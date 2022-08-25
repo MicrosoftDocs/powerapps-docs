@@ -308,6 +308,7 @@ A representation of the **Service Request** virtual table is shown below. You'll
    1. In the **Lookup Field** section, set the **Display Name** to **Account.**
    1. The **Name** column automatically populates with the lookup column name.
    1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
+1. **Save**, and then close the relationship.
 
       :::image type="content" source="media/ve-create-relationship.png" alt-text="Create relationship":::
 

@@ -7,7 +7,7 @@ ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/25/2021
+ms.date: 08/17/2022
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -28,6 +28,8 @@ As a developer, you can extend canvas apps in Power Apps, enabling even more pow
 As an enterprise developer, empower your organization to build robust, tailored solutions on Power Apps:
 
 - **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services. [Learn more](/connectors/custom-connectors/)
+
+- **Create canvas apps using Power Platform CLI**: Use [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction) to create, pack (preview), and unpack (preview) canvas apps using a [custom connector](/connectors/custom-connectors/). More information: [Power Platform CLI - **pac canvas**](/power-platform/developer/cli/reference/canvas)
 
 - **Build Azure Functions**: Craft Azure Functions to extend apps with custom server-side logic. [Learn more](/azure/azure-functions/app-service-export-api-to-powerapps-and-flow)
 

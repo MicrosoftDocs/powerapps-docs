@@ -131,7 +131,7 @@ To add Russian, you would first add Russian translation to the spreadsheet for e
     ```powerapps-dot
     //user language
     Set(gblUserLanguage,Switch(Left(Language(),2),"de","de-DE","en","en-US","es","es-ES","fr","fr-FR","it","it-IT","ja","ja-JP","nl","nl-NL",
-    "pt","pt-BR",“ru-RU”,
+    "pt","pt-BR","ru-RU",
     //default
     "en-US"));
     //build localization collection, with user's language
@@ -155,7 +155,7 @@ Let us add a label to the Loading screen:
 
     ![Welcome to app](media/localizing-sample-apps/welcome-to-the-app.png "Welcome to app")
 
-    For now, we'll set the text to “Welcome to the app” until it's ready for localization.
+    For now, we'll set the text to "Welcome to the app" until it's ready for localization.
 
 1. Open the Excel file to add rows for this text.
 
@@ -171,7 +171,7 @@ Let us add a label to the Loading screen:
     | nl-NL |
     | pt-BR |
 
-1. For the third column&mdash;**LocalizedText**, translate the text “Welcome to the app” in the 8 different languages:
+1. For the third column&mdash;**LocalizedText**, translate the text "Welcome to the app" in the 8 different languages:
 
     - en-US (US English)
     - de-DE (German)
@@ -198,12 +198,12 @@ Let us add a label to the Loading screen:
 
 1. Readd the spreadsheet as a connector, and select **staticLocalizations** table as the data source (make sure to select the correct excel file that was updated).
 
-1. Select the label with the text “Welcome to the app”.
+1. Select the label with the text "Welcome to the app".
 
 1. Open the **Text** property of the label and paste the following formula:
 
    ```powerapps-dot
-   With({varDefault: "Welcome to the app";varOOBTextId: "lblLoadingText_Welcome_locText"};With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId;LocalizedText)};Coalesce(varLocalizedText;varDefault)))
+   With({varDefault: "Welcome to the app", varOOBTextId: "lblLoadingText_Welcome_locText"}, With({varLocalizedText: LookUp(colLocalization;OOBTextID = varOOBTextId, LocalizedText)}, Coalesce(varLocalizedText;varDefault)))
    ```
 
 1. To test the localization of the label we created, change the language of our user in Teams to one of the languages that is in our localization Excel spreadsheet. You can change your Teams language by selecting your photo in the upper-right corner, and then selecting settings.

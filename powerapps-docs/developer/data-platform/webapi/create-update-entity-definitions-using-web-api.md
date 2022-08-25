@@ -1,7 +1,7 @@
 ---
 title: "Create and update table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating table definitions using the Web API."
-ms.date: 08/08/2022
+ms.date: 08/15/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -173,7 +173,10 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
 When you update a table or column definition, you must use the  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action"> or 
 <xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action"> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
-Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the DisplayName changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+Typically, you will retrieve the JSON definition of the entity attribute and modify the properties before you send it back. The following example contains all the definition properties of the table created in the [Create table definitions](#bkmk_createEntities) example, but with the `DisplayName` changed to "Bank Business Name." It may be useful to note that the JSON here provides the default values for properties not set in the [Create table definitions](#bkmk_createEntities) example.  
+
+> [!NOTE]
+> Some of the examples below use the `MetadataId` primary key value. But you can also use the `LogicalName` alternate key to reference schema entities. More information: [Retrieve table definitions by name or MetadataId](retrieve-metadata-name-metadataid.md)
   
  **Request**
 
@@ -906,12 +909,12 @@ OData-Version: 4.0
 
 As mentioned in [Update table definitions](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), data model entities are updated using the HTTP `PUT` method with the entire JSON definition of the current item. This applies to entity attributes as well as entities. Just like with entities, you have the option to overwrite labels using the `MSCRM.MergeLabels` header with the value set to `false`, and you must publish customizations before they are active in the system.  
 
-Using the boolean attribute created in [Create a Boolean column](#create-a-boolean-column) above, we must first retrieve the entire attribute. In this case also expanding the `OptionSet` property so we can change the labels for the options.
+Using the boolean attribute created in [Create a Boolean column](#create-a-boolean-column) above, we must first retrieve the entire attribute.
 
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$expand=OptionSet HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -925,7 +928,7 @@ HTTP/1.1 OK
 OData-Version: 4.0
 
 {
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('new_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(OptionSet())/$entity",
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('new_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata/$entity",
   "MetadataId": "38d20735-6817-ed11-b83e-00224837179f",
   "HasChanged": null,
   "AttributeOf": null,
@@ -1045,121 +1048,7 @@ OData-Version: 4.0
     "CanBeChanged": true,
     "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
   },
-  "Settings": [],
-  "OptionSet": {
-    "MetadataId": "39d20735-6817-ed11-b83e-00224837179f",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "new_bankaccount_new_boolean",
-    "ExternalTypeName": null,
-    "OptionSetType": "Boolean",
-    "IntroducedVersion": "1.0.0.0",
-    "Description": {
-      "LocalizedLabels": [
-        {
-          "Label": "Boolean Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "3bd20735-6817-ed11-b83e-00224837179f",
-        "HasChanged": null
-      }
-    },
-    "DisplayName": {
-      "LocalizedLabels": [
-        {
-          "Label": "Sample Boolean",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "3ad20735-6817-ed11-b83e-00224837179f",
-        "HasChanged": null
-      }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "TrueOption": {
-      "Value": 1,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
-            "Label": "True",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "7af31d83-0c00-4cd8-822a-1068414051d2",
-            "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "True",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "7af31d83-0c00-4cd8-822a-1068414051d2",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
-            "Label": "False",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632",
-            "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "False",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "387b1285-7092-49ff-9872-2ddba5768632",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    }
-  }
+  "Settings": []
 }
 ```
 
@@ -1170,10 +1059,9 @@ Then, change the properties you want to change.
 |`DisplayName`|Sample Boolean|Sample Boolean Updated|
 |`Description`|Boolean Attribute|Boolean Attribute Updated|
 |`RequiredLevel`|`None`|`ApplicationRequired`|
-|`OptionSet.DisplayName`|Boolean Attribute|Boolean Attribute Choice|
-|`OptionSet.Description`|Boolean Attribute|Boolean Attribute Choice Description|
-|`OptionSet.TrueOption`|True|Up|
-|`OptionSet.FalseOption`|False|Down|
+
+> [!NOTE]
+> If you want to update the options, you must send a different request. See [Update Options](#update-options).
 
 Now you can send the `PUT` request with the modified properties:
 
@@ -1309,121 +1197,7 @@ Accept: application/json
     "CanBeChanged": true,
     "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
   },
-  "Settings": [],
-  "OptionSet": {
-    "MetadataId": "e260ff9b-6f17-ed11-b83e-00224837179f",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "new_bankaccount_new_boolean",
-    "ExternalTypeName": null,
-    "OptionSetType": "Boolean",
-    "IntroducedVersion": "1.0.0.0",
-    "Description": {
-      "LocalizedLabels": [
-        {
-          "Label": "Boolean Attribute Choice Description",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "e460ff9b-6f17-ed11-b83e-00224837179f",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Boolean Attribute Choice Description",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "e460ff9b-6f17-ed11-b83e-00224837179f",
-        "HasChanged": null
-      }
-    },
-    "DisplayName": {
-      "LocalizedLabels": [
-        {
-          "Label": "Sample Boolean Choice",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "e360ff9b-6f17-ed11-b83e-00224837179f",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Sample Boolean Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "e360ff9b-6f17-ed11-b83e-00224837179f",
-        "HasChanged": null
-      }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "TrueOption": {
-      "Value": 1,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
-            "Label": "Up",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "5d0b245d-d303-4243-92eb-a2acdca12b44",
-            "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Up",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "5d0b245d-d303-4243-92eb-a2acdca12b44",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
-            "Label": "Down",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "682e7b7b-02ba-46d7-93ac-3d736527f3fd",
-            "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Down",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "682e7b7b-02ba-46d7-93ac-3d736527f3fd",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    }
-  }
+  "Settings": []
 }
 
 ```
@@ -1436,6 +1210,50 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='new_bankaccount')/Attributes(LogicalName='new_boolean')
 ```
 
+## Update Options
+
+To update individual options you must use the <xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>. The following example updates the `TrueOption` from the Boolean column example in [Create a Boolean column](#create-a-boolean-column) and changes the label so that it is `Up` rather than `True`. Because this is a 'local' option set, it uses `AttributeLogicalName` and `EntityLogicalName`. For a global option set, use the `OptionSetName` parameter instead.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+{
+  "AttributeLogicalName": "new_boolean",
+  "EntityLogicalName": "new_bankaccount",
+  "Value": 1,
+  "Label": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Up",
+        "LanguageCode": 1033,
+        "IsManaged": false
+      }
+    ],
+    "UserLocalizedLabel": {
+      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+      "Label": "Up",
+      "LanguageCode": 1033,
+      "IsManaged": false
+    }
+  },
+  "MergeLabels": true
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
 
   
 ### See also
