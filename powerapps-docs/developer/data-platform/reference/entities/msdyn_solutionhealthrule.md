@@ -1080,6 +1080,6 @@ See the [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](workflow.md#B
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_solutionhealthrule?text=msdyn_solutionhealthrule EntityType" />

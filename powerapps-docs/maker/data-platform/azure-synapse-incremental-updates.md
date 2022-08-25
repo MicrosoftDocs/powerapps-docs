@@ -31,12 +31,12 @@ Microsoft Dataverse data can continuously change through create, update, and del
 
 When creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table is stored under a separate *DataverseTableName* folder.
 
-> [!NOTE]
+> [!IMPORTANT]
 > This is a preview feature.
 > 
 > Timestamp and table folders are created only when there is a data update during the user-specified time interval.
 > 
-> This feature can only be enabled while creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace.
+> This feature will apply to all selected tables within Azure Synapse Link for Dataverse and, by default, all the tables selected will be assigned append-only mode with incremental updates.
 
 ## Prerequisites
 

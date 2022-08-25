@@ -11,6 +11,8 @@ caps.latest.revision: 57
 ms.subservice: dataverse-maker
 ms.author: "matp"
 manager: "kvivek"
+contributors:
+  - Lezucket
 search.audienceType: 
   - maker
 search.app: 

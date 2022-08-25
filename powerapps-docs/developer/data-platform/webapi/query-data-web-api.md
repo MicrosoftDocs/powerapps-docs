@@ -76,7 +76,7 @@ OData-Version: 4.0
  Unless you specify a smaller page size, a maximum of 5000 rows will be returned for each request. If there are more rows that match the query filter criteria, a `@odata.nextLink` property will be returned with the results. Use the value of the `@odata.nextLink` property with a new `GET` request to return the next page of rows.  
   
 > [!NOTE]
->  Queries on entity (table) definitions aren't limited or paged. More information:[Query table definitions using the Web API](query-metadata-web-api.md)  
+>  Queries on entity (table) definitions aren't limited or paged. More information: [Query table definitions using the Web API](query-metadata-web-api.md)  
 
 <a name="bkmk_limitResults"></a>
 
@@ -425,7 +425,7 @@ For example:
 ### Filter results based on values of collection-valued navigation properties
 
 > [!NOTE]
-> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded tables](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-tables).
+> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded records](retrieve-entity-using-web-api.md#bkmk_optionsOnExpand).
 
 The two options for filtering results based on values of collection-valued navigation properties are:
 
@@ -695,9 +695,9 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 <a name="bkmk_retrieverelatedentities"></a>
 
-## Retrieve related tables with query
+## Retrieve related table records with a query
 
-Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. More information: [Retrieve related tables with query](retrieve-related-entities-query.md).
+Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. More information: [Retrieve related table records with a query](retrieve-related-entities-query.md).
 
 <a name="bkmk_lookupProperty"></a>
 
@@ -776,10 +776,10 @@ More information: [Use column comparison in queries](../column-comparison.md)
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />

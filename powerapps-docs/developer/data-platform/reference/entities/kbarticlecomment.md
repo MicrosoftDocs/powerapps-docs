@@ -475,6 +475,6 @@ See the [kbarticle_comments](kbarticle.md#BKMK_kbarticle_comments) one-to-many r
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.kbarticlecomment?text=kbarticlecomment EntityType" />

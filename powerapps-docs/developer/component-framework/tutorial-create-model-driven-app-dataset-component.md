@@ -45,7 +45,7 @@ Firstly, download the [sample code](https://github.com/microsoft/PowerApps-Sampl
 npm install
 ```
 
-Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using `pac auth`.
+Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using [pac auth](/power-platform/developer/cli/reference/auth).
 
 At the terminal, use:
 

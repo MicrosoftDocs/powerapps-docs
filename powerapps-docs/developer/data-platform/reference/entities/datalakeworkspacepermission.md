@@ -1022,6 +1022,6 @@ See the [datalakeworkspace_workspacepermission](datalakeworkspace.md#BKMK_datala
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.datalakeworkspacepermission?text=datalakeworkspacepermission EntityType" />

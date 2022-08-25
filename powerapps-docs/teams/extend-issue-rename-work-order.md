@@ -16,7 +16,7 @@ contributors:
 
 # Convert Issue reporting sample app to Work order management app
 
-The Issue Reporting template Power App for Microsoft Teams is designed to be flexible and extendable, including for scenarios other than tracking issues.
+The Issue Reporting template Power Apps for Microsoft Teams is designed to be flexible and extendable, including for scenarios other than tracking issues.
 
 For example, in a simple work scheduling scenario, you may want to use it as a work order management app. There are many similarities between issues and work order—assigned users, task descriptions, and due dates.
 

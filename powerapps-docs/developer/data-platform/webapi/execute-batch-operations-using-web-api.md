@@ -41,15 +41,15 @@ Also, the responses returned are essentially text documents rather than objects 
 
 ## Batch requests
 
-Use a POST request to submit a batch operation that contains multiple requests. A batch request can include GET requests and change sets. To use the transactional capabilities of batch requests, only operations that will change data can be included within a change set. GET requests must not be included in the change set.  
+Use a `POST` request to submit a batch operation that contains multiple requests. A batch request can include `GET` requests and change sets. To use the transactional capabilities of batch requests, only operations that will change data can be included within a change set. `GET` requests must not be included in the change set.  
   
-The POST request containing the batch must have a Content-Type header with a value set to multipart/mixed with a boundary set to include the identifier of the batch using this pattern:  
+The `POST` request containing the batch must have a `Content-Type` header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch using this pattern:  
   
 ```
 --batch_<unique identifier>
 ```  
   
-The unique identifier doesn't need to be a GUID, but should be unique. Each item within the batch must be preceded by the batch identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
+The unique identifier doesn't need to be a GUID, but should be unique. Each item within the batch must be preceded by the batch identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
   
 ```  
 --batch_WKQS9Yui9r
@@ -69,7 +69,7 @@ The end of the batch must contain a termination indicator like the following:
 
 When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a boundary set to include the identifier of the change set using this pattern:  
   
-```  
+```
 --changeset_<unique identifier>
 ```  
   
@@ -97,7 +97,7 @@ When an error occurs for a request within a batch, the error for that request wi
 
 You can use the `Prefer: odata.continue-on-error` request header to specify that additional requests be processed when errors occur. The batch request will return `200 OK` and individual response errors will be returned in the batch response body.
 
-More information: [Enable/Disable continue-on-error in Batch Request](/odata/webapi/batch#enabledisable-continue-on-error-in-batch-request)
+More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-error](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398236)
 
 <a name="bkmk_Example"></a>
 
@@ -642,10 +642,10 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
