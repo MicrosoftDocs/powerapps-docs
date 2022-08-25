@@ -67,14 +67,18 @@ With these features, it just takes one call to the server to perform the same op
 
 
 |After  |     Description   |
-|-----------------------|------------------------------|
+|-----------------------|------------------------------|[
+](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal)
 | ![Update using UpdateRequest.](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
 
 ## Change tracking
 
-When organizations need to maintain Dataverse data in external storage there is now a way to keep that data synchronized in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.
+The change tracking feature in Microsoft Dataverse provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Change tracking is not only used to synchronize data with external systems, it is also a prerequisite for several Power Platform and Dataverse capabilities such as Azure Synapse Link for Dataverse and Mobile offline.
 
-More information: [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)
+More information: 
+
+- [Create and edit tables using Power Apps](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal) (See the Track changes parameter) 
+- [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)
 
 ## In This Section
 
