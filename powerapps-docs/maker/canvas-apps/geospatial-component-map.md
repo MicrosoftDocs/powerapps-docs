@@ -46,11 +46,13 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 Pins, routes, and shapes are data set properties that need to both identify a data source, which is a table from a collection or connector, and the relevant columns. The data source is set in the Items property (Items for pins, RouteWaypoints_Items for routes, Shape_Items for shapes) and the relevant columns are set in the related properties (e.g. ItemLatitudes, ItemLongitudes, etc for pins). The [Properties](#properties) section contains additional information about these data sets and their related properties.
 
 For example, if you had a table collection named **Locations** with **Name**, **Longitude**, and **Latitude** columns:
-|Name | Longitude | Latitude |
-| -- | -- | -- |
+
+| Name | Longitude | Latitude |
+| - | - | - |
 | Fourth Coffee (sample) | -98.29277 | 26.2774 |
 | Litware, Inc. (sample) | -96.85572 | 32.55253 |
 | Adventure Works (sample) | -96.99952 | 32.72058 |
+
 
 To display these as labeled pins on the map:
 
