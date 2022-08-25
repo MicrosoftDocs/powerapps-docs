@@ -151,4 +151,4 @@ To remove a table from your app, select **More options** to the right of the tab
 
 - To create a table in Dataverse, the environment must have a Dataverse database provisioned. You must have system customizer or system administrator permissions within the environment where you'd like to build a table. If these conditions are not met, the **Create New Table** button is disabled.
 
-- You can only create and edit tables in the current Dataverse environment. If you changed your Dataverse environment using the environment picker, then the **Create new table** and **Edit table** options will be disabled.
+- You can only create and edit tables in the current Dataverse environment. If you changed your Dataverse environment using the environment picker, then the **Create new table** and **Edit table** options is disabled.
