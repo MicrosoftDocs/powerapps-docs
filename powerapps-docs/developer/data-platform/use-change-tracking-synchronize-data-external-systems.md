@@ -1,7 +1,7 @@
 ---
 title: "Use change tracking to synchronize data with external systems (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/26/2022
+ms.date: 08/25/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: Peakerbl # GitHub ID
@@ -18,13 +18,20 @@ contributors:
 ---
 # Use change tracking to synchronize data with external systems
 
-The change tracking feature in Microsoft Dataverse provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Without this feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in Dataverse. This article discusses how to retrieve changes for a table.  
+The change tracking feature in Microsoft Dataverse provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. This article discusses how to enable and retrieve changes for a table.  
 
 ## Enable change tracking for a table  
 
-Before retrieving the changes for a table, make sure that the change tracking feature is enabled for that table. This feature can be enabled by using the customization user interface (UI) or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled?text=EntityMetadata.ChangeTrackingEnabled Property> to `True`.
+Before retrieving the changes for a table, make sure that the change tracking is enabled for that table.
 
-For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](/power-platform/admin/enable-change-tracking-control-data-synchronization).
+You can check whether this feature is enabled or enable it by using [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Select **Data** > **Tables** and the specific table. Under **Advanced options** you will find the **Track changes** property.
+
+You can set this programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled?text=EntityMetadata.ChangeTrackingEnabled Property> to `True`. 
+
+> [!NOTE]
+> Once change tracking has been enabled for a table, it is not possible to disable it.
+
+For more information on how to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc): [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md)
 
 There are two ways to check whether change tracking is enabled for a table using Web API.
 
