@@ -84,9 +84,10 @@ You can also add canvas apps to Teams using the web player.
 1. Select **Launch it now** to open the Teams app. Alternatively, you can also choose **Use the web app instead** to open the app in Teams web.
 
 > [!NOTE]
+> - To add canvas apps to Teams using the web player:
+>     - Your organization must have **Allow interaction with custom apps** turned on. More information: [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings)
+>     - Your organization must allow **Shared Power Apps**. More information: [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
 > - You can only add apps to Teams that belong to the same tenant as your Teams account. Otherwise, you'll see an error "App was not found in tenant".
-> - Your organization must have interaction with custom apps turned on. More information: [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings)
-> - Your organization must allow **Shared Power Apps**. More information: [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
 
 ## Publish the app to the Teams catalog
 
