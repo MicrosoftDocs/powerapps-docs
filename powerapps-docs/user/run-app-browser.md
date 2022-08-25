@@ -38,10 +38,21 @@ To follow this quickstart, you need:
 Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
 ## Find an app on the Home page
-The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Business Apps** to launch your business app that you have access to.
-
+The Home page may show several types of business apps. 
 
 ![Busines Apps.](media/bussinessapps.png)
+
+The Dynamics and Power Apps presented in Office App Launcher and Office.com/apps experiences meet the following filter criteria:  
+1. Apps a user launched in the last week 
+2. Apps a user made 
+3. Apps an admin marked as ‘featured’ in the tenant 
+4. All 1st party Dynamics branded apps a user can access 
+
+### What if I cannot find an app?
+Infrequently used apps, apps not used in the last week, won’t appear in Office.com experiences. Much like today, if a user cannot find an app they’re looking for they’ll need the URI to launch the app in the browser. To get an app URI: Admins and Makers can get app URIs by selecting an app in https://admin.powerplatform.microsoft.com or https://make.powerapps.com > Select an app > details > web link. 
+
+> [!NOTE]
+> The duration between an app being shared with a user and when it's presented in an Office experience, when meeting the filter criteria, is expected to be 24 hours. 
 
 The Microsoft 365 apps page has a different URL per cloud. 
 
