@@ -33,6 +33,9 @@ The portals Web API enables a richer user experience inside Power Apps portals p
 
 The portals Web API offers a subset of capabilities for Dataverse operations that you can do by using the Dataverse API. We've kept the API format as similar as possible to reduce the learning curve.
 
+> [!NOTE]
+> Web API operations are case-sensitive.
+
 ### Web API operations available in portals
 
 - [Read records from a table](read-operations.md)
