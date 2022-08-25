@@ -33,12 +33,12 @@ Create and edit a Dataverse table in canvas apps using the table designer inside
 2. In the app authoring menu, select **Data**.
 
    > [!div class="mx-imgBorder"]
-   > ![Open the Data pane.](media/data-pane-1.png)
+   > ![Open the Data pane.](media/tables/data-pane-1.png)
 
 3. On the **Data** pane, select **Add Data** &gt; **Create new table**.  
     
    > [!div class="mx-imgBorder"]
-   > ![Create new table.](media/create-new-table-2.png)
+   > ![Create new table.](media/tables/create-new-table-2.png)
 
    > [!NOTE]
    > If the **Create new table** button is disabled then review the [**Required permissions and limitations**](create-edit-tables.md#required-permissions-and-limitations) section below.
@@ -48,14 +48,14 @@ Create and edit a Dataverse table in canvas apps using the table designer inside
    You can also expand the **Advanced settings** to update the plural name for the table. For example, a table name can be Ticket, and the plural table name can be Tickets.
 
   > [!div class="mx-imgBorder"]
-  > ![Table name.](media/table-name-3.png)
+  > ![Table name.](media/tables/table-name-3.png)
 
 5. When you're done, select **Create** to create the table.
 
    The table designer will open when the newly created table ready for editing.
 
     > [!div class="mx-imgBorder"]
-    > ![Table designer.](media/table-designer-4.png)
+    > ![Table designer.](media/tables/table-designer-4.png)
 
 ## Edit an existing table
 
@@ -68,12 +68,12 @@ Once a Dataverse table is created, you can start editing the table. You can also
 3. From the list of existing Dataverse tables in the **Select a data source** dialog box, select a table to add to your app.
 
    > [!div class="mx-imgBorder"]
-   > ![Select a table.](media/select-table-5.png)
+   > ![Select a table.](media/tables/select-table-5.png)
 
 4. On the newly added table select, **More actions** &gt; **Edit data***.*
 
    > [!div class="mx-imgBorder"]
-   > ![Edit table data.](media/edit-table-data-6.png)
+   > ![Edit table data.](media/tables/edit-table-data-6.png)
 
 5. The selected table is ready for editing in the table designer.
 
@@ -85,7 +85,7 @@ Once a Dataverse table is created, you can start editing the table. You can also
 When the table designer opens, select **Edit table properties**.
 
  > [!div class="mx-imgBorder"]
- > ![Edit table properties.](media/edit-table-properties-7.png)
+ > ![Edit table properties.](media/tables/edit-table-properties-7.png)
 
 You can edit the following table properties.
 
@@ -145,7 +145,7 @@ To remove a table from your app, select **More options** to the right of the tab
 > When you remove a table, the table is removed not deleted.
 
 > [!div class="mx-imgBorder"]
-> ![Remove a table.](media/remove-table-8.png)
+> ![Remove a table.](media/tables/remove-table-8.png)
 
 ## Required permissions and limitations
 
