@@ -20,10 +20,10 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Create and edit a Dataverse table in canvas apps using the table designer inside [Power Apps Studio](power-apps-studio.md). You also work with the data that in the table without leaving the app that you're working on.
+Create and edit a Dataverse table in canvas apps using the table designer inside [Power Apps Studio](power-apps-studio.md). You also work with the data that's in the table without leaving the app that you're working on.
 
 > [!IMPORTANT]
-> - This is a preview feature that's avalable for everyone to use.
+> - This is a preview feature that is available for everyone to use.
 
 
 ## Create a table
@@ -52,14 +52,14 @@ Create and edit a Dataverse table in canvas apps using the table designer inside
 
 5. When you're done, select **Create** to create the table.
 
-   The table designer will open when the newly created table ready for editing.
+   The table designer will open when the newly created table is ready for editing.
 
     > [!div class="mx-imgBorder"]
     > ![Table designer.](media/tables/table-designer-4.png)
 
 ## Edit an existing table
 
-Once a Dataverse table is created, you can start editing the table. You can also add existing Dataverse tables to your app and edit those tables using the table designer.
+When the Dataverse table is created, you can start editing the table. You can also add existing Dataverse tables to your app and edit those tables using the table designer.
 
 1. From the app authoring menu, select **Data**.
 
@@ -142,7 +142,7 @@ The table designer for canvas apps allows you to add new rows to a Dataverse tab
 To remove a table from your app, select **More options** to the right of the table name then select, **Remove**.
 
 > [!NOTE]
-> When you remove a table, the table is removed not deleted.
+> When you remove a table, the table is removed and not deleted.
 
 > [!div class="mx-imgBorder"]
 > ![Remove a table.](media/tables/remove-table-8.png)
