@@ -106,20 +106,20 @@ Select **Advanced options** to display additional properties that are optional
 | **Schema name** | By default, the schema name is automatically created for you based on the display name, but you can change it. The schema name can't contain spaces and includes the customization prefix for the Dataverse solution publisher. You can't change this after the table is saved. |
 | **Type** | Select the type of table. Use standard for most tables. Activity tables are a special table that can only be owned by a user or team, but can't be owned by an organization. Virtual tables require the table be populated with data from an external source. |
 | **Record ownership** | Switch the table type to Activity table to create tables that can manage tasks. The type of **Ownership** defines who can perform operations on a record. |
-| **Choose a table image** | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/types-of-fields#image-columns) |
+| **Choose a table image** | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](../data-platform/types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps. |
 | **Apply duplicate detection rules** | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table. |
 | **Track changes** | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized. |
 | **Provide custom help** | When selected, set a **Help URL** to control what page users will see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table. |
 | **Audit changes to its data** | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on. |
-| **Leverage quick create form if available** | After you've created and published a Quick Create Form for this table, people will have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-design-forms)<br /></br>When this is enabled for a custom activity table, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form will be used when the custom table icon is selected. |
+| **Leverage quick create form if available** | After you've created and published a Quick Create Form for this table, people will have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)<br /></br>When this is enabled for a custom activity table, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don't support quick create forms, the main form will be used when the custom table icon is selected. |
 | **Creating a new activity** | Associate activities to records for this table. |
 | **Doing a mail merge** | App users can use this table with mail merge. |
 | **Setting up SharePoint document management** | After other tasks have been performed to enable document management for your organization, enabling this feature allows for this table to participate in integration with SharePoint. |
 | **Can have connections** | Use the connections feature to show how records for this table have connections to records of other tables that also have connections enabled. |
 | **Can have a contact email** | Send emails using an email address stored in one of the fields for this table. If a **Single Line of Text** column with format set to email doesn't already exist for this table, a new one will be created when you enable sending email. |
 | **Have an access team** | Create team templates for this table. |
-| **Can be linked to feedback** | Let app users write feedback for any table record, or rate table records within a defined rating range. More information: [Configure a table for feedback/ratings](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/configure-entity-feedback) |
+| **Can be linked to feedback** | Let app users write feedback for any table record, or rate table records within a defined rating range. More information: [Configure a table for feedback/ratings](../data-platform/configure-entity-feedback.md) |
 | **Appear in search results** | Enable so that table records can be included in search results when using an app. |
 | **Can be taken offline** | Makes data in this table available while the Power Apps application isn't connected to a network. |
 | **Can be added to a queue** | Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
@@ -127,15 +127,15 @@ Select **Advanced options** to display additional properties that are optional
 
 ## Add and edit columns
 
-You can create and edit columns in the table editor. For more information, see [How to create and edit columns](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-fields).
+You can create and edit columns in the table editor. For more information, see [How to create and edit columns](../data-platform/create-edit-fields.md).
 
 ## Editing other table properties
 
-For more advanced table editing scenarios, using the table hub is required. Some examples of these kinds of edits are table relationships, keys, and deleting the table. More information see, [Create and edit tables using Power Apps](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal)
+For more advanced table editing scenarios, using the table hub is required. Some examples of these kinds of edits are table relationships, keys, and deleting the table. More information see, [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md)
 
 ## Add and edit data
 
-The table designer in canvas allows you to add new rows to your Dataverse tables or edit those rows right within the canvas designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](https://docs.microsoft.com/en-us/power-apps/teams/create-first-app#create-your-first-table).
+The table designer for canvas apps allows you to add new rows to a Dataverse table or edit rows inside Power Apps Studio using the table designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](/power-apps/teams/create-first-app.md#create-your-first-table)
 
 ## Remove a table
 
