@@ -18,13 +18,13 @@ contributors:
 ---
 # Use change tracking to synchronize data with external systems
 
-The change tracking feature in Microsoft Dataverse provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. Without this feature, it was difficult to build a reliable and efficient mechanism to determine what records had changed in Dataverse. This article discusses how to retrieve changes for a table.  
+The change tracking feature in Microsoft Dataverse provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. This article discusses how to enable and retrieve changes for a table.  
 
 ## Enable change tracking for a table  
 
-Before retrieving the changes for a table, make sure that the change tracking feature is enabled for that table. This feature can be enabled by using the customization user interface (UI) or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled?text=EntityMetadata.ChangeTrackingEnabled Property> to `True`.
+Before retrieving the changes for a table, make sure that the change tracking is enabled for that table. This feature can be enabled by using the mMker portal user interface (UI) and select **Track changes** parameter, under **Advanced options** for the table, or programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled?text=EntityMetadata.ChangeTrackingEnabled Property> to `True`. Once Change tracking has been enabled for a table, it is not possible to disable.
 
-For more information about using the customization user interface (UI), see [Enable change tracking to control data synchronization](/power-platform/admin/enable-change-tracking-control-data-synchronization).
+For more information on how to use the Maker portal: [Create and edit tables using Power Apps](powerapps-docs-pr/powerapps-docs/maker/data-platform/create-edit-entities-portal.md)
 
 There are two ways to check whether change tracking is enabled for a table using Web API.
 
