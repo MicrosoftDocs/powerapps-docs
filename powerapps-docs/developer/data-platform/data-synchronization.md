@@ -1,7 +1,7 @@
 ---
 title: "Data Synchronization (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about synchronizing Dataverse data with external systems." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/26/2022
+ms.date: 08/25/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: Peakerbl # GitHub ID
@@ -67,8 +67,7 @@ With these features, it just takes one call to the server to perform the same op
 
 
 |After  |     Description   |
-|-----------------------|------------------------------|[
-](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal)
+|-----------------------|------------------------------|
 | ![Update using UpdateRequest.](media/after-carina-dynamics-crm-2015.png "Update using UpdateRequest") | Just one call to verify that there is an account with the unique ID ABC123, set the primary contact to contact@company.com, set the region to NW, set the owner to user@mycompany.com and the status to active. |
 
 ## Change tracking
@@ -77,7 +76,7 @@ The change tracking feature in Microsoft Dataverse provides a way to keep the da
 
 More information: 
 
-- [Create and edit tables using Power Apps](https://docs.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal) (See the Track changes parameter) 
+- [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md) (See the **Track changes** property)
 - [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md)
 
 ## In This Section
@@ -94,8 +93,7 @@ More information:
 ## Related Sections
 
 [Define alternate keys for the table](define-alternate-keys-entity.md)<br />
-[Perform specialized operations using Update](/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update)<br /> 
-[Developers guide to customization for Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br /> 
+[Behavior of specialized update operations](special-update-operation-behavior.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
