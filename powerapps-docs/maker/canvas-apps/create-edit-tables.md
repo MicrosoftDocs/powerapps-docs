@@ -20,7 +20,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Create and edit a Dataverse table in canvas apps using the table designer inside [Power Apps Studio](power-apps-studio.md). You also work with the data that's in the table without leaving the app that you're working on.
+Create and edit a Dataverse tables in canvas apps using the table designer inside [Power Apps Studio](power-apps-studio.md). You can also work with the data that's in the table without leaving the app that you're working on.
 
 > [!IMPORTANT]
 > - This is a preview feature that is available for everyone to use.
