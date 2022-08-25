@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 04/27/2022
+ms.date: 08/25/2022
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,7 +22,6 @@ search.app:
 contributors:
   - JasonHQX
 ---
-
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Synapse Analytics to explore your data and accelerate time to insight. This article shows you how to perform the following tasks:
@@ -132,18 +131,14 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 
 6. Navigate to Power Apps, and relink the Synapse workspace and data lake.
 
-## Access near real-time data and read-only snapshot data (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Access near real-time data and read-only snapshot data
 
 After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
 
 - Near real-time data: Provides a copy of data synchronized from Dataverse via Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.
 - Snapshot data: Provides a read-only copy of near real-time data that is updated at regular intervals (in this case every hour).  
 
-> [!IMPORTANT]
-> This is a preview feature.
->
+> [!NOTE]
 > For empty table data and metadata table, only near real-time data is created.
 
 1. Select the desired Azure Synapse Link, and then select the **Go to Azure Synapse Analytics workspace** from the top panel.
