@@ -85,6 +85,10 @@ Use your chart:
 > :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/add-and-customize-visualizations-in-model-driven-apps-1.png" alt-text="Select Chart from within app":::
 > Then save and publish your app.
 
+## Maximum number of records displayed in a chart
+
+Charts display views that return up to 50,000 records. Views that exceed 50,000 records display the message: The maximum record limit is exceeded. Reduce the number of records. More information: [Reporting infrastructure](reporting-considerations.md#reporting-infrastructure)
+
 ## Known chart creation issues
 
 In the chart designer, adding an order by on certain calculated columns is not supported and will cause an error. The calculated columns causing this are using another calculated column, a related table column, or a local column on the table.
