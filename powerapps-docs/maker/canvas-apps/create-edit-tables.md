@@ -1,6 +1,6 @@
 ---
-title: Create and edit Dataverse tables in canvas apps using the visual editor
-description: Create and edit Dataverse tables in canvas apps using the visual editor.
+title: Create and edit Dataverse tables in canvas apps using the table designer
+description: Create and edit Dataverse tables in canvas apps using the table designer.
 author: 
 ms.topic: conceptual
 ms.custom: canvas
@@ -16,11 +16,11 @@ contributors:
   - mduelae
   
 ---
-# Create and edit tables using the visual editor
+# Create and edit tables using the table designer
 
 [This article is pre-release documentation and is subject to change.]
 
-Create and edit Dataverse tables for canvas apps and work with data in those tables using the visual editor in [Power Apps Studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio). You also work with the data in the tables without leaving the app that you're working on.
+Create and edit Dataverse tables for canvas apps and work with data in those tables using the table designer in [Power Apps Studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio). You also work with the data in the tables without leaving the app that you're working on.
 
 ## Prerequisites
 
@@ -39,7 +39,8 @@ Create and edit Dataverse tables for canvas apps and work with data in those tab
 3.  On the **Data** pane, select **Add Data** &gt; **Create new** **table**.  
     ![](media/image2.png)
 
-**Note**: If the **Create new table** button is disabled then review the [**Required permissions and limitations**](#required-permissions-and-limitations) section below.
+> [!NOTE]
+> If the **Create new table** button is disabled then review the [**Required permissions and limitations**](#required-permissions-and-limitations) section below.
 
 4.  On the **Create a table** dialog box, enter a name for the table.
 
@@ -49,13 +50,13 @@ You can also expand the **Advanced settings** to update the plural name for th
 
 5.  When you're done, select **Create** to create the table.
 
-The visual editor will open when the newly created table ready for editing.
+The table designer will open when the newly created table ready for editing.
 
 ![A screen capture of the table designer in the canvas designer  It says Edit table at the top  features some action buttons below inlcuding   New Row    New column  Refresh  and Edit table properties  ](media/image4.png)
 
 ## Edit an existing table
 
-Once a Dataverse table is created, you can start editing the table. You can also add existing Dataverse tables to your app and edit those tables using the visual editor.
+Once a Dataverse table is created, you can start editing the table. You can also add existing Dataverse tables to your app and edit those tables using the table designer.
 
 1. From the app authoring menu, select **Data**.
 
@@ -69,13 +70,14 @@ Once a Dataverse table is created, you can start editing the table. You can also
 
 ![](media/image6.png)
 
-5. The selected table is ready for editing in the visual editor.
+5. The selected table is ready for editing in the table designer.
 
-**Note**: Some system tables may not be available for editing, or some editing actions may be disabled.
+> [!NOTE]
+> Some system tables may not be available for editing, or some editing actions may be disabled.
 
 ## Edit the table properties
 
-When the visual editor opens, select **Edit table properties**.
+When the table designer opens, select **Edit table properties**.
 
 ![A screenshot showing the table designer with a title row  a row of action buttons like  New Row and Edit Table columns  blow that there is an empty grid waiting to hold data  ](media/image7.png)
 
@@ -133,12 +135,13 @@ The table designer in canvas allows you to add new rows to your Dataverse tables
 
 To remove a table from your app, select **More options** to the right of the table name then select, **Remove**.
 
-Note: When you remove a table, the table is removed not deleted.
+> [!NOTE]
+> When you remove a table, the table is removed not deleted.
 
 ![A screenshot of the remove option from the ellipsis on the Contacts table  ](media/image8.png)
 
 ## Required permissions and limitations
 
--   To create a table in Dataverse, the environment must have a Dataverse database provisioned. You must have system customizer or system administrator permissions within the environment where you'd like to build a table. If these conditions are not met, the **Create New Table** button is disabled.
+- To create a table in Dataverse, the environment must have a Dataverse database provisioned. You must have system customizer or system administrator permissions within the environment where you'd like to build a table. If these conditions are not met, the **Create New Table** button is disabled.
 
--   You can only create and edit tables in the current Dataverse environment. If you changed your Dataverse environment using the environment picker, then the **Create new table** and **Edit table** options will be disabled.
+- You can only create and edit tables in the current Dataverse environment. If you changed your Dataverse environment using the environment picker, then the **Create new table** and **Edit table** options will be disabled.
