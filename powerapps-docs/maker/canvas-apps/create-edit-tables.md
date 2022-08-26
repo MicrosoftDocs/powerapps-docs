@@ -70,7 +70,7 @@ Once a Dataverse table is created, you can start editing the table. You can also
    > [!div class="mx-imgBorder"]
    > ![Select a table.](media/tables/select-table-5.png)
 
-4. On the newly added table select, **More actions** &gt; **Edit data***.*
+4. On the newly added table select, **More actions** &gt; **Edit data**.
 
    > [!div class="mx-imgBorder"]
    > ![Edit table data.](media/tables/edit-table-data-6.png)
