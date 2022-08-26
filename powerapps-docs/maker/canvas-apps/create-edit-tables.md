@@ -16,7 +16,7 @@ contributors:
   - mduelae
   
 ---
-# Create and edit a table using the table designer
+# Create and edit tables using the table designer
 
 [This article is pre-release documentation and is subject to change.]
 
