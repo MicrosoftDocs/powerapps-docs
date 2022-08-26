@@ -7,19 +7,17 @@ ms.author: nhelgren
 manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Create and retrieve table relationships
-
-
 
 This sample shows how to create and retrieve table relationships. The following methods are used to create and retrieve the relationships:
 
@@ -30,7 +28,7 @@ This sample shows how to create and retrieve table relationships. The following 
 - [CanManyToManyRequest](/dotnet/api/microsoft.xrm.sdk.messages.canmanytomanyrequest)
 - [RetrieveRelationshipRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieverelationshiprequest)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateRetrieveEntityRelationships).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateRetrieveEntityRelationships).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -52,15 +50,13 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `CreateOneToManyRequest` method creates a new One-to-Many (1:N) relationship. 
+1. The `CreateOneToManyRequest` method creates a new One-to-Many (1:N) relationship.
 2. The `CreateManyToManyRequest` method creates a new Many-To-Many (N:N) relationship.
 3. The `EligibleCreateManyToManyRelationship` method verifies whether tables can participate in N:N relationship.
 4. The `RetrieveRelationshipRequest` method retrieves the two tables relationships previously created.
 
-
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

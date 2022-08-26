@@ -7,20 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Enable duplicate detection and retrieve duplicates
 
-
-
-This sample shows how to enable duplicate detection and retrieve duplicate records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EnableDuplicateDetection).
+This sample shows how to enable duplicate detection and retrieve duplicate records. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/EnableDuplicateDetection).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -40,16 +39,15 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 1. The `Account` method creates some account records to retrieve duplicates.
-1. The `RetrieveDuplicateRequest` method retrieves the duplicate records. 
-1. The `EnableDuplicateDetectionForOrg` class enables duplicate detection for an organization. 
+1. The `RetrieveDuplicateRequest` method retrieves the duplicate records.
+1. The `EnableDuplicateDetectionForOrg` class enables duplicate detection for an organization.
 1. To enable duplicate detection set `IsDuplicateDetectionEnabled = true`.
-1. The `RetrieveEntityRequest` method retrieves the entity metadata. 
+1. The `RetrieveEntityRequest` method retrieves the entity metadata.
 1. Set `IsDuplicateDetectionEnabled = true` to update the duplicate detection flag.
 1. The `UpdateEntityRequest` updates the entity with duplicate detection set to `true`.
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
