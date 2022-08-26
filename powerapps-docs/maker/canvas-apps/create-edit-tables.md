@@ -80,7 +80,7 @@ Once a Dataverse table is created, you can start editing the table. You can also
     > [!NOTE]
     > Some system tables may not be available for editing, or some editing actions may be disabled.
 
-## Edit the table properties
+### Edit the table properties
 
 When the table designer opens, select **Edit table properties**.
 
@@ -125,15 +125,15 @@ Select **Advanced options** to display additional properties that are optional
 | **Can be added to a queue** | Use the table with queues. Queues improve routing and sharing of work by making records for this table available in a central place that everyone can access. |
 
 
-## Add and edit columns
+### Add and edit columns
 
 You can create and edit columns in the table editor. For more information, see [How to create and edit columns](../data-platform/create-edit-fields.md).
 
-## Editing other table properties
+### Editing other table properties
 
 For more advanced table editing scenarios, using the table hub is required. Some examples of these kinds of edits are table relationships, keys, and deleting the table. More information see, [Create and edit tables using Power Apps](../data-platform/create-edit-entities-portal.md)
 
-## Add and edit data
+### Add and edit data
 
 The table designer for canvas apps allows you to add new rows to a Dataverse table or edit rows inside Power Apps Studio using the table designer. You can start typing directly into the grid or select, **New row**. For more information, see [Create your first table](/power-apps/teams/create-first-app.md#create-your-first-table)
 
