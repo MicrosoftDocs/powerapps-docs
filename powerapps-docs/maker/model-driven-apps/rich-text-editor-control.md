@@ -4,7 +4,6 @@ description: "The rich text editor control provides the app user a WYSIWYG editi
 ms.custom: ""
 ms.date: 06/14/2022
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -115,7 +114,7 @@ A rich text-enabled column has a limited set of configuration that can be config
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about plug-ins: [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about CKEditor plug-ins: [Plug-ins available](https://ckeditor.com/cke4/addons/plugins/all)
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
