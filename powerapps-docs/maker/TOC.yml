@@ -386,7 +386,7 @@
                     href: ./canvas-apps/screen-templates/people-screen-overview.md
                   - name: People-screen reference
                     href: ./canvas-apps/screen-templates/people-screen-reference.md
-         - name: Work with a gallery
+          - name: Show a table of items
             items:
             - name: Add a gallery
               href: ./canvas-apps/add-gallery.md
@@ -464,7 +464,7 @@
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
-          - name: Create an app to edit tables
+          - name: Add editable tables
             href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
