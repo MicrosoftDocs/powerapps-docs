@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "powerapps-docs/developer/data-platform/org-service/web-service-error-codes.md",
-      "redirect_url": "../reference/web-service-error-codes.md",
+      "redirect_url": "../reference/web-service-error-codes",
       "redirect_document_id": false
     },
     {
