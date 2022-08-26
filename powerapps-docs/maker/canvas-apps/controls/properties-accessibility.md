@@ -60,7 +60,7 @@ The **TabIndex** property has two recommended values:
 | 0 | Control participates in keyboard navigation. | [**Button**](control-button.md), [**Text input**](control-text-input.md), [**Combo box**](control-combo-box.md), and other typically interactive controls. |
 | &minus;1 | Control does not participate in keyboard navigation. | [**Label**](control-text-box.md), [**Image**](control-image.md), [**Icon**](control-shapes-icons.md), and other typically non-interactive controls. |
 
-A logical keyboard navigation sequence can be achieved with just these values, along with the use of the [**Container**](control-container.md) control. We recommend that you do not set **TabIndex** to other values.
+Any keyboard navigation sequence can be achieved with just these values, along with the use of the [**Container**](control-container.md) control. We recommend that you do not set **TabIndex** to other values.
 
 When **TabIndex** of all controls are set to either -1 or 0, navigation order goes from left-to-right, then top-to-bottom, in a "Z" pattern. The order is based on the **X** and **Y** property values of the controls. If controls are dynamically moved on the screen, for example, by having its **X** or **Y** value change according to a timer or other control, the navigation order will change dynamically too.
 
@@ -72,7 +72,8 @@ Controls that have a **Visible** property value of *false* or a **DisplayMode** 
 > **TabIndex** only affects keyboard navigation. A [logical control order](../accessible-apps-structure.md) is still necessary for screen reader users to understand app structure.
 
 > [!WARNING]
-> - For rare scenarios where you may not want to follow visual order or logical structure, you can customize the keyboard navigation order by setting **TabIndex** to be greater than zero. If you do this, the accessibility tools will give you a warning about this change. Use caution since it can be difficult to get the order correct and accurate with this manual change that can result in a confusing screen reader experience.
+> - **TabIndex** values greater than zero will not be supported soon. They will be treated as if they were zero. Enable the **Simplified tab index** app setting to preview this behavior.
+> - In the meantime, setting **TabIndex** to be greater than zero is one of the ways to customize keyboard navigation. This is for rare scenarios where you may not want to follow visual order or logical structure. Use caution since it can be difficult to get the order correct and accurate. It also results in a confusing screen reader experience.
 > - When there are controls with **TabIndex** greater than 0, users will first navigate to controls with increasing positive **TabIndex** values (such as, 1, then 2). When users have navigated all controls with positive **TabIndex** values, they will finally navigate to controls with **TabIndex** of 0. When there are multiple controls with the same **TabIndex**, their **X** and **Y** value and the **Containers** they are in will determine their relative order. Inside a **Gallery** or **Form**, **TabIndex** is scoped so that the contained controls will be navigated first before the ones outside.
 
 ### See also

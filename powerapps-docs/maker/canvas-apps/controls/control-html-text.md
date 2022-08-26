@@ -93,18 +93,15 @@ An **HTML text** control not only shows plain text and numbers but also converts
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines
-**HTML text** isn't meant to be interactive. Use it only for text display.
 
 ### Color contrast
 There must be adequate color contrast between:
 * **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
 * Text with custom colors and its background
 
-### Screen reader support
-* **HtmlText** must be present.
-
 ### Keyboard support
-* **HtmlText** shouldn't contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps doesn't consider elements inside **HtmlText**.
+* The control can't act as a button. It doesn't have **TabIndex** and keyboard users won't be able to focus on it.
+* The control can contain interactive parts in **HtmlText** like `<a>` elements, but the app setting **Simplified tab indexes" must be enabled. Otherwise, the tab navigation order will be wrong.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
