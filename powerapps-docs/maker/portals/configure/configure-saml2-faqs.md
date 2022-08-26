@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/26/2022
 ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: ndoelman
@@ -13,6 +13,7 @@ contributors:
     - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
+    - ProfessorKendrick
 ---
 
 # FAQs for using SAML 2.0 in portals
@@ -42,6 +43,10 @@ Portals requires *persistent* identifiers that ensure that the user can always b
 ## Does portals require any specific AuthNContextClass in SAML assertion requests?
 
 Yes. Portals will specify *PasswordProtectedTransport* in authentication requests, and requires that the identity provider support it.
+
+## Does portals support SAML logout request?
+
+Yes.  Use the Power Platform admin center to upload the custom certificate.  After uploading the custom certificate, copy the thumbprint of the uploaded custom certificate from the Manage custom certificate screen and paste it to site settings *Authentication/SAML2/[ProviderName]/ExternalLogoutCertThumbprint*.
 
 ### See also
 
