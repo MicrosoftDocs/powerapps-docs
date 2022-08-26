@@ -112,6 +112,6 @@
   - name: Handle exceptions in your code
     href: handle-exceptions-code.md
   - name: Web service error codes
-    href: ../../reference/web-service-error-codes.md 
+    href: ../reference/web-service-error-codes.md 
 - name: Samples
   href: samples/toc.yml
