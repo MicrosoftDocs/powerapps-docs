@@ -59,7 +59,7 @@ Create and edit a Dataverse tables in canvas apps using the table designer insid
 
 ## Edit an existing table
 
-When the Dataverse table is created, you can start editing the table. You can also add existing Dataverse tables to your app and edit those tables using the table designer.
+Once a Dataverse table is created, you can start editing the table. You can also add existing Dataverse tables to your app and edit those tables using the table designer.
 
 1. From the app authoring menu, select **Data**.
 
