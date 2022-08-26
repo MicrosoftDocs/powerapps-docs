@@ -387,9 +387,9 @@
                   - name: People-screen reference
                     href: ./canvas-apps/screen-templates/people-screen-reference.md
          - name: Work with tables
-           items:
-           - name: Create and edit a table
-             href: ./canvas-apps/create-edit-tables.md
+            items:
+            - name: Create and edit a table
+              href: ./canvas-apps/create-edit-tables.md
          - name: Work with a gallery
             items:
             - name: Add a gallery
