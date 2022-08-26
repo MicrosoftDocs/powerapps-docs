@@ -65,7 +65,7 @@ Once a Dataverse table is created, you can start editing the table. You can also
 
 2. On the **Data** pane, select **Add data**.
 
-3. From the list of existing Dataverse tables in the **Select a data source** dialog box, select a table to add to your app.
+3. In the **Select a data source** dialog box, select a table to add to your app from the list of existing Dataverse tables.
 
    > [!div class="mx-imgBorder"]
    > ![Select a table.](media/tables/select-table-5.png)
