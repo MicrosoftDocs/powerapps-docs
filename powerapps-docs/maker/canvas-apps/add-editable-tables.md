@@ -1,5 +1,5 @@
 ---
-title: Add editable tables in canvas apps | Microsoft Docs
+title: Create an app to edit tables in canvas apps | Microsoft Docs
 description: Learn how to configure an app interface with editable tables that allow you to edit data from the data source directly through the app.
 author: denisem-msft
 
@@ -18,7 +18,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Add editable tables in canvas apps
+# Create an app to edit tables in canvas apps
 
 Designing a productivity application to have related data and functions in one place enables you to achieve more without having to switch back and forth between the screens. Microsoft Excel is one such example that allows editing data real time in fast and efficient way.
 
