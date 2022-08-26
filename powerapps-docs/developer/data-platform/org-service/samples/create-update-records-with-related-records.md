@@ -7,14 +7,14 @@ ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Create and update records with related records (early bound)
@@ -24,7 +24,7 @@ This sample shows how to create and update a record and related records in one c
 - [IOrganizationService.Create](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create)
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CreateUpdateRecordsWithRelatedRecords).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CreateUpdateRecordsWithRelatedRecords).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -46,14 +46,11 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `Account` method creates a account record for which we will add letters. 
+1. The `Account` method creates a account record for which we will add letters.
 1. The `Relationship` method creates the reference between letter and account.
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

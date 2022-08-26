@@ -7,19 +7,18 @@ manager: evlew
 ms.date: 06/10/2022
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
 ---
 
 # Sample: Work with views
 
-
-This sample shows how to perform various actions on views. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithViews).
+This sample shows how to perform various actions on views. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithViews).
 
 ## How to run this sample
 
@@ -45,6 +44,5 @@ Checks for the current version of the org.
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
