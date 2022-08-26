@@ -130,11 +130,16 @@ If an environment variable is used in a flow and the display name of the environ
 
 ## Use Azure Key Vault secrets (preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Environment variables allow for referencing secrets stored in Azure Key Vault. These secrets are then made available for use within Power Automate flows and custom connectors. Notice that the secrets aren't available for use in other customizations or generally via the API.
 
 The actual secrets are stored in Azure Key Vault and the environment variable references the key vault secret location. Using Azure Key Vault secrets with environment variables require that you configure Azure Key Vault so that Power Platform can read the specific secrets you want to reference.
 
 Environment variables referencing secrets aren't currently available from the dynamic content selector for use in flows.
+
+> [!IMPORTANT]
+> This is a preview feature. More information: [Portals, model-driven apps and app management preview features](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 ### Configure Azure Key Vault
 
