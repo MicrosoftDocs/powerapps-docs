@@ -13,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # addCustomFilter (Client API reference)
 
@@ -24,7 +26,7 @@ Lookup
 
 ## Syntax
 
-`formContext.getControl(arg).addCustomFilter(filter, entityLogicaName)`
+`formContext.getControl(arg).addCustomFilter(filter, entityLogicalName)`
 
 ## Parameters
 

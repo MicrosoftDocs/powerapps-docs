@@ -1,8 +1,8 @@
 ---
-title: "ExpiredProcess table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ExpiredProcess table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ExpiredProcess table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -677,7 +677,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_lk_expiredprocess_workflowlogs"></a> lk_expiredprocess_workflowlogs
 
-Same as workflowlog table [lk_expiredprocess_workflowlogs](workflowlog.md#BKMK_lk_expiredprocess_workflowlogs) Many-To-One relationship.
+Same as the [lk_expiredprocess_workflowlogs](workflowlog.md#BKMK_lk_expiredprocess_workflowlogs) many-to-one relationship for the [workflowlog](workflowlog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -692,7 +692,7 @@ Same as workflowlog table [lk_expiredprocess_workflowlogs](workflowlog.md#BKMK_l
 
 ### <a name="BKMK_ExpiredProcess_SyncErrors"></a> ExpiredProcess_SyncErrors
 
-Same as syncerror table [ExpiredProcess_SyncErrors](syncerror.md#BKMK_ExpiredProcess_SyncErrors) Many-To-One relationship.
+Same as the [ExpiredProcess_SyncErrors](syncerror.md#BKMK_ExpiredProcess_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -707,7 +707,7 @@ Same as syncerror table [ExpiredProcess_SyncErrors](syncerror.md#BKMK_ExpiredPro
 
 ### <a name="BKMK_ExpiredProcess_ProcessSessions"></a> ExpiredProcess_ProcessSessions
 
-Same as processsession table [ExpiredProcess_ProcessSessions](processsession.md#BKMK_ExpiredProcess_ProcessSessions) Many-To-One relationship.
+Same as the [ExpiredProcess_ProcessSessions](processsession.md#BKMK_ExpiredProcess_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -738,42 +738,42 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_expiredprocess_createdonbehalfby"></a> lk_expiredprocess_createdonbehalfby
 
-See systemuser Table [lk_expiredprocess_createdonbehalfby](systemuser.md#BKMK_lk_expiredprocess_createdonbehalfby) One-To-Many relationship.
+See the [lk_expiredprocess_createdonbehalfby](systemuser.md#BKMK_lk_expiredprocess_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_expiredprocess"></a> transactioncurrency_expiredprocess
 
-See transactioncurrency Table [transactioncurrency_expiredprocess](transactioncurrency.md#BKMK_transactioncurrency_expiredprocess) One-To-Many relationship.
+See the [transactioncurrency_expiredprocess](transactioncurrency.md#BKMK_transactioncurrency_expiredprocess) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_modifiedonbehalfby"></a> lk_expiredprocess_modifiedonbehalfby
 
-See systemuser Table [lk_expiredprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_expiredprocess_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_expiredprocess_modifiedonbehalfby](systemuser.md#BKMK_lk_expiredprocess_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_expiredprocess"></a> organization_expiredprocess
 
-See organization Table [organization_expiredprocess](organization.md#BKMK_organization_expiredprocess) One-To-Many relationship.
+See the [organization_expiredprocess](organization.md#BKMK_organization_expiredprocess) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_knowledgearticleid"></a> lk_expiredprocess_knowledgearticleid
 
-See knowledgearticle Table [lk_expiredprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_expiredprocess_knowledgearticleid) One-To-Many relationship.
+See the [lk_expiredprocess_knowledgearticleid](knowledgearticle.md#BKMK_lk_expiredprocess_knowledgearticleid) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_createdby"></a> lk_expiredprocess_createdby
 
-See systemuser Table [lk_expiredprocess_createdby](systemuser.md#BKMK_lk_expiredprocess_createdby) One-To-Many relationship.
+See the [lk_expiredprocess_createdby](systemuser.md#BKMK_lk_expiredprocess_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_activestageid"></a> lk_expiredprocess_activestageid
 
-See processstage Table [lk_expiredprocess_activestageid](processstage.md#BKMK_lk_expiredprocess_activestageid) One-To-Many relationship.
+See the [lk_expiredprocess_activestageid](processstage.md#BKMK_lk_expiredprocess_activestageid) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_processid"></a> lk_expiredprocess_processid
 
-See workflow Table [lk_expiredprocess_processid](workflow.md#BKMK_lk_expiredprocess_processid) One-To-Many relationship.
+See the [lk_expiredprocess_processid](workflow.md#BKMK_lk_expiredprocess_processid) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_lk_expiredprocess_modifiedby"></a> lk_expiredprocess_modifiedby
 
-See systemuser Table [lk_expiredprocess_modifiedby](systemuser.md#BKMK_lk_expiredprocess_modifiedby) One-To-Many relationship.
+See the [lk_expiredprocess_modifiedby](systemuser.md#BKMK_lk_expiredprocess_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.expiredprocess?text=expiredprocess EntityType" />

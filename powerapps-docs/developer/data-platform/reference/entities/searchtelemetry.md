@@ -1,8 +1,8 @@
 ---
-title: "searchtelemetry table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "searchtelemetry table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the searchtelemetry table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -102,10 +102,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -243,6 +243,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.searchtelemetry?text=searchtelemetry EntityType" />

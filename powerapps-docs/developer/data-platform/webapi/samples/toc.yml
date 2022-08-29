@@ -12,6 +12,8 @@
       href: ../web-api-functions-actions-sample.md
 - name: (C#) samples
   items:
+    - name: About the samples
+      href: ../web-api-samples-csharp.md
     - name: CDSWebApiService class
       href: cdswebapiservice.md
     - name: Basic Operations
@@ -26,8 +28,6 @@
       href: cdswebapiservice-parallel-operations.md
     - name: Async Parallel Operations
       href: cdswebapiservice-async-parallel-operations.md
-    - name: Global Discovery Service
-      href: global-discovery-service-csharp.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples

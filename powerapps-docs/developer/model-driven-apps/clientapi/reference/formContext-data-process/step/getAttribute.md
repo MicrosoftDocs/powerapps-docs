@@ -1,5 +1,5 @@
 ---
-title: "getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "step.getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getAttribute method.
 ms.author: jdaly
 author: adrianorth
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getAttribute (Client API reference)
+# step.getAttribute (Client API reference)
 
 
 

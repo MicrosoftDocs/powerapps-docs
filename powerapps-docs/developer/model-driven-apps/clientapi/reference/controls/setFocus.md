@@ -1,6 +1,6 @@
 ---
-title: "setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the setFocus method.
+title: "control.setFocus (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the control.setFocus method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# setFocus (Client API reference)
+# control.setFocus (Client API reference)
 
 
 

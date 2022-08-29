@@ -1,20 +1,19 @@
 ---
 title: "Manage invalid characters | Microsoft Docs"
 description: Describes how to manage invalid characters.
-
-ms.date: 08/09/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "JimDaly"
+ms.date: 03/22/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: divka78
 ms.subservice: dataverse-developer
-ms.author: "pehecke"
-manager: "kvivek"
+ms.author: dikamath
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Manage invalid characters

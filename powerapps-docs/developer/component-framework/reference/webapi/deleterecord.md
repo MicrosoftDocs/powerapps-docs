@@ -1,16 +1,15 @@
 ---
 title: deleteRecord | Microsoft Docs
 description: Deletes a table record.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # deleteRecord
@@ -19,7 +18,7 @@ ms.topic: "article"
 
 ## Available for 
 
-Model-driven apps
+Model-driven apps & portals.
 
 ## Syntax
 
@@ -27,7 +26,7 @@ Model-driven apps
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>

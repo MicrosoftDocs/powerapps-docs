@@ -1,6 +1,6 @@
 ---
-title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the getEntityReference method.
+title: gridEntity.getEntityReference (Client API reference)
+description: Includes description and supported parameters for the gridEntity.getEntityReference method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityReference (Client API reference)
+# gridEntity.getEntityReference (Client API reference)
 
 
 

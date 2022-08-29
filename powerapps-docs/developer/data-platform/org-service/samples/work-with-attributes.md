@@ -1,26 +1,25 @@
 ---
 title: "Sample: Work with columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to work with columns" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.date: 04/06/2022
+author: NHelgren
+ms.author: nhelgren
+ms.reviewer: pehecke
+manager: sunilg
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
 
 # Work with columns definitions
 
-
-
-This sample shows how to perform various actions on columns. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithAttributes).
+This sample shows how to perform various actions on columns. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithAttributes).
 
 ## How to run this sample
 
@@ -51,6 +50,5 @@ Checks for the current version of the org.
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

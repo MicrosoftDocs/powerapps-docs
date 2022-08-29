@@ -1,8 +1,8 @@
 ---
-title: "SLA table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SLA table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLA table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -102,10 +102,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Allow|
-|0|Do Not Allow|
+|1|Allow||
+|0|Do Not Allow||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -209,10 +209,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -265,7 +265,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
@@ -477,6 +477,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [SLAIdUnique](#BKMK_SLAIdUnique)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
@@ -663,10 +664,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -827,6 +828,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |92|Team template|Team template for an entity enabled for automatically created access teams.|
 |99|Social Profile|This entity is used to store social profile information of its associated account and contacts on different social channels.|
 |101|Service Plan|Service Plan|
+|103|Privileges Removal Setting|Privileges Removal Setting|
 |126|Indexed Article|Article indexed for search purposes.|
 |127|Article|Structured content that is part of the knowledge base.|
 |129|Subject|Information regarding subjects available in the system.|
@@ -1134,92 +1136,120 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10014|Solution Component Count Summary||
 |10015|Solution Component Data Source||
 |10016|Solution Component Count Data Source||
-|10017|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
-|10018|Catalog Assignment|Entity for assigning records to a specific catalog |
-|10019|Internal Catalog Assignment||
-|10020|Custom API|Entity that defines a custom API|
-|10021|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
-|10022|Custom API Response Property|Entity that defines a response property for a custom API |
-|10023|ProvisionLanguageForUser||
-|10024|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
-|10025|Data Lake Folder Permission||
-|10026|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
-|10027|Data Lake Workspace Permission||
-|10028|CascadeGrantRevokeAccessRecordsTracker||
-|10029|CascadeGrantRevokeAccessVersionTracker||
-|10030|RevokeInheritedAccessRecordsTracker||
-|10031|Model-Driven App Element|Associates a model-driven app with its components.|
-|10032|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10033|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10034|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10035|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10036|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10037|Setting Definition|Contains Setting Definitions|
-|10038|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10039|Service Plan Mapping|Service Plan Mapping|
-|10041|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10044|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10045|Flow Machine||
-|10046|Flow Machine Group||
-|10047|ProcessStageParameter||
-|10048|Workflow Binary||
-|10049|Connection Reference||
-|10050|AI Form Processing Document||
-|10051|AI Object Detection Image||
-|10052|AI Object Detection Label||
-|10053|AI Object Detection Bounding Box||
-|10054|AI Object Detection Image Mapping||
-|10056|AI Builder Dataset||
-|10057|AI Builder Dataset File||
-|10058|AI Builder Dataset Record||
-|10059|AI Builder Datasets Container||
-|10060|AI Builder File||
-|10061|AI Builder File Attached Data||
-|10062|Help Page||
-|10063|Tour||
-|10064|BotContent||
-|10065|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10066|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10067|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10073|PDF Setting|PDF Settings to save enabled pdf entities|
-|10074|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10075|Service Configuration||
-|10076|SLA KPI||
-|10077|Knowledge Federated Article||
-|10078|Knowledge Federated Article Incident||
-|10079|Search provider||
-|10080|Knowledge Article Image||
-|10081|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10082|Knowledge Search Insight|Knowledge Search Insight|
-|10083|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10084|Knowledge Article Attachment||
-|10085|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10086|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10087|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10088|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10090|Plugin Package||
-|10091|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10092|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10093|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10094|TeamMobileOfflineProfileMembership||
-|10095|UserMobileOfflineProfileMembership||
-|10096|OrganizationDataSyncSubscription||
-|10097|OrganizationDataSyncSubscriptionEntity||
-|10098|NonRelational Data Source||
-|10099|Notification|Notification to be provided to a user.|
-|10100|App Action||
-|10101|Rich Text Attachment|Image or file attached to a rich text field|
-|10102|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10103|PM Inferred Task||
-|10104|PM Recording||
-|10105|Analysis Component||
-|10106|Analysis Job||
-|10107|Analysis Result||
-|10108|Analysis Result Detail||
-|10109|Solution Health Rule||
-|10110|Solution Health Rule Argument||
-|10111|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10112|Comment|A collaborative comment on a maker artifact|
+|10017|AAD User|Virtual entity that represents AAD user|
+|10018|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
+|10019|Catalog Assignment|Entity for assigning records to a specific catalog |
+|10020|Internal Catalog Assignment||
+|10021|Custom API|Entity that defines a custom API|
+|10022|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
+|10023|Custom API Response Property|Entity that defines a response property for a custom API |
+|10024|ProvisionLanguageForUser||
+|10025|Shared Object|A record that is being shared in a real time collaboration session.|
+|10026|Shared Workspace|References a container that stores real-time collaboration data.|
+|10027|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
+|10028|Data Lake Folder Permission||
+|10029|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
+|10030|Data Lake Workspace Permission||
+|10031|Data Processing configuration||
+|10032|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
+|10033|Synapse Link External Table State|Synapse Link external table states|
+|10034|Synapse Link Profile|Synapse Link Profile|
+|10035|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
+|10036|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
+|10037|Synapse Link Schedule|Synapse link schedules|
+|10038|DataflowRefreshHistory||
+|10039|EntityRefreshHistory||
+|10040|Shared Link Setting|Shared Link Setting|
+|10041|CascadeGrantRevokeAccessRecordsTracker||
+|10042|CascadeGrantRevokeAccessVersionTracker||
+|10043|RevokeInheritedAccessRecordsTracker||
+|10044|Model-Driven App Element|Associates a model-driven app with its components.|
+|10045|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10046|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10047|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10048|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10049|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10050|Setting Definition|Contains Setting Definitions|
+|10051|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10052|Service Plan Mapping|Service Plan Mapping|
+|10054|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10057|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10058|Flow Machine||
+|10059|Flow Machine Group||
+|10060|Flow Machine Image||
+|10061|Flow Machine Image Version||
+|10062|ProcessStageParameter||
+|10063|Workflow Binary||
+|10064|Connection Reference||
+|10065|AI Builder Feedback Loop||
+|10066|AI Form Processing Document||
+|10067|AI Object Detection Image||
+|10068|AI Object Detection Label||
+|10069|AI Object Detection Bounding Box||
+|10070|AI Object Detection Image Mapping||
+|10072|AI Builder Dataset||
+|10073|AI Builder Dataset File||
+|10074|AI Builder Dataset Record||
+|10075|AI Builder Datasets Container||
+|10076|AI Builder File||
+|10077|AI Builder File Attached Data||
+|10078|Help Page||
+|10079|Tour||
+|10080|BotContent||
+|10081|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10082|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10083|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10089|Comment|A collaborative comment on a maker artifact|
+|10090|PDF Setting|PDF Settings to save enabled pdf entities|
+|10091|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10092|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10093|Service Configuration||
+|10094|SLA KPI||
+|10095|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10096|Knowledge Federated Article||
+|10097|Knowledge Federated Article Incident||
+|10098|Search provider||
+|10099|Knowledge Article Image||
+|10100|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10101|Knowledge Search Insight|Knowledge Search Insight|
+|10102|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10103|Knowledge Article Attachment||
+|10104|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10105|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10106|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10107|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10109|Plugin Package||
+|10110|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10111|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10112|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10113|MobileOfflineProfileItemFilter||
+|10114|TeamMobileOfflineProfileMembership||
+|10115|UserMobileOfflineProfileMembership||
+|10116|OrganizationDataSyncSubscription||
+|10117|OrganizationDataSyncSubscriptionEntity||
+|10118|OrganizationDataSyncState|Information regarding data synchronization state|
+|10119|NonRelational Data Source||
+|10120|Notification|Notification to be provided to a user.|
+|10121|User Rating||
+|10122|Insights Store Data Source||
+|10123|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10124|App Action||
+|10125|App Action Migration||
+|10126|App Action Rule||
+|10129|Rich Text Attachment|Image or file attached to a rich text field|
+|10130|Custom Control Extended Setting||
+|10131|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10132|PM Analysis History||
+|10133|PM Inferred Task||
+|10134|PM Recording||
+|10135|PM Template||
+|10136|Analysis Component||
+|10137|Analysis Job||
+|10138|Analysis Result||
+|10139|Analysis Result Detail||
+|10140|Solution Health Rule||
+|10141|Solution Health Rule Argument||
+|10142|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
 
 
 
@@ -1267,6 +1297,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|owneridyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -1385,11 +1431,13 @@ Listed by **SchemaName**.
 - [slabase_ProcessSessions](#BKMK_slabase_ProcessSessions)
 - [sla_phonecall](#BKMK_sla_phonecall)
 - [manualsla_email](#BKMK_manualsla_email)
+- [chat_sla_slaid](#BKMK_chat_sla_slaid)
+- [chat_sla_slainvokedid](#BKMK_chat_sla_slainvokedid)
 
 
 ### <a name="BKMK_sla_socialactivity"></a> sla_socialactivity
 
-Same as socialactivity table [sla_socialactivity](socialactivity.md#BKMK_sla_socialactivity) Many-To-One relationship.
+Same as the [sla_socialactivity](socialactivity.md#BKMK_sla_socialactivity) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1404,7 +1452,7 @@ Same as socialactivity table [sla_socialactivity](socialactivity.md#BKMK_sla_soc
 
 ### <a name="BKMK_manualsla_contact"></a> manualsla_contact
 
-Same as contact table [manualsla_contact](contact.md#BKMK_manualsla_contact) Many-To-One relationship.
+Same as the [manualsla_contact](contact.md#BKMK_manualsla_contact) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1419,7 +1467,7 @@ Same as contact table [manualsla_contact](contact.md#BKMK_manualsla_contact) Man
 
 ### <a name="BKMK_slabase_BulkDeleteFailures"></a> slabase_BulkDeleteFailures
 
-Same as bulkdeletefailure table [slabase_BulkDeleteFailures](bulkdeletefailure.md#BKMK_slabase_BulkDeleteFailures) Many-To-One relationship.
+Same as the [slabase_BulkDeleteFailures](bulkdeletefailure.md#BKMK_slabase_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1434,7 +1482,7 @@ Same as bulkdeletefailure table [slabase_BulkDeleteFailures](bulkdeletefailure.m
 
 ### <a name="BKMK_manualsla_fax"></a> manualsla_fax
 
-Same as fax table [manualsla_fax](fax.md#BKMK_manualsla_fax) Many-To-One relationship.
+Same as the [manualsla_fax](fax.md#BKMK_manualsla_fax) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1449,7 +1497,7 @@ Same as fax table [manualsla_fax](fax.md#BKMK_manualsla_fax) Many-To-One relatio
 
 ### <a name="BKMK_manualsla_activitypointer"></a> manualsla_activitypointer
 
-Same as activitypointer table [manualsla_activitypointer](activitypointer.md#BKMK_manualsla_activitypointer) Many-To-One relationship.
+Same as the [manualsla_activitypointer](activitypointer.md#BKMK_manualsla_activitypointer) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1464,7 +1512,7 @@ Same as activitypointer table [manualsla_activitypointer](activitypointer.md#BKM
 
 ### <a name="BKMK_slabase_AsyncOperations"></a> slabase_AsyncOperations
 
-Same as asyncoperation table [slabase_AsyncOperations](asyncoperation.md#BKMK_slabase_AsyncOperations) Many-To-One relationship.
+Same as the [slabase_AsyncOperations](asyncoperation.md#BKMK_slabase_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1479,7 +1527,7 @@ Same as asyncoperation table [slabase_AsyncOperations](asyncoperation.md#BKMK_sl
 
 ### <a name="BKMK_sla_Annotation"></a> sla_Annotation
 
-Same as annotation table [sla_Annotation](annotation.md#BKMK_sla_Annotation) Many-To-One relationship.
+Same as the [sla_Annotation](annotation.md#BKMK_sla_Annotation) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1494,7 +1542,7 @@ Same as annotation table [sla_Annotation](annotation.md#BKMK_sla_Annotation) Man
 
 ### <a name="BKMK_sla_task"></a> sla_task
 
-Same as task table [sla_task](task.md#BKMK_sla_task) Many-To-One relationship.
+Same as the [sla_task](task.md#BKMK_sla_task) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1509,7 +1557,7 @@ Same as task table [sla_task](task.md#BKMK_sla_task) Many-To-One relationship.
 
 ### <a name="BKMK_sla_activitypointer"></a> sla_activitypointer
 
-Same as activitypointer table [sla_activitypointer](activitypointer.md#BKMK_sla_activitypointer) Many-To-One relationship.
+Same as the [sla_activitypointer](activitypointer.md#BKMK_sla_activitypointer) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1524,7 +1572,7 @@ Same as activitypointer table [sla_activitypointer](activitypointer.md#BKMK_sla_
 
 ### <a name="BKMK_manualsla_task"></a> manualsla_task
 
-Same as task table [manualsla_task](task.md#BKMK_manualsla_task) Many-To-One relationship.
+Same as the [manualsla_task](task.md#BKMK_manualsla_task) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1539,7 +1587,7 @@ Same as task table [manualsla_task](task.md#BKMK_manualsla_task) Many-To-One rel
 
 ### <a name="BKMK_manualsla_account"></a> manualsla_account
 
-Same as account table [manualsla_account](account.md#BKMK_manualsla_account) Many-To-One relationship.
+Same as the [manualsla_account](account.md#BKMK_manualsla_account) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1554,7 +1602,7 @@ Same as account table [manualsla_account](account.md#BKMK_manualsla_account) Man
 
 ### <a name="BKMK_sla_letter"></a> sla_letter
 
-Same as letter table [sla_letter](letter.md#BKMK_sla_letter) Many-To-One relationship.
+Same as the [sla_letter](letter.md#BKMK_sla_letter) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1569,7 +1617,7 @@ Same as letter table [sla_letter](letter.md#BKMK_sla_letter) Many-To-One relatio
 
 ### <a name="BKMK_manualsla_phonecall"></a> manualsla_phonecall
 
-Same as phonecall table [manualsla_phonecall](phonecall.md#BKMK_manualsla_phonecall) Many-To-One relationship.
+Same as the [manualsla_phonecall](phonecall.md#BKMK_manualsla_phonecall) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1584,7 +1632,7 @@ Same as phonecall table [manualsla_phonecall](phonecall.md#BKMK_manualsla_phonec
 
 ### <a name="BKMK_sla_email"></a> sla_email
 
-Same as email table [sla_email](email.md#BKMK_sla_email) Many-To-One relationship.
+Same as the [sla_email](email.md#BKMK_sla_email) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1599,7 +1647,7 @@ Same as email table [sla_email](email.md#BKMK_sla_email) Many-To-One relationshi
 
 ### <a name="BKMK_sla_appointment"></a> sla_appointment
 
-Same as appointment table [sla_appointment](appointment.md#BKMK_sla_appointment) Many-To-One relationship.
+Same as the [sla_appointment](appointment.md#BKMK_sla_appointment) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1614,7 +1662,7 @@ Same as appointment table [sla_appointment](appointment.md#BKMK_sla_appointment)
 
 ### <a name="BKMK_sla_slaitem_slaId"></a> sla_slaitem_slaId
 
-Same as slaitem table [sla_slaitem_slaId](slaitem.md#BKMK_sla_slaitem_slaId) Many-To-One relationship.
+Same as the [sla_slaitem_slaId](slaitem.md#BKMK_sla_slaitem_slaId) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1629,7 +1677,7 @@ Same as slaitem table [sla_slaitem_slaId](slaitem.md#BKMK_sla_slaitem_slaId) Man
 
 ### <a name="BKMK_sla_account"></a> sla_account
 
-Same as account table [sla_account](account.md#BKMK_sla_account) Many-To-One relationship.
+Same as the [sla_account](account.md#BKMK_sla_account) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1644,7 +1692,7 @@ Same as account table [sla_account](account.md#BKMK_sla_account) Many-To-One rel
 
 ### <a name="BKMK_SLA_SyncErrors"></a> SLA_SyncErrors
 
-Same as syncerror table [SLA_SyncErrors](syncerror.md#BKMK_SLA_SyncErrors) Many-To-One relationship.
+Same as the [SLA_SyncErrors](syncerror.md#BKMK_SLA_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1659,7 +1707,7 @@ Same as syncerror table [SLA_SyncErrors](syncerror.md#BKMK_SLA_SyncErrors) Many-
 
 ### <a name="BKMK_manualsla_letter"></a> manualsla_letter
 
-Same as letter table [manualsla_letter](letter.md#BKMK_manualsla_letter) Many-To-One relationship.
+Same as the [manualsla_letter](letter.md#BKMK_manualsla_letter) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1674,7 +1722,7 @@ Same as letter table [manualsla_letter](letter.md#BKMK_manualsla_letter) Many-To
 
 ### <a name="BKMK_manualsla_appointment"></a> manualsla_appointment
 
-Same as appointment table [manualsla_appointment](appointment.md#BKMK_manualsla_appointment) Many-To-One relationship.
+Same as the [manualsla_appointment](appointment.md#BKMK_manualsla_appointment) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1689,7 +1737,7 @@ Same as appointment table [manualsla_appointment](appointment.md#BKMK_manualsla_
 
 ### <a name="BKMK_manualsla_socialactivity"></a> manualsla_socialactivity
 
-Same as socialactivity table [manualsla_socialactivity](socialactivity.md#BKMK_manualsla_socialactivity) Many-To-One relationship.
+Same as the [manualsla_socialactivity](socialactivity.md#BKMK_manualsla_socialactivity) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1704,7 +1752,7 @@ Same as socialactivity table [manualsla_socialactivity](socialactivity.md#BKMK_m
 
 ### <a name="BKMK_sla_fax"></a> sla_fax
 
-Same as fax table [sla_fax](fax.md#BKMK_sla_fax) Many-To-One relationship.
+Same as the [sla_fax](fax.md#BKMK_sla_fax) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1719,7 +1767,7 @@ Same as fax table [sla_fax](fax.md#BKMK_sla_fax) Many-To-One relationship.
 
 ### <a name="BKMK_sla_contact"></a> sla_contact
 
-Same as contact table [sla_contact](contact.md#BKMK_sla_contact) Many-To-One relationship.
+Same as the [sla_contact](contact.md#BKMK_sla_contact) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1734,7 +1782,7 @@ Same as contact table [sla_contact](contact.md#BKMK_sla_contact) Many-To-One rel
 
 ### <a name="BKMK_slabase_ProcessSessions"></a> slabase_ProcessSessions
 
-Same as processsession table [slabase_ProcessSessions](processsession.md#BKMK_slabase_ProcessSessions) Many-To-One relationship.
+Same as the [slabase_ProcessSessions](processsession.md#BKMK_slabase_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1749,7 +1797,7 @@ Same as processsession table [slabase_ProcessSessions](processsession.md#BKMK_sl
 
 ### <a name="BKMK_sla_phonecall"></a> sla_phonecall
 
-Same as phonecall table [sla_phonecall](phonecall.md#BKMK_sla_phonecall) Many-To-One relationship.
+Same as the [sla_phonecall](phonecall.md#BKMK_sla_phonecall) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1764,7 +1812,7 @@ Same as phonecall table [sla_phonecall](phonecall.md#BKMK_sla_phonecall) Many-To
 
 ### <a name="BKMK_manualsla_email"></a> manualsla_email
 
-Same as email table [manualsla_email](email.md#BKMK_manualsla_email) Many-To-One relationship.
+Same as the [manualsla_email](email.md#BKMK_manualsla_email) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1774,6 +1822,40 @@ Same as email table [manualsla_email](email.md#BKMK_manualsla_email) Many-To-One
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|manualsla_email|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_chat_sla_slaid"></a> chat_sla_slaid
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_sla_slaid](chat.md#BKMK_chat_sla_slaid) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|slaid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_sla_slaid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10001|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_chat_sla_slainvokedid"></a> chat_sla_slainvokedid
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_sla_slainvokedid](chat.md#BKMK_chat_sla_slainvokedid) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|slainvokedid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_sla_slainvokedid|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
@@ -1796,46 +1878,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_slabase_workflowid"></a> slabase_workflowid
 
-See workflow Table [slabase_workflowid](workflow.md#BKMK_slabase_workflowid) One-To-Many relationship.
+See the [slabase_workflowid](workflow.md#BKMK_slabase_workflowid) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### <a name="BKMK_lk_slabase_modifiedonbehalfby"></a> lk_slabase_modifiedonbehalfby
 
-See systemuser Table [lk_slabase_modifiedonbehalfby](systemuser.md#BKMK_lk_slabase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_slabase_modifiedonbehalfby](systemuser.md#BKMK_lk_slabase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_slabase_createdonbehalfby"></a> lk_slabase_createdonbehalfby
 
-See systemuser Table [lk_slabase_createdonbehalfby](systemuser.md#BKMK_lk_slabase_createdonbehalfby) One-To-Many relationship.
+See the [lk_slabase_createdonbehalfby](systemuser.md#BKMK_lk_slabase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_slabase_createdby"></a> lk_slabase_createdby
 
-See systemuser Table [lk_slabase_createdby](systemuser.md#BKMK_lk_slabase_createdby) One-To-Many relationship.
+See the [lk_slabase_createdby](systemuser.md#BKMK_lk_slabase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_slaBase"></a> team_slaBase
 
-See team Table [team_slaBase](team.md#BKMK_team_slaBase) One-To-Many relationship.
+See the [team_slaBase](team.md#BKMK_team_slaBase) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_SLA"></a> TransactionCurrency_SLA
 
-See transactioncurrency Table [TransactionCurrency_SLA](transactioncurrency.md#BKMK_TransactionCurrency_SLA) One-To-Many relationship.
+See the [TransactionCurrency_SLA](transactioncurrency.md#BKMK_TransactionCurrency_SLA) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_slabase_modifiedby"></a> lk_slabase_modifiedby
 
-See systemuser Table [lk_slabase_modifiedby](systemuser.md#BKMK_lk_slabase_modifiedby) One-To-Many relationship.
+See the [lk_slabase_modifiedby](systemuser.md#BKMK_lk_slabase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_slabase"></a> user_slabase
 
-See systemuser Table [user_slabase](systemuser.md#BKMK_user_slabase) One-To-Many relationship.
+See the [user_slabase](systemuser.md#BKMK_user_slabase) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_slabase"></a> business_unit_slabase
 
-See businessunit Table [business_unit_slabase](businessunit.md#BKMK_business_unit_slabase) One-To-Many relationship.
+See the [business_unit_slabase](businessunit.md#BKMK_business_unit_slabase) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_slabase_businesshoursid"></a> slabase_businesshoursid
 
-See calendar Table [slabase_businesshoursid](calendar.md#BKMK_slabase_businesshoursid) One-To-Many relationship.
+See the [slabase_businesshoursid](calendar.md#BKMK_slabase_businesshoursid) one-to-many relationship for the [calendar](calendar.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sla?text=sla EntityType" />

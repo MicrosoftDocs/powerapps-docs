@@ -1,19 +1,18 @@
 ---
 title: "Web API CDSWebApiService Async Parallel Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates using Task Parallel Library (TPL) dataflow components with asynchronous requests."
-ms.custom: ""
-ms.date: 07/15/2021
-
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Web API CDSWebApiService Async Parallel Operations Sample (C#)
@@ -185,7 +184,7 @@ namespace PowerApps.Samples
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
 [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)<br />
-[Create a table using the Web API](../create-entity-web-api.md)<br />
+[Create a table row using the Web API](../create-entity-web-api.md)<br />
 [Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

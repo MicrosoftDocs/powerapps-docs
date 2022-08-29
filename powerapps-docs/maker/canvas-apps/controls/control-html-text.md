@@ -2,12 +2,11 @@
 title: HTML text control in Power Apps
 description: Learn about the details, properties, and examples of the HTML text control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.subservice: canvas-maker
-ms.date: 07/13/2021
+ms.date: 07/19/2022
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -54,6 +53,9 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[OnSelect](properties-core.md)** – Actions to do when the user selects a control.
 
+> [!NOTE]
+> **OnSelect** is ignored for hyperlinks within the content referenced inside **HtmlText** property.
+
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 
 **[PaddingLeft](properties-size-location.md)** – The distance between text in a control and the left edge of that control.
@@ -91,7 +93,8 @@ An **HTML text** control not only shows plain text and numbers but also converts
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
 ## Accessibility guidelines
-**HTML text** isn't meant to be interactive. Use it only for text display.
+
+ARIA mapping for elements inside the **HTML text** control are not defined automatically by Power Apps.
 
 ### Color contrast
 There must be adequate color contrast between:

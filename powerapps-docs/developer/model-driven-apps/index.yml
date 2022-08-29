@@ -6,9 +6,8 @@ summary: Model-driven apps are primarily a no-code or low-code component focused
 metadata:
   title: Model-driven apps developer documentation
   description: Provides access to highlighted areas within the model-driven apps documentation
-  services: service
-  
-  ms.subservice: subservice
+  services: service  
+  ms.subservice: mda-developer
   ms.topic: landing-page 
   ms.collection: collection
   author: kumarvivek

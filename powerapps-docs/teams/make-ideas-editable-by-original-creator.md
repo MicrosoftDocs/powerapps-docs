@@ -269,7 +269,7 @@ Now, we'll add a container that will include the idea details section on our ide
     | Name | conIdeaEditPane |
     | X | 300 |
     | Y | comHeader_CampaignDetail_EditScreen.Y + comHeader_CampaignDetail_EditScreen.Height |
-    | Width | Parent.Width - conCampaignDetailNav_1.Width |
+    | Width | Parent.Width - conCampaignDetailNav_EditScreen.Width |
     | Height | Parent.Height - Self.Y |
 
 1. Add another container inside this new container using the steps above.

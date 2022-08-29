@@ -1,9 +1,9 @@
 ---
 title: "Importing and exporting data | MicrosoftDocs"
+description: Learn about importing and exporting data into Microsoft Dataverse.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -11,7 +11,7 @@ applies_to:
   - "powerapps"
 author: "mmercuri"
 ms.subservice: dataverse-maker
-ms.author: "mmercuri"
+ms.author: "kvivek"
 manager: "kvivek"
 search.audienceType: 
   - maker
@@ -36,7 +36,7 @@ Power Query is a data connection technology you can use to discover, connect, co
 
 ![Dataflows and Power Query with Dataverse.](media/dataflows-power-query-with-cds.png "Dataflows and Power Query with Dataverse")
 
-More information: [Create and use dataflows in Power Apps](./create-and-use-dataflows.md) and [Add data to a table in Dataverse by using Power Query](./add-data-power-query.md)
+More information: [Create and use dataflows in Power Apps](./create-and-use-dataflows.md) and [Add data to a table in Dataverse by using Power Query](/power-query/dataflows/add-data-power-query)
 
 ## Azure Data Factory
 
@@ -52,7 +52,7 @@ In addition to bringing data into Dataverse, Data Factory can also be used to pr
 
 ## Exporting data from Dataverse
 
-Exporting data, either to another data technology or to another Dataverse environment, can use any of the same technologies mentioned for importing data, such as dataflows, Data Factory, Power Query, and Power Automate.
+Exporting data, either to another data technology or to another environment, can use any of the same technologies mentioned for importing data, such as dataflows, Data Factory, Power Query, and Power Automate.
 
 ![Export Dataverse data methods.](media/export-cds-data.png "Export Dataverse data methods")
 

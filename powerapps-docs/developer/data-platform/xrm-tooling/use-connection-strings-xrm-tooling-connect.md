@@ -1,19 +1,20 @@
 ---
 title: "Use connection strings in XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Microsoft Dataverse environment by using connection strings"
-ms.custom: ""
-ms.date: 1/6/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
+ms.topic: article
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke
 ---
 # Use connection strings in XRM tooling to connect to Microsoft Dataverse
 

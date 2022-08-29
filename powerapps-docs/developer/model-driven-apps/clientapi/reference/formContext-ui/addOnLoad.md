@@ -1,6 +1,6 @@
 ---
-title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the addOnLoad method.
+title: "ui.addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the ui.addOnLoad method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# addOnLoad (Client API reference)
+# ui.addOnLoad (Client API reference)
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Add a custom page to your model-driven app" 
 description: " Learn how to add a custom page to a model-driven app"
-ms.date: 06/29/2021
+ms.date: 05/26/2022
 ms.reviewer: "matp"
 
 ms.subservice: mda-maker
@@ -14,16 +14,14 @@ search.audienceType:
 search.app: 
   - "PowerApps"
 ---
-# Add a custom page to your model-driven app (preview)
+# Add a custom page to your model-driven app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This article guides you through creating and editing a custom page for a model-driven app using the modern app designer.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Create or edit a model-driven app using modern app designer
 
@@ -53,10 +51,7 @@ The following steps walk you through opening the new modern app designer, which 
 
 1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
 
-1. Open the model-driven app menu and select **Edit** > **Edit in preview** to open the modern app designer.
-
-    > [!div class="mx-imgBorder"]
-    > ![Open modern app designer preview](media/add-page-to-model-app/open-modern-app-designer-preview.png "Open modern app designer preview")
+1. Open the model-driven app menu and select **Edit** to open the modern app designer.
 
 ## Create or edit a custom page
 
@@ -173,6 +168,6 @@ After saving changes to a custom page in the canvas designer, the custom page mu
 
 [Using PowerFx in custom page](page-powerfx-in-model-app.md)
 
-[Navigating to and from a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
+[Navigating to a custom page using client API](../../developer/model-driven-apps/clientapi/navigate-to-custom-page-examples.md)
 
 [Code components for custom page designer](../../developer/component-framework/component-framework-for-canvas-apps.md)

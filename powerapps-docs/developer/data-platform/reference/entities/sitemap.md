@@ -1,8 +1,8 @@
 ---
-title: "SiteMap table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SiteMap table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SiteMap table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -84,10 +84,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -108,10 +108,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -133,10 +133,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -158,10 +158,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -183,10 +183,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -398,10 +398,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -622,26 +622,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_SiteMap_createdby"></a> lk_SiteMap_createdby
 
-See systemuser Table [lk_SiteMap_createdby](systemuser.md#BKMK_lk_SiteMap_createdby) One-To-Many relationship.
+See the [lk_SiteMap_createdby](systemuser.md#BKMK_lk_SiteMap_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_SiteMap_modifiedby"></a> lk_SiteMap_modifiedby
 
-See systemuser Table [lk_SiteMap_modifiedby](systemuser.md#BKMK_lk_SiteMap_modifiedby) One-To-Many relationship.
+See the [lk_SiteMap_modifiedby](systemuser.md#BKMK_lk_SiteMap_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sitemap"></a> organization_sitemap
 
-See organization Table [organization_sitemap](organization.md#BKMK_organization_sitemap) One-To-Many relationship.
+See the [organization_sitemap](organization.md#BKMK_organization_sitemap) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_SiteMap_createdonbehalfby"></a> lk_SiteMap_createdonbehalfby
 
-See systemuser Table [lk_SiteMap_createdonbehalfby](systemuser.md#BKMK_lk_SiteMap_createdonbehalfby) One-To-Many relationship.
+See the [lk_SiteMap_createdonbehalfby](systemuser.md#BKMK_lk_SiteMap_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_SiteMap_modifiedonbehalfby"></a> lk_SiteMap_modifiedonbehalfby
 
-See systemuser Table [lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_SiteMap_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_SiteMap_modifiedonbehalfby](systemuser.md#BKMK_lk_SiteMap_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.sitemap?text=sitemap EntityType" />

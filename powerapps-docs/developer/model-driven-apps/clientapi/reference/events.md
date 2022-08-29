@@ -13,9 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Events (Client API reference)
-
 
 
 Events occur in Custom Engagement forms and grids whenever a form or grid loads, data is changed, or saved. You execute your JavaScript code by associating it an events so that it is executed when the event occurs. More information: [Events in forms and grids](../events-forms-grids.md)
@@ -23,6 +24,10 @@ Events occur in Custom Engagement forms and grids whenever a form or grid loads,
 ## Column event
 
 - [OnChange](events/attribute-onchange.md)
+
+## Control event
+
+- [OnOutputChange](events/onoutputchange.md)
 
 ## Form events
 

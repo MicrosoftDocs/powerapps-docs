@@ -5,18 +5,22 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 02/01/2022
+ms.date: 07/26/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Portals Web API overview
 
-The portals Web API enables building a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, read, update, and delete operations across all Microsoft Dataverse tables from your portals pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+The portals Web API enables a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, read, update, and delete operations across all Microsoft Dataverse tables from your portals pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
+
+> [!NOTE] 
+> You can also use portals Web API in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work**.
@@ -29,6 +33,9 @@ The portals Web API enables building a richer user experience inside Power Apps 
 
 The portals Web API offers a subset of capabilities for Dataverse operations that you can do by using the Dataverse API. We've kept the API format as similar as possible to reduce the learning curve.
 
+> [!NOTE]
+> Web API operations are case-sensitive.
+
 ### Web API operations available in portals
 
 - [Read records from a table](read-operations.md)
@@ -39,6 +46,9 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 ## Site settings for the Web API
 
 You must enable the site setting to enable the portals Web API for your portal. You can also configure the field-level Web API that determines the table fields that can or can't be modified with the portals Web API.
+
+> [!NOTE]
+> Use the table [logical name](../../developer/data-platform/entity-metadata.md) for these settings (for example **account**).
 
 | Site setting name | Description|
 | - |- |
@@ -68,6 +78,23 @@ You can configure [column permissions](configure/column-permissions.md) to furth
 ## Authenticating portals Web API requests
 
 You don't need to include an authentication code, because authentication and authorization are managed by the application session. All Web API calls must include a Cross-Site Request Forgery (CSRF) token.
+
+## Using EntitySetName
+
+When referring to Dataverse tables using the portals Web API in your code, you need to use the [EntitySetName](../../developer/data-platform/entity-metadata.md#table-names), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**; `/_api/accounts()`.
+
+> [!NOTE]
+> Use the table logical name for [site settings](#site-settings-for-the-web-api) (for example, **account**).
+
+You can determine the **EntitySetName** of specific tables by following these steps: 
+
+1. Go to https://make.powerapps.com
+
+1. Select the **Dataverse** tab from the side panel and select the table.
+
+1. Select the **...** (Commands option) and then choose **Advanced**, **Tools**, and **Copy set name** to copy the **EntitySetName** of the table to your clipboard.
+
+    :::image type="content" source="media/web-api/entitysetname.png" alt-text="How to locate EntitySetName of a Dataverse table.":::
 
 ## General Data Protection Regulation (GDPR)
 

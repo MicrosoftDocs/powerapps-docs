@@ -1,19 +1,18 @@
 ---
 title: "Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to query data of Microsoft Dataverse entity instances, using the Dataverse Web API along with the CDSWebApiService class."
-ms.custom: ""
-ms.date: 07/15/2020
-
-applies_to: 
-  - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "pehecke"
-ms.reviewer: "pehecke"
-search.audienceType: 
+ms.date: 04/06/2022
+author: divka78
+ms.author: dikamath
+ms.reviewer: jdaly
+manager: sunilg
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # Query Data sample (C#)
@@ -30,7 +29,7 @@ This sample demonstrates how to perform data queries of Microsoft Dataverse tabl
 - Aggregate results
 - FetchXml queries
 - Using predefined queries
-  
+
 > [!NOTE]
 > This sample implements the Dataverse operations and console output detailed in [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the methods available in the [CDSWebApiService](cdswebapiservice.md) class for message processing, performance enhancements, and error management.
 
@@ -40,12 +39,12 @@ The following is required to build and run the sample:
 
 - Microsoft Visual Studio 2019.
 - Access to Dataverse with privileges to perform the operations described above.
-  
+
 ## How to run this sample
 
 1. Go to the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/) repository and either clone or download the compressed samples repository. If you downloaded the compressed file, extract its contents into a local folder.
 
-1. Navigate to the cds/webapi/C#/[QueryData](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QueryData) folder and load the solution file into Visual Studio.
+1. Navigate to the cds/webapi/C#/[QueryData](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QueryData) folder and load the solution file into Visual Studio.
 
 1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Dataverse environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
 
@@ -284,7 +283,7 @@ namespace PowerApps.Samples
                     //  3) Expand using collection-valued navigation properties (e.g.: via the 'contact_customer_accounts')
                     //  4) Expand using multiple navigation property types in a single request.
                     //  5) Multi-level expands
- 
+
                     // Tip: For performance best practice, always use $select statement in an expand option.
                     Console.WriteLine("\n-- Expanding Results --");
 
@@ -370,7 +369,7 @@ namespace PowerApps.Samples
 
                     //Get aggregated salary information about Contacts working for Contoso
 
-                    Console.WriteLine("\nAggregated Annual Income information for Contoso contacts:"); 
+                    Console.WriteLine("\nAggregated Annual Income information for Contoso contacts:");
 
                     JToken contactData = svc.Get($"{account1Uri}/contact_customer_accounts?" +
                         $"$apply=aggregate(annualincome with average as average, " +

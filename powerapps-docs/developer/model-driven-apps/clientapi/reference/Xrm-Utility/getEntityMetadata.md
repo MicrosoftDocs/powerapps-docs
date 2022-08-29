@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getEntityMetadata
+# getEntityMetadata (Client API)
 
 
 
@@ -299,23 +301,23 @@ An object returned with the following properties:</p>
 An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
 <ul>
 <li><b>DefaultFormValue</b>: Boolean. Default value for a Yes/No column.</li>
-<li><b>Choice</b>: Object. Options for the boolean column where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the boolean column where each option is a key:value pair.</li></ul>
 
 <p><b>Column definitions for the <i>enum</i> type</b><br/>
 An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
 <ul>
-<li><b>Choice</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 
 <p><b>Column definitions for the <i>choices</i> type</b><br/>
 An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
 <ul>
 <li><b>DefaultFormValue</b>: Number. Default form value for the column.</li>
-<li><b>Choice</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 
 <p><b>Column definitions for the <i>state</i> type</b><br/>
 An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
 <ul>
-<li><b>Choice</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 <p>The object also contains the following methods:</p>
 <ul>
 <li><b>getDefaultStatus(arg)</b>: Returns the default status (number) based on the passed in state value for a table. For default state and status values for a table, see table definitions information of the table in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">table/entity reference</a>.</li>
@@ -324,7 +326,7 @@ An object returned with the following properties in addition to the <i>base</i> 
 <p><b>Column definitions for the <i>status</i> type</b><br/>
 An object returned with the following properties in addition to the <i>base</i> column definitions type properties:</p>
 <ul>
-<li><b>Choice</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
+<li><b>OptionSet</b>: Object. Options for the column where each option is a key:value pair.</li></ul>
 <p>The object also contains the following method:</p>
 <ul>
 <li><b>getState(arg)</b>: Returns the state value (number) for the specified status value (number). For default state and status values for a table, see table definitions information of the table in <a href="/powerapps/developer/data-platform/reference/about-entity-reference">table/entity reference</a>.</li>

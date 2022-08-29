@@ -37,13 +37,13 @@ Have you ever tried to build an app and then publish it for iOS or Android devic
 With Power Apps, you can leverage the power of the user's mobile device. You have access to acceleration, the camera, the compass, the connection information, and location signals: all from within your app. This opens up a whole world of possibilities for building apps to get work done. Of course, touch functionality is just automatic in Power Apps: nothing extra to code when you build your app.
 
 **Get out of the box**  
-With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a SharePoint list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. Power Apps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-standard-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Power Automate and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
+With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. Power Apps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-standard-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Power Automate and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
 
 Now you can build solutions to scale where your users need to take you, not just where the original data lived.
 
 ## Power Apps and SharePoint: even better together
 
-Power Apps is a great tool for making your SharePoint experience better in two ways. You have the option to either customize the forms for a SharePoint list or to create a standalone app for working with SharePoint data.
+Power Apps is a great tool for making your SharePoint experience better in two ways. You have the option to either customize the forms for a list or to create a standalone app for working with SharePoint data.
 
 **Customizing a SharePoint form** is great if you want to customize how users add, view, or edit items in a list that they use for their everyday work. Clicking **Customize Forms** will create a single-screen &quot;forms app&quot; that will change modes (new/edit/view) based on context. SharePoint manages these apps; their permissions are the same as the list permissions for editing/viewing.
 
@@ -67,13 +67,13 @@ Use this technique if, instead of just updating the list-form experience, you wa
 
 To get started, follow these steps:
 
-1. Open the SharePoint list from which you would like to build an app.
+1. Open the list from which you would like to build an app.
 1. On the menu bar, select **Integrate** -> **Power Apps** -> **Create an app**.
 1. Provide a name, and then select **Create**.
 
 Power Apps will build you an app that you can customize.
 
-Start with a simple custom list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#create-an-app-from-within-sharepoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in Power Apps. Each of these builds on a simple SharePoint list app.
+Start with a simple list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#create-an-app-from-within-sharepoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in Power Apps. Each of these builds on a simple list app.
 
 ## How do you do that with Power Apps?
 
@@ -121,12 +121,12 @@ You'll need to dig deeper if you want to use Active Directory groups to manage a
 **Send an email from your app**  
 You can send an email message from Power Apps in many ways, but the easiest is to use the Office 365 Outlook Connector. With this connector, you can send a message as yourself from your app. You can also get email messages and other tasks that interact with your mailbox. There is [documentation](connections/connection-office365-outlook.md) or this community [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Send-an-email-from-PowerApps/m-p/74349) about sending email.
 
-You can send more complex message (for example, as part of a SharePoint approval workflow) by using Power Automate and connecting your app to the flow that you create. Once you connect your app to Power Automate, you've opened up the full power of a workflow engine that, like Power Apps, is very well connected to external data and services. For more information about how to connect Power Apps and Power Automate, check out this [documentation](using-logic-flows.md).
+You can send more complex message (for example, as part of a SharePoint approval workflow) by using Power Automate and connecting your app to the flow that you create. Once you connect your app to Power Automate, you've opened up the full power of a workflow engine that, like Power Apps, is very well connected to external data and services. For more information about how to connect Power Apps and Power Automate, check out this [documentation](working-with-flows.md).
 
 If you still haven't found the email option you're looking for, you can also leverage the Power Apps connectors for Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid, or SMTP. Connectivity is the beauty of Power Apps.
 
 **Workflows**  
-It's hard to talk about business apps and business logic without a workflow engine. The good news is the Power Apps team didn't reinvent the wheel and give you another workflow engine. Instead, they provide you with a robust connector to the Power Automate service. You can automate processes and tasks across more than [200 different services](https://flow.microsoft.com/connectors/) through their easy-to-use workflow engine. For more information about how to connect Power Apps and Power Automate, check out this [documentation](using-logic-flows.md).
+It's hard to talk about business apps and business logic without a workflow engine. The good news is the Power Apps team didn't reinvent the wheel and give you another workflow engine. Instead, they provide you with a robust connector to the Power Automate service. You can automate processes and tasks across more than [200 different services](https://flow.microsoft.com/connectors/) through their easy-to-use workflow engine. For more information about how to connect Power Apps and Power Automate, check out this [documentation](working-with-flows.md).
 
 **Variables with Power Apps**  
 When you build solutions, it's natural to think variables must be involved. Power Apps offers multiple types of variables, but use them only when necessary. Instead of thinking about getting data, storing it in a variable, and then referencing that variable, think about just referencing that data directly. You can better understand this model if you compare it to Excel. In Excel, Total isn't a variable; it's the sum of other fields. So, if you want to use that value elsewhere on the sheet, you specify the cell in which you calculated the total. The [documentation](working-with-variables.md) has a great explanation of all of this. Be open to a different thought process.

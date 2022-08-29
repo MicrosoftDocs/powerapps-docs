@@ -1,6 +1,6 @@
 ---
-title: "refreshRibbon (Client API reference) in model-driven apps| MicrosoftDocs"
-description: Includes description and supported parameters for the refreshRibbon method.
+title: "gridContext.refreshRibbon (Client API reference) in model-driven apps| MicrosoftDocs"
+description: Includes description and supported parameters for the gridContext.refreshRibbon method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -13,8 +13,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# refreshRibbon (Client API reference)
+# gridContext.refreshRibbon (Client API reference)
 
 
 

@@ -1,8 +1,8 @@
 ---
-title: "Team table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "Team table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Team table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -36,7 +36,7 @@ Collection of system users that routinely collaborate. Teams can be used to simp
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/teams<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |SetParentBusinessUnit|[Associate and disassociate entities](/powerapps/developer/common-data-service/webapi/associate-disassociate-entities-using-web-api)|<xref:Microsoft.Crm.Sdk.Messages.SetParentBusinessUnitRequest>|
 |SetParentSystemUser|<xref href="Microsoft.Dynamics.CRM.SetParentSystemUser?text=SetParentSystemUser Action" />|<xref:Microsoft.Crm.Sdk.Messages.SetParentSystemUserRequest>|
-|SetParentTeam|[Associate and disassociate entities](/powerapps/developer/common-data-service/webapi/associate-disassociate-entities-using-web-api)|<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|
+|SetParentTeam|<xref href="Microsoft.Dynamics.CRM.SetParentTeam?text=SetParentTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/teams(*teamid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
@@ -417,6 +417,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [IsDefault](#BKMK_IsDefault)
+- [IsSasTokenSet](#BKMK_IsSasTokenSet)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -427,6 +428,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [QueueIdName](#BKMK_QueueIdName)
+- [SasToken](#BKMK_SasToken)
+- [ShareLinkQualifier](#BKMK_ShareLinkQualifier)
 - [SystemManaged](#BKMK_SystemManaged)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -619,10 +622,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsSasTokenSet"></a> IsSasTokenSet
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|issastokenset|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsSasTokenSet Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -778,6 +806,42 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_SasToken"></a> SasToken
+
+**Added by**: Access Team Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Sas Token for Team.|
+|DisplayName|Sas Token|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|sastoken|
+|MaxLength|50|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ShareLinkQualifier"></a> ShareLinkQualifier
+
+**Added by**: Access Team Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Share Link Qualifier|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|sharelinkqualifier|
+|MaxLength|1250|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SystemManaged"></a> SystemManaged
 
 |Property|Value|
@@ -794,10 +858,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -897,12 +961,17 @@ Listed by **SchemaName**.
 - [team_customapiresponseproperty](#BKMK_team_customapiresponseproperty)
 - [team_datalakefolder](#BKMK_team_datalakefolder)
 - [team_datalakefolderpermission](#BKMK_team_datalakefolderpermission)
+- [team_synapsedatabase](#BKMK_team_synapsedatabase)
 - [team_msdyn_dataflow](#BKMK_team_msdyn_dataflow)
+- [team_msdyn_dataflowrefreshhistory](#BKMK_team_msdyn_dataflowrefreshhistory)
+- [team_msdyn_entityrefreshhistory](#BKMK_team_msdyn_entityrefreshhistory)
 - [team_connector](#BKMK_team_connector)
 - [team_environmentvariabledefinition](#BKMK_team_environmentvariabledefinition)
 - [team_environmentvariablevalue](#BKMK_team_environmentvariablevalue)
 - [team_flowmachine](#BKMK_team_flowmachine)
 - [team_flowmachinegroup](#BKMK_team_flowmachinegroup)
+- [team_flowmachineimage](#BKMK_team_flowmachineimage)
+- [team_flowmachineimageversion](#BKMK_team_flowmachineimageversion)
 - [team_processstageparameter](#BKMK_team_processstageparameter)
 - [team_flowsession](#BKMK_team_flowsession)
 - [team_workflowbinary](#BKMK_team_workflowbinary)
@@ -910,6 +979,7 @@ Listed by **SchemaName**.
 - [team_msdyn_aiconfiguration](#BKMK_team_msdyn_aiconfiguration)
 - [team_msdyn_aimodel](#BKMK_team_msdyn_aimodel)
 - [team_msdyn_aitemplate](#BKMK_team_msdyn_aitemplate)
+- [team_msdyn_aibfeedbackloop](#BKMK_team_msdyn_aibfeedbackloop)
 - [team_msdyn_aifptrainingdocument](#BKMK_team_msdyn_aifptrainingdocument)
 - [team_msdyn_aiodimage](#BKMK_team_msdyn_aiodimage)
 - [team_msdyn_aiodlabel](#BKMK_team_msdyn_aiodlabel)
@@ -926,8 +996,10 @@ Listed by **SchemaName**.
 - [team_bot](#BKMK_team_bot)
 - [team_botcomponent](#BKMK_team_botcomponent)
 - [team_activityfileattachment](#BKMK_team_activityfileattachment)
+- [chat_team_owningteam](#BKMK_chat_team_owningteam)
 - [team_msdyn_serviceconfiguration](#BKMK_team_msdyn_serviceconfiguration)
 - [team_msdyn_slakpi](#BKMK_team_msdyn_slakpi)
+- [team_msdyn_knowledgemanagementsetting](#BKMK_team_msdyn_knowledgemanagementsetting)
 - [team_msdyn_federatedarticle](#BKMK_team_msdyn_federatedarticle)
 - [team_msdyn_kmfederatedsearchconfig](#BKMK_team_msdyn_kmfederatedsearchconfig)
 - [team_msdyn_knowledgearticleimage](#BKMK_team_msdyn_knowledgearticleimage)
@@ -942,8 +1014,11 @@ Listed by **SchemaName**.
 - [team_managedidentity](#BKMK_team_managedidentity)
 - [team_appnotification](#BKMK_team_appnotification)
 - [team_msdyn_richtextfile](#BKMK_team_msdyn_richtextfile)
+- [team_msdyn_customcontrolextendedsettings](#BKMK_team_msdyn_customcontrolextendedsettings)
+- [team_msdyn_pmanalysishistory](#BKMK_team_msdyn_pmanalysishistory)
 - [team_msdyn_pminferredtask](#BKMK_team_msdyn_pminferredtask)
 - [team_msdyn_pmrecording](#BKMK_team_msdyn_pmrecording)
+- [team_msdyn_pmtemplate](#BKMK_team_msdyn_pmtemplate)
 - [team_msdyn_analysiscomponent](#BKMK_team_msdyn_analysiscomponent)
 - [team_msdyn_analysisjob](#BKMK_team_msdyn_analysisjob)
 - [team_msdyn_analysisresult](#BKMK_team_msdyn_analysisresult)
@@ -954,7 +1029,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_team_principalobjectattributeaccess_principalid"></a> team_principalobjectattributeaccess_principalid
 
-Same as principalobjectattributeaccess table [team_principalobjectattributeaccess_principalid](principalobjectattributeaccess.md#BKMK_team_principalobjectattributeaccess_principalid) Many-To-One relationship.
+Same as the [team_principalobjectattributeaccess_principalid](principalobjectattributeaccess.md#BKMK_team_principalobjectattributeaccess_principalid) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -969,7 +1044,7 @@ Same as principalobjectattributeaccess table [team_principalobjectattributeacces
 
 ### <a name="BKMK_team_exchangesyncidmapping"></a> team_exchangesyncidmapping
 
-Same as exchangesyncidmapping table [team_exchangesyncidmapping](exchangesyncidmapping.md#BKMK_team_exchangesyncidmapping) Many-To-One relationship.
+Same as the [team_exchangesyncidmapping](exchangesyncidmapping.md#BKMK_team_exchangesyncidmapping) many-to-one relationship for the [exchangesyncidmapping](exchangesyncidmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -984,7 +1059,7 @@ Same as exchangesyncidmapping table [team_exchangesyncidmapping](exchangesyncidm
 
 ### <a name="BKMK_team_interactionforemail"></a> team_interactionforemail
 
-Same as interactionforemail table [team_interactionforemail](interactionforemail.md#BKMK_team_interactionforemail) Many-To-One relationship.
+Same as the [team_interactionforemail](interactionforemail.md#BKMK_team_interactionforemail) many-to-one relationship for the [interactionforemail](interactionforemail.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -999,7 +1074,7 @@ Same as interactionforemail table [team_interactionforemail](interactionforemail
 
 ### <a name="BKMK_team_knowledgearticle"></a> team_knowledgearticle
 
-Same as knowledgearticle table [team_knowledgearticle](knowledgearticle.md#BKMK_team_knowledgearticle) Many-To-One relationship.
+Same as the [team_knowledgearticle](knowledgearticle.md#BKMK_team_knowledgearticle) many-to-one relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1014,7 +1089,7 @@ Same as knowledgearticle table [team_knowledgearticle](knowledgearticle.md#BKMK_
 
 ### <a name="BKMK_team_sharepointsite"></a> team_sharepointsite
 
-Same as sharepointsite table [team_sharepointsite](sharepointsite.md#BKMK_team_sharepointsite) Many-To-One relationship.
+Same as the [team_sharepointsite](sharepointsite.md#BKMK_team_sharepointsite) many-to-one relationship for the [sharepointsite](sharepointsite.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1029,7 +1104,7 @@ Same as sharepointsite table [team_sharepointsite](sharepointsite.md#BKMK_team_s
 
 ### <a name="BKMK_team_sharepointdocumentlocation"></a> team_sharepointdocumentlocation
 
-Same as sharepointdocumentlocation table [team_sharepointdocumentlocation](sharepointdocumentlocation.md#BKMK_team_sharepointdocumentlocation) Many-To-One relationship.
+Same as the [team_sharepointdocumentlocation](sharepointdocumentlocation.md#BKMK_team_sharepointdocumentlocation) many-to-one relationship for the [sharepointdocumentlocation](sharepointdocumentlocation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1044,7 +1119,7 @@ Same as sharepointdocumentlocation table [team_sharepointdocumentlocation](share
 
 ### <a name="BKMK_team_goal"></a> team_goal
 
-Same as goal table [team_goal](goal.md#BKMK_team_goal) Many-To-One relationship.
+Same as the [team_goal](goal.md#BKMK_team_goal) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1059,7 +1134,7 @@ Same as goal table [team_goal](goal.md#BKMK_team_goal) Many-To-One relationship.
 
 ### <a name="BKMK_team_goalrollupquery"></a> team_goalrollupquery
 
-Same as goalrollupquery table [team_goalrollupquery](goalrollupquery.md#BKMK_team_goalrollupquery) Many-To-One relationship.
+Same as the [team_goalrollupquery](goalrollupquery.md#BKMK_team_goalrollupquery) many-to-one relationship for the [goalrollupquery](goalrollupquery.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1074,7 +1149,7 @@ Same as goalrollupquery table [team_goalrollupquery](goalrollupquery.md#BKMK_tea
 
 ### <a name="BKMK_team_mailbox"></a> team_mailbox
 
-Same as mailbox table [team_mailbox](mailbox.md#BKMK_team_mailbox) Many-To-One relationship.
+Same as the [team_mailbox](mailbox.md#BKMK_team_mailbox) many-to-one relationship for the [mailbox](mailbox.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1089,7 +1164,7 @@ Same as mailbox table [team_mailbox](mailbox.md#BKMK_team_mailbox) Many-To-One r
 
 ### <a name="BKMK_team_connections2"></a> team_connections2
 
-Same as connection table [team_connections2](connection.md#BKMK_team_connections2) Many-To-One relationship.
+Same as the [team_connections2](connection.md#BKMK_team_connections2) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1104,7 +1179,7 @@ Same as connection table [team_connections2](connection.md#BKMK_team_connections
 
 ### <a name="BKMK_team_slaBase"></a> team_slaBase
 
-Same as sla table [team_slaBase](sla.md#BKMK_team_slaBase) Many-To-One relationship.
+Same as the [team_slaBase](sla.md#BKMK_team_slaBase) many-to-one relationship for the [sla](sla.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1119,7 +1194,7 @@ Same as sla table [team_slaBase](sla.md#BKMK_team_slaBase) Many-To-One relations
 
 ### <a name="BKMK_team_goal_goalowner"></a> team_goal_goalowner
 
-Same as goal table [team_goal_goalowner](goal.md#BKMK_team_goal_goalowner) Many-To-One relationship.
+Same as the [team_goal_goalowner](goal.md#BKMK_team_goal_goalowner) many-to-one relationship for the [goal](goal.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1134,7 +1209,7 @@ Same as goal table [team_goal_goalowner](goal.md#BKMK_team_goal_goalowner) Many-
 
 ### <a name="BKMK_team_principalobjectattributeaccess"></a> team_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [team_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_team_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [team_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_team_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1149,7 +1224,7 @@ Same as principalobjectattributeaccess table [team_principalobjectattributeacces
 
 ### <a name="BKMK_OwningTeam_postfollows"></a> OwningTeam_postfollows
 
-Same as postfollow table [OwningTeam_postfollows](postfollow.md#BKMK_OwningTeam_postfollows) Many-To-One relationship.
+Same as the [OwningTeam_postfollows](postfollow.md#BKMK_OwningTeam_postfollows) many-to-one relationship for the [postfollow](postfollow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1164,7 +1239,7 @@ Same as postfollow table [OwningTeam_postfollows](postfollow.md#BKMK_OwningTeam_
 
 ### <a name="BKMK_team_ImportMaps"></a> team_ImportMaps
 
-Same as importmap table [team_ImportMaps](importmap.md#BKMK_team_ImportMaps) Many-To-One relationship.
+Same as the [team_ImportMaps](importmap.md#BKMK_team_ImportMaps) many-to-one relationship for the [importmap](importmap.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1179,7 +1254,7 @@ Same as importmap table [team_ImportMaps](importmap.md#BKMK_team_ImportMaps) Man
 
 ### <a name="BKMK_team_recurringappointmentmaster"></a> team_recurringappointmentmaster
 
-Same as recurringappointmentmaster table [team_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_team_recurringappointmentmaster) Many-To-One relationship.
+Same as the [team_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_team_recurringappointmentmaster) many-to-one relationship for the [recurringappointmentmaster](recurringappointmentmaster.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1194,7 +1269,7 @@ Same as recurringappointmentmaster table [team_recurringappointmentmaster](recur
 
 ### <a name="BKMK_team_queueitembase_workerid"></a> team_queueitembase_workerid
 
-Same as queueitem table [team_queueitembase_workerid](queueitem.md#BKMK_team_queueitembase_workerid) Many-To-One relationship.
+Same as the [team_queueitembase_workerid](queueitem.md#BKMK_team_queueitembase_workerid) many-to-one relationship for the [queueitem](queueitem.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1209,7 +1284,7 @@ Same as queueitem table [team_queueitembase_workerid](queueitem.md#BKMK_team_que
 
 ### <a name="BKMK_team_phonecall"></a> team_phonecall
 
-Same as phonecall table [team_phonecall](phonecall.md#BKMK_team_phonecall) Many-To-One relationship.
+Same as the [team_phonecall](phonecall.md#BKMK_team_phonecall) many-to-one relationship for the [phonecall](phonecall.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1224,7 +1299,7 @@ Same as phonecall table [team_phonecall](phonecall.md#BKMK_team_phonecall) Many-
 
 ### <a name="BKMK_team_emailserverprofile"></a> team_emailserverprofile
 
-Same as emailserverprofile table [team_emailserverprofile](emailserverprofile.md#BKMK_team_emailserverprofile) Many-To-One relationship.
+Same as the [team_emailserverprofile](emailserverprofile.md#BKMK_team_emailserverprofile) many-to-one relationship for the [emailserverprofile](emailserverprofile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1239,7 +1314,7 @@ Same as emailserverprofile table [team_emailserverprofile](emailserverprofile.md
 
 ### <a name="BKMK_team_connections1"></a> team_connections1
 
-Same as connection table [team_connections1](connection.md#BKMK_team_connections1) Many-To-One relationship.
+Same as the [team_connections1](connection.md#BKMK_team_connections1) many-to-one relationship for the [connection](connection.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1254,7 +1329,7 @@ Same as connection table [team_connections1](connection.md#BKMK_team_connections
 
 ### <a name="BKMK_team_userqueryvisualizations"></a> team_userqueryvisualizations
 
-Same as userqueryvisualization table [team_userqueryvisualizations](userqueryvisualization.md#BKMK_team_userqueryvisualizations) Many-To-One relationship.
+Same as the [team_userqueryvisualizations](userqueryvisualization.md#BKMK_team_userqueryvisualizations) many-to-one relationship for the [userqueryvisualization](userqueryvisualization.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1269,7 +1344,7 @@ Same as userqueryvisualization table [team_userqueryvisualizations](userqueryvis
 
 ### <a name="BKMK_team_userform"></a> team_userform
 
-Same as userform table [team_userform](userform.md#BKMK_team_userform) Many-To-One relationship.
+Same as the [team_userform](userform.md#BKMK_team_userform) many-to-one relationship for the [userform](userform.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1284,7 +1359,7 @@ Same as userform table [team_userform](userform.md#BKMK_team_userform) Many-To-O
 
 ### <a name="BKMK_team_socialactivity"></a> team_socialactivity
 
-Same as socialactivity table [team_socialactivity](socialactivity.md#BKMK_team_socialactivity) Many-To-One relationship.
+Same as the [team_socialactivity](socialactivity.md#BKMK_team_socialactivity) many-to-one relationship for the [socialactivity](socialactivity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1299,7 +1374,7 @@ Same as socialactivity table [team_socialactivity](socialactivity.md#BKMK_team_s
 
 ### <a name="BKMK_Team_ProcessSessions"></a> Team_ProcessSessions
 
-Same as processsession table [Team_ProcessSessions](processsession.md#BKMK_Team_ProcessSessions) Many-To-One relationship.
+Same as the [Team_ProcessSessions](processsession.md#BKMK_Team_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1314,7 +1389,7 @@ Same as processsession table [Team_ProcessSessions](processsession.md#BKMK_Team_
 
 ### <a name="BKMK_Team_DuplicateMatchingRecord"></a> Team_DuplicateMatchingRecord
 
-Same as duplicaterecord table [Team_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Team_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [Team_DuplicateMatchingRecord](duplicaterecord.md#BKMK_Team_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1329,7 +1404,7 @@ Same as duplicaterecord table [Team_DuplicateMatchingRecord](duplicaterecord.md#
 
 ### <a name="BKMK_team_contacts"></a> team_contacts
 
-Same as contact table [team_contacts](contact.md#BKMK_team_contacts) Many-To-One relationship.
+Same as the [team_contacts](contact.md#BKMK_team_contacts) many-to-one relationship for the [contact](contact.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1344,7 +1419,7 @@ Same as contact table [team_contacts](contact.md#BKMK_team_contacts) Many-To-One
 
 ### <a name="BKMK_Team_AsyncOperations"></a> Team_AsyncOperations
 
-Same as asyncoperation table [Team_AsyncOperations](asyncoperation.md#BKMK_Team_AsyncOperations) Many-To-One relationship.
+Same as the [Team_AsyncOperations](asyncoperation.md#BKMK_Team_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1359,7 +1434,7 @@ Same as asyncoperation table [Team_AsyncOperations](asyncoperation.md#BKMK_Team_
 
 ### <a name="BKMK_team_ImportLogs"></a> team_ImportLogs
 
-Same as importlog table [team_ImportLogs](importlog.md#BKMK_team_ImportLogs) Many-To-One relationship.
+Same as the [team_ImportLogs](importlog.md#BKMK_team_ImportLogs) many-to-one relationship for the [importlog](importlog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1374,7 +1449,7 @@ Same as importlog table [team_ImportLogs](importlog.md#BKMK_team_ImportLogs) Man
 
 ### <a name="BKMK_team_workflowlog"></a> team_workflowlog
 
-Same as workflowlog table [team_workflowlog](workflowlog.md#BKMK_team_workflowlog) Many-To-One relationship.
+Same as the [team_workflowlog](workflowlog.md#BKMK_team_workflowlog) many-to-one relationship for the [workflowlog](workflowlog.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1389,7 +1464,7 @@ Same as workflowlog table [team_workflowlog](workflowlog.md#BKMK_team_workflowlo
 
 ### <a name="BKMK_team_Imports"></a> team_Imports
 
-Same as import table [team_Imports](import.md#BKMK_team_Imports) Many-To-One relationship.
+Same as the [team_Imports](import.md#BKMK_team_Imports) many-to-one relationship for the [import](import.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1404,7 +1479,7 @@ Same as import table [team_Imports](import.md#BKMK_team_Imports) Many-To-One rel
 
 ### <a name="BKMK_team_processsession"></a> team_processsession
 
-Same as processsession table [team_processsession](processsession.md#BKMK_team_processsession) Many-To-One relationship.
+Same as the [team_processsession](processsession.md#BKMK_team_processsession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1419,7 +1494,7 @@ Same as processsession table [team_processsession](processsession.md#BKMK_team_p
 
 ### <a name="BKMK_team_SyncError"></a> team_SyncError
 
-Same as syncerror table [team_SyncError](syncerror.md#BKMK_team_SyncError) Many-To-One relationship.
+Same as the [team_SyncError](syncerror.md#BKMK_team_SyncError) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1434,7 +1509,7 @@ Same as syncerror table [team_SyncError](syncerror.md#BKMK_team_SyncError) Many-
 
 ### <a name="BKMK_team_letter"></a> team_letter
 
-Same as letter table [team_letter](letter.md#BKMK_team_letter) Many-To-One relationship.
+Same as the [team_letter](letter.md#BKMK_team_letter) many-to-one relationship for the [letter](letter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1449,7 +1524,7 @@ Same as letter table [team_letter](letter.md#BKMK_team_letter) Many-To-One relat
 
 ### <a name="BKMK_team_annotations"></a> team_annotations
 
-Same as annotation table [team_annotations](annotation.md#BKMK_team_annotations) Many-To-One relationship.
+Same as the [team_annotations](annotation.md#BKMK_team_annotations) many-to-one relationship for the [annotation](annotation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1464,7 +1539,7 @@ Same as annotation table [team_annotations](annotation.md#BKMK_team_annotations)
 
 ### <a name="BKMK_team_appointment"></a> team_appointment
 
-Same as appointment table [team_appointment](appointment.md#BKMK_team_appointment) Many-To-One relationship.
+Same as the [team_appointment](appointment.md#BKMK_team_appointment) many-to-one relationship for the [appointment](appointment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1479,7 +1554,7 @@ Same as appointment table [team_appointment](appointment.md#BKMK_team_appointmen
 
 ### <a name="BKMK_team_asyncoperation"></a> team_asyncoperation
 
-Same as asyncoperation table [team_asyncoperation](asyncoperation.md#BKMK_team_asyncoperation) Many-To-One relationship.
+Same as the [team_asyncoperation](asyncoperation.md#BKMK_team_asyncoperation) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1494,7 +1569,7 @@ Same as asyncoperation table [team_asyncoperation](asyncoperation.md#BKMK_team_a
 
 ### <a name="BKMK_Team_BulkDeleteFailures"></a> Team_BulkDeleteFailures
 
-Same as bulkdeletefailure table [Team_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Team_BulkDeleteFailures) Many-To-One relationship.
+Same as the [Team_BulkDeleteFailures](bulkdeletefailure.md#BKMK_Team_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1509,7 +1584,7 @@ Same as bulkdeletefailure table [Team_BulkDeleteFailures](bulkdeletefailure.md#B
 
 ### <a name="BKMK_Team_SyncErrors"></a> Team_SyncErrors
 
-Same as syncerror table [Team_SyncErrors](syncerror.md#BKMK_Team_SyncErrors) Many-To-One relationship.
+Same as the [Team_SyncErrors](syncerror.md#BKMK_Team_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1524,7 +1599,7 @@ Same as syncerror table [Team_SyncErrors](syncerror.md#BKMK_Team_SyncErrors) Man
 
 ### <a name="BKMK_team_mailboxtrackingfolder"></a> team_mailboxtrackingfolder
 
-Same as mailboxtrackingfolder table [team_mailboxtrackingfolder](mailboxtrackingfolder.md#BKMK_team_mailboxtrackingfolder) Many-To-One relationship.
+Same as the [team_mailboxtrackingfolder](mailboxtrackingfolder.md#BKMK_team_mailboxtrackingfolder) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1539,7 +1614,7 @@ Same as mailboxtrackingfolder table [team_mailboxtrackingfolder](mailboxtracking
 
 ### <a name="BKMK_team_task"></a> team_task
 
-Same as task table [team_task](task.md#BKMK_team_task) Many-To-One relationship.
+Same as the [team_task](task.md#BKMK_team_task) many-to-one relationship for the [task](task.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1554,7 +1629,7 @@ Same as task table [team_task](task.md#BKMK_team_task) Many-To-One relationship.
 
 ### <a name="BKMK_team_activity"></a> team_activity
 
-Same as activitypointer table [team_activity](activitypointer.md#BKMK_team_activity) Many-To-One relationship.
+Same as the [team_activity](activitypointer.md#BKMK_team_activity) many-to-one relationship for the [activitypointer](activitypointer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1569,7 +1644,7 @@ Same as activitypointer table [team_activity](activitypointer.md#BKMK_team_activ
 
 ### <a name="BKMK_Team_DuplicateBaseRecord"></a> Team_DuplicateBaseRecord
 
-Same as duplicaterecord table [Team_DuplicateBaseRecord](duplicaterecord.md#BKMK_Team_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [Team_DuplicateBaseRecord](duplicaterecord.md#BKMK_Team_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1584,7 +1659,7 @@ Same as duplicaterecord table [Team_DuplicateBaseRecord](duplicaterecord.md#BKMK
 
 ### <a name="BKMK_team_accounts"></a> team_accounts
 
-Same as account table [team_accounts](account.md#BKMK_team_accounts) Many-To-One relationship.
+Same as the [team_accounts](account.md#BKMK_team_accounts) many-to-one relationship for the [account](account.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1599,7 +1674,7 @@ Same as account table [team_accounts](account.md#BKMK_team_accounts) Many-To-One
 
 ### <a name="BKMK_team_userquery"></a> team_userquery
 
-Same as userquery table [team_userquery](userquery.md#BKMK_team_userquery) Many-To-One relationship.
+Same as the [team_userquery](userquery.md#BKMK_team_userquery) many-to-one relationship for the [userquery](userquery.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1614,7 +1689,7 @@ Same as userquery table [team_userquery](userquery.md#BKMK_team_userquery) Many-
 
 ### <a name="BKMK_team_email"></a> team_email
 
-Same as email table [team_email](email.md#BKMK_team_email) Many-To-One relationship.
+Same as the [team_email](email.md#BKMK_team_email) many-to-one relationship for the [email](email.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1629,7 +1704,7 @@ Same as email table [team_email](email.md#BKMK_team_email) Many-To-One relations
 
 ### <a name="BKMK_ImportFile_Team"></a> ImportFile_Team
 
-Same as importfile table [ImportFile_Team](importfile.md#BKMK_ImportFile_Team) Many-To-One relationship.
+Same as the [ImportFile_Team](importfile.md#BKMK_ImportFile_Team) many-to-one relationship for the [importfile](importfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1644,7 +1719,7 @@ Same as importfile table [ImportFile_Team](importfile.md#BKMK_ImportFile_Team) M
 
 ### <a name="BKMK_team_ImportFiles"></a> team_ImportFiles
 
-Same as importfile table [team_ImportFiles](importfile.md#BKMK_team_ImportFiles) Many-To-One relationship.
+Same as the [team_ImportFiles](importfile.md#BKMK_team_ImportFiles) many-to-one relationship for the [importfile](importfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1659,7 +1734,7 @@ Same as importfile table [team_ImportFiles](importfile.md#BKMK_team_ImportFiles)
 
 ### <a name="BKMK_team_email_templates"></a> team_email_templates
 
-Same as template table [team_email_templates](template.md#BKMK_team_email_templates) Many-To-One relationship.
+Same as the [team_email_templates](template.md#BKMK_team_email_templates) many-to-one relationship for the [template](template.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1674,7 +1749,7 @@ Same as template table [team_email_templates](template.md#BKMK_team_email_templa
 
 ### <a name="BKMK_team_fax"></a> team_fax
 
-Same as fax table [team_fax](fax.md#BKMK_team_fax) Many-To-One relationship.
+Same as the [team_fax](fax.md#BKMK_team_fax) many-to-one relationship for the [fax](fax.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1689,7 +1764,7 @@ Same as fax table [team_fax](fax.md#BKMK_team_fax) Many-To-One relationship.
 
 ### <a name="BKMK_team_DuplicateRules"></a> team_DuplicateRules
 
-Same as duplicaterule table [team_DuplicateRules](duplicaterule.md#BKMK_team_DuplicateRules) Many-To-One relationship.
+Same as the [team_DuplicateRules](duplicaterule.md#BKMK_team_DuplicateRules) many-to-one relationship for the [duplicaterule](duplicaterule.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1704,7 +1779,7 @@ Same as duplicaterule table [team_DuplicateRules](duplicaterule.md#BKMK_team_Dup
 
 ### <a name="BKMK_team_workflow"></a> team_workflow
 
-Same as workflow table [team_workflow](workflow.md#BKMK_team_workflow) Many-To-One relationship.
+Same as the [team_workflow](workflow.md#BKMK_team_workflow) many-to-one relationship for the [workflow](workflow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1721,7 +1796,7 @@ Same as workflow table [team_workflow](workflow.md#BKMK_team_workflow) Many-To-O
 
 **Added by**: Active Solution Solution
 
-Same as solutioncomponentbatchconfiguration table [team_solutioncomponentbatchconfiguration](solutioncomponentbatchconfiguration.md#BKMK_team_solutioncomponentbatchconfiguration) Many-To-One relationship.
+Same as the [team_solutioncomponentbatchconfiguration](solutioncomponentbatchconfiguration.md#BKMK_team_solutioncomponentbatchconfiguration) many-to-one relationship for the [solutioncomponentbatchconfiguration](solutioncomponentbatchconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1738,7 +1813,7 @@ Same as solutioncomponentbatchconfiguration table [team_solutioncomponentbatchco
 
 **Added by**: Active Solution Solution
 
-Same as stagesolutionupload table [team_stagesolutionupload](stagesolutionupload.md#BKMK_team_stagesolutionupload) Many-To-One relationship.
+Same as the [team_stagesolutionupload](stagesolutionupload.md#BKMK_team_stagesolutionupload) many-to-one relationship for the [stagesolutionupload](stagesolutionupload.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1755,7 +1830,7 @@ Same as stagesolutionupload table [team_stagesolutionupload](stagesolutionupload
 
 **Added by**: Active Solution Solution
 
-Same as exportsolutionupload table [team_exportsolutionupload](exportsolutionupload.md#BKMK_team_exportsolutionupload) Many-To-One relationship.
+Same as the [team_exportsolutionupload](exportsolutionupload.md#BKMK_team_exportsolutionupload) many-to-one relationship for the [exportsolutionupload](exportsolutionupload.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1772,7 +1847,7 @@ Same as exportsolutionupload table [team_exportsolutionupload](exportsolutionupl
 
 **Added by**: Active Solution Solution
 
-Same as featurecontrolsetting table [team_featurecontrolsetting](featurecontrolsetting.md#BKMK_team_featurecontrolsetting) Many-To-One relationship.
+Same as the [team_featurecontrolsetting](featurecontrolsetting.md#BKMK_team_featurecontrolsetting) many-to-one relationship for the [featurecontrolsetting](featurecontrolsetting.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1789,7 +1864,7 @@ Same as featurecontrolsetting table [team_featurecontrolsetting](featurecontrols
 
 **Added by**: Active Solution Solution
 
-Same as customapi table [team_customapi](customapi.md#BKMK_team_customapi) Many-To-One relationship.
+Same as the [team_customapi](customapi.md#BKMK_team_customapi) many-to-one relationship for the [customapi](customapi.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1806,7 +1881,7 @@ Same as customapi table [team_customapi](customapi.md#BKMK_team_customapi) Many-
 
 **Added by**: Active Solution Solution
 
-Same as customapirequestparameter table [team_customapirequestparameter](customapirequestparameter.md#BKMK_team_customapirequestparameter) Many-To-One relationship.
+Same as the [team_customapirequestparameter](customapirequestparameter.md#BKMK_team_customapirequestparameter) many-to-one relationship for the [customapirequestparameter](customapirequestparameter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1823,7 +1898,7 @@ Same as customapirequestparameter table [team_customapirequestparameter](customa
 
 **Added by**: Active Solution Solution
 
-Same as customapiresponseproperty table [team_customapiresponseproperty](customapiresponseproperty.md#BKMK_team_customapiresponseproperty) Many-To-One relationship.
+Same as the [team_customapiresponseproperty](customapiresponseproperty.md#BKMK_team_customapiresponseproperty) many-to-one relationship for the [customapiresponseproperty](customapiresponseproperty.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1840,7 +1915,7 @@ Same as customapiresponseproperty table [team_customapiresponseproperty](customa
 
 **Added by**: Active Solution Solution
 
-Same as datalakefolder table [team_datalakefolder](datalakefolder.md#BKMK_team_datalakefolder) Many-To-One relationship.
+Same as the [team_datalakefolder](datalakefolder.md#BKMK_team_datalakefolder) many-to-one relationship for the [datalakefolder](datalakefolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1857,7 +1932,7 @@ Same as datalakefolder table [team_datalakefolder](datalakefolder.md#BKMK_team_d
 
 **Added by**: Active Solution Solution
 
-Same as datalakefolderpermission table [team_datalakefolderpermission](datalakefolderpermission.md#BKMK_team_datalakefolderpermission) Many-To-One relationship.
+Same as the [team_datalakefolderpermission](datalakefolderpermission.md#BKMK_team_datalakefolderpermission) many-to-one relationship for the [datalakefolderpermission](datalakefolderpermission.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1870,11 +1945,28 @@ Same as datalakefolderpermission table [team_datalakefolderpermission](datalakef
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_synapsedatabase"></a> team_synapsedatabase
+
+**Added by**: Active Solution Solution
+
+Same as the [team_synapsedatabase](synapsedatabase.md#BKMK_team_synapsedatabase) many-to-one relationship for the [synapsedatabase](synapsedatabase.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|synapsedatabase|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_synapsedatabase|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_dataflow"></a> team_msdyn_dataflow
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_dataflow table [team_msdyn_dataflow](msdyn_dataflow.md#BKMK_team_msdyn_dataflow) Many-To-One relationship.
+Same as the [team_msdyn_dataflow](msdyn_dataflow.md#BKMK_team_msdyn_dataflow) many-to-one relationship for the [msdyn_dataflow](msdyn_dataflow.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1887,11 +1979,45 @@ Same as msdyn_dataflow table [team_msdyn_dataflow](msdyn_dataflow.md#BKMK_team_m
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_dataflowrefreshhistory"></a> team_msdyn_dataflowrefreshhistory
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_dataflowrefreshhistory](msdyn_dataflowrefreshhistory.md#BKMK_team_msdyn_dataflowrefreshhistory) many-to-one relationship for the [msdyn_dataflowrefreshhistory](msdyn_dataflowrefreshhistory.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflowrefreshhistory|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_dataflowrefreshhistory|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_msdyn_entityrefreshhistory"></a> team_msdyn_entityrefreshhistory
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_entityrefreshhistory](msdyn_entityrefreshhistory.md#BKMK_team_msdyn_entityrefreshhistory) many-to-one relationship for the [msdyn_entityrefreshhistory](msdyn_entityrefreshhistory.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_entityrefreshhistory|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_entityrefreshhistory|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_connector"></a> team_connector
 
 **Added by**: Active Solution Solution
 
-Same as connector table [team_connector](connector.md#BKMK_team_connector) Many-To-One relationship.
+Same as the [team_connector](connector.md#BKMK_team_connector) many-to-one relationship for the [connector](connector.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1908,7 +2034,7 @@ Same as connector table [team_connector](connector.md#BKMK_team_connector) Many-
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariabledefinition table [team_environmentvariabledefinition](environmentvariabledefinition.md#BKMK_team_environmentvariabledefinition) Many-To-One relationship.
+Same as the [team_environmentvariabledefinition](environmentvariabledefinition.md#BKMK_team_environmentvariabledefinition) many-to-one relationship for the [environmentvariabledefinition](environmentvariabledefinition.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1925,7 +2051,7 @@ Same as environmentvariabledefinition table [team_environmentvariabledefinition]
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariablevalue table [team_environmentvariablevalue](environmentvariablevalue.md#BKMK_team_environmentvariablevalue) Many-To-One relationship.
+Same as the [team_environmentvariablevalue](environmentvariablevalue.md#BKMK_team_environmentvariablevalue) many-to-one relationship for the [environmentvariablevalue](environmentvariablevalue.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1942,7 +2068,7 @@ Same as environmentvariablevalue table [team_environmentvariablevalue](environme
 
 **Added by**: Active Solution Solution
 
-Same as flowmachine table [team_flowmachine](flowmachine.md#BKMK_team_flowmachine) Many-To-One relationship.
+Same as the [team_flowmachine](flowmachine.md#BKMK_team_flowmachine) many-to-one relationship for the [flowmachine](flowmachine.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1959,7 +2085,7 @@ Same as flowmachine table [team_flowmachine](flowmachine.md#BKMK_team_flowmachin
 
 **Added by**: Active Solution Solution
 
-Same as flowmachinegroup table [team_flowmachinegroup](flowmachinegroup.md#BKMK_team_flowmachinegroup) Many-To-One relationship.
+Same as the [team_flowmachinegroup](flowmachinegroup.md#BKMK_team_flowmachinegroup) many-to-one relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1972,11 +2098,45 @@ Same as flowmachinegroup table [team_flowmachinegroup](flowmachinegroup.md#BKMK_
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_flowmachineimage"></a> team_flowmachineimage
+
+**Added by**: Active Solution Solution
+
+Same as the [team_flowmachineimage](flowmachineimage.md#BKMK_team_flowmachineimage) many-to-one relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachineimage|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_flowmachineimage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_flowmachineimageversion"></a> team_flowmachineimageversion
+
+**Added by**: Active Solution Solution
+
+Same as the [team_flowmachineimageversion](flowmachineimageversion.md#BKMK_team_flowmachineimageversion) many-to-one relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachineimageversion|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_flowmachineimageversion|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_processstageparameter"></a> team_processstageparameter
 
 **Added by**: Active Solution Solution
 
-Same as processstageparameter table [team_processstageparameter](processstageparameter.md#BKMK_team_processstageparameter) Many-To-One relationship.
+Same as the [team_processstageparameter](processstageparameter.md#BKMK_team_processstageparameter) many-to-one relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1993,7 +2153,7 @@ Same as processstageparameter table [team_processstageparameter](processstagepar
 
 **Added by**: Active Solution Solution
 
-Same as flowsession table [team_flowsession](flowsession.md#BKMK_team_flowsession) Many-To-One relationship.
+Same as the [team_flowsession](flowsession.md#BKMK_team_flowsession) many-to-one relationship for the [flowsession](flowsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2010,7 +2170,7 @@ Same as flowsession table [team_flowsession](flowsession.md#BKMK_team_flowsessio
 
 **Added by**: Active Solution Solution
 
-Same as workflowbinary table [team_workflowbinary](workflowbinary.md#BKMK_team_workflowbinary) Many-To-One relationship.
+Same as the [team_workflowbinary](workflowbinary.md#BKMK_team_workflowbinary) many-to-one relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2027,7 +2187,7 @@ Same as workflowbinary table [team_workflowbinary](workflowbinary.md#BKMK_team_w
 
 **Added by**: Active Solution Solution
 
-Same as connectionreference table [team_connectionreference](connectionreference.md#BKMK_team_connectionreference) Many-To-One relationship.
+Same as the [team_connectionreference](connectionreference.md#BKMK_team_connectionreference) many-to-one relationship for the [connectionreference](connectionreference.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2044,7 +2204,7 @@ Same as connectionreference table [team_connectionreference](connectionreference
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aiconfiguration table [team_msdyn_aiconfiguration](msdyn_aiconfiguration.md#BKMK_team_msdyn_aiconfiguration) Many-To-One relationship.
+Same as the [team_msdyn_aiconfiguration](msdyn_aiconfiguration.md#BKMK_team_msdyn_aiconfiguration) many-to-one relationship for the [msdyn_aiconfiguration](msdyn_aiconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2061,7 +2221,7 @@ Same as msdyn_aiconfiguration table [team_msdyn_aiconfiguration](msdyn_aiconfigu
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aimodel table [team_msdyn_aimodel](msdyn_aimodel.md#BKMK_team_msdyn_aimodel) Many-To-One relationship.
+Same as the [team_msdyn_aimodel](msdyn_aimodel.md#BKMK_team_msdyn_aimodel) many-to-one relationship for the [msdyn_aimodel](msdyn_aimodel.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2078,7 +2238,7 @@ Same as msdyn_aimodel table [team_msdyn_aimodel](msdyn_aimodel.md#BKMK_team_msdy
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aitemplate table [team_msdyn_aitemplate](msdyn_aitemplate.md#BKMK_team_msdyn_aitemplate) Many-To-One relationship.
+Same as the [team_msdyn_aitemplate](msdyn_aitemplate.md#BKMK_team_msdyn_aitemplate) many-to-one relationship for the [msdyn_aitemplate](msdyn_aitemplate.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2091,11 +2251,28 @@ Same as msdyn_aitemplate table [team_msdyn_aitemplate](msdyn_aitemplate.md#BKMK_
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_aibfeedbackloop"></a> team_msdyn_aibfeedbackloop
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md#BKMK_team_msdyn_aibfeedbackloop) many-to-one relationship for the [msdyn_aibfeedbackloop](msdyn_aibfeedbackloop.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfeedbackloop|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_msdyn_aibfeedbackloop|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_aifptrainingdocument"></a> team_msdyn_aifptrainingdocument
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aifptrainingdocument table [team_msdyn_aifptrainingdocument](msdyn_aifptrainingdocument.md#BKMK_team_msdyn_aifptrainingdocument) Many-To-One relationship.
+Same as the [team_msdyn_aifptrainingdocument](msdyn_aifptrainingdocument.md#BKMK_team_msdyn_aifptrainingdocument) many-to-one relationship for the [msdyn_aifptrainingdocument](msdyn_aifptrainingdocument.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2112,7 +2289,7 @@ Same as msdyn_aifptrainingdocument table [team_msdyn_aifptrainingdocument](msdyn
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aiodimage table [team_msdyn_aiodimage](msdyn_aiodimage.md#BKMK_team_msdyn_aiodimage) Many-To-One relationship.
+Same as the [team_msdyn_aiodimage](msdyn_aiodimage.md#BKMK_team_msdyn_aiodimage) many-to-one relationship for the [msdyn_aiodimage](msdyn_aiodimage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2129,7 +2306,7 @@ Same as msdyn_aiodimage table [team_msdyn_aiodimage](msdyn_aiodimage.md#BKMK_tea
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aiodlabel table [team_msdyn_aiodlabel](msdyn_aiodlabel.md#BKMK_team_msdyn_aiodlabel) Many-To-One relationship.
+Same as the [team_msdyn_aiodlabel](msdyn_aiodlabel.md#BKMK_team_msdyn_aiodlabel) many-to-one relationship for the [msdyn_aiodlabel](msdyn_aiodlabel.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2146,7 +2323,7 @@ Same as msdyn_aiodlabel table [team_msdyn_aiodlabel](msdyn_aiodlabel.md#BKMK_tea
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aiodtrainingboundingbox table [team_msdyn_aiodtrainingboundingbox](msdyn_aiodtrainingboundingbox.md#BKMK_team_msdyn_aiodtrainingboundingbox) Many-To-One relationship.
+Same as the [team_msdyn_aiodtrainingboundingbox](msdyn_aiodtrainingboundingbox.md#BKMK_team_msdyn_aiodtrainingboundingbox) many-to-one relationship for the [msdyn_aiodtrainingboundingbox](msdyn_aiodtrainingboundingbox.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2163,7 +2340,7 @@ Same as msdyn_aiodtrainingboundingbox table [team_msdyn_aiodtrainingboundingbox]
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aiodtrainingimage table [team_msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md#BKMK_team_msdyn_aiodtrainingimage) Many-To-One relationship.
+Same as the [team_msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md#BKMK_team_msdyn_aiodtrainingimage) many-to-one relationship for the [msdyn_aiodtrainingimage](msdyn_aiodtrainingimage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2180,7 +2357,7 @@ Same as msdyn_aiodtrainingimage table [team_msdyn_aiodtrainingimage](msdyn_aiodt
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aibdataset table [team_msdyn_aibdataset](msdyn_aibdataset.md#BKMK_team_msdyn_aibdataset) Many-To-One relationship.
+Same as the [team_msdyn_aibdataset](msdyn_aibdataset.md#BKMK_team_msdyn_aibdataset) many-to-one relationship for the [msdyn_aibdataset](msdyn_aibdataset.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2197,7 +2374,7 @@ Same as msdyn_aibdataset table [team_msdyn_aibdataset](msdyn_aibdataset.md#BKMK_
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aibdatasetfile table [team_msdyn_aibdatasetfile](msdyn_aibdatasetfile.md#BKMK_team_msdyn_aibdatasetfile) Many-To-One relationship.
+Same as the [team_msdyn_aibdatasetfile](msdyn_aibdatasetfile.md#BKMK_team_msdyn_aibdatasetfile) many-to-one relationship for the [msdyn_aibdatasetfile](msdyn_aibdatasetfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2214,7 +2391,7 @@ Same as msdyn_aibdatasetfile table [team_msdyn_aibdatasetfile](msdyn_aibdatasetf
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aibdatasetrecord table [team_msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md#BKMK_team_msdyn_aibdatasetrecord) Many-To-One relationship.
+Same as the [team_msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md#BKMK_team_msdyn_aibdatasetrecord) many-to-one relationship for the [msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2231,7 +2408,7 @@ Same as msdyn_aibdatasetrecord table [team_msdyn_aibdatasetrecord](msdyn_aibdata
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aibdatasetscontainer table [team_msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md#BKMK_team_msdyn_aibdatasetscontainer) Many-To-One relationship.
+Same as the [team_msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md#BKMK_team_msdyn_aibdatasetscontainer) many-to-one relationship for the [msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2248,7 +2425,7 @@ Same as msdyn_aibdatasetscontainer table [team_msdyn_aibdatasetscontainer](msdyn
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aibfile table [team_msdyn_aibfile](msdyn_aibfile.md#BKMK_team_msdyn_aibfile) Many-To-One relationship.
+Same as the [team_msdyn_aibfile](msdyn_aibfile.md#BKMK_team_msdyn_aibfile) many-to-one relationship for the [msdyn_aibfile](msdyn_aibfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2265,7 +2442,7 @@ Same as msdyn_aibfile table [team_msdyn_aibfile](msdyn_aibfile.md#BKMK_team_msdy
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_aibfileattacheddata table [team_msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.md#BKMK_team_msdyn_aibfileattacheddata) Many-To-One relationship.
+Same as the [team_msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.md#BKMK_team_msdyn_aibfileattacheddata) many-to-one relationship for the [msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2282,7 +2459,7 @@ Same as msdyn_aibfileattacheddata table [team_msdyn_aibfileattacheddata](msdyn_a
 
 **Added by**: Active Solution Solution
 
-Same as msdynce_botcontent table [team_msdynce_botcontent](msdynce_botcontent.md#BKMK_team_msdynce_botcontent) Many-To-One relationship.
+Same as the [team_msdynce_botcontent](msdynce_botcontent.md#BKMK_team_msdynce_botcontent) many-to-one relationship for the [msdynce_botcontent](msdynce_botcontent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2299,7 +2476,7 @@ Same as msdynce_botcontent table [team_msdynce_botcontent](msdynce_botcontent.md
 
 **Added by**: Active Solution Solution
 
-Same as conversationtranscript table [team_conversationtranscript](conversationtranscript.md#BKMK_team_conversationtranscript) Many-To-One relationship.
+Same as the [team_conversationtranscript](conversationtranscript.md#BKMK_team_conversationtranscript) many-to-one relationship for the [conversationtranscript](conversationtranscript.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2316,7 +2493,7 @@ Same as conversationtranscript table [team_conversationtranscript](conversationt
 
 **Added by**: Active Solution Solution
 
-Same as bot table [team_bot](bot.md#BKMK_team_bot) Many-To-One relationship.
+Same as the [team_bot](bot.md#BKMK_team_bot) many-to-one relationship for the [bot](bot.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2333,7 +2510,7 @@ Same as bot table [team_bot](bot.md#BKMK_team_bot) Many-To-One relationship.
 
 **Added by**: Active Solution Solution
 
-Same as botcomponent table [team_botcomponent](botcomponent.md#BKMK_team_botcomponent) Many-To-One relationship.
+Same as the [team_botcomponent](botcomponent.md#BKMK_team_botcomponent) many-to-one relationship for the [botcomponent](botcomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2350,7 +2527,7 @@ Same as botcomponent table [team_botcomponent](botcomponent.md#BKMK_team_botcomp
 
 **Added by**: Activities Patch Solution
 
-Same as activityfileattachment table [team_activityfileattachment](activityfileattachment.md#BKMK_team_activityfileattachment) Many-To-One relationship.
+Same as the [team_activityfileattachment](activityfileattachment.md#BKMK_team_activityfileattachment) many-to-one relationship for the [activityfileattachment](activityfileattachment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2363,11 +2540,28 @@ Same as activityfileattachment table [team_activityfileattachment](activityfilea
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_chat_team_owningteam"></a> chat_team_owningteam
+
+**Added by**: Activities Patch Solution
+
+Same as the [chat_team_owningteam](chat.md#BKMK_chat_team_owningteam) many-to-one relationship for the [chat](chat.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|chat|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|chat_team_owningteam|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_serviceconfiguration"></a> team_msdyn_serviceconfiguration
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_serviceconfiguration table [team_msdyn_serviceconfiguration](msdyn_serviceconfiguration.md#BKMK_team_msdyn_serviceconfiguration) Many-To-One relationship.
+Same as the [team_msdyn_serviceconfiguration](msdyn_serviceconfiguration.md#BKMK_team_msdyn_serviceconfiguration) many-to-one relationship for the [msdyn_serviceconfiguration](msdyn_serviceconfiguration.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2384,7 +2578,7 @@ Same as msdyn_serviceconfiguration table [team_msdyn_serviceconfiguration](msdyn
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_slakpi table [team_msdyn_slakpi](msdyn_slakpi.md#BKMK_team_msdyn_slakpi) Many-To-One relationship.
+Same as the [team_msdyn_slakpi](msdyn_slakpi.md#BKMK_team_msdyn_slakpi) many-to-one relationship for the [msdyn_slakpi](msdyn_slakpi.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2397,11 +2591,28 @@ Same as msdyn_slakpi table [team_msdyn_slakpi](msdyn_slakpi.md#BKMK_team_msdyn_s
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_knowledgemanagementsetting"></a> team_msdyn_knowledgemanagementsetting
+
+**Added by**: Knowledge Management Patch Solution
+
+Same as the [team_msdyn_knowledgemanagementsetting](msdyn_knowledgemanagementsetting.md#BKMK_team_msdyn_knowledgemanagementsetting) many-to-one relationship for the [msdyn_knowledgemanagementsetting](msdyn_knowledgemanagementsetting.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_knowledgemanagementsetting|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_knowledgemanagementsetting|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_federatedarticle"></a> team_msdyn_federatedarticle
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_federatedarticle table [team_msdyn_federatedarticle](msdyn_federatedarticle.md#BKMK_team_msdyn_federatedarticle) Many-To-One relationship.
+Same as the [team_msdyn_federatedarticle](msdyn_federatedarticle.md#BKMK_team_msdyn_federatedarticle) many-to-one relationship for the [msdyn_federatedarticle](msdyn_federatedarticle.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2418,7 +2629,7 @@ Same as msdyn_federatedarticle table [team_msdyn_federatedarticle](msdyn_federat
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_kmfederatedsearchconfig table [team_msdyn_kmfederatedsearchconfig](msdyn_kmfederatedsearchconfig.md#BKMK_team_msdyn_kmfederatedsearchconfig) Many-To-One relationship.
+Same as the [team_msdyn_kmfederatedsearchconfig](msdyn_kmfederatedsearchconfig.md#BKMK_team_msdyn_kmfederatedsearchconfig) many-to-one relationship for the [msdyn_kmfederatedsearchconfig](msdyn_kmfederatedsearchconfig.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2435,7 +2646,7 @@ Same as msdyn_kmfederatedsearchconfig table [team_msdyn_kmfederatedsearchconfig]
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_knowledgearticleimage table [team_msdyn_knowledgearticleimage](msdyn_knowledgearticleimage.md#BKMK_team_msdyn_knowledgearticleimage) Many-To-One relationship.
+Same as the [team_msdyn_knowledgearticleimage](msdyn_knowledgearticleimage.md#BKMK_team_msdyn_knowledgearticleimage) many-to-one relationship for the [msdyn_knowledgearticleimage](msdyn_knowledgearticleimage.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2452,7 +2663,7 @@ Same as msdyn_knowledgearticleimage table [team_msdyn_knowledgearticleimage](msd
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_knowledgeinteractioninsight table [team_msdyn_knowledgeinteractioninsight](msdyn_knowledgeinteractioninsight.md#BKMK_team_msdyn_knowledgeinteractioninsight) Many-To-One relationship.
+Same as the [team_msdyn_knowledgeinteractioninsight](msdyn_knowledgeinteractioninsight.md#BKMK_team_msdyn_knowledgeinteractioninsight) many-to-one relationship for the [msdyn_knowledgeinteractioninsight](msdyn_knowledgeinteractioninsight.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2469,7 +2680,7 @@ Same as msdyn_knowledgeinteractioninsight table [team_msdyn_knowledgeinteraction
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_knowledgesearchinsight table [team_msdyn_knowledgesearchinsight](msdyn_knowledgesearchinsight.md#BKMK_team_msdyn_knowledgesearchinsight) Many-To-One relationship.
+Same as the [team_msdyn_knowledgesearchinsight](msdyn_knowledgesearchinsight.md#BKMK_team_msdyn_knowledgesearchinsight) many-to-one relationship for the [msdyn_knowledgesearchinsight](msdyn_knowledgesearchinsight.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2486,7 +2697,7 @@ Same as msdyn_knowledgesearchinsight table [team_msdyn_knowledgesearchinsight](m
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_kalanguagesetting table [team_msdyn_kalanguagesetting](msdyn_kalanguagesetting.md#BKMK_team_msdyn_kalanguagesetting) Many-To-One relationship.
+Same as the [team_msdyn_kalanguagesetting](msdyn_kalanguagesetting.md#BKMK_team_msdyn_kalanguagesetting) many-to-one relationship for the [msdyn_kalanguagesetting](msdyn_kalanguagesetting.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2503,7 +2714,7 @@ Same as msdyn_kalanguagesetting table [team_msdyn_kalanguagesetting](msdyn_kalan
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_kbattachment table [team_msdyn_kbattachment](msdyn_kbattachment.md#BKMK_team_msdyn_kbattachment) Many-To-One relationship.
+Same as the [team_msdyn_kbattachment](msdyn_kbattachment.md#BKMK_team_msdyn_kbattachment) many-to-one relationship for the [msdyn_kbattachment](msdyn_kbattachment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2520,7 +2731,7 @@ Same as msdyn_kbattachment table [team_msdyn_kbattachment](msdyn_kbattachment.md
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_knowledgearticletemplate table [team_msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md#BKMK_team_msdyn_knowledgearticletemplate) Many-To-One relationship.
+Same as the [team_msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md#BKMK_team_msdyn_knowledgearticletemplate) many-to-one relationship for the [msdyn_knowledgearticletemplate](msdyn_knowledgearticletemplate.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2537,7 +2748,7 @@ Same as msdyn_knowledgearticletemplate table [team_msdyn_knowledgearticletemplat
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_knowledgepersonalfilter table [team_msdyn_knowledgepersonalfilter](msdyn_knowledgepersonalfilter.md#BKMK_team_msdyn_knowledgepersonalfilter) Many-To-One relationship.
+Same as the [team_msdyn_knowledgepersonalfilter](msdyn_knowledgepersonalfilter.md#BKMK_team_msdyn_knowledgepersonalfilter) many-to-one relationship for the [msdyn_knowledgepersonalfilter](msdyn_knowledgepersonalfilter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2554,7 +2765,7 @@ Same as msdyn_knowledgepersonalfilter table [team_msdyn_knowledgepersonalfilter]
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_knowledgesearchfilter table [team_msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md#BKMK_team_msdyn_knowledgesearchfilter) Many-To-One relationship.
+Same as the [team_msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md#BKMK_team_msdyn_knowledgesearchfilter) many-to-one relationship for the [msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2571,7 +2782,7 @@ Same as msdyn_knowledgesearchfilter table [team_msdyn_knowledgesearchfilter](msd
 
 **Added by**: Active Solution Solution
 
-Same as keyvaultreference table [team_keyvaultreference](keyvaultreference.md#BKMK_team_keyvaultreference) Many-To-One relationship.
+Same as the [team_keyvaultreference](keyvaultreference.md#BKMK_team_keyvaultreference) many-to-one relationship for the [keyvaultreference](keyvaultreference.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2588,7 +2799,7 @@ Same as keyvaultreference table [team_keyvaultreference](keyvaultreference.md#BK
 
 **Added by**: Active Solution Solution
 
-Same as managedidentity table [team_managedidentity](managedidentity.md#BKMK_team_managedidentity) Many-To-One relationship.
+Same as the [team_managedidentity](managedidentity.md#BKMK_team_managedidentity) many-to-one relationship for the [managedidentity](managedidentity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2605,7 +2816,7 @@ Same as managedidentity table [team_managedidentity](managedidentity.md#BKMK_tea
 
 **Added by**: Active Solution Solution
 
-Same as appnotification table [team_appnotification](appnotification.md#BKMK_team_appnotification) Many-To-One relationship.
+Same as the [team_appnotification](appnotification.md#BKMK_team_appnotification) many-to-one relationship for the [appnotification](appnotification.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2622,7 +2833,7 @@ Same as appnotification table [team_appnotification](appnotification.md#BKMK_tea
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_richtextfile table [team_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_team_msdyn_richtextfile) Many-To-One relationship.
+Same as the [team_msdyn_richtextfile](msdyn_richtextfile.md#BKMK_team_msdyn_richtextfile) many-to-one relationship for the [msdyn_richtextfile](msdyn_richtextfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2635,11 +2846,45 @@ Same as msdyn_richtextfile table [team_msdyn_richtextfile](msdyn_richtextfile.md
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_customcontrolextendedsettings"></a> team_msdyn_customcontrolextendedsettings
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md#BKMK_team_msdyn_customcontrolextendedsettings) many-to-one relationship for the [msdyn_customcontrolextendedsettings](msdyn_customcontrolextendedsettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_customcontrolextendedsettings|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_customcontrolextendedsettings|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_msdyn_pmanalysishistory"></a> team_msdyn_pmanalysishistory
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_pmanalysishistory](msdyn_pmanalysishistory.md#BKMK_team_msdyn_pmanalysishistory) many-to-one relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmanalysishistory|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_msdyn_pmanalysishistory|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_pminferredtask"></a> team_msdyn_pminferredtask
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_pminferredtask table [team_msdyn_pminferredtask](msdyn_pminferredtask.md#BKMK_team_msdyn_pminferredtask) Many-To-One relationship.
+Same as the [team_msdyn_pminferredtask](msdyn_pminferredtask.md#BKMK_team_msdyn_pminferredtask) many-to-one relationship for the [msdyn_pminferredtask](msdyn_pminferredtask.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2656,7 +2901,7 @@ Same as msdyn_pminferredtask table [team_msdyn_pminferredtask](msdyn_pminferredt
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_pmrecording table [team_msdyn_pmrecording](msdyn_pmrecording.md#BKMK_team_msdyn_pmrecording) Many-To-One relationship.
+Same as the [team_msdyn_pmrecording](msdyn_pmrecording.md#BKMK_team_msdyn_pmrecording) many-to-one relationship for the [msdyn_pmrecording](msdyn_pmrecording.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2669,11 +2914,28 @@ Same as msdyn_pmrecording table [team_msdyn_pmrecording](msdyn_pmrecording.md#BK
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_pmtemplate"></a> team_msdyn_pmtemplate
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_pmtemplate](msdyn_pmtemplate.md#BKMK_team_msdyn_pmtemplate) many-to-one relationship for the [msdyn_pmtemplate](msdyn_pmtemplate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmtemplate|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_msdyn_pmtemplate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_analysiscomponent"></a> team_msdyn_analysiscomponent
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_analysiscomponent table [team_msdyn_analysiscomponent](msdyn_analysiscomponent.md#BKMK_team_msdyn_analysiscomponent) Many-To-One relationship.
+Same as the [team_msdyn_analysiscomponent](msdyn_analysiscomponent.md#BKMK_team_msdyn_analysiscomponent) many-to-one relationship for the [msdyn_analysiscomponent](msdyn_analysiscomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2690,7 +2952,7 @@ Same as msdyn_analysiscomponent table [team_msdyn_analysiscomponent](msdyn_analy
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_analysisjob table [team_msdyn_analysisjob](msdyn_analysisjob.md#BKMK_team_msdyn_analysisjob) Many-To-One relationship.
+Same as the [team_msdyn_analysisjob](msdyn_analysisjob.md#BKMK_team_msdyn_analysisjob) many-to-one relationship for the [msdyn_analysisjob](msdyn_analysisjob.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2707,7 +2969,7 @@ Same as msdyn_analysisjob table [team_msdyn_analysisjob](msdyn_analysisjob.md#BK
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_analysisresult table [team_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_team_msdyn_analysisresult) Many-To-One relationship.
+Same as the [team_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_team_msdyn_analysisresult) many-to-one relationship for the [msdyn_analysisresult](msdyn_analysisresult.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2724,7 +2986,7 @@ Same as msdyn_analysisresult table [team_msdyn_analysisresult](msdyn_analysisres
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_analysisresultdetail table [team_msdyn_analysisresultdetail](msdyn_analysisresultdetail.md#BKMK_team_msdyn_analysisresultdetail) Many-To-One relationship.
+Same as the [team_msdyn_analysisresultdetail](msdyn_analysisresultdetail.md#BKMK_team_msdyn_analysisresultdetail) many-to-one relationship for the [msdyn_analysisresultdetail](msdyn_analysisresultdetail.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2741,7 +3003,7 @@ Same as msdyn_analysisresultdetail table [team_msdyn_analysisresultdetail](msdyn
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_solutionhealthrule table [team_msdyn_solutionhealthrule](msdyn_solutionhealthrule.md#BKMK_team_msdyn_solutionhealthrule) Many-To-One relationship.
+Same as the [team_msdyn_solutionhealthrule](msdyn_solutionhealthrule.md#BKMK_team_msdyn_solutionhealthrule) many-to-one relationship for the [msdyn_solutionhealthrule](msdyn_solutionhealthrule.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2758,7 +3020,7 @@ Same as msdyn_solutionhealthrule table [team_msdyn_solutionhealthrule](msdyn_sol
 
 **Added by**: Active Solution Solution
 
-Same as msdyn_solutionhealthruleargument table [team_msdyn_solutionhealthruleargument](msdyn_solutionhealthruleargument.md#BKMK_team_msdyn_solutionhealthruleargument) Many-To-One relationship.
+Same as the [team_msdyn_solutionhealthruleargument](msdyn_solutionhealthruleargument.md#BKMK_team_msdyn_solutionhealthruleargument) many-to-one relationship for the [msdyn_solutionhealthruleargument](msdyn_solutionhealthruleargument.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -2792,51 +3054,51 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_knowledgearticle_Teams"></a> knowledgearticle_Teams
 
-See knowledgearticle Table [knowledgearticle_Teams](knowledgearticle.md#BKMK_knowledgearticle_Teams) One-To-Many relationship.
+See the [knowledgearticle_Teams](knowledgearticle.md#BKMK_knowledgearticle_Teams) one-to-many relationship for the [knowledgearticle](knowledgearticle.md) table/entity.
 
 ### <a name="BKMK_teamtemplate_Teams"></a> teamtemplate_Teams
 
-See teamtemplate Table [teamtemplate_Teams](teamtemplate.md#BKMK_teamtemplate_Teams) One-To-Many relationship.
+See the [teamtemplate_Teams](teamtemplate.md#BKMK_teamtemplate_Teams) one-to-many relationship for the [teamtemplate](teamtemplate.md) table/entity.
 
 ### <a name="BKMK_lk_teambase_administratorid"></a> lk_teambase_administratorid
 
-See systemuser Table [lk_teambase_administratorid](systemuser.md#BKMK_lk_teambase_administratorid) One-To-Many relationship.
+See the [lk_teambase_administratorid](systemuser.md#BKMK_lk_teambase_administratorid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_processstage_teams"></a> processstage_teams
 
-See processstage Table [processstage_teams](processstage.md#BKMK_processstage_teams) One-To-Many relationship.
+See the [processstage_teams](processstage.md#BKMK_processstage_teams) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### <a name="BKMK_lk_teambase_modifiedby"></a> lk_teambase_modifiedby
 
-See systemuser Table [lk_teambase_modifiedby](systemuser.md#BKMK_lk_teambase_modifiedby) One-To-Many relationship.
+See the [lk_teambase_modifiedby](systemuser.md#BKMK_lk_teambase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_teambase_createdby"></a> lk_teambase_createdby
 
-See systemuser Table [lk_teambase_createdby](systemuser.md#BKMK_lk_teambase_createdby) One-To-Many relationship.
+See the [lk_teambase_createdby](systemuser.md#BKMK_lk_teambase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_queue_team"></a> queue_team
 
-See queue Table [queue_team](queue.md#BKMK_queue_team) One-To-Many relationship.
+See the [queue_team](queue.md#BKMK_queue_team) one-to-many relationship for the [queue](queue.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_Team"></a> TransactionCurrency_Team
 
-See transactioncurrency Table [TransactionCurrency_Team](transactioncurrency.md#BKMK_TransactionCurrency_Team) One-To-Many relationship.
+See the [TransactionCurrency_Team](transactioncurrency.md#BKMK_TransactionCurrency_Team) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_business_unit_teams"></a> business_unit_teams
 
-See businessunit Table [business_unit_teams](businessunit.md#BKMK_business_unit_teams) One-To-Many relationship.
+See the [business_unit_teams](businessunit.md#BKMK_business_unit_teams) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_organization_teams"></a> organization_teams
 
-See organization Table [organization_teams](organization.md#BKMK_organization_teams) One-To-Many relationship.
+See the [organization_teams](organization.md#BKMK_organization_teams) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_team_modifiedonbehalfby"></a> lk_team_modifiedonbehalfby
 
-See systemuser Table [lk_team_modifiedonbehalfby](systemuser.md#BKMK_lk_team_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_team_modifiedonbehalfby](systemuser.md#BKMK_lk_team_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_team_createdonbehalfby"></a> lk_team_createdonbehalfby
 
-See systemuser Table [lk_team_createdonbehalfby](systemuser.md#BKMK_lk_team_createdonbehalfby) One-To-Many relationship.
+See the [lk_team_createdonbehalfby](systemuser.md#BKMK_lk_team_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -2919,6 +3181,6 @@ IntersectEntityName: teamprofiles<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.team?text=team EntityType" />

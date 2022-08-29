@@ -1,6 +1,6 @@
 ---
 title: "formContext.ui.tabs (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "A tab is a group of sections on a page. It contains properties and methods to manipulate tabs as well as access to sections within the tab through the sections collection."
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,6 +14,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.tabs (Client API reference)
 
@@ -29,7 +31,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 
 ## Properties
 
-- **sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext.ui section](formContext-ui-sections.md) for information about the properties and methods of the section objects in the collection.
+- **sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext-ui Tab sections](formContext-ui-tab-sections.md) for information about the properties and methods of the section objects in the collection.
 
 ## Methods
 

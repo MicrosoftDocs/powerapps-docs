@@ -26,7 +26,7 @@ In Power Apps, create a canvas app based on a list of sample accounts in [Datave
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 Watch this short video that shows you how to create a canvas app quickly using Dataverse tables.
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWIUJy]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YzH0]
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
     :::image type="content" source="media/data-platform-create-app/start-from-data.png" alt-text="Start from Dataverse.":::
 
-1. If this is you first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
+1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
 1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
 

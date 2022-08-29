@@ -1,10 +1,10 @@
 ---
-title: "getValue (Client API reference)| MicrosoftDocs"
+title: "attribute.getValue (Client API reference)| MicrosoftDocs"
 description: Retrieves the data value for a column.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 03/12/2022
+ms.date: 06/09/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,8 +14,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getValue (Client API reference)
+# attribute.getValue (Client API reference)
 
 Retrieves the data value for a column.
 
@@ -29,14 +31,14 @@ All
 
 ## Return Value
 
-**Type**: Depends on the type of column. 
+**Type**: Depends on the type of column. The value may be null.
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 
 | Column Type | Return Type| 
 |----|-----|
 | boolean | [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
-| datetime| [Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)<br/> To get the string version of a date using the Power Apps user’s locale preferences, use the [format](/previous-versions/bb384009(v=vs.140)) and [localeFormat](/previous-versions/bb383816(v=vs.140)) methods. Other methods will format dates using the operating system locale rather than the user’s Power Apps locale preferences. | 
+| datetime| [Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)<br/> To get the string version of a date using the Power Apps user's locale preferences, use the [format](/previous-versions/bb384009(v=vs.140)) and [localeFormat](/previous-versions/bb383816(v=vs.140)) methods. Other methods will format dates using the operating system locale rather than the user's Power Apps locale preferences. | 
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)| 
 | Double | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)| 
 | integer | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|

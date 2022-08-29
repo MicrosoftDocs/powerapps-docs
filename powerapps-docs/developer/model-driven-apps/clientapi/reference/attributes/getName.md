@@ -1,6 +1,6 @@
 ---
-title: "getName (Client API reference)| MicrosoftDocs"
-description: Includes description and supported parameters for the getName method.
+title: "attribute.getName  (Client API reference)| MicrosoftDocs"
+description: Includes description and supported parameters for the attribute.getName method.
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -14,8 +14,10 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
-# getName (Client API reference)
+# attribute.getName (Client API reference)
 
 
 

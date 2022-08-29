@@ -1,12 +1,10 @@
 ---
 title: "Tutorial: Update a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The third of three tutorials that will show you how to work with plug-ins. " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/27/2021
+ms.date: 07/12/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
@@ -15,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
 ---
 # Tutorial: Update a plug-in
 
@@ -221,6 +221,9 @@ Configure the **ValidateAccountName** plug-in using these settings:
 1. When the image is registered you will see it in the Plug-in Registration tool.
 
     ![The registered image.](media/tutorial-update-plug-in-image-added.png)
+
+> [!IMPORTANT]
+> The default behavior when creating an entity image is to select all columns. However, this can result in reduced web service performance. Developers should only include those columns that are required.
 
 ## Test the plug-in
 

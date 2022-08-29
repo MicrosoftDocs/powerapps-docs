@@ -1,10 +1,10 @@
 ---
 title: "Client API Xrm object for model-driven apps | MicrosoftDocs"
-description: "The topic provides client API reference for model-driven apps."
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+description: "Describes the client api Xrm object"
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "conceptual"
 applies_to:
@@ -12,9 +12,12 @@ applies_to:
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - caburk
 ---
 
 # Client API Xrm object

@@ -1,8 +1,8 @@
 ---
-title: "package table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "package table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the package table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -679,7 +679,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [package_SyncErrors](syncerror.md#BKMK_package_SyncErrors) Many-To-One relationship.
+Same as the [package_SyncErrors](syncerror.md#BKMK_package_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -696,7 +696,7 @@ Same as syncerror table [package_SyncErrors](syncerror.md#BKMK_package_SyncError
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [package_DuplicateMatchingRecord](duplicaterecord.md#BKMK_package_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [package_DuplicateMatchingRecord](duplicaterecord.md#BKMK_package_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -713,7 +713,7 @@ Same as duplicaterecord table [package_DuplicateMatchingRecord](duplicaterecord.
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [package_DuplicateBaseRecord](duplicaterecord.md#BKMK_package_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [package_DuplicateBaseRecord](duplicaterecord.md#BKMK_package_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -730,7 +730,7 @@ Same as duplicaterecord table [package_DuplicateBaseRecord](duplicaterecord.md#B
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [package_AsyncOperations](asyncoperation.md#BKMK_package_AsyncOperations) Many-To-One relationship.
+Same as the [package_AsyncOperations](asyncoperation.md#BKMK_package_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -747,7 +747,7 @@ Same as asyncoperation table [package_AsyncOperations](asyncoperation.md#BKMK_pa
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [package_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_package_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [package_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_package_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -764,7 +764,7 @@ Same as mailboxtrackingfolder table [package_MailboxTrackingFolders](mailboxtrac
 
 **Added by**: System Solution Solution
 
-Same as processsession table [package_ProcessSession](processsession.md#BKMK_package_ProcessSession) Many-To-One relationship.
+Same as the [package_ProcessSession](processsession.md#BKMK_package_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -781,7 +781,7 @@ Same as processsession table [package_ProcessSession](processsession.md#BKMK_pac
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [package_BulkDeleteFailures](bulkdeletefailure.md#BKMK_package_BulkDeleteFailures) Many-To-One relationship.
+Same as the [package_BulkDeleteFailures](bulkdeletefailure.md#BKMK_package_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -798,7 +798,7 @@ Same as bulkdeletefailure table [package_BulkDeleteFailures](bulkdeletefailure.m
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [package_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_package_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [package_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_package_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -827,31 +827,31 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_createdby](systemuser.md#BKMK_lk_package_createdby) One-To-Many relationship.
+See the [lk_package_createdby](systemuser.md#BKMK_lk_package_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_package_createdonbehalfby"></a> lk_package_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_createdonbehalfby](systemuser.md#BKMK_lk_package_createdonbehalfby) One-To-Many relationship.
+See the [lk_package_createdonbehalfby](systemuser.md#BKMK_lk_package_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_package_modifiedby"></a> lk_package_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_modifiedby](systemuser.md#BKMK_lk_package_modifiedby) One-To-Many relationship.
+See the [lk_package_modifiedby](systemuser.md#BKMK_lk_package_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_package_modifiedonbehalfby"></a> lk_package_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_package_modifiedonbehalfby](systemuser.md#BKMK_lk_package_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_package_modifiedonbehalfby](systemuser.md#BKMK_lk_package_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_package"></a> organization_package
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_package](organization.md#BKMK_organization_package) One-To-Many relationship.
+See the [organization_package](organization.md#BKMK_organization_package) one-to-many relationship for the [organization](organization.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
@@ -884,6 +884,6 @@ IntersectEntityName: package_solution<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.package?text=package EntityType" />

@@ -10,9 +10,11 @@ ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app:
+search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 
 # pickFile (Client API reference)
@@ -41,7 +43,7 @@ On success, returns a promise with array of objects as specified earlier for the
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

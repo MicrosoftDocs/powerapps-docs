@@ -6,7 +6,7 @@ author: maustinjones
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 08/22/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -271,7 +271,7 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 | OnlineUrl                 | <https://make.powerapps.com>                                                                                                   |
 | TestAutomationURLFilePath | ```$(Build.SourcesDirectory)\<test URL file>.json``` <br>**Note:** This is the [*Test URLs .json*](#step-2---create-test-url-json-file) file you created earlier.                      |
 | UsePrivateMode            | true                                                                                                                           |
-| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account. |
+| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account. Ensure this user has the ability to run the app and connect to any data sources the app might connect to. |
 
 1. Select **Add** and enter **OnlinePassword** in the variable name.
 

@@ -1,19 +1,20 @@
 ---
 title: "Update and delete table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete table rows using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/04/2021
+ms.date: 08/01/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Update and delete table rows using the Organization Service
@@ -25,7 +26,7 @@ This topic will include examples using both late-bound and early-bound programmi
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
 > [!IMPORTANT]
-> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven’t actually changed.
+> When updating a table row, only include the columns you are changing. Simply updating the columns of a table row that you previously retrieved will update each column even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause columns to appear to have been updated in auditing data when in fact they haven't actually changed.
 >
 > You should create a new `Entity` instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the table row.
 
@@ -232,7 +233,7 @@ If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sd
 The following example shows how to update an `Account` using an alternate key defined for the `accountnumber` column (attribute).
 
 > [!IMPORTANT]
-> By default there are no alternate keys defined for any tables. This method can only be used when the environment is configured to define an alternate key for a table.
+> Most tables for business data do not have alternate keys defined. This method can only be used when the environment is configured to define an alternate key for a table.
 
 ```csharp
 var accountNumberKey = new KeyAttributeCollection();
@@ -245,7 +246,7 @@ svc.Update(exampleAccount);
 
 More information: 
 - [Work with alternate keys](../define-alternate-keys-entity.md)
-- [Use an alternate key to create a row](../use-alternate-key-create-record.md)
+- [Use an alternate key to reference a record](../use-alternate-key-reference-record.md)
 
 ## Update and delete documents in storage partitions
 

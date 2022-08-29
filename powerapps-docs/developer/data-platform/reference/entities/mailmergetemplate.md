@@ -1,8 +1,8 @@
 ---
-title: "MailMergeTemplate table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "MailMergeTemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MailMergeTemplate table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -216,10 +216,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Individual|
-|0|Organization|
+|1|Individual||
+|0|Organization||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -467,6 +467,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParameterXml](#BKMK_ParameterXml)
@@ -654,10 +655,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -834,12 +835,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier of the business unit that owns the mail merge template.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -956,7 +973,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_MailMergeTemplate_SyncErrors"></a> MailMergeTemplate_SyncErrors
 
-Same as syncerror table [MailMergeTemplate_SyncErrors](syncerror.md#BKMK_MailMergeTemplate_SyncErrors) Many-To-One relationship.
+Same as the [MailMergeTemplate_SyncErrors](syncerror.md#BKMK_MailMergeTemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -971,7 +988,7 @@ Same as syncerror table [MailMergeTemplate_SyncErrors](syncerror.md#BKMK_MailMer
 
 ### <a name="BKMK_MailMergeTemplate_AsyncOperations"></a> MailMergeTemplate_AsyncOperations
 
-Same as asyncoperation table [MailMergeTemplate_AsyncOperations](asyncoperation.md#BKMK_MailMergeTemplate_AsyncOperations) Many-To-One relationship.
+Same as the [MailMergeTemplate_AsyncOperations](asyncoperation.md#BKMK_MailMergeTemplate_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -986,7 +1003,7 @@ Same as asyncoperation table [MailMergeTemplate_AsyncOperations](asyncoperation.
 
 ### <a name="BKMK_mailmergetemplate_principalobjectattributeaccess"></a> mailmergetemplate_principalobjectattributeaccess
 
-Same as principalobjectattributeaccess table [mailmergetemplate_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_mailmergetemplate_principalobjectattributeaccess) Many-To-One relationship.
+Same as the [mailmergetemplate_principalobjectattributeaccess](principalobjectattributeaccess.md#BKMK_mailmergetemplate_principalobjectattributeaccess) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1001,7 +1018,7 @@ Same as principalobjectattributeaccess table [mailmergetemplate_principalobjecta
 
 ### <a name="BKMK_MailMergeTemplate_ProcessSessions"></a> MailMergeTemplate_ProcessSessions
 
-Same as processsession table [MailMergeTemplate_ProcessSessions](processsession.md#BKMK_MailMergeTemplate_ProcessSessions) Many-To-One relationship.
+Same as the [MailMergeTemplate_ProcessSessions](processsession.md#BKMK_MailMergeTemplate_ProcessSessions) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1029,30 +1046,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_mailmergetemplatebase_createdby"></a> lk_mailmergetemplatebase_createdby
 
-See systemuser Table [lk_mailmergetemplatebase_createdby](systemuser.md#BKMK_lk_mailmergetemplatebase_createdby) One-To-Many relationship.
+See the [lk_mailmergetemplatebase_createdby](systemuser.md#BKMK_lk_mailmergetemplatebase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_business_unit_mailmergetemplates"></a> business_unit_mailmergetemplates
 
-See businessunit Table [business_unit_mailmergetemplates](businessunit.md#BKMK_business_unit_mailmergetemplates) One-To-Many relationship.
+See the [business_unit_mailmergetemplates](businessunit.md#BKMK_business_unit_mailmergetemplates) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_MailMergeTemplate"></a> TransactionCurrency_MailMergeTemplate
 
-See transactioncurrency Table [TransactionCurrency_MailMergeTemplate](transactioncurrency.md#BKMK_TransactionCurrency_MailMergeTemplate) One-To-Many relationship.
+See the [TransactionCurrency_MailMergeTemplate](transactioncurrency.md#BKMK_TransactionCurrency_MailMergeTemplate) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_mailmergetemplatebase_modifiedby"></a> lk_mailmergetemplatebase_modifiedby
 
-See systemuser Table [lk_mailmergetemplatebase_modifiedby](systemuser.md#BKMK_lk_mailmergetemplatebase_modifiedby) One-To-Many relationship.
+See the [lk_mailmergetemplatebase_modifiedby](systemuser.md#BKMK_lk_mailmergetemplatebase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_mailmergetemplate_modifiedonbehalfby"></a> lk_mailmergetemplate_modifiedonbehalfby
 
-See systemuser Table [lk_mailmergetemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_mailmergetemplate_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_mailmergetemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_mailmergetemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_mailmergetemplate_createdonbehalfby"></a> lk_mailmergetemplate_createdonbehalfby
 
-See systemuser Table [lk_mailmergetemplate_createdonbehalfby](systemuser.md#BKMK_lk_mailmergetemplate_createdonbehalfby) One-To-Many relationship.
+See the [lk_mailmergetemplate_createdonbehalfby](systemuser.md#BKMK_lk_mailmergetemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.mailmergetemplate?text=mailmergetemplate EntityType" />

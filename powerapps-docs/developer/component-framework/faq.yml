@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Power App component framework FAQs
+  title: Power Apps component framework FAQs
   description: Get answers to frequently asked questions about Power Apps component framework.
   author: ghurlman
   
@@ -16,7 +16,7 @@ sections:
     questions:
       - question: Where can I find some good examples of code components?
         answer: |
-          We have published set of [basic components](https://docs.microsoft.com/powerapps/developer/component-framework/use-sample-components) which showcase usage of various component capabilities and APIs. Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
+          We have published set of [basic components](/powerapps/developer/component-framework/use-sample-components) which showcase usage of various component capabilities and APIs. Lots of great examples from the community are available on the [Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/td-p/280710).
 
       - question: How to use rich data types in code components such as Collections?
         answer: |

@@ -1,6 +1,6 @@
 ---
 title: "formContext.ui.FormSelector (Client API reference) in model-driven apps| MicrosoftDocs"
-description: "Learn about working with processes in model-driven apps using client API."
+description: "This property lets you work with form items where a form item represents a form that is available to a user because it is associated with a security role that the user is also associated to. "
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
@@ -15,6 +15,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # formContext.ui.formSelector (Client API reference)
 
@@ -24,6 +26,9 @@ The **formContext.ui.formSelector** property lets you work with form items where
 
 > [!NOTE]
 > The `formContext.ui.formSelector`is not supported for quick create forms.
+
+> [!NOTE]
+> The form selector is not visible if the user only has access to one main form
 
 Form Items are available through any of the following:
 

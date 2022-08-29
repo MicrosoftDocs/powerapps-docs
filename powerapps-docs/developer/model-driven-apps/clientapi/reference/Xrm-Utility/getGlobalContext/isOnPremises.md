@@ -1,5 +1,5 @@
 ---
-title: "isOnPremise (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "isOnPremises (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the isOnPremises method.
 ms.author: jdaly
 author: adrianorth
@@ -13,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # isOnPremises (Client API reference)
 

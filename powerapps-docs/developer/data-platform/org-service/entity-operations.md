@@ -1,19 +1,20 @@
 ---
 title: "Entity class operations using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the Entity class used for data operations using the Microsoft Dataverse organization service" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 08/04/2021
+ms.date: 03/22/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "divka78" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # Entity class operations using the Organization service
@@ -85,7 +86,7 @@ Attribute types can be any of the following. This is a partial list.
 |Type|Description|
 |--|--|
 |<xref:Microsoft.Xrm.Sdk.EntityReference>|A **Lookup** attribute. A link to another entity record.|
-|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|Used only for entities that can be solution components, such as the [WebResource table/entity reference](../reference/entities/webresource.md). More information: [Use managed properties](/power-platform/alm/use-managed-properties)|
+|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|Used only for entities that can be solution components, such as [WebResource](../reference/entities/webresource.md). More information: [Use managed properties](/power-platform/alm/use-managed-properties)|
 |<xref:Microsoft.Xrm.Sdk.Money>|A **Currency** attribute.|
 |<xref:Microsoft.Xrm.Sdk.OptionSetValue>|An **Option Set** attribute. **State** and **Status** attributes also use this type. |
 |<xref:System.Boolean>|A **Two Option** attribute.|

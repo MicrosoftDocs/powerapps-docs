@@ -1,8 +1,8 @@
 ---
-title: "msdyn_serviceconfiguration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_serviceconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_serviceconfiguration table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -336,6 +336,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -623,12 +624,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -699,7 +718,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_serviceconfiguration_SyncErrors](syncerror.md#BKMK_msdyn_serviceconfiguration_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_SyncErrors](syncerror.md#BKMK_msdyn_serviceconfiguration_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -716,7 +735,7 @@ Same as syncerror table [msdyn_serviceconfiguration_SyncErrors](syncerror.md#BKM
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_serviceconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_serviceconfiguration_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_serviceconfiguration_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -733,7 +752,7 @@ Same as duplicaterecord table [msdyn_serviceconfiguration_DuplicateMatchingRecor
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_serviceconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_serviceconfiguration_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_serviceconfiguration_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -750,7 +769,7 @@ Same as duplicaterecord table [msdyn_serviceconfiguration_DuplicateBaseRecord](d
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_serviceconfiguration_AsyncOperations](asyncoperation.md#BKMK_msdyn_serviceconfiguration_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_AsyncOperations](asyncoperation.md#BKMK_msdyn_serviceconfiguration_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -767,7 +786,7 @@ Same as asyncoperation table [msdyn_serviceconfiguration_AsyncOperations](asynco
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_serviceconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_serviceconfiguration_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_serviceconfiguration_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -784,7 +803,7 @@ Same as mailboxtrackingfolder table [msdyn_serviceconfiguration_MailboxTrackingF
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_serviceconfiguration_ProcessSession](processsession.md#BKMK_msdyn_serviceconfiguration_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_ProcessSession](processsession.md#BKMK_msdyn_serviceconfiguration_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -801,7 +820,7 @@ Same as processsession table [msdyn_serviceconfiguration_ProcessSession](process
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_serviceconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_serviceconfiguration_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_serviceconfiguration_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -818,7 +837,7 @@ Same as bulkdeletefailure table [msdyn_serviceconfiguration_BulkDeleteFailures](
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_serviceconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_serviceconfiguration_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_serviceconfiguration_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_serviceconfiguration_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -849,46 +868,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_serviceconfiguration_createdby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_createdby) One-To-Many relationship.
+See the [lk_msdyn_serviceconfiguration_createdby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_serviceconfiguration_createdonbehalfby"></a> lk_msdyn_serviceconfiguration_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_serviceconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_serviceconfiguration_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_serviceconfiguration_modifiedby"></a> lk_msdyn_serviceconfiguration_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_serviceconfiguration_modifiedby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_serviceconfiguration_modifiedby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_serviceconfiguration_modifiedonbehalfby"></a> lk_msdyn_serviceconfiguration_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_serviceconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_serviceconfiguration_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_serviceconfiguration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_serviceconfiguration"></a> user_msdyn_serviceconfiguration
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_serviceconfiguration](systemuser.md#BKMK_user_msdyn_serviceconfiguration) One-To-Many relationship.
+See the [user_msdyn_serviceconfiguration](systemuser.md#BKMK_user_msdyn_serviceconfiguration) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_serviceconfiguration"></a> team_msdyn_serviceconfiguration
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_serviceconfiguration](team.md#BKMK_team_msdyn_serviceconfiguration) One-To-Many relationship.
+See the [team_msdyn_serviceconfiguration](team.md#BKMK_team_msdyn_serviceconfiguration) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_serviceconfiguration"></a> business_unit_msdyn_serviceconfiguration
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_serviceconfiguration](businessunit.md#BKMK_business_unit_msdyn_serviceconfiguration) One-To-Many relationship.
+See the [business_unit_msdyn_serviceconfiguration](businessunit.md#BKMK_business_unit_msdyn_serviceconfiguration) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.msdyn_serviceconfiguration?text=msdyn_serviceconfiguration EntityType" />

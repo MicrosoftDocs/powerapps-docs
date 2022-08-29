@@ -1,0 +1,1 @@
+Indicates which feature the code components want to use.

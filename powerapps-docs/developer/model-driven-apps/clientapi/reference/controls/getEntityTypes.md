@@ -13,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # getEntityTypes (Client API reference)
 

@@ -1,12 +1,11 @@
 ---
 title: "Query and edit an organization theme(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about defining and applying visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.author: jdaly
+ms.author: hemantg
 author: HemantGaur
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 04/01/2022
 ms.reviewer: jdaly
-
 ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType: 
@@ -14,6 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Query and edit an organization theme
 
@@ -71,7 +72,7 @@ OData-Version: 4.0
 
 ## Edit and publish theme data
 
- A theme is created by using the customization tools in the UI, without requiring a developer to write code. Details about how to apply these customizations can be found in [Change the color scheme or add a logo to match your organization’s brand](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand).  
+ A theme is created by using the customization tools in the UI, without requiring a developer to write code. Details about how to apply these customizations can be found in [Use a theme to create a custom look for your app](/power-apps/maker/model-driven-apps/create-themes-organization-branding).  
 
  Most theme data is stored within the theme table. Customized colors for specific tables is included in the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntityColor> property. This data is exported with the table if the table is included in a solution.
 
@@ -114,7 +115,7 @@ After you have applied changes, use the <xref href="Microsoft.Dynamics.CRM.Publi
 ### See also
 
  [Theme table](../data-platform/reference/entities/theme.md) <br/>
- [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
+ [Create a theme](/powerapps/maker/model-driven-apps/create-themes-organization-branding) <br/>
  [Developers guide to customization](overview.md)
 
 

@@ -1,8 +1,8 @@
 ---
-title: "ActionCardUserState table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "ActionCardUserState table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ActionCardUserState table/entity."
-ms.date: 10/05/2021
-
+ms.date: 06/30/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -355,14 +355,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_ActionCardUserState_ActionCard"></a> ActionCardUserState_ActionCard
 
-See actioncard Table [ActionCardUserState_ActionCard](actioncard.md#BKMK_ActionCardUserState_ActionCard) One-To-Many relationship.
+See the [ActionCardUserState_ActionCard](actioncard.md#BKMK_ActionCardUserState_ActionCard) one-to-many relationship for the [actioncard](actioncard.md) table/entity.
 
 ### <a name="BKMK_TransactionCurrency_ActionCardUserState"></a> TransactionCurrency_ActionCardUserState
 
-See transactioncurrency Table [TransactionCurrency_ActionCardUserState](transactioncurrency.md#BKMK_TransactionCurrency_ActionCardUserState) One-To-Many relationship.
+See the [TransactionCurrency_ActionCardUserState](transactioncurrency.md#BKMK_TransactionCurrency_ActionCardUserState) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.actioncarduserstate?text=actioncarduserstate EntityType" />

@@ -12,6 +12,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # Xrm.WebApi.online.executeMultiple (Client API reference)
 
@@ -58,7 +60,7 @@ Xrm.WebApi.online.executeMultiple(requests).then(successCallback, errorCallback)
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
