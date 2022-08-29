@@ -46,7 +46,7 @@ Yes. Portals will specify *PasswordProtectedTransport* in authentication request
 
 ## Does portals support SAML logout request?
 
-Yes.  Use the Power Platform admin center to upload the custom certificate.  After uploading the custom certificate, copy the thumbprint of the uploaded custom certificate from the Manage custom certificate screen and paste it to site settings *Authentication/SAML2/[ProviderName]/ExternalLogoutCertThumbprint*.
+Yes.  Use the [Power Platform admin center](../admin/manage-custom-certificates.md) to upload the custom certificate.  After uploading the custom certificate, copy the thumbprint of the uploaded custom certificate from the Manage custom certificate screen and paste it to site settings *Authentication/SAML2/[ProviderName]/ExternalLogoutCertThumbprint*.
 
 ### See also
 
