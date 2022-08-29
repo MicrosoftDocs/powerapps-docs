@@ -14,10 +14,10 @@
   items:
     - name: About the samples
       href: ../web-api-samples-csharp.md
-    - name: CDSWebApiService class
-      href: cdswebapiservice.md
+    - name: WebApiService class library
+      href: webapiservice.md
     - name: Basic Operations
-      href: cdswebapiservice-basic-operations.md
+      href: webapiservice-basic-operations.md
     - name: Query Data
       href: cdswebapiservice-query-data.md
     - name: Conditional Operations
