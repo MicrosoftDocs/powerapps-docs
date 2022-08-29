@@ -127,6 +127,8 @@ items:
           href: reference/client/getclient.md
         - name: getFormFactor
           href: reference/client/getformfactor.md
+        - name: isNetworkAvailable
+          href: reference/client/isnetworkavailable.md
         - name: isOffline
           href: reference/client/isoffline.md
       - name: Column
