@@ -42,17 +42,25 @@ The Home page may show several types of business apps.
 
 ![Busines Apps.](media/bussinessapps.png)
 
-The Dynamics and Power Apps presented in Office App Launcher and Office.com/apps experiences meet the following filter criteria:  
-1. Apps a user launched in the last week 
-2. Apps a user made 
-3. Apps an admin marked as ‘featured’ in the tenant 
-4. All 1st party Dynamics branded apps a user can access 
+The apps that meet the following criteria will be shown in the list of **Office** apps:
 
-### What if I cannot find an app?
-Infrequently used apps, apps not used in the last week, won’t appear in Office.com experiences. Much like today, if a user cannot find an app they’re looking for they’ll need the URI to launch the app in the browser. To get an app URI: Admins and Makers can get app URIs by selecting an app in https://admin.powerplatform.microsoft.com or https://make.powerapps.com > Select an app > details > web link. 
+- Apps that you launched in the last week.
+- Apps that you created. 
+- Apps your admin marked as **Featured** in your tenant.
+- All first party model-driven apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
 
 > [!NOTE]
-> The duration between an app being shared with a user and when it's presented in an Office experience, when meeting the filter criteria, is expected to be 24 hours. 
+> When a new app is shared with users it needs to meet the criteria listed above and it can take up to 24 hours for it to appear in the list of **Office** apps.
+
+### What if I cannot find an app?
+
+Apps that haven't been used in the last week won't appear in the list of **Office** apps. If you can't find an app, then you need to use the web link to open the app directly in your browser.
+
+1. To find the web link for an app, sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com) or [Power Apps](https://make.powerapps.com).
+2. Find the app that you're looking for.
+3. Across the app name, select (...) **More Commands** > **Details**.
+4. From the **Details** tab copy the **Web link**.
+5. Paste the web link in a browser window to launch the app.
 
 The Microsoft 365 apps page has a different URL per cloud. 
 
