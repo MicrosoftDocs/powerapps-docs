@@ -80,7 +80,7 @@ This method facilitates returning a class that includes properties found in the 
 - Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) parameter. When using this method it is expected, but not required, that the request parameter is one of the [*Response classes](#response-classes) that derive from `HttpRequestMessage`.
 - Returns `Task<T>` where `T` is a class derived from `HttpResponseMessage`. See [*Response classes](#response-classes) for more information.
 - Calls the [SendAsync Method](#sendasync-method).
-- Uses the [HttpResponseMessage.As&lt;T&gt; ](#httpresponsemessage-aslttgt) extension method to return the requested type.
+- Uses the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension method to return the requested type.
 
 The following example shows use with the <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI function>:
 
@@ -113,7 +113,7 @@ The Config class contains properties that control the behavior of the applicatio
 |---------|---------|---------|
 |`GetAccessToken`|`Func<Task<string>>`|A function provided by the client application to return an access token.|
 |`Url`|`string?`|The base Url of the environment. i.e.: `https://org.api.crm.dynamics.com`|
-|`CallerObjectId`|`Guid`|The [SystemUser.ActiveDirectoryGuid](../../reference/entities/systemuser.md#BKMK_ActiveDirectoryGuid) value to apply for impersonation. Default is [Guid.Empty](dotnet/api/system.guid.empty?view=net-6.0)<br /> More information: [Impersonate another user using the Web API](../impersonate-another-user-web-api.md)|
+|`CallerObjectId`|`Guid`|The [SystemUser.ActiveDirectoryGuid](../../reference/entities/systemuser.md#BKMK_ActiveDirectoryGuid) value to apply for impersonation. Default is [Guid.Empty](/dotnet/api/system.guid.empty)<br /> More information: [Impersonate another user using the Web API](../impersonate-another-user-web-api.md)|
 |`TimeoutInSeconds`|`ushort`|How long to wait for a timeout. Default is 120 seconds.|
 |`MaxRetries`|`byte`|Maximum number of times to re-try when service protection limits occur. Default is 3.|
 |`Version`|`string`|The version of the service to use. Default is `v9.2`|
@@ -168,7 +168,7 @@ EntityReference has the following public methods. Neither of them require any pa
 
 #### ServiceException
 
-[ServiceException](ServiceException.cs) is an [Exception class](dotnet/api/system.exception?view=net-6.0) that contains properties of the error returned by the service. Use the [ParseError Method](#parseerror-method) to get an instance of this exception.
+ServiceException is an [Exception class](/dotnet/api/system.exception?view=net-6.0) that contains properties of the error returned by the service. Use the [ParseError Method](#parseerror-method) to get an instance of this exception.
 
 ## Extensions
 
@@ -176,11 +176,11 @@ WebAPIService has one extension method from a .NET type.
 
 ### HttpResponseMessage As&lt;T&gt;
 
-This extension instantiates an instance of `T` where `T` is derived from [HttpResponseMessage](dotnet/api/system.net.http.httpresponsemessage?view=net-6.0) and copies the properties of the `HttpResponseMessage` to the derived class. It is used by the `Service` [SendAsync&lt;T&gt; Method](#sendasynclttgt-method) but can also be used separately. For example, when using the [BatchRequest](#batchrequest) class, the items in the `BatchResponse.HttpResponseMessages` will be `HttpResponseMessage` types. You can use this extension to convert them to the appropriate derived class to facilitate accessing any properties.
+This extension instantiates an instance of `T` where `T` is derived from [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0) and copies the properties of the `HttpResponseMessage` to the derived class. It is used by the `Service` [SendAsync&lt;T&gt; Method](#sendasynct-method) but can also be used separately. For example, when using the [BatchRequest](#batchrequest) class, the items in the `BatchResponse.HttpResponseMessages` will be `HttpResponseMessage` types. You can use this extension to convert them to the appropriate derived class to facilitate accessing any properties.
 
 ## Messages
 
-The `Messages` folder includes classes that inherit from [HttpRequestMessage](dotnet/api/system.net.http.httprequestmessage?view=net-6.0) or [HttpResponseMessage](dotnet/api/system.net.http.httpresponsemessage?view=net-6.0).
+The `Messages` folder includes classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) or [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0).
 
 These classes provide re-usable definitions of requests and responses that correspond to OData operations you can use in any Dataverse environment.
 
@@ -197,7 +197,7 @@ You can see an example of this in the [FunctionsAndActions Sample](../FunctionsA
 
 ### *Request classes
 
-These classes will generally have a constructor with parameters that will instantiate a [HttpRequestMessage](dotnet/api/system.net.http.httprequestmessage?view=net-6.0) with the data needed to perform the operation. They may have separate properties as appropriate.
+These classes will generally have a constructor with parameters that will instantiate a [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) with the data needed to perform the operation. They may have separate properties as appropriate.
 
 The most simple example of this pattern is the `WhoAmIRequest` class.
 
@@ -227,7 +227,7 @@ The names of these classes may align with the classes in the Dataverse SDK <xref
 
 ### *Response classes
 
-When \*Request classes returns a value there will be a corresponding \*Response class to access the returned properties. If the \*Request returns `204 No Content`, the operation will return an [HttpResponseMessage](dotnet/api/system.net.http.httpresponsemessage?view=net-6.0) but there will be no derived class. Use the [SendAsync method](#sendasync-method) to send these requests.
+When \*Request classes returns a value there will be a corresponding \*Response class to access the returned properties. If the \*Request returns `204 No Content`, the operation will return an [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0) but there will be no derived class. Use the [SendAsync method](#sendasync-method) to send these requests.
 
 \*Response classes provide typed properties that access the `HttpResponseMessage` `Headers` or `Content` properties and parse them to provide access to the Complex Type returned by the operation.
 
@@ -281,7 +281,7 @@ namespace PowerApps.Samples.Messages
 
 ```
 
-These classes can only be properly instantiated when returned by the [SendAsync&lt;T&gt; method](#sendasynclttgt-method) or by using the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-aslttgt) extension on an `HttpResponseMessage` that was returned by a `BatchResponse.HttpResponseMessages` property.
+These classes can only be properly instantiated when returned by the [SendAsync&lt;T&gt; Method](#sendasynct-method) or by using the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension on an `HttpResponseMessage` that was returned by a `BatchResponse.HttpResponseMessages` property.
 
 ## Batch
 
@@ -289,7 +289,7 @@ The `Batch` folder contains three classes to manage sending OData $`batch` reque
 
 ### BatchRequest
 
-The `BatchRequest` constructor initializes an `HttpRequestMessage` that can be used with [SendAsync&lt;T&gt; Method](#sendasynclttgt-method) to send requests in batches. The constructor requires the `Service.BaseAddress` value to be passed as a parameter.
+The `BatchRequest` constructor initializes an `HttpRequestMessage` that can be used with [SendAsync&lt;T&gt; Method](#sendasynct-method) to send requests in batches. The constructor requires the `Service.BaseAddress` value to be passed as a parameter.
 
 `BatchRequest` has the following properties.
 
@@ -299,7 +299,7 @@ The `BatchRequest` constructor initializes an `HttpRequestMessage` that can be u
 |`ChangeSets` |`List<ChangeSet>`|One or more change sets to be included in the batch.|
 |`Requests`|`List<HttpRequestMessage>` |One or more `HttpMessageRequest` to be sent outside of any `ChangeSet`. |
 
-When `ChangeSets` or `Requests` are set they are encapsulated into [HttpMessageContent](previous-versions/aspnet/hh834416(v=vs.118)) and added to the `Content` of the request. The private `ToMessageContent` method applies the required changes to headers and returns the `HttpMessageContent` for both `ChangeSets` and `Requests` properties.
+When `ChangeSets` or `Requests` are set they are encapsulated into [HttpMessageContent](/previous-versions/aspnet/hh834416(v=vs.118)) and added to the `Content` of the request. The private `ToMessageContent` method applies the required changes to headers and returns the `HttpMessageContent` for both `ChangeSets` and `Requests` properties.
 
 ### ChangeSet
 
@@ -321,7 +321,7 @@ It contains a single property:
 
 `BatchResponse` has a private `ParseMultipartContent` method used by the `HttpResponseMessages` property getter to parse the `MultipartContent` returned into individual `HttpResponseMessage`.
 
-To access type properties of the `HttpResponseMessage` instances returned, you can use the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-aslttgt) extension method.
+To access type properties of the `HttpResponseMessage` instances returned, you can use the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension method.
 
 ## Methods
 
