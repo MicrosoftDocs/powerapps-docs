@@ -2,7 +2,7 @@
 title: "Cards overview"
 description: "Get a quick overview of cards as a Power Apps capability and what issues this capability can help you solve"
 keywords: "Cards, Power Apps, overview"
-ms.date: 03/18/2022
+ms.date: 09/19/2022
 ms.topic: article
 author: eberhardts
 ms.author: v-eberhardts
