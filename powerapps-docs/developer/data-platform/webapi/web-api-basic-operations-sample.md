@@ -570,7 +570,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    
    {
-    "@odata.id": "https://crmue.api.crm.dynamics.com/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)"
+    "@odata.id": "[Organization Uri]/api/data/v9.2/contacts(0928bcb4-bb27-ed11-9db1-002248274ada)"
    }
    ```
    
@@ -675,7 +675,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Accept: application/json
    
    {
-    "@odata.id": "https://crmue.api.crm.dynamics.com/api/data/v9.2/roles(e359feba-bb27-ed11-9db1-002248274ada)"
+    "@odata.id": "[Organization Uri]/api/data/v9.2/roles(e359feba-bb27-ed11-9db1-002248274ada)"
    }
    ```
    
