@@ -446,7 +446,6 @@ The rollup type can be configured for timelines on forms for notes. The availabl
 
 More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
   
-
 ### Posts on timeline
 
 To enable rich text posts on the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support). 
