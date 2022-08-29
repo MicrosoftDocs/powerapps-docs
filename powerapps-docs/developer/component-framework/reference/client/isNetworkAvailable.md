@@ -3,8 +3,7 @@ title: isNetworkAvailable | Microsoft Docs
 description: Returns information whether the network is available or not.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+ms.date: 08/29/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -14,7 +13,7 @@ contributors:
 
 # isNetworkAvailable
 
-[!INCLUDE [isNetworkAvailable-description](includes/isNetworkAvailable-description.md)]
+[!INCLUDE [isnetworkavailable-description](includes/isnetworkavailable-description.md)]
 
 ## Syntax
 

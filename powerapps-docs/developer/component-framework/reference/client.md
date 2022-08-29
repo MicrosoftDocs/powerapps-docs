@@ -39,7 +39,7 @@ Disables the scrolling capabilities for the components. This property is support
 | [getClient](client/getclient.md)                   | [!INCLUDE [getclient-description](client/includes/getclient-description.md)]                   | Model-driven and canvas apps |
 | [getFormFactor](client/getformfactor.md)           | [!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]           | Model-driven and canvas apps |
 | [isOffline](client/isoffline.md)                   | [!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]                   | Model-driven apps            |
-| [isNetworkAvailable](client/isNetworkAvailable.md) | [!INCLUDE [isNetworkAvailable-description](client/includes/isNetworkAvailable-description.md)] | Model-driven apps            |
+| [isNetworkAvailable](client/isnetworkavailable.md) | [!INCLUDE [isnetworkavailable-description](client/includes/isnetworkavailable-description.md)] | Model-driven apps            |
 
 ## Example
 
