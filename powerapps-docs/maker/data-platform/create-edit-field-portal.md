@@ -85,9 +85,10 @@ These columns store data as a number but include different presentation and vali
 
 |Format|Description|
 |--|--|
-|**Duration**|A number value presented as a drop-down list that contains time intervals. A user can select a pre-defined value from the list or type an integer value using the format: “x minutes”, “x hours” or “x days”. Hours and days can be entered using decimals, for example, “1.2 hours” or “1.5 days”. Minute values entered must be expressible in whole minutes, sub-minute values will be rounded to the nearest minute. <img src="media/whole-number-duration.png" alt="Whole number with duration format" height="300" width="400"/>  |
+|**Duration**|A number value presented as a drop-down list that contains time intervals. A user can select a pre-defined value from the list or type an integer value using the format: “x minutes”, “x hours” or “x days”. Hours and days can be entered using decimals, for example, “1.2 hours” or “1.5 days”. Minute values entered must be expressible in whole minutes. Entering a decimal to represent sub-minute values will be rounded to the nearest minute. <img src="media/whole-number-duration.png" alt="Whole number with duration format" height="300" width="400"/>  |
 |**Timezone**|A number value presented as a drop-down list that contains a list of time zones.|
-|**Language**|A number value presented as a drop-down list that contains a list of languages that have been enabled for the environment. If no other languages have been enabled, the base language will be the only option. The value saved is the Locale Identifier (LCID) value for the language.|
+|**Language code**|A number value presented as a drop-down list that contains a list of languages that have been enabled for the environment. If no other languages have been enabled, the base language will be the only option. The value saved is the Locale Identifier (LCID) value for the language.|
+| **None** | No special formatting will be applied for the whole number column. This is the default format. |
 
 ### Date Time
 
