@@ -48,6 +48,8 @@ You can add up to 10 levels of related table conditions using the filter editor 
 
 - Public views that include **Contains data** or **Does not contain data** filters don't appear in the list of saved views in legacy advanced find.
 
+- When you open the **Edit filters** panel on certain Activity tables, you will see a condition filtering tables that are not valid for Unified Client. These conditions may not be a part of the FetchXML of the view.
+
 ## See also
 
 [Explore data in a view on a grid page](grid-filters.md)  
