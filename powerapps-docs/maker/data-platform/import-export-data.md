@@ -2,7 +2,7 @@
 title: "Importing and exporting data | MicrosoftDocs"
 description: Learn about importing and exporting data into Microsoft Dataverse.
 ms.custom: ""
-ms.date: 06/16/2020
+ms.date: 08/30/2022
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -19,10 +19,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Importing and exporting data
-
-
 
 There are multiple ways to import and export data into Microsoft Dataverse. You can use dataflows, Power Query, Azure Data Factory, Azure Logic Apps, and Power Automate.
 
@@ -56,8 +53,7 @@ Exporting data, either to another data technology or to another environment, can
 
 ![Export Dataverse data methods.](media/export-cds-data.png "Export Dataverse data methods")
 
-Dynamics customers who are targeting SQL Server or Azure SQL Database can use the Data Export Service. This is an add-on service made available as a Dataverse solution that adds the ability to replicate Dataverse data to a SQL Database store in a customer-owned Azure subscription. The supported target destinations are SQL Database and SQL Server on Azure virtual machines. Data Export Service intelligently synchronizes the entire Common
-Data Service schema and data initially and, thereafter, synchronizes on a continuous basis as changes occur (delta changes) in Dataverse.
+Dynamics customers who are targeting SQL Server or Azure SQL Database can use Azure Synapse Link. Azure Synapse Link for Dataverse enables you to get near real-time insights over your data in Microsoft Dataverse. With a tight seamless integration between Dataverse and Azure Synapse Analytics, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your data. More information: [What is Azure Synapse Link for Dataverse](export-to-data-lake.md)
 
 ### See also
 
