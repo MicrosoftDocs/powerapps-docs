@@ -358,6 +358,8 @@
           href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
+          - name: Understand Power Apps Studio
+            href: ./canvas-apps/power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -369,7 +371,7 @@
               - name: Configure Office 365 screens
                 items:
                   - name: Calendar-screen overview
-                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+                    href: /canvas-apps/screen-templates/calendar-screen-overview.md
                   - name: Calendar-screen reference
                     href: ./canvas-apps/screen-templates/calendar-screen-reference.md
                   - name: Email-screen overview
@@ -384,7 +386,9 @@
                     href: ./canvas-apps/screen-templates/people-screen-overview.md
                   - name: People-screen reference
                     href: ./canvas-apps/screen-templates/people-screen-reference.md
-          - name: Show a table of items
+          - name: Create and edit tables 
+            href: ./canvas-apps/create-edit-tables.md
+          - name: Work with a gallery
             items:
             - name: Add a gallery
               href: ./canvas-apps/add-gallery.md
@@ -462,7 +466,7 @@
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
-          - name: Add editable tables
+          - name: Create an app to edit tables
             href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
@@ -2609,7 +2613,7 @@
       items:
         - name: Overview of the Power Apps app
           href: ../teams/overview-of-the-power-apps-app.md
-        - name: Understand Power Apps Studio
+        - name: Understand Power Apps Studio in a Teams environment
           href: ../teams/understand-power-apps-studio.md
         - name: Use the Fluent UI controls
           href: ../teams/use-the-fluent-ui-controls.md

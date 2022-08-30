@@ -6,12 +6,12 @@ author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
 manager: sunilg
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
 ---
 
@@ -32,12 +32,12 @@ The following is required to build and run the sample:
 
 - Microsoft Visual Studio 2019.
 - Access to Dataverse with privileges to perform the operations described above.
-  
+
 ## How to run this sample
 
 1. Go to the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/) repository and either clone or download the compressed samples repository. If you downloaded the compressed file, extract its contents into a local folder.
 
-1. Navigate to the cds/webapi/C#/[ConditionalOperations](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ConditionalOperations) folder and load the solution file into Visual Studio.
+1. Navigate to the cds/webapi/C#/[ConditionalOperations](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/ConditionalOperations) folder and load the solution file into Visual Studio.
 
 1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Dataverse environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
 
@@ -47,7 +47,7 @@ The following is required to build and run the sample:
 
 This sample depends on the assembly built from in the CDSWebApiService project. For information on the methods this class provides see [CDSWebApiService class](cdswebapiservice.md).
 
-The following is the code from the Program.cs file: 
+The following is the code from the Program.cs file:
 
 ```csharp
 using Newtonsoft.Json;
@@ -61,13 +61,13 @@ using System.Net;
 namespace PowerApps.Samples
 {
     /// <summary>
-    /// This program demonstrates use of conditional operations with the 
+    /// This program demonstrates use of conditional operations with the
     /// Dataverse Web API.
     /// </summary>
     class Program
     {
         //Get environment configuration data from the connection string in the App.config file.
-        static readonly string connectionString = 
+        static readonly string connectionString =
             ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
         static readonly ServiceConfig config = new ServiceConfig(connectionString);
 
@@ -279,7 +279,7 @@ namespace PowerApps.Samples
 
                     foreach (Uri entityUrl in entityUris) svc.Delete(entityUrl);
 
-                    #endregion Delete created records 
+                    #endregion Delete created records
                 }
             }
             catch (ServiceException e)

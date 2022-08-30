@@ -7,19 +7,17 @@ ms.author: mspilde
 manager: lwelicki
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Create, retrieve, update, and delete a dashboard
-
-
 
 This sample shows how to create, retrieve, update, and delete an user-owned dashboard using the following methods:
 
@@ -28,7 +26,7 @@ This sample shows how to create, retrieve, update, and delete an user-owned dash
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDOperationsDashboard).
 
 ## How to run this sample
 
@@ -48,14 +46,13 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `mySavedQuery` method grabs the default public view for opportunities. 
-2. The `visualizationQuery` method retrieves the visualizations out of the system. This sample assumes that you have the **Top opportunities**. 
+1. The `mySavedQuery` method grabs the default public view for opportunities.
+2. The `visualizationQuery` method retrieves the visualizations out of the system. This sample assumes that you have the **Top opportunities**.
 3. The `dashboard` method sets the dashboard and specifies the FormXml.
 4. The `chartPicker` method enables the chart picker on the chart.
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

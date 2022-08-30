@@ -4,7 +4,6 @@ description: "The rich text editor control provides the app user a WYSIWYG editi
 ms.custom: ""
 ms.date: 06/14/2022
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -115,7 +114,7 @@ A rich text-enabled column has a limited set of configuration that can be config
 
 The JSON file is comprised of properties set as name and value pairs. There are two types of configurations: the `defaultSupportedProps` section, and individual configuration settings that provide various functionality. 
 
-The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about plug-ins: [Use plug-ins to extend business processes](/powerapps/developer/data-platform/plug-ins).
+The `defaultSupportedProps` is a set of properties for the plug-ins, and includes support for all the CKEditor configurations. More information: [Visualization of the rich text editor configuration file](#visualization-of-the-rich-text-editor-configuration-file). The `defaultSupportedProps` isn’t limited to only plug-in properties documented from CKEditor, but also allows you to set properties for more plug-ins that you add or create. More information about CKEditor plug-ins: [Plug-ins available](https://ckeditor.com/cke4/addons/plugins/all)
 
 The individual configuration settings allow you to change how your editor behaves and functions.
 
@@ -1066,13 +1065,14 @@ The following table describes the different formatting features and functionalit
 |Icon | Name | Shortcut key | Description |
 |----------------------|-------------------------|-----------------------------|-----------------------------|
 |![Format Painter.](media/format-painter.png "Format Painter")| Format Painter | Ctrl+Shift+C, Ctrl+Shift+V | Apply the look of a particular section to another section. |
-|![Font.](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select your desired font. The default font is Segoe UI.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed. |
-|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The default size is 12.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
+|![Font.](media/format-font.png "Font") | Font | Ctrl+Shift+F | Select a font. The application considers the font that you select as the default font. Segoe UI is the default font if you don't select any.<br /><br /> **Note**: When you select any formatted content, the font name for that content displays. If your selection contains multiple fonts, the topmost font name of your selection is displayed.<br>  |
+|![Font Size.](media/font-size.png "Font Size") | Font size | Ctrl+Shift+P | Change the size of your text. The application considers the font size that you select as the default font size. 12 is the default font if you don't select any.<br /><br /> **Note**: When you select any formatted content, the font size for that content displays. If your selection contains multiple font sizes, the topmost font name of your selection is displayed.|
 |![Bold.](media/format-bold.png "Bold")| Bold | Ctrl+B | Make your text bold. |
 |![Italic.](media/format-italic.png "Italic")| Italic | Ctrl+I | Italicize your text. |
 |![Underline.](media/format-underline.png "Underline")| Underline | Ctrl+U | Underline your text. |
 |![Text Highlight Color.](media/text-highlight-color.png "Text Highlight Color")| Text Highlight Color |  | Make your text stand out by highlighting it in a bright color. |
 |![Font Color.](media/font-color.png "Font Color")| Font Color |  | Change the color of your text. |
+|![Attachment.](media/rte-attachment.png "Attachment")| Attachment |  | Attach a file. After you've uploaded a file, you can select the link to preview the file in the **Attachment Preview** dialog. |
 |![Bullets.](media/format-bullets.png "Bullets")| Bullets |  | Create a bulleted list. |
 |![Numbering.](media/format-numbering.png "Numbering")| Numbering |  | Create a numbered list. |
 |![Decrease Indent.](media/decrease-indent.png "Decrease Indent")| Decrease Indent |  | Move your paragraph closer to the margin. |
@@ -1081,7 +1081,7 @@ The following table describes the different formatting features and functionalit
 |![Align Left.](media/align-left.png "Align Left")| Align Left | Ctrl+L | Align your content with the left margin. (Commonly used for body text to make it easier to read.) |
 |![Align Center.](media/align-center.png "Align Center")| Align Center | Ctrl+E | Center your content on the page. (Commonly used for a formal appearance.) |
 |![Align Right.](media/align-right.png "Align Right")| Align Right | Ctrl+R | Align your content with the right margin. (Commonly used for a formal appearance.) |
-|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it. |
+|![Link.](media/format-link.png "Link")| Link |  | Create a link in your document for quick access to web pages and files.<br /><br />Pasted or typed URL text is converted into a link. For example, "http://myexample.com" will become "<a href="http://myexample.com">http://myexample.com</a>".<br /><br /> In the **Link** dialog box, choose the type of link you'd like to insert.<br /><br />The **Link Info** tab allows you to choose the link type as well as set the link protocol and URL.<br /><br />The **Target** tab is only available for the URL link type. It specifies the location where the link will open after you select it.<br /> |
 |![Remove Link.](media/remove-link.png "Unlink")| Unlink |  | Delete a link in your email or document.<br /><br />When you place the cursor on a link, the **Unlink** button on the toolbar becomes active. Select the button to remove the link and make it plain text. |
 |![Superscript.](media/format-superscript.png "Superscript")| Superscript |  | Type small letters just above the line of text. |
 |![Subscript.](media/format-subscript.png "Subscript")| Subscript |  | Type small letters just below the line of text. |

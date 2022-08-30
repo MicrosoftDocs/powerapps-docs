@@ -10,12 +10,13 @@ author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use OAuth authentication with Microsoft Dataverse
 
 [OAuth 2.0](https://oauth.net/2/) is the industry-standard protocol for authorization. After application users provide credentials to authenticate, OAuth determines whether they are authorized to access the resources.
@@ -27,7 +28,7 @@ OAuth requires an identity provider for authentication. For Dataverse, the ident
 > [!NOTE]
 > This topic will introduce common concepts related to connecting to Dataverse using OAuth with authentication libraries. This content will focus on how a developer can connect to Dataverse but not on the inner workings of OAuth or the libraries. For complete information related to authentication see the Azure Active Directory documentation. [What is authentication?](/azure/active-directory/develop/authentication-scenarios) is a good place to start.
 >
->Samples we provide are pre-configured with appropriate registration values so that you can run them without generating your own app registration. When you publish your own apps, you must use your own registration values.
+> Samples we provide are pre-configured with appropriate registration values so that you can run them without generating your own app registration. When you publish your own apps, you must use your own registration values.
 
 ## App Registration
 
@@ -41,15 +42,16 @@ The decisions you will need to make in this step mostly depend on the Applicatio
 
 When you register an app with Azure AD one of the decisions you must make is the application type. There are two types of applications you can register:
 
-|Application type|Description|
-|--|--|
-|Web app /API|**Web client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that executes all code on a web server.<br /><br />**User-agent-based client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that downloads code from a web server and executes within a user-agent (for instance, a web browser), such as a Single Page Application (SPA). 
+| Application type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Web app /API     | **Web client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that executes all code on a web server.<br /><br />**User-agent-based client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that downloads code from a web server and executes within a user-agent (for instance, a web browser), such as a Single Page Application (SPA). |
+
 |
 |Native|A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that is installed natively on a device. |
 
 When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD will send the authentication response, including a token if authentication was successful. While you develop an app, this is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.
 
-When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `app://<guid>`. 
+When you select **Native**, you must provide a Redirect URI. This is a unique identifier to which Azure AD will redirect the user-agent in an OAuth 2.0 request. This is typically a value formatted like so: `app://<guid>`.
 
 ### Giving access to Dataverse
 
@@ -58,6 +60,7 @@ If your app will be a client which allows the authenticated user to perform oper
 For specific steps to do this, see [Walkthrough: Register an app with Azure Active Directory > Apply Permissions](walkthrough-register-app-azure-active-directory.md).
 
 <!-- TODO Verify this -->
+
 If your app will use Server-to-Server (S2S) authentication, this step is not required. That configuration requires a specific system user and the operations will be performed by that user account rather than any user that must be authenticated.
 
 ### Enable Implicit Flow
@@ -68,7 +71,7 @@ If you are configuring an app for a Single Page Application (SPA) you must edit 
 
 For server to server scenarios there will not be an interactive user account to authenticate. In these cases, you need to provide some means to confirm that the application is trusted. This is done using client secrets or certificates.
 
-For apps that are registered with the **Web app /API** application type, you can configure secrets. These are set using the **Keys** area under **API Access** in the **Settings** for the app registration. 
+For apps that are registered with the **Web app /API** application type, you can configure secrets. These are set using the **Keys** area under **API Access** in the **Settings** for the app registration.
 
 For either application type, you can upload a certificate.
 
@@ -81,7 +84,7 @@ Use one of the Microsoft-supported Azure Active Directory authentication client 
 > [!NOTE]
 > Azure Active Directory Authentication Library (ADAL) is no longer actively receiving updates and is scheduled to be supported only until June, 2022. MSAL is the recommended authentication library to use for projects.
 
-For a code sample that demonstrates use of MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart).
+For a code sample that demonstrates use of MSAL libraries for authentication with Dataverse see [QuickStart sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart).
 
 ### .NET client libraries
 
@@ -91,12 +94,12 @@ Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft
 
 ## Use the AccessToken with your requests
 
-The point of using the authentication libraries is to get an access token that you can include with your requests. 
+The point of using the authentication libraries is to get an access token that you can include with your requests.
 This only requires a few lines of code, and just a few more lines to configure an [HttpClient](xref:System.Net.Http.HttpClient) to execute a request.
 
 ### Simple example
 
-The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart) sample.
+The following is the minimum amount of code needed to execute a single Web API request, but it is not the recommended approach. Note that this code uses the MSAL library and is taken from the [QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) sample.
 
 ```csharp
 string resource = "https://contoso.api.crm.dynamics.com";
@@ -138,7 +141,7 @@ This simple approach does not represent a good pattern to follow because the `to
 
 The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that the access token will be refreshed by the `AcquireToken*` method calls with each request sent by the Http client.
 
-The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>. This code is taken from the [Enhanced QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/EnhancedQuickStart) sample which uses the MSAL authentication library.
+The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>. This code is taken from the [Enhanced QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/EnhancedQuickStart) sample which uses the MSAL authentication library.
 
 ```csharp
 class OAuthMessageHandler : DelegatingHandler
@@ -190,7 +193,7 @@ class OAuthMessageHandler : DelegatingHandler
 }
 ```
 
-Using this `OAuthMessageHandler` class, the simple `Main` method would look like this. 
+Using this `OAuthMessageHandler` class, the simple `Main` method would look like this.
 
 ```csharp
 class Program
@@ -202,7 +205,7 @@ class Program
             //Get configuration data from App.config connectionStrings
             string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
 
-            using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, 
+            using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId,
                 SampleHelpers.redirectUrl))
             {
                 // Use the WhoAmI function
@@ -210,7 +213,7 @@ class Program
 
                 if (response.IsSuccessStatusCode)
                 {
-                    //Get the response content and parse it.  
+                    //Get the response content and parse it.
                     JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
                     Guid userId = (Guid)body["UserId"];
                     Console.WriteLine("Your UserId is {0}", userId);
@@ -263,13 +266,13 @@ public static HttpClient GetHttpClient(string connectionString, string clientId,
 }
 ```
 
-See the [Enhanced QuickStart](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/EnhancedQuickStart) sample for the complete code.
+See the [Enhanced QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/EnhancedQuickStart) sample for the complete code.
 
 Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 
 ## Connect as an app
 
-Some apps you will create are not intended to be run interactively by a user. For example, you may want to make a web client application that can perform operations on Dataverse data, or a console application that performs a scheduled task of some kind. 
+Some apps you will create are not intended to be run interactively by a user. For example, you may want to make a web client application that can perform operations on Dataverse data, or a console application that performs a scheduled task of some kind.
 
 While you could achieve these scenarios using credentials for an ordinary user, that user account would need to use a paid license. This isn't the recommended approach.
 
@@ -278,23 +281,25 @@ In these cases you can create a special application user which is bound to an Az
 ### Requirements to connect as an app
 
 To connect as an app you will need:
- - A registered app
- - A Dataverse user bound to the registered app
- - Connect using either the application secret or a certificate thumbprint
+
+- A registered app
+- A Dataverse user bound to the registered app
+- Connect using either the application secret or a certificate thumbprint
 
 #### Register your app
 
 When registering an app you follow many of the same steps described in [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md), with the following exceptions:
 
- - You do not need to grant the **Access Dynamics 365 as organization users** permission.
- 
-    This application will be bound to a specific user account.
+- You do not need to grant the **Access Dynamics 365 as organization users** permission.
 
- - You must configure a secret for the app registration OR upload a public key certificate.
+  This application will be bound to a specific user account.
+
+- You must configure a secret for the app registration OR upload a public key certificate.
 
 While registering the app, select the **Keys** section on the **Settings** page.
 
 To add a certificate:
+
 1. Select **Upload Public Key**.
 2. Select the file you'd like to upload. It must be one of the following file types: .cer, .pem, .crt.
 
@@ -302,9 +307,9 @@ To add a password:
 
 1. Add a description for your key.
 2. Select a duration.
-3. Select **Save**. 
+3. Select **Save**.
 
-  The right-most column will contain the key value, after you save the configuration changes. Be sure to copy the key for use in your client application code, as it is not accessible once you leave this page.
+The right-most column will contain the key value, after you save the configuration changes. Be sure to copy the key for use in your client application code, as it is not accessible once you leave this page.
 
 #### Dataverse user account bound to the registered app
 
@@ -314,33 +319,33 @@ After you have created the custom security role, you must create the user accoun
 
 <!-- Almost exactly the same intructions below can be found in powerapps-docs\developer\data-platform\use-multi-tenant-server-server-authentication.md -->
 
-#### Manually create a Dataverse application user  
+#### Manually create a Dataverse application user
 
- The procedure to create this user is different from creating a licensed user. Use the following steps:  
-  
-1. Navigate to **Settings** > **Security** > **Users**  
-  
-2. In the view drop-down, select **Application Users**.  
-  
-3. Click **New**. Then verify that you are using the **Application user** form.  
-  
-    If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
-  
-   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")  
-  
-4. Add the appropriate values to the fields:  
-  
-   |Field|Value|  
-   |-----------|-----------|
-   |**User Name**| A name for the user|
-   |**Application ID**|The Application ID value for the application registered with Azure AD.|  
-   |**Full Name**|The name of your application.|  
-   |**Primary Email**|The email address for the user.|  
-  
-    The **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.  
-  
-    When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.  
-  
+The procedure to create this user is different from creating a licensed user. Use the following steps:
+
+1. Navigate to **Settings** > **Security** > **Users**
+
+2. In the view drop-down, select **Application Users**.
+
+3. Click **New**. Then verify that you are using the **Application user** form.
+
+   If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:
+
+   ![Select Application User Form.](media/select-application-user-form.PNG "Select Application User Form")
+
+4. Add the appropriate values to the fields:
+
+   | Field              | Value                                                                  |
+   | ------------------ | ---------------------------------------------------------------------- |
+   | **User Name**      | A name for the user                                                    |
+   | **Application ID** | The Application ID value for the application registered with Azure AD. |
+   | **Full Name**      | The name of your application.                                          |
+   | **Primary Email**  | The email address for the user.                                        |
+
+   The **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.
+
+   When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.
+
 5. Associate the application user with the custom security role you created.
 
 #### Connect using the application secret

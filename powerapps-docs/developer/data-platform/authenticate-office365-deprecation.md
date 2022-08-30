@@ -10,9 +10,9 @@ author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
@@ -65,19 +65,20 @@ the recommended connection interface for authentication with Dataverse.
 
   If you are passing the `OrganizationServiceProxy` instance around to various methods, or returning the instance from a method, replace all occurrences of the type `OrganizationServiceProxy` with the [IOrganizationService](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) interface. This interface exposes all the core methods used to communicate with Dataverse.
 
-  When invoking the constructor, it is recommend you add the NuGet package [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) to your project and replace all use of `OrganizationServiceProxy` class constructors with [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` supports connection strings in addition to complex constructors and the ability to provide external authentication handlers. `CrmServiceClient` implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of `CrmServiceClient` in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23) repository.
+  When invoking the constructor, it is recommend you add the NuGet package [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) to your project and replace all use of `OrganizationServiceProxy` class constructors with [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) class constructors. You will need to alter your coding pattern here, however, for simplicity `CrmServiceClient` supports connection strings in addition to complex constructors and the ability to provide external authentication handlers. `CrmServiceClient` implements `IOrganizationService`, therefore your new authentication code will be portable to the rest of your application code. You can find examples on the use of `CrmServiceClient` in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23) repository.
 
 - If your code is using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with the “Office365” authentication type:
 
-    An example of this is a connections string that looks like this:
+  An example of this is a connections string that looks like this:
 
-    `connectionString = "AuthType=Office365;Username=jsmith@contoso.onmicrosoft.com;Password=passcode;Url=https://contoso.crm.dynamics.com"`
+  `connectionString = "AuthType=Office365;Username=jsmith@contoso.onmicrosoft.com;Password=passcode;Url=https://contoso.crm.dynamics.com"`
 
-    Similarly, you could also be using a `CrmServiceClient` constructor and pass in `AuthType.Office365`.
+  Similarly, you could also be using a `CrmServiceClient` constructor and pass in `AuthType.Office365`.
 
-    - Switch over to using an OAuth based connection string. Such connection string looks like this:
+  - Switch over to using an OAuth based connection string. Such connection string looks like this:
 
         `connectionString = "AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;
+
     Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
     RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;LoginPrompt=Auto"`
 
@@ -87,11 +88,11 @@ the recommended connection interface for authentication with Dataverse.
 
 - If you are accessing the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
 
-     Remove all use of that property in your code. `CrmServiceClient` implements `IOrganizationService` and exposes everything that is settable for the organization service proxy.
+  Remove all use of that property in your code. `CrmServiceClient` implements `IOrganizationService` and exposes everything that is settable for the organization service proxy.
 
 > [!IMPORTANT]
 > Regarding not being able to login using User ID/Password even if using OAuth: if your tenant and user is configured in Azure Active Directory for conditional access and/or Multi-Factor Authentication is required, you will not be able to use user ID/password flows in a non-interactive form at all. For those situations, you must use a Service Principal user to authenticate with Dataverse.<p/>
-To do this, you must first register the application user (Service Principal) in Azure Active Directory. You can find out how to do this [here](/azure/active-directory/develop/howto-create-service-principal-portal). During application registration you will need to create that user in Dataverse and grant permissions. Those permissions can either be granted directly or indirectly by adding the application user to a team which has been granted permissions in Dataverse. You can find more information on how to set up an unlicensed "application user" to authenticate with Dataverse [here](./use-single-tenant-server-server-authentication.md).
+> To do this, you must first register the application user (Service Principal) in Azure Active Directory. You can find out how to do this [here](/azure/active-directory/develop/howto-create-service-principal-portal). During application registration you will need to create that user in Dataverse and grant permissions. Those permissions can either be granted directly or indirectly by adding the application user to a team which has been granted permissions in Dataverse. You can find more information on how to set up an unlicensed "application user" to authenticate with Dataverse [here](./use-single-tenant-server-server-authentication.md).
 
 ## Need help?
 

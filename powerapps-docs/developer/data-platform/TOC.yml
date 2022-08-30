@@ -499,3 +499,5 @@
     href: customization-solutions-file-schema.md
   - name: FetchXML schema
     href: fetchxml-schema.md
+  - name: Web service error codes
+    href: reference/web-service-error-codes.md
