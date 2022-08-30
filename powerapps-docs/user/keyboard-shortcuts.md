@@ -64,7 +64,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Move to the previous option, option group, or column| Shift+Tab |
 |Move between options in an open list, or between options in a group of options|Arrow keys|
 |Go to the Command Bar| N/A |
-|Go to the landmark section of a page| Ctrl+\[ |
+|Go to the landmark section of a page| Ctrl+HOME   |
 
 
 ## Email 
