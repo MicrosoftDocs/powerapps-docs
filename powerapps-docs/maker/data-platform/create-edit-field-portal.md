@@ -2,7 +2,7 @@
 title: "Create and edit columns in Dataverse using Power Apps | MicrosoftDocs"
 description: Learn how to create and edit columns with Power Apps
 ms.custom: ""
-ms.date: 08/18/2022
+ms.date: 08/30/2022
 ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
@@ -55,7 +55,7 @@ Initially, just three column properties are available:
 
 You can set additional options depending on your choice of **Data type**.
 
-## Column Data types
+## Column data types
 
 There are many different types of columns, but you can only create some of them. For more information about all types of columns, see [Types of columns and column data types](types-of-fields.md).
 
@@ -83,10 +83,9 @@ Columns that store text have an absolute maximum depending on the type. The **Ma
 
 These columns store data as a number but include different presentation and validation options.
 
-|Data type|Description|
+|Format|Description|
 |--|--|
-|**Whole Number**|A number value presented in a text box.|
-|**Duration**|A number value presented as a drop-down list that contains time intervals. A user can select a value from the list or type an integer value that represents the number of minutes. The duration must be entered in the format: “x minutes”, “x hours” or “x days”. Hours and days can also be entered using decimals, for example, “x.x hours” or “x.x days”. The values entered must be expressible in minutes, sub-minute values will be rounded to the nearest minute.|
+|**Duration**|A number value presented as a drop-down list that contains time intervals. A user can select a pre-defined value from the list or type an integer value using the format: “x minutes”, “x hours” or “x days”. Hours and days can be entered using decimals, for example, “1.2 hours” or “1.5 days”. Minute values entered must be expressible in whole minutes, sub-minute values will be rounded to the nearest minute. <img src="media/whole-number-duration.png" alt="Whole number with duration format" height="300" width="400"/>  |
 |**Timezone**|A number value presented as a drop-down list that contains a list of time zones.|
 |**Language**|A number value presented as a drop-down list that contains a list of languages that have been enabled for the environment. If no other languages have been enabled, the base language will be the only option. The value saved is the Locale Identifier (LCID) value for the language.|
 
