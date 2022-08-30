@@ -7,18 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Get report history limits
 
-This sample shows how to get report history limits using the [GetReportHistoryLimitRequest](/dotnet/api/microsoft.crm.sdk.messages.getreporthistorylimitrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/GetReportHistoryLimit).
+This sample shows how to get report history limits using the [GetReportHistoryLimitRequest](/dotnet/api/microsoft.crm.sdk.messages.getreporthistorylimitrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/GetReportHistoryLimit).
 
 ## How to run this sample
 
@@ -38,12 +39,11 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `QueryByAttribute` method  queries for an existing report.
+1. The `QueryByAttribute` method queries for an existing report.
 2. The `GetReportHistoryLimitRequest` method gets the history limit data.
 
 ### Clean up
 
 No clean up is required for this sample.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
