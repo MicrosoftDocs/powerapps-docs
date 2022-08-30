@@ -10,9 +10,9 @@ ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
@@ -80,24 +80,24 @@ Leave your application projects and code as is. Continue using the Microsoft.Crm
 
 ## Code samples
 
-Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient) 
+Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/ServiceClient)
 
 ## Timeline
 
 The following table lists some important dates to keep in mind.
 
-| Timeframe | Event |
-| --- | --- |
-|June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|December 2022|Microsoft support for ADAL ends|
-|At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
+| Timeframe        | Event                                                                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| June 2022        | GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package |
+| December 2022    | Microsoft support for ADAL ends                                                                                                                      |
+| At a future date | Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)   |
 
 > [!IMPORTANT]
 > The `CrmServiceClient` class will continue to function as documented even after ADAL authentication is turned off. Both service client classes will continue to function as documented after the 2011 SOAP endpoint has been turned off. If required, we may release an updated assembly containing revised service clients that your application will need to load at run-time.
 
 ### See also
-  
+
 [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)  
-[Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)  
+[Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

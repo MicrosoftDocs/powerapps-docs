@@ -71,8 +71,8 @@ where:
     {% fetchxml contacts %}
         <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
             <entity name="contact">
-                <attribute name="fullname">
-                <attribute name="entityimage">
+                <attribute name="fullname"/>
+                <attribute name="entityimage"/>
             </entity>
         </fetch>
     {% endfetchxml %}

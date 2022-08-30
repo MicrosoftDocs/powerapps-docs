@@ -1,15 +1,12 @@
 ---
 title: "Sharing and assigning (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the security that applies to sharing and assigning records." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/11/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "paulliew" # GitHub ID
+ms.date: 08/22/2022
+ms.reviewer: pehecke
+ms.topic: article
+author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+ms.author: paulliew # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -81,6 +78,9 @@ shares the record with all access rights after the assign operation. Otherwise,
 the previous owner does not share the record and may not have access to the
 record, depending on his or her privileges. The Organization table's
 [ShareToPreviousOwnerOnAssign](reference/entities/organization.md#sharetopreviousowneronassign-choicesoptions) column controls this setting.
+
+> [!NOTE]
+> The [Appointment table](reference/entities/appointment.md) has special logic which is used when an appointment is assigned to another user. If the current owner is still a participant such as the organizer or an attendee, the appointment record is shared with this user when the appointment is reassigned. This behavior occurs even if the **Share reassigned records with original owner** setting is disabled. Because the appointment may be shared with the previous owner, the user assigning the meeting requires both the **Assign** and **Share** access rights on the record.
 
 ## Revoking access
 

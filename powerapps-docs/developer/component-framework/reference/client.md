@@ -9,7 +9,7 @@ ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
- - JimDaly
+  - JimDaly
 ---
 
 # Client
@@ -20,7 +20,7 @@ contributors:
 
 `context.client;`
 
-## Available for 
+## Available for
 
 Model-driven apps, canvas apps, & portals.
 
@@ -34,13 +34,14 @@ Disables the scrolling capabilities for the components. This property is support
 
 ## Methods
 
-|Method | Description |Available for|
-| ------------- |-------------|------|
-|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven and canvas apps|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven and canvas apps|
-|[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
+| Method                                             | Description                                                                                    | Available for                |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------- |
+| [getClient](client/getclient.md)                   | [!INCLUDE [getclient-description](client/includes/getclient-description.md)]                   | Model-driven and canvas apps |
+| [getFormFactor](client/getformfactor.md)           | [!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]           | Model-driven and canvas apps |
+| [isOffline](client/isoffline.md)                   | [!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]                   | Model-driven apps            |
+| [isNetworkAvailable](client/isnetworkavailable.md) | [!INCLUDE [isnetworkavailable-description](client/includes/isnetworkavailable-description.md)] | Model-driven apps            |
 
-## Example 
+## Example
 
 ```TypeScript
 private createHTMLTableElement(): HTMLTableElement {

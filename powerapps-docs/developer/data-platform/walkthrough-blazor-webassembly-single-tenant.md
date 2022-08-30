@@ -8,9 +8,9 @@ ms.subservice: dataverse-developer
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: kvivek # MSFT alias of manager or PM counterpart
 ms.reviewer: pehecke
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
@@ -31,7 +31,6 @@ When you complete this tutorial, you will have a Blazor WebAssembly app that dis
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this tutorial.":::
 
-
 ## Prerequisites
 
 To complete this tutorial, you must have:
@@ -51,7 +50,7 @@ Let’s make sure that your environment is configured properly, and you understa
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. Select **Solutions** in the navigation pane.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a Dataverse database.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a Dataverse database.":::
 
 1. If you don’t see a list of installed solutions, use the environment selector at the top to choose a different environment that has a database. Otherwise create a new environment.
 
@@ -59,7 +58,7 @@ Let’s make sure that your environment is configured properly, and you understa
 
 You will need the Instance Web API Service Root URL. This is found on the Developer Resources page of your Dataverse environment.
 
-Follow the instructions found in [View or download developer resources](view-download-developer-resources.md) to copy the Url. 
+Follow the instructions found in [View or download developer resources](view-download-developer-resources.md) to copy the Url.
 
 It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.1/`
 
@@ -68,15 +67,15 @@ It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. In the ‘waffle’ icon at the top left and select **Admin**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="Navigating to the Microsoft 365 admin center.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="Navigating to the Microsoft 365 admin center.":::
 
 1. This will take you to the Microsoft 365 admin center. In the left navigation, click **Show all** and select **Azure Active Directory**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-AAD-from-admin-center.png" alt-text="Navigating to the Azure Active Directory Admin center.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-AAD-from-admin-center.png" alt-text="Navigating to the Azure Active Directory Admin center.":::
 
 1. This will take you to the Azure Active Directory admin center. Expand the left navigation pane and select **Azure Active Directory**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Azure Active Directory page.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Azure Active Directory page.":::
 
 This takes you to the starting point for Step 2.
 
@@ -89,11 +88,11 @@ These steps will describe how to create an app registration in Azure AD and run 
 > [!NOTE]
 > At this time, you must use the .NET Core CLI command to generate the app. There is no template for this specific type of app when creating a project using Visual Studio.
 
-Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) and follow the instructions there to generate the basic app template. 
+Go to [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) and follow the instructions there to generate the basic app template.
 
 > [!NOTE]
-> The rest of the content in this section provides supplemental information to assist in completing the steps described in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. 
-> 
+> The rest of the content in this section provides supplemental information to assist in completing the steps described in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic.
+>
 > You may want to review this as you complete those steps, but it is not required. When you are done, come back here and start with [Step 3 Grant API permissions](#step-3-grant-api-permissions).
 
 Registering the application involves completing a form. The default value for the Redirect URI includes a placeholder for the port value. You must replace the placeholder with a number value to complete the registration, for example, just add `1111` for now. You can provide the randomly generated port value later after you open the project in Visual Studio. See [Update callback URL](#update-callback-url).
@@ -134,12 +133,12 @@ The port setting used by Visual Studio is randomly generated. The callback URI i
 
 1. In Visual Studio, open the project properties and select **Debug**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-project-debug-settings.png" alt-text="The Visual Studio project Debug page.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-project-debug-settings.png" alt-text="The Visual Studio project Debug page.":::
 
 1. Under **Web Server Settings** copy the **Enable SSL** value that includes the random port assigned for debugging
 1. Return to your app registration in Azure AD, In the **Authentication** section, change the **Redirect URI** to include this root Uri, then save your changes
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-application-redirect-uri.png" alt-text="The registered application Authentication information.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-application-redirect-uri.png" alt-text="The registered application Authentication information.":::
 
 ### Verify that the app runs
 
@@ -155,24 +154,24 @@ To connect to Dataverse, you must configure permissions for the app to connect.
 
 1. Return to your app registration in Azure AD, In the **API permissions** section, click **Add a permission**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
 
-1. In the **Request API permissions** area, select **APIs my organization uses** and search for *Common Data Service*.
+1. In the **Request API permissions** area, select **APIs my organization uses** and search for _Common Data Service_.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="Searching for the Dataverse permissions.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="Searching for the Dataverse permissions.":::
 
-1. Select **Common Data Service**. 
+1. Select **Common Data Service**.
 1. Select the **user_impersonation** permission
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the Dataverse user_impersonation permission.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the Dataverse user_impersonation permission.":::
 
-    > [!NOTE]
-    > Dynamics CRM and Dataverse refer to the same service.
+   > [!NOTE]
+   > Dynamics CRM and Dataverse refer to the same service.
 
 1. Click **Add permissions**.
 1. (Optional) For the **Configured permissions**, click **Grant Admin consent for [Your Azure Active Directory tenant name]**. In the screenshot below the tenant name is ‘Default Directory’. Yours may be different.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="The button showing the optional button to grant admin consent for the registered application.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="The button showing the optional button to grant admin consent for the registered application.":::
 
 ## Step 4: Apply code changes
 
@@ -215,38 +214,39 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
 ### Program.cs
 
 1. Install the `Microsoft.Extensions.Http` NuGet package.
-    1. In the solution explorer, right-click the project and select **Manage NuGet Packages...**.
-    1. Select **Browse** and search for `Microsoft.Extensions.Http`.
-    1. Install the latest version of the package.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-install-microsoft.extensions.http-nuget-package.png" alt-text="Install the required NuGet package.":::
+   1. In the solution explorer, right-click the project and select **Manage NuGet Packages...**.
+   1. Select **Browse** and search for `Microsoft.Extensions.Http`.
+   1. Install the latest version of the package.
+
+   :::image type="content" source="media/blazor-webassembly-walkthrough-install-microsoft.extensions.http-nuget-package.png" alt-text="Install the required NuGet package.":::
 
 1. Add the following code below the line that starts with `builder.Services.AddTransient(sp => new HttpClient...`
 
-    ```csharp
-    // Get configuration data about the Web API set in wwwroot/appsettings.json
-    var CDSWebApiConfig = builder.Configuration.GetSection("CDSWebAPI");
-    var resourceUrl = CDSWebApiConfig.GetSection("ResourceUrl").Value;
-    var version = CDSWebApiConfig.GetSection("Version").Value;
-    var timeoutSeconds = int.Parse(CDSWebApiConfig.GetSection("TimeoutSeconds").Value);
+   ```csharp
+   // Get configuration data about the Web API set in wwwroot/appsettings.json
+   var CDSWebApiConfig = builder.Configuration.GetSection("CDSWebAPI");
+   var resourceUrl = CDSWebApiConfig.GetSection("ResourceUrl").Value;
+   var version = CDSWebApiConfig.GetSection("Version").Value;
+   var timeoutSeconds = int.Parse(CDSWebApiConfig.GetSection("TimeoutSeconds").Value);
 
-    // Create an named definition of an HttpClient that can be created in a component page
-    builder.Services.AddHttpClient("CDSClient", client =>
-    {
-        // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors
-        client.BaseAddress = new Uri($"{resourceUrl}/api/data/{version}/");
-        client.Timeout = TimeSpan.FromSeconds(timeoutSeconds);
-        client.DefaultRequestHeaders.Add("OData-Version", "4.0");
-        client.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
-    });
-    ```
+   // Create an named definition of an HttpClient that can be created in a component page
+   builder.Services.AddHttpClient("CDSClient", client =>
+   {
+       // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors
+       client.BaseAddress = new Uri($"{resourceUrl}/api/data/{version}/");
+       client.Timeout = TimeSpan.FromSeconds(timeoutSeconds);
+       client.DefaultRequestHeaders.Add("OData-Version", "4.0");
+       client.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
+   });
+   ```
 
 1. Add the following code below the line that starts with `builder.Configuration.Bind("AzureAd" ...`
 
-    ```csharp
-    // Add access to Dataverse to the scope of the access token when the user signs in
-    options.ProviderOptions.DefaultAccessTokenScopes.Add($"{resourceUrl}/user_impersonation");
-    ```
+   ```csharp
+   // Add access to Dataverse to the scope of the access token when the user signs in
+   options.ProviderOptions.DefaultAccessTokenScopes.Add($"{resourceUrl}/user_impersonation");
+   ```
 
 ### Add \Pages\FetchAccounts.razor
 
@@ -255,207 +255,207 @@ This is a new page that will display the account information.
 1. In solution explorer, right click **Pages** and select **Add** > **Razor Component…** from the context menu and name it `FetchAccounts.razor`.
 1. Replace the code in the file with the following:
 
-    ```cshtml
-    @page "/fetchaccounts"
-    @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
-    @using System.Net.Http.Headers
-    @using System.Net.Http.Json
-    @using Microsoft.Extensions.Logging;
-    @using System.Text.Json.Serialization;
-    @inject IAccessTokenProvider TokenProvider
-    @inject IHttpClientFactory ClientFactory
-    @inject ILogger<FetchAccounts> logger;
+   ```cshtml
+   @page "/fetchaccounts"
+   @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+   @using System.Net.Http.Headers
+   @using System.Net.Http.Json
+   @using Microsoft.Extensions.Logging;
+   @using System.Text.Json.Serialization;
+   @inject IAccessTokenProvider TokenProvider
+   @inject IHttpClientFactory ClientFactory
+   @inject ILogger<FetchAccounts> logger;
 
-    <AuthorizeView>
-        @*Only show the list if the user is signed in and authorized*@
-        <Authorized>
-            <h3>Fetch Accounts</h3>
+   <AuthorizeView>
+       @*Only show the list if the user is signed in and authorized*@
+       <Authorized>
+           <h3>Fetch Accounts</h3>
 
-            @if (accounts != null)
-            {
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Main Phone</th>
-                            <th>City</th>
-                            <th>Primary Contact</th>
-                            <th>Email (Primary Contact)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (Account account in accounts.value)
-                        {
-                            <tr id="@account.accountid">
-                                <td>
-                                    @((account.name != null)
-                                    ? account.name
-                                    : string.Empty)
-                                </td>
-                                <td>
-                                    @((account.telephone1 != null)
-                                    ? account.telephone1
-                                    : string.Empty)
-                                </td>
-                                <td>
-                                    @((account.address1_city != null)
-                                    ? account.address1_city
-                                    : string.Empty)
-                                </td>
-                                <td>
-                                    @((account.primarycontactid != null)
-                                    ? (account.primarycontactid.fullname != null
-                                        ? account.primarycontactid.fullname
-                                        : string.Empty)
-                                    : string.Empty)
-                                </td>
-                                <td>
-                                    @((account.primarycontactid != null)
-                                    ? (account.primarycontactid.emailaddress1 !=null
-                                        ? account.primarycontactid.emailaddress1
-                                        : string.Empty)
-                                    : string.Empty)
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            }
-            else
-            {
-                <p><em>@message</em></p>
-            }
-        </Authorized>
-        <NotAuthorized>
-            <h3>Authentication Failure!</h3>
-            <p>You're not signed in.</p>
-        </NotAuthorized>
-    </AuthorizeView>
-
-
-    @code {
-
-        //The collection of Account records to display
-        private AccountCollection accounts;
-
-        //An informational message
-        private string message = "Loading...";
-
-        //Contains data about an error returned from the Web API
-        private Error error;
-
-        // Method invoked when the component is ready to start, having received its initial parameters from its parent in the render tree.
-        // Override this method if you will perform an asynchronous operation and want the component to refresh when that operation is completed.
-        protected override async Task OnInitializedAsync()
-        {
-            // Tries to get an access token for the current user with the default set of permissions.
-            var tokenResult = await TokenProvider.RequestAccessToken();
-
-            // If the token request was successful
-            if (tokenResult.TryGetToken(out var token))
-            {
-                //Creates an HttpClient based on the named definition found in Program.Main
-                var client = ClientFactory.CreateClient("CDSClient");
-
-                //Prepare the request to get the data
-                var request = new HttpRequestMessage()
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri($"{client.BaseAddress}accounts?" +
-                    "$select=name,telephone1,address1_city&" +
-                    "$expand=primarycontactid($select=fullname,emailaddress1)")
-                };
-                //Add the access token
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token.Value);
-                //Specify a JSON result is expected
-                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                //Limit the number of results to 10
-                request.Headers.Add("Prefer", "odata.maxpagesize=10");
-
-                //Send the request
-                var response = await client.SendAsync(request);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    //Parse the JSON returned into a strongly typed AccountCollection
-                    accounts = await response.Content.ReadFromJsonAsync<AccountCollection>();
-                }
-                else
-                {
-                    //Parse the JSON returned into a strongly typed Error
-                    error = await response.Content.ReadFromJsonAsync<Error>();
-                    error.statuscode = (int)response.StatusCode;
-                    error.reason = response.ReasonPhrase;
-                    //Display a message to the user
-                    message = "An error occurred.";
-                    //Log the details so they can be seen in the browser console
-                    logger.LogError($"{error.detail.message}");
-
-                }
-
-            }
-            else
-            {
-                // Notify user that the token request was not successful
-                message = "There was a problem authenticating.";
-            }
-
-        }
+           @if (accounts != null)
+           {
+               <table class="table">
+                   <thead>
+                       <tr>
+                           <th>Name</th>
+                           <th>Main Phone</th>
+                           <th>City</th>
+                           <th>Primary Contact</th>
+                           <th>Email (Primary Contact)</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       @foreach (Account account in accounts.value)
+                       {
+                           <tr id="@account.accountid">
+                               <td>
+                                   @((account.name != null)
+                                   ? account.name
+                                   : string.Empty)
+                               </td>
+                               <td>
+                                   @((account.telephone1 != null)
+                                   ? account.telephone1
+                                   : string.Empty)
+                               </td>
+                               <td>
+                                   @((account.address1_city != null)
+                                   ? account.address1_city
+                                   : string.Empty)
+                               </td>
+                               <td>
+                                   @((account.primarycontactid != null)
+                                   ? (account.primarycontactid.fullname != null
+                                       ? account.primarycontactid.fullname
+                                       : string.Empty)
+                                   : string.Empty)
+                               </td>
+                               <td>
+                                   @((account.primarycontactid != null)
+                                   ? (account.primarycontactid.emailaddress1 !=null
+                                       ? account.primarycontactid.emailaddress1
+                                       : string.Empty)
+                                   : string.Empty)
+                               </td>
+                           </tr>
+                       }
+                   </tbody>
+               </table>
+           }
+           else
+           {
+               <p><em>@message</em></p>
+           }
+       </Authorized>
+       <NotAuthorized>
+           <h3>Authentication Failure!</h3>
+           <p>You're not signed in.</p>
+       </NotAuthorized>
+   </AuthorizeView>
 
 
-        // The result will be a JSON object with an array of entities set to the value property
-        public class AccountCollection
-        {
-            public Account[] value { get; set; }
-        }
+   @code {
 
-        //Just the properties of the Account EntityType used for this sample
-        // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/account
-        public class Account
-        {
+       //The collection of Account records to display
+       private AccountCollection accounts;
 
-            public Guid accountid { get; set; }
+       //An informational message
+       private string message = "Loading...";
 
-            public string name { get; set; }
+       //Contains data about an error returned from the Web API
+       private Error error;
 
-            public string telephone1 { get; set; }
+       // Method invoked when the component is ready to start, having received its initial parameters from its parent in the render tree.
+       // Override this method if you will perform an asynchronous operation and want the component to refresh when that operation is completed.
+       protected override async Task OnInitializedAsync()
+       {
+           // Tries to get an access token for the current user with the default set of permissions.
+           var tokenResult = await TokenProvider.RequestAccessToken();
 
-            public string address1_city { get; set; }
+           // If the token request was successful
+           if (tokenResult.TryGetToken(out var token))
+           {
+               //Creates an HttpClient based on the named definition found in Program.Main
+               var client = ClientFactory.CreateClient("CDSClient");
 
-            public Contact primarycontactid { get; set; }
+               //Prepare the request to get the data
+               var request = new HttpRequestMessage()
+               {
+                   Method = HttpMethod.Get,
+                   RequestUri = new Uri($"{client.BaseAddress}accounts?" +
+                   "$select=name,telephone1,address1_city&" +
+                   "$expand=primarycontactid($select=fullname,emailaddress1)")
+               };
+               //Add the access token
+               request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token.Value);
+               //Specify a JSON result is expected
+               request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+               //Limit the number of results to 10
+               request.Headers.Add("Prefer", "odata.maxpagesize=10");
 
-        }
+               //Send the request
+               var response = await client.SendAsync(request);
 
-        //Just the properties of the Contact EntityType that are expanded from the Account entity
-        // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/contact
-        public class Contact
-        {
+               if (response.IsSuccessStatusCode)
+               {
+                   //Parse the JSON returned into a strongly typed AccountCollection
+                   accounts = await response.Content.ReadFromJsonAsync<AccountCollection>();
+               }
+               else
+               {
+                   //Parse the JSON returned into a strongly typed Error
+                   error = await response.Content.ReadFromJsonAsync<Error>();
+                   error.statuscode = (int)response.StatusCode;
+                   error.reason = response.ReasonPhrase;
+                   //Display a message to the user
+                   message = "An error occurred.";
+                   //Log the details so they can be seen in the browser console
+                   logger.LogError($"{error.detail.message}");
 
-            public string fullname { get; set; }
+               }
 
-            public string emailaddress1 { get; set; }
-        }
+           }
+           else
+           {
+               // Notify user that the token request was not successful
+               message = "There was a problem authenticating.";
+           }
 
-        // Contains the error data returned by the Web API and the HttpMessageResponse
-        public class Error
-        {
-            [JsonPropertyName("error")]
-            public ErrorDetail detail { get; set; }
-            public int statuscode { get; set; }
-            public string reason { get; set; }
+       }
 
-        }
 
-        //Contains data from the Web API
-        //See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#parse-errors-from-the-response
-        public class ErrorDetail
-        {
-            public string code { get; set; }
-            public string message { get; set; }
+       // The result will be a JSON object with an array of entities set to the value property
+       public class AccountCollection
+       {
+           public Account[] value { get; set; }
+       }
 
-        }
-    }
-    ```
+       //Just the properties of the Account EntityType used for this sample
+       // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/account
+       public class Account
+       {
+
+           public Guid accountid { get; set; }
+
+           public string name { get; set; }
+
+           public string telephone1 { get; set; }
+
+           public string address1_city { get; set; }
+
+           public Contact primarycontactid { get; set; }
+
+       }
+
+       //Just the properties of the Contact EntityType that are expanded from the Account entity
+       // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/contact
+       public class Contact
+       {
+
+           public string fullname { get; set; }
+
+           public string emailaddress1 { get; set; }
+       }
+
+       // Contains the error data returned by the Web API and the HttpMessageResponse
+       public class Error
+       {
+           [JsonPropertyName("error")]
+           public ErrorDetail detail { get; set; }
+           public int statuscode { get; set; }
+           public string reason { get; set; }
+
+       }
+
+       //Contains data from the Web API
+       //See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#parse-errors-from-the-response
+       public class ErrorDetail
+       {
+           public string code { get; set; }
+           public string message { get; set; }
+
+       }
+   }
+   ```
 
 This code does the following:
 
@@ -472,9 +472,9 @@ Add this node where ever you like within the `<ul class="nav flex-column">` elem
 
 ```html
 <li class="nav-item px-3">
-    <NavLink class="nav-link" href="fetchaccounts">
-        <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch Accounts
-    </NavLink>
+  <NavLink class="nav-link" href="fetchaccounts">
+    <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch Accounts
+  </NavLink>
 </li>
 ```
 
@@ -485,25 +485,24 @@ In Visual Studio, press F5 to launch the app with the code changes.
 1. Before logging in, navigate to **Fetch Accounts**. You should expect to see the failure notification.
 1. Log-in as a user who has access to the Dataverse data.
 
-    > [!NOTE]
-    > If you did not grant admin consent in [Step 3: Grant API permissions](#step-3-grant-api-permissions), users can expect to see a dialog like this:
-    > 
-    > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="The dialog to prompt the user to grant consent to the application.":::
-    >
-    > You must click **Accept** to continue.
+   > [!NOTE]
+   > If you did not grant admin consent in [Step 3: Grant API permissions](#step-3-grant-api-permissions), users can expect to see a dialog like this:
+   >
+   > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="The dialog to prompt the user to grant consent to the application.":::
+   >
+   > You must click **Accept** to continue.
 
 1. Navigate to **Fetch Accounts** and verify that the Account data is displayed as expected:
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="The final expected behavior for successfully completing the walkthrough.":::
+   :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="The final expected behavior for successfully completing the walkthrough.":::
 
 ### See also
 
-[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)  
+[Use the global Discovery service from a Blazor WebAssembly](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/BlazorCDS)  
 [Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
 [Use OAuth with Dataverse](authenticate-oauth.md)<br />
 [Use the Dataverse Web API](webapi/overview.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
