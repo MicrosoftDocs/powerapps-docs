@@ -27,7 +27,7 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
 
 ## Prerequisites
 
-The following is required to build and run the CDSWebApiService C# samples :
+The following is required to build and run this sample:
 
 - Microsoft Visual Studio 2022.
 - Access to Dataverse with privileges to perform data operations.
@@ -37,6 +37,7 @@ The following is required to build and run the CDSWebApiService C# samples :
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
+1. Locate the [/dataverse/webapi/C#-NETx/BasicOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/BasicOperations) folder.
 1. Open the `BasicOperations.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
