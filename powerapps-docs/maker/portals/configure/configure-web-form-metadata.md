@@ -1,20 +1,21 @@
 ---
-title: Configure advanced form metadata for portals
-description: Learn how to add and configure advanced form metadata for a portal.
+title: Configure multistep form metadata for portals
+description: Learn how to add and configure multistep form metadata for a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
-# Configure advanced form metadata for portals
+# Configure multistep form metadata for portals
 
 The Advanced Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
