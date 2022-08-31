@@ -369,7 +369,7 @@ This section of the program demonstrates how to perform conditional delete and u
    }
    ```
 
-# Section 3: Delete sample records
+## Section 3: Delete sample records
 
 This section simply deletes the record created in [Section 0: Create sample records](#section-0-create-sample-records). It uses a `$batch` request.
 
