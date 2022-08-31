@@ -14,17 +14,17 @@ ms.collection:
 
 # Cards Overview
 
-Cards are a low-code capability of Power Apps enabling business users and developers to design, send, and use cards - micro-apps using enterprise data that can be sent as content in Teams.
+Cards are a low-code capability of Power Apps enabling business users and developers to design, send, and use cards - micro-apps using enterprise data that can be sent as content in other applications.
 
 Business users and subject matter experts can create cards with a guided, low-code graphical interface to optimize and automate business tasks and to create actionable scenarios with interactive, data-driven, lightweight UI and make these cards available for other people to use.
 
-As a part of the Power Apps ecosystem, cards add business logic through Power Fx and integration with business data through connectors.
+As a part of the Power Apps ecosystem, cards add business logic through Power Fx and integration with business data through Power Platform connectors.
 
 Using cards, you can quickly build, manage, and share rich, actionable UI cards without needing coding or IT expertise.
 
 ## Get started in minutes
 
-Cards are available to makers as a part of Power Apps. You can easily sign up and create your card with a few clicks; there is no complex systems or services to deploy and maintain.
+Cards are available to makers as a part of Power Apps. You can easily sign into the Power Apps maker portal and create your card with a few clicks; there is no complex systems or services to deploy and maintain.
 
 To create a card, you can go to make.powerapps.com and navigate to the Cards section:  
 
@@ -32,9 +32,9 @@ To create a card, you can go to make.powerapps.com and navigate to the Cards sec
 
 There are two key parts to this solution:
 
-- **Card Designer**: a low-code designer for creating new cards using drag-and-drop controls, Power Fx logic, and data from connectors
+- **Card Designer**: a low-code designer for creating new cards using drag-and-drop controls, Power Fx logic, and data from Power Platfrom connectors
 
-- **Lightweight runtime**: manages sending and receiving cards, replacing the need for a secondary bot
+- **Lightweight runtime**: securily manages sending and receiving cards
 
 ## Card Designer
 
@@ -44,7 +44,7 @@ Use the intuitive drag-and-drop Designer to easily create a card consisting of b
 
 ### Add data and connect to services with connectors
 
-Leverage connectors to work with enterprise data and invoke cloud-based functions safely and securely in your cards.
+Leverage Power Platfrom connectors to work with enterprise data and invoke cloud-based functions safely and securely in your cards.
 
 The lightweight runtime of cards securely handles tokens for each participant in the card transaction, enabling data-rich and powerful scenarios that respect security boundaries within an organization.
 
@@ -56,10 +56,12 @@ Use Power Fx to add inline calculations and dynamic actions to cards. Create pow
 
 :::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer." border="false":::
 
-## Lightweight Runtime
 
-The card runtime is the core of what allows users to play their interactive cards, using an easy declarative format to embed data and workflows. This engine abstracts over the interactive transaction capabilities of card canvases in Teams, enabling users to send and receive cards without needing to deploy a secondary bot service or build a Teams app.
-
-Share cards on Teams with other people by using the Send button in the Designer and copying the link into a Teams chat or channel.
+## Post cards on Teams 
+Post cards on Teams to share them with other people by using the **Send** button in the Designer and copying the link into a Teams chat or channel.
 
 :::image type="content" source="media/overview/placeholder-cards-play-page.png" alt-text="Screenshot of the card designer." border="false":::
+
+## Lightweight Runtime
+
+The card runtime is the core of what allows users to securily run their interactive cards with embeded data and workflows. The runtime engine abstracts over the interactive transaction capabilities of card canvases, enabling users to send and receive cards without needing to deploy a secondary bot service or build additional apps.
