@@ -34,7 +34,7 @@ Model-driven and canvas apps
 Type: `string` | `Date` | `number` | `number[]` | `boolean` | [EntityReference](./../entityreference.md) | `EntityReference[]` | [FileObject](./../fileobject.md) | [ImageObject](./../imageobject.md)
 
 > [!NOTE]
-> For Canvas apps some attributes for file columns will be missing on the first call, since they depend on some async functions. After async functions resolve they will caches values and next `getValue` call will fetch all existing attributes.
+> For Canvas apps the [fileSize](../fileobject.md#filesize) and [mimeType](../fileobject.md#mimetype) properties for file columns will be missing on the first call, but the call initiates an asynchronous process to cache these values. After these values are cached, the next `getValue` call will return all attribute values.
 
 ### Related topics
 

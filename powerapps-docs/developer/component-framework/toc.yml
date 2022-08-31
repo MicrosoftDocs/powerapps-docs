@@ -277,6 +277,8 @@ items:
           href: reference/formatting/parsedatefrominput.md
       - name: ICommand
         href: reference/icommand.md
+      - name: ImageObject
+        href: reference/imageobject.md
       - name: Linking
         href: reference/linking.md
         items:

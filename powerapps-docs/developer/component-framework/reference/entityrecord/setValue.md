@@ -28,7 +28,7 @@ Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/workin
 |Parameter Name |Type| Required | Description|
 |----|----|----|----|
 | `columnName`|`string`| Yes| Name of the column.|
-| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../ImageObject.md)| Yes      | New value for the record. |
+| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
 
 ## Return Value
 

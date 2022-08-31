@@ -3,7 +3,7 @@ title: ImageObject | Microsoft Docs
 description: Provides access to all the properties of an image.
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 08/22/2022
+ms.date: 08/31/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -13,11 +13,11 @@ contributors:
 
 # ImageObject
 
-[!INCLUDE [ImageObject-description](includes/imageobject-description.md)]
+[!INCLUDE [imageobject-description](includes/imageobject-description.md)]
 
 ## Available for
 
-Canvas apps.
+Canvas apps
 
 ## Properties
 
