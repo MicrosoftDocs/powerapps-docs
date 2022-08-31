@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/26/2022
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -58,7 +58,7 @@ To fix this issue for Advanced forms:
 
 1. On the left-pane, select **Advanced form**.
 
-1. Open each advanced form and go to **Advanced Form Steps**.
+1. Open each multistep form and go to **Advanced Form Steps**.
 
 1. Go through each step, and update the **Enable Table Permission** property to be enabled.
 
@@ -322,7 +322,7 @@ To avoid this, do the following:
 
 ## Basic form lookup configuration 
 
-Enabling a lookup to render as a drop-down mode in basic forms or advanced forms can lead to performance issues if the number of records shown in the drop-down exceeds 200 and are changed frequently. Use this option for only static lookups, such as country and state list, having a limited number of records.
+Enabling a lookup to render as a drop-down mode in basic forms or multistep forms can lead to performance issues if the number of records shown in the drop-down exceeds 200 and are changed frequently. Use this option for only static lookups, such as country and state list, having a limited number of records.
 
 When this option is enabled for lookups that can have a large number of records, it will slow down the load time of the webpage on which the basic form is available. When this page is used by many users and loaded many times, it can slow down the entire website by using website resources to render this page. For these situations, full lookup experience should be used, or a custom HTML control that calls an AJAX endpoint (created using web templates) should be built for the wanted look and feel.
 
@@ -455,9 +455,9 @@ This issue occurs when the **Access Denied** site marker is available, but is po
 3.    Find the **Access Denied** site marker record.
 4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
-## Profile advanced form isn't available for contact table
+## Profile multistep form isn't available for contact table
 
-The profile page is one of the common pages used in your portal for all profile-related issues. This page shows a form that can be used by users to update their profiles. The form used on this page comes from the **Profile Web Page** main form available in the Contact table. This form is created in your Dataverse environment when the portal is provisioned. This error is displayed when the **Profile** advanced form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website, displaying a runtime error on your portal. This is an irreparable state and requires the portal to be reinstalled in the environment.
+The profile page is one of the common pages used in your portal for all profile-related issues. This page shows a form that can be used by users to update their profiles. The form used on this page comes from the **Profile Web Page** main form available in the Contact table. This form is created in your Dataverse environment when the portal is provisioned. This error is displayed when the **Profile** multistep form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website, displaying a runtime error on your portal. This is an irreparable state and requires the portal to be reinstalled in the environment.
 
 ## Published state isn't available for this website
 
