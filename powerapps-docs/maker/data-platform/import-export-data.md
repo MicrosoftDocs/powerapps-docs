@@ -53,7 +53,7 @@ Exporting data, either to another data technology or to another environment, can
 
 ![Export Dataverse data methods.](media/export-cds-data.png "Export Dataverse data methods")
 
-Dynamics customers who are targeting SQL Server or Azure SQL Database can use Azure Synapse Link. Azure Synapse Link for Dataverse enables you to get near real-time insights over your data in Microsoft Dataverse. With a tight seamless integration between Dataverse and Azure Synapse Analytics, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your data. More information: [What is Azure Synapse Link for Dataverse](export-to-data-lake.md)
+Dynamics customers who are targeting SQL Server or Azure SQL Database can use Azure Synapse Link. Azure Synapse Link for Dataverse connects with Azure Synapse Analytics to enable you to get near real-time insights over your data from Microsoft Dataverse. With a tight seamless integration between Dataverse and Azure Synapse Analytics, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your data. More information: [What is Azure Synapse Link for Dataverse](export-to-data-lake.md)
 
 ### See also
 
