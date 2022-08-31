@@ -21,9 +21,7 @@ search.app:
 ---
 # Importing and exporting data
 
-There are multiple ways to import and export data into Microsoft Dataverse. You can use dataflows, Power Query, Azure Data Factory, Azure Logic Apps, and Power Automate.
-
-Dynamics customers also have access to the Data Export Service.
+There are multiple ways to import and export data into Microsoft Dataverse. You can use dataflows, Power Query, Azure Synapse Link, Azure Data Factory, Azure Logic Apps, and Power Automate.
 
 ## Dataflows and Power Query
 
