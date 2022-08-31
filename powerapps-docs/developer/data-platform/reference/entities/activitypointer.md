@@ -1,7 +1,7 @@
 ---
 title: "Activity (ActivityPointer)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Activity (ActivityPointer)  table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Task performed, or to be performed, by a user. An activity is any action for whi
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/activitypointers(*activityid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activitypointers<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -718,6 +718,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [DeliveryLastAttemptedOn](#BKMK_DeliveryLastAttemptedOn)
+- [DescriptionBlobId](#BKMK_DescriptionBlobId)
+- [DescriptionBlobId_Name](#BKMK_DescriptionBlobId_Name)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [InstanceTypeCode](#BKMK_InstanceTypeCode)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
@@ -894,6 +896,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|deliverylastattemptedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_DescriptionBlobId"></a> DescriptionBlobId
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|File that contains description content.|
+|DisplayName|Description File Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_DescriptionBlobId_Name"></a> DescriptionBlobId_Name
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate
@@ -1708,6 +1743,6 @@ See the [user_activity](systemuser.md#BKMK_user_activity) one-to-many relationsh
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.activitypointer?text=activitypointer EntityType" />
