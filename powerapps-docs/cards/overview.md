@@ -1,6 +1,6 @@
 ﻿---
 title: "Cards overview"
-description: "Get a quick overview of cards as a Power Apps capability and what issues this capability can help you solve"
+description: "Get a quick overview of cards as a Power Apps capability and the busines problems cards can help you solve"
 keywords: "Cards, Power Apps, overview"
 ms.date: 09/20/2022
 ms.topic: article
@@ -14,7 +14,7 @@ ms.collection:
 
 # Cards Overview
 
-Cards are a low-code capability of Power Apps enabling business users and developers to design, send, and use cards - micro-apps using enterprise data that can be sent as content in other applications.
+Cards are a low-code capability of Power Apps enabling business users and developers to design, send, and use cards - micro-apps with embedded enterprise data and workflows that can be sent as content in other applications.
 
 Business users and subject matter experts can create cards with a guided, low-code graphical interface to optimize and automate business tasks and to create actionable scenarios with interactive, data-driven, lightweight UI and make these cards available for other people to use.
 
@@ -24,7 +24,7 @@ Using cards, you can quickly build, manage, and share rich, actionable UI cards 
 
 ## Get started in minutes
 
-Cards are available to makers as a part of Power Apps. You can easily sign into the Power Apps maker portal and create your card with a few clicks; there is no complex systems or services to deploy and maintain.
+Cards are available to makers as a part of Power Apps. You can easily sign into the Power Apps maker portal and create your card with a few clicks; there are no complex systems or services to deploy and maintain.
 
 To create a card, you can go to make.powerapps.com and navigate to the Cards section:  
 
@@ -48,19 +48,19 @@ Leverage Power Platfrom connectors to work with enterprise data and invoke cloud
 
 The lightweight runtime of cards securely handles tokens for each participant in the card transaction, enabling data-rich and powerful scenarios that respect security boundaries within an organization.
 
-:::image type="content" source="media/overview/placeholder-cards-add-data.png" alt-text="Screenshot of the card designer." border="false":::
+:::image type="content" source="media/overview/placeholder-cards-add-data.png" alt-text="Screenshot of the card designe with connectors." border="false":::
 
 ### Build business logic with actions and calculations
 
 Use Power Fx to add inline calculations and dynamic actions to cards. Create powerful actions, including data operations, and assign them to interactive UI elements in the card.
 
-:::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer." border="false":::
+:::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer with Power Fx logic." border="false":::
 
 
 ## Post cards on Teams 
 Post cards on Teams to share them with other people by using the **Send** button in the Designer and copying the link into a Teams chat or channel.
 
-:::image type="content" source="media/overview/placeholder-cards-play-page.png" alt-text="Screenshot of the card designer." border="false":::
+:::image type="content" source="media/overview/placeholder-cards-play-page.png" alt-text="Screenshot of the card designer Play page." border="false":::
 
 ## Lightweight Runtime
 
