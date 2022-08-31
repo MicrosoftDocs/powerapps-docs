@@ -55,7 +55,7 @@ To embed a canvas app on a model-driven app main form, such as the main form for
 9.  Select **Canvas app** from the **Related Data** section. There are a series of additional items that need to be added to configure the control.
    - The **Entity name** area specifies the table that will provide the data to your embedded canvas app.
 
-       - **Bind to table column**: When **Bind to table column** is selected, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when **Bind to table column** is selected for the **Table column**, at app runtime the value of the table name takes the value of the column.
+       - **Bind to table column**: When **Bind to table column** is selected, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when **Bind to table column** is selected for the **Entity name**, at app runtime the value of the table name takes the value of the table column specified.
            > [!IMPORTANT]
            > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control.
 
