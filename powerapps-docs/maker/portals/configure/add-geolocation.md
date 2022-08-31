@@ -5,13 +5,14 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Add geolocation
@@ -62,7 +63,7 @@ The map control requires additional configuration to tell it what the IDs of the
 
 - For basic forms, see [Geolocation configuration for basic forms](entity-forms.md#geolocation-configuration-for-basic-forms).
 
-- For advanced forms, see [Geolocation configuration for advanced forms](web-form-properties.md#geolocation-configuration-for-advanced-form).
+- For multistep forms, see [Geolocation configuration for multistep forms](web-form-properties.md#geolocation-configuration-for-advanced-form).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
