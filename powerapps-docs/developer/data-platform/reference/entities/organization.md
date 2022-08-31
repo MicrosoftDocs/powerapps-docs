@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/organizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -56,6 +56,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ACIWebEndpointUrl](#BKMK_ACIWebEndpointUrl)
 - [AcknowledgementTemplateId](#BKMK_AcknowledgementTemplateId)
 - [ActivityTypeFilter](#BKMK_ActivityTypeFilter)
+- [ActivityTypeFilterV2](#BKMK_ActivityTypeFilterV2)
 - [AdvancedColumnEditorEnabled](#BKMK_AdvancedColumnEditorEnabled)
 - [AdvancedColumnFilteringEnabled](#BKMK_AdvancedColumnFilteringEnabled)
 - [AdvancedFilteringEnabled](#BKMK_AdvancedFilteringEnabled)
@@ -65,7 +66,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowAutoUnsubscribe](#BKMK_AllowAutoUnsubscribe)
 - [AllowAutoUnsubscribeAcknowledgement](#BKMK_AllowAutoUnsubscribeAcknowledgement)
 - [AllowClientMessageBarAd](#BKMK_AllowClientMessageBarAd)
+- [AllowedIpRangeForFirewall](#BKMK_AllowedIpRangeForFirewall)
 - [AllowEntityOnlyAudit](#BKMK_AllowEntityOnlyAudit)
+- [AllowLeadingWildcardsInGridSearch](#BKMK_AllowLeadingWildcardsInGridSearch)
 - [AllowLegacyClientExperience](#BKMK_AllowLegacyClientExperience)
 - [AllowLegacyDialogsEmbedding](#BKMK_AllowLegacyDialogsEmbedding)
 - [AllowMarketingEmailExecution](#BKMK_AllowMarketingEmailExecution)
@@ -81,6 +84,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AppDesignerExperienceEnabled](#BKMK_AppDesignerExperienceEnabled)
 - [AppointmentRichEditorExperience](#BKMK_AppointmentRichEditorExperience)
 - [AppointmentWithTeamsMeeting](#BKMK_AppointmentWithTeamsMeeting)
+- [AppointmentWithTeamsMeetingV2](#BKMK_AppointmentWithTeamsMeetingV2)
 - [AuditRetentionPeriod](#BKMK_AuditRetentionPeriod)
 - [AuditRetentionPeriodV2](#BKMK_AuditRetentionPeriodV2)
 - [AutoApplyDefaultonCaseCreate](#BKMK_AutoApplyDefaultonCaseCreate)
@@ -144,6 +148,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
 - [EnableCanvasAppsInSolutionsByDefault](#BKMK_EnableCanvasAppsInSolutionsByDefault)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
+- [EnableIpBasedCookieBinding](#BKMK_EnableIpBasedCookieBinding)
+- [EnableIpBasedFirewallRule](#BKMK_EnableIpBasedFirewallRule)
 - [EnableLivePersonaCardUCI](#BKMK_EnableLivePersonaCardUCI)
 - [EnableLivePersonCardIntegrationInOffice](#BKMK_EnableLivePersonCardIntegrationInOffice)
 - [EnableLPAuthoring](#BKMK_EnableLPAuthoring)
@@ -266,6 +272,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
 - [IsRichTextNotesEnabled](#BKMK_IsRichTextNotesEnabled)
+- [IsRpaAutoscaleAadJoinEnabled](#BKMK_IsRpaAutoscaleAadJoinEnabled)
 - [IsRpaAutoscaleEnabled](#BKMK_IsRpaAutoscaleEnabled)
 - [IsRpaUnattendedEnabled](#BKMK_IsRpaUnattendedEnabled)
 - [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
@@ -480,6 +487,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
+
+
+
+### <a name="BKMK_ActivityTypeFilterV2"></a> ActivityTypeFilterV2
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information on whether filtering activity based on entity in app.|
+|DisplayName|Enable Rich Editing Experience for Appointment|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|activitytypefilterv2|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### ActivityTypeFilterV2 Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
 
 
 
@@ -698,6 +730,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_AllowedIpRangeForFirewall"></a> AllowedIpRangeForFirewall
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies the range of IP addresses that are in allow list for the firewall.|
+|DisplayName|List of IP Ranges to be allowed by the firewall rule|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowediprangeforfirewall|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_AllowEntityOnlyAudit"></a> AllowEntityOnlyAudit
 
 |Property|Value|
@@ -719,6 +769,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 1
+
+
+
+### <a name="BKMK_AllowLeadingWildcardsInGridSearch"></a> AllowLeadingWildcardsInGridSearch
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enables ends-with searches in grids with the use of a leading wildcard on all tables in the environment|
+|DisplayName|Allow Leading Wildcards In Grid Search|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|allowleadingwildcardsingridsearch|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowLeadingWildcardsInGridSearch Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -1065,6 +1140,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
+
+
+
+### <a name="BKMK_AppointmentWithTeamsMeetingV2"></a> AppointmentWithTeamsMeetingV2
+
+**Added by**: Activities Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information on whether Teams meeting experience for Appointment is enabled.|
+|DisplayName|Enable teams Meeting experience for appointment|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|appointmentwithteamsmeetingv2|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AppointmentWithTeamsMeetingV2 Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
 
 
 
@@ -1479,7 +1579,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|contentsecuritypolicyreporturi|
 |MaxLength|100|
-|RequiredLevel|SystemRequired|
+|RequiredLevel|None|
 |Type|String|
 
 
@@ -2215,6 +2315,56 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 1
+
+
+
+### <a name="BKMK_EnableIpBasedCookieBinding"></a> EnableIpBasedCookieBinding
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether IP based cookie binding is enabled|
+|DisplayName|Enable IP Address Based Cookie Binding|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|enableipbasedcookiebinding|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableIpBasedCookieBinding Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_EnableIpBasedFirewallRule"></a> EnableIpBasedFirewallRule
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether IP based firewall rule is enabled|
+|DisplayName|Enable IP Range based Firewall|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|enableipbasedfirewallrule|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableIpBasedFirewallRule Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
 
 
 
@@ -3814,7 +3964,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether v2 schema for Desktop Flows is enabled in this organization..|
+|Description|Indicates whether v2 schema for Desktop Flows is enabled in this organization.|
 |DisplayName|Enable v2 schema for Desktop Flows in this organization.|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -4838,6 +4988,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|No||
 
 **DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsRpaAutoscaleAadJoinEnabled"></a> IsRpaAutoscaleAadJoinEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether AAD Join for RPA Autoscale is enabled in this organization..|
+|DisplayName|Enable AAD Join for RPA Autoscale feature for this organization.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaautoscaleaadjoinenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaAutoscaleAadJoinEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
 
 
 
@@ -8718,6 +8893,7 @@ Listed by **SchemaName**.
 - [organization_organizationdatasyncsubscription](#BKMK_organization_organizationdatasyncsubscription)
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncstate](#BKMK_organization_organizationdatasyncstate)
+- [organization_msdyn_appinsightsmetadata](#BKMK_organization_msdyn_appinsightsmetadata)
 - [organization_userrating](#BKMK_organization_userrating)
 - [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
 - [organization_appaction](#BKMK_organization_appaction)
@@ -10254,6 +10430,23 @@ Same as the [organization_organizationdatasyncstate](organizationdatasyncstate.m
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_msdyn_appinsightsmetadata"></a> organization_msdyn_appinsightsmetadata
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md#BKMK_organization_msdyn_appinsightsmetadata) many-to-one relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_appinsightsmetadata|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_appinsightsmetadata|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_userrating"></a> organization_userrating
 
 **Added by**: Active Solution Solution
@@ -10410,6 +10603,6 @@ See the [Template_Organization](template.md#BKMK_Template_Organization) one-to-m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.organization?text=organization EntityType" />
