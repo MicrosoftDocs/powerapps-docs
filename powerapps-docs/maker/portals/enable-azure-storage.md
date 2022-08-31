@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/29/2022
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,11 +13,12 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
 # Enable Azure Storage
 
-Azure Storage integration for portals enables you to take advantage of the greater file storage capability of Azure, using the same interface and providing the same user experience as for default file attachments. This feature is supported for web files, basic forms, and advanced forms.
+Azure Storage integration for portals enables you to take advantage of the greater file storage capability of Azure, using the same interface and providing the same user experience as for default file attachments. This feature is supported for web files, basic forms, and multistep forms.
 
 You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](/azure/storage/storage-create-storage-account#create-a-storage-account).
 
@@ -79,9 +80,9 @@ Add the following site settings from **Portals** > **Site Settings**. [!include[
 |WebFiles/StorageLocation|AzureBlobStorage|
 |||
 
-## Configure basic or advanced forms 
+## Configure basic or multistep forms 
 
-To view and add attachments stored in Azure on basic and advanced forms on your site, you will need to [configure notes as attachments](configure-notes.md) as well as add [basic form](configure-notes.md#notes-configuration-for-basic-forms) or [advanced form](configure-notes.md#notes-configuration-for-advanced-forms) metadata with the **File Attachment Location** set to **Azure Blob Storage**.
+To view and add attachments stored in Azure on basic and multistep forms on your site, you will need to [configure notes as attachments](configure-notes.md) as well as add [basic form](configure-notes.md#notes-configuration-for-basic-forms) or [multistep form](configure-notes.md#notes-configuration-for-advanced-forms) metadata with the **File Attachment Location** set to **Azure Blob Storage**.
 
 You can then add attachments to records on web pages.
 
