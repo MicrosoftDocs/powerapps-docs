@@ -1,11 +1,10 @@
 ---
 title: "Web API Conditional Operations Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "This collection of samples demonstrate how to perform operations that are conditionally based upon the version of the table row contained on the Microsoft Dataverse server and/or currently maintained by the client."
-ms.date: 04/06/2022
+ms.date: 09/02/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -104,7 +103,7 @@ Created and retrieved the initial account, shown below:
 
 ## Section 1: Conditional GET
 
-This section of the program demonstrates how to perform conditional retrievals in order to optimize network bandwidth and server processing while still maintaining the most current row state on the client. More information:[Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
+This section of the program demonstrates how to perform conditional retrievals in order to optimize network bandwidth and server processing while still maintaining the most current row state on the client. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged)  
   
 1. Attempt to retrieve the account `Contoso Ltd.` only if it does *not* match the current version, identified by the initial ETag value that was returned when the account row was created. This condition is represented by the `If-None-Match` header.  
   
@@ -131,7 +130,7 @@ This section of the program demonstrates how to perform conditional retrievals i
    Expected outcome: Entity was not modified so nothing was returned.
    ```  
 
-   The response value, `304 Not Modified`, indicates that the current table row is the most current, so the server does *not* return the requested row in the response body.  
+   The response value, `304 NotModified`, indicates that the current table row is the most current, so the server does *not* return the requested row in the response body.  
   
 1. Update the account by modifying its primary telephone number property.  
   
@@ -212,7 +211,7 @@ This section of the program demonstrates how to perform conditional retrievals i
   
 ## Section 2: Optimistic concurrency on delete and update
  
-This section of the program demonstrates how to perform conditional delete and update operations.  The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
+This section of the program demonstrates how to perform conditional delete and update operations.  The most common use for such operations is in implementing an optimistic concurrency approach to row processing in a multi-user environment. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency)  
   
 1. Attempt to delete original account if and only if it matches the original version (ETag value).  This condition is represented by the `If-Match` header.  This operation fails because the account row was updated in the previous section, so as a result, its version was updated on the server.  
   
@@ -237,7 +236,7 @@ This section of the program demonstrates how to perform conditional delete and u
    "error": {
       "code": "0x80060882",
       "message": "The version of the existing record doesn't match the RowVersion property provided."
-   }
+    }
    }
    ```
    
@@ -277,7 +276,7 @@ This section of the program demonstrates how to perform conditional delete and u
    "error": {
       "code": "0x80060882",
       "message": "The version of the existing record doesn't match the RowVersion property provided."
-   }
+    }
    }
    ```
    
@@ -323,7 +322,7 @@ This section of the program demonstrates how to perform conditional delete and u
    Account successfully updated using ETag: W/"72965025". 
    ```  
   
-1. Confirm the update succeeded by retrieving and outputting the current account state.  This uses a basic GET request.  
+1. Confirm the update succeeded by retrieving and outputting the current account state.  This uses a basic `GET` request.  
   
    **Request**
 
