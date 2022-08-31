@@ -54,13 +54,11 @@ The lightweight runtime of cards securely handles tokens for each participant in
 
 Use Power Fx to add inline calculations and dynamic actions to cards. Create powerful actions, including data operations, and assign them to interactive UI elements in the card.
 
-Adaptive Cards provides a simple, efficient UI to present buttons, text, and images in a card, but building logic into those elements requires a developer. Not only does this limit the type of developer who can create cards, but it also limits the sophistication of cards in the market, as using advanced features of adaptive cards is overly complex and requires expertise in multiple frameworks. Adaptive Cards also has minimal support for card distribution and management, needing a separate bot to send cards, and limitations on what kind of data can be used in cards.
-
 :::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer." border="false":::
 
 ## Lightweight Runtime
 
-The card runtime is the core of what allows users to play their interactive cards, using an easy declarative format to embed data and workflows. This engine abstracts over the interactive transaction capabilities of card canvases (where Adaptive Cards render) in Teams, enabling users to send and receive cards without needing to deploy a secondary bot service or build a Teams app.
+The card runtime is the core of what allows users to play their interactive cards, using an easy declarative format to embed data and workflows. This engine abstracts over the interactive transaction capabilities of card canvases in Teams, enabling users to send and receive cards without needing to deploy a secondary bot service or build a Teams app.
 
 Share cards on Teams with other people by using the Send button in the Designer and copying the link into a Teams chat or channel.
 
