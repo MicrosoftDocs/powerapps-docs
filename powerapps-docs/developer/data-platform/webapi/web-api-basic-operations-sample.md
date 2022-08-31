@@ -793,7 +793,7 @@ This section demonstrates how to associate and disassociate existing table rows.
 [Create a table row using the Web API](create-entity-web-api.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
 [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate table rows using the Web API](associate-disassociate-table rows-using-web-api.md)<br />
-[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

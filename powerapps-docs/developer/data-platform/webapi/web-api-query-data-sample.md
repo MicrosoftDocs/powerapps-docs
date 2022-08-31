@@ -1,7 +1,7 @@
 ---
 title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "These code samples shows how to query data using the Web API. These samples are implemented using C# and client-side JavaScript."
-ms.date: 08/29/2022
+ms.date: 09/02/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -31,15 +31,15 @@ This sample is divided into the following principal sections, containing Web API
 
 |Topic section|Associated topic(s)|
 |-------------------|---------------------------|
-|[Section 1 Selecting specific properties](#section-1-selecting-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br />[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)|
-|[Section 2 Using query functions](#section-2-using-query-functions)|[Filter results](query-data-web-api.md#bkmk_filter)<br /> [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
-|[Section 3 Ordering and aliases](#section-3-ordering-and-aliases)|[Order results](query-data-web-api.md#bkmk_order)<br /> [Filter results](query-data-web-api.md#bkmk_filter)<br />[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
-|[Section 4 Limit and count results](#section-4-limit-and-count-results)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
-|[Section 5 Pagination](#section-5-pagination)|[Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)|
-|[Section 6 Expanding results](#section-6-expanding-results)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
-|[Section 7 Aggregate results](#section-7-aggregate-results)|[Aggregate and grouping results](query-data-web-api.md#aggregate-and-grouping-results)|
-|[Section 8 FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)|
-|[Section 9 Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
+|[Section 1: Selecting specific properties](#section-1-selecting-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br />[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)|
+|[Section 2: Using query functions](#section-2-using-query-functions)|[Filter results](query-data-web-api.md#bkmk_filter)<br /> [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
+|[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order results](query-data-web-api.md#bkmk_order)<br /> [Filter results](query-data-web-api.md#bkmk_filter)<br />[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
+|[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
+|[Section 5: Pagination](#section-5-pagination)|[Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)|
+|[Section 6: Expanding results](#section-6-expanding-results)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
+|[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate and grouping results](query-data-web-api.md#aggregate-and-grouping-results)|
+|[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)|
+|[Section 9: Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
 
 The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.
@@ -286,9 +286,9 @@ The data is added using *deep insert* in a single `POST` request and matches the
   
 <a name="bkmk_selectproperties"></a>
 
-## Section 1 Selecting specific properties
+## Section 1: Selecting specific properties
   
-Always construct  queries using the `$select` query option, otherwise the server will return all properties of each table row which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType>. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information:[Request specific properties](query-data-web-api.md#bkmk_requestProperties), [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).  
+Always construct  queries using the `$select` query option, otherwise the server will return all properties of each table row which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType>. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information: [Request specific properties](query-data-web-api.md#bkmk_requestProperties), [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).  
   
 In this example, we are requesting for a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
   
@@ -338,20 +338,20 @@ Contact basic info:
   
 <a name="bkmk_queryfunctions"></a>
   
-## Section 2 Using query functions
+## Section 2: Using query functions
  
-Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information:[Filter results](query-data-web-api.md#bkmk_filter).  
+Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information: [Filter results](query-data-web-api.md#bkmk_filter).  
   
 Query functions are functions that can be used as a filter criteria in a query. There are standard query functions and Dataverse specific query functions. These functions accept parameters and return a `Boolean` value. This sample illustrates how to create a query for each type.  
   
 ### Standard query functions
 
-Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows us to filter for properties matching a string. In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`. More information:[Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions).  
+Dataverse supports a subset of OData built-in query functions, specifically: `contains`, `endswith`, and `startswith`. For example, the `contains` standard query function allows us to filter for properties matching a string. In this operation, we are querying for all contacts with `fullname` containing the string `(sample)`. More information: [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions).  
   
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')%20and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482 HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)') and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482 HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -490,14 +490,14 @@ Contacts filtered by fullname containing '(sample)':
   
 ### Dataverse query functions
 
-Dataverse query functions provide a large number of options to build queries which are relevant for Dataverse. For a complete list of these functions, see <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. More information:[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
+Dataverse query functions provide a large number of options to build queries which are relevant for Dataverse. For a complete list of these functions, see <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. More information: [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
   
 You will use these query functions in a manner similar to the standard query functions. The main difference is, when using Dataverse query functions, you must provide the full name of the function including the parameter name(s). For example, to get a list of contacts created in the last hour, you can construct a query using the <xref:Microsoft.Dynamics.CRM.LastXHours?text=LastXHours Function>.  
   
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2)%20and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482&@p1='createdon'&@p2='1' HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=Microsoft.Dynamics.CRM.LastXHours(PropertyName=@p1,PropertyValue=@p2) and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482&@p1='createdon'&@p2='1' HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -636,14 +636,14 @@ Contacts that were created within the last 1hr:
   
 <a name="bkmk_operators"></a>
 
-## Using operators
+### Using operators
 
 Use the [Standard filter operators](query-data-web-api.md#bkmk_buildInFilterOperators) (`eq`,`ne`,`gt`,`ge`,`lt`,`le`,`and`,`or`,`not`)  to further refine our results. In this example, we are requesting a list of all contacts with `fullname` containing `(sample)` and annual income greater than `55000`.  
   
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')%20and%20annualincome%20gt%2055000%20%20and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482 HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)') and annualincome gt 55000 and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482 HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -743,7 +743,7 @@ Contacts with '(sample)' in name and income above $55,000:
   
 <a name="bkmk_prededence"></a>
    
-## Setting precedence
+### Setting precedence
  
 You will use parentheses to establish the order in which your conditions are evaluated.  
   
@@ -752,7 +752,7 @@ In this example, we are requesting a list of all contacts with `fullname` contai
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')%20and%20(contains(jobtitle,%20'senior')%20or%20contains(jobtitle,'manager'))%20and%20annualincome%20gt%2055000%20and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482 HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)') and (contains(jobtitle, 'senior') or contains(jobtitle,'manager')) and annualincome gt 55000 and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482 HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -825,18 +825,18 @@ Contacts with '(sample)' in name senior jobtitle or high income:
 ```  
 
 
-## Section 3 Ordering and aliases
+## Section 3: Ordering and aliases
 
 <a name="bkmk_orderresults"></a>
 
 ### Ordering results
 
-You can specify either an ascending or descending order on the results by using the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information:[Order results](query-data-web-api.md#bkmk_order).  
+You can specify either an ascending or descending order on the results by using the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information: [Order results](query-data-web-api.md#bkmk_order).  
   
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482&$orderby=jobtitle%20asc,%20annualincome%20desc HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)') and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482&$orderby=jobtitle asc, annualincome desc HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -977,12 +977,12 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
 
 ### Parameter alias
 
-Use parameter aliases to more easily reuse  parameters in your filters. Parameterized aliases can be used in `$filter` and `$orderby` options. If the alias isn't assigned a value it is assumed to be null. You can also use parameter aliases when calling functions. More information:[Use Web API functions](use-web-api-functions.md), [Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases). Taking the order results operation for example, we can write that query again using parameters and we would get the same output results.  
+Use parameter aliases to more easily reuse  parameters in your filters. Parameterized aliases can be used in `$filter` and `$orderby` options. If the alias isn't assigned a value it is assumed to be null. You can also use parameter aliases when calling functions. More information: [Use Web API functions](use-web-api-functions.md), [Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases). Taking the order results operation for example, we can write that query again using parameters and we would get the same output results.  
   
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(@p1,'(sample)')%20and%20@p2%20eq%20@p3&$orderby=@p4%20asc,%20@p5%20desc&@p1=fullname&@p2=_parentcustomerid_value&@p3=7d716234-9628-ed11-9db1-000d3a320482&@p4=jobtitle&@p5=annualincome HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(@p1,'(sample)') and @p2 eq @p3&$orderby=@p4 asc, @p5 desc&@p1=fullname&@p2=_parentcustomerid_value&@p3=7d716234-9628-ed11-9db1-000d3a320482&@p4=jobtitle&@p5=annualincome HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -1121,7 +1121,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
   
 <a name="bkmk_limitresults"></a>
 
-## Section 4 Limit and count results
+## Section 4: Limit and count results
 
 Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Limits on number of rows returned](query-data-web-api.md#bkmk_limits).  
   
@@ -1134,7 +1134,7 @@ We can apply the `$top` query option to limit the basic query operation to the f
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')%20and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482&$top=5 HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)') and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482&$top=5 HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -1265,12 +1265,12 @@ The contacts collection has 9 contacts.
 
 ### Result count
 
-You can get just the count of rows from a collection-valued property or a count of matched table rows in a filter. Getting a count tells us the number of possible rows in our result. However, the Dataverse server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information:[Retrieve a count of table rows](query-data-web-api.md#bkmk_retrieveCount).  
+You can get just the count of rows from a collection-valued property or a count of matched table rows in a filter. Getting a count tells us the number of possible rows in our result. However, the Dataverse server will return 5000 as the maximum count even if the result may have more. In this example, we constructed a filter with `jobtitle` containing either `Senior` or `Manager` and we also requested a `$count` of the result. The response contains the count in the `@odata.count` property as well as the results of the query. More information: [Retrieve a count of table rows](query-data-web-api.md#bkmk_retrieveCount).  
   
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=(contains(jobtitle,'senior')%20or%20contains(jobtitle,%20'manager'))%20and%20_parentcustomerid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482&$count=true HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=(contains(jobtitle,'senior') or contains(jobtitle, 'manager')) and _parentcustomerid_value eq 7d716234-9628-ed11-9db1-000d3a320482&$count=true HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -1384,9 +1384,9 @@ Preference-Applied: odata.include-annotations="*"
   
 <a name="bkmk_filterPagination"></a>
 
-## Section 5 Pagination
+## Section 5: Pagination
 
-To retrieve a sequential subset of results for a query that returns a large number of rows, use the `odata.maxpagesize` instead of `$top`. More information:[Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
+To retrieve a sequential subset of results for a query that returns a large number of rows, use the `odata.maxpagesize` instead of `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
   
 In this example, we ask for a `$count` and we set the `odata.maxpagesize` to `4`. This filter matches 10 contacts, but we are only retrieving 4 at a time. We also use the count and the max page size to figured out how many total pages there are. The result of the first page is returned in this request.  
   
@@ -1486,7 +1486,7 @@ To retrieve page 2, use a `GET` request with the value of the  `@odata.nextLink`
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')&$count=true&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253ccontactid%2520last%253d%2522%257b8D716234-9628-ED11-9DB1-000D3A320482%257d%2522%2520first%253d%2522%257b81716234-9628-ED11-9DB1-000D3A320482%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/contacts?$select=fullname,jobtitle,annualincome&$filter=contains(fullname,'(sample)')&$count=true&$skiptoken=<cookie pagenumber="2" pagingcookie="%3ccookie%20page%3d%221%22%3e%3ccontactid%20last%3d%22%7b8D716234-9628-ED11-9DB1-000D3A320482%7d%22%20first%3d%22%7b81716234-9628-ED11-9DB1-000D3A320482%7d%22%20%2f%3e%3c%2fcookie%3e" istracking="False" /> HTTP/1.1
 Prefer: odata.maxpagesize=4; odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -1575,9 +1575,9 @@ Page 2 of 3:
   
 <a name="bkmk_expandresults"></a>
 
-## Section 6 Expanding results
+## Section 6: Expanding results
 
-To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information:[Retrieve related table records with a query](retrieve-related-entities-query.md)
+To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Retrieve related table records with a query](retrieve-related-entities-query.md)
   
 ### Expand on single-valued navigation property
 
@@ -2025,7 +2025,7 @@ from the `contact`, `account`, and `systemuser` tables using only single-valued 
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/tasks?$select=subject&$filter=regardingobjectid_contact_task/_accountid_value%20eq%207d716234-9628-ed11-9db1-000d3a320482&$expand=regardingobjectid_contact_task($select=fullname;$expand=parentcustomerid_account($select=name;$expand=createdby($select=fullname))) HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/tasks?$select=subject&$filter=regardingobjectid_contact_task/_accountid_value eq 7d716234-9628-ed11-9db1-000d3a320482&$expand=regardingobjectid_contact_task($select=fullname;$expand=parentcustomerid_account($select=name;$expand=createdby($select=fullname))) HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -2516,14 +2516,14 @@ Expanded values from Task:
         |Task 3 for Jim Glynn          |Jim Glynn (sample)            |Contoso, Ltd. (sample)   |FirstName Lastname
 ```
 
-## Section 7 Aggregate results
+## Section 7: Aggregate results
 
 You can use the `$apply` option to specify aggregated values to return. This example applies `average`, `sum`, `min`, and `max` to annual income values.
 
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/accounts(7d716234-9628-ed11-9db1-000d3a320482)/contact_customer_accounts?$apply=aggregate(annualincome%20with%20average%20as%20average,%20annualincome%20with%20sum%20as%20total,%20annualincome%20with%20min%20as%20minimum,%20annualincome%20with%20max%20as%20maximum) HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/accounts(7d716234-9628-ed11-9db1-000d3a320482)/contact_customer_accounts?$apply=aggregate(annualincome with average as average, annualincome with sum as total, annualincome with min as minimum, annualincome with max as maximum) HTTP/1.1
 Prefer: odata.include-annotations="*"
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -2765,9 +2765,9 @@ Aggregated Annual Income information for Contoso contacts:
 
 <a name="bkmk_fetchxml"></a>
 
-## Section 8 FetchXML queries
+## Section 8: FetchXML queries
 
-Besides query filter operations, the Web API also supports FetchXML queries. FetchXml provides an alternative way to define queries and additional options to perform aggregations. More information:[Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+Besides query filter operations, the Web API also supports FetchXML queries. FetchXml provides an alternative way to define queries and additional options to perform aggregations. More information: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
   
 To use fetch xml you must compose a string representing the query. Make sure the query string conforms to the [FetchXML schema](../fetchxml-schema.md). Before you include the string in the URL you must URL encode the string.
   
@@ -3077,9 +3077,9 @@ Contacts Fetched by fullname containing '(sample)' - Page 2:
   
 <a name="bkmk_predefinedqueries"></a>
  
-## Section 9 Using predefined queries
+## Section 9: Using predefined queries
 
-You can use the Web API to execute predefined queries. More information:[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md).  
+You can use the Web API to execute predefined queries. More information: [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md).  
   
 ### Saved query
 
@@ -3090,7 +3090,7 @@ Getting the saved query's GUID.
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/savedqueries?$select=name,savedqueryid&$filter=name%20eq%20'Active%20Accounts' HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/savedqueries?$select=name,savedqueryid&$filter=name eq 'Active Accounts' HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
