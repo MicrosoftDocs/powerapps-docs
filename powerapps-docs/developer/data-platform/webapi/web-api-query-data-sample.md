@@ -31,22 +31,22 @@ This sample is divided into the following principal sections, containing Web API
 
 |Topic section|Associated topic(s)|
 |-------------------|---------------------------|
-|[Selecting specific properties](#bkmk_selectproperties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /><br /> [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)|
-|[Using query functions](#bkmk_queryfunctions)|[Filter results](query-data-web-api.md#bkmk_filter)<br /><br /> [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions)<br /><br /> [Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /><br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
-|[Using operators](#bkmk_operators)|[Standard filter operators](query-data-web-api.md#bkmk_buildInFilterOperators)|
-|[Setting precedence](#bkmk_prededence)|[Standard filter operators](query-data-web-api.md#bkmk_buildInFilterOperators)|
-|[Ordering results](#bkmk_orderresults)|[Order results](query-data-web-api.md#bkmk_order)<br /><br /> [Filter results](query-data-web-api.md#bkmk_filter)|
-|[Parameter alias](#bkmk_parameteralias)|[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
-|[Limit results](#bkmk_limitresults)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /><br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
-|[Expanding results](#bkmk_expandresults)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
-|[FetchXML queries](#fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /><br />[Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)|
-|[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
+|[Section 1 Selecting specific properties](#section-1-selecting-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br />[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)|
+|[Section 2 Using query functions](#section-2-using-query-functions)|[Filter results](query-data-web-api.md#bkmk_filter)<br /> [Standard query functions](query-data-web-api.md#bkmk_buildInQueryFunctions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
+|[Section 3 Ordering and aliases](#section-3-ordering-and-aliases)|[Order results](query-data-web-api.md#bkmk_order)<br /> [Filter results](query-data-web-api.md#bkmk_filter)<br />[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
+|[Section 4 Limit and count results](#section-4-limit-and-count-results)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
+|[Section 5 Pagination](#section-5-pagination)|[Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)|
+|[Section 6 Expanding results](#section-6-expanding-results)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
+|[Section 7 Aggregate results](#section-7-aggregate-results)|[Aggregate and grouping results](query-data-web-api.md#aggregate-and-grouping-results)|
+|[Section 8 FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)|
+|[Section 9 Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
+|[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
 
 The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.
 
 <a name="bkmk_sampleData"></a>
 
-## Sample data
+## Section 0: Create Records to query
 
 To ensure the queries in this sample work properly, a standard set of sample rows is created by this sample. These sample rows will be deleted unless the user chooses to not delete them. This is the data the sample will be querying. You may get different results depending on any existing data in your environment.  
   
@@ -286,7 +286,7 @@ The data is added using *deep insert* in a single `POST` request and matches the
   
 <a name="bkmk_selectproperties"></a>
 
-## Selecting specific properties
+## Section 1 Selecting specific properties
   
 Always construct  queries using the `$select` query option, otherwise the server will return all properties of each table row which reduces performance. This example demonstrates how to construct a basic query by selecting three properties of a <xref:Microsoft.Dynamics.CRM.contact?text=contact EntityType>. The properties are `fullname`, `jobtitle`, `annualincome`. The section also illustrates the differences between formatted and unformatted values as seen in the results of the contact's `annualincome` property. More information:[Request specific properties](query-data-web-api.md#bkmk_requestProperties), [Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues).  
   
@@ -338,7 +338,7 @@ Contact basic info:
   
 <a name="bkmk_queryfunctions"></a>
   
-## Using query functions
+## Section 2 Using query functions
  
 Use filter options to set criteria for the results you want. You can  build simple to complex filters using a combination of query functions, comparison operators, and logical operators. More information:[Filter results](query-data-web-api.md#bkmk_filter).  
   
@@ -492,7 +492,7 @@ Contacts filtered by fullname containing '(sample)':
 
 Dataverse query functions provide a large number of options to build queries which are relevant for Dataverse. For a complete list of these functions, see <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>. More information:[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)  
   
-You will use these query functions in a manner similar to the standard query functions. The main difference is, when using Dataverse query functions, you must provide the full name of the function including the parameter name(s). For example, to get a list of contacts created in the last hour, you can construct a query using the <xref href="Microsoft.Dynamics.CRM.LastXHours?text=LastXHours Function" />.  
+You will use these query functions in a manner similar to the standard query functions. The main difference is, when using Dataverse query functions, you must provide the full name of the function including the parameter name(s). For example, to get a list of contacts created in the last hour, you can construct a query using the <xref:Microsoft.Dynamics.CRM.LastXHours?text=LastXHours Function>.  
   
 **Request**
 
@@ -823,10 +823,13 @@ Contacts with '(sample)' in name senior jobtitle or high income:
         |Robert Lyon (sample)       |Senior Technician                  |$78,000.00
         |Jim Glynn (sample)         |Senior International Sales Manager |$81,400.00
 ```  
-  
+
+
+## Section 3 Ordering and aliases
+
 <a name="bkmk_orderresults"></a>
 
-## Ordering results
+### Ordering results
 
 You can specify either an ascending or descending order on the results by using the `$orderby` filter option . In this example, we will query for all contacts with `fullname` containing `(sample)` and request the data in ascending order based on the `jobtitle` property value and then in  descending based on the `annualincome` property value using this syntax: `$orderby=jobtitle asc, annualincome desc`. More information:[Order results](query-data-web-api.md#bkmk_order).  
   
@@ -972,7 +975,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
   
 <a name="bkmk_parameteralias"></a>
 
-## Parameter alias
+### Parameter alias
 
 Use parameter aliases to more easily reuse  parameters in your filters. Parameterized aliases can be used in `$filter` and `$orderby` options. If the alias isn't assigned a value it is assumed to be null. You can also use parameter aliases when calling functions. More information:[Use Web API functions](use-web-api-functions.md), [Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases). Taking the order results operation for example, we can write that query again using parameters and we would get the same output results.  
   
@@ -1118,7 +1121,7 @@ Contacts ordered by jobtitle (Ascending) and annualincome (descending)
   
 <a name="bkmk_limitresults"></a>
 
-## Limit results
+## Section 4 Limit and count results
 
 Returning more data than you need is bad for performance. The server will return a maximum of 5000 table rows per request. You can limit the number of results returned using the `$top` query option or by adding `odata.maxpagesize` in the request header. The `$top` query option only returns the top number of rows from the result set and ignores the rest. The `odata.maxpagesize` request header specifies the number of rows returned per page with an `@odata.nextLink` property to get results of the next page. For more information about `odata.maxpagesize`, see the section on [Pagination](#bkmk_filterPagination) and see also [Limits on number of rows returned](query-data-web-api.md#bkmk_limits).  
   
@@ -1381,7 +1384,7 @@ Preference-Applied: odata.include-annotations="*"
   
 <a name="bkmk_filterPagination"></a>
 
-### Pagination
+## Section 5 Pagination
 
 To retrieve a sequential subset of results for a query that returns a large number of rows, use the `odata.maxpagesize` instead of `$top`. More information:[Specify the number of rows to return in a page](query-data-web-api.md#bkmk_specifyNumber).  
   
@@ -1572,7 +1575,7 @@ Page 2 of 3:
   
 <a name="bkmk_expandresults"></a>
 
-## Expanding results
+## Section 6 Expanding results
 
 To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information:[Retrieve related table records with a query](retrieve-related-entities-query.md)
   
@@ -2513,7 +2516,7 @@ Expanded values from Task:
         |Task 3 for Jim Glynn          |Jim Glynn (sample)            |Contoso, Ltd. (sample)   |FirstName Lastname
 ```
 
-## Using Aggregation
+## Section 7 Aggregate results
 
 You can use the `$apply` option to specify aggregated values to return. This example applies `average`, `sum`, `min`, and `max` to annual income values.
 
@@ -2762,7 +2765,7 @@ Aggregated Annual Income information for Contoso contacts:
 
 <a name="bkmk_fetchxml"></a>
 
-## FetchXML queries
+## Section 8 FetchXML queries
 
 Besides query filter operations, the Web API also supports FetchXML queries. FetchXml provides an alternative way to define queries and additional options to perform aggregations. More information:[Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
   
@@ -3074,7 +3077,7 @@ Contacts Fetched by fullname containing '(sample)' - Page 2:
   
 <a name="bkmk_predefinedqueries"></a>
  
-## Predefined queries
+## Section 9 Using predefined queries
 
 You can use the Web API to execute predefined queries. More information:[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md).  
   
@@ -3303,6 +3306,209 @@ Contacts Fetched by My User Query:
         |Jim Glynn (sample)         |Senior International Sales Manager |$81,400.00
         |Nancy Anderson (sample)    |Activities Manager                 |$55,500.00
 ```  
+
+## Section 10: Delete sample records
+
+Delete all the records created in [Section 0: Create Records to query](#section-0-create-records-to-query). This is done using a `$batch` operation.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(f36e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(ef6e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(eb6e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(e76e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(e36e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(df6e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(db6e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(d76e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/accounts(cf6e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 121
+
+DELETE /api/data/v9.2/contacts(d36e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 124
+
+DELETE /api/data/v9.2/userqueries(f76e86e2-a228-ed11-9db1-000d3a320482) HTTP/1.1
+
+
+--batch_23ea682f-a60a-412a-b37d-7df10a976508--
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--batchresponse_1e45a745-8b68-401f-a1c0-0081ec083cdc--
+
+```
 
 
   
