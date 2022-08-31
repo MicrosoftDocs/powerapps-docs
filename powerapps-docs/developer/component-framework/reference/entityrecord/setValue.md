@@ -3,8 +3,7 @@ title: setValue | Microsoft Docs
 description: Set value for the column.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+ms.date: 08/22/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -26,10 +25,10 @@ Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/workin
 
 ## Parameters
 
-| Parameter Name | Type     | Required | Description         |
-| -------------- | -------- | -------- | ------------------- | -------- | ------- | --------------- | ----------------- | ---------- | ------------ | --- | ------------------------- |
-| `columnName`   | `string` | Yes      | Name of the column. |
-| `value`        | `string  | Date     | number              | number[] | boolean | EntityReference | EntityReference[] | FileObject | ImageObject` | Yes | New value for the record. |
+|Parameter Name |Type| Required | Description|
+|----|----|----|----|
+| `columnName`|`string`| Yes| Name of the column.|
+| `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
 
 ## Return Value
 
