@@ -52,6 +52,8 @@ The following is required to build and run this sample:
 
 ## Demonstrates
 
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/BasicOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/BasicOperations/Program.cs)
+
 This sample has 5 regions:
 
 ### Section 1: Basic Create and Update operations
@@ -98,13 +100,13 @@ By default this sample will delete all the records created in it. If you want to
 ### See also
 
 [Use the Dataverse Web API](../overview.md)<br />
-[Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
+[WebAPIService class library (C#)](webapiservice.md)<br />
 [Create a table row using the Web API](../create-entity-web-api.md)<br />
 [Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Retrieve an table row using the Web API](../retrieve-entity-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)
-[Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
+[Web API Query Data Sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)
 

@@ -52,6 +52,8 @@ The following is required to build and run this sample:
 
 ## Demonstrates
 
+The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/QueryData/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/QueryData/Program.cs)
+
 This sample has 11 regions:
 
 ### Section 0: Create Records to query

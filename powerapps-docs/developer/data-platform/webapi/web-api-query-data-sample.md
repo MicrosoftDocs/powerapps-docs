@@ -3517,7 +3517,7 @@ OData-Version: 4.0
 [Use the Dataverse Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
-[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
+[Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
 
 
