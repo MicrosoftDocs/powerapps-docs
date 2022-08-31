@@ -10,6 +10,8 @@
       href: ../web-api-conditional-operations-sample.md
     - name: Functions and Actions
       href: ../web-api-functions-actions-sample.md
+    - name: Metadata Operations
+      href: ../web-api-metadata-operations-sample.md
 - name: (C#) samples
   items:
     - name: About the samples
@@ -21,13 +23,15 @@
     - name: Query Data
       href: webapiservice-query-data.md
     - name: Conditional Operations
-      href: cdswebapiservice-conditional-operations.md
+      href: webapiservice-conditional-operations.md
     - name: Functions and Actions
-      href: functions-actions-csharp.md
+      href: webapiservice-functions-and-actions.md
     - name: Parallel Operations
-      href: cdswebapiservice-parallel-operations.md
+      href: webapiservice-parallel-operations.md
     - name: Async Parallel Operations
       href: cdswebapiservice-async-parallel-operations.md
+    - name: Metadata Operations
+      href: webapiservice-metadata-operations.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
