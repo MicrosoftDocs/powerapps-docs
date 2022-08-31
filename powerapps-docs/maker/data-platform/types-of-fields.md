@@ -233,8 +233,6 @@ More information for developers working with image data:
 
 ## File columns
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
 
 The default **Maximum file size** is 32 MB and the largest size you can set is 131072 KB (131 MB). The file size limit can be set individually for each column of file type added to a table. 
