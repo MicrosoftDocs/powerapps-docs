@@ -86,7 +86,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 1. Then create the solution related to the publisher. 
 
     > [!NOTE]
-    > All of the items created or updated in is sample will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
+    > Many of the items created or updated in is sample will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. Some actions have a `SolutionUniqueName` parameter that does the same thing. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
 
    **Request**
 
@@ -269,13 +269,13 @@ This sample is divided into the following sections, containing Dataverse Web API
    Created sample_BankAccount table.
    ```
 
-1. Retrieve the `sample_BankAccount` table definition. 
+1. Retrieve the `sample_BankAccount` table definition.
 
    - This retrieve doesn't include any `$select` to filter the properties returned because this data will be modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
    - This query also doesn't include an `$expand` to include related data, such as attributes, because those must be updated separately.
 
    > [!NOTE]
-   > This request uses the `Consistency: Strong` header
+   > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item may return a 404 because it hasn't been cached yet. Caching may take 30 seconds. This header will force the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you are retrieving changes you have just made. More information: [Other headers](compose-http-requests-handle-errors.md#other-headers).
 
    **Request**
 
@@ -1036,6 +1036,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 ## Section 2: Create, Retrieve and Update Columns
 
 This section will create and retrieve a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
+
 ### Boolean Column
 
 1. Create a Boolean column using <xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata?text=BooleanAttributeMetadata EntityType>. Despite the name, boolean columns have an `OptionSet` property just like choice columns. However, they always have only two options: `TrueOption` with value 1 and `FalseOption` with value 0.
@@ -1424,7 +1425,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 1. Update the Boolean column. The only changes are to the `DisplayName`, `Description`, and `RequiredLevel` properties, but the entire definition is included because `PUT` is used.
 
    > [!NOTE]
-   > Even though the `OptionSet` property is included in this payload, any changes to them would not be applied because they are not considered part of the column definition. They must be updated separately and this sample will show you how in following steps.
+   > Even though the `OptionSet` property is included in this payload, any changes to the options would not be applied because they are not considered part of the column definition. They must be updated separately and this sample will show you how in following steps.
 
    **Request**
 
@@ -1684,2173 +1685,2308 @@ This section will create and retrieve a selected group of column definitions. Ea
    OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')
    ```
 
-1. Update each of the boolean options using UpdateOptionValue.
+   **Console output**
 
-**Request**
+   ```
+   Updated Boolean Column properties
+   ```
 
-```http
-POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+1. Update each of the boolean options using (xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action).
 
-{
-  "AttributeLogicalName": "sample_boolean",
-  "EntityLogicalName": "sample_bankaccount",
-  "Value": 1,
-  "Label": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Up",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Up",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "MergeLabels": true
-}
-```
+   Change the `TrueOption` value label to 'Up'.
 
-**Response**
+   **Request**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
+   ```http
+   POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-  "AttributeLogicalName": "sample_boolean",
-  "EntityLogicalName": "sample_bankaccount",
-  "Value": 0,
-  "Label": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Down",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Down",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "MergeLabels": true
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
-
-Retrieve the modified option values for the Boolean column
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$select=MetadataId&$expand=OptionSet HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,OptionSet())/$entity",
-  "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2",
-  "OptionSet": {
-    "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_boolean",
-    "ExternalTypeName": null,
-    "OptionSetType": "Boolean",
-    "IntroducedVersion": "1.0.0.0",
-    "Description": {
+   {
+   "AttributeLogicalName": "sample_boolean",
+   "EntityLogicalName": "sample_bankaccount",
+   "Value": 1,
+   "Label": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Boolean Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Up",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Up",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "DisplayName": {
+   },
+   "MergeLabels": true
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
+
+   Change the `FalseOption` value label to 'Down'.
+
+   **Request**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/UpdateOptionValue HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "AttributeLogicalName": "sample_boolean",
+   "EntityLogicalName": "sample_bankaccount",
+   "Value": 0,
+   "Label": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Sample Boolean",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Down",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Down",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "TrueOption": {
-      "Value": 1,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
+   },
+   "MergeLabels": true
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
+
+   **Console output**
+
+   ```
+   Updated option labels
+   ```
+
+1. Retrieve the modified option values for the Boolean column.
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$select=MetadataId&$expand=OptionSet HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,OptionSet())/$entity",
+   "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2",
+   "OptionSet": {
+      "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2",
       "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
+      "IsManaged": false,
+      "Name": "sample_bankaccount_sample_boolean",
+      "ExternalTypeName": null,
+      "OptionSetType": "Boolean",
+      "IntroducedVersion": "1.0.0.0",
+      "Description": {
+         "LocalizedLabels": [
+         {
+            "Label": "Boolean Attribute",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
+            "HasChanged": null
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
+      },
+      "DisplayName": {
+         "LocalizedLabels": [
+         {
+            "Label": "Sample Boolean",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
+            "HasChanged": null
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
+      },
+      "IsCustomizable": {
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
+      },
+      "TrueOption": {
+         "Value": 1,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "Up",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "Up",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Up",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
-          "HasChanged": null
-        }
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+      "FalseOption": {
+         "Value": 0,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "Down",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "Down",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Down",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       }
-    }
-  }
-}
-```
+   }
+   }
+   ```
 
+   **Console output**
 
+   ```
+   Updated Option Labels:
+   Updated True Option Label:'Up' Value: 1
+   Updated False Option Label:'Down' Value: 0
+   ```
 
 ### DateTime
 
-Create a DateTime column
+1. Create a DateTime column.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
-  "AttributeType": "DateTime",
-  "AttributeTypeName": {
-    "Value": "DateTimeType"
-  },
-  "Format": "DateOnly",
-  "ImeMode": "Disabled",
-  "DateTimeBehavior": {
-    "Value": "DateOnly"
-  },
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "DateTime Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+   "AttributeType": "DateTime",
+   "AttributeTypeName": {
+      "Value": "DateTimeType"
+   },
+   "Format": "DateOnly",
+   "ImeMode": "Disabled",
+   "DateTimeBehavior": {
+      "Value": "DateOnly"
+   },
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "DateTime Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "DateTime Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "DateTime Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample DateTime",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample DateTime",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample DateTime",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample DateTime",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_DateTime"
-}
-```
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_DateTime"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f1db3d43-112a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f1db3d43-112a-ed11-9db1-00224804f8e2)
+   ```
 
-Retrieve selected values the DateTime column
+   **Console output**
 
+   ```
+   Created DateTime column with id:f1db3d43-112a-ed11-9db1-00224804f8e2
+   ```
 
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_datetime')/Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?$select=SchemaName,Format,DateTimeBehavior HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.DateTimeAttributeMetadata(SchemaName,Format,DateTimeBehavior)/$entity",
-  "SchemaName": "sample_DateTime",
-  "Format": "DateOnly",
-  "MetadataId": "f1db3d43-112a-ed11-9db1-00224804f8e2",
-  "DateTimeBehavior": {
-    "Value": "DateOnly"
-  }
-}
-```
+1. Retrieve selected values the DateTime column.
 
 
-**Console output**
+   **Request**
 
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_datetime')/Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?$select=SchemaName,Format,DateTimeBehavior HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-```
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.DateTimeAttributeMetadata(SchemaName,Format,DateTimeBehavior)/$entity",
+   "SchemaName": "sample_DateTime",
+   "Format": "DateOnly",
+   "MetadataId": "f1db3d43-112a-ed11-9db1-00224804f8e2",
+   "DateTimeBehavior": {
+      "Value": "DateOnly"
+   }
+   }
+   ```
+
+   **Console output**
+
+   ```
+   Retrieved Datetime column properties:
+         DateTime Format:'DateOnly'
+         DateTime DateTimeBehavior:'DateOnly'
+   ```
 
 ### Decimal Column
 
-Create a Decimal Column:
+1. Create a Decimal Column.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.DecimalAttributeMetadata",
-  "AttributeType": "Decimal",
-  "AttributeTypeName": {
-    "Value": "DecimalType"
-  },
-  "MaxValue": 100.0,
-  "MinValue": 0.0,
-  "Precision": 1,
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Decimal Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.DecimalAttributeMetadata",
+   "AttributeType": "Decimal",
+   "AttributeTypeName": {
+      "Value": "DecimalType"
+   },
+   "MaxValue": 100.0,
+   "MinValue": 0.0,
+   "Precision": 1,
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Decimal Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Decimal Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Decimal Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Decimal",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Decimal",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Decimal",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Decimal",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Decimal"
-}
-```
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Decimal"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f2db3d43-112a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f2db3d43-112a-ed11-9db1-00224804f8e2)
+   ```
 
-Retrieve selected values of the DateTime column
+   **Console output**
 
-**Request**
+   ```
+   Created Decimal column with id:f2db3d43-112a-ed11-9db1-00224804f8e2
+   ```
 
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_decimal')/Microsoft.Dynamics.CRM.DecimalAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Precision HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+1. Retrieve selected values of the Decimal column.
 
-**Response**
+   **Request**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_decimal')/Microsoft.Dynamics.CRM.DecimalAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Precision HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.DecimalAttributeMetadata(SchemaName,MaxValue,MinValue,Precision)/$entity",
-  "SchemaName": "sample_Decimal",
-  "MaxValue": 100,
-  "MinValue": 0,
-  "Precision": 1,
-  "MetadataId": "f2db3d43-112a-ed11-9db1-00224804f8e2"
-}
-```
+   **Response**
 
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-**Console output**
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.DecimalAttributeMetadata(SchemaName,MaxValue,MinValue,Precision)/$entity",
+   "SchemaName": "sample_Decimal",
+   "MaxValue": 100,
+   "MinValue": 0,
+   "Precision": 1,
+   "MetadataId": "f2db3d43-112a-ed11-9db1-00224804f8e2"
+   }
+   ```
 
-```
+   **Console output**
 
-```
+   ```
+   Retrieved Decimal column properties:
+   Decimal MaxValue:100
+   Decimal MinValue:0
+   Decimal Precision:1
+   ```
 
 ### Integer Column
 
-Create an Integer column
+1. Create an Integer column.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
-  "AttributeType": "Integer",
-  "AttributeTypeName": {
-    "Value": "IntegerType"
-  },
-  "MaxValue": 100,
-  "MinValue": 0,
-  "Format": "None",
-  "SourceTypeMask": 0,
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Integer Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+   "AttributeType": "Integer",
+   "AttributeTypeName": {
+      "Value": "IntegerType"
+   },
+   "MaxValue": 100,
+   "MinValue": 0,
+   "Format": "None",
+   "SourceTypeMask": 0,
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Integer Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Integer Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Integer Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Integer",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Integer",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Integer",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Integer",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Integer"
-}
-```
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Integer"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f5db3d43-112a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f5db3d43-112a-ed11-9db1-00224804f8e2)
+   ```
 
-Retrieve selected values of the Integer column
+   **Console output**
 
-**Request**
+   ```
+   Created Integer column with id:f5db3d43-112a-ed11-9db1-00224804f8e2
+   ```
 
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_integer')/Microsoft.Dynamics.CRM.IntegerAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Format HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+1. Retrieve selected values of the Integer column.
 
-**Response**
+   **Request**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_integer')/Microsoft.Dynamics.CRM.IntegerAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Format HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.IntegerAttributeMetadata(SchemaName,MaxValue,MinValue,Format)/$entity",
-  "SchemaName": "sample_Integer",
-  "MaxValue": 100,
-  "MinValue": 0,
-  "Format": "None",
-  "MetadataId": "f5db3d43-112a-ed11-9db1-00224804f8e2"
-}
-```
+   **Response**
 
-**Console output**
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.IntegerAttributeMetadata(SchemaName,MaxValue,MinValue,Format)/$entity",
+   "SchemaName": "sample_Integer",
+   "MaxValue": 100,
+   "MinValue": 0,
+   "Format": "None",
+   "MetadataId": "f5db3d43-112a-ed11-9db1-00224804f8e2"
+   }
+   ```
 
-```
+   **Console output**
+
+   ```
+   Retrieved Integer column properties:
+   Integer MaxValue:100
+   Integer MinValue:0
+   Integer Format:None
+   ```
 
 ### Memo Column
 
-Create a Memo Column.
+1. Create a Memo Column.
 
 **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
-  "AttributeType": "Memo",
-  "AttributeTypeName": {
-    "Value": "MemoType"
-  },
-  "Format": "TextArea",
-  "ImeMode": "Disabled",
-  "MaxLength": 500,
-  "IsLocalizable": false,
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Memo Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+   "AttributeType": "Memo",
+   "AttributeTypeName": {
+      "Value": "MemoType"
+   },
+   "Format": "TextArea",
+   "ImeMode": "Disabled",
+   "MaxLength": 500,
+   "IsLocalizable": false,
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Memo Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Memo Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Memo Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Memo",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Memo",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Memo",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Memo",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Memo"
-}
-```
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Memo"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f6db3d43-112a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(f6db3d43-112a-ed11-9db1-00224804f8e2)
+   ```
 
+   **Console output**
 
+   ```
+   Created Memo column with id:f6db3d43-112a-ed11-9db1-00224804f8e2
+   ```
 
-Retrieve selected values of the Memo Column
+1. Retrieve selected values of the Memo Column
 
-**Request**
+   **Request**
 
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_memo')/Microsoft.Dynamics.CRM.MemoAttributeMetadata?$select=SchemaName,Format,ImeMode,MaxLength HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_memo')/Microsoft.Dynamics.CRM.MemoAttributeMetadata?$select=SchemaName,Format,ImeMode,MaxLength HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MemoAttributeMetadata(SchemaName,Format,ImeMode,MaxLength)/$entity",
-  "SchemaName": "sample_Memo",
-  "Format": "TextArea",
-  "ImeMode": "Disabled",
-  "MaxLength": 500,
-  "MetadataId": "f6db3d43-112a-ed11-9db1-00224804f8e2"
-}
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MemoAttributeMetadata(SchemaName,Format,ImeMode,MaxLength)/$entity",
+   "SchemaName": "sample_Memo",
+   "Format": "TextArea",
+   "ImeMode": "Disabled",
+   "MaxLength": 500,
+   "MetadataId": "f6db3d43-112a-ed11-9db1-00224804f8e2"
+   }
+   ```
 
+   **Console output**
 
-
-**Console output**
-
-```
-
-```
+   ```
+   Retrieved Memo column properties:
+   Memo Format:TextArea
+   Memo ImeMode:Disabled
+   Memo MaxLength:500
+   ```
 
 ### Money Column
 
-Create a Money Column.
+1. Create a Money Column.
 
 **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata",
-  "AttributeType": "Money",
-  "AttributeTypeName": {
-    "Value": "MoneyType"
-  },
-  "ImeMode": "Disabled",
-  "MaxValue": 1000.0,
-  "MinValue": 0.0,
-  "Precision": 1,
-  "PrecisionSource": 1,
-  "SourceTypeMask": 0,
-  "IsBaseCurrency": false,
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Money Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.MoneyAttributeMetadata",
+   "AttributeType": "Money",
+   "AttributeTypeName": {
+      "Value": "MoneyType"
+   },
+   "ImeMode": "Disabled",
+   "MaxValue": 1000.0,
+   "MinValue": 0.0,
+   "Precision": 1,
+   "PrecisionSource": 1,
+   "SourceTypeMask": 0,
+   "IsBaseCurrency": false,
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Money Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Money Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Money Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Money",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Money",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Money",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Money",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Money"
-}
-```
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Money"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fddb3d43-112a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(fddb3d43-112a-ed11-9db1-00224804f8e2)
+   ```
 
+   **Console output**
+
+   ```
+   Created Money column with id:fddb3d43-112a-ed11-9db1-00224804f8e2
+   ```
 
 
-Retrieve selected values of the Money Column
+
+1. Retrieve selected values of the Money Column
 
 
-**Request**
+   **Request**
 
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_money')/Microsoft.Dynamics.CRM.MoneyAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Precision,PrecisionSource,ImeMode HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_money')/Microsoft.Dynamics.CRM.MoneyAttributeMetadata?$select=SchemaName,MaxValue,MinValue,Precision,PrecisionSource,ImeMode HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MoneyAttributeMetadata(SchemaName,MaxValue,MinValue,Precision,PrecisionSource,ImeMode)/$entity",
-  "SchemaName": "sample_Money",
-  "MaxValue": 1000.0,
-  "MinValue": 0.0,
-  "Precision": 1,
-  "PrecisionSource": 1,
-  "ImeMode": "Disabled",
-  "MetadataId": "fddb3d43-112a-ed11-9db1-00224804f8e2"
-}
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MoneyAttributeMetadata(SchemaName,MaxValue,MinValue,Precision,PrecisionSource,ImeMode)/$entity",
+   "SchemaName": "sample_Money",
+   "MaxValue": 1000.0,
+   "MinValue": 0.0,
+   "Precision": 1,
+   "PrecisionSource": 1,
+   "ImeMode": "Disabled",
+   "MetadataId": "fddb3d43-112a-ed11-9db1-00224804f8e2"
+   }
+   ```
 
+   **Console output**
+
+   ```
+   Retrieved Money column properties:
+   Money MaxValue:1000
+   Money MinValue:0
+   Money Precision:1
+   Money PrecisionSource:1
+   Money ImeMode:Disabled
+   ```
 
 ### Picklist Column
 
-Create a Choice (Picklist) Column
+1. Create a Choice (Picklist) Column.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
-  "AttributeType": "Picklist",
-  "AttributeTypeName": {
-    "Value": "PicklistType"
-  },
-  "SourceTypeMask": 0,
-  "OptionSet": {
-    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
-    "Options": [
-      {
-        "Value": 727000000,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Bravo",
-              "LanguageCode": 1033,
-              "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
+   "AttributeType": "Picklist",
+   "AttributeTypeName": {
+      "Value": "PicklistType"
+   },
+   "SourceTypeMask": 0,
+   "OptionSet": {
+      "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+      "Options": [
+         {
+         "Value": 727000000,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Bravo",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      },
-      {
-        "Value": 727000001,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Delta",
-              "LanguageCode": 1033,
-              "IsManaged": false
+         }
+         },
+         {
+         "Value": 727000001,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Delta",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      },
-      {
-        "Value": 727000002,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Alpha",
-              "LanguageCode": 1033,
-              "IsManaged": false
+         }
+         },
+         {
+         "Value": 727000002,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Alpha",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      },
-      {
-        "Value": 727000003,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Charlie",
-              "LanguageCode": 1033,
-              "IsManaged": false
+         }
+         },
+         {
+         "Value": 727000003,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Charlie",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      },
-      {
-        "Value": 727000004,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Foxtrot",
-              "LanguageCode": 1033,
-              "IsManaged": false
+         }
+         },
+         {
+         "Value": 727000004,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Foxtrot",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      }
-    ],
-    "IsGlobal": false,
-    "OptionSetType": "Picklist"
-  },
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Choice Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Choice Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Choice",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Choice"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(4a154e49-112a-ed11-9db1-00224804f8e2)
-```
-
-Retrieve options of the choice column.
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-  "SchemaName": "sample_Choice",
-  "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
-  "OptionSet": {
-    "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_choice",
-    "ExternalTypeName": null,
-    "OptionSetType": "Picklist",
-    "IntroducedVersion": "1.0.0.0",
-    "ParentOptionSetName": null,
-    "Description": {
+         }
+         }
+      ],
+      "IsGlobal": false,
+      "OptionSetType": "Picklist"
+   },
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Choice Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Choice Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "DisplayName": {
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Sample Choice",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Sample Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "Options": [
-      {
-        "Value": 727000000,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Bravo",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Bravo",
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Choice"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(4a154e49-112a-ed11-9db1-00224804f8e2)
+   ```
+
+   **Console output**
+
+   ```
+   Created Choice column with id:4a154e49-112a-ed11-9db1-00224804f8e2
+   ```
+
+1. Retrieve options of the choice column.
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
+   "SchemaName": "sample_Choice",
+   "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
+   "OptionSet": {
+      "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
+      "HasChanged": null,
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
+      "IsManaged": false,
+      "Name": "sample_bankaccount_sample_choice",
+      "ExternalTypeName": null,
+      "OptionSetType": "Picklist",
+      "IntroducedVersion": "1.0.0.0",
+      "ParentOptionSetName": null,
+      "Description": {
+         "LocalizedLabels": [
+         {
+            "Label": "Choice Attribute",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+            "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000001,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Delta",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Delta",
+      "DisplayName": {
+         "LocalizedLabels": [
+         {
+            "Label": "Sample Choice",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+            "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Sample Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000002,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Alpha",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Alpha",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+      "IsCustomizable": {
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
       },
-      {
-        "Value": 727000003,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Charlie",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-              "HasChanged": null
+      "Options": [
+         {
+         "Value": 727000000,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Charlie",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      },
-      {
-        "Value": 727000004,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Foxtrot",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-              "HasChanged": null
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000001,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Foxtrot",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      }
-    ]
-  }
-}
-```
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000002,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000003,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000004,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         }
+      ]
+   }
+   }
+   ```
+   **Console output**
 
-Add an option to the choice column
+   ```
+   Retrieved Choice column options:
+        Value:727000000 Label:Bravo
+        Value:727000001 Label:Delta
+        Value:727000002 Label:Alpha
+        Value:727000003 Label:Charlie
+        Value:727000004 Label:Foxtrot
+   ```
 
-**Request**
+1. Add an option to the choice column using <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
 
-```http
-POST [Organization Uri]/api/data/v9.2/InsertOptionValue HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+> [!NOTE]
+> `InsertOptionValue` and the following actions to work with options has a SolutionUniqueName parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
 
-{
-  "AttributeLogicalName": "sample_choice",
-  "EntityLogicalName": "sample_bankaccount",
-  "Value": 727000005,
-  "Label": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Echo",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Echo",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "SolutionUniqueName": "examplesolution"
-}
-```
+   **Request**
 
-**Response**
+   ```http
+   POST [Organization Uri]/api/data/v9.2/InsertOptionValue HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InsertOptionValueResponse",
-  "NewOptionValue": 727000005
-}
-```
-
-Retrieve the choice column options again
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-  "SchemaName": "sample_Choice",
-  "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
-  "OptionSet": {
-    "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_choice",
-    "ExternalTypeName": null,
-    "OptionSetType": "Picklist",
-    "IntroducedVersion": "1.0.0.0",
-    "ParentOptionSetName": null,
-    "Description": {
+   {
+   "AttributeLogicalName": "sample_choice",
+   "EntityLogicalName": "sample_bankaccount",
+   "Value": 727000005,
+   "Label": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Choice Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Echo",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Choice Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Echo",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "DisplayName": {
-      "LocalizedLabels": [
-        {
-          "Label": "Sample Choice",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Sample Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
-      }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "Options": [
-      {
-        "Value": 727000000,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Bravo",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Bravo",
+   },
+   "SolutionUniqueName": "examplesolution"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InsertOptionValueResponse",
+   "NewOptionValue": 727000005
+   }
+   ```
+
+   **Console output**
+
+   ```
+   Added new option with label 'Echo'
+   ```
+
+1. Retrieve the choice column options again
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
+   "SchemaName": "sample_Choice",
+   "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
+   "OptionSet": {
+      "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
+      "HasChanged": null,
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
+      "IsManaged": false,
+      "Name": "sample_bankaccount_sample_choice",
+      "ExternalTypeName": null,
+      "OptionSetType": "Picklist",
+      "IntroducedVersion": "1.0.0.0",
+      "ParentOptionSetName": null,
+      "Description": {
+         "LocalizedLabels": [
+         {
+            "Label": "Choice Attribute",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+            "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000001,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Delta",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Delta",
+      "DisplayName": {
+         "LocalizedLabels": [
+         {
+            "Label": "Sample Choice",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+            "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Sample Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000002,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Alpha",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Alpha",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+      "IsCustomizable": {
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
       },
-      {
-        "Value": 727000003,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Charlie",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-              "HasChanged": null
+      "Options": [
+         {
+         "Value": 727000000,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Charlie",
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000001,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000002,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000003,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000004,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000005,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": null,
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Echo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Echo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         }
+      ]
+   }
+   }
+   ```
+
+   **Console output**
+
+   ```
+   The option values for the picklist:
+        Value: 727000000, Label:Bravo
+        Value: 727000001, Label:Delta
+        Value: 727000002, Label:Alpha
+        Value: 727000003, Label:Charlie
+        Value: 727000004, Label:Foxtrot
+        Value: 727000005, Label:Echo
+   ```
+
+1. Re-order the Choice column options using <xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>.
+
+   **Request**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/OrderOption HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "EntityLogicalName": "sample_bankaccount",
+   "AttributeLogicalName": "sample_choice",
+   "Values": [
+      727000002,
+      727000000,
+      727000003,
+      727000001,
+      727000005,
+      727000004
+   ],
+   "SolutionUniqueName": "examplesolution"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
+
+   **Console output**
+
+   ```
+   Options re-ordered.
+   ```
+
+1. Retrieve the Choice column options again to see the options in the new order
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
+   "SchemaName": "sample_Choice",
+   "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
+   "OptionSet": {
+      "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
+      "HasChanged": null,
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
+      "IsManaged": false,
+      "Name": "sample_bankaccount_sample_choice",
+      "ExternalTypeName": null,
+      "OptionSetType": "Picklist",
+      "IntroducedVersion": "1.0.0.0",
+      "ParentOptionSetName": null,
+      "Description": {
+         "LocalizedLabels": [
+         {
+            "Label": "Choice Attribute",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+            "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000004,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Foxtrot",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Foxtrot",
+      "DisplayName": {
+         "LocalizedLabels": [
+         {
+            "Label": "Sample Choice",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+            "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Sample Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000005,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": null,
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Echo",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Echo",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      }
-    ]
-  }
-}
-```
-
-Re-order the Choice column options using OrderOption
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.2/OrderOption HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-  "EntityLogicalName": "sample_bankaccount",
-  "AttributeLogicalName": "sample_choice",
-  "Values": [
-    727000002,
-    727000000,
-    727000003,
-    727000001,
-    727000005,
-    727000004
-  ],
-  "SolutionUniqueName": "examplesolution"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
-
-Retrieve the Choice column options again to see the options in the new order
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-  "SchemaName": "sample_Choice",
-  "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
-  "OptionSet": {
-    "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_choice",
-    "ExternalTypeName": null,
-    "OptionSetType": "Picklist",
-    "IntroducedVersion": "1.0.0.0",
-    "ParentOptionSetName": null,
-    "Description": {
-      "LocalizedLabels": [
-        {
-          "Label": "Choice Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Choice Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
-      }
-    },
-    "DisplayName": {
-      "LocalizedLabels": [
-        {
-          "Label": "Sample Choice",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
-      ],
-      "UserLocalizedLabel": {
-        "Label": "Sample Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
-      }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "Options": [
-      {
-        "Value": 727000002,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Alpha",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Alpha",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+      "IsCustomizable": {
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
       },
-      {
-        "Value": 727000000,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Bravo",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-              "HasChanged": null
+      "Options": [
+         {
+         "Value": 727000002,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Alpha",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Bravo",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      },
-      {
-        "Value": 727000003,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Charlie",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-              "HasChanged": null
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000000,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Bravo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Charlie",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      },
-      {
-        "Value": 727000001,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Delta",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-              "HasChanged": null
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000003,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Charlie",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Delta",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      },
-      {
-        "Value": 727000005,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": null,
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Echo",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-              "HasChanged": null
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000001,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Delta",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Echo",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      },
-      {
-        "Value": 727000004,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Foxtrot",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-              "HasChanged": null
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000005,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": null,
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Echo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Echo",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Foxtrot",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      }
-    ]
-  }
-}
-```
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000004,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Foxtrot",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         }
+      ]
+   }
+   }
+   ```
 
-Delete an option using DeleteOptionValue
+   **Console output**
 
-**Request**
+   ```
+   The option values for the picklist in the new order:
+        Value: 727000002, Label:Alpha
+        Value: 727000000, Label:Bravo
+        Value: 727000003, Label:Charlie
+        Value: 727000001, Label:Delta
+        Value: 727000005, Label:Echo
+        Value: 727000004, Label:Foxtrot
+   ```
 
-```http
-POST [Organization Uri]/api/data/v9.2/DeleteOptionValue HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+1. Delete an option using <xref:Microsoft.Dynamics.CRM.DeleteOptionValue?displayProperty=nameWithType>
 
-{
-  "AttributeLogicalName": "sample_choice",
-  "EntityLogicalName": "sample_bankaccount",
-  "Value": 727000004
-}
-```
+   **Request**
 
-**Response**
+   ```http
+   POST [Organization Uri]/api/data/v9.2/DeleteOptionValue HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
+   {
+   "AttributeLogicalName": "sample_choice",
+   "EntityLogicalName": "sample_bankaccount",
+   "Value": 727000004
+   }
+   ```
 
-**Console output**
+   **Response**
 
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
 
-```
+   **Console output**
+
+   ```
+   Deleting a local option value...
+   Local OptionSet option value deleted.
+   ```
 
 ### Multi-Select Picklist Column
 
-Create a multi-select Choice column
+1. Create a multi-select Choice column
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
-  "AttributeType": "Virtual",
-  "AttributeTypeName": {
-    "Value": "MultiSelectPicklistType"
-  },
-  "SourceTypeMask": 0,
-  "OptionSet": {
-    "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
-    "Options": [
-      {
-        "Value": 727000000,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Appetizer",
-              "LanguageCode": 1033,
-              "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
+   "AttributeType": "Virtual",
+   "AttributeTypeName": {
+      "Value": "MultiSelectPicklistType"
+   },
+   "SourceTypeMask": 0,
+   "OptionSet": {
+      "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+      "Options": [
+         {
+         "Value": 727000000,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Appetizer",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Appetizer",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Appetizer",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      },
-      {
-        "Value": 727000001,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Entree",
-              "LanguageCode": 1033,
-              "IsManaged": false
+         }
+         },
+         {
+         "Value": 727000001,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Entree",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Entree",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Entree",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      },
-      {
-        "Value": 727000002,
-        "Label": {
-          "@odata.type": "Microsoft.Dynamics.CRM.Label",
-          "LocalizedLabels": [
-            {
-              "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-              "Label": "Dessert",
-              "LanguageCode": 1033,
-              "IsManaged": false
+         }
+         },
+         {
+         "Value": 727000002,
+         "Label": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+               {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Dessert",
+               "LanguageCode": 1033,
+               "IsManaged": false
+               }
+            ],
+            "UserLocalizedLabel": {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Dessert",
+               "LanguageCode": 1033,
+               "IsManaged": false
             }
-          ],
-          "UserLocalizedLabel": {
-            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Dessert",
-            "LanguageCode": 1033,
-            "IsManaged": false
-          }
-        }
-      }
-    ],
-    "IsGlobal": false,
-    "OptionSetType": "Picklist"
-  },
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "MultiSelect Choice Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "MultiSelect Choice Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample MultiSelect Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample MultiSelect Choice",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_MultiSelectChoice"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(2c1c3050-112a-ed11-9db1-00224804f8e2)
-```
-
-Retrieve the multi-select choice column
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_multiselectchoice')/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-  "SchemaName": "sample_MultiSelectChoice",
-  "MetadataId": "2c1c3050-112a-ed11-9db1-00224804f8e2",
-  "OptionSet": {
-    "MetadataId": "2d1c3050-112a-ed11-9db1-00224804f8e2",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_multiselectchoice",
-    "ExternalTypeName": null,
-    "OptionSetType": "Picklist",
-    "IntroducedVersion": "1.0.0.0",
-    "ParentOptionSetName": null,
-    "Description": {
+         }
+         }
+      ],
+      "IsGlobal": false,
+      "OptionSetType": "Picklist"
+   },
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "MultiSelect Choice Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "2f1c3050-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "MultiSelect Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "MultiSelect Choice Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "2f1c3050-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "MultiSelect Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "DisplayName": {
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Sample MultiSelect Choice",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "2e1c3050-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample MultiSelect Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Sample MultiSelect Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "2e1c3050-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample MultiSelect Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "IsCustomizable": {
-      "Value": true,
-      "CanBeChanged": true,
-      "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "Options": [
-      {
-        "Value": 727000000,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Appetizer",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "f88708bf-872e-43db-b648-e06c4ca7bd7c",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Appetizer",
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_MultiSelectChoice"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(2c1c3050-112a-ed11-9db1-00224804f8e2)
+   ```
+
+   **Console output**
+
+   ```
+   Creating a MultiSelect Choice column...
+   Created MultiSelect Choice column with id:2c1c3050-112a-ed11-9db1-00224804f8e2
+   ```
+
+1. Retrieve the multi-select choice column
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_multiselectchoice')/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
+   "SchemaName": "sample_MultiSelectChoice",
+   "MetadataId": "2c1c3050-112a-ed11-9db1-00224804f8e2",
+   "OptionSet": {
+      "MetadataId": "2d1c3050-112a-ed11-9db1-00224804f8e2",
+      "HasChanged": null,
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
+      "IsManaged": false,
+      "Name": "sample_bankaccount_sample_multiselectchoice",
+      "ExternalTypeName": null,
+      "OptionSetType": "Picklist",
+      "IntroducedVersion": "1.0.0.0",
+      "ParentOptionSetName": null,
+      "Description": {
+         "LocalizedLabels": [
+         {
+            "Label": "MultiSelect Choice Attribute",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "f88708bf-872e-43db-b648-e06c4ca7bd7c",
+            "MetadataId": "2f1c3050-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "MultiSelect Choice Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "2f1c3050-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000001,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Entree",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "167ea50e-0b0a-4606-8a87-f23750219f2f",
-              "HasChanged": null
-            }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Entree",
+      "DisplayName": {
+         "LocalizedLabels": [
+         {
+            "Label": "Sample MultiSelect Choice",
             "LanguageCode": 1033,
             "IsManaged": false,
-            "MetadataId": "167ea50e-0b0a-4606-8a87-f23750219f2f",
+            "MetadataId": "2e1c3050-112a-ed11-9db1-00224804f8e2",
             "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Sample MultiSelect Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "2e1c3050-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
       },
-      {
-        "Value": 727000002,
-        "Color": null,
-        "IsManaged": false,
-        "ExternalValue": "",
-        "ParentValues": [],
-        "MetadataId": null,
-        "HasChanged": null,
-        "Label": {
-          "LocalizedLabels": [
-            {
-              "Label": "Dessert",
-              "LanguageCode": 1033,
-              "IsManaged": false,
-              "MetadataId": "698a32bf-d4f8-443a-8ca6-8b598d39e0f3",
-              "HasChanged": null
+      "IsCustomizable": {
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
+      },
+      "Options": [
+         {
+         "Value": 727000000,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Appetizer",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "f88708bf-872e-43db-b648-e06c4ca7bd7c",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Appetizer",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "f88708bf-872e-43db-b648-e06c4ca7bd7c",
+               "HasChanged": null
             }
-          ],
-          "UserLocalizedLabel": {
-            "Label": "Dessert",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "698a32bf-d4f8-443a-8ca6-8b598d39e0f3",
-            "HasChanged": null
-          }
-        },
-        "Description": {
-          "LocalizedLabels": [],
-          "UserLocalizedLabel": null
-        }
-      }
-    ]
-  }
-}
-```
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000001,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Entree",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "167ea50e-0b0a-4606-8a87-f23750219f2f",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Entree",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "167ea50e-0b0a-4606-8a87-f23750219f2f",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         },
+         {
+         "Value": 727000002,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+            "LocalizedLabels": [
+               {
+               "Label": "Dessert",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "698a32bf-d4f8-443a-8ca6-8b598d39e0f3",
+               "HasChanged": null
+               }
+            ],
+            "UserLocalizedLabel": {
+               "Label": "Dessert",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "698a32bf-d4f8-443a-8ca6-8b598d39e0f3",
+               "HasChanged": null
+            }
+         },
+         "Description": {
+            "LocalizedLabels": [],
+            "UserLocalizedLabel": null
+         }
+         }
+      ]
+   }
+   }
+   ```
 
-**Console output**
+   **Console output**
 
-```
-
-```
+   ```
+   The option values for the multi-select choice column:
+         Value: 727000000, Label:Appetizer
+         Value: 727000001, Label:Entree
+         Value: 727000002, Label:Dessert
+   ```
 
 ### Insert Status Value
+
+Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it is valid for.
 
 **Request**
 
@@ -3902,679 +4038,702 @@ OData-Version: 4.0
 **Console output**
 
 ```
-
+Created new Status value:727000000
 ```
 
 ## Section 3: Create and use Global OptionSet
 
-Create a global choice (optionset)
+1. Create a global choice (optionset)
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
-  "Options": [
-    {
-      "Value": 727000000,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+   "Options": [
+      {
+         "Value": 727000000,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Red",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "Red",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Red",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      }
-    },
-    {
-      "Value": 727000001,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+         }
+         }
+      },
+      {
+         "Value": 727000001,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Yellow",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "Yellow",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Yellow",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      }
-    },
-    {
-      "Value": 727000002,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+         }
+         }
+      },
+      {
+         "Value": 727000002,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Green",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "Green",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Green",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
+         }
+         }
       }
-    }
-  ],
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
+   ],
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Color Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Color Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false
+      }
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Colors",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Colors",
+         "LanguageCode": 1033,
+         "IsManaged": false
+      }
+   },
+   "Name": "sample_colors",
+   "OptionSetType": "Picklist"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)
+   ```
+
+   **Console output**
+
+   ```
+   Created a new global option set with id:7cfd8c56-112a-ed11-9db1-00224804f8e2
+   ```
+
+1. Retrieve the global choice
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OptionSetMetadata HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#GlobalOptionSetDefinitions/Microsoft.Dynamics.CRM.OptionSetMetadata/$entity",
+   "ParentOptionSetName": null,
+   "IsCustomOptionSet": true,
+   "IsGlobal": true,
+   "IsManaged": false,
+   "Name": "sample_colors",
+   "ExternalTypeName": null,
+   "OptionSetType": "Picklist",
+   "IntroducedVersion": "1.0.0.0",
+   "MetadataId": "7cfd8c56-112a-ed11-9db1-00224804f8e2",
+   "HasChanged": null,
+   "Options": [
       {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Color Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Color Choice",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Colors",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Colors",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "Name": "sample_colors",
-  "OptionSetType": "Picklist"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)
-```
-
-Retrieve the global choice
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OptionSetMetadata HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#GlobalOptionSetDefinitions/Microsoft.Dynamics.CRM.OptionSetMetadata/$entity",
-  "ParentOptionSetName": null,
-  "IsCustomOptionSet": true,
-  "IsGlobal": true,
-  "IsManaged": false,
-  "Name": "sample_colors",
-  "ExternalTypeName": null,
-  "OptionSetType": "Picklist",
-  "IntroducedVersion": "1.0.0.0",
-  "MetadataId": "7cfd8c56-112a-ed11-9db1-00224804f8e2",
-  "HasChanged": null,
-  "Options": [
-    {
-      "Value": 727000000,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+         "Value": 727000000,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "Red",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "2c1fa94f-3714-4615-995b-690158d0d989",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "Red",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "2c1fa94f-3714-4615-995b-690158d0d989",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Red",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "2c1fa94f-3714-4615-995b-690158d0d989",
-          "HasChanged": null
-        }
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    },
-    {
-      "Value": 727000001,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+      {
+         "Value": 727000001,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "Yellow",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "a499c2fe-c13a-4c1e-b190-db8ae74396f5",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "Yellow",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "a499c2fe-c13a-4c1e-b190-db8ae74396f5",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Yellow",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "a499c2fe-c13a-4c1e-b190-db8ae74396f5",
-          "HasChanged": null
-        }
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    },
-    {
-      "Value": 727000002,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+      {
+         "Value": 727000002,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "Green",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "8378af2c-4b68-4ea4-ad37-e676f696e1ba",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "Green",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "8378af2c-4b68-4ea4-ad37-e676f696e1ba",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "Green",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "8378af2c-4b68-4ea4-ad37-e676f696e1ba",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       }
-    }
-  ],
-  "Description": {
-    "LocalizedLabels": [
-      {
-        "Label": "Color Choice",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "7efd8c56-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+   ],
+   "Description": {
+      "LocalizedLabels": [
+         {
+         "Label": "Color Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "7efd8c56-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "Color Choice",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "7efd8c56-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
       }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "Color Choice",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "7efd8c56-112a-ed11-9db1-00224804f8e2",
-      "HasChanged": null
-    }
-  },
-  "DisplayName": {
-    "LocalizedLabels": [
-      {
-        "Label": "Colors",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "7dfd8c56-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+   },
+   "DisplayName": {
+      "LocalizedLabels": [
+         {
+         "Label": "Colors",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "7dfd8c56-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "Colors",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "7dfd8c56-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
       }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "Colors",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "7dfd8c56-112a-ed11-9db1-00224804f8e2",
-      "HasChanged": null
-    }
-  },
-  "IsCustomizable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  }
-}
-```
+   },
+   "IsCustomizable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+   }
+   }
+   ```
 
-Create a choice column that uses the global optionset
+   **Console output**
 
-**Request**
+   ```
+   List the retrieved options for the colors global option set:
+   Value: 727000000 Label:Red
+   Value: 727000001 Label:Yellow
+   Value: 727000002 Label:Green
+   ```
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+1. Create a choice column that uses the global optionset
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
-  "AttributeType": "Picklist",
-  "AttributeTypeName": {
-    "Value": "PicklistType"
-  },
-  "SourceTypeMask": 0,
-  "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)",
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Colors Global Picklist Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   **Request**
+
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
+   "AttributeType": "Picklist",
+   "AttributeTypeName": {
+      "Value": "PicklistType"
+   },
+   "SourceTypeMask": 0,
+   "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)",
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Colors Global Picklist Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Colors Global Picklist Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Colors Global Picklist Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Colors",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Colors",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Colors",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Colors",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Colors"
-}
-```
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Colors"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(81fd8c56-112a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(81fd8c56-112a-ed11-9db1-00224804f8e2)
+   ```
 
+   **Console output**
 
-
-**Console output**
-
-```
-
-```
+   ```
+   Created Choice column with id:81fd8c56-112a-ed11-9db1-00224804f8e2 using colors global optionset.
+   ```
 
 ## Section 4: Create Customer Relationship
 
-**Request**
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action> to create a customer relationship. This will add a lookup column for the `sample_BankAccount` table that allows for either an `account` or `contact` record to be set.
 
-```http
-POST [Organization Uri]/api/data/v9.2/CreateCustomerRelationships HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   **Request**
 
-{
-  "Lookup": {
-    "AttributeType": "Lookup",
-    "AttributeTypeName": {
-      "Value": "LookupType"
-    },
-    "Format": "None",
-    "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
-    "Targets": [
+   ```http
+   POST [Organization Uri]/api/data/v9.2/CreateCustomerRelationships HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "Lookup": {
+      "AttributeType": "Lookup",
+      "AttributeTypeName": {
+         "Value": "LookupType"
+      },
+      "Format": "None",
+      "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+      "Targets": [
+         "account",
+         "contact"
+      ],
+      "ColumnNumber": 0,
+      "Description": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+         {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "The owner of the bank account",
+            "LanguageCode": 1033,
+            "IsManaged": false
+         }
+         ],
+         "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "The owner of the bank account",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      },
+      "DisplayName": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+         {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Bank Account owner",
+            "LanguageCode": 1033,
+            "IsManaged": false
+         }
+         ],
+         "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Account owner",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      },
+      "RequiredLevel": {
+         "Value": "ApplicationRequired",
+         "CanBeChanged": false,
+         "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+      },
+      "SchemaName": "sample_CustomerId",
+      "SourceType": 0
+   },
+   "OneToManyRelationships": [
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata",
+         "ReferencedEntity": "account",
+         "ReferencingEntity": "sample_bankaccount",
+         "RelationshipBehavior": 0,
+         "RelationshipType": "OneToManyRelationship",
+         "SchemaName": "sample_BankAccount_Customer_Account",
+         "SecurityTypes": "None"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata",
+         "ReferencedEntity": "contact",
+         "ReferencingEntity": "sample_bankaccount",
+         "RelationshipBehavior": 0,
+         "RelationshipType": "OneToManyRelationship",
+         "SchemaName": "sample_BankAccount_Customer_Contact",
+         "SecurityTypes": "None"
+      }
+   ],
+   "SolutionUniqueName": "examplesolution"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse",
+   "RelationshipIds": [
+      "84fd8c56-112a-ed11-9db1-00224804f8e2",
+      "8dfd8c56-112a-ed11-9db1-00224804f8e2"
+   ],
+   "AttributeId": "59478264-16af-4bcc-8baa-b154df0d6767"
+   }
+   ```
+
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType>.`AttributeId` value to retrieve the lookup column for the customer relationship
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_customerid')/Microsoft.Dynamics.CRM.LookupAttributeMetadata?$select=Targets HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.LookupAttributeMetadata(Targets)/$entity",
+   "Targets": [
       "account",
       "contact"
-    ],
-    "ColumnNumber": 0,
-    "Description": {
-      "@odata.type": "Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels": [
-        {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "The owner of the bank account",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      ],
-      "UserLocalizedLabel": {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "The owner of the bank account",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   ],
+   "MetadataId": "59478264-16af-4bcc-8baa-b154df0d6767"
+   }
+   ```
+
+   **Console output**
+
+   ```
+   The Target values of the Lookup column created:
+         account
+         contact
+   ```
+
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType>.`RelationshipIds` values to retrieve the relationships for the customer column.
+
+   First for the relationship to `account`:
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(84fd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#RelationshipDefinitions/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata/$entity",
+   "ReferencedAttribute": "accountid",
+   "ReferencedEntity": "account",
+   "ReferencingAttribute": "sample_customerid",
+   "ReferencingEntity": "sample_bankaccount",
+   "IsHierarchical": false,
+   "EntityKey": null,
+   "IsRelationshipAttributeDenormalized": false,
+   "ReferencedEntityNavigationPropertyName": "sample_BankAccount_Customer_Account",
+   "ReferencingEntityNavigationPropertyName": "sample_CustomerId_account",
+   "RelationshipBehavior": 1,
+   "IsDenormalizedLookup": null,
+   "DenormalizedAttributeName": null,
+   "IsCustomRelationship": true,
+   "IsValidForAdvancedFind": true,
+   "SchemaName": "sample_BankAccount_Customer_Account",
+   "SecurityTypes": "Append",
+   "IsManaged": false,
+   "RelationshipType": "OneToManyRelationship",
+   "IntroducedVersion": "1.0.0.0",
+   "MetadataId": "84fd8c56-112a-ed11-9db1-00224804f8e2",
+   "HasChanged": null,
+   "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000,
+      "IsCustomizable": true,
+      "Icon": null,
+      "ViewId": "00000000-0000-0000-0000-000000000000",
+      "AvailableOffline": true,
+      "MenuId": null,
+      "QueryApi": null,
+      "Label": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
       }
-    },
-    "DisplayName": {
-      "@odata.type": "Microsoft.Dynamics.CRM.Label",
-      "LocalizedLabels": [
-        {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Bank Account owner",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      ],
-      "UserLocalizedLabel": {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Bank Account owner",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Archive": "RemoveLink",
+      "Merge": "Cascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade",
+      "RollupView": "NoCascade"
+   },
+   "RelationshipAttributes": [],
+   "IsCustomizable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+   }
+   }
+   ```
+
+   Then for the relationship to `contact`:
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(8dfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#RelationshipDefinitions/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata/$entity",
+   "ReferencedAttribute": "contactid",
+   "ReferencedEntity": "contact",
+   "ReferencingAttribute": "sample_customerid",
+   "ReferencingEntity": "sample_bankaccount",
+   "IsHierarchical": false,
+   "EntityKey": null,
+   "IsRelationshipAttributeDenormalized": false,
+   "ReferencedEntityNavigationPropertyName": "sample_BankAccount_Customer_Contact",
+   "ReferencingEntityNavigationPropertyName": "sample_CustomerId_contact",
+   "RelationshipBehavior": 1,
+   "IsDenormalizedLookup": null,
+   "DenormalizedAttributeName": null,
+   "IsCustomRelationship": true,
+   "IsValidForAdvancedFind": true,
+   "SchemaName": "sample_BankAccount_Customer_Contact",
+   "SecurityTypes": "Append",
+   "IsManaged": false,
+   "RelationshipType": "OneToManyRelationship",
+   "IntroducedVersion": "1.0.0.0",
+   "MetadataId": "8dfd8c56-112a-ed11-9db1-00224804f8e2",
+   "HasChanged": null,
+   "AssociatedMenuConfiguration": {
+      "Behavior": "UseCollectionName",
+      "Group": "Details",
+      "Order": 10000,
+      "IsCustomizable": true,
+      "Icon": null,
+      "ViewId": "00000000-0000-0000-0000-000000000000",
+      "AvailableOffline": true,
+      "MenuId": null,
+      "QueryApi": null,
+      "Label": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
       }
-    },
-    "RequiredLevel": {
-      "Value": "ApplicationRequired",
-      "CanBeChanged": false,
-      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-    },
-    "SchemaName": "sample_CustomerId",
-    "SourceType": 0
-  },
-  "OneToManyRelationships": [
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata",
-      "ReferencedEntity": "account",
-      "ReferencingEntity": "sample_bankaccount",
-      "RelationshipBehavior": 0,
-      "RelationshipType": "OneToManyRelationship",
-      "SchemaName": "sample_BankAccount_Customer_Account",
-      "SecurityTypes": "None"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata",
-      "ReferencedEntity": "contact",
-      "ReferencingEntity": "sample_bankaccount",
-      "RelationshipBehavior": 0,
-      "RelationshipType": "OneToManyRelationship",
-      "SchemaName": "sample_BankAccount_Customer_Contact",
-      "SecurityTypes": "None"
-    }
-  ],
-  "SolutionUniqueName": "examplesolution"
-}
-```
+   },
+   "CascadeConfiguration": {
+      "Assign": "NoCascade",
+      "Delete": "RemoveLink",
+      "Archive": "RemoveLink",
+      "Merge": "Cascade",
+      "Reparent": "NoCascade",
+      "Share": "NoCascade",
+      "Unshare": "NoCascade",
+      "RollupView": "NoCascade"
+   },
+   "RelationshipAttributes": [],
+   "IsCustomizable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+   }
+   }
+   ```
 
-**Response**
+   **Console output**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse",
-  "RelationshipIds": [
-    "84fd8c56-112a-ed11-9db1-00224804f8e2",
-    "8dfd8c56-112a-ed11-9db1-00224804f8e2"
-  ],
-  "AttributeId": "59478264-16af-4bcc-8baa-b154df0d6767"
-}
-```
-
-Retrieve the lookup column for the customer relationship
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_customerid')/Microsoft.Dynamics.CRM.LookupAttributeMetadata?$select=Targets HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.LookupAttributeMetadata(Targets)/$entity",
-  "Targets": [
-    "account",
-    "contact"
-  ],
-  "MetadataId": "59478264-16af-4bcc-8baa-b154df0d6767"
-}
-```
-
-Retrieve the relationships that support the customer relationship
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(84fd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#RelationshipDefinitions/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata/$entity",
-  "ReferencedAttribute": "accountid",
-  "ReferencedEntity": "account",
-  "ReferencingAttribute": "sample_customerid",
-  "ReferencingEntity": "sample_bankaccount",
-  "IsHierarchical": false,
-  "EntityKey": null,
-  "IsRelationshipAttributeDenormalized": false,
-  "ReferencedEntityNavigationPropertyName": "sample_BankAccount_Customer_Account",
-  "ReferencingEntityNavigationPropertyName": "sample_CustomerId_account",
-  "RelationshipBehavior": 1,
-  "IsDenormalizedLookup": null,
-  "DenormalizedAttributeName": null,
-  "IsCustomRelationship": true,
-  "IsValidForAdvancedFind": true,
-  "SchemaName": "sample_BankAccount_Customer_Account",
-  "SecurityTypes": "Append",
-  "IsManaged": false,
-  "RelationshipType": "OneToManyRelationship",
-  "IntroducedVersion": "1.0.0.0",
-  "MetadataId": "84fd8c56-112a-ed11-9db1-00224804f8e2",
-  "HasChanged": null,
-  "AssociatedMenuConfiguration": {
-    "Behavior": "UseCollectionName",
-    "Group": "Details",
-    "Order": 10000,
-    "IsCustomizable": true,
-    "Icon": null,
-    "ViewId": "00000000-0000-0000-0000-000000000000",
-    "AvailableOffline": true,
-    "MenuId": null,
-    "QueryApi": null,
-    "Label": {
-      "LocalizedLabels": [],
-      "UserLocalizedLabel": null
-    }
-  },
-  "CascadeConfiguration": {
-    "Assign": "NoCascade",
-    "Delete": "RemoveLink",
-    "Archive": "RemoveLink",
-    "Merge": "Cascade",
-    "Reparent": "NoCascade",
-    "Share": "NoCascade",
-    "Unshare": "NoCascade",
-    "RollupView": "NoCascade"
-  },
-  "RelationshipAttributes": [],
-  "IsCustomizable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  }
-}
-```
-
-The second relationship
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/RelationshipDefinitions(8dfd8c56-112a-ed11-9db1-00224804f8e2)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#RelationshipDefinitions/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata/$entity",
-  "ReferencedAttribute": "contactid",
-  "ReferencedEntity": "contact",
-  "ReferencingAttribute": "sample_customerid",
-  "ReferencingEntity": "sample_bankaccount",
-  "IsHierarchical": false,
-  "EntityKey": null,
-  "IsRelationshipAttributeDenormalized": false,
-  "ReferencedEntityNavigationPropertyName": "sample_BankAccount_Customer_Contact",
-  "ReferencingEntityNavigationPropertyName": "sample_CustomerId_contact",
-  "RelationshipBehavior": 1,
-  "IsDenormalizedLookup": null,
-  "DenormalizedAttributeName": null,
-  "IsCustomRelationship": true,
-  "IsValidForAdvancedFind": true,
-  "SchemaName": "sample_BankAccount_Customer_Contact",
-  "SecurityTypes": "Append",
-  "IsManaged": false,
-  "RelationshipType": "OneToManyRelationship",
-  "IntroducedVersion": "1.0.0.0",
-  "MetadataId": "8dfd8c56-112a-ed11-9db1-00224804f8e2",
-  "HasChanged": null,
-  "AssociatedMenuConfiguration": {
-    "Behavior": "UseCollectionName",
-    "Group": "Details",
-    "Order": 10000,
-    "IsCustomizable": true,
-    "Icon": null,
-    "ViewId": "00000000-0000-0000-0000-000000000000",
-    "AvailableOffline": true,
-    "MenuId": null,
-    "QueryApi": null,
-    "Label": {
-      "LocalizedLabels": [],
-      "UserLocalizedLabel": null
-    }
-  },
-  "CascadeConfiguration": {
-    "Assign": "NoCascade",
-    "Delete": "RemoveLink",
-    "Archive": "RemoveLink",
-    "Merge": "Cascade",
-    "Reparent": "NoCascade",
-    "Share": "NoCascade",
-    "Unshare": "NoCascade",
-    "RollupView": "NoCascade"
-  },
-  "RelationshipAttributes": [],
-  "IsCustomizable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  }
-}
-```
-
-
-
-
-
-**Console output**
-
-```
-
-```
+   ```
+   The Schema Names of the relationships created:
+         sample_BankAccount_Customer_Account
+         sample_BankAccount_Customer_Contact
+   ```
 
 ## Section 5: Create and retrieve a one-to-many relationship
 
