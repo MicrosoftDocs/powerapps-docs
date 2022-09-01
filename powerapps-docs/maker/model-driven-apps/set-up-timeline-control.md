@@ -419,9 +419,6 @@ Only enable the activities that you need on the form. If you select more than 10
   
 #### Configure the form for notes
 
-> [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
-  
 In the **Notes** area, under **Configure form**, select **Default form** to configure how information is displayed in notes, such as relevant users and dates, and whether or not to include labels. This enables you to increase or reduce the number of timeline records that appear onscreen.
 
 :::image type="content" source="media/timeline-configure-form-notes.png" alt-text="Configure the form for notes":::
@@ -443,8 +440,11 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
   - Display option: Always show, show on expand, this footer containing the createdon, modifiedon, or overridenon date.
    
 
- #### Set the notes rollup type in timeline (Preview)
-
+ #### Set the notes rollup type in timeline
+  
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
+  
 The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To only show records that are directly related to the notes in timeline, select **None**.
 
 More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
