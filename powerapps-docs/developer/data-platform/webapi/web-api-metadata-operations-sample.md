@@ -49,7 +49,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 ## Section 0: Create Publisher and Solution
 
-1. Create the publisher first since the solution must be related to it. All the items below will use the `customizationprefix` and `customizationoptionvalueprefix` values.
+1. Create the publisher first since the solution must be related to it. All the items created or modified in this sample will use the publisher `customizationprefix` and `customizationoptionvalueprefix` values.
 
    **Request**
 
@@ -86,7 +86,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 1. Then create the solution related to the publisher. 
 
     > [!NOTE]
-    > All of the items below will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
+    > All of the items created or updated in is sample will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
 
    **Request**
 
@@ -122,7 +122,15 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 ## Section 1: Create, Retrieve and Update Table
 
-1. Create the `sample_BankAccount` table. Note the `MSCRM.SolutionUniqueName: examplesolution` request header and how the `SchemaName` value (`sample_BankAccount`) includes the customization prefix from the publisher.
+1. Create the `sample_BankAccount` table.
+
+   These properties are required: `SchemaName`, `DisplayName`, `DisplayCollectionName`, `HasNotes`, `HasActivities` and `PrimaryNameAttribute`, which must include the LogicalName value of the primary name column.
+
+   The table must also include one <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata> column in the `Attributes` collection to be the primary name column for the table. That column definition must have `SchemaName`, `MaxLength`, and `DisplayName` values, and `IsPrimaryName` must be set to true.
+
+   > [!NOTE]
+   > The `MSCRM.SolutionUniqueName: examplesolution` request header associates this table to the solution.
+   > The `SchemaName` value (`sample_BankAccount`) includes the customization prefix from the publisher.
 
    **Request**
 
@@ -263,8 +271,11 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 1. Retrieve the `sample_BankAccount` table definition. 
 
-- This retrieve doesn't include any `$select` to filter the properties returned because this data will be modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
-- This query also doesn't include an `$expand` to include related data, such as attributes, because that must be updated separately.
+   - This retrieve doesn't include any `$select` to filter the properties returned because this data will be modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
+   - This query also doesn't include an `$expand` to include related data, such as attributes, because those must be updated separately.
+
+   > [!NOTE]
+   > This request uses the `Consistency: Strong` header
 
    **Request**
 
