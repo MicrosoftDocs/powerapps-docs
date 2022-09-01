@@ -33,20 +33,20 @@ This sample is divided into the following principal sections, containing Web API
   
 |Topic section|Associated topic(s)|  
 |-------------------|---------------------------|
-|[Section 1: Unbound Functions: WhoAmI](#section-1-unbound-functions-whoami)|<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function><br />[Using unbound function with no parameters](#bkmk_unboundFunctionNoParams)|
-|[Section 2: Unbound Functions: FormatAddress](#section-2-unbound-functions-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Using unbound function with parameters](#bkmk_unboundFunctionWithParams)|
-|[Section 3: Unbound Functions: InitializeFrom](#section-3-unbound-functions-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
-|[Section 4: Unbound Functions: RetrieveCurrentOrganization](#section-4-unbound-functions-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
-|[Section 6: Bound Functions: IsSystemAdmin](#section-6-bound-functions-issystemadmin)||
-|[Section 7: Unbound Actions: GrantAccess](#section-7-unbound-actions-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />|
-|[Section 8: Bound Actions: AddPrivilegesRole](#section-8-bound-actions-addprivilegesrole)|<xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action>|
-|[Section 9: Delete sample records](#section-9-delete-sample-records)||
+|[Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami)|<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function><br />[Unbound functions](use-web-api-functions.md#unbound-functions)|
+|[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
+|[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
+|[Section 4: Unbound Function RetrieveCurrentOrganization](#section-4-unbound-function-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
+|[Section 6: Bound Function IsSystemAdmin Custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)[Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use Custom APIs](../custom-api.md)|
+|[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)|
+|[Section 8: Bound Actions AddPrivilegesRole](#section-8-bound-action-addprivilegesrole)|[Bound actions](web-api-actions.md#bound-actions)<br />[Use Bound actions](use-web-api-actions.md#bound-actions)<br /><xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action><br />[Security Role (Role)  table/entity reference](../reference/entities/role.md)|
+|[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
 The following sections contain a brief discussion of the Dataverse Web API operations performed, along with the corresponding HTTP messages and associated console output.  
 
-## Section 1: Unbound Functions: WhoAmI
+## Section 1: Unbound Function WhoAmI
 
-<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> is one of the commonly used and simplest unbound function in Dataverse.
+<xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> is a simple and commonly used unbound function.
 
 **Request**
 
@@ -81,279 +81,280 @@ WhoAmIResponse.UserId:2138bd90-ec19-ea11-a811-000d3a334e11
 WhoAmIResponse.OrganizationId:f2c9290b-0806-4d48-bf9c-3814d4286755
 ```
 
-## Section 2: Unbound Functions: FormatAddress
+## Section 2: Unbound Function FormatAddress
 
-<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function> is an unbound function that requires parameters to be set. It returns a string that represents an address address according to country/regional format specific requirements.
+<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function> is an unbound function that requires parameters to be set. It returns a string that represents an address according to country/regional format specific requirements.
 
 In this example, the parameters are set using query string parameter values.
 
-The first request sends an address from the United States:
+1. A request for an address in the United States:
 
-**Request**
+   **Request**
 
-```http
-GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='123%20Maple%20St.'&@p2='Seattle'&@p3='WA'&@p4='98007'&@p5='USA' HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='123%20Maple%20St.'&@p2='Seattle'&@p3='WA'&@p4='98007'&@p5='USA' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.FormatAddressResponse",
-  "Address": "123 Maple St.\r\nSeattle, WA 98007\r\nUSA"
-}
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.FormatAddressResponse",
+   "Address": "123 Maple St.\r\nSeattle, WA 98007\r\nUSA"
+   }
+   ```
 
-**Console output**
+   **Console output**
 
-```
-USA Formatted Address:
-123 Maple St.
-Seattle, WA 98007
-USA
-```
+   ```
+   USA Formatted Address:
+   123 Maple St.
+   Seattle, WA 98007
+   USA
+   ```
 
-The second request sends an address from Japan:
+1. A request for an address in Japan.
 
-**Request**
+   **Request**
 
-```http
-GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='1-2-3%20Sakura'&@p2='Nagoya'&@p3='Aichi'&@p4='455-2345'&@p5='JAPAN' HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/FormatAddress(Line1=@p1,City=@p2,StateOrProvince=@p3,PostalCode=@p4,Country=@p5)?@p1='1-2-3%20Sakura'&@p2='Nagoya'&@p3='Aichi'&@p4='455-2345'&@p5='JAPAN' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.FormatAddressResponse",
-  "Address": "455-2345\r\nAichi\r\nNagoya\r\n1-2-3 Sakura\r\nJAPAN"
-}
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.FormatAddressResponse",
+   "Address": "455-2345\r\nAichi\r\nNagoya\r\n1-2-3 Sakura\r\nJAPAN"
+   }
+   ```
 
-**Console output**
+   **Console output**
 
-```
-JAPAN Formatted Address:
-455-2345
-Aichi
-Nagoya
-1-2-3 Sakura
-JAPAN
-```
+   ```
+   JAPAN Formatted Address:
+   455-2345
+   Aichi
+   Nagoya
+   1-2-3 Sakura
+   JAPAN
+   ```
 
-## Section 3: Unbound Functions: InitializeFrom
+## Section 3: Unbound Function InitializeFrom
 
-<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned can include data copied from the original record.
+<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> is an unbound function that requires parameters. This function returns the data for a new record to create in the context of an existing record. Depending on the configuration data to control what data is copied over, the record data returned includes data copied from the original record.
 
 More information:
+
 - [Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)
 - [Map table columns](../../../maker/data-platform/map-entity-fields.md)
 - [Customize table and column mappings](../customize-entity-attribute-mappings.md)
 
-The first step in demonstrating this is to have an original record to start with, so the sample code creates a record:
+1. Create a record to be the original record:
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "accountcategorycode": 1,
-  "address1_addresstypecode": 3,
-  "address1_city": "Redmond",
-  "address1_country": "USA",
-  "address1_line1": "123 Maple St.",
-  "address1_name": "Corporate Headquarters",
-  "address1_postalcode": "98000",
-  "address1_shippingmethodcode": 4,
-  "address1_stateorprovince": "WA",
-  "address1_telephone1": "555-1234",
-  "customertypecode": 3,
-  "description": "Contoso is a business consulting company.",
-  "emailaddress1": "info@contoso.com",
-  "industrycode": 7,
-  "name": "Contoso Consulting",
-  "numberofemployees": 150,
-  "ownershipcode": 2,
-  "preferredcontactmethodcode": 2,
-  "telephone1": "(425) 555-1234"
-}
-```
+   {
+   "accountcategorycode": 1,
+   "address1_addresstypecode": 3,
+   "address1_city": "Redmond",
+   "address1_country": "USA",
+   "address1_line1": "123 Maple St.",
+   "address1_name": "Corporate Headquarters",
+   "address1_postalcode": "98000",
+   "address1_shippingmethodcode": 4,
+   "address1_stateorprovince": "WA",
+   "address1_telephone1": "555-1234",
+   "customertypecode": 3,
+   "description": "Contoso is a business consulting company.",
+   "emailaddress1": "info@contoso.com",
+   "industrycode": 7,
+   "name": "Contoso Consulting",
+   "numberofemployees": 150,
+   "ownershipcode": 2,
+   "preferredcontactmethodcode": 2,
+   "telephone1": "(425) 555-1234"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)
+   ```
 
-Now that we have an original record, this sample uses `InitializeFrom` to get the data for a new record.
+1. Use `InitializeFrom` to get the data for a new record from the original record.
 
-**Request**
+   **Request**
 
-```http
-GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-Preference-Applied: return=representation
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   Preference-Applied: return=representation
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
-  "@odata.type": "#Microsoft.Dynamics.CRM.account",
-  "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)"
-}
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)"
+   }
+   ```
 
-**Console output**
+   **Console output**
 
-```
-New data based on original record:
-{
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
-  "@odata.type": "#Microsoft.Dynamics.CRM.account",
-  "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)"
-}
-```
-
-> [!NOTE]
-> If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, the `parentaccountid` lookup to associate the new record with the original.
-
-If all the available columns are mapped for this relationship, the value returned will include much more data from the original record, for example:
-
-```json
-{
+   ```
+   New data based on original record:
+   {
    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
    "@odata.type": "#Microsoft.Dynamics.CRM.account",
-   "territorycode": 1,
-   "address2_freighttermscode": 1,
-   "address2_shippingmethodcode": 1,
-   "address1_telephone1": "555-1234",
-   "accountclassificationcode": 1,
-   "creditonhold": false,
-   "donotbulkemail": false,
-   "donotsendmm": false,
-   "emailaddress1": "info@contoso.com",
-   "address1_line1": "123 Maple St.",
-   "customertypecode": 3,
-   "ownershipcode": 2,
-   "businesstypecode": 1,
-   "donotpostalmail": false,
-   "donotbulkpostalmail": false,
-   "name": "Contoso Consulting",
-   "address1_city": "Redmond",
-   "description": "Contoso is a business consulting company.",
-   "donotemail": false,
-   "address2_addresstypecode": 1,
-   "donotphone": false,
-   "statuscode": 1,
-   "address1_name": "Corporate Headquarters",
-   "followemail": true,
-   "preferredcontactmethodcode": 2,
-   "numberofemployees": 150,
-   "industrycode": 7,
-   "telephone1": "(425) 555-1234",
-   "address1_shippingmethodcode": 4,
-   "donotfax": false,
-   "address1_addresstypecode": 3,
-   "customersizecode": 1,
-   "marketingonly": false,
-   "accountratingcode": 1,
-   "shippingmethodcode": 1,
-   "address1_country": "USA",
-   "participatesinworkflow": false,
-   "accountcategorycode": 1,
-   "address1_postalcode": "98000",
-   "address1_stateorprovince": "WA",
-   "parentaccountid@odata.bind": "accounts(fe9873ac-2f1b-ed11-b83e-00224837179f)"
-}     
-```
+   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)"
+   }
+   ```
 
-Then the sample uses the data returned to create a new record with additional properties set that are unique to the new record:
+   > [!NOTE]
+   > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, the `parentaccountid` lookup to associate the new record with the original.
 
-**Request**
+   If all the available columns are mapped for this relationship, the value returned will include much more data from the original record, for example:
 
-```http
-POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```json
+   {
+      "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
+      "@odata.type": "#Microsoft.Dynamics.CRM.account",
+      "territorycode": 1,
+      "address2_freighttermscode": 1,
+      "address2_shippingmethodcode": 1,
+      "address1_telephone1": "555-1234",
+      "accountclassificationcode": 1,
+      "creditonhold": false,
+      "donotbulkemail": false,
+      "donotsendmm": false,
+      "emailaddress1": "info@contoso.com",
+      "address1_line1": "123 Maple St.",
+      "customertypecode": 3,
+      "ownershipcode": 2,
+      "businesstypecode": 1,
+      "donotpostalmail": false,
+      "donotbulkpostalmail": false,
+      "name": "Contoso Consulting",
+      "address1_city": "Redmond",
+      "description": "Contoso is a business consulting company.",
+      "donotemail": false,
+      "address2_addresstypecode": 1,
+      "donotphone": false,
+      "statuscode": 1,
+      "address1_name": "Corporate Headquarters",
+      "followemail": true,
+      "preferredcontactmethodcode": 2,
+      "numberofemployees": 150,
+      "industrycode": 7,
+      "telephone1": "(425) 555-1234",
+      "address1_shippingmethodcode": 4,
+      "donotfax": false,
+      "address1_addresstypecode": 3,
+      "customersizecode": 1,
+      "marketingonly": false,
+      "accountratingcode": 1,
+      "shippingmethodcode": 1,
+      "address1_country": "USA",
+      "participatesinworkflow": false,
+      "accountcategorycode": 1,
+      "address1_postalcode": "98000",
+      "address1_stateorprovince": "WA",
+      "parentaccountid@odata.bind": "accounts(fe9873ac-2f1b-ed11-b83e-00224837179f)"
+   }     
+   ```
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
-  "@odata.type": "#Microsoft.Dynamics.CRM.account",
-  "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)",
-  "name": "Contoso Consulting Chicago Branch",
-  "address1_city": "Chicago",
-  "address1_line1": "456 Elm St.",
-  "address1_name": "Chicago Branch Office",
-  "address1_postalcode": "60007",
-  "address1_stateorprovince": "IL",
-  "address1_telephone1": "(312) 555-3456",
-  "numberofemployees": 12
-}
-```
+1. Create a new record using the data returned with `InitializeFrom`.
 
-**Response**
+   **Request**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2)
-```
+   ```http
+   POST [Organization Uri]/api/data/v9.2/accounts HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-**Console output**
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)",
+   "name": "Contoso Consulting Chicago Branch",
+   "address1_city": "Chicago",
+   "address1_line1": "456 Elm St.",
+   "address1_name": "Chicago Branch Office",
+   "address1_postalcode": "60007",
+   "address1_stateorprovince": "IL",
+   "address1_telephone1": "(312) 555-3456",
+   "numberofemployees": 12
+   }
+   ```
 
-```
-New Record:
-{
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
-  "@odata.type": "#Microsoft.Dynamics.CRM.account",
-  "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)",
-  "name": "Contoso Consulting Chicago Branch",
-  "address1_city": "Chicago",
-  "address1_line1": "456 Elm St.",
-  "address1_name": "Chicago Branch Office",
-  "address1_postalcode": "60007",
-  "address1_stateorprovince": "IL",
-  "address1_telephone1": "(312) 555-3456",
-  "numberofemployees": 12
-}
-```
+   **Response**
 
-## Section 4: Unbound Functions: RetrieveCurrentOrganization
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2)
+   ```
+
+   **Console output**
+
+   ```
+   New Record:
+   {
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts/$entity",
+   "@odata.type": "#Microsoft.Dynamics.CRM.account",
+   "parentaccountid@odata.bind": "accounts(98d463e4-6d29-ed11-9db1-00224804f8e2)",
+   "name": "Contoso Consulting Chicago Branch",
+   "address1_city": "Chicago",
+   "address1_line1": "456 Elm St.",
+   "address1_name": "Chicago Branch Office",
+   "address1_postalcode": "60007",
+   "address1_stateorprovince": "IL",
+   "address1_telephone1": "(312) 555-3456",
+   "numberofemployees": 12
+   }
+   ```
+
+## Section 4: Unbound Function RetrieveCurrentOrganization
 
 <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function> returns information about the current organizaiton. It requires an <xref:Microsoft.Dynamics.CRM.EndpointAccessType?text=EndpointAccessType EnumType> value as a parameter.
 
-It returns a <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse?text=RetrieveCurrentOrganizationResponse ComplexType> which includes a Detail property that is an <xref:Microsoft.Dynamics.CRM.OrganizationDetail?text=OrganizationDetail ComplexType> which has complex properties that use the <xref:Microsoft.Dynamics.CRM.EndpointCollection?text=EndpointCollection ComplexType>, <xref:Microsoft.Dynamics.CRM.EndpointType?text=EndpointType EnumType> and <xref:Microsoft.Dynamics.CRM.OrganizationState?text=OrganizationState EnumType>.
+`RetrieveCurrentOrganization` returns a <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganizationResponse?text=RetrieveCurrentOrganizationResponse ComplexType> which includes a `Detail` property that is an <xref:Microsoft.Dynamics.CRM.OrganizationDetail?text=OrganizationDetail ComplexType>, which has complex properties that use the <xref:Microsoft.Dynamics.CRM.EndpointCollection?text=EndpointCollection ComplexType>, <xref:Microsoft.Dynamics.CRM.EndpointType?text=EndpointType EnumType> and <xref:Microsoft.Dynamics.CRM.OrganizationState?text=OrganizationState EnumType>.
 
 > [!NOTE]
 > Notice how the `AccessType` <xref:Microsoft.Dynamics.CRM.EndpointAccessType?text=EndpointAccessType EnumType> parameter value is passed in the URL. The fully qualified name with the selected member name is required.
@@ -438,7 +439,7 @@ Data returned with RetrieveCurrentOrganizationResponse:
 }
 ```
 
-## Section 5: Unbound Functions: RetrieveTotalRecordCount
+## Section 5: Unbound Function RetrieveTotalRecordCount
 
 <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> returns data on the total number of records for specific entities. The data retrieved will be from a snapshot within last 24 hours, so it isn't an exact count at a given moment in time.
 
@@ -483,14 +484,14 @@ The number of records for each table according to RetrieveTotalRecordCount:
         contact:3
 ```
 
-## Section 6: Bound Functions: IsSystemAdmin
+## Section 6: Bound Function IsSystemAdmin Custom API
 
 To demonstrate a bound function, this sample will import a custom message defined within a solution before running this portion of the sample.
 
-The sample will use the `sample_IsSystemAdmin` custom message which is defined using a [Custom API](../custom-api.md). You can find details about this Custom API here: [Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)
+The sample will use the `sample_IsSystemAdmin` custom message which is defined using a [Custom API](../custom-api.md). You can find details about this custom api here: [Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md).
 
 > [!NOTE]
-> When using a bound function or action, you must include the fully qualified name of the function, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt;.
+> When using a bound function or action, you must include the fully qualified name, which includes `Microsoft.Dynamics.CRM.`+ &lt;function or action name&gt; in the url.
 
 **Request**
 
@@ -536,7 +537,7 @@ Top 10 users and whether they have System Administrator role.
 
 For another example of a bound function, see the use of the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> in the next example.
 
-## Section 7: Unbound Actions: GrantAccess
+## Section 7: Unbound Action GrantAccess
 
 <xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action> is an unbound action allows people to share specific privileges to other users in their environment.
 
@@ -544,110 +545,108 @@ To demonstrate this operation, the sample code does the following:
 
 1. Create a record to share.
 1. Find an enabled user other than the current user.
-1. Use <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> to determine what access rights the user has.
+1. Use <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> to determine what access rights the user has for the record created.
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
+   "AccessRights": "ShareAccess"
+   }
+   ```
+
+   **Console output**
+
+   ```
+   Testing user: Gediminas Matulis
+   Current users access: ShareAccess
+   ```
+
 1. If the user doesn't have <xref:Microsoft.Dynamics.CRM.AccessRights?text=AccessRights>.`DeleteAccess`, grant the user this access using the `GrantAccess` action.
 
-Skipping steps 1 & 2 above, the request for step 3 is shown below:
+   **Request**
 
-**Request**
+   ```http
+   POST [Organization Uri]/api/data/v9.2/GrantAccess HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-```http
-GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
+   {
+   "Target": {
+      "accountid": "659876fd-6d29-ed11-9db1-00224804f8e2",
+      "@odata.type": "Microsoft.Dynamics.CRM.account"
+   },
+   "PrincipalAccess": {
+      "AccessMask": "DeleteAccess",
+      "Principal": {
+         "systemuserid": "ce31e691-f559-ec11-8f8f-000d3a308de4",
+         "@odata.type": "Microsoft.Dynamics.CRM.systemuser"
+      }
+   }
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
-  "AccessRights": "ShareAccess"
-}
-```
+1. Once `DeleteAccess` has been granted, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that they now have access to delete this record:
 
-**Console output**
+   **Request**
 
-```
-Testing user: Gediminas Matulis
-Current users access: ShareAccess
-```
+   ```http
+   GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-The request to grant `DeleteAccess` to this user is below:
+   **Response**
 
-**Request**
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-```http
-POST [Organization Uri]/api/data/v9.2/GrantAccess HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
+   "AccessRights": "DeleteAccess, ShareAccess"
+   }
+   ```
 
-{
-  "Target": {
-    "accountid": "659876fd-6d29-ed11-9db1-00224804f8e2",
-    "@odata.type": "Microsoft.Dynamics.CRM.account"
-  },
-  "PrincipalAccess": {
-    "AccessMask": "DeleteAccess",
-    "Principal": {
-      "systemuserid": "ce31e691-f559-ec11-8f8f-000d3a308de4",
-      "@odata.type": "Microsoft.Dynamics.CRM.systemuser"
-    }
-  }
-}
-```
+   **Console output**
 
-**Response**
+   ```
+   Gediminas Matulis was granted DeleteAccess
+   ```
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
-
-Once `DeleteAccess` has been granted, the same call to <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> shows that they now have access to delete this record:
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/systemusers(ce31e691-f559-ec11-8f8f-000d3a308de4)/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@p1)?@p1={'@odata.id':'accounts(659876fd-6d29-ed11-9db1-00224804f8e2)'} HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse",
-  "AccessRights": "DeleteAccess, ShareAccess"
-}
-```
-
-**Console output**
-
-```
-Gediminas Matulis was granted DeleteAccess
-```
-
-## Section 8: Bound Actions: AddPrivilegesRole
+## Section 8: Bound Action AddPrivilegesRole
 
 <xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action> is an action bound to the <xref:Microsoft.Dynamics.CRM.role?text=role EntityType>. It is the way to add privileges to a security role.
 
 To demonstrate the use of this action, the sample does the following:
 
-1. Create a role.
+1. Create a security role. The role must be associated with a business unit. The business unit id value was retrieved in [Section 1: Unbound Function WhoAmI](#section-1-unbound-function-whoami).
+   
    **Request**
 
    ```http
@@ -672,6 +671,7 @@ To demonstrate the use of this action, the sample does the following:
    ```
 
 1. Retrieve the role, expanding the `roleprivileges_association` collection-valued navigation property to include the privileges included with the role.
+   
    **Request**
 
    ```http
@@ -744,6 +744,7 @@ To demonstrate the use of this action, the sample does the following:
    ```
 
 1. Show the number of privileges created by default for the new role.
+   
    **Console output**
 
    ```
@@ -759,7 +760,8 @@ To demonstrate the use of this action, the sample does the following:
          prvReadSharePointDocument
    ```
 
-1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges.
+1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges from <xref:Microsoft.Dynamics.CRM.privilege?text=privilege EntityType>
+   
    **Request**
 
    ```http
@@ -805,7 +807,22 @@ To demonstrate the use of this action, the sample does the following:
    If-None-Match: null
    Accept: application/json
 
-   {"Privileges":[{"Depth":"Basic","PrivilegeId":"886b280c-6396-4d56-a0a3-2c1b0a50ceb0","BusinessUnitId":"cca3985e-c618-ea11-a811-000d3a33f066","PrivilegeName":"prvReadAccount"},{"Depth":"Basic","PrivilegeId":"d26fe964-230b-42dd-ad93-5cc879de411e","BusinessUnitId":"cca3985e-c618-ea11-a811-000d3a33f066","PrivilegeName":"prvCreateAccount"}]}
+   {
+   "Privileges": [
+      {
+         "Depth": "Basic",
+         "PrivilegeId": "886b280c-6396-4d56-a0a3-2c1b0a50ceb0",
+         "BusinessUnitId": "cca3985e-c618-ea11-a811-000d3a33f066",
+         "PrivilegeName": "prvReadAccount"
+      },
+      {
+         "Depth": "Basic",
+         "PrivilegeId": "d26fe964-230b-42dd-ad93-5cc879de411e",
+         "BusinessUnitId": "cca3985e-c618-ea11-a811-000d3a33f066",
+         "PrivilegeName": "prvCreateAccount"
+      }
+    ]
+   }
    ```
 
    **Response**
@@ -816,6 +833,7 @@ To demonstrate the use of this action, the sample does the following:
    ```
 
 1. Retrieve the privileges associated with the role again to confirm that they have been added.
+   
    **Request**
 
    ```http
@@ -933,7 +951,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 121
 
 DELETE /api/data/v9.2/accounts(98d463e4-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a
@@ -942,7 +959,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 121
 
 DELETE /api/data/v9.2/accounts(9ad463e4-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a
@@ -951,7 +967,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 122
 
 DELETE /api/data/v9.2/solutions(b37bc86a-4c3a-41be-b35d-ddfd129276c5) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a
@@ -960,7 +975,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 121
 
 DELETE /api/data/v9.2/accounts(659876fd-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a
@@ -969,7 +983,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 118
 
 DELETE /api/data/v9.2/roles(669876fd-6d29-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6010246-cd97-429f-bc05-cf20054cfe8a--
@@ -1031,6 +1044,7 @@ OData-Version: 4.0
 ```
 Deleting created records.
 ```
+
 ### See also  
 
 [Use the Dataverse Web API](overview.md)<br />
