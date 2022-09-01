@@ -1,6 +1,6 @@
 ---
 title: Define multistep  form steps for portals
-description: Learn how to create an multistep  form step for an multistep  form on a portal.
+description: Learn how to create a multistep  form step for a multistep  form on a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
