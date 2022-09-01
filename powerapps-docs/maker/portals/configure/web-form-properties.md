@@ -5,13 +5,14 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2021
+ms.date: 09/01/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Define advanced form properties for portals
@@ -20,22 +21,22 @@ The advanced form contains relationships to webpages and a start step to control
 
 The other options on the advanced form record itself control top-level preferences for the multiple-step process as a whole, for example whether you'd like to display a progress bar.
 
-To view existing Advanced forms or to create new advanced forms, open the [Portal Management app](configure-portal.md) and go to **Portals** > **Advanced Forms**.
+To view existing multistep forms or to create new advanced forms, open the [Portal Management app](configure-portal.md) and go to **Portals** > **Multistep Forms**.
 
 > [!NOTE]
 > Before you continue, ensure you review [considerations](#considerations) for advanced forms.
 
-When creating or editing a webpage from the the [Portal Management app](configure-portal.md), an **Advanced Form** can be specified in the lookup field provided on the **New Web Page** form.
+When creating or editing a webpage from the the [Portal Management app](configure-portal.md), an **Multistep Form** can be specified in the lookup field provided on the **New Web Page** form.
 
-## Advanced form attributes
+## Multistep form attributes
 
-The following attributes and relationships determine the functionality of the Advanced form.
+The following attributes and relationships determine the functionality of the multistep form.
 
 
 |                Name                 |                                                                                                                                                                                        Description                                                                                                                                                                                         |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                Name                 |                                                                                                                                                                          A title of the form used for reference.                                                                                                                                                                           |
-|             Start Step              |                                                                                The first step of the form. An Advanced Form will consist of one or more steps. For more information about these steps please refer to the section titled Advanced Form Step found below. The first step cannot be of type Condition.                                                                                |
+|             Start Step              |                                                                                The first step of the form. An Multistep Form will consist of one or more steps. For more information about these steps please refer to the section titled Multistep Form Step found below. The first step cannot be of type Condition.                                                                                |
 |       Authentication Required       |                                                                              If checked, when a user who is not signed in visits the page that contains the form, they will be redirected to the sign-in page. Upon successful sign-in, the user will be redirected back to the page that contains the form.                                                                               |
 |      Start New Session On Load      |              Selecting **Yes** indicates that if the user opens the form in a new browser or new tab, or closes the browser or page and returns, the form will start a completely new session and begin at the first step. Otherwise the session will be persisted and the user can close the browser or page and resume later exactly where they left off. Default: **No**.               |
 | Multiple Records Per User Permitted |                                                                                                  Selecting **Yes** indicates that a user is permitted to create more than one submission. This assists the form in determining what to do when a user revisits a form. Default: **Yes**.                                                                                                   |
@@ -91,7 +92,7 @@ Example:
 
 A managed form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
 
-The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The Advanced Form Step record has a section that defines these field mappings that you must assign values for. The field names will vary depending on the schema you have created.
+The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The Multistep Form Step record has a section that defines these field mappings that you must assign values for. The field names will vary depending on the schema you have created.
 
 ![Geolocation data in advanced form.](../media/geolocation-managed-form.png "Geolocation data in advanced form")
 
@@ -100,7 +101,7 @@ The form's map control requires additional configuration to tell it what the IDs
 
 ## Considerations
 
-- An **Advanced Form** must be associated with a webpage for a given website for the form to be viewable within the site.
+- An **Multistep Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app)
 - Rollup columns on portal forms may sometimes show up as editable although they're intended to be read-only. To ensure that these columns remain read-only, mark the column as **Read-only**  on the model-driven app form.
 
@@ -108,10 +109,10 @@ The form's map control requires additional configuration to tell it what the IDs
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Advanced Form steps for portals](web-form-steps.md)  
-[Advanced Forms metadata for portals](configure-web-form-metadata.md)  
-[Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Advanced Forms for portals](../configure-notes.md)  
+[Multistep Form steps for portals](web-form-steps.md)  
+[Multistep Forms metadata for portals](configure-web-form-metadata.md)  
+[Multistep Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+[Notes configuration for Multistep Forms for portals](../configure-notes.md)  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
