@@ -2,10 +2,10 @@
 title: "Use a connector in a card"
 description: "Learn how to add one connector to your card, and walk through an example"
 keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, connectors"
-ms.date: 03/18/2022
+ms.date: 09/20/2022
 ms.topic: article
-author: eberhardts
-ms.author: v-eberhardts
+author: iaanw
+ms.author: iaanw
 manager: shellyha
 ms.reviewer: 
 ms.custom: 

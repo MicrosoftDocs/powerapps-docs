@@ -2863,79 +2863,65 @@
   href: ../chatbots.md
 - name: Cards
   href: ../cards/overview.md
-  items:
-    - name: Roadmap
-      href: ../cards/roadmap.md
-    - name: Motivations and Principles
-      href: ../cards/motivations-principles.md
-    - name: Data architecture
-      href: ../cards/data-architecture.md
-    - name: Get started with Designer
+  items:        
+    - name: Create cards
       items: 
         - name: Designer overview
           href: ../cards/get-started-designer/designer-overview.md
-    - name: Make a Card
-      items: 
-        - name: Get started with a Card
-          href: ../cards/make-a-card/hello-world-card.md
-        - name: Data binding in Cards 
-          href: ../cards/make-a-card/data-binding-in-cards.md
-        - name: Connectors
+        - name: Design the interface
+          items:
+            - name: Add and configure controls
+              href: ../cards/make-a-card/ui-elements/add-and-configure-controls.md
+            - name: Repeating controls
+              href: ../cards/make-a-card/ui-elements/data-binding.md
+            - name: Buttons
+              items: 
+               - name: Understand buttons
+                 href: ../cards/make-a-card/ui-elements/buttons/buttons.md
+               - name: Using buttons
+                 href: ../cards/make-a-card/ui-elements/buttons/use-buttons.md
+            - name: Control reference
+              href: ../cards/make-a-card/ui-elements/controls.md
+        - name: Add and configure screens
+          items:
+            - name: Understand screens
+              href: ../cards/make-a-card/screens/understand-screens.md
+            - name: Use screens
+              href: ../cards/make-a-card/screens/use-screens.md
+        - name: Connecting to data and services
           items: 
-            - name: Intro to Connectors
+            - name: Introduction to connectors
               href: ../cards/make-a-card/connectors/connector-intro.md
-            - name: Connector Types
-              href: ../cards/make-a-card/connectors/connector-types.md
             - name: Use a Connector in a Card
               href: ../cards/make-a-card/connectors/use-connector-in-card.md
-            - name: Use multiple Connectors in a Card
-              href: ../cards/make-a-card/connectors/use-multiple-connectors-in-card.md
-            - name: Add data sources to the Designer
-              href: ../cards/make-a-card/connectors/custom-connectors.md
-        - name: Flows
-          items:
-            - name: Create a Flow
-              href: ../cards/make-a-card/flows/create-flow.md
-            - name: Use a pre-made Flow
-              href: ../cards/make-a-card/flows/use-premade-flow.md
-        - name: Power FX
+        - name: Add business logic
           items: 
             - name: Intro to Power FX
               href: ../cards/make-a-card/power-fx/intro-to-pfx.md
-        - name: Testing
+        - name: Testing your cards
           items: 
             - name: Intro to the Play Page
               href: ../cards/make-a-card/testing/play-page-intro.md
             - name: How to debug your card
               href: ../cards/make-a-card/testing/debugging-cards.md
-        - name: Publishing
+        - name: Manage your cards
           items: 
-            - name: Share a card
-              href: ../cards/make-a-card/publishing/share-a-card.md
-            - name: Publish a card
-              href: ../cards/make-a-card/publishing/publish-a-card.md
-        - name: Tutorials
-          items: 
-            - name: Build a simple shopping list
-              href: ../cards/make-a-card/tutorials/simple-shopping-list.md
-            - name: Build a compound shopping list
-              href: ../cards/make-a-card/tutorials/compound-shopping-list.md
-            - name: Build a card with connectors
-              href: ../cards/make-a-card/tutorials/use-connectors.md
-    - name: Send from your apps
+            - name: Card lifecycle management
+              href: ../cards/make-a-card/testing/manage-cards.md
+    - name: Send cards
       items:
-        - name: Send a card from Power Automate
-          href: ../cards/send-from-apps/send-from-power-automate.md
-        - name: Send a card from Power Apps
-          href: ../cards/send-from-apps/send-from-power-apps.md
-    - name: Admin
+        - name: Send a card in Teams
+          href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Tutorials
       items:
-        - name: Data limits
-          href: ../cards/admin/data-limits.md
-        - name: Licensing
-          href: ../cards/admin/licensing.md
-        - name: Pricing tiers
-          href: ../cards/admin/pricing-tiers.md
+        - name: Create a hello world card
+          href: ../cards/make-a-card/tutorials/hello-world-card.md
+        - name: Create a simple shopping list
+          href: ../cards/make-a-card/tutorials/simple-shopping-list.md
+        - name: Create a compound shopping list
+          href: ../cards/make-a-card/tutorials/compound-shopping-list.md
+        - name: Create a card with data from Dataverse
+          href: ../cards/make-a-card/tutorials/dataverse-card.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions

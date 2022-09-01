@@ -2,10 +2,10 @@
 title: "Debugging Cards"
 description: "Learn how to debug your cards using the Play page in designer"
 keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, debugging, play page"
-ms.date: 03/18/2022
+ms.date: 09/20/2022
 ms.topic: article
-author: eberhardts
-ms.author: v-eberhardts
+author: iaanw
+ms.author: iaanw
 manager: shellyha
 ms.reviewer: 
 ms.custom: 

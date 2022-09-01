@@ -4,8 +4,8 @@ description: "Get a quick overview of cards as a Power Apps capability and what 
 keywords: "Cards, Power Apps, overview"
 ms.date: 09/20/2022
 ms.topic: article
-author: eberhardts
-ms.author: v-eberhardts
+author: iaanw
+ms.author: iaanw
 manager: shellyha
 ms.reviewer: 
 ms.custom: 

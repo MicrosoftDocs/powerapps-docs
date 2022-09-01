@@ -1,11 +1,11 @@
 ---
-title: "Intro to Connectors"
+title: "Connect to data and services"
 description: "Learn about connectors and how you can use them to expand the capabilities of your cards"
 keywords: "Power Cards, Power Apps, Cards, connectors"
-ms.date: 03/18/2022
+ms.date: 09/20/2022
 ms.topic: article
-author: eberhardts
-ms.author: v-eberhardts
+author: iaanw
+ms.author: iaanw
 manager: shellyha
 ms.reviewer: 
 ms.custom: 
@@ -20,8 +20,4 @@ For more information on Connectors in Power Platform, see [Connectors overview](
 
 ## Types of connectors
 
-All of the connectors available to Power Apps are available to use in your Cards. For a full list, see [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors).
-
-## Custom connectors
-
-## Use connectors in a card
+As a part of preview, only connections to Dataverse are available. You can connect to Dataverse tables to read, write, create, and update records. 
