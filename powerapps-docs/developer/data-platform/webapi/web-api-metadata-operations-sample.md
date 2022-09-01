@@ -45,1626 +45,1635 @@ This sample is divided into the following sections, containing Dataverse Web API
 |[Section 10: Import and Delete managed solution](#section-10-import-and-delete-managed-solution)||
   
 > [!NOTE]
->  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the ID of the row assigned by your Dataverse server.  
+>  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the IDs set by the Dataverse server.  
 
 ## Section 0: Create Publisher and Solution
 
-Create the publisher first since the solution must be related to it.
+1. Create the publisher first since the solution must be related to it. All the items below will use the `customizationprefix` and `customizationoptionvalueprefix` values.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/publishers HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/publishers HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "friendlyname": "Example Publisher",
-  "uniquename": "examplepublisher",
-  "description": "An example publisher for samples",
-  "customizationprefix": "sample",
-  "customizationoptionvalueprefix": 72700
-}
-```
+   {
+   "friendlyname": "Example Publisher",
+   "uniquename": "examplepublisher",
+   "description": "An example publisher for samples",
+   "customizationprefix": "sample",
+   "customizationoptionvalueprefix": 72700
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)
+   ```
 
-**Console output**
+   **Console output**
 
-```
-Created publisher Example Publisher
-```
+   ```
+   Created publisher Example Publisher
+   ```
 
-Then create the solution related to the publisher.
+1. Then create the solution related to the publisher. 
 
-**Request**
+    > [!NOTE]
+    > All of the items below will use the `uniquename` value of this solution with the `MSCRM.SolutionUniqueName` request header so that the changes are included as part of this solution. At the end of this sample this solution will be exported and contain the definitions of all the items created and changed in this sample.
 
-```http
-POST [Organization Uri]/api/data/v9.2/solutions HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   **Request**
 
-{
-  "friendlyname": "Example Solution",
-  "uniquename": "examplesolution",
-  "description": "An example solution for samples",
-  "version": "1.0.0.0",
-  "publisherid@odata.bind": "publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)"
-}
-```
+   ```http
+   POST [Organization Uri]/api/data/v9.2/solutions HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-**Response**
+   {
+   "friendlyname": "Example Solution",
+   "uniquename": "examplesolution",
+   "description": "An example solution for samples",
+   "version": "1.0.0.0",
+   "publisherid@odata.bind": "publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2)"
+   }
+   ```
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/solutions(5472b902-112a-ed11-9db1-00224804f8e2)
-```
+   **Response**
 
-**Console output**
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/solutions(5472b902-112a-ed11-9db1-00224804f8e2)
+   ```
 
-```
-Created solution Example Solution
-```
+   **Console output**
+
+   ```
+   Created solution Example Solution
+   ```
 
 ## Section 1: Create, Retrieve and Update Table
 
-Create the `sample_BankAccount` table.
+1. Create the `sample_BankAccount` table. Note the `MSCRM.SolutionUniqueName: examplesolution` request header and how the `SchemaName` value (`sample_BankAccount`) includes the customization prefix from the publisher.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "A table to store information about customer bank accounts",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "A table to store information about customer bank accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "A table to store information about customer bank accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "A table to store information about customer bank accounts",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayCollectionName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Bank Accounts",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Bank Accounts",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Bank Account",
-        "LanguageCode": 1033,
-        "IsManaged": false
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Account",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Account",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Bank Account",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "HasActivities": false,
-  "HasNotes": false,
-  "OwnershipType": "UserOwned",
-  "PrimaryNameAttribute": "sample_name",
-  "SchemaName": "sample_BankAccount",
-  "Attributes": [
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
-      "AttributeType": "String",
-      "AttributeTypeName": {
-        "Value": "StringType"
-      },
-      "MaxLength": 100,
-      "Description": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+   },
+   "HasActivities": false,
+   "HasNotes": false,
+   "OwnershipType": "UserOwned",
+   "PrimaryNameAttribute": "sample_name",
+   "SchemaName": "sample_BankAccount",
+   "Attributes": [
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+         "AttributeType": "String",
+         "AttributeTypeName": {
+         "Value": "StringType"
+         },
+         "MaxLength": 100,
+         "Description": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "The primary attribute for the Bank Account entity.",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "The primary attribute for the Bank Account entity.",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "The primary attribute for the Bank Account entity.",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      },
-      "DisplayName": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+         }
+         },
+         "DisplayName": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "Account Name",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "Account Name",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Account Name",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
+         }
+         },
+         "IsPrimaryName": true,
+         "RequiredLevel": {
+         "Value": "None",
+         "CanBeChanged": false,
+         "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+         },
+         "SchemaName": "sample_Name"
+      }
+   ]
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(5872b902-112a-ed11-9db1-00224804f8e2)
+   ```
+
+   **Console output**
+
+   ```
+   Sending request to create the sample_BankAccount table...
+   Created sample_BankAccount table.
+   ```
+
+1. Retrieve the `sample_BankAccount` table definition. 
+
+- This retrieve doesn't include any `$select` to filter the properties returned because this data will be modified and sent back to update the table definition using `PUT`, which overwrites the existing value.
+- This query also doesn't include an `$expand` to include related data, such as attributes, because that must be updated separately.
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount') HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions/$entity",
+   "ActivityTypeMask": 0,
+   "AutoRouteToOwnerQueue": false,
+   "CanTriggerWorkflow": true,
+   "EntityHelpUrlEnabled": false,
+   "EntityHelpUrl": null,
+   "IsDocumentManagementEnabled": false,
+   "IsOneNoteIntegrationEnabled": false,
+   "IsInteractionCentricEnabled": false,
+   "IsKnowledgeManagementEnabled": false,
+   "IsSLAEnabled": false,
+   "IsBPFEntity": false,
+   "IsDocumentRecommendationsEnabled": false,
+   "IsMSTeamsIntegrationEnabled": false,
+   "SettingOf": null,
+   "DataProviderId": null,
+   "DataSourceId": null,
+   "AutoCreateAccessTeams": false,
+   "IsActivity": false,
+   "IsActivityParty": false,
+   "IsRetrieveAuditEnabled": false,
+   "IsRetrieveMultipleAuditEnabled": false,
+   "IsArchivalEnabled": false,
+   "IsAvailableOffline": false,
+   "IsChildEntity": false,
+   "IsAIRUpdated": false,
+   "IconLargeName": null,
+   "IconMediumName": null,
+   "IconSmallName": null,
+   "IconVectorName": null,
+   "IsCustomEntity": true,
+   "IsBusinessProcessEnabled": false,
+   "SyncToExternalSearchIndex": false,
+   "IsOptimisticConcurrencyEnabled": true,
+   "ChangeTrackingEnabled": false,
+   "IsImportable": true,
+   "IsIntersect": false,
+   "IsManaged": false,
+   "IsEnabledForCharts": true,
+   "IsEnabledForTrace": false,
+   "IsValidForAdvancedFind": true,
+   "DaysSinceRecordLastModified": 0,
+   "MobileOfflineFilters": "",
+   "IsReadingPaneEnabled": true,
+   "IsQuickCreateEnabled": false,
+   "LogicalName": "sample_bankaccount",
+   "ObjectTypeCode": 10393,
+   "OwnershipType": "UserOwned",
+   "PrimaryNameAttribute": "sample_name",
+   "PrimaryImageAttribute": null,
+   "PrimaryIdAttribute": "sample_bankaccountid",
+   "RecurrenceBaseEntityLogicalName": null,
+   "ReportViewName": "Filteredsample_BankAccount",
+   "SchemaName": "sample_BankAccount",
+   "IntroducedVersion": "1.0.0.0",
+   "IsStateModelAware": true,
+   "EnforceStateTransitions": false,
+   "ExternalName": null,
+   "EntityColor": null,
+   "LogicalCollectionName": "sample_bankaccounts",
+   "ExternalCollectionName": null,
+   "CollectionSchemaName": "sample_BankAccounts",
+   "EntitySetName": "sample_bankaccounts",
+   "IsEnabledForExternalChannels": false,
+   "IsPrivate": false,
+   "UsesBusinessDataLabelTable": false,
+   "IsLogicalEntity": false,
+   "HasNotes": false,
+   "HasActivities": false,
+   "HasFeedback": false,
+   "IsSolutionAware": false,
+   "CreatedOn": "2022-09-01T16:13:40Z",
+   "ModifiedOn": "2022-09-01T16:13:40Z",
+   "HasEmailAddresses": false,
+   "OwnerId": null,
+   "OwnerIdType": 8,
+   "OwningBusinessUnit": null,
+   "MetadataId": "5872b902-112a-ed11-9db1-00224804f8e2",
+   "HasChanged": null,
+   "Description": {
+      "LocalizedLabels": [
+         {
+         "Label": "A table to store information about customer bank accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "daf026b7-dfde-4b7b-8e52-91f31b098a9d",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "A table to store information about customer bank accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "daf026b7-dfde-4b7b-8e52-91f31b098a9d",
+         "HasChanged": null
+      }
+   },
+   "DisplayCollectionName": {
+      "LocalizedLabels": [
+         {
+         "Label": "Bank Accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "Bank Accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb",
+         "HasChanged": null
+      }
+   },
+   "DisplayName": {
+      "LocalizedLabels": [
+         {
+         "Label": "Bank Account",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "Bank Account",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0",
+         "HasChanged": null
+      }
+   },
+   "IsAuditEnabled": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings"
+   },
+   "IsValidForQueue": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyqueuesettings"
+   },
+   "IsConnectionsEnabled": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyconnectionsettings"
+   },
+   "IsCustomizable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+   },
+   "IsRenameable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "isrenameable"
+   },
+   "IsMappable": {
+      "Value": true,
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "ismappable"
+   },
+   "IsDuplicateDetectionEnabled": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings"
+   },
+   "CanCreateAttributes": {
+      "Value": true,
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateattributes"
+   },
+   "CanCreateForms": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "cancreateforms"
+   },
+   "CanCreateViews": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "cancreateviews"
+   },
+   "CanCreateCharts": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "cancreatecharts"
+   },
+   "CanBeRelatedEntityInRelationship": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canberelatedentityinrelationship"
+   },
+   "CanBePrimaryEntityInRelationship": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship"
+   },
+   "CanBeInManyToMany": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbeinmanytomany"
+   },
+   "CanBeInCustomEntityAssociation": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbeincustomentityassociation"
+   },
+   "CanEnableSyncToExternalSearchIndex": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex"
+   },
+   "CanModifyAdditionalSettings": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+   },
+   "CanChangeHierarchicalRelationship": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canchangehierarchicalrelationship"
+   },
+   "CanChangeTrackingBeEnabled": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canchangetrackingbeenabled"
+   },
+   "IsMailMergeEnabled": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymailmergesettings"
+   },
+   "IsVisibleInMobile": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobilevisibility"
+   },
+   "IsVisibleInMobileClient": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientvisibility"
+   },
+   "IsReadOnlyInMobileClient": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientreadonly"
+   },
+   "IsOfflineInMobileClient": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientoffline"
+   },
+   "Privileges": [
+      {
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvCreatesample_BankAccount",
+         "PrivilegeId": "44f00701-716e-4584-8bab-cb0d263c070b",
+         "PrivilegeType": "Create"
       },
-      "IsPrimaryName": true,
-      "RequiredLevel": {
-        "Value": "None",
-        "CanBeChanged": false,
-        "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+      {
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvReadsample_BankAccount",
+         "PrivilegeId": "9cad3243-d0fe-467e-a731-c8b3416a6252",
+         "PrivilegeType": "Read"
       },
-      "SchemaName": "sample_Name"
-    }
-  ]
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(5872b902-112a-ed11-9db1-00224804f8e2)
-```
-
-**Console output**
-
-```
-Sending request to create the sample_BankAccount table...
-Created sample_BankAccount table.
-```
-
-Retrieve the `sample_BankAccount` table definition.
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount') HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions/$entity",
-  "ActivityTypeMask": 0,
-  "AutoRouteToOwnerQueue": false,
-  "CanTriggerWorkflow": true,
-  "EntityHelpUrlEnabled": false,
-  "EntityHelpUrl": null,
-  "IsDocumentManagementEnabled": false,
-  "IsOneNoteIntegrationEnabled": false,
-  "IsInteractionCentricEnabled": false,
-  "IsKnowledgeManagementEnabled": false,
-  "IsSLAEnabled": false,
-  "IsBPFEntity": false,
-  "IsDocumentRecommendationsEnabled": false,
-  "IsMSTeamsIntegrationEnabled": false,
-  "SettingOf": null,
-  "DataProviderId": null,
-  "DataSourceId": null,
-  "AutoCreateAccessTeams": false,
-  "IsActivity": false,
-  "IsActivityParty": false,
-  "IsRetrieveAuditEnabled": false,
-  "IsRetrieveMultipleAuditEnabled": false,
-  "IsArchivalEnabled": false,
-  "IsAvailableOffline": false,
-  "IsChildEntity": false,
-  "IsAIRUpdated": false,
-  "IconLargeName": null,
-  "IconMediumName": null,
-  "IconSmallName": null,
-  "IconVectorName": null,
-  "IsCustomEntity": true,
-  "IsBusinessProcessEnabled": false,
-  "SyncToExternalSearchIndex": false,
-  "IsOptimisticConcurrencyEnabled": true,
-  "ChangeTrackingEnabled": false,
-  "IsImportable": true,
-  "IsIntersect": false,
-  "IsManaged": false,
-  "IsEnabledForCharts": true,
-  "IsEnabledForTrace": false,
-  "IsValidForAdvancedFind": true,
-  "DaysSinceRecordLastModified": 0,
-  "MobileOfflineFilters": "",
-  "IsReadingPaneEnabled": true,
-  "IsQuickCreateEnabled": false,
-  "LogicalName": "sample_bankaccount",
-  "ObjectTypeCode": 10393,
-  "OwnershipType": "UserOwned",
-  "PrimaryNameAttribute": "sample_name",
-  "PrimaryImageAttribute": null,
-  "PrimaryIdAttribute": "sample_bankaccountid",
-  "RecurrenceBaseEntityLogicalName": null,
-  "ReportViewName": "Filteredsample_BankAccount",
-  "SchemaName": "sample_BankAccount",
-  "IntroducedVersion": "1.0.0.0",
-  "IsStateModelAware": true,
-  "EnforceStateTransitions": false,
-  "ExternalName": null,
-  "EntityColor": null,
-  "LogicalCollectionName": "sample_bankaccounts",
-  "ExternalCollectionName": null,
-  "CollectionSchemaName": "sample_BankAccounts",
-  "EntitySetName": "sample_bankaccounts",
-  "IsEnabledForExternalChannels": false,
-  "IsPrivate": false,
-  "UsesBusinessDataLabelTable": false,
-  "IsLogicalEntity": false,
-  "HasNotes": false,
-  "HasActivities": false,
-  "HasFeedback": false,
-  "IsSolutionAware": false,
-  "CreatedOn": "2022-09-01T16:13:40Z",
-  "ModifiedOn": "2022-09-01T16:13:40Z",
-  "HasEmailAddresses": false,
-  "OwnerId": null,
-  "OwnerIdType": 8,
-  "OwningBusinessUnit": null,
-  "MetadataId": "5872b902-112a-ed11-9db1-00224804f8e2",
-  "HasChanged": null,
-  "Description": {
-    "LocalizedLabels": [
       {
-        "Label": "A table to store information about customer bank accounts",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "daf026b7-dfde-4b7b-8e52-91f31b098a9d",
-        "HasChanged": null
-      }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "A table to store information about customer bank accounts",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "daf026b7-dfde-4b7b-8e52-91f31b098a9d",
-      "HasChanged": null
-    }
-  },
-  "DisplayCollectionName": {
-    "LocalizedLabels": [
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvWritesample_BankAccount",
+         "PrivilegeId": "dc5465ed-223f-4b13-a272-fff25e5b5270",
+         "PrivilegeType": "Write"
+      },
       {
-        "Label": "Bank Accounts",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb",
-        "HasChanged": null
-      }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "Bank Accounts",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb",
-      "HasChanged": null
-    }
-  },
-  "DisplayName": {
-    "LocalizedLabels": [
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvDeletesample_BankAccount",
+         "PrivilegeId": "9a409df2-ca4a-4ad9-8218-df88424dd7a0",
+         "PrivilegeType": "Delete"
+      },
       {
-        "Label": "Bank Account",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0",
-        "HasChanged": null
-      }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "Bank Account",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0",
-      "HasChanged": null
-    }
-  },
-  "IsAuditEnabled": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyauditsettings"
-  },
-  "IsValidForQueue": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyqueuesettings"
-  },
-  "IsConnectionsEnabled": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyconnectionsettings"
-  },
-  "IsCustomizable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  },
-  "IsRenameable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "isrenameable"
-  },
-  "IsMappable": {
-    "Value": true,
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "ismappable"
-  },
-  "IsDuplicateDetectionEnabled": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings"
-  },
-  "CanCreateAttributes": {
-    "Value": true,
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "cancreateattributes"
-  },
-  "CanCreateForms": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "cancreateforms"
-  },
-  "CanCreateViews": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "cancreateviews"
-  },
-  "CanCreateCharts": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "cancreatecharts"
-  },
-  "CanBeRelatedEntityInRelationship": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canberelatedentityinrelationship"
-  },
-  "CanBePrimaryEntityInRelationship": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship"
-  },
-  "CanBeInManyToMany": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canbeinmanytomany"
-  },
-  "CanBeInCustomEntityAssociation": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canbeincustomentityassociation"
-  },
-  "CanEnableSyncToExternalSearchIndex": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex"
-  },
-  "CanModifyAdditionalSettings": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
-  },
-  "CanChangeHierarchicalRelationship": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canchangehierarchicalrelationship"
-  },
-  "CanChangeTrackingBeEnabled": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canchangetrackingbeenabled"
-  },
-  "IsMailMergeEnabled": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymailmergesettings"
-  },
-  "IsVisibleInMobile": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobilevisibility"
-  },
-  "IsVisibleInMobileClient": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobileclientvisibility"
-  },
-  "IsReadOnlyInMobileClient": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobileclientreadonly"
-  },
-  "IsOfflineInMobileClient": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobileclientoffline"
-  },
-  "Privileges": [
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvCreatesample_BankAccount",
-      "PrivilegeId": "44f00701-716e-4584-8bab-cb0d263c070b",
-      "PrivilegeType": "Create"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvReadsample_BankAccount",
-      "PrivilegeId": "9cad3243-d0fe-467e-a731-c8b3416a6252",
-      "PrivilegeType": "Read"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvWritesample_BankAccount",
-      "PrivilegeId": "dc5465ed-223f-4b13-a272-fff25e5b5270",
-      "PrivilegeType": "Write"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvDeletesample_BankAccount",
-      "PrivilegeId": "9a409df2-ca4a-4ad9-8218-df88424dd7a0",
-      "PrivilegeType": "Delete"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvAssignsample_BankAccount",
-      "PrivilegeId": "73bf7dd3-f532-4468-abfe-84bbf0eae058",
-      "PrivilegeType": "Assign"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvSharesample_BankAccount",
-      "PrivilegeId": "292f6e27-9603-4835-882d-e28c175432ed",
-      "PrivilegeType": "Share"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvAppendsample_BankAccount",
-      "PrivilegeId": "42401aa6-6447-4fdc-9679-bcb89b62bd76",
-      "PrivilegeType": "Append"
-    },
-    {
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvAppendTosample_BankAccount",
-      "PrivilegeId": "847ba62d-2f33-4208-87e6-52532b331f60",
-      "PrivilegeType": "AppendTo"
-    }
-  ],
-  "Settings": []
-}
-```
-
-**Console output**
-
-The sample displays the JSON retrieved from the server.
-
-
-Update the `sample_BankAccount` table.
-
-**Request**
-
-```http
-PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount') HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-MSCRM.MergeLabels: true
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
-  "ActivityTypeMask": 0,
-  "AutoCreateAccessTeams": false,
-  "AutoRouteToOwnerQueue": false,
-  "CanBeInCustomEntityAssociation": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canbeincustomentityassociation"
-  },
-  "CanBeInManyToMany": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canbeinmanytomany"
-  },
-  "CanBePrimaryEntityInRelationship": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship"
-  },
-  "CanBeRelatedEntityInRelationship": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canberelatedentityinrelationship"
-  },
-  "CanChangeHierarchicalRelationship": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canchangehierarchicalrelationship"
-  },
-  "CanChangeTrackingBeEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canchangetrackingbeenabled"
-  },
-  "CanCreateAttributes": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "cancreateattributes"
-  },
-  "CanCreateCharts": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "cancreatecharts"
-  },
-  "CanCreateForms": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "cancreateforms"
-  },
-  "CanCreateViews": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "cancreateviews"
-  },
-  "CanEnableSyncToExternalSearchIndex": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex"
-  },
-  "CanModifyAdditionalSettings": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
-  },
-  "CanTriggerWorkflow": true,
-  "ChangeTrackingEnabled": false,
-  "CollectionSchemaName": "sample_BankAccounts",
-  "DaysSinceRecordLastModified": 0,
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvAssignsample_BankAccount",
+         "PrivilegeId": "73bf7dd3-f532-4468-abfe-84bbf0eae058",
+         "PrivilegeType": "Assign"
+      },
       {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Contains information about customer bank accounts",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Contains information about customer bank accounts",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayCollectionName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvSharesample_BankAccount",
+         "PrivilegeId": "292f6e27-9603-4835-882d-e28c175432ed",
+         "PrivilegeType": "Share"
+      },
       {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Bank Accounts",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb"
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Bank Accounts",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb"
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvAppendsample_BankAccount",
+         "PrivilegeId": "42401aa6-6447-4fdc-9679-bcb89b62bd76",
+         "PrivilegeType": "Append"
+      },
       {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Bank Account",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0"
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvAppendTosample_BankAccount",
+         "PrivilegeId": "847ba62d-2f33-4208-87e6-52532b331f60",
+         "PrivilegeType": "AppendTo"
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Bank Account",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0"
-    }
-  },
-  "EnforceStateTransitions": false,
-  "EntityHelpUrlEnabled": false,
-  "EntitySetName": "sample_bankaccounts",
-  "HasActivities": true,
-  "HasFeedback": false,
-  "HasNotes": false,
-  "IntroducedVersion": "1.0.0.0",
-  "IsActivity": false,
-  "IsActivityParty": false,
-  "IsAIRUpdated": false,
-  "IsAuditEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyauditsettings"
-  },
-  "IsAvailableOffline": false,
-  "IsBPFEntity": false,
-  "IsBusinessProcessEnabled": false,
-  "IsChildEntity": false,
-  "IsConnectionsEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyconnectionsettings"
-  },
-  "IsCustomEntity": true,
-  "IsCustomizable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  },
-  "IsDocumentManagementEnabled": false,
-  "IsDocumentRecommendationsEnabled": false,
-  "IsDuplicateDetectionEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings"
-  },
-  "IsEnabledForCharts": true,
-  "IsEnabledForExternalChannels": false,
-  "IsEnabledForTrace": false,
-  "IsImportable": true,
-  "IsInteractionCentricEnabled": false,
-  "IsIntersect": false,
-  "IsKnowledgeManagementEnabled": false,
-  "IsLogicalEntity": false,
-  "IsMailMergeEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymailmergesettings"
-  },
-  "IsManaged": false,
-  "IsMappable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "ismappable"
-  },
-  "IsMSTeamsIntegrationEnabled": false,
-  "IsOfflineInMobileClient": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobileclientoffline"
-  },
-  "IsOneNoteIntegrationEnabled": false,
-  "IsOptimisticConcurrencyEnabled": true,
-  "IsPrivate": false,
-  "IsQuickCreateEnabled": false,
-  "IsReadingPaneEnabled": true,
-  "IsReadOnlyInMobileClient": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobileclientreadonly"
-  },
-  "IsRenameable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "isrenameable"
-  },
-  "IsSLAEnabled": false,
-  "IsSolutionAware": false,
-  "IsStateModelAware": true,
-  "IsValidForAdvancedFind": true,
-  "IsValidForQueue": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyqueuesettings"
-  },
-  "IsVisibleInMobile": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobilevisibility"
-  },
-  "IsVisibleInMobileClient": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifymobileclientvisibility"
-  },
-  "LogicalCollectionName": "sample_bankaccounts",
-  "LogicalName": "sample_bankaccount",
-  "MobileOfflineFilters": "",
-  "ObjectTypeCode": 10393,
-  "OwnershipType": "UserOwned",
-  "PrimaryIdAttribute": "sample_bankaccountid",
-  "PrimaryNameAttribute": "sample_name",
-  "Privileges": [
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvCreatesample_BankAccount",
-      "PrivilegeId": "44f00701-716e-4584-8bab-cb0d263c070b",
-      "PrivilegeType": "Create"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvReadsample_BankAccount",
-      "PrivilegeId": "9cad3243-d0fe-467e-a731-c8b3416a6252",
-      "PrivilegeType": "Read"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvWritesample_BankAccount",
-      "PrivilegeId": "dc5465ed-223f-4b13-a272-fff25e5b5270",
-      "PrivilegeType": "Write"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvDeletesample_BankAccount",
-      "PrivilegeId": "9a409df2-ca4a-4ad9-8218-df88424dd7a0",
-      "PrivilegeType": "Delete"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvAssignsample_BankAccount",
-      "PrivilegeId": "73bf7dd3-f532-4468-abfe-84bbf0eae058",
-      "PrivilegeType": "Assign"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvSharesample_BankAccount",
-      "PrivilegeId": "292f6e27-9603-4835-882d-e28c175432ed",
-      "PrivilegeType": "Share"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvAppendsample_BankAccount",
-      "PrivilegeId": "42401aa6-6447-4fdc-9679-bcb89b62bd76",
-      "PrivilegeType": "Append"
-    },
-    {
-      "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
-      "CanBeBasic": true,
-      "CanBeDeep": true,
-      "CanBeGlobal": true,
-      "CanBeLocal": true,
-      "CanBeEntityReference": false,
-      "CanBeParentEntityReference": false,
-      "Name": "prvAppendTosample_BankAccount",
-      "PrivilegeId": "847ba62d-2f33-4208-87e6-52532b331f60",
-      "PrivilegeType": "AppendTo"
-    }
-  ],
-  "ReportViewName": "Filteredsample_BankAccount",
-  "SchemaName": "sample_BankAccount",
-  "Settings": [],
-  "SyncToExternalSearchIndex": false,
-  "UsesBusinessDataLabelTable": false,
-  "MetadataId": "5872b902-112a-ed11-9db1-00224804f8e2"
-}
-```
+   ],
+   "Settings": []
+   }
+   ```
 
-**Response**
+   **Console output**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')
-```
+   The sample displays the JSON retrieved from the server.
 
-**Console output**
 
-```
-Sending request to update the sample_BankAccount table...
-Updated the Bank Account table
-```
+1. Update the `sample_BankAccount` table. The only values that are changed are `HasActivities` and `Description`, but you must send the entire definition with `PUT`.
+
+   **Request**
+
+   ```http
+   PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount') HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   MSCRM.MergeLabels: true
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+   "ActivityTypeMask": 0,
+   "AutoCreateAccessTeams": false,
+   "AutoRouteToOwnerQueue": false,
+   "CanBeInCustomEntityAssociation": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbeincustomentityassociation"
+   },
+   "CanBeInManyToMany": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbeinmanytomany"
+   },
+   "CanBePrimaryEntityInRelationship": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canbeprimaryentityinrelationship"
+   },
+   "CanBeRelatedEntityInRelationship": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canberelatedentityinrelationship"
+   },
+   "CanChangeHierarchicalRelationship": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canchangehierarchicalrelationship"
+   },
+   "CanChangeTrackingBeEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canchangetrackingbeenabled"
+   },
+   "CanCreateAttributes": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "cancreateattributes"
+   },
+   "CanCreateCharts": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "cancreatecharts"
+   },
+   "CanCreateForms": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "cancreateforms"
+   },
+   "CanCreateViews": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "cancreateviews"
+   },
+   "CanEnableSyncToExternalSearchIndex": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex"
+   },
+   "CanModifyAdditionalSettings": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+   },
+   "CanTriggerWorkflow": true,
+   "ChangeTrackingEnabled": false,
+   "CollectionSchemaName": "sample_BankAccounts",
+   "DaysSinceRecordLastModified": 0,
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Contains information about customer bank accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Contains information about customer bank accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false
+      }
+   },
+   "DisplayCollectionName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb"
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Accounts",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "5c598c79-b89d-4679-8a40-9562d0a1e4fb"
+      }
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
+      "LocalizedLabels": [
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Account",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0"
+         }
+      ],
+      "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Bank Account",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "4e4c3fdc-7711-4b43-8eba-9155bb7100c0"
+      }
+   },
+   "EnforceStateTransitions": false,
+   "EntityHelpUrlEnabled": false,
+   "EntitySetName": "sample_bankaccounts",
+   "HasActivities": true,
+   "HasFeedback": false,
+   "HasNotes": false,
+   "IntroducedVersion": "1.0.0.0",
+   "IsActivity": false,
+   "IsActivityParty": false,
+   "IsAIRUpdated": false,
+   "IsAuditEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings"
+   },
+   "IsAvailableOffline": false,
+   "IsBPFEntity": false,
+   "IsBusinessProcessEnabled": false,
+   "IsChildEntity": false,
+   "IsConnectionsEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyconnectionsettings"
+   },
+   "IsCustomEntity": true,
+   "IsCustomizable": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "iscustomizable"
+   },
+   "IsDocumentManagementEnabled": false,
+   "IsDocumentRecommendationsEnabled": false,
+   "IsDuplicateDetectionEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyduplicatedetectionsettings"
+   },
+   "IsEnabledForCharts": true,
+   "IsEnabledForExternalChannels": false,
+   "IsEnabledForTrace": false,
+   "IsImportable": true,
+   "IsInteractionCentricEnabled": false,
+   "IsIntersect": false,
+   "IsKnowledgeManagementEnabled": false,
+   "IsLogicalEntity": false,
+   "IsMailMergeEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymailmergesettings"
+   },
+   "IsManaged": false,
+   "IsMappable": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "ismappable"
+   },
+   "IsMSTeamsIntegrationEnabled": false,
+   "IsOfflineInMobileClient": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientoffline"
+   },
+   "IsOneNoteIntegrationEnabled": false,
+   "IsOptimisticConcurrencyEnabled": true,
+   "IsPrivate": false,
+   "IsQuickCreateEnabled": false,
+   "IsReadingPaneEnabled": true,
+   "IsReadOnlyInMobileClient": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientreadonly"
+   },
+   "IsRenameable": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "isrenameable"
+   },
+   "IsSLAEnabled": false,
+   "IsSolutionAware": false,
+   "IsStateModelAware": true,
+   "IsValidForAdvancedFind": true,
+   "IsValidForQueue": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyqueuesettings"
+   },
+   "IsVisibleInMobile": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobilevisibility"
+   },
+   "IsVisibleInMobileClient": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifymobileclientvisibility"
+   },
+   "LogicalCollectionName": "sample_bankaccounts",
+   "LogicalName": "sample_bankaccount",
+   "MobileOfflineFilters": "",
+   "ObjectTypeCode": 10393,
+   "OwnershipType": "UserOwned",
+   "PrimaryIdAttribute": "sample_bankaccountid",
+   "PrimaryNameAttribute": "sample_name",
+   "Privileges": [
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvCreatesample_BankAccount",
+         "PrivilegeId": "44f00701-716e-4584-8bab-cb0d263c070b",
+         "PrivilegeType": "Create"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvReadsample_BankAccount",
+         "PrivilegeId": "9cad3243-d0fe-467e-a731-c8b3416a6252",
+         "PrivilegeType": "Read"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvWritesample_BankAccount",
+         "PrivilegeId": "dc5465ed-223f-4b13-a272-fff25e5b5270",
+         "PrivilegeType": "Write"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvDeletesample_BankAccount",
+         "PrivilegeId": "9a409df2-ca4a-4ad9-8218-df88424dd7a0",
+         "PrivilegeType": "Delete"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvAssignsample_BankAccount",
+         "PrivilegeId": "73bf7dd3-f532-4468-abfe-84bbf0eae058",
+         "PrivilegeType": "Assign"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvSharesample_BankAccount",
+         "PrivilegeId": "292f6e27-9603-4835-882d-e28c175432ed",
+         "PrivilegeType": "Share"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvAppendsample_BankAccount",
+         "PrivilegeId": "42401aa6-6447-4fdc-9679-bcb89b62bd76",
+         "PrivilegeType": "Append"
+      },
+      {
+         "@odata.type": "Microsoft.Dynamics.CRM.SecurityPrivilegeMetadata",
+         "CanBeBasic": true,
+         "CanBeDeep": true,
+         "CanBeGlobal": true,
+         "CanBeLocal": true,
+         "CanBeEntityReference": false,
+         "CanBeParentEntityReference": false,
+         "Name": "prvAppendTosample_BankAccount",
+         "PrivilegeId": "847ba62d-2f33-4208-87e6-52532b331f60",
+         "PrivilegeType": "AppendTo"
+      }
+   ],
+   "ReportViewName": "Filteredsample_BankAccount",
+   "SchemaName": "sample_BankAccount",
+   "Settings": [],
+   "SyncToExternalSearchIndex": false,
+   "UsesBusinessDataLabelTable": false,
+   "MetadataId": "5872b902-112a-ed11-9db1-00224804f8e2"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')
+   ```
+
+   **Console output**
+
+   ```
+   Sending request to update the sample_BankAccount table...
+   Updated the Bank Account table
+   ```
 
 ## Section 2: Create, Retrieve and Update Columns
 
-**Console output**
+This section will create and retrieve a selected group of column definitions. Each of these types are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> so they share most of the same common properties. However, each derived type has a few special properties.
+### Boolean Column
 
-```
+1. Create a Boolean column using <xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata?text=BooleanAttributeMetadata EntityType>. Despite the name, boolean columns have an `OptionSet` property just like choice columns. However, they always have only two options: `TrueOption` with value 1 and `FalseOption` with value 0.
 
-```
+   **Request**
 
-### Boolean
+   ```http
+   POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-Create a Boolean column
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
-  "AttributeType": "Boolean",
-  "AttributeTypeName": {
-    "Value": "BooleanType"
-  },
-  "DefaultValue": false,
-  "OptionSet": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanOptionSetMetadata",
-    "TrueOption": {
-      "Value": 1,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
+   "AttributeType": "Boolean",
+   "AttributeTypeName": {
+      "Value": "BooleanType"
+   },
+   "DefaultValue": false,
+   "OptionSet": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanOptionSetMetadata",
+      "TrueOption": {
+         "Value": 1,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "True",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "True",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "True",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      }
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+         }
+         }
+      },
+      "FalseOption": {
+         "Value": 0,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "False",
+               "LanguageCode": 1033,
+               "IsManaged": false
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "False",
             "LanguageCode": 1033,
             "IsManaged": false
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "False",
-          "LanguageCode": 1033,
-          "IsManaged": false
-        }
-      }
-    },
-    "OptionSetType": "Boolean"
-  },
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Boolean Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Boolean",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Boolean"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(73f33b3d-112a-ed11-9db1-00224804f8e2)
-```
-
-Retrieve the Boolean column:
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$expand=OptionSet HTTP/1.1
-Consistency: Strong
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(OptionSet())/$entity",
-  "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2",
-  "HasChanged": null,
-  "AttributeOf": null,
-  "AttributeType": "Boolean",
-  "ColumnNumber": 35,
-  "DeprecatedVersion": null,
-  "IntroducedVersion": "1.0.0.0",
-  "EntityLogicalName": "sample_bankaccount",
-  "IsCustomAttribute": true,
-  "IsPrimaryId": false,
-  "IsValidODataAttribute": true,
-  "IsPrimaryName": false,
-  "IsValidForCreate": true,
-  "IsValidForRead": true,
-  "IsValidForUpdate": true,
-  "CanBeSecuredForRead": true,
-  "CanBeSecuredForCreate": true,
-  "CanBeSecuredForUpdate": true,
-  "IsSecured": false,
-  "IsRetrievable": false,
-  "IsFilterable": false,
-  "IsSearchable": false,
-  "IsManaged": false,
-  "LinkedAttributeId": null,
-  "LogicalName": "sample_boolean",
-  "IsValidForForm": true,
-  "IsRequiredForForm": false,
-  "IsValidForGrid": true,
-  "SchemaName": "sample_Boolean",
-  "ExternalName": null,
-  "IsLogical": false,
-  "IsDataSourceSecret": false,
-  "InheritsFrom": null,
-  "CreatedOn": "2022-09-01T16:15:08Z",
-  "ModifiedOn": "2022-09-01T16:15:08Z",
-  "SourceType": 0,
-  "AutoNumberFormat": null,
-  "DefaultValue": false,
-  "FormulaDefinition": "",
-  "SourceTypeMask": 0,
-  "AttributeTypeName": {
-    "Value": "BooleanType"
-  },
-  "Description": {
-    "LocalizedLabels": [
-      {
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "ea50b52d-53e4-4f8d-82ce-8f74a7554800",
-        "HasChanged": null
-      }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "Boolean Attribute",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "ea50b52d-53e4-4f8d-82ce-8f74a7554800",
-      "HasChanged": null
-    }
-  },
-  "DisplayName": {
-    "LocalizedLabels": [
-      {
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "9e4daa21-8774-4de9-b467-d046389459dc",
-        "HasChanged": null
-      }
-    ],
-    "UserLocalizedLabel": {
-      "Label": "Sample Boolean",
-      "LanguageCode": 1033,
-      "IsManaged": false,
-      "MetadataId": "9e4daa21-8774-4de9-b467-d046389459dc",
-      "HasChanged": null
-    }
-  },
-  "IsAuditEnabled": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyauditsettings"
-  },
-  "IsGlobalFilterEnabled": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
-  },
-  "IsSortableEnabled": {
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyissortablesettings"
-  },
-  "IsCustomizable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  },
-  "IsRenameable": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "isrenameable"
-  },
-  "IsValidForAdvancedFind": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifysearchsettings"
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "CanModifyAdditionalSettings": {
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
-  },
-  "Settings": [],
-  "OptionSet": {
-    "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2",
-    "HasChanged": null,
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_boolean",
-    "ExternalTypeName": null,
-    "OptionSetType": "Boolean",
-    "IntroducedVersion": "1.0.0.0",
-    "Description": {
+         }
+         }
+      },
+      "OptionSetType": "Boolean"
+   },
+   "Description": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Boolean Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "DisplayName": {
+   },
+   "DisplayName": {
+      "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "Label": "Sample Boolean",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
-          "HasChanged": null
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
-        "HasChanged": null
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "IsCustomizable": {
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Boolean"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(73f33b3d-112a-ed11-9db1-00224804f8e2)
+   ```
+
+1. Retrieve the Boolean column including `$expand=OptionSet` so that the options can be retrieved.
+
+   > [!NOTE]
+   > The URL for this request includes `/Microsoft.Dynamics.CRM.BooleanAttributeMetadata` which performs a cast operation that is required to return any property that is not defined within the <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType>. Without this, the `OptionSet` expansion is not possible.
+
+   **Request**
+
+   ```http
+   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$expand=OptionSet HTTP/1.1
+   Consistency: Strong
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(OptionSet())/$entity",
+   "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2",
+   "HasChanged": null,
+   "AttributeOf": null,
+   "AttributeType": "Boolean",
+   "ColumnNumber": 35,
+   "DeprecatedVersion": null,
+   "IntroducedVersion": "1.0.0.0",
+   "EntityLogicalName": "sample_bankaccount",
+   "IsCustomAttribute": true,
+   "IsPrimaryId": false,
+   "IsValidODataAttribute": true,
+   "IsPrimaryName": false,
+   "IsValidForCreate": true,
+   "IsValidForRead": true,
+   "IsValidForUpdate": true,
+   "CanBeSecuredForRead": true,
+   "CanBeSecuredForCreate": true,
+   "CanBeSecuredForUpdate": true,
+   "IsSecured": false,
+   "IsRetrievable": false,
+   "IsFilterable": false,
+   "IsSearchable": false,
+   "IsManaged": false,
+   "LinkedAttributeId": null,
+   "LogicalName": "sample_boolean",
+   "IsValidForForm": true,
+   "IsRequiredForForm": false,
+   "IsValidForGrid": true,
+   "SchemaName": "sample_Boolean",
+   "ExternalName": null,
+   "IsLogical": false,
+   "IsDataSourceSecret": false,
+   "InheritsFrom": null,
+   "CreatedOn": "2022-09-01T16:15:08Z",
+   "ModifiedOn": "2022-09-01T16:15:08Z",
+   "SourceType": 0,
+   "AutoNumberFormat": null,
+   "DefaultValue": false,
+   "FormulaDefinition": "",
+   "SourceTypeMask": 0,
+   "AttributeTypeName": {
+      "Value": "BooleanType"
+   },
+   "Description": {
+      "LocalizedLabels": [
+         {
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "ea50b52d-53e4-4f8d-82ce-8f74a7554800",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "ea50b52d-53e4-4f8d-82ce-8f74a7554800",
+         "HasChanged": null
+      }
+   },
+   "DisplayName": {
+      "LocalizedLabels": [
+         {
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "9e4daa21-8774-4de9-b467-d046389459dc",
+         "HasChanged": null
+         }
+      ],
+      "UserLocalizedLabel": {
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "9e4daa21-8774-4de9-b467-d046389459dc",
+         "HasChanged": null
+      }
+   },
+   "IsAuditEnabled": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings"
+   },
+   "IsGlobalFilterEnabled": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
+   },
+   "IsSortableEnabled": {
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyissortablesettings"
+   },
+   "IsCustomizable": {
       "Value": true,
       "CanBeChanged": true,
       "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "TrueOption": {
-      "Value": 1,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
+   },
+   "IsRenameable": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "isrenameable"
+   },
+   "IsValidForAdvancedFind": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifysearchsettings"
+   },
+   "RequiredLevel": {
+      "Value": "None",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "CanModifyAdditionalSettings": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+   },
+   "Settings": [],
+   "OptionSet": {
+      "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2",
       "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
+      "IsManaged": false,
+      "Name": "sample_bankaccount_sample_boolean",
+      "ExternalTypeName": null,
+      "OptionSetType": "Boolean",
+      "IntroducedVersion": "1.0.0.0",
+      "Description": {
+         "LocalizedLabels": [
+         {
+            "Label": "Boolean Attribute",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
+            "HasChanged": null
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
+      },
+      "DisplayName": {
+         "LocalizedLabels": [
+         {
+            "Label": "Sample Boolean",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
+            "HasChanged": null
+         }
+         ],
+         "UserLocalizedLabel": {
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
+         "HasChanged": null
+         }
+      },
+      "IsCustomizable": {
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
+      },
+      "TrueOption": {
+         "Value": 1,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "True",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "True",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "True",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
-          "HasChanged": null
-        }
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
-      }
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Color": null,
-      "IsManaged": false,
-      "ExternalValue": "",
-      "ParentValues": [],
-      "MetadataId": null,
-      "HasChanged": null,
-      "Label": {
-        "LocalizedLabels": [
-          {
+      "FalseOption": {
+         "Value": 0,
+         "Color": null,
+         "IsManaged": false,
+         "ExternalValue": "",
+         "ParentValues": [],
+         "MetadataId": null,
+         "HasChanged": null,
+         "Label": {
+         "LocalizedLabels": [
+            {
+               "Label": "False",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
+               "HasChanged": null
+            }
+         ],
+         "UserLocalizedLabel": {
             "Label": "False",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
             "HasChanged": null
-          }
-        ],
-        "UserLocalizedLabel": {
-          "Label": "False",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
-          "HasChanged": null
-        }
-      },
-      "Description": {
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": null
+         }
+         },
+         "Description": {
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": null
+         }
       }
-    }
-  }
-}
-```
+   }
+   }
+   ```
 
-**Console output**
+   **Console output**
 
-```
+   ```
+   Original Option Labels:
+   True Option Label:'True' Value: 1
+   False Option Label:'False' Value: 0
+   ```
 
-```
+1. Update the Boolean column. The only changes are to the `DisplayName`, `Description`, and `RequiredLevel` properties, but the entire definition is included because `PUT` is used.
 
-Update the Boolean column
+   > [!NOTE]
+   > Even though the `OptionSet` property is included in this payload, any changes to them would not be applied because they are not considered part of the column definition. They must be updated separately and this sample will show you how in following steps.
 
-**Request**
+   **Request**
 
-```http
-PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean') HTTP/1.1
-MSCRM.SolutionUniqueName: examplesolution
-MSCRM.MergeLabels: true
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   PUT [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean') HTTP/1.1
+   MSCRM.SolutionUniqueName: examplesolution
+   MSCRM.MergeLabels: true
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
-  "AttributeType": "Boolean",
-  "AttributeTypeName": {
-    "Value": "BooleanType"
-  },
-  "DefaultValue": false,
-  "FormulaDefinition": "",
-  "SourceTypeMask": 0,
-  "OptionSet": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanOptionSetMetadata",
-    "TrueOption": {
-      "Value": 1,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+   {
+   "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
+   "AttributeType": "Boolean",
+   "AttributeTypeName": {
+      "Value": "BooleanType"
+   },
+   "DefaultValue": false,
+   "FormulaDefinition": "",
+   "SourceTypeMask": 0,
+   "OptionSet": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanOptionSetMetadata",
+      "TrueOption": {
+         "Value": 1,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "True",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1"
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "True",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1"
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "True",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1"
-        }
+         }
+         },
+         "Description": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "LanguageCode": 0,
+            "IsManaged": false
+         }
+         },
+         "IsManaged": false,
+         "ExternalValue": ""
       },
-      "Description": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "LanguageCode": 0,
-          "IsManaged": false
-        }
-      },
-      "IsManaged": false,
-      "ExternalValue": ""
-    },
-    "FalseOption": {
-      "Value": 0,
-      "Label": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [
-          {
+      "FalseOption": {
+         "Value": 0,
+         "Label": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+            {
+               "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+               "Label": "False",
+               "LanguageCode": 1033,
+               "IsManaged": false,
+               "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f"
+            }
+         ],
+         "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
             "Label": "False",
             "LanguageCode": 1033,
             "IsManaged": false,
             "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f"
-          }
-        ],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "False",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f"
-        }
+         }
+         },
+         "Description": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [],
+         "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "LanguageCode": 0,
+            "IsManaged": false
+         }
+         },
+         "IsManaged": false,
+         "ExternalValue": ""
       },
+      "OptionSetType": "Boolean",
       "Description": {
-        "@odata.type": "Microsoft.Dynamics.CRM.Label",
-        "LocalizedLabels": [],
-        "UserLocalizedLabel": {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "LanguageCode": 0,
-          "IsManaged": false
-        }
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+         {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Boolean Attribute",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2"
+         }
+         ],
+         "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Boolean Attribute",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2"
+         }
       },
+      "DisplayName": {
+         "@odata.type": "Microsoft.Dynamics.CRM.Label",
+         "LocalizedLabels": [
+         {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Sample Boolean",
+            "LanguageCode": 1033,
+            "IsManaged": false,
+            "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2"
+         }
+         ],
+         "UserLocalizedLabel": {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Boolean",
+         "LanguageCode": 1033,
+         "IsManaged": false,
+         "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2"
+         }
+      },
+      "IntroducedVersion": "1.0.0.0",
+      "IsCustomizable": {
+         "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+         "Value": true,
+         "CanBeChanged": true,
+         "ManagedPropertyLogicalName": "iscustomizable"
+      },
+      "IsCustomOptionSet": true,
+      "IsGlobal": false,
       "IsManaged": false,
-      "ExternalValue": ""
-    },
-    "OptionSetType": "Boolean",
-    "Description": {
+      "Name": "sample_bankaccount_sample_boolean",
+      "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2"
+   },
+   "CanBeSecuredForCreate": true,
+   "CanBeSecuredForRead": true,
+   "CanBeSecuredForUpdate": true,
+   "CanModifyAdditionalSettings": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
+   },
+   "ColumnNumber": 35,
+   "Description": {
       "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Boolean Attribute",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2"
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Boolean Attribute Updated",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Boolean Attribute",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2"
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Boolean Attribute Updated",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "DisplayName": {
+   },
+   "DisplayName": {
       "@odata.type": "Microsoft.Dynamics.CRM.Label",
       "LocalizedLabels": [
-        {
-          "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-          "Label": "Sample Boolean",
-          "LanguageCode": 1033,
-          "IsManaged": false,
-          "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2"
-        }
+         {
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Boolean Updated",
+         "LanguageCode": 1033,
+         "IsManaged": false
+         }
       ],
       "UserLocalizedLabel": {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Boolean",
-        "LanguageCode": 1033,
-        "IsManaged": false,
-        "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2"
+         "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+         "Label": "Sample Boolean Updated",
+         "LanguageCode": 1033,
+         "IsManaged": false
       }
-    },
-    "IntroducedVersion": "1.0.0.0",
-    "IsCustomizable": {
+   },
+   "EntityLogicalName": "sample_bankaccount",
+   "IntroducedVersion": "1.0.0.0",
+   "IsAuditEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyauditsettings"
+   },
+   "IsCustomAttribute": true,
+   "IsCustomizable": {
       "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
       "Value": true,
       "CanBeChanged": true,
       "ManagedPropertyLogicalName": "iscustomizable"
-    },
-    "IsCustomOptionSet": true,
-    "IsGlobal": false,
-    "IsManaged": false,
-    "Name": "sample_bankaccount_sample_boolean",
-    "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2"
-  },
-  "CanBeSecuredForCreate": true,
-  "CanBeSecuredForRead": true,
-  "CanBeSecuredForUpdate": true,
-  "CanModifyAdditionalSettings": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyadditionalsettings"
-  },
-  "ColumnNumber": 35,
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Boolean Attribute Updated",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Boolean Attribute Updated",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Sample Boolean Updated",
-        "LanguageCode": 1033,
-        "IsManaged": false
-      }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample Boolean Updated",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "EntityLogicalName": "sample_bankaccount",
-  "IntroducedVersion": "1.0.0.0",
-  "IsAuditEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyauditsettings"
-  },
-  "IsCustomAttribute": true,
-  "IsCustomizable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "iscustomizable"
-  },
-  "IsDataSourceSecret": false,
-  "IsFilterable": false,
-  "IsGlobalFilterEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
-  },
-  "IsLogical": false,
-  "IsManaged": false,
-  "IsPrimaryId": false,
-  "IsPrimaryName": false,
-  "IsRenameable": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "isrenameable"
-  },
-  "IsRequiredForForm": false,
-  "IsRetrievable": false,
-  "IsSearchable": false,
-  "IsSecured": false,
-  "IsSortableEnabled": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": false,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifyissortablesettings"
-  },
-  "IsValidForAdvancedFind": {
-    "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
-    "Value": true,
-    "CanBeChanged": true,
-    "ManagedPropertyLogicalName": "canmodifysearchsettings"
-  },
-  "IsValidForCreate": true,
-  "IsValidForForm": true,
-  "IsValidForGrid": true,
-  "IsValidForRead": true,
-  "IsValidForUpdate": true,
-  "LogicalName": "sample_boolean",
-  "RequiredLevel": {
-    "Value": "ApplicationRequired",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_Boolean",
-  "SourceType": 0,
-  "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2"
-}
-```
+   },
+   "IsDataSourceSecret": false,
+   "IsFilterable": false,
+   "IsGlobalFilterEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyglobalfiltersettings"
+   },
+   "IsLogical": false,
+   "IsManaged": false,
+   "IsPrimaryId": false,
+   "IsPrimaryName": false,
+   "IsRenameable": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "isrenameable"
+   },
+   "IsRequiredForForm": false,
+   "IsRetrievable": false,
+   "IsSearchable": false,
+   "IsSecured": false,
+   "IsSortableEnabled": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": false,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifyissortablesettings"
+   },
+   "IsValidForAdvancedFind": {
+      "@odata.type": "Microsoft.Dynamics.CRM.BooleanManagedProperty",
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canmodifysearchsettings"
+   },
+   "IsValidForCreate": true,
+   "IsValidForForm": true,
+   "IsValidForGrid": true,
+   "IsValidForRead": true,
+   "IsValidForUpdate": true,
+   "LogicalName": "sample_boolean",
+   "RequiredLevel": {
+      "Value": "ApplicationRequired",
+      "CanBeChanged": false,
+      "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+   },
+   "SchemaName": "sample_Boolean",
+   "SourceType": 0,
+   "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')
-```
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   OData-EntityId: [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')
+   ```
 
-Update each of the boolean options using UpdateOptionValue.
+1. Update each of the boolean options using UpdateOptionValue.
 
 **Request**
 
