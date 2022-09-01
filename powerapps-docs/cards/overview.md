@@ -56,12 +56,12 @@ Use Power Fx to add inline calculations and dynamic actions to cards. Create pow
 
 :::image type="content" source="media/overview/placeholder-cards-power-fx.png" alt-text="Screenshot of the card designer with Power Fx logic." border="false":::
 
+## Post cards on Teams
 
-## Post cards on Teams 
 Post cards on Teams to share them with other people by using the **Send** button in the Designer and copying the link into a Teams chat or channel.
 
 :::image type="content" source="media/overview/placeholder-cards-play-page.png" alt-text="Screenshot of the card designer Play page." border="false":::
 
 ## Lightweight Runtime
 
-The card runtime allows users to run their interactive cards with embedded data and workflows. The runtime engine abstracts over the interactive transaction capabilities of card canvases, enabling users to send and receive cards without needing to deploy a secondary bot service or build other apps.
+The card runtime allows users to securely run their interactive cards with embedded data and workflows. The runtime engine abstracts over the interactive transaction capabilities of card canvases, enabling users to send and receive cards without needing to deploy a secondary bot service or build other apps.
