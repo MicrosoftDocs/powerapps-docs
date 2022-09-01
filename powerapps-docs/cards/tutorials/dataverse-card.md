@@ -5,16 +5,16 @@ keywords: "Cards Designer, Power Apps, Cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
-ms.author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
 ---
 
-This needs to be updated for specifically Dataverse
-
 # Use connectors
+
+This needs to be updated for specifically Dataverse
 
 In this tutorial, you'll learn how to build a card that utilizes the Bing Connector to add search query results to a card. You'll also learn about:
 
@@ -28,7 +28,7 @@ The result will look like the example below:
 
 ## Basic data binding
 
-1. Create your card as described in the [Setup instructions](../get-started-designer/setup-designer.md). You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "Bing Search".
+1. Create your card. You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "Bing Search".
 
    :::image type="content" source="../media/tutorial-use-connectors/rename-card-title.png" alt-text="Screenshot of the card renamed to Bing search." border="false":::
 

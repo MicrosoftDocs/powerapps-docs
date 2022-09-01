@@ -1,11 +1,11 @@
 ---
 title: "Simple shopping list"
 description: "Create a simple shopping list card, learning about the basics of creating a card"
-keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
+keywords: "Cards Designer, Power Apps, Cards, tutorial"
 ms.date: 03/18/2022
 ms.topic: article
-author: eberhardts
-ms.author: v-eberhardts
+author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 

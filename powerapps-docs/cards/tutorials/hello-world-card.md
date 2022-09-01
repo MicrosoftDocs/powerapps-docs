@@ -1,11 +1,11 @@
 ﻿---
 title: "Intro to Card elements"
 description: "Learn about basic elements of a card by creating a simple card"
-keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, tutorial"
+keywords: "Cards Designer, Power Apps, Cards, tutorial"
 ms.date: 03/18/2022
 ms.topic: article
-author: eberhardts
-ms.author: v-eberhardts
+author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 

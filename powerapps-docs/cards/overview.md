@@ -5,7 +5,7 @@ keywords: "Cards, Power Apps, overview"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
-ms.author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 

@@ -1,11 +1,11 @@
 ---
 title: "Debugging Cards"
 description: "Learn how to debug your cards using the Play page in designer"
-keywords: "Power Cards, Power Cards Designer, Power Apps, Cards, debugging, play page"
+keywords: "Cards Designer, Power Apps, Cards, debugging, play page"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
-ms.author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 
@@ -28,7 +28,7 @@ The play page is made up of a few different components:
 
 ## Set up debugging
 
-1. Create a card following the procedure listed in the [getting started documentation](../../get-started-designer/setup-designer.md).
+1. Create a card
 
 1. Go to **Variables** and select **New variable**.
 

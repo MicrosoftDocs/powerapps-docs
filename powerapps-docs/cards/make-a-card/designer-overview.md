@@ -1,11 +1,11 @@
 ---
 title: "Cards Designer overview"
 description: "Learn about the designer in Power Cards to confidently create cards"
-keywords: "Power Cards, Power Cards Designer, Power Apps, Cards"
+keywords: "Cards Designer, Power Apps, Cards"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
-ms.author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 
@@ -63,7 +63,7 @@ The navigation bar allows you to swap between the different tools available in t
 - Structure: see the card as a hierarchical outline and view the relationships of the card elements; add multiple steps to a card
 - Elements (default view): main UI for editing the card
 - Data connections: add connectors to your card to use data from external sources
-- Variables: store, bind, and reuse data across a card. For more information, see [Data binding in cards](../make-a-card/data-binding-in-cards.md).
+- Variables: store, bind, and reuse data across a card.
 - Power Automate: add Power Automate flows to your card to add automation to your cards, allowing them to take care of repetitive tasks. See [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started) for more information.
 
 ### Tool pane
@@ -103,4 +103,4 @@ Once you've set up your card to your liking, you can preview the card with the P
 
 ## Next steps
 
-Now that you've got an overview of the Power Cards Designer, [Get started making your first card](setup-designer.md).
+Now that you've got an overview of the Power Cards Designer, [Get started making your first card](../tutorials/hello-world-card.md).

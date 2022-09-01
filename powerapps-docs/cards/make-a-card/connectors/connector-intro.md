@@ -1,11 +1,11 @@
 ---
 title: "Connect to data and services"
 description: "Learn about connectors and how you can use them to expand the capabilities of your cards"
-keywords: "Power Cards, Power Apps, Cards, connectors"
+keywords: "Power Apps, Cards, connectors"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
-ms.author: iaanw
+ms.author: iawilt
 manager: shellyha
 ms.reviewer: 
 ms.custom: 
