@@ -2867,7 +2867,7 @@
     - name: Create cards
       items: 
         - name: Designer overview
-          href: ../cards/designer-overview.md
+          href: ../cards/make-a-card/designer-overview.md
         - name: Design the interface
           items:
             - name: Add and configure controls

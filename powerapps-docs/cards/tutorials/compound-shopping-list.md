@@ -34,7 +34,7 @@ Here, the list has Apple and Banana in it. In the UI, for each item in the list,
 
 ## Create a card and give it a name
 
-1. Create your card as described in the [Setup instructions](../get-started-designer/setup-designer.md). You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "compound list tutorial".
+1. Create your card. You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "compound list tutorial".
 
    :::image type="content" source="../media/tutorial-compound-shopping-list/create-card.png" alt-text="Screenshot of where to go to create a card." border="false":::
 

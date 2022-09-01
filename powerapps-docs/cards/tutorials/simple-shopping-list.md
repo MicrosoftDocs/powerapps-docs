@@ -30,7 +30,7 @@ This tutorial will only let you add items in this card. For a more complex shopp
 
 ## Create a card and give it a name
 
-1. Create your card as described in the [Setup instructions](../get-started-designer/setup-designer.md).You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "shopping list tutorial".
+1. Create your card. You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "shopping list tutorial".
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/create-card.png" alt-text="Screenshot of where to go to create a card." border="false":::
 
