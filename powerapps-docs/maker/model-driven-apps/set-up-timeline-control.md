@@ -445,9 +445,9 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
   
-The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To only show records that are directly related to the notes in timeline, select **None**.
+The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show  those records only that're directly related to the notes in timeline, select **None**.
 
-More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
+More information on rollup types is available at [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
   
 ### Posts on timeline
 
