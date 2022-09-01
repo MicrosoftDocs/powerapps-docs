@@ -124,7 +124,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 
 1. Create the `sample_BankAccount` table.
 
-   These properties are required: `SchemaName`, `DisplayName`, `DisplayCollectionName`, `HasNotes`, `HasActivities` and `PrimaryNameAttribute`, which must include the LogicalName value of the primary name column.
+   These properties are required: `SchemaName`, `DisplayName`, `DisplayCollectionName`, `HasNotes`, `HasActivities` and `PrimaryNameAttribute`, which must include the `LogicalName` value of the primary name column.
 
    The table must also include one <xref:Microsoft.Dynamics.CRM.StringAttributeMetadata?text=StringAttributeMetadata> column in the `Attributes` collection to be the primary name column for the table. That column definition must have `SchemaName`, `MaxLength`, and `DisplayName` values, and `IsPrimaryName` must be set to true.
 
@@ -275,7 +275,7 @@ This sample is divided into the following sections, containing Dataverse Web API
    - This query also doesn't include an `$expand` to include related data, such as attributes, because those must be updated separately.
 
    > [!NOTE]
-   > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item may return a 404 because it hasn't been cached yet. Caching may take 30 seconds. This header will force the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you are retrieving changes you have just made. More information: [Other headers](compose-http-requests-handle-errors.md#other-headers).
+   > This request and others in this sample use the `Consistency: Strong` header. Use this header when you retrieve metadata definition changes right after you apply them. Metadata changes are cached for performance reasons and a request for a newly created item may return a 404 because it hasn't been cached yet. Caching may take 30 seconds. This header will force the server to read the latest version including your changes. By using this header, you negate the performance gain that caching provides, so you should only use it when in scenarios like this sample where you are retrieving changes you have just made. More information: [HTTP headers > Other headers](compose-http-requests-handle-errors.md#other-headers).
 
    **Request**
 
@@ -1691,7 +1691,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Updated Boolean Column properties
    ```
 
-1. Update each of the boolean options using (xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action).
+1. Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>.
 
    Change the `TrueOption` value label to 'Up'.
 
@@ -2014,7 +2014,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Created DateTime column with id:f1db3d43-112a-ed11-9db1-00224804f8e2
    ```
 
-1. Retrieve selected values the DateTime column.
+1. Retrieve selected values of the DateTime column.
 
 
    **Request**
@@ -2041,7 +2041,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    "MetadataId": "f1db3d43-112a-ed11-9db1-00224804f8e2",
    "DateTimeBehavior": {
       "Value": "DateOnly"
-   }
+    }
    }
    ```
 
@@ -2294,7 +2294,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 1. Create a Memo Column.
 
-**Request**
+   **Request**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -2371,7 +2371,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Created Memo column with id:f6db3d43-112a-ed11-9db1-00224804f8e2
    ```
 
-1. Retrieve selected values of the Memo Column
+1. Retrieve selected values of the Memo Column.
 
    **Request**
 
@@ -2413,7 +2413,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 1. Create a Money Column.
 
-**Request**
+   **Request**
 
    ```http
    POST [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes HTTP/1.1
@@ -2493,10 +2493,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Created Money column with id:fddb3d43-112a-ed11-9db1-00224804f8e2
    ```
 
-
-
-1. Retrieve selected values of the Money Column
-
+1. Retrieve selected values of the Money Column.
 
    **Request**
 
@@ -2540,7 +2537,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Picklist Column
 
-1. Create a Choice (Picklist) Column.
+1. Create a Choice (Picklist) Column with a local option set.
 
    **Request**
 
@@ -2971,8 +2968,8 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 1. Add an option to the choice column using <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
 
-> [!NOTE]
-> `InsertOptionValue` and the following actions to work with options has a SolutionUniqueName parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
+   > [!NOTE]
+   > `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
 
    **Request**
 
@@ -3623,7 +3620,7 @@ This section will create and retrieve a selected group of column definitions. Ea
         Value: 727000004, Label:Foxtrot
    ```
 
-1. Delete an option using <xref:Microsoft.Dynamics.CRM.DeleteOptionValue?displayProperty=nameWithType>
+1. Delete an option using <xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action>.
 
    **Request**
 
@@ -3657,7 +3654,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Multi-Select Picklist Column
 
-1. Create a multi-select Choice column
+1. Create a multi-select choice column.
 
    **Request**
 
@@ -4043,7 +4040,7 @@ Created new Status value:727000000
 
 ## Section 3: Create and use Global OptionSet
 
-1. Create a global choice (optionset)
+1. Create a global choice (optionset).
 
    **Request**
 
@@ -4351,7 +4348,7 @@ Created new Status value:727000000
    Value: 727000002 Label:Green
    ```
 
-1. Create a choice column that uses the global optionset
+1. Create a choice column that uses the global optionset. Associate the column definition to the global optionset using :<br /> `"GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)"`.
 
    **Request**
 
@@ -4432,6 +4429,8 @@ Created new Status value:727000000
 
 1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action> to create a customer relationship. This will add a lookup column for the `sample_BankAccount` table that allows for either an `account` or `contact` record to be set.
 
+   `CreateCustomerRelationships` has a `Lookup` <xref:Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata?text=ComplexLookupAttributeMetadata ComplexType> parameter and a `OneToManyRelationships` parameter containing a pair of relationships defined using <xref:Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata?text=ComplexOneToManyRelationshipMetadata ComplexType>.
+
    **Request**
 
    ```http
@@ -4443,12 +4442,12 @@ Created new Status value:727000000
 
    {
    "Lookup": {
+      "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
       "AttributeType": "Lookup",
       "AttributeTypeName": {
          "Value": "LookupType"
       },
-      "Format": "None",
-      "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata",
+      "Format": "None",      
       "Targets": [
          "account",
          "contact"
@@ -4536,7 +4535,7 @@ Created new Status value:727000000
    }
    ```
 
-1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType>.`AttributeId` value to retrieve the lookup column for the customer relationship
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse>.`AttributeId` value to retrieve the lookup column `Targets` property for the customer relationship.
 
    **Request**
 
@@ -4573,7 +4572,7 @@ Created new Status value:727000000
          contact
    ```
 
-1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse?text=CreateCustomerRelationshipsResponse ComplexType>.`RelationshipIds` values to retrieve the relationships for the customer column.
+1. Use the <xref:Microsoft.Dynamics.CRM.CreateCustomerRelationshipsResponse>.`RelationshipIds` values to retrieve the relationships for the customer column.
 
    First for the relationship to `account`:
 
