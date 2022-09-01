@@ -37,8 +37,8 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 2: Unbound Function FormatAddress](#section-2-unbound-function-formataddress)|<xref:Microsoft.Dynamics.CRM.FormatAddress?text=FormatAddress Function><br />[Passing parameters to a function](use-web-api-functions.md#passing-parameters-to-a-function)|
 |[Section 3: Unbound Function InitializeFrom](#section-3-unbound-function-initializefrom)|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function><br />[Create a new record from another record](create-entity-web-api.md#create-a-new-record-from-another-record)<br />[Map table columns](../../../maker/data-platform/map-entity-fields.md)<br />[Customize table and column mappings](../customize-entity-attribute-mappings.md)|
 |[Section 4: Unbound Function RetrieveCurrentOrganization](#section-4-unbound-function-retrievecurrentorganization)|<xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=RetrieveCurrentOrganization Function><br />|
-|[Section 6: Bound Function IsSystemAdmin Custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)[Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use Custom APIs](../custom-api.md)|
-|[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)|
+|[Section 6: Bound Function IsSystemAdmin Custom API](#section-6-bound-function-issystemadmin-custom-api)|[Bound Functions](web-api-functions.md#bound-functions)<br />[Use Bound functions](use-web-api-functions.md#bound-functions)<br />[Sample: IsSystemAdmin Custom API](../org-service/samples/issystemadmin-customapi-sample-plugin.md)<br />[Create and use Custom APIs](../custom-api.md)|
+|[Section 7: Unbound Action GrantAccess](#section-7-unbound-action-grantaccess)|<xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action><br />[Sharing and assigning](../security-sharing-assigning.md)<br /><xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function>|
 |[Section 8: Bound Actions AddPrivilegesRole](#section-8-bound-action-addprivilegesrole)|[Bound actions](web-api-actions.md#bound-actions)<br />[Use Bound actions](use-web-api-actions.md#bound-actions)<br /><xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action><br />[Security Role (Role)  table/entity reference](../reference/entities/role.md)|
 |[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
   
@@ -80,6 +80,8 @@ WhoAmIResponse.BusinessUnitId:cca3985e-c618-ea11-a811-000d3a33f066
 WhoAmIResponse.UserId:2138bd90-ec19-ea11-a811-000d3a334e11
 WhoAmIResponse.OrganizationId:f2c9290b-0806-4d48-bf9c-3814d4286755
 ```
+
+The `BusinessUnitId` value retrieved here will be used in [Section 8: Bound Action AddPrivilegesRole](#section-8-bound-action-addprivilegesrole).
 
 ## Section 2: Unbound Function FormatAddress
 
@@ -245,7 +247,7 @@ More information:
    ```
 
    > [!NOTE]
-   > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, the `parentaccountid` lookup to associate the new record with the original.
+   > If there are no columns mapped for this relationship, only the minimum column values are included as shown above. In this case, only the `parentaccountid` lookup to associate the new record with the original.
 
    If all the available columns are mapped for this relationship, the value returned will include much more data from the original record, for example:
 
@@ -598,7 +600,7 @@ To demonstrate this operation, the sample code does the following:
          "systemuserid": "ce31e691-f559-ec11-8f8f-000d3a308de4",
          "@odata.type": "Microsoft.Dynamics.CRM.systemuser"
       }
-   }
+    }
    }
    ```
 
@@ -760,7 +762,7 @@ To demonstrate the use of this action, the sample does the following:
          prvReadSharePointDocument
    ```
 
-1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges from <xref:Microsoft.Dynamics.CRM.privilege?text=privilege EntityType>
+1. Retrieve the definition of the `prvCreateAccount` and `prvReadAccount` privileges from <xref:Microsoft.Dynamics.CRM.privilege?text=privilege EntityType>.
    
    **Request**
 
