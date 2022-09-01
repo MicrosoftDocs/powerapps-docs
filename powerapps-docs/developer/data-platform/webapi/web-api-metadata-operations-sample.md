@@ -4736,73 +4736,81 @@ Created new Status value:727000000
 
 ## Section 5: Create and retrieve a one-to-many relationship
 
-**Console output**
-
-```
-
-```
+Before you create a relationship using code you should confirm that the relationship is valid. The designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) use special functions to show you which combinations are valid. You can use the same functions in your code to detect whether a particular relationship can be created or not.
 
 ### Validate 1:N relationship eligibility
 
-Using CanBeReferenced
+1. <xref:Microsoft.Dynamics.CRM.CanBeReferenced?text=CanBeReferenced Function> tells you whether a table the primary table (one) in a one-to-many relationship.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/CanBeReferenced HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/CanBeReferenced HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "EntityName": "sample_bankaccount"
-}
-```
+   {
+   "EntityName": "sample_bankaccount"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanBeReferencedResponse",
-  "CanBeReferenced": true
-}
-```
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanBeReferencedResponse",
+   "CanBeReferenced": true
+   }
+   ```
 
-Using CanBeReferencing
+   **Console output**
 
-**Request**
+   ```
+   The sample_BankAccount table is eligible to be a primary table in a one-to-many relationship.
+   ```
 
-```http
-POST [Organization Uri]/api/data/v9.2/CanBeReferencing HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+1. <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function> tells you whether a table can be the referencing table in a one-to-many relationship. This is the table that will have a Lookup column added to it to be the 'many' in the one-to-many relationship.
 
-{
-  "EntityName": "contact"
-}
-```
+   **Request**
 
-**Response**
+   ```http
+   POST [Organization Uri]/api/data/v9.2/CanBeReferencing HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   {
+   "EntityName": "contact"
+   }
+   ```
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanBeReferencingResponse",
-  "CanBeReferencing": true
-}
-```
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanBeReferencingResponse",
+   "CanBeReferencing": true
+   }
+   ```
+
+   **Console output**
+
+   ```
+   The contact table is eligible to be a related table in a one-to-many relationship.
+   ```
+
 ### Identify Potential Referencing Entities
 
-
-Using GetValidReferencingEntities
+In the context of a specific table that can be the parmary table in a one-to-many relationship, use the <xref:Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function> to identify what other tables can be the related to it.
 
 **Request**
 
@@ -4928,11 +4936,11 @@ OData-Version: 4.0
 **Console output**
 
 ```
-
+The contact table is in the list of potential referencing entities for sample_BankAccount.
 ```
-
-
 ### Create 1:N relationship
+
+The following request will create a one-to-many relationship between `sample_BankAccount` and contact tables with a lookup column added to the `contact` table.
 
 **Request**
 
@@ -5047,10 +5055,18 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(991efd5
 **Console output**
 
 ```
-
+Creating a one-to-many relationship...
+Created one-to-many relationship: RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2)
 ```
 
 ### Retrieve 1:N relationship
+
+The following request will retrieve the relationship created by the previous request.
+
+> [!NOTE]
+> Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve:<br />
+`/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`
+> Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType>.
 
 **Request**
 
@@ -5140,27 +5156,17 @@ OData-Version: 4.0
 }
 ```
 
-
-
 **Console output**
 
 ```
-
+Retrieved relationship: sample_BankAccount_Contacts
 ```
 
 ## Section 6: Create and retrieve a many-to-one relationship
 
+A many-to-one relationship is a one-to-many relationship viewed from the other direction. The following examples will create a lookup column named `sample_relatedaccountid` on the `sample_BankAccount` table referencing a row in the `account` table.
 
-
-
-
-**Console output**
-
-```
-
-```
-
-## Create N:1 relationship
+### Create N:1 relationship
 
 **Request**
 
@@ -5273,10 +5279,10 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(0901c46
 **Console output**
 
 ```
-
+Created many-to-one relationship: RelationshipDefinitions(0901c466-112a-ed11-9db1-00224804f8e2)
 ```
 
-## Retrieve N:1 relationship
+### Retrieve N:1 relationship
 
 **Request**
 
@@ -5366,94 +5372,89 @@ OData-Version: 4.0
 }
 ```
 
-
-
 **Console output**
 
 ```
-
+Retrieved relationship: sample_Account_BankAccounts
 ```
 
 ## Section 7: Create and retrieve a many-to-many relationship
 
-
-
-**Console output**
-
-```
-
-```
-
+Like one-to-many relationships, there are special functions used by the designers in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) prevent invalid combinations when createing many-to-many relationships.
 ### Validate N:N relationship eligibility
 
-Using CanManyToMany for contact
+1. <xref:Microsoft.Dynamics.CRM.CanManyToMany?text=CanManyToMany Function> tells you whether a table can participate in a many-to-many relationship. So this request will test the `contact` table.
 
-**Request**
+   **Request**
 
-```http
-POST [Organization Uri]/api/data/v9.2/CanManyToMany HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```http
+   POST [Organization Uri]/api/data/v9.2/CanManyToMany HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "EntityName": "contact"
-}
-```
+   {
+   "EntityName": "contact"
+   }
+   ```
 
-**Response**
+   **Response**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanManyToManyResponse",
-  "CanManyToMany": true
-}
-```
-Using CanManyToMany for sample_bankaccount
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanManyToManyResponse",
+   "CanManyToMany": true
+   }
+   ```
 
-**Request**
+   **Console output**
 
-```http
-POST [Organization Uri]/api/data/v9.2/CanManyToMany HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   ```
+   The contact table can participate in many-to-many relationships.
+   ```
 
-{
-  "EntityName": "sample_bankaccount"
-}
-```
+1. This request will perform the same test on the `sample_bankaccount` table.
 
-**Response**
+   **Request**
 
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
+   ```http
+   POST [Organization Uri]/api/data/v9.2/CanManyToMany HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanManyToManyResponse",
-  "CanManyToMany": true
-}
-```
+   {
+   "EntityName": "sample_bankaccount"
+   }
+   ```
+
+   **Response**
+
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CanManyToManyResponse",
+   "CanManyToMany": true
+   }
+   ```
 
 
+   **Console output**
 
-
-
-**Console output**
-
-```
-
-```
+   ```
+   The sample_bankaccount table can participate in many-to-many relationships.
+   ```
 
 ### Identify Potential Entities for N:N relationships
 
-Using GetValidManyToMany
+Use the <xref:Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function> to get a list of tables that can particpate in many-to-many relationships.
 
 **Request**
 
@@ -5615,15 +5616,16 @@ OData-Version: 4.0
 }
 ```
 
-
-
 **Console output**
 
 ```
-
+Contact is in the list of potential tables for N:N.
+sample_BankAccount is in the list of potential tables for N:N.
 ```
 
 ### Create N:N relationship
+
+This request will create a many-to-many relationship between `sample_BankAccount` and `Contact` tables.
 
 **Request**
 
@@ -5708,10 +5710,17 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(55c9f86
 **Console output**
 
 ```
-
+Created Many-to-Many relationship at: RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)
 ```
 
 ### Retrieve N:N relationship
+
+This request will retrieve the many-to-many relationship created by the previous request.
+
+> [!NOTE]
+> As mentioned above, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve:<br />
+`/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`
+> Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType>.
 
 **Request**
 
@@ -5814,15 +5823,16 @@ OData-Version: 4.0
 }
 ```
 
-
-
 **Console output**
 
 ```
+Retrieved Many-to-Many relationship:sample_sample_BankAccounts_Contacts
 
 ```
 
 ## Section 8: Export managed solution
+
+Use the <xref:Microsoft.Dynamics.CRM.ExportSolution?text=ExportSolution Action> to export the solution as a managed solution. This action includes many switches you can use to include additional information as part of the solution, but in this case, all those options are turned off. More information: [Work with solutions](/power-platform/alm/solution-api)
 
 **Request**
 
@@ -5863,14 +5873,15 @@ OData-Version: 4.0
 ```
 
 
-
 **Console output**
 
 ```
-
+Solution Exported to E:\GitHub\PowerApps-Samples\dataverse\webapi\C#-NETx\MetadataOperations\bin\Debug\net6.0\examplesolution.zip
 ```
 
 ## Section 9: Delete sample records
+
+References to all of the records created in this sample have been added to a list. In this section, all the records created are deleted using a `$batch` operation.
 
 **Request**
 
@@ -5985,76 +5996,77 @@ OData-Version: 4.0
 **Console output**
 
 ```
-
+Deleting created records...
 ```
 
 ## Section 10: Import and Delete managed solution
 
-Import the managed solution
+1. This step will import managed solution exported in [Section 8: Export managed solution](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
+   
+   **Request**
 
-**Request**
+   ```http
+   POST [Organization Uri]/api/data/v9.2/ImportSolution HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
 
-```http
-POST [Organization Uri]/api/data/v9.2/ImportSolution HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+   {
+   "OverwriteUnmanagedCustomizations": false,
+   "PublishWorkflows": false,
+   "CustomizationFile": "[ Binary content removed for brevity]",
+   "ImportJobId": "00000000-0000-0000-0000-000000000000"
+   }
+   ```
 
-{
-  "OverwriteUnmanagedCustomizations": false,
-  "PublishWorkflows": false,
-  "CustomizationFile": "[ Binary content removed for brevity]",
-  "ImportJobId": "00000000-0000-0000-0000-000000000000"
-}
-```
+   **Response**
 
-**Response**
+   ```http
+   HTTP/1.1 204 NoContent
+   OData-Version: 4.0
+   ```
 
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-```
+   **Console output**
 
-Get the id of the managed solution by uniquename so you can delete it
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/solutions?$select=solutionid&$filter=uniquename%20eq%20'examplesolution' HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#solutions(solutionid)",
-  "value": [
-    {
-      "@odata.etag": "W/\"13291034\"",
-      "solutionid": "07439497-6992-4e30-81e0-628a91984af5"
-    }
-  ]
-}
-```
+   ```
+   Sending request to import the examplesolution solution...
+   Solution imported as a managed solution.
+   ```
 
 
+1. Get the id of the managed solution by uniquename so you can delete it.
 
+   **Request**
 
-**Console output**
+   ```http
+   GET [Organization Uri]/api/data/v9.2/solutions?$select=solutionid&$filter=uniquename%20eq%20'examplesolution' HTTP/1.1
+   OData-MaxVersion: 4.0
+   OData-Version: 4.0
+   If-None-Match: null
+   Accept: application/json
+   ```
 
-```
+   **Response**
 
-```
+   ```http
+   HTTP/1.1 200 OK
+   OData-Version: 4.0
+
+   {
+   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#solutions(solutionid)",
+   "value": [
+      {
+         "@odata.etag": "W/\"13291034\"",
+         "solutionid": "07439497-6992-4e30-81e0-628a91984af5"
+      }
+   ]
+   }
+   ```
 
 ### Delete managed solution
+
+This final step will delete the managed solution imported to return the system to the original state.
 
 **Request**
 
@@ -6078,5 +6090,21 @@ OData-Version: 4.0
 **Console output**
 
 ```
-
+Sending request to delete the examplesolution solution...
+Managed solution deleted.
+--Metadata Operations sample completed--
 ```
+
+### See also  
+
+[Use the Dataverse Web API](overview.md)<br />
+[Use the Web API with table definitions](use-web-api-metadata.md)<br />
+[Query table definitions using the Web API](query-metadata-web-api.md)<br />
+[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br />
+[Create and update table relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
+[Create and update choices (option sets) using the Web API](create-update-optionsets.md)<br />
+[Web API Metadata Operations Sample (C#)](samples/webapiservice-metadata-operations.md)<br />
+
+
+
+[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
