@@ -50,7 +50,7 @@ Value |Client |
 
 ## getClientState
 
-Returns a value to indicate the state of the client.  Note that a client in offline-first mode will always report it is `"Offline"`.
+Returns a value to indicate the state of the client.  Note that a client in offline-first mode (in preview) will always indicate it is offline.
 
 ### Syntax
 
