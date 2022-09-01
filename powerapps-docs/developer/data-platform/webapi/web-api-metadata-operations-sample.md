@@ -30,19 +30,19 @@ This topic describes a common set of operations implemented by each sample in th
 
 This sample is divided into the following sections, containing Dataverse Web API operations which are discussed in greater detail in the specified associated conceptual topics.  
   
-|Code section|Associated conceptual topics|  
+|Code section|Associated conceptual and reference topics|  
 |------------------|----------------------------------|  
-|[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)||
-|[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)||
-|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)||
-|[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)||
-|[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)||
-|[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)||
-|[Section 6: Create and retrieve a many-to-one relationship](#section-6-create-and-retrieve-a-many-to-one-relationship)||
-|[Section 7: Create and retrieve a many-to-many relationship](#section-7-create-and-retrieve-a-many-to-many-relationship)||
-|[Section 8: Export managed solution](#section-8-export-managed-solution)||
-|[Section 9: Delete sample records](#section-9-delete-sample-records)||
-|[Section 10: Import and Delete managed solution](#section-10-import-and-delete-managed-solution)||
+|[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row using the Web API](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
+|[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
+|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />[Boolean Column](#boolean-column)<br />[DateTime Column](#datetime)<br />[Decimal Column](#decimal-column)<br />[Integer Column](#integer-column)<br />[Memo Column](#memo-column)<br />[Money Column](#money-column)<br /><br />[Picklist Column](#picklist-column)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)|
+|[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
+|[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
+|[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)|[Eligibility for relationships](create-update-entity-relationships-using-web-api.md#eligibility-for-relationships)<br /> [Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
+|[Section 6: Create and retrieve a many-to-one relationship](#section-6-create-and-retrieve-a-many-to-one-relationship)|[Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
+|[Section 7: Create and retrieve a many-to-many relationship](#section-7-create-and-retrieve-a-many-to-many-relationship)|[Create a many-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-many-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
+|[Section 8: Export managed solution](#section-8-export-managed-solution)|[Export solutions](../../../maker/data-platform/export-solutions.md)|
+|[Section 9: Delete sample records](#section-9-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)|
+|[Section 10: Import and Delete managed solution](#section-10-import-and-delete-managed-solution)|[Import solutions](../../../maker/data-platform/import-update-export-solutions.md)|
   
 > [!NOTE]
 >  For brevity, less pertinent HTTP headers have been omitted. The URLs of the records will vary with the base organization address and the IDs set by the Dataverse server.  
@@ -1932,7 +1932,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Updated False Option Label:'Down' Value: 0
    ```
 
-### DateTime
+### DateTime Column
 
 1. Create a DateTime column.
 
