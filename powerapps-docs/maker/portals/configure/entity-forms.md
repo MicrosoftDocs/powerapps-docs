@@ -1,11 +1,11 @@
 ---
 title: About basic forms
-description: Learn how to create basic forms in a portal."
+description: Learn how to create basic forms in a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/07/2022
+ms.date: 09/31/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -223,7 +223,7 @@ To disable request validation, follow these steps:
 - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
 - Duplicate fields, Party List fields, and business rules aren't supported in basic forms.
 - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app) 
-- [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [advanced forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
+- [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [multistep forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 - Business rules and client API can enable locked fields on a read-only form.
 - If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
