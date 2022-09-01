@@ -50,7 +50,7 @@ Value |Client |
 
 ## getClientState
 
-Returns a value to indicate the state of the client.
+Returns a value to indicate the state of the client.  Note that a client in offline-first mode will always report it is `"Offline"`.
 
 ### Syntax
 
@@ -91,7 +91,7 @@ Value |Form Factor |
 
 ## isOffline
 
-Returns information whether the server is online or offline.
+Returns information whether the client state is online or offline.  Note that a client in offline-first mode will always report it is offline.
 
 ### Syntax
 
@@ -105,7 +105,7 @@ Returns information whether the server is online or offline.
 
 ## isNetworkAvailable
 
-Returns information whether the network is available or not.
+Returns information whether the network is available or not, regardless of client mode.
 
 ### Syntax
 
