@@ -32,7 +32,7 @@ Provides properties and methods to use Web API to create and manage records and 
 |[offline](xrm-webapi/offline.md)|[!INCLUDE[xrm-webapi/includes/offline-description.md](xrm-webapi/includes/offline-description.md)]|
 
 ## Methods
-With mobile offline configured, the source for these records will depend on the current client state.  In offline mode, the source is the offline data store.  In online mode, the source is the server.  If the client is offline-first (currently in preview), the methods in [online](xrm-webapi/online.md) can be used to access tables and records that are not part of the offline profile.
+With mobile offline configured, the source for these records will depend on the current client state.  In offline mode, the source is the offline data store.  In online mode, the source is the server.  If the client is offline-first (in preview), the methods in [online](xrm-webapi/online.md) can be used to access tables and records that are not part of the offline profile, as long as the client has network connectivity.
 |Method | Description | 
 |------ |-------------| 
 |[createRecord](xrm-webapi/createRecord.md)|[!INCLUDE[xrm-webapi/includes/createRecord-description.md](xrm-webapi/includes/createRecord-description.md)]|
