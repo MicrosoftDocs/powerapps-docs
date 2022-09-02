@@ -50,9 +50,11 @@ The following is required to build and run this sample:
 1. Save the `appsettings.json` file
 1. Press F5 to run the sample.
 
-## Demonstrates
+## Code
 
 The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/ConditionalOperations/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/ConditionalOperations/Program.cs)
+
+## Demonstrates
 
 This sample has 4 regions:
 
@@ -92,7 +94,7 @@ Operations:
 
 1. Attempt to update the original account setting the `If-Match` header with the `updatedAcctETagVal` value.
 
-   Request succeeds becaused the initial ETag value doesn't match anymore.
+   Request succeeds becaused the ETag value matches the current value for the record.
 
 ### Section 3: Delete sample records
 

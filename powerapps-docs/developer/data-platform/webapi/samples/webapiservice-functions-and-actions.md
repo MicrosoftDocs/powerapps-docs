@@ -50,9 +50,11 @@ The following is required to build and run this sample:
 1. Save the `appsettings.json` file
 1. Press F5 to run the sample.
 
-## Demonstrates
+## Code
 
 The code for this sample is here: [PowerApps-Samples/dataverse/webapi/C#-NETx/FunctionsAndActions/Program.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Program.cs)
+
+## Demonstrates
 
 This sample has 9 regions:
 

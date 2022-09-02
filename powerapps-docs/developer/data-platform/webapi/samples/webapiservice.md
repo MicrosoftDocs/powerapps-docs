@@ -40,6 +40,8 @@ This library does not:
 - **Provide for any code generation capabilities**. All classes used in the samples are written by hand. All business entity data uses the well-known [Json.NET JObject Class](https://www.newtonsoft.com/json/help/html/t_newtonsoft_json_linq_jobject.htm) rather than a class representing the entity type.
 - **Provide an object model for composing OData queries**. All queries show the OData query syntax as query parameters.
 
+## Code
+
 You can find the WebApiService class library source code and Visual Studio solution at [PowerApps-Samples/dataverse/webapi/C#-NETx/WebAPIService](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/WebAPIService)
 
 ## Class list
