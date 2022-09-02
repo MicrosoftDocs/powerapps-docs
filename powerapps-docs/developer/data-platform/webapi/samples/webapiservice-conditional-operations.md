@@ -68,10 +68,14 @@ Operations:
 Operations:
 
 1. Attempts to retrieve the record setting the `If-None-Match` header with the `initialAcctETagVal` value.
-1. Request fails with `304 NotModified` as expected.
+
+   Request fails with `304 NotModified` as expected.
+
 1. Update the record `telephone1` column value.
 1. Attempt to retrieve the record again setting the `If-None-Match` header with the `initialAcctETagVal` value.
-1. Request succeeds becaused the initial ETag value doesn't match anymore.
+
+   Request succeeds becaused the initial ETag value doesn't match anymore.
+
 1. Store the new ETag value as `updatedAcctETagVal`.
 
 ### Section 2: Optimistic concurrency on delete and update
@@ -79,11 +83,16 @@ Operations:
 Operations:
 
 1. Attempt to delete the original account setting the `If-Match` header with the `initialAcctETagVal` value.
-1. Request fails with `412 PreconditionFailed` as expected.
+
+   Request fails with `412 PreconditionFailed` as expected.
+
 1. Attempt to update the original account setting the `If-Match` header with the `initialAcctETagVal` value.
-1. Request fails with `412 PreconditionFailed` as expected.
+
+   Request fails with `412 PreconditionFailed` as expected.
+
 1. Attempt to update the original account setting the `If-Match` header with the `updatedAcctETagVal` value.
-1. Request succeeds becaused the initial ETag value doesn't match anymore.
+
+   Request succeeds becaused the initial ETag value doesn't match anymore.
 
 ### Section 3: Delete sample records
 

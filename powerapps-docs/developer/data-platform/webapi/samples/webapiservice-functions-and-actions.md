@@ -72,7 +72,7 @@ Operations:
 Operations:
 
 1. Create an account record to be the original record.
-1. Send <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> with parameters referencing the account record created. Recieve <xref:Microsoft.Dynamics.CRM.InitializeFromResponse?text=InitializeFromResponse ComplexType> with data to create a new account record with values from the original record.
+1. Send <xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function> with parameters referencing the account record created. Recieve a response with data to create a new account record with values from the original record.
 1. Create a new account record using the data from `InitializeFromResponse` so that the new record is associated with the original record and potentially containing data copied from the original record, depending on how the column mappings are configured for the organization.
 
 ### Section 4: Unbound Functions: RetrieveCurrentOrganization
@@ -81,7 +81,7 @@ Operation: Send <xref:Microsoft.Dynamics.CRM.RetrieveCurrentOrganization?text=Re
 
 ### Section 5: Unbound Functions: RetrieveTotalRecordCount
 
-Operations: Send <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> with parameters for `account` and `contact` tables and recieve <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount ComplexType> containing the number of records in each table.
+Operations: Send <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount?text=RetrieveTotalRecordCount Function> with parameters for `account` and `contact` tables and recieve <xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCountResponse?text=RetrieveTotalRecordCountResponse ComplexType> containing the number of records in each table.
 
 ### Section 6: Bound Functions: IsSystemAdmin
 
@@ -89,7 +89,7 @@ Operations:
 
 1. Detect if organization has the `sample_IsSystemAdmin` Custom API installed.
 1. If not, install solution in `IsSystemAdminFunction_1_0_0_0_managed.zip` containing the Custom API.
-1. Retrieve 10 systemuser records
+1. Retrieve 10 systemuser records.
 1. Loop through the records using the `sample_IsSystemAdmin` function to detect which ones have the System Administrator security role.
 
 ### Section 7: Unbound Actions: GrantAccess
@@ -97,7 +97,7 @@ Operations:
 Operations:
 
 1. Create an account record to share.
-1. Retrieve an enabled user other than the current user
+1. Retrieve an enabled user other than the current user.
 1. Use the <xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function> to determine if the other user has <xref:Microsoft.Dynamics.CRM.AccessRights>`'DeleteAccess'` on the account record created.
 1. If they do not have `DeleteAccess`, use <xref:Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action> to share this access to the other user.
 1. Test the user's access again using `RetrievePrincipalAccess` to verify that they now have `DeleteAccess`.
