@@ -34,7 +34,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 |------------------|----------------------------------|  
 |[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row using the Web API](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
 |[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
-|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />[Boolean Column](#boolean-column)<br />[DateTime Column](#datetime)<br />[Decimal Column](#decimal-column)<br />[Integer Column](#integer-column)<br />[Memo Column](#memo-column)<br />[Money Column](#money-column)<br /><br />[Picklist Column](#picklist-column)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)|
+|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />[Boolean Column](#boolean-column)<br />[DateTime Column](#datetime)<br />[Decimal Column](#decimal-column)<br />[Integer Column](#integer-column)<br />[Memo Column](#memo-column)<br />[Money Column](#money-column)<br />[Picklist Column](#picklist-column)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)|
 |[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
 |[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
 |[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)|[Eligibility for relationships](create-update-entity-relationships-using-web-api.md#eligibility-for-relationships)<br /> [Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
@@ -1934,7 +1934,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### DateTime Column
 
-1. Create a DateTime column.
+1. Create a DateTime column using <xref:Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType>.
 
    **Request**
 
@@ -2055,7 +2055,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Decimal Column
 
-1. Create a Decimal Column.
+1. Create a Decimal Column using <xref:Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType>.
 
    **Request**
 
@@ -2173,7 +2173,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Integer Column
 
-1. Create an Integer column.
+1. Create an Integer column using <xref:Microsoft.Dynamics.CRM.IntegerAttributeMetadata?text=IntegerAttributeMetadata EntityType>.
 
    **Request**
 
@@ -2292,7 +2292,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Memo Column
 
-1. Create a Memo Column.
+1. Create a Memo Column using <xref:Microsoft.Dynamics.CRM.MemoAttributeMetadata?text=MemoAttributeMetadata EntityType>.
 
    **Request**
 
@@ -2411,7 +2411,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Money Column
 
-1. Create a Money Column.
+1. Create a Money Column using <xref:Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType>.
 
    **Request**
 
@@ -2537,7 +2537,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Picklist Column
 
-1. Create a Choice (Picklist) Column with a local option set.
+1. Create a Choice (Picklist) Column using <xref:Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType> with a local option set.
 
    **Request**
 
@@ -2720,7 +2720,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Created Choice column with id:4a154e49-112a-ed11-9db1-00224804f8e2
    ```
 
-1. Retrieve options of the choice column.
+1. Retrieve options of the choice column using `$select=SchemaName&$expand=OptionSet`.
 
    **Request**
 
@@ -2966,7 +2966,7 @@ This section will create and retrieve a selected group of column definitions. Ea
         Value:727000004 Label:Foxtrot
    ```
 
-1. Add an option to the choice column using <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
+1. Add an option to the choice column using the <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
 
    > [!NOTE]
    > `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
@@ -3023,7 +3023,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Added new option with label 'Echo'
    ```
 
-1. Retrieve the choice column options again
+1. Retrieve the choice column options again.
 
    **Request**
 
@@ -3302,7 +3302,7 @@ This section will create and retrieve a selected group of column definitions. Ea
         Value: 727000005, Label:Echo
    ```
 
-1. Re-order the Choice column options using <xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>.
+1. Re-order the Choice column options using the <xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>.
 
    **Request**
 
@@ -3341,7 +3341,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Options re-ordered.
    ```
 
-1. Retrieve the Choice column options again to see the options in the new order
+1. Retrieve the Choice column options again to see the options in the new order.
 
    **Request**
 
@@ -3654,7 +3654,7 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 ### Multi-Select Picklist Column
 
-1. Create a multi-select choice column.
+1. Create a multi-select choice column using <xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType>.
 
    **Request**
 
@@ -3798,7 +3798,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Created MultiSelect Choice column with id:2c1c3050-112a-ed11-9db1-00224804f8e2
    ```
 
-1. Retrieve the multi-select choice column
+1. Retrieve the multi-select choice column options.
 
    **Request**
 
@@ -3985,6 +3985,9 @@ This section will create and retrieve a selected group of column definitions. Ea
 
 Use <xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action> to add a new option to a `statuscode` column. You must specify which `StateCode` it is valid for.
 
+> [!NOTE]
+> Notice that the value returned applies the publisher `customizationoptionvalueprefix` value (72700) automatically.
+
 **Request**
 
 ```http
@@ -4169,7 +4172,7 @@ Created new Status value:727000000
    Created a new global option set with id:7cfd8c56-112a-ed11-9db1-00224804f8e2
    ```
 
-1. Retrieve the global choice
+1. Retrieve the global choice options.
 
    **Request**
 
@@ -4348,7 +4351,7 @@ Created new Status value:727000000
    Value: 727000002 Label:Green
    ```
 
-1. Create a choice column that uses the global optionset. Associate the column definition to the global optionset using :<br /> `"GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)"`.
+1. Create a choice column that uses the global optionset. Associate the column definition to the global optionset using: `"GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2)"`.
 
    **Request**
 
@@ -4938,6 +4941,7 @@ OData-Version: 4.0
 ```
 The contact table is in the list of potential referencing entities for sample_BankAccount.
 ```
+
 ### Create 1:N relationship
 
 The following request will create a one-to-many relationship between `sample_BankAccount` and contact tables with a lookup column added to the `contact` table.
@@ -5064,8 +5068,7 @@ Created one-to-many relationship: RelationshipDefinitions(991efd5f-112a-ed11-9db
 The following request will retrieve the relationship created by the previous request.
 
 > [!NOTE]
-> Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve:<br />
-`/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`
+> Because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
 > Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType>.
 
 **Request**
@@ -5705,8 +5708,6 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/RelationshipDefinitions(55c9f86c-112a-ed11-9db1-00224804f8e2)
 ```
 
-
-
 **Console output**
 
 ```
@@ -5718,8 +5719,7 @@ Created Many-to-Many relationship at: RelationshipDefinitions(55c9f86c-112a-ed11
 This request will retrieve the many-to-many relationship created by the previous request.
 
 > [!NOTE]
-> As mentioned above, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve:<br />
-`/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`
+> As mentioned above, because `RelationshipDefinitions` contains both one-to-many and many-to-many relationship definitions, you must include the following in the URL to cast to the type you want to retrieve: `/Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata`.
 > Otherwise, the value returned will be the <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> and will not include the properties specific to the <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType>.
 
 **Request**
@@ -5827,7 +5827,6 @@ OData-Version: 4.0
 
 ```
 Retrieved Many-to-Many relationship:sample_sample_BankAccounts_Contacts
-
 ```
 
 ## Section 8: Export managed solution
