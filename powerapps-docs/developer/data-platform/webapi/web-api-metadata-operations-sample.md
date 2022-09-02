@@ -32,8 +32,8 @@ This sample is divided into the following sections, containing Dataverse Web API
   
 |Code section|Associated conceptual and reference topics|  
 |------------------|----------------------------------|  
-|[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row using the Web API](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
-|[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
+|[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
+|[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
 |[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br /><xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action><br /><xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action>|
 |[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
 |[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
@@ -5072,7 +5072,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 136
 
 DELETE /api/data/v9.2/RelationshipDefinitions(991efd5f-112a-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5081,7 +5080,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 130
 
 DELETE /api/data/v9.2/EntityDefinitions(5872b902-112a-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5090,7 +5088,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 122
 
 DELETE /api/data/v9.2/solutions(5472b902-112a-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5099,7 +5096,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 123
 
 DELETE /api/data/v9.2/publishers(a78ab7fc-102a-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a
@@ -5108,7 +5104,6 @@ Content-Transfer-Encoding: binary
 Content-Length: 139
 
 DELETE /api/data/v9.2/GlobalOptionSetDefinitions(7cfd8c56-112a-ed11-9db1-00224804f8e2) HTTP/1.1
-Host: org619826b5.api.crm.dynamics.com
 
 
 --batch_d6cb9873-6b53-490d-942d-0bea79b8ba9a--
