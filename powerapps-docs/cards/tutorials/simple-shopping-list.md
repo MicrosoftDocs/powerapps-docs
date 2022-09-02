@@ -30,11 +30,11 @@ This tutorial will only let you add items in this card. For a more complex shopp
 
 ## Create a card and give it a name
 
-1. Create your card. You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "shopping list tutorial".
+1. Create your card. You'll be asked to name your card - name your card something unique, if the name is already used, you won't be able to create the card.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/create-card.png" alt-text="Screenshot of where to go to create a card." border="false":::
 
-1. You'll see the default "empty" card.
+1. You'll see the default card.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/default-blank-card.png" alt-text="Screenshot of a blank card." border="false":::
 
@@ -46,7 +46,7 @@ This tutorial will only let you add items in this card. For a more complex shopp
 
 ## Create a variable to hold your list
 
-This shopping list will hold several individual lines of text (or strings), so you'll need to create a variable to hold these strings.
+This shopping list will hold several individual lines of text, so you'll need to create a variable to hold these lines of text.
 
 1. Select **Variables** from the Navigation bar.
 
@@ -56,15 +56,15 @@ This shopping list will hold several individual lines of text (or strings), so y
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/add-new-variable.png" alt-text="Screenshot of how to add a new variable." border="false":::
 
-1. Give your variable a name. In this example, we use `my_grocery_list`.
+1. Give your variable a name. In this example, we use `myGroceryList`.
 
-1. Set the type of variable to **array**. This will be an array of strings.
+1. Set the type of variable to **Table**. This will be an table of text.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/setup-grocery-array-var.png" alt-text="Screenshot of the my grocery list variable setup." border="false":::
 
 1. Save the card.
 
-1. Now you should see that your variable list contains one variable whose name is `my_grocery_list` and type is array.
+1. Now you should see that your variable list contains one variable whose name is `myGroceryList` and type is Table.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/my-grocery-list-array-var.png" alt-text="Screenshot of the fully set up my grocery list array variable." border="false":::
 
@@ -72,31 +72,31 @@ This shopping list will hold several individual lines of text (or strings), so y
 
 ## Add and configure the list
 
-Time to build the card UI.
+Time to build the card interface.
 
 1. Open the Tool pane.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/find-tool-panel.png" alt-text="Screenshot of where to find the cards tool pane." border="false":::
 
-1. Drag and drop a **Text Block** from the Elements pane onto the card underneath the text blocks you previously added. The Text Block will snap into place, so you don't have to be precise with positioning.
+1. Drag and drop a **Text label** onto the card underneath the text labels you previously added. The Text label will snap into place, so you don't have to be precise with positioning.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-text-block-to-card.png" alt-text="Screenshot of another text block added to the card." border="false":::
+   :::image type="content" source="../media/tutorial-simple-shopping-list/add-text-block-to-card.png" alt-text="Screenshot of another text label added to the card." border="false":::
 
-1. With the empty Text Block still selected, go to the **Advanced** tab in the Property pane.
+1. With the empty Text label still selected, go to the **Advanced** tab in the Property pane.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/go-to-advanced-pane.png" alt-text="Screenshot of how to find the advanced properties for the selected text block." border="false":::
+   :::image type="content" source="../media/tutorial-simple-shopping-list/go-to-advanced-pane.png" alt-text="Screenshot of how to find the advanced properties for the selected text label." border="false":::
 
-1. Select the **Repeat for every** field and enter `= my_grocery_list`.
+1. Select the **Repeat for every** field and enter `myGroceryList`.
 
-   This will repeat the TextBlock for every element in a given array. In this example, the array you're providing&mdash;`my_grocery_list`&mdash;is the variable you created previously. This means that for every element in the grocery list, a separate text block is created in the card.
+   This will repeat the Text label for every element in a given table. In this example, the table you're providing - `myGroceryList` - is the variable you created previously. This means that for every element in the grocery list, a separate text label is created in the card.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/add-array-to-advanced.png" alt-text="Screenshot showing how to add the my grocery list variable to the advanced pane under repeat for every." border="false":::
 
 1. Select the **Properties** tab (visible in the picture above for reference).
 
-1. In the **Text** field, enter `=$data`.
+1. In the **Text** field, enter `ThisItem`.
 
-   Assigning the `$data` variable to the text block lets you view and display the current element of the `my_grocery_list` array in the visible text of the Text Block.
+   Assigning the `ThisItem` variable to the text label lets you view and display the current element of the `myGroceryList` array in the visible text of the Text label.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/add-data-var-to-text-block.png" alt-text="Screenshot showing how to add the data variable to the text field in the properties tab." border="false":::
 
@@ -106,39 +106,39 @@ Time to build the card UI.
 
 The list you've created is currently empty, so the final step is to give the card the ability to add items to the list.
 
-1. Add an **Input.Text** onto the card underneath all of the previously created text boxes.
+1. Add an **Text input** onto the card underneath all of the previously created text boxes.
 
-1. Select the **Input.Text**. In the Properties pane, update the following properties:
+1. Select the **Text input**. In the Properties pane, update the following properties:
 
-   - **Name:** `the_new_item`
+   - **Name:** `theNewItem`
    - **Label:** `New Item:`
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/added-input-text-names.png" alt-text="Screenshot of added variable names to an input text box." border="false":::
 
    > [!NOTE]
-   > The Name property lets you refer to the field from PowerFX – it needs to be one word. The Label property is displayed above the field – you can see it on the card to the left. These don't have to be similar as they are here (i.e. *the_new_item* and "New Item:"), but it makes it easier to keep track of things.
+   > The Name property lets you refer to the field from Power Fx – it needs to be one word. The Label property is displayed above the field – you can see it on the card to the left. These don't have to be similar as they are here (i.e. *theNewItem* and "New Item:"), but it makes it easier to keep track of things.
 
 1. Add a **Button** to the card. Drop it anywhere below the **New Item** field.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/add-a-button.png" alt-text="Screenshot of adding a button to the card." border="false":::
 
-1. Select the **Button**. In the Properties pane, set the **Title** property to `Add the New Item`. Note that the **Type** property is set to **Run PowerFx**&mdash;buttons can be used for other kinds of actions, but using a PowerFX expression is the most common.
+1. Select the **Button**. In the Properties pane, set the **Title** property to `Add the New Item`. Note that the **Type** property is set to **Run Power Fx** - buttons can be used for other kinds of actions, but using a Power Fx expression is the most common.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/run-pfx-in-button.png" alt-text="Screenshot showing the button type." border="false":::
 
 1. Click **Save**.
 
-## One line of PowerFX to tie it all together
+## One line of Power Fx to tie it all together
 
-1. With the button selected, add in the following line of code into the PowerFX editor: `AppendItem(my_grocery_list, the_new_item)`
+1. With the button selected, add in the following line of code into the PowerFX editor: `Collect(myGroceryList, theNewItem)`
 
-   This PowerFX expression will append the contents of the `item_to_add` field to the `my_grocery_list` array.
+   This PowerFX expression will append the contents of the `theNewItem` field to the `myGroceryList` table.
 
    | Variable          | Function in PowerFX script                                                             |
    | ----------------- | -------------------------------------------------------------------------------------- |
-   | `AppendItem`      | A built-in function that takes an array and an item and appends the item to the array. |
-   | `my_grocery_list` | The first variable you created; an initially empty array.                              |
-   | `the_new_item`    | The text input field above the button.                                                 |
+   | `Collect`         | A built-in function that takes a table and an item and adds the item to the table. |
+   | `myGroceryList`   | The first variable you created; an initially empty table.                              |
+   | `theNewItem`      | The text input field above the button.                                                 |
 
 1. Save the card.
 
@@ -151,5 +151,5 @@ Save first (always save before testing) and then select the **Play** button in t
 ### Bonus things to try
 
 - Try making the items on the shopping list have a different color than the rest of the text.
-- Use a PowerFX expression to add "please" to every item on the shopping list
-- Advanced: make it so every item in the shopping list has two text blocks instead of one. For more information on this, see the [Complex List tutorial](compound-shopping-list.md).
+- Use a Power Fx expression to add "please" to every item on the shopping list
+- Advanced: make it so every item in the shopping list has two text labels instead of one. For more information on this, see the [Compound List tutorial](compound-shopping-list.md).
