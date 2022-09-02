@@ -34,7 +34,7 @@ This sample is divided into the following sections, containing Dataverse Web API
 |------------------|----------------------------------|  
 |[Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution)|[Create a table row using the Web API](create-entity-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.publisher?text=publisher EntityType><br /><xref:Microsoft.Dynamics.CRM.solution?text=soluion EntityType>|
 |[Section 1: Create, Retrieve and Update Table](#section-1-create-retrieve-and-update-table)|[Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /><xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>|
-|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />[Boolean Column](#boolean-column)<br />[DateTime Column](#datetime-column)<br />[Decimal Column](#decimal-column)<br />[Integer Column](#integer-column)<br />[Memo Column](#memo-column)<br />[Money Column](#money-column)<br />[Picklist Column](#picklist-column)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)|
+|[Section 2: Create, Retrieve and Update Columns](#section-2-create-retrieve-and-update-columns)<br />- [Boolean Column](#boolean-column)<br />&nbsp;&nbsp;&nbsp;- [Update Option Values](#update-option-values)<br />- [DateTime Column](#datetime-column)<br />- [Decimal Column](#decimal-column)<br />- [Integer Column](#integer-column)<br />- [Memo Column](#memo-column)<br />- [Money Column](#money-column)<br />- [Picklist Column](#picklist-column)<br />&nbsp;&nbsp;&nbsp;- [Add an option to the local optionset](#add-an-option-to-the-local-optionset)<br />&nbsp;&nbsp;&nbsp;- [Re-order choice column options](#re-order-choice-column-options)<br />&nbsp;&nbsp;&nbsp;- [Delete local option value](#delete-local-option-value)<br />- [Multi-Select Picklist Column](#multi-select-picklist-column)<br />- [Insert Status Value](#insert-status-value)|[Create columns](create-update-entity-definitions-using-web-api.md#create-columns)<br />[Retrieving attributes](query-metadata-web-api.md#retrieving-attributes)<br /><xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action><br /><xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action><br /><xref:Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action>|
 |[Section 3: Create and use Global OptionSet](#section-3-create-and-use-global-optionset)|[Create and update choices (option sets)](create-update-optionsets.md)|
 |[Section 4: Create Customer Relationship](#section-4-create-customer-relationship)|<xref:Microsoft.Dynamics.CRM.CreateCustomerRelationships?text=CreateCustomerRelationships Action>|
 |[Section 5: Create and retrieve a one-to-many relationship](#section-5-create-and-retrieve-a-one-to-many-relationship)|[Eligibility for relationships](create-update-entity-relationships-using-web-api.md#eligibility-for-relationships)<br /> [Create a one-to-many relationship](create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship)<br />[Querying relationship metadata](query-metadata-web-api.md#querying-relationship-metadata)|
@@ -1691,9 +1691,14 @@ This section will create and retrieve a selected group of column definitions. Ea
    Updated Boolean Column properties
    ```
 
-1. Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>.
+#### Update Option Values
 
-   Change the `TrueOption` value label to 'Up'.
+Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action>. 
+
+> [!NOTE]
+> Here we are applying changes to options in a boolean attribute, but you will use `UpdateOptionValue` for options in any type of column that uses them except `status` columns, where you must use the <xref:Microsoft.Dynamics.CRM.UpdateStateValue?text=UpdateStateValue Action>.
+
+1. Change the `TrueOption` value label to 'Up'.
 
    **Request**
 
@@ -1736,7 +1741,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    OData-Version: 4.0
    ```
 
-   Change the `FalseOption` value label to 'Down'.
+1. Change the `FalseOption` value label to 'Down'.
 
    **Request**
 
@@ -1785,144 +1790,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Updated option labels
    ```
 
-1. Retrieve the modified option values for the Boolean column.
-
-   **Request**
-
-   ```http
-   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_boolean')/Microsoft.Dynamics.CRM.BooleanAttributeMetadata?$select=MetadataId&$expand=OptionSet HTTP/1.1
-   Consistency: Strong
-   OData-MaxVersion: 4.0
-   OData-Version: 4.0
-   If-None-Match: null
-   Accept: application/json
-   ```
-
-   **Response**
-
-   ```http
-   HTTP/1.1 200 OK
-   OData-Version: 4.0
-
-   {
-   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,OptionSet())/$entity",
-   "MetadataId": "73f33b3d-112a-ed11-9db1-00224804f8e2",
-   "OptionSet": {
-      "MetadataId": "74f33b3d-112a-ed11-9db1-00224804f8e2",
-      "HasChanged": null,
-      "IsCustomOptionSet": true,
-      "IsGlobal": false,
-      "IsManaged": false,
-      "Name": "sample_bankaccount_sample_boolean",
-      "ExternalTypeName": null,
-      "OptionSetType": "Boolean",
-      "IntroducedVersion": "1.0.0.0",
-      "Description": {
-         "LocalizedLabels": [
-         {
-            "Label": "Boolean Attribute",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Boolean Attribute",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "76f33b3d-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "DisplayName": {
-         "LocalizedLabels": [
-         {
-            "Label": "Sample Boolean",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Sample Boolean",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "75f33b3d-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "IsCustomizable": {
-         "Value": true,
-         "CanBeChanged": true,
-         "ManagedPropertyLogicalName": "iscustomizable"
-      },
-      "TrueOption": {
-         "Value": 1,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-         "LocalizedLabels": [
-            {
-               "Label": "Up",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
-               "HasChanged": null
-            }
-         ],
-         "UserLocalizedLabel": {
-            "Label": "Up",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "12049c5f-e99d-453f-8315-3933512539a1",
-            "HasChanged": null
-         }
-         },
-         "Description": {
-         "LocalizedLabels": [],
-         "UserLocalizedLabel": null
-         }
-      },
-      "FalseOption": {
-         "Value": 0,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-         "LocalizedLabels": [
-            {
-               "Label": "Down",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
-               "HasChanged": null
-            }
-         ],
-         "UserLocalizedLabel": {
-            "Label": "Down",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "e3d4c2b1-ad54-4d3a-8e01-f759da0e476f",
-            "HasChanged": null
-         }
-         },
-         "Description": {
-         "LocalizedLabels": [],
-         "UserLocalizedLabel": null
-         }
-      }
-   }
-   }
-   ```
+1. Retrieve the modified option values for the Boolean column using the same query as before:
 
    **Console output**
 
@@ -2966,10 +2834,12 @@ This section will create and retrieve a selected group of column definitions. Ea
         Value:727000004 Label:Foxtrot
    ```
 
-1. Add an option to the choice column using the <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
+#### Add an option to the local optionset
 
-   > [!NOTE]
-   > `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
+Add an option to the choice column using the <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
+
+> [!NOTE]
+> `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
 
    **Request**
 
@@ -3023,272 +2893,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Added new option with label 'Echo'
    ```
 
-1. Retrieve the choice column options again.
-
-   **Request**
-
-   ```http
-   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-   Consistency: Strong
-   OData-MaxVersion: 4.0
-   OData-Version: 4.0
-   If-None-Match: null
-   Accept: application/json
-   ```
-
-   **Response**
-
-   ```http
-   HTTP/1.1 200 OK
-   OData-Version: 4.0
-
-   {
-   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-   "SchemaName": "sample_Choice",
-   "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
-   "OptionSet": {
-      "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
-      "HasChanged": null,
-      "IsCustomOptionSet": true,
-      "IsGlobal": false,
-      "IsManaged": false,
-      "Name": "sample_bankaccount_sample_choice",
-      "ExternalTypeName": null,
-      "OptionSetType": "Picklist",
-      "IntroducedVersion": "1.0.0.0",
-      "ParentOptionSetName": null,
-      "Description": {
-         "LocalizedLabels": [
-         {
-            "Label": "Choice Attribute",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Choice Attribute",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "DisplayName": {
-         "LocalizedLabels": [
-         {
-            "Label": "Sample Choice",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Sample Choice",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "IsCustomizable": {
-         "Value": true,
-         "CanBeChanged": true,
-         "ManagedPropertyLogicalName": "iscustomizable"
-      },
-      "Options": [
-         {
-         "Value": 727000000,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Bravo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Bravo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000001,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Delta",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Delta",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000002,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Alpha",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Alpha",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000003,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Charlie",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Charlie",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000004,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Foxtrot",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Foxtrot",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000005,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": null,
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Echo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Echo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         }
-      ]
-   }
-   }
-   ```
+1. Retrieve the choice column options again using the same query as before:
 
    **Console output**
 
@@ -3301,6 +2906,8 @@ This section will create and retrieve a selected group of column definitions. Ea
         Value: 727000004, Label:Foxtrot
         Value: 727000005, Label:Echo
    ```
+
+#### Re-order choice column options
 
 1. Re-order the Choice column options using the <xref:Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action>.
 
@@ -3341,272 +2948,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Options re-ordered.
    ```
 
-1. Retrieve the Choice column options again to see the options in the new order.
-
-   **Request**
-
-   ```http
-   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_choice')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-   Consistency: Strong
-   OData-MaxVersion: 4.0
-   OData-Version: 4.0
-   If-None-Match: null
-   Accept: application/json
-   ```
-
-   **Response**
-
-   ```http
-   HTTP/1.1 200 OK
-   OData-Version: 4.0
-
-   {
-   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-   "SchemaName": "sample_Choice",
-   "MetadataId": "4a154e49-112a-ed11-9db1-00224804f8e2",
-   "OptionSet": {
-      "MetadataId": "4b154e49-112a-ed11-9db1-00224804f8e2",
-      "HasChanged": null,
-      "IsCustomOptionSet": true,
-      "IsGlobal": false,
-      "IsManaged": false,
-      "Name": "sample_bankaccount_sample_choice",
-      "ExternalTypeName": null,
-      "OptionSetType": "Picklist",
-      "IntroducedVersion": "1.0.0.0",
-      "ParentOptionSetName": null,
-      "Description": {
-         "LocalizedLabels": [
-         {
-            "Label": "Choice Attribute",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Choice Attribute",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "4d154e49-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "DisplayName": {
-         "LocalizedLabels": [
-         {
-            "Label": "Sample Choice",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Sample Choice",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "4c154e49-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "IsCustomizable": {
-         "Value": true,
-         "CanBeChanged": true,
-         "ManagedPropertyLogicalName": "iscustomizable"
-      },
-      "Options": [
-         {
-         "Value": 727000002,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Alpha",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Alpha",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "8db04562-9ec3-4014-a170-0482bbb94e44",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000000,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Bravo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Bravo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "bc8d1815-75b7-4c13-b618-7959aaf4abb6",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000003,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Charlie",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Charlie",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "d00dc11e-ed91-478b-ac78-86b6784326ad",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000001,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Delta",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Delta",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "c3613791-85a0-41ac-8575-91aca4bb91e8",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000005,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": null,
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Echo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Echo",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "7d9c281a-23fc-4a3a-b413-761099b2384c",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000004,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Foxtrot",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Foxtrot",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "36a565b7-cd21-4505-812b-5567c28eec23",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         }
-      ]
-   }
-   }
-   ```
+1. Retrieve the Choice column options again using the same query as before to see the options in the new order.
 
    **Console output**
 
@@ -3619,6 +2961,8 @@ This section will create and retrieve a selected group of column definitions. Ea
         Value: 727000005, Label:Echo
         Value: 727000004, Label:Foxtrot
    ```
+
+#### Delete local option value
 
 1. Delete an option using <xref:Microsoft.Dynamics.CRM.DeleteOptionValue?text=DeleteOptionValue Action>.
 
@@ -3798,179 +3142,7 @@ This section will create and retrieve a selected group of column definitions. Ea
    Created MultiSelect Choice column with id:2c1c3050-112a-ed11-9db1-00224804f8e2
    ```
 
-1. Retrieve the multi-select choice column options.
-
-   **Request**
-
-   ```http
-   GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_multiselectchoice')/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet HTTP/1.1
-   Consistency: Strong
-   OData-MaxVersion: 4.0
-   OData-Version: 4.0
-   If-None-Match: null
-   Accept: application/json
-   ```
-
-   **Response**
-
-   ```http
-   HTTP/1.1 200 OK
-   OData-Version: 4.0
-
-   {
-   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('sample_bankaccount')/Attributes/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata(SchemaName,OptionSet())/$entity",
-   "SchemaName": "sample_MultiSelectChoice",
-   "MetadataId": "2c1c3050-112a-ed11-9db1-00224804f8e2",
-   "OptionSet": {
-      "MetadataId": "2d1c3050-112a-ed11-9db1-00224804f8e2",
-      "HasChanged": null,
-      "IsCustomOptionSet": true,
-      "IsGlobal": false,
-      "IsManaged": false,
-      "Name": "sample_bankaccount_sample_multiselectchoice",
-      "ExternalTypeName": null,
-      "OptionSetType": "Picklist",
-      "IntroducedVersion": "1.0.0.0",
-      "ParentOptionSetName": null,
-      "Description": {
-         "LocalizedLabels": [
-         {
-            "Label": "MultiSelect Choice Attribute",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "2f1c3050-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "MultiSelect Choice Attribute",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "2f1c3050-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "DisplayName": {
-         "LocalizedLabels": [
-         {
-            "Label": "Sample MultiSelect Choice",
-            "LanguageCode": 1033,
-            "IsManaged": false,
-            "MetadataId": "2e1c3050-112a-ed11-9db1-00224804f8e2",
-            "HasChanged": null
-         }
-         ],
-         "UserLocalizedLabel": {
-         "Label": "Sample MultiSelect Choice",
-         "LanguageCode": 1033,
-         "IsManaged": false,
-         "MetadataId": "2e1c3050-112a-ed11-9db1-00224804f8e2",
-         "HasChanged": null
-         }
-      },
-      "IsCustomizable": {
-         "Value": true,
-         "CanBeChanged": true,
-         "ManagedPropertyLogicalName": "iscustomizable"
-      },
-      "Options": [
-         {
-         "Value": 727000000,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Appetizer",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "f88708bf-872e-43db-b648-e06c4ca7bd7c",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Appetizer",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "f88708bf-872e-43db-b648-e06c4ca7bd7c",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000001,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Entree",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "167ea50e-0b0a-4606-8a87-f23750219f2f",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Entree",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "167ea50e-0b0a-4606-8a87-f23750219f2f",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         },
-         {
-         "Value": 727000002,
-         "Color": null,
-         "IsManaged": false,
-         "ExternalValue": "",
-         "ParentValues": [],
-         "MetadataId": null,
-         "HasChanged": null,
-         "Label": {
-            "LocalizedLabels": [
-               {
-               "Label": "Dessert",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "698a32bf-d4f8-443a-8ca6-8b598d39e0f3",
-               "HasChanged": null
-               }
-            ],
-            "UserLocalizedLabel": {
-               "Label": "Dessert",
-               "LanguageCode": 1033,
-               "IsManaged": false,
-               "MetadataId": "698a32bf-d4f8-443a-8ca6-8b598d39e0f3",
-               "HasChanged": null
-            }
-         },
-         "Description": {
-            "LocalizedLabels": [],
-            "UserLocalizedLabel": null
-         }
-         }
-      ]
-   }
-   }
-   ```
+1. Retrieve the multi-select choice column options using `GET EntityDefinitions(LogicalName='sample_bankaccount')/Attributes(LogicalName='sample_multiselectchoice')/Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?$select=SchemaName&$expand=OptionSet`
 
    **Console output**
 
@@ -6034,7 +5206,7 @@ Deleting created records...
    ```
 
 
-1. Get the id of the managed solution by uniquename so you can delete it.
+1. Get the `solutionid` of the managed solution by `uniquename` so you can delete it.
 
    **Request**
 
