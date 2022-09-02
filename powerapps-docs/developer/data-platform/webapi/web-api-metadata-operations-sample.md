@@ -2836,10 +2836,10 @@ Update each of the boolean options using <xref:Microsoft.Dynamics.CRM.UpdateOpti
 
 #### Add an option to the local optionset
 
-Add an option to the choice column using the <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
-
-> [!NOTE]
-> `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
+1. Add an option to the choice column using the <xref:Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action>.
+   
+   > [!NOTE]
+   > `InsertOptionValue` and the following actions to work with options has a `SolutionUniqueName` parameter for you to set the solution unique name rather than by using the `MSCRM.SolutionUniqueName` request header.
 
    **Request**
 
@@ -2899,12 +2899,12 @@ Add an option to the choice column using the <xref:Microsoft.Dynamics.CRM.Insert
 
    ```
    The option values for the picklist:
-        Value: 727000000, Label:Bravo
-        Value: 727000001, Label:Delta
-        Value: 727000002, Label:Alpha
-        Value: 727000003, Label:Charlie
-        Value: 727000004, Label:Foxtrot
-        Value: 727000005, Label:Echo
+         Value: 727000000, Label:Bravo
+         Value: 727000001, Label:Delta
+         Value: 727000002, Label:Alpha
+         Value: 727000003, Label:Charlie
+         Value: 727000004, Label:Foxtrot
+         Value: 727000005, Label:Echo
    ```
 
 #### Re-order choice column options
@@ -3215,7 +3215,10 @@ Created new Status value:727000000
 
 ## Section 3: Create and use Global OptionSet
 
-1. Create a global choice (optionset).
+1. Create a global choice (optionset). This optionset is named `sample_colors` and contains options for Red, Yellow, and Green.
+   
+   > [!NOTE]
+   > The request specifies the option values using the publisher `customizationoptionvalueprefix`.
 
    **Request**
 
