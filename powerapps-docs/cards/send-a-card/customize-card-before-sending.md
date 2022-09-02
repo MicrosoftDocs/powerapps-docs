@@ -1,7 +1,7 @@
 ---
 title: "Customize a card before sending"
 description: "Learn how to customize a card before sharing with teammates"
-keywords: "Cards Designer, Power Apps, Cards, share a card, send a card, customize"
+keywords: "Card Designer, Power Apps, cards, share a card, send a card, customize"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw

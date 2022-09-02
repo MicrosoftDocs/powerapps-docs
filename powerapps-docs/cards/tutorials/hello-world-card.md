@@ -1,8 +1,8 @@
 ﻿---
 title: "Building a hello world card"
 description: "Learn about basic elements of a card by creating a simple card"
-keywords: "Cards Designer, Power Apps, Cards, tutorial"
-ms.date: 03/18/2022
+keywords: "Card Designer, Power Apps, cards, tutorial"
+ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
 ms.author: iawilt

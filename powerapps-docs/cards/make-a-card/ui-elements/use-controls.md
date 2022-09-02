@@ -1,7 +1,7 @@
 ---
 title: "Use controls"
 description: "Learn how to build a card with multiple controls"
-keywords: "Cards Designer, Power Apps, Cards, controls"
+keywords: "Card Designer, Power Apps, cards, controls"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw

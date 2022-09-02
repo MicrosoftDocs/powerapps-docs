@@ -1,7 +1,7 @@
 ---
 title: "Use variables"
 description: "Learn how to use variables in cards"
-keywords: "Cards Designer, Power Apps, Cards, variables"
+keywords: "Card Designer, Power Apps, cards, variables"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw

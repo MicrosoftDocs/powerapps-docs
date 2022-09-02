@@ -1,7 +1,7 @@
 ---
 title: "Create a card with data from Dataverse"
 description: "Create a card that uses connectors"
-keywords: "Cards Designer, Power Apps, Cards, tutorial, Dataverse, connectors"
+keywords: "Card Designer, Power Apps, cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw

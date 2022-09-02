@@ -1,7 +1,7 @@
 ---
 title: "Card controls"
 description: "Learn about the different controls available for cards"
-keywords: "Cards Designer, Power Apps, Cards, controls"
+keywords: "Card Designer, Power Apps, cards, controls"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw

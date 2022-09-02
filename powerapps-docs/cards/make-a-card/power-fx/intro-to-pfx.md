@@ -1,7 +1,7 @@
 ---
-title: "Intro to Power FX"
-description: "Learn about Power FX and how it's used in Power Cards"
-keywords: "Cards Designer, Power Apps, Cards, Power FX"
+title: "Adding business logic to your cards"
+description: "Learn about Power FX and how it's used in cards to add business logic"
+keywords: "Card Designer, Power Apps, cards, Power Fx"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,6 +12,6 @@ ms.custom:
 ms.collection: 
 ---
 
-# Intro to Power FX
+# Add business logic
 
-placeholder
+placeholder - Use Power Fx to add business logic

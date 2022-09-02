@@ -1,7 +1,7 @@
 ---
 title: "Compound Shopping List"
 description: "Create a compound shopping list card, using more features of power cards"
-keywords: "Cards Designer, Power Apps, Cards, tutorial"
+keywords: "Card Designer, Power Apps, cards, tutorial"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw

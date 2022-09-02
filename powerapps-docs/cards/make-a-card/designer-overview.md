@@ -1,7 +1,7 @@
 ---
 title: "Card Designer overview"
 description: "Learn about the designer in Power Cards to confidently create cards"
-keywords: "Card Designer, Power Apps, Cards"
+keywords: "Card Designer, Power Apps, cards"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
