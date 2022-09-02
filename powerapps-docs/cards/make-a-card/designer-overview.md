@@ -1,7 +1,7 @@
 ---
-title: "Cards Designer overview"
+title: "Card Designer overview"
 description: "Learn about the designer in Power Cards to confidently create cards"
-keywords: "Cards Designer, Power Apps, Cards"
+keywords: "Card Designer, Power Apps, Cards"
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,14 +12,12 @@ ms.custom:
 ms.collection: 
 ---
 
-# Cards Designer overview
+# Card Designer overview
 
-## What is the Cards Designer?
+The Cards Designer is where makers can build out cards to suit their own needs, enabling them to optimize and automate business user tasks and to create actionable scenarios in interactive and easy-to-make cards. The Designer builds off of the designer for Adaptive Cards, introducing a few new concepts:
 
-The Power Apps Cards Designer is where Excel-level users can build out cards to suit their own needs, enabling them to optimize and automate business user tasks and to create actionable scenarios in interactive and easy-to-make cards. The Designer builds off of the designer for Adaptive Cards, introducing a few new concepts:
-
-- PowerFX: specify an action to trigger when an element is selected
-- Connectors: bring data into cards (for now, only Bing Search)
+- Power Fx: specify an action to trigger when an element is selected
+- Connectors: bring data into cards (for now, only Dataverse)
 - Variables: store, bind, and reuse data across a card
 - Dataverse: stores each card you create and allows you to retrieve the card at send time
 
@@ -27,11 +25,7 @@ The Power Apps Cards Designer is where Excel-level users can build out cards to 
 
 To get to the Card Designer, follow the instructions below:
 
-1. Navigate to [aka.ms/pcdesigner](https://make.test.powerapps.com/environment/8c0760a1-b9cb-473d-8fdd-8afa2ea50eb3/cards/list).
-
-1. Go to the Environment selector at the top of the page and make sure you're in the Environment PowerCards S environment.
-
-   :::image type="content" source="../media/designer-overview/verify-selected-environment.png" alt-text="Screenshot verifying you're in the correct environment." border="false":::
+1. Navigate to [https://make.powerapps.com](https://make.powerapps.com).
 
 1. Go to the left side pane to access all of the Card-related views.
 
@@ -40,7 +34,7 @@ To get to the Card Designer, follow the instructions below:
 
       :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen." border="false":::
 
-1. From **Cards** > **Create**, select the Basic card tile to start creating your own card.
+1. From **Cards** > **Create**, select **Create a card** to start building your own card.
 
 ## What's in the Designer
 
@@ -50,7 +44,7 @@ The Designer is made up of the following elements:
 - Tool pane
 - Card canvas
 - Property pane
-- PowerFX editor
+- Formula bar
 - Play button
 
 :::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Power Apps Cards Designer with elements highlighted." border="false":::
@@ -64,7 +58,6 @@ The navigation bar allows you to swap between the different tools available in t
 - Elements (default view): main UI for editing the card
 - Data connections: add connectors to your card to use data from external sources
 - Variables: store, bind, and reuse data across a card.
-
 
 ### Tool pane
 
@@ -93,9 +86,11 @@ Each property pane also contains Advanced features, which allow you to specify t
 
 You can also input PowerFX expressions into the properties, utilizing low-code solutions to make your card more powerful.
 
-### Power FX editor
+### Power Fx editor
 
-The PowerFX editor sits at the top of the card designer and allows you to write PowerFX expressions with intellisense. When you select an element on the card, the PowerFX editor lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. To get started with PowerFX, see [Intro to Power FX](../make-a-card/power-fx/intro-to-pfx.md). For more information on the specific functions you can use, see the Microsoft documentation for [Prebuilt Adaptive Expressions](/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions) and [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
+The formula bar sits at the top of the card designer and allows you to write Power Fx expressions with intellisense. When you select an element on the card, the formula bar lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made. To get started with Power Fx, see [Intro to Power FX](../make-a-card/power-fx/intro-to-pfx.md). For more information on the specific functions you can use, see the Microsoft documentation for [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
+
+Note that some expressions supported in Power Apps will not be available for cards during preview.
 
 ### Play button
 

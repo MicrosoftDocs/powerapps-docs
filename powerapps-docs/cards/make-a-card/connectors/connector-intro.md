@@ -12,7 +12,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Intro to Connectors
+# Connectors
 
 Connectors are an important part of Power Apps, allowing your card to talk to other apps, data, and devices in the cloud.
 
@@ -20,4 +20,6 @@ For more information on Connectors in Power Platform, see [Connectors overview](
 
 ## Types of connectors
 
-As a part of preview, only connections to Dataverse are available. You can connect to Dataverse tables to read, write, create, and update records. 
+Within Teams, only connections to Dataverse are available. You can connect to Dataverse tables for creating, reading, updating, and deleting records.
+
+Learn how to [create a card with data from Dataverse](../../tutorials/dataverse-card.md).

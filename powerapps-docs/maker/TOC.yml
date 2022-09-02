@@ -2910,6 +2910,8 @@
               href: ../cards/make-a-card/management/manage-cards.md
     - name: Send cards
       items:
+        - name: Customize before sending
+          href: ../cards/send-a-card/customize-card-before-sending.md
         - name: Send a card in Teams
           href: ../cards/send-a-card/send-card-in-teams.md
     - name: Tutorials
