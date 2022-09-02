@@ -16,7 +16,7 @@ ms.collection:
 
 In this tutorial, you'll learn how to ask a user for their name and then show that name in the title of a card.
 
-1. Create a card in Power Cards: in your environment, go to **Cards** in the left pane, select **Create**, then select **Basic card**.
+1. Create a card in Power Apps: in your environment, go to **Cards** in the left pane, select **Create**, then select **Basic card**.
 
 1. Name your card something you'll remember; here, we're using `GetPrefilledCard`. Once you've named your card, select **Create card**.
 
