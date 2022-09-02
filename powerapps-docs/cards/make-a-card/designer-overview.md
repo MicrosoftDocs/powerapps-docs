@@ -64,7 +64,7 @@ The navigation bar allows you to swap between the different tools available in t
 - Elements (default view): main UI for editing the card
 - Data connections: add connectors to your card to use data from external sources
 - Variables: store, bind, and reuse data across a card.
-- Power Automate: add Power Automate flows to your card to add automation to your cards, allowing them to take care of repetitive tasks. See [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started) for more information.
+
 
 ### Tool pane
 
