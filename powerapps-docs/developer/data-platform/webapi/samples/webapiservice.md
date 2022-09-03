@@ -190,12 +190,10 @@ These classes also provide examples of specific operations that can be applied u
 
 Within an application, you may also create custom messages, for example representing a Custom API in your environment, using the same pattern. These are modular classes and are not required to be included in the `WebAPIService.Messages` folder.
 
-<!-- 
-TODO: add this later
-You can see an example of this in the [FunctionsAndActions Sample](../FunctionsAndActions) :
-- [Messages/IsSystemAdminRequest.cs](../FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
-- [Messages/IsSystemAdminResponse.cs](../FunctionsAndActions/Messages/IsSystemAdminResponse.cs) -->
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for the corresponding classes to use this message are located in the sample application that uses it:
 
+- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs ](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
+- [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
 
 ### *Request classes
 
@@ -346,9 +344,8 @@ The following methods are included:
 |`Upsert` |`Task<UpsertResponse>`|Performs an Upsert on a record.|
 
 Within an a sample application using WebAPIService when the operation doesn't represent an API found in Dataverse by default, the method will be defined in the application rather than in the WebAPIService. 
-<!-- 
-TODO add later
-The [FunctionsAndActions Sample](../FunctionsAndActions) has this custom method included: [/Methods/IsSystemAdmin.cs](../FunctionsAndActions/Methods/IsSystemAdmin.cs) -->
+
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs ](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
 
 ## Types
 
@@ -356,7 +353,17 @@ The `Types` folder contains any classes or enums that correspond to <xref:Micros
 
 ## Metadata
 
-The `Metadata` folder contains Messages and Types specific to operations that work with Dataverse Schema definitions. These are frequently classes with many properties that return complex types.
+The `Metadata` folder contains `Messages` and `Types` specific to operations that work with Dataverse Schema definitions. These are frequently classes with many properties that return complex types. These types are used in the [Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md).
+
+### See also
+
+[Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
+[Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
+[Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
+[Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
+[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
+[Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

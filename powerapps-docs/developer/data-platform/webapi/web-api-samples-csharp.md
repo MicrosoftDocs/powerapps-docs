@@ -30,7 +30,7 @@ The following is required to build and run the Dataverse Web API C# samples :
 
 ## WebApiService class library
 
-These samples use the [WebAPIService class library (C#)](samples/webapiservice.md) to provide re-usable common code that handles re-triable service protection limit errors. More information [Service protection API limits](../api-limits.md)
+These samples use the [WebAPIService class library (C#)](samples/webapiservice.md) to provide re-usable common code that handles re-triable service protection limit errors. More information: [Service protection API limits](../api-limits.md)
 
 <a name="bkmk_webApiSamplesListing"></a>
 

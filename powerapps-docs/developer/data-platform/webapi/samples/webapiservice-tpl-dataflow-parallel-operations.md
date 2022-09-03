@@ -76,10 +76,11 @@ By default this sample will delete all the records created in it. If you want to
 [Update and delete table rows using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Service protection API limits](../../api-limits.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
-[Web API Basic Operations Sample](../web-api-basic-operations-sample.md)
-[Web API Query Data Sample (C#)](webapiservice-query-data.md)<br />
-[Web API Conditional Operations Sample (C#)](webapiservice-conditional-operations.md)<br />
+[Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
+[Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
+[Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
 [Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

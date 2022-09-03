@@ -138,5 +138,11 @@ Operations: A reference to each record created in this sample was added to a lis
 [Query Data using the Web API](../query-data-web-api.md)  
 [Web API Query Data Sample](../web-api-query-data-sample.md)  
 [Use the Dataverse Web API](../overview.md)
+[Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
+[Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
+[Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
+[Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
+[Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
+[Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

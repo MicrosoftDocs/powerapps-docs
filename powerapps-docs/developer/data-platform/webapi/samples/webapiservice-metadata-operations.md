@@ -162,11 +162,11 @@ By default this sample will delete all the records created in it. If you want to
 [WebAPIService class library (C#)](webapiservice.md)<br />
 [Use the Web API with table definitions](../use-web-api-metadata.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
-[Web API Basic Operations Sample](../web-api-basic-operations-sample.md)<br />
-[Web API Query Data Sample (C#)](webapiservice-query-data.md)<br />
+[Web API Basic Operations Sample (C#)](webapiservice-basic-operations.md)<br />
+[Web API Query Data sample (C#)](webapiservice-query-data.md)<br />
 [Web API Conditional Operations sample (C#)](webapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md)<br />
-[Web API CDSWebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
+[Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
