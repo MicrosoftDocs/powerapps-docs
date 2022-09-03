@@ -1,5 +1,5 @@
 ---
-title: "Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+title: "Web API Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to query data of Microsoft Dataverse entity instances, using the Dataverse Web API along with the WebApiService class."
 ms.date: 08/29/2022
 author: divka78
@@ -14,7 +14,7 @@ contributors:
   - JimDaly
 ---
 
-# Query Data sample (C#)
+# Web API Query Data sample (C#)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
