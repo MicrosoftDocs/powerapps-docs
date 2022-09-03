@@ -466,6 +466,11 @@ Before you leave this topic, consider saving your project as a project template.
 
 Use the following resources to learn more:
 
-> [!div class="nextstepaction"] > [Perform operations using the Web API](perform-operations-web-api.md)<br /><br /> > [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br /><br /> > [Review Web API samples (C#) on GitHub](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23)
+> [!div class="nextstepaction"]
+> [Perform operations using the Web API](perform-operations-web-api.md)
+> [!div class="nextstepaction"]
+> [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)
+> [!div class="nextstepaction"]
+> [Review Web API samples (C#) on GitHub](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
