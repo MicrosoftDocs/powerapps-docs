@@ -262,7 +262,7 @@ More information: [Access table data faster using storage partitions](azure-stor
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

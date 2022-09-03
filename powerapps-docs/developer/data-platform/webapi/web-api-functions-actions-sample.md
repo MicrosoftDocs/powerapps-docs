@@ -20,7 +20,7 @@ contributors:
 
 This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Microsoft Dataverse Web API. This sample is implemented as a separate project for the following languages:  
   
-- [Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)
+- [Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)
 - [Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)
   
 This topic explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample topics above for language-specific implementation details about how to perform the operations described in this topic.  
