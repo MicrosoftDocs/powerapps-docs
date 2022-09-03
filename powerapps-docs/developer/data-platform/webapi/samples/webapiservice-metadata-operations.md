@@ -23,7 +23,7 @@ This .NET 6.0 sample demonstrates how to perform operations that create and modi
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
   
 > [!NOTE]
-> This sample implements the Dataverse operations and console output detailed in [Web API Metadata Operations Sample](../web-api-metadata-operations-sample) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).
+> This sample implements the Dataverse operations and console output detailed in [Web API Metadata Operations Sample](../web-api-metadata-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).
 
 ## Prerequisites
 
@@ -125,7 +125,7 @@ Operations:
 Operations:
 
 1. Create a N:1 relationship between `sample_BankAccount` and `account` tables by sending `POST` a request to `/RelationshipDefinitions`.
-1. Retrieve the N:1 relationship by sending a `GET` request to `/RelationshipDefinitions(<id>)`.
+1. Retrieve the N:1 relationship by sending a `GET` request to `/RelationshipDefinitions(<id>)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
 
 ### Section 7: Create and retrieve a many-to-many relationship
 
@@ -148,8 +148,8 @@ Operations: A reference to each record created in this sample was added to a lis
 
 Operations:
 
-1. Import the solution exported in Section 8 using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
-1. Query the solution table to get the id of the imported solution
+1. Import the solution exported in [Section 8](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
+1. Query the solution table to get the id of the imported solution.
 1. Delete the imported solution.
 
 ## Clean up

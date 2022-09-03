@@ -60,9 +60,9 @@ This sample first sends a request simply to access the value of the `x-ms-dop-hi
 
 To encounter service protection limits with this sample you should raise the `numberOfRecords` variable to over 10,000 or whatever is needed for the sample to run for more than 5 minutes. You should also change the code to set the `maxDegreeOfParallelism` to be significantly greater than `x-ms-dop-hint` response header value. Then, using Fiddler you should be able to observe how WebAPIService retries the requests that return this error.
 
-This example uses the [Parallel.ForEachAsync Method](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.parallel.foreachasync) introduced with .NET 6.0.
+This example uses the [Parallel.ForEachAsync Method](/dotnet/api/system.threading.tasks.parallel.foreachasync) introduced with .NET 6.0.
 
-This sample processes a list of requests to create account records, sending the requests in parallel and then uses the data returned to add requests to delete the created accounts to a [ConcurrentBag](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0). After the records are created, the number of seconds to create the records is displayed.
+This sample processes a list of requests to create account records, sending the requests in parallel and then uses the data returned to add requests to delete the created accounts to a [ConcurrentBag](/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0). After the records are created, the number of seconds to create the records is displayed.
 
 Then, the delete requests in the `ConcurrentBag` are processed and the time spent deleting the records is displayed.
 
