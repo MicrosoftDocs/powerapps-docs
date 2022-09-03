@@ -280,6 +280,8 @@ The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement
 
 Learn how to structure your code for a better design.
 
-> [!div class="nextstepaction"] > [Enhanced quick start](enhanced-quick-start.md)<br/>
+> [!div class="nextstepaction"]
+> [Enhanced quick start](enhanced-quick-start.md)
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
