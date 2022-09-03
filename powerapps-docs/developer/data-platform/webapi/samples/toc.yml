@@ -27,12 +27,12 @@ items:
       href: webapiservice-conditional-operations.md
     - name: Functions and Actions
       href: webapiservice-functions-and-actions.md
+    - name: Metadata Operations
+      href: webapiservice-metadata-operations.md
     - name: Parallel Operations
       href: webapiservice-parallel-operations.md
     - name: TPL Dataflow Parallel Operations
-      href: webapiservice-tpl-dataflow-parallel-operations.md
-    - name: Metadata Operations
-      href: webapiservice-metadata-operations.md
+      href: webapiservice-tpl-dataflow-parallel-operations.md    
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
