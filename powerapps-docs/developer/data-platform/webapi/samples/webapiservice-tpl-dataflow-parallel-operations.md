@@ -19,7 +19,7 @@ contributors:
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 
-This .NET 6.0 sample demonstrates how to perform parallel data operations using the Dataverse Web API.
+This .NET 6.0 sample demonstrates how to perform parallel data operations using the Dataverse Web API with Task Parallel Library (TPL) Dataflow components. More information: [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 
@@ -60,7 +60,7 @@ This sample first sends a request simply to access the value of the `x-ms-dop-hi
 
 To encounter service protection limits with this sample you should raise the `numberOfRecords` variable to over 10,000 or whatever is needed for the sample to run for more than 5 minutes. You should also change the code to set the `maxDegreeOfParallelism` to be significantly greater than `x-ms-dop-hint` response header value. Then, using Fiddler you should be able to observe how WebAPIService retries the requests that return this error.
 
-This sample simply creates a configurable number of account records to create, which it will in turn delete. This sample uses dataflow components to process the records and transform the results of the create operation into the next phase that deletes these records. Because of the nature of this data flow, delete operations for previously created records will start before all the records to create are finished.
+This sample simply creates a configurable number of account records, which it will in turn delete. This sample uses dataflow components to process the records and transform the results of the create operation into the next phase that deletes these records. Because of the nature of this data flow, delete operations for previously created records will start before all the records to create are finished.
 
 You may want to compare this sample to the [Web API CDSWebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md).
 

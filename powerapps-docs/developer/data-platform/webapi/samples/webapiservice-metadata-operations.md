@@ -63,7 +63,7 @@ This sample has 11 regions:
 Operations: Create a solution record and an associated publisher record.
 
 > [!NOTE]
-> All solution components created in this sample will be associated to the solution so that they can be exported. This association is created using the `MSCRM.SolutionUniqueName` request header setting the solution unique name set as the value.
+> All solution components created in this sample will be associated to the solution so that they can be exported. For operations without a named message, this association is created using the `MSCRM.SolutionUniqueName` request header setting the solution unique name set as the value.
 > All names of solution components are prefixed using the publisher customization prefix.
 
 ### Section 1: Create, Retrieve and Update Table
@@ -71,8 +71,8 @@ Operations: Create a solution record and an associated publisher record.
 Operations:
 
 1. Create a new `sample_BankAccount` user-owned table by sending a `POST` request to `/EntityDefinitions`.
-1. Retrieve the created table by sending a `GET` request to `/EntityDefinitions`.
-1. Update the table by sending a `PUT` request to `/EntityDefinitions`.
+1. Retrieve the created table by sending a `GET` request to `/EntityDefinitions(LogicalName='sample_bankaccount')`.
+1. Update the table by sending a `PUT` request to `/EntityDefinitions(LogicalName='sample_bankaccount')`.
 
 ### Section 2: Create, Retrieve and Update Columns
 
@@ -98,9 +98,9 @@ Operations:
 
 Operations:
 
-1. Create a new global choice by sending a `POST` request to `/GlobalOptionSetDefinitions`.
-1. Retrieve the global choice by sending a `GET` request to  `/GlobalOptionSetDefinitions(<id value>)`.
-1. Create a new `sample_colors` choice column for the `sample_BankAccount` table by sending a `POST` request to `/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes`.
+1. Create a new global choice named `sample_colors` by sending a `POST` request to `/GlobalOptionSetDefinitions`.
+1. Retrieve the `sample_colors` global choice by sending a `GET` request to  `/GlobalOptionSetDefinitions(<id value>)`.
+1. Create a new `sample_colors` choice column for the `sample_BankAccount` table using the `sample_colors` global choice by sending a `POST` request to `/EntityDefinitions(LogicalName='sample_bankaccount')/Attributes` and associating it to the global choice.
 
 ### Section 4: Create Customer Relationship
 
@@ -115,8 +115,8 @@ Operations:
 Operations:
 
 1. Verify that the `sample_BankAccount` table is eligible to be referenced in a 1:N relationship using the <xref:Microsoft.Dynamics.CRM.CanBeReferenced?text=CanBeReferenced Function>.
-1. Verify that the contact table is eligible to be reference other tables in a 1:N relationship using the <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function>.
-1. Identify what other tables can reference the sample_BankAccount table in a 1:N relationship using the <xref:Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function>.
+1. Verify that the `contact` table is eligible to be reference other tables in a 1:N relationship using the <xref:Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Function>.
+1. Identify what other tables can reference the `sample_BankAccount` table in a 1:N relationship using the <xref:Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function>.
 1. Create a 1:N relationship between `sample_BankAccount` and `contact` tables by sending a `POST` request to `/RelationshipDefinitions`.
 1. Retrieve the 1:N relationship by sending `GET` request to `/RelationshipDefinitions(<id>)/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata`.
 
@@ -138,7 +138,7 @@ Operations:
 
 ### Section 8: Export managed solution
 
-Operations: Export the solution containing the items created in this sample using the <xref:Microsoft.Dynamics.CRM.ExportSolution?text=ExportSolution Action>.
+Operations: Export the solution created in [Section 0: Create Publisher and Solution](#section-0-create-publisher-and-solution) containing the items created in this sample using the <xref:Microsoft.Dynamics.CRM.ExportSolution?text=ExportSolution Action>.
 
 ### Section 9: Delete sample records
 
@@ -149,8 +149,8 @@ Operations: A reference to each record created in this sample was added to a lis
 Operations:
 
 1. Import the solution exported in [Section 8](#section-8-export-managed-solution) using the <xref:Microsoft.Dynamics.CRM.ImportSolution?text=ImportSolution Action>.
-1. Query the solution table to get the id of the imported solution.
-1. Delete the imported solution.
+1. Query the solution table to get the `solutionid` of the imported solution.
+1. Delete the imported solution using the `solutionid`.
 
 ## Clean up
 

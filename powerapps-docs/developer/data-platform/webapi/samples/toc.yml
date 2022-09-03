@@ -29,7 +29,7 @@ items:
       href: webapiservice-functions-and-actions.md
     - name: Parallel Operations
       href: webapiservice-parallel-operations.md
-    - name: Parallel Operations with TPL Dataflow components
+    - name: TPL Dataflow Parallel Operations
       href: webapiservice-tpl-dataflow-parallel-operations.md
     - name: Metadata Operations
       href: webapiservice-metadata-operations.md
