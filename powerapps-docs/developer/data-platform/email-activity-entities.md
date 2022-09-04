@@ -52,8 +52,8 @@ The <xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest> and <xref:Microsoft.Cr
 1. The email router, Dynamics 365 for Outlook, or a third-party email send component polls Dataverse for pending email messages, and if one is found, downloads it by using the `BackgroundSendEmail` request.  
 1. The `BackgroundSendEmail` request performs the following operations: checks if pending email messages are present, downloads the email to the caller of the <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> message, and synchronizes the downloads if there are multiple callers.  
 
-  > [!NOTE]
-  > Your email service provider may have limits which affect how many emails you can send within a period of time. More information: [Exchange Online limits > Sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+   > [!NOTE]
+   > Your email service provider may have limits which affect how many emails you can send within a period of time. More information: [Exchange Online limits > Sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 1. The caller of the <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> message receives the downloaded email message, and sends it out.  
   
@@ -93,7 +93,9 @@ To reuse an existing file attachment:
 1. Retrieve the `ActivityMimeAttachment` row that contains the attachment file that you want to reuse, as shown in the following code example:  
   
    ```csharp  
-   ActivityMimeAttachment retrievedAttachment = (ActivityMimeAttachment)_serviceProxy.Retrieve(ActivityMimeAttachment.EntityLogicalName, _emailAttachmentId, new ColumnSet(true));  
+   ActivityMimeAttachment retrievedAttachment = 
+       (ActivityMimeAttachment)_serviceProxy
+       .Retrieve(ActivityMimeAttachment.EntityLogicalName, _emailAttachmentId, new ColumnSet(true));  
    ```  
   
 1. Create a new email attachment, associate it with the required email or email template row, and point it to the attached file of the retrieved `ActivityMimeAttachment` row, as shown in the following code example:  

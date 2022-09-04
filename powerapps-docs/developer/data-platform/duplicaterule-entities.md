@@ -63,22 +63,22 @@ Some system tables will have more than one active or inactive state.The followin
 | StateCode |Active State(s)|Inactive State(s)|  
 |-----------|---------------|-----------------|  
 |[Appointment.StateCode](reference/entities/appointment.md#BKMK_StateCode)|`Open`, `Scheduled`|`Completed`, `Canceled`|  
-|[CampaignActivity.StateCode](reference/entities/CampaignActivity.md#BKMK_StateCode)|`Open`|`Closed`, `Canceled`|  
-|[CampaignResponse.StateCode](reference/entities/CampaignResponse.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
-|[Contract.StateCode](reference/entities/Contract.md#BKMK_StateCode)|`Draft`, `Invoiced`, `On Hold`|`Canceled`, `Expired`|  
-|[ContractDetail.StateCode](reference/entities/ContractDetail.md#BKMK_StateCode)|`Existing`, `Renewed`|`Canceled`, `Expired`|  
+|CampaignActivity.StateCode|`Open`|`Closed`, `Canceled`|  
+|CampaignResponse.StateCode|`Open`|`Completed`, `Canceled`|  
+|Contract.StateCode|`Draft`, `Invoiced`, `On Hold`|`Canceled`, `Expired`|  
+|ContractDetail.StateCode|`Existing`, `Renewed`|`Canceled`, `Expired`|  
 |[Email.StateCode](reference/entities/Email.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
 |[Fax.StateCode](reference/entities/Fax.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
-|[Incident.StateCode](reference/entities/Incident.md#BKMK_StateCode)|`Active`|`Resolved`, `Canceled`, `Closed`|  
-|[Invoice.StateCode](reference/entities/Invoice.md#BKMK_StateCode)|`Active`|`Closed`, `Paid`, `Canceled`|  
+|Incident.StateCode|`Active`|`Resolved`, `Canceled`, `Closed`|  
+|Invoice.StateCode|`Active`|`Closed`, `Paid`, `Canceled`|  
 |[KbArticle.StateCode](reference/entities/KbArticle.md#BKMK_StateCode)|`Draft`, `Unapproved`, `Published`|N/A|  
-|[Lead.StateCode](reference/entities/Lead.md#BKMK_StateCode)|`Open`|`Qualified`, `Disqualified`|  
+|Lead.StateCode|`Open`|`Qualified`, `Disqualified`|  
 |[Letter.StateCode](reference/entities/Letter.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
-|[Opportunity.StateCode](reference/entities/Opportunity.md#BKMK_StateCode)|`Open`|`Won`, `Lost`|  
+|Opportunity.StateCode|`Open`|`Won`, `Lost`|  
 |[PhoneCall.StateCode](reference/entities/PhoneCall.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
-|[Quote.StateCode](reference/entities/Quote.md#BKMK_StateCode)|`Draft`, `Active`|`Won`, `Closed`|  
-|[SalesOrder.StateCode](reference/entities/SalesOrder.md#BKMK_StateCode)|`Active`, `Submitted`, `Invoiced`|`Canceled`, `Fulfilled`|  
-|[ServiceAppointment.StateCode](reference/entities/ServiceAppointment.md#BKMK_StateCode)|`Open`, `Scheduled`|`Closed`, `Canceled`|  
+|Quote.StateCode|`Draft`, `Active`|`Won`, `Closed`|  
+|SalesOrder.StateCode|`Active`, `Submitted`, `Invoiced`|`Canceled`, `Fulfilled`|  
+|ServiceAppointment.StateCode|`Open`, `Scheduled`|`Closed`, `Canceled`|  
 |[Task.StateCode](reference/entities/Task.md#BKMK_StateCode)|`Open`|`Completed`, `Canceled`|  
 
  For example, if you set the `ExcludeInactiveRecords` column to `true`, only `Active`, `Submitted`, and `Invoiced` sales orders will be considered for matching during duplicate detection. 
