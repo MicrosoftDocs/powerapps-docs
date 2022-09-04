@@ -86,8 +86,9 @@ foreach (var folderMapping in resp.MailboxTrackingFolderMappings)
 }  
 ```  
 
-### See also  
- <xref href="Microsoft.Dynamics.CRM.RetrieveMailboxTrackingFolders?text=RetrieveMailboxTrackingFolders Function" /><br />
+### See also
+
+ <xref:Microsoft.Dynamics.CRM.RetrieveMailboxTrackingFolders?text=RetrieveMailboxTrackingFolders Function><br />
  [MailboxTrackingFolder table](/reference/entities/mailboxtrackingfolder.md)<br />
  [Mailbox table](/reference/entities/mailbox.md)<br />
  [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)<br />
