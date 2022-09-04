@@ -18,7 +18,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps
+Model-driven and canvas ([experimental](../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages)) apps
 
 ## Syntax
 

@@ -17,7 +17,7 @@ contributors:
 
 ## Available for
 
-Model-driven and canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages)) apps
+Model-driven and canvas ([experimental](../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages))) apps
 
 ## Syntax
 
@@ -36,7 +36,7 @@ Type: `Promise`
 
 ## Limitations
 
-Canvas ([experimental](/powerapps-docs/maker/canvas-apps/working-with-experimental-preview#feature-roll-out-stages) apps do not support `Decimal Number` and `Floating Point Number` types.
+Canvas ([experimental](../../../maker/canvas-apps/working-with-experimental-preview.md#feature-roll-out-stages)) apps do not support `Decimal Number` and `Floating Point Number` types.
 
 ### Related topics
 
