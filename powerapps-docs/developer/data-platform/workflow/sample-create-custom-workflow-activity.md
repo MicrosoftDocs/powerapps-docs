@@ -33,7 +33,7 @@ This sample shows how to write a custom workflow activity that can create an acc
 
 ## Example
 
-[SimpleActivities.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/orgsvc/C%23/WorkflowActivities/WorkflowActivities/SimpleActivities.cs)
+[SimpleActivities.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23/WorkflowActivities/WorkflowActivities/SimpleActivities.cs)
 
 ### See also
 
