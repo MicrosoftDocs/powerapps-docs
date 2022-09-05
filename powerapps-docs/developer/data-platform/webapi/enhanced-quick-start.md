@@ -86,7 +86,7 @@ In Visual Studio, right-click the project in **Solution Explorer** and choose **
 
 In the [Quick start](quick-start-console-app-csharp.md) example, all the code is within the `Program.cs` file. We are going to move the code that deals with connecting and creating an <xref:System.Net.Http.HttpClient> into a separate file of helper methods.
 
-These helpers are also used in the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) file used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). If you understand these helpers, you will understand how they are used in the samples.
+These helpers are also used in the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23/SampleHelpers.cs) file used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). If you understand these helpers, you will understand how they are used in the samples.
 
 1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
 
