@@ -189,6 +189,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
 - Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the start of the command bar to overflow menu.
+
   | Before | After |
   | :---:         |     :---:      |
   | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
