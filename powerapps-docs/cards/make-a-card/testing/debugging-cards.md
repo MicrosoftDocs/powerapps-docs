@@ -16,6 +16,8 @@ ms.collection:
 
 Once you've created a card, you can view what your finished card will look like before sending it out to your teammates. This is done via the Play Page, which also has the tools to test your card and debug any issues.
 
+Note: Card instances and their data, which is what you see on the Play Page, will only last 48 hours after being created. Press the play button from the Card Designer to get a new instance of that card. 
+
 ## Play page intro
 
 The play page is made up of a few different components:
