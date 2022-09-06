@@ -334,7 +334,7 @@ If you are using the Organization Service, we recommend that you use the <xref:M
 
 Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
 
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient  or ServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
 More information:
 
@@ -345,7 +345,7 @@ More information:
 
 To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
-TPL can be used with <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> because CrmServiceClient includes a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
+TPL can be used with either <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> because both classes include a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
 
 ## Frequently asked questions
 
