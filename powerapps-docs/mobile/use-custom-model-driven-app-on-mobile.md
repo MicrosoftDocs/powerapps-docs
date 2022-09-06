@@ -180,14 +180,19 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
-- The **Delete** command is automatically hidden when it's not applicable. For example, when there is no record selected then you won't see the option to **Delete** because nothing is selected.
-- The **Process** command is hidden when there is no process defined for a table.
+- The **Delete** command on a grid page is automatically hidden when a row is not selected. When one or more rows is selected, the **Delete** command is automatically displayed.
+- The **Process** command is hidden when there's no process enabled for a table.
 
   | Before | After |
   | :---:         |     :---:      |
-  | ![Old process comman.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
+  | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
-- The command bar on a tablet was at the button and it was limited to only show up to three commands. Now the commands on forms, grids, and dashboards pages are displayed at the top.
+- Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the start of the command bar to overflow menu.
+  | Before | After |
+  | :---:         |     :---:      |
+  | ![Old commands show at the bottom.](media/command-bar-old.png "Process command shown.")| ![Commands moved to overflow menu.](media/over-flow-menu.png "Process command hidden.")| 
+
+- When running Power Apps mobile on a tablet for iOS and Android the command bar was displayed at the bottom. Now the command bar is displayed at the top, same as the web app.
 
     ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
 
