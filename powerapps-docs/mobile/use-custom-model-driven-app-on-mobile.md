@@ -194,7 +194,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
 
-- The command bar on Power Apps mobile for tablets was at the bottom now the command bar is located at the top.
+- The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top.
     ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
 
 
