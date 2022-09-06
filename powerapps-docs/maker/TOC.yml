@@ -2863,7 +2863,9 @@
   href: ../chatbots.md
 - name: Cards
   href: ../cards/overview.md
-  items:        
+  items:
+    - name: Glossary
+    - href: ../cards/glossary.md
     - name: Create cards
       items: 
         - name: Designer overview
