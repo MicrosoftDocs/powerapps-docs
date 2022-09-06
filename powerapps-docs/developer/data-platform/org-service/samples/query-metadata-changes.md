@@ -7,19 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Query and detect table definitions changes
 
-This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery).
+This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MetadataQuery).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -29,7 +29,7 @@ This sample shows how to retrieve and detect changes in table definitions using 
 
 ## What this sample does
 
-The `RetrieveMetadataChangeRequest` message is intended to be used in a scenario where it contains the data  that is needed to retrieve a collection of table definitions records that satisfy the specified criteria. The [RetrieveMetadataChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesresponse) returns a timestamp value that can be used with this request at a later time to return information about how table definitions have changed since the last request.
+The `RetrieveMetadataChangeRequest` message is intended to be used in a scenario where it contains the data that is needed to retrieve a collection of table definitions records that satisfy the specified criteria. The [RetrieveMetadataChangesResponse](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesresponse) returns a timestamp value that can be used with this request at a later time to return information about how table definitions have changed since the last request.
 
 ## How this sample works
 
@@ -41,16 +41,14 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `MetadataFilterExpression` method creates the filter expression to limit tables returned to non-intersect, user-owned tables not found in the list of excluded tables. 
+1. The `MetadataFilterExpression` method creates the filter expression to limit tables returned to non-intersect, user-owned tables not found in the list of excluded tables.
 2. The `MetadataConditionExpression` method returns the choice column.
 3. The `MetadataPropertiesExpression` method limits the properties to be included with the columns.
 4. The `LabelQueryExpression` method limits the labels returned to only those for user's preferred language.
 5. The `RetrieveMetadataChangeRequest` method retrieves the table definitions for the query.
 
-
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
