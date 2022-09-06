@@ -190,7 +190,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
 - Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the start of the command bar to overflow menu.
   | Before | After |
   | :---:         |     :---:      |
-  | ![Old commands show at the bottom.](media/command-bar-old.png "Process command shown.")| ![Commands moved to overflow menu.](media/over-flow-menu.png "Process command hidden.")| 
+  | ![Old commands show at the bottom.](media/command-bar-old.png "Process command shown.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "Process command hidden.")| 
 
 - When running Power Apps mobile on a tablet for iOS and Android the command bar was displayed at the bottom. Now the command bar is displayed at the top, same as the web app.
 
