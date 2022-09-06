@@ -181,8 +181,6 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
 - The **Delete** command on a grid page is automatically hidden when a row is not selected. When one or more rows is selected, the **Delete** command is automatically displayed.
-
-  ![New delete option.](media/new-delete.gif "New delete option."
   
 - The **Process** command is hidden when there's no process enabled for a table.
 
