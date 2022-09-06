@@ -140,7 +140,7 @@ Any user who has used their mobile device to access a canvas app that was publis
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 
-The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Azure AD and Microsoft account users. You can  also create a deeplink. For more information, see [Use deep links with Power Apps mobile](/../mobile/mobile-deep-links).
+The guest user opens the email they received when an app in the guest tenant was shared, and selects **Open the app**. This applies to both Azure AD and Microsoft account users. You can  also create a deeplink. For more information, see [Use deep links with Power Apps mobile](../mobile/mobile-deep-links.md).
 
 ### Must a guest accept the Azure AD guest invitation before an app can be shared with them?
 
