@@ -35,7 +35,7 @@ The following sample workflow activity returns the next birthday. Use this in a 
 
 ## Example
 
-[NextBirthday.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/orgsvc/C%23/WorkflowActivities/WorkflowActivities/NextBirthday.cs)
+[NextBirthday.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23/WorkflowActivities/WorkflowActivities/NextBirthday.cs)
 
 ### See also
 
