@@ -6,12 +6,12 @@ author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
 manager: sunilg
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
 ---
 
@@ -24,15 +24,15 @@ This program will authenticate and use an <xref:System.Net.Http.HttpClient> to s
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code. The [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
-You can find the complete Visual Studio solution for this (.NET Framework) project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under cds/webapi/[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QuickStart). There is also a .NET 6 version of the sample under cds/webapi/[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23-NETx/QuickStart).
+You can find the complete Visual Studio solution for this (.NET Framework) project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under cds/webapi/[C#/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart). There is also a .NET 6 version of the sample under cds/webapi/[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/QuickStart).
 
 ## Prerequisites
 
- - Visual Studio 2019 or later
- - Internet connection
- - Valid user account for a Dataverse environment
- - Url to the Dataverse environment you want to connect with
- - Basic understanding of the Visual C# language
+- Visual Studio 2019 or later
+- Internet connection
+- Valid user account for a Dataverse environment
+- Url to the Dataverse environment you want to connect with
+- Basic understanding of the Visual C# language
 
 > [!NOTE]
 > To authenticate you must have an app registered in Azure Active Directory (AD). This quick start example provides an app registration `clientid` value you can use for the purpose of running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
@@ -43,26 +43,26 @@ You can find the complete Visual Studio solution for this (.NET Framework) proje
 
 1. Create a new Console App (.NET Framework) project.
 
-    :::image type="content" source="media/quickstart-new-project.png" alt-text="New console app project":::
+   :::image type="content" source="media/quickstart-new-project.png" alt-text="New console app project":::
 
 1. Configure the project to use .NET Framework 4.6.2 or later.
 
-    :::image type="content" source="media/quickstart-configure-project.png" alt-text="Configure the project":::
+   :::image type="content" source="media/quickstart-configure-project.png" alt-text="Configure the project":::
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages** in the context menu. We will now bring in required assemblies for our project.
 
 1. Browse for the Microsoft Authentication Library (MSAL) NuGet package named `Microsoft.Identity.Client`, select it, and then choose **Install**.
 
-    :::image type="content" source="media/quickstart-nuget-package-install.png" alt-text="Install the (MSAL) authentication package" lightbox="media/quickstart-nuget-package-install.png":::
+   :::image type="content" source="media/quickstart-nuget-package-install.png" alt-text="Install the (MSAL) authentication package" lightbox="media/quickstart-nuget-package-install.png":::
 
-    > [!NOTE]
-    > You will be prompted to preview and **OK** the assembly additions, and **Accept** the license agreements, for the installed packages and their contents.
+   > [!NOTE]
+   > You will be prompted to preview and **OK** the assembly additions, and **Accept** the license agreements, for the installed packages and their contents.
 
-    To use the deprecated Azure Active Directory Authentication Library (ADAL), browse for and install the `Microsoft.IdentityModel.Clients.ActiveDirectory` package.
+   To use the deprecated Azure Active Directory Authentication Library (ADAL), browse for and install the `Microsoft.IdentityModel.Clients.ActiveDirectory` package.
 
 1. Browse for the `Newtonsoft.Json` NuGet package and install the latest version.
 
-    :::image type="content" source="media/quickstart-nuget-package-json.png" alt-text="Install the JSON package" lightbox="media/quickstart-nuget-package-json.png":::
+   :::image type="content" source="media/quickstart-nuget-package-json.png" alt-text="Install the JSON package" lightbox="media/quickstart-nuget-package-json.png":::
 
 ## Edit Program.cs
 
@@ -88,7 +88,7 @@ namespace PowerApps.Samples
             // TODO Specify the Dataverse environment name to connect with.
             string resource = "https://<env-name>.api.<region>.dynamics.com";
 
-            // Azure Active Directory app registration shared by all Power App samples.
+            // Azure Active Directory app registration shared by all Power Apps samples.
             // For your custom apps, you will need to register them with Azure AD yourself.
             // See https://docs.microsoft.com/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory
             var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
@@ -103,7 +103,7 @@ namespace PowerApps.Samples
             var scope = resource + "/.default";
             string[] scopes = { scope };
 
-            AuthenticationResult token = 
+            AuthenticationResult token =
                 authBuilder.AcquireTokenInteractive(scopes).ExecuteAsync().Result;
             #endregion Authentication
 
@@ -135,7 +135,7 @@ namespace PowerApps.Samples
 
             if (response.IsSuccessStatusCode)
             {
-                // Parse the JSON formatted service response to obtain the user ID.  
+                // Parse the JSON formatted service response to obtain the user ID.
                 JObject body = JObject.Parse(
                     response.Content.ReadAsStringAsync().Result);
                 Guid userId = (Guid)body["UserId"];
@@ -174,7 +174,7 @@ namespace WebAPIQuickStart
             // TODO Specify the Dataverse environment URL to connect with.
             string resource = "https://<env-name>.<region>.dynamics.com";
 
-            // Azure Active Directory app registration shared by all Power App samples.
+            // Azure Active Directory app registration shared by all Power Apps samples.
             // For your custom apps, you will need to register them with Azure AD yourself.
             // See https://docs.microsoft.com/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory
             var clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
@@ -226,7 +226,7 @@ namespace WebAPIQuickStart
 
             if (response.IsSuccessStatusCode)
             {
-                // Parse the JSON formatted service response to obtain the user ID.  
+                // Parse the JSON formatted service response to obtain the user ID.
                 JObject body = JObject.Parse(
                     response.Content.ReadAsStringAsync().Result);
                 Guid userId = (Guid)body["UserId"];
@@ -251,18 +251,18 @@ namespace WebAPIQuickStart
 
 2. Right below the TODO comment in the above code, replace the `resource` value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
 
-    1. Navigate your browser to [Power Apps](https://make.powerapps.com).
-    1. Select the environments icon (to the right of the search field), and choose a test environment.
-    1. Select the settings icon ![Settings button.](media/settings-icon.png) and choose **Developer resources**.
-    1. Copy the Web API endpoint URL from "https:" through ".com" leaving off the /api/data/v9.x.
-    1. Replace the resource string value in the program code with that endpoint URL value. For example:<p/>
-        `string resource = "https://contoso.api.crm.dynamics.com";`
+   1. Navigate your browser to [Power Apps](https://make.powerapps.com).
+   1. Select the environments icon (to the right of the search field), and choose a test environment.
+   1. Select the settings icon ![Settings button.](media/settings-icon.png) and choose **Developer resources**.
+   1. Copy the Web API endpoint URL from "https:" through ".com" leaving off the /api/data/v9.x.
+   1. Replace the resource string value in the program code with that endpoint URL value. For example:<p/>
+      `string resource = "https://contoso.api.crm.dynamics.com";`
 
 ## Run the program
 
 1. Press F5 to build and run the program. The output should look something like this:
 
-    `Your user ID is 969effb0-98ae-478c-b547-53a2968c2e75`
+   `Your user ID is 969effb0-98ae-478c-b547-53a2968c2e75`
 
 2. With the console window active, press any key to terminate the program.
 
@@ -281,6 +281,7 @@ The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement
 Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
-> [Enhanced quick start](enhanced-quick-start.md)<br/>
+> [Enhanced quick start](enhanced-quick-start.md)
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
