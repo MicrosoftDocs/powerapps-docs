@@ -48,7 +48,7 @@ The following sample workflow activity calculates the credit score based on the 
 
 ## Example
 
-[RetrieveCreditScore.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/orgsvc/C%23/WorkflowActivities/WorkflowActivities/RetrieveCreditScore.cs)
+[RetrieveCreditScore.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23/WorkflowActivities/WorkflowActivities/RetrieveCreditScore.cs)
 
 ### See also
 

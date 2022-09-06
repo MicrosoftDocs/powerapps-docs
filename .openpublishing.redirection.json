@@ -1,6 +1,41 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice.md",
+      "redirect_url": "webapiservice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-basic-operations.md",
+      "redirect_url": "webapiservice-basic-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-query-data.md",
+      "redirect_url": "webapiservice-query-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-conditional-operations.md",
+      "redirect_url": "webapiservice-conditional-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/functions-actions-csharp.md",
+      "redirect_url": "webapiservice-functions-and-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-parallel-operations.md",
+      "redirect_url": "webapiservice-parallel-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-async-parallel-operations.md",
+      "redirect_url": "webapiservice-tpl-dataflow-parallel-operations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/org-service/web-service-error-codes.md",
       "redirect_url": "../reference/web-service-error-codes",
       "redirect_document_id": false
@@ -3481,8 +3516,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api.md",
-      "redirect_url": "../data-platform/online-management-api",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
@@ -3956,33 +3991,33 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/authentication.md",
-      "redirect_url": "../../data-platform/online-management-api/authentication",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/authentication.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/get-started-online-management-api.md",
-      "redirect_url": "../../data-platform/online-management-api/get-started-online-management-api",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/get-started-online-management-api.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/operations-supported.md",
-      "redirect_url": "../../data-platform/online-management-api/operations-supported",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/operations-supported.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/overview.md",
-      "redirect_url": "../../data-platform/online-management-api/overview",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/overview.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/sample-authentication-helper.md",
-      "redirect_url": "../../data-platform/online-management-api/sample-authentication-helper",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/sample-authentication-helper.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/sample-quick-start.md",
-      "redirect_url": "../../data-platform/online-management-api/sample-quick-start",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/sample-quick-start.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
@@ -7169,6 +7204,6 @@
       "source_path": "powerapps-docs/user/customize-insert-email-template.md",
       "redirect_url": "/dynamics365/customer-service/customize-insert-email-template",
       "redirect_document_id": "false"
-    }    
+    }
   ]
 }
