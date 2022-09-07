@@ -6,7 +6,7 @@ author: chmoncay
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/02/2022
+ms.date: 09/07/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -53,7 +53,7 @@ You can control the use of API version using the **AllowNewAPI** property. For m
 | False | You can embed a dashboard tile either by **Embed URL** and making it the **TileUrl** value, or using the graphical interface provided.
 
 > [!NOTE]
-> Embedding a Power BI URL (for example, in an IFrame) is not supported on Power Apps mobile since authenticating the Power BI URL request is not handled by the mobile device.
+> Embedding a Power BI URL (for example, in an IFrame) is not supported on Power Apps mobile since authenticating the Power BI URL request is not handled by the mobile player.
 
 ## Filtering
 
