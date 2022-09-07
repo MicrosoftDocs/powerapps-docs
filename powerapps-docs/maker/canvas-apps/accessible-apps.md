@@ -4,7 +4,7 @@ description: How to make canvas apps accessible for people with disabilities
 author: chmoncay
 ms.topic: conceptual
 ms.reviewer: tapanm
-ms.date: 03/24/2022
+ms.date: 09/06/2022
 ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
@@ -29,7 +29,7 @@ Use the **[Accessibility Checker](accessibility-checker.md)** to help review pot
 Common sense and uncomplicated design helps apps be more accessible to all users. When doing heavy customization of apps take note of the below suggestions. Power Apps themes are designed to meet accessibility standards.
 - Ensure all elements are clearly visible and text is of sufficient size.  All content must be easily read and understood by the naked eye.
 - Ensure input elements are labeled on the screen. **[AccessibleLabel](controls/properties-accessibility.md)** property defines what the screen reader will announce.
-- If customizing colors, ensure the contrast ratio of text to background is 4.5:1 or greater.Software tools that assist this process are readily available.
+- If customizing colors, ensure the contrast ratio of text to background is 4.5:1 or greater. Software tools that assist this process are readily available.
 - Ensure layout follows a logical flow when read from top to bottom, left to right.
 - [Create a responsive app](build-responsive-apps) so that low-vision users can zoom in and use it without scrolling back and forth.
 
