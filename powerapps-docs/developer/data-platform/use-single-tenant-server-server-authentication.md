@@ -4,12 +4,10 @@ description: "Learn how to access Microsoft Dataverse data in a single tenant fr
 ms.custom: ""
 ms.date: 10/07/2021
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
 search.app:
@@ -50,31 +48,23 @@ To create and test a single-tenant application that uses server-to-server authen
 To create an application registration in Azure AD, follow these steps.
 
 1. Navigate to https://admin.microsoft.com and sign in, or from your Dataverse environment web page, and select the application launcher in the top left corner.
-2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
-3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
-4. Choose **+ New registration**
-5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
-
-   > [!div class="mx-imgBorder"] > ![Register an application form.](media/S2S-app-registration-started.PNG)
-
-6. On the **Overview** page, select **API permissions**
-
-   > [!div class="mx-imgBorder"] > ![App registration permissions.](media/S2S-app-registration-completed.PNG)
-
-7. Choose **+ Add a permission**
-8. In the **Microsoft APIs** tab, choose **Dynamics CRM**
-9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions**
-
-   > [!div class="mx-imgBorder"] > ![Setting API permissions.](media/S2S-api-permission-started.PNG)
-
-10. On the **API permissions** page select **Grant admin consent for "org-name"** and when prompted choose **Yes**
-
-    > [!div class="mx-imgBorder"] > ![Granting API permissions.](media/S2S-api-permission-completed.PNG)
-
-11. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
-12. In the navigation panel, select **Certificates & secrets**
-13. Below **Client secrets**, choose **+ New client secret** to create a secret
-14. In the form, enter a description and select **Add**. Record the secret string. You will not be able to view the secret again once you leave the current screen.
+1. Choose **Admin** > **Admin centers** > **Azure Active Directory**
+1. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
+1. Choose **+ New registration**
+1. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
+  :::image type="content" source="media/S2S-app-registration-started.PNG" alt-text="Register an application form.":::
+1. On the **Overview** page, select **API permissions**
+  :::image type="content" source="media/S2S-app-registration-completed.PNG" alt-text="App registration permissions.":::
+1. Choose **+ Add a permission**
+1. In the **Microsoft APIs** tab, choose **Dynamics CRM**
+1. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions**
+  :::image type="content" source="media/S2S-api-permission-started.PNG" alt-text="Setting API permissions.":::
+1. On the **API permissions** page select **Grant admin consent for "org-name"** and when prompted choose **Yes**
+  :::image type="content" source="media/S2S-api-permission-completed.PNG" alt-text="Granting API permissions.":::
+1. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
+1. In the navigation panel, select **Certificates & secrets**
+1. Below **Client secrets**, choose **+ New client secret** to create a secret
+1. In the form, enter a description and select **Add**. Record the secret string. You will not be able to view the secret again once you leave the current screen.
 
 <a name="bkmk_appuser"></a>
 

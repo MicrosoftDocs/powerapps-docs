@@ -3,7 +3,6 @@ title: "Create your first component using Power Apps Component Framework in Micr
 description: "Learn how to implement code components using Power Apps component framework"
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -412,7 +411,7 @@ To add the code component to a portal, follow the steps in the article [Use code
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
-[Microsoft Power Platform Build Tools](/powerapps/developer/data-platform/build-tools-overview)<br/>
+[Overview of tools and apps used with ALM](/power-platform/alm/tools-apps-used-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)<br/>
 [Debug code components](debugging-custom-controls.md)
