@@ -31,7 +31,7 @@ Common sense and uncomplicated design helps apps be more accessible to all users
 - Ensure input elements are labeled on the screen. **[AccessibleLabel](controls/properties-accessibility.md)** property defines what the screen reader will announce.
 - If customizing colors, ensure the contrast ratio of text to background is 4.5:1 or greater. Software tools that assist this process are readily available.
 - Ensure layout follows a logical flow when read from top to bottom, left to right.
-- [Create a responsive app](build-responsive-apps) so that low-vision users can zoom in and use it without scrolling back and forth.
+- [Create a responsive app](build-responsive-apps.md) so that low-vision users can zoom in and use it without scrolling back and forth.
 
 ## Keyboard
 
