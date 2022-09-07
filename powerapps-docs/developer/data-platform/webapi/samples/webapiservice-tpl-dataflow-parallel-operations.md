@@ -36,7 +36,7 @@ The following is required to build and run this sample:
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
 1. Locate the [/dataverse/webapi/C#-NETx/TPLDataFlowParallelOperations/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/TPLDataFlowParallelOperations) folder.
-1. Open the `ParalTPLDataFlowParallelOperationslelOperations.sln` file using Visual Studio 2022
+1. Open the `TPLDataFlowParallelOperations.sln` file using Visual Studio 2022
 1. Edit the `appsettings.json` file to set the following property values:
 
    |Property|Instructions  |

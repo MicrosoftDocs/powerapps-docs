@@ -144,7 +144,7 @@
           href: debug-plug-in.md
         - name: Tracing and logging
           href: logging-tracing.md
-        - name: Application Insights with ILogger (Preview)
+        - name: Application Insights with ILogger
           href: application-insights-ilogger.md
         - name: Analyze performance
           href: analyze-performance.md
