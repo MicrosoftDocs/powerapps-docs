@@ -64,7 +64,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  See [Associate and disassociate table rows on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-table-rows-on-update) for information about associating and disassociating entities on update.  
+>  See [Using single-valued navigation properties](associate-disassociate-entities-using-web-api.md#using-single-valued-navigation-properties) for information about associating and disassociating entities on update.  
   
 <a name="bkmk_updateWithDataReturned"></a>
 
@@ -145,7 +145,7 @@ OData-Version: 4.0
 
 ## Delete a single property value
 
-To delete the value of a single property use a DELETE request with the property name appended to the Uri of the entity.  
+To delete the value of a single property use a `DELETE` request with the property name appended to the Uri of the entity.  
   
 The following example deletes the value of the `description` property of an account entity with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
   
@@ -167,7 +167,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  This can't be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Remove a reference to a table](associate-disassociate-entities-using-web-api.md#bkmk_Removeareferencetoarow).  
+>  This can't be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Disassociate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#disassociate-with-a-single-valued-navigation-property) .  
   
 <a name="bkmk_upsert"></a>
 
@@ -262,7 +262,7 @@ More information: [Access table data faster using storage partitions](azure-stor
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

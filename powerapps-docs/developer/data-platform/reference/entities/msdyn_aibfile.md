@@ -1,7 +1,7 @@
 ---
 title: "msdyn_AIBFile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_AIBFile table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_aibfiles(*msdyn_aibfileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_aibfiles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -368,6 +368,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_AIBDatasetsContainerIdName](#BKMK_msdyn_AIBDatasetsContainerIdName)
+- [msdyn_File](#BKMK_msdyn_File)
 - [msdyn_File_Name](#BKMK_msdyn_File_Name)
 - [msdyn_Image_Timestamp](#BKMK_msdyn_Image_Timestamp)
 - [msdyn_Image_URL](#BKMK_msdyn_Image_URL)
@@ -635,9 +636,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_msdyn_File_Name"></a> msdyn_File_Name
+### <a name="BKMK_msdyn_File"></a> msdyn_File
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|File|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_file|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_File_Name"></a> msdyn_File_Name
 
 |Property|Value|
 |--------|-----|
@@ -1052,6 +1064,6 @@ See the [msdyn_AIBFile_msdyn_AIBDatasetsCont](msdyn_aibdatasetscontainer.md#BKMK
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_aibfile?text=msdyn_aibfile EntityType" />
