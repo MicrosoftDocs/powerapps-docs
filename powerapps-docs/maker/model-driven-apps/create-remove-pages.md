@@ -27,7 +27,7 @@ search.app:
 
 App designer pages are containers for one or more tables or dashboards. You can choose whether to have the page appear in the app navigation (site map) or not.
 
-> [!NOTE]
+> [!IMPORTANT]
 > This is a preview feature. More information: [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 ## Create a page

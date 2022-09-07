@@ -59,3 +59,11 @@ You need administrator rights on your device to install WebView2. If you don't h
 3. Go over the license terms and privacy statement and then select **Accept and Download**.
 4. Run **MicroEdgeWebview2Setup.exe**.
 
+## Install from app center
+
+If you don't have access to install Power Apps for Windows from the Microsoft Store then you can install it from the [app center](https://install.appcenter.ms/orgs/dynamics365-mobile/apps/power-apps-windows-store-signed-builds/distribution_groups/windows%20store-signed%20build%20external%20partners).
+
+An administrator can also download the package from the [app center](https://install.appcenter.ms/orgs/dynamics365-mobile/apps/power-apps-windows-store-signed-builds/distribution_groups/windows%20store-signed%20build%20external%20partners) and distribute it to users with Intune.
+
+
+

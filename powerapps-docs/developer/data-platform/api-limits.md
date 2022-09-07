@@ -248,7 +248,7 @@ Remember that the main point of service protection API limits is to smooth out t
 
 If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
 
-If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class sample (C#)](webapi/samples/cdswebapiservice.md).
+If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [WebAPIService class library (C#)](webapi/samples/webapiservice.md).
 
 ```csharp
 private async Task<HttpResponseMessage> SendAsync(
@@ -322,10 +322,10 @@ You should not depend on these values to control how many requests you send. The
 
 To achieve optimum throughput, you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
-See these examples using the [Web API CDSWebApiService class sample (C#)](webapi/samples/cdswebapiservice.md):
+See these examples using the [WebAPIService class library (C#)](webapi/samples/webapiservice.md):
 
-- [Web API CDSWebApiService Parallel Operations sample (C#)](webapi/samples/cdswebapiservice-parallel-operations.md)
-- [Web API CDSWebApiService Async Parallel Operations sample (C#)](webapi/samples/cdswebapiservice-async-parallel-operations.md)
+- [Web API CDSWebApiService Parallel Operations Sample (C#)](webapi/samples/webapiservice-parallel-operations.md)
+- [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapi/samples/webapiservice-tpl-dataflow-parallel-operations.md)
 
 
 ## Using the Organization Service

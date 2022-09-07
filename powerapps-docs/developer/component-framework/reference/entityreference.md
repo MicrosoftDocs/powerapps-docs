@@ -9,14 +9,14 @@ ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
 contributors:
- - JimDaly
+  - JimDaly
 ---
 
 # EntityReference
 
 [!INCLUDE [entityreference-description](includes/entityreference-description.md)]
 
-## Available for 
+## Available for
 
 Model-driven apps
 
@@ -36,9 +36,9 @@ The record id. Read-only.
 
 The `id` object contains the following property:
 
-|Name|Type|Description|
-|--|--|--|
-|`guid`|`string`|00000000-0000-0000-0000-000000000000|
+| Name   | Type     | Description                          |
+| ------ | -------- | ------------------------------------ |
+| `guid` | `string` | 00000000-0000-0000-0000-000000000000 |
 
 ### name
 
@@ -50,6 +50,5 @@ The name of the table reference. Read-only.
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework overview](../overview.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

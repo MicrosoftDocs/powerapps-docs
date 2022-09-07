@@ -1,7 +1,7 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Organizational knowledge for internal and external use.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -968,6 +968,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_contentstore](#BKMK_msdyn_contentstore)
 - [msdyn_contentstore_Name](#BKMK_msdyn_contentstore_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
@@ -1299,9 +1300,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_msdyn_contentstore"></a> msdyn_contentstore
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Stores the reference to content in file store|
+|DisplayName|File storage content reference|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_contentstore|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_msdyn_contentstore_Name"></a> msdyn_contentstore_Name
 
-**Added by**: Active Solution Solution
+**Added by**: Knowledge Management Patch Solution
 
 |Property|Value|
 |--------|-----|
@@ -2306,6 +2322,6 @@ See the [msdyn_msdyn_kbattachment_knowledgearticle](msdyn_kbattachment.md#BKMK_m
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.knowledgearticle?text=knowledgearticle EntityType" />
