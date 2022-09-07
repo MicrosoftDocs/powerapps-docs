@@ -107,9 +107,7 @@ The following [Column types](../../../../data-platform/entity-attribute-metadata
 
 ## Unsupported features in Mobile Offline using FetchXML
 The following features are not supported in Mobile Offline when working with FetchXML:
-- Grouping feature
-- Aggregation feature
-
+- Grouping and Aggregation feature
 
 ## Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML
 The following operations are supported for all attribute types when working with FetchXML:
