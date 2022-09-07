@@ -108,7 +108,7 @@ The Portal Checker tool will check for this scenario and provide you an indicati
   1. Reference your web file directly in the HTML of the page template or web template of the page where you want to use it. This will load your file on demand on that page. 
  
 
- ## Basic form lookup configuration 
+## Basic form lookup configuration 
 
 Enabling a lookup to render as a drop-down mode in basic forms or advanced forms can lead to performance issues if the number of records shown in the drop-down exceeds 200 and are changed frequently. Use this option for only static lookups, such as country and state list, having a limited number of records.
 
