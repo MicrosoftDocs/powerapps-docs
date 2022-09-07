@@ -105,7 +105,7 @@ The following [Column types](../../../../data-platform/entity-attribute-metadata
 - PartyList
 - Virtual
 
-## Unsupported features for OData query options in Mobile Offline
+## Unsupported features in Mobile Offline
 The following features are not supported in Mobile Offline:
 - Grouping and Aggregation features
 
