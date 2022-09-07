@@ -52,6 +52,9 @@ You can control the use of API version using the **AllowNewAPI** property. For m
 | True | You can embed a dashboard, report, or tile by taking the **Embed URL** from Power BI and making it the **TileUrl** value. |
 | False | You can embed a dashboard tile either by **Embed URL** and making it the **TileUrl** value, or using the graphical interface provided.
 
+> [!NOTE]
+> Embedding a Power BI URL (for example, in an IFrame) is not supported on Power Apps mobile since authenticating the Power BI URL request is not handled by the mobile device.
+
 ## Filtering
 
 Filtering differs between the versions of the Power BI API. See the appropriate sections below depending on how you configure the control.
