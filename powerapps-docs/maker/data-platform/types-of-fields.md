@@ -2,7 +2,7 @@
 title: "Column data types in Microsoft Dataverse (contains video) | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
-ms.date: 08/13/2021
+ms.date: 07/29/2022
 ms.custom: 
 ms.topic: article
 author: "Mattp123"
@@ -116,7 +116,6 @@ Choices multi-select columns are supported in the following types of forms:
 
 You can use global choices that are defined in your organization to configure values for the multi-select choices.
 
-
 <a name="BKMK_UsingTheRightTypeOfNumber"></a>
   
 ## Using the right type of number
@@ -203,7 +202,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
 ### Create an image column and add it to a form
 
 1. Go to [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution that contains the table form where you want to add an image column.
-1. Open the table, and then select the **Columns** tab.
+1. Open the table, and then select the **Columns** area.
 1. On the command bar, select **Add column**.
 1. Enter or select values for the following properties, and then select **Done**.
    - **Display Name**, such as *Recipe image*. 
@@ -234,22 +233,42 @@ More information for developers working with image data:
 
 ## File columns
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
 
-The default **Maximum file size** is 32 MB and the largest size you can set is 10 GB. The file size limit can be set individually for each column of file type added to a table. 
+The default **Maximum file size** is 32 MB and the largest size you can set is 131072 KB (131 MB). The file size limit can be set individually for each column of file type added to a table. 
 
 >[!NOTE]
 > - Once the maximum file size has been saved, it can't be changed.
 > - File columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
 
-To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, on the **Columns** tab select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
-
-> [!div class="mx-imgBorder"] 
-> ![File data type.](media/file-data-type.png)
+To create a file column, on the left pane in Power Apps select **Solutions**, open the solution you want, open the table you want, select the **Columns** area, select **Add Column**, and then in the **Column properties** pane, select **File** as the **Data type**. 
 
 More information for developers working with file data: [File attributes](../../developer/data-platform/file-attributes.md)
 
+## Fx Formula columns
+
+Built on Power Fx, use an Fx formula column to perform operations that return values during fetch operations. Formula columns use the Power Fx syntax that's similar to Office Excel. More information: [Work with formula columns (preview)](formula-columns.md)
+
+## Searching and sorting columns
+
+Most columns have options to enable searching or sorting of the column's contents. 
+
+### Searchable
+
+Almost every column data type is created with the **Searchable** value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types can't be search enabled:
+
+- Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
+- File. Files are stored and retrieved using reference URLS and because of this they can't be searched.
+- Formulas. Formulas are used to create a dynamically calculated output and because of this can't be searched.
+
+The **Customer** datatype is search enabled by default and this can't be disabled. It's required to be searchable by the system.
+
+### Sortable
+
+Almost every data type is created with the **Sortable** value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types don't provide the ability to enable a sortable attribute:
+
+- Formulas. Formulas are used to create a dynamically calculated output and because of this can't be sorted.
+- Lookup. Lookups have values that are dynamically retrieved from the source table and because of this can't be sorted.
+- Customer. Customer is a standard lookup field and can't be sorted because it is dynamically retrieved.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

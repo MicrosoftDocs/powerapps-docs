@@ -1,7 +1,7 @@
 ---
 title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
-ms.date: 05/23/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/botcomponents<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -162,11 +162,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |6|Language understanding|Language Understanding (LU) is used by a bot to understand language naturally and contextually to determine what next to do in a conversation flow.|
 |7|Language generation|Language Generation (LG) lets you define multiple variations of a phrase, execute simple expressions based on context, and refer to conversational memory.|
 |8|Dialog schema|Schema of the dialog that specifies dialog's input and output parameters|
-|9|Object Model Dialog|Object model dialog|
-|10|Object Model Trigger|Object model trigger|
-|11|Object Model custom entity|Object model custom entity|
-|12|Object Model global variable|Object model global variable|
-|13|Object Model skill|Object model skill|
+|9|Topic|A topic defines a how a bot conversation plays out. A topic has trigger phrases - these are phrases, keywords, or questions - and conversation nodes - these are what you use to define how a bot should respond and what it should do.|
+|10|Unused|Unused|
+|11|Bot entity|An entity can be viewed as an information unit that represents a certain type of a real-world subject, like a phone number, zip code, city, or even a person's name.|
+|12|Bot variable|Variables let you save responses from your customers in a conversation with your bot so that you can reuse them later in the conversation.|
+|13|Skill|Power Virtual Agents enables you to extend your bot using Bot Framework Skills. Bot Framework Skills are re-usable conversational skill building-blocks covering conversational use-cases.|
 
 
 
@@ -1317,6 +1317,6 @@ IntersectEntityName: botcomponent_workflow<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.botcomponent?text=botcomponent EntityType" />

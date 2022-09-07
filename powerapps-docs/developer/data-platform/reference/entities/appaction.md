@@ -1,7 +1,7 @@
 ---
 title: "appaction table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the appaction table/entity."
-ms.date: 05/23/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/appactions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/appactions(*appactionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -89,6 +89,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OnClickEventType](#BKMK_OnClickEventType)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [ParentAppActionId](#BKMK_ParentAppActionId)
+- [Sequence](#BKMK_Sequence)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
@@ -168,7 +169,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Button Sequence Priority|
+|DisplayName|Button Sequence Priority (Depreciated)|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|buttonsequencepriority|
@@ -615,6 +616,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|appaction|
 |Type|Lookup|
+
+
+### <a name="BKMK_Sequence"></a> Sequence
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Sequence|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|sequence|
+|MaxValue|100000000000|
+|MinValue|0|
+|Precision|10|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_statecode"></a> statecode
@@ -1617,6 +1634,6 @@ IntersectEntityName: appaction_appactionrule_classicrules<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.appaction?text=appaction EntityType" />

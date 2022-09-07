@@ -29,12 +29,9 @@ Power Apps enables configuring the most common options, but certain options can 
 1. In Power Apps ([make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)), select **Data** > **Tables** and select the table that you want to view.
 2. Select **Keys** to view a list of any alternate keys that are defined.
 
-   > [!div class="mx-imgBorder"] 
-	 > ![View alternate keys.](media/view-alternate-keys-portal.png)
-
 ## Create an alternate key
 
-1. While [viewing alternate keys](#view-alternate-keys), select **Add key**.
+1. While [viewing alternate keys](#view-alternate-keys), select **New key**.
 2. Use the panel to set a **Display name** and choose the columns to use to create the alternate key.
 
     The **Name** column will be populated based on the display name.

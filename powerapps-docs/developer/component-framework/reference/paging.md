@@ -3,7 +3,6 @@ title: Paging | Microsoft Docs
 description: Provides properties and methods to work with paging.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 06/14/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -61,6 +60,7 @@ The pageSize of the paging.
 ### totalResultCount
 
 Total number of results on the server for the current query.
+In case when value is not available `-1` is sent.
 
 **Type**: `number`
 
@@ -102,7 +102,7 @@ Total number of results on the server for the current query.
 ### Related topics
 
 [Power Apps component framework API reference](../reference/index.md)<br/>
-[Power Apps component framework overview](../overview.md)
-[Data source delegation limitations](/powerapps-docs/maker/canvas-apps/delegation-overview#changing-the-limit)
+[Power Apps component framework overview](../overview.md)<br/>
+[Data source delegation limitations](../../../maker/canvas-apps/delegation-overview.md#changing-the-limit)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

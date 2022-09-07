@@ -4,7 +4,6 @@ description: "Use the paging cookie feature to make paging in an application fas
 ms.date: 04/03/2022
 author: divka78
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
@@ -23,13 +22,13 @@ contributors:
 
 In Microsoft Dataverse, you can use the paging cookie feature to make paging in an application faster for large datasets. The feature is available in both FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries. When you use the paging cookie feature when querying a set of table rows (records), the result contains a value for the paging cookie. To improve system performance, you can then pass that value when you retrieve the next set of rows.  
   
- <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and FetchXML use different formats for their paging cookies. If you convert from one query format to the other by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message, the paging cookie value is ignored. In addition, if you request nonconsecutive pages, the paging cookie value is ignored.  
+<xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and FetchXML use different formats for their paging cookies. If you convert from one query format to the other by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message, the paging cookie value is ignored. In addition, if you request nonconsecutive pages, the paging cookie value is ignored.  
   
 <a name="QueryExpression"></a>
 
 ## Using a paging cookie with QueryExpression
 
- The following example shows how to use the paging cookie with a query expression. For the complete sample code, see [Sample: Use QueryExpression with a paging cookie](../org-service/samples/use-queryexpression-with-a-paging-cookie.md).  
+The following example shows how to use the paging cookie with a query expression. For the complete sample code, see [Sample: Use QueryExpression with a paging cookie](../org-service/samples/use-queryexpression-with-a-paging-cookie.md).  
   
 ```csharp
 // Query using the paging cookie.
@@ -108,10 +107,9 @@ while (true)
 
 ### See also
 
- [Building queries with QueryExpression](build-queries-with-queryexpression.md)   
- [Sample: Use QueryExpression with a paging cookie](samples/use-queryexpression-with-a-paging-cookie.md)   
- [Sample: Retrieve with one-to-many relationship](/dynamics365/customer-engagement/developer/retrieve-with-one-to-many-relationship)   
- [Using the QueryExpression class](use-queryexpression-class.md)   
- [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
+[Building queries with QueryExpression](build-queries-with-queryexpression.md)<br />
+[Sample: Use QueryExpression with a paging cookie](samples/use-queryexpression-with-a-paging-cookie.md)<br />
+[Using the QueryExpression class](use-queryexpression-class.md)<br />
+[Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

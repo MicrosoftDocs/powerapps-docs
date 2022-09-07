@@ -49,7 +49,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > - The storage account must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account must be created in the same region as the Power Apps environment you will use the feature in.
 > - You must have **Reader** role access to the resource group with the storage account.  
-> - To link the Dataverse environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
+> - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
 
 ## Connect Dataverse to Azure Data Lake Storage Gen2
@@ -63,13 +63,13 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 3. Select the **Subscription**, **Resource group**, and **Storage account**. Ensure that storage account meets the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
     > [!NOTE]
-    > As part of linking the Dataverse environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+    > As part of linking the environment to a data lake, you grant the Azure Synapse Link service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
 
 4. Add the tables you want to export, and then select **Save**. Only tables with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization).
 
    ![Select tables for export.](media/export-data-lake-select-entity.png "Select tables for export")
 
-You can follow the steps above to create a link from one Dataverse environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple Dataverse environments to the same Azure Data Lake, all within the same tenant.
+You can follow the steps above to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
 > The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)

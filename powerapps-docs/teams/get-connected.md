@@ -26,7 +26,7 @@ In this tutorial, learn about the Get connected app, and how to use it effective
 
 ## Overview
 
-The Get connected sample app for Microsoft Teams provides a simple way to connect and with people in your organization with similar skills.
+The Get connected sample app for Microsoft Teams provides a simple way to connect with people in your organization having similar skills.
 
 Benefits of using the Get connected app:
 

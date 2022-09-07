@@ -129,7 +129,7 @@ Next, add a button to append the user's data to the pin collection.
 3. Set the button's **Text** property to *Add pin*.
 4. Enter the following code in the button's **OnSelect** property, exactly as shown:
 
-    ```json
+    ```powerapps-dot
     Collect( 
     PinsCollection,
       {
@@ -171,4 +171,3 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 - Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
