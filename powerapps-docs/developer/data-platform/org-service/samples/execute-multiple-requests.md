@@ -7,22 +7,21 @@ ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Execute multiple requests
-
-
 
 This sample shows how to execute multiple organization message requests by using a single web service method call, passing [ExecuteMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.executemultiplerequest) as a parameter. Reducing the number of message requests that must be transmitted over the network results in increased message processing performance.
 
-You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExecutemultipleRequests).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecutemultipleRequests).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -50,10 +49,8 @@ Checks for the current version of the org.
 1. The `CreateRequest` method is added for each table to the request collection.
 1. The `GetCollectionOdEntitiesToUpdate` class updates the tables that are previously created.
 
-
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -44,6 +44,7 @@ This section contains reference documentation for creating code components using
 |[Filtering](filtering.md)|[!INCLUDE [filtering-description](includes/filtering-description.md)]|Model-driven and canvas apps|
 |[Formatting](formatting.md)|[!INCLUDE [formatting-description](includes/formatting-description.md)]|Model-driven and canvas apps|
 |[ICommand](ICommand.md)|[!INCLUDE [icommand-description](includes/icommand-description.md)]|Model-driven and canvas apps|
+|[ImageObject](imageobject.md)|[!INCLUDE [imageobject-description](includes/imageobject-description.md)]|Canvas apps|
 |[Linking](linking.md)|[!INCLUDE [linking-description](includes/linking-description.md)]|Model-driven apps|
 |[Metadata](metadata.md)|[!INCLUDE [metadata-description](includes/metadata-description.md)]|Model-driven apps|
 |[Mode](mode.md)|[!INCLUDE [mode-description](includes/mode-description.md)]|Model-driven and canvas apps|

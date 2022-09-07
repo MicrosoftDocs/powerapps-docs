@@ -7,20 +7,20 @@ ms.author: jaredha
 manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Persistent queue listener
 
-This sample shows how to write a Azure Service Bus listener application for a persistent queue endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PersistentQueueListener).
+This sample shows how to write a Azure Service Bus listener application for a persistent queue endpoint contract. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/PersistentQueueListener).
 
 The listener waits for a message to be posted to the service bus and to be available in the endpoint queue. When a message is available in the queue, the listener reads the message, prints the execution context contained in the message to the console, and deletes the message from the queue.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

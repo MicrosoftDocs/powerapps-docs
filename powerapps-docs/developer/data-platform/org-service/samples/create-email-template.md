@@ -7,20 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Create an email using a template
 
-
-
-This sample shows how to instantiate an email record by using [InstantiateTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.instantiatetemplaterequest) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EmailTemplate). 
+This sample shows how to instantiate an email record by using [InstantiateTemplateRequest](/dotnet/api/microsoft.crm.sdk.messages.instantiatetemplaterequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/EmailTemplate).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -39,19 +38,17 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. Creates an account record. 
-2. Defines the body and subject of the email template in **XML** format.
-3. Creates an email template.
+1. Creates an account record.
+1. Defines the body and subject of the email template in **XML** format.
+1. Creates an email template.
 
 ### Demonstrate
 
-1. The `InstantiateTemplateRequest` message is used to create an email message using a template. 
+1. The `InstantiateTemplateRequest` message is used to create an email message using a template.
 2. Serialize the email message to **XML** and save to a file.
-
 
 ### Clean up
 
 Display an option to delete the record created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
