@@ -35,10 +35,10 @@ For information about how to create a custom report, see [Reporting and Analytic
   
    2. In the **File Location** box, enter the path and file name of the file to add, or choose **Browse** to locate the file. 
    
-      You can can upload many other file types such as an excel file but for this to run like a SQL Server Reporting Services report or Report Wizard created report, the file needs to be an .RDL file. For more information, see [Report writing environment using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
+      You can upload many other file types such as an Excel file but for this to run like a SQL Server Reporting Services report or Report Wizard created report, the file needs to be an .RDL file. For more information, see [Report writing environment using SQL Server Data Tools](/dynamics365/customer-engagement/analytics/report-writing-environment-using-sql-server-data-tools).
   
       > [!NOTE]
-      > The maximum size of files is determined by the **Maximum file size for attachments** setting in the [Email settings environment system setting](/power-platform/admin/settings-email). However, a report definition file (.RDL) can’t be more than 4 MB in size, even if the maximum file size for attachments setting is larger than 4 MB.
+      > The maximum size of the report file is determined by the **Maximum file size for attachments** setting in the [Email settings environment setting](/power-platform/admin/settings-email). However, a report definition file (.RDL) can’t be more than 4 MB in size, even if the maximum file size for attachments setting is larger than 4 MB.
       
       -OR  
   
