@@ -1,0 +1,392 @@
+---
+title: "Walkthrough: Registering and configuring a SimpleSPA application with msal.js (Microsoft Dataverse) | Microsoft Docs"
+description: "Describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using msal.js and Cross-origin Resource Sharing (CORS)."
+ms.date: 09/08/2022
+ms.topic: quickstart
+author: ritesp # GitHub ID
+ms.subservice: dataverse-developer
+ms.author: ritesp # MSFT alias of Microsoft employees only
+ms.reviewer: jdaly
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
+---
+
+# Quickstart: Register and configure a SPA application for Dataverse using msal.js
+
+This topic describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using msal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single-Page Application to Dataverse ](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
+  
+## Prerequisites
+  
+- Access to a Dataverse environment.
+- An Azure account with an active subscription.
+- The Azure account must have permission to manage applications in Azure Active Directory (Azure AD). Any of the following Azure AD roles include the required permissions:
+
+   - [Application administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
+   - [Application developer](/azure/active-directory/roles/permissions-reference#application-developer)
+   - [Cloud application administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
+
+- Visual Studio Code (VS Code) [Download](https://code.visualstudio.com/download)
+  
+<a name="bkmk_goal"></a>
+
+## Goal of this walkthrough
+
+When you complete this walkthrough you will be able to run a simple SPA application that will provide the ability for a user to authenticate and retrieve data from Dataverse. This application consists of a single HTML page.  
+
+When you debug the application initially there will only be a **Login** button.  
+
+Click **Login** and a pop-up will open to enter your credentials.  
+
+After you enter your credentials you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.
+
+Click the **Get Accounts** button to retrieve 10 account records from your Dataverse organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
+  
+![The SimpleSPA page.](media/simple-spa.png "The SimpleSPA page")  
+
+Finally, you can click on **Logout** button to logout.  
+
+> [!NOTE]
+> This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application. 
+
+## Get your Dataverse Web API endpoint
+
+Use the instructions in [View developer resources](view-download-developer-resources.md) to identify a Web API endpoint for an environment you can access. It should look something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2`. 
+
+## Register your application
+
+1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select Azure Active Directory
+
+   :::image type="content" source="media/azure-active-directory-from-ppac.png" alt-text="Azure Active Directory from Power Platform Admin Center":::
+
+   This will open the **Microsoft Entra admin center**
+
+1. Expand **Applications** and select **App registrations**.
+
+   :::image type="content" source="media/aad-app-registrations-from-entra-admin-center.png" alt-text="Azure App registrations from Microsoft Entra admin center":::
+
+1. Click **New registration**.
+1. In the **Register an application**form, type a **Name**. For the purpose of this quickstart, use the name *Simple SPA*.
+1. For **Supported account types**, the default selection should be: **Accounts in this organizational directory only (<Thenant Name> only – Single tenant)**. Don't change this.
+1. For **Redirect URI (optional)**, use these options:
+
+   - **Select a platform**: **Single-page application (SPA)**
+   - `e.g. https://example.com/auth`: `http://localhost:5500/index.html`
+
+1. Click Register.
+1. In the **Overview** area, Copy the following values because you will need them in step X.
+1. **Application (client) ID**
+1. **Directory (tenant) ID**
+1. Select **API permissions**.
+1. Click **Add a permission**.
+1. In the **Request API permissions** fly-out, select **Dynamics CRM**.
+
+   - If you don't see **Dynamics CRM**, look for **Dataverse**. Or select the **APIs my organization uses**tab and search for *Dataverse*.
+
+1. Select **user_impersonation**.
+1. Click **Add permissions**.
+
+The configured permissions should look like this when you are done:
+
+:::image type="content" source="media/configured-permissions-for-simple-spa-app.png" alt-text="Configured permissions for Simple SPA app":::
+
+
+## Install Live Server Visual Studio Code extension
+
+[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) is a Visual Studio Code extension that allows you to easily launch a local development server for web pages.
+
+1. Use these instructions to find and install the Live Server extension for VS Code in the VS Code marketplace:
+
+- [Browse for extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_browse-for-extensions)
+- [Install an extension](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension)
+
+1. After you have installed the Live Server extension, make these changes to the default settings.
+1. Click the Gear icon in VS Code and select **Settings** , or use the `Ctrl+,` keyboard shortcut.
+1. In the search window type `liveServer.settings.host` and change the default value from `127.0.0.1` to `localhost`.
+
+
+## Create a web application project  
+  
+1. Create a folder on your computer. The name is not important but for the purpose of these instructions name it `simplespa`.
+1. Open VS Code and select **File** > **Open Folder** in the menu. Select the `simplespa` folder.
+1. Create a new HTML file in the folder named `index.html`. (Not `index.htm`)
+1. Copy the contents below into the index.html file:
+  
+   ```html
+   <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+         const baseUrl = "https://org.api.crm.dynamics.com";      //<= Change this
+         const clientId = "11111111-1111-1111-1111-111111111111"; //<= Change this
+         const tenantId = "22222222-2222-2222-2222-222222222222"; //<= Change this
+         const redirectUrl = "http://localhost:5500/index.html";
+         const webAPIEndpoint = baseUrl +"/api/data/v9.2";
+
+         /**
+          * Configuration object to be passed to MSAL instance on creation. 
+         * For a full list of MSAL.js configuration parameters, visit:
+         * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
+         */
+         const msalConfig = {
+            auth: {       
+               clientId: clientId,
+               // Full directory URL, in the form of https://login.microsoftonline.com/<tenant-id>
+               authority: "https://login.microsoftonline.com/"+tenantId,       
+               redirectUri: redirectUrl,
+            },
+            cache: {
+               cacheLocation: "sessionStorage", // This configures where your cache will be stored
+               storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
+            },
+            system: {   
+               loggerOptions: {   
+                  loggerCallback: (level, message, containsPii) => {   
+                        if (containsPii) {      
+                           return;      
+                        }      
+                        switch (level) {      
+                           case msal.LogLevel.Error:      
+                              console.error(message);      
+                              return;      
+                           case msal.LogLevel.Info:      
+                              console.info(message);      
+                              return;      
+                           case msal.LogLevel.Verbose:      
+                              console.debug(message);      
+                              return;      
+                           case msal.LogLevel.Warning:      
+                              console.warn(message);      
+                              return;      
+                        }   
+                  }   
+               }   
+            }
+         };
+
+      </script>
+         <!-- Latest version of msal-browser.js from CDN as of 2022/09 -->
+      <script
+            type="text/javascript" 
+            src="https://alcdn.msauth.net/browser/2.28.1/js/msal-browser.min.js">
+      </script>
+      <style>
+         body {  
+            font-family: 'Segoe UI';  
+         }  
+
+         table {  
+            border-collapse: collapse;  
+         }  
+
+         td, th {  
+            border: 1px solid black;  
+         }  
+
+         #errorMessage {  
+            color: red;  
+         }  
+
+         #message {  
+            color: green;  
+         }
+      </style>
+  </head>
+  <body>
+   <div>
+      <button id="loginButton" onclick="signIn()">Login</button>
+      <button id="logoutButton" onclick="signOut()" style="display:none;">Logout</button>
+      <button id="getAccountsButton" onclick="getAccounts(writeTable)" style="display:none;">Get Accounts</button>  
+      <div id="message"></div>
+      <table id="accountsTable" style="display:none;">  
+       <thead><tr><th>Name</th><th>City</th></tr></thead>  
+       <tbody id="accountsTableBody"></tbody>  
+      </table> 
+   </div>
+   <script>
+   const loginButton = document.getElementById("loginButton");
+   const logoutButton = document.getElementById("logoutButton");
+   const getAccountsButton = document.getElementById("getAccountsButton");
+   const accountsTable = document.getElementById("accountsTable");
+   const accountsTableBody = document.getElementById("accountsTableBody");
+   const message = document.getElementById("message");
+   // Create the main myMSALObj instance
+   const myMSALObj = new msal.PublicClientApplication(msalConfig);
+
+   let username = "";
+
+   // Sets the username. Called at the end of this script.
+   function selectAccount() {
+
+      /**
+       * See here for more info on account retrieval: 
+       * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
+       */
+
+      const currentAccounts = myMSALObj.getAllAccounts();
+      if (currentAccounts.length === 0) {
+         return;
+      } else if (currentAccounts.length > 1) {
+         // Add choose account code here
+         console.warn("Multiple accounts detected.");
+      } else if (currentAccounts.length === 1) {
+         username = currentAccounts[0].username;
+         showWelcomeMessage(username);
+      }
+   }
+
+   // Called by the loginButton
+   function signIn() {
+      myMSALObj.loginPopup({
+         scopes: ["User.Read"]
+         })
+         .then(response =>{
+            if (response !== null) {
+            username = response.account.username;
+            showWelcomeMessage(username);
+               } else {
+                  selectAccount();
+               }
+         })
+         .catch(error => {
+               console.error(error);
+         });
+   }
+
+   // Shows greeting and enables logoutButton and getAccountsButton
+   // Called from signIn or selectAccount functions
+   function showWelcomeMessage(username) {
+   message.innerHTML = `Welcome ${username}`;
+   loginButton.style.display = "none";
+   logoutButton.style.display = "block";
+   getAccountsButton.style.display = "block";
+   }
+
+   // Called by the logoutButton
+   function signOut() {
+
+      const logoutRequest = {
+         account: myMSALObj.getAccountByUsername(username),
+         postLogoutRedirectUri: msalConfig.auth.redirectUri,
+         mainWindowRedirectUri: msalConfig.auth.redirectUri
+      };
+
+      myMSALObj.logoutPopup(logoutRequest);
+   }
+
+   // Provides the access token for a request, opening pop-up if necessary.
+   // Used by GetAccounts function in dataverse.js
+   function getTokenPopup(request) {
+
+      request.account = myMSALObj.getAccountByUsername(username);
+      
+      return myMSALObj.acquireTokenSilent(request)
+         .catch(error => {
+               console.warn("silent token acquisition fails. acquiring token using popup");
+               if (error instanceof msal.InteractionRequiredAuthError) {
+                  // fallback to interaction when silent call fails
+                  return myMSALObj.acquireTokenPopup(request)
+                     .then(tokenResponse => {
+                           console.log(tokenResponse);
+                           return tokenResponse;
+                     }).catch(error => {
+                           console.error(error);
+                     });
+               } else {
+                  console.warn(error);   
+               }
+      });
+   }
+
+   // Retrieves top 10 account records from Dataverse
+   function getAccounts(callback) {
+      // Gets the access token
+      getTokenPopup({
+            scopes: [baseUrl+"/.default"]
+         })
+         .then(response => {
+            getDataverse("accounts?$select=name,address1_city&$top=10", response.accessToken, callback);
+         }).catch(error => {
+            console.error(error);
+         });
+   }
+
+   /** 
+    * Helper function to get data from Dataverse
+    * using the authorization bearer token scheme
+    * callback is the writeTable function below
+   */
+   function getDataverse(url, token, callback) {
+      const headers = new Headers();
+      const bearer = `Bearer ${token}`;
+      headers.append("Authorization", bearer);
+      // Other Dataverse headers
+      headers.append("Accept", "application/json"); 
+      headers.append("OData-MaxVersion", "4.0");  
+      headers.append("OData-Version", "4.0");  
+
+      const options = {
+         method: "GET",
+         headers: headers
+      };
+
+      console.log('GET Request made to Dataverse at: ' + new Date().toString());
+
+      fetch(webAPIEndpoint+"/"+url, options)
+         .then(response => response.json())
+         .then(response => callback(response))
+         .catch(error => console.log(error));
+   }
+
+   // Renders the table with data from GetAccounts in dataverse.js
+   function writeTable(data) {
+
+      data.value.forEach(function (account) {
+      var name = account.name;
+      var city = account.address1_city;
+
+      var nameCell = document.createElement("td");
+      nameCell.textContent = name;
+
+      var cityCell = document.createElement("td");
+      cityCell.textContent = city;
+
+      var row = document.createElement("tr");
+
+      row.appendChild(nameCell);
+      row.appendChild(cityCell);
+
+      accountsTableBody.appendChild(row);
+      });
+      
+      accountsTable.style.display = "block";
+      getAccountsButton.style.display = "none";
+   }
+
+   selectAccount();
+   </script>
+  </body>
+ </html>
+   ```
+1. Within the index.html page, locate the following configuration variables and set them using the information you gathered in earlier steps: [Get your Dataverse Web API endpoint](#get-your-dataverse-web-api-endpoint) and [Register your application](#register-your-application).
+
+   ```javascript
+   const baseUrl = "https://org.api.crm.dynamics.com";      //<= Change this
+   const clientId = "11111111-1111-1111-1111-111111111111"; //<= Change this
+   const tenantId = "22222222-2222-2222-2222-222222222222"; //<= Change this
+   ```
+  
+## See also
+
+[Create client applications](connect-dataverse.md)<br />
+[Tutorial: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
+[Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
+[Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application to Dataverse](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
