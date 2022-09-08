@@ -25,7 +25,7 @@ search.app:
 ---
 # Configure a map on a form
 
-By default, the maps control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table records. Although not configured by default, the maps control can be added to the system user table. The maps control can also be used with some system tables, such as contact, account, and user as well as with some Dynamics 365 apps tables, such as the lead, quote, order, invoice, and competitor tables. The maps control can't be used with custom tables.
+By default, the map control is configured on the main form for both the account and contact tables, which provides the ability to display a map on table records. Although not configured by default, the map control can be added to the system user table. The map control can also be used with some Dynamics 365 apps tables, such as the lead, quote, order, invoice, and competitor tables. The map control can't be used with custom tables.
 
 When enabled, the map displays the location specified in the address composite columns for the given record.
 
@@ -33,7 +33,7 @@ When enabled, the map displays the location specified in the address composite c
 > ![Bing map control in an app.](media/bing-map-example.png "Bing map control in an app")
 
 > [!IMPORTANT]
-> - To use maps the **Bing Maps** setting must be **On** under the **Embedded content** section of environment settings in the Power Platform admin center. More information: [Manage Bing Maps for your organization]/power-platform/admin/manage-bing-maps-organization)
+> - To use the map component the **Bing Maps** setting must be **On** under the **Embedded content** section of environment settings in the Power Platform admin center. More information: [Manage Bing Maps for your organization]/power-platform/admin/manage-bing-maps-organization)
 >
 > - A form can only have one map component.
 
@@ -65,6 +65,5 @@ You can remove the maps area in the form editor or add it back by using the **Bi
 ### See also
 
 [Create and design model-driven app forms](create-design-forms.md) 
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
