@@ -6,7 +6,7 @@ author: chmoncay
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09    /06/2022
+ms.date: 09/06/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
