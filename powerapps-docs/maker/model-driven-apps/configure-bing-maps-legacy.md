@@ -33,7 +33,7 @@ When enabled, the map displays the location specified in the address composite c
 > ![Bing map control in an app.](media/bing-map-example.png "Bing map control in an app")
 
 > [!IMPORTANT]
-> - To use the map component the **Bing Maps** setting must be **On** under the **Embedded content** section of environment settings in the Power Platform admin center. More information: [Manage Bing Maps for your organization]/power-platform/admin/manage-bing-maps-organization)
+> - To use the map component the **Bing Maps** setting must be **On** under the **Embedded content** section of environment settings in the Power Platform admin center. More information: [Manage Bing Maps for your organization](/power-platform/admin/manage-bing-maps-organization)
 >
 > - A form can only have one map component.
 
