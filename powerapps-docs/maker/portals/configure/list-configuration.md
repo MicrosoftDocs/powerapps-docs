@@ -206,9 +206,6 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 ### See also
 
 - [Work with lists](entity-lists.md)
-- [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
-
-
-
