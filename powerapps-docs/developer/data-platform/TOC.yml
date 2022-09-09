@@ -450,8 +450,8 @@
           href: walkthrough-register-app-azure-active-directory.md
         - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
           href: walkthrough-blazor-webassembly-single-tenant.md
-        - name: "Tutorial: Register and configuring a SPA application with msal.js"
-          href: walkthrough-registering-configuring-simplespa-application-msal-js.md
+        - name: "Quick Start: Register and configuring a SPA application with msal.js"
+          href: quickstart-registering-configuring-simplespa-application-msal-js.md
 - name: Transition apps to Dataverse ServiceClient
   href: sdk-client-transition.md
 - name: Best practices
