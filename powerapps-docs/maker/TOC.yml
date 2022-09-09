@@ -1395,7 +1395,9 @@
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
           - name: Add a chart to a form
-            href: ./model-driven-apps/add-chart-to-form.md                 
+            href: ./model-driven-apps/add-chart-to-form.md
+          - name: Add a map on a form
+            href: ./model-driven-apps/configure-bing-maps-legacy.md               
         - name: Design effective forms
           href: 
           items:
@@ -1533,8 +1535,6 @@
             href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
-          - name: How to configure Bing maps in a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to configure event handlers in a form
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
@@ -2548,7 +2548,7 @@
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
         href: ./data-platform/azure-synapse-link-spark.md
-      - name: Run Azure Synapse pipelines
+      - name: Copy Dataverse into Azure SQL
         href: ./data-platform/azure-synapse-link-pipelines.md
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
@@ -2562,8 +2562,6 @@
       items:
       - name: Ingest exported data with Azure Data Factory
         href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Copy data to Azure SQL with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-copy-sql.md
       - name: Copy data from multiple data lakes to single data lake
         href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
       - name: Transform data from CSV to Parquet

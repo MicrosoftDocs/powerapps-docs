@@ -69,8 +69,7 @@ If you aren't a global administrator and you try to manage a portal that has alr
 
 ### See also
 
-- [Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
-- [Microsoft Learn: Power Apps portals architecture](/learn/modules/portals-architecture)
-
+- [Administer Power Apps portals](/learn/paths/administer-portals/)
+- [Power Apps portals architecture](/learn/modules/portals-architecture)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
