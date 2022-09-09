@@ -52,7 +52,7 @@ The set of steps required are described in [Quickstart: Register and configure a
 ### See also
 
 [Use OAuth to connect to Dataverse web services](authenticate-oauth.md)<br />
-[Quickstart: Register and configure a SPA application for Dataverse using msal.js](walkthrough-registering-configuring-simplespa-application-msal-js.md)<br />
+[Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-registering-configuring-simplespa-application-msal-js.md)<br />
 [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

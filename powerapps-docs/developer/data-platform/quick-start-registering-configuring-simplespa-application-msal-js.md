@@ -71,16 +71,18 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
 1. Click **New registration**.
 1. In the **Register an application** form, type a **Name**. For the purpose of this quickstart, use the name *Simple SPA*.
-1. For **Supported account types**, the default selection should be:<br />**Accounts in this organizational directory only (&lt;The tenant Name&gt; only – Single tenant)**. Don't change this.
+1. For **Supported account types**, the default selection should be:<br />**Accounts in this organizational directory only (&lt;tenant name&gt; only – Single tenant)**. Don't change this.
 1. For **Redirect URI (optional)**, use these options:
 
    - **Select a platform**: Single-page application (SPA)
    - `e.g. https://example.com/auth`: `http://localhost:5500/index.html`
 
 1. Click **Register**.
-1. In the **Overview** area, copy the following values because you will need them in step X.
-1. **Application (client) ID**
-1. **Directory (tenant) ID**
+1. In the **Overview** area, copy the following values because you will need them in the final step of [Create a web application project](#create-a-web-application-project).
+
+   - **Application (client) ID**
+   - **Directory (tenant) ID**
+
 1. Select **API permissions**.
 1. Click **Add a permission**.
 1. In the **Request API permissions** fly-out, select **Dynamics CRM**.
@@ -221,11 +223,6 @@ The configured permissions should look like this when you are done:
 
       // Sets the username. Called at the end of this script.
       function selectAccount() {
-
-         /**
-          * See here for more info on account retrieval: 
-         * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
-         */
 
          const currentAccounts = myMSALObj.getAllAccounts();
          if (currentAccounts.length === 0) {
