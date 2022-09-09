@@ -18,7 +18,7 @@ search.app:
 
 # Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application
 
-You can create a Single-Page Application (SPA) which uses JavaScript to work with Microsoft Dataverse data using Web API. To provide this, Cross-Origin Resource Sharing (CORS) is enabled so that your SPAs can bypass browser restrictions that normally prevent requests that cross domain boundaries. 
+You can create a Single-Page Application (SPA) which uses JavaScript to work with Microsoft Dataverse data using Web API. To provide this, Cross-Origin Resource Sharing (CORS) is enabled so that your SPAs can bypass browser restrictions that normally prevent requests that cross domain boundaries.
   
 <a name="bkmk_Spas_and_same_origin_policy"></a> 
   
@@ -34,21 +34,18 @@ The [CORS protocol](https://fetch.spec.whatwg.org/#http-cors-protocol) provides 
 
 ## Preparing to use MSAL.js with a SPA
 
-In order to configure your SPA to work with msal.js you will need to:  
-  
+In order to configure your SPA to work with msal.js you will need to:
+
 1. Register your application with the Azure Active Directory tenant.
 1. Set configuration variables in your SPA with information from that registration.  
-
-   You will need to include the following:  
-  
+   You will need to include the following: 
    - The URL to your Dataverse organization.
    - The Id of the Active Directory tenant your organization uses to authenticate.
    - The client ID you get when you register your application.
    - The URL to where the SPA will be deployed or debugged during development.
 
+The set of steps required are described in [Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-register-configure-simplespa-application-msal-js.md)
 
-The set of steps required are described in [Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-register-configure-simplespa-application-msal-js.md)  
-  
 ### See also
 
 [Use OAuth to connect to Dataverse web services](authenticate-oauth.md)<br />
