@@ -81,7 +81,7 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
-The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`. In addition, tables types 'virtual' and 'audit' are not supported at this time. 
+The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`. In addition, tables types 'virtual' and 'audit' are not supported at this time.
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
@@ -181,8 +181,8 @@ This means the port has been blocked at the client.
 
 ### See also
 
+[Get started with virtual tables (entities)](virtual-entities/get-started-ve)  
 [Use FetchXML to construct a query](dataverse-sql-query.md)  
 [Service Protection API Limits](api-limits.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
