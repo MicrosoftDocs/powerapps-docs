@@ -47,7 +47,7 @@ In order to configure your SPA to work with msal.js you will need to:
    - The URL to where the SPA will be deployed or debugged during development.
 
 
-The set of steps required are described in [Quickstart: Register and configure a SPA application for Dataverse using msal.js](walkthrough-registering-configuring-simplespa-application-msal-js.md).  
+The set of steps required are described in [Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-registering-configuring-simplespa-application-msal-js.md)  
   
 ### See also
 
