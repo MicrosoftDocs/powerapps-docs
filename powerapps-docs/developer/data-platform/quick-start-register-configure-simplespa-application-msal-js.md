@@ -1,7 +1,7 @@
 ---
 title: "Walkthrough: Registering and configuring a SimpleSPA application with msal.js (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using msal.js and Cross-origin Resource Sharing (CORS)."
-ms.date: 09/08/2022
+ms.date: 09/09/2022
 ms.topic: quickstart
 author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
