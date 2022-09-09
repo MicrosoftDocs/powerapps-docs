@@ -233,7 +233,7 @@ The configured permissions should look like this when you are done:
       // Called by the loginButton
       function signIn() {
          myMSALObj.loginPopup({
-            scopes: ["User.Read",baseUrl+"/user_impersonation"]
+            scopes: ["User.Read",baseUrl+"/user_impersonation"] //<= Includes Dataverse scope
             })
             .then(response =>{
                if (response !== null) {
@@ -376,10 +376,10 @@ The configured permissions should look like this when you are done:
    >   // Called by the loginButton
    >   function signIn() {
    >      myMSALObj.loginPopup({
-   >         scopes: ["User.Read",baseUrl+"/user_impersonation"]
+   >         scopes: ["User.Read",baseUrl+"/user_impersonation"]  //<= Includes Dataverse scope
    >         })
    > ```
-   > These scopes include both the Microsoft Graph User.Read scope, but also the Dataverse user_impersonation scope.
+   > These scopes include both the Microsoft Graph `User.Read` scope, but also the Dataverse `user_impersonation` scope.
    > By including both of these scopes when signing in, the inital consent dialog will include all the necessary scopes used in the applicaiton.
    >
    > Then, when specifying the scope used for the call to Dataverse you can use either `/.default` or `/user_impersonation`.
@@ -418,7 +418,7 @@ Because you installed the Live Server extension in [Install Live Server Visual S
 
    :::image type="content" source="media/permissions-requested-dialog.png" alt-text="Permissions requested dialog":::
 
-   If you are an administrator, you can select the **Consent on behalf of your organization**checkbox which will enable others to also run the app.
+   If you are an administrator, you can select the **Consent on behalf of your organization** checkbox which will enable others to also run the app without having to use the **Permissions requested** dialog.
 
 1. Click **Accept** to continue testing to verify that the app works as described in [Goal of this quick start](#goal-of-this-quick-start).
 
