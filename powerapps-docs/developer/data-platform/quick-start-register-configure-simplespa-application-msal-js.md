@@ -42,7 +42,7 @@ When you debug the application initially there will only be a **Login** button.
 
 - Click **Login** and a pop-up will open to enter your credentials.  
 - After you enter your credentials you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.
-- Click the **Get Accounts** button to retrieve 10 account records from your Dataverse organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
+- Click the **Get Accounts** button to retrieve 10 account records from your Dataverse organization. The result is shown in the following screenshot:  
   
    ![The SimpleSPA page.](media/simple-spa.png "The SimpleSPA page")
 
@@ -67,7 +67,7 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
    :::image type="content" source="media/aad-app-registrations-from-entra-admin-center.png" alt-text="Azure App registrations from Microsoft Entra admin center":::
 
-1. Click **New registration**. This will open the **Register an application**form.
+1. Click **New registration**. This will open the **Register an application** form.
 
    :::image type="content" source="media/aad-app-registration-form.png" alt-text="Register and application form":::
 
@@ -90,7 +90,7 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
    - If you don't see **Dynamics CRM**, look for **Dataverse**. Or select the **APIs my organization uses** tab and search for *Dataverse*.
 
-1. Select **user_impersonation**.
+1. Select the **user_impersonation** delegated permission.
 1. Click **Add permissions**.
 
 The configured permissions should look like this when you are done:
@@ -116,7 +116,7 @@ The configured permissions should look like this when you are done:
 1. Open VS Code and select **File** > **Open Folder** in the menu. Select the `simplespa` folder.
 1. Create a new HTML file in the folder named `index.html`. (Not `index.htm`)
 1. Copy the contents below into the index.html file:
-  
+
    ```html
    <html>
     <head>
@@ -366,6 +366,25 @@ The configured permissions should look like this when you are done:
    </html>
    ```
 
+   > [!NOTE]
+   > The JavaScript code in the HTML page was adapted from the sample code published here: [https://github.com/Azure-Samples/ms-identity-javascript-v2](https://github.com/Azure-Samples/ms-identity-javascript-v2) which connects to Microsoft Graph.
+   >
+   > The key difference is the scopes used when getting the access token. You must set the scope to the value of the Dataverse Url + `/.default` or `/user_impersonation`.
+   >
+   > ```javascript
+   >          // Retrieves top 10 account records from Dataverse
+   >       function getAccounts(callback) {
+   >          // Gets the access token
+   >          getTokenPopup({
+   >                scopes: [baseUrl+"/.default"]
+   >             })
+   >    ```
+   >
+   > `/user_impersonation` scope only works for delegated permissions, which is the case here, so it could be used. `/.default` works for both delegated and application permissions.
+   >
+   >
+   > You can find other SPA examples and tutorials here: [Single-page application (SPA) documentation](/azure/active-directory/develop/index-spa).
+
 1. Within the index.html page, locate the following configuration variables and set them using the information you gathered in earlier steps: [Get your Dataverse Web API endpoint](#get-your-dataverse-web-api-endpoint) and [Register your application](#register-your-application).
 
    ```javascript
@@ -382,9 +401,8 @@ Click the **Go Live** button and a new browser window will open to `http://local
 
 ### See also
 
-[Create client applications](connect-dataverse.md)<br />
-[Tutorial: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
-[Build web applications using server-to-server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
-[Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application to Dataverse](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
+[Single-page application (SPA) documentation](/azure/active-directory/develop/index-spa)<br />
+[Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application to Dataverse](oauth-cross-origin-resource-sharing-connect-single-page-application.md)<br />
+[Create client applications](connect-dataverse.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
