@@ -71,10 +71,10 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
 1. Click **New registration**.
 1. In the **Register an application** form, type a **Name**. For the purpose of this quickstart, use the name *Simple SPA*.
-1. For **Supported account types**, the default selection should be: **Accounts in this organizational directory only (<Thenant Name> only – Single tenant)**. Don't change this.
+1. For **Supported account types**, the default selection should be:<br />**Accounts in this organizational directory only (&lt;The tenant Name&gt; only – Single tenant)**. Don't change this.
 1. For **Redirect URI (optional)**, use these options:
 
-   - **Select a platform**: **Single-page application (SPA)**
+   - **Select a platform**: Single-page application (SPA)
    - `e.g. https://example.com/auth`: `http://localhost:5500/index.html`
 
 1. Click **Register**.
@@ -85,7 +85,7 @@ Use the instructions in [View developer resources](view-download-developer-resou
 1. Click **Add a permission**.
 1. In the **Request API permissions** fly-out, select **Dynamics CRM**.
 
-   - If you don't see **Dynamics CRM**, look for **Dataverse**. Or select the **APIs my organization uses**tab and search for *Dataverse*.
+   - If you don't see **Dynamics CRM**, look for **Dataverse**. Or select the **APIs my organization uses** tab and search for *Dataverse*.
 
 1. Select **user_impersonation**.
 1. Click **Add permissions**.
@@ -94,20 +94,18 @@ The configured permissions should look like this when you are done:
 
 :::image type="content" source="media/configured-permissions-for-simple-spa-app.png" alt-text="Configured permissions for Simple SPA app":::
 
-
 ## Install Live Server Visual Studio Code extension
 
 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) is a Visual Studio Code extension that allows you to easily launch a local development server for web pages.
 
 1. Use these instructions to find and install the Live Server extension for VS Code in the VS Code marketplace:
 
-- [Browse for extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_browse-for-extensions)
-- [Install an extension](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension)
+   - [Browse for extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_browse-for-extensions)
+   - [Install an extension](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension)
 
 1. After you have installed the Live Server extension, make these changes to the default settings.
 1. Click the Gear icon in VS Code and select **Settings** , or use the `Ctrl+,` keyboard shortcut.
 1. In the search window type `liveServer.settings.host` and change the default value from `127.0.0.1` to `localhost`.
-
 
 ## Create a web application project  
   
