@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/data-platform/azure-synapse-link-copy-sql.md",
+      "redirect_url": "azure-synapse-link-pipelines",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice.md",
       "redirect_url": "webapiservice",
       "redirect_document_id": false
