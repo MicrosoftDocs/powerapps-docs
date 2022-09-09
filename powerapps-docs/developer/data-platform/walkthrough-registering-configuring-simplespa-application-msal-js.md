@@ -34,9 +34,9 @@ This topic describes the process of registering and configuring the simplest Sin
   
 <a name="bkmk_goal"></a>
 
-## Goal of this walkthrough
+## Goal of this quick start
 
-When you complete this walkthrough you will be able to run a simple SPA application that will provide the ability for a user to authenticate and retrieve data from Dataverse. This application consists of a single HTML page.  
+When you complete this quick start you will be able to run a simple SPA application that will provide the ability for a user to authenticate and retrieve data from Dataverse. This application consists of a single HTML page.  
 
 When you debug the application initially there will only be a **Login** button.  
 
@@ -51,7 +51,7 @@ Click the **Get Accounts** button to retrieve 10 account records from your Datav
 Finally, you can click on **Logout** button to logout.  
 
 > [!NOTE]
-> This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application. 
+> This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.
 
 ## Get your Dataverse Web API endpoint
 
@@ -70,15 +70,15 @@ Use the instructions in [View developer resources](view-download-developer-resou
    :::image type="content" source="media/aad-app-registrations-from-entra-admin-center.png" alt-text="Azure App registrations from Microsoft Entra admin center":::
 
 1. Click **New registration**.
-1. In the **Register an application**form, type a **Name**. For the purpose of this quickstart, use the name *Simple SPA*.
+1. In the **Register an application** form, type a **Name**. For the purpose of this quickstart, use the name *Simple SPA*.
 1. For **Supported account types**, the default selection should be: **Accounts in this organizational directory only (<Thenant Name> only – Single tenant)**. Don't change this.
 1. For **Redirect URI (optional)**, use these options:
 
    - **Select a platform**: **Single-page application (SPA)**
    - `e.g. https://example.com/auth`: `http://localhost:5500/index.html`
 
-1. Click Register.
-1. In the **Overview** area, Copy the following values because you will need them in step X.
+1. Click **Register**.
+1. In the **Overview** area, copy the following values because you will need them in step X.
 1. **Application (client) ID**
 1. **Directory (tenant) ID**
 1. Select **API permissions**.
@@ -196,9 +196,9 @@ The configured permissions should look like this when you are done:
          #message {  
             color: green;  
          }
-      </style>
-  </head>
-  <body>
+   </style>
+   </head>
+   <body>
    <div>
       <button id="loginButton" onclick="signIn()">Login</button>
       <button id="logoutButton" onclick="signOut()" style="display:none;">Logout</button>
@@ -207,173 +207,174 @@ The configured permissions should look like this when you are done:
       <table id="accountsTable" style="display:none;">  
        <thead><tr><th>Name</th><th>City</th></tr></thead>  
        <tbody id="accountsTableBody"></tbody>  
-      </table> 
+      </table>
    </div>
    <script>
-   const loginButton = document.getElementById("loginButton");
-   const logoutButton = document.getElementById("logoutButton");
-   const getAccountsButton = document.getElementById("getAccountsButton");
-   const accountsTable = document.getElementById("accountsTable");
-   const accountsTableBody = document.getElementById("accountsTableBody");
-   const message = document.getElementById("message");
-   // Create the main myMSALObj instance
-   const myMSALObj = new msal.PublicClientApplication(msalConfig);
+      const loginButton = document.getElementById("loginButton");
+      const logoutButton = document.getElementById("logoutButton");
+      const getAccountsButton = document.getElementById("getAccountsButton");
+      const accountsTable = document.getElementById("accountsTable");
+      const accountsTableBody = document.getElementById("accountsTableBody");
+      const message = document.getElementById("message");
+      // Create the main myMSALObj instance
+      const myMSALObj = new msal.PublicClientApplication(msalConfig);
 
-   let username = "";
+      let username = "";
 
-   // Sets the username. Called at the end of this script.
-   function selectAccount() {
+      // Sets the username. Called at the end of this script.
+      function selectAccount() {
 
-      /**
-       * See here for more info on account retrieval: 
-       * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
-       */
+         /**
+          * See here for more info on account retrieval: 
+         * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
+         */
 
-      const currentAccounts = myMSALObj.getAllAccounts();
-      if (currentAccounts.length === 0) {
-         return;
-      } else if (currentAccounts.length > 1) {
-         // Add choose account code here
-         console.warn("Multiple accounts detected.");
-      } else if (currentAccounts.length === 1) {
-         username = currentAccounts[0].username;
-         showWelcomeMessage(username);
-      }
-   }
-
-   // Called by the loginButton
-   function signIn() {
-      myMSALObj.loginPopup({
-         scopes: ["User.Read"]
-         })
-         .then(response =>{
-            if (response !== null) {
-            username = response.account.username;
+         const currentAccounts = myMSALObj.getAllAccounts();
+         if (currentAccounts.length === 0) {
+            return;
+         } else if (currentAccounts.length > 1) {
+            // Add choose account code here
+            console.warn("Multiple accounts detected.");
+         } else if (currentAccounts.length === 1) {
+            username = currentAccounts[0].username;
             showWelcomeMessage(username);
-               } else {
-                  selectAccount();
-               }
-         })
-         .catch(error => {
+         }
+      }
+
+      // Called by the loginButton
+      function signIn() {
+         myMSALObj.loginPopup({
+            scopes: ["User.Read"]
+            })
+            .then(response =>{
+               if (response !== null) {
+               username = response.account.username;
+               showWelcomeMessage(username);
+                  } else {
+                     selectAccount();
+                  }
+            })
+            .catch(error => {
+                  console.error(error);
+            });
+      }
+
+      // Shows greeting and enables logoutButton and getAccountsButton
+      // Called from signIn or selectAccount functions
+      function showWelcomeMessage(username) {
+       message.innerHTML = `Welcome ${username}`;
+       loginButton.style.display = "none";
+       logoutButton.style.display = "block";
+       getAccountsButton.style.display = "block";
+      }
+
+      // Called by the logoutButton
+      function signOut() {
+
+         const logoutRequest = {
+            account: myMSALObj.getAccountByUsername(username),
+            postLogoutRedirectUri: msalConfig.auth.redirectUri,
+            mainWindowRedirectUri: msalConfig.auth.redirectUri
+         };
+
+         myMSALObj.logoutPopup(logoutRequest);
+      }
+
+      // Provides the access token for a request, opening pop-up if necessary.
+      // Used by GetAccounts function in dataverse.js
+      function getTokenPopup(request) {
+
+         request.account = myMSALObj.getAccountByUsername(username);
+         
+         return myMSALObj.acquireTokenSilent(request)
+            .catch(error => {
+                  console.warn("silent token acquisition fails. acquiring token using popup");
+                  if (error instanceof msal.InteractionRequiredAuthError) {
+                     // fallback to interaction when silent call fails
+                     return myMSALObj.acquireTokenPopup(request)
+                        .then(tokenResponse => {
+                              console.log(tokenResponse);
+                              return tokenResponse;
+                        }).catch(error => {
+                              console.error(error);
+                        });
+                  } else {
+                     console.warn(error);   
+                  }
+         });
+      }
+
+      // Retrieves top 10 account records from Dataverse
+      function getAccounts(callback) {
+         // Gets the access token
+         getTokenPopup({
+               scopes: [baseUrl+"/.default"]
+            })
+            .then(response => {
+               getDataverse("accounts?$select=name,address1_city&$top=10", response.accessToken, callback);
+            }).catch(error => {
                console.error(error);
-         });
-   }
+            });
+      }
 
-   // Shows greeting and enables logoutButton and getAccountsButton
-   // Called from signIn or selectAccount functions
-   function showWelcomeMessage(username) {
-   message.innerHTML = `Welcome ${username}`;
-   loginButton.style.display = "none";
-   logoutButton.style.display = "block";
-   getAccountsButton.style.display = "block";
-   }
+      /** 
+       * Helper function to get data from Dataverse
+      * using the authorization bearer token scheme
+      * callback is the writeTable function below
+      */
+      function getDataverse(url, token, callback) {
+          const headers = new Headers();
+          const bearer = `Bearer ${token}`;
+          headers.append("Authorization", bearer);
+          // Other Dataverse headers
+          headers.append("Accept", "application/json"); 
+          headers.append("OData-MaxVersion", "4.0");  
+          headers.append("OData-Version", "4.0");  
 
-   // Called by the logoutButton
-   function signOut() {
+          const options = {
+             method: "GET",
+             headers: headers
+          };
 
-      const logoutRequest = {
-         account: myMSALObj.getAccountByUsername(username),
-         postLogoutRedirectUri: msalConfig.auth.redirectUri,
-         mainWindowRedirectUri: msalConfig.auth.redirectUri
-      };
+        console.log('GET Request made to Dataverse at: ' + new Date().toString());
 
-      myMSALObj.logoutPopup(logoutRequest);
-   }
+        fetch(webAPIEndpoint+"/"+url, options)
+             .then(response => response.json())
+             .then(response => callback(response))
+             .catch(error => console.log(error));
+       }
 
-   // Provides the access token for a request, opening pop-up if necessary.
-   // Used by GetAccounts function in dataverse.js
-   function getTokenPopup(request) {
+       // Renders the table with data from GetAccounts in dataverse.js
+       function writeTable(data) {
 
-      request.account = myMSALObj.getAccountByUsername(username);
+          data.value.forEach(function (account) {
+              var name = account.name;
+              var city = account.address1_city;
+
+              var nameCell = document.createElement("td");
+              nameCell.textContent = name;
+               
+              var cityCell = document.createElement("td");
+              cityCell.textContent = city;
+
+              var row = document.createElement("tr");
+
+              row.appendChild(nameCell);
+              row.appendChild(cityCell);
+            
+              accountsTableBody.appendChild(row);
+          });
       
-      return myMSALObj.acquireTokenSilent(request)
-         .catch(error => {
-               console.warn("silent token acquisition fails. acquiring token using popup");
-               if (error instanceof msal.InteractionRequiredAuthError) {
-                  // fallback to interaction when silent call fails
-                  return myMSALObj.acquireTokenPopup(request)
-                     .then(tokenResponse => {
-                           console.log(tokenResponse);
-                           return tokenResponse;
-                     }).catch(error => {
-                           console.error(error);
-                     });
-               } else {
-                  console.warn(error);   
-               }
-      });
-   }
-
-   // Retrieves top 10 account records from Dataverse
-   function getAccounts(callback) {
-      // Gets the access token
-      getTokenPopup({
-            scopes: [baseUrl+"/.default"]
-         })
-         .then(response => {
-            getDataverse("accounts?$select=name,address1_city&$top=10", response.accessToken, callback);
-         }).catch(error => {
-            console.error(error);
-         });
-   }
-
-   /** 
-    * Helper function to get data from Dataverse
-    * using the authorization bearer token scheme
-    * callback is the writeTable function below
-   */
-   function getDataverse(url, token, callback) {
-      const headers = new Headers();
-      const bearer = `Bearer ${token}`;
-      headers.append("Authorization", bearer);
-      // Other Dataverse headers
-      headers.append("Accept", "application/json"); 
-      headers.append("OData-MaxVersion", "4.0");  
-      headers.append("OData-Version", "4.0");  
-
-      const options = {
-         method: "GET",
-         headers: headers
-      };
-
-      console.log('GET Request made to Dataverse at: ' + new Date().toString());
-
-      fetch(webAPIEndpoint+"/"+url, options)
-         .then(response => response.json())
-         .then(response => callback(response))
-         .catch(error => console.log(error));
-   }
-
-   // Renders the table with data from GetAccounts in dataverse.js
-   function writeTable(data) {
-
-      data.value.forEach(function (account) {
-      var name = account.name;
-      var city = account.address1_city;
-
-      var nameCell = document.createElement("td");
-      nameCell.textContent = name;
-
-      var cityCell = document.createElement("td");
-      cityCell.textContent = city;
-
-      var row = document.createElement("tr");
-
-      row.appendChild(nameCell);
-      row.appendChild(cityCell);
-
-      accountsTableBody.appendChild(row);
-      });
-      
-      accountsTable.style.display = "block";
-      getAccountsButton.style.display = "none";
-   }
-
-   selectAccount();
-   </script>
-  </body>
- </html>
+          accountsTable.style.display = "block";
+          getAccountsButton.style.display = "none";
+       }
+       
+       selectAccount();
+     </script>
+    </body>
+   </html>
    ```
+
 1. Within the index.html page, locate the following configuration variables and set them using the information you gathered in earlier steps: [Get your Dataverse Web API endpoint](#get-your-dataverse-web-api-endpoint) and [Register your application](#register-your-application).
 
    ```javascript
