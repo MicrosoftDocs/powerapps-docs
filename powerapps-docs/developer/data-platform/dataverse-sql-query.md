@@ -181,7 +181,7 @@ This means the port has been blocked at the client.
 
 ### See also
 
-[Get started with virtual tables (entities)](virtual-entities/get-started-ve)  
+[Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
 [Use FetchXML to construct a query](dataverse-sql-query.md)  
 [Service Protection API Limits](api-limits.md)
 
