@@ -47,12 +47,12 @@ In order to configure your SPA to work with msal.js you will need to:
    - The URL to where the SPA will be deployed or debugged during development.
 
 
-The set of steps required are described in [Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-registering-configuring-simplespa-application-msal-js.md)  
+The set of steps required are described in [Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-register-configure-simplespa-application-msal-js.md)  
   
 ### See also
 
 [Use OAuth to connect to Dataverse web services](authenticate-oauth.md)<br />
-[Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-registering-configuring-simplespa-application-msal-js.md)<br />
+[Quickstart: Register and configure a SPA application for Dataverse using msal.js](quick-start-register-configure-simplespa-application-msal-js.md)<br />
 [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

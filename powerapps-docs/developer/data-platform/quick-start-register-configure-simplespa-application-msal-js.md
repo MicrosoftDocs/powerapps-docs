@@ -36,19 +36,17 @@ This topic describes the process of registering and configuring the simplest Sin
 
 ## Goal of this quick start
 
-When you complete this quick start you will be able to run a simple SPA application that will provide the ability for a user to authenticate and retrieve data from Dataverse. This application consists of a single HTML page.  
+When you complete this quick start you will be able to run a simple SPA application that will provide the ability for a user to authenticate and retrieve data from Dataverse.  
 
 When you debug the application initially there will only be a **Login** button.  
 
-Click **Login** and a pop-up will open to enter your credentials.  
-
-After you enter your credentials you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.
-
-Click the **Get Accounts** button to retrieve 10 account records from your Dataverse organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
+- Click **Login** and a pop-up will open to enter your credentials.  
+- After you enter your credentials you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.
+- Click the **Get Accounts** button to retrieve 10 account records from your Dataverse organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
   
-![The SimpleSPA page.](media/simple-spa.png "The SimpleSPA page")  
+   ![The SimpleSPA page.](media/simple-spa.png "The SimpleSPA page")
 
-Finally, you can click on **Logout** button to logout.  
+- Finally, you can click on **Logout** button to logout. 
 
 > [!NOTE]
 > This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.
@@ -59,7 +57,7 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
 ## Register your application
 
-1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select Azure Active Directory
+1. From [Power Platform admin center](https://admin.powerplatform.microsoft.com) in the left navigation expand **Admin centers** and select **Azure Active Directory**.
 
    :::image type="content" source="media/azure-active-directory-from-ppac.png" alt-text="Azure Active Directory from Power Platform Admin Center":::
 
@@ -69,7 +67,10 @@ Use the instructions in [View developer resources](view-download-developer-resou
 
    :::image type="content" source="media/aad-app-registrations-from-entra-admin-center.png" alt-text="Azure App registrations from Microsoft Entra admin center":::
 
-1. Click **New registration**.
+1. Click **New registration**. This will open the **Register an application**form.
+
+   :::image type="content" source="media/aad-app-registration-form.png" alt-text="Register and application form":::
+
 1. In the **Register an application** form, type a **Name**. For the purpose of this quickstart, use the name *Simple SPA*.
 1. For **Supported account types**, the default selection should be:<br />**Accounts in this organizational directory only (&lt;tenant name&gt; only – Single tenant)**. Don't change this.
 1. For **Redirect URI (optional)**, use these options:
@@ -106,7 +107,7 @@ The configured permissions should look like this when you are done:
    - [Install an extension](https://code.visualstudio.com/docs/editor/extension-marketplace#_install-an-extension)
 
 1. After you have installed the Live Server extension, make these changes to the default settings.
-1. Click the Gear icon in VS Code and select **Settings** , or use the `Ctrl+,` keyboard shortcut.
+1. Click the gear icon :::image type="icon" source="media/vscode-gear-icon.png" border="false"::: in VS Code and select **Settings** , or use the `Ctrl+,` keyboard shortcut.
 1. In the search window type `liveServer.settings.host` and change the default value from `127.0.0.1` to `localhost`.
 
 ## Create a web application project  
@@ -129,11 +130,9 @@ The configured permissions should look like this when you are done:
          const redirectUrl = "http://localhost:5500/index.html";
          const webAPIEndpoint = baseUrl +"/api/data/v9.2";
 
-         /**
-          * Configuration object to be passed to MSAL instance on creation. 
-         * For a full list of MSAL.js configuration parameters, visit:
-         * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md 
-         */
+         
+         // Configuration object to be passed to MSAL instance on creation. 
+         
          const msalConfig = {
             auth: {       
                clientId: clientId,
@@ -142,8 +141,7 @@ The configured permissions should look like this when you are done:
                redirectUri: redirectUrl,
             },
             cache: {
-               cacheLocation: "sessionStorage", // This configures where your cache will be stored
-               storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
+               cacheLocation: "sessionStorage" // This configures where your cache will be stored
             },
             system: {   
                loggerOptions: {   
@@ -187,11 +185,7 @@ The configured permissions should look like this when you are done:
 
          td, th {  
             border: 1px solid black;  
-         }  
-
-         #errorMessage {  
-            color: red;  
-         }  
+         }
 
          #message {  
             color: green;  
@@ -276,14 +270,14 @@ The configured permissions should look like this when you are done:
       }
 
       // Provides the access token for a request, opening pop-up if necessary.
-      // Used by GetAccounts function in dataverse.js
+      // Used by GetAccounts function
       function getTokenPopup(request) {
 
          request.account = myMSALObj.getAccountByUsername(username);
          
          return myMSALObj.acquireTokenSilent(request)
             .catch(error => {
-                  console.warn("silent token acquisition fails. acquiring token using popup");
+                  console.warn("Silent token acquisition fails. Acquiring token using popup");
                   if (error instanceof msal.InteractionRequiredAuthError) {
                      // fallback to interaction when silent call fails
                      return myMSALObj.acquireTokenPopup(request)
@@ -339,10 +333,11 @@ The configured permissions should look like this when you are done:
              .catch(error => console.log(error));
        }
 
-       // Renders the table with data from GetAccounts in dataverse.js
+       // Renders the table with data from GetAccounts
        function writeTable(data) {
 
           data.value.forEach(function (account) {
+
               var name = account.name;
               var city = account.address1_city;
 
@@ -357,7 +352,8 @@ The configured permissions should look like this when you are done:
               row.appendChild(nameCell);
               row.appendChild(cityCell);
             
-              accountsTableBody.appendChild(row);
+              accountsTableBody.appendChild(row); 
+        
           });
       
           accountsTable.style.display = "block";
@@ -378,7 +374,13 @@ The configured permissions should look like this when you are done:
    const tenantId = "22222222-2222-2222-2222-222222222222"; //<= Change this
    ```
   
-## See also
+## Debug the app
+
+Because you installed the Live Server extension in [Install Live Server Visual Studio Code extension](#install-live-server-visual-studio-code-extension), in the VS Code tool bar you should find this button: :::image type="icon" source="media/vscode-live-server-go-live-button.png" border="false":::.
+
+Click the **Go Live** button and a new browser window will open to `http://localhost:5500/index.html` rendering the index.html page. You can now test the app works as described in [Goal of this quick start](#goal-of-this-quick-start).
+
+### See also
 
 [Create client applications](connect-dataverse.md)<br />
 [Tutorial: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
