@@ -22,7 +22,7 @@ Download the sample: [Workflow](https://github.com/microsoft/PowerApps-Samples/t
 
 ## How to run this sample
 
-See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/README.md) for general information about how to run this sample.
+See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/README.md) for general information about how to run this sample.
 
 Notice that there are five separate samples, each in it's own C# file, in the solution's [project](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Workflow/Workflow). To run each sample, set it as the startup object in the project's properties prior to executing the sample.
 

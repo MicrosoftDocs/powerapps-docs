@@ -76,7 +76,7 @@ A [ServiceEndpoint Table](reference/entities/serviceendpoint.md) contains config
 ### See also
 
 [Azure integration](azure-integration.md)<br />
-[Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+[What is Azure Service Bus?](/azure/service-bus-messaging/service-bus-messaging-overview)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

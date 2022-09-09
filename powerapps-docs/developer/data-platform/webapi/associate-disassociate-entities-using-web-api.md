@@ -306,18 +306,18 @@ OData-Version: 4.0
 
 ### See also
 
- [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)   
- [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)   
- [Perform operations using the Web API](perform-operations-web-api.md)   
- [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)   
- [Query Data using the Web API](query-data-web-api.md)   
- [Create a table row using the Web API](create-entity-web-api.md)   
- [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
- [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
- [Use Web API functions](use-web-api-functions.md)   
- [Use Web API actions](use-web-api-actions.md)   
- [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   
- [Impersonate another user using the Web API](impersonate-another-user-web-api.md)   
- [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
+ [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
+ [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
+ [Perform operations using the Web API](perform-operations-web-api.md)<br />
+ [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
+ [Query Data using the Web API](query-data-web-api.md)<br />
+ [Create a table row using the Web API](create-entity-web-api.md)<br />
+ [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+ [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+ [Use Web API functions](use-web-api-functions.md)<br />
+ [Use Web API actions](use-web-api-actions.md)<br />
+ [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
+ [Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
+ [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

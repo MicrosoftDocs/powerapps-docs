@@ -2,13 +2,13 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/08/2022
+ms.date: 09/06/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "RichdiMSFT" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+ms.author: "richdi" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -21,7 +21,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ![Another query using a JOIN.](media/ssms-join-query.PNG)
 
-### Power BI
+### Power BI (General Availability)
 
 You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
 

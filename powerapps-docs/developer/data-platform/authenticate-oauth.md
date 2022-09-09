@@ -3,18 +3,18 @@ title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsof
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
 ms.date: 07/28/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "paulliew" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: ritesp # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: ritesp # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
 search.app:
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Use OAuth authentication with Microsoft Dataverse
@@ -42,11 +42,9 @@ The decisions you will need to make in this step mostly depend on the Applicatio
 
 When you register an app with Azure AD one of the decisions you must make is the application type. There are two types of applications you can register:
 
-| Application type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Web app /API     | **Web client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that executes all code on a web server.<br /><br />**User-agent-based client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that downloads code from a web server and executes within a user-agent (for instance, a web browser), such as a Single Page Application (SPA). |
-
-|
+| Application type | Description|
+|------------------|------------|
+| Web app /API | **Web client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that executes all code on a web server.<br /><br />**User-agent-based client**<br />A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that downloads code from a web server and executes within a user-agent (for instance, a web browser), such as a Single Page Application (SPA). |
 |Native|A type of [client application](/azure/active-directory/develop/developer-glossary#client-application) that is installed natively on a device. |
 
 When you select **Web app /API** you must provide a **Sign-On URL** which is the URL where Azure AD will send the authentication response, including a token if authentication was successful. While you develop an app, this is usually set to `https://localhost/appname:[port]` so you can develop and debug your app locally. When you publish your app, you need to change this value to the published URL of the app.

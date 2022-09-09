@@ -1,6 +1,6 @@
 ---
 title: "Query data using LINQ (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample provides many examples of Language-Integrated Query (LINQ) with data from Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/05/2020
 ms.reviewer: "pehecke"
@@ -22,7 +22,7 @@ These samples show how to query business data using [Language-Integrated Query (
 
 ## How to run this sample
 
-See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/cds/README.md) for information about how to run this sample. There are multiple projects in the solution. Each project demonstrates some aspect of LINQ queries.
+See [How to run samples](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/README.md) for information about how to run this sample. There are multiple projects in the solution. Each project demonstrates some aspect of LINQ queries.
 
 ## What this sample does
 
