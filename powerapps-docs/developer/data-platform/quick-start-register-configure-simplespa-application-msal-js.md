@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Registering and configuring a SimpleSPA application with msal.js (Microsoft Dataverse) | Microsoft Docs"
+title: "Quickstart: Register and configure a SPA application for Dataverse using msal.js (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes the process of registering and configuring the simplest Single-Page Application (SPA) to access data in Microsoft Dataverse using msal.js and Cross-origin Resource Sharing (CORS)."
 ms.date: 09/09/2022
 ms.topic: quickstart
@@ -372,7 +372,7 @@ The configured permissions should look like this when you are done:
    > The key difference is the scopes used when getting the access token. You must set the scope to the value of the Dataverse Url + `/.default` or `/user_impersonation`.
    >
    > ```javascript
-   >          // Retrieves top 10 account records from Dataverse
+   >       // Retrieves top 10 account records from Dataverse
    >       function getAccounts(callback) {
    >          // Gets the access token
    >          getTokenPopup({
