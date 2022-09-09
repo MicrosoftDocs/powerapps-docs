@@ -233,7 +233,7 @@ The configured permissions should look like this when you are done:
       // Called by the loginButton
       function signIn() {
          myMSALObj.loginPopup({
-            scopes: ["User.Read"]
+            scopes: ["User.Read",baseUrl+"/user_impersonation"]
             })
             .then(response =>{
                if (response !== null) {
@@ -369,7 +369,20 @@ The configured permissions should look like this when you are done:
    > [!NOTE]
    > The JavaScript code in the HTML page was adapted from the sample code published here: [https://github.com/Azure-Samples/ms-identity-javascript-v2](https://github.com/Azure-Samples/ms-identity-javascript-v2) which connects to Microsoft Graph.
    >
-   > The key difference is the scopes used when getting the access token. You must set the scope to the value of the Dataverse Url + `/.default` or `/user_impersonation`.
+   > The key difference is the scopes used when getting the access token.
+   >
+   > Use these scopes for the login button:
+   > ```javascript
+   >   // Called by the loginButton
+   >   function signIn() {
+   >      myMSALObj.loginPopup({
+   >         scopes: ["User.Read",baseUrl+"/user_impersonation"]
+   >         })
+   > ```
+   > These scopes include both the Microsoft Graph User.Read scope, but also the Dataverse user_impersonation scope.
+   > By including both of these scopes when signing in, the inital consent dialog will include all the necessary scopes used in the applicaiton.
+   >
+   > Then, when specifying the scope used for the call to Dataverse you can use either `/.default` or `/user_impersonation`.
    >
    > ```javascript
    >       // Retrieves top 10 account records from Dataverse
@@ -381,6 +394,8 @@ The configured permissions should look like this when you are done:
    >    ```
    >
    > `/user_impersonation` scope only works for delegated permissions, which is the case here, so it could be used. `/.default` works for both delegated and application permissions.
+   >
+   > If you don't include the `baseUrl+"/user_impersonation"` scope when logging in, the user will have to consent a second time when they click the **Get Accounts** button for the first time.
    >
    >
    > You can find other SPA examples and tutorials here: [Single-page application (SPA) documentation](/azure/active-directory/develop/index-spa).
@@ -397,7 +412,23 @@ The configured permissions should look like this when you are done:
 
 Because you installed the Live Server extension in [Install Live Server Visual Studio Code extension](#install-live-server-visual-studio-code-extension), in the VS Code tool bar you should find this button: :::image type="icon" source="media/vscode-live-server-go-live-button.png" border="false":::.
 
-Click the **Go Live** button and a new browser window will open to `http://localhost:5500/index.html` rendering the index.html page. You can now test the app works as described in [Goal of this quick start](#goal-of-this-quick-start).
+1. Click the **Go Live** button and a new browser window will open to `http://localhost:5500/index.html` rendering the index.html page.
+
+   The first time you run the app and click the **Login** button, you will get a consent dialog like this:
+
+   :::image type="content" source="media/permissions-requested-dialog.png" alt-text="Permissions requested dialog":::
+
+   If you are an administrator, you can select the **Consent on behalf of your organization**checkbox which will enable others to also run the app.
+
+1. Click **Accept** to continue testing to verify that the app works as described in [Goal of this quick start](#goal-of-this-quick-start).
+
+## Troubleshooting
+
+The experience in this quick start depends on the Live Server port setting to be the default value: `5500`. If you already have Live Server installed and have modified the port setting, you will need to change the default setting or the URL set in the app registration.
+
+Please note that the `liveServer.settings.port` may also be set for the **Workspace** and will override the **User** setting.
+
+If you open multiple Live Server instances, the port setting may increment to 5501 or higher. This will break the callback used for authentication because the port is 'hard-coded' into the application registration as `http://localhost:5500/index.html`.
 
 ### See also
 
