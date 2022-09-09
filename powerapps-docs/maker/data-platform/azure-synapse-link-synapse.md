@@ -148,6 +148,9 @@ All **Near Real-Time Data Tables** are listed and available for analysis with th
 
 :::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
 
+> [!IMPORTANT]
+> Make sure that your serverless SQL pool in Azure Synapse Analytics workspace can access Azure Data Lake storage account if you want to use the snapshot data. Without Managed Identity access, the snapshot data table will not be accessible using the serverless SQL pool.
+
 ### What's next?
 
 After successfully using the Azure Synapse Link for Dataverse service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, go to **Power Apps** > **Azure Synapse Link**. Select your linked service and then select the **Discover Hub** tab. Here you can find recommended tools and curated documentation to help you get the most value out of your data.
