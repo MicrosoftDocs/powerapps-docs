@@ -24,7 +24,7 @@ You can customize Microsoft Dataverse by using tools that are available in Power
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Dataverse. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
-Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com are supported, but might not be upgradable.
+Topics covered in technical articles published on Microsoft sites such as Microsoft Docs are supported, but might not be upgradable.
 
 ## Customizations using Power Apps
 
