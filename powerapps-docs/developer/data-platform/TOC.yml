@@ -31,6 +31,15 @@
       href: ./webapi/overview.md
     - name: Use Organization Service
       href: ./org-service/overview.md
+    - name: Search for records
+      href: ./search/overview.md
+      items:
+      - name: Query
+        href: ./search/query.md
+      - name: Suggest
+        href: ./search/suggest.md
+      - name: Autocomplete
+        href: ./search/autocomplete.md
     - name: Create your own messages
       href: custom-actions.md
       items:
