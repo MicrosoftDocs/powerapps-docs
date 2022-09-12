@@ -96,7 +96,7 @@ Icons of copresent makers appear in both the toolbar area and the left navigatio
 
 When you have several tabs open, your icon is displayed in the left navigation pane as well. This way you’ll always see if you've more than one tab open, which helps you find the one you want to continue working on.
 
-On the right side of the app designer toolbar, all the makers that have this app open are displayed. If  more than four makers are present, a +n, such as +1 or +30, is displayed that expands with all the makers’ names. Select each name to display **Send email** and **Chat in Teams** links.
+On the right side of the app designer toolbar, all the makers that have this app open are displayed. If  more than four makers are present, a +n, such as +1 or +30, is displayed that expands with all the makers’ names. Select a name to display **Send email** and **Chat in Teams** links to contact that person.
 
 ### Notifications
 
