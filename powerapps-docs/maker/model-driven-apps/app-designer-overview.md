@@ -84,9 +84,7 @@ Copresence provides the following benefits:
 - Icons and names of people who have the app open and might be making changes are displayed.
 - Contact those people working on the app via email or Teams.
 - Sections of the app being worked on are displayed on the left navigation pane.
--	Receive notification for saved changes made from other makers. Then, you'll be prompted to refresh the app to stay on the latest version so as not to lose your work. If you choose to ignore the refresh notification, you can continue working. Later, when you go to save your work, you're given a choice:
-    - Overwrite and discard the changes of the previous changes made by others.
-    - Refresh the app and lose your changes.
+-	Receive notification for saved changes made from other makers. Then, you'll be prompted to refresh the app to stay on the latest version so as not to lose your work. If you choose to ignore the refresh notification, you can continue working. Later, when you go to save your work, you're given a choice to overwrite or refresh. More information: [Notifications](#notifications)
 -	The name of the maker who has made the first save or the last save is displayed.
 
 > [!IMPORTANT]
