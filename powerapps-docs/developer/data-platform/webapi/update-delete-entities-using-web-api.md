@@ -1,11 +1,10 @@
 ---
 title: "Update and delete table rows using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to perform update and delete operations on tables using the Web API"
-ms.date: 04/06/2022
+ms.date: 08/01/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +29,7 @@ Update operations use the HTTP `PATCH` verb. Pass a JSON object containing the p
 The `If-Match: *` header ensures you don't create a new record by accidentally performing an upsert operation. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert).
   
 > [!IMPORTANT]
-> When updating an record, only include the properties you are changing in the request body. Simply updating the properties of a record that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
+> When updating an entity, only include the properties you are changing in the request body. Simply updating the properties of an entity that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
 
 > [!NOTE] 
 > The definition for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#column-requirement-level)
@@ -65,7 +64,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  See [Associate and disassociate table rows on update](associate-disassociate-entities-using-web-api.md#associate-and-disassociate-table-rows-on-update) for information about associating and disassociating entities on update.  
+>  See [Using single-valued navigation properties](associate-disassociate-entities-using-web-api.md#using-single-valued-navigation-properties) for information about associating and disassociating entities on update.  
   
 <a name="bkmk_updateWithDataReturned"></a>
 
@@ -146,7 +145,7 @@ OData-Version: 4.0
 
 ## Delete a single property value
 
-To delete the value of a single property use a DELETE request with the property name appended to the Uri of the entity.  
+To delete the value of a single property use a `DELETE` request with the property name appended to the Uri of the entity.  
   
 The following example deletes the value of the `description` property of an account entity with the `accountid` value of 00000000-0000-0000-0000-000000000001.  
   
@@ -168,15 +167,62 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  This can't be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Remove a reference to a table](associate-disassociate-entities-using-web-api.md#bkmk_Removeareferencetoarow).  
+>  This can't be used with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Disassociate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#disassociate-with-a-single-valued-navigation-property) .  
   
 <a name="bkmk_upsert"></a>
 
-## Update or create a record with Upsert
+## Upsert a table row
 
-An *upsert* operation is like an update because it uses a `PATCH` request and uses a URI to reference a specific entity. The difference is that if the entity doesn't exist it will be created. If it already exists, it will be updated. Normally when creating a new entity you will let the system assign a unique identifier. This is a best practice. But if you need to create a record with a specific `id` value, an `upsert` operation provides a way to do this. This can be valuable in situation where you are synchronizing data in different systems.  More information: [Use Upsert to insert or update a record](../use-upsert-insert-update-record.md)
-  
-Sometimes there are situations where you want to perform an `upsert`, but you want to prevent one of the potential default actions: either create or update. You can accomplish this through the addition of `If-Match` or `If-None-Match` headers. For more information, see [Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations).  
+An *upsert* operation is similar to an update. It uses a `PATCH` request and uses a URI to reference a specific record. The difference is that if the record doesn't exist it will be created. If it already exists, it will be updated.
+
+Upsert is valuable when synchronizing data between external systems. The external system may not contain a reference to the primary key of the Dataverse table, so you can configure alternate keys for the Dataverse table using values from the external system that uniquely identify the record on both systems. More information: [Define alternate keys to reference rows](../../../maker/data-platform/define-alternate-keys-reference-records.md)
+
+You can see any alternate keys that are defined for a table in the annotations for the entity type in the $metadata service document. More information: [Alternate Keys](web-api-entitytypes.md#alternate-keys).
+
+In the following example, there is a table with the name `sample_thing` that has an alternate key that refers to two columns: `sample_key1` and `sample_key2` which are both defined to store integer values.
+
+**Request**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/sample_things(sample_key1=1,sample_key2=1) HTTP/1.1
+Accept: application/json 
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Content-Type: application/json
+
+{
+    "sample_name": "1:1"
+}
+```
+
+For both create or update operations you will get the same response. Notice how the `OData-EntityId` response header uses the key values rather than the GUID primary key identifier for the record. 
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: [Organization URI]/api/data/v9.2/sample_things(sample_key1=1,sample_key2=1)
+```
+
+Because the response it the same, you cannot know whether the operation represented a `Create` or `Update`.
+
+If you need to know, you can use the `Prefer: return=representation` request header. Whith this header you will get a `201 Created` response when a record is created and a `200 OK` reponse when the record is updated. This adds an additional `Retrieve` operation which has an impact on performance. If you use the `Prefer: return=representation` request header, make sure that your `$select` includes the minimal amount of data, preferably only the primary key column. More information: [Update with data returned](#update-with-data-returned) and [Create with data returned](create-entity-web-api.md#create-with-data-returned).
+
+When using alternate keys, you should not include the alternate key values in the body of the request.
+
+- When an upsert represents an `Update`, these alternate key values will be ignored. You cannot update alternate key values while using them to identify the record.
+- When an upsert represents a `Create`, the key values in the URL will be set for the record if they are not present in the body. So there is no need to include them in the body of the request.
+
+More information: [Use Upsert to Create or Update a record](../use-upsert-insert-update-record.md)
+
+> [!NOTE]
+> Normally when creating a new record you will let the system assign a GUID value for the primary key. This is a best practice because the system generates keys that are optimized for the index and this improves performance. But if you need to create a record with a specific primary key value, such as when the key GUID value is generated by an external system, the `upsert` operation provides a way to do this.
+
+### Prevent create or update with upsert
+
+Sometimes there are situations where you want to perform an `upsert`, but you want to prevent one of the potential operations: either create or update. You can accomplish this through the addition of `If-Match` or `If-None-Match` headers. For more information, see [Limit upsert operations](perform-conditional-operations-using-web-api.md#bkmk_limitUpsertOperations). 
   
 <a name="bkmk_delete"></a>
   
@@ -216,7 +262,7 @@ More information: [Access table data faster using storage partitions](azure-stor
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

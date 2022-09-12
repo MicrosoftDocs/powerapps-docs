@@ -18,7 +18,7 @@ contributors:
 # Multi-table lookups
 
 Multi-table lookup type columns allow a user to use a specific table that has
-multiple one-to-many (1:M) relationships to other tables in the environment. A single lookup
+multiple one-to-many (1:N) relationships to other tables in the environment. A single lookup
 type column can refer to multiple other tables. A lookup value submitted to the
 multi-table type column will be matched to a record in any of the related
 tables.
@@ -36,7 +36,7 @@ power to define any other multi-table lookups they may need.
 Let's say you are hosting media for users in a library. You have many different
 MediaObjects, many of them have the same name but are in different formats like
 "Books", "Audio", and "Video". Creating a multi-table lookup called "new_Media"
-that has 1:M relationships to "new_Books", "new_Audio", and "new_Video" will
+that has 1:N relationships to "new_Books", "new_Audio", and "new_Video" will
 result in a "new_Media" lookup table that provides quick identifications of
 records stored in specific tables.
 

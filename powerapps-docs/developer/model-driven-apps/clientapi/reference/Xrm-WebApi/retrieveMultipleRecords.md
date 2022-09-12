@@ -105,6 +105,10 @@ The following [Column types](../../../../data-platform/entity-attribute-metadata
 - PartyList
 - Virtual
 
+## Unsupported features in Mobile Offline
+The following features are not supported in Mobile Offline:
+- Grouping and Aggregation features
+
 ## Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML
 The following operations are supported for all attribute types when working with FetchXML:
 - Equals (`eq`)

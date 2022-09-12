@@ -5,7 +5,7 @@ author: Mattp123
 manager: kvivek
 ms.component: cds
 ms.topic: article
-ms.date: 10/31/2021
+ms.date: 09/06/2022
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -125,6 +125,11 @@ Here's a summary of each column in the report.
 |Member     |  Member of the issue identified in the assembly.      | Custom workflow activity        |
 |Statement     | The code statement or configuration that resulted in the issue.        |  All       |
 |Comments     | Details about the issue that include high-level resolution steps.         |  All       |
+
+
+## Run solution checker rules locally
+
+You can run solution checker rules in your development environment to detect issues much sooner as you create your solution resources.  This is currently supported for web resources (JavaScript and [TypeScript](https://typescript-eslint.io/)). For more details, go to the NPM package [@microsoft/eslint-plugin-power-apps](https://www.npmjs.com/package/@microsoft/eslint-plugin-power-apps).
 
 
 ## Best practice rules used by solution checker

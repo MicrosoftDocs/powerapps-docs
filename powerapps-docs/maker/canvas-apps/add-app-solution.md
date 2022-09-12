@@ -93,9 +93,9 @@ You can create a blank canvas app from within a solution. You can't automaticall
 
     Your new app appears in the list of components for that solution. If you save any changes to your app, they will be reflected in the version that's in the solution.
 
-## Link an existing canvas app to a solution
+## Add an existing canvas app to a solution
 
-If you want to link an app to a solution, both must be in the same environment, and the app must have been created from within a solution.
+If you want to add an app to a solution, both must be in the same environment, and the app must have been created from within a solution.
 
 1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps.
 
@@ -129,5 +129,8 @@ For information about known limitations, see [Solutions overview](../data-platfo
 - Create or link more apps and [other components](/powerapps/maker/canvas-apps/solutions-overview), such as tables, flows, and dashboards, to your solution.
 - [Export your solution](../data-platform/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.
 
+### See also
+
+[Add canvas apps to solution by default (preview)](add-app-solution-default.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/01/2022
+ms.date: 08/23/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -21,16 +21,16 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
-
 It is frequently valuable to include another assembly or a resource file within a plug-in. For example, you may want to use Newtonsoft.Json.dll or another assembly. You may want to access a list of localized strings.  
 
 Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, it was never supported by Dataverse and it didn't always work. ILMerge is no longer being maintained.
 
 With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. Unlike ILMerge, you can also include other file resources, such as JSON files containing localized strings. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PluginPackage` and changes to the related plugin assemblies will be managed on the server.
 
@@ -56,7 +56,12 @@ You are not required to sign plug-in assemblies used in plugin packages.
 
 When registering individual plug-in assemblies without the dependent assemblies feature, signing is required because it provides a unique name for the assembly. But with plug-in assemblies within plug-in package, the assemblies are loaded on the sandbox server using a different mechanism, so signing is not necessary.
 
-However, if you choose to sign your assemblies be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed. If any signed assemblies depend on unsigned assemblies, you will get an error like the following: `Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.`
+> [!NOTE]
+> If you sign your assemblies, be aware that signed assemblies cannot use resources contained in unsigned assemblies. If you sign your plug-in assemblies or any dependent assembly, all the assemblies that those assemblies depend on must be signed. If any signed assemblies depend on unsigned assemblies, you will get an error like the following: `Could not load file or assembly '<AssemblyName>, Version=<Version>, Culture=neutral, PublicKeyToken=null' or one of its dependencies. A strongly-named assembly is required.`
+>
+> When you use the Microsoft Power Platform CLI (pac cli), the default settings will sign the assembly for you. You must opt out of signing by using the `--skip-signing` parameter. More information: [Create a Visual Studio project](#create-a-visual-studio-project).
+>
+> Power Platform Tools will not sign your plug-in assembly for you.
 
 ## Tooling options
 
@@ -79,44 +84,30 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 
 |Tool/App|Instructions |
 |---------|---------|
-|**Microsoft Power Platform CLI**|The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
+|**Microsoft Power Platform CLI**|You must have version 1.17 or higher.<br />The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
 |**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ### Create a Visual Studio project
 
-> [!IMPORTANT]
-> If you are using PAC CLI version 1.15, you should perform the steps below:
-> 
-> 1. Determine the location of your installed pac.exe. Use the VS Code terminal with this command:
->    
->    ```powershell
->    Get-Command pac.exe
->    ```
->    
-> 1. The `Source` column will tell you the path. It should be something like:
->    
->    ```
->    c:\Users\you\AppData\Roaming\Code\User\globalStorage\microsoft-isvexptools.powerplatform-vscode\pac\
->    ```
->    
-> 1. Locate the file `\pac\tools\featureflags.json`
-> 1. Open the file in VS Code and look at or near the bottom for the setting `VerbPluginInitNupkg`.
-> 1. Change the `VerbPluginInitNupkg` setting from `off` to `on`.
-
-Use the PAC CLI `pac plugin init` command to create a Visual Studio project that will streamline your development process with dependent assemblies.
+Use the PAC CLI [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) command to create a Visual Studio project that will streamline your development process with dependent assemblies.
 
 1. Create a folder for your plug-in project. The name of this folder will determine the name of the Visual Studio .NET Framework Class library project for your plug-in.
-1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command `pac plugin init`.
+1. Open a PowerShell terminal window in Visual Studio Code to navigate to the folder and run the command [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init). For plug-in packages we recommend that you use the `--skip-signing` parameter so that your plug-in assemblies are not signed.
 
-These steps will ensure that the NuGet package generated will be correct. PAC CLI version 1.16 is expected in the first week of August. These steps are not required with that version.
+   Example:
+   ```powershell
+   PS E:\projects\mypluginproject> pac plugin init --skip-signing
+   ```
+
+> [!NOTE]
+> It is no longer required to sign the assemblies when using dependent assemblies. If you sign your assembly, all dependent assemblies must also be signed. More information: [Signing Assemblies](#signing-assemblies)
+>
+> The [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) command has a number of optional parameters. You must use the [--skip-signing](/power-platform/developer/cli/reference/plugin#--skip-signing--ss) parameter if you do not want to sign your plug-in assembly.
 
 You will find a Visual Studio .NET Framework class library project created based on the name of the folder it was created in.
 
 Depending on your Visual Studio solution configuration, when you open the Visual Studio project in Visual Studio and build it, you will find a NuGet package generated for the project in the `bin\Debug` or `bin\Release` folder. Each time you build your project, this NuGet package will be updated. This is the file you will upload using the Plug-in Registration tool.
-
-> [!NOTE]
-> It is no longer required to sign the assemblies when using dependent assemblies. More information: [Signing Assemblies](#signing-assemblies)
 
 ### Add a dependent assembly using NuGet
 
@@ -124,9 +115,13 @@ You can add a NuGet Package to your Visual Studio project as you normally do. Af
 
 You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
 
-### Add another dependent file or assembly
+### Add a dependent assembly without using NuGet
 
-To include another file or assembly that will be available in the runtime for your plug-in.
+If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
+
+### Add a file resource
+
+To include another file resource that will be available in the runtime for your plug-in.
 
 1. Add the file to your Visual Studio project.
 1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
@@ -238,9 +233,13 @@ You can add a NuGet Package to your Visual Studio project as you normally do. Af
 
 You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-explorer/9wzdncrdmdm3) to examine the NuGet package.
 
-#### Add another dependent file or assembly with Power Platform Tools
+#### Add a dependent assembly without using NuGet with Power Platform Tools
 
-To include another file or assembly that will be available in the runtime for your plug-in.
+If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
+
+#### Add a file resource with Power Platform Tools
+
+To include another file that will be available in the runtime for your plug-in.
 
 1. Add the file to your Visual Studio project.
 1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
@@ -329,7 +328,7 @@ This will open an dialog to allow you to select a nuget package to update the pl
 
 ## Design notes
 
-The Visual Studio project created using `pac plugin init` leverages Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format. Power Platform Tools for Visual Studio uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
+The Visual Studio project created using [pac plugin init](/power-platform/developer/cli/reference/plugin#pac-plugin-init) leverages Visual Studio capabilities that enable generating NuGet Packages. This method uses the [SDK-style](/nuget/resources/check-project-format) project format. Power Platform Tools for Visual Studio uses the [Non-SDK-style](/nuget/resources/check-project-format) project format.
 
 You are not required to use these tools to generate a NuGet package with your plug-ins. You can use whatever capabilities you choose to generate a NuGet package, but you must use the tooling available to upload the package to Dataverse.
 
@@ -343,6 +342,10 @@ More information:
 ### Q: Can I continue to use ILMerge?
 
 **A**: We have never supported ILMerge. This dependent assemblies feature provides a solution we can support with the same functionality and more. But nothing else has changed. If ILMerge works for you, you can continue to use it. We recommend using dependent assemblies because we can support this solution.
+
+## Known issues
+
+You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package.
 
 ### See also
 

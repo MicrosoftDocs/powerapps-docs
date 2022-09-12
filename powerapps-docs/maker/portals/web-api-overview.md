@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 07/26/2022
+ms.date: 09/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -24,7 +24,7 @@ The portals Web API enables a richer user experience inside Power Apps portals p
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work**.
-> - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
+> - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration. Using the portals Web API to integrate with other Power Apps portals sites is also not supported.
 > - Portals Web API operations are limited to tables related to data&mdash;for example, accounts, contacts, or your custom tables. Configuring table metadata or portal configuration table data&mdash;for example, configuring portals tables such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration tables](#unsupported-configuration-tables) later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md), so subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
 > - Portals Web API operations require a Power Apps portals license. For example, Web API calls made by anonymous users are counted towards page view capacity. Web API calls made by authenticated users (internal or external) are not counted towards page views, but require applicable licenses. More information: [Power Apps portals licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
@@ -32,6 +32,9 @@ The portals Web API enables a richer user experience inside Power Apps portals p
 ## Web API operations
 
 The portals Web API offers a subset of capabilities for Dataverse operations that you can do by using the Dataverse API. We've kept the API format as similar as possible to reduce the learning curve.
+
+> [!NOTE]
+> Web API operations are case-sensitive.
 
 ### Web API operations available in portals
 

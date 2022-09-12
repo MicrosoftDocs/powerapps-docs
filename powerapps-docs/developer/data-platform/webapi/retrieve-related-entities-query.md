@@ -201,7 +201,7 @@ OData-Version: 4.0
 
 ## Retrieve related records by expanding collection-valued navigation properties
 
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise the collection will return an empty array.
+If you expand on collection-valued navigation properties to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise the collection will return an empty array.
 
 In either case an `@odata.nextLink` property will be returned for the related entities. If you want to retrieve the collection separately, you can use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
 

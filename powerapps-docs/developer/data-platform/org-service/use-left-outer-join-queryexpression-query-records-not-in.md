@@ -4,7 +4,6 @@ description: "Read how to use a left outer join by using the QueryExpression cla
 ms.date: 04/03/2022
 author: divka78
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
@@ -24,14 +23,12 @@ contributors:
 You can use a left outer join by using the <xref:Microsoft.Crm.Sdk.Messages.SearchByKeywordsKbArticleRequest.QueryExpression> class to perform a query that filters on the join table, such as to find all contacts who did not have any campaign activities in the past two months. Another common use for this type of a query is to find table rows (records) “not in” a set, such as in these cases:  
   
 - Find all leads that have no tasks  
-  
 - Find all accounts that have no contacts  
-  
 - Find all leads that have one or more tasks  
   
-  A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The nonmatching rows in the second input are returned as null values.  
+A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that had no matching rows in the second input. The nonmatching rows in the second input are returned as null values.  
   
-  You can perform a left outer join in `QueryExpression` by using the `entityname` column as a condition operator. The `entityname` column is valid in conditions, filters, and nested filters.  
+You can perform a left outer join in `QueryExpression` by using the `entityname` column as a condition operator. The `entityname` column is valid in conditions, filters, and nested filters.  
   
 ## Find all leads that have no tasks, using an alias  
 
@@ -61,9 +58,8 @@ WHERE ab.RegardingObjectId is null
   
 ### See also
 
- [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
- [Test for a Null Value](/dynamics365/customer-engagement/developer/test-null-value)   
- [Using the QueryExpression Class](use-queryexpression-class.md)   
- [Using the QueryByAttribute Class](use-querybyattribute-class.md)
+[Build Queries with QueryExpression](build-queries-with-queryexpression.md)<br />
+[Using the QueryExpression Class](use-queryexpression-class.md)<br />
+[Using the QueryByAttribute Class](use-querybyattribute-class.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
