@@ -79,3 +79,29 @@ While you can create multiple email signatures depending on your needs, only one
    To change your default email signature setting:
    1. Select the email signature you want to set as default. This will change the command bar to display **Edit**.
    2. Select **Edit**. A new page opens, where you can update the email default setting. While you are on this page, you can also delete one or multiple email signatures just by selecting them.
+
+## Add a default signature template to a queue
+
+Specify a default signature template for a queue to ensure that emails sent from the queue by different agents have consistent email signatures. When you send an email with the queue as the sender or reply to messages received by the queue, the default signature is added to the body of email. If you don't specify a default signature template for a queue, the application defaults the signature associated with the owner of the queue.
+
+More information, see: [Add an email signature](#add-an-email-signature)
+
+You can set up a default email signature for a queue as follows:
+
+1. Go to one of the admin apps, and perform the following steps:
+   
+   ### [Customer Service admin center](#tab/customerserviceadmincenter)
+        
+    1. In the site map, select **Queues** in **Customer support**.
+    
+    1. On the **Queues** page, select **Manage** for **Basic queues**.
+
+   ### [Customer Service Hub](#tab/customerservicehub)
+
+    1. Go to **Service Management**, and then select **Queues** in **Case Settings**.
+  
+2. To create a queue, select **New**. To edit a queue, select the queue in the list of queues, and then select **Edit** on the command bar.  
+1. In the **EMAIL SETTINGS** section, specify the **Email Signature**.
+
+ ![Add a default signature template.](media\email-sig-temp-queue.png "Add a default signature template to a queue")
+
