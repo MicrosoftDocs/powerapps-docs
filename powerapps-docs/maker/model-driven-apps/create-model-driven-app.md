@@ -2,7 +2,7 @@
 title: "Create a model-driven app using the designer | MicrosoftDocs"
 description: Learn how to create a model-driven app.
 ms.custom: ""
-ms.date: 08/31/2021
+ms.date: 05/19/2022
 
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,9 +22,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create a model-driven app with the app designer (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Create a model-driven app with the app designer
 
 In this article, you learn the basics of how to create a model-driven app that can be shared and distributed to other environments.
 
@@ -51,7 +49,6 @@ For more information, go to the following articles:
    > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Viewing solutions within an environment":::
    > Although the **Default Solution** is an unmanaged solution, it is in most circumstances not recommended to create or edit customizations in the default solution.
 1. Select **New** > **App** > **Model-driven app**.
-1. On the **New model-driven app from blank** dialog box, select **Modern app designer**, and then select **Create**. :::image type="content" source="media/new-model-driven-app-from-blank.png" alt-text="New model-driven app from blank":::
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
 1. On the left navigation pane, select **Navigation** to display the navigation tree. 
 
@@ -80,7 +77,7 @@ For more information, go to the following articles:
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
 
-## Add comments (preview)
+## Add comments
 
 Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
 

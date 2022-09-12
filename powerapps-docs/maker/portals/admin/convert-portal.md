@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2021
+ms.date: 07/26/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -50,6 +50,9 @@ To convert your portal from trial to production:
 
     > [!div class=mx-imgBorder]
     > ![Trial to production confirmation.](../media/trial-to-prod-confirm.png "Trial to production confirmation")
+
+> [!IMPORTANT]
+> Once the portal has been converted to production, you should ensure that the portal is appropriately licensed with page views and logins corresponding to the expected user volume. Not having appropriate licenses assigned can result in degraded performance. For information on how to allocate page views and logins, see [Allocate or change capacity in an environment](/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment).
 
 ## Convert an existing portal to capacity-based model
 
@@ -96,8 +99,7 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 ### See also
 
 - [Understand lifecycle of a portal](portal-lifecycle.md) <br>
-- [Microsoft Learn: Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
 - [Power Apps portals FAQ](../faq.yml)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

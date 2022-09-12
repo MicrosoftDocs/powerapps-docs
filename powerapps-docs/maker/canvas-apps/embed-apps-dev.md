@@ -38,7 +38,7 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 For GCC users
 
 ```
-https://apps.gov.powerapps.us/play[AppID]?source=iframe
+https://apps.gov.powerapps.us/play/[AppID]?source=iframe
 ```
 
 > [!IMPORTANT]

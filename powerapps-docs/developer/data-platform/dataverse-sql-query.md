@@ -2,13 +2,13 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/12/2021
+ms.date: 09/06/2022
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+author: "RichdiMSFT" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
+ms.author: "richdi" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -21,7 +21,11 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
-A SQL data connection is available on the Microsoft Dataverse endpoint. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+
+## Prerequisites
+
+The **Enable TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Applications support
 
@@ -39,12 +43,14 @@ You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-ma
 
 #### Security and authentication
 
-Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL.
+Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication aren't supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL. 
 
 ![Connec dialog.](media/ssms-connect-dialog.PNG)
 
 > [!NOTE]
 > Ports 1433 and/or 5558 need to be enabled to use the TDS endpoint from a client application such as SSMS. If you only enable port 5558, the user must append that port number to the server name in the **Connect to Server** dialog of SSMS - for example: myorgname.crm.dynamics.com,5558.
+
+Information on endpoint encryption: [In-transit data protection](/power-platform/admin/about-encryption#in-transit-data-protection)
 
 #### Example table data queries
 
@@ -64,7 +70,7 @@ select name, fullname from account a inner join contact c on a.primarycontactid 
 
 ![Another query using a JOIN.](media/ssms-join-query.PNG)
 
-### Power BI
+### Power BI (General Availability)
 
 You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the Dataverse connector to analyze data in Power BI Desktop. More information: [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi)
 
@@ -75,7 +81,7 @@ You can use the **Analyze in Power BI** option (**Data** > **Tables** > **Analyz
 
 Any operation that attempts to modify data (that is, INSERT, UPDATE) will not work with this read-only SQL data connection. For a detailed list of supported SQL operations on the Dataverse endpoint, see [How Dataverse SQL differs from Transact-SQL](how-dataverse-sql-differs-from-transact-sql.md).
 
-The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`. In addition, tables types 'virtual' and 'audit' are not supported at this time. 
+The following Dataverse datatypes are not supported with the SQL connection: `binary`, `image`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`, `choices`. In addition, tables types 'virtual' and 'audit' are not supported at this time.
 
 > [!TIP]
 > `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
@@ -94,6 +100,10 @@ Dataverse lookup columns are represented as \<lookup\>id and \<lookup\>name in a
 Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label in a result set.
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
+
+### Reported SQL version
+The Dataverse TDS endpoint emulates Microsoft SQL Server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure version 12.0.2000.8 for `select @@version`.
+
 
 ## Limitations
 
@@ -171,8 +181,8 @@ This means the port has been blocked at the client.
 
 ### See also
 
+[Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
 [Use FetchXML to construct a query](dataverse-sql-query.md)  
 [Service Protection API Limits](api-limits.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

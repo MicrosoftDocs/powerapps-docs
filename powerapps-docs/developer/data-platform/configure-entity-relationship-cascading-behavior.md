@@ -31,7 +31,7 @@ You can configure cascading behaviors for a one-to-many relationship to preserve
 
 ## Using Web API to configure cascading behavior
 
-When working with Web API, you can define a One-to-Many relationship using <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />. This definition includes the name of the intersect table to be created as well as how the relationship should be displayed in the application by using <xref href="Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />. 
+When working with Web API, you can define a One-to-Many relationship using <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType>. This definition includes the name of the intersect table to be created as well as how the relationship should be displayed in the application by using <xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType>, <xref:Microsoft.Dynamics.CRM.Label?text=Label ComplexType> and <xref:Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType>. 
 
 More information: [Create a One-to-Many relationship using Web API](webapi/create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship).
 
@@ -39,7 +39,7 @@ More information: [Create a One-to-Many relationship using Web API](webapi/creat
 
 When you use <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRelationshipRequest> you include an instance of a <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata> class in the body of the request. In the <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.CascadeConfiguration> property of that class you use the <xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class.  
 
-The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />) contains the properties representing actions that may be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the <xref href="Microsoft.Dynamics.CRM.CascadeType?text=CascadeType EnumType" />.  
+The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class or <xref:Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType>) contains the properties representing actions that may be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the <xref:Microsoft.Dynamics.CRM.CascadeType?text=CascadeType EnumType>.  
 
 |Value|Application label|Description|  
 |-----------|-----------------------|-----------------|  
@@ -109,7 +109,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 ### About the assign action
 The assign action allows the owner, the Owning Business Unit or both owner and business unit updates to be cascaded down to all child records when the parent record is updated.
 
-#### Allowed record ownership across business unites not enabled
+#### Allowed record ownership across business units not enabled
 When the [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is not enabled, the Owning Business Unit column can't be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner is updated.
 
 If you update the owner:
@@ -125,7 +125,7 @@ If you update the owner:
   - Child records’ owner is not updated (no cascade)
   - Child records’ business unit is not updated (no cascade)
 
-#### Allowed record ownership across business unites is enabled
+#### Allowed record ownership across business units is enabled
 When [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is enabled,
 the Owning Business Unit column can be explicitly updated when changing the record’s owner. The following lists the cascading behaviors when the parent’s record owner and/or the business unit is updated.
 

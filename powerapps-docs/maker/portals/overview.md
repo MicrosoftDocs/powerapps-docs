@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: overview
 
-ms.date: 06/11/2021
+ms.date: 06/10/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -14,6 +14,7 @@ searchScope:
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # What are Power Apps portals?
@@ -26,13 +27,13 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 
 After the launch of Power Apps portals on October 1, 2019, all Dynamics 365 Portals are now referred to as **Power Apps portals**.
 
-One of the major changes introduced to portals after October 1, 2019 is the licensing model. Before this, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. As of October 1, 2019, portals are [licensed based on usage](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing), or capacity. All previously existing portals must become part of a transition period based on current customer contract, after which they're required to be converted to a new licensing model.
+One of the major changes introduced to portals after October 1, 2019 is the licensing model. Before, portals were licensed add-ons to Dynamics 365 apps while certain Dynamics 365 licenses included a default portal add-on. As of October 1, 2019, portals are [licensed based on usage](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing), or capacity. All previously existing portals must become part of a transition period based on current customer contract, after which they're required to be converted to a new licensing model.
 
 You can check the type of a portal from the [Power Apps portals admin center](./admin/admin-overview.md):
 
 ![Power Apps portals type.](./media/power-apps-portals-type.png)
 
-Additional differences between Power Apps portals with capacity-based licenses and add-on licenses include:
+Other differences between Power Apps portals with capacity-based licenses and add-on licenses include:
 
 - For add-on portals, an 'add-on' suffix is included to the portal type. For example, a production add-on portal type is listed as 'Production (add-on)'.
 - Power Apps portals have a [different caching mechanism](admin/clear-server-side-cache.md) in comparison to portals with add-on licenses.
@@ -54,12 +55,10 @@ For more on the differences between add-on licenses and capacity-based licenses,
 ### See also
 
 [Terminology changes in Power Apps portals](terminology-changes.md) <br>
-[Microsoft Learn: Get started with Power Apps portals](/learn/paths/get-started-power-apps-portals/) <br>
+[Get started with Power Apps portals](/learn/paths/get-started-power-apps-portals/) <br>
 [Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
 [Available portal templates](portal-templates.md) <br>
 [Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>
 [Server-side cache in portals](admin/clear-server-side-cache.md)
-
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

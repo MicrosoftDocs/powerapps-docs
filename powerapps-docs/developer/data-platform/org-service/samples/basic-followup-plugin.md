@@ -1,25 +1,27 @@
 ---
 title: "Sample: Create a basic plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a simple plug-in that creates a follow-up activity."
-ms.custom: ""
-ms.date: 03/17/2021
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: divka78
+ms.author: dikamath
+manager: sunilg
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly"
-ms.author: "pehecke"
-manager: "kvivek"
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Create a basic plug-in
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to write a simple plug-in that creates a follow-up activity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FollowupPlugin).
+This sample shows how to write a simple plug-in that creates a follow-up activity. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/FollowupPlugin).
 
 ## How to run this sample
 
@@ -45,8 +47,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 3. How to catch exceptions from the web service and process it.
 
 ### See also
+
 [Write a plug-in](../../write-plug-in.md)  
 [Register a plug-in](../../register-plug-in.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

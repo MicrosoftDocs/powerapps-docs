@@ -1,8 +1,8 @@
 ---
-title: "CallbackRegistration table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "CallbackRegistration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CallbackRegistration table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ Callback Registration that stores configuration.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/callbackregistrations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/callbackregistrations(*callbackregistrationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -59,6 +59,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EntityName](#BKMK_EntityName)
 - [FilterExpression](#BKMK_FilterExpression)
 - [FilteringAttributes](#BKMK_FilteringAttributes)
+- [HardDelete](#BKMK_HardDelete)
+- [LogicAppsVersion](#BKMK_LogicAppsVersion)
 - [Message](#BKMK_Message)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
@@ -132,6 +134,44 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|filteringattributes|
 |MaxLength|100000|
 |RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_HardDelete"></a> HardDelete
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds hard delete information.|
+|DisplayName|Hard Delete|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|harddelete|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### HardDelete Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+
+
+### <a name="BKMK_LogicAppsVersion"></a> LogicAppsVersion
+
+**Added by**: CallbackRegistrationApp Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. Holds version of logic apps trigger.|
+|DisplayName|Logic Apps Version|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|logicappsversion|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
 |Type|String|
 
 
@@ -651,26 +691,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_callbackregistration_modifiedonbehalfby"></a> lk_callbackregistration_modifiedonbehalfby
 
-See systemuser Table [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_callbackregistration_modifiedonbehalfby](systemuser.md#BKMK_lk_callbackregistration_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_modifiedby"></a> lk_callbackregistration_modifiedby
 
-See systemuser Table [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) One-To-Many relationship.
+See the [lk_callbackregistration_modifiedby](systemuser.md#BKMK_lk_callbackregistration_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_createdonbehalfby"></a> lk_callbackregistration_createdonbehalfby
 
-See systemuser Table [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) One-To-Many relationship.
+See the [lk_callbackregistration_createdonbehalfby](systemuser.md#BKMK_lk_callbackregistration_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_callbackregistration_createdby"></a> lk_callbackregistration_createdby
 
-See systemuser Table [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) One-To-Many relationship.
+See the [lk_callbackregistration_createdby](systemuser.md#BKMK_lk_callbackregistration_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_businessunit_callbackregistration"></a> businessunit_callbackregistration
 
-See businessunit Table [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) One-To-Many relationship.
+See the [businessunit_callbackregistration](businessunit.md#BKMK_businessunit_callbackregistration) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.callbackregistration?text=callbackregistration EntityType" />

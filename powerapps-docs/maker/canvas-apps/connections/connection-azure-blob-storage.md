@@ -198,7 +198,7 @@ Let's configure the app with controls and logic to allow upload of files to the 
 
 ## Download files from Azure Blob Storage
 
-So far you've added the ability to view containers, files from the selected container, and the option to upload file to the storage. Now, let's understand how to work with the download capability with the connected storage.
+So far you've added the ability to view containers, files from the selected container, and the option to upload files to the storage. Now, let's understand how to work with the download capability with the connected storage.
 
 1. Select the first row in the gallery with the list of files from a container.
 
@@ -207,7 +207,7 @@ So far you've added the ability to view containers, files from the selected cont
 1. Select **Insert** -> **Icons** -> **Download**.
     This adds the download icon for all rows in the gallery.
 
-1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves rest of the icons for next rows in gallery.
+1. Move the first download icon towards the right side inside the gallery on the app screen. This also moves the rest of the icons for the next rows in the gallery.
 
     ![Move first row in the file list gallery.](./media/connection-azure-blob-storage/move-download-icon.png "Move first row in the file list gallery")
 
@@ -255,9 +255,9 @@ Similarly, you can use different file extension types, or media types to additio
 
 The Azure Blob Storage connection doesn't refresh data inside the galleries automatically when the data is updated. If you have more than one container, you can select the other container and then, select the previously selected container back to refresh the connected gallery to display the changes.
 
-Another method that can be considered is to use collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
+Another method that can be considered is to use a collection for the first gallery, and then, use the function [ClearCollect](../functions/function-clear-collect-clearcollect.md) to refresh the collection.
 
-For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when upload button is selected, or when the screen appears (OnVisible screen property).
+For example, the following formulas allow you to update the collection for the top containers list in the first gallery, and update the second gallery when the upload button is selected, or when the screen appears (OnVisible screen property).
 
 1. Set the **Items** property of the first gallery for the list of containers to "TopLevelList".
 

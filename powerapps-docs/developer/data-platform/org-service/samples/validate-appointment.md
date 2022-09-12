@@ -1,27 +1,25 @@
 ---
 title: "Sample: Validate an appointment (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to validate an appointment" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Validate an appointment
 
-
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-validate-appointment -->
-
-This sample shows how to validate an appointment using the [ValidateRequest](/dotnet/api/microsoft.crm.sdk.messages.validaterequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ValidateAppointment).
+This sample shows how to validate an appointment using the [ValidateRequest](/dotnet/api/microsoft.crm.sdk.messages.validaterequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ValidateAppointment).
 
 ## How to run this sample
 
@@ -43,12 +41,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Retrieves the appointment to be validated. 
+1. Retrieves the appointment to be validated.
 2. The `ValidateRequest` message validates the appointment created in the Setup(#setup).
 
 ### Clean up
 
 Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

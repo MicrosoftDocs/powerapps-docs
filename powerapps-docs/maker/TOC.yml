@@ -41,6 +41,8 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
+  - name: Use the Measure in MR control to take measurements 
+    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -51,7 +53,7 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: In-app notifications (preview)
+      - name: In-app notifications
         href: ../user/notifications.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
@@ -91,7 +93,7 @@
       items:
       - name: Use timeline
         href: ../user/add-activities.md
-      - name: Create and join a Teams meeting from an appointment (preview)
+      - name: Create and join a Teams meeting from an appointment
         href: ../user/join-teams-meeting-from-appointments.md  
       - name: FAQs about activities
         href: ../user/faq-for-timeline-and-activity.md 
@@ -115,17 +117,23 @@
         items:
         - name: Create email templates
           href: ../user/email-template-create.md
+        - name: Customize an email template using the template editor
+          href: ../user/cs-template-options.md
+        - name: Personalize emails with dynamic text
+          href: ../user/email-dynamic-text.md  
         - name: Insert an email template
           href: ../user/insert-email-template.md
         - name: Convert an email to a template
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
-          href: ../user/email-signature.md
+          href: ../user/email-signature.md 
+      - name: Enable the enhanced insert email template
+        href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
-      - name: Explore data in a view on a grid page (preview)
+      - name: Explore data in a view on a grid page 
         href: ../user/grid-filters.md
-      - name: Create and manage personal views on a grid page (preview)
+      - name: Create and manage personal views on a grid page 
         href: ../user/grid-filters-advanced.md     
       - name: Faq for grids and views
         href: ../user/faq-for-grids-views.md
@@ -231,8 +239,29 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+    - name: 1 - Create an app from a design or a template
+      items:
+      - name: Create an app from a template
+        href: ./canvas-apps/get-started-test-drive.md
+      - name: Create an app from a design (preview)
+        items:
+        - name: Express design overview
+          href: ./canvas-apps/express-design.md
+        - name: Create an app from an image
+          href: ./canvas-apps/app-from-image.md
+        - name: Create an app from Figma
+          items:
+          - name: Overview
+            href: ./canvas-apps/figma/overview.md
+          - name: Design apps using the UI kit
+            href: ./canvas-apps/figma/design-using-kit.md
+          - name: Components supported by the UI kit
+            href: ./canvas-apps/figma/supported-components.md
+          - name: Create a canvas app from Figma
+            href: ./canvas-apps/figma/create-app-from-figma.md
+          - name: Troubleshoot common errors
+            href: ./canvas-apps/figma/common-errors.md
+            displayName: Troubleshoot common errors when creating app from Figma
     - name: 2 - Create an app using data
       items:
       - name: From Microsoft Dataverse
@@ -329,6 +358,8 @@
           href: ./canvas-apps/working-with-dynamic-schema.md
       - name: Design the interface
         items:
+          - name: Understand Power Apps Studio
+            href: ./canvas-apps/power-apps-studio.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -340,7 +371,7 @@
               - name: Configure Office 365 screens
                 items:
                   - name: Calendar-screen overview
-                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+                    href: /canvas-apps/screen-templates/calendar-screen-overview.md
                   - name: Calendar-screen reference
                     href: ./canvas-apps/screen-templates/calendar-screen-reference.md
                   - name: Email-screen overview
@@ -355,7 +386,9 @@
                     href: ./canvas-apps/screen-templates/people-screen-overview.md
                   - name: People-screen reference
                     href: ./canvas-apps/screen-templates/people-screen-reference.md
-          - name: Show a table of items
+          - name: Create and edit tables 
+            href: ./canvas-apps/create-edit-tables.md
+          - name: Work with a gallery
             items:
             - name: Add a gallery
               href: ./canvas-apps/add-gallery.md
@@ -391,7 +424,7 @@
               items:
               - name: View 3D models in Power Apps
                 href: ./canvas-apps/mixed-reality-component-view-3d.md
-              - name: Load models with the View in 3D control
+              - name: Load models with the 3D object control
                 href: ./canvas-apps/mixed-reality-component-view-3d-store.md
               - name: Add pins to 3D models
                 href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
@@ -409,6 +442,10 @@
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
                 href: ./canvas-apps/mixed-reality-cgtrader.md
+              - name: Use the Markup in MR control in Power Apps (preview)
+                href: ./canvas-apps/markup-in-mixed-reality.md
+              - name: Use marker detection with mixed reality controls (preview)
+                href: ./canvas-apps/mixed-reality-marker-detection.md
           - name: "Add geospatial controls"
             items:
             - name: Geospatial controls
@@ -429,7 +466,7 @@
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
-          - name: Add editable tables
+          - name: Create an app to edit tables
             href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
@@ -495,7 +532,7 @@
               href: ./canvas-apps/controls/control-list-box.md
             - name: Map
               href: ./canvas-apps/geospatial-component-map.md
-            - name: Measure in MR
+            - name: Measuring Camera
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
             - name: Microphone
               href: ./canvas-apps/controls/control-microphone.md
@@ -585,10 +622,10 @@
           href: ./canvas-apps/sharepoint-lookup-fields.md
         - name: Working with flows
           items:
-          - name: Add a flow
-            href: ./canvas-apps/using-logic-flows.md
-          - name: Use Power Automate pane (preview)
+          - name: Use Power Automate pane 
             href: ./canvas-apps/working-with-flows.md
+          - name: Add a flow (retired)
+            href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
@@ -604,389 +641,397 @@
         - name: Formula reference
           items:
           - name: Overview
-            href: ./canvas-apps/formula-reference.md
+            href: /power-platform/power-fx/formula-reference
           - name: Abs
-            href: ./canvas-apps/functions/function-numericals.md
+            href: /power-platform/power-fx/reference/function-numericals
           - name: Acceleration
-            href: ./canvas-apps/functions/signals.md
+            href: /power-platform/power-fx/reference/signals
           - name: Acos
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Acot
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: AddColumns
-            href: ./canvas-apps/functions/function-table-shaping.md
+            href: /power-platform/power-fx/reference/function-table-shaping
           - name: And
-            href: ./canvas-apps/functions/function-logicals.md
+            href: /power-platform/power-fx/reference/function-logicals
           - name: App
-            href: ./canvas-apps/functions/object-app.md
+            href: /power-platform/power-fx/reference/object-app
           - name: As
-            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
+            href: /power-platform/power-fx/reference/operators#thisitem-thisrecord-and-as-operators
           - name: Asin
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Assert
-            href: ./canvas-apps/functions/function-assert.md
+            href: /power-platform/power-fx/reference/function-assert
           - name: AsType
-            href: ./canvas-apps/functions/function-astype-istype.md
+            href: /power-platform/power-fx/reference/function-astype-istype
           - name: Atan
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Atan2
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Average
-            href: ./canvas-apps/functions/function-aggregates.md
+            href: /power-platform/power-fx/reference/function-aggregates
           - name: Back
-            href: ./canvas-apps/functions/function-navigate.md
+            href: /power-platform/power-fx/reference/function-navigate
           - name: Blank
-            href: ./canvas-apps/functions/function-isblank-isempty.md
+            href: /power-platform/power-fx/reference/function-isblank-isempty
           - name: Calendar
-            href: ./canvas-apps/functions/function-clock-calendar.md
+            href: /power-platform/power-fx/reference/function-clock-calendar
           - name: Char
-            href: ./canvas-apps/functions/function-char.md
+            href: /power-platform/power-fx/reference/function-char
           - name: Choices
-            href: ./canvas-apps/functions/function-choices.md
+            href: /power-platform/power-fx/reference/function-choices
           - name: Clear
-            href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+            href: /power-platform/power-fx/reference/function-clear-collect-clearcollect
           - name: ClearCollect
-            href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+            href: /power-platform/power-fx/reference/function-clear-collect-clearcollect
           - name: Clock
-            href: ./canvas-apps/functions/function-clock-calendar.md
+            href: /power-platform/power-fx/reference/function-clock-calendar
           - name: Coalesce
-            href: ./canvas-apps/functions/function-isblank-isempty.md
+            href: /power-platform/power-fx/reference/function-isblank-isempty
           - name: Collect
-            href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+            href: /power-platform/power-fx/reference/function-clear-collect-clearcollect
           - name: Color
-            href: ./canvas-apps/functions/function-colors.md
+            href: /power-platform/power-fx/reference/function-colors
           - name: ColorFade
-            href: ./canvas-apps/functions/function-colors.md
+            href: /power-platform/power-fx/reference/function-colors
           - name: ColorValue
-            href: ./canvas-apps/functions/function-colors.md
+            href: /power-platform/power-fx/reference/function-colors
           - name: Compass
-            href: ./canvas-apps/functions/signals.md
+            href: /power-platform/power-fx/reference/signals
           - name: Concat
-            href: ./canvas-apps/functions/function-concatenate.md
+            href: /power-platform/power-fx/reference/function-concatenate
           - name: Concatenate
-            href: ./canvas-apps/functions/function-concatenate.md
+            href: /power-platform/power-fx/reference/function-concatenate
           - name: Concurrent
-            href: ./canvas-apps/functions/function-concurrent.md
+            href: /power-platform/power-fx/reference/function-concurrent
           - name: Connection
-            href: ./canvas-apps/functions/signals.md
+            href: /power-platform/power-fx/reference/signals
           - name: Count
-            href: ./canvas-apps/functions/function-table-counts.md
+            href: /power-platform/power-fx/reference/function-table-counts
           - name: Cos
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Cot
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: CountA
-            href: ./canvas-apps/functions/function-table-counts.md
+            href: /power-platform/power-fx/reference/function-table-counts
           - name: CountIf
-            href: ./canvas-apps/functions/function-table-counts.md
+            href: /power-platform/power-fx/reference/function-table-counts
           - name: CountRows
-            href: ./canvas-apps/functions/function-table-counts.md
+            href: /power-platform/power-fx/reference/function-table-counts
           - name: Data types
-            href: ./canvas-apps/functions/data-types.md
+            href: /power-platform/power-fx/reference/data-types
           - name: DataSourceInfo
-            href: ./canvas-apps/functions/function-datasourceinfo.md
+            href: /power-platform/power-fx/reference/function-datasourceinfo
           - name: Date
-            href: ./canvas-apps/functions/function-date-time.md
+            href: /power-platform/power-fx/reference/function-date-time
           - name: DateAdd
-            href: ./canvas-apps/functions/function-dateadd-datediff.md
+            href: /power-platform/power-fx/reference/function-dateadd-datediff
           - name: DateDiff
-            href: ./canvas-apps/functions/function-dateadd-datediff.md
+            href: /power-platform/power-fx/reference/function-dateadd-datediff
           - name: DateTimeValue
-            href: ./canvas-apps/functions/function-datevalue-timevalue.md
+            href: /power-platform/power-fx/reference/function-datevalue-timevalue
           - name: DateValue
-            href: ./canvas-apps/functions/function-datevalue-timevalue.md
+            href: /power-platform/power-fx/reference/function-datevalue-timevalue
           - name: Day
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
           - name: Defaults
-            href: ./canvas-apps/functions/function-defaults.md
+            href: /power-platform/power-fx/reference/function-defaults
           - name: Degrees
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Disable
-            href: ./canvas-apps/functions/function-enable-disable.md
+            href: /power-platform/power-fx/reference/function-enable-disable
           - name: Distinct
-            href: ./canvas-apps/functions/function-distinct.md
+            href: /power-platform/power-fx/reference/function-distinct
           - name: Download
-            href: ./canvas-apps/functions/function-download.md
+            href: /power-platform/power-fx/reference/function-download
           - name: DropColumns
-            href: ./canvas-apps/functions/function-table-shaping.md
+            href: /power-platform/power-fx/reference/function-table-shaping
           - name: EditForm
-            href: ./canvas-apps/functions/function-form.md
+            href: /power-platform/power-fx/reference/function-form
           - name: Enable
-            href: ./canvas-apps/functions/function-enable-disable.md
+            href: /power-platform/power-fx/reference/function-enable-disable
           - name: EncodeUrl
-            href: ./canvas-apps/functions/function-encode-decode.md
+            href: /power-platform/power-fx/reference/function-encode-decode
           - name: EndsWith
-            href: ./canvas-apps/functions/function-startswith.md
+            href: /power-platform/power-fx/reference/function-startswith
+          - name: Error
+            href: /power-platform/power-fx/reference/function-iferror
           - name: Errors
-            href: ./canvas-apps/functions/function-errors.md
+            href: /power-platform/power-fx/reference/function-errors
           - name: exactin
-            href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+            href: /power-platform/power-fx/reference/operators#in-and-exactin-operators
           - name: Exit
-            href: ./canvas-apps/functions/function-exit.md
+            href: /power-platform/power-fx/reference/function-exit
           - name: Exp
-            href: ./canvas-apps/functions/function-numericals.md
+            href: /power-platform/power-fx/reference/function-numericals
           - name: Filter
-            href: ./canvas-apps/functions/function-filter-lookup.md
+            href: /power-platform/power-fx/reference/function-filter-lookup
           - name: Find
-            href: ./canvas-apps/functions/function-find.md
+            href: /power-platform/power-fx/reference/function-find
           - name: First
-            href: ./canvas-apps/functions/function-first-last.md
+            href: /power-platform/power-fx/reference/function-first-last
           - name: FirstN
-            href: ./canvas-apps/functions/function-first-last.md
+            href: /power-platform/power-fx/reference/function-first-last
           - name: ForAll
-            href: ./canvas-apps/functions/function-forall.md
+            href: /power-platform/power-fx/reference/function-forall
           - name: GroupBy
-            href: ./canvas-apps/functions/function-groupby.md
+            href: /power-platform/power-fx/reference/function-groupby
           - name: GUID
-            href: ./canvas-apps/functions/function-guid.md
+            href: /power-platform/power-fx/reference/function-guid
           - name: HashTags
-            href: ./canvas-apps/functions/function-hashtags.md
+            href: /power-platform/power-fx/reference/function-hashtags
           - name: Hour
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
           - name: Identifiers
-            href: ./canvas-apps/functions/operators.md
+            href: /power-platform/power-fx/reference/operators
           - name: If
-            href: ./canvas-apps/functions/function-if.md
+            href: /power-platform/power-fx/reference/function-if
           - name: IfError
-            href: ./canvas-apps/functions/function-iferror.md
+            href: /power-platform/power-fx/reference/function-iferror
           - name: in
-            href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
+            href: /power-platform/power-fx/reference/operators#in-and-exactin-operators
+          - name: Index
+            href: /power-platform/power-fx/reference/function-first-last
           - name: Int
-            href: ./canvas-apps/functions/function-round.md
+            href: /power-platform/power-fx/reference/function-round
           - name: IsBlank
-            href: ./canvas-apps/functions/function-isblank-isempty.md
+            href: /power-platform/power-fx/reference/function-isblank-isempty
           - name: IsBlankOrError
-            href: ./canvas-apps/functions/function-iferror.md            
+            href: /power-platform/power-fx/reference/function-iferror            
           - name: IsEmpty
-            href: ./canvas-apps/functions/function-isblank-isempty.md
+            href: /power-platform/power-fx/reference/function-isblank-isempty
           - name: IsError
-            href: ./canvas-apps/functions/function-iferror.md
+            href: /power-platform/power-fx/reference/function-iferror
           - name: IsMatch
-            href: ./canvas-apps/functions/function-ismatch.md
+            href: /power-platform/power-fx/reference/function-ismatch
           - name: IsNumeric
-            href: ./canvas-apps/functions/function-isnumeric.md
+            href: /power-platform/power-fx/reference/function-isnumeric
           - name: ISOWeekNum
-            href: ./canvas-apps/functions/function-weeknum.md            
+            href: /power-platform/power-fx/reference/function-weeknum            
           - name: IsToday
-            href: ./canvas-apps/functions/function-now-today-istoday.md
+            href: /power-platform/power-fx/reference/function-now-today-istoday
           - name: IsType
-            href: ./canvas-apps/functions/function-astype-istype.md
+            href: /power-platform/power-fx/reference/function-astype-istype
           - name: IsUTCToday
-            href: ./canvas-apps/functions/function-now-today-istoday.md            
+            href: /power-platform/power-fx/reference/function-now-today-istoday            
           - name: JSON
-            href: ./canvas-apps/functions/function-json.md
+            href: /power-platform/power-fx/reference/function-json
           - name: Language
-            href: ./canvas-apps/functions/function-language.md
+            href: /power-platform/power-fx/reference/function-language
           - name: Last
-            href: ./canvas-apps/functions/function-first-last.md
+            href: /power-platform/power-fx/reference/function-first-last
           - name: LastN
-            href: ./canvas-apps/functions/function-first-last.md
+            href: /power-platform/power-fx/reference/function-first-last
           - name: Launch
-            href: ./canvas-apps/functions/function-param.md
+            href: /power-platform/power-fx/reference/function-param
           - name: Left
-            href: ./canvas-apps/functions/function-left-mid-right.md
+            href: /power-platform/power-fx/reference/function-left-mid-right
           - name: Len
-            href: ./canvas-apps/functions/function-len.md
+            href: /power-platform/power-fx/reference/function-len
           - name: Ln
-            href: ./canvas-apps/functions/function-numericals.md
+            href: /power-platform/power-fx/reference/function-numericals
           - name: LoadData
-            href: ./canvas-apps/functions/function-savedata-loaddata.md
+            href: /power-platform/power-fx/reference/function-savedata-loaddata
           - name: Location
-            href: ./canvas-apps/functions/signals.md
+            href: /power-platform/power-fx/reference/signals
           - name: LookUp
-            href: ./canvas-apps/functions/function-filter-lookup.md
+            href: /power-platform/power-fx/reference/function-filter-lookup
           - name: Lower
-            href: ./canvas-apps/functions/function-lower-upper-proper.md
+            href: /power-platform/power-fx/reference/function-lower-upper-proper
           - name: Match
-            href: ./canvas-apps/functions/function-ismatch.md
+            href: /power-platform/power-fx/reference/function-ismatch
           - name: MatchAll
-            href: ./canvas-apps/functions/function-ismatch.md
+            href: /power-platform/power-fx/reference/function-ismatch
           - name: Max
-            href: ./canvas-apps/functions/function-aggregates.md
+            href: /power-platform/power-fx/reference/function-aggregates
           - name: Mid
-            href: ./canvas-apps/functions/function-left-mid-right.md
+            href: /power-platform/power-fx/reference/function-left-mid-right
           - name: Min
-            href: ./canvas-apps/functions/function-aggregates.md
+            href: /power-platform/power-fx/reference/function-aggregates
           - name: Minute
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
           - name: Mod
-            href: ./canvas-apps/functions/function-mod.md
+            href: /power-platform/power-fx/reference/function-mod
           - name: Month
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
           - name: Navigate
-            href: ./canvas-apps/functions/function-navigate.md
+            href: /power-platform/power-fx/reference/function-navigate
           - name: NewForm
-            href: ./canvas-apps/functions/function-form.md
+            href: /power-platform/power-fx/reference/function-form
           - name: Not
-            href: ./canvas-apps/functions/function-logicals.md
+            href: /power-platform/power-fx/reference/function-logicals
           - name: Notify
-            href: ./canvas-apps/functions/function-showerror.md
+            href: /power-platform/power-fx/reference/function-showerror
           - name: Now
-            href: ./canvas-apps/functions/function-now-today-istoday.md
+            href: /power-platform/power-fx/reference/function-now-today-istoday
           - name: Operators
-            href: ./canvas-apps/functions/operators.md
+            href: /power-platform/power-fx/reference/operators
           - name: Or
-            href: ./canvas-apps/functions/function-logicals.md
+            href: /power-platform/power-fx/reference/function-logicals
           - name: Param
-            href: ./canvas-apps/functions/function-param.md
+            href: /power-platform/power-fx/reference/function-param
           - name: Parent
-            href: ./canvas-apps/functions/operators.md#self-and-parent-operators
+            href: /power-platform/power-fx/reference/operators#self-and-parent-operators
           - name: Patch
-            href: ./canvas-apps/functions/function-patch.md
+            href: /power-platform/power-fx/reference/function-patch
           - name: Pi
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: PlainText
-            href: ./canvas-apps/functions/function-encode-decode.md
+            href: /power-platform/power-fx/reference/function-encode-decode
           - name: Power
-            href: ./canvas-apps/functions/function-numericals.md
+            href: /power-platform/power-fx/reference/function-numericals
           - name: Print
-            href: ./canvas-apps/functions/function-print.md
+            href: /power-platform/power-fx/reference/function-print
           - name: Proper
-            href: ./canvas-apps/functions/function-lower-upper-proper.md
+            href: /power-platform/power-fx/reference/function-lower-upper-proper
           - name: Radians
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Rand
-            href: ./canvas-apps/functions/function-rand.md
+            href: /power-platform/power-fx/reference/function-rand
+          - name: RandBetween
+            href: /power-platform/power-fx/reference/function-rand            
           - name: ReadNFC
-            href: ./canvas-apps/functions/function-readnfc.md
+            href: /power-platform/power-fx/reference/function-readnfc
           - name: RecordInfo
-            href: ./canvas-apps/functions/function-recordinfo.md            
+            href: /power-platform/power-fx/reference/function-recordinfo            
           - name: Refresh
-            href: ./canvas-apps/functions/function-refresh.md
+            href: /power-platform/power-fx/reference/function-refresh
           - name: Relate
-            href: ./canvas-apps/functions/function-relate-unrelate.md
+            href: /power-platform/power-fx/reference/function-relate-unrelate
           - name: Remove
-            href: ./canvas-apps/functions/function-remove-removeif.md
+            href: /power-platform/power-fx/reference/function-remove-removeif
           - name: RemoveIf
-            href: ./canvas-apps/functions/function-remove-removeif.md
+            href: /power-platform/power-fx/reference/function-remove-removeif
           - name: RenameColumns
-            href: ./canvas-apps/functions/function-table-shaping.md
+            href: /power-platform/power-fx/reference/function-table-shaping
           - name: Replace
-            href: ./canvas-apps/functions/function-replace-substitute.md
+            href: /power-platform/power-fx/reference/function-replace-substitute
           - name: Reset
-            href: ./canvas-apps/functions/function-reset.md
+            href: /power-platform/power-fx/reference/function-reset
           - name: ResetForm
-            href: ./canvas-apps/functions/function-form.md
+            href: /power-platform/power-fx/reference/function-form
           - name: Revert
-            href: ./canvas-apps/functions/function-revert.md
+            href: /power-platform/power-fx/reference/function-revert
           - name: RequestHide
-            href: ./canvas-apps/functions/function-requesthide.md
+            href: /power-platform/power-fx/reference/function-requesthide
           - name: RGBA
-            href: ./canvas-apps/functions/function-colors.md
+            href: /power-platform/power-fx/reference/function-colors
           - name: Right
-            href: ./canvas-apps/functions/function-left-mid-right.md
+            href: /power-platform/power-fx/reference/function-left-mid-right
           - name: Round
-            href: ./canvas-apps/functions/function-round.md
+            href: /power-platform/power-fx/reference/function-round
           - name: RoundDown
-            href: ./canvas-apps/functions/function-round.md
+            href: /power-platform/power-fx/reference/function-round
           - name: RoundUp
-            href: ./canvas-apps/functions/function-round.md
+            href: /power-platform/power-fx/reference/function-round
           - name: SaveData
-            href: ./canvas-apps/functions/function-savedata-loaddata.md
+            href: /power-platform/power-fx/reference/function-savedata-loaddata
           - name: Search
-            href: ./canvas-apps/functions/function-filter-lookup.md
+            href: /power-platform/power-fx/reference/function-filter-lookup
           - name: Second
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
           - name: Select
-            href: ./canvas-apps/functions/function-select.md
+            href: /power-platform/power-fx/reference/function-select
           - name: Self
-            href: ./canvas-apps/functions/operators.md#self-and-parent-operators
+            href: /power-platform/power-fx/reference/operators#self-and-parent-operators
           - name: Set
-            href: ./canvas-apps/functions/function-set.md
+            href: /power-platform/power-fx/reference/function-set
           - name: SetFocus
-            href: ./canvas-apps/functions/function-setfocus.md
+            href: /power-platform/power-fx/reference/function-setfocus
           - name: SetProperty
-            href: ./canvas-apps/functions/function-setproperty.md
+            href: /power-platform/power-fx/reference/function-setproperty
           - name: Sequence
-            href: ./canvas-apps/functions/function-sequence.md
+            href: /power-platform/power-fx/reference/function-sequence
           - name: ShowColumns
-            href: ./canvas-apps/functions/function-table-shaping.md
+            href: /power-platform/power-fx/reference/function-table-shaping
           - name: Shuffle
-            href: ./canvas-apps/functions/function-shuffle.md
+            href: /power-platform/power-fx/reference/function-shuffle
           - name: Sin
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Sort
-            href: ./canvas-apps/functions/function-sort.md
+            href: /power-platform/power-fx/reference/function-sort
           - name: SortByColumns
-            href: ./canvas-apps/functions/function-sort.md
+            href: /power-platform/power-fx/reference/function-sort
           - name: Split
-            href: ./canvas-apps/functions/function-split.md
+            href: /power-platform/power-fx/reference/function-split
           - name: Sqrt
-            href: ./canvas-apps/functions/function-numericals.md
+            href: /power-platform/power-fx/reference/function-numericals
           - name: StartsWith
-            href: ./canvas-apps/functions/function-startswith.md
+            href: /power-platform/power-fx/reference/function-startswith
           - name: StdevP
-            href: ./canvas-apps/functions/function-aggregates.md
+            href: /power-platform/power-fx/reference/function-aggregates
           - name: Substitute
-            href: ./canvas-apps/functions/function-replace-substitute.md
+            href: /power-platform/power-fx/reference/function-replace-substitute
           - name: SubmitForm
-            href: ./canvas-apps/functions/function-form.md
+            href: /power-platform/power-fx/reference/function-form
           - name: Sum
-            href: ./canvas-apps/functions/function-aggregates.md
+            href: /power-platform/power-fx/reference/function-aggregates
           - name: Switch
-            href: ./canvas-apps/functions/function-if.md
+            href: /power-platform/power-fx/reference/function-if
           - name: Table
-            href: ./canvas-apps/functions/function-table.md
+            href: /power-platform/power-fx/reference/function-table
           - name: Tan
-            href: ./canvas-apps/functions/function-trig.md
+            href: /power-platform/power-fx/reference/function-trig
           - name: Text
-            href: ./canvas-apps/functions/function-text.md
+            href: /power-platform/power-fx/reference/function-text
           - name: ThisItem
-            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
+            href: /power-platform/power-fx/reference/operators#thisitem-thisrecord-and-as-operators
           - name: ThisRecord
-            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
+            href: /power-platform/power-fx/reference/operators#thisitem-thisrecord-and-as-operators
           - name: Time
-            href: ./canvas-apps/functions/function-date-time.md
+            href: /power-platform/power-fx/reference/function-date-time
           - name: TimeValue
-            href: ./canvas-apps/functions/function-datevalue-timevalue.md
+            href: /power-platform/power-fx/reference/function-datevalue-timevalue
           - name: TimeZoneOffset
-            href: ./canvas-apps/functions/function-dateadd-datediff.md
+            href: /power-platform/power-fx/reference/function-dateadd-datediff
           - name: Today
-            href: ./canvas-apps/functions/function-now-today-istoday.md
+            href: /power-platform/power-fx/reference/function-now-today-istoday
           - name: Trace
-            href: ./canvas-apps/functions/function-trace.md
+            href: /power-platform/power-fx/reference/function-trace
           - name: Trim
-            href: ./canvas-apps/functions/function-trim.md
+            href: /power-platform/power-fx/reference/function-trim
           - name: TrimEnds
-            href: ./canvas-apps/functions/function-trim.md
+            href: /power-platform/power-fx/reference/function-trim
           - name: Trunc
-            href: ./canvas-apps/functions/function-round.md            
+            href: /power-platform/power-fx/reference/function-round            
           - name: Ungroup
-            href: ./canvas-apps/functions/function-groupby.md
+            href: /power-platform/power-fx/reference/function-groupby
           - name: Unrelate
-            href: ./canvas-apps/functions/function-relate-unrelate.md
+            href: /power-platform/power-fx/reference/function-relate-unrelate
           - name: Update
-            href: ./canvas-apps/functions/function-update-updateif.md
+            href: /power-platform/power-fx/reference/function-update-updateif
           - name: UpdateContext
-            href: ./canvas-apps/functions/function-updatecontext.md
+            href: /power-platform/power-fx/reference/function-updatecontext
           - name: UpdateIf
-            href: ./canvas-apps/functions/function-update-updateif.md
+            href: /power-platform/power-fx/reference/function-update-updateif
           - name: Upper
-            href: ./canvas-apps/functions/function-lower-upper-proper.md
+            href: /power-platform/power-fx/reference/function-lower-upper-proper
           - name: User
-            href: ./canvas-apps/functions/function-user.md
+            href: /power-platform/power-fx/reference/function-user
           - name: UTCNow
-            href: ./canvas-apps/functions/function-now-today-istoday.md
+            href: /power-platform/power-fx/reference/function-now-today-istoday
           - name: UTCToday
-            href: ./canvas-apps/functions/function-now-today-istoday.md            
+            href: /power-platform/power-fx/reference/function-now-today-istoday            
           - name: Validate
-            href: ./canvas-apps/functions/function-validate.md
+            href: /power-platform/power-fx/reference/function-validate
           - name: Value
-            href: ./canvas-apps/functions/function-value.md
+            href: /power-platform/power-fx/reference/function-value
           - name: VarP
-            href: ./canvas-apps/functions/function-aggregates.md
+            href: /power-platform/power-fx/reference/function-aggregates
           - name: ViewForm
-            href: ./canvas-apps/functions/function-form.md
+            href: /power-platform/power-fx/reference/function-form
           - name: Weekday
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
           - name: WeekNum
-            href: ./canvas-apps/functions/function-weeknum.md
+            href: /power-platform/power-fx/reference/function-weeknum
           - name: With
-            href: ./canvas-apps/functions/function-with.md
+            href: /power-platform/power-fx/reference/function-with
           - name: Year
-            href: ./canvas-apps/functions/function-datetime-parts.md
+            href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
+      - name: Add canvas apps to solution by default (preview)
+        href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
           - name: Install the data
@@ -1045,7 +1090,7 @@
       href: ./canvas-apps/how-to/mobile-apps-view-shape-in-mr.md
     - name: Create an app with address input and map controls
       href: ./canvas-apps/how-to/mobile-apps-address-map.md
-    - name: Create an app using the Measure in MR control
+    - name: Create an app using the Measuring Camera control
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
     - name: Create a canvas app with deep link to a specific screen
       href: ./canvas-apps/how-to/deep-linking.md
@@ -1133,12 +1178,22 @@
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
         - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
-    - name: Cognitive Services
-      href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
     - name: Analyze app telemetry using Application Insights
       href: ./canvas-apps/application-insights.md
+  - name: Create native mobile apps
+    items:
+      - name: Overview of wrap
+        href: ./common/wrap/overview.md
+      - name: Customize and build your mobile app
+        href: ./common/wrap/how-to.md
+      - name: Code sign for iOS
+        href: ./common/wrap/code-sign-ios.md
+      - name: Code sign for Android
+        href: ./common/wrap/code-sign-android.md
+      - name: Frequently asked questions
+        href: ./common/wrap/faq.yml
   - name: For developers
     items:
     - name: Canvas apps for enterprise developers, partners, and ISVs
@@ -1149,18 +1204,20 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Create a component (preview)
+    - name: Create a canvas component
       items:
-        - name: Components overview
+        - name: Canvas component overview
           href: ./canvas-apps/create-component.md
         - name: Component library
           href: ./canvas-apps/component-library.md
+        - name: Component library ALM
+          href: ./canvas-apps/component-library-alm.md
         - name: Map input fields
           href: ./canvas-apps/map-component-input-fields.md
-        - name: Behavior formulas
+        - name: Add multimedia to a component
+          href: ./canvas-apps/component-multimedia.md
+        - name: Behavior formulas (experimental)
           href: ./canvas-apps/component-behavior.md
-    - name: Embed canvas apps in your applications
-      href: ./canvas-apps/embedding-sdk.md
   - name: Performance and optimization
     items:
     - name: Understand canvas app execution phases and data flow
@@ -1184,7 +1241,9 @@
     - name: What are model-driven apps?
       href: ./model-driven-apps/model-driven-app-overview.md
     - name: The benefits of the model-driven approach
-      href: ./model-driven-apps/app-value-proposition.md            
+      href: ./model-driven-apps/app-value-proposition.md
+    - name: Build an app in three steps (preview)
+      href: ./model-driven-apps/build-app-three-steps.md            
     - name: Explore sample apps
       href: ./model-driven-apps/overview-model-driven-samples.md
     - name: Meet the model-driven designers
@@ -1212,10 +1271,10 @@
       items:
       - name: App interface design overview
         href: ./model-driven-apps/app-interface-design-overview.md
-      - name: Use the modern app designer (preview)
+      - name: Use the modern app designer
         href: 
         items: 
-        - name: App designer overview (preview)
+        - name: App designer overview
           href: ./model-driven-apps/app-designer-overview.md
         - name: Create an app
           href: ./model-driven-apps/create-model-driven-app.md
@@ -1223,11 +1282,11 @@
           href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Understanding app navigation
           href: ./model-driven-apps/app-navigation.md
-        - name: Create and remove pages
+        - name: Work with pages (preview)
           href: ./model-driven-apps/create-remove-pages.md
-        - name: Manage app properties
+        - name: Manage app settings
           href: ./model-driven-apps/app-properties.md         
-        - name: Use custom pages within model-driven apps (preview)
+        - name: Use custom pages within model-driven apps
           items:
           - name: Custom pages overview
             href: ./model-driven-apps/model-app-page-overview.md
@@ -1268,7 +1327,11 @@
           href: ./model-driven-apps/create-edit-view-filters.md
         - name: Sorting records within views
           href: ./model-driven-apps/configure-sorting.md
-        - name: Converting views into editable grids
+        - name: Power Apps read-only grid control
+          href: ./model-driven-apps/power-apps-grid-control.md
+        - name: Convert views and subgrids into editable grids (preview)
+          href: ./model-driven-apps/the-power-apps-grid-control.md       
+        - name: Convert views and subgrids into editable grids (legacy)
           href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
         - name: Setting managed properties for views
           href: ./model-driven-apps/managed-properties-views.md
@@ -1325,12 +1388,16 @@
             href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
           - name: Configure header properties
             href: ./model-driven-apps/form-designer-header-properties.md
-          - name: Add and configure sub-grid component
+          - name: Add and configure subgrid component
             href: ./model-driven-apps/form-designer-add-configure-subgrid.md
           - name: Add and configure quick view component
             href: ./model-driven-apps/form-designer-add-configure-quickview.md
           - name: Configure lookup component
-            href: ./model-driven-apps/form-designer-add-configure-lookup.md      
+            href: ./model-driven-apps/form-designer-add-configure-lookup.md
+          - name: Add a chart to a form
+            href: ./model-driven-apps/add-chart-to-form.md
+          - name: Add a map on a form
+            href: ./model-driven-apps/configure-bing-maps-legacy.md               
         - name: Design effective forms
           href: 
           items:
@@ -1385,8 +1452,6 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
-        - name: Use custom controls for data visualizations
-          href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -1411,7 +1476,7 @@
           href: ./model-driven-apps/model-app-page-issues.md
         - name: Use monitor to troubleshoot custom pages
           href: ./model-driven-apps/monitor-page-checker.md
-      - name: Customize app commands (preview)
+      - name: Customize app commands
         href: ./model-driven-apps/command-designer-overview.md
         items:
         - name: Use command designer
@@ -1422,6 +1487,8 @@
           href: ./model-driven-apps/commanding-designer-use-custom-pages-as-dialogs.md
         - name: Manage commands in solutions
           href: ./model-driven-apps/manage-commands-in-solutions.md
+        - name: Command scopes
+          href: ./model-driven-apps/commanding-scopes.md
         - name: Command designer limitations
           href: ./model-driven-apps/command-designer-limitations.md       
       - name: Use the classic designers
@@ -1445,10 +1512,12 @@
           items:
           - name: Form properties overview
             href: ./model-driven-apps/form-properties-legacy.md
-          - name: Sub-grid properties overview
+          - name: Subgrid properties overview
             href: ./model-driven-apps/sub-grid-properties-legacy.md
           - name: Tab properties overview
             href: ./model-driven-apps/tab-properties-legacy.md
+          - name: Use controls for data visualizations
+            href: ./model-driven-apps/use-custom-controls-data-visualizations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
@@ -1466,10 +1535,6 @@
             href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
-          - name: How to add a chart to a form
-            href: ./model-driven-apps/add-chart-to-form.md
-          - name: How to configure Bing maps in a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to configure event handlers in a form
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
@@ -1547,33 +1612,41 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
+    - name: Enable the enhanced email template editor page
+      href: ../user/cs-email-template-builder.md
   - name: App performance insights
     items:
     - name: Performance insights overview
       href: ./common/performance-insights-overview.md
     - name: Understand performance insights
       href: ./common/performance-insights-categories.md
+  - name: App ratings (preview)
+    href: ./common/app-ratings.md
   - name: Developer zone
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md    
 - name: Power Apps mobile  
   items:
-  - name: Get started with Power Apps mobile
+  - name: Install Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
+  - name: Manage your mobile app with Microsoft Intune
+    href: ../mobile/intune.md
   - name: Use model-driven apps on Power Apps mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Use Dataverse search on Power Apps mobile  
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile (preview)
+  - name: In-app notifications in Power Apps mobile
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
+  - name: Use deep links with Power Apps mobile
+    href: ../mobile/mobile-deep-links.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-  - name: 'Mobile offline'
+  - name: Mobile offline
     items:
     - name: Mobile offline overview (preview)
       href: ../mobile/mobile-offline-overview.md
@@ -1583,11 +1656,13 @@
       href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
-  - name: 'Power Apps for Windows (preview)'
+    - name: Offline profile guidelines
+      href: ../mobile/mobile-offline-guidelines.md   
+  - name: Power Apps for Windows 
     items:
-    - name: Install Power Apps for Windows (preview)
+    - name: Install Power Apps for Windows 
       href: ../mobile/windows-app-install.md
-    - name: Use Power Apps for Windows (preview)
+    - name: Use Power Apps for Windows 
       href: ../mobile/windows-app-use.md
 - name: Portals
   items:
@@ -1687,6 +1762,29 @@
           items:
             - name: Work with lists
               href: ./portals/configure/entity-lists.md
+              items:
+              - name: List attributes and relationships
+                href: portals/configure/list-attributes-relationionships.md
+              - name: Sort lists
+                href: portals/configure/sort-lists.md
+              - name: Add custom JavaScript
+                href: portals/configure/add-custom-javascript-list.md
+              - name: List configuration  
+                href: portals/configure/list-configuration.md
+              - name: Securing lists
+                href: portals/configure/securing-lists.md
+              - name: Add a view details page
+                href: portals/configure/list-view-details.md
+              - name: List filter configuration
+                href: portals/configure/list-filter-configuration.md
+              - name: List Map view
+                href: portals/configure/list-map-view.md
+              - name: List Calendar view 
+                href: portals/configure/list-calendar-view.md
+              - name: List OData feeds 
+                href: portals/configure/list-odata-feeds.md
+              - name: Enhanced view filter for lists
+                href: portals/configure/list-enhanced-view-filter.md
             - name: Work with basic forms
               items:
                 - name: Work with basic forms
@@ -1739,8 +1837,12 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
+        - name: Configure file column (preview)
+          href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
+        - name: Configure image column
+          href: ./portals/configure/image-column.md         
         - name: Configure page templates
           href: ./portals/configure/page-templates.md
         - name: Configure polls
@@ -1804,7 +1906,9 @@
         - name: Manage SSL certificates
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
-          href: ./portals/admin/manage-custom-certificates.md              
+          href: ./portals/admin/manage-custom-certificates.md  
+        - name: Content Delivery Network (preview)
+          href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
@@ -1905,6 +2009,10 @@
               href: ./portals/configure/webpage-access-control.md
             - name: Create website access permissions
               href: ./portals/configure/website-access-permission.md
+        - name: Website security
+          items:
+            - name: Manage content security policy 
+              href: ./portals/configure/manage-content-security-policy.md
     - name: Configure search in portals
       items:
         - name: Portal search overview
@@ -1916,9 +2024,7 @@
         - name: Search within file attachments
           href: ./portals/configure/search-file-attachment.md
         - name: Configure progressive search counts
-          href: ./portals/configure/progressive-search.md
-        - name: Configure Dataverse search (preview)
-          href: ./portals/configure/dataverse-search.md          
+          href: ./portals/configure/progressive-search.md        
     - name: Configure document storage in portals
       items:
         - name: Configure notes
@@ -1983,6 +2089,8 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Redirect a user to a default page on sign-in
+                  href: ./portals/liquid/redirect-a-user-homepage.md                  
                 - name: Render list for a page
                   href: ./portals/liquid/render-entity-list-current-page.md
                 - name: Render an RSS feed by using a custom page template
@@ -2023,7 +2131,7 @@
             href: ./portals/power-apps-cli.md
           - name: "Tutorial: Use Microsoft Power Platform CLI with portals"
             href: ./portals/power-apps-cli-tutorial.md
-          - name: Use the Visual Studio Code extension for portals (Preview)
+          - name: Use the Visual Studio Code extension for portals
             href: ./portals/vs-code-extension.md
     - name: Update, upgrade, migrate and convert portals
       items:
@@ -2093,8 +2201,6 @@
           href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
-    - name: Supported web browsers
-      href: ./portals/supported-web-browsers.md
     - name: Known issues
       href: ./portals/known-issues.md
     - name: Power Apps portals FAQs
@@ -2119,6 +2225,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2204.x
+                href: ./portals/versions/package-version-9.3.2204.md             
               - name: Package 9.3.2201.x
                 href: ./portals/versions/package-version-9.3.2201.md           
               - name: Package 9.3.2109.x
@@ -2151,26 +2259,24 @@
       href: ./data-platform/create-edit-metadata.md
     - name: Types of tables
       href: ./data-platform/types-of-entities.md    
-    - name: "Create a table"
-      href: ./data-platform/data-platform-create-entity.md
+    - name: "Create or edit a table"
+      href: ./data-platform/create-edit-entities-portal.md
     - name: "Create a custom table that has components"
       href: ./data-platform/create-custom-entity.md
-    - name: Edit a table
-      href: ./data-platform/edit-entities.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
     - name: Virtual table OData v4 data provider
       href: ./data-platform/virtual-entity-odata-provider-requirements.md
-    - name: Define alternate keys using Power Apps portal
+    - name: View and edit tables representing solution objects
+      href: ./data-platform/table-solution-objects.md
+    - name: Define alternate keys using Power Apps
       href: ./data-platform/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using Power Apps portal
-        href: ./data-platform/create-edit-entities-portal.md
       - name: How to create tables using solution explorer
         href: ./data-platform/create-edit-entities-solution-explorer.md
       - name: How to open table data in Excel
@@ -2191,6 +2297,8 @@
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
+      - name: Create virtual tables using virtual connectors (preview)
+        href: ./data-platform/create-virtual-tables-using-connectors.md
   - name: Work with table relationships
     href: ./data-platform/relationships-overview.md
     items:
@@ -2235,10 +2343,12 @@
     items:
     - name: Types of columns
       href: ./data-platform/types-of-fields.md
-    - name: Global choices overview
+    - name: Choice columns overview
       href: ./data-platform/create-edit-global-option-sets.md
     - name: Autonumber columns
       href: ./data-platform/autonumber-fields.md
+    - name: Fx formula columns
+      href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time column
@@ -2253,10 +2363,8 @@
         href: ./data-platform/create-edit-field-portal.md
       - name: How to create columns using Power Apps solution explorer
         href: ./data-platform/create-edit-field-solution-explorer.md
-      - name: How to create a choice using Power Apps portal
+      - name: How to create a choice
         href: ./data-platform/custom-picklists.md
-      - name: How to create global choices using solution explorer
-        href: ./data-platform/create-edit-global-option-sets-solution-explorer.md
       - name: How to define calculated columns
         href: ./data-platform/define-calculated-fields.md
       - name: How to define rollup columns
@@ -2336,6 +2444,56 @@
           items:
           - name: "Common issues and resolutions: solution checker"
             href: ./data-platform/common-issues-resolutions-solution-checker.md
+          - name: "Rule reference"
+            items:
+            - name: "Web"
+              items:
+              - name: "avoid-2011-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-2011-api.md"
+              - name: "avoid-browser-specific-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-browser-specific-api.md"
+              - name: "avoid-crm2011-service-odata"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-crm2011-service-odata.md"
+              - name: "avoid-crm2011-service-soap"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-crm2011-service-soap.md"
+              - name: "avoid-dom-form"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form.md"
+              - name: "avoid-dom-form-event"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form-event.md"
+              - name: "avoid-isactivitytype"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-isactivitytype.md"
+              - name: "avoid-modals"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-modals.md"
+              - name: "avoid-ui-refreshribbon"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-ui-refreshribbon.md"
+              - name: "avoid-unpub-api"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-unpub-api.md"
+              - name: "avoid-window-top"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-window-top.md"
+              - name: "do-not-make-parent-assumption"
+                href: "./data-platform/powerapps-checker/rules/web/do-not-make-parent-assumption.md"
+              - name: "use-async"
+                href: "./data-platform/powerapps-checker/rules/web/use-async.md"
+              - name: "use-cached-webresource"
+                href: "./data-platform/powerapps-checker/rules/web/use-cached-webresource.md"
+              - name: "use-client-context"
+                href: "./data-platform/powerapps-checker/rules/web/use-client-context.md"
+              - name: "use-getsecurityroleprivilegesinfo"
+                href: "./data-platform/powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md"
+              - name: "use-global-context"
+                href: "./data-platform/powerapps-checker/rules/web/use-global-context.md"
+              - name: "use-grid-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-grid-api.md"
+              - name: "use-navigation-api"
+                href: "./data-platform/powerapps-checker/rules/web/use-navigation-api.md"
+              - name: "use-offline"
+                href: "./data-platform/powerapps-checker/rules/web/use-offline.md"
+              - name: "use-org-setting"
+                href: "./data-platform/powerapps-checker/rules/web/use-org-setting.md"
+              - name: "use-relative-uri"
+                href: "./data-platform/powerapps-checker/rules/web/use-relative-uri.md"
+              - name: "use-utility-dialogs"
+                href: "./data-platform/powerapps-checker/rules/web/use-utility-dialogs.md"
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
@@ -2384,11 +2542,13 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
+      - name: Query and analyze incremental updates (preview)
+        href: ./data-platform/azure-synapse-incremental-updates.md
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
         href: ./data-platform/azure-synapse-link-spark.md
-      - name: Run Azure Synapse pipelines
+      - name: Copy Dataverse into Azure SQL
         href: ./data-platform/azure-synapse-link-pipelines.md
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
@@ -2402,8 +2562,6 @@
       items:
       - name: Ingest exported data with Azure Data Factory
         href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Copy data to Azure SQL with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-copy-sql.md
       - name: Copy data from multiple data lakes to single data lake
         href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
       - name: Transform data from CSV to Parquet
@@ -2412,6 +2570,8 @@
         href: ./data-platform/export-to-data-lake-data-powerbi.md
       - name: Access Dataverse choices with Azure Data Factory
         href: ./data-platform/azure-synapse-link-choices-adf.md
+      - name: Access choice labels from Azure Synapse Link for Dataverse
+        href: ./data-platform/azure-synapse-link-choice-labels.md
       - name: Access Dataverse choices with Power BI
         href: ./data-platform/azure-synapse-link-choices-powerbi.md        
   - name: Security in Dataverse
@@ -2451,7 +2611,7 @@
       items:
         - name: Overview of the Power Apps app
           href: ../teams/overview-of-the-power-apps-app.md
-        - name: Understand Power Apps Studio
+        - name: Understand Power Apps Studio in a Teams environment
           href: ../teams/understand-power-apps-studio.md
         - name: Use the Fluent UI controls
           href: ../teams/use-the-fluent-ui-controls.md
@@ -2688,9 +2848,9 @@
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
-  - name: Migrate Access data to Dataverse for Teams (preview)
+  - name: Migrate Access data to Dataverse for Teams
     href: ../teams/migrate-access-to-dvft.md
-- name: Access migration (preview)
+- name: Access migration
   href: ./data-platform/migrate-access-to-dataverse.md
   items:
   - name: Data types and sizes for Access migration
@@ -2773,14 +2933,14 @@
     - name: Advanced monitoring
       href: monitor-advanced.md
   - name: Common issues and resolutions
-    href: ./canvas-apps/common-issues-and-resolutions.md
+    href: /troubleshoot/power-platform/power-apps/common-issues-and-resolutions
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
   - name: Change Power Apps Studio version
     href: ./canvas-apps/studio-versions.md
   - name: Troubleshoot startup issues for Power Apps
-    href: ../troubleshooting-startup-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshooting-startup-issues
   - name: Troubleshoot Power Query
-    href: ./data-platform/troubleshoot-power-query-issues.md
+    href: /troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues
   - name: Support
     href: https://powerapps.microsoft.com/support/

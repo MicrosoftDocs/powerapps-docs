@@ -1,26 +1,25 @@
 ---
-title: " Initialize a record from existing record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Initialize a record from existing record (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to create a new record from existing record." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
 
-# Initialize a record from existing record
+# Sample: Initialize a record from existing record
 
-
-
-This sample shows how to use the [IOrganizationService.InitializeFromRequest](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest?view=dynamics-general-ce-9) message to create new records from an existing record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/InitializeRecordFromExisting).
+This sample shows how to use the [IOrganizationService.InitializeFromRequest](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) message to create new records from an existing record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/InitializeRecordFromExisting).
 
 ## How to run this sample
 
@@ -39,17 +38,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. The `CreateRequiredRecords` method creates any records that this sample requires.
 
-
 ### Demonstrate
 
-1. The `InitializeFromRequest` method creates the request and set properties for the request object. 
-2. The `InitializeFromResponse`  method executes the request.
-
+1. The `InitializeFromRequest` method creates the request and set properties for the request object.
+2. The `InitializeFromResponse` method executes the request.
 
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,8 +1,8 @@
 ---
-title: "WebResource table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "WebResource table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the WebResource table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ Data equivalent to files used in Web development. Web resources provide client-s
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/webresourceset<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -201,10 +201,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -237,10 +237,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -358,7 +358,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
+- [ContentFileRef](#BKMK_ContentFileRef)
 - [ContentFileRef_Name](#BKMK_ContentFileRef_Name)
+- [ContentJsonFileRef](#BKMK_ContentJsonFileRef)
 - [ContentJsonFileRef_Name](#BKMK_ContentJsonFileRef_Name)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
@@ -403,9 +405,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 
+### <a name="BKMK_ContentFileRef"></a> ContentFileRef
+
+**Added by**: UnifiedClientWebResourceFileType Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Reference to the content file on Azure.|
+|DisplayName|ContentFileRef|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentfileref|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_ContentFileRef_Name"></a> ContentFileRef_Name
 
-**Added by**: Active Solution Solution
+**Added by**: UnifiedClientWebResourceFileType Solution
 
 |Property|Value|
 |--------|-----|
@@ -421,9 +438,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_ContentJsonFileRef"></a> ContentJsonFileRef
+
+**Added by**: UnifiedClientWebResourceFileType Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Reference to the Json content file on Azure.|
+|DisplayName|ContentJsonFileRef|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentjsonfileref|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_ContentJsonFileRef_Name"></a> ContentJsonFileRef_Name
 
-**Added by**: Active Solution Solution
+**Added by**: UnifiedClientWebResourceFileType Solution
 
 |Property|Value|
 |--------|-----|
@@ -530,10 +562,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -726,7 +758,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_webresource_savedqueryvisualizations"></a> webresource_savedqueryvisualizations
 
-Same as savedqueryvisualization table [webresource_savedqueryvisualizations](savedqueryvisualization.md#BKMK_webresource_savedqueryvisualizations) Many-To-One relationship.
+Same as the [webresource_savedqueryvisualizations](savedqueryvisualization.md#BKMK_webresource_savedqueryvisualizations) many-to-one relationship for the [savedqueryvisualization](savedqueryvisualization.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -741,7 +773,7 @@ Same as savedqueryvisualization table [webresource_savedqueryvisualizations](sav
 
 ### <a name="BKMK_solution_configuration_webresource"></a> solution_configuration_webresource
 
-Same as solution table [solution_configuration_webresource](solution.md#BKMK_solution_configuration_webresource) Many-To-One relationship.
+Same as the [solution_configuration_webresource](solution.md#BKMK_solution_configuration_webresource) many-to-one relationship for the [solution](solution.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -756,7 +788,7 @@ Same as solution table [solution_configuration_webresource](solution.md#BKMK_sol
 
 ### <a name="BKMK_webresource_userqueryvisualizations"></a> webresource_userqueryvisualizations
 
-Same as userqueryvisualization table [webresource_userqueryvisualizations](userqueryvisualization.md#BKMK_webresource_userqueryvisualizations) Many-To-One relationship.
+Same as the [webresource_userqueryvisualizations](userqueryvisualization.md#BKMK_webresource_userqueryvisualizations) many-to-one relationship for the [userqueryvisualization](userqueryvisualization.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -771,7 +803,7 @@ Same as userqueryvisualization table [webresource_userqueryvisualizations](userq
 
 ### <a name="BKMK_lk_theme_logoid"></a> lk_theme_logoid
 
-Same as theme table [lk_theme_logoid](theme.md#BKMK_lk_theme_logoid) Many-To-One relationship.
+Same as the [lk_theme_logoid](theme.md#BKMK_lk_theme_logoid) many-to-one relationship for the [theme](theme.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -788,7 +820,7 @@ Same as theme table [lk_theme_logoid](theme.md#BKMK_lk_theme_logoid) Many-To-One
 
 **Added by**: Power Apps Actions Solution
 
-Same as appaction table [webresource_appaction_iconwebresourceid](appaction.md#BKMK_webresource_appaction_iconwebresourceid) Many-To-One relationship.
+Same as the [webresource_appaction_iconwebresourceid](appaction.md#BKMK_webresource_appaction_iconwebresourceid) many-to-one relationship for the [appaction](appaction.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -805,7 +837,7 @@ Same as appaction table [webresource_appaction_iconwebresourceid](appaction.md#B
 
 **Added by**: Power Apps Actions Solution
 
-Same as appaction table [webresource_appaction_onclickeventjavascriptwebresourceid](appaction.md#BKMK_webresource_appaction_onclickeventjavascriptwebresourceid) Many-To-One relationship.
+Same as the [webresource_appaction_onclickeventjavascriptwebresourceid](appaction.md#BKMK_webresource_appaction_onclickeventjavascriptwebresourceid) many-to-one relationship for the [appaction](appaction.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -832,26 +864,36 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_webresourcebase_modifiedonbehalfby"></a> lk_webresourcebase_modifiedonbehalfby
 
-See systemuser Table [lk_webresourcebase_modifiedonbehalfby](systemuser.md#BKMK_lk_webresourcebase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_webresourcebase_modifiedonbehalfby](systemuser.md#BKMK_lk_webresourcebase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_webresource_createdby"></a> webresource_createdby
 
-See systemuser Table [webresource_createdby](systemuser.md#BKMK_webresource_createdby) One-To-Many relationship.
+See the [webresource_createdby](systemuser.md#BKMK_webresource_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_webresourcebase_createdonbehalfby"></a> lk_webresourcebase_createdonbehalfby
 
-See systemuser Table [lk_webresourcebase_createdonbehalfby](systemuser.md#BKMK_lk_webresourcebase_createdonbehalfby) One-To-Many relationship.
+See the [lk_webresourcebase_createdonbehalfby](systemuser.md#BKMK_lk_webresourcebase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_webresource_modifiedby"></a> webresource_modifiedby
 
-See systemuser Table [webresource_modifiedby](systemuser.md#BKMK_webresource_modifiedby) One-To-Many relationship.
+See the [webresource_modifiedby](systemuser.md#BKMK_webresource_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_webresource_organization"></a> webresource_organization
 
-See organization Table [webresource_organization](organization.md#BKMK_webresource_organization) One-To-Many relationship.
+See the [webresource_organization](organization.md#BKMK_webresource_organization) one-to-many relationship for the [organization](organization.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the WebResource table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_appactionrule_webresource_scripts"></a> appactionrule_webresource_scripts
+
+See the [appactionrule_webresource_scripts](appactionrule.md#BKMK_appactionrule_webresource_scripts) many-to-many relationship for the [appactionrule](appactionrule.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.webresource?text=webresource EntityType" />

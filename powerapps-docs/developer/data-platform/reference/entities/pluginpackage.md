@@ -1,8 +1,8 @@
 ---
-title: "pluginpackage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the pluginpackage table/entity."
-ms.date: 10/05/2021
-
+title: "PluginPackage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the PluginPackage table/entity."
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# pluginpackage table/entity reference
+# PluginPackage table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/pluginpackages<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/pluginpackages(*pluginpackageid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -51,7 +51,7 @@ search.app:
 |OwnershipType|OrganizationOwned|
 |PrimaryIdAttribute|pluginpackageid|
 |PrimaryNameAttribute|name|
-|SchemaName|pluginpackage|
+|SchemaName|PluginPackage|
 
 <a name="writable-attributes"></a>
 
@@ -59,30 +59,31 @@ search.app:
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
-- [EncodedContents](#BKMK_EncodedContents)
+- [Content](#BKMK_Content)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
-- [name](#BKMK_name)
+- [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
-- [pluginpackageId](#BKMK_pluginpackageId)
+- [PluginPackageId](#BKMK_PluginPackageId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UniqueName](#BKMK_UniqueName)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+- [Version](#BKMK_Version)
 
 
-### <a name="BKMK_EncodedContents"></a> EncodedContents
+### <a name="BKMK_Content"></a> Content
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|EncodedContents|
+|DisplayName|Content|
 |Format|TextArea|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|encodedcontents|
+|LogicalName|content|
 |MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|Memo|
@@ -122,11 +123,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|ManagedProperty|
 
 
-### <a name="BKMK_name"></a> name
+### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the custom entity.|
+|Description|The name of the plugin package entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -154,7 +155,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|DateTime|
 
 
-### <a name="BKMK_pluginpackageId"></a> pluginpackageId
+### <a name="BKMK_PluginPackageId"></a> PluginPackageId
 
 |Property|Value|
 |--------|-----|
@@ -231,7 +232,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Unique Name for the entity.|
+|Description|Unique name for the package|
 |DisplayName|Unique Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -259,6 +260,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
+
+### <a name="BKMK_Version"></a> Version
+
+|Property|Value|
+|--------|-----|
+|Description|Version of the package|
+|DisplayName|Version|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|version|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
+
 <a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
@@ -267,7 +284,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 - [ComponentIdUnique](#BKMK_ComponentIdUnique)
 - [ComponentState](#BKMK_ComponentState)
-- [Contents_Name](#BKMK_Contents_Name)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -275,6 +291,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [FileId](#BKMK_FileId)
+- [FileId_Name](#BKMK_FileId_Name)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -286,6 +304,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
+- [Package](#BKMK_Package)
+- [Package_Name](#BKMK_Package_Name)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -329,24 +349,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
-
-
-### <a name="BKMK_Contents_Name"></a> Contents_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|contents_name|
-|MaxLength|200|
-|RequiredLevel|None|
-|Type|String|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -468,6 +470,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_FileId"></a> FileId
+
+|Property|Value|
+|--------|-----|
+|Description|Lookup to FileAttachment|
+|DisplayName|FileId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fileid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_FileId_Name"></a> FileId_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|fileid_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
 **Added by**: Basic Solution Solution
@@ -486,10 +517,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -663,6 +694,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_Package"></a> Package
+
+|Property|Value|
+|--------|-----|
+|Description|Lookup to FileAttachment|
+|DisplayName|Package|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|package|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_Package_Name"></a> Package_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|package_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -727,7 +787,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [pluginpackage_SyncErrors](syncerror.md#BKMK_pluginpackage_SyncErrors) Many-To-One relationship.
+Same as the [pluginpackage_SyncErrors](syncerror.md#BKMK_pluginpackage_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -744,7 +804,7 @@ Same as syncerror table [pluginpackage_SyncErrors](syncerror.md#BKMK_pluginpacka
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [pluginpackage_AsyncOperations](asyncoperation.md#BKMK_pluginpackage_AsyncOperations) Many-To-One relationship.
+Same as the [pluginpackage_AsyncOperations](asyncoperation.md#BKMK_pluginpackage_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -761,7 +821,7 @@ Same as asyncoperation table [pluginpackage_AsyncOperations](asyncoperation.md#B
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [pluginpackage_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_pluginpackage_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [pluginpackage_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_pluginpackage_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -778,7 +838,7 @@ Same as mailboxtrackingfolder table [pluginpackage_MailboxTrackingFolders](mailb
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [pluginpackage_BulkDeleteFailures](bulkdeletefailure.md#BKMK_pluginpackage_BulkDeleteFailures) Many-To-One relationship.
+Same as the [pluginpackage_BulkDeleteFailures](bulkdeletefailure.md#BKMK_pluginpackage_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -795,7 +855,7 @@ Same as bulkdeletefailure table [pluginpackage_BulkDeleteFailures](bulkdeletefai
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [pluginpackage_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_pluginpackage_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [pluginpackage_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_pluginpackage_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -810,7 +870,7 @@ Same as principalobjectattributeaccess table [pluginpackage_PrincipalObjectAttri
 
 ### <a name="BKMK_pluginpackage_pluginassembly"></a> pluginpackage_pluginassembly
 
-Same as pluginassembly table [pluginpackage_pluginassembly](pluginassembly.md#BKMK_pluginpackage_pluginassembly) Many-To-One relationship.
+Same as the [pluginpackage_pluginassembly](pluginassembly.md#BKMK_pluginpackage_pluginassembly) many-to-one relationship for the [pluginassembly](pluginassembly.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -820,7 +880,7 @@ Same as pluginassembly table [pluginpackage_pluginassembly](pluginassembly.md#BK
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|pluginpackage_pluginassembly|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -839,34 +899,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_pluginpackage_createdby](systemuser.md#BKMK_lk_pluginpackage_createdby) One-To-Many relationship.
+See the [lk_pluginpackage_createdby](systemuser.md#BKMK_lk_pluginpackage_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_pluginpackage_createdonbehalfby"></a> lk_pluginpackage_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_pluginpackage_createdonbehalfby](systemuser.md#BKMK_lk_pluginpackage_createdonbehalfby) One-To-Many relationship.
+See the [lk_pluginpackage_createdonbehalfby](systemuser.md#BKMK_lk_pluginpackage_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_pluginpackage_modifiedby"></a> lk_pluginpackage_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_pluginpackage_modifiedby](systemuser.md#BKMK_lk_pluginpackage_modifiedby) One-To-Many relationship.
+See the [lk_pluginpackage_modifiedby](systemuser.md#BKMK_lk_pluginpackage_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_pluginpackage_modifiedonbehalfby"></a> lk_pluginpackage_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_pluginpackage_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginpackage_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_pluginpackage_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginpackage_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_pluginpackage"></a> organization_pluginpackage
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_pluginpackage](organization.md#BKMK_organization_pluginpackage) One-To-Many relationship.
+See the [organization_pluginpackage](organization.md#BKMK_organization_pluginpackage) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.pluginpackage?text=pluginpackage EntityType" />

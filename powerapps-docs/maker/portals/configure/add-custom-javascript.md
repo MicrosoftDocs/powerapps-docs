@@ -1,29 +1,29 @@
 ---
-title: Add custom JavaScript
+title: Add custom JavaScript to a form
 description: Learn how to add custom JavaScript to a form in a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/22/2021
+ms.date: 07/15/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
-    - nickdoelman
+    - Professor Kendrick
 ---
 
-# Add custom JavaScript
+# Add custom JavaScript to a form
 
-The Advanced Form Step record contains a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
+Both the [basic form](entity-forms.md) and [advanced form](web-form-properties.md) step records contain a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
 The custom block of JavaScript will be added to the bottom of the page just before the closing form tag element.
 
 ## Form fields
 
-The HTML input ID of a table field is set to the logical name of the attribute. This makes selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
+The HTML input ID of a table field is set to the logical name of the attribute. Selecting a field, setting values, or other client-side manipulation easy by with [jQuery](https://jquery.com/).  
 
 ```JavaScript
 $(document).ready(function() {
@@ -32,10 +32,10 @@ $(document).ready(function() {
 ```
 
 > [!Important]
-> Adding a choice column to model-driven form to be used in an Advanced Form step or a Basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
+> Adding a choice column to model-driven form to be used in an advanced form step or a basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
 
 ## Additional client-side field validation
-Sometimes you might need to customize the validation of fields on the form. The following example demonstrates adding a custom validator. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.
+Sometimes you might need to customize the validation of fields on the form. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.
 
 > [!NOTE]
 > The client-side field validation is not supported in a subgrid.
@@ -50,7 +50,7 @@ if (window.jQuery) {
          newValidator.style.display = "none";
          newValidator.id = "emailaddress1Validator";
          newValidator.controltovalidate = "emailaddress1";
-         newValidator.errormessage = "<a href='#emailaddress1_label'>Email is a required field.</a>";
+         newValidator.errormessage = "<a href='#emailaddress1_label' referencecontrolid='emailaddress1 ' onclick='javascript:scrollToAndFocus(\"emailaddress1 _label\",\" emailaddress1 \");return false;'>Email is a required field.</a>";
          newValidator.validationGroup = ""; // Set this if you have set ValidationGroup on the form
          newValidator.initialvalue = "";
          newValidator.evaluationfunction = function () {
@@ -64,12 +64,10 @@ if (window.jQuery) {
                return true;
             }
          };
- 
+
          // Add the new validator to the page validators array:
          Page_Validators.push(newValidator);
- 
-         // Wire-up the click event handler of the validation summary link
-         $("a[href='#emailaddress1_label']").on("click", function () { scrollToAndFocus('emailaddress1_label','emailaddress1'); });
+
       });
    }(window.jQuery));
 }
@@ -77,15 +75,15 @@ if (window.jQuery) {
 
 ## General validation
 
-On click of the **Next**/**Submit** button, a function named **webFormClientValidate** is executed. You can extend this method to add custom validation logic.
+On click of the **Next**/**Submit** button, a function named **entityFormClientValidate** is executed. You can extend this method to add custom validation logic.
 
 ```JavaScript
 if (window.jQuery) {
    (function ($) {
-      if (typeof (webFormClientValidate) != 'undefined') {
-         var originalValidationFunction = webFormClientValidate;
+      if (typeof (entityFormClientValidate) != 'undefined') {
+         var originalValidationFunction = entityFormClientValidate;
          if (originalValidationFunction && typeof (originalValidationFunction) == "function") {
-            webFormClientValidate = function() {
+            entityFormClientValidate = function() {
                originalValidationFunction.apply(this, arguments);
                // do your custom validation here
                // return false; // to prevent the form submit you need to return false
@@ -97,6 +95,7 @@ if (window.jQuery) {
    }(window.jQuery));
 }
 ```
+
 ### See also
 
 - [Configure a portal](configure-portal.md)  
@@ -105,8 +104,5 @@ if (window.jQuery) {
 - [Load Form/Load Tab step type](load-form-step.md)  
 - [Redirect step type](add-redirect-step.md)  
 - [Conditional step type](add-conditional-step.md)
-- [Microsoft Learn: Extend Power Apps portals with scripts](/learn/modules/extend-power-app-portals/3-portal-javascript)
-- [Microsoft Learn: Advanced client-side development](/learn/modules/extend-power-app-portals/5-advanced-portal-development)
-
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+- [Extend Power Apps portals with scripts](/learn/modules/extend-power-app-portals/3-portal-javascript)
+- [Advanced client-side development](/learn/modules/extend-power-app-portals/5-advanced-portal-development)

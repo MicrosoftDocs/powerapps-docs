@@ -298,7 +298,7 @@ The following describes settings for modifying default authentication cookie beh
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Power Apps portals authentication settings](/learn/modules/authentication-user-management/2-authentication-settings)  
+[Power Apps portals authentication settings](/learn/modules/authentication-user-management/2-authentication-settings)  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

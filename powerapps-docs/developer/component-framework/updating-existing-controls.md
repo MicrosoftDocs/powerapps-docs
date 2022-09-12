@@ -2,15 +2,15 @@
 title: Update existing code components using Power Apps component framework tooling| Microsoft Docs
 description: Update components using the Power Apps component framework tooling
 keywords: Power Apps component framework, code component, component Framework
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # Update existing code components 
 
@@ -91,7 +91,7 @@ If you have created a component using the older version of the tooling and want 
 
 2. If you have previously created an auth profile, you need to recreate it. This is because a new property was added to the profile to support non-public cloud. You can do this by:
  
-    - Running the command `pac auth clear`.
+    - Running the command [pac auth clear](/power-platform/developer/cli/reference/auth#pac-auth-clear).
     - Running the command `pac auth create --url <your org url>`.
 
 ## Updating your project with the latest node modules
@@ -110,8 +110,8 @@ The build tools expect the component source to be exported using standard ES6 mo
      module SampleNamespace
      {
     export class TSLinearInputControl implements ComponentFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {
-	      <your class implementation>
-	       }
+         <your class implementation>
+          }
             }
      
       ```

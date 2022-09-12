@@ -1,21 +1,21 @@
 ---
 title: "Write a listener application for a Microsoft Azure solution (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn how to write an Azure solution listener application that can read and process Microsoft Dataverse messages that are posted to the Azure Service Bus." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
-ms.date: 03/18/2021
-
+ms.date: 07/01/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: cf68e0a9-c240-59e7-c501-68cbfa0df455
-author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Write a listener application for an Azure solution
@@ -110,17 +110,17 @@ When receiving messages, your listener application can read the data context in 
 ```csharp
 var receivedMessage = inboundQueueClient.Receive(TimeSpan.MaxValue);  
   
-if (receivedMessage.ContentType = "application/msbin1")  
+if (receivedMessage.ContentType == "application/msbin1")  
 {  
     RemoteExecutionContext context = receivedMessage.GetBody<RemoteExecutionContext>();  
 }  
-else if (receivedMessage.ContentType = "application/json")  
+else if (receivedMessage.ContentType == "application/json")  
 {  
     //string jsonBody = new StreamReader(receivedMessage.GetBody<Stream>(), Encoding.UTF8).ReadToEnd();  
     RemoteExecutionContext contextFromJSON = receivedMessage.GetBody<RemoteExecutionContext>(  
         new DataContractJsonSerializer(typeof(RemoteExecutionContext)));  
 }  
-else if (receivedMessage.ContentType = "application/xml")  
+else if (receivedMessage.ContentType == "application/xml")  
 {  
     //string xmlBody = new StreamReader(receivedMessage.GetBody<Stream>(), Encoding.UTF8).ReadToEnd();  
     RemoteExecutionContext contextFromXML = receivedMessage.GetBody<RemoteExecutionContext>(  

@@ -1,8 +1,8 @@
 ---
-title: "SdkMessage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "SdkMessage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessage table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ Message that is supported by the SDK.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/sdkmessages(*sdkmessageid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/sdkmessages<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -82,10 +82,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -155,10 +155,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -195,10 +195,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: True
+**DefaultValue**: 1
 
 
 
@@ -218,10 +218,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -242,10 +242,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -295,10 +295,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 <a name="read-only-attributes"></a>
@@ -479,10 +479,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -502,10 +502,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -715,10 +715,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 <a name="onetomany"></a>
@@ -735,7 +735,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_sdkmessageid_sdkmessageprocessingstep"></a> sdkmessageid_sdkmessageprocessingstep
 
-Same as sdkmessageprocessingstep table [sdkmessageid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_sdkmessageid_sdkmessageprocessingstep) Many-To-One relationship.
+Same as the [sdkmessageid_sdkmessageprocessingstep](sdkmessageprocessingstep.md#BKMK_sdkmessageid_sdkmessageprocessingstep) many-to-one relationship for the [sdkmessageprocessingstep](sdkmessageprocessingstep.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -750,7 +750,7 @@ Same as sdkmessageprocessingstep table [sdkmessageid_sdkmessageprocessingstep](s
 
 ### <a name="BKMK_sdkmessageid_sdkmessagefilter"></a> sdkmessageid_sdkmessagefilter
 
-Same as sdkmessagefilter table [sdkmessageid_sdkmessagefilter](sdkmessagefilter.md#BKMK_sdkmessageid_sdkmessagefilter) Many-To-One relationship.
+Same as the [sdkmessageid_sdkmessagefilter](sdkmessagefilter.md#BKMK_sdkmessageid_sdkmessagefilter) many-to-one relationship for the [sdkmessagefilter](sdkmessagefilter.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -767,7 +767,7 @@ Same as sdkmessagefilter table [sdkmessageid_sdkmessagefilter](sdkmessagefilter.
 
 **Added by**: Custom API Framework Solution
 
-Same as customapi table [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_customapi) Many-To-One relationship.
+Same as the [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_customapi) many-to-one relationship for the [customapi](customapi.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -784,7 +784,7 @@ Same as customapi table [sdkmessage_customapi](customapi.md#BKMK_sdkmessage_cust
 
 **Added by**: License Enforcement Solution
 
-Same as serviceplanmapping table [sdkmessage_serviceplanmapping](serviceplanmapping.md#BKMK_sdkmessage_serviceplanmapping) Many-To-One relationship.
+Same as the [sdkmessage_serviceplanmapping](serviceplanmapping.md#BKMK_sdkmessage_serviceplanmapping) many-to-one relationship for the [serviceplanmapping](serviceplanmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -811,26 +811,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_sdkmessage_modifiedonbehalfby"></a> lk_sdkmessage_modifiedonbehalfby
 
-See systemuser Table [lk_sdkmessage_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessage_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessage_modifiedonbehalfby](systemuser.md#BKMK_lk_sdkmessage_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_sdkmessage"></a> createdby_sdkmessage
 
-See systemuser Table [createdby_sdkmessage](systemuser.md#BKMK_createdby_sdkmessage) One-To-Many relationship.
+See the [createdby_sdkmessage](systemuser.md#BKMK_createdby_sdkmessage) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_sdkmessage_createdonbehalfby"></a> lk_sdkmessage_createdonbehalfby
 
-See systemuser Table [lk_sdkmessage_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessage_createdonbehalfby) One-To-Many relationship.
+See the [lk_sdkmessage_createdonbehalfby](systemuser.md#BKMK_lk_sdkmessage_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_sdkmessage"></a> organization_sdkmessage
 
-See organization Table [organization_sdkmessage](organization.md#BKMK_organization_sdkmessage) One-To-Many relationship.
+See the [organization_sdkmessage](organization.md#BKMK_organization_sdkmessage) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_modifiedby_sdkmessage"></a> modifiedby_sdkmessage
 
-See systemuser Table [modifiedby_sdkmessage](systemuser.md#BKMK_modifiedby_sdkmessage) One-To-Many relationship.
+See the [modifiedby_sdkmessage](systemuser.md#BKMK_modifiedby_sdkmessage) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.sdkmessage?text=sdkmessage EntityType" />

@@ -1,8 +1,8 @@
 ---
-title: "msdyn_analysisjob table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_analysisjob table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_analysisjob table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_analysisjobs(*msdyn_analysisjobid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_analysisjobs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -72,6 +72,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_EndTime](#BKMK_msdyn_EndTime)
 - [msdyn_ErrorCount](#BKMK_msdyn_ErrorCount)
 - [msdyn_Exception](#BKMK_msdyn_Exception)
+- [msdyn_InAppNotificationEnabled](#BKMK_msdyn_InAppNotificationEnabled)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_RuleFailCount](#BKMK_msdyn_RuleFailCount)
 - [msdyn_RulePassCount](#BKMK_msdyn_RulePassCount)
@@ -203,6 +204,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|10000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_msdyn_InAppNotificationEnabled"></a> msdyn_InAppNotificationEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Health rule set Failure In App Notification Enabled.|
+|DisplayName|Health rule set Failure In App Notification Enabled.|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_inappnotificationenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_InAppNotificationEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
 
 
 ### <a name="BKMK_msdyn_name"></a> msdyn_name
@@ -572,9 +591,12 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_AnalysisJobsReport](#BKMK_msdyn_AnalysisJobsReport)
+- [msdyn_AnalysisJobsReport_Name](#BKMK_msdyn_AnalysisJobsReport_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -818,6 +840,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_msdyn_AnalysisJobsReport"></a> msdyn_AnalysisJobsReport
+
+|Property|Value|
+|--------|-----|
+|Description|Analysis job report stored in excel format. |
+|DisplayName|Analysis Job Report File|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_analysisjobsreport|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_AnalysisJobsReport_Name"></a> msdyn_AnalysisJobsReport_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_analysisjobsreport_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 **Added by**: Active Solution Solution
@@ -862,12 +913,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -940,7 +1009,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_analysisjob_SyncErrors](syncerror.md#BKMK_msdyn_analysisjob_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_analysisjob_SyncErrors](syncerror.md#BKMK_msdyn_analysisjob_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -957,7 +1026,7 @@ Same as syncerror table [msdyn_analysisjob_SyncErrors](syncerror.md#BKMK_msdyn_a
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_analysisjob_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_analysisjob_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [msdyn_analysisjob_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_analysisjob_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -974,7 +1043,7 @@ Same as duplicaterecord table [msdyn_analysisjob_DuplicateMatchingRecord](duplic
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [msdyn_analysisjob_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_analysisjob_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [msdyn_analysisjob_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_analysisjob_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -991,7 +1060,7 @@ Same as duplicaterecord table [msdyn_analysisjob_DuplicateBaseRecord](duplicater
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_analysisjob_AsyncOperations](asyncoperation.md#BKMK_msdyn_analysisjob_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_analysisjob_AsyncOperations](asyncoperation.md#BKMK_msdyn_analysisjob_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1008,7 +1077,7 @@ Same as asyncoperation table [msdyn_analysisjob_AsyncOperations](asyncoperation.
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_analysisjob_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_analysisjob_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_analysisjob_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_analysisjob_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1025,7 +1094,7 @@ Same as mailboxtrackingfolder table [msdyn_analysisjob_MailboxTrackingFolders](m
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_analysisjob_ProcessSession](processsession.md#BKMK_msdyn_analysisjob_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_analysisjob_ProcessSession](processsession.md#BKMK_msdyn_analysisjob_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1042,7 +1111,7 @@ Same as processsession table [msdyn_analysisjob_ProcessSession](processsession.m
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_analysisjob_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_analysisjob_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_analysisjob_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_analysisjob_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1059,7 +1128,7 @@ Same as bulkdeletefailure table [msdyn_analysisjob_BulkDeleteFailures](bulkdelet
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_analysisjob_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_analysisjob_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_analysisjob_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_analysisjob_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1074,7 +1143,7 @@ Same as principalobjectattributeaccess table [msdyn_analysisjob_PrincipalObjectA
 
 ### <a name="BKMK_msdyn_analysisjob_msdyn_analysiscomponent"></a> msdyn_analysisjob_msdyn_analysiscomponent
 
-Same as msdyn_analysiscomponent table [msdyn_analysisjob_msdyn_analysiscomponent](msdyn_analysiscomponent.md#BKMK_msdyn_analysisjob_msdyn_analysiscomponent) Many-To-One relationship.
+Same as the [msdyn_analysisjob_msdyn_analysiscomponent](msdyn_analysiscomponent.md#BKMK_msdyn_analysisjob_msdyn_analysiscomponent) many-to-one relationship for the [msdyn_analysiscomponent](msdyn_analysiscomponent.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1089,7 +1158,7 @@ Same as msdyn_analysiscomponent table [msdyn_analysisjob_msdyn_analysiscomponent
 
 ### <a name="BKMK_msdyn_analysisjob_msdyn_analysisresult"></a> msdyn_analysisjob_msdyn_analysisresult
 
-Same as msdyn_analysisresult table [msdyn_analysisjob_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_msdyn_analysisjob_msdyn_analysisresult) Many-To-One relationship.
+Same as the [msdyn_analysisjob_msdyn_analysisresult](msdyn_analysisresult.md#BKMK_msdyn_analysisjob_msdyn_analysisresult) many-to-one relationship for the [msdyn_analysisresult](msdyn_analysisresult.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1120,46 +1189,46 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysisjob_createdby](systemuser.md#BKMK_lk_msdyn_analysisjob_createdby) One-To-Many relationship.
+See the [lk_msdyn_analysisjob_createdby](systemuser.md#BKMK_lk_msdyn_analysisjob_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_analysisjob_createdonbehalfby"></a> lk_msdyn_analysisjob_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysisjob_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_analysisjob_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_analysisjob_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_analysisjob_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_analysisjob_modifiedby"></a> lk_msdyn_analysisjob_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysisjob_modifiedby](systemuser.md#BKMK_lk_msdyn_analysisjob_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_analysisjob_modifiedby](systemuser.md#BKMK_lk_msdyn_analysisjob_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_analysisjob_modifiedonbehalfby"></a> lk_msdyn_analysisjob_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_analysisjob_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_analysisjob_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_analysisjob_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_analysisjob_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_msdyn_analysisjob"></a> user_msdyn_analysisjob
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_msdyn_analysisjob](systemuser.md#BKMK_user_msdyn_analysisjob) One-To-Many relationship.
+See the [user_msdyn_analysisjob](systemuser.md#BKMK_user_msdyn_analysisjob) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_msdyn_analysisjob"></a> team_msdyn_analysisjob
 
 **Added by**: System Solution Solution
 
-See team Table [team_msdyn_analysisjob](team.md#BKMK_team_msdyn_analysisjob) One-To-Many relationship.
+See the [team_msdyn_analysisjob](team.md#BKMK_team_msdyn_analysisjob) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_msdyn_analysisjob"></a> business_unit_msdyn_analysisjob
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_msdyn_analysisjob](businessunit.md#BKMK_business_unit_msdyn_analysisjob) One-To-Many relationship.
+See the [business_unit_msdyn_analysisjob](businessunit.md#BKMK_business_unit_msdyn_analysisjob) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_analysisjob?text=msdyn_analysisjob EntityType" />

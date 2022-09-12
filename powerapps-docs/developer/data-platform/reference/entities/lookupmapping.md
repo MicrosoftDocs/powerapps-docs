@@ -1,8 +1,8 @@
 ---
-title: "LookUpMapping table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "LookUpMapping table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the LookUpMapping table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ In a data map, maps a lookup attribute in a source file to Microsoft Dynamics 36
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/lookupmappings<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/lookupmappings(*lookupmappingid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -410,10 +410,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -613,30 +613,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_lookupmapping_createdby"></a> lk_lookupmapping_createdby
 
-See systemuser Table [lk_lookupmapping_createdby](systemuser.md#BKMK_lk_lookupmapping_createdby) One-To-Many relationship.
+See the [lk_lookupmapping_createdby](systemuser.md#BKMK_lk_lookupmapping_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_lookupmapping_createdonbehalfby"></a> lk_lookupmapping_createdonbehalfby
 
-See systemuser Table [lk_lookupmapping_createdonbehalfby](systemuser.md#BKMK_lk_lookupmapping_createdonbehalfby) One-To-Many relationship.
+See the [lk_lookupmapping_createdonbehalfby](systemuser.md#BKMK_lk_lookupmapping_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_LookUpMapping_ColumnMapping"></a> LookUpMapping_ColumnMapping
 
-See columnmapping Table [LookUpMapping_ColumnMapping](columnmapping.md#BKMK_LookUpMapping_ColumnMapping) One-To-Many relationship.
+See the [LookUpMapping_ColumnMapping](columnmapping.md#BKMK_LookUpMapping_ColumnMapping) one-to-many relationship for the [columnmapping](columnmapping.md) table/entity.
 
 ### <a name="BKMK_lk_lookupmapping_modifiedby"></a> lk_lookupmapping_modifiedby
 
-See systemuser Table [lk_lookupmapping_modifiedby](systemuser.md#BKMK_lk_lookupmapping_modifiedby) One-To-Many relationship.
+See the [lk_lookupmapping_modifiedby](systemuser.md#BKMK_lk_lookupmapping_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_LookUpMapping_TransformationParameterMapping"></a> LookUpMapping_TransformationParameterMapping
 
-See transformationparametermapping Table [LookUpMapping_TransformationParameterMapping](transformationparametermapping.md#BKMK_LookUpMapping_TransformationParameterMapping) One-To-Many relationship.
+See the [LookUpMapping_TransformationParameterMapping](transformationparametermapping.md#BKMK_LookUpMapping_TransformationParameterMapping) one-to-many relationship for the [transformationparametermapping](transformationparametermapping.md) table/entity.
 
 ### <a name="BKMK_lk_lookupmapping_modifiedonbehalfby"></a> lk_lookupmapping_modifiedonbehalfby
 
-See systemuser Table [lk_lookupmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_lookupmapping_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_lookupmapping_modifiedonbehalfby](systemuser.md#BKMK_lk_lookupmapping_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.lookupmapping?text=lookupmapping EntityType" />

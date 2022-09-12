@@ -1,27 +1,25 @@
 ---
-title: "Sample: User rollup queries to track goals(Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: User rollup queries to track goals (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to use rollup queries to track goals" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Use rollup queries to track goals
 
-
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-use-rollup-queries-track-goals -->
-
-This sample shows how to use rollup queries to track goals. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesTrackGoals).
+This sample shows how to use rollup queries to track goals. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueriesTrackGoals).
 
 This sample requires additional three users that are not in your system. Create the three required users **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the organization name.
 
@@ -62,20 +60,19 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 6. The `Product` creates few products that are required for the sample.
 7. The `PriceLevel` creates a new price list.
 8. The `ProductPriceLevel` creates a price list item for the first product and applies volume discount.
-9. Creates an account record for the sales order's potential customer id. 
+9. Creates an account record for the sales order's potential customer id.
 10. The `SalesOrderDetails` adds the product to the order with the price overridden with a negative value.
 
 ### Demonstrate
 
 1. Creates Metric, and setting the Metric type to `Amount` and setting amount data type to `Money`.
 2. The `RollupField` creates a rollup column which targets the actual totals.
-3. The `GoalRollupQuery` creates the goal rollup queries, locating the sales orders in the first sales representative's area (zip code: 60661) and with a value greater than $1000. 
+3. The `GoalRollupQuery` creates the goal rollup queries, locating the sales orders in the first sales representative's area (zip code: 60661) and with a value greater than $1000.
 4. Creates two goals, one parent goal and one child goals.
-5. The `RecalculateRequest` calculates the rollup for goals. 
+5. The `RecalculateRequest` calculates the rollup for goals.
 
 ### Clean up
 
 Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

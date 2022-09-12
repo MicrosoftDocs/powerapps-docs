@@ -1,21 +1,20 @@
 ---
 title: "Work with Microsoft Dataverse event data in your Azure Event Hub solution (Dataverse) | Microsoft Docs"
 description: "Learn about working with event data in your Azure Event Hub solution."
-keywords: ""
-ms.date: 03/17/2021
-
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: a3732c49-7f47-d87c-5062-585ef28ab511
-author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: pehecke
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Work with Microsoft Dataverse event data in your Azure Event Hub solution
@@ -29,9 +28,9 @@ Azure Event Hubs is a highly scalable publish-subscribe service that can ingest 
   
 ## 1. Create an event hub
 
-You can create an event hub in Azure either through API programming  or interactively by using the [Azure classic portal](https://manage.windowsazure.com). Either way, after creating your event hub you must obtain a copy of the event hub connection string and provide that string when registering the Azure service endpoint detailed in the next section.  
+You can create an event hub in Azure either through API programming  or interactively by using the [Azure portal](https://portal.azure.com/). Either way, after creating your event hub you must obtain a copy of the event hub connection string and provide that string when registering the Azure service endpoint detailed in the next section.  
 
-For more information about creating event hubs see the [Event Hubs documentation](https://azure.microsoft.com/documentation/services/event-hubs/).  
+For more information about creating event hubs see the [Event Hubs documentation](/azure/event-hubs/).
   
 ## 2. Register an endpoint
 
@@ -57,7 +56,6 @@ You can check the related system job in the Dataverse web application and look f
   
 ### See also
 
- [Azure integration with Dataverse](azure-integration.md)
-
+[Azure integration with Dataverse](azure-integration.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

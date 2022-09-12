@@ -1,12 +1,11 @@
 ---
 title: Analyze telemetry of a canvas app using Application Insights
 description: Learn about how to analyze app telemetry of canvas apps using Application Insights.
-author: tapanm-msft
-
+author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/19/2021
+ms.date: 08/23/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -15,6 +14,8 @@ search.app:
   - PowerApps
 contributors:
   - tapanm-msft
+  - maustinjones 
+  - mattgon
 ---
 
 # Analyze telemetry of a canvas app using Application Insights
@@ -279,6 +280,110 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
     > [!TIP]
     > *Log queries* are extremely powerful. You can use them to join multiple tables, aggregate large amounts of data, and perform complex operations. For more information, read [Log queries](/azure/azure-monitor/log-query/log-query-overview).
 
+## Monitor unhandled errors (experimental)
+
+[This section contains pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Errors occurring during app runtime cannot always be anticipated and planned for. Unhandled Power Fx formula errors are reported to users as banner messages during runtime. These errors can also be reported to Application Insights to help understand frequency and severity without reliance on app users reporting issues. More proactive measures can also be put in place by [setting up real-time alerts](/azure/azure-monitor/app/availability-alerts) when runtime errors occur.
+
+### Enable error passing to Application Insights
+
+You'll need to enable the setting that allows Power Apps to pass the unhandled runtime errors to Azure Application Insights.
+
+> [!WARNING]
+> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+
+To enable error passing, go to **Settings > Upcoming features > Experimental > Pass errors to Azure Application Insights** while keeping your canvas app open for editing.
+
+:::image type="content" source="media/application-insights/pass-error-feature.png" alt-text="Enable Pass errors to Azure Application Insights setting.":::
+
+Upon publishing the app, unhandled runtime errors are now reported to Application Insights.
+
+### Error events in Application Insights
+
+Unhandled Power Fx errors experienced by end users at app runtime will be reported to the **traces** table. Unhandled errors can be identified and distinguished from other error events by the event message "Unhandled error". The "severityLevel" dimension of these events will be 3 (TraceSeverity.Error).
+
+Detailed error messages are provided in the "errors" dimension of the *customDimension* property. In situations where  multiple errors occurred during the same operation, these errors will be consolidated in the "errors" dimension of a single trace event. These error messages are the same as reported in [Monitor](/power-apps/maker/monitor-canvasapps) during a live debug session.
+
+This example query identifies unhandled errors and expands all error messages included in the trace event:
+
+```kusto
+traces
+    | where message == "Unhandled error"
+    | extend customdims = parse_json(customDimensions)
+    | extend errors = parse_json(tostring(customdims.['errors']))
+    | mv-expand errors
+    | project timestamp
+        , itemId //unique identifier for the trace event
+        , AppName = customdims.['ms-appName']
+        , AppId = customdims.['ms-appId']
+        , errors = errors.['Message']
+    | order by timestamp desc
+```
+
+:::image type="content" source="media/application-insights/kusto.png" alt-text="Sample output for example query.":::
+
+## Correlation tracing (experimental)
+
+[This section contains pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+Connections to external data and services are fundamental to most apps. Correlation tracing enables the generation and propagation of context information to enable the joining of telemetry across a canvas app and its connections (see limitations below). As an example, your app may call into a custom connector that in turn calls an Azure Function or other REST API. Correlation tracing allows you to correlate actions taken within the app with the underlying API calls across tiers. This can be useful in troubleshooting.
+
+Canvas app correlation tracing is an implementation of context tracing follows [W3C specification](https://www.w3.org/TR/trace-context/).
+
+### Enable correlation tracing
+
+> [!WARNING]
+> Enabling this setting may incur additional costs related to the storage of Application Insights logs.
+
+To enable the correlation tracing feature, go to **Settings > Upcoming features > Experimental > Enable Azure Application Insights correlation tracing** while keeping your canvas app open for editing.
+
+:::image type="content" source="media/application-insights/correlation-tracing.png" alt-text="Enable Azure Application Insights correlation tracing.":::
+
+Upon publishing the app, correlation tracing will now be enabled in Application Insights.
+
+### Limitations
+
+- Correlation tracing is currently enabled for custom connectors. Other connector types are not yet supported.
+- HTTP requests are only captured in Application Insights if the connected service [is also instrumented with Application Insights](/azure/azure-monitor/app/app-insights-overview).
+
+### Using correlation tracing
+
+When enabled, correlation tracing adds a new telemetry event in the **dependencies** table of the canvas app's Application Insights instance. This event is recorded at the time a response from a network call (for supported connectors) is received. Dependency events capture details of the network call, including the request and response headers, response status code, and duration of the call.
+
+:::image type="content" source="media/application-insights/correlation-dependencies.png" alt-text="Sample event logged in the dependencies table.":::
+
+If the connected service is also instrumented with Application Insights, an additional telemetry event capturing the request is generated in the **requests** table of the service's Application Insights instance. Some Azure Services, such as Azure Functions can be instrumented without any coding from the Azure portal. Both the canvas app (or multiple apps) and connected services can be instrumented with the same Application Insights instance.
+
+:::image type="content" source="media/application-insights/correlation-requests.png" alt-text="Sample event logged in the requests table.":::
+
+Network calls for supported connectors can be joined with other telemetry on the "operation_Id" dimension. This example query shows a network call being made alongside trace events emitted during an app session.
+
+```kusto
+traces | union dependencies | union requests | union pageViews | union customEvents
+| project timestamp
+    , itemType
+    , name
+    , operation_Name
+    , message
+    , severityLevel
+    , customDimensions
+    , operation_Id
+    , operation_ParentId
+| where operation_Id == "0a7729e3e83c4e4d93cb4f51149f73b9" //placeholder operation_Id, replace
+| order by timestamp asc
+```
+
+:::image type="content" source="media/application-insights/correlation-output.png" alt-text="Sample output for the earlier example query.":::
+  
 ## Export data to Power BI
 
 You can export your Application Insights data and query results to Power BI for analysis and data presentation.
@@ -315,16 +420,25 @@ A set of default dimensions is also added to the *customDimensions* property on 
 
 | Dimension Name  | Represents                                            |
 |-----------------|-------------------------------------------------------|
-| ms-appId        | The Application ID of the app that sent the event.     |
-| ms-appName      | The Application name of the app that sent the event.   |
-| ms-appSessionId | The application session ID.                           |
+| ms-appId | The Application ID of the app that sent the event. |
+| ms-appname | The Application name of the app that sent the event. |
+| ms-appSessionId | The application session ID. This value may not be populated is some scenarios. When available, this value overrides the standard Application Insights sessionID dimension. |
+| ms-tenantID | The unique identifier of the tenant where the application is published. |
+| ms-environmentId | The name of the environment where the application is published. |
+| userId | A unique identifier for the end-user associated with the session. |
+| ms-duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value overrides the standard Application Insights PageView duration dimension. |
+| sessionId | A session ID that can be used to correlate all events associated with a single application session. This value will always be present and is recommended for understanding unique session count. This value is taken from the player's session ID and is shown when viewing the session details while playing the app. Session ID might sometimes get a default, random, and unique Application Insights generated value. This default value isn't reliable and doesn't correlate with any app-specific parameters. |
+| Duration | An imputed value measuring the time it takes for a user to navigate from one screen to another. This value is the same as the duration reported by the ms-duration dimension. |
+| ms-isTest | Indicates if the session is associated with the Test Studio test runner. |
+| ms-currentScreenName | The name of the page an end user is navigating from (present for page navigation events). |
+| ms-targetScreenName | The name of the page an end user is navigating to (present for page navigation events). |
 
 ## Unsupported scenarios
 
-App Insights doesn't support the following scenarios.
+Application Insights doesn't support the following scenarios.
 
-- Offline and mobile apps/player events (both Android and iOS) are not captured.
-- Network requests and errors are not captured.  
-- GCC and non-public clouds are not supported.
+- Offline and mobile apps/player events (both Android and iOS) aren't captured.
+- Network requests and errors aren't captured.  
+- GCC and non-public clouds aren't supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

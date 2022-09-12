@@ -1,8 +1,8 @@
 ---
-title: "Plug-in Type Statistic (PluginTypeStatistic) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Plug-in Type Statistic (PluginTypeStatistic) table/entity."
-ms.date: 10/05/2021
-
+title: "Plug-in Type Statistic (PluginTypeStatistic)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Plug-in Type Statistic (PluginTypeStatistic)  table/entity."
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Plug-in Type Statistic (PluginTypeStatistic) table/entity reference
+# Plug-in Type Statistic (PluginTypeStatistic)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,7 +25,7 @@ Plug-in type statistic.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/plugintypestatistics(*plugintypestatisticid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypestatistics<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -511,30 +511,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_plugintypestatisticbase_modifiedonbehalfby"></a> lk_plugintypestatisticbase_modifiedonbehalfby
 
-See systemuser Table [lk_plugintypestatisticbase_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_plugintypestatisticbase_modifiedonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_plugintypestatistic"></a> createdby_plugintypestatistic
 
-See systemuser Table [createdby_plugintypestatistic](systemuser.md#BKMK_createdby_plugintypestatistic) One-To-Many relationship.
+See the [createdby_plugintypestatistic](systemuser.md#BKMK_createdby_plugintypestatistic) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_plugintypestatisticbase_createdonbehalfby"></a> lk_plugintypestatisticbase_createdonbehalfby
 
-See systemuser Table [lk_plugintypestatisticbase_createdonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_createdonbehalfby) One-To-Many relationship.
+See the [lk_plugintypestatisticbase_createdonbehalfby](systemuser.md#BKMK_lk_plugintypestatisticbase_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_plugintypestatistic"></a> organization_plugintypestatistic
 
-See organization Table [organization_plugintypestatistic](organization.md#BKMK_organization_plugintypestatistic) One-To-Many relationship.
+See the [organization_plugintypestatistic](organization.md#BKMK_organization_plugintypestatistic) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_modifiedby_plugintypestatistic"></a> modifiedby_plugintypestatistic
 
-See systemuser Table [modifiedby_plugintypestatistic](systemuser.md#BKMK_modifiedby_plugintypestatistic) One-To-Many relationship.
+See the [modifiedby_plugintypestatistic](systemuser.md#BKMK_modifiedby_plugintypestatistic) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_plugintype_plugintypestatistic"></a> plugintype_plugintypestatistic
 
-See plugintype Table [plugintype_plugintypestatistic](plugintype.md#BKMK_plugintype_plugintypestatistic) One-To-Many relationship.
+See the [plugintype_plugintypestatistic](plugintype.md#BKMK_plugintype_plugintypestatistic) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.plugintypestatistic?text=plugintypestatistic EntityType" />

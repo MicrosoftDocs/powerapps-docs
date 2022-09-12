@@ -1,27 +1,27 @@
 ---
 title: "Sample: Retrieve currency exchange rate (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create a new currency and retrieve and display currency exchange rate." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Retrieve currency exchange rate
-
-
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-currency-exchange-rate -->
 
-This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveCurrencyExchangeRate).
+This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RetrieveCurrencyExchangeRate).
 
 ## How to run this sample
 
@@ -37,7 +37,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org. 
+1. Checks for the current version of the org.
 2. The `TransactionCurrency` method creates a new currency for the sample.
 
 ### Demonstrate
@@ -46,7 +46,6 @@ The `RetrieveExchangeRateRequest` message retrieves the exchange rate against th
 
 ### Clean up
 
-Display an option to delete the sample data created  in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

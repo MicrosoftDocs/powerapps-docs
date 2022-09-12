@@ -1,16 +1,15 @@
 ---
 title: Client | Microsoft Docs
 description: Provides access to the methods to determine which client is being used, whether the client is connected to server, and what kind of device is being used.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+  - JimDaly
 ---
 
 # Client
@@ -21,9 +20,9 @@ ms.topic: "article"
 
 `context.client;`
 
-## Available for 
+## Available for
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Properties
 
@@ -35,13 +34,14 @@ Disables the scrolling capabilities for the components. This property is support
 
 ## Methods
 
-|Method | Description |Available for|
-| ------------- |-------------|------|
-|[getClient](client/getclient.md)|[!INCLUDE [getclient-description](client/includes/getclient-description.md)]|Model-driven and canvas apps|
-|[getFormFactor](client/getformfactor.md)|[!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]|Model-driven and canvas apps|
-|[isOffline](client/isoffline.md)|[!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]|Model-driven apps|
+| Method                                             | Description                                                                                    | Available for                |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------- |
+| [getClient](client/getclient.md)                   | [!INCLUDE [getclient-description](client/includes/getclient-description.md)]                   | Model-driven and canvas apps |
+| [getFormFactor](client/getformfactor.md)           | [!INCLUDE [getformfactor-description](client/includes/getformfactor-description.md)]           | Model-driven and canvas apps |
+| [isOffline](client/isoffline.md)                   | [!INCLUDE [isoffline-description](client/includes/isoffline-description.md)]                   | Model-driven apps            |
+| [isNetworkAvailable](client/isnetworkavailable.md) | [!INCLUDE [isnetworkavailable-description](client/includes/isnetworkavailable-description.md)] | Model-driven apps            |
 
-## Example 
+## Example
 
 ```TypeScript
 private createHTMLTableElement(): HTMLTableElement {

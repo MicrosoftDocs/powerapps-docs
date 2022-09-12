@@ -1,8 +1,8 @@
 ---
-title: "QuarterlyFiscalCalendar table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "QuarterlyFiscalCalendar table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QuarterlyFiscalCalendar table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ Quarterly fiscal calendar of an organization. A span of time during which the fi
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/quarterlyfiscalcalendars<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/quarterlyfiscalcalendars(*userfiscalcalendarid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -662,7 +662,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_QuarterlyFiscalCalendar_AsyncOperations"></a> QuarterlyFiscalCalendar_AsyncOperations
 
-Same as asyncoperation table [QuarterlyFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_QuarterlyFiscalCalendar_AsyncOperations) Many-To-One relationship.
+Same as the [QuarterlyFiscalCalendar_AsyncOperations](asyncoperation.md#BKMK_QuarterlyFiscalCalendar_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -677,7 +677,7 @@ Same as asyncoperation table [QuarterlyFiscalCalendar_AsyncOperations](asyncoper
 
 ### <a name="BKMK_QuarterlyFiscalCalendar_BulkDeleteFailures"></a> QuarterlyFiscalCalendar_BulkDeleteFailures
 
-Same as bulkdeletefailure table [QuarterlyFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_QuarterlyFiscalCalendar_BulkDeleteFailures) Many-To-One relationship.
+Same as the [QuarterlyFiscalCalendar_BulkDeleteFailures](bulkdeletefailure.md#BKMK_QuarterlyFiscalCalendar_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -705,30 +705,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_quarterlyfiscalcalendar_modifiedonbehalfby"></a> lk_quarterlyfiscalcalendar_modifiedonbehalfby
 
-See systemuser Table [lk_quarterlyfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_quarterlyfiscalcalendar_modifiedonbehalfby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_quarterlyfiscalcalendar_createdby"></a> lk_quarterlyfiscalcalendar_createdby
 
-See systemuser Table [lk_quarterlyfiscalcalendar_createdby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_createdby) One-To-Many relationship.
+See the [lk_quarterlyfiscalcalendar_createdby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_transactioncurrency_quarterlyfiscalcalendar"></a> transactioncurrency_quarterlyfiscalcalendar
 
-See transactioncurrency Table [transactioncurrency_quarterlyfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_quarterlyfiscalcalendar) One-To-Many relationship.
+See the [transactioncurrency_quarterlyfiscalcalendar](transactioncurrency.md#BKMK_transactioncurrency_quarterlyfiscalcalendar) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
 
 ### <a name="BKMK_lk_quarterlyfiscalcalendar_createdonbehalfby"></a> lk_quarterlyfiscalcalendar_createdonbehalfby
 
-See systemuser Table [lk_quarterlyfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_createdonbehalfby) One-To-Many relationship.
+See the [lk_quarterlyfiscalcalendar_createdonbehalfby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_quarterlyfiscalcalendar_salespersonid"></a> lk_quarterlyfiscalcalendar_salespersonid
 
-See systemuser Table [lk_quarterlyfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_salespersonid) One-To-Many relationship.
+See the [lk_quarterlyfiscalcalendar_salespersonid](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_salespersonid) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_quarterlyfiscalcalendar_modifiedby"></a> lk_quarterlyfiscalcalendar_modifiedby
 
-See systemuser Table [lk_quarterlyfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_modifiedby) One-To-Many relationship.
+See the [lk_quarterlyfiscalcalendar_modifiedby](systemuser.md#BKMK_lk_quarterlyfiscalcalendar_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.quarterlyfiscalcalendar?text=quarterlyfiscalcalendar EntityType" />
