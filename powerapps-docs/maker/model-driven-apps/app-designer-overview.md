@@ -2,8 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 05/19/2022
-
+ms.date: 09/12/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -73,6 +72,49 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea. More information: [Add a URL to an app](app-navigation.md#add-a-url-to-an-app)
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
+
+## Discover who's working on an app (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Find who is working on an app at the same time as you with copresence.
+
+Copresence provides the following benefits:
+
+- Icons and names of people who have the app open and might be making changes are displayed.
+- Contact those people working on the app via email or Teams.
+-	From the left navigation pane the sections of the app being worked on is displayed.
+-	Receive notification for saved changes made from other makers.  Then, you will be prompted to refresh the app to stay on the latest version so as not to lose your work. If you choose to ignore the refresh notification, you can continue working. Later when you save your work you’ll be given a choice: 
+   - Overwrite and discard the changes of the previous changes made by others.
+   - Refresh the app and lose your changes.
+-	The name of the maker who has made the first save or the last save is displayed. You can contact the maker who made the change before committing your work.
+
+> [!IMPORTANT]
+> This is a public preview feature. More information: Public previews for [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+
+### How copresence works
+
+The first time someone joins your app in app designer while you working on it, a notice explaining that other people are also working on the app. Advise is given to check with the other makers about the order you plan to make changes. Notice that it is possible that the other makers in the app may not want to save their changes.
+
+Icons of copresent makers appear in both the upper navigation panel and the left navigation panel showing where exactly other makers are workiing in the app.
+
+   When you have several tabs open, your icon is displayed in the left navigation pane as well. This way you’ll always see if you have more than one tab open and find the one you want to continue working on.
+
+On the right side of the app designer toolbar, all the makers that have this app open are displayed. If  more than four makers are present, a +n, such as +1 or +30, is displayed that expands with all the makers’ names. Select each name to display **Send email** and **Chat in Teams** links.
+ 
+### Notifications
+
+You may be working on the app, or you may be idle, but once someone else saves a change to the app, you’ll receive a notification in the upper bar indicating that another maker made changes to the app and you are advised to refresh to be at the latest version and not lose your changes later.
+
+> [!TIP]
+> - If you weren’t expecting anyone to make changes to the app, and spent long time adding changes to the app, we recommend that you contact the person immediately. For example, it might happen that they saved something minor and you can agree that your changes may overwrite their changes. In this case, do not select refresh and save your changes immediately or keep working until you are ready to save. This overwrites all the changes that have been made by other makers since your version of the app.
+> - We recommend that you to always stay at the latest version of the app and refresh when others save changes. If you have been idle and see this notification select refresh. If you were idle and didn't make changes and see this notification, select refresh.
+>
+
+If you have ignored or closed the refresh notification, you won’t be at the latest version of the app. At the time when you select save, you are prompted with a choice: Refresh (and lose your changes) or Overwrite (and lose other maker(s) changes).
+
+> [!TIP]
+> We recommend you chat with the team or the person who made the last change. Copresence provides the name of the maker to alert you before you overwrite their changes.
 
 ## Known limitation
 
