@@ -29,30 +29,53 @@ Dataverse search delivers fast and comprehensive search results across multiple 
 > - [Frequently asked questions about Dataverse search](../../../user/relevance-faq.md)
 > - [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
 
-Developers can use the search APIs to search for records using three methods:
+## How to use
 
-- The Search `/api/search/v1.0/` endpoint
-- The Web API `/api/data/` endpoint
+Developers can use the search APIs three different ways:
+
+- The native Search `/api/search/v1.0/` endpoint
 - The Dataverse SDK for .NET
+- The Web API `/api/data/` endpoint
+
+
+### Use the native search endpoint
+
+The search endpoint is the native endpoint for Dataverse Search. This is the endpoint used for the search experience in model-driven apps. You can use this endpoint without authentication from within model-driven application experiences such as PCF controls or form scripts.
+
+You can also authenticate to this endpoint from external applications just as you would when using Web API, but you will use the `/api/search/` path rather than `/api/data/`.
+
+### Use the Dataverse SDK for .NET
+
+For .NET projects using the Dataverse SDK for .NET, you can use the `CrmSvcUtil` command line code generation tool to generate `*Request` and `*Response` classes for these messages just as you would for any custom action. Or, you can use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest?text=OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse?text=OrganizationResponse> classes.
 
 > [!NOTE]
-> The Search endpoint is the native endpoint for Dataverse Search. This is the endpoint used for the search experience in model-driven apps.
+> To use Dataverse search from a plug-in, you must use the SDK.
+
+More information:
+
+- [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
+- [Use messages with the Organization service](../org-service/use-messages.md)
+
+### Use the Web API
+
+In the Web API, the `searchquery`, `searchsuggest`, and `searchautocomplete` messages are exposed as OData actions. More information: [Use Web API actions](../webapi/use-web-api-actions.md)
 
 ## Search operations
 
-Search provides three operations to support a user interface that enables searching for data.
+Search provides three operations to support a user interface that enables searching for data and two operations that you can use to retrieve information about how the organization is configured to support search.
 
-|Search Endpoint<br />Web API Action<br />SDK for .NET message|Description|
+|Search Endpoint<br />Web API Action<br />SDK message|Description|
 |---------|---------|
 |`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page.|
 |`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. |
 |`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.|
+|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.status?text=status Function><br />`status`|Search status of an Organization.|
+|`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.|
 
 The Web API and Dataverse SDK for .NET expose the native Search verbs Web API Actions or as organization service `messages`. These actions and messages use the native search endpoint on the server and return the results.
 
-## Authentication
+## Search Status and Statistics
 
-The search endpoint uses the same authentication as the Web API. You must use OAuth except when your code runs as part of a model-driven app, such as a PCF control or form script. In those cases authentication is not required.
 
 ## Service Protection Limits
 
