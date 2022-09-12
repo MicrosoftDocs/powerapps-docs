@@ -7,21 +7,21 @@ ms.author: nhelgren
 manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Dump choices information to a file
 
-This sample shows how to write out all the choices column definitions to an `XML` file. It uses the [RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpGlobalOptionSetInfo).
+This sample shows how to write out all the choices column definitions to an `XML` file. It uses the [RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpGlobalOptionSetInfo).
 
-The following sample creates a new file at `\DumpGlobalOptionSetInfo\bin\Debug\AllOptionSetValues.xml`. You can open this file in **Office Excel** to see a tabular report. 
+The following sample creates a new file at `\DumpGlobalOptionSetInfo\bin\Debug\AllOptionSetValues.xml`. You can open this file in **Office Excel** to see a tabular report.
 
 ## How to run this sample
 
@@ -41,12 +41,11 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `RetrieveAllOptionSetsRequest` method retrieves the metadata. 
+1. The `RetrieveAllOptionSetsRequest` method retrieves the metadata.
 1. The `StreamWriter` creates an instance of StreamWriter to write text to a file.
 
 ### Clean up
 
 This sample creates no records. No cleanup is required.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

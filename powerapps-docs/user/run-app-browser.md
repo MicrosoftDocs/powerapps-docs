@@ -38,10 +38,29 @@ To follow this quickstart, you need:
 Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
 ## Find an app on the Home page
-The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Business Apps** to launch your business app that you have access to.
-
+The Home page may show several types of business apps. 
 
 ![Busines Apps.](media/bussinessapps.png)
+
+The apps that meet the following criteria will be shown in the list of **Office** apps:
+
+- Apps that you launched in the last week.
+- Apps that you created. 
+- Apps your admin marked as **Featured** in your tenant.
+- All first party model-driven apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
+
+> [!NOTE]
+> When a new app is shared with users it needs to meet the criteria listed above and it can take up to 24 hours for it to appear in the list of **Office** apps.
+
+### What if I cannot find an app?
+
+Apps that haven't been used in the last week won't appear in the list of **Office** apps. If you can't find an app, then you need to use the web link to open the app directly in your browser.
+
+1. To find the web link for an app, sign in to [Power Platform admin center](https://admin.powerplatform.microsoft.com) or [Power Apps](https://make.powerapps.com).
+2. Find the app that you're looking for.
+3. Across the app name, select (...) **More Commands** > **Details**.
+4. From the **Details** tab copy the **Web link**.
+5. Paste the web link in a browser window to launch the app.
 
 The Microsoft 365 apps page has a different URL per cloud. 
 

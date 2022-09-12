@@ -34,7 +34,7 @@ The default display mode for Power Apps mobile is set to **Light**.
 | ![Power Apps mobile in light mode](media/light-mode.png "Profile picture")  | ![Power Apps mobile in dark mode](media/dark-mode.png "Dark mode") |
 
 
-1. To change the display, open Power App mobile and sign in.
+1. To change the display, open Power Apps mobile and sign in.
 2. From the **Home** screen, select your profile picture.
 
    > [!div class="mx-imgBorder"]

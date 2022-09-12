@@ -6,7 +6,6 @@ ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divka78" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -302,12 +301,13 @@ Or you can use the values:
 ```csharp
 svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
+
 > [!IMPORTANT]
-> Delete operations can initiate cascading operations that may delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](/powerapps/developer/data-platform/org-service/create-edit-entity-relationships#entity-relationship-behavior)
+> Delete operations can initiate cascading operations that may delete child rows to maintain data integrity depending on logic defined for the relationships in the environment. More information: [Table relationship behavior](../../../maker/data-platform/create-edit-entity-relationships.md#table-relationship-behavior)
 
 ## Use the DeleteRequest class
 
-You can use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> instead of the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method, but it is only required when you want to specify optimistic concurrency behavior.
+You can use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> instead of the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A> method, but it is only required when you want to specify optimistic concurrency behavior.
 
 ```csharp
 var retrievedEntity = new Entity("account")
@@ -336,7 +336,7 @@ To determine whether the row has been changed, you don't need to compare all the
 
 The following example will succeed only when:
 - The `RowVersion` of the row in the database equals `986323`
-- The account row is enabled for optimistic concurrency (<xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> is `true`)
+- The account row is enabled for optimistic concurrency (<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled> is `true`)
 - The `RowVersion` property is set on the row passed with the request.
 
 If the `RowVersion` doesn't match, an error with the message `The version of the existing record doesn't match the RowVersion property provided.` will occur.
@@ -381,15 +381,14 @@ catch (FaultException<OrganizationServiceFault> ex)
 }
 ```
 
-More information: 
+More information:
+
 - [Optimistic Concurrency](../optimistic-concurrency.md)
-- <xref href="Microsoft.Xrm.Sdk.ConcurrencyBehavior?text=ConcurrencyBehavior Enum"  />
+- <xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior?text=ConcurrencyBehavior Enum>
 
 ## Legacy update messages
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update -->
-
-There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A>
 
 [!INCLUDE [cc-legacy-update-messages](../includes/cc-legacy-update-messages.md)]
 

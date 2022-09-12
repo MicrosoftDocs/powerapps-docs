@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/31/2022
+ms.date: 09/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -99,21 +99,25 @@ You'll have to configure permissions so that users are able to use the Web API f
 
     :::image type="content" source="media/read-operations/table-permissions.png" alt-text="Contact table permissions." border="false":::
 
+### Create a web role
+
+You can use an existing web role in your website or create a new web role.
+
 1. On the left pane, select **Web Roles** .
 
 1. Select **New**.
 
-1. In the **Name** box, enter **Web API User**.
+1. In the **Name** box, enter **Web API User** (or any name that best reflects the role of the user accessing this functionality).
 
 1. In the **Website** list, select your website record.
-
-1. For **Authenticated Users Role**, select **Yes**.
 
     :::image type="content" source="media/read-operations/wepAPIuser-webrole.png" alt-text="Add Web API User web role." border="false":::
 
 1. Select **Save**.
 
-1. Select **Related** &gt; **Table Permissions**.
+### Add related table permissions
+
+1. With the new or existing web role, select **Related** &gt; **Table Permissions**.
 
     :::image type="content" source="media/read-operations/related-table-permissions.png" alt-text="Add related table permissions to web role." border="true":::
 
@@ -128,6 +132,8 @@ You'll have to configure permissions so that users are able to use the Web API f
 1. Select **Save & Close**.
 
     :::image type="content" source="media/read-operations/table-permissions-view.png" alt-text="Table permissions view." border="false":::
+
+### Add contacts to the web role
 
 1. On the left pane, select **Contacts**.
 

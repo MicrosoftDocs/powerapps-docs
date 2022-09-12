@@ -39,11 +39,14 @@ sections:
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
           
-        | Column Name                              | Format                           | Example                            |
-        |------------------------------------------|----------------------------------|------------------------------------|
-        | **SinkCreatedOn** and **SinkModifiedOn** | M/d/yyyy H:mm:ss tt              | 6/28/2021 4:34:35 PM               |
-        | **CreatedOn**                            | yyyy-MM-dd'T'HH:mm:ss.sssssssXXX | 2018-05-25T16:21:09.0000000+00:00  |
-        | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | 2021-06-25T16:21:12Z               |
+        | Column Name                              | Format                           | Data Type                          | Example                            |
+        |------------------------------------------|----------------------------------|------------------------------------|------------------------------------|
+        | **SinkCreatedOn** and **SinkModifiedOn** | M/d/yyyy H:mm:ss tt              | datetime                           | 6/28/2021 4:34:35 PM               |
+        | **CreatedOn**                            | yyyy-MM-dd'T'HH:mm:ss.sssssssXXX | datetimeOffset                     | 2018-05-25T16:21:09.0000000+00:00  |
+        | All Other Columns                        | yyyy-MM-dd'T'HH:mm:ss'Z'         | datetime                           | 2021-06-25T16:21:12Z               |
+        
+        > [!NOTE]
+        > **CreatedOn** data type changed from datetime to datetimeOffset on 07/29/2022. To edit the data type format for a table created before the change, drop and re-add the table.
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
@@ -69,7 +72,7 @@ sections:
         - Use Azure Synapse pipelines or Azure Data Factory to copy data from Azure resources in one region to Azure resources in another.
    - question: Why do I see the error message - cannot bulk load because the file is incomplete or could not be read?
      answer: |
-        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data-preview)
+        Dataverse data can continuously change through creating, updating, and deleting transactions. This error is caused by the underlying file being changed when you are reading data from it. So, for tables with continuous changes, you should change your consumption pipeline to use snapshot data (partitioned tables) to consume. More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data)
 additionalContent: |
 
   ## See also
