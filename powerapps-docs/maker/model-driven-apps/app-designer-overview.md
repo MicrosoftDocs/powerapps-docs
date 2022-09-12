@@ -100,7 +100,7 @@ On the right side of the app designer toolbar, all the makers that have this app
 
 ### Notifications
 
-You may be working on the app, or you may be idle, but once someone else saves a change to the app, you’ll receive a notification in the upper bar indicating that another maker made changes to the app. When this occurs, you're advised to refresh to be at the latest version so as not to lose your changes.
+You may be working on the app, or you may be idle, but once someone else saves a change to the app, you’ll receive a notification in the upper bar indicating that another maker made changes. When this occurs, you're advised to refresh to be at the latest version so as not to lose your changes.
 
 > [!TIP]
 > - If you weren’t expecting anyone to make changes to the app, and spent a long time adding changes, we recommend you contact the person immediately. For example, it might happen that another maker saved something minor and you can agree that your changes may overwrite their changes. In this case, do not select refresh and save your changes immediately or keep working until you are ready to save. This overwrites all the changes that have been made by other makers since your version of the app.
