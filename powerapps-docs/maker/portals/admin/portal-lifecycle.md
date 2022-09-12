@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 07/26/2021
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -36,6 +36,9 @@ Every portal begins as a trial portal that expires after 30 days. You can conver
 
 To convert a trial portal to a production portal, the environment should have required add-ons for external users or a license for internal users. More information: [Power Apps and Power Automate licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
+> [!IMPORTANT]
+> Once the portal has been converted to production, you should ensure that the portal is appropriately licensed with page views and logins corresponding to the expected user volume. Not having appropriate licenses assigned can result in degraded performance. For information on how to allocate page views and logins, see [Allocate or change capacity in an environment](/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment).
+
 ## Suspended portal
 
 You'll continue to see notifications in the Power Apps portals admin center about the expiration of your trial portal. Trial portals expire after 30 days. If you don't convert your portal to production within the trial period, the portal is shut down and placed in suspended status.
@@ -54,9 +57,8 @@ If you don't convert your portal to production within the seven-day suspension p
 
 ### See also
 
-[Microsoft Learn: Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
+[Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
 [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production) <br>
 [Convert an existing portal to capacity-based model](convert-portal.md#convert-an-existing-portal-to-capacity-based-model)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

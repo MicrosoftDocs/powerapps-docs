@@ -1,8 +1,8 @@
 ---
-title: "msdyn_helppage table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "msdyn_helppage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_helppage table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_helppages<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_helppages(*msdyn_helppageid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -500,10 +500,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -741,7 +741,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [msdyn_helppage_SyncErrors](syncerror.md#BKMK_msdyn_helppage_SyncErrors) Many-To-One relationship.
+Same as the [msdyn_helppage_SyncErrors](syncerror.md#BKMK_msdyn_helppage_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -758,7 +758,7 @@ Same as syncerror table [msdyn_helppage_SyncErrors](syncerror.md#BKMK_msdyn_help
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [msdyn_helppage_AsyncOperations](asyncoperation.md#BKMK_msdyn_helppage_AsyncOperations) Many-To-One relationship.
+Same as the [msdyn_helppage_AsyncOperations](asyncoperation.md#BKMK_msdyn_helppage_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -775,7 +775,7 @@ Same as asyncoperation table [msdyn_helppage_AsyncOperations](asyncoperation.md#
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [msdyn_helppage_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_helppage_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [msdyn_helppage_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_helppage_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -792,7 +792,7 @@ Same as mailboxtrackingfolder table [msdyn_helppage_MailboxTrackingFolders](mail
 
 **Added by**: System Solution Solution
 
-Same as processsession table [msdyn_helppage_ProcessSession](processsession.md#BKMK_msdyn_helppage_ProcessSession) Many-To-One relationship.
+Same as the [msdyn_helppage_ProcessSession](processsession.md#BKMK_msdyn_helppage_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -809,7 +809,7 @@ Same as processsession table [msdyn_helppage_ProcessSession](processsession.md#B
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [msdyn_helppage_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_helppage_BulkDeleteFailures) Many-To-One relationship.
+Same as the [msdyn_helppage_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_helppage_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -826,7 +826,7 @@ Same as bulkdeletefailure table [msdyn_helppage_BulkDeleteFailures](bulkdeletefa
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [msdyn_helppage_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_helppage_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [msdyn_helppage_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_helppage_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -855,34 +855,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_helppage_createdby](systemuser.md#BKMK_lk_msdyn_helppage_createdby) One-To-Many relationship.
+See the [lk_msdyn_helppage_createdby](systemuser.md#BKMK_lk_msdyn_helppage_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_helppage_createdonbehalfby"></a> lk_msdyn_helppage_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_helppage_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_helppage_createdonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_helppage_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_helppage_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_helppage_modifiedby"></a> lk_msdyn_helppage_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_helppage_modifiedby](systemuser.md#BKMK_lk_msdyn_helppage_modifiedby) One-To-Many relationship.
+See the [lk_msdyn_helppage_modifiedby](systemuser.md#BKMK_lk_msdyn_helppage_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_msdyn_helppage_modifiedonbehalfby"></a> lk_msdyn_helppage_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_msdyn_helppage_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_helppage_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_msdyn_helppage_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_helppage_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_msdyn_helppage"></a> organization_msdyn_helppage
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_msdyn_helppage](organization.md#BKMK_organization_msdyn_helppage) One-To-Many relationship.
+See the [organization_msdyn_helppage](organization.md#BKMK_organization_msdyn_helppage) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_helppage?text=msdyn_helppage EntityType" />

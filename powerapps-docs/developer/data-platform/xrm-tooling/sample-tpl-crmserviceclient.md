@@ -1,24 +1,24 @@
 ---
 title: "Sample: Task Parallel Library with CrmServiceClient (Microsoft Dataverse)| Microsoft Docs"
 description: "Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications. This sample demonstrates using this with CrmServiceClient"
-ms.custom: ""
-ms.date: 11/04/2021
-ms.reviewer: "pehecke"
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
+ms.date: 04/01/2022
+author: MattB-msft
+ms.author: mbarbour
+ms.reviewer: pehecke
+manager: jstrauss
 ms.topic: sample
-applies_to: 
+applies_to:
   - "Dynamics 365 (online)"
-author: "JimDaly"
-ms.author: "nabuthuk"
-manager: "kvivek"
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Task Parallel Library with CrmServiceClient
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
@@ -27,13 +27,13 @@ Task Parallel Library (TPL) makes developers more productive by simplifying the 
 
 Adding parallelism and concurrency can significantly improve the total throughput for applications that need to perform a large number of Dataverse operations in a short period of time.
 
-Download the sample: [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/TPLCrmServiceClient)
+Download the sample: [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/TPLCrmServiceClient)
 
 ## How to run the sample
 
-1. Download and extract the sample so that you have a copy locally.  
-2. Open the `TPLCrmServiceClient.sln` file in Visual Studio.  
-3. Press **F5** to compile and run the program.  
+1. Download and extract the sample so that you have a copy locally.
+2. Open the `TPLCrmServiceClient.sln` file in Visual Studio.
+3. Press **F5** to compile and run the program.
 
 ## Demonstrates
 
@@ -48,6 +48,7 @@ This simple sample will generate a number of account table records using the [Sy
 Then it will use that technique again to delete the tables created.
 
 **NOTE**:
+
 > By default, this sample will create only 10 records, which is not enough to hit the service protection api limit errors. If you raise the `numberOfRecords` variable value to 10000, you can use Fiddler to observe how some of the requests will be rejected and re-tried.
 
 ## Code listing
@@ -67,7 +68,7 @@ namespace PowerApps.Samples
 {
     public partial class SampleProgram
     {
-       
+
         //How many records to create with this sample.
         private static readonly int numberOfRecords = 10;
 
@@ -83,7 +84,7 @@ namespace PowerApps.Samples
             System.Threading.ThreadPool.SetMinThreads(100, 100);
             //Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server
             System.Net.ServicePointManager.Expect100Continue = false;
-            //Can decreas overall transmission overhead but can cause delay in data packet arrival
+            //Can decrease overall transmission overhead but can cause delay in data packet arrival
             System.Net.ServicePointManager.UseNagleAlgorithm = false;
 
             #endregion Optimize Connection settings
@@ -190,7 +191,6 @@ namespace PowerApps.Samples
 ```
 
 SampleMethods.cs contains the definition of two static methods (`CreateEntities` and `DeleteEntities`) used in the code:
-
 
 ```csharp
 /// <summary>

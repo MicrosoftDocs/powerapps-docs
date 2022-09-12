@@ -1,8 +1,8 @@
 ---
-title: "Comment (PostComment) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Comment (PostComment) table/entity."
-ms.date: 10/05/2021
-
+title: "Comment (PostComment)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Comment (PostComment)  table/entity."
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Comment (PostComment) table/entity reference
+# Comment (PostComment)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,7 +25,7 @@ A comment on an activity feed post.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/postcomments<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/postcomments(*postcommentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -339,7 +339,7 @@ Listed by **SchemaName**.
 
 **Added by**: Activities Patch Solution
 
-Same as activityfileattachment table [post_comment_activity_file_attachment](activityfileattachment.md#BKMK_post_comment_activity_file_attachment) Many-To-One relationship.
+Same as the [post_comment_activity_file_attachment](activityfileattachment.md#BKMK_post_comment_activity_file_attachment) many-to-one relationship for the [activityfileattachment](activityfileattachment.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -365,22 +365,22 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_postcomment_createdby"></a> lk_postcomment_createdby
 
-See systemuser Table [lk_postcomment_createdby](systemuser.md#BKMK_lk_postcomment_createdby) One-To-Many relationship.
+See the [lk_postcomment_createdby](systemuser.md#BKMK_lk_postcomment_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_PostComment"></a> organization_PostComment
 
-See organization Table [organization_PostComment](organization.md#BKMK_organization_PostComment) One-To-Many relationship.
+See the [organization_PostComment](organization.md#BKMK_organization_PostComment) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_postcomment_createdonbehalfby"></a> lk_postcomment_createdonbehalfby
 
-See systemuser Table [lk_postcomment_createdonbehalfby](systemuser.md#BKMK_lk_postcomment_createdonbehalfby) One-To-Many relationship.
+See the [lk_postcomment_createdonbehalfby](systemuser.md#BKMK_lk_postcomment_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_Post_Comments"></a> Post_Comments
 
-See post Table [Post_Comments](post.md#BKMK_Post_Comments) One-To-Many relationship.
+See the [Post_Comments](post.md#BKMK_Post_Comments) one-to-many relationship for the [post](post.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.postcomment?text=postcomment EntityType" />

@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -17,6 +17,9 @@ contributors:
 # Manage SharePoint documents
 
 Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on a basic form or advanced form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+
+> [!NOTE] 
+> You can also manage SharePoint documents in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
@@ -192,8 +195,7 @@ The below example demonstrates configuration using the Case table which needs th
          
         d. If you’ve made any changes to the form, select **Save**.
 
-5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role
-) to make sure table permissions are granted to the users.
+5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role) to make sure table permissions are granted to the users.
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
@@ -230,7 +232,6 @@ The below example demonstrates configuration using the Case table which needs th
 
 ### See also
 
-[Microsoft Learn: Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
-
+[Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

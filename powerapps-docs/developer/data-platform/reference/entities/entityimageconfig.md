@@ -1,8 +1,8 @@
 ---
-title: "Entity Image Configuration (EntityImageConfig) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Entity Image Configuration (EntityImageConfig) table/entity."
-ms.date: 10/05/2021
-
+title: "Entity Image Configuration (EntityImageConfig)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Entity Image Configuration (EntityImageConfig)  table/entity."
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Entity Image Configuration (EntityImageConfig) table/entity reference
+# Entity Image Configuration (EntityImageConfig)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -27,7 +27,7 @@ Store image configuration for each entity
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/entityimageconfigs<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/entityimageconfigs(*entityimageconfigid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -177,10 +177,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -256,7 +256,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [entityimageconfig_SyncErrors](syncerror.md#BKMK_entityimageconfig_SyncErrors) Many-To-One relationship.
+Same as the [entityimageconfig_SyncErrors](syncerror.md#BKMK_entityimageconfig_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -273,7 +273,7 @@ Same as syncerror table [entityimageconfig_SyncErrors](syncerror.md#BKMK_entityi
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [entityimageconfig_AsyncOperations](asyncoperation.md#BKMK_entityimageconfig_AsyncOperations) Many-To-One relationship.
+Same as the [entityimageconfig_AsyncOperations](asyncoperation.md#BKMK_entityimageconfig_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -290,7 +290,7 @@ Same as asyncoperation table [entityimageconfig_AsyncOperations](asyncoperation.
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [entityimageconfig_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_entityimageconfig_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [entityimageconfig_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_entityimageconfig_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -307,7 +307,7 @@ Same as mailboxtrackingfolder table [entityimageconfig_MailboxTrackingFolders](m
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [entityimageconfig_BulkDeleteFailures](bulkdeletefailure.md#BKMK_entityimageconfig_BulkDeleteFailures) Many-To-One relationship.
+Same as the [entityimageconfig_BulkDeleteFailures](bulkdeletefailure.md#BKMK_entityimageconfig_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -324,7 +324,7 @@ Same as bulkdeletefailure table [entityimageconfig_BulkDeleteFailures](bulkdelet
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [entityimageconfig_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_entityimageconfig_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [entityimageconfig_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_entityimageconfig_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -339,6 +339,6 @@ Same as principalobjectattributeaccess table [entityimageconfig_PrincipalObjectA
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.entityimageconfig?text=entityimageconfig EntityType" />

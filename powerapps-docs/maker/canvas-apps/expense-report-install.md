@@ -59,9 +59,9 @@ The Expense Report sample app includes a lot of the functionality commonly used 
 
 [Save the app](save-publish-app.md#save-changes-to-an-app) and update it to use a data source such as [SharePoint](connections/connection-sharepoint-online.md) or [Microsoft Dataverse](connections/connection-common-data-service.md).
 
-You can also enable the capability to send emails or approval routing using [Power Automate flow](using-logic-flows.md) or [Approvals connector](/connectors/approvals).
+You can also enable the capability to send emails or approval routing using [Power Automate pane](working-with-flows.md) or [Approvals connector](/connectors/approvals).
 
-Additionally, you can also read [Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/) to create a custom expense report app.
+Additionally, you can also read [Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/) to create a custom expense report app.
 
 ## Next steps
 
@@ -69,11 +69,10 @@ Additionally, you can also read [Microsoft Learn: Create an expense report app f
 
 ### See also
 
-[Microsoft Learn: Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/)  <br>
+[Create an expense report app from start to finish in Power Apps](/learn/paths/expense-canvas-app-start-finish/)  <br>
 [Canvas apps connectors for Power Apps](connections-list.md) <br>
 [Formula reference](formula-reference.md) <br>
 [Controls reference](reference-properties.md) <br>
 [Share a canvas app](share-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

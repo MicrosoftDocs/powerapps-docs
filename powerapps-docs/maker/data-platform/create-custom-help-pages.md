@@ -29,7 +29,7 @@ search.app:
 Use custom help panes and guided tasks to give your Unified Interface application a custom in-product help experience that is tailored to your organization. Use custom help panes to provide table, form, and language-specific help and guidance that includes rich text, content links, images, and video links. 
 
 > [!IMPORTANT]
-> - Custom help panes replace the previous learning path guided learning feature used with legacy web client apps.
+> - Custom help panes replace the previous learning path guided help feature used with legacy web client apps.
 > - Custom help panes don’t work with Unified Interface apps running on a mobile device, such as Android and iOS tablets and smartphones.
 
 ## Custom help panes and learning path
@@ -49,7 +49,7 @@ Custom help panes don't provide the following key features that are available wi
 
 ## Prerequisites
 
-To use the custom help panes feature, you environment needs the following: 
+To use the custom help panes feature, your environment needs the following: 
 - Be version 9.1.0.10300 or later.
 - [Must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
 
@@ -106,7 +106,7 @@ Text can be placed anywhere within the help pane. Enter free-form text before, i
 
 ### Bullets and numbered lists
 
-Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have selected multiple lines in a list, each line becomes bulleted or numbered. Tabbing and indenting subnumbers a line within the list.  
+Selecting the bullet or number icon toggles the current line to become bulleted or numbered. If you have selected multiple lines in a list, each line becomes bulleted or numbered. Tabbing and indenting subnumbers align within the list.  
 
 ### Sections
 
@@ -135,7 +135,7 @@ Balloons and coach marks can be used to point to specific UI elements. A balloon
 
 ![Insert Balloon](media/balloon.png)
 
-A coach mark simply highlights an element with a coach pointer bring the user attention to element in UI.
+A coach mark simply highlights an element with a coach pointer to draw the user's attention to that UI element.
 
 ![Insert Coach Marks](media/coach-marks.png)
 
@@ -171,7 +171,7 @@ When exported, each help page is exported as a separate file.
 
 The custom help panes and guided tasks feature consists of the solution components in the Contextual Help managed solution. Customizing or creating records using the tables outside of the custom help panes and guided tasks feature isn’t supported.
 
-Notice that some apps, such as Dynamics 365 Sales and Dynamics 365 Service, include a first run experiences that are built by using tables included in the Contextual Help managed solution. For example, both the Help Page (msdyn_helppage) and Tour (msdyn_tour) tables are used in the creation of these first run experiences. Currently, the custom help panes and guided tasks feature doesn’t support creating these first run experiences.
+Notice that some apps, such as Dynamics 365 Sales and Dynamics 365 Service, include first run experiences that are built by using tables included in the Contextual Help managed solution. For example, both the Help Page (msdyn_helppage) and Tour (msdyn_tour) tables are used in the creation of these first run experiences. Currently, the custom help panes and guided tasks feature doesn’t support creating these first run experiences.
 
 ## Frequently asked questions
 

@@ -1,8 +1,8 @@
 ---
-title: "organizationdatasyncsubscription table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "organizationdatasyncsubscription table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncsubscription table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -66,18 +66,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DataProcessingType](#BKMK_DataProcessingType)
 - [EndpointSettings](#BKMK_EndpointSettings)
 - [EntityFilters](#BKMK_EntityFilters)
+- [EntitySettings](#BKMK_EntitySettings)
+- [FullSyncOnly](#BKMK_FullSyncOnly)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsOutOfBoxSubscription](#BKMK_IsOutOfBoxSubscription)
+- [MigrationState](#BKMK_MigrationState)
 - [name](#BKMK_name)
 - [NeedCopyAttachmentsToBlob](#BKMK_NeedCopyAttachmentsToBlob)
+- [NeedToCopyFilesToBlob](#BKMK_NeedToCopyFilesToBlob)
+- [NewEntities](#BKMK_NewEntities)
 - [organizationdatasyncsubscriptionId](#BKMK_organizationdatasyncsubscriptionId)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PartnerPrefix](#BKMK_PartnerPrefix)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
+- [SubscribedToAllEntities](#BKMK_SubscribedToAllEntities)
 - [SubscriptionEndpointStatus](#BKMK_SubscriptionEndpointStatus)
 - [SubscriptionEntities](#BKMK_SubscriptionEntities)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [UnsubscribedEntities](#BKMK_UnsubscribedEntities)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -136,10 +143,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -222,6 +229,45 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
+### <a name="BKMK_EntitySettings"></a> EntitySettings
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|EntitySettings|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|entitysettings|
+|MaxLength|50000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_FullSyncOnly"></a> FullSyncOnly
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|FullSyncOnly|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fullsynconly|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+
+#### FullSyncOnly Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
 |Property|Value|
@@ -255,10 +301,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_MigrationState"></a> MigrationState
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|MigrationState|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|migrationstate|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
+
+#### MigrationState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|DsfCloudService||
+|1|DsfSdk||
 
 
 
@@ -294,11 +361,50 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
+
+
+### <a name="BKMK_NeedToCopyFilesToBlob"></a> NeedToCopyFilesToBlob
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|NeedToCopyFilesToBlob|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|needtocopyfilestoblob|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+
+#### NeedToCopyFilesToBlob Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_NewEntities"></a> NewEntities
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|NewEntities|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|newentities|
+|MaxLength|5000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_organizationdatasyncsubscriptionId"></a> organizationdatasyncsubscriptionId
@@ -390,6 +496,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_SubscribedToAllEntities"></a> SubscribedToAllEntities
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|SubscribedToAllEntities|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|subscribedtoallentities|
+|RequiredLevel|ApplicationRequired|
+|Type|Boolean|
+
+#### SubscribedToAllEntities Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_SubscriptionEndpointStatus"></a> SubscriptionEndpointStatus
 
 |Property|Value|
@@ -436,6 +565,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_UnsubscribedEntities"></a> UnsubscribedEntities
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|UnsubscribedEntities|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|unsubscribedentities|
+|MaxLength|5000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode
@@ -781,13 +926,15 @@ Listed by **SchemaName**.
 - [organizationdatasyncsubscription_BulkDeleteFailures](#BKMK_organizationdatasyncsubscription_BulkDeleteFailures)
 - [organizationdatasyncsubscription_PrincipalObjectAttributeAccesses](#BKMK_organizationdatasyncsubscription_PrincipalObjectAttributeAccesses)
 - [subscription_subscriptionentity](#BKMK_subscription_subscriptionentity)
+- [subscription_subscriptionentity_duplicate](#BKMK_subscription_subscriptionentity_duplicate)
+- [organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid](#BKMK_organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid)
 
 
 ### <a name="BKMK_organizationdatasyncsubscription_SyncErrors"></a> organizationdatasyncsubscription_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [organizationdatasyncsubscription_SyncErrors](syncerror.md#BKMK_organizationdatasyncsubscription_SyncErrors) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_SyncErrors](syncerror.md#BKMK_organizationdatasyncsubscription_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -804,7 +951,7 @@ Same as syncerror table [organizationdatasyncsubscription_SyncErrors](syncerror.
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [organizationdatasyncsubscription_DuplicateMatchingRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscription_DuplicateMatchingRecord) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_DuplicateMatchingRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscription_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -821,7 +968,7 @@ Same as duplicaterecord table [organizationdatasyncsubscription_DuplicateMatchin
 
 **Added by**: System Solution Solution
 
-Same as duplicaterecord table [organizationdatasyncsubscription_DuplicateBaseRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscription_DuplicateBaseRecord) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_DuplicateBaseRecord](duplicaterecord.md#BKMK_organizationdatasyncsubscription_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -838,7 +985,7 @@ Same as duplicaterecord table [organizationdatasyncsubscription_DuplicateBaseRec
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [organizationdatasyncsubscription_AsyncOperations](asyncoperation.md#BKMK_organizationdatasyncsubscription_AsyncOperations) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_AsyncOperations](asyncoperation.md#BKMK_organizationdatasyncsubscription_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -855,7 +1002,7 @@ Same as asyncoperation table [organizationdatasyncsubscription_AsyncOperations](
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [organizationdatasyncsubscription_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_organizationdatasyncsubscription_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_organizationdatasyncsubscription_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -872,7 +1019,7 @@ Same as mailboxtrackingfolder table [organizationdatasyncsubscription_MailboxTra
 
 **Added by**: System Solution Solution
 
-Same as processsession table [organizationdatasyncsubscription_ProcessSession](processsession.md#BKMK_organizationdatasyncsubscription_ProcessSession) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_ProcessSession](processsession.md#BKMK_organizationdatasyncsubscription_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -889,7 +1036,7 @@ Same as processsession table [organizationdatasyncsubscription_ProcessSession](p
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [organizationdatasyncsubscription_BulkDeleteFailures](bulkdeletefailure.md#BKMK_organizationdatasyncsubscription_BulkDeleteFailures) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_BulkDeleteFailures](bulkdeletefailure.md#BKMK_organizationdatasyncsubscription_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -906,7 +1053,7 @@ Same as bulkdeletefailure table [organizationdatasyncsubscription_BulkDeleteFail
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [organizationdatasyncsubscription_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_organizationdatasyncsubscription_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [organizationdatasyncsubscription_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_organizationdatasyncsubscription_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -921,7 +1068,7 @@ Same as principalobjectattributeaccess table [organizationdatasyncsubscription_P
 
 ### <a name="BKMK_subscription_subscriptionentity"></a> subscription_subscriptionentity
 
-Same as organizationdatasyncsubscriptionentity table [subscription_subscriptionentity](organizationdatasyncsubscriptionentity.md#BKMK_subscription_subscriptionentity) Many-To-One relationship.
+Same as the [subscription_subscriptionentity](organizationdatasyncsubscriptionentity.md#BKMK_subscription_subscriptionentity) many-to-one relationship for the [organizationdatasyncsubscriptionentity](organizationdatasyncsubscriptionentity.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -932,6 +1079,38 @@ Same as organizationdatasyncsubscriptionentity table [subscription_subscriptione
 |ReferencedEntityNavigationPropertyName|subscription_subscriptionentity|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_subscription_subscriptionentity_duplicate"></a> subscription_subscriptionentity_duplicate
+
+Same as the [subscription_subscriptionentity_duplicate](organizationdatasyncsubscriptionentity.md#BKMK_subscription_subscriptionentity_duplicate) many-to-one relationship for the [organizationdatasyncsubscriptionentity](organizationdatasyncsubscriptionentity.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncsubscriptionentity|
+|ReferencingAttribute|organizationdatasyncsubscription|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|subscription_subscriptionentity_duplicate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid"></a> organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid
+
+**Added by**: DataSyncState Solution
+
+Same as the [organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid](organizationdatasyncstate.md#BKMK_organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid) many-to-one relationship for the [organizationdatasyncstate](organizationdatasyncstate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|organizationdatasyncstate|
+|ReferencingAttribute|organizationdatasyncsubscriptionid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organizationdatasyncsubscription_organizationdatasyncstate_organizationdatasyncsubscriptionid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -950,34 +1129,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscription_createdby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_createdby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscription_createdby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organizationdatasyncsubscription_createdonbehalfby"></a> lk_organizationdatasyncsubscription_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscription_createdonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_createdonbehalfby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscription_createdonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organizationdatasyncsubscription_modifiedby"></a> lk_organizationdatasyncsubscription_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscription_modifiedby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_modifiedby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscription_modifiedby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_organizationdatasyncsubscription_modifiedonbehalfby"></a> lk_organizationdatasyncsubscription_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_organizationdatasyncsubscription_modifiedonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_organizationdatasyncsubscription_modifiedonbehalfby](systemuser.md#BKMK_lk_organizationdatasyncsubscription_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_organizationdatasyncsubscription"></a> organization_organizationdatasyncsubscription
 
 **Added by**: System Solution Solution
 
-See organization Table [organization_organizationdatasyncsubscription](organization.md#BKMK_organization_organizationdatasyncsubscription) One-To-Many relationship.
+See the [organization_organizationdatasyncsubscription](organization.md#BKMK_organization_organizationdatasyncsubscription) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.organizationdatasyncsubscription?text=organizationdatasyncsubscription EntityType" />

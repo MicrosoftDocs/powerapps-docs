@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/01/2022
+ms.date: 08/10/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -26,6 +26,9 @@ You can use [available Web API operations](web-api-overview.md#web-api-operation
 - Enable table and field for Web API operations. More information: [Site settings for the Web API](web-api-overview.md#site-settings-for-the-web-api)
 
 - The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
+
+> [!NOTE]
+> When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](./web-api-overview.md#using-entitysetname), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
 
 ## Query records
 
@@ -207,6 +210,39 @@ The following example shows how to compare columns using the Web API:
 
 Use the **$expand** system query option in the navigation properties to control what data from related entities is returned.
 
+### Lookup associated navigation property
+
+You will need to use the **Microsoft.Dynamics.CRM.associatednavigationproperty** as the lookup attribute when using the **$expand** query option. 
+
+To determine the **Microsoft.Dynamics.CRM.associatednavigationproperty** of an attribute, you can make the following http GET request for the column using the following naming convention: **_*name*_value**.
+
+In the following example, we can determine the associated navigation property of the **Primary Contact** column of the **Account** table by specifying the column name **primarycontactid** by formatting the name in the request: **_primarycontactid_value**.
+
+| **Method** | **URI** |
+|-|-|
+| GET | `[Portal URI]/_api/accounts?$select=_primarycontactid_value`</br></br>**Example**</br>`https://contoso.powerappsportals.com/_api/accounts?$select=_primarycontactid_value` |
+
+**Sample response**
+
+```json
+{
+"value": [
+    {
+        "@odata.etag": "W/\"2465216\"",
+        "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Yvonne McKay (sample)",
+        "_primarycontactid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "primarycontactid",
+        "_primarycontactid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "contact",
+        "_primarycontactid_value": "417319b5-cd18-ed11-b83c-000d3af4d812",
+        "accountid": "2d7319b5-cd18-ed11-b83c-000d3af4d812"
+    }
+]
+}
+```
+
+We see from the response that the associated navigation property is **primarycontactid**. The associated navigation property can be either the lookup column's [logical name or schema name](../../developer/data-platform/entity-metadata.md) depending how the table was created.
+
+For more information see [Retrieve data about lookup properties](../../developer/data-platform/webapi/query-data-web-api.md#retrieve-data-about-lookup-properties).
+
 ### Retrieve related table records by expanding single-valued navigation properties
 
 The following example shows how to retrieve the contact for all the account records. For the related contact records, we're only retrieving the **contactid** and **fullname**.
@@ -252,7 +288,7 @@ If you expand on collection-valued navigation parameters to retrieve related tab
 
 ### Retrieve related tables by expanding both single-valued and collection-valued navigation properties
 
-The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties.
+The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties. You will need to specify the [table relationship name](../data-platform/relationships-overview.md) in the syntax of your code.
 
 | **Method** | **URI** |
 |-------------------------|-------------------------|

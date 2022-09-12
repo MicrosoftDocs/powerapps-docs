@@ -1,8 +1,8 @@
 ---
-title: "Plug-in Assembly (PluginAssembly) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Plug-in Assembly (PluginAssembly) table/entity."
-ms.date: 10/05/2021
-
+title: "Plug-in Assembly (PluginAssembly)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Plug-in Assembly (PluginAssembly)  table/entity."
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Plug-in Assembly (PluginAssembly) table/entity reference
+# Plug-in Assembly (PluginAssembly)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,7 +25,7 @@ Assembly that contains one or more plug-in types.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/pluginassemblies<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/pluginassemblies(*pluginassemblyid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -356,6 +356,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Disk||
 |2|Normal||
 |3|AzureWebApp||
+|4|File Store||
 
 
 
@@ -586,10 +587,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -609,10 +610,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -866,7 +867,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_pluginassembly_plugintype"></a> pluginassembly_plugintype
 
-Same as plugintype table [pluginassembly_plugintype](plugintype.md#BKMK_pluginassembly_plugintype) Many-To-One relationship.
+Same as the [pluginassembly_plugintype](plugintype.md#BKMK_pluginassembly_plugintype) many-to-one relationship for the [plugintype](plugintype.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -895,38 +896,38 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_modifiedby_pluginassembly"></a> modifiedby_pluginassembly
 
-See systemuser Table [modifiedby_pluginassembly](systemuser.md#BKMK_modifiedby_pluginassembly) One-To-Many relationship.
+See the [modifiedby_pluginassembly](systemuser.md#BKMK_modifiedby_pluginassembly) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_createdby_pluginassembly"></a> createdby_pluginassembly
 
-See systemuser Table [createdby_pluginassembly](systemuser.md#BKMK_createdby_pluginassembly) One-To-Many relationship.
+See the [createdby_pluginassembly](systemuser.md#BKMK_createdby_pluginassembly) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_organization_pluginassembly"></a> organization_pluginassembly
 
-See organization Table [organization_pluginassembly](organization.md#BKMK_organization_pluginassembly) One-To-Many relationship.
+See the [organization_pluginassembly](organization.md#BKMK_organization_pluginassembly) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_pluginassembly_modifiedonbehalfby"></a> lk_pluginassembly_modifiedonbehalfby
 
-See systemuser Table [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginassembly_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_pluginassembly_modifiedonbehalfby](systemuser.md#BKMK_lk_pluginassembly_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_pluginassembly_createdonbehalfby"></a> lk_pluginassembly_createdonbehalfby
 
-See systemuser Table [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) One-To-Many relationship.
+See the [lk_pluginassembly_createdonbehalfby](systemuser.md#BKMK_lk_pluginassembly_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_pluginpackage_pluginassembly"></a> pluginpackage_pluginassembly
 
 **Added by**: Plugin Infrastructure Extension Solution
 
-See pluginpackage Table [pluginpackage_pluginassembly](pluginpackage.md#BKMK_pluginpackage_pluginassembly) One-To-Many relationship.
+See the [pluginpackage_pluginassembly](pluginpackage.md#BKMK_pluginpackage_pluginassembly) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
 
 ### <a name="BKMK_managedidentity_PluginAssembly"></a> managedidentity_PluginAssembly
 
 **Added by**: ManagedIdentityExtensions Solution
 
-See managedidentity Table [managedidentity_PluginAssembly](managedidentity.md#BKMK_managedidentity_PluginAssembly) One-To-Many relationship.
+See the [managedidentity_PluginAssembly](managedidentity.md#BKMK_managedidentity_PluginAssembly) one-to-many relationship for the [managedidentity](managedidentity.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.pluginassembly?text=pluginassembly EntityType" />

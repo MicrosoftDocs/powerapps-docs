@@ -1,24 +1,24 @@
 ---
 title: FileObject | Microsoft Docs
 description: Provides access to all the properties of a file.
-keywords:
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # FileObject
 
-Provides access to all the properties of a file.
+[!INCLUDE [fileobject-description](includes/fileobject-description.md)]
 
 ## Available for
 
-Model-driven apps
+Model-driven and canvas apps.
 
 ## Properties
 
@@ -26,25 +26,29 @@ Model-driven apps
 
 Contents of the file.
 
-**Type**: `String`
+**Type**: `string`
 
 ### fileName
 
 Name of the file.
 
-**Type**: `String`
+**Type**: `string`
 
 ### fileSize
 
 Size of the file in KB.
 
-**Type**: `Number`
+**Type**: `number`
 
 ### mimeType
 
 File MIME type.
 
-**Type**: `String`
+**Type**: `string`
+
+## Sample controls
+
+[Image upload component](../sample-controls/image-upload-control.md)
 
 ## Related topics
 

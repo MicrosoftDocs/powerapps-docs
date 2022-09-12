@@ -2,15 +2,15 @@
 title: Create and build a code component in Microsoft Dataverse| Microsoft Docs
 description: Start creating a component using the Power Apps component framework tooling.
 keywords: Power Apps component framework, code components, Component Framework
-ms.subservice: pcf
-ms.author: jdaly
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Create and build a code component
@@ -25,7 +25,7 @@ To begin, open **Developer Command Prompt for VS 2017 or higher** after installi
 
 1. In the Developer Command Prompt, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_code_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
-3. Create a new component project by passing some basic parameters using the command:
+3. Create a new component project by passing some basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command:
 
     ```CLI
     pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>

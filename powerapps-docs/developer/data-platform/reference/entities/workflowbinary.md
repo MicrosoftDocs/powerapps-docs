@@ -1,8 +1,8 @@
 ---
-title: "workflowbinary table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "workflowbinary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the workflowbinary table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/workflowbinaries(*workflowbinaryid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/workflowbinaries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -67,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [FlowSessionId](#BKMK_FlowSessionId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsCustomizable](#BKMK_IsCustomizable)
 - [Metadata](#BKMK_Metadata)
 - [MimeType](#BKMK_MimeType)
 - [name](#BKMK_name)
@@ -74,6 +75,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [Process](#BKMK_Process)
+- [Reference](#BKMK_Reference)
 - [ReferenceName](#BKMK_ReferenceName)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -99,6 +101,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
 
+**Added by**: Basic Solution Solution
+
 |Property|Value|
 |--------|-----|
 |Description|Sequence number of the import that created this record.|
@@ -112,6 +116,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Is Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
 
 
 ### <a name="BKMK_Metadata"></a> Metadata
@@ -221,6 +240,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|SystemRequired|
 |Targets|workflow|
 |Type|Lookup|
+
+
+### <a name="BKMK_Reference"></a> Reference
+
+|Property|Value|
+|--------|-----|
+|Description|A reference for the workflow binary|
+|DisplayName|Reference|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|reference|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ReferenceName"></a> ReferenceName
@@ -349,6 +384,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -356,8 +393,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [Data](#BKMK_Data)
 - [Data_Name](#BKMK_Data_Name)
 - [FlowSessionIdName](#BKMK_FlowSessionIdName)
+- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -365,13 +404,57 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ProcessName](#BKMK_ProcessName)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Row id unique|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ComponentState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
+
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -493,9 +576,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_Data_Name"></a> Data_Name
+### <a name="BKMK_Data"></a> Data
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description|Azure blob storage backed file containing the binary data|
+|DisplayName|Data|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|data|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_Data_Name"></a> Data_Name
 
 |Property|Value|
 |--------|-----|
@@ -525,6 +619,31 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the solution component is part of a managed solution.|
+|DisplayName|Is Managed|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsManaged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
@@ -646,6 +765,23 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+
+
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 **Added by**: Active Solution Solution
@@ -690,12 +826,30 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Unique identifier for the business unit that owns the record|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -746,6 +900,36 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
 **Added by**: Active Solution Solution
@@ -780,7 +964,7 @@ Listed by **SchemaName**.
 
 **Added by**: System Solution Solution
 
-Same as syncerror table [workflowbinary_SyncErrors](syncerror.md#BKMK_workflowbinary_SyncErrors) Many-To-One relationship.
+Same as the [workflowbinary_SyncErrors](syncerror.md#BKMK_workflowbinary_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -797,7 +981,7 @@ Same as syncerror table [workflowbinary_SyncErrors](syncerror.md#BKMK_workflowbi
 
 **Added by**: System Solution Solution
 
-Same as asyncoperation table [workflowbinary_AsyncOperations](asyncoperation.md#BKMK_workflowbinary_AsyncOperations) Many-To-One relationship.
+Same as the [workflowbinary_AsyncOperations](asyncoperation.md#BKMK_workflowbinary_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -814,7 +998,7 @@ Same as asyncoperation table [workflowbinary_AsyncOperations](asyncoperation.md#
 
 **Added by**: System Solution Solution
 
-Same as mailboxtrackingfolder table [workflowbinary_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_workflowbinary_MailboxTrackingFolders) Many-To-One relationship.
+Same as the [workflowbinary_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_workflowbinary_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -831,7 +1015,7 @@ Same as mailboxtrackingfolder table [workflowbinary_MailboxTrackingFolders](mail
 
 **Added by**: System Solution Solution
 
-Same as processsession table [workflowbinary_ProcessSession](processsession.md#BKMK_workflowbinary_ProcessSession) Many-To-One relationship.
+Same as the [workflowbinary_ProcessSession](processsession.md#BKMK_workflowbinary_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -848,7 +1032,7 @@ Same as processsession table [workflowbinary_ProcessSession](processsession.md#B
 
 **Added by**: System Solution Solution
 
-Same as bulkdeletefailure table [workflowbinary_BulkDeleteFailures](bulkdeletefailure.md#BKMK_workflowbinary_BulkDeleteFailures) Many-To-One relationship.
+Same as the [workflowbinary_BulkDeleteFailures](bulkdeletefailure.md#BKMK_workflowbinary_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -865,7 +1049,7 @@ Same as bulkdeletefailure table [workflowbinary_BulkDeleteFailures](bulkdeletefa
 
 **Added by**: System Solution Solution
 
-Same as principalobjectattributeaccess table [workflowbinary_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) Many-To-One relationship.
+Same as the [workflowbinary_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -898,56 +1082,56 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_createdby](systemuser.md#BKMK_lk_workflowbinary_createdby) One-To-Many relationship.
+See the [lk_workflowbinary_createdby](systemuser.md#BKMK_lk_workflowbinary_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowbinary_createdonbehalfby"></a> lk_workflowbinary_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_createdonbehalfby](systemuser.md#BKMK_lk_workflowbinary_createdonbehalfby) One-To-Many relationship.
+See the [lk_workflowbinary_createdonbehalfby](systemuser.md#BKMK_lk_workflowbinary_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowbinary_modifiedby"></a> lk_workflowbinary_modifiedby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_modifiedby](systemuser.md#BKMK_lk_workflowbinary_modifiedby) One-To-Many relationship.
+See the [lk_workflowbinary_modifiedby](systemuser.md#BKMK_lk_workflowbinary_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_workflowbinary_modifiedonbehalfby"></a> lk_workflowbinary_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See systemuser Table [lk_workflowbinary_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowbinary_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_workflowbinary_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowbinary_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_user_workflowbinary"></a> user_workflowbinary
 
 **Added by**: System Solution Solution
 
-See systemuser Table [user_workflowbinary](systemuser.md#BKMK_user_workflowbinary) One-To-Many relationship.
+See the [user_workflowbinary](systemuser.md#BKMK_user_workflowbinary) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_team_workflowbinary"></a> team_workflowbinary
 
 **Added by**: System Solution Solution
 
-See team Table [team_workflowbinary](team.md#BKMK_team_workflowbinary) One-To-Many relationship.
+See the [team_workflowbinary](team.md#BKMK_team_workflowbinary) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_business_unit_workflowbinary"></a> business_unit_workflowbinary
 
 **Added by**: System Solution Solution
 
-See businessunit Table [business_unit_workflowbinary](businessunit.md#BKMK_business_unit_workflowbinary) One-To-Many relationship.
+See the [business_unit_workflowbinary](businessunit.md#BKMK_business_unit_workflowbinary) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_flowsession_workflowbinary_FlowSessionId"></a> flowsession_workflowbinary_FlowSessionId
 
-See flowsession Table [flowsession_workflowbinary_FlowSessionId](flowsession.md#BKMK_flowsession_workflowbinary_FlowSessionId) One-To-Many relationship.
+See the [flowsession_workflowbinary_FlowSessionId](flowsession.md#BKMK_flowsession_workflowbinary_FlowSessionId) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
 
 ### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
 
 **Added by**: System Solution Solution
 
-See workflow Table [workflow_workflowbinary_Process](workflow.md#BKMK_workflow_workflowbinary_Process) One-To-Many relationship.
+See the [workflow_workflowbinary_Process](workflow.md#BKMK_workflow_workflowbinary_Process) one-to-many relationship for the [workflow](workflow.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.workflowbinary?text=workflowbinary EntityType" />

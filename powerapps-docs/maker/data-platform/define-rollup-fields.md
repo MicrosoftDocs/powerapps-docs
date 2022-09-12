@@ -2,9 +2,8 @@
 title: "Define rollup columns with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup columns"
 ms.custom: ""
-ms.date: 01/23/2020
+ms.date: 06/21/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -25,8 +24,6 @@ search.app:
   - D365CE
 ---
 # Define rollup columns that aggregate values
-
-
 
 Rollup columns help users obtain insights into data by monitoring key business metrics. A rollup column contains an aggregate value computed over the rows related to a specified row. This includes regular tables and activity tables such as emails and appointments.
 
@@ -78,14 +75,20 @@ The rollups are calculated by scheduled system jobs that run asynchronously in t
 
 To view rollup jobs:
 
-1. While viewing the **Common Data Services Default Solution** edit the URL, removing everything after `dynamics.com` and refresh the page.
-2. In the **Settings** area, select **System** > **System Jobs**.<br />![Navigate to system jobs.](media/navigate-system-jobs.png)
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select the environment you want.
+1. Select **Settings** (gear) > **Advanced settings**.
+1. Select  **Settings** > **System Jobs**.<br />![Navigate to system jobs.](media/navigate-system-jobs.png)
 1. In the  view selector, choose **Recurring System Jobs**.
-2. To quickly find a relevant job, you can filter by the System Job type: **Mass Calculate Rollup Field** or **Calculate Rollup Field**.
+1. To quickly find a relevant job, you can filter by the System Job type: **Mass Calculate Rollup Field** or **Calculate Rollup Field**.
  
 ### Mass Calculate Rollup Field
 
-**Mass Calculate Rollup Field** is a recurring job, created per a rollup column. It runs once, after you created or updated a rollup column. The job recalculates the specified rollup column value in all existing rows that contain this column. By default, the job will run 12 hours after you created or updated a column. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the column is modified, the job resets to run again in 12 hours after the update. The 12-hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup column is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup columns.  
+Mass Calculate Rollup Field is a recurring job, created for each rollup column. It runs once, after you create or update a rollup column. The job recalculates the specified rollup column value in all existing records that contain this column. By default, the job will run 12 hours after you have created or updated a column. When the column is modified, the job resets to run again in 12 hours after the update. The 12-hour delay is needed to assure that the Mass Calculate Rollup Field runs during the non-operational hours of the environment.
+
+We recommend that an administrator adjusts the start time of a Mass Calculate Rollup Field job after the rollup column is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup columns.
+
+Notice that, when the situation occurs where the rollup column is never updated, the Mass Calculate Rollup Field job won’t run again for that column until after 10 years have passed. This behavior is by design. When there aren’t any updates in the underlying columns associated with the rollup field, there isn’t any reason to run the job more frequently.
+
 
 ### Calculate Rollup Column 
 

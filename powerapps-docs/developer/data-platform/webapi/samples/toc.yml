@@ -1,3 +1,4 @@
+items:
 - name: (HTTP) samples
   items:
     - name: About the samples
@@ -10,24 +11,28 @@
       href: ../web-api-conditional-operations-sample.md
     - name: Functions and Actions
       href: ../web-api-functions-actions-sample.md
+    - name: Metadata Operations
+      href: ../web-api-metadata-operations-sample.md
 - name: (C#) samples
   items:
-    - name: CDSWebApiService class
-      href: cdswebapiservice.md
+    - name: About the samples
+      href: ../web-api-samples-csharp.md
+    - name: WebApiService class library
+      href: webapiservice.md
     - name: Basic Operations
-      href: cdswebapiservice-basic-operations.md
+      href: webapiservice-basic-operations.md
     - name: Query Data
-      href: cdswebapiservice-query-data.md
+      href: webapiservice-query-data.md
     - name: Conditional Operations
-      href: cdswebapiservice-conditional-operations.md
+      href: webapiservice-conditional-operations.md
     - name: Functions and Actions
-      href: functions-actions-csharp.md
+      href: webapiservice-functions-and-actions.md
+    - name: Metadata Operations
+      href: webapiservice-metadata-operations.md
     - name: Parallel Operations
-      href: cdswebapiservice-parallel-operations.md
-    - name: Async Parallel Operations
-      href: cdswebapiservice-async-parallel-operations.md
-    - name: Global Discovery Service
-      href: global-discovery-service-csharp.md
+      href: webapiservice-parallel-operations.md
+    - name: TPL Dataflow Parallel Operations
+      href: webapiservice-tpl-dataflow-parallel-operations.md    
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples

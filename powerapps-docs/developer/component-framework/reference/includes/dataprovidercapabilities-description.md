@@ -1,0 +1,1 @@
+Provides access to all the properties of a file.

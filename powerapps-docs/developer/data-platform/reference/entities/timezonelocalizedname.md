@@ -1,8 +1,8 @@
 ---
-title: "TimeZoneLocalizedName table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "TimeZoneLocalizedName table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the TimeZoneLocalizedName table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ Localized name of the time zone.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Retrieve|GET [*org URI*]/api/data/v9.0/timezonelocalizednames(*timezonelocalizednameid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.0/timezonelocalizednames<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
@@ -364,26 +364,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_timezonelocalizedname_modifiedby"></a> lk_timezonelocalizedname_modifiedby
 
-See systemuser Table [lk_timezonelocalizedname_modifiedby](systemuser.md#BKMK_lk_timezonelocalizedname_modifiedby) One-To-Many relationship.
+See the [lk_timezonelocalizedname_modifiedby](systemuser.md#BKMK_lk_timezonelocalizedname_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonelocalizedname_createdby"></a> lk_timezonelocalizedname_createdby
 
-See systemuser Table [lk_timezonelocalizedname_createdby](systemuser.md#BKMK_lk_timezonelocalizedname_createdby) One-To-Many relationship.
+See the [lk_timezonelocalizedname_createdby](systemuser.md#BKMK_lk_timezonelocalizedname_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonelocalizedname_modifiedonbehalfby"></a> lk_timezonelocalizedname_modifiedonbehalfby
 
-See systemuser Table [lk_timezonelocalizedname_modifiedonbehalfby](systemuser.md#BKMK_lk_timezonelocalizedname_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_timezonelocalizedname_modifiedonbehalfby](systemuser.md#BKMK_lk_timezonelocalizedname_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonelocalizedname_createdonbehalfby"></a> lk_timezonelocalizedname_createdonbehalfby
 
-See systemuser Table [lk_timezonelocalizedname_createdonbehalfby](systemuser.md#BKMK_lk_timezonelocalizedname_createdonbehalfby) One-To-Many relationship.
+See the [lk_timezonelocalizedname_createdonbehalfby](systemuser.md#BKMK_lk_timezonelocalizedname_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_timezonelocalizedname_timezonedefinitionid"></a> lk_timezonelocalizedname_timezonedefinitionid
 
-See timezonedefinition Table [lk_timezonelocalizedname_timezonedefinitionid](timezonedefinition.md#BKMK_lk_timezonelocalizedname_timezonedefinitionid) One-To-Many relationship.
+See the [lk_timezonelocalizedname_timezonedefinitionid](timezonedefinition.md#BKMK_lk_timezonelocalizedname_timezonedefinitionid) one-to-many relationship for the [timezonedefinition](timezonedefinition.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.timezonelocalizedname?text=timezonelocalizedname EntityType" />

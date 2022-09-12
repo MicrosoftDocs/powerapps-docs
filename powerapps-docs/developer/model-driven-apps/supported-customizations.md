@@ -1,20 +1,19 @@
 ---
 title: "Get started with model-driven apps customization using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: "intro-internal"
-ms.date: 04/15/2021
-ms.reviewer: ""
-
-ms.topic: "article"
-author: "Nkrb" # GitHub ID
+author: HemantGaur
+ms.author: hemantg
+manager: lwelicki
+ms.date: 04/01/2022
+ms.reviewer: jdaly
 ms.subservice: mda-developer
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
 search.app:
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 # Get started with Model-driven apps customization using code
 

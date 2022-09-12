@@ -26,7 +26,7 @@ Easily add cards to maps in your canvas apps to show details about pinned locati
 
 ## Prerequisites
 
-1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites).
+1. [Create a canvas app](./create-blank-app.md) and make sure it meets the [geospatial prerequisites](./geospatial-overview.md#prerequisites-for-full-support).
 1. [Insert a map](./geospatial-component-map.md).
 
 
@@ -49,6 +49,7 @@ When the user selects a pin, an info card shows the fields you selected.
 ## Other interactive map features
 
 - [Use data from Excel to insert pins](./geospatial-map-excel.md)
+- [Show routes between waypoints](geospatial-map-routing.md)
 - [Draw and insert shapes onto maps](./geospatial-map-draw-shapes.md)
 
 ## Other geospatial controls

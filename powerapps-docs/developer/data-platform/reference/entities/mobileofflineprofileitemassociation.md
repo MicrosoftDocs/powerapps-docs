@@ -1,8 +1,8 @@
 ---
-title: "MobileOfflineProfileItemAssociation table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
+title: "MobileOfflineProfileItemAssociation table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfileItemAssociation table/entity."
-ms.date: 10/05/2021
-
+ms.date: 08/31/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "KumarVivek"
@@ -25,7 +25,7 @@ Information on relationships to be used to follow related entity's records for m
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/mobileofflineprofileitemassociations<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/mobileofflineprofileitemassociations(*mobileofflineprofileitemassociationid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -457,10 +457,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -480,10 +480,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -739,30 +739,30 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_mobileofflineprofileitemassociation_modifiedby"></a> lk_mobileofflineprofileitemassociation_modifiedby
 
-See systemuser Table [lk_mobileofflineprofileitemassociation_modifiedby](systemuser.md#BKMK_lk_mobileofflineprofileitemassociation_modifiedby) One-To-Many relationship.
+See the [lk_mobileofflineprofileitemassociation_modifiedby](systemuser.md#BKMK_lk_mobileofflineprofileitemassociation_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_mobileofflineprofileitemassociation_modifiedonbehalfby"></a> lk_mobileofflineprofileitemassociation_modifiedonbehalfby
 
-See systemuser Table [lk_mobileofflineprofileitemassociation_modifiedonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitemassociation_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_mobileofflineprofileitemassociation_modifiedonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitemassociation_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_MobileOfflineProfileItem_MobileOfflineProfileItemAssociation"></a> MobileOfflineProfileItem_MobileOfflineProfileItemAssociation
 
-See mobileofflineprofileitem Table [MobileOfflineProfileItem_MobileOfflineProfileItemAssociation](mobileofflineprofileitem.md#BKMK_MobileOfflineProfileItem_MobileOfflineProfileItemAssociation) One-To-Many relationship.
+See the [MobileOfflineProfileItem_MobileOfflineProfileItemAssociation](mobileofflineprofileitem.md#BKMK_MobileOfflineProfileItem_MobileOfflineProfileItemAssociation) one-to-many relationship for the [mobileofflineprofileitem](mobileofflineprofileitem.md) table/entity.
 
 ### <a name="BKMK_lk_MobileOfflineProfileItemAssociation_createdby"></a> lk_MobileOfflineProfileItemAssociation_createdby
 
-See systemuser Table [lk_MobileOfflineProfileItemAssociation_createdby](systemuser.md#BKMK_lk_MobileOfflineProfileItemAssociation_createdby) One-To-Many relationship.
+See the [lk_MobileOfflineProfileItemAssociation_createdby](systemuser.md#BKMK_lk_MobileOfflineProfileItemAssociation_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_MobileOfflineProfileItemAssociation_organization"></a> MobileOfflineProfileItemAssociation_organization
 
-See organization Table [MobileOfflineProfileItemAssociation_organization](organization.md#BKMK_MobileOfflineProfileItemAssociation_organization) One-To-Many relationship.
+See the [MobileOfflineProfileItemAssociation_organization](organization.md#BKMK_MobileOfflineProfileItemAssociation_organization) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### <a name="BKMK_lk_mobileofflineprofileitemassociation_createdonbehalfby"></a> lk_mobileofflineprofileitemassociation_createdonbehalfby
 
-See systemuser Table [lk_mobileofflineprofileitemassociation_createdonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitemassociation_createdonbehalfby) One-To-Many relationship.
+See the [lk_mobileofflineprofileitemassociation_createdonbehalfby](systemuser.md#BKMK_lk_mobileofflineprofileitemassociation_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.mobileofflineprofileitemassociation?text=mobileofflineprofileitemassociation EntityType" />

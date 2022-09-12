@@ -1,15 +1,15 @@
 ---
 title: Common issues and workarounds (Power Apps Component Framework) | Microsoft Docs
-description: Provides information on know issues and workarounds some come across while working with Power Apps component framework and CLI
-keywords:
-ms.author: jdaly
+description: Provides information on known issues and workarounds some come across while working with Power Apps component framework and CLI
+ms.author: noazarur
 author: noazarur-microsoft
-manager: kvivek
-ms.date: 03/12/2022
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Common issues and workarounds
@@ -23,8 +23,8 @@ Here are some common issues that you might come across while using the Power App
 Update the component version (minor or patch) in the component manifest file (for example, 1.0.0 to 1.0.1). Every update in the component needs a component version bump to be reflected on the Microsoft Dataverse server.
 
 ```XML
- <control namespace="SampleNamespace" constructor="TSLinearInputControl" 
-   version="1.0.1" 
+ <control namespace="SampleNamespace" constructor="TSLinearInputControl"
+   version="1.0.1"
     display-name-key="TSLinearInputControl_Display_Key" description-key="TSLinearInputControl_Desc_Key" control-type="standard">
 ```
 
@@ -47,30 +47,30 @@ Update the component version (minor or patch) in the component manifest file (fo
 ## Issues while updating existing code components
 
 - If you have created a code component using the CLI version 0.1.817.1 or earlier and want to ensure that the latest build and debug modules are being used, make the updates to the `package.json` file as shown below:
-   
+
    ```JSON
-   "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" } 
+   "dependencies": { "@types/node": "^10.12.18", "@types/powerapps-component-framework": "1.1.0"}, "devDependencies": { "pcf-scripts": "~0", "pcf-start": "~0" }
    ```
 
 ## Error: Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote source &lt;Feed Url&gt; when the build fails for authorization issues.
 
    **Workaround**
 
-   - Open the `NuGet.Config` file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file. 
+   - Open the `NuGet.Config` file from **%APPDATA%\NuGet**. The feed from which the user is getting the error should be present in this file.
    - Remove the feed from the `NuGet.Config file` or generate a PAT token and add it to the` Nuget.Config file`. For example:
 
      ```XML
-     <?xml version="1.0" encoding="utf-8"?>  
-     <configuration>  
-     <packageSources>  
-         <add key="YourFeedName" value="https://contoso.com/_packaging/YourFeedName/nuget/v3/index.json" />  
-      </packageSources>  
-      <packageSourceCredentials>  
-      <YourFeedName>  
-      <add key="Username" value="anything" />  
-      <add key="Password" value="User PAT" />  
-        </YourFeedName>  
-        </packageSourceCredentials>  
+     <?xml version="1.0" encoding="utf-8"?>
+     <configuration>
+     <packageSources>
+         <add key="YourFeedName" value="https://contoso.com/_packaging/YourFeedName/nuget/v3/index.json" />
+      </packageSources>
+      <packageSourceCredentials>
+      <YourFeedName>
+      <add key="Username" value="anything" />
+      <add key="Password" value="User PAT" />
+        </YourFeedName>
+        </packageSourceCredentials>
        </configuration>
      ```
 
@@ -80,11 +80,11 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command 
+- Build  the `.pcfproj` as release configuration, which sets the web pack to production mode using the command
   ```CLI
   msbuild /property:configuration=Release
   ```
-- Run the msbuild command with an extra property as shown below: 
+- Run the msbuild command with an extra property as shown below:
   ```CLI
   msbuild /p:PcfBuildMode=production
   ```
@@ -102,7 +102,7 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Error: Do not use the eval function or its functional equivalents**
 
-This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs web pack (used to bundle the code component) to package in development mode, which emits `eval()`. 
+This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs web pack (used to bundle the code component) to package in development mode, which emits `eval()`.
 
 **Workaround**
 
@@ -122,9 +122,9 @@ Power Apps component framework dataset API's getValue function only searches rec
 
 **Workaround**
 
-Use the dataset column name (component can get the dataset column name by searching the column array using the alias). 
+Use the dataset column name (component can get the dataset column name by searching the column array using the alias).
 
-   ***Expected Behavior*** 
+   ***Expected Behavior***
 
    ```TypeScript
    long  = dataSet.records[currentRecordId].getValue("Longitude") //based on property set in manifest"-122.3514661"
@@ -145,12 +145,30 @@ Power Apps component framework dataset component currently does not properly sho
 No workaround as of now. We are working on pushing a fix to our deployment trains.-->
 
 ## Canvas dataset paging is not reset when external filter applied
- 
-Currently there is an issue with canvas app datasets bound to code components. When the dataset is filtered externally to the code component using PowerFX, the page should be reset to the first page, and the hasPreviousPage should be set to false. This is the functionality inside model-driven apps. This does not happen for canvas apps and so the code components cannot reset the paging and the page numbers can get out of sync. 
- 
+
+Currently there is an issue with canvas app datasets bound to code components. When the dataset is filtered externally to the code component using PowerFX, the page should be reset to the first page, and the hasPreviousPage should be set to false. This is the functionality inside model-driven apps. This does not happen for canvas apps and so the code components cannot reset the paging and the page numbers can get out of sync.
+
 **Workaround**
 
 No workaround as of now. A fix for this issue is being deployed.
+
+## Authentication for third party services fails in Canvas
+
+PCF authentication for third parties is not supported.
+
+**Workaround**
+
+Use combination of a [custom page](../../maker/model-driven-apps/model-app-page-overview.md) and a [connector](../../maker/canvas-apps/connections-list.md).
+
+## Control cannot finish loading
+
+If you use [refresh](./reference/dataset/refresh.md) in `updateView` you must include a guarding condition, otherwise it will create an infinite loop. Whenever `refresh` is called, it will reset the page number to 1, and then fetch the first page of records under the current filtering and sorting criteria. When the updated data is received by the client, `updateView` will be called to update the display.  The result is that the control cannot finish loading and will not be able to fetch records beyond the first page.
+
+## Same page is loaded rather than the expected one
+
+[refresh](./reference/dataset/refresh.md), [loadExactPage](./reference/paging/loadExactPage.md), [loadNextPage](./reference/paging/loadnextpage.md), [loadPreviousPage](./reference/paging/loadpreviouspage.md) do not support parallel execution.
+
+When these functions are called, the results for the requested page will not be available immediately in the next line. Instead they will trigger `updateView` on the control with newly fetched results.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
