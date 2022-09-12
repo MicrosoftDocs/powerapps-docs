@@ -7,22 +7,23 @@ ms.author: dikamath
 manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: IsSystemAdmin Custom API
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This sample shows how to write a plug-in that supports a Custom API named `sample_IsSystemAdmin`. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/IsSystemAdminCustomAPI).
+This sample shows how to write a plug-in that supports a Custom API named `sample_IsSystemAdmin`. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/IsSystemAdminCustomAPI).
 
-This sample creates a plug-in for the main operation of the `sample_IsSystemAdmin` Custom API. This Custom API will detect whether a user has the System Administrator security role. 
+This sample creates a plug-in for the main operation of the `sample_IsSystemAdmin` Custom API. This Custom API will detect whether a user has the System Administrator security role.
 
 Detecting whether a user has the System Administrator security role may require two separate queries depending on whether the user has been assigned the security role directly or whether they have it because of team that they belong to. This Custom API encapsulates these queries into a single API call which will return a boolean value. This makes it easier to use by delegating the operation to the Dataverse server.
 
@@ -32,13 +33,13 @@ To run the code found in this sample, you must first create a Custom API in your
 
 ### Import the managed solution file
 
-The `IsSystemAdminFunction_1_0_0_0_managed.zip` in this folder contains the `sample_IsSystemAdmin` Custom API that uses this code. You can simply import this solution file to create the Custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
+The `IsSystemAdminFunction_1_0_0_0_managed.zip` in this folder contains the `sample_IsSystemAdmin` Custom API that uses this code. You can simply import this solution file to create the Custom API in your organization. See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
 
 After you are finished testing, delete the managed solution to remove the Custom API.
 
 ### Create the Custom API
 
-You can create the Custom API yourself and set the plug-in assembly created by this code. 
+You can create the Custom API yourself and set the plug-in assembly created by this code.
 There are several ways to create Custom API, and they are documented here: [Create and use Custom APIs](../../custom-api.md)
 
 This Custom API is defined with the following data:
@@ -89,7 +90,6 @@ After the plug-in is registered, you will be able to set it as the plug-in type 
 
 The `sample_IsSystemAdmin` Custom API you create will be part of the unmanaged customizations in your environment. To remove it you must delete the Custom API and the Plugin Assembly.
 
-
 ## What this sample does
 
 This `sample_IsSystemAdmin` Custom API uses this code to query the system to detect whether the user has the System Administrator security role.
@@ -103,12 +103,12 @@ To use the `sample_IsSystemAdmin` Custom API, you can use either the Web API or 
 The Web API is easiest to try because you don't need to write any code. You can test it using your browser.
 
 1. Get the Web API Url from the Developer Resources page. See [View developer resources](../../view-download-developer-resources.md). The value will look something like this: `https://yourorgname.api.crm.dynamics.com/api/data/v9.2`.
-1. Copy the Web API URL and paste it into a browser address bar. You may be prompted to authenticate if you have not previously run a model-driven application before. 
+1. Copy the Web API URL and paste it into a browser address bar. You may be prompted to authenticate if you have not previously run a model-driven application before.
 1. Edit the Web API URL to return information about system users. Append the following to the Web API Url: `/systemusers?$select=fullname`. Your you should be able to see JSON data in your browser.
 1. Select a one of the `systemuserid` values for a user and open a different browser tab.
 1. In this browser tab, compose the following URL using your Web API Url and the `systemuserid` value: <br />
-    `https://<your org url>/api/data/v9.2/systemusers(<The systemuserid value>)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin`<br />
-    You must include the `Microsoft.Dynamics.CRM` namespace because this is a bound function. More information: [Bound functions](../../webapi/use-web-api-functions.md#bound-functions)
+   `https://<your org url>/api/data/v9.2/systemusers(<The systemuserid value>)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin`<br />
+   You must include the `Microsoft.Dynamics.CRM` namespace because this is a bound function. More information: [Bound functions](../../webapi/use-web-api-functions.md#bound-functions)
 1. You should see results like the following when you send the request:<br />
 
 ```
@@ -117,6 +117,7 @@ The Web API is easiest to try because you don't need to write any code. You can 
   "HasRole": false
 }
 ```
+
 The `HasRole` value indicates if the user has the System Administrator security role.
 
 ### Using Organization Service
@@ -148,7 +149,7 @@ The `HasRole` value indicates if the user has the System Administrator security 
    QueryExpression query = new QueryExpression("systemuser");
    query.ColumnSet = new ColumnSet("fullname");
    query.TopCount = 10;
-    
+
     //Execute the query to retrieve the data
    EntityCollection users = svc.RetrieveMultiple(query);
 
@@ -158,10 +159,11 @@ The `HasRole` value indicates if the user has the System Administrator security 
        bool isAdmin = IsSystemAdmin(svc, user.Id);
 
         //Show the results in the console
-       Console.WriteLine($"{user["fullname"]} is{(isAdmin? string.Empty: " not")} an administrator");                    
+       Console.WriteLine($"{user["fullname"]} is{(isAdmin? string.Empty: " not")} an administrator");
    }
    ```
-  This code will retrieve 10 users and loop through each one, testing whether they are a system administrator or not, writing the results to the console.
+
+   This code will retrieve 10 users and loop through each one, testing whether they are a system administrator or not, writing the results to the console.
 
 ### Demonstrate
 
@@ -175,6 +177,5 @@ The `HasRole` value indicates if the user has the System Administrator security 
 [Create and use Custom APIs](../../custom-api.md)<br />
 [Write a plug-in](../../write-plug-in.md)<br />
 [Register a plug-in](../../register-plug-in.md)
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

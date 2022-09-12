@@ -25,7 +25,7 @@ The Power Apps grid control represents the next evolution of the Power Apps read
 
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
-> [!NOTE]
+> [!IMPORTANT
 > This is a preview feature.
 
 ## Add the Power Apps grid control to views for an entity

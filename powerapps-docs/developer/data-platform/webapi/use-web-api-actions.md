@@ -329,7 +329,7 @@ If you do not specify the type of entity in this situation, you can get the foll
 ### See also
 
 [Web API Actions](web-api-actions.md)<br />
-[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />
+[Web API Functions and Actions Sample (C#)](samples/webapiservice-functions-and-actions.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

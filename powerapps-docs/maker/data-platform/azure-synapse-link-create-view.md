@@ -41,7 +41,6 @@ This section describes the prerequisites necessary to create a view of your Data
 
 - **Synapse administrator.** You must be granted **Synapse Administrator** role access within Synapse studio.
 
-- **SQL Database.** This guide assumes you have created an additional SQL database (Serverless Pool or Dedicated Pool) in your Azure Synapse Analytics workspace to save the view.
 
 ## Create a view of your Dataverse data
 
@@ -49,23 +48,27 @@ This section describes the prerequisites necessary to create a view of your Data
 
     ![Go to workspace.](media/go-to-workspace.png "Go to workspace")
 
-2. Expand **SQL database**, and select the **...** next to the database where you will store your view. Then select **New SQL script** > **New external table**.
-
-    ![New empty script.](media/new-empty-script.png "New empty script")
-
-3. Run a create view script by specifying a **view name**, the **column names**, **Dataverse database name**, and the exported **table name**.
+2. Create User-defined schema within Synapse SQL
 
    ```sql
-   CREATE VIEW [VIEW NAME] 
+   CREATE SCHEMA [SCHEMA NAME] 
+   GO
+   ```
+   
+3. Run a create view script by specifying a **view name**, the **column names**, **Dataverse database name** under the new **schema**, and then exported **table name**.
+
+   ```sql
+   CREATE OR ALTER VIEW [SCHEMA NAME].[VIEW NAME] 
    AS
    SELECT [COLUMN NAMES]
    FROM [DATAVERSE DATABASE NAME].[dbo].[TABLE NAME]
 
    ```
 
-4. Find the new view under the **Views** folder in the SQL database.
+## Use a view of your Dataverse data
 
-    ![Create view result.](media/create-view-result.png "Create view result")
+You can use views in your queries the same way you use views in SQL Server queries.
+The view will be created and accessible under views folder in **SQL Server Management Studio (SSMS)** or **Azure Data Studio**
 
 ### See also
 

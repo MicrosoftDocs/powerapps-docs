@@ -6,7 +6,7 @@ author: tapanm-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 01/31/2022
+ms.date: 09/06/2022
 ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
@@ -71,6 +71,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 The following limitations apply to the Power Apps visual:
 
+- Power Apps visual is only supported for [Embed for your organization](/power-bi/developer/embedded/embed-organization-app). [Embed for your customers](/power-bi/developer/embedded/embed-customer-app) is not supported.
 - The maximum number of records that can be passed from Power BI to Power Apps visual using "PowerBIIntegration" object is limited to 1000.
 - Power Apps visual is only supported for [guest users](share-app-guests.md) when the following conditions are met:
   - The canvas app URI (weblink) includes the tenantId of the app in the query string.
