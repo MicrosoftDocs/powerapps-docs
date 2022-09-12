@@ -1571,6 +1571,8 @@
         href: ./model-driven-apps/add-reporting-to-app.md      
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md
+      - name: Create Power BI report and dataset components
+        href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Use Excel and Word templates
