@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/13/2022
+ms.date: 09/09/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -25,6 +25,15 @@ Makers, developers, and IT pros can use this information to prepare for future r
 
 > [!IMPORTANT]
 > *Deprecated* means that we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it's officially removed. This deprecation notification can span a few months or years. After it's removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
+
+## Controlling site visibility changes in Power Pages
+
+Starting October 2022 with website version 9.4.9.xx, any new site created in Power Pages or Power Apps portals will be private by default. Only makers or people in the organization granted permission by makers will have website access, making Power Pages sites secure. This feature will provide another layer of security using Azure Active Directory authentication to prevent accidental leaks of partially developed website data and design. When a website is ready to go-live, the site visibility can be changed to public making it accessible to everyone over the internet anonymously or secured with identity providers.  
+
+At launch, users with the system administrator role along with [service admins](/power-platform/admin/use-service-admin-role-manage-tenant) will by default have privilege to change site visibility status (private to public or vice versa). 
+
+> [!Note] 
+> All system administrators being able to change the site visibility will only be for a certain duration after which service admins will need to explicitly specify whether all system administrators are allowed to change site visibility. However, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
@@ -73,7 +82,7 @@ Also, with the same release, lists on all portals (new or existing) that have [l
 > [!NOTE]
 > The changes described above also apply to portals [converted](admin/convert-portal.md) from trial to production.
 
-To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md) and web role setup instead.
+To configure anonymous access explicitly, use proper [table permissions](configure/entity-permissions-studio.md) and web role set up instead.
 
 ## SameSite mode changes
 
