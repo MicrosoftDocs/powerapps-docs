@@ -77,15 +77,13 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Find who's working on an app at the same time as you with copresence.
-
-Copresence provides the following benefits:
+Find who's working on an app at the same time as you with copresence. Copresence provides the following benefits:
 
 - Icons and names of people who have the app open and might be making changes are displayed.
 - Contact those people working on the app via email or Teams.
-- Sections of the app being worked on are displayed on the left navigation pane.
--	Receive notification for saved changes made from other makers. Then, you'll be prompted to refresh the app to stay on the latest version so as not to lose your work. If you choose to ignore the refresh notification, you can continue working. Later, when you go to save your work, you're given a choice to overwrite or refresh. More information: [Notifications](#notifications)
--	The name of the maker who has made the first save or the last save is displayed.
+- Sections of the app being worked on are displayed on the left navigation pane letting you know who's working on what.
+- Receive notification for saved changes made from other makers. Then, you'll be prompted to refresh the app to stay on the latest version so as not to lose your work or overwrite other's work. More information: [Notifications](#notifications)
+- The name of the maker who made the first save or the last save is displayed.
 
 > [!IMPORTANT]
 > This is a public preview feature. More information: Public previews for [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
