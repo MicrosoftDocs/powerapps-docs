@@ -34,7 +34,7 @@ This experience gives app makers the ability to configure the information displa
 
 ## Add a timeline
 
-A timeline control is located on a form within a table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. Notice that there can be only one timeline per form.
+A timeline control is located on a form within a table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. 
 
 ### Display a custom table in a timeline
 
