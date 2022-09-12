@@ -165,6 +165,9 @@ The following category and subcategory options are available on the filer menu:
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
 
+> [!NOTE]
+> By default, the fax and letter records are disabled on the timeline.
+
 <sup>1</sup> Requires a Dynamics 365 app
 
 #### Expand filter pane 
