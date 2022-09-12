@@ -62,17 +62,17 @@ In this article you'll see how to create a solution that includes Power BI compo
 
 1. In the new solution, choose **Add existing > Analytics > Power BI Report**.
 
-    ![Screenshot of add Analytics menu showing Power B I component dataset and report options.](./media/create-power-bi-components/create-power-bi-components.png)
+    ![Screenshot of add Analytics menu showing Power B I component dataset and report options.](./media/create-edit-powerbi-report-dataset-components/create-power-bi-components.png)
 
 1. Click **Outside Dataverse**, find and select the Power BI report you want to add to the solution, then choose **Add**. 
 
-    ![Screenshot showing Outside Dataverse tab for selecting a Power B I item that is outside Dataverse.](./media/create-power-bi-components/add-existing-power-bi-report.png)
+    ![Screenshot showing Outside Dataverse tab for selecting a Power B I item that is outside Dataverse.](./media/create-edit-powerbi-report-dataset-components/add-existing-power-bi-report.png)
 
     When you add a Power BI report component to a solution, a component for the report's dataset is added to the solution as well.  
 
     In addition, when you add a report from outside of Dataverse, copies of the report and its dataset are created in the Power workspace that is dedicated to the environment. **Afterwards, all updates should start from this dedicated environment workspace**.
 
-    ![Screenshot showing Power B I components successfully added to solution.](./media/create-power-bi-components/power-bi-components-exported-to-dataverse.png)
+    ![Screenshot showing Power B I components successfully added to solution.](./media/create-edit-powerbi-report-dataset-components/power-bi-components-exported-to-dataverse.png)
 
     > [!NOTE]
     > The Add operation can last a few minutes while the actual reports and datasets are being exported to Dataverse.
@@ -81,11 +81,11 @@ In this article you'll see how to create a solution that includes Power BI compo
 
     Select the dataset and choose **Edit**.
 
-    ![Screenshot showing the edit buttons for a Power BI component.](./media/create-power-bi-components/edit-power-bi-components.png)
+    ![Screenshot showing the edit buttons for a Power BI component.](./media/create-edit-powerbi-report-dataset-components/edit-power-bi-components.png)
 
 1. In the edit pane that appears, select **Yes** to configure the dataset so that it automatically connects to an existing connection when the solution is imported into another environment.
 
-    ![Screenshot showing how to automatically connect a Power B I component to an existing connection in deployment environments.](./media/create-power-bi-components/connect-component-to-existing-connection.png)
+    ![Screenshot showing how to automatically connect a Power B I component to an existing connection in deployment environments.](./media/create-edit-powerbi-report-dataset-components/connect-component-to-existing-connection.png)
 
     > [!NOTE]
     > Steps 5 and 6 are only relevant for Dataverse data sources.
@@ -107,15 +107,15 @@ In this section you'll see the options you have for configuring how a Power BI d
 
 1. Select the dataset that has the parameters you want to configure, and then choose **Edit parameters**:
 
-    ![Screenshot of how to open the edit parameter page.](./media/create-power-bi-components/open-edit-parameters-page.png)
+    ![Screenshot of how to open the edit parameter page.](./media/create-edit-powerbi-report-dataset-components/open-edit-parameters-page.png)
 
 1. Choose **Add a parameter**. You can only add parameters that are already part of the Power BI dataset:
 
-    ![Screenshot of how to add a new Power B I parameter.](./media/create-power-bi-components/add-new-power-bi-parameter.png)
+    ![Screenshot of how to add a new Power B I parameter.](./media/create-edit-powerbi-report-dataset-components/add-new-power-bi-parameter.png)
 
 1. Select a Power BI mashup parameter and choose **Edit** to open the parameters edit pane. Select the **Replace current value with \*** drop down to view the parameter configuration options.
 
-    ![Screenshot of how to replace the current parameter value.](./media/create-power-bi-components/replace-current-parameter-value.png)
+    ![Screenshot of how to replace the current parameter value.](./media/create-edit-powerbi-report-dataset-components/replace-current-parameter-value.png)
 
     You have three options for determining how the parameter is going to get its value when the solution is installed in a different environment:  
 
@@ -133,7 +133,7 @@ In this section you'll see the options you have for configuring how a Power BI d
 
 1. Once you're done configuring the parameters, click **Apply all to apply all parameter values**. 
  
-    ![Screenshot of how to apply all parameter values.](./media/create-power-bi-components/apply-all-parameter-values.png)
+    ![Screenshot of how to apply all parameter values.](./media/create-edit-powerbi-report-dataset-components/apply-all-parameter-values.png)
 
 1. Once you’re applied the parameters, you can export the solution and deploy it in your deployment environments.
 
