@@ -81,12 +81,13 @@ Find who's working on an app at the same time as you with copresence. Copresence
 
 - Icons and names of people who have the app open and might be making changes are displayed.
 - Contact those people working on the app via email or Teams.
-- Sections of the app being worked on are displayed on the left navigation pane letting you know who's working on what.
-- Receive notification for saved changes made from other makers. Then, you'll be prompted to refresh the app to stay on the latest version so as not to lose your work or overwrite other's work. More information: [Notifications](#notifications)
+- On the left navigation pane the structure of the app is displayed letting you know what part of the app is being worked on.
+- Receive notification for saved changes made from other makers. Then, you'll be prompted to refresh the app to stay on the latest version so as not to lose your work or overwrite other's work later. More information: [Notifications](#notifications)
 - The name of the maker who made the first save or the last save is displayed.
 
 > [!IMPORTANT]
-> This is a public preview feature. More information: Public previews for [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> - This is a public preview feature. More information: Public previews for [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> - This feature is being rolled out, and&mdash;depending on your region&mdash;it might not be available for your tenant yet.
 
 ### How copresence works
 
@@ -103,7 +104,7 @@ On the right side of the app designer toolbar, all the makers that have this app
 You may be working on the app, or you may be idle, but once someone else saves a change to the app, you’ll receive a notification in the upper bar indicating that another maker made changes. When this occurs, you're advised to refresh to be at the latest version so as not to lose changes you make afterwards.
 
 > [!TIP]
-> - If you weren’t expecting anyone to make changes to the app, and spent a long time adding changes, we recommend you contact the person immediately. For example, it might happen that another maker saved something minor and you can agree that your changes may overwrite their changes. In this case, do not select refresh and save your changes immediately or keep working until you are ready to save. This overwrites all the changes that have been made by other makers since your version of the app.
+> - If you weren’t expecting anyone to make changes to the app, and spent a long time adding changes, we recommend you contact the person immediately. For example, it might happen that another maker saved something minor and you can agree that your changes may overwrite their changes. In this case, do not select refresh, instead select save to present the option to overwrite changes.
 > - We recommend that you to always stay at the latest version of the app and refresh when others save changes. If you were idle and didn't make changes and see this notification, select refresh.
 >
 
@@ -112,12 +113,16 @@ If you've ignored or closed the refresh notification, you won’t be at the late
 > [!TIP]
 > We recommend you chat with the team or the person who made the last change. Copresence provides the name of the maker to alert you before you overwrite their changes.
 
+### Known copresence limitations and issues
+
+- There may be a delay up to 20 seconds between when new members join the app and when you see their presence and location.
+- There may also be a delay up to one minute between when someone saves a change and when you get a notification about the change. However, if there is a conflict, you will always get the prompt to choose whether to refresh or overwrite when you try to save.
+- Making a comment on a new page or area triggers a background save and if your app is not on the latest version you'll be prompted to either refresh or overwrite.
+
 ## Known limitation
 
 - The app’s URL can’t be specified.
 
-> [!TIP]
-> Select **Switch to classic** to use the classic designer to complete the app design tasks that aren't currently available in the modern designer.
 
 ## Next steps
 
