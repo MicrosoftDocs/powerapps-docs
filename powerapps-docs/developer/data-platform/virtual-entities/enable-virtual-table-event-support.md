@@ -5,7 +5,6 @@ ms.date: 04/04/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
-manager: sunilg
 ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"
@@ -131,7 +130,7 @@ HTTP/1.1 200 OK
 
 Then, create the virtual entity metadata record while associating it to the `Entity` entitytype using the `MetadataId` retrieved in the first step.
 
-Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtual entity metadata record to the solution as it is created. More information: [HTTP headers](/webapi/compose-http-requests-handle-errors#http-headers)
+Note the use of the `MSCRM.SolutionUniqueName` header set to the `Solution.UniqueName` value. This will add the virtual entity metadata record to the solution as it is created. More information: [HTTP headers](../webapi/compose-http-requests-handle-errors.md#http-headers)
 
 **Request**
 

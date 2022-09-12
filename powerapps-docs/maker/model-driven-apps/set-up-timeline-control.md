@@ -438,7 +438,17 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
   - Label option: Show or hide the label, "Created on", "Modified on", or "Overridden on".
   - Data column: Select to show the createdon, modifiedon, or overridenon date.
   - Display option: Always show, show on expand, this footer containing the createdon, modifiedon, or overridenon date.
+   
 
+ #### Set the notes rollup type in timeline
+  
+> [!NOTE]
+> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
+  
+The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show  those records only that're directly related to the notes in timeline, select **None**.
+
+More information on rollup types is available at [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
+  
 ### Posts on timeline
 
 To enable rich text posts on the timeline, contact [Microsoft Support](/power-platform/admin/get-help-support). 

@@ -80,14 +80,12 @@ This completes the registration of your application in Azure Active Directory.
 
 ## Additional configuration options
 
-If your application will be a Single Page Application (SPA) that depends on CORS you must configure the app registration to support the implicit flow. 
-More information: [Tutorial: Registering and configuring a SPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md)
-
 If your application will support server-to-server connections, see [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)
   
-### See also  
- [Application registration in Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)    
- [Authenticate Users with Dataverse Web Services](authentication.md)
+### See also
+
+[Application registration in Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)<br />
+[Authenticate Users with Dataverse Web Services](authentication.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

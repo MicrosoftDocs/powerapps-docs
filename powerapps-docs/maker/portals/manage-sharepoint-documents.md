@@ -195,8 +195,7 @@ The below example demonstrates configuration using the Case table which needs th
          
         d. If you’ve made any changes to the form, select **Save**.
 
-5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role
-) to make sure table permissions are granted to the users.
+5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role) to make sure table permissions are granted to the users.
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
@@ -233,7 +232,6 @@ The below example demonstrates configuration using the Case table which needs th
 
 ### See also
 
-[Microsoft Learn: Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
-
+[Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

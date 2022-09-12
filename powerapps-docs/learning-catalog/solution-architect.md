@@ -19,7 +19,7 @@ The following catalog is organized from core knowledge to specific domains, and 
 | Content | Description | Format | Length |
 |---------|-------------|--------|--------|
 | [Becoming a solution architect for Dynamics 365 and Power Platform](/learn/modules/becoming-solution-architect/) |The Solution Architect leads successful implementations and focuses on how solutions address the broader business and technical needs of organizations.  This module covers what it takes to get started as a Solution Architect and as key member of the overall project team. | Free, self-paced online learning path| 1 hr 43 min |
-| [Solution Architect: Design Microsoft Power Platform solutions](/learn/paths/solution-architect-data/) |A Solution Architect should have functional and technical knowledge of Microsoft Power Platform, Dynamics 365 apps, related Microsoft cloud solutions, and other third-party technologies. This Learning Path looks at architecture, data modeling, security, and related tasks for a solution architect. |Free, self-paced online learning path| 7 hr 6 min |
+| [Solution Architect: Design Microsoft Power Platform solutions](/learn/paths/solution-architect-data/) |A Solution Architect should have functional and technical knowledge of Microsoft Power Platform, Dynamics 365 apps, related Microsoft cloud solutions, and other third-party technologies. This learning path looks at architecture, data modeling, security, and related tasks for a solution architect. |Free, self-paced online learning path| 7 hr 6 min |
 
 ## Exam<a name="exam"></a>
 

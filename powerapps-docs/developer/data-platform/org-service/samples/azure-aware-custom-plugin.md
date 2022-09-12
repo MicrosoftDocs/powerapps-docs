@@ -7,18 +7,19 @@ ms.author: jaredha
 manager: sunilg
 ms.reviewer: jdaly
 ms.topic: article
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Azure aware custom plug-in
 
-The plug-in demonstrates how to obtain the execution context and the tracing service from the service provider parameter of the `Execute` method. The plug-in then posts the context to the Azure Service Bus endpoint and writes information to the trace log to facilitate debugging. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Azureplugin).
+The plug-in demonstrates how to obtain the execution context and the tracing service from the service provider parameter of the `Execute` method. The plug-in then posts the context to the Azure Service Bus endpoint and writes information to the trace log to facilitate debugging. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Azureplugin).
 
 ## How to run this sample
 
@@ -26,10 +27,7 @@ The plug-in demonstrates how to obtain the execution context and the tracing ser
 2. Open the sample solution in Visual Studio and sign the assembly with a key.
 3. Register the plug-in using the **Plugin Registration Tool**.
 
->[!NOTE]
+> [!NOTE]
 > This sample requires a service endpoint to be created first, and its ID passed to the plug-in constructor through the unsecure configuration parameter when the plug-in step is registered.
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
