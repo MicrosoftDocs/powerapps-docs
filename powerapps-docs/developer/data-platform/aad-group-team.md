@@ -245,10 +245,10 @@ GET [Organization URI]/api/data/v9.0/RetrieveAadUserPrivileges(DirectoryObjectId
 
 If you have a non-interactive process where your service needs to check if the user has access rights to a record, you can make a [RetrievePrincipalAccess function](/dynamics365/customer-engagement/web-api/retrieveprincipalaccess) call on behalf of the user by specifying the `CallerID`.
 
-More information: [Impersonate another user](../impersonate-another-user.md)
+More information: [Impersonate another user](impersonate-another-user.md)
 
 ### See also
 
 [Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
