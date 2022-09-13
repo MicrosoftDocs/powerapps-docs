@@ -743,7 +743,8 @@ Depends on showAsTabControl and showPreview set to true.
 
 ## Commonly used rich text editor configurations
 
-The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Create and use advanced configuration for the rich text editor control](#create-and-use-advanced-configuration-for-the-rich-text-editor-control) and [Use the default web resource for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
+The following are common configurations for the rich text editor. These sample configurations can be used to enable specific types of rich text experiences. For each sample, you create a JSON web resource or modify the default web resource configuration. More information: [Create and use advanced configuration for the rich text editor control](#create-and-use-advanced-configuration-for-the-rich-text-editor-control) and [
+for organization-wide changes](#use-the-default-web-resource-for-organization-wide-changes)
 
 ### Set the default font to Calibri with font-size 11pt
 Set your default font and size to match the Microsoft Windows defaults. This example shows which settings you use to implement this change in your experience.
@@ -958,7 +959,19 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
 ## Use the default web resource for organization-wide changes
 
-The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control. Based on your business requirements, can specify the parameters and values in this file. Use the non-editable RTEGlobalConfiguration.json as a sample to add the parameters in the required structure format.
+The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control. 
+By default, RTEGlobalConfiguration.json is empty. Based on your business requirements, you can specify the values you want to customize in this file. Use the non-editable RTEGlobalConfiguration.json as a sample to add the parameters in the required structure format.
+
+An example of the custom values you can add to the RTEGlobalConfiguration.json is:
+
+  ```
+  {
+     "defaultSupportedProps": {
+             "height": 300,
+	     "toolbarLocation" : "top"
+      }
+   }   
+  ```
 
 
 ## Find the current setting for a rich text editor configuration
