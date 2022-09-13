@@ -190,6 +190,7 @@ class OAuthMessageHandler : DelegatingHandler
         //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
         authHeader = new AuthenticationHeaderValue("Bearer", authBuilderResult.AccessToken);
     }
+
     protected override Task<HttpResponseMessage> SendAsync(
               HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
     {
