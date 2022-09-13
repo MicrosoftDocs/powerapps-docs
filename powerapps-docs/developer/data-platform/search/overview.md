@@ -69,13 +69,295 @@ Search provides three operations to support a user interface that enables search
 |`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page.|
 |`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. |
 |`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.|
-|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.status?text=status Function><br />`status`|Search status of an Organization.|
+|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`status`|Search status of an Organization.|
 |`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.|
 
 The Web API and Dataverse SDK for .NET expose the native Search verbs Web API Actions or as organization service `messages`. These actions and messages use the native search endpoint on the server and return the results.
 
-## Search Status and Statistics
+## Search Status
 
+Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, and administrator must enable it.
+
+You will get the following error when using the native search endpoint and search is not enabled:
+
+TODO: Check Web API and SDK errors as well
+
+```http
+
+HTTP/1.1 501 Not Implemented
+
+{
+  "Message": "The Relevance Search API is currently disabled. To enable this API, activate the Relevance Search experience administration option in System Settings.",
+  "ExceptionMessage": "The Relevance Search API is currently disabled. To enable this API, activate the Relevance Search experience administration option in System Settings.",
+  "ExceptionType": "Microsoft.Crm.CrmHttpException",
+  "StackTrace": "[Redacted for brevity]",
+  "ErrorCode": "0x8006088a"
+}
+
+```
+
+You can detect whether the search service is enabled without catching the error using the following:
+
+### Check Organization table
+
+The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. You can query the following properties to determine the status of the service:
+
+|Name  |Type|Description|
+|---------|---------|---------|
+|[IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled)|Yes/No|Select whether data can be synchronized with an external search index.|
+|[NewSearchExperienceEnabled](../reference/entities/organization.md#BKMK_NewSearchExperienceEnabled)|Yes/No|Indicates whether an organization has enabled the new Relevance search experience (released in Oct 2020) for the organization|
+|[RelevanceSearchModifiedOn](../reference/entities/organization.md#BKMK_RelevanceSearchModifiedOn)|DateTime|This setting contains the last modified date for relevance search setting that appears as a toggle in PPAC.|
+|[RelevanceSearchEnabledByPlatform](../reference/entities/organization.md#BKMK_RelevanceSearchEnabledByPlatform)|Yes/No|   Indicates whether relevance search was enabled for the environment as part of Dataverse's relevance search on-by-default sweep|
+
+#### [.NET SDK](#tab/sdk)
+
+```csharp
+static void CheckOrganizationSearchProperties(IOrganizationService service) {
+
+   QueryExpression query = new QueryExpression("organization") { 
+      ColumnSet = new ColumnSet(
+         "isexternalsearchindexenabled", 
+         "newsearchexperienceenabled", 
+         "relevancesearchmodifiedon", 
+         "relevancesearchenabledbyplatform")
+   };
+
+   EntityCollection organizations = service.RetrieveMultiple(query);
+   Entity organization = organizations.Entities.FirstOrDefault();
+   Console.WriteLine("Organization Search Values:");
+   Console.WriteLine($"\tIsExternalSearchIndexEnabled:{organization["isexternalsearchindexenabled"]}");
+   Console.WriteLine($"\tNewSearchExperienceEnabled:{organization["newsearchexperienceenabled"]}");
+   Console.WriteLine($"\tRelevanceSearchModifiedOn:{organization["relevancesearchmodifiedon"]}");
+   Console.WriteLine($"\tRelevanceSearchEnabledByPlatform:{organization["relevancesearchenabledbyplatform"]}");
+}
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/organizations?$select=isexternalsearchindexenabled,newsearchexperienceenabled,relevancesearchmodifiedon,relevancesearchenabledbyplatform HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isexternalsearchindexenabled,newsearchexperienceenabled,relevancesearchmodifiedon,relevancesearchenabledbyplatform)",
+    "value": [
+        {
+            "@odata.etag": "W/\"73630341\"",
+            "isexternalsearchindexenabled": true,
+            "newsearchexperienceenabled": true,
+            "relevancesearchmodifiedon": "2022-09-12T23:41:58Z",
+            "relevancesearchenabledbyplatform": false,
+            "organizationid": "883278f5-07af-45eb-a0bc-3fea67caa544"
+        }
+    ]
+}
+```
+
+--- 
+
+
+If you want to programatically enable search for an org, you can set these properties by updating the organization record for all of these properties.
+
+
+### Use the status API
+
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+GET [Organization URI]/api/search/v1.0/status HTTP/1.1
+```
+
+When search is not enabled, the status property will be `notprovisioned`.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "value": {
+    "status": "notprovisioned",
+    "lockboxstatus": "Unknown"
+  }
+}
+```
+
+When search is enabled, detailed information about each entity is in the `entitystatusresults` 
+property and the `status` value is `provisioned`.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "value": {
+    "entitystatusresults": [
+      {
+        "entitylogicalname": "account",
+        "objecttypecode": 1,
+        "primarynamefield": "name",
+        "lastdatasynctimestamp": "73630169!09/12/2022 14:26:14",
+        "lastprincipalobjectaccesssynctimestamp": "72969347!09/12/2022 14:26:14",
+        "entitystatus": "EntitySyncComplete",
+        "searchableindexedfieldinfomap": {
+          "emailaddress1": {
+            "indexfieldname": "a3x"
+          },
+          "address1_city": {
+            "indexfieldname": "a3y"
+          },
+          "modifiedon": {
+            "indexfieldname": "j_0"
+          },
+          "telephone1": {
+            "indexfieldname": "a3z"
+          },
+          "statecode": {
+            "indexfieldname": "f_0"
+          },
+          "primarycontactid": {
+            "indexfieldname": "a40"
+          },
+          "statuscode": {
+            "indexfieldname": "g_0"
+          },
+          "createdon": {
+            "indexfieldname": "i_0"
+          },
+          "entityimage_url": {
+            "indexfieldname": "h_0"
+          },
+          "industrycode": {
+            "indexfieldname": "a43"
+          },
+          "name": {
+            "indexfieldname": "d_0"
+          },
+          "owningbusinessunit": {
+            "indexfieldname": "c_0"
+          },
+          "crdcb_testrollupfield": {
+            "indexfieldname": "a45"
+          },
+          "ownerid": {
+            "indexfieldname": "b_0"
+          },
+          "accountnumber": {
+            "indexfieldname": "a46"
+          },
+          "telephone2": {
+            "indexfieldname": "a47"
+          },
+          "versionnumber": {
+            "indexfieldname": "e_0"
+          },
+          "accountid": {
+            "indexfieldname": "a_0"
+          },
+          "crdcb_throwawaydate": {
+            "indexfieldname": "a48"
+          },
+          "crdcb_budget": {
+            "indexfieldname": "a8f"
+          }
+        }
+      },
+<Information on other entities removed for brevity>      
+    ],
+    "status": "provisioned",
+    "lockboxstatus": "Disabled",
+    "cmkstatus": "Disabled"
+  }
+}
+```
+
+#### [.NET SDK](#tab/sdk)
+
+```csharp
+static void CheckSearchStatus(IOrganizationService service) {
+   try
+   {
+      var status = (searchstatusResponse)service.Execute(new searchstatusRequest());
+
+      Console.WriteLine(status.response);
+      //Expect that this value is an escaped string containing JSON that must be parsed
+   }
+   catch (FaultException<OrganizationServiceFault> osf)
+   {
+      Console.WriteLine($"OrganizationServiceFault:{osf.Message}");
+      // Fails here, Due to plug-in in Custom API?
+
+      /*
+      ErrorCode: 0x80048D0A IsvAbortedInternalServerError
+      Message: Object reference not set to an instance of an object.
+      
+      */
+   }
+   catch (Exception ex) {
+
+      Console.WriteLine($"Exception:{ex.Message}");
+   }      
+}
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/searchstatus HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
+```
+
+The `response` property returned by <xref:Microsoft.Dynamics.CRM.searchstatusResponse?text=searchstatusResponse ComplexType> is an escaped string containing JSON data.
+
+When search is not enabled, the `status` property within that escaped string will be `notprovisioned`.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatusResponse",
+  "response": "{\"value\":{\"status\":\"notprovisioned\",\"lockboxstatus\":\"Unknown\"}}"
+}
+```
+
+When search is enabled, the response property contains all the same data in an escaped string that is returned with the search endpoint.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatusResponse",
+  "response": "{\"value\":{\"entitystatusresults\":[{\"entitylogicalname\":\"account\",\"objecttypecode\":1,\"primarynamefield\":\"name\",\"lastdatasynctimestamp\":\"73630169!09/12/2022 14:26:14\",\"lastprincipalobjectaccesssynctimestamp\":\"72969347!09/12/2022 14:26:14\",\"entitystatus\":\"EntitySyncComplete\",\"searchableindexedfieldinfomap\":{\"emailaddress1\":{\"indexfieldname\":\"a3x\"},\"address1_city\":{\"indexfieldname\":\"a3y\"},\"modifiedon\":{\"indexfieldname\":\"j_0\"},\"telephone1\":{\"indexfieldname\":\"a3z\"},\"statecode\":{\"indexfieldname\":\"f_0\"},\"primarycontactid\":{\"indexfieldname\":\"a40\"},\"statuscode\":{\"indexfieldname\":\"g_0\"},\"createdon\":{\"indexfieldname\":\"i_0\"},\"entityimage_url\":{\"indexfieldname\":\"h_0\"},\"industrycode\":{\"indexfieldname\":\"a43\"},\"name\":{\"indexfieldname\":\"d_0\"},\"owningbusinessunit\":{\"indexfieldname\":\"c_0\"},\"crdcb_testrollupfield\":{\"indexfieldname\":\"a45\"},\"ownerid\":{\"indexfieldname\":\"b_0\"},\"accountnumber\":{\"indexfieldname\":\"a46\"},\"telephone2\":{\"indexfieldname\":\"a47\"},\"versionnumber\":{\"indexfieldname\":\"e_0\"},\"accountid\":{\"indexfieldname\":\"a_0\"},\"crdcb_throwawaydate\":{\"indexfieldname\":\"a48\"},\"crdcb_budget\":{\"indexfieldname\":\"a8f\"}}}, <Information on other entities removed for brevity> ],\"status\":\"provisioned\",\"lockboxstatus\":\"Disabled\",\"cmkstatus\":\"Disabled\"}}"
+}
+
+```
+
+---
 
 ## Service Protection Limits
 
