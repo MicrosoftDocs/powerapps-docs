@@ -71,7 +71,7 @@ If you still need more help, select **No** to the question, **Did this solve you
 
 ## Restart or close a session
 
-Your conversation with the virtual agent is open until you restart the conversation or when you end the session.
+Your conversation with the virtual agent is open until you restart the conversation or until you end the session.
 
 1. To start a new session, select **Restart virtual agent**.
 
