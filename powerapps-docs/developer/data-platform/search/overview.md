@@ -60,8 +60,8 @@ More information:
 
 In the Web API, the search operations are exposed as OData actions and functions. More information:
 
-[Use Web API actions](../webapi/use-web-api-actions.md)
-[Use Web API functions](../webapi/use-web-api-functions.md)
+- [Use Web API actions](../webapi/use-web-api-actions.md)
+- [Use Web API functions](../webapi/use-web-api-functions.md)
 
 ## Search operations
 
@@ -128,7 +128,7 @@ The [Organization table](../reference/entities/organization.md) contains a singl
 #### [Search endpoint](#tab/search)
 
 <!-- Must include this tab b/c all tabs must be consistent on the page -->
-Not available. You must use the .NET SDK or Web API for this.
+Organization table isn't available with the search endpoint. Use the SDK, Web API, or the [Search Status](#search-status) operation. 
 
 #### [.NET SDK](#tab/sdk)
 
@@ -400,7 +400,7 @@ Search statistics provides information about:
 **Request**
 
 ```http
-GET https://crmue.api.crm.dynamics.com/api/search/v1.0/statistics HTTP/1.1
+GET [Organization URI]/api/search/v1.0/statistics HTTP/1.1
 ```
 
 **Response**
@@ -469,7 +469,7 @@ StackTrace:
 **Request**
 
 ```http
-GET https://crmue.api.crm.dynamics.com/api/data/v9.2/searchstatistics HTTP/1.1
+GET [Organization URI]/api/data/v9.2/searchstatistics HTTP/1.1
 ```
 
 **Response**
@@ -478,7 +478,7 @@ GET https://crmue.api.crm.dynamics.com/api/data/v9.2/searchstatistics HTTP/1.1
 HTTP/1.1 200 OK
 
 {
-  "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
   "response": "{\"value\":{\"storagesizeinbytes\":11464058,\"storagesizeinmb\":10,\"documentcount\":13155}}"
 }
 
