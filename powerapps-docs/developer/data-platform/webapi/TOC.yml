@@ -16,12 +16,8 @@
       href: enhanced-quick-start.md
     - name: Start Web API project in Visual Studio
       href: start-web-api-project-visual-studio-csharp.md
-- name: Security and web service access
-  items:
-  - name: Web service authentication
-    href: authenticate-web-api.md
-  - name: Active Directory group teams
-    href: aad-group-team.md
+- name: Web service authentication
+  href: authenticate-web-api.md
 - name: Types and operations
   href: web-api-types-operations.md
   items:
