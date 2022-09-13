@@ -25,13 +25,13 @@ search.app:
 ---
 # Add table relationships to a form
 
-Creating a table relationship adds the navigation within a form that allows app users to view lists of related records from the Related tab in a model-driven app. 
+Creating a table relationship adds the navigation within a form that allows app users to view a list of related records from the **Related** tab in a model-driven app.
 
 :::image type="content" source="media/related-tab.png" alt-text="Related tab in a model-driven app":::
 
-Each table relationship has properties to control whether it should be shown.  More information: [Navigation pane item for primary table](../data-platform/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-table)  
+Each table relationship has properties to control the relationship behavior. More information: [Table relationship behavior](../data-platform/create-edit-entity-relationships.md#table-relationship-behavior)
   
-Table relationships that are configured to be displayed can be overridden within the form designer. Navigation links can also be included to display web resources or other web sites via form navigation.
+Table relationships that are configured to be displayed can be hidden using the form designer.
 
 ## Add, edit, or create a related table in form designer (preview)
 
@@ -61,7 +61,7 @@ Table relationships that are configured to be displayed can be overridden within
 - You can’t edit or remove self many-to-many relationships.
 - You can't add or edit related web resources or external URLs.
 
-## Creating navigation using the legacy experience
+## Create navigation using the legacy experience
 
 To enable editing navigation first select **Navigation** from the **Select** group on the **Home** tab of the form designer.  
 
