@@ -15,3 +15,67 @@ contributors:
  - JimDaly
 ---
 # Dataverse Search autocomplete
+
+
+## Examples
+
+### Example: TODO
+
+This is a template for an example
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+POST [Organization URI]/api/search/v1.0/status HTTP/1.1
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{}
+```
+
+#### [.NET SDK](#tab/sdk)
+
+```csharp
+static void SDKExampleMethod(IOrganizationService service){
+ TODO
+}
+```
+**Output**
+
+```
+TODO: The output of the SDK Sample
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{}
+```
+---
+
+### See also
+
+[Search for Dataverse records](overview.md)<br />
+[Dataverse Search query](query.md)<br />
+[Dataverse Search suggest](suggest.md)<br />
+
+[!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

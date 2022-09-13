@@ -42,7 +42,7 @@ Developers can use the search APIs three different ways:
 
 The search endpoint is the native endpoint for Dataverse Search. This is the endpoint used for the search experience in model-driven apps. You can use this endpoint without authentication from within model-driven application experiences such as PCF controls or form scripts.
 
-You can also authenticate to this endpoint from external applications just as you would when using Web API, but you will use the `/api/search/` path rather than `/api/data/`.
+You can also authenticate to this endpoint from external applications just as you would when using Web API, but you will use the `/api/search/` path rather than `/api/data/`. More information: [Use OAuth authentication with Microsoft Dataverse](../authenticate-oauth.md)
 
 ### Use the Dataverse SDK for .NET
 
@@ -65,7 +65,7 @@ In the Web API, the search operations are exposed as OData actions and functions
 
 ## Search operations
 
-Search provides three operations to support a user interface that enables searching for data and two operations that you can use to retrieve information about how the organization is configured to support search.
+Search provides three operations to support a user interface that enables searching for data.
 
 |Search Endpoint<br />Web API Action<br />SDK message|Description|
 |---------|---------|
@@ -128,7 +128,7 @@ The [Organization table](../reference/entities/organization.md) contains a singl
 #### [Search endpoint](#tab/search)
 
 <!-- Must include this tab b/c all tabs must be consistent on the page -->
-Not available. You must use the SDK or Web API for this.
+Not available. You must use the .NET SDK or Web API for this.
 
 #### [.NET SDK](#tab/sdk)
 
@@ -208,7 +208,7 @@ More information: [Query data using the Web API](../webapi/query-data-web-api.md
 
 Use search status to know:
 
-- Whether Search is enabled
+- Whether search is enabled.
 - Which tables and columns are enabled for search.
 
 #### [Search endpoint](#tab/search)
