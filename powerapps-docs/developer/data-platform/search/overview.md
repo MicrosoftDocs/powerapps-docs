@@ -66,11 +66,11 @@ Search provides three operations to support a user interface that enables search
 
 |Search Endpoint<br />Web API Action<br />SDK message|Description|
 |---------|---------|
-|`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page.|
-|`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. |
-|`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.|
-|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`status`|Search status of an Organization.|
-|`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.|
+|`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
+|`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
+|`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
+|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`status`|Search status of an Organization.<br /> See [Use the status API](#use-the-status-api)|
+|`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.<br /> See [Search statistics](#search-statistics)|
 
 The Web API and Dataverse SDK for .NET expose the native Search verbs Web API Actions or as organization service `messages`. These actions and messages use the native search endpoint on the server and return the results.
 
@@ -111,7 +111,9 @@ The [Organization table](../reference/entities/organization.md) contains a singl
 
 #### [Search endpoint](#tab/search)
 
-Not available.
+<!-- Must include this tab b/c all tabs must be consistent on the page -->
+Not available. You must use the SDK or Web API for this.
+
 #### [.NET SDK](#tab/sdk)
 
 ```csharp
@@ -133,6 +135,16 @@ static void CheckOrganizationSearchProperties(IOrganizationService service) {
    Console.WriteLine($"\tRelevanceSearchModifiedOn:{organization["relevancesearchmodifiedon"]}");
    Console.WriteLine($"\tRelevanceSearchEnabledByPlatform:{organization["relevancesearchenabledbyplatform"]}");
 }
+```
+
+**Output**:
+
+```
+Organization Search Values:
+        IsExternalSearchIndexEnabled:True
+        NewSearchExperienceEnabled:True
+        RelevanceSearchModifiedOn:9/12/2022 11:41:58 PM
+        RelevanceSearchEnabledByPlatform:False
 ```
 
 #### [Web API](#tab/webapi)
@@ -167,8 +179,7 @@ HTTP/1.1 200 OK
     ]
 }
 ```
-
---- 
+---
 
 If you want to programatically enable search for an org, you can set these properties by updating the organization record for all of these properties.
 
@@ -253,9 +264,6 @@ HTTP/1.1 200 OK
           "owningbusinessunit": {
             "indexfieldname": "c_0"
           },
-          "crdcb_testrollupfield": {
-            "indexfieldname": "a45"
-          },
           "ownerid": {
             "indexfieldname": "b_0"
           },
@@ -270,12 +278,6 @@ HTTP/1.1 200 OK
           },
           "accountid": {
             "indexfieldname": "a_0"
-          },
-          "crdcb_throwawaydate": {
-            "indexfieldname": "a48"
-          },
-          "crdcb_budget": {
-            "indexfieldname": "a8f"
           }
         }
       },
@@ -360,6 +362,10 @@ HTTP/1.1 200 OK
 ```
 
 ---
+
+## Search statistics
+
+TODO: Add examples here
 
 ## Service Protection Limits
 
