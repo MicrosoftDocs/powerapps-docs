@@ -23,9 +23,9 @@ You can connect to a virtual agent from the following areas:
 
 - [Power Apps](https://make.preview.powerapps.com/) home page
 
-- [Model-driven app designer](../../maker/model-driven-apps/app-designer-overview)
+- [Model-driven app designer](../model-driven-apps/app-designer-overview.md)
 
-- [Power Apps studio](../../canvas-apps/power-apps-studio.md)
+- [Power Apps studio](../canvas-apps/power-apps-studio.md)
 
 When the left navigation menu is expanded the **Ask a virtual agent** button looks like this: ![Ask a virtual agent expanded menu.](media/bot/virtual-agent-expanded.png "Ask a virtual agent button in its expanded state")
 
@@ -38,12 +38,12 @@ To access the virtual agent on the [Power Apps](https://make.preview.powerapps.c
 > [!div class="mx-imgBorder"]
 >![Access the virtual agent from the Power Apps home page.](media/bot/home-page-maker-1.png)
 
-From the [model-driven app designer](/power-apps/maker/model-driven-apps/app-designer-overview), select **Ask a virtual agent**.
+From the [model-driven app designer](../model-driven-apps/app-designer-overview.md), select **Ask a virtual agent**.
 
 > [!div class="mx-imgBorder"]
 > ![Access the virtual agent from the model-driven app designer.](media/bot/model-driven-designer-2.png)
 
-In [Power Apps studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio), select **Ask virtual agent**.
+In [Power Apps studio](../canvas-apps/power-apps-studio.md), select **Ask virtual agent**.
 
 > [!div class="mx-imgBorder"]
 > ![Access the virtual agent from Power Apps studio.](media/bot/power-app-studio-3.png)
