@@ -65,7 +65,7 @@ In [Power Apps studio](../canvas-apps/power-apps-studio.md), select **Ask virtua
 3. Select the area that you need help in or select **I need help with something else** to ask the bot a question.
 
    > [!div class="mx-imgBorder"]
-   > [Still need help.](media/bot/virtual-agent-3.png)
+   > ![Still need help.](media/bot/virtual-agent-3.png)
 
 If you still need more help, select **No** to the question, **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
 
