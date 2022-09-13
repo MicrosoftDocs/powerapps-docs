@@ -1,52 +1,71 @@
-﻿---
-title: Get help building your app from a virtual agent
 ---
+title: "Get help building your app from a virtual agent | MicrosoftDocs"
+description: Get help building your app from a virtual agent. 
+ms.custom: ""
+ms.date: 09/12/2022
+ms.reviewer: "mkaur"
+ms.topic: overview
+author: "yogeshgupta698"
+ms.subservice: common
+ms.author: "mkaur"
+manager: "kvivek"
+search.audienceType: 
+  - maker, admin
+search.app: 
+  - PowerApps
+---
+
+# Get help building your app from a virtual agent
 
 Get contextual help while building your app using the Power Platform virtual agent. The virtual agent is available to answer questions about common scenarios when you're building an app. The virtual agent helps you by providing access to help content from documentation, the community, and blogs.
 
 You can connect to a virtual agent from the following areas:
 
-\- [Power Apps](https://make.preview.powerapps.com/) home page
+- [Power Apps](https://make.preview.powerapps.com/) home page
 
-\- [Model-driven app designer](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-designer-overview)
+- [Model-driven app designer](/model-driven-apps/app-designer-overview)
 
-\- [Power Apps studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio)
+- [Power Apps studio](maker/canvas-apps/power-apps-studio)
 
-When the left navigation menu is expanded the **Ask a virtual agent** button looks like this: ![a closeup of the  quot](media/Ask a virtual agent&quot.png " button in its expanded state, showing the robot icon on the left and verbiage on the right.")
+When the left navigation menu is expanded the **Ask a virtual agent** button looks like this: ![Ask a virtual agent expanded menu.](media/virtual-agent-expanded.png "Ask a virtual agent button in its expanded state")
 
-When you hide the left navigation menu the **Ask a virtual agent** button looks like this: ![A closeup of the virtual agent icon in its collapsed state  showing only the robot icon  ](media/image2.png)
+When you hide the left navigation menu the **Ask a virtual agent** button looks like this: ![Ask a virtual agent hidden menu](media/virtual-agent-hidden.png)
 
 ## Access the virtual agent
 
--   To access the virtual agent on the [Power Apps](https://make.preview.powerapps.com/) home page, select **Ask a virtual agent**.
+To access the virtual agent on the [Power Apps](https://make.preview.powerapps.com/) home page, select **Ask a virtual agent**.
 
-![Graphical user interface  application  Teams Description automatically generated](media/image3.png)
+> [!div class="mx-imgBorder"]
+>![Access the virtual agent from the Power Apps home page.](media/home-page-maker-1.png)
 
--   From the [model-driven app designer](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-designer-overview), select **Ask a virtual agent**.
+From the [model-driven app designer](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-designer-overview), select **Ask a virtual agent**.
 
-![Graphical user interface  application  Teams Description automatically generated](media/image4.png)
+> [!div class="mx-imgBorder"]
+> ![Access the virtual agent from the model-driven app designer.](media/model-driven-designer-2.png)
 
-## 
+In [Power Apps studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio), select **Ask virtual agent**.
 
--   In [Power Apps studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio), select **Ask virtual agent**.
+> [!div class="mx-imgBorder"]
+> ![Access the virtual agent from Power Apps studio.](media/power-app-studio-3.png)
 
-![Graphical user interface Description automatically generated](media/image5.png)
+## Get help using the virtual agent
 
-# Get help using the virtual agent
+1. From Power Apps, select **Ask a virtual agent** to open the virtual assistant.
 
-1.  From Power Apps, select **Ask a virtual agent** to open the virtual assistant.
+   > [!div class="mx-imgBorder"]
+   >![Open the virtual agent.](media/virtual-agent-1.png)
 
-![Graphical user interface  application  Teams Description automatically generated](media/image6.png)
+2. Select **App creation** to get help with Power Apps.
 
-2\. Select **App creation** to get help with Power Apps.
-
-![Graphical user interface  application Description automatically generated](media/image7.png)
+   > [!div class="mx-imgBorder"]
+   > ![Select app creation.](media/virtual-agent-2.png)
 
 **Note**: You can also ask questions about other parts of the Power Platform by selecting a different topic.
 
-3.  Select the area that you need help in or select **I need help with something else** to ask the bot a question.
+3. Select the area that you need help in or select **I need help with something else** to ask the bot a question.
 
-![Graphical user interface  text  application Description automatically generated](media/image8.png)
+   > [!div class="mx-imgBorder"]
+   > [Still need help.](media/virtual-agent-3.png)
 
 If you still need more help, select **No** to the question, **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
 
@@ -54,8 +73,9 @@ If you still need more help, select **No** to the question, **Did this solve you
 
 Your conversation with the virtual agent is open until you restart the conversation or when you end the session.
 
-1.  To start a new session, select **Restart virtual agent**.
+1. To start a new session, select **Restart virtual agent**.
 
-2.  To end a session, select **Close virtual agent**.
+2. To end a session, select **Close virtual agent**.
 
-![Graphical user interface  text  application  email Description automatically generated](media/image9.png)
+   > [!div class="mx-imgBorder"]
+   > ![Restart or close the session.](media/virtual-agent-4.png)
