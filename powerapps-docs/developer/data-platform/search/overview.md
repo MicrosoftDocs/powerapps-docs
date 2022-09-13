@@ -109,6 +109,9 @@ The [Organization table](../reference/entities/organization.md) contains a singl
 |[RelevanceSearchModifiedOn](../reference/entities/organization.md#BKMK_RelevanceSearchModifiedOn)|DateTime|This setting contains the last modified date for relevance search setting that appears as a toggle in PPAC.|
 |[RelevanceSearchEnabledByPlatform](../reference/entities/organization.md#BKMK_RelevanceSearchEnabledByPlatform)|Yes/No|   Indicates whether relevance search was enabled for the environment as part of Dataverse's relevance search on-by-default sweep|
 
+#### [Search endpoint](#tab/search)
+
+Not available.
 #### [.NET SDK](#tab/sdk)
 
 ```csharp
@@ -166,7 +169,6 @@ HTTP/1.1 200 OK
 ```
 
 --- 
-
 
 If you want to programatically enable search for an org, you can set these properties by updating the organization record for all of these properties.
 
@@ -343,7 +345,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-When search is enabled, the response property contains all the same data in an escaped string that is returned with the search endpoint.
+When search is enabled, the response property contains all the same data in an escaped string that is returned with the search endpoint and the `status` value within the string is `provisioned`.
 
 **Response**
 
