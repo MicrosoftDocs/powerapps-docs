@@ -42,6 +42,7 @@ Table relationships that are configured to be displayed can be overridden within
    - Add and edit an existing relationship. Select a table in the list to display the table properties in the right pane. Select **Edit relationship** to make changes to the relationship. More information: [Add advanced relationship behavior](../data-platform/data-platform-entity-lookup.md#add-advanced-relationship-behavior)
    - Add a new relationship. Select **+** to **Search** for another relationship or select **New relationship** to create either a **One-to-many relationship** or **Many-to-many** relationship. More information: [Add a One-to-many relationship](../data-platform/data-platform-entity-lookup.md#add-a-one-to-many-relationship) and [Add a Many-to-many relationship](../data-platform/data-platform-entity-lookup.md#add-a-many-to-many-relationship)
 
+     :::image type="content" source="media/add-relationship-form-designer.png" alt-text="Add a related table":::
 1. **Save** and **Publish** the change.
 
 ### Hide a relationship
