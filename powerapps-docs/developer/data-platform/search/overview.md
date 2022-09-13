@@ -58,7 +58,10 @@ More information:
 
 ### Use the Web API
 
-In the Web API, the `searchquery`, `searchsuggest`, and `searchautocomplete` messages are exposed as OData actions. More information: [Use Web API actions](../webapi/use-web-api-actions.md)
+In the Web API, the search operations are exposed as OData actions and functions. More information:
+
+[Use Web API actions](../webapi/use-web-api-actions.md)
+[Use Web API functions](../webapi/use-web-api-functions.md)
 
 ## Search operations
 
@@ -69,18 +72,22 @@ Search provides three operations to support a user interface that enables search
 |`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
 |`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
 |`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
-|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`status`|Search status of an Organization.<br /> See [Use the status API](#use-the-status-api)|
-|`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.<br /> See [Search statistics](#search-statistics)|
 
-The Web API and Dataverse SDK for .NET expose the native Search verbs Web API Actions or as organization service `messages`. These actions and messages use the native search endpoint on the server and return the results.
+There are also two operations you can use to understand whether search is enabled and how it is configured.
 
-## Search Status
+|Search Endpoint<br />Web API Function<br />SDK message|Description|
+|---------|---------|
+|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`status`|Search status of an Organization.<br /> See [Search Status](#search-status)|
+|`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.<br /> See [Search Statistics](#search-statistics)|
 
-Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, and administrator must enable it.
+
+## Detect if search is enabled
+
+Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, an administrator must enable it.
 
 You will get the following error when using the native search endpoint and search is not enabled:
 
-TODO: Check Web API and SDK errors as well
+#### [Search endpoint](#tab/search)
 
 ```http
 
@@ -93,10 +100,19 @@ HTTP/1.1 501 Not Implemented
   "StackTrace": "[Redacted for brevity]",
   "ErrorCode": "0x8006088a"
 }
-
 ```
 
-You can detect whether the search service is enabled without catching the error using the following:
+#### [.NET SDK](#tab/sdk)
+
+TODO
+
+#### [Web API](#tab/webapi)
+
+TODO
+
+---
+
+You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Search Status](#search-status) operation.
 
 ### Check Organization table
 
@@ -136,6 +152,7 @@ static void CheckOrganizationSearchProperties(IOrganizationService service) {
    Console.WriteLine($"\tRelevanceSearchEnabledByPlatform:{organization["relevancesearchenabledbyplatform"]}");
 }
 ```
+More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
 
 **Output**:
 
@@ -179,12 +196,20 @@ HTTP/1.1 200 OK
     ]
 }
 ```
+More information: [Query data using the Web API](../webapi/query-data-web-api.md)
+
 ---
 
-If you want to programatically enable search for an org, you can set these properties by updating the organization record for all of these properties.
+> [!NOTE]
+> If you want to programatically enable search for an org, you can set these properties by updating the organization record for all of these properties.
 
 
-### Use the status API
+## Search Status
+
+Use search status to know:
+
+- Whether Search is enabled
+- Which tables and columns are enabled for search.
 
 #### [Search endpoint](#tab/search)
 
@@ -209,8 +234,8 @@ HTTP/1.1 200 OK
 }
 ```
 
-When search is enabled, detailed information about each entity is in the `entitystatusresults` 
-property and the `status` value is `provisioned`.
+When search is enabled, detailed information about each entity is in the `entitystatusresults`
+property and the `status` value is `provisioned`. For each entity, the `searchableindexedfieldinfomap` tells you which columns are included in search.
 
 **Response**
 
@@ -360,12 +385,106 @@ HTTP/1.1 200 OK
 }
 
 ```
-
 ---
 
 ## Search statistics
 
-TODO: Add examples here
+Search statistics provides information about:
+
+- Storage size in bytes
+- Storage size in megabytes
+- Number of documents
+
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+GET https://crmue.api.crm.dynamics.com/api/search/v1.0/statistics HTTP/1.1
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "value": {
+    "storagesizeinbytes": 11464058,
+    "storagesizeinmb": 10,
+    "documentcount": 13155
+  }
+}
+```
+
+#### [.NET SDK](#tab/sdk)
+
+```csharp
+
+static void CheckSearchStatistics(IOrganizationService service)
+{
+   try
+   {
+      var searchstatisticsResponse = (searchstatisticsResponse)service.Execute(new searchstatisticsRequest());
+      Console.WriteLine(searchstatisticsResponse.response);
+
+   }
+   catch (FaultException<OrganizationServiceFault> osf)
+   {
+      
+      Console.WriteLine($"OrganizationServiceFault:{osf.Detail}");
+      Console.WriteLine($"StackTrace:{osf.Detail.TraceText}");
+
+   }
+   catch (Exception ex)
+   {
+
+      Console.WriteLine($"Exception:{ex.Message}");
+   }            
+}
+
+```
+
+**Output**
+
+```
+OrganizationServiceFault:Exception details:
+ErrorCode: 0x80048D0A
+Message: Object reference not set to an instance of an object.
+TimeStamp: 2022-09-13T19:14:06.9534141Z
+--
+Exception details:
+ErrorCode: 0x80048D0A
+Message: Object reference not set to an instance of an object.
+TimeStamp: 2022-09-13T19:14:06.9534141Z
+--
+
+StackTrace:
+[Microsoft.CDS.RelevanceSearch.Plugins: Microsoft.CDS.RelevanceSearch.Plugins.StatisticsPlugin]
+[1dc24ad0-fe44-ec11-8c60-002248208fac: CustomApi 'searchstatistics' implementation]
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET https://crmue.api.crm.dynamics.com/api/data/v9.2/searchstatistics HTTP/1.1
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
+  "response": "{\"value\":{\"storagesizeinbytes\":11464058,\"storagesizeinmb\":10,\"documentcount\":13155}}"
+}
+
+```
+
+---
 
 ## Service Protection Limits
 
