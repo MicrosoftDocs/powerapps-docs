@@ -46,7 +46,7 @@ In this article, you'll see how to
 
 1. Open your Power Apps solution development environment.
     > [!NOTE]
-    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. See [Cross-geo operations](./security-notes-powerapps-power-bi-integration.md#cross-geo-operations) more information. 
+    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. See [Cross-geo operations](/power-bi/collaborate-share/service-powerbi-powerapps-integration#cross-geo-operations) more information. 
 
 1. Create a new solution.
 
@@ -119,7 +119,7 @@ In this section you'll see the options you have for configuring how a Power BI d
 
         When you configure a parameter with an environment variable in order to require the installer to provide a value upon deployment, make sure that the default value is blank. If there is a current value, remove it by right-clicking and choosing **Remove from solution**. 
 
-        See [Environment variables overview](./environmentvariables.md) for more information about environment variables. 
+        See [Environment variables overview](../data-platform/environmentvariables.md) for more information about environment variables. 
 
 1. Once you're done configuring the parameters, click **Apply all to apply all parameter values**. 
  
