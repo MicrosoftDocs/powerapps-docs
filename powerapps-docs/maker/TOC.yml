@@ -2514,6 +2514,8 @@
       href: ./data-platform/use-powerbi-dataverse.md
     - name: Create a Power BI report
       href: ./data-platform/data-platform-powerbi-connector.md
+    - name: Customize and manage Power BI components
+      href: ./data-platform/customize-manage-powerbi-components.md
     - name: View table data in Power BI Desktop
       href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration
