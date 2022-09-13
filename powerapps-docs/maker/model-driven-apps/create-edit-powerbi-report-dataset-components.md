@@ -23,14 +23,12 @@ In this article, you'll see how to
 
 * Add Power BI reports and dataset components to a solution.
 * Configure the behavior of Power BI mashup parameters upon import and export as part of the Power Apps solution.
-* Export the Power Apps solution from the Power Apps solution’s development environment to a file as a managed or unmanaged solution.
-* Import the solution into a deployment environment and authenticate against the data sources in that environment. 
+* Configure the dataset component so that the dataset automatically connects to a Dataverse data source when the solution is deployed to a new environment.
 
 ##  Prerequisites
 
 * A Power BI Pro license.
 * A Power BI report and/or dataset that you want to create Power Apps solution components for.
-* The Power BI Extensions (Preview) system solutions, installed as described in [XXX]().
 
 ## General limitations and restrictions
 
@@ -39,18 +37,10 @@ In this article, you'll see how to
 * The Power BI dataset parameter types "Any" and "Binary" are not supported in the Power BI integration with Power Apps solutions.
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app does not share the embedded report).
 * Recovery from workspace deletion is not supported. Once the dedicated environment workspace has been deleted, you will not be able to add/import any Power BI component to the Power Apps environment.
-
-## Limitations and known bugs of the gated preview 
-
-In this preview, the following limitations are applicable only for this preview and will be resolved until public preview release. 
-
-* Power BI system solutions must be installed manually (appendix A).
-* Customizations and solution layers are not reflected in Power BI. Removing an unmanaged layer doesn't revert to the old version of the report/dataset.
-* Power Apps Application IDs are not supported by the Power BI permission sync. To allow an application ID to perform operations in the Power BI environment workspace, the service principal must be manually added to the environment workspace.
-* The solution checker fails when a solution includes Power BI components.
-* The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Cross-geo operations](./security-notes-powerapps-power-bi-integration.md#cross-geo-operations?branch=pr-en-us-6925#cross-geo-operations).
-
-In this article you'll see how to create a solution that includes Power BI components. You'll also see how, when a dataset connects to a Dataverse data source, it can be configured to automatically connect to the Dataverse data source in the deployment environment.
+* The **Power BI Extensions (Preview)** system solution must be installed. It is installed in new environments by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. For more information see [Add link to how to install D365].
+* Power Apps Application IDs are not supported during public preview.
+* The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).
+* Environment life cycle operations are not supported during public preview. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
 
 ## Create Power BI report and dataset components
 
