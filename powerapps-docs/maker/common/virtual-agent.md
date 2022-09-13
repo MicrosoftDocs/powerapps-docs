@@ -46,7 +46,7 @@ From the [model-driven app designer](https://docs.microsoft.com/en-us/power-apps
 In [Power Apps studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio), select **Ask virtual agent**.
 
 > [!div class="mx-imgBorder"]
-> ![Access the virtual agent from Power Apps studio.](media/power-app-studio-3.png)
+> ![Access the virtual agent from Power Apps studio.](bot/media/power-app-studio-3.png)
 
 ## Get help using the virtual agent
 
