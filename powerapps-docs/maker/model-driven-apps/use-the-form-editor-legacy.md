@@ -25,7 +25,7 @@ search.app:
 ---
 # Add table relationships to a form
 
-Creating a table relationship adds the navigation within a form that allows app users to view lists of related records fro the Related tab in a model-driven app. 
+Creating a table relationship adds the navigation within a form that allows app users to view lists of related records from the Related tab in a model-driven app. 
 
 :::image type="content" source="media/related-tab.png" alt-text="Related tab in a model-driven app":::
 
