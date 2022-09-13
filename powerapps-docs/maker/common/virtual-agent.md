@@ -27,45 +27,45 @@ You can connect to a virtual agent from the following areas:
 
 - [Power Apps studio](maker/canvas-apps/power-apps-studio)
 
-When the left navigation menu is expanded the **Ask a virtual agent** button looks like this: ![Ask a virtual agent expanded menu.](media/virtual-agent-expanded.png "Ask a virtual agent button in its expanded state")
+When the left navigation menu is expanded the **Ask a virtual agent** button looks like this: ![Ask a virtual agent expanded menu.](media/bot/virtual-agent-expanded.png "Ask a virtual agent button in its expanded state")
 
-When you hide the left navigation menu the **Ask a virtual agent** button looks like this: ![Ask a virtual agent hidden menu](media/virtual-agent-hidden.png)
+When you hide the left navigation menu the **Ask a virtual agent** button looks like this: ![Ask a virtual agent hidden menu](media/bot/virtual-agent-hidden.png)
 
 ## Access the virtual agent
 
 To access the virtual agent on the [Power Apps](https://make.preview.powerapps.com/) home page, select **Ask a virtual agent**.
 
 > [!div class="mx-imgBorder"]
->![Access the virtual agent from the Power Apps home page.](media/home-page-maker-1.png)
+>![Access the virtual agent from the Power Apps home page.](media/bot/home-page-maker-1.png)
 
 From the [model-driven app designer](https://docs.microsoft.com/en-us/power-apps/maker/model-driven-apps/app-designer-overview), select **Ask a virtual agent**.
 
 > [!div class="mx-imgBorder"]
-> ![Access the virtual agent from the model-driven app designer.](media/model-driven-designer-2.png)
+> ![Access the virtual agent from the model-driven app designer.](media/bot/model-driven-designer-2.png)
 
 In [Power Apps studio](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio), select **Ask virtual agent**.
 
 > [!div class="mx-imgBorder"]
-> ![Access the virtual agent from Power Apps studio.](bot/media/power-app-studio-3.png)
+> ![Access the virtual agent from Power Apps studio.](media/bot/power-app-studio-3.png)
 
 ## Get help using the virtual agent
 
 1. From Power Apps, select **Ask a virtual agent** to open the virtual assistant.
 
    > [!div class="mx-imgBorder"]
-   >![Open the virtual agent.](media/virtual-agent-1.png)
+   >![Open the virtual agent.](media/bot/virtual-agent-1.png)
 
 2. Select **App creation** to get help with Power Apps.
 
    > [!div class="mx-imgBorder"]
-   > ![Select app creation.](media/virtual-agent-2.png)
+   > ![Select app creation.](media/bot/virtual-agent-2.png)
 
 **Note**: You can also ask questions about other parts of the Power Platform by selecting a different topic.
 
 3. Select the area that you need help in or select **I need help with something else** to ask the bot a question.
 
    > [!div class="mx-imgBorder"]
-   > [Still need help.](media/virtual-agent-3.png)
+   > [Still need help.](media/bot/virtual-agent-3.png)
 
 If you still need more help, select **No** to the question, **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
 
@@ -78,4 +78,4 @@ Your conversation with the virtual agent is open until you restart the conversat
 2. To end a session, select **Close virtual agent**.
 
    > [!div class="mx-imgBorder"]
-   > ![Restart or close the session.](media/virtual-agent-4.png)
+   > ![Restart or close the session.](media/bot/virtual-agent-4.png)
