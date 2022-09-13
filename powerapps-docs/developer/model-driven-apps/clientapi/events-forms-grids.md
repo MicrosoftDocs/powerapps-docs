@@ -58,7 +58,7 @@ To add or remove event handler functions to events in the new Unified Interface:
 
 By default, events handlers aren't called when a form is in bulk edit mode. 
 
-To enable an event handler in bulk edit mode, modify the Form XML by finding the relevant `event` element and creating/setting the `BehaviorInBulkEditForm` attribute to `Enabled`.
+To enable an event handler in bulk edit mode, modify the Form XML by finding the relevant `event` element and creating/setting the `BehaviorInBulkEditForm` attribute to `Enabled`. Currently, this is only supported for [OnLoad events](reference/events/form-onload.md).
 
 For more information on Form XML customization, see [When to edit the customizations file](../when-edit-customization-file.md), [Customize forms](../customize-entity-forms.md), and the [Form XML schema](../form-xml-schema.md).
 
