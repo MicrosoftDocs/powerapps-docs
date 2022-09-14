@@ -46,7 +46,7 @@ menu item for authoring the app.
 
 1. [Properties pane](#8--properties-pane) - properties list for the selected object in UI format.
 
-1. [Virtual agent](#7--virtual-agent) - get help building your app from a virtual agent.
+1. [Virtual agent](#9--virtual-agent) - get help building your app from a virtual agent.
 
 1. [Screen selector](#10--screen-selector) - switch between different screens in an app.
 
