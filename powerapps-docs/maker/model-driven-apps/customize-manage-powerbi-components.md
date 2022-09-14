@@ -108,12 +108,11 @@ Updating a solution with Power BI components automatically updates the relevant 
 
 ## Authenticating Power BI dataset against data sources after deployment to new environment
 
-Importing a solution may require additional steps in Power BI such as authentication against data sources and dataset refresh. See [XXX](/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-about) for more information.
+Importing a solution may require additional steps in Power BI such as authentication against data sources and dataset refresh.
 
 ### See also
 
-* [Use Power BI with Microsoft Dataverse data](./use-powerbi-dataverse.md)
-* [Create Power BI report and dataset components](../model-driven-apps/create-edit-powerbi-report-dataset-components.md)
-* [Power BI content management in Power Apps solutions](../model-driven-apps/power-bi-content-management-power-apps-solutions.md)
+* [Create Power BI report and dataset components](./create-edit-powerbi-report-dataset-components.md)
+* [Power BI content management in Power Apps solutions](./power-bi-content-management-power-apps-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

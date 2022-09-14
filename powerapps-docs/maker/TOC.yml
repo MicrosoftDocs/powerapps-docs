@@ -1575,6 +1575,8 @@
         href: ./model-driven-apps/power-bi-content-management-power-apps-solutions.md
       - name: Create Power BI report and dataset components
         href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
+      - name: Customize and manage Power BI components
+        href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Use Excel and Word templates
@@ -2516,8 +2518,6 @@
       href: ./data-platform/use-powerbi-dataverse.md
     - name: Create a Power BI report
       href: ./data-platform/data-platform-powerbi-connector.md
-    - name: Customize and manage Power BI components
-      href: ./data-platform/customize-manage-powerbi-components.md
     - name: View table data in Power BI Desktop
       href: ./data-platform/view-entity-data-power-bi.md
   - name: SharePoint, OneNote, and OneDrive integration

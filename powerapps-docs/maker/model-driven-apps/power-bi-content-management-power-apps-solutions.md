@@ -21,7 +21,7 @@ This article presents high-level descriptions of some of the main features of th
 
 ## Add Power BI components to solutions
 
-Working in Power Apps, you add Power BI report and dataset components from Power BI workspaces just like any other Dataverse component. When you add a Power BI report, any dependency between the report and the relevant dataset will be detected, and the dependent dataset will be added as a component automatically. Once the report or dataset is added to the solution, the artifacts will be exported and uploaded to Dataverse, and a new dedicated workspace in Power BI will automatically be created to store the artifacts. This dedicated Power BI workspace inherits privileges from several pre-defined roles (see [Permission sync between Power Apps environment and Power BI workspace](../data-platform/customize-manage-powerbi-components.md#permission-sync-between-power-apps-environment-and-power-bi-workspace), giving the users in these roles permission in the workspace, thus enabling co-authoring between Power Apps and Power BI. This process ensures that your Power BI reports and datasets can be embedded as a system dashboard or inside forms and will survive deployment across environments and tenants.
+Working in Power Apps, you add Power BI report and dataset components from Power BI workspaces just like any other Dataverse component. When you add a Power BI report, any dependency between the report and the relevant dataset will be detected, and the dependent dataset will be added as a component automatically. Once the report or dataset is added to the solution, the artifacts will be exported and uploaded to Dataverse, and a new dedicated workspace in Power BI will automatically be created to store the artifacts. This dedicated Power BI workspace inherits privileges from several pre-defined roles (see [Permission sync between Power Apps environment and Power BI workspace](../model-driven-apps/customize-manage-powerbi-components.md#permission-sync-between-power-apps-environment-and-power-bi-workspace), giving the users in these roles permission in the workspace, thus enabling co-authoring between Power Apps and Power BI. This process ensures that your Power BI reports and datasets can be embedded as a system dashboard or inside forms and will survive deployment across environments and tenants.
 
 ## Control Power BI dataset parameters from Power Apps
 
@@ -38,6 +38,6 @@ You can fully customize Power BI components to fit your exact needs. When you de
 ### See also
 
 * [Create Power BI report and dataset components](./create-edit-powerbi-report-dataset-components.md)
-* [Customize and manage Power BI components](../data-platform/customize-manage-powerbi-components.md)
+* [Customize and manage Power BI components](../model-driven-apps/customize-manage-powerbi-components.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -32,12 +32,12 @@ In this article, you'll see how to
 
 ## General limitations and restrictions
 
+* The **Power BI Extensions (Preview)** system solution must be installed. It is installed in new environments by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. To install the extension, go to the [Power Platform admin center](https://aka.ms/powerbi_extension).
 * Connection references to Power BI data sources are not supported.
 * Only datasets created with the enhanced dataset model are supported. Paginated reports are not supported.
 * The Power BI dataset parameter types "Any" and "Binary" are not supported in the Power BI integration with Power Apps solutions.
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app does not share the embedded report).
 * Recovery from workspace deletion is not supported. Once the dedicated environment workspace has been deleted, you will not be able to add/import any Power BI component to the Power Apps environment.
-* The **Power BI Extensions (Preview)** system solution must be installed. It is installed in new environments by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. For more information see [Add link to how to install D365].
 * Power Apps Application IDs are not supported during public preview.
 * The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).
 * Environment life cycle operations are not supported during public preview. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
@@ -46,7 +46,7 @@ In this article, you'll see how to
 
 1. Open your Power Apps solution development environment.
     > [!NOTE]
-    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. See [Cross-geo operations](/power-bi/collaborate-share/service-powerbi-powerapps-integration#cross-geo-operations) more information. 
+    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. See [Cross-geo operations](/power-bi/collaborate-share/power-bi/collaborate-share/power-apps-power-bi-integration-considerations#cross-geo-operations) more information. 
 
 1. Create a new solution.
 
@@ -140,7 +140,7 @@ After you update the component, you can export the solution as a managed or unma
 
 ### See also
 
-* [Customize and manage Power BI components](../data-platform/customize-manage-powerbi-components.md)
+* [Customize and manage Power BI components](./customize-manage-powerbi-components.md)
 * [Power BI content management in Power Apps solutions](./power-bi-content-management-power-apps-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
