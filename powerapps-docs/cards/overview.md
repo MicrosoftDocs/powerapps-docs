@@ -33,7 +33,7 @@ There are two key parts of any card:
 
 - **Card Designer**: A low-code designer for creating new cards using drag-and-drop controls, Power Fx logic, and data from Power Platform connectors
 
-- **Lightweight runtime**: Manages sending and receiving cards with embedded data and workflows
+- **Power Apps data and resource management**: Manages sending and receiving cards with embedded data and workflows
 
 ## Card Designer
 
@@ -67,4 +67,4 @@ Each interactive card runs securely, with embedded data and workflows. Users do 
 
 ## Next steps
 
-Learn more about the [Cards Designer](make-a-card/designer-overview.md) and to start making cards.
+Learn more about the [Card Designer](make-a-card/designer-overview.md) and to start making cards.
