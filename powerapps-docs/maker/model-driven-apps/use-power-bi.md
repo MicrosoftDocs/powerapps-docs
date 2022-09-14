@@ -23,9 +23,11 @@ search.app:
 The Power BI cloud service works with Microsoft Dataverse apps to provide a self-service analytics solution. Power BI automatically refreshes the app's data displayed. With Power BI Desktop or Microsoft Excel, Power Query for authoring reports and Power BI for sharing dashboards and refreshing data from model-driven apps, your users have a powerful way to work with your app's data. For more information, see these articles:
 
 - [Visualize data in a view with Power BI](../../user/visualize-in-power-bi.md)
+- [Create Power BI report and dataset components (preview)](./create-edit-powerbi-report-dataset-components.md)
 - [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)
 - [Embed a Power BI report in a model-driven system form](embed-powerbi-report-in-system-form.md)
 - [How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md)
+- [Power BI content management in Power Apps solutions (preview)](../model-driven-apps/powerr-bi-content-management-power-apps-solutions.md)
 
 :::image type="content" source="../../maker/model-driven-apps/media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png" alt-text="Example of embedded Power BI without contextual filtering":::
 

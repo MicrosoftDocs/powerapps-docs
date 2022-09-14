@@ -129,6 +129,8 @@ In this section you'll see the options you have for configuring how a Power BI d
 
 ### See also
 
-[Customize and manage Power BI components](../data-platform/customize-manage-powerbi-components.md)
+* [Customize and manage Power BI components](../data-platform/customize-manage-powerbi-components.md)
+* [Power BI content management in Power Apps solutions](./powerr-bi-content-management-power-apps-solutions.md)
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
