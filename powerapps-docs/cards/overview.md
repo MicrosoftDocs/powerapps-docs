@@ -15,7 +15,7 @@ ms.collection:
 
 Cards are a low-code capability of Power Apps that let you design, send, and use cards. Cards are micro-apps with embedded enterprise data and workflows that can be sent as content in other applications.
 
-Business users and subject matter experts can create cards with a guided, visual-graphical interface to optimize and automate business tasks. Cards can be used to create actionable scenarios with interactive, data-driven, lightweight UI, and make these cards available for other people to use.
+Use the Power Apps guided and visual interface to create cards to optimize and automate business tasks. Use them to create actionable scenarios with interactive, data-driven, lightweight UI elements; then, make them available for other people to use.
 
 As a part of the Power Apps ecosystem, cards add business logic through Power Fx and integration with business data through Power Platform connectors.
 
@@ -23,13 +23,13 @@ Using cards, you can quickly build, manage, and share rich, actionable UI cards 
 
 ## Get started with cards
 
-Cards are available to makers as a part of Power Apps. You can sign into the [Power Apps maker portal](https://make.powerapps.com) and create your card with a few clicks; there aren't any complex systems or services to deploy and maintain.
+Cards are available to makers as a part of Power Apps. You can sign into the [Power Apps maker portal](https://make.powerapps.com) and create your card with a few clicks; there are no complex systems or services to deploy and maintain.
 
-To create a card, go to [Power Apps maker portal](https://make.powerapps.com) and select **Cards (preview)**:  
+To create a card, go to [Power Apps maker portal](https://make.powerapps.com) and select **Cards (preview)** then **+ Create a card**.
 
 :::image type="content" source="media/overview/cards-get-started.png" alt-text="Screenshot of the card create page." border="false":::
 
-There are two key parts to this Cards:
+There are two key parts of any card:
 
 - **Card Designer**: A low-code designer for creating new cards using drag-and-drop controls, Power Fx logic, and data from Power Platform connectors
 
@@ -37,7 +37,7 @@ There are two key parts to this Cards:
 
 ## Card Designer
 
-Use the intuitive drag-and-drop Designer to create a card consisting of buttons, tables, text, images, checkboxes, input fields, containers, and a variety of other types of elements without writing any code.
+Use the drag-and-drop designer to create a card consisting of buttons, tables, text, images, checkboxes, input fields, containers, and a variety of other types of elements, all without writing any code.
 
 :::image type="content" source="media/overview/cards-designer-get-started.png" alt-text="Screenshot of the card designer." border="false":::
 
@@ -45,7 +45,7 @@ Use the intuitive drag-and-drop Designer to create a card consisting of buttons,
 
 Add Power Platform connectors to work with enterprise data and invoke cloud-based functions safely and securely in your cards.
 
-The lightweight runtime of cards securely handles tokens for each participant in the card transaction, enabling data-rich and powerful scenarios that respect security boundaries within an organization.
+Each card securely handles tokens for each participant in the card transaction, enabling data-rich and powerful scenarios that respect security boundaries within an organization.
 
 :::image type="content" source="media/overview/cards-add-data.png" alt-text="Screenshot of the card designer with connectors." border="false":::
 
@@ -63,7 +63,7 @@ Post cards on Teams to share them with other people by using the **Send** button
 
 ## Lightweight runtime
 
-The card runtime allows users to securely run their interactive cards with embedded data and workflows. The runtime engine abstracts over the interactive transaction capabilities of card canvases, enabling users to send and receive cards without needing to deploy a secondary bot service or build other apps.
+Each interactive card runs securely, with embedded data and workflows. Users do not need to a secondary bot service or other apps to send and receive cards
 
 ## Next steps
 
