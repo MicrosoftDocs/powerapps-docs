@@ -114,6 +114,6 @@ Importing a solution may require additional steps in Power BI such as authentica
 
 * [Use Power BI with Microsoft Dataverse data](./use-powerbi-dataverse.md)
 * [Create Power BI report and dataset components](../model-driven-apps/create-edit-powerbi-report-dataset-components.md)
-* [Power BI content management in Power Apps solutions](../model-driven-apps/powerr-bi-content-management-power-apps-solutions.md)
+* [Power BI content management in Power Apps solutions](../model-driven-apps/power-bi-content-management-power-apps-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

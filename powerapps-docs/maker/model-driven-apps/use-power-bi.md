@@ -27,7 +27,7 @@ The Power BI cloud service works with Microsoft Dataverse apps to provide a self
 - [Create or edit a Power BI embedded system dashboard](create-edit-powerbi-embedded-page.md)
 - [Embed a Power BI report in a model-driven system form](embed-powerbi-report-in-system-form.md)
 - [How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md)
-- [Power BI content management in Power Apps solutions (preview)](../model-driven-apps/powerr-bi-content-management-power-apps-solutions.md)
+- [Power BI content management in Power Apps solutions (preview)](../model-driven-apps/power-bi-content-management-power-apps-solutions.md)
 
 :::image type="content" source="../../maker/model-driven-apps/media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png" alt-text="Example of embedded Power BI without contextual filtering":::
 
