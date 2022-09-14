@@ -473,7 +473,7 @@ selected object on the canvas. The **Properties** tab shows generic options such
 
 ## 9 – Virtual agent
 
-Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agenet will help answer question about most common scenario. More information:[Get help building your app from a virtual agent](../common/virtual-agent.md).
+Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. More information: [Get help building your app from a virtual agent](../common/virtual-agent.md).
 
 ## 10 – Screen selector
 
