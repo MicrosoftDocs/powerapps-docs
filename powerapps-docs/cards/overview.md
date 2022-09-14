@@ -1,6 +1,6 @@
 ﻿---
-title: What are Cards?
-description: Learn about Cards as a Power Apps capability and the business problems they can help you solve.
+title: What are cards? (Preview)
+description: Learn about cards as a Power Apps capability and the business problems they can help you solve.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -11,21 +11,21 @@ ms.custom:
 ms.collection: 
 ---
 
-# What are Cards?
+# What are cards?
 
-Cards are a low-code capability of Power Apps that let business users and developers design, send, and use cards - micro-apps with embedded enterprise data and workflows that can be sent as content in other applications.
+Cards are a low-code capability of Power Apps that let you design, send, and use cards. Cards are micro-apps with embedded enterprise data and workflows that can be sent as content in other applications.
 
 Business users and subject matter experts can create cards with a guided, visual-graphical interface to optimize and automate business tasks. Cards can be used to create actionable scenarios with interactive, data-driven, lightweight UI, and make these cards available for other people to use.
 
 As a part of the Power Apps ecosystem, cards add business logic through Power Fx and integration with business data through Power Platform connectors.
 
-Using Cards, you can quickly build, manage, and share rich, actionable UI cards without any coding nor IT expertise.
+Using cards, you can quickly build, manage, and share rich, actionable UI cards without any coding nor IT expertise.
 
-## Get started in minutes
+## Get started with cards
 
 Cards are available to makers as a part of Power Apps. You can sign into the [Power Apps maker portal](https://make.powerapps.com) and create your card with a few clicks; there aren't any complex systems or services to deploy and maintain.
 
-To create a card, go to [Power Apps maker portal](https://make.powerapps.com) and select **Cards**:  
+To create a card, go to [Power Apps maker portal](https://make.powerapps.com) and select **Cards (preview)**:  
 
 :::image type="content" source="media/overview/cards-get-started.png" alt-text="Screenshot of the card create page." border="false":::
 
