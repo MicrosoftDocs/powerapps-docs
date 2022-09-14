@@ -17,7 +17,7 @@ search.app:
 
 The Power BI/Power Apps solutions integration enables you, as an App maker, to add Power BI reports and datasets as Dataverse components in Power Apps solutions. When you add a Power BI report or dataset to a solution, it will stay connected as the solution is deployed across environments and tenants, and can be seamlessly managed as part of your Application Lifecycle Management process across environments and tenants.
 
-This article presents high-level descriptions of some of the main features of the integration. If you want to just start creating Power BI components to use in your solutions, go to [Create Power BI report and dataset components](./create-edit-powerbi-report-dataset-components.md).
+This article presents high-level descriptions of some of the main features of the Power BI/Power App solutions integration. If you just want to get started, go to [Create Power BI report and dataset components](./create-edit-powerbi-report-dataset-components.md).
 
 ## Add Power BI components to solutions
 
