@@ -1,7 +1,6 @@
 ---
-title: "Simple shopping list"
-description: "Create a simple shopping list card, learning about the basics of creating a card"
-keywords: "Cards Designer, Power Apps, Cards, tutorial"
+title: Create a simple shopping list card (Preview)
+description: Learn about the basics of creating card while creating a simple shopping list card
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -14,7 +13,7 @@ ms.collection:
 
 # Simple Shopping List
 
-This tutorial will show you how to build a simple card that displays a shopping list and lets you add new items. You'll learn about:
+This tutorial shows you how to build a simple card that displays a shopping list and lets you add new items. You'll learn about:
 
 - Variables
 - Calling PowerFX from a button
@@ -22,13 +21,13 @@ This tutorial will show you how to build a simple card that displays a shopping 
 - Reading data from input fields
 - A basic tour of the user interface
 
-The result will look like the example below:
+At the end of this tutorial your shopping list card will look like the example below:
 
 :::image type="content" source="../media/tutorial-simple-shopping-list/shopping-list-card.png" alt-text="Screenshot of a finished simple shopping list card." border="false":::
 
-This tutorial will only let you add items in this card. For a more complex shopping list tutorial, see [Compound Shopping List](compound-shopping-list.md).
+This tutorial show how to create a card that only let you add items in this card. For a more complex shopping list tutorial, see the [compound Shopping list](compound-shopping-list.md) tutorial.
 
-## Create a card and give it a name
+## Create a card
 
 1. Create your card. You'll be asked to name your card - name your card something unique, if the name is already used, you won't be able to create the card.
 
