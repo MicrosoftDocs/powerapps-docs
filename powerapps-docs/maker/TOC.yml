@@ -1397,7 +1397,9 @@
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: Add a map on a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md               
+            href: ./model-driven-apps/configure-bing-maps-legacy.md
+          - name: Edit the related tab on a form
+            href: ./model-driven-apps/use-the-form-editor-legacy.md           
         - name: Design effective forms
           href: 
           items:
@@ -1522,8 +1524,6 @@
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
-        - name: Change navigation within a form
-          href: ./model-driven-apps/use-the-form-editor-legacy.md
           items:
           - name: Add form navigation for related tables
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
