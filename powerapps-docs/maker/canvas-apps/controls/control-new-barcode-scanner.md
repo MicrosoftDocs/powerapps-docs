@@ -19,7 +19,7 @@ contributors:
 ---
 # Barcode scanner control in Power Apps
 
-Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
+Scans barcodes, QR codes, and data-matrix codes on an Android, iOS, and Windows device.
 
 ## Description
 
