@@ -82,21 +82,22 @@ Apply filters using this syntax: `<table logical name>: <filter>` where the tabl
 
 Filters use the following query operators:
 
-|Operator|Description|Example|  
-|--------------|-----------------|-------------|  
-|**Comparison Operators**|||  
-|`eq`|Equal|`account:revenue eq 100000`|  
-|`ne`|Not Equal|`account:revenue ne 100000`|  
-|`gt`|Greater than|`account:revenue gt 100000`|  
-|`ge`|Greater than or equal|`account:revenue ge 100000`|  
-|`lt`|Less than|`account:revenue lt 100000`|  
-|`le`|Less than or equal|`account:revenue le 100000`|  
-|**Logical Operators**|||  
-|`and`|Logical and|`account:revenue lt 100000 and revenue gt 2000`|  
-|`or`|Logical or|`account:name eq 'sample' or name eq 'test'|  
-|`not`|Logical negation|`account:not name eq 'sample'`|  
-|**Grouping Operators**|||  
-|`( )`|Precedence grouping|`account:(name eq 'sample') or name eq 'test') and revenue gt 5000`|  
+
+|Operator|Description|Example|
+|--------|-----------|-------|
+|**Comparison Operators**|&nbsp;|&nbsp;|
+|`eq`|Equal|`account:revenue eq 100000`|
+|`ne`|Not Equal|`account:revenue ne 100000`|
+|`gt`|Greater than|`account:revenue gt 100000`|
+|`ge`|Greater than or equal|`account:revenue ge 100000`|
+|`lt`|Less than|`account:revenue lt 100000`|
+|`le`|Less than or equal|`account:revenue le 100000`|
+|**Logical Operators**|&nbsp;|&nbsp;|
+|`and`|Logical and|`account:revenue lt 100000 and revenue gt 2000`|
+|`or`|Logical or|`account:name eq 'sample' or name eq 'test'`|
+|`not`|Logical negation|`account:not name eq 'sample'`|
+|**Grouping Operators**|&nbsp;|&nbsp;|
+|`( )`|Precedence grouping|`account:(name eq 'sample') or name eq 'test') and revenue gt 5000`|
 
 
 ## returntotalrecordcount or count parameter
