@@ -26,13 +26,13 @@ In general, Power BI components are customized and managed much like other compo
 
 Once you've imported a managed solution, you can make changes to the report or the dataset in order to make a customization. To bring the changes into Power Apps as an unmanaged layer, Power BI and Power Apps must be synced manually. You first make the changes in Power BI, then detect and synchronize the changes in Power Apps. More information: [Solution layers - Power Apps](../data-platform/solution-layers.md)
 
-The basic flow is as follows: 
+The basic flow is as follows:
 
 1. Start with a managed solution that has the report and/or dataset you want. You can import a managed solution either from the marketplace or you can use your own.
 
-1. Create a new solution. 
+1. Create a new solution.
 
-1. Add an existing report and/or dataset component from the managed solution (From Dataverse) to the new solution. 
+1. Add an existing report and/or dataset component from the managed solution (From Dataverse) to the new solution.
 
 1. Once the report or dataset has been added to your new solution, select the solution  component(s) and choose **Open in Power BI**.
 
