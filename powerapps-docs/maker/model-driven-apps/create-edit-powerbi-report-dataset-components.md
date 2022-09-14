@@ -1,6 +1,6 @@
 ---
 title: Create Power BI report and dataset components
-description: Learn how to create Power BI report and dataset components to use in PowerApps solutions.
+description: Learn how to create Power BI report and dataset components to use in Power Apps solutions.
 author: paulinbar
 manager: kfollis
 ms.component: cds
@@ -33,14 +33,14 @@ In this article, you'll see how to
 ## General limitations and restrictions
 
 * The **Power BI Extensions (Preview)** system solution must be installed. It is installed in new environments by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. To install the extension, go to the [Power Platform admin center](https://aka.ms/powerbi_extension).
-* Connection references to Power BI data sources are not supported.
-* Only datasets created with the enhanced dataset model are supported. Paginated reports are not supported.
-* The Power BI dataset parameter types "Any" and "Binary" are not supported in the Power BI integration with Power Apps solutions.
-* Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app does not share the embedded report).
-* Recovery from workspace deletion is not supported. Once the dedicated environment workspace has been deleted, you will not be able to add/import any Power BI component to the Power Apps environment.
-* Power Apps Application IDs are not supported during public preview.
+* Connection references to Power BI data sources aren't supported.
+* Only datasets created with the enhanced dataset model are supported. Paginated reports aren't supported.
+* The Power BI dataset parameter types "Any" and "Binary" aren't supported in the Power BI integration with Power Apps solutions.
+* Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app doesn't share the embedded report).
+* Recovery from workspace deletion isn't supported. Once the dedicated environment workspace has been deleted, you won't be able to add/import any Power BI component to the Power Apps environment.
+* Power Apps Application IDs aren't supported during public preview.
 * The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).
-* Environment life cycle operations are not supported during public preview. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
+* Environment life cycle operations aren't supported during public preview. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
 
 ## Create Power BI report and dataset components
 
@@ -54,7 +54,7 @@ In this article, you'll see how to
 
     ![Screenshot of add Analytics menu showing Power B I component dataset and report options.](./media/create-edit-powerbi-report-dataset-components/create-power-bi-components.png)
 
-1. Click **Outside Dataverse**, find and select the Power BI report you want to add to the solution, then choose **Add**. 
+1. Select **Outside Dataverse**, find and select the Power BI report you want to add to the solution, then choose **Add**. 
 
     ![Screenshot showing Outside Dataverse tab for selecting a Power B I item that is outside Dataverse.](./media/create-edit-powerbi-report-dataset-components/add-existing-power-bi-report.png)
 
@@ -103,7 +103,7 @@ In this section you'll see the options you have for configuring how a Power BI d
 
     ![Screenshot of how to add a new Power B I parameter.](./media/create-edit-powerbi-report-dataset-components/add-new-power-bi-parameter.png)
 
-1. Select a Power BI mashup parameter and choose **Edit** to open the parameters edit pane. Select the **Replace current value with \*** drop down to view the parameter configuration options.
+1. Select a Power BI mashup parameter and choose **Edit** to open the parameters edit pane. Select the **Replace current value with \*** drop-down to view the parameter configuration options.
 
     ![Screenshot of how to replace the current parameter value.](./media/create-edit-powerbi-report-dataset-components/replace-current-parameter-value.png)
 
@@ -113,7 +113,7 @@ In this section you'll see the options you have for configuring how a Power BI d
 
     * **Current environment domain**: When you choose current environment domain, the value of the parameter will be domain of the current environment. This means that wherever the solution is deployed, the value of the parameter will be the domain of the deployment environment. 
 
-    * **Environment variable**: With this option you associate the parameter value with an environment variable. When you select this option, you will see all the environment variables in the current environment, and you can select one. If the environment variable you need doesn't exist, you can create one in the solution. 
+    * **Environment variable**: With this option you associate the parameter value with an environment variable. When you select this option, you'll see all the environment variables in the current environment, and you can select one. If the environment variable you need doesn't exist, you can create one in the solution. 
 
         The environment variable option is significant because it makes it possible to require the installer to provide a value for a parameter during deployment. This is done by associating the parameter with an environment variable that has a blank value. 
 

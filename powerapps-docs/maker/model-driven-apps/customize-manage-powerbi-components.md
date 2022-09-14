@@ -15,7 +15,7 @@ search.app:
 ---
 # Customize and manage Power BI components
 
-In general Power BI components are customized and managed much like other components in Power Apps. However, there are a number of characteristics of Power BI components that require additional steps or that have additional considerations. This article discusses these special characteristics.
+In general, Power BI components are customized and managed much like other components in Power Apps. However, there are a number of characteristics of Power BI components that require additional steps or that have additional considerations. This article discusses these special characteristics.
 
 ## Customization with Power BI components
 
@@ -54,7 +54,7 @@ After syncing changes, an unmanaged layer is created. Removing the unmanaged lay
 
 ### Using the Default solution to sync all changes. 
 
-In some cases it may be difficult to know exactly where the changes from Power BI are coming from. To make sure you sync all changes, go to the Default solution, select **Reports** or **Datasets**, and choose **Sync all changes**.
+In some cases, it may be difficult to know exactly where the changes from Power BI are coming from. To make sure you sync all changes, go to the Default solution, select **Reports** or **Datasets**, and choose **Sync all changes**.
 
 ![Screenshot showing default solution Sync all changes button.](./media/customize-manage-powerbi-components/sync-all-changes.png)
 
@@ -86,7 +86,7 @@ The table below shows:
 * Column 2: The [Power BI workspace roles](/power-bi/collaborate-share/service-roles-new-workspaces) to which each group is assigned. The workspace roles determine what permissions the users will have on the items in the workspace.
 
 
-|Assign user to one of the following predefined roles in the PowerApps environment   |As a result, users get these workspace roles in the dedicated Power BI workspace     |
+|Assign user to one of the following predefined roles in the Power Apps environment   |As a result, users get these workspace roles in the dedicated Power BI workspace     |
 |---------|---------|
 |Power BI workspace admin ; System administrator      |Admin        |
 |Power BI workspace contributor ; System customizer      |Contributor         |
@@ -94,13 +94,13 @@ The table below shows:
 
 ### Notes 
 
-* The special Power-Platform-related groups in the dedicated Power BI workspace must not be removed. If any are removed, synchronization won’t work and users might not be able to customize and update solutions due to lack of required permissions in Power BI.
+* The special Power-Platform-related groups in the dedicated Power BI workspace must not be removed. If any are removed, synchronization won’t work, and users might not be able to customize and update solutions due to lack of required permissions in Power BI.
 
-* Permissions synchronization is on by default. If synchronization is disabled, users who have access to the Power BI workspace thanks to membership in one of the predefined security roles in the PowerApps environment will lose access to the Power BI workspace. However, PowerApps users who have been granted access to the Power BI workspace manually in Power BI will still have access.
+* Permissions synchronization is on by default. If synchronization is disabled, users who have access to the Power BI workspace thanks to membership in one of the predefined security roles in the Power Apps environment will lose access to the Power BI workspace. However, Power Apps users who have been granted access to the Power BI workspace manually in Power BI will still have access.
 
 * If permissions synchronization is disabled, you can still grant users access to the dedicated Power BI workspace manually via the workspace’s Access tab in Power BI.
 
-* Currently, you can only see group membership by looking at the predefined group in the PowerApps environment. You cannot open the special Power-Platform-related groups in the dedicated Power BI workspace to view membership. 
+* Currently, you can only see group membership by looking at the predefined group in the Power Apps environment. You can't open the special Power-Platform-related groups in the dedicated Power BI workspace to view membership. 
 
 ## Updating a solution with Power BI components
 
