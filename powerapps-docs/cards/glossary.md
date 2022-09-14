@@ -1,5 +1,5 @@
 ---
-title: Cards glossary
+title: Cards glossary (Preview)
 description: Glossary resource for terminology related to cards.
 ms.date: 09/20/2022
 ms.topic: article
