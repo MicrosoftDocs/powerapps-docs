@@ -35,7 +35,10 @@ The query operation returns search results based on a search term. In addition t
 |`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|
 |`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|
 
-## search parameter
+## Parameters
+
+Details for the parameters in the table above can be found below.
+### search parameter
 
 The search parameter contains the text to search. It is the only required parameter. It has a 100 character limit.
 
@@ -53,13 +56,13 @@ By default, the search parameter supports simple search syntax as described in t
 
 Using the [searchtype parameter](#searchtype-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax).
 
-## entities parameter
+### entities parameter
 
 By default all the tables enabled for search will be searched unless you specify a sub-set using the `entities` parameter. Set this parameter with an array of table logical names.
 
 To get a list of entities enabled for the environment use the [Search Status](overview.md#search-status) API and look for the entities listed by  `entitylogicalname` within `entitystatusresults`.
 
-## facets parameter
+### facets parameter
 
 Facets support the ability to drill down into data results after they've been retrieved. By default, no facets are returned with search results.
 
@@ -74,7 +77,7 @@ TODO: Establish exactly what developers will do with the facets data and how to 
 ```
 
 
-## filter parameter
+### filter parameter
 
 Filters limit the scope of the search results returned. Use filters to exclude unwanted results.
 
@@ -100,17 +103,17 @@ Filters use the following query operators:
 |`( )`|Precedence grouping|`account:(name eq 'sample') or name eq 'test') and revenue gt 5000`|
 
 
-## returntotalrecordcount or count parameter
+### returntotalrecordcount or count parameter
 
 Whether to return the total record count. When using the search endpoint use `returntotalrecordcount`. Use `count` when using Dataverse Web API or SDK.
 
 
-## skip and top parameters
+### skip and top parameters
 
 You can use these parameters together with the [returntotalrecordcount or count parameter](#returntotalrecordcount-or-count-parameter) to create a paged experience.
 By default, as many as 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use top to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
 
-## orderby parameter
+### orderby parameter
 
 Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
@@ -122,7 +125,7 @@ For a set of results that contain multiple table types, the list of clauses for 
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
-## searchmode parameter
+### searchmode parameter
 
 Specifies whether `any` or `all` the search terms must be matched to count the
 document as a match. The default is `any`.
@@ -133,11 +136,11 @@ Using `searchMode=any` increases the recall of queries by including more results
 
 Using `searchMode=all` increases the precision of queries by including fewer results, and by default will be interpreted as `AND NOT`. For example, `wifi -luxury` will match documents that contain the term `wifi` and don't contain the term `luxury`.
 
-## searchtype parameter
+### searchtype parameter
 
 When you use `"searchtype": "full"`, you specify that Lucerne Query syntax be used.
 
-### Lucerne Query Syntax
+#### Lucerne Query Syntax
 
 The Lucene query syntax supports the following functionality:
 
@@ -151,17 +154,225 @@ The Lucene query syntax supports the following functionality:
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
 
 
-## propertybag parameter
+### propertybag parameter
 
 A collection of the additional properties for search request. Eg. appid, correlationid.
 
 TODO: Only find this in <xref:Microsoft.Dynamics.CRM.searchquery>
 
-## options parameter
+### options parameter
 
 Options are settings configured to search a search term. Eg. lucene, besteffortsearch, groupranking, searchmodelall.
 
 TODO: Only find this in <xref:Microsoft.Dynamics.CRM.searchquery>
+
+## Response
+
+The following is an example of the response from a query.
+
+This is a template for an example
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+POST [Organization URI]/api/search/v1.0/query HTTP/1.1
+
+{
+    "search":"maria",
+    "returntotalrecordcount": true,
+    "top":2,
+    "facets": ["@search.entityname,count:100"]
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+    "querycontext": null,
+    "value": [
+        {
+            "@search.score": 11.778422355651855,
+            "@search.highlights": {
+                "firstname": [
+                    "{crmhit}Maria{/crmhit}"
+                ],
+                "fullname": [
+                    "{crmhit}Maria{/crmhit} Campbell (sample)"
+                ]
+            },
+            "@search.entityname": "contact",
+            "@search.objectid": "4d50e110-6330-ed11-9db0-00224808d5bc",
+            "ownerid": "ce939f72-a724-ed11-b83e-00224804438a",
+            "owneridname": "Corey Gray",
+            "@search.ownerid.logicalname": "systemuser",
+            "@search.objecttypecode": 2,
+            "fullname": "Maria Campbell (sample)",
+            "versionnumber": 1261450,
+            "statecode": [
+                "Active"
+            ],
+            "statuscode": [
+                "Active"
+            ],
+            "entityimage_url": null,
+            "createdon": "9/9/2022 5:16 PM",
+            "modifiedon": "9/9/2022 5:16 PM",
+            "emailaddress1": "someone_d@example.com",
+            "address1_city": "Monroe",
+            "address1_telephone1": null,
+            "parentcustomerid": "3950e110-6330-ed11-9db0-00224808d5bc",
+            "parentcustomeridname": "Fabrikam, Inc. (sample)",
+            "@search.parentcustomerid.logicalname": "account",
+            "telephone1": "555-0103"
+        }
+    ],
+    "facets": {
+        "@search.entityname": [
+            {
+                "Type": "Value",
+                "Value": "contact",
+                "Count": 1
+            }
+        ],
+        "ownerid": [
+            {
+                "Type": "Value",
+                "Value": "ce939f72-a724-ed11-b83e-00224804438a",
+                "OptionalValue": "Corey Gray",
+                "Count": 1
+            }
+        ],
+        "createdon": [
+            {
+                "Type": "Range",
+                "To": "9/14/2021 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "9/14/2021 12:00 AM",
+                "To": "8/14/2022 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "8/14/2022 12:00 AM",
+                "To": "9/7/2022 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "9/7/2022 12:00 AM",
+                "To": "9/14/2022 12:00 AM",
+                "Count": 1
+            },
+            {
+                "Type": "Range",
+                "From": "9/14/2022 12:00 AM",
+                "To": "9/15/2022 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "9/15/2022 12:00 AM",
+                "Count": 0
+            }
+        ],
+        "modifiedon": [
+            {
+                "Type": "Range",
+                "To": "9/14/2021 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "9/14/2021 12:00 AM",
+                "To": "8/14/2022 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "8/14/2022 12:00 AM",
+                "To": "9/7/2022 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "9/7/2022 12:00 AM",
+                "To": "9/14/2022 12:00 AM",
+                "Count": 1
+            },
+            {
+                "Type": "Range",
+                "From": "9/14/2022 12:00 AM",
+                "To": "9/15/2022 12:00 AM",
+                "Count": 0
+            },
+            {
+                "Type": "Range",
+                "From": "9/15/2022 12:00 AM",
+                "Count": 0
+            }
+        ]
+    },
+    "totalrecordcount": 1
+}
+```
+
+#### [.NET SDK](#tab/sdk)
+
+```csharp
+static void SDKExampleMethod(IOrganizationService service){
+ TODO
+}
+```
+**Output**
+
+```
+TODO: The output of the SDK Sample
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{}
+```
+---
+
+In the response you will find these properties:
+TODO: We should have a name for these types, like **SearchResultsPage**, SearchResult, and FacetResult
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`querycontext` |TODO|TODO: find out. It is always null. Why is it included?|
+|`value`|[`SearchResult`](#searchresult)`[]`|A collection of matching records.|
+|`facets`|[FacetResult](#facetresult)|A dictionary of facet values|
+|`totalrecordcount`|int|The total number of matching records if `"returntotalrecordcount": true` is included in the body of the request.|
+
+### SearchResult
+
+### FacetResult
+
+
 
 ## Examples
 
