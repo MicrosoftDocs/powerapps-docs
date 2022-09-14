@@ -1,6 +1,6 @@
 ---
 title: Create a simple shopping list card (Preview)
-description: Learn about the basics of creating card while creating a simple shopping list card
+description: Learn about the basics of creating card while creating a simple shopping list card.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -11,19 +11,19 @@ ms.custom:
 ms.collection: 
 ---
 
-# Simple Shopping List
+# Create a simple shopping list card
 
-This tutorial shows you how to build a simple card that displays a shopping list and lets you add new items. You'll learn about:
-
-- Variables
-- Calling PowerFX from a button
-- Repeating UI elements
-- Reading data from input fields
-- A basic tour of the user interface
-
-At the end of this tutorial your shopping list card will look like the example below:
+This tutorial shows you how to build a simple card that displays a shopping list and lets you add new items. At the end of this tutorial, your shopping list card will look like the example below:
 
 :::image type="content" source="../media/tutorial-simple-shopping-list/shopping-list-card.png" alt-text="Screenshot of a finished simple shopping list card." border="false":::
+
+## Prerequisites
+
+- Access to [Power Apps](https://powerapps.microsoft.com/).
+- Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
+
+- Repeating UI elements
+- Reading data from input fields
 
 This tutorial show how to create a card that only let you add items in this card. For a more complex shopping list tutorial, see the [compound Shopping list](compound-shopping-list.md) tutorial.
 
@@ -147,8 +147,6 @@ Save first (always save before testing) and then select the **Play** button in t
 
 :::image type="content" source="../media/tutorial-simple-shopping-list/play-button-in-cards.png" alt-text="Screenshot showing where the play button is." border="false":::
 
-### Bonus things to try
+## Next Steps
 
-- Try making the items on the shopping list have a different color than the rest of the text.
-- Use a Power Fx expression to add "please" to every item on the shopping list
-- Advanced: make it so every item in the shopping list has two text labels instead of one. For more information on this, see the [Compound List tutorial](compound-shopping-list.md).
+Learn how to make a more complex card with the [compound List tutorial](compound-shopping-list.md).
