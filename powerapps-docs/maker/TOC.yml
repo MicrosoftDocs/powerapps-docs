@@ -1573,9 +1573,9 @@
         href: ./model-driven-apps/use-power-bi.md
       - name: Power BI content management in Power Apps solutions
         href: ./model-driven-apps/power-bi-content-management-power-apps-solutions.md
-      - name: Create Power BI report and dataset components
+      - name: Create Power BI report and dataset components (preview)
         href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
-      - name: Customize and manage Power BI components
+      - name: Customize and manage Power BI components (preview)
         href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md

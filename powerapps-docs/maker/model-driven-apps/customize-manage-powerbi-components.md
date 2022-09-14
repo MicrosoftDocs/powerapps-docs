@@ -13,21 +13,26 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Customize and manage Power BI components
+# Customize and manage Power BI components (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 In general, Power BI components are customized and managed much like other components in Power Apps. However, there are a number of characteristics of Power BI components that require additional steps or that have additional considerations. This article discusses these special characteristics.
 
+> [!IMPORTANT]
+> This is a preview feature.
+
 ## Customization with Power BI components
 
-Once you've imported a managed solution, you can make changes to the report or the dataset in order to make a customization. To bring the changes into Power Apps as an unmanaged layer, Power BI and Power Apps must be synced manually. You first make the changes in Power BI, then detect and synchronize the changes in Power Apps. See [Solution layers - Power Apps](../data-platform/solution-layers.md) for more information about solution layers.
+Once you've imported a managed solution, you can make changes to the report or the dataset in order to make a customization. To bring the changes into Power Apps as an unmanaged layer, Power BI and Power Apps must be synced manually. You first make the changes in Power BI, then detect and synchronize the changes in Power Apps. More information: [Solution layers - Power Apps](../data-platform/solution-layers.md)
 
 The basic flow is as follows: 
 
-1. Start with a managed solution. You can import a managed solution either from the marketplace or you can use your own.
+1. Start with a managed solution that has the report and/or dataset you want. You can import a managed solution either from the marketplace or you can use your own.
 
 1. Create a new solution. 
 
-1. Add an existing report and or dataset component from the managed solution (From Dataverse) to the new solution. 
+1. Add an existing report and/or dataset component from the managed solution (From Dataverse) to the new solution. 
 
 1. Once the report or dataset has been added to your new solution, select the solution  component(s) and choose **Open in Power BI**.
 
@@ -39,26 +44,26 @@ The basic flow is as follows:
 
     ![Screenshot showing the Sync changes button.](./media/customize-manage-powerbi-components/sync-changes.png)
 
-    A banner notifies you if changes were detected and if an unmanaged layer was created. Press the Download log button on the right to see where the changes were detected. 
+    A banner notifies you if changes were detected and if an unmanaged layer was created. Select **Download log** on the right to view where the changes were detected.
 
     ![Screenshot of banner notifying you if changes were detected and an unmanaged layer created.](./media/customize-manage-powerbi-components/banner-change-unmanaged-layer-detection.png)
 
 1. Once you've created an unmanaged layer, you can export your solution which will also export the report/dataset as a whole, or, if you want to roll back the changes, you can remove the unmanaged layer. Removing the unmanaged layer rolls back the changes to the managed solution components.
 
     > [!NOTE]
-    > Power BI can work only with the top active layer of the component. Exporting unmanaged layer exports the complete report/dataset not only the changes you made to the report/dataset. For example, when making a customization to a report you can continue to update the dependent dataset but updates to managed layers beneath the active layer aren't applied to the report/dataset.  
+    > Power BI can work only with the top active layer of the component. Exporting the unmanaged layer exports the complete report/dataset not only the changes you made to the report/dataset. For example, when making a customization to a report you can continue to update the dependent dataset but updates to managed layers beneath the active layer aren't applied to the report/dataset.  
 
 ### Removing unmanaged layer/customization 
 
 After syncing changes, an unmanaged layer is created. Removing the unmanaged layer will roll back the changes to the active managed layer. The Power BI items (report and/or dataset) in the Power BI environment workspace will also revert to the original managed active layer. 
 
-### Using the Default solution to sync all changes. 
+### Using the Default solution to sync all changes
 
 In some cases, it may be difficult to know exactly where the changes from Power BI are coming from. To make sure you sync all changes, go to the Default solution, select **Reports** or **Datasets**, and choose **Sync all changes**.
 
 ![Screenshot showing default solution Sync all changes button.](./media/customize-manage-powerbi-components/sync-all-changes.png)
 
-The banner notifies you if changes were detected and if an unmanaged layer was created. Press the Download log button to see where the changes were detected.
+The banner notifies you if changes were detected and if an unmanaged layer was created. Select **Download log** to view where the changes were detected.
 
 ![Screenshot showing Download log button.](./media/customize-manage-powerbi-components/download-log.png)
 
@@ -75,16 +80,14 @@ To make sure that collaborators can customize solutions that include Power BI co
 * Power BI workspace admin
 * Power BI workspace contributor
 * Power BI workspace viewer
-* System adminstrator
+* System administrator
 * System customizer 
 
-These groups sync automatically with special groups in the dedicated Power BI workspace and ensure that the people you add to them get the Power BI workspace permissions they need for customizing solutions that include Power BI components. See [Assign a security role to a user](/power-platform/admin/assign-security-roles) for more information on assigning users to security roles in Power Apps environments.
-
+These groups sync automatically with special groups in the dedicated Power BI workspace and ensure that the people you add to them get the Power BI workspace permissions they need for customizing solutions that include Power BI components. More information: [Assign a security role to a user](/power-platform/admin/assign-security-roles)
 The table below shows:
 
-* Column 1: The special predefined groups in the Power Apps environment that you assign users to. The System administrator and System customizer security roles are automatically included in the Power BI workspace admin and Power BI workspace contributor roles, respectively.
+* Column 1: The special predefined groups in the Power Apps environment that you assign users to. The system administrator and system customizer security roles are automatically included in the Power BI workspace admin and Power BI workspace contributor roles, respectively.
 * Column 2: The [Power BI workspace roles](/power-bi/collaborate-share/service-roles-new-workspaces) to which each group is assigned. The workspace roles determine what permissions the users will have on the items in the workspace.
-
 
 |Assign user to one of the following predefined roles in the Power Apps environment   |As a result, users get these workspace roles in the dedicated Power BI workspace     |
 |---------|---------|
@@ -94,13 +97,13 @@ The table below shows:
 
 ### Notes 
 
-* The special Power-Platform-related groups in the dedicated Power BI workspace must not be removed. If any are removed, synchronization won’t work, and users might not be able to customize and update solutions due to lack of required permissions in Power BI.
+* The special Power Platform-related groups in the dedicated Power BI workspace must not be removed. If any are removed, synchronization won’t work, and users might not be able to customize and update solutions due to lack of required permissions in Power BI.
 
 * Permissions synchronization is on by default. If synchronization is disabled, users who have access to the Power BI workspace thanks to membership in one of the predefined security roles in the Power Apps environment will lose access to the Power BI workspace. However, Power Apps users who have been granted access to the Power BI workspace manually in Power BI will still have access.
 
-* If permissions synchronization is disabled, you can still grant users access to the dedicated Power BI workspace manually via the workspace’s Access tab in Power BI.
+* If permissions synchronization is disabled, you can still grant users access to the dedicated Power BI workspace manually via the workspace’s **Access** tab in Power BI.
 
-* Currently, you can only see group membership by looking at the predefined group in the Power Apps environment. You can't open the special Power-Platform-related groups in the dedicated Power BI workspace to view membership. 
+* Currently, you can only display group membership by looking at the predefined group in the Power Apps environment. You can't open the special Power Platform-related groups in the dedicated Power BI workspace to view membership. 
 
 ## Updating a solution with Power BI components
 

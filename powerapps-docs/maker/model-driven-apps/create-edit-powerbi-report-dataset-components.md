@@ -15,17 +15,22 @@ search.app:
 ---
 # Create Power BI report and dataset components (preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 As data culture spreads across more and more organizations, and analytics becomes a vital part of decision making and the daily actions taken by employees, it has become critical to have reliable, up-to-date analytics readily available in your Power Apps.  
 
 As a step towards achieving this goal, it possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
 
-In this article, you'll see how to
+> [!IMPORTANT]
+> This is a preview feature.
+
+In this article, you'll learn how to do the following tasks:
 
 * Add Power BI reports and dataset components to a solution.
 * Configure the behavior of Power BI mashup parameters upon import and export as part of the Power Apps solution.
-* Configure the dataset component so that the dataset automatically connects to a Dataverse data source when the solution is deployed to a new environment.
+* Configure the dataset component so that the dataset automatically connects to a Microsoft Dataverse data source when the solution is deployed to a new environment.
 
-##  Prerequisites
+## Prerequisites
 
 * A Power BI Pro license.
 * A Power BI report and/or dataset that you want to create Power Apps solution components for.
@@ -40,13 +45,13 @@ In this article, you'll see how to
 * Recovery from workspace deletion isn't supported. Once the dedicated environment workspace has been deleted, you won't be able to add/import any Power BI component to the Power Apps environment.
 * Power Apps Application IDs aren't supported during public preview.
 * The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).
-* Environment life cycle operations aren't supported during public preview. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
+* Environment life cycle operations aren't supported during public preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
 
 ## Create Power BI report and dataset components
 
 1. Open your Power Apps solution development environment.
     > [!NOTE]
-    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. See [Cross-geo operations](/power-bi/collaborate-share/power-bi/collaborate-share/power-apps-power-bi-integration-considerations#cross-geo-operations) more information. 
+    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. More information: [Cross-geo operations](/power-bi/collaborate-share/power-bi/collaborate-share/power-apps-power-bi-integration-considerations#cross-geo-operations) more information. 
 
 1. Create a new solution.
 
@@ -54,13 +59,13 @@ In this article, you'll see how to
 
     ![Screenshot of add Analytics menu showing Power B I component dataset and report options.](./media/create-edit-powerbi-report-dataset-components/create-power-bi-components.png)
 
-1. Select **Outside Dataverse**, find and select the Power BI report you want to add to the solution, then choose **Add**. 
+1. Select **Outside Dataverse**, find and select the Power BI report you want to add to the solution, and then choose **Add**. 
 
     ![Screenshot showing Outside Dataverse tab for selecting a Power B I item that is outside Dataverse.](./media/create-edit-powerbi-report-dataset-components/add-existing-power-bi-report.png)
 
     When you add a Power BI report component to a solution, a component for the report's dataset is added to the solution as well.  
 
-    In addition, when you add a report from outside of Dataverse, copies of the report and its dataset are created in the Power workspace that is dedicated to the environment. **Afterwards, all updates should start from this dedicated environment workspace**.
+    In addition, when you add a report from outside of Dataverse, copies of the report and its dataset are created in the workspace that is dedicated to the environment. **Afterwards, all updates should start from this dedicated environment workspace**.
 
     ![Screenshot showing Power B I components successfully added to solution.](./media/create-edit-powerbi-report-dataset-components/power-bi-components-exported-to-dataverse.png)
 
@@ -89,9 +94,9 @@ Power BI components allow you to configure Power BI mashup parameters. However, 
 > [!NOTE]
 > The Power BI dataset parameter types *Any* and *Binary* are not supported in the Power BI integration with Power Apps solutions. 
 
-In this section you'll see the options you have for configuring how a Power BI dataset parameter is going to get its value when the solution is deployed in a different environment.
+In this section the options you have for configuring how a Power BI dataset parameter is going to get its value when the solution is deployed in a different environment are displayed.
 
-1. Go to your Power Apps environment > Solutions.
+1. Go to your Power Apps environment > **Solutions**.
 
 1. Create a solution.
 
@@ -113,15 +118,15 @@ In this section you'll see the options you have for configuring how a Power BI d
 
     * **Current environment domain**: When you choose current environment domain, the value of the parameter will be domain of the current environment. This means that wherever the solution is deployed, the value of the parameter will be the domain of the deployment environment. 
 
-    * **Environment variable**: With this option you associate the parameter value with an environment variable. When you select this option, you'll see all the environment variables in the current environment, and you can select one. If the environment variable you need doesn't exist, you can create one in the solution. 
+    * **Environment variable**: With this option you associate the parameter value with an environment variable. When you select this option, you'll notice all the environment variables in the current environment, and you can select one. If the environment variable you need doesn't exist, you can create one in the solution. 
 
         The environment variable option is significant because it makes it possible to require the installer to provide a value for a parameter during deployment. This is done by associating the parameter with an environment variable that has a blank value. 
 
         When you configure a parameter with an environment variable in order to require the installer to provide a value upon deployment, make sure that the default value is blank. If there is a current value, remove it by right-clicking and choosing **Remove from solution**. 
 
-        See [Environment variables overview](../data-platform/environmentvariables.md) for more information about environment variables. 
+        For more information about environment variables, go to [Environment variables overview](../data-platform/environmentvariables.md). 
 
-1. Once you're done configuring the parameters, click **Apply all to apply all parameter values**. 
+1. Once you're done configuring the parameters, select **Apply all to apply all parameter values**. 
  
     ![Screenshot of how to apply all parameter values.](./media/create-edit-powerbi-report-dataset-components/apply-all-parameter-values.png)
 
