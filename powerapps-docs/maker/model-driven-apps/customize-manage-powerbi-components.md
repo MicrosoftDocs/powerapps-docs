@@ -19,7 +19,7 @@ In general, Power BI components are customized and managed much like other compo
 
 ## Customization with Power BI components
 
-Once you've imported a managed solution, you can make changes to the report or the dataset in order to make a customization. To bring the changes into Power Apps as an unmanaged layer, Power BI and Power Apps must be synced manually. You first make the changes in Power BI, then detect and synchronize the changes in Power Apps. See [Solution layers - Power Apps](./solution-layers.md) for more information about solution layers.
+Once you've imported a managed solution, you can make changes to the report or the dataset in order to make a customization. To bring the changes into Power Apps as an unmanaged layer, Power BI and Power Apps must be synced manually. You first make the changes in Power BI, then detect and synchronize the changes in Power Apps. See [Solution layers - Power Apps](../data-platform/solution-layers.md) for more information about solution layers.
 
 The basic flow is as follows: 
 
