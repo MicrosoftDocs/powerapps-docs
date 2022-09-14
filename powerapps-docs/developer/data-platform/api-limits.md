@@ -2,7 +2,7 @@
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 03/22/2022
+ms.date: 09/14/2022
 ms.reviewer: "jdaly"
 ms.topic: "article"
 author: "divka78" 
@@ -345,7 +345,7 @@ More information:
 
 To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
-TPL can be used with either <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> because both classes include a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
+TPL can be used with either <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> because both classes include a `Clone` method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
 
 ## Frequently asked questions
 
