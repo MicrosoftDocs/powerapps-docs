@@ -127,10 +127,20 @@ In this section you'll see the options you have for configuring how a Power BI d
 
 1. Once you’re applied the parameters, you can export the solution and deploy it in your deployment environments.
 
+## Updating a solution that includes Power BI components
+
+Updates to Power BI components must be made in Power BI on the artifacts in the dedicated Power BI environment workspace that are connected to the components. You can access these artifacts either by opening the workspace directly in the Power BI service, or by using the **Open in Power BI** option in the Power Apps environment.
+
+![Screenshot showing the Open Power BI option in Power Apps.](./media/create-edit-powerbi-report-dataset-components/update-components-open-power-bi.png)
+
+> [!NOTE]
+> Updating a solution with Power BI components automatically updates the relevant artifacts of the dedicated environment workspace in Power BI for both managed and unmanaged solutions. 
+
+After you update the component, you can export the solution as a managed or unmanaged solution, and then import it into a different environment (for unmanaged solutions you can also import into the same environment). 
+
 ### See also
 
 * [Customize and manage Power BI components](../data-platform/customize-manage-powerbi-components.md)
 * [Power BI content management in Power Apps solutions](./power-bi-content-management-power-apps-solutions.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
