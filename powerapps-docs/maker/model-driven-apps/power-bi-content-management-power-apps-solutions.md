@@ -25,7 +25,7 @@ Working in Power Apps, you add Power BI report and dataset components from Power
 
 ## Control Power BI dataset parameters from Power Apps
 
-Once you've added Power BI components to a solution, you can configure connectivity across environments using dataset parameters (see [XXX](./create-edit-powerbi-report-dataset-components.md#configure-power-bi-parameters)). Every Power BI dataset that includes a dynamic query parameter can be controlled from Power Apps solutions by defining its value with an environment variable, an environment domain, or custom text. This gives you flexibility in controlling data sources on deployment between your dev, test, and production environments. Datasets that connect to Dataverse and do not have existing parameters can automatically be configured to connect to the target environment domain when you deploy.
+Once you've added Power BI components to a solution, you can configure connectivity across environments using dataset parameters (see [Configure Power BI parameters](./create-edit-powerbi-report-dataset-components.md#configure-power-bi-parameters)). Every Power BI dataset that includes a dynamic query parameter can be controlled from Power Apps solutions by defining its value with an environment variable, an environment domain, or custom text. This gives you flexibility in controlling data sources on deployment between your dev, test, and production environments. Datasets that connect to Dataverse and do not have existing parameters can automatically be configured to connect to the target environment domain when you deploy.
 
 ## Power BI components in the Power Apps solutions package
  
