@@ -17,7 +17,7 @@ The table below is a glossary of terminology related to cards.
 
 | Term | Description |
 | - | - |
-| card | Lightweight, data-driven, interactive UI that can be sent in Teams |
+| card | A lightweight, data-driven, interactive UI that can be sent in Teams |
 | card definition | JSON representation of a card that is stored in Dataverse, including all the controls, their properties, the screens, formulas, data connections, and more. |
 | Card Designer | Where you author cards. See [Designer overview](/make-a-card/designer-overview.md). |
 | card instance | When a card definition is played, that card definition is turned into a card instance by populating the data from connections, taking any variable customizations. Card instances are what you send to other users and can be shared across users and clients, like Teams or the Play Page. |
