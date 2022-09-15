@@ -1,7 +1,7 @@
 ﻿---
 title: Create a simple card (Preview)
 description: Learn about basic elements of a card by creating a simple "Hello World" card
-ms.date: 09/19/2022
+ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
 ms.author: iawilt
@@ -24,7 +24,7 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
 1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left. Make sure that you're in the correct environment.
 
-1. Select the **Create a card** button.
+1. Select the **+ Create a card** button.
 
 1. Enter "HelloWorldCard" under **Card name** and then select **Create**. If the name of the card has already been used, you won't be able to create the card.
 
@@ -80,7 +80,9 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
    :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of Power Fx expression in button." border="false":::
 
-1. **Save** the card by selecting the button on the top right, Then select **Play**.
+## Test your card
+
+1. **Save** the card by selecting the button on the top right. You should always save changes before playing an updated card. Then select **Play**.
 
     Test your card and see how your input replaces the default value "No Name" in the card's title text. Note that if you replace the user input and select the button again the title text will change.
 

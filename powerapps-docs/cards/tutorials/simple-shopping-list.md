@@ -1,6 +1,6 @@
 ---
 title: Create a simple shopping list card (Preview)
-description: Learn about the basics of creating card while creating a simple shopping list card.
+description: Learn about card basics while creating a simple shopping list card.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -19,87 +19,67 @@ This tutorial shows you how to build a simple card that displays a shopping list
 
 ## Prerequisites
 
-- Access to [Power Apps](https://powerapps.microsoft.com/).
+- A [Power Apps](https://powerapps.microsoft.com/) account.
 - Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
 - Repeating UI elements
 - Reading data from input fields
 
-This tutorial show how to create a card that only let you add items in this card. For a more complex shopping list tutorial, see the [compound Shopping list](compound-shopping-list.md) tutorial.
+This tutorial show how to create a card that only lets you add items in this card. For a more complex shopping list tutorial, see the [compound Shopping list](compound-shopping-list.md) tutorial.
 
 ## Create a card
 
-1. Create your card. You'll be asked to name your card - name your card something unique, if the name is already used, you won't be able to create the card.
+1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left. Make sure that you're in the correct environment.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/create-card.png" alt-text="Screenshot of where to go to create a card." border="false":::
+1. Select the **+ Create a card** button.
 
-1. You'll see the default card.
+1. Enter "SimpleShoppingCard" under **Card name** and then select **Create**. If the name of the card has already been used, you won't be able to create the card. The default card will appear, shown below.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/default-blank-card.png" alt-text="Screenshot of a blank card." border="false":::
 
-1. Select the first heading and enter `Shopping List`.
+1. Select the top **Text label** and enter `Shopping List`. Then select the **Text label** and enter `Use the field below to add items to the list.`.
 
-1. Select the second heading and enter `Use the field below to add items to the list`.
+## Add a new variable
 
-1. Save your card. Cards don't autosave, so it's good to save as you go.
+The shopping list will hold several individual lines of text, so you'll need to create a variable to hold these.
 
-## Create a variable to hold your list
+1. Select the **Variables** menu on the left. Then select the **New variable** button to create a new variable.
 
-This shopping list will hold several individual lines of text, so you'll need to create a variable to hold these lines of text.
+1. The **New variable** box will appear. Under name **Name** enter "myGroceryList".
 
-1. Select **Variables** from the Navigation bar.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/go-to-variables.png" alt-text="Screenshot of the variables location in Cards." border="false":::
-
-1. Select the **New variable** button. This will open the variable editor.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-new-variable.png" alt-text="Screenshot of how to add a new variable." border="false":::
-
-1. Give your variable a name. In this example, we use `myGroceryList`.
-
-1. Set the type of variable to **Table**. This will be an table of text.
+1. Set the variable **Type** to *Table*. Keep the **Value Persistance** set to **Temporary**.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/setup-grocery-array-var.png" alt-text="Screenshot of the my grocery list variable setup." border="false":::
 
-1. Save the card.
+1. Select **Save** to create the `MyGroceryList` table variable.
 
-1. Now you should see that your variable list contains one variable whose name is `myGroceryList` and type is Table.
+1. You should now see that your variable list contains one variable whose name is `MyGroceryList` and type is *Table*.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/my-grocery-list-array-var.png" alt-text="Screenshot of the fully set up my grocery list array variable." border="false":::
 
-1. Save the card.
-
 ## Add and configure the list
 
-Time to build the card interface.
+Now that you have a list variable you need to add it to the card and configure it.
 
-1. Open the Tool pane.
+1. Select the **Insert** menu. Then select **Display>Text label**.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/find-tool-panel.png" alt-text="Screenshot of where to find the cards tool pane." border="false":::
+   :::image type="content" source="../media/tutorial-simple-shopping-list/add-text-label.png" alt-text="Screenshot of where to find the Text label in the Insert>Display menu." border="false":::
 
-1. Drag and drop a **Text label** onto the card underneath the text labels you previously added. The Text label will snap into place, so you don't have to be precise with positioning.
+    A **Text label** will appear on the card underneath the Text labels you edited previously.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-text-block-to-card.png" alt-text="Screenshot of another text label added to the card." border="false":::
+1. With the empty Text label still selected, select the **Advanced** tab on the right. Select the **Repeat for every** field and enter `MyGroceryList`.
 
-1. With the empty Text label still selected, go to the **Advanced** tab in the Property pane.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/go-to-advanced-pane.png" alt-text="Screenshot of how to find the advanced properties for the selected text label." border="false":::
-
-1. Select the **Repeat for every** field and enter `myGroceryList`.
+   :::image type="content" source="../media/tutorial-simple-shopping-list/advanced-pane-setup.png" alt-text="Screenshot of how to setup Advanced pane" border="false":::
 
    This will repeat the Text label for every element in a given table. In this example, the table you're providing - `myGroceryList` - is the variable you created previously. This means that for every element in the grocery list, a separate text label is created in the card.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-array-to-advanced.png" alt-text="Screenshot showing how to add the my grocery list variable to the advanced pane under repeat for every." border="false":::
-
-1. Select the **Properties** tab (visible in the picture above for reference).
-
-1. In the **Text** field, enter `ThisItem`.
+1. Select the **Properties** tab next to **Advanced**. In the **Text** field, enter `ThisItem`.
 
    Assigning the `ThisItem` variable to the text label lets you view and display the current element of the `myGroceryList` array in the visible text of the Text label.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-data-var-to-text-block.png" alt-text="Screenshot showing how to add the data variable to the text field in the properties tab." border="false":::
+CHECK THIS EM
 
-1. Save the card. Now you're done creating the list.
+   :::image type="content" source="../media/tutorial-simple-shopping-list/add-data-var-to-text-block.png" alt-text="Screenshot showing how to add the data variable to the text field in the properties tab." border="false":::
 
 ## Add the input field and button
 
