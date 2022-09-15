@@ -13,7 +13,7 @@ ms.collection:
 
 # Create a simple card (Preview)
 
-In this tutorial, you'll learn how to create a card, ask a user for their name, and then show that name in the title of the card.
+This tutorial shows you how to create a card, ask a user for their name, and then show that name in the title of the card.
 
 ## Prerequisites
 
@@ -22,11 +22,11 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
 ## Create a card
 
-1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left. Make sure that you're in the correct environment.
+1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left.
 
 1. Select **+ Create a card**.
 
-1. Enter "HelloWorldCard" under **Card name** and then select **Create**. If the name of the card has already been used, you'll need to create the card with a unique name.
+1. Enter "HelloWorldCard" under **Card name** and then select **Create**.
 
 ## Ask for text input
 
@@ -80,7 +80,7 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
    :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of Power Fx expression in button." border="false":::
 
-## Test your card
+## Test the card
 
 1. **Save** the card by selecting the button on the top right. You should always save changes before playing an updated card. Then select **Play**.
 

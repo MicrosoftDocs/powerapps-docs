@@ -24,11 +24,11 @@ This tutorial shows you how to build a simple card that displays a shopping list
 
 ## Create a card
 
-1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left. Make sure that you're in the correct environment.
+1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left.
 
 1. Select **+ Create a card**.
 
-1. Enter "SimpleShoppingCard" under **Card name** and then select **Create**. If the name of the card has already been used, you won't be able to create the card. The default card will appear, shown below.
+1. Enter "SimpleShoppingCard" under **Card name** and then select **Create**. The default card will appear, shown below.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/default-blank-card.png" alt-text="Screenshot of a blank card." border="false":::
 
@@ -80,8 +80,8 @@ The list you've created is currently empty, so the final step is to give the car
 
 1. Select the **Text input** control to display its properties.
 
-   - Set its **Name** to `TheNewItem`.
-   - Set its **Label** to `New Item:`.
+   - Set **Name** to `TheNewItem`.
+   - Set **Label** to `New Item:`.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/added-input-text-names.png" alt-text="Screenshot of added variable names to an input text box." border="false":::
 
@@ -105,7 +105,7 @@ The list you've created is currently empty, so the final step is to give the car
 
 This PowerFX expression will append the contents of the `theNewItem` field to the `myGroceryList` table.
 
-   | Variable          | Function in PowerFX script                                                             |
+   | Variable          | Function in Power Fx                                                             |
    | ----------------- | -------------------------------------------------------------------------------------- |
    | `Collect`         | A built-in function that takes a table and an item and adds the item to the table. |
    | `MyGroceryList`   | The first variable you created; an initially empty table.                              |
