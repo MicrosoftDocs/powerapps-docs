@@ -177,12 +177,12 @@ and definitions, go to [Controls and properties in Power Apps](reference-propert
 
 Add screens and select from the list of available screen layouts.
 
-##### Screnarios
+##### Scenarios 
 
 > [!div class="mx-imgBorder"] 
 > ![Layout scenarios.](media/studio/pa-studio-add-screen-scenarios.png "Layout scenarios")
 
-Or, select the **Screnarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
+Or, select the **Scenarios** and select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, **Calendar**, **Portrait print**, or **Landscape print**.
 
 
 #### Background color
