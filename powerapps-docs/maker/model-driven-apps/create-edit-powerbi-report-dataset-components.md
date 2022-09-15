@@ -85,6 +85,8 @@ In this article, you'll learn how to do the following tasks:
     > [!NOTE]
     > Steps 5 and 6 are only relevant for Dataverse data sources.
 
+1. Now, you can [create a Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md) based on the report component or [embed in a form using the form designer](./add-move-configure-or-delete-components-on-form#add-components-for-a-column-on-the-form.md).
+
 1. When done, export the solution. You can export the solution as either a managed or unmanaged solution.
 
 ## Configure Power BI parameters
