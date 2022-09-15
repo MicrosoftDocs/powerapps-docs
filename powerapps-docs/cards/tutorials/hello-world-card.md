@@ -24,9 +24,9 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
 1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left. Make sure that you're in the correct environment.
 
-1. Select the **+ Create a card** button.
+1. Select **+ Create a card**.
 
-1. Enter "HelloWorldCard" under **Card name** and then select **Create**. If the name of the card has already been used, you won't be able to create the card.
+1. Enter "HelloWorldCard" under **Card name** and then select **Create**. If the name of the card has already been used, you'll need to create the card with a unique name.
 
 ## Ask for text input
 
