@@ -30,7 +30,7 @@ The table below is a glossary of terminology related to cards.
 | Formula bar | A bar along the top of the Card Designer used to change properties or write formulas. |
 | Insert pane | A pane on the left side of the Card Designer where you can see the controls available to add into a card. |
 | JSON view | A pane on the right side of the Card Designer where you can see the card definition in its JSON representation. |
-| Play Page | A place to play cards; it can be used to either validate cards during the authoring process or to share cards on the web. |
+| Play page | A place to play cards; it can be used to either validate cards during the authoring process or to share cards on the web. |
 | screen | A set of controls put together for a user to interact with. A card can have multiple screens. See [screens](/make-a-card/screens/understand-screens.md). |
 | Tree view | A pane on the left side of the Card Designer where you can see the hierarchical structure of the card, including screens and controls. |
 | variable | A way to store data within the context of card. See [variables](/make-a-card/variables/variables.md). |
