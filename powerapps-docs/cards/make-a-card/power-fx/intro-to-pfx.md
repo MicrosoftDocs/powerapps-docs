@@ -15,7 +15,7 @@ ms.collection:
 
 [Power Fx](/power-platform/power-fx/overview) is a low-code programming language available across the Power Platform, including cards. Cards can calculate values, perform other tasks, and respond to user input using [formulas](/power-platform/power-fx/formula-reference) expressed with Power Fx.
 
-For example, a formula might determine what happens when a user selects a button or enters text into a text input. Formulas can also be used to update variables and data sources. Expressions can be combined to create complex formulas that can handle advanced business logic. Power Fx being simple, declarative, and extensible makes it possible for those with no, low, and pro code experience to use easily.
+For example, a formula might determine what happens when a user selects a button or enters text into a text input. Formulas can also be used to update variables and data sources. Expressions can be combined to create complex formulas that can handle advanced business logic.
 
 ## Power Fx documentation
 
