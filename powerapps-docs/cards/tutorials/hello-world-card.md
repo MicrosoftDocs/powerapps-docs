@@ -36,7 +36,7 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
 1. Under the **Insert** menu, select **Input**. Then select **Text input**.
 
-   :::image type="content" source="../media/hello-world-card/text-input-location.png" alt-text="Screenshot showing where Text input is under the Insert>Input menu" border="false":::
+   :::image type="content" source="../media/hello-world-card/text-input-location.png" alt-text="Screenshot showing where text input is under the Insert>Input menu" border="false":::
 
 1. A new **Text input** box will appear on your card. This lets you gather text input from users who interact with the card.
 

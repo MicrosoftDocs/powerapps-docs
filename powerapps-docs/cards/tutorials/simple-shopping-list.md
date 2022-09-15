@@ -22,11 +22,6 @@ This tutorial shows you how to build a simple card that displays a shopping list
 - A [Power Apps](https://powerapps.microsoft.com/) account.
 - Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
-- Repeating UI elements
-- Reading data from input fields
-
-This tutorial show how to create a card that only lets you add items in this card. For a more complex shopping list tutorial, see the [compound Shopping list](compound-shopping-list.md) tutorial.
-
 ## Create a card
 
 1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left. Make sure that you're in the correct environment.
@@ -77,55 +72,51 @@ Now that you have a list variable you need to add it to the card and configure i
 
    Assigning the `ThisItem` variable to the text label lets you view and display the current element of the `myGroceryList` array in the visible text of the Text label.
 
-CHECK THIS EM
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-data-var-to-text-block.png" alt-text="Screenshot showing how to add the data variable to the text field in the properties tab." border="false":::
-
 ## Add the input field and button
 
 The list you've created is currently empty, so the final step is to give the card the ability to add items to the list.
 
-1. Add an **Text input** onto the card underneath all of the previously created text boxes.
+1. Select the **Insert** menu. Then select **Input>Text input**. A text input box will appear on the screen.
 
-1. Select the **Text input**. In the Properties pane, update the following properties:
+1. Select the **Text input**. Update the following properties on the right:
 
-   - **Name:** `theNewItem`
+   - **Name:** `TheNewItem`
    - **Label:** `New Item:`
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/added-input-text-names.png" alt-text="Screenshot of added variable names to an input text box." border="false":::
 
    > [!NOTE]
-   > The Name property lets you refer to the field from Power Fx – it needs to be one word. The Label property is displayed above the field – you can see it on the card to the left. These don't have to be similar as they are here (i.e. *theNewItem* and "New Item:"), but it makes it easier to keep track of things.
+   > The **Name** property lets you refer to the field from Power Fx and has to be one word. The **Label** property is displayed above the field; you can see it on the card to the left. These don't have to be similar as they are here (i.e. *TheNewItem* and "New Item:"), but it makes it easier to keep track of things.
 
-1. Add a **Button** to the card. Drop it anywhere below the **New Item** field.
+1. Now add a **Button** to the card by selecting **Input>Button**. A button will appear on the card.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/add-a-button.png" alt-text="Screenshot of adding a button to the card." border="false":::
 
-1. Select the **Button**. In the Properties pane, set the **Title** property to `Add the New Item`. Note that the **Type** property is set to **Run Power Fx** - buttons can be used for other kinds of actions, but using a Power Fx expression is the most common.
+1. Select the **Button**. On the right, set the **Title** property to `Add a new item`.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/run-pfx-in-button.png" alt-text="Screenshot showing the button type." border="false":::
+    Note that the **Type** property is set to **Run Power Fx**. Buttons can be used for other kinds of actions, but using a Power Fx expression is the most common.
 
 1. Click **Save**.
 
-## One line of Power Fx to tie it all together
+### Add the Power Fx expression
 
-1. With the button selected, add in the following line of code into the PowerFX editor: `Collect(myGroceryList, theNewItem)`
+1. With the button selected, add in the following line of code into the Power Fx editor at the top: `Collect(myGroceryList, theNewItem)`
 
-   This PowerFX expression will append the contents of the `theNewItem` field to the `myGroceryList` table.
+This PowerFX expression will append the contents of the `theNewItem` field to the `myGroceryList` table.
 
    | Variable          | Function in PowerFX script                                                             |
    | ----------------- | -------------------------------------------------------------------------------------- |
    | `Collect`         | A built-in function that takes a table and an item and adds the item to the table. |
-   | `myGroceryList`   | The first variable you created; an initially empty table.                              |
-   | `theNewItem`      | The text input field above the button.                                                 |
-
-1. Save the card.
+   | `MyGroceryList`   | The first variable you created; an initially empty table.                              |
+   | `TheNewItem`      | The text input field above the button.                                                 |
 
 ## Test the card
 
-Save first (always save before testing) and then select the **Play** button in the upper right corner. This will launch your card in a new web page.
+1. Save all of your changes by selecting **Save** at the top. Always save your changes before testing your card.
 
-:::image type="content" source="../media/tutorial-simple-shopping-list/play-button-in-cards.png" alt-text="Screenshot showing where the play button is." border="false":::
+1. Select the **Play** button in the upper right corner. This will launch your card in a new web page.
+
+    :::image type="content" source="../media/tutorial-simple-shopping-list/play-button-in-cards.png" alt-text="Screenshot showing where the play button is." border="false":::
 
 ## Next Steps
 
