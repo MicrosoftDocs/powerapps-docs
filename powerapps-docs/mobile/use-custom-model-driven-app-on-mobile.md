@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/15/2021
+ms.date: 8/09/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -175,6 +175,40 @@ From a list view, swipe left to access the actions menu for a row.
 ## Sign out
 
 From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon"), select the profile icon ![Profile icon](media/profile_icon.png "Site map icon"), and then select **Sign out**.
+
+## Enhancements  (preview)
+
+Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
+
+### Commanding improvements
+
+- The **Delete** command on a grid page is automatically hidden when a row is not selected thus, making room for other commands. When one or more rows is selected the **Delete** command is automatically displayed.
+  
+- The **Process** command is hidden when there's no process enabled for a table. Removing a nonfunctional command makes room for other commands. 
+
+  | Before | After |
+  | :---:         |     :---:      |
+  | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
+ 
+- Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the main set of commands to overflow menu. This gives priority to other commands including custom commands. 
+
+  | Before | After |
+  | :---:         |     :---:      |
+  | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
+  
+### Command bar optimization for tablets
+
+- The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top like to the web app.
+
+    ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
+
+
+
+
+
+
+
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
