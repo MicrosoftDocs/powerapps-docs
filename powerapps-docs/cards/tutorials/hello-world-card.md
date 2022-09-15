@@ -17,7 +17,7 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
 ## Prerequisites
 
-- Access to [Power Apps](https://powerapps.microsoft.com/).
+- A [Power Apps](https://powerapps.microsoft.com/) account.
 - Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
 ## Create a card
@@ -28,9 +28,7 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
 1. Enter "HelloWorldCard" under **Card name** and then select **Create**. If the name of the card has already been used, you won't be able to create the card.
 
-   :::image type="content" source="../media/hello-world-card/name-card.png" alt-text="Screenshot of card being named HelloWorldCard." border="false":::
-
-## Customize your card
+## Ask for text input
 
 1. Double-click on the **Text label** that has "Add and remove element to customize your new card.". Select the Remove button (X) at the top of the box to delete it.
 
@@ -46,7 +44,7 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
    :::image type="content" source="../media/hello-world-card/edit-input-text-label.png" alt-text="Screenshot showing an updated input text label and the resulting card with the same label." border="false":::
 
-### Assign variables
+## Assign variables
 
 1. Under **Name** enter `UserAnswer`. This is the name of the variable associated with the input the user enters.
 
@@ -62,15 +60,13 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
    :::image type="content" source="../media/hello-world-card/new-variable-setup.png" alt-text="Screenshot of the variable properties to change for the default name variable." border="false":::
 
-1. Select the **Text label** at the top of the card. Replace the **Text** with `"Hello " & UserName`.
+1. Select the **Text label** at the top of the card. Replace the **Text** with `="Hello " & UserName`.
 
    This will call the variable you just created in the title once the user has provided their name.
 
-   :::image type="content" source="../media/hello-world-card/add-variable-to-card-title.png" alt-text="Screenshot of the using the username variable in the card title." border="false":::
-
 ## Use Power Fx in buttons
 
-1. To say "Hello" to the user, you need to create a button that uses Power Fx. Under the **Display** menu, select **Button**. The button will appear under the Text input box.
+1. To say "Hello" to the name from user input, you need to create a button that uses Power Fx. Under the **Display** menu, select **Button**. The button will appear under the Text input box.
 
 1. Under **Title** enter "Say Hello". You'll see the text on the button update as soon as you finish typing.
 
@@ -84,4 +80,10 @@ In this tutorial, you'll learn how to create a card, ask a user for their name, 
 
    :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of Power Fx expression in button." border="false":::
 
-1. **Save** the card and then select **Play** to see the card in action.
+1. **Save** the card by selecting the button on the top right, Then select **Play**.
+
+    Test your card and see how your input replaces the default value "No Name" in the card's title text. Note that if you replace the user input and select the button again the title text will change.
+
+## Next steps
+
+Learn how to use more cards functionality in the [simple shopping list](simple-shopping-list.md) tutorial.
