@@ -96,7 +96,7 @@ You can also input Power Fx expressions into the properties, utilizing low-code 
 
 ### Power Fx editor
 
-The formula bar at the top of the card designer and allows you to write Power Fx expressions. When you select an element on the card, the formula bar lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression. Intellisense will also pull in any variables you've defined, and specific functions based on the data connections you've made.
+The formula bar at the top of the card designer and allows you to write Power Fx expressions. When you select an element on the card, the formula bar lets you select a property of that element from the dropdown that supports a code input and then assists you in writing an expression.
 
 To get started with Power Fx, see [Introduction to Power FX](../make-a-card/power-fx/intro-to-pfx.md). For more information on the specific functions you can use, see the Microsoft documentation for [Formula reference for Power Apps](/powerapps/maker/canvas-apps/formula-reference).
 
