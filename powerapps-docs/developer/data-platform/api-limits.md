@@ -1,14 +1,12 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
-description: "Understand the service protection limits for API requests." 
-ms.custom: ""
-ms.date: 09/14/2022
-ms.reviewer: "jdaly"
-ms.topic: "article"
-author: "divka78" 
+description: "Understand what a developer needs to do to manage service protection limits for API requests." 
+ms.date: 09/15/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: divka78
 ms.subservice: dataverse-developer
-ms.author: "jdaly" 
-manager: "ryjones" 
+ms.author: dikamath 
 search.audienceType: 
   - developer
 search.app: 
@@ -251,61 +249,39 @@ If you are using the Web API with a client library, you may find that it support
 If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [WebAPIService class library (C#)](webapi/samples/webapiservice.md).
 
 ```csharp
-private async Task<HttpResponseMessage> SendAsync(
-    HttpRequestMessage request,
-    HttpCompletionOption httpCompletionOption = HttpCompletionOption.ResponseHeadersRead,
-    int retryCount = 0)
+/// <summary>
+/// Specifies the Retry policies
+/// </summary>
+/// <param name="config">Configuration data for the service</param>
+/// <returns></returns>
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy(Config config)
 {
-    HttpResponseMessage response;
-    try
-    {
-        //The request is cloned so it can be sent again.
-        response = await httpClient.SendAsync(request.Clone(), httpCompletionOption);
-    }
-    catch (Exception)
-    {
-        throw;
-    }
-
-    if (!response.IsSuccessStatusCode)
-    {
-        if ((int)response.StatusCode != 429)
-        {
-            //Not a service protection limit error
-            throw ParseError(response);
-        }
-        else
-        {
-            // Give up re-trying if exceeding the maxRetries
-            if (++retryCount >= config.MaxRetries)
-            {
-                throw ParseError(response);
-            }
-
+    return HttpPolicyExtensions
+      .HandleTransientHttpError()
+      .OrResult(httpResponseMessage => httpResponseMessage.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+      .WaitAndRetryAsync(
+         retryCount: config.MaxRetries,
+         sleepDurationProvider: (count, response, context) =>
+         {
             int seconds;
-            //Try to use the Retry-After header value if it is returned.
-            if (response.Headers.Contains("Retry-After"))
+            HttpResponseHeaders headers = response.Result.Headers;
+
+            if (headers.Contains("Retry-After"))
             {
-                seconds = int.Parse(response.Headers.GetValues("Retry-After").FirstOrDefault());
+               seconds = int.Parse(headers.GetValues("Retry-After").FirstOrDefault());
             }
             else
             {
-                //Otherwise, use an exponential backoff strategy
-                seconds = (int)Math.Pow(2, retryCount);
+               seconds = (int)Math.Pow(2, count);
             }
-            await Task.Delay(TimeSpan.FromSeconds(seconds));
-
-            return await SendAsync(request, httpCompletionOption, retryCount);
-        }
-    }
-    else
-    {
-        return response;
-    }
+            return TimeSpan.FromSeconds(seconds);
+         },
+         onRetryAsync: (_, _, _, _) => { return Task.CompletedTask; }
+      );
 }
 ```
 
-You may also want to use [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
+This example uses [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
 
 ### HTTP Response headers
 
