@@ -129,4 +129,4 @@ Save first (always save before testing) and then select the **Play** button in t
 
 ## Next Steps
 
-Learn how to make a more complex card with the [compound List tutorial](compound-shopping-list.md).
+Learn how to make a more complex card with the [compound list tutorial](compound-shopping-list.md).
