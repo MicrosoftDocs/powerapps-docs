@@ -33,7 +33,7 @@ When you export your solution with Power BI components, the Power BI artifacts a
 
 ## Solution Customization
  
-You can fully customize Power BI components to fit your exact needs. When you deploy a managed solution, any customizations you make are saved as an additional, unmanaged layer. This enables you to take a managed solution from your own organization, a vendor, or even from AppSource, and adapt it to suit your own analytics needs.
+You can fully [customize Power BI components](./customize-manage-powerbi-components.md#customization-with-power-bi-components) to fit your exact needs. When you deploy a managed solution, any customizations you make are saved as an additional, unmanaged layer. This enables you to take a managed solution from your own organization, a vendor, or even from AppSource, and adapt it to suit your own analytics needs.
 
 ### See also
 
