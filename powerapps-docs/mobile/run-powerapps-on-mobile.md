@@ -70,6 +70,10 @@ If you have the Microsoft Authenticator app installed on your mobile device, ent
 ## Find the app
   
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on Power Apps mobile. 
+  
+>[!Note]
+> For Model driven apps to appear in Power Apps mobile, users must be assigned a [predefined security role](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) in the environment where the app is hosted. For example, users with access to model driven apps in the "Constoso Prod" environment that are also assigned the "Basic User" security role will see model driven apps in Power Apps mobile.
+  
 
 ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
 
