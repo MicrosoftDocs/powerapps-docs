@@ -63,7 +63,7 @@ The main menu lets you switch between the different tools available in the desig
 
 ### Tool pane
 
-When you start making your card, you'll use items from the Tool pane. There are three categories of items in the pane:
+When you start making your card, you'll use controls from the Tool pane. There are three categories of controls in the pane:
 
 - Display: Add text and media to cards.
 - Input: Add different types of input boxes to collect information from users.
@@ -84,7 +84,7 @@ The property pane is used to change up specific properties for an element. Each 
 - **Default value**: the initial value of a field
 - **Initially visible**: choose if the element will be visible on load
 
-Visual elements for certain elements can also be edited. For example, you can customize the **Font**, **Color**, **Spacing** and more for text labels and input. 
+Visual elements for certain elements can also be edited. For example, you can customize the **Font**, **Color**, **Spacing** and more for text labels and input.
 
 Each property pane also contains Advanced features, which allow you to specify things like:
 
@@ -104,7 +104,7 @@ Note that some expressions supported in Power Apps won't be available for cards 
 
 ### Play button
 
-Once you've set up your card to your liking, you can preview the card with the **Play** button. This will open your card in a new tab and allow you to test out the card's functionalities. This is also where, if needed, you'll be able to debug and troubleshoot your card. For more information on debugging, see [Debugging cards](../make-a-card/testing/debugging-cards.md).
+Once you've set up your card to your liking, you can preview the card with the **Play** button. This will open your card on the **Play** page in a new tab and allow you to test the card's functionalities. This is also where, if needed, you'll be able to debug and troubleshoot your card. For more information on debugging, see [Debugging cards](../make-a-card/testing/debugging-cards.md).
 
 ## Next steps
 
