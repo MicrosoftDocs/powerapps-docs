@@ -80,24 +80,28 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 
 ## Barcode Availability by Device
 
-| Barcode Type | Android | iOS |
-|--------------|:-------:|:---:|
-|QR_CODE|✔|✔|
-|DATA_MATRIX|✔|✔|
-|UPC_A|✔|✔|
-|UPC_E|✔|✔|
-|EAN_8|✔|✔|
-|EAN_13|✔|✔|
-|CODE_39|✔|✔|
-|CODE_93|✔|✔|
-|CODE_128|✔|✔|
-|CODABAR|✔|✖|
-|ITF|✔|✔|
-|RSS14|✔|✖|
-|PDF_417|✔|✔|
-|RSS_EXPANDED|✔|✖|
-|MSI|✖|✖|
-|AZTEC|✔|✔|
+| Barcode Type | Android | iOS | Windows |
+|--------------|:-------:|:---:|:---:|
+|QR_CODE|✔|✔|✔|
+|DATA_MATRIX|✔|✔|✖|
+|UPC_A|✔|✔|✔|
+|UPC_E|✔|✔|✔|
+|EAN_8|✔|✔|✔|
+|EAN_13|✔|✔|✔|
+|CODE_39|✔|✔|✔|
+|CODE_93|✔|✔|✖|
+|CODE_128|✔|✔|✔|
+|CODABAR|✔|✖|✔|
+|Databar Omnidirectional|✖|✖|✔|
+|Databar Stacked|✖|✖|✔|
+|GS1-DWCode|✖|✖|✔|
+|ITF|✔|✔|✖|
+|Interleaved 2 of 5|✖|✖|✔|
+|RSS14|✔|✖|✖|
+|PDF_417|✔|✔|✖|
+|RSS_EXPANDED|✔|✖|✖|
+|MSI|✖|✖|✖|
+|AZTEC|✔|✔|✖|
 
 > [!NOTE]
 > PDF_417 and AZTEC aren't supported in Auto mode.
