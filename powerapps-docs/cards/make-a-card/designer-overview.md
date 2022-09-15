@@ -1,7 +1,6 @@
 ---
-title: "Card Designer overview"
-description: "Learn about the designer in Power Cards to confidently create cards"
-keywords: "Card Designer, Power Apps, cards"
+title: Card Designer overview (Preview)
+description: Learn about the designer and how to create cards using it.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,22 +11,24 @@ ms.custom:
 ms.collection: 
 ---
 
-# Card Designer overview
+# Card Designer overview (Preview)
 
-The Cards Designer is where makers can build out cards to suit their own needs, enabling them to optimize and automate business user tasks and to create actionable scenarios in interactive and easy-to-make cards. The Designer builds off of the designer for Adaptive Cards, introducing a few new concepts:
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+
+The Card Designer is where makers and developers can build cards to suit their own needs. The designer lets you optimize and automate business user tasks and create actionable scenarios in interactive and easy-to-make cards. The designer builds off of the designer for Adaptive Cards, introducing a few new concepts:
 
 - Power Fx: specify an action to trigger when an element is selected
-- Connectors: bring data into cards (for now, only Dataverse)
+- Connectors: bring data into cards (currently only Dataverse)
 - Variables: store, bind, and reuse data across a card
 - Dataverse: stores each card you create and allows you to retrieve the card at send time
 
-## Find the Designer
+## Find the designer
 
-To get to the Card Designer, follow the instructions below:
+To get to the designer, take the following steps:
 
-1. Navigate to [https://make.powerapps.com](https://make.powerapps.com).
+1. Go to [Power Apps](https://make.powerapps.com) and make sure you're in the correct environment.
 
-1. Go to the left side pane to access all of the Card-related views.
+1. Go to the pane on the left to access all of the card-related views.
 
    1. Create a new card: select **Cards** > **Create**
    1. See all current cards: select **Cards** > **Cards**
@@ -36,7 +37,7 @@ To get to the Card Designer, follow the instructions below:
 
 1. From **Cards** > **Create**, select **Create a card** to start building your own card.
 
-## What's in the Designer
+## What's in the designer?
 
 The Designer is made up of the following elements:
 
@@ -47,7 +48,7 @@ The Designer is made up of the following elements:
 - Formula bar
 - Play button
 
-:::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Power Apps Cards Designer with elements highlighted." border="false":::
+:::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Card Designer with elements highlighted." border="false":::
 
 ### Navigation
 
@@ -98,4 +99,4 @@ Once you've set up your card to your liking, you can preview the card with the P
 
 ## Next steps
 
-Now that you've got an overview of the Power Cards Designer, [Get started making your first card](../tutorials/hello-world-card.md).
+Now that you've got an overview of designer, [make your first card](../tutorials/hello-world-card.md).
