@@ -1,7 +1,6 @@
 ---
-title: "Adding business logic to your cards"
-description: "Learn about Power FX and how it's used in cards to add business logic"
-keywords: "Card Designer, Power Apps, cards, Power Fx"
+title: Introduction to Power Fx
+description: Learn about Power FX and how it's used in cards to add business logic.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,17 +11,28 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add business logic
+# Introduction to Power Fx
 
-Cards can calculate values, perform other tasks, and respond to user input using formulas expressed with Power Fx.
+[Power Fx](/power-platform/power-fx/overview) is a low-code programming language available across the Power Platform, including cards. Cards can calculate values, perform other tasks, and respond to user input using [formulas](/power-platform/power-fx/formula-reference) expressed with Power Fx.
 
-For example, a formula might determine what happens when a user selects a button or write text into a text input control. Formulas can also be used to update variables and data sources. 
+For example, a formula might determine what happens when a user selects a button or enters text into a text input. Formulas can also be used to update variables and data sources. Expressions can be combined to create complex formulas that can handle advanced business logic. Power Fx being simple, declarative, and extensible makes it possible for those with no, low, and pro code experience to use easily.
 
-## Known Limitations
+## Power Fx documentation
 
-- All device sensor formulas do not work (**Acceleration**, **App**, **Compass**, **Connection**, and **Location**)
-- **SaveData**, **LoadData**, and **ClearData** do not work
-- Form-related formulas do not work (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**)
-- **Collect**, **Patch**, and **Remove** only works for variables and Dataverse tables
-- **Update** and **UpdateIf** do not work
-- **Set** requires the type of the variable to match what you are trying to set it to and requires the variable to be already created using the variable creation
+The [Power Fx documentation](/power-platform/power-fx/overview) is the main source for information about Power Fx. Makers and developers working with cards will find the following articles helpful:
+
+- [Expression grammar](/power-platform/power-fx/expression-grammar)
+- [Operators](/power-platform/power-fx/operators)
+- [Variables](/power-platform/power-fx/variables)
+- [Formula reference](/power-platform/power-fx/formula-reference)
+
+## Known Power Fx limitations with cards
+
+There are some known limitations with cards and Power Fx. These include:
+
+- All device sensor formulas don't work (**Acceleration**, **App**, **Compass**, **Connection**, and **Location**).
+- **SaveData**, **LoadData**, and **ClearData** don't work.
+- Form-related formulas don't work (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**).
+- **Collect**, **Patch**, and **Remove** only work for variables and Dataverse tables.
+- **Update** and **UpdateIf** don't work.
+- **Set** requires the type of the variable to match what you are trying to set it to and requires the variable to be already created using the variable creation.
