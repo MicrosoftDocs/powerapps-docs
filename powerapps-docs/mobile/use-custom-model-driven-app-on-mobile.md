@@ -178,6 +178,8 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 ## Enhancements  (preview)
 
+[This section has pre-release documentation and is subject to change.]
+
 Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
 ### Commanding improvements
