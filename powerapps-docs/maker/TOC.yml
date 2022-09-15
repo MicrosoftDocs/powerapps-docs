@@ -2861,7 +2861,7 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-- name: Cards
+- name: Cards (Preview)
   href: ../cards/overview.md
   items:
     - name: Glossary
