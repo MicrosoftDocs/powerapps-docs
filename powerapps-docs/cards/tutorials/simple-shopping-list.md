@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Create a simple shopping list card
+# Create a simple shopping list card (Preview)
 
 This tutorial shows you how to build a simple card that displays a shopping list and lets you add new items. At the end of this tutorial, your shopping list card will look like the example below:
 

@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Create a simple card
+# Create a simple card (Preview)
 
 In this tutorial, you'll learn how to create a card, ask a user for their name, and then show that name in the title of the card.
 
