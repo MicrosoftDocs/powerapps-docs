@@ -49,7 +49,6 @@ Returns an object with methods to manage the events.
 |[OnStageSelected](../events/onstageselected.md)|When the form `OnStageSelected` event occurs, you can use the `getEventArgs` method of the execution context object to retrieve an object that contains the following methods: <br/>- **getStage**: Gets the stage object corresponding to the event triggered. Returns the selected stage in for the `OnStageSelected` event and next or previous stage objects for the `OnStageChange` event depending on direction moved. More information: [Stage methods](../formcontext-data-process.md#stage-methods).<br/>- **getDirection**: Gets the direction of the stage advance action. It returns a string value `Next` or `Previous`.|
 |[OnTabStateChange](../events/tabstatechange.md)|None|
 |[PreSearch](../events/presearch.md)|None|
-|||
 
 
 ### Related topics
