@@ -1,13 +1,12 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 09/14/2022
-ms.reviewer: "jdaly"
-ms.topic: "article"
-author: "divka78" 
+ms.date: 09/15/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: divka78
 ms.subservice: dataverse-developer
-ms.author: "jdaly" 
-manager: "ryjones" 
+ms.author: dikamath 
 search.audienceType: 
   - developer
 search.app: 
