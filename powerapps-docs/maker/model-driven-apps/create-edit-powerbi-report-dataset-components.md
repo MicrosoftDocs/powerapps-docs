@@ -148,6 +148,8 @@ After you update the component, you can export the solution as a managed or unma
 ### See also
 
 * [Customize and manage Power BI components](./customize-manage-powerbi-components.md)
+* [Create a Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md)
+* [Add components for a column on the form](the report component) in a form using the form designer](./add-move-configure-or-delete-components-on-form#add-components-for-a-column-on-the-form.md).
 * [Power BI content management in Power Apps solutions](./power-bi-content-management-power-apps-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
