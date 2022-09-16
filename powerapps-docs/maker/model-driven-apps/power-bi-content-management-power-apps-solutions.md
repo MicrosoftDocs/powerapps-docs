@@ -1,11 +1,11 @@
 ---
-title: Power BI content management in Power Apps solutions
+title: Power BI content management in Power Apps solutions (preview)
 description: Learn how the Power BI/Power Apps solutions integration makes it possible to include Power BI reports and datasets in your apps and manage them in your ALM lifecycle process.
 author: paulinbar
 manager: kfollis
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/14/2022
+ms.date: 09/16/2022
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
@@ -15,9 +15,15 @@ search.app:
 ---
 # Power BI content management in Power Apps solutions (preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The Power BI/Power Apps solutions integration enables you, as an App maker, to add Power BI reports and datasets as Dataverse components in Power Apps solutions. When you add a Power BI report or dataset to a solution, it will stay connected as the solution is deployed across environments and tenants, and can be seamlessly managed as part of your Application Lifecycle Management process across environments and tenants.
 
 This article presents high-level descriptions of some of the main features of the Power BI/Power App solutions integration. If you just want to get started, go to [Create Power BI report and dataset components](./create-edit-powerbi-report-dataset-components.md).
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Add Power BI components to solutions
 

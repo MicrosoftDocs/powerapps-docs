@@ -1,11 +1,11 @@
 ---
-title: Customize and manage Power BI components
+title: Customize and manage Power BI components (preview)
 description: Learn how to customize and work with Power BI components in Power Apps solutions.
 author: paulinbar
 manager: kfollis
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/07/2022
+ms.date: 09/16/2022
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
@@ -20,7 +20,8 @@ search.app:
 In general, Power BI components are customized and managed much like other components in Power Apps. However, there are a number of characteristics of Power BI components that require additional steps or that have additional considerations. This article discusses these special characteristics.
 
 > [!IMPORTANT]
-> This is a preview feature.
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Customization with Power BI components
 

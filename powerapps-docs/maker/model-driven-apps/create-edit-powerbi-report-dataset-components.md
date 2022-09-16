@@ -1,11 +1,11 @@
 ---
-title: Create Power BI report and dataset components
+title: Create Power BI report and dataset components (preview)
 description: Learn how to create Power BI report and dataset components to use in Power Apps solutions.
 author: paulinbar
 manager: kfollis
 ms.component: cds
 ms.topic: how-to
-ms.date: 09/15/2022
+ms.date: 09/16/2022
 ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
@@ -22,7 +22,8 @@ As data culture spreads across more and more organizations, and analytics become
 As a step towards achieving this goal, it possible to add Power BI reports and datasets as components in Power Apps solutions. Once you've added a Power BI report to a solution, it can be seamlessly managed as part of your ALM process across environments and tenants.
 
 > [!IMPORTANT]
-> This is a preview feature.
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 In this article, you'll learn how to do the following tasks:
 
