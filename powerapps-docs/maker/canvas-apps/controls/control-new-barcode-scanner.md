@@ -26,7 +26,7 @@ Scans barcodes, QR codes, and data-matrix codes on an Android, iOS, and Windows 
 The control opens a native scanner on an Android, iOS, and Windows device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
 
 > [!NOTE]
-> The barcode scanner control is only supported on on Android, iOS, and Windows device. All other platforms will show a warning that some features of the app won't work.
+> The barcode scanner control is supported on an Android, iOS, and Windows device. All other platforms will show a warning that some features of the app won't work.
 
 ## Key properties
 
