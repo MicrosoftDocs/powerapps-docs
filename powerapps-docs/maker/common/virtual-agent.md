@@ -67,7 +67,7 @@ In [Power Apps studio](../canvas-apps/power-apps-studio.md), select **Ask virtua
    > [!div class="mx-imgBorder"]
    > ![Still need help.](media/bot/virtual-agent-3.png)
 
-If you still need more help, select **No** to the question, **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
+If you still need help, select **No** to: **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
 
 ## Restart or close a session
 
