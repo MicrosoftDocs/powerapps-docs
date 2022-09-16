@@ -2863,15 +2863,13 @@
   href: ../chatbots.md
 - name: Cards (Preview)
   items:
-    - name: Cards overview
+    - name: What are cards?
       href: ../cards/overview.md
-    - name: Glossary
-      href: ../cards/glossary.md
     - name: Create cards
       items: 
         - name: Design the interface
           items:
-            - name: Designer overview
+            - name: Card Designer overview
               href: ../cards/make-a-card/designer-overview.md
             - name: Add controls
               items:
@@ -2880,31 +2878,21 @@
               - name: Control reference
                 href: ../cards/make-a-card/ui-elements/controls.md
             - name: Add buttons
-              items: 
-               - name: Use buttons
-                 href: ../cards/make-a-card/ui-elements/buttons/use-buttons.md
-        - name: Add and configure screens
-          items:
-            - name: Use screens
+              href: ../cards/make-a-card/ui-elements/buttons/use-buttons.md
+            - name: Add and configure screens
               href: ../cards/make-a-card/screens/use-screens.md
-        - name: Connect to data and services
-          items: 
-            - name: Introduction to connectors
-              href: ../cards/make-a-card/connectors/connector-intro.md
-            - name: Use a Connector in a Card
-              href: ../cards/make-a-card/connectors/use-connector-in-card.md
-        - name: Add business logic
-          items: 
-            - name: Introduction to Power Fx
-              href: ../cards/make-a-card/power-fx/intro-to-pfx.md
-        - name: Test cards
-          items: 
-            - name: How to debug your card
-              href: ../cards/make-a-card/testing/debugging-cards.md
-    - name: Send cards
-      items:
-        - name: Send a card in Teams
-          href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Connect to data and services
+      items: 
+        - name: Introduction to connectors
+          href: ../cards/make-a-card/connectors/connector-intro.md
+        - name: Use a Connector in a card
+          href: ../cards/make-a-card/connectors/use-connector-in-card.md
+    - name: Add business logic with Power Fx
+      href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
+    - name: Test and debug cards
+      href: ../cards/make-a-card/testing/debugging-cards.md
+    - name: Send a card in Teams
+      href: ../cards/send-a-card/send-card-in-teams.md
     - name: Tutorials
       items:
         - name: Create a hello world card
@@ -2915,6 +2903,8 @@
           href: ../cards/tutorials/compound-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
+    - name: Glossary
+      href: ../cards/glossary.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
