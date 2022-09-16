@@ -42,7 +42,7 @@ The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details
 > [!NOTE]
 > - All existing customers who are using this deprecated feature need to migrate to the supported method by October 2022.
 > - For more information on using a custom certificate, go to [using a custom certificate](oauth-implicit-grant-flow.md#custom-certificates).
-> - For sample code on using POST calls on the Token endpoint, go to [](oauth-implicit-grant-flow.md#token-endpoint-sample).
+> - For sample code on using POST calls on the Token endpoint, go to [Token endpoint sample](oauth-implicit-grant-flow.md#token-endpoint-sample).
 
 ## List OData feed 
 
