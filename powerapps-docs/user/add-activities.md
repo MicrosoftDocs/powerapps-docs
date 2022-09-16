@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 09/15/2022
+ms.date: 09/16/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -20,7 +20,7 @@ search.app:
 ---
 # Use timeline 
 
-Timeline is a modernized and optimized control that helps provide you with at-a glance understanability when working with your customers. You can use the timeline to view information that is connected to a row in a table and occurs over time in a single stream. Some information that can be logged into the timeline includes notes and posts, in addition to displaying activities such as emails, appointments, phone calls, and tasks.
+Timeline is a modernized and optimized control that helps provide you with at-a glance understandability when working with your customers. You can use the timeline to view information that is connected to a row in a table and occurs over time in a single stream. Some information that can be logged into the timeline includes notes and posts, in addition to displaying activities such as emails, appointments, phone calls, and tasks.
 
 Timeline allows you to:
 - Access the command bar to perform common actions quickly
