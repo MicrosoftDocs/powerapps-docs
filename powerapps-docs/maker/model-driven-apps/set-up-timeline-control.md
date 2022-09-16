@@ -159,7 +159,7 @@ The following category and subcategory options are available on the filer menu:
 |Activity type              |<li>Appointment</li><li>Campaign Activity<sup>1<sup></li> <li>Campaign Response<sup>1<sup></li><li>Email</li><li>Fax</li><li>Case Resolution<sup>1<sup></li><li>Letter</li><li>Opportunity Case<sup>1<sup></li>   <li>Order Case<sup>1<sup></li><li>Phone Call</li><li>Quote Close<sup>1<sup></li>           <li>Recurring Appointment</li><li>Social Activity</li><li>Task</li>   <li>Project Service Approval<sup>1<sup></li><li>Booking Alert<sup>1<sup></li><li>Conversation</li><li>Session</li><li>Customer Voice survey invite<sup>1<sup></li><li>Customer Voice survey response<sup>1<sup></li><li>Custom activities (made available by imported solutions)</li>|
 |Activity status            |<li>Active</li><li>Overdue</li>       <li>Closed</li>                         |
 |Activity status reason     |Allows you to filter using specific status reasons. The values are a unique list of all of the status reasons from the activities in the timeline. The status reasons will change depending on the activity. If there are multiple activities on the timeline that have the same status reason, it will be reflected once, but then the number next to it will indicate how many occurrences of that status reason appear in the timeline.                       |
-|Activity due date (active) |<li>Next 30 days</li><li>Next seven days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last seven days</li>   <li>Last 30 days</li>                   |
+|Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
 
@@ -181,7 +181,7 @@ You can search for records in the timeline. When you search for a phrase in the 
 |Form designer configure view  | Form designer display view |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 |![Configure search bar](media\timeline-enable-search-bar-display-options-advanced-3a.PNG "Configue search bar")|![Enable search bar](media\timeline-enable-search-bar-display-options-advanced-2b.PNG "Enable search bar")|
-|Select **Enable search bar** to enable the **Search timeline** bar functionality. It is enabled by default.    |Enable the search bar setting to display a **search bar** at the top of the timeline.<BR>Disable the search bar by clearing the box next to the setting and the search bar won't appear on the timeline.|
+|Select **Enable search bar** to enable the **Search timeline** bar functionality. It's enabled by default.    |Enable the search bar setting to display a **search bar** at the top of the timeline.<BR>Disable the search bar by clearing the box next to the setting and the search bar won't appear on the timeline.|
 
 #### Expand all records in timeline
 
@@ -190,7 +190,7 @@ You can search for records in the timeline. When you search for a phrase in the 
 |Form designer configure view |  Form designer display view |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |![Configure Expand all records in timeline](media\timeline-expand-all-records-display-options-advanced-2a.PNG "Configure Expand all records in timeline")|![Enable Expand all records in timeline](media\timeline-expand-all-records-display-options-advanced-2b.PNG "Enable Expand all records in timeline")|
-|Select **Expand all records** to set the default view to display all records in the expanded view format in the form each time the timeline is opened. **Expand all records** is disabled by default.|1. When enabled, the **Expand all records** icon is displayed in the top-right corner of the timeline nav. <BR>2. Records can be expanded or collapsed by using the **Expand all records** icon. When expanded, all records are displayed in the expanded view in the form each time it is opened. When you clear **Expand all records**, it no longer displays activities in an expanded view.<BR><BR> When disabled, the **Expand all records** icon won't display in the top-right nav of the timeline. Records will always be displayed in a collapsed view.|
+|Select **Expand all records** to set the default view to display all records in the expanded view format in the form each time the timeline is opened. **Expand all records** is disabled by default.|1. When enabled, the **Expand all records** icon is displayed in the top-right corner of the timeline nav. <BR>2. Records can be expanded or collapsed by using the **Expand all records** icon. When expanded, all records are displayed in the expanded view in the form each time it's opened. When you clear **Expand all records**, it no longer displays activities in an expanded view.<BR><BR> When disabled, the **Expand all records** icon won't display in the top-right nav of the timeline. Records will always be displayed in a collapsed view.|
   
 #### Edit filter pane
 
@@ -203,13 +203,13 @@ You can configure the default filters that are applied when a form loads or is r
 You can send and receive records with images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed.
 
 ![Expand records with images in timeline.](media\timeline-expand-records-with-images-display-optiones-advanced-2b.png "Expand records with images in timeline")
-1. Records when collapsed provide a visual summary. To expand an individual record, select anywhere on the timeline record to expand and collapse a record view. In the bottom-right corner of the record there is a caret:
+1. Records when collapsed provide a visual summary. To expand an individual record, select anywhere on the timeline record to expand and collapse a record view. In the bottom-right corner of the record, there's a caret:
    - When the caret is facing downward (˅), the record is collapsed.
    - When the caret is facing upward (^), the record is expanded.
 
 2. Records with images might display the following notice: <BR>
    This email has been blocked due to potentially harmful content. View full email content.
-3. When you select the message, the warning goes away and the image appears.
+3. When you select the message, the warning goes away, and the image appears.
 
 If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity) for more information.
 
@@ -278,11 +278,11 @@ You can set these fields as follows:
 
 ![Icon for create a timeline record.](media\maker-create-open-activities.png " Create a timeline record with this icon") 
 
-If you set the following form type for a specific activity, the application considers the following:
+If you set the following form type for a specific activity, the application considers the following settings:
 -  **Default**: The form type in the  **Create activities using** or **Open activities using** in **Activities**.
 - **Quick create form**, **Main form**, or **Main form dialog**: The activity specific setting irrespective of the form type set in  **Create activities using** or **Open activities using** in **Activities**.
 
- When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity is either created or opens in the selected form type. 
+ When the user selects the activity from the create a timeline record or opens an activity from the timeline, the activity is either created or opens in the selected form type.
 
 #### Enable command actions on activity record types (Preview)
 
@@ -292,12 +292,12 @@ For information about how to enable these features, see [Opt in to early access 
 
 Command actions allow users to assign, close, delete, open a record or add a record to a queue for activities from the timeline. You can enable or disable the command actions for a specific activity type.
 
-Based on the activity type, you can also enable additional command actions. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
+Based on the activity type, you can also enable other command actions. For example, for an email you can also enable actions such as Reply, Reply All, and Forward.
 
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure the ability to enable command actions from timeline](media\maker-enable-commands-1.png "Enable command actions") | ![Display command actions directly from timeline](media\maker-enable-commands-2.png "Command actions directly displayed on timeline") |
-| To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**. You can only en five command actions for an activity.<br> 
+| To allow users to enable command actions for an activity directly from the timeline, check the box next to command action in  **Select and order commands**. You can only enable five command actions for an activity.<br> 
 You can also move the position of the  command actions to change the order in which they're displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
 
 
@@ -370,7 +370,7 @@ This section isn't visible on the timeline record.
 |Form designer configuration view | Form designer display view|
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 |![Customize a card form in timeline - Footer section.](media\timeline-create-and-use-card-forms-details-footer-1a.png "Customize a card form in timeline - Footer section")|             |
-|**Column 1**<BR>1. For this example, we selected **Owner** for this column.<br><BR>**Column 2**<BR>2. For this example, we selected **Regarding** for this column.<br><BR>**Column 3**<BR>3. For this example, we selected **Priority** for this column.| These column aren't visible on the timeline record |
+|**Column 1**<BR>1. For this example, we selected **Owner** for this column.<br><BR>**Column 2**<BR>2. For this example, we selected **Regarding** for this column.<br><BR>**Column 3**<BR>3. For this example, we selected **Priority** for this column.| These columns aren't visible on the timeline record |
 
 #### Set the date to use when sorting activities in timeline
 
@@ -388,7 +388,7 @@ Legend
 Some dates can only exist on specific types of activities. For example, **Date sent** or **Date delivery last attempted** only apply to email. If you sort by such dates, then non-email activities end up grouped together without any ordering. You can't create a custom date column, but if you need more flexibility, you can use **Sort date**, which is empty by default and requires that you populate it for each activity record with the date you want to use for sorting. Some of the ways you can populate the date are by using Microsoft Power Automate, business rules, or JavaScript.
 
 When using Sort date, keep in mind the following:
-- If you set a value in **Sort date**, you can use it for more customized sorting, but be aware that you have to populate it for every activity record or it won't work. The sort date has to be configured for each timeline instance, and must be set up for all three main forms in the account table.
+- If you set a value in **Sort date**, you can use it for more customized sorting, but you have to populate it for every activity record or it won't work. The sort date has to be configured for each timeline instance, and must be set up for all three main forms in the account table.
 - If the **DateTime** column is on the same calendar day, the date won't be displayed if **DateTime** was earlier in the day compared to current time.
 - The sort date isn't based on a 24-hour period, but rather, compares the **DateTime** column value with the current date and time (based on the user's preferred time zone). If the value entered occurred earlier in the day, the date isn't displayed.
 
@@ -443,7 +443,7 @@ In the **Notes** area, under **Configure form**, select **Default form** to conf
 > [!NOTE]
 > This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
   
-The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show  those records only that're directly related to the notes in timeline, select **None**.
+The rollup type can be configured for timelines on forms for notes. The available types of rollups are **Extended**, **Related**, and **None**. To show  those records only that are directly related to the notes in timeline, select **None**.
 
 More information on rollup types is available at [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
   
@@ -497,7 +497,7 @@ By default, the **@** symbol returns matches with the first name, last name, or 
 
 By default, the **#** symbol returns matches with the account and contact name table records starting with the search string.
 
-As an administrator, you can configure additional entities to appear when a user types these symbols. Adding more entities to the default configured entities may result in slower load times, so only add the entities that are required by your organization. You can add the following additional entities:
+As an administrator, you can configure other entities to appear when a user types these symbols. Adding more entities to the default configured entities may result in slower load times, so only add the entities that are required by your organization. You can add the following entities:
 
 - "systemuser"
 - "contact"
@@ -508,7 +508,7 @@ As an administrator, you can configure additional entities to appear when a user
 - "opportunity"
 - "knowledge article"
 
-To configure additional entities, add and modify the following code to the configuration file you're using for rich text notes and posts:
+To configure more entities, add and modify the following code to the configuration file you're using for rich text notes and posts:
 
 ```
      "defaultSupportedProps": {
