@@ -2878,7 +2878,7 @@
               - name: Control reference
                 href: ../cards/make-a-card/ui-elements/controls.md
             - name: Add buttons
-              href: ../cards/make-a-card/ui-elements/buttons/use-buttons.md
+              href: ../cards/make-a-card/ui-elements/use-buttons.md
             - name: Add and configure screens
               href: ../cards/make-a-card/screens/use-screens.md
     - name: Connect to data and services
