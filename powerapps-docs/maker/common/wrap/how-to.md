@@ -260,12 +260,12 @@ Follow these steps to configure KeyVault URI:
   
 1. Sign in to your tenent as an admin and [create an Azure service principal](/powershell/azure/create-azure-service-principal-azureps?#create-a-service-principal) for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) 
   
-2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For more information, see [Steps to assign an Azure role](/azure/key-vault/general/quick-create-portal).
+2. Add a role to the service principal listed above in the subscription where the KeyVault is going to exist. For more information, see [Steps to assign an Azure role](/azure/key-vault/general/quick-create-portal).
 
-3. Create or access existing keyvault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
-4. Add access policies to the Keyvault.
+3. Create or access existing KeyVault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
+4. Add access policies for the KeyVault.
   
-   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies to the Keyvault.":::
+   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for Keyvault.":::
   
 5. Depending on your device, do one of following:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
