@@ -108,7 +108,7 @@ It's a serious accessibility issue to have custom tab indexes. Screen reader use
 #### Usability
 Users can be confused when some items appear to be skipped. They can be disoriented when focus moves in an unpredictable order. This is even more problematic for users with cognitive disabilities.
 
-#### Maintainability
+#### Maintenance
 App makers have to manually update the **TabIndex** of multiple controls whenever a new one is inserted. It's easy to miss an update or get the order wrong.
 
 #### Performance
@@ -119,11 +119,15 @@ Custom tab indexes only work with built-in controls. Controls that aren't integr
 
 In the other direction, when canvas apps are embedded in another web page, custom tab indexes don't work. For example, in [custom pages](../model-driven-apps/model-app-page-overview.md). Power Apps can't control the elements outside the canvas app, so the overall tab navigation order will be illogical.
 
-### Simplified tab index
+### Simplified tab index (preview)
 
-To ensure that tab indexes are either 0 or -1, enable the app feature **Simplified tab index**.
+To ensure that tab indexes are either 0 or -1, enable the app feature **Simplified tab index** from **Settings** > **Upcoming features**.
 
 :::image type="content" source="media/accessible-apps-structure/simplified-tab-index-setting.png" alt-text="Enabling the Simplified tab index app feature.":::
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 When this feature is enabled, all **TabIndex** values greater than zero will be treated as zero. This also disables Power Apps' tab index system so that it can integrate better with other components, as described above.
 
