@@ -338,15 +338,15 @@ All card forms are separated into the following four sections:
 
 Legend
 
-1. **ColorStrip Section**: This section doesn't appear on the timeline record. The **ColorStrip** is located on the left of the card form.
-2. **Header Section**: This section is displayed on the timeline record; however, only the first two columns are displayed on the timeline record. For this example, only the **Subject** and **Modified On** columns are visible.
-3. **Details Section** This section is displayed on timeline record; however, only the first three columns are displayed on the timeline record. For this example, only the **To**, **CC** and **Description** columns are visible on the timeline record.
-4. **Footer Section.** This section isn't displayed on the timeline record.
-5. **Table Columns** You can select which columns you want to add to your card form from the column options listed on the right. You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline record.
+1. **ColorStrip**: This section doesn't appear on the timeline record. The **ColorStrip** is located on the left of the card form.
+2. **Header**: This section is displayed on the timeline record; however, only the first two columns are displayed on the timeline record. For this example, only the **Subject** and **Modified On** columns are visible.
+3. **Details**: This section is displayed on timeline record; however, only the first three columns are displayed on the timeline record. For this example, only the **To**, **CC** and **Description** columns are visible on the timeline record.
+4. **Footer**: This section isn't displayed on the timeline record.
+5. **Table columns**: You can select which columns you want to add to your card form from the column options listed on the right. You can customize your card form by dragging and dropping the columns you want to use into the sections you want that column to appear in on the timeline record.
 
 Each individual card form must be customized for each activity record, such as email, tasks, posts, and so forth.
 
-**Header Section**
+**Header section**
 
 The card **Header** displays the title/subject in your timeline email form. You can have up to six columns in the **Header** section, but only the first two columns will be seen on the timeline record. Empty columns will be ignored by the form in all sections.
 
@@ -355,7 +355,7 @@ The card **Header** displays the title/subject in your timeline email form. You 
 |![Customize a card form in timeline - Header](media\timeline-create-and-use-card-forms-header-1a.png "Customize a card form in timeline - Header")|![Card form in timeline - Header Display](media\timeline-create-and-use-card-forms-header-display-1a.png "Card form in timeline - Header Display")|
 | **Column 1** <BR>1. Regardless of the column you choose for this section, it will appear as a bold header at the top of your timeline record. For this example, we selected **Subject** for this column. <br><BR>**Column 2** <BR>2. Again, regardless of the column you choose for this section, this column will always appear in the bottom-right corner of the timeline record. For this example, **Modified On** is selected for this column. |**Column 1**<BR>1. Column 1 from the card header is always displayed in this section of the timeline record.<BR><BR>**Column 2**<BR>2. Column 2 from the card header is always displayed in this section of the timeline record. |
 
-**Details Section**
+**Details section**
 
 The card **Details** section displays in the body of your timeline email record. You can have up to four columns in the **Details** section, but only the first three columns are viewable on the timeline record.
 
@@ -364,7 +364,7 @@ The card **Details** section displays in the body of your timeline email record.
 |![Customize a card form in timeline - Details section](media\timeline-create-and-use-card-forms-details-1a.png "Customize a card form in timeline - Details section") |![Display the card form in timeline - Details section](media\timeline-create-and-use-card-forms-details-display-1a.png "Display the card form in timeline - Details section")|
 |The card details will always appear below the header regardless of the column you choose.<BR><BR>**Column 1**<BR>1. In the card details Column 1 acts as a subheader on the timeline record. For this example, **To** is selected for this column.<BR><BR>**Column 2**<BR>2. This column will only display one line of text in a summary view on the timeline record.  When you expand your timeline record,  content in this column is fully displayed and formatted. For this example, **CC** is selected for this column.<BR><BR>**Column 3**<BR>3. This column follows the content of Column 2 and is part of the main body of your timeline record that is only viewable when you expand the record. For this example, **Description** is selected for this column.|**Column 1**<BR>1. This column always displays in this section and acts as a subheader on the timeline record. <BR><BR>**Column 2**<BR>2. This column always displays in this section and only displays one line of text in the summary view but when expanded, content is fully displayed. <BR><BR>**Column 3**<BR>3. This column will always display in this section and is only viewable when the record is expanded.|	
 
-**Footer Section**<br>
+**Footer section**<br>
 This section isn't visible on the timeline record.  
 
 |Form designer configuration view | Form designer display view|
