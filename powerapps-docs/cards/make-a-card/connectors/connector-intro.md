@@ -16,7 +16,7 @@ ms.collection:
 
 Connectors are an important part of Power Apps, allowing your card to talk to other apps, data, and devices in the cloud.
 
-For more information on Connectors in Power Platform, see [Connectors overview](https://docs.microsoft.com/connectors/connectors).
+For more information on Connectors in Power Platform, see [Connectors overview](/connectors/connectors).
 
 ## Types of connectors
 

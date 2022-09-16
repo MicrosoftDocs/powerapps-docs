@@ -2868,19 +2868,17 @@
     - href: ../cards/glossary.md
     - name: Create cards
       items: 
-        - name: Designer overview
-          href: ../cards/make-a-card/designer-overview.md
         - name: Design the interface
           items:
+            - name: Designer overview
+              href: ../cards/make-a-card/designer-overview.md
             - name: Add and configure controls
               href: ../cards/make-a-card/ui-elements/add-and-configure-controls.md
-            - name: Repeating controls
-              href: ../cards/make-a-card/ui-elements/data-binding.md
             - name: Buttons
               items: 
                - name: Understand buttons
                  href: ../cards/make-a-card/ui-elements/buttons/buttons.md
-               - name: Using buttons
+               - name: Use buttons
                  href: ../cards/make-a-card/ui-elements/buttons/use-buttons.md
             - name: Control reference
               href: ../cards/make-a-card/ui-elements/controls.md
@@ -2890,7 +2888,7 @@
               href: ../cards/make-a-card/screens/understand-screens.md
             - name: Use screens
               href: ../cards/make-a-card/screens/use-screens.md
-        - name: Connecting to data and services
+        - name: Connect to data and services
           items: 
             - name: Introduction to connectors
               href: ../cards/make-a-card/connectors/connector-intro.md
@@ -2898,22 +2896,14 @@
               href: ../cards/make-a-card/connectors/use-connector-in-card.md
         - name: Add business logic
           items: 
-            - name: Intro to Power FX
+            - name: Introduction to Power Fx
               href: ../cards/make-a-card/power-fx/intro-to-pfx.md
-        - name: Testing your cards
+        - name: Test cards
           items: 
-            - name: Intro to the Play Page
-              href: ../cards/make-a-card/testing/play-page-intro.md
             - name: How to debug your card
               href: ../cards/make-a-card/testing/debugging-cards.md
-        - name: Manage your cards
-          items: 
-            - name: Card lifecycle management
-              href: ../cards/make-a-card/management/manage-cards.md
     - name: Send cards
       items:
-        - name: Customize before sending
-          href: ../cards/send-a-card/customize-card-before-sending.md
         - name: Send a card in Teams
           href: ../cards/send-a-card/send-card-in-teams.md
     - name: Tutorials

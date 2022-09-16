@@ -13,6 +13,8 @@ ms.collection:
 
 # Create a simple card (Preview)
 
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+
 This tutorial shows you how to create a card, ask a user for their name, and then show that name in the title of the card.
 
 ## Prerequisites

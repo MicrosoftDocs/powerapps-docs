@@ -13,6 +13,8 @@ ms.collection:
 
 # Create a simple shopping list card (Preview)
 
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+
 This tutorial shows you how to build a simple card that displays a shopping list and lets you add new items. At the end of this tutorial, your shopping list card will look like the example below:
 
 :::image type="content" source="../media/tutorial-simple-shopping-list/shopping-list-card.png" alt-text="Screenshot of a finished simple shopping list card." border="false":::
