@@ -45,9 +45,12 @@ menu item for authoring the app.
 
 1. [Properties pane](#8--properties-pane) - properties list for the selected object in UI format.
 
-1. [Screen selector](#9--screen-selector) - switch between different screens in an app.
+1. [Virtual agent](#9--virtual-agent) - get help building your app from a virtual agent.
 
-1. [Change canvas screen size](#10--change-canvas-screen-size) - change the size of the canvas during an authoring experience in Power Apps Studio.
+1. [Screen selector](#10--screen-selector) - switch between different screens in an app.
+
+1. [Change canvas screen size](#11--change-canvas-screen-size) - change the size of the canvas during an authoring experience in Power Apps Studio.
+
 
 Let's understand each option in Power Apps Studio in detail.
 
@@ -447,12 +450,17 @@ selected object on the canvas. The **Properties** tab shows generic options such
 > [!div class="mx-imgBorder"] 
 > ![Properties pane.](media/studio/pa-studio-prop-pane.png)
 
-## 9 – Screen selector
+
+## 9 – Virtual agent
+
+Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. More information: [Get help building your app from a virtual agent](../common/virtual-agent.md).
+
+## 10 – Screen selector
 
 Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the left pane by selecting the
 tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
 
-## 10 – Change canvas screen size
+## 11 – Change canvas screen size
 
 You can zoom in or zoom out while authoring the canvas app. Select **Ctrl**+**0**
 **Fit to window** to fit the screen size
