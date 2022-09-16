@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2022
+ms.date: 09/16/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -25,7 +25,7 @@ OAuth 2.0 implicit grant flow supports [token](#token-endpoint-details) endpoint
 
 ## Custom certificates 
 
-Custom certificates provide another layer of security while using the OAuth 2.0 end point. Use the [Power Platform admin center](/admin/manage-custom-certificates) to upload the custom certificate. After uploading the custom certificate, you need to update site settings as below 
+Using the default certificate for OAuth 2.0 implicit grant flow is [deprecated](important-changes-deprecations.md#oauth-20-implicit-grant-flow-within-your-portal). You will need to use a custom certificates while using the OAuth 2.0 end point. Use the [Power Platform admin center](/admin/manage-custom-certificates) to upload the custom certificate. After uploading the custom certificate, you need to update site settings as below: 
 
 1. Go to [portal settings](manage-existing-portals.md#settings) and select **Site Settings**. 
 
