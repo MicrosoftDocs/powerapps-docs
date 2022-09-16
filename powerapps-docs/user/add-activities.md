@@ -245,14 +245,14 @@ To add an attachment to a post:
   
 ### Preview an attachment in the timeline
   
-You can view previews of attachments in the timeline if they are in the supported file format (.JPG, .PNG., or .PDF).
+You can view previews of attachments in the timeline if they are in the supported file format (.JPG, .PNG., or .PDF). Any attachment that is viewable inline on the timeline can be downloaded, whether or not a preview is available.
   
 ![Attachment preview dialog.](media\attachment-preview-timeline.png "Attachment preview dialog")
 
 To preview an attachment in the timeline, do either of the following steps:
   
 In edit mode:
-1. Right-click the attachment, and then select **Preview**. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment frmo the dialog.
+1. Right-click the attachment, and then select **Preview**. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
 2. When you're finished viewing the attachment, select **Close** to return to the note or post.
 
 OR
@@ -342,7 +342,7 @@ When you mouse over the profile image, you can view the user's detailed profile 
 
 ### Add an attachment to a note in timeline
 
-When enabled by your system administrator, you can add an attachment, such as a file, to a note in timeline to share with users.
+When enabled by your system administrator, you can add an attachment, such as a file, to a note in timeline to share with users. Any attachment that is viewable inline on the timeline can be downloaded, whether or not a preview is available.
 
 > [!NOTE]
 > - The list of allowed attachments is configured by your system administrator.
