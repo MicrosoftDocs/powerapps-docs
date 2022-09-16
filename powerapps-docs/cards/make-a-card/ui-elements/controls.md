@@ -1,7 +1,6 @@
 ---
-title: "Card controls"
-description: "Learn about the different controls available for cards"
-keywords: "Card Designer, Power Apps, cards, controls"
+title: Card controls (Preview)
+description: Learn about the different controls available for cards.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Controls
+# Controls (Preview)
+
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
 These are the basic building blocks of a card, and the ones you're most likely to use.
 

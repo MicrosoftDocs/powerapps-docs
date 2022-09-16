@@ -1,7 +1,6 @@
 ---
-title: "Debugging Cards"
-description: "Learn how to debug your cards using the Play page in designer"
-keywords: "Card Designer, Power Apps, cards, debugging, play page"
+title: Test and debug cards (Preview)
+description: Learn how to test and debug your cards using the Play page
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# The Play Page and Debugging Cards
+# Test and debug cards (Preview)
+
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
 Once you've created a card, you can view what your finished card will look like before sending it out to your teammates. This is done via the Play Page, which also has the tools to test your card and debug any issues.
 

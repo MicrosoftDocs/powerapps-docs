@@ -1,7 +1,6 @@
 ---
-title: "Use screens"
-description: "Learn how to build a card with multiple screens"
-keywords: "Card Designer, Power Apps, cards, screens"
+title: Use screens (Preview)
+description: Learn how to build a card with multiple screens.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Use screens
+# Use screens (Preview)
+
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
 ## make multiple screens
 

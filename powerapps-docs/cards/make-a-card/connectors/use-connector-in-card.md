@@ -1,7 +1,6 @@
 ﻿---
-title: "Use a connector in a card"
-description: "Learn how to add one connector to your card, and walk through an example"
-keywords: "Card Designer, Power Apps, cards, connectors"
+title: Use a connector in a card (Preview)
+description: Learn how to add a connector to your card, and walk through an example.
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Use a connector in a card
+# Use a connector in a card (Preview)
+
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
 In this tutorial, you'll learn how to ask a user for their name and then show that name in the title of a card.
 
