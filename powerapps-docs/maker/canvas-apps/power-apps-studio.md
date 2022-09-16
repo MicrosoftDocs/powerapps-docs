@@ -18,7 +18,6 @@ contributors:
 ---
 # Understand Power Apps Studio
 
-[This article is pre-release documentation and is subject to change.]
 
 When you create a canvas app by using any method, you're taken to the canvas app
 builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app. 
@@ -46,9 +45,12 @@ menu item for authoring the app.
 
 1. [Properties pane](#8--properties-pane) - properties list for the selected object in UI format.
 
-1. [Screen selector](#9--screen-selector) - switch between different screens in an app.
+1. [Virtual agent](#9--virtual-agent) - get help building your app from a virtual agent.
 
-1. [Change canvas screen size](#10--change-canvas-screen-size) - change the size of the canvas during an authoring experience in Power Apps Studio.
+1. [Screen selector](#10--screen-selector) - switch between different screens in an app.
+
+1. [Change canvas screen size](#11--change-canvas-screen-size) - change the size of the canvas during an authoring experience in Power Apps Studio.
+
 
 Let's understand each option in Power Apps Studio in detail.
 
@@ -62,31 +64,12 @@ options are relevant to the current session and app-related settings.
 > ![Power Apps Studio options.](media/studio/pa-studio-options.png)
 
 
-### Modern command bar (preview)
+### Modern command bar
 
 The modern command bar displays the relevant set of commands depending on the control that is selected. 
 
 ![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
 
-> [!IMPORTANT]
-> - This feature is being rolled out and depending on your region, it may not be available for your tenant yet.
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-#### Enable the modern command bar
-
-The modern command bar needs to be enabled manually through the feature switch. To enable the feature:
-
-1. Open a [new](data-platform-create-app.md) or an [existing](edit-app.md) app in Power Apps Studio.
-
-1. Select **Settings** at the top.
-
-1. Select **Upcoming features**.
-
-1. Under the **Preview** tab, set the toggle to **On** for **Enable modern command bar**.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Enable the modern command bar.](media/studio/pa-studio-enable-modern-bar.png)
 
 The command bar changes when one of the following control or object is selected: 
 
@@ -467,12 +450,17 @@ selected object on the canvas. The **Properties** tab shows generic options such
 > [!div class="mx-imgBorder"] 
 > ![Properties pane.](media/studio/pa-studio-prop-pane.png)
 
-## 9 – Screen selector
+
+## 9 – Virtual agent
+
+Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. More information: [Get help building your app from a virtual agent](../common/virtual-agent.md).
+
+## 10 – Screen selector
 
 Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the left pane by selecting the
 tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
 
-## 10 – Change canvas screen size
+## 11 – Change canvas screen size
 
 You can zoom in or zoom out while authoring the canvas app. Select **Ctrl**+**0**
 **Fit to window** to fit the screen size
