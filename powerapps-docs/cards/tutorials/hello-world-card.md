@@ -1,7 +1,6 @@
 ﻿---
-title: "Building a hello world card"
-description: "Learn about basic elements of a card by creating a simple card"
-keywords: "Card Designer, Power Apps, cards, tutorial"
+title: Create a simple card (Preview)
+description: Learn about basic elements of a card by creating a simple "Hello World" card
 ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
@@ -12,64 +11,81 @@ ms.custom:
 ms.collection: 
 ---
 
-# Building a hello world card
+# Create a simple card (Preview)
 
-In this tutorial, you'll learn how to ask a user for their name and then show that name in the title of a card.
+This tutorial shows you how to create a card, ask a user for their name, and then show that name in the title of the card.
 
-1. Create a card in your environment, go to [https://make.powerapps.com](https://make.powerapps.com) and select **Cards** in the left pane, select **Create**, then select **Create a card**.
+## Prerequisites
 
-1. Name your card; here, we're using `HelloWorldCard`. Once you've named your card, select **Create card**.
+- A [Power Apps](https://powerapps.microsoft.com/) account.
+- Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
-   If the name of the card has already been used, you won't be able to create the card.
+## Create a card
 
-   :::image type="content" source="../media/hello-world-card/name-card.png" alt-text="Screenshot of card being named Hello World Card." border="false":::
+1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left.
 
-1. Remove the placeholder text box underneath the title.
+1. Select **+ Create a card**.
 
-1. Drag and drop a **Text input** control onto your card underneath the title.
+1. Enter "HelloWorldCard" under **Card name** and then select **Create**.
 
-   :::image type="content" source="../media/hello-world-card/add-input-text-box.png" alt-text="Screenshot showing a newly added input text box to card underneath card title." border="false":::
+## Ask for text input
 
-1. With the **Text input** selected, edit **Label** on the right pane. This label will add text to the **Text input** box.
+1. Double-click on the **Text label** that has "Add and remove element to customize your new card.". Select the Remove button (X) at the top of the box to delete it.
 
-   In this example, we're going to ask the question "What's your name?", and you'll see the text fill in the space above the text box on the card.
+   :::image type="content" source="../media/hello-world-card/remove-placeholder-text-label.png" alt-text="Screenshot of placeholder text label to remove in the card." border="false":::
+
+1. Under the **Insert** menu, select **Input**. Then select **Text input**.
+
+   :::image type="content" source="../media/hello-world-card/text-input-location.png" alt-text="Screenshot showing where text input is under the Insert>Input menu" border="false":::
+
+1. A new **Text input** box will appear on your card. This lets you gather text input from users who interact with the card.
+
+    With the **Text input** selected, edit the **Label** on the right by entering "What's your name?". This label will add text to the **Text input** box.
 
    :::image type="content" source="../media/hello-world-card/edit-input-text-label.png" alt-text="Screenshot showing an updated input text label and the resulting card with the same label." border="false":::
 
-1. For **Name**, add a descriptive name. This gives the user-provided text an easy to reference name that you'll be able to use in Power Fx expressions later in the card building process.
+## Assign variables
 
-   In this example, we give this variable the name `UserAnswer`.
+1. Under **Name** enter `UserAnswer`. This is the name of the variable associated with the input the user enters.
 
    :::image type="content" source="../media/hello-world-card/edit-input-text-variable-name.png" alt-text="Screenshot of the updated value for input text name." border="false":::
 
-1. Create another variable to use in the card, this one so the user can see their name added to the card title. Select **Variables** from the left pane and then select **New variable**.
+    Using a descriptive and unique variable name makes it easier to use in Power Fx expressions later in the card building process.
+
+1. Now create another variable. This variable will be used to add the user's input (their name, `UserName`) to the card title. Select **Variables** from the left pane and then select **New variable**.
 
    :::image type="content" source="../media/hello-world-card/add-new-variable.png" alt-text="Screenshot showing the New variable button to create a new variable in the card." border="false":::
 
-1. Enter a descriptive variable name into the **Name** box. In this example, we'll use `UserName`.
-
-1. Leave the **Type** as **Text** and enter `No Name` into the **Default value** box. Then **Save** the card.
+1. Enter `UserName` under **Name**. Leave the **Type** as **Text** and enter `No Name` as the **Default value**. Keep the **Value Persistance** set to **Temporary**. Then select **Save**.
 
    :::image type="content" source="../media/hello-world-card/new-variable-setup.png" alt-text="Screenshot of the variable properties to change for the default name variable." border="false":::
 
-1. Select the title element on the card, and add the following title: `"Hello " & UserName`
+1. Select the **Text label** at the top of the card. Replace the **Text** with `="Hello " & UserName`.
 
-   This will call the variable you just created in the title, once the user has provided their name.
+   This will call the variable you just created in the title once the user has provided their name.
 
-   :::image type="content" source="../media/hello-world-card/add-variable-to-card-title.png" alt-text="Screenshot of the using the username variable in the card title." border="false":::
+## Use Power Fx in buttons
 
-1. Now add some Power Fx to make the button work. Drag and drop a **Button** onto the card, underneath the **Text input** box.
+1. To say "Hello" to the name from user input, you need to create a button that uses Power Fx. Under the **Display** menu, select **Button**. The button will appear under the Text input box.
 
-1. Add a descriptive title to the **Title** box; in this example, we'll use "Say hello". You'll see the text on the button update as soon as you finish typing.
+1. Under **Title** enter "Say Hello". You'll see the text on the button update as soon as you finish typing.
 
    :::image type="content" source="../media/hello-world-card/rename-button-title.png" alt-text="Screenshot of the named button title and updated button on the card." border="false":::
 
-1. Select Power Fx in the right pane. This moves your cursor up to the Power Fx bar at the top of the screen.
+1. Select **PowerFx** under **Type** on the right. This moves your cursor up to the PowerFx bar at the top of the screen.
 
-1. Enter the following PowerFX into the bar: `Set(UserName,UserAnswer)`
+1. Enter the following Power Fx expression into the bar: `Set(UserName,UserAnswer)`
 
-   This will assign the provided name of the user to the `UserName` variable you put into the card title.
+   This assigns value of `UserAnswer`, the user's input, to the `UserName` variable you put into the card title.
 
-   :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of power fx expression in button." border="false":::
+   :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of Power Fx expression in button." border="false":::
 
-1. Save the card and then select **Play** to see the card in action.
+## Test the card
+
+1. **Save** the card by selecting the button on the top right. You should always save changes before playing an updated card. Then select **Play**.
+
+    Test your card and see how your input replaces the default value "No Name" in the card's title text. Note that if you replace the user input and select the button again the title text will change.
+
+## Next steps
+
+Learn how to use more cards functionality in the [simple shopping list](simple-shopping-list.md) tutorial.
