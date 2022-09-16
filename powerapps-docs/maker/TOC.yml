@@ -2862,8 +2862,9 @@
 - name: Chatbots
   href: ../chatbots.md
 - name: Cards (Preview)
-  href: ../cards/overview.md
   items:
+    - name: Cards overview
+    - href: ../cards/overview.md
     - name: Glossary
     - href: ../cards/glossary.md
     - name: Create cards
