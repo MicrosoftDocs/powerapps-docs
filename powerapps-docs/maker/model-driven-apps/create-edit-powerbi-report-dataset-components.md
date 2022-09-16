@@ -44,8 +44,8 @@ In this article, you'll learn how to do the following tasks:
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app doesn't share the embedded report).
 * Recovery from workspace deletion isn't supported. Once the dedicated environment workspace has been deleted, you won't be able to add/import any Power BI component to the Power Apps environment.
 * Power Apps Application IDs aren't supported during public preview.
-* The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).
-* Environment life cycle operations aren't supported during public preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations).  
+* The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
+* Environment life cycle operations aren't supported during public preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#environment-life-cycle-operations).  
 
 ## Create Power BI report and dataset components
 
@@ -149,7 +149,7 @@ After you update the component, you can export the solution as a managed or unma
 
 * [Customize and manage Power BI components](./customize-manage-powerbi-components.md)
 * [Create a Power BI embedded system dashboard](./create-edit-powerbi-embedded-page.md)
-* [Add components for a column on the form](the report component) in a form using the form designer](./add-move-configure-or-delete-components-on-form#add-components-for-a-column-on-the-form.md).
+* [Add components for a column on the form (the report component) in a form using the form designer](./add-move-configure-or-delete-components-on-form#add-components-for-a-column-on-the-form.md).
 * [Power BI content management in Power Apps solutions](./power-bi-content-management-power-apps-solutions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
