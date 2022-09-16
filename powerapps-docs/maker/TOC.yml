@@ -2864,9 +2864,9 @@
 - name: Cards (Preview)
   items:
     - name: Cards overview
-    - href: ../cards/overview.md
+      href: ../cards/overview.md
     - name: Glossary
-    - href: ../cards/glossary.md
+      href: ../cards/glossary.md
     - name: Create cards
       items: 
         - name: Design the interface
