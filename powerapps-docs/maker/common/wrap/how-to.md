@@ -262,10 +262,10 @@ Follow these steps to configure KeyVault URI:
   
 2. Add a role to the service principal listed above in the subscription where the KeyVault is going to exist. For more information, see [Steps to assign an Azure role](/azure/key-vault/general/quick-create-portal).
 
-3. Create or access existing KeyVault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
-4. Add access policies for the KeyVault.
+3. Create or access existing key vault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
+4. Add access policies for the key vault.
   
-   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for Keyvault.":::
+   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for the key vault.":::
   
 5. Depending on your device, do one of following:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
