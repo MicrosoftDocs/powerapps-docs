@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 08/23/2022
+ms.date: 09/15/2022
 ms.reviewer: "matp"
 
 ms.suite: ""
@@ -22,11 +22,9 @@ search.app:
 
 # Set up the timeline control
 
-
-
 The timeline helps app users see all activity history. The timeline control is used to capture activities like notes, appointments, emails, phone calls, and tasks to ensure that all interactions with the related table are tracked and visible over time. Use the timeline to quickly catch up on all of the latest activity details.
 
-:::image type="content" source="media/timeline-on-account-form.png" alt-text="Timeline in app for the account table main form":::
+:::image type="content" source="media/timeline-browser-view.png" alt-text="Timeline in app for the account table main form":::
 
 The timeline control provides an easy and immersive experience to view information related to a table, such as accounts or contacts, which gives users a better understanding and helps them deliver more personalized service in an efficient and effective manner.
 
@@ -575,11 +573,21 @@ You can create custom tables that display on a timeline. More information: [Disp
 
 ## Configure blocked attachment file types
 
-Power platform administrators can configure the file types that are blocked from being added as file attachments to records including records in a timeline.
+Power platform administrators can configure the file types that are blocked from being added as file attachments to records, including records in a timeline.
 
 1. Find the **Set blocked file extensions for attachments** systems setting. More information: [Open the System Settings dialog box General tab](/power-platform/admin/system-settings-dialog-box-general-tab#open-the-system-settings-dialog-box)
 1. In the text box of blocked file attachments, type the file extension type you want to block for attachments (for example, ".pdf"). Separate file types with a semi-colon.
 1. Select **OK**.
+  
+## Set file size limits for attachments
+
+Power platform administrators can restrict the file size of attachments users can upload in the rich text editor.
+
+1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
+1.	On the **Administration page**, select **System Settings**.
+1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
+1.	Enter the desired size limit for attachments, and then select **Save**.
+
 
 ### See also
 
