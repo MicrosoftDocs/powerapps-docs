@@ -265,7 +265,7 @@ Follow these steps to configure KeyVault URI:
 3. Create or access existing keyvault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
 4. Add access policies to the Keyvault.
   
-   :::image type="content" source="media/wrap-canvas-app/tbd.gif" alt-text="Add access policies to the Keyvault.":::
+   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies to the Keyvault.":::
   
 5. Depending on your device, do one of following:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
