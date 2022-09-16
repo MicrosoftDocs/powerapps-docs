@@ -263,8 +263,11 @@ Follow these steps to configure KeyVault URI:
 2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For more information, see [Steps to assign an Azure role](/azure/key-vault/general/quick-create-portal).
 
 3. Create or access existing keyvault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
+4. Add access policies to the Keyvault.
   
-4. Depending on your device, do one of following:
+   :::image type="content" source="media/wrap-canvas-app/tbd.gif" alt-text="Add access policies to the Keyvault.":::
+  
+5. Depending on your device, do one of following:
    - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
   
      :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
@@ -283,7 +286,7 @@ Follow these steps to configure KeyVault URI:
   
         :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
 
-5. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
+6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
