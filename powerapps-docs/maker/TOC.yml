@@ -2873,20 +2873,18 @@
           items:
             - name: Designer overview
               href: ../cards/make-a-card/designer-overview.md
-            - name: Add and configure controls
-              href: ../cards/make-a-card/ui-elements/add-and-configure-controls.md
-            - name: Buttons
+            - name: Add controls
+              items:
+              - name: Add and configure controls
+                href: ../cards/make-a-card/ui-elements/add-and-configure-controls.md
+              - name: Control reference
+                href: ../cards/make-a-card/ui-elements/controls.md
+            - name: Add buttons
               items: 
-               - name: Understand buttons
-                 href: ../cards/make-a-card/ui-elements/buttons/buttons.md
                - name: Use buttons
                  href: ../cards/make-a-card/ui-elements/buttons/use-buttons.md
-            - name: Control reference
-              href: ../cards/make-a-card/ui-elements/controls.md
         - name: Add and configure screens
           items:
-            - name: Understand screens
-              href: ../cards/make-a-card/screens/understand-screens.md
             - name: Use screens
               href: ../cards/make-a-card/screens/use-screens.md
         - name: Connect to data and services

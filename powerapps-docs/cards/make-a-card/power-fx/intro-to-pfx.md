@@ -1,5 +1,5 @@
 ---
-title: Introduction to Power Fx
+title: Introduction to Power Fx (Preview)
 description: Learn about Power FX and how it's used in cards to add business logic.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Introduction to Power Fx
+# Introduction to Power Fx (Preview)
+
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
 [Power Fx](/power-platform/power-fx/overview) is a low-code programming language available across the Power Platform, including cards. Cards can calculate values, perform other tasks, and respond to user input using [formulas](/power-platform/power-fx/formula-reference) expressed with Power Fx.
 
