@@ -34,7 +34,7 @@ Buttons can do one of four things:
 1. Select **+ Insert** on the left. Then select **Button** to add a button to your card.
 
     :::image type="content" source="../../media/use-buttons/add-button.png" alt-text="Screenshot of Button in Insert menu":::
-1. Now that the button is on your card you can edit its properties. At a minimum select your button **Type** and add a button **Title** to display on the card, shown below.
+1. Now that the button is on your card, you can edit its properties. At a minimum, choose a button **Type** and add a button **Title** to display on the card, as shown below.
 
     :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of Button in Insert menu":::
 
@@ -71,5 +71,5 @@ Set the **Type** to **Open Url** and then enter a **Url**. When the user selects
 
 The **Toggle Visibility** button shows or hides other controls in the card.
 
-Set the **Type** to **Toggle Visibility**. Then select the **Target Elements** pane and select **+ Add new**. Enter the **ElementID** and toggle the **Visibility** to toggle, visible, or invisible. Add as many elements as you want to toggle the visibility of.
+Set the **Type** to **Toggle Visibility**. Then select the **Target Elements** pane and select **+ Add new**. Enter the **ElementID** and toggle the **Visibility** property to make the element visible or invisible. Add as many elements as you want to toggle the visibility of.
 
