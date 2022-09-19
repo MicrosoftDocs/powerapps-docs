@@ -15,7 +15,7 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
-Cards can have multiple screens that see with a **Show Screen** button or navigate between formulas. Screens can be used to show a different user interface for specific scenarios. For example, a polling card might have a screen to collect user responses and a screen to show the current aggregated poll results.
+Cards can have multiple screens. Each screen can show a different user interface for specific scenarios. For example, a polling card might have a screen to collect user responses and a screen to show the current aggregated poll results. Use buttons to let users switch between screens or use Power Fx formulas for more complex scenarios.
 
 ## Tree view
 
@@ -33,15 +33,15 @@ You can view the screens in your card and change properties of each screen using
 
 To show screens from other cards, use the **Show Screen** button.
 
-1. Select **Insert** from the left. Then select **Input**>**Button** to create a new button.
+1. Select **Insert** from the left. Then select **Input** then **Button** to create a new button.
 1. Go to **Type** in the Properties pane on the right. Select the drop-down and change the **Type** to **Show Screen**.
 1. **ShowCard** will appear on the right. Select the **Screen** you want to show and the **Name** of your button.
 
    :::image type="content" source="../../media/make-a-card/show-card-properties.png" alt-text="Screenshot of ShowCard options." border="false":::
 
-    In the example above this button will show the `NameScreen` on a button that has the text "Say Goodbye".
+    In the example above, this button will show the `NameScreen` when a user selects a button titled "Say Goodbye".
 
-    Now when you test your card the screen will appear after selecting the button. The example below shows how the screen appears after adding the button above to the [simple card tutorial](../../tutorials/hello-world-card.md) card.
+    Now, the screen will appear when you test your card and select the button. The example below shows how the screen appears after adding an example button to the [simple card tutorial](../../tutorials/hello-world-card.md) card.
 
    :::image type="content" source="../../media/make-a-card/screen-example.png" alt-text="Screenshot of an example screen in a card." border="false":::
 
@@ -49,6 +49,6 @@ Repeat this process as many times as needed to create more screens.
 
 ## Switch screens with Power Fx formulas
 
-The Power Fx [Back(/power-platform/power-fx/reference/function-navigate#back) and [Navigate](/power-platform/power-fx/reference/function-navigate#navigate) functions let you switch between screens. While **ShowScreen** just shows a screen, the above functions can be used for more complex scenarios where you want to switch between different screens, and can be used outside of buttons.
+The Power Fx [Back](/power-platform/power-fx/reference/function-navigate#back) and [Navigate](/power-platform/power-fx/reference/function-navigate#navigate) functions let you switch between screens. While **ShowScreen** just shows a screen, these functions can be used outside of buttons and are appropriate for more complex screen-switching scenarios.
 
-For more information about Back and Navigate, see the Power Fx reference documentation [syntax](/power-platform/power-fx/reference/function-navigate#syntax), [examples](/power-platform/power-fx/reference/function-navigate#examples) and [step-by-step instructions](/power-platform/power-fx/reference/function-navigate#step-by-step).
+For more information about Back and Navigate, see the Power Fx reference documentation [syntax](/power-platform/power-fx/reference/function-navigate#syntax), [examples](/power-platform/power-fx/reference/function-navigate#examples), and [step-by-step instructions](/power-platform/power-fx/reference/function-navigate#step-by-step).
