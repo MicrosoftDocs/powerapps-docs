@@ -12,15 +12,13 @@ ms.custom:
 ms.collection: 
 ---
 
-# Use connectors
+# Use the Dataverse connector
 
-This needs to be updated for specifically Dataverse
+In this tutorial, you'll learn how to build a card that utilizes the Dataverse connector to show and update information about an Account.
 
-In this tutorial, you'll learn how to build a card that utilizes the Bing Connector to add search query results to a card. You'll also learn about:
-
-- Connectors, specifically Bing Search
-- How to use more of the elements
-- More advanced PowerFX expressions
+- Connectors, specifically Dataverse
+- How to use more of the controls
+- More advanced Power Fx expressions
 
 The result will look like the example below:
 
