@@ -60,8 +60,8 @@ Use an input element when you want the end user of the card to specify informati
 | Text input     | Allow the user to input text. The value is stored as a string.                          |
 | Number input    | Allow the user to input a number. The value is stored as a string. |
 | Button       | Allow the user to select a button. Use a Power Fx formula to control what happens when the button is selected.                                                                       |
-| Date picker      | Allow the user to input a date (in mm/dd/yyyy format) or choose a date from the dropdown calendar.                                  |
-| Time picker     | Enter a time (in HH:MM AM/PM format) or select a time from the dropdown clock.                                                      |
+| Date picker      | Allow the user to input a date (in mm/dd/yyyy format) or choose a date from the dropdown calendar. The value is stored as a Date.                                  |
+| Time picker     | Enter a time (in HH:MM AM/PM format) or select a time from the dropdown clock. The variable is stored as a Time.                                                      |
 | Drop down | User selects a choice from the dropdown; default is two choices, but more can be added.                                   |
 | Checkbox    | Checkbox for the user to select, if applicable; default is unchecked.                                                      |
 
