@@ -45,7 +45,7 @@ These tables describe the available card controls.
 
 ### Display
 
-| **Item**     | **Description**                                                                                                                                                                                               |
+| Item     | Description                                                                                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Text label    | Standard text block; supports strings and Power Fx formulas.                                                                                                                                                   |
 | Image        | Supports addition of images to card via URL.                                                                                                                                                                  |
@@ -55,7 +55,7 @@ These tables describe the available card controls.
 
 Use an input element when you want the end user of the card to specify information.
 
-| **Item**        | **Description**                                                                                                           |
+| Item        | Description                                                                                                           |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------|
 | Text input     | Allow the user to input text. The value is stored as a string.                          |
 | Number input    | Allow the user to input a numerical response by typing a number or selecting from the up/down arrows; parses as a string. |
@@ -69,7 +69,7 @@ Use an input element when you want the end user of the card to specify informati
 
 Just like with the **Button** group, use layout controls when you want to group elements together, either for ease of reference or design purposes.
 
-| **Item**  | **Description**                                                                                                                                                                                                      |
+| Item  | Description                                                                                                                                                                                                      |
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Container | A standard container, useable with any element; takes on the properties of the first element placed inside. Doesn't support multiple element types at once.                                                          |
 | Button set | Container for a set of buttons.                                                          |
