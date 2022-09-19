@@ -2883,10 +2883,8 @@
               href: ../cards/make-a-card/screens/use-screens.md
     - name: Connect to data and services
       items: 
-        - name: Introduction to connectors
+        - name: Access connectors
           href: ../cards/make-a-card/connectors/connector-intro.md
-        - name: Use a Connector in a card
-          href: ../cards/make-a-card/connectors/use-connector-in-card.md
     - name: Add business logic with Power Fx
       href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
     - name: Test and debug cards
