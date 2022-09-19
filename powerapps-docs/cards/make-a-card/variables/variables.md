@@ -36,8 +36,8 @@ To add variables in cards, do the following.
 1. The **New variable** window will appear. Set the following values:
     - **Name**: the name of your variable.
     - **Type**: the type of variable.
-    - **Default value**: the default value of the variable regardless of input
-    - **Value Persistance**: whether the variable is temporary (resets every time the card's opened) or Permanent.
+    - **Default value**: the default value of the variable, prior to input.
+    - **Value Persistance**: whether the variable is temporary (resets every time the card's opened) or permanent.
 
     You can also customize sender options, as well as the **Title** and **Description** of the variable. These may be helpful for testing and debugging.
 1. After you've entered everything select **Save**. The new variable will appear in the **Variables** list and can be used anywhere in your card.
@@ -49,7 +49,7 @@ If you want to to edit or delete a variable, select the three dots next to the v
 :::image type="content" source="../../media/variables/edit-delete-variable.png" alt-text="Screenshot of the Edit and Delete variable button":::
 
 >[!NOTE]
-> The variable **Name** and **Type** cannot be edited. If you need to change these values, create a new variable.
+> After creation, the variable **Name** and **Type** cannot be edited. If you need to change these values, create a new variable.
 
 ## Use variables in cards
 
