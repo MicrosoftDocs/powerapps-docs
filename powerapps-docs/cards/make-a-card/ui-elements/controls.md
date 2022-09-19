@@ -21,7 +21,7 @@ Controls are the building blocks for designing your card's interface and functio
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
 - A card. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../make-a-card/designer-overview.md).
+- Familiarity with the [Card Designer](../designer-overview.md).
 
 ## Types of controls
 
