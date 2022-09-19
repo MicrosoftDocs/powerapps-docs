@@ -26,7 +26,7 @@ Buttons can do one of four things:
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
 - A card. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../../make-a-card/designer-overview.md).
+- Familiarity with the [Card Designer](../designer-overview.md).
 
 ## Add a button to a card
 
@@ -36,7 +36,7 @@ Buttons can do one of four things:
     :::image type="content" source="../../media/use-buttons/add-button.png" alt-text="Screenshot of Button in Insert menu":::
 1. Now that the button is on your card you can edit its properties. At a minimum select your button **Type** and add a button **Title** to display on the card, shown below.
 
-    :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of Button in Insert menu":::
+    :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of button title change":::
 
 ### Button type
 
