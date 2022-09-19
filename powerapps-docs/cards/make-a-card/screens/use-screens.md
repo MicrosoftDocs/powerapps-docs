@@ -29,7 +29,7 @@ You can view the screens in your card and change properties of each screen using
 1. Enter a name for your new screen and select **Create** to make it.
 1. Add any controls, data, and variables you want to this screen. After you've added everything you wanted, you can use buttons to call your screen from a card.
 
-## Use buttons with Show Screen
+## Add a screen with the Show Screen button
 
 To show screens from other cards, use the **Show Screen** button.
 

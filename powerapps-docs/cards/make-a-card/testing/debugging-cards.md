@@ -18,7 +18,7 @@ ms.collection:
 Using the **Play** page you can see how finished cards will look and act before sending them out to users. It has the tools to test your card and debug any issues.
 
 > [!NOTE]
-> Card instances and their data, which you see on the Play page, will only last 48 hours after being created. Select the **Play** button from the Card Designer to get a new instance of that card.
+> Card instances and their data, which you see on the **Play** page, will only last 48 hours after being created. Select the **Play** button from the Card Designer to get a new instance of that card.
 
 ## Prerequisites
 
@@ -26,19 +26,19 @@ Using the **Play** page you can see how finished cards will look and act before 
 - A card to test. For an example see the [simple card tutorial](../../tutorials/hello-world-card.md).
 - Familiarity with the [Card Designer](../designer-overview.md).
 
-## Access the Play page
+## Access the **Play** page
 
-To access the Play page, take the following steps:
+To access the **Play** page, take the following steps:
 
 1. Go to [Power Apps](https://make.test.powerapps.com/) and select **Cards (preview)**.
 1. On the left select **Cards** to see all of your cards. Select the card you want to test and debug.
 1. Select the **Play** button at the top of the page. A new window will appear with the Play page.
 
-   :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the Play button in the Card Designer":::
+   :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the **Play** button in the Card Designer":::
 
-## Play page components
+## **Play** page components
 
-The Play page is made up of the following components:
+The **Play** page is made up of the following components:
 
    :::image type="content" source="../../media/debugging-cards/play-page-elements.png" alt-text="Screenshot of the Play page elements":::
 
@@ -62,7 +62,7 @@ After interacting with the card:
 
 :::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card after interacting with it":::
 
-You can also change the **View** button on the Play page to switch between light and dark modes. The example below is the same card in dark mode:
+You can also change the **View** button on the **Play** page to switch between light and dark modes. The example below is the same card in dark mode:
 
 :::image type="content" source="../../media/debugging-cards/dark-mode-card.png" alt-text="Screenshot of the card in dark mode":::
 
