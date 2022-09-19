@@ -24,7 +24,7 @@ Using the **Play** page you can see how finished cards will look and act before 
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
 - A card to test. For an example see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../make-a-card/designer-overview.md).
+- Familiarity with the [Card Designer](../designer-overview.md).
 
 ## Access the Play page
 
@@ -60,7 +60,7 @@ Before interacting with the card:
 
 After interacting with the card:
 
-:::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card before interacting with it":::
+:::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card after interacting with it":::
 
 You can also change the **View** button on the Play page to switch between light and dark modes. The example below is the same card in dark mode:
 
