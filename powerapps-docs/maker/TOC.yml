@@ -2872,11 +2872,7 @@
             - name: Card Designer overview
               href: ../cards/make-a-card/designer-overview.md
             - name: Add controls
-              items:
-              - name: Add and configure controls
-                href: ../cards/make-a-card/ui-elements/add-and-configure-controls.md
-              - name: Control reference
-                href: ../cards/make-a-card/ui-elements/controls.md
+              href: ../cards/make-a-card/ui-elements/controls.md
             - name: Add buttons
               href: ../cards/make-a-card/ui-elements/use-buttons.md
             - name: Add and configure screens
