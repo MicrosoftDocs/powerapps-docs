@@ -46,3 +46,9 @@ To show screens from other cards, use the **Show Screen** button.
    :::image type="content" source="../../media/make-a-card/screen-example.png" alt-text="Screenshot of an example screen in a card." border="false":::
 
 Repeat this process as many times as needed to create more screens.
+
+## Switch screens with Power Fx formulas
+
+The Power Fx [Back(/power-platform/power-fx/reference/function-navigate#back) and [Navigate](/power-platform/power-fx/reference/function-navigate#navigate) functions let you switch between screens. While **ShowScreen** just shows a screen, the above functions can be used for more complex scenarios where you want to switch between different screens, and can be used outside of buttons.
+
+For more information about Back and Navigate, see the Power Fx reference documentation [syntax](/power-platform/power-fx/reference/function-navigate#syntax), [examples](/power-platform/power-fx/reference/function-navigate#examples) and [step-by-step instructions](/power-platform/power-fx/reference/function-navigate#step-by-step).
