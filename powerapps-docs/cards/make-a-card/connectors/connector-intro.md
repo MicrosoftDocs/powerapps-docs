@@ -23,7 +23,7 @@ For more information on Connectors in Power Platform, see [Connectors overview](
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
 - A card to add connectors to. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../make-a-card/designer-overview.md).
+- Familiarity with the [Card Designer](../../make-a-card/designer-overview.md).
 
 ## Access connectors in cards
 
