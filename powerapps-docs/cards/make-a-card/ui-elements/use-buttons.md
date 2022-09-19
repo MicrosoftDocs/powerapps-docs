@@ -34,6 +34,7 @@ Buttons can do one of four things:
 1. Select **+ Insert** on the left. Then select **Button** to add a button to your card.
 
     :::image type="content" source="../../media/use-buttons/add-button.png" alt-text="Screenshot of Button in Insert menu":::
+
 1. Now that the button is on your card, you can edit its properties. At a minimum, choose a button **Type** and add a button **Title** to display on the card, as shown below.
 
     :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of button title change":::
