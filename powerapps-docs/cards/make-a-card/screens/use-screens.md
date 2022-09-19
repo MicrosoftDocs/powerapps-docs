@@ -29,17 +29,17 @@ You can view the screens in your card and change properties of each screen using
 1. Enter a name for your new screen and select **Create** to make it.
 1. Add any controls, data, and variables you want to this screen. After you've added everything you wanted, you can use buttons to call your screen from a card.
 
-## Add a screen with the Show Screen button
+## Use a button to show a screen
 
 To show screens from other cards, use the **Show Screen** button.
 
 1. Select **Insert** from the left. Then select **Input** then **Button** to create a new button.
 1. Go to **Type** in the Properties pane on the right. Select the drop-down and change the **Type** to **Show Screen**.
-1. **ShowCard** will appear on the right. Select the **Screen** you want to show and the **Name** of your button.
+1. **ShowCard** will appear on the right. Set **Screen** to the screen you want to show and set **Title** to the text to display on your button.
 
    :::image type="content" source="../../media/make-a-card/show-card-properties.png" alt-text="Screenshot of ShowCard options." border="false":::
 
-    In the example above, this button will show the `NameScreen` when a user selects a button titled "Say Goodbye".
+    In the example above, this button will show the `NameScreen` screen when a user selects the button titled "Say Goodbye".
 
     Now, the screen will appear when you test your card and select the button. The example below shows how the screen appears after adding an example button to the [simple card tutorial](../../tutorials/hello-world-card.md) card.
 
