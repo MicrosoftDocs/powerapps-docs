@@ -59,7 +59,7 @@ When you test the button, the actions expressed by the Power Fx formula should h
 
 The **Show Screen** button lets users select a button and then display a screen. For more information about screens, see the [screens](../screens/use-screens.md) article.
 
-Set the **Type** to **Show Screen** and then select a **Screen** to switch to. If you don't have any screens, only *main** will appear in the list. When the user selects the button, the new screen will appear under the card.
+Set the **Type** to **Show Screen** and then select a **Screen** to switch to. If you don't have any screens, only **main** will appear in the list. When the user selects the button, the new screen will appear under the card.
 
 #### Open Url
 
