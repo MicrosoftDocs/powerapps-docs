@@ -48,7 +48,7 @@ The following table lists the samples implemented in C#. Each sample is describe
 
 The following samples demonstrate methods to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within Dataverse.
 
-- [Web API CDSWebApiService Parallel Operations Sample (C#)](samples/webapiservice-parallel-operations.md)
+- [Web API WebApiService Parallel Operations Sample (C#)](samples/webapiservice-parallel-operations.md)
 - [Web API Parallel Operations with TPL Dataflow components Sample (C#)](samples/webapiservice-tpl-dataflow-parallel-operations.md)
 
 <a name="bkmk_howDownloadRun"></a>

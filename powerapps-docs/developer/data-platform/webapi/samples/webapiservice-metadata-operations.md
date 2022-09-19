@@ -2,8 +2,8 @@
 title: "Web API Metadata Operations Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to perform operations that change the Dataverse data structures using the Web API."
 ms.date: 09/02/2022
-author: divka78
-ms.author: dikamath
+author: NHelgren
+ms.author: nhelgren
 ms.reviewer: jdaly
 search.audienceType: 
   - developer

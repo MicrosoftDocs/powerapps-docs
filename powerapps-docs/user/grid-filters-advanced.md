@@ -115,6 +115,13 @@ Select a column heading, and then select how the view should sort data in the co
 
 Sorting options depend on the type of data. Alphanumeric columns can be sorted in A to Z (ascending) or Z to A (descending) order. Date columns can be sorted in older to newer (ascending) or newer to older (descending) order. An arrow to the right of the column name indicates the view is sorted on that column. The direction the arrow is pointing indicates whether the column is sorted in ascending or descending order.
 
+## Edit column width
+
+If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, as asterisk appears besige the view name to indicate that you edited the view and haven't saved it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
+
+> [!TIP]
+> Since the column width edits change the **minimum** width of the column, you may see column widths getting adjusted after the view is saved, to fill the available horizontal screen space.
+
 ## Save your view
 
 An asterisk beside the view name indicates you edited the view and haven't saved it. If you switch to another view or leave the page, the view will revert to its original definition. To keep your changes and add the new view to the list of views available to you, be sure to save it.
