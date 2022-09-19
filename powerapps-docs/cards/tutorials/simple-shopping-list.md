@@ -123,4 +123,4 @@ This PowerFX expression will append the contents of the `theNewItem` field to th
 
 ## Next Steps
 
-Learn how to make a more complex card with the [compound list tutorial](compound-shopping-list.md).
+Learn how to make a more complex card with the [Dataverse tutorial](dataverse-card.md).
