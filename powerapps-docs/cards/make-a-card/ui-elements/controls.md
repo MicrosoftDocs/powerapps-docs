@@ -15,37 +15,39 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
-These are the basic building blocks of a card, and the ones you're most likely to use.
+These table details the basic building blocks of a card, and the ones you're most likely to use.
+
+## Display
 
 | **Item**     | **Description**                                                                                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TextBlock    | Standard text block; supports strings and PowerFX formulas.                                                                                                                                                   |
-| Button       | Specify an action to occur when the button is pressed with PowerFX formula.                                                                                                                                   |
+| Text label    | Standard text block; supports strings and Power Fx formulas.                                                                                                                                                   |
 | Image        | Supports addition of images to card via URL.                                                                                                                                                                  |
 | Media        | Supports addition of other forms of media to card via URL.                                                                                                                                                    |
-| Button Group | If you have multiple buttons in one location on the card, use a Button Group to manage the buttons under one parent element (visible on the Structure page). Provides an easy UI method to add more buttons.  |
 
-#### Inputs
+### Input
 
 Use an input element when you want the end user of the card to specify information.
 
 | **Item**        | **Description**                                                                                                           |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------|
-| Input.Text      | Allow the user to input a text response; parses as a string.                                                              |
-| Input.Number    | Allow the user to input a numerical response by typing a number or selecting from the up/down arrows; parses as a string. |
-| Input.Date      | Allow the user to input a date (mm/dd/yyyy) or choose a date from the dropdown calendar.                                  |
-| Input.Time      | Enter a time (HH:MM AM/PM) or select a time from the dropdown clock.                                                      |
-| Input.ChoiceSet | User selects a choice from the dropdown; default is two choices, but more can be added.                                   |
-| Input.Toggle    | Checkbox for the user to select if applicable; default is unchecked.                                                      |
+| Text input     | Allow the user to input a text response; parses as a string.                                                              |
+| Number input    | Allow the user to input a numerical response by typing a number or selecting from the up/down arrows; parses as a string. |
+| Button       | Specify an action to occur when the button is pressed with Power Fx formula.                                                                       |
+| Date picker      | Allow the user to input a date (mm/dd/yyyy) or choose a date from the dropdown calendar.                                  |
+| Time picker     | Enter a time (HH:MM AM/PM) or select a time from the dropdown clock.                                                      |
+| Drop down | User selects a choice from the dropdown; default is two choices, but more can be added.                                   |
+| Checkbox    | Checkbox for the user to select if applicable; default is unchecked.                                                      |
 
-#### Containers
+## Layout
 
-Just like with the Button Group in the Elements section, use a container when you want to group elements together, either for ease of reference or design purposes.
+Just like with the Button Group, use Layout when you want to group elements together, either for ease of reference or design purposes.
 
 | **Item**  | **Description**                                                                                                                                                                                                      |
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Container | A standard container, useable with any element; takes on the properties of the first element placed inside. Doesn't support multiple element types at once.                                                          |
-| ImageSet  | Container for images; provides an easy UI method to add more images.                                                                                                                                                 |
-| FactSet   | Creates a table of property/value pairs.                                                                                                                                                                             |
-| ColumnSet | Container for columns; provides an easy UI method to add more columns. Required when using columns.                                                                                                                  |
-| Column    | Add to a ColumnSet to create dividers on the page. Empty columns aren't inherently visible in the final card, so you'll need to put another element (e.g., TextBlock, Input, etc.) into a column to make it visible. |
+| Button set | Container for a set of buttons.                                                          |
+| Image set  | Container for images; provides an easy UI method to add more images.                                                                                                                                                 |
+| Fact set   | Creates a table of property/value pairs.                                                                                                                                                                             |
+| Column set | Container for columns; provides an easy UI method to add more columns. Required when using columns.                                                                                                                  |
+| Column    | Add to a Column set to create dividers on the page. Empty columns aren't inherently visible in the final card, so you'll need to put another element (like Text input) into a column to make it visible. |
