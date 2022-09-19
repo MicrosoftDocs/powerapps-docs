@@ -2879,10 +2879,8 @@
               href: ../cards/make-a-card/screens/use-screens.md
     - name: Connect to data and services
       items: 
-        - name: Introduction to connectors
+        - name: Access connectors
           href: ../cards/make-a-card/connectors/connector-intro.md
-        - name: Use a Connector in a card
-          href: ../cards/make-a-card/connectors/use-connector-in-card.md
     - name: Add business logic with Power Fx
       href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
     - name: Test and debug cards
@@ -2891,12 +2889,10 @@
       href: ../cards/send-a-card/send-card-in-teams.md
     - name: Tutorials
       items:
-        - name: Create a hello world card
+        - name: Create a simple card
           href: ../cards/tutorials/hello-world-card.md
-        - name: Create a simple shopping list
+        - name: Create a shopping list card
           href: ../cards/tutorials/simple-shopping-list.md
-        - name: Create a compound shopping list
-          href: ../cards/tutorials/compound-shopping-list.md
         - name: Create a card with data from Dataverse
           href: ../cards/tutorials/dataverse-card.md
     - name: Glossary

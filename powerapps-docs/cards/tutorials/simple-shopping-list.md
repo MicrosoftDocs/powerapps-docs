@@ -1,5 +1,5 @@
 ---
-title: Create a simple shopping list card (Preview)
+title: Create a shopping list card (Preview)
 description: Learn about card basics while creating a simple shopping list card.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Create a simple shopping list card (Preview)
+# Create a shopping list card (Preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
@@ -124,3 +124,4 @@ This PowerFX expression will append the contents of the `theNewItem` field to th
 ## Next Steps
 
 Learn how to make a more complex card with the [Dataverse](dataverse-card.md).
+
