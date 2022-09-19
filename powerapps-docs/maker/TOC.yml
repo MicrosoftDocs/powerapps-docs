@@ -2893,14 +2893,12 @@
       href: ../cards/send-a-card/send-card-in-teams.md
     - name: Tutorials
       items:
-        - name: Create a hello world card
+        - name: Create a simple card
           href: ../cards/tutorials/hello-world-card.md
-        - name: Create a simple shopping list
+        - name: Create a shopping list card
           href: ../cards/tutorials/simple-shopping-list.md
-        - name: Create a compound shopping list
-          href: ../cards/tutorials/compound-shopping-list.md
         - name: Create a card with data from Dataverse
-          href: ../cards/tutorials/dataverse-card.
+          href: ../cards/tutorials/dataverse-card.md
     - name: Glossary
       href: ../cards/glossary.md
 - name: AI Builder
