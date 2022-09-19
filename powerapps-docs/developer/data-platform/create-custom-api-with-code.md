@@ -101,7 +101,7 @@ OData-EntityId: [Organization URI]/api/data/v9.1/customapis(b532b299-4684-eb11-a
 
 ## Create a Custom API using the Organization Service
 
-This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style: More information: 
+This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style. You can also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. More information:
 
 - [Use CrmServiceClient constructors to connect to Dataverse](xrm-tooling/use-crmserviceclient-constructors-connect.md)
 - [Late-bound and Early-bound programming using the Organization service](org-service/early-bound-programming.md)
@@ -122,6 +122,7 @@ string conn = $@"
     LoginPrompt=Auto;
     RequireNewInstance = True";
 
+//var service = new ServiceClient(conn);
 var service = new CrmServiceClient(conn);
 
 //The plug-in type
@@ -180,10 +181,9 @@ Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br/>
-[CustomAPI tables](custom-api-tables.md)<br/>
+[Custom API tables](custom-api-tables.md)<br/>
 [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br/>
 [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br/>
 [Create a Custom API with solution files](create-custom-api-solution.md)<br/>
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
