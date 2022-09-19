@@ -22,16 +22,16 @@ For more information on Connectors in Power Platform, see [Connectors overview](
 ## Prerequisites
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
-- A card to add connectors to. For an example see the [simple card tutorial](../../tutorials/hello-world-card.md).
+- A card to add connectors to. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
 - Familiarity with the [Card Designer](../make-a-card/designer-overview.md).
 
 ## Access connectors in cards
 
-To access connectors in cards, take the following steps:
+To access connectors in card:
 
 1. Go to [Power Apps](https://make.test.powerapps.com/) and select **Cards (preview)**.
-1. On the left select **Cards** to see all of your cards. Select the card you want to test add a connector to.
-1. On the left select **Data**. Then select **+ Add data**.
+1. On the left, select **Cards** and select the card you want to test add a connector to.
+1. On the left, select **Data**. Then select **+ Add data**.
 
     :::image type="content" source="../../media/connector-intro/add-data-location.png" alt-text="Screenshot of + Add data menu":::
 
@@ -43,4 +43,4 @@ Only connections to Dataverse are currently available. You can connect to Datave
 
 Learn how to [create a card with data from Dataverse](../../tutorials/dataverse-card.md).
 
-The other connectors are available within the Card Designer but functionality for them will be added in updates.
+The other connectors are available within the Card Designer, but functionality for them will be added in future updates.
