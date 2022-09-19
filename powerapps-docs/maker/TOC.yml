@@ -2878,7 +2878,9 @@
             - name: Add and configure screens
               href: ../cards/make-a-card/screens/use-screens.md
     - name: Connect to data and services
-      items: 
+      items:
+        - name: Add variables
+          href: ../cards/make-a-card/variables/variables.md
         - name: Access connectors
           href: ../cards/make-a-card/connectors/connector-intro.md
     - name: Add business logic with Power Fx
