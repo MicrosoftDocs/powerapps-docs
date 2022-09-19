@@ -21,7 +21,7 @@ For example, if you wanted a card that counted how many times a user pressed a b
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
 - A card. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../make-a-card/designer-overview.md).
+- Familiarity with the [Card Designer](../designer-overview.md).
 
 ## Add a variable
 
