@@ -32,18 +32,19 @@ At a high level, command customization fits into the following categories. Vario
 -	**Main grid**. This command bar is displayed when using the left-hand navigation of an app to view a full page list of records in this table.
     > [!div class="mx-imgBorder"]
     > ![Command bar on main grid](media/CommandDesigner-home-grid-location.png "Command bar on main grid")
-    
+
 - **Main form**. This command bar is displayed on the table’s main forms. This appears at the top of the form and is not the same as the associated view or subgrid view that will appear in different areas of the form.
     > [!div class="mx-imgBorder"]
     > ![Main form](media/CommandDesigner-main-form-location.png "Main form")
-    
+
 - **Subgrid view**. This command bar is displayed on forms of other tables that render this table’s data within a subgrid. For example, the account main form has a subgrid control that lists contact records related to the account record. To edit the below command bar, edit the command bar for the contact table then subgrid view.
     > [!div class="mx-imgBorder"]
     > ![Subgrid view](media/CommandDesigner-subrid-location.png "Subgrid view")
+
 - **Associated view**. This command bar is displayed on the form of a parent table when viewing related data in this table. For example, from the main form of an account record select the **Related** tab then select a related table like contacts.
     > [!div class="mx-imgBorder"]
     > ![Associated view](media/CommandDesigner-associated-view-location.png "Associated view")
-    
+
 -	**Quick actions**. Quick actions are associated with the main grid location. To add or edit commands for both quick actions and main grid locations, select the desired table from within modern app designer, then edit the command bar and choose the main grid location. The first five commands, determined by order, will also be shown as quick actions when playing the app.
     > [!div class="mx-imgBorder"]
     > ![An example quick action configured on the contact table](media/CommandDesigner-quick-actions-location.png.jpg "An example quick action configured on the contact table")
