@@ -35,8 +35,8 @@ To access connectors in cards, take the following steps:
 
 ## Types of connectors
 
-Within Teams, only connections to Dataverse are available. You can connect to Dataverse tables for creating, reading, updating, and deleting records.
+Only connections to Dataverse are currently available. You can connect to Dataverse tables for creating, reading, updating, and deleting records.
 
 Learn how to [create a card with data from Dataverse](../../tutorials/dataverse-card.md).
 
-The other connectors are available within the Card Designer as they work in the Play page. You can use the Play page to share card instances and experiment with different data connections.
+The other connectors are available within the Card Designer but functionality for them will be added in updates.

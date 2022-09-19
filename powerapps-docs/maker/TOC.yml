@@ -2899,8 +2899,6 @@
           href: ../cards/tutorials/simple-shopping-list.md
         - name: Create a compound shopping list
           href: ../cards/tutorials/compound-shopping-list.md
-        - name: Create a card with data from Dataverse
-          href: ../cards/tutorials/dataverse-card.md
     - name: Glossary
       href: ../cards/glossary.md
 - name: AI Builder
