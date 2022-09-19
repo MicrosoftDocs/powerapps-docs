@@ -15,7 +15,7 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
-Using the **Play** page you can see how finished cards will look and act before sending them out to users. It has the tools to test your card and debug any issues.
+Use the **Play** page to see how finished cards will look and act before sending them out to users. It has the tools to test your card and debug any issues.
 
 > [!NOTE]
 > Card instances and their data, which you see on the **Play** page, will only last 48 hours after being created. Select the **Play** button from the Card Designer to get a new instance of that card.
@@ -23,12 +23,12 @@ Using the **Play** page you can see how finished cards will look and act before 
 ## Prerequisites
 
 - A [Power Apps](https://powerapps.microsoft.com/) account.
-- A card to test. For an example see the [simple card tutorial](../../tutorials/hello-world-card.md).
+- A card to test. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
 - Familiarity with the [Card Designer](../designer-overview.md).
 
 ## Access the **Play** page
 
-To access the **Play** page, take the following steps:
+To access the Play page:
 
 1. Go to [Power Apps](https://make.test.powerapps.com/) and select **Cards (preview)**.
 1. On the left select **Cards** to see all of your cards. Select the card you want to test and debug.
@@ -78,11 +78,11 @@ To open the **Debug** panel, select the **Debug** button on the right. There are
 
 The **Memory** section lets you see variables stored in memory and how your card is assigning and using them.
 
-The example below shows the user input stored in `UserAnswer` has the same as the assigned variable `UserName` used in the card.
+The example below shows that the user input stored in `UserAnswer` has the same value as the assigned variable `UserName` used in the card.
 
 :::image type="content" source="../../media/debugging-cards/memory-example.png" alt-text="Screenshot of the Memory section in the Debug panel":::
 
-If you're encountering issues with memory, check your variable names and any related Power Fx formulas used in your card
+If you're encountering issues with memory, check your variable names and any related Power Fx formulas used in your card.
 
 ### JSON
 
