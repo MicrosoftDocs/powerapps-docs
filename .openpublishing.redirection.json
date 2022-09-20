@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/cards/glossary.md",
+      "redirect_url": "overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/aad-group-team.md",
       "redirect_url": "../aad-group-team",
       "redirect_document_id": false
