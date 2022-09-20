@@ -51,7 +51,7 @@ These are the methods available for a Standard control.
 <ul>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
 <li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
-<li><a href="controls/getoutput.md" data-raw-source="[getOutput](controls/getName.md)">getOutput</a></li>
+<li><a href="controls/getoutputs.md" data-raw-source="[getOutputs](controls/getoutputs.md)">getOutputs</a></li>
 <li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
 <li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
 
