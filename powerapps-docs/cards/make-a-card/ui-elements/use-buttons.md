@@ -13,7 +13,7 @@ ms.collection:
 
 # Add buttons (Preview)
 
-[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
 Buttons are a type of control that let users perform actions in cards. They're a visual interface that makes it easy for users to do things with cards without entering any input aside from a click.
 
