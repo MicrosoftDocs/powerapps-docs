@@ -24,8 +24,8 @@ As a part of the Power Apps ecosystem, cards add business logic through Power Fx
 Using cards, you can quickly build, manage, and share rich, actionable UI cards without any coding or IT expertise.
 
 > [!IMPORTANT]
-> This is a preview feature.
-> [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Get started with cards
 
