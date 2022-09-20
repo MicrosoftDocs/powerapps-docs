@@ -107,7 +107,7 @@ You can find an example of a customized editable grid control here: [Customized 
 
 [Power Apps component framework overview](overview.md)<br/>
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)
 
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]

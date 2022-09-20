@@ -82,6 +82,6 @@ You can also choose to disable maintenance mode on your portal when the schedule
 
 ### See also
 
-[Power Apps portals maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
+[Power Apps portals maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

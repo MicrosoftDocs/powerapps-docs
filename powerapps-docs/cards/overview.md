@@ -1,4 +1,4 @@
-﻿---
+---
 title: What are cards? (Preview)
 description: Learn about cards as a Power Apps capability and the business problems they can help you solve.
 ms.date: 09/20/2022
@@ -13,6 +13,8 @@ ms.collection:
 
 # What are cards?
 
+[This article is pre-release documentation and is subject to change.]
+
 Cards are a low-code capability of Power Apps that let you design, send, and use cards. Cards are micro-apps with embedded enterprise data and workflows that can be sent as content in other applications.
 
 Use the Power Apps guided and visual interface to create cards to optimize and automate business tasks. Use them to create actionable scenarios with interactive, data-driven, lightweight UI elements; then, make them available for other people to use.
@@ -22,8 +24,8 @@ As a part of the Power Apps ecosystem, cards add business logic through Power Fx
 Using cards, you can quickly build, manage, and share rich, actionable UI cards without any coding or IT expertise.
 
 > [!IMPORTANT]
-> This is a preview feature.
-> [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Get started with cards
 

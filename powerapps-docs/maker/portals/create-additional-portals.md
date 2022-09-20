@@ -76,7 +76,7 @@ After you enter the portal name, address, and choose the language, the portal cr
 ### See also
 
 [Available portal templates](portal-templates.md) <br>
-[Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
+[Administer Power Apps portals](/training/paths/administer-portals/) <br>
+[Access Dataverse in Power Apps portals](/training/modules/portals-access-data-platform/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
