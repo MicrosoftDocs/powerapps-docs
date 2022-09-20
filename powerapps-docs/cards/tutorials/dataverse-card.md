@@ -17,125 +17,69 @@ ms.collection:
 In this tutorial, you'll learn how to build a card that utilizes the Dataverse connector to show and update information about an Account.
 
 - Connectors, specifically Dataverse
-- How to use more of the controls
 - More advanced Power Fx expressions
 
-The result will look like the example below:
+## Prerequisites
 
-:::image type="content" source="../media/tutorial-use-connectors/use-connectors-card.png" alt-text="Screenshot of a finished card using the Bing search connector." border="false":::
+- A [Power Apps](https://powerapps.microsoft.com/) account.
+- Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
-## Basic data binding
+## Tutorial
 
-1. Create your card. You'll be asked to name your card&mdash;use something you'll remember later when you go looking for it, like "Bing Search".
+### Create a card
 
-   :::image type="content" source="../media/tutorial-use-connectors/rename-card-title.png" alt-text="Screenshot of the card renamed to Bing search." border="false":::
+1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left.
 
-1. Remove the default text box.
+1. Select **+ Create a card**.
 
-1. From the Elements side menu, drag and drop an **Input.Text** box under the card title.
+1. Enter "DataverseCard" under **Card name** and then select **Create**.
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-new-input-text-box.png" alt-text="Screenshot of a new input text box added under the title box." border="false":::
+### Add the Dataverse connector to the Accounts table
 
-1. Add a descriptive label to the input text box, such as `Search for:`
+1. Go to the Data pane on the left-hand menu and select **Add data**
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-search-for-label.png" alt-text="Screenshot of how to add the search for label to the input text box." border="false":::
+1. Select the **Microsoft Dataverse** connector, wait for it to configure the connection, press **OK** then select the **Accounts** table and press **Select**
 
-1. Set the following properties:
-   1. **Name**: `query`
-   1. **Default value**: `${query}`
+### Ask for the account name
 
-   :::image type="content" source="../media/tutorial-use-connectors/adding-query-vars.png" alt-text="Screenshot of how to add query to the input text box properties." border="false":::
+1. Navigate to the Insert pane in the left-hand menu and add a Text label control, setting the **Text** to `Enter account name`
 
-1. Drag and drop a **Button Group** into the card under the card description.
+1. Add a Text input control
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-button-group-to-card.png" alt-text="Screenshot of an added button group." border="false":::
+1. Add a button and set the Title to `See details`
 
-1. Click **Add Button**.
+1. Navigate to the Variables pane and select **New variable**
 
-1. Set the button **Title** to `Back`.
+1. Set the variable name to `enteredAccountName`, the type to `Text`, and select **Save**
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-button-title-back.png" alt-text="Screenshot showing a button renamed to back." border="false":::
+1. Navigate to the Tree View pane in the left-hand menu and select **New screen**
 
-1. In the PowerFX code line at the top, add the following for this button: `Back();`
+1. Set the name to `DetailsScreen` and select **Create**
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-back-pfx-to-button.png" alt-text="Screenshot showing Power FX expression to add to back button to make functional." border="false":::
+1. Select the button and set the **OnSelect** property to `Set(enteredAccountName, textInput1); Navigate(DetailsScreen);` 
 
-1. Select the empty space around the Back button to re-select the Button Group.
+### Show additional account details
 
-1. Select **Add Button**.
+1. In the DetailsScreen, set the Text property on the bolded text label that is added by default to `LookUp(account, 'Account Name' = enteredAccountName).'Account Name'`
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-new-button-to-group.png" alt-text="Screenshot showing how to add a second button to the button group." border="false":::
+1. Through the Insert pane, add a text label and set the **Text** property to `LookUp(account, 'Account Name' = enteredAccountName).'Account Number'`
 
-1. Name the new button `Search`.
+1. Through the Insert pane, add a button and set the **Text** property to `"Search for a different account"` and the **OnSelect** property to `Back()`
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-button-title-search.png" alt-text="Screenshot showing a second button renamed to search." border="false":::
+### Change the account description
 
-1. Select **Data Connections** from the Navigation bar and then select **Add data**.
+1. Navigate to the Insert pane in the left-hand menu and add a Text input control and button to your DetailsScreen
 
-   :::image type="content" source="../media/tutorial-use-connectors/go-to-data-connections.png" alt-text="Screenshot showing how to get to the data connections pane." border="false":::
+1. Set the button text to `"Update description"` and the **OnSelect** property to `Patch(account, LookUp(account, 'Account Name' = enteredAccountName), { Description: textInput2 })`
 
-1. Select the **+ plus** next to **Bing Search**.
+### List all accounts
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-bing-connector.png" alt-text="Screenshot showing how to add the Bing search connector to the card." border="false":::
+1. On the main screen, add a text label
 
-1. Go to the **Variables** tab and select **New variable**.
+1. On the text label, set the **Text** property to `ThisItem.'Account Name'` and set the **Repeat for every** property on the Advanced tab to `account`
 
-   :::image type="content" source="../media/tutorial-use-connectors/add-new-var.png" alt-text="Screenshot showing how to add a new variable to the card." border="false":::
+## Test the card
 
-1. Create a variable to store the results of your Bing search, here called `searchResults`, then set the variable type to array.
+1. **Save** the card by selecting the button on the top right. You should always save changes before playing an updated card. Then select **Play**.
 
-   :::image type="content" source="../media/tutorial-use-connectors/create-search-results-array.png" alt-text="Screenshot showing how to set up the search results array variable." border="false":::
-
-1. Save the card.
-
-1. With the Search button selected, go to the PowerFX editor and enter the following: `Set(searchResults, bingSearch.GetNews(query));`
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-pfx-to-search-button.png" alt-text="Screenshot showing how to add power fx to the search button to use the bing connector." border="false":::
-
-1. To output the search results as clickable links, add another text box below the buttons. Add the following to the text box: `[${name}](${url})`.
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-pfx-for-links.png" alt-text="Screenshot showing how to add power fx to a text box to make the resulting links clickable." border="false":::
-
-1. With the text box selected, go to the PowerFX bar at the top and enter searchResults. Make sure the drop down to the left is set to **Repeat for Every**.
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-search-results-to-text-box.png" alt-text="Screenshot showing how to make each link show up in the results." border="false":::
-
-1. Save and preview your card.
-
-   :::image type="content" source="../media/tutorial-use-connectors/preview-search-card.png" alt-text="Screenshot showing a working bing search card, with clickable links for each result." border="false":::
-
-### More advanced data binding
-
-Instead of just showing a clickable link, you can also set the Bing search up to show a photo and a short description of each article in the search.
-
-1. Remove the text box from your card and add a **ColumnSet** element.
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-column-set.png" alt-text="Screenshot showing a column set added to the card in place of the text box from previous steps." border="false":::
-
-1. Add a column for the article photo and set the column width to **auto**.
-
-   :::image type="content" source="../media/tutorial-use-connectors/set-column-to-auto.png" alt-text="Screenshot showing how to set the columns in the column set to auto width." border="false":::
-
-1. Drag and drop an **Image** element into the column.
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-image-to-column.png" alt-text="Screenshot of an image block added to the first column in the column set." border="false":::
-
-1. Add the following to the image **Url** box: `= image.thumbnail.contentUrl`
-
-1. Select the empty space around the first column to re-select the ColumnSet.
-
-1. Add a second column to the ColumnSet and make sure the column width is set to **stretch**.
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-second-column.png" alt-text="Screenshot showing a second column added to the column set." border="false":::
-
-1. Add a **Text block** to the second column and add the following: `[${name}](${url})`
-
-1. Drag a second **Text block** into the column underneath the first and add the following: `${description}`
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-pfx-to-second-col.png" alt-text="Screenshot of power fx expressions added to text blocks within the second column." border="false":::
-
-1. With the ColumnSet selected, go to the PowerFX bar at the top and enter `searchResults`. Make sure the drop down to the left is set to **Repeat for Every**.
-
-   :::image type="content" source="../media/tutorial-use-connectors/add-pfx-to-column-set.png" alt-text="Screenshot showing the power fx to add to the column set to view each search result in the card." border="false":::
-
-1. Save and preview your card.
+The card will have two screens - the first screen lists all accounts and allows the user to type in the exact name of an account to see additional details, the second screen shows the account name and number as well as lets the user modify the description.
