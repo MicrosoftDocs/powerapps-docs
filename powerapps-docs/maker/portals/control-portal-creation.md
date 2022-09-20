@@ -52,8 +52,7 @@ For more details about the required roles, and permissions to create a portal, g
 ### See also
 
 [Create additional portals in an environment](create-additional-portals.md) <br>
-[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
-
+[Administer Power Apps portals](/learn/paths/administer-portals/) <br>
+[Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
