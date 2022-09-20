@@ -4,8 +4,7 @@ description: "Describes the requirement to upgrade code to use Web API OData v4.
 suite: powerapps
 author: divka78
 ms.author: dikamath
-manager: sunilg
-ms.date: 04/01/2022
+ms.date: 09/19/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -83,6 +82,84 @@ Web API allows to set a max page size and will return up to 5000 records. More i
 ### Legacy documentation
 
 Documentation describing the Organization Data Service is available here: [Microsoft Dynamics 2015 SDK: Use the OData endpoint with web resources](/previous-versions/dynamicscrm-2015/developers-guide/gg334279(v=crm.7)).
+
+The following table connects related areas for the Organization Data Service and the Web API:
+
+
+|Organization Data Service|Web API|
+|---------|---------|
+|[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query-data-web-api.md)<br /> [Web API Properties](../../../data-platform/webapi/web-api-properties.md)|
+|[Creating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#creating-records)|[Create a table row](../../../data-platform/webapi/create-entity-web-api.md)|
+|[Retrieving records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#retrieving-records)|[Retrieve a table row](../../../data-platform/webapi/retrieve-entity-using-web-api.md)|
+|[Updating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#updating-records)|[Basic update](../../../data-platform/webapi/update-delete-entities-using-web-api.md#basic-update)|
+|[Deleting records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#deleting-records)|[Basic delete](../../../data-platform/webapi/update-delete-entities-using-web-api.md#basic-delete)|
+|[Using Deep insert](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#using-deep-insert)|[Create related table rows in one operation](../../../data-platform/webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)|
+|[Updating individual properties](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#updating-individual-properties)|[Update a single property value](../../../data-platform/webapi/update-delete-entities-using-web-api.md#update-a-single-property-value)|
+|[Associating and disassociating records](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#associating-and-disassociating-records)|[Associate and disassociate table rows](../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md)|
+|[OData endpoint Http status codes](/previous-versions/dynamicscrm-2015/developers-guide/gg334391(v=crm.7))|[Identify status codes](../../../data-platform/webapi/compose-http-requests-handle-errors.md#identify-status-codes)|
+
+## Examples
+
+This section highlights the differences between using the Organization Data Service and the Web API.
+
+### Create records
+
+These examples show the differences between the Organization Data Service and the Web API when creating records.
+
+### Organization Data Service Create
+
+**Request**
+
+```http
+POST [Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "OwnershipCode": {
+    "Value": 2
+  },
+  "PrimaryContactId": {
+    "Id": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
+    "LogicalName": "contact",
+    "Name": "Sam Smith"
+  },
+  "OpenDeals_Date": "12/25/2022",
+  "CustomerSizeCode": {
+    "Value": 1
+  },
+  "Telephone1": "555-1234",
+  "NumberOfEmployees": 500,
+  "Name": "Contoso, Ltd. (sample)",
+  "AccountNumber": "12225",
+  "DoNotPhone": true,
+  "IndustryCode": {
+    "Value": 7
+  }
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json;charset=utf-8
+REQ_ID: a0c614be-50be-4c1e-9413-1c7ba459c5c9
+
+{
+  "d": {
+    "__metadata": {
+      "uri": "[Organization URI]/xrmservices/2011/OrganizationData.svc/AccountSet(guid'57d4d1af-7b38-ed11-9db0-002248296d7e')",
+      "type": "Microsoft.Crm.Sdk.Data.Services.Account"
+    },
+    "AccountId": "57d4d1af-7b38-ed11-9db0-002248296d7e",
+    <All properties are returned>
+  }
+}
+
+```
+
+
 
 ## See Also
 
