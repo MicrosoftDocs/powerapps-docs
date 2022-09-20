@@ -130,6 +130,6 @@ contributors:
 
 ### See also
 
-[Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
+[Power App portal maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
