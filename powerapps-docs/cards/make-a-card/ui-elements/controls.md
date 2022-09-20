@@ -20,8 +20,8 @@ Controls are the building blocks of your card's interface and functionality. The
 There are three categories of controls that you can add to your card:
 
 - **Display**: Controls that display elements, including text, images, and other media
-- **Input**: Controls that ask for information from users, such as text, numbers, and dates, or that allow the user to interact with the card, such as buttons and drop-down lists
-- **Layout**: Controls that modify the layout and physical appearance of card elements
+- **Input**: Controls that ask for information from users, such as text, numbers, and dates, or that allow the user to interact with the card, such as buttons and lists
+- **Layout**: Controls that modify the layout and appearance of card elements
 
 ## Prerequisites
 
@@ -34,11 +34,9 @@ There are three categories of controls that you can add to your card:
 
 1. In the left pane of the card designer, select **Insert**.
 
+1. In the tool pane, select a category to expand it, and then select a control from the list to place it on the card. You can also drag a control from the list and drop it on the card.
+
    :::image type="content" source="../../media/make-a-card/insert-menu.png" alt-text="Screenshot of the Insert menu in the Power Apps card designer.":::
-
-1. In the tool pane, select a category to expand it, and then select a control from the list to place it on the card.
-
-    You can also drag a control from the list and drop it on the card.
 
 1. With the control selected, use the **Properties** pane to modify it.
 
@@ -50,41 +48,29 @@ The following tables describe the card controls.
 
 | Item | Description |
 | --- | --- |
-| Text label | Standard text block; enter strings and Power Fx formulas |
-| Image | Enter an image file URL |
-| Media | Supports adding other forms of media to the card using the file URL |
+| Text label | Standard text block; accepts strings and Power Fx formulas |
+| Image | Accepts image URLs |
+| Media | Accepts other media URLs |
 
 ### Input
 
-Use an input element when you want the end user of the card to specify information.
-
-| Item        | Description                                                                                                           |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------|
-| Text input     | Allow the user to input text. The value is stored as a string.                          |
-| Number input    | Allow the user to input a number. The value is stored as a string. |
-| Button       | Allow the user to select a button. Use a Power Fx formula to control what happens when the button is selected.                                                                       |
-| Date picker      | Allow the user to input a date (in mm/dd/yyyy format) or choose a date from the dropdown calendar. The value is stored as a Date.                                  |
-| Time picker     | Enter a time (in HH:MM AM/PM format) or select a time from the dropdown clock. The variable is stored as a Time.                                                      |
-| Drop down | User selects a choice from the dropdown; default is two choices, but more can be added.                                   |
-| Checkbox    | Checkbox for the user to select, if applicable; default is unchecked.                                                      |
+| Item | Description |
+| --- | --- |
+| Text input | Allows the user to enter text. The value is stored as a string. |
+| Number input | Allows the user to enter a number. The value is stored as a string. |
+| Button | Allows the user to select a button. Use a Power Fx formula to control what happens when the button is selected. |
+| Date picker | Allows the user to enter a date in mm/dd/yyyy format or select a date on the calendar. The value is stored as a date. |
+| Time picker | Allows the user to enter a time in HH:MM AM/PM format or select a time from a list of hours and minutes. The value is stored as a time. |
+| Drop down | Allows the user to select an option from a list. The default is two choices, but more can be added. |
+| Check box | Allows the user to select a check box. The default is "not selected." |
 
 ### Layout
 
-Just like with the **Button** group, use layout controls when you want to group elements together, either for ease of reference or design purposes.
-
-| Item  | Description                                                                                                                                                                                                      |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Container | A standard container, useable with any element; takes on the properties of the first element placed inside. Doesn't support multiple element types at once.                                                          |
-| Button set | Container for a set of buttons.                                                          |
-| Image set  | Container for images; provides an easy UI method to add more images.                                                                                                                                                 |
-| Fact set   | Creates a table of property-value pairs.                                                                                                                                                                             |
-| Column set | Container for columns; provides an easy UI method to add more columns. Required when using columns.                                                                                                                  |
-| Column    | Add to a column set to create dividers on the page. Empty columns aren't inherently visible in the final card, so you'll need to put another element (like a text input control) into a column to make it visible. |
-
-## Data binding
-
-Data binding is used to repeat controls for a table variable using the **Repeat for every** advanced property.
-
-For example, if you have a table named `fruits` bound to the array `["apples", "oranges", "pears"]`, you can add a text label control and set its **Repeat for every** property to `fruits` and the **Text** property to `ThisItem`. When played, the card will show three text labels with each of the strings in the table.
-
-   :::image type="content" source="../../media/make-a-card/cards-data-binding.png" alt-text="Screenshot of tree view in Card Designer.":::
+| Item | Description |
+| --- | --- |
+| Container | A standard container, useable with any element<br>A container takes on the properties of the first element placed inside it. Only elements of the same type can be added to a container. |
+| Button set | A container for a group of buttons |
+| Image set | A container for a group of images |
+| Fact set | A table of property-value pairs |
+| Column set | A container for columns |
+| Column  | Add to a column set to create dividers on the page<br>Empty columns aren't visible. You'll need to put another element (like a text input control) into a column to make it visible. |

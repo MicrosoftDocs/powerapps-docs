@@ -58,3 +58,11 @@ There are a variety of ways to use variables in cards. The most common option is
 To use variables in Power Fx expressions simply add the variable name to your formula. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md). Your variables should be recognized in the formula bar as well, shown below:
 
 :::image type="content" source="../../media/variables/formula-bar-example.png" alt-text="Screenshot of auto-filling variable name in formula bar button":::
+
+## Data binding
+
+Data binding is used to repeat controls for a table variable using the **Repeat for every** advanced property.
+
+For example, if you have a table named `fruits` bound to the array `["apples", "oranges", "pears"]`, you can add a text label control and set its **Repeat for every** property to `fruits` and the **Text** property to `ThisItem`. When played, the card will show three text labels with each of the strings in the table.
+
+   :::image type="content" source="../../media/make-a-card/cards-data-binding.png" alt-text="Screenshot of a card with a table with the values 'apples,' 'oranges,' and 'pears' in a column.":::

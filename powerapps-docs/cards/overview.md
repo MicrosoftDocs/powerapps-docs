@@ -23,9 +23,9 @@ Power Apps cards are micro-apps with enterprise data and workflows and interacti
 
 You can create cards with just a few clicks. There are no complex systems or services to deploy and maintain.
 
-To get started, sign in to the [Power Apps maker portal](https://make.powerapps.com). Select **Cards (preview)**, and then select **+ Create a card**.
+To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)**, and then select **+ Create a card**.
 
-:::image type="content" source="media/overview/cards-get-started.png" alt-text="Screenshot of the card create page in the Power Apps maker portal.":::
+:::image type="content" source="media/overview/cards-get-started.png" alt-text="Screenshot of the card create page in Power Apps.":::
 
 There are two key components of a card:
 
