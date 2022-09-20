@@ -106,7 +106,7 @@ This section highlights the differences between using the Organization Data Serv
 
 These examples show the differences between the Organization Data Service and the Web API when creating records.
 
-### Organization Data Service Create
+#### [Organization Data Service](#tab/odatav2)
 
 **Request**
 
@@ -159,7 +159,130 @@ REQ_ID: a0c614be-50be-4c1e-9413-1c7ba459c5c9
 
 ```
 
+#### [Web API](#tab/webapi)
 
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+--- 
+
+### Retrieve records
+
+These examples show the differences between the Organization Data Service and the Web API when retrieving records.
+
+#### [Organization Data Service](#tab/odatav2)
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+--- 
+
+### Update records
+
+These examples show the differences between the Organization Data Service and the Web API when updating records.
+
+#### [Organization Data Service](#tab/odatav2)
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+--- 
+
+### Delete records
+
+These examples show the differences between the Organization Data Service and the Web API when deleting records.
+
+#### [Organization Data Service](#tab/odatav2)
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+
+```
+
+**Response**
+
+```http
+
+
+```
+
+--- 
 
 ## See Also
 
