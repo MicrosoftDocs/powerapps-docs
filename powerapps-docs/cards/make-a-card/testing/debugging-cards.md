@@ -1,8 +1,8 @@
 ---
 title: Test and debug cards (Preview)
-description: Learn how to test and debug your cards using the Play page
+description: Learn how to test and debug Microsoft Power Apps cards.
 ms.date: 09/20/2022
-ms.topic: article
+ms.topic: how-to
 author: iaanw
 ms.author: iawilt
 manager: shellyha
@@ -15,83 +15,75 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
-Use the **Play** page to see how finished cards will look and act before sending them out to users. It has the tools to test your card and debug any issues.
+Use the **Play** page to preview your cards before sending them out to users. The **Play** page has tools to test your card and help you debug any issues. Get to the **Play** page in the [card designer](../designer-overview.md).
 
-> [!NOTE]
-> Card instances and their data, which you see on the **Play** page, will only last 48 hours after being created. Select the **Play** button from the Card Designer to get a new instance of that card.
+Card instances that you preview in the **Play** page expire 48 hours after you create the preview. After 48 hours, select **Play** in the card designer to create a fresh instance of the card.
 
 ## Prerequisites
 
-- A [Power Apps](https://powerapps.microsoft.com/) account.
-- A card to test. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../designer-overview.md).
+- A [Power Apps](https://powerapps.microsoft.com/) account
+- [A card](../../tutorials/hello-world-card.md)
 
-## Access the **Play** page
+## Preview a card in the Play page
 
-To access the Play page:
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. Select **Play** at the top of the card designer window. The **Play** page opens in a new browser tab.
 
-1. Go to [Power Apps](https://make.test.powerapps.com/) and select **Cards (preview)**.
-1. On the left select **Cards** to see all of your cards. Select the card you want to test and debug.
-1. Select the **Play** button at the top of the page. A new window will appear with the Play page.
-
-   :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the **Play** button in the Card Designer":::
-
-## **Play** page components
+   :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the Play button in the card designer.":::
 
 The **Play** page is made up of the following components:
 
-   :::image type="content" source="../../media/debugging-cards/play-page-elements.png" alt-text="Screenshot of the Play page elements":::
+   :::image type="content" source="../../media/debugging-cards/play-page-elements.png" alt-text="Screenshot of the Play page in the card designer with components called out.":::
 
-1. Card title - The title of the card
-1. View mode - Switch between light and dark modes to see how cards looks in different environments.
-1. Card viewer - Interact with and view the card.
-1. Send button - Send the card in Teams with a link.
-1. Debug pane - Displays important debugging information while testing. For more information, see the [debugging](#debug-your-card) section.
+Legend:
+
+1. The card title
+1. Preview the card in light or dark mode
+1. View and interact with the card
+1. Send a link to the card to Microsoft Teams
+1. [Open debugging information and tools](#debug-your-card)
 
 ## Test your card
 
-Now that you're on the Play page and understand the different elements of it, you can test your card. The example used in this section is from the [simple card tutorial](../../tutorials/hello-world-card.md).
+The example used in this section is from the [simple card tutorial](../../tutorials/hello-world-card.md).
 
-Try interacting with your card. In the example below, the **Say Hello** button is used to fill a variable with the user's text input. Notice how the bot's title changes to the user input.
+Test your card by interacting with all the elements in it. In the example below, the **Say Hello** button stores the user's text input in a variable, and then uses the value of the variable in the card title. If you're testing this card, you'll enter your name and select **Say Hello**, and then make sure the card title changes to reflect your input.
 
-Before interacting with the card:
+Before you interact with the card, its title is **Hello No Name**:
 
-:::image type="content" source="../../media/debugging-cards/card-before-interaction.png" alt-text="Screenshot of the card before interacting with it":::
+:::image type="content" source="../../media/debugging-cards/card-before-interaction.png" alt-text="Screenshot of a card before interacting with it.":::
 
-After interacting with the card:
+After you interact with the card, the card title changes to **Hello \<whatever you entered\>**:
 
-:::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card after interacting with it":::
+:::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card after interacting with it.":::
 
-You can also change the **View** button on the **Play** page to switch between light and dark modes. The example below is the same card in dark mode:
+You should also change the **View** from light to dark mode and make sure the card looks good in both.
 
-:::image type="content" source="../../media/debugging-cards/dark-mode-card.png" alt-text="Screenshot of the card in dark mode":::
-
-If you encounter issues while testing your card, use the [Debug](#debug-your-card) panel to try and fix them.
+:::image type="content" source="../../media/debugging-cards/dark-mode-card.png" alt-text="Screenshot of the card in dark mode.":::
 
 ## Debug your card
 
-The **Debug** panel lets you ascertain issues with your card and gives suggestions when possible for fixes.
+If you encounter issues while testing your card, open the debug pane to troubleshoot and get suggestions for fixing them.
 
-To open the **Debug** panel, select the **Debug** button on the right. There are four elements to the debug panel: **Memory**, **JSON**, **Output**, and **Info**.
+There are four tabs in the debug pane: **Memory**, **JSON**, **Output**, and **Info**.
 
 ### Memory
 
-The **Memory** section lets you see variables stored in memory and how your card is assigning and using them.
+The **Memory** tab displays the variables that the card has stored and how your card is assigning and using them. If you're encountering issues with memory, check your variable names and any related Power Fx formulas that are used in your card.
 
-The example below shows that the user input stored in `UserAnswer` has the same value as the assigned variable `UserName` used in the card.
+The example below shows that the user input that's stored in `UserAnswer` has the same value as the variable `UserName`, and that both are used in the **main** screen.
 
-:::image type="content" source="../../media/debugging-cards/memory-example.png" alt-text="Screenshot of the Memory section in the Debug panel":::
-
-If you're encountering issues with memory, check your variable names and any related Power Fx formulas used in your card.
+:::image type="content" source="../../media/debugging-cards/memory-example.png" alt-text="Screenshot of the Memory tab in the debug pane.":::
 
 ### JSON
 
-The **JSON** section lets you see the JSON representation of your card. This can be helpful for developers working on cards who prefer a code-first approach.
+The **JSON** tab displays the JSON representation of your card. A direct view of the card's underlying code can be helpful for developers who prefer a code-first approach.
 
 ### Output
 
-The **Output** sections lets you see any output from your card. This is only available for cards where output is set up already.
+The **Output** tab displays any output from your card. This tab is available only when a card has output elements.
+<!--The Debug > Output tab still shows a placeholder sentence. Please pass along to the dev team.-->
 
 ### Info
 
-The **Info** section lets you see information about the card's **Environment ID**, **Card ID**, and **User**.
+The **Info** tab displays the card's **Environment ID**, **Card ID**, and **User**.

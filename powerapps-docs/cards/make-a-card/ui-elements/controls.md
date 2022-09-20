@@ -38,7 +38,7 @@ There are three categories of controls that you can add to your card:
 
    :::image type="content" source="../../media/make-a-card/insert-menu.png" alt-text="Screenshot of the Insert menu in the Power Apps card designer.":::
 
-1. With the control selected, use the **Properties** pane to modify it.
+1. With the control selected, use the properties pane to modify it.
 
 ## Controls reference
 
