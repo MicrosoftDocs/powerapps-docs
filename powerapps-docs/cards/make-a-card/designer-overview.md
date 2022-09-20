@@ -33,7 +33,7 @@ To get to the designer, take the following steps:
    1. To create a new card, select **Cards** then **Create**.
    1. To see all current cards, select **Cards** then **Cards**
 
-      :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen." border="false":::
+      :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen." border="true":::
 
 1. Select the **+ Create a card** to start building your own card.
 
@@ -41,7 +41,7 @@ To get to the designer, take the following steps:
 
 The designer is made up of the following elements:
 
-:::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Card Designer with elements highlighted." border="false":::
+:::image type="content" source="../media/designer-overview/designer-elements.png" alt-text="Screenshot of Card Designer with elements highlighted." border="true":::
 
 1. Main menu
 1. Tool pane

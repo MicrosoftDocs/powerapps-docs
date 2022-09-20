@@ -33,7 +33,7 @@ To access connectors in card:
 1. On the left, select **Cards** and select the card you want to test add a connector to.
 1. On the left, select **Data**. Then select **+ Add data**.
 
-    :::image type="content" source="../../media/connector-intro/add-data-location.png" alt-text="Screenshot of + Add data menu":::
+    :::image type="content" source="../../media/connector-intro/add-data-location.png" alt-text="Screenshot of + Add data menu" border="true":::
 
     You'll then be able to add a data source and see all available connectors.
 

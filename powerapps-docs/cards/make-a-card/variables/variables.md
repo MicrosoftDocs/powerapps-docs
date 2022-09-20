@@ -1,5 +1,5 @@
 ---
-title: Use variable
+title: Use variables (Preview)
 description: Learn about storing data in variables
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Variables
+# Variables (Preview)
+
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 Variables are used to store data within the context of a card. That data can be of different types like table, text, or a number. The value can also be temporary, where it resets for every card session, or permanent, where it is shared across all sessions for a specific card instance. Variables have unique names, which is how they are referenced in [formulas](../../make-a-card/power-fx/intro-to-pfx.md).
 
@@ -31,7 +33,7 @@ To add variables in cards, do the following.
 1. On the left, select **Cards** and select the card you want to test add a connector to.
 1. On the left, select **Variables**. Then select **+ New variable**.
 
-    :::image type="content" source="../../media/variables/new-variable.png" alt-text="Screenshot of the + Add variable button":::
+    :::image type="content" source="../../media/variables/new-variable.png" alt-text="Screenshot of the + Add variable button" border="true":::
 
 1. The **New variable** window will appear. Set the following values:
     - **Name**: the name of your variable.
@@ -46,7 +48,7 @@ To add variables in cards, do the following.
 
 If you want to to edit or delete a variable, select the three dots next to the variable and choose the option that works for you.
 
-:::image type="content" source="../../media/variables/edit-delete-variable.png" alt-text="Screenshot of the Edit and Delete variable button":::
+:::image type="content" source="../../media/variables/edit-delete-variable.png" alt-text="Screenshot of the Edit and Delete variable button" border="true":::
 
 >[!NOTE]
 > After creation, the variable **Name** and **Type** cannot be edited. If you need to change these values, create a new variable.
@@ -57,4 +59,4 @@ There are a variety of ways to use variables in cards. The most common option is
 
 To use variables in Power Fx expressions simply add the variable name to your formula. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md). Your variables should be recognized in the formula bar as well, shown below:
 
-:::image type="content" source="../../media/variables/formula-bar-example.png" alt-text="Screenshot of auto-filling variable name in formula bar button":::
+:::image type="content" source="../../media/variables/formula-bar-example.png" alt-text="Screenshot of auto-filling variable name in formula bar button" border="true":::

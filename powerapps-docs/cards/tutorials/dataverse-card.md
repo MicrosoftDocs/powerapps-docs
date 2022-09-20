@@ -1,5 +1,5 @@
 ---
-title: "Create a card with data from Dataverse"
+title: "Create a card with data from Dataverse (Preview)"
 description: "Create a card that uses connectors"
 keywords: "Card Designer, Power Apps, cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
@@ -12,7 +12,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Use the Dataverse connector
+# Use the Dataverse connector (Preview)
+
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 In this tutorial, you'll learn how to build a card that utilizes the Dataverse connector to show and update information about an Account.
 

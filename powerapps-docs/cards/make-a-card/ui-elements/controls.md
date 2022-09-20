@@ -27,7 +27,7 @@ Controls are the building blocks for designing your card's interface and functio
 
 To access card controls, go to [Power Apps](https://powerapps.microsoft.com/), select **Cards** and a card to edit, and then select **Insert**.
 
-   :::image type="content" source="../../media/make-a-card/insert-menu.png" alt-text="Screenshot of the Insert menu Card Designer." border="false":::
+   :::image type="content" source="../../media/make-a-card/insert-menu.png" alt-text="Screenshot of the Insert menu Card Designer." border="true":::
 
 There you'll see the following control categories:
 
@@ -84,4 +84,4 @@ Data binding is used to repeat controls for a table variable using the **Repeat 
 
 For example, if you have a table named `fruits` bound to the array `["apples", "oranges", "pears"]`, you can add a text label control and set its **Repeat for every** property to `fruits` and the **Text** property to `ThisItem`. When played, the card will show three text labels with each of the strings in the table.
 
-   :::image type="content" source="../../media/make-a-card/cards-data-binding.png" alt-text="Screenshot of tree view in Card Designer." border="false":::
+   :::image type="content" source="../../media/make-a-card/cards-data-binding.png" alt-text="Screenshot of tree view in Card Designer." border="true":::

@@ -34,13 +34,13 @@ To access the Play page:
 1. On the left select **Cards** to see all of your cards. Select the card you want to test and debug.
 1. Select the **Play** button at the top of the page. A new window will appear with the Play page.
 
-   :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the **Play** button in the Card Designer":::
+   :::image type="content" source="../../media/debugging-cards/play-button-in-designer.png" alt-text="Screenshot of the **Play** button in the Card Designer" border="true":::
 
 ## **Play** page components
 
 The **Play** page is made up of the following components:
 
-   :::image type="content" source="../../media/debugging-cards/play-page-elements.png" alt-text="Screenshot of the Play page elements":::
+   :::image type="content" source="../../media/debugging-cards/play-page-elements.png" alt-text="Screenshot of the Play page elements" border="true":::
 
 1. Card title - The title of the card
 1. View mode - Switch between light and dark modes to see how cards looks in different environments.
@@ -56,15 +56,15 @@ Try interacting with your card. In the example below, the **Say Hello** button i
 
 Before interacting with the card:
 
-:::image type="content" source="../../media/debugging-cards/card-before-interaction.png" alt-text="Screenshot of the card before interacting with it":::
+:::image type="content" source="../../media/debugging-cards/card-before-interaction.png" alt-text="Screenshot of the card before interacting with it" border="true":::
 
 After interacting with the card:
 
-:::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card after interacting with it":::
+:::image type="content" source="../../media/debugging-cards/card-after-interaction.png" alt-text="Screenshot of the card after interacting with it" border="true":::
 
 You can also change the **View** button on the **Play** page to switch between light and dark modes. The example below is the same card in dark mode:
 
-:::image type="content" source="../../media/debugging-cards/dark-mode-card.png" alt-text="Screenshot of the card in dark mode":::
+:::image type="content" source="../../media/debugging-cards/dark-mode-card.png" alt-text="Screenshot of the card in dark mode" border="true":::
 
 If you encounter issues while testing your card, use the [Debug](#debug-your-card) panel to try and fix them.
 
@@ -80,7 +80,7 @@ The **Memory** section lets you see variables stored in memory and how your card
 
 The example below shows that the user input stored in `UserAnswer` has the same value as the assigned variable `UserName` used in the card.
 
-:::image type="content" source="../../media/debugging-cards/memory-example.png" alt-text="Screenshot of the Memory section in the Debug panel":::
+:::image type="content" source="../../media/debugging-cards/memory-example.png" alt-text="Screenshot of the Memory section in the Debug panel" border="true":::
 
 If you're encountering issues with memory, check your variable names and any related Power Fx formulas used in your card.
 

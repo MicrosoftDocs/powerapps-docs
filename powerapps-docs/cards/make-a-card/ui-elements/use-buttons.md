@@ -1,5 +1,5 @@
 ---
-title: Add buttons
+title: Add buttons (Preview)
 description: Learn how to build a card with buttons.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,9 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add buttons
+# Add buttons (Preview)
+
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 Buttons are a type of control that let users perform actions in cards. They're a visual interface that makes it easy for users to do things with cards without entering any input aside from a click.
 
@@ -33,11 +35,11 @@ Buttons can do one of four things:
 1. Go to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (Preview)** and then the card you want add a button to.
 1. Select **+ Insert** on the left. Then select **Button** to add a button to your card.
 
-    :::image type="content" source="../../media/use-buttons/add-button.png" alt-text="Screenshot of Button in Insert menu":::
+    :::image type="content" source="../../media/use-buttons/add-button.png" alt-text="Screenshot of Button in Insert menu" border="true":::
 
 1. Now that the button is on your card, you can edit its properties. At a minimum, choose a button **Type** and add a button **Title** to display on the card, as shown below.
 
-    :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of button title change":::
+    :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of button title change" border="true":::
 
 ### Button type
 
@@ -73,4 +75,3 @@ Set the **Type** to **Open Url** and then enter a **Url**. When the user selects
 The **Toggle Visibility** button shows or hides other controls in the card.
 
 Set the **Type** to **Toggle Visibility**. Then select the **Target Elements** pane and select **+ Add new**. Enter the **ElementID** and toggle the **Visibility** property to make the element visible or invisible. Add as many elements as you want to toggle the visibility of.
-
