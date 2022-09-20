@@ -1,6 +1,6 @@
 ---
-title: control.getOutput (Client API reference)
-description: Includes description and supported parameters for the control.getOutput method.
+title: control.getOutputs (Client API reference)
+description: Includes description and supported parameters for the control.getOutputs method.
 ms.author: noazarur
 author: noazarur-microsoft
 ms.date: 08/17/2022
@@ -15,7 +15,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# control.getOutput (Client API reference)
+# control.getOutputs (Client API reference)
 
 Returns a dictionary of the output properties of the control.
 
@@ -25,7 +25,7 @@ Standard controls.
 
 ## Syntax
 
-`formContext.getControl(arg).getOutput();`
+`formContext.getControl(arg).getOutputs();`
 
 ## Return Value
 
