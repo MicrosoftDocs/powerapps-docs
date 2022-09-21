@@ -51,12 +51,12 @@ After you select **Insert Template**, a window appears displaying a list of exis
 
 The application displays the enhanced email template selection window only if your admin has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions in the enhanced email template selection window:
 
- - Switch between list, tile, and grid views.
+ -  Switch between list, tile, and grid views.
  - Search for templates based on their title, subject, description, or content of the template.  
  - Filter templates based on standard and custom attributes.
+ - Filter templates based on language, if your Administrator has enabled **Language** in the **Template Gallery Filter Form**. See: [Add the language filter in the email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#add-the-language-filter-in-the-email-template-selection-view)
  - Zoom in to view templates on a full screen. The application provides an option to navigate between templates.
- - Admins can add custom attributes to the Template Gallery Filter Form to extend Filters, Email Template Sorted View to extend the grids, and Template Gallery Properties Form to extend the template details section.
-
+ 
 ![Enhanced email template selection window.](media\config_enhance_email_template.png "New Email template selection window")
 
 **Legend**
@@ -68,6 +68,7 @@ The application displays the enhanced email template selection window only if yo
 5. **View**. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
  
 > [!Note] 
+> The enhanced email template selection view might differ based on the customizations your Administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
 > If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
   
 ### Email template selection dialog
