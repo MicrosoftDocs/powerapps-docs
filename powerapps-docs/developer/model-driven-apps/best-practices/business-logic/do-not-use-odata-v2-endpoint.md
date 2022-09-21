@@ -102,6 +102,180 @@ The following table connects related areas for the Organization Data Service and
 
 This section highlights the differences between using the Organization Data Service and the Web API.
 
+### Query records
+
+These examples show the differences between the Organization Data Service and the Web API when querying records.
+
+#### [Organization Data Service](#tab/odatav2)
+
+**Request**
+
+```http
+GET  [Organization URI]/XRMServices/2011/OrganizationData.svc/AccountSet?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode&$filter=PrimaryContactId/Id ne null&$top=2 HTTP/1.1
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Allow: OPTIONS,GET,HEAD,POST
+Content-Type: application/json;charset=utf-8
+
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "uri": " [Organization URI]/xrmservices/2011/OrganizationData.svc/AccountSet(guid'7a4814f9-b0b8-ea11-a812-000d3a122b89')",
+          "type": "Microsoft.Crm.Sdk.Data.Services.Account"
+        },
+        "OwnershipCode": {
+          "__metadata": {
+            "type": "Microsoft.Crm.Sdk.Data.Services.OptionSetValue"
+          },
+          "Value": 2
+        },
+        "PrimaryContactId": {
+          "__metadata": {
+            "type": "Microsoft.Crm.Sdk.Data.Services.EntityReference"
+          },
+          "Id": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
+          "LogicalName": "contact",
+          "Name": "Sam Smith",
+          "RowVersion": null
+        },
+        "OpenDeals_Date": "/Date(1663715691000)/",
+        "Telephone1": "555-1234",
+        "NumberOfEmployees": 500,
+        "Name": "Contoso, Ltd. (sample)",
+        "AccountNumber": "1111",
+        "DoNotPhone": false,
+        "IndustryCode": {
+          "__metadata": {
+            "type": "Microsoft.Crm.Sdk.Data.Services.OptionSetValue"
+          },
+          "Value": 7
+        }
+      },
+      {
+        "__metadata": {
+          "uri": " [Organization URI]/xrmservices/2011/OrganizationData.svc/AccountSet(guid'fed58509-4af3-ec11-bb3d-000d3a1a51c1')",
+          "type": "Microsoft.Crm.Sdk.Data.Services.Account"
+        },
+        "OwnershipCode": {
+          "__metadata": {
+            "type": "Microsoft.Crm.Sdk.Data.Services.OptionSetValue"
+          },
+          "Value": null
+        },
+        "PrimaryContactId": {
+          "__metadata": {
+            "type": "Microsoft.Crm.Sdk.Data.Services.EntityReference"
+          },
+          "Id": "ffd58509-4af3-ec11-bb3d-000d3a1a51c1",
+          "LogicalName": "contact",
+          "Name": "Susie Curtis",
+          "RowVersion": null
+        },
+        "OpenDeals_Date": "/Date(1663715691000)/",
+        "Telephone1": null,
+        "NumberOfEmployees": null,
+        "Name": "Fourth Coffee",
+        "AccountNumber": null,
+        "DoNotPhone": false,
+        "IndustryCode": {
+          "__metadata": {
+            "type": "Microsoft.Crm.Sdk.Data.Services.OptionSetValue"
+          },
+          "Value": null
+        }
+      }
+    ]
+  }
+}
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET  [Organization URI]/api/data/v9.2/accounts?$select=ownershipcode,_primarycontactid_value,opendeals_date,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode&$filter=_primarycontactid_value ne null&$count=true HTTP/1.1
+Prefer: odata.include-annotations="*"
+Prefer: odata.maxpagesize=2
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+If-None-Match: null
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+Preference-Applied: odata.maxpagesize=2
+
+{
+  "@odata.context": " [Organization URI]/api/data/v9.2/$metadata#accounts(ownershipcode,_primarycontactid_value,opendeals_date,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode)",
+  "@odata.count": 37,
+  "@Microsoft.Dynamics.CRM.totalrecordcount": 37,
+  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+  "@Microsoft.Dynamics.CRM.globalmetadataversion": "73916662",
+  "value": [
+    {
+      "@odata.etag": "W/\"73692809\"",
+      "ownershipcode@OData.Community.Display.V1.FormattedValue": "Private",
+      "ownershipcode": 2,
+      "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Sam Smith",
+      "_primarycontactid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "primarycontactid",
+      "_primarycontactid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "contact",
+      "_primarycontactid_value": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
+      "opendeals_date@OData.Community.Display.V1.FormattedValue": "9/20/2022 4:14 PM",
+      "opendeals_date": "2022-09-20T23:14:51Z",
+      "telephone1": "555-1234",
+      "numberofemployees@OData.Community.Display.V1.FormattedValue": "500",
+      "numberofemployees": 500,
+      "name": "Contoso, Ltd. (sample)",
+      "accountnumber": "1111",
+      "donotphone@OData.Community.Display.V1.FormattedValue": "Allow",
+      "donotphone": false,
+      "industrycode@OData.Community.Display.V1.FormattedValue": "Consulting",
+      "industrycode": 7,
+      "accountid": "7a4814f9-b0b8-ea11-a812-000d3a122b89"
+    },
+    {
+      "@odata.etag": "W/\"68958376\"",
+      "ownershipcode": null,
+      "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Susie Curtis",
+      "_primarycontactid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "primarycontactid",
+      "_primarycontactid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "contact",
+      "_primarycontactid_value": "ffd58509-4af3-ec11-bb3d-000d3a1a51c1",
+      "opendeals_date@OData.Community.Display.V1.FormattedValue": "9/20/2022 4:14 PM",
+      "opendeals_date": "2022-09-20T23:14:51Z",
+      "telephone1": null,
+      "numberofemployees": null,
+      "name": "Fourth Coffee",
+      "accountnumber": null,
+      "donotphone@OData.Community.Display.V1.FormattedValue": "Allow",
+      "donotphone": false,
+      "industrycode": null,
+      "accountid": "fed58509-4af3-ec11-bb3d-000d3a1a51c1"
+    }
+  ],
+  "@odata.nextLink": " [Organization URI]/api/data/v9.2/accounts?$select=ownershipcode,_primarycontactid_value,opendeals_date,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode&$filter=_primarycontactid_value%20ne%20null&$count=true&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257bFED58509-4AF3-EC11-BB3D-000D3A1A51C1%257d%2522%2520first%253d%2522%257b7A4814F9-B0B8-EA11-A812-000D3A122B89%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
+}
+
+
+```
+
+--- 
+
+
 ### Create records
 
 These examples show the differences between the Organization Data Service and the Web API when creating records.
@@ -164,13 +338,62 @@ REQ_ID: a0c614be-50be-4c1e-9413-1c7ba459c5c9
 **Request**
 
 ```http
+POST  [Organization URI]/api/data/v9.2/accounts?$select=ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode HTTP/1.1
+Prefer: odata.include-annotations="*"
+Prefer: return=representation
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json
 
+{
+"ownershipcode": 2,
+"primarycontactid@odata.bind":"/contacts(dff27d1f-a61b-4bfe-a203-b2e5a36cda0e)",
+"opendeals_date": "2022-09-21T00:00:00Z",
+"customersizecode": 1,
+"telephone1":"555-1234",
+"numberofemployees": 500,
+"name":"Contoso, Ltd. (sample)",
+"accountnumber": "12227",
+"donotphone": true,
+"industrycode": 7
+}
 ```
 
 **Response**
 
 ```http
+HTTP/1.1 201 Created
+Content-Type: application/json; odata.metadata=minimal
+Preference-Applied: return=representation
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
 
+{
+  "@odata.context": " [Organization URI]/api/data/v9.2/$metadata#accounts(ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode)/$entity",
+  "@odata.etag": "W/\"73921446\"",
+  "ownershipcode@OData.Community.Display.V1.FormattedValue": "Private",
+  "ownershipcode": 2,
+  "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Sam Smith",
+  "_primarycontactid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "primarycontactid",
+  "_primarycontactid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "contact",
+  "_primarycontactid_value": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
+  "opendeals_date@OData.Community.Display.V1.FormattedValue": "9/20/2022 5:52 PM",
+  "opendeals_date": "2022-09-21T00:52:24Z",
+  "customersizecode@OData.Community.Display.V1.FormattedValue": "Default Value",
+  "customersizecode": 1,
+  "telephone1": "555-1234",
+  "numberofemployees@OData.Community.Display.V1.FormattedValue": "500",
+  "numberofemployees": 500,
+  "name": "Contoso, Ltd. (sample)",
+  "accountnumber": "12227",
+  "donotphone@OData.Community.Display.V1.FormattedValue": "Do Not Allow",
+  "donotphone": true,
+  "industrycode@OData.Community.Display.V1.FormattedValue": "Consulting",
+  "industrycode": 7,
+  "accountid": "b68d56a6-4739-ed11-9db0-002248296d7e"
+}
 
 ```
 
