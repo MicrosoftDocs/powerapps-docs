@@ -281,10 +281,9 @@ Preference-Applied: odata.maxpagesize=2
   ],
   "@odata.nextLink": " [Organization URI]/api/data/v9.2/accounts?$select=ownershipcode,_primarycontactid_value,opendeals_date,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode&$filter=_primarycontactid_value%20ne%20null&$count=true&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257bFED58509-4AF3-EC11-BB3D-000D3A1A51C1%257d%2522%2520first%253d%2522%257b7A4814F9-B0B8-EA11-A812-000D3A122B89%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
 }
+```
 
 A Url for the next page is available using the `@odata.nextLink` property.
-
-```
 
 --- 
 
@@ -308,8 +307,7 @@ Content-Type: application/json
   },
   "PrimaryContactId": {
     "Id": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
-    "LogicalName": "contact",
-    "Name": "Sam Smith"
+    "LogicalName": "contact"
   },
   "OpenDeals_Date": "12/25/2022",
   "CustomerSizeCode": {
