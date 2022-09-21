@@ -39,14 +39,14 @@ In this article, you'll learn how to do the following tasks:
 ## General limitations and restrictions
 
 * The **Power BI Extensions (Preview)** system solution must be installed. In new environments it's installed by default. Existing environments must install it manually from PPAC before importing solutions and creating Power BI components. To install the extension, go to the [Power Platform admin center](https://aka.ms/powerbi_extension).
-* Only Power BI reports and datasets can be added to a solution. Only datasets created with the enhanced dataset model are supported. Any other artifact type is not supported (dashboard, dataflow, paginated report, etc.).
+* Only Power BI reports and datasets can be added to a solution. Only datasets created with the enhanced dataset model are supported. Any other artifact type is not supported (such as dashboard, dataflow, and paginated report).
 * Connection references to Power BI data sources aren't supported (for example, in composite models).
 * The Power BI dataset parameter types "Any" and "Binary" aren't supported in the Power BI integration with Power Apps solutions.
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app doesn't share the embedded report).
 * Recovery from workspace deletion isn't supported. Once the dedicated environment workspace has been deleted, you won't be able to add/import any Power BI component to the Power Apps environment.
 * Power Apps Application IDs aren't supported during public preview.
 * The Power Apps environment and the Power BI workspaces all need to be in the same geography. For more information, see [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
-* Environment life cycle operations aren't supported during public preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#environment-life-cycle-operations).
+* Environment life cycle operations aren't supported during preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#environment-life-cycle-operations).
 * Dataverse for Teams environments are not supported.
 * National clouds are not currently supported.  
 
