@@ -68,8 +68,8 @@ The application displays the enhanced email template selection window only if yo
 5. **View**. Use the dropdown list to switch between grid, tile, or list views. Based on your admin's settings, the application displays a specific view. More information: [Customize the email](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#configure-the-default-email-template-selection-view).
  
 > [!Note] 
-> The enhanced email template selection view might differ based on the customizations your Administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
-> If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
+> - The enhanced email template selection view might differ based on the customizations your Administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
+> - If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template.
   
 ### Email template selection dialog
 
