@@ -2,10 +2,9 @@
 title: Important upcoming changes and deprecations in Power Apps portals
 description: Learn about the important changes, including deprecations, coming soon to Power Apps portals.
 author: sandhangitmsft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2022
+ms.date: 09/21/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -37,10 +36,12 @@ At launch, users with the system administrator role along with [service admins](
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
-Starting June 2022, [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request, and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals that don't use this feature. If you're already using this feature, you need to use the token endpoint POST request to get a secure access token to authorize the external APIs. 
+The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request, and using the default certificate for OAuth 2.0 implicit grant flow is deprecated. No action is needed for newly created portals or for existing portals that don't use this feature. If you're already using this feature, you need to use the token endpoint POST request to get a secure access token to authorize the external APIs.
 
 > [!NOTE]
-> All existing customers who are using this deprecated feature need to migrate to the supported method by October 2022.
+> - All existing customers who are using this deprecated feature need to migrate to the supported method by October 2022.
+> - For more information on using a custom certificate, go to [Using a custom certificate](oauth-implicit-grant-flow.md#custom-certificates).
+> - For sample code on using POST calls on the Token endpoint, go to [Token endpoint sample](oauth-implicit-grant-flow.md#token-endpoint-sample).
 
 ## List OData feed 
 
