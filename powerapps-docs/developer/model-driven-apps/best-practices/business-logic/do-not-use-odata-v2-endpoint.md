@@ -67,7 +67,7 @@ Column Names in Web API are all lower case using the <xref:Microsoft.Xrm.Sdk.Met
 
 ### HTTP methods
 
-Organization Data Service uses `MERGE` or `PUT` rather than `PATCH`.
+Organization Data Service uses `MERGE` or `PUT` rather than `PATCH` to update a record.
 
 ### Data format
 
@@ -278,7 +278,7 @@ Preference-Applied: odata.maxpagesize=2
 
 ### Create records
 
-These examples show the differences between the Organization Data Service and the Web API when creating records.
+These examples show the differences between the Organization Data Service and the Web API when creating records. 
 
 #### [Organization Data Service](#tab/odatav2)
 
@@ -334,6 +334,8 @@ REQ_ID: a0c614be-50be-4c1e-9413-1c7ba459c5c9
 ```
 
 #### [Web API](#tab/webapi)
+
+The Web API example in this case uses the `Prefer: return=representation` request header which defines a behavior similar to the Organization Data Service behavior of returning `201 Created` with the columns defined by the `$select` query option. Without this request header, Web API returns `201 No Content`.
 
 **Request**
 
@@ -408,13 +410,50 @@ These examples show the differences between the Organization Data Service and th
 **Request**
 
 ```http
-
+GET https://crmue.api.crm.dynamics.com/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e')?$select=OwnershipCode,PrimaryContactId,OpenDeals_Date,Telephone1,NumberOfEmployees,Name,AccountNumber,DoNotPhone,IndustryCode HTTP/1.1
+Accept: application/json
 ```
 
 **Response**
 
 ```http
+HTTP/1.1 200 OK
 
+{
+  "d": {
+    "__metadata": {
+      "uri": "https://crmue.api.crm.dynamics.com/xrmservices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e')",
+      "type": "Microsoft.Crm.Sdk.Data.Services.Account"
+    },
+    "OwnershipCode": {
+      "__metadata": {
+        "type": "Microsoft.Crm.Sdk.Data.Services.OptionSetValue"
+      },
+      "Value": 2
+    },
+    "PrimaryContactId": {
+      "__metadata": {
+        "type": "Microsoft.Crm.Sdk.Data.Services.EntityReference"
+      },
+      "Id": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
+      "LogicalName": "contact",
+      "Name": "Sam Smith",
+      "RowVersion": null
+    },
+    "OpenDeals_Date": "/Date(1663784098000)/",
+    "Telephone1": "555-1234",
+    "NumberOfEmployees": 500,
+    "Name": "Contoso, Ltd. (sample)",
+    "AccountNumber": "12227",
+    "DoNotPhone": true,
+    "IndustryCode": {
+      "__metadata": {
+        "type": "Microsoft.Crm.Sdk.Data.Services.OptionSetValue"
+      },
+      "Value": 7
+    }
+  }
+}
 
 ```
 
@@ -423,13 +462,48 @@ These examples show the differences between the Organization Data Service and th
 **Request**
 
 ```http
-
+GET https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e)?$select=ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode HTTP/1.1
+Prefer: odata.include-annotations="*"
+Prefer: return=representation
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 ```
 
 **Response**
 
 ```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+ETag: W/"73921464"
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
 
+{
+  "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(ownershipcode,_primarycontactid_value,opendeals_date,customersizecode,telephone1,numberofemployees,name,accountnumber,donotphone,industrycode)/$entity",
+  "@odata.etag": "W/\"73921464\"",
+  "ownershipcode@OData.Community.Display.V1.FormattedValue": "Private",
+  "ownershipcode": 2,
+  "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Sam Smith",
+  "_primarycontactid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "primarycontactid",
+  "_primarycontactid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "contact",
+  "_primarycontactid_value": "dff27d1f-a61b-4bfe-a203-b2e5a36cda0e",
+  "opendeals_date@OData.Community.Display.V1.FormattedValue": "9/21/2022 11:14 AM",
+  "opendeals_date": "2022-09-21T18:14:58Z",
+  "customersizecode@OData.Community.Display.V1.FormattedValue": "Default Value",
+  "customersizecode": 1,
+  "telephone1": "555-1234",
+  "numberofemployees@OData.Community.Display.V1.FormattedValue": "500",
+  "numberofemployees": 500,
+  "name": "Contoso, Ltd. (sample)",
+  "accountnumber": "12227",
+  "donotphone@OData.Community.Display.V1.FormattedValue": "Do Not Allow",
+  "donotphone": true,
+  "industrycode@OData.Community.Display.V1.FormattedValue": "Consulting",
+  "industrycode": 7,
+  "accountid": "b68d56a6-4739-ed11-9db0-002248296d7e"
+}
 
 ```
 
@@ -444,13 +518,34 @@ These examples show the differences between the Organization Data Service and th
 **Request**
 
 ```http
+POST https://crmue.api.crm.dynamics.com/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e') HTTP/1.1
+Accept: application/json
+X-HTTP-Method: MERGE
+Content-Type: application/json
 
+{
+  "OwnershipCode": {
+    "Value": 3
+  },
+  "PrimaryContactId": {
+    "Id": "6db0be2e-d01c-ed11-b83e-000d3a572421"
+  },
+  "OpenDeals_Date": "12/26/2022",
+  "Telephone1": "555-1235",
+  "NumberOfEmployees": 501,
+  "Name": "Contoso, Ltd.",
+  "AccountNumber": "12228",
+  "DoNotPhone": false,
+  "IndustryCode": {
+    "Value": 6
+  }
+}
 ```
 
 **Response**
 
 ```http
-
+HTTP/1.1 204 No Content
 
 ```
 
@@ -459,14 +554,33 @@ These examples show the differences between the Organization Data Service and th
 **Request**
 
 ```http
+PATCH https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e) HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json
+
+{
+"ownershipcode": 3,
+"primarycontactid@odata.bind":"/contacts(6db0be2e-d01c-ed11-b83e-000d3a572421)",
+"opendeals_date": "2022-12-26T00:00:00Z",
+"telephone1":"555-1235",
+"numberofemployees": 501,
+"name":"Contoso, Ltd.",
+"accountnumber": "12229",
+"donotphone": false,
+"industrycode": 6
+}
 
 ```
 
 **Response**
 
 ```http
-
-
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e)
 ```
 
 --- 
@@ -480,14 +594,14 @@ These examples show the differences between the Organization Data Service and th
 **Request**
 
 ```http
-
+DELETE https://crmue.api.crm.dynamics.com/XRMServices/2011/OrganizationData.svc/AccountSet(guid'b68d56a6-4739-ed11-9db0-002248296d7e') HTTP/1.1
+Accept: application/json
 ```
 
 **Response**
 
 ```http
-
-
+HTTP/1.1 204 No Content
 ```
 
 #### [Web API](#tab/webapi)
@@ -495,14 +609,18 @@ These examples show the differences between the Organization Data Service and th
 **Request**
 
 ```http
-
+DELETE https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts(b68d56a6-4739-ed11-9db0-002248296d7e) HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 ```
 
 **Response**
 
 ```http
-
-
+HTTP/1.1 204 No Content
+OData-Version: 4.0
 ```
 
 --- 
