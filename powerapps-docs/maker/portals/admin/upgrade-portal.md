@@ -67,7 +67,7 @@ If you encounter any issue during the early upgrade phase, you can report it thr
 ### See also
 
 [Update portal solution](update-portal-solution.md) <br>
-[Power Apps portals maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
+[Power Apps portals maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/) <br>
 [Administer Power Platform](/power-platform/admin/admin-documentation) <br>
 [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)
 
