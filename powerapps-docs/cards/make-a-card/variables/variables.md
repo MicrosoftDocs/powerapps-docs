@@ -1,6 +1,6 @@
 ---
 title: Add variables to a card (Preview)
-description: Learn how to add screens to your Microsoft Power Apps cards.
+description: Learn how to add variables to your Microsoft Power Apps cards.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -36,7 +36,7 @@ As an example, you've created a card that counts how many times the user presses
     - **Default value**: The default value of the variable
     - **Value Persistence**: Whether the variable is temporary (resets every time the card is opened) or permanent
 
-/*    You can't change the name or type of a variable. If you need to change them, create a new variable.
+    You can't change the name or type of a variable. If you need to change them, create a new variable.
 
     You can also customize sender options and, under **Additional variable information**, the **Title** and **Description** of the variable. This information may be helpful for testing and debugging and using your variable with Power Automate flows and Power Virtual Agents bots.
 
