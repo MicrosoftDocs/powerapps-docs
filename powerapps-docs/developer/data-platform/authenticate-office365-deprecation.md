@@ -77,14 +77,15 @@ the recommended connection interface for authentication with Dataverse.
 
   - Switch over to using an OAuth based connection string. Such connection string looks like this:
 
-        `connectionString = "AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;
-
+    ```
+    connectionString = "AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;
     Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;
     RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;LoginPrompt=Auto"`
+    ```
 
-        This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office365 behavior worked.
+    This will be your fastest way to update the code. Note that LoginPrompt can be set to “never” to simulate the way that the Office365 behavior worked.
 
-        The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to [create your own application registration](walkthrough-register-app-azure-active-directory.md) in Azure Active Directory (Azure AD) for applications running in your tenant. Use your Username, Password, and Dataverse environment URL values in the connection string along with the RedirectUri and AppId you obtain from your Azure app registration.<p/>
+    The AppId and RedirectUri provided above are examples of working application registration values. These values work everywhere our online services are deployed. However, they are provided here as examples and you are encouraged to [create your own application registration](walkthrough-register-app-azure-active-directory.md) in Azure Active Directory (Azure AD) for applications running in your tenant. Use your Username, Password, and Dataverse environment URL values in the connection string along with the RedirectUri and AppId you obtain from your Azure app registration.<p/>
 
 - If you are accessing the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
 

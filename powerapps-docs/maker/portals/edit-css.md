@@ -85,8 +85,7 @@ Or, depending on the customizer application used, it might only contain bootstra
 
 ### See also
 
-- [Microsoft Learn: Advanced CSS in Power Apps portals](/learn/modules/extend-power-app-portals/4-portal-css)
-- [Microsoft Learn: Advanced client-side development](/learn/modules/extend-power-app-portals/5-advanced-portal-development)
-
+- [Advanced CSS in Power Apps portals](/training/modules/extend-power-app-portals/4-portal-css)
+- [Advanced client-side development](/training/modules/extend-power-app-portals/5-advanced-portal-development)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

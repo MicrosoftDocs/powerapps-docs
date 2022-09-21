@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create a simple card (Preview)
 description: Learn about the basic elements of a Microsoft Power Apps card by creating a simple "Hello World" card.
 ms.date: 09/20/2022

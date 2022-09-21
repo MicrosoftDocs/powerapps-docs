@@ -1,7 +1,7 @@
 ---
 title: "Mailbox table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Mailbox table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/mailboxes(*mailboxid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/mailboxes<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -1221,6 +1221,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [EntityImage_URL](#BKMK_EntityImage_URL)
 - [EntityImageId](#BKMK_EntityImageId)
 - [ExchangeContactsImportCompletedOn](#BKMK_ExchangeContactsImportCompletedOn)
+- [ExchangeSyncStateXmlFileRef](#BKMK_ExchangeSyncStateXmlFileRef)
 - [ExchangeSyncStateXmlFileRef_Name](#BKMK_ExchangeSyncStateXmlFileRef_Name)
 - [ForcedUnlockCount](#BKMK_ForcedUnlockCount)
 - [HostId](#BKMK_HostId)
@@ -1466,9 +1467,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_ExchangeSyncStateXmlFileRef"></a> ExchangeSyncStateXmlFileRef
+
+**Added by**: msft_ServerSideSync_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Reference to the ExchangeSyncStateXml file on Azure.|
+|DisplayName|ExchangeSyncStateXml File Ref|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|exchangesyncstatexmlfileref|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_ExchangeSyncStateXmlFileRef_Name"></a> ExchangeSyncStateXmlFileRef_Name
 
-**Added by**: Active Solution Solution
+**Added by**: msft_ServerSideSync_Extensions Solution
 
 |Property|Value|
 |--------|-----|
@@ -2479,6 +2495,6 @@ See the [mailbox_regarding_systemuser](systemuser.md#BKMK_mailbox_regarding_syst
 
 ### See also
 
-[Dataverse table/entity reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.mailbox?text=mailbox EntityType" />
