@@ -2,10 +2,9 @@
 title: Important upcoming changes and deprecations in Power Apps portals
 description: Learn about the important changes, including deprecations, coming soon to Power Apps portals.
 author: sandhangitmsft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/16/2022
+ms.date: 09/21/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -41,7 +40,7 @@ The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details
 
 > [!NOTE]
 > - All existing customers who are using this deprecated feature need to migrate to the supported method by October 2022.
-> - For more information on using a custom certificate, go to [using a custom certificate](oauth-implicit-grant-flow.md#custom-certificates).
+> - For more information on using a custom certificate, go to [Using a custom certificate](oauth-implicit-grant-flow.md#custom-certificates).
 > - For sample code on using POST calls on the Token endpoint, go to [Token endpoint sample](oauth-implicit-grant-flow.md#token-endpoint-sample).
 
 ## List OData feed 
