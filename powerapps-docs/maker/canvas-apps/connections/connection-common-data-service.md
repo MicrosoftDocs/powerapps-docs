@@ -89,8 +89,9 @@ Dataverse for processing (rather than processing locally within Power Apps).
 5.  The aggregate functions are limited to a collection of 50,000 rows. If
     needed, use the Filter function to select 50,000 
 
-6.  CountRows on Dataverse uses a cached value.  For non-cached values where the record count is expected to be under 50,000 records use `CountIf(table, True)`.  
-7.  For CountRows ensure that users have appropriate permissions to get totals for the table. 
+6.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
+
+7.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
