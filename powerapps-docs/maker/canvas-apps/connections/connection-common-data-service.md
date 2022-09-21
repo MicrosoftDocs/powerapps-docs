@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/15/2022
+ms.date: 09/20/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -69,7 +69,7 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
 | \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
 | In (substring)                                                  | No             | Yes          | No         | No               | \-       |
-| In (membership) [`In Preview`]                                  | No             | Yes          | Yes        | No               | Yes      |
+| In (membership) (preview)                                  | No             | Yes          | Yes        | No               | Yes      |
 | And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
 | IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
