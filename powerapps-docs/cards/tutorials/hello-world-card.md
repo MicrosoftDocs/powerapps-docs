@@ -2,7 +2,7 @@
 title: Create a simple card (Preview)
 description: Learn about the basic elements of a Microsoft Power Apps card by creating a simple "Hello World" card.
 ms.date: 09/20/2022
-ms.topic: article
+ms.topic: how-to
 author: iaanw
 ms.author: iawilt
 manager: shellyha
@@ -29,7 +29,7 @@ In this tutorial, you'll create a card that asks the user to enter their name, a
 
 1. Select **+ Create a card**.
 
-1. Under **Card name**, type **HelloWorldCard**, and then select **Create**.
+1. Under **Card name**, type *HelloWorldCard*, and then select **Create**.
 
 ## Ask for text input
 
@@ -38,17 +38,19 @@ In this tutorial, you'll create a card that asks the user to enter their name, a
    :::image type="content" source="../media/hello-world-card/remove-placeholder-text-label.png" alt-text="Screenshot of the placeholder text label to remove in a new card in the card designer.":::
 
 1. In the left pane, select **Insert**.
-1. Select **Input** to expand the category, and then select **Text input**.
+1. In the tool pane, select **Input** to expand the category, and then select **Text input**.
 
    :::image type="content" source="../media/hello-world-card/text-input-location.png" alt-text="Screenshot of the card designer tool pane with input elements shown and the Text input control highlighted.":::
 
-1. With the new text input control selected, in the properties pane, enter *What's your name?* in the **Label** box.
+1. In the text input properties pane, set **Label** to *What's your name?*.
 
    :::image type="content" source="../media/hello-world-card/edit-input-text-label.png" alt-text="Screenshot of a card with a labeled text input control in the card designer.":::
 
 ## Assign variables
 
-1. In the **Name** box, replace the default value, `textInput1`, with *UserAnswer*. We're giving the text input control the name of a variable that we're going to associate with the user's input.
+1. In the text input properties pane, set **Name** to *UserAnswer*.
+
+    We're giving the text input control the name of a variable that we're going to associate with the user's input.
 
    :::image type="content" source="../media/hello-world-card/edit-input-text-variable-name.png" alt-text="Screenshot of the text input control properties with the Name entered.":::
 
@@ -58,41 +60,39 @@ In this tutorial, you'll create a card that asks the user to enter their name, a
    We need another variable to add the user's input to the card title, so let's create one now.
 
 1. In the left pane, select **Variables**.
-
 1. Select **+ New variable**.
-
-1. Enter *UserName* under **Name** and enter *No Name* under **Default value**. Leave the other values as they are.
-
+1. In the **New variable** window, enter *UserName* under **Name** and enter *No Name* under **Default value**. Leave the other values as they are.
 1. Select **Save**.
 
    :::image type="content" source="../media/hello-world-card/new-variable-setup.png" alt-text="Screenshot of the variable properties pane.":::
 
-1. Select the card title, which is a text label control. Replace the **Text** with `="Hello " & UserName`.
+1. Select the card title, which is a text label control. In the control's properties pane, set **Text** to *="Hello " & UserName*.
 
-   This will call the variable you just created in the title once the user has provided their name.
+   This expression changes the card title to the string "Hello " followed by the value of the variable you created. You can enter the expression in the formula bar or the properties pane.
 
-## Use Power Fx in buttons
+    :::image type="content" source="../media/hello-world-card/card-title-with-variable.png" alt-text="Screenshot of a text expression entered in the card title's Text property.":::
 
-1. To say "Hello" to the name from user input, you need to create a button that uses Power Fx. Under the **Display** menu, select **Button**. The button will appear under the Text input box.
+## Add a Power Fx button
 
-1. Under **Title** enter "Say Hello". You'll see the text on the button update as soon as you finish typing.
+1. In the left pane, select **Insert**.
+1. In the tool pane, select **Input** to expand the category, and then select **Button**.
+1. In the button properties pane, set **Title** to *Say Hello*.
 
-   :::image type="content" source="../media/hello-world-card/rename-button-title.png" alt-text="Screenshot of the named button title and updated button on the card.":::
+   :::image type="content" source="../media/hello-world-card/rename-button-title.png" alt-text="Screenshot of the named button properties pane and the button in the card.":::
 
-1. Select **PowerFx** under **Type** on the right. This moves your cursor up to the PowerFx bar at the top of the screen.
+1. In the properties pane, select **PowerFx** to place your cursor in the formula bar.
+1. Type the following Power Fx expression in the formula bar: *Set(UserName, UserAnswer)*
 
-1. Enter the following Power Fx expression into the bar: `Set(UserName,UserAnswer)`
+   This expression assigns the value of the user's input, `UserAnswer`, to the `UserName` variable you referred to in the card title, when the button is selected. Another way to read the expression is, "Set the value of the variable UserName equal to the value of UserAnswer." Since the expression is bound to the button's **OnSelect** property, it runs when the user selects the button.
 
-   This assigns value of `UserAnswer`, the user's input, to the `UserName` variable you put into the card title.
-
-   :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of Power Fx expression in button.":::
+   :::image type="content" source="../media/hello-world-card/pfx-in-button.png" alt-text="Screenshot of the Power Fx expression in the formula bar, assigned to the button's OnSelect property.":::
 
 ## Test the card
 
-1. **Save** the card by selecting the button on the top right. You should always save changes before playing an updated card. Then select **Play**.
+You should always save your changes before you play a card. Select **Save**, and then select **Play**.
 
-    Test your card and see how your input replaces the default value "No Name" in the card's title text. Note that if you replace the user input and select the button again the title text will change.
+Test your card a few times with different inputs. Make sure your input replaces the default value "No Name" in the card title each time.
 
 ## Next steps
 
-Learn how to use more cards functionality in the [simple shopping list](simple-shopping-list.md) tutorial.
+Learn how to make a slightly more complex card in the [simple shopping list](simple-shopping-list.md) tutorial.
