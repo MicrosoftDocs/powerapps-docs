@@ -107,7 +107,5 @@
   href: get-started-web-api-client-side-javascript.md
 - name: Web API versions and limitations
   href: web-api-versions.md
-- name: Dataverse search, suggestions, and autocomplete
-  href: relevance-search.md
 - name: Samples
   href: samples/toc.yml

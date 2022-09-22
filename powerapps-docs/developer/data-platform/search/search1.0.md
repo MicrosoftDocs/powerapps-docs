@@ -1,6 +1,6 @@
 ---
-title: "Dataverse search 1.0 (Microsoft Dataverse)| Microsoft Docs"
-description: "Dataverse Search 1.0 remains available but we recommend you use Dataverse Search 2.0."
+title: "Dataverse native search 1.0 (Microsoft Dataverse)| Microsoft Docs"
+description: "Dataverse native Search 1.0 remains available but we recommend you use Dataverse Search 2.0."
 ms.date: 09/22/2022
 ms.topic: article
 applies_to: 
@@ -17,9 +17,7 @@ contributors:
  - JimDaly
 ---
 
-# Dataverse search 1.0
-
-[!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
+# Dataverse native search 1.0
 
 > [!IMPORTANT]
 > This documentation is for the Dataverse native search API version 1.0.
@@ -28,20 +26,21 @@ contributors:
 >
 > More information: [Search for Dataverse records](overview.md)
 
+[!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
 
 To begin using Dataverse native search 1.0, your application simply issues an HTTP POST
 request to start a Dataverse search. When searching
 data, specify optional properties in the request body to set criteria for how the environment
 data is to be searched.
 
-Dataverse native search 1.0 has three methods that can be used in the Power Apps web
+Dataverse native search 1.0 has three endpoints that can be used in the Power Apps web
 application UI:
 
-- **Search**: Provides a search results page.
+- **Search**: `/api/search/v1.0/query` Provides a search results page.
 
-- **Suggestions**: Provides suggestions as the user enters text into a form field.
+- **Suggestions**: `/api/search/v1.0/suggest` Provides suggestions as the user enters text into a form field.
 
-- **Autocomplete**: Provides autocompletion of input as the user enters text into a
+- **Autocomplete**: `/api/search/v1.0/autocomplete` Provides autocompletion of input as the user enters text into a
     form field.
 
 The following sections describe how to access the above mentioned search
@@ -184,7 +183,7 @@ The Lucene query syntax supports the following functionality:
 > [!NOTE]
 > Wildcards are used only for word completion in Dataverse search. As a rule, querying with a leading wildcard will take significantly longer than not using a wildcard, so we encourage you to explore alternative ways to find what you're looking for and only use leading wildcards sparingly, if at all.
 
-In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: + - & | ! ( ) { } [ ] ^ " ~ * ? : \ /
+In order to use any of the search operators as part of the search text, escape the character by prefixing it with a single backslash (\\). Special characters that require escaping include the following: `+ - & | ! ( ) { } [ ] ^ " ~ * ? : \ /`
 
 ### Example: basic search
 
@@ -504,6 +503,6 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 [Search for Dataverse records](overview.md)<br />
 [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)<br />
 [Compare search options in Microsoft Dataverse](../../../user/search.md)<br />
-[Connect with your Dataverse environment](setup-postman-environment.md#connect-with-your-dataverse-environment)<br />
+[Connect with your Dataverse environment](../webapi/setup-postman-environment.md#connect-with-your-dataverse-environment)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

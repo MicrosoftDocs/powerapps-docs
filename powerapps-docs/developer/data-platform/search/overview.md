@@ -488,7 +488,9 @@ HTTP/1.1 200 OK
 
 ## Service Protection Limits
 
-The search endpoint has service protection limits that are different from the Dataverse [Service protection API limits](../api-limits.md) that apply to the Web API and Dataverse SDK for .NET. The search endpoint returns a 429 error when # requests are received within a specific time frame. If a 429 error is returned, you should wait until the Retry-After period returned in the response header has passed before sending additional requests.
+Dataverse search has service protection limits that are different from the Dataverse [Service protection API limits](../api-limits.md) that apply to the Web API and Dataverse SDK for .NET.
+
+Dataverse search allows a user to send 1 request per second. If this is exceeded, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error will be returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending additional requests. The value represents the number of seconds to wait.
 
 ### See also
 

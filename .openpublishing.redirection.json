@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/relevance-search.md",
+      "redirect_url": "../../search/overview",
+      "redirect_document_id": false
+    },  
+    {
       "source_path": "powerapps-docs/developer/data-platform/walkthrough-registering-configuring-simplespa-application-adal-js.md",
       "redirect_url": "quick-start-register-configure-simplespa-application-msal-js",
       "redirect_document_id": false

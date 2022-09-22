@@ -770,8 +770,8 @@ More information: [Use column comparison in queries](../column-comparison.md)
 
 ### See also
 
-[Search across table data using Dataverse search](relevance-search.md)  
-[Work with Quick Find's search item limit](../quick-find-limit.md)  
+[Search for Dataverse records](../search/overview.md)<br />
+[Work with Quick Find's search item limit](../quick-find-limit.md)<br />
 [Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
