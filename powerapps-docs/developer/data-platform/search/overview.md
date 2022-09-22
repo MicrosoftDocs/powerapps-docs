@@ -24,185 +24,82 @@ Dataverse search delivers fast and comprehensive search results across multiple 
 > See the following topics for information about the user experience and how to configure Dataverse Search for your environment:
 > 
 > - [What is Dataverse search?](../../../user/relevance-search-benefits.md)
-> - [Search for records by using Dataverse search](../../../user/relevance-search.md).
-> - [Configure facets and filters](../../../user/facets-and-filters.md)
-> - [Frequently asked questions about Dataverse search](../../../user/relevance-faq.md)
 > - [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
 
 ## How to use
 
 Developers can use the search APIs three different ways:
 
-- The native Search `/api/search/v1.0/` endpoint
+- The Web API `/api/data/v9.x` endpoint
+- The native search `/api/search/v2.0/` endpoint
 - The Dataverse SDK for .NET
-- The Web API `/api/data/` endpoint
+
+### Web API
+
+Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document). You can use these in the same way you use other Web API operations.
+
+More information:
+
+- [Use Web API actions](../webapi/use-web-api-actions.md)
+- [Use Web API functions](../webapi/use-web-api-functions.md)
 
 
-### Use the native search endpoint
+### Native search 2.0
 
-The search endpoint is the native endpoint for Dataverse Search. This is the endpoint used for the search experience in model-driven apps. You can use this endpoint without authentication from within model-driven application experiences such as PCF controls or form scripts.
+The native search 2.0 endpoint is not an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
 
-You can also authenticate to this endpoint from external applications just as you would when using Web API, but you will use the `/api/search/` path rather than `/api/data/`. More information: [Use OAuth authentication with Microsoft Dataverse](../authenticate-oauth.md)
+The [Dataverse native search 1.0](search1.0.md) has not been deprecated and continues to be supported.
 
-### Use the Dataverse SDK for .NET
+### SDK for .NET
 
-For .NET projects using the Dataverse SDK for .NET, you can use the `CrmSvcUtil` command line code generation tool to generate `*Request` and `*Response` classes for these messages just as you would for any custom action. Or, you can use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest?text=OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse?text=OrganizationResponse> classes.
+Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects they can also be used with the SDK for .NET.
 
-> [!NOTE]
-> To use Dataverse search from a plug-in, you must use the SDK.
+There are currently no classes included in the SDK to use these operations. For .NET Framework projects you can use the `CrmSvcUtil` command line code generation tool with the `/generateactions` parameter to generate `*Request` and `*Response` classes for these messages just as you would for any custom action.
+
+You can also use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest?text=OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse?text=OrganizationResponse> classes.
 
 More information:
 
 - [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
 - [Use messages with the Organization service](../org-service/use-messages.md)
 
-### Use the Web API
-
-In the Web API, the search operations are exposed as OData actions and functions. More information:
-
-- [Use Web API actions](../webapi/use-web-api-actions.md)
-- [Use Web API functions](../webapi/use-web-api-functions.md)
-
 ## Search operations
 
 Search provides three operations to support a user interface that enables searching for data.
 
-|Search Endpoint<br />Web API Action<br />SDK message|Description|
+|Web API Action<br />Search Endpoint<br />SDK Message Name|Description|
 |---------|---------|
-|`/api/search/v1.0/query`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`searchquery`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
-|`/api/search/v1.0/suggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`searchsuggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
-|`/api/search/v1.0/autocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
+|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`/api/search/v1.0/query`<br />`searchquery`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
+|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`/api/search/v1.0/suggest`<br />`searchsuggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
+|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`/api/search/v1.0/autocomplete`<br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
 
 There are also two operations you can use to understand whether search is enabled and how it is configured.
 
-|Search Endpoint<br />Web API Function<br />SDK message|Description|
+|Web API Function<br />Search Endpoint<br />SDK Message Name|Description|
 |---------|---------|
-|`/api/search/v1.0/status`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`status`|Search status of an Organization.<br /> See [Search Status](#search-status)|
-|`/api/search/v1.0/searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`searchstatistics`|Provides organization storage size and document count.<br /> See [Search Statistics](#search-statistics)|
+|<xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`/api/search/v1.0/status`<br />`status`|Search status of an Organization.<br /> See [Search Status](#search-status)|
+|<xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`/api/search/v1.0/searchstatistics`<br />`searchstatistics`|Provides organization storage size and document count.<br /> See [Search Statistics](#search-statistics)|
 
 
 ## Detect if search is enabled
 
 Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, an administrator must enable it.
 
-You will get the following error when using the native search endpoint and search is not enabled:
-
-#### [Search endpoint](#tab/search)
+This is the error you will get when search is not enabled when using Web API or the Native search:
 
 ```http
-
-HTTP/1.1 501 Not Implemented
-
-{
-  "Message": "The Relevance Search API is currently disabled. To enable this API, activate the Relevance Search experience administration option in System Settings.",
-  "ExceptionMessage": "The Relevance Search API is currently disabled. To enable this API, activate the Relevance Search experience administration option in System Settings.",
-  "ExceptionType": "Microsoft.Crm.CrmHttpException",
-  "StackTrace": "[Redacted for brevity]",
-  "ErrorCode": "0x8006088a"
-}
+HTTP/1.1 400 Bad Request
+{"error":{"code":"0x80048d0b","message":"Dataverse Search feature is disabled for this organization."}}
 ```
 
-#### [.NET SDK](#tab/sdk)
+TODO: Verify SDK Error is the same
 
-TODO
-
-#### [Web API](#tab/webapi)
-
-TODO
-
----
 
 You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Search Status](#search-status) operation.
 
 ### Check Organization table
 
-The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. You can query the following properties to determine the status of the service:
-
-|Name  |Type|Description|
-|---------|---------|---------|
-|[IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled)|Yes/No|Select whether data can be synchronized with an external search index.|
-|[NewSearchExperienceEnabled](../reference/entities/organization.md#BKMK_NewSearchExperienceEnabled)|Yes/No|Indicates whether an organization has enabled the new Relevance search experience (released in Oct 2020) for the organization|
-|[RelevanceSearchModifiedOn](../reference/entities/organization.md#BKMK_RelevanceSearchModifiedOn)|DateTime|This setting contains the last modified date for relevance search setting that appears as a toggle in PPAC.|
-|[RelevanceSearchEnabledByPlatform](../reference/entities/organization.md#BKMK_RelevanceSearchEnabledByPlatform)|Yes/No|   Indicates whether relevance search was enabled for the environment as part of Dataverse's relevance search on-by-default sweep|
-
-#### [Search endpoint](#tab/search)
-
-<!-- Must include this tab b/c all tabs must be consistent on the page -->
-Organization table isn't available with the search endpoint. Use the SDK, Web API, or the [Search Status](#search-status) operation. 
-
-#### [.NET SDK](#tab/sdk)
-
-```csharp
-static void CheckOrganizationSearchProperties(IOrganizationService service) {
-
-   QueryExpression query = new QueryExpression("organization") { 
-      ColumnSet = new ColumnSet(
-         "isexternalsearchindexenabled", 
-         "newsearchexperienceenabled", 
-         "relevancesearchmodifiedon", 
-         "relevancesearchenabledbyplatform")
-   };
-
-   EntityCollection organizations = service.RetrieveMultiple(query);
-   Entity organization = organizations.Entities.FirstOrDefault();
-   Console.WriteLine("Organization Search Values:");
-   Console.WriteLine($"\tIsExternalSearchIndexEnabled:{organization["isexternalsearchindexenabled"]}");
-   Console.WriteLine($"\tNewSearchExperienceEnabled:{organization["newsearchexperienceenabled"]}");
-   Console.WriteLine($"\tRelevanceSearchModifiedOn:{organization["relevancesearchmodifiedon"]}");
-   Console.WriteLine($"\tRelevanceSearchEnabledByPlatform:{organization["relevancesearchenabledbyplatform"]}");
-}
-```
-More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
-
-**Output**:
-
-```
-Organization Search Values:
-        IsExternalSearchIndexEnabled:True
-        NewSearchExperienceEnabled:True
-        RelevanceSearchModifiedOn:9/12/2022 11:41:58 PM
-        RelevanceSearchEnabledByPlatform:False
-```
-
-#### [Web API](#tab/webapi)
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.2/organizations?$select=isexternalsearchindexenabled,newsearchexperienceenabled,relevancesearchmodifiedon,relevancesearchenabledbyplatform HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
-{
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isexternalsearchindexenabled,newsearchexperienceenabled,relevancesearchmodifiedon,relevancesearchenabledbyplatform)",
-    "value": [
-        {
-            "@odata.etag": "W/\"73630341\"",
-            "isexternalsearchindexenabled": true,
-            "newsearchexperienceenabled": true,
-            "relevancesearchmodifiedon": "2022-09-12T23:41:58Z",
-            "relevancesearchenabledbyplatform": false,
-            "organizationid": "883278f5-07af-45eb-a0bc-3fea67caa544"
-        }
-    ]
-}
-```
-More information: [Query data using the Web API](../webapi/query-data-web-api.md)
-
----
-
-> [!NOTE]
-> If you want to programatically enable search for an org, you can set these properties by updating the organization record for all of these properties.
-
+The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column tells you whether search is enabled for the organization.
 
 ## Search Status
 
@@ -211,15 +108,20 @@ Use search status to know:
 - Whether search is enabled.
 - Which tables and columns are enabled for search.
 
-#### [Search endpoint](#tab/search)
+#### [Web API](#tab/webapi)
 
 **Request**
 
 ```http
-GET [Organization URI]/api/search/v1.0/status HTTP/1.1
+GET [Organization URI]/api/data/v9.2/searchstatus HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+
 ```
 
-When search is not enabled, the status property will be `notprovisioned`.
+The `response` property returned by <xref:Microsoft.Dynamics.CRM.searchstatusResponse?text=searchstatusResponse ComplexType> is an escaped string containing JSON data. The `status` property value can be either: `notprovisioned`, `provisioninginprogress`, or `provisioned`.
 
 **Response**
 
@@ -227,21 +129,31 @@ When search is not enabled, the status property will be `notprovisioned`.
 HTTP/1.1 200 OK
 
 {
-  "value": {
-    "status": "notprovisioned",
-    "lockboxstatus": "Unknown"
-  }
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatusResponse",
+  "response": "{\"value\":{\"status\":\"notprovisioned\",\"lockboxstatus\":\"Unknown\"}}"
 }
 ```
 
-When search is enabled, detailed information about each entity is in the `entitystatusresults`
-property and the `status` value is `provisioned`. For each entity, the `searchableindexedfieldinfomap` tells you which columns are included in search.
+When search is enabled, there is more data that describes the search status for the org.
 
 **Response**
 
 ```http
 HTTP/1.1 200 OK
 
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatusResponse",
+  "response": "{\"value\":{\"entitystatusresults\":[{\"entitylogicalname\":\"account\",\"objecttypecode\":1,\"primarynamefield\":\"name\",\"lastdatasynctimestamp\":\"73630169!09/12/2022 14:26:14\",\"lastprincipalobjectaccesssynctimestamp\":\"72969347!09/12/2022 14:26:14\",\"entitystatus\":\"EntitySyncComplete\",\"searchableindexedfieldinfomap\":{\"emailaddress1\":{\"indexfieldname\":\"a3x\"},\"address1_city\":{\"indexfieldname\":\"a3y\"},\"modifiedon\":{\"indexfieldname\":\"j_0\"},\"telephone1\":{\"indexfieldname\":\"a3z\"},\"statecode\":{\"indexfieldname\":\"f_0\"},\"primarycontactid\":{\"indexfieldname\":\"a40\"},\"statuscode\":{\"indexfieldname\":\"g_0\"},\"createdon\":{\"indexfieldname\":\"i_0\"},\"entityimage_url\":{\"indexfieldname\":\"h_0\"},\"industrycode\":{\"indexfieldname\":\"a43\"},\"name\":{\"indexfieldname\":\"d_0\"},\"owningbusinessunit\":{\"indexfieldname\":\"c_0\"},\"crdcb_testrollupfield\":{\"indexfieldname\":\"a45\"},\"ownerid\":{\"indexfieldname\":\"b_0\"},\"accountnumber\":{\"indexfieldname\":\"a46\"},\"telephone2\":{\"indexfieldname\":\"a47\"},\"versionnumber\":{\"indexfieldname\":\"e_0\"},\"accountid\":{\"indexfieldname\":\"a_0\"},\"crdcb_throwawaydate\":{\"indexfieldname\":\"a48\"},\"crdcb_budget\":{\"indexfieldname\":\"a8f\"}}}, 
+  
+  <Information on other tables removed for brevity> 
+  
+  ],\"status\":\"provisioned\",\"lockboxstatus\":\"Disabled\",\"cmkstatus\":\"Disabled\"}}"
+}
+```
+
+When unescaped, the JSON of the `response` property looks like this:
+
+```json
 {
   "value": {
     "entitystatusresults": [
@@ -253,60 +165,31 @@ HTTP/1.1 200 OK
         "lastprincipalobjectaccesssynctimestamp": "72969347!09/12/2022 14:26:14",
         "entitystatus": "EntitySyncComplete",
         "searchableindexedfieldinfomap": {
-          "emailaddress1": {
-            "indexfieldname": "a3x"
-          },
-          "address1_city": {
-            "indexfieldname": "a3y"
-          },
-          "modifiedon": {
-            "indexfieldname": "j_0"
-          },
-          "telephone1": {
-            "indexfieldname": "a3z"
-          },
-          "statecode": {
-            "indexfieldname": "f_0"
-          },
-          "primarycontactid": {
-            "indexfieldname": "a40"
-          },
-          "statuscode": {
-            "indexfieldname": "g_0"
-          },
-          "createdon": {
-            "indexfieldname": "i_0"
-          },
-          "entityimage_url": {
-            "indexfieldname": "h_0"
-          },
-          "industrycode": {
-            "indexfieldname": "a43"
-          },
-          "name": {
-            "indexfieldname": "d_0"
-          },
-          "owningbusinessunit": {
-            "indexfieldname": "c_0"
-          },
-          "ownerid": {
-            "indexfieldname": "b_0"
-          },
-          "accountnumber": {
-            "indexfieldname": "a46"
-          },
-          "telephone2": {
-            "indexfieldname": "a47"
-          },
-          "versionnumber": {
-            "indexfieldname": "e_0"
-          },
-          "accountid": {
-            "indexfieldname": "a_0"
-          }
+          "emailaddress1": { "indexfieldname": "a3x" },
+          "address1_city": { "indexfieldname": "a3y" },
+          "modifiedon": { "indexfieldname": "j_0" },
+          "telephone1": { "indexfieldname": "a3z" },
+          "statecode": { "indexfieldname": "f_0" },
+          "primarycontactid": { "indexfieldname": "a40" },
+          "statuscode": { "indexfieldname": "g_0" },
+          "createdon": { "indexfieldname": "i_0" },
+          "entityimage_url": { "indexfieldname": "h_0" },
+          "industrycode": { "indexfieldname": "a43" },
+          "name": { "indexfieldname": "d_0" },
+          "owningbusinessunit": { "indexfieldname": "c_0" },
+          "crdcb_testrollupfield": { "indexfieldname": "a45" },
+          "ownerid": { "indexfieldname": "b_0" },
+          "accountnumber": { "indexfieldname": "a46" },
+          "telephone2": { "indexfieldname": "a47" },
+          "versionnumber": { "indexfieldname": "e_0" },
+          "accountid": { "indexfieldname": "a_0" },
+          "crdcb_throwawaydate": { "indexfieldname": "a48" },
+          "crdcb_budget": { "indexfieldname": "a8f" }
         }
       },
-<Information on other entities removed for brevity>      
+
+  <Information on other tables removed for brevity> 
+
     ],
     "status": "provisioned",
     "lockboxstatus": "Disabled",
@@ -315,7 +198,19 @@ HTTP/1.1 200 OK
 }
 ```
 
-#### [.NET SDK](#tab/sdk)
+The `entitystatusresults` contains information about each table configured for search. For each table, the `searchableindexedfieldinfomap` tells you which columns are included in search for that table.
+
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+GET [Organization URI]/api/search/v2.0/status HTTP/1.1
+```
+
+The response from the search endpoint is the same as the Web API.
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 static void CheckSearchStatus(IOrganizationService service) {
@@ -344,47 +239,12 @@ static void CheckSearchStatus(IOrganizationService service) {
 }
 ```
 
-#### [Web API](#tab/webapi)
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.2/searchstatus HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
+**Output**
 
 ```
-
-The `response` property returned by <xref:Microsoft.Dynamics.CRM.searchstatusResponse?text=searchstatusResponse ComplexType> is an escaped string containing JSON data.
-
-When search is not enabled, the `status` property within that escaped string will be `notprovisioned`.
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
-{
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatusResponse",
-  "response": "{\"value\":{\"status\":\"notprovisioned\",\"lockboxstatus\":\"Unknown\"}}"
-}
+//TODO: Should be the same as the Web API.
 ```
 
-When search is enabled, the response property contains all the same data in an escaped string that is returned with the search endpoint and the `status` value within the string is `provisioned`.
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
-{
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatusResponse",
-  "response": "{\"value\":{\"entitystatusresults\":[{\"entitylogicalname\":\"account\",\"objecttypecode\":1,\"primarynamefield\":\"name\",\"lastdatasynctimestamp\":\"73630169!09/12/2022 14:26:14\",\"lastprincipalobjectaccesssynctimestamp\":\"72969347!09/12/2022 14:26:14\",\"entitystatus\":\"EntitySyncComplete\",\"searchableindexedfieldinfomap\":{\"emailaddress1\":{\"indexfieldname\":\"a3x\"},\"address1_city\":{\"indexfieldname\":\"a3y\"},\"modifiedon\":{\"indexfieldname\":\"j_0\"},\"telephone1\":{\"indexfieldname\":\"a3z\"},\"statecode\":{\"indexfieldname\":\"f_0\"},\"primarycontactid\":{\"indexfieldname\":\"a40\"},\"statuscode\":{\"indexfieldname\":\"g_0\"},\"createdon\":{\"indexfieldname\":\"i_0\"},\"entityimage_url\":{\"indexfieldname\":\"h_0\"},\"industrycode\":{\"indexfieldname\":\"a43\"},\"name\":{\"indexfieldname\":\"d_0\"},\"owningbusinessunit\":{\"indexfieldname\":\"c_0\"},\"crdcb_testrollupfield\":{\"indexfieldname\":\"a45\"},\"ownerid\":{\"indexfieldname\":\"b_0\"},\"accountnumber\":{\"indexfieldname\":\"a46\"},\"telephone2\":{\"indexfieldname\":\"a47\"},\"versionnumber\":{\"indexfieldname\":\"e_0\"},\"accountid\":{\"indexfieldname\":\"a_0\"},\"crdcb_throwawaydate\":{\"indexfieldname\":\"a48\"},\"crdcb_budget\":{\"indexfieldname\":\"a8f\"}}}, <Information on other entities removed for brevity> ],\"status\":\"provisioned\",\"lockboxstatus\":\"Disabled\",\"cmkstatus\":\"Disabled\"}}"
-}
-
-```
 ---
 
 ## Search statistics
@@ -395,12 +255,12 @@ Search statistics provides information about:
 - Storage size in megabytes
 - Number of documents
 
-#### [Search endpoint](#tab/search)
+#### [Web API](#tab/webapi)
 
 **Request**
 
 ```http
-GET [Organization URI]/api/search/v1.0/statistics HTTP/1.1
+GET [Organization URI]/api/data/v9.2/searchstatistics HTTP/1.1
 ```
 
 **Response**
@@ -409,15 +269,23 @@ GET [Organization URI]/api/search/v1.0/statistics HTTP/1.1
 HTTP/1.1 200 OK
 
 {
-  "value": {
-    "storagesizeinbytes": 11464058,
-    "storagesizeinmb": 10,
-    "documentcount": 13155
-  }
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
+  "response": "{\"value\":{\"storagesizeinbytes\":11464058,\"storagesizeinmb\":10,\"documentcount\":13155}}"
 }
+
 ```
 
-#### [.NET SDK](#tab/sdk)
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+GET [Organization URI]/api/search/v2.0/statistics HTTP/1.1
+```
+
+The response from the search endpoint is the same as the Web API.
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 
@@ -462,26 +330,6 @@ TimeStamp: 2022-09-13T19:14:06.9534141Z
 StackTrace:
 [Microsoft.CDS.RelevanceSearch.Plugins: Microsoft.CDS.RelevanceSearch.Plugins.StatisticsPlugin]
 [1dc24ad0-fe44-ec11-8c60-002248208fac: CustomApi 'searchstatistics' implementation]
-```
-
-#### [Web API](#tab/webapi)
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.2/searchstatistics HTTP/1.1
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
-{
-  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.searchstatisticsResponse",
-  "response": "{\"value\":{\"storagesizeinbytes\":11464058,\"storagesizeinmb\":10,\"documentcount\":13155}}"
-}
-
 ```
 
 ---

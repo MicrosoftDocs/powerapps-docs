@@ -39,7 +39,7 @@ HTTP/1.1 200 OK
 {}
 ```
 
-#### [.NET SDK](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 static void SDKExampleMethod(IOrganizationService service){

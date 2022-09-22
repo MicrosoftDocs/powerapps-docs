@@ -22,7 +22,7 @@ contributors:
 > [!IMPORTANT]
 > This documentation is for the Dataverse native search API version 1.0.
 > 
-> We recommend you use the Dataverse search 2.0 APIs rather than this endpoint. 
+> We recommend you use the Dataverse search 2.0 APIs.
 >
 > More information: [Search for Dataverse records](overview.md)
 
@@ -451,16 +451,16 @@ search is to be done and which results are returned. The supported properties ar
 
 ### Autocomplete properties
 
-#### `usefuzzy:true | false' (optional)
+#### `usefuzzy: true | false` (optional)
 
 Fuzzy search to aid with misspellings. The default is **false**.
 
-#### `entities:[list<string>]` (optional)
+#### `entities: [list<string>]` (optional)
 
 The default scope is searching across all Dataverse search&ndash;configured tables
 and columns.
 
-#### `filter:[string]` (optional)
+#### `filter: [string]` (optional)
 
 Filters are applied while searching data and are specified in standard OData
 syntax.
