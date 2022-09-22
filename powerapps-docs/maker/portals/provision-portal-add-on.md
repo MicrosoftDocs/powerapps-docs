@@ -206,6 +206,6 @@ However, you can change the audience and type of portal after it's provisioned b
 
 ### See also
 
-[Administer Power Apps portals](/learn/paths/administer-portals/)
+[Administer Power Apps portals](/training/paths/administer-portals/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

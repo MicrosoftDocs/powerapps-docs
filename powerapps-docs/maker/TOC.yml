@@ -2867,7 +2867,40 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-
+- name: Cards (Preview)
+  items:
+    - name: What are cards?
+      href: ../cards/overview.md
+    - name: Design cards
+      items: 
+        - name: Card Designer overview
+          href: ../cards/make-a-card/designer-overview.md
+        - name: Add controls
+          href: ../cards/make-a-card/ui-elements/controls.md
+        - name: Add buttons
+          href: ../cards/make-a-card/ui-elements/use-buttons.md
+        - name: Add and configure screens
+          href: ../cards/make-a-card/screens/use-screens.md
+    - name: Connect to data and services
+      items:
+        - name: Add variables
+          href: ../cards/make-a-card/variables/variables.md
+        - name: Access connectors
+          href: ../cards/make-a-card/connectors/connector-intro.md
+    - name: Add business logic with Power Fx
+      href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
+    - name: Test and debug cards
+      href: ../cards/make-a-card/testing/debugging-cards.md
+    - name: Send a card in Teams
+      href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Tutorials
+      items:
+        - name: Create a simple card
+          href: ../cards/tutorials/hello-world-card.md
+        - name: Create a shopping list card
+          href: ../cards/tutorials/simple-shopping-list.md
+        - name: Create a card with data from Dataverse
+          href: ../cards/tutorials/dataverse-card.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
