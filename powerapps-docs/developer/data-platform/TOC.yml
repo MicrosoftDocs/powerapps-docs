@@ -40,6 +40,8 @@
         href: ./search/suggest.md
       - name: Autocomplete
         href: ./search/autocomplete.md
+      - name: Search 1.0
+        href: ./search/search1.0.md
     - name: Create your own messages
       href: custom-actions.md
       items:
