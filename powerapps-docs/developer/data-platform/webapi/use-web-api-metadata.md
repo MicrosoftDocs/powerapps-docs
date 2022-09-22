@@ -1,7 +1,7 @@
 ---
 title: "Use the Web API with table definitions (Microsoft Dataverse) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference, enabling you to read, create, and update table and column definitions."
-ms.date: 04/06/2022
+ms.date: 09/02/2022
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly
@@ -24,16 +24,16 @@ You can perform any of the table and column definition (metadata) operations wit
   
 |Entity Set Path|Description|  
 |---------------------|-----------------|  
-|*[Organization URI]*/api/data/v9.0/EntityDefinitions|Contains a collection of <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType/>.|  
-|*[Organization URI]*/api/data/v9.0/RelationshipDefinitions|Contains <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType/> and <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType/> as both inherit from <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType/>.|  
-|*[Organization URI]*/api/data/v9.0/GlobalOptionSetDefinitions|Contains a collection of globally defined <xref:Microsoft.Dynamics.CRM.BooleanOptionSetMetadata?text=BooleanOptionSetMetadata EntityType/> and <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType/> as both inherit from <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType/>.|  
+|*[Organization URI]*/api/data/v9.0/EntityDefinitions|Contains a collection of <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType>.|  
+|*[Organization URI]*/api/data/v9.0/RelationshipDefinitions|Contains <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType> and <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType> as both inherit from <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType>.|  
+|*[Organization URI]*/api/data/v9.0/GlobalOptionSetDefinitions|Contains a collection of globally defined <xref:Microsoft.Dynamics.CRM.BooleanOptionSetMetadata?text=BooleanOptionSetMetadata EntityType> and <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType> as both inherit from <xref:Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType>.|  
 |*[Organization URI]*/api/data/v9.0/ManagedPropertyDefinitions|  For internal use only|  
   
-Each definition entity type uses `MetadataId` as the unique identifier property, which it inherits from the <xref:Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType/>. While all definition entities have a `MetadataId`, you can’t query all of them directly. For example, you can query and perform operations on attributes (table columns) only in the context of the `EntityMetadata` entity that contains them.  
+Each definition entity type uses `MetadataId` as the unique identifier property, which it inherits from the <xref:Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType>. While all definition entities have a `MetadataId`, you can't query all of them directly. For example, you can query and perform operations on attributes (table columns) only in the context of the `EntityMetadata` entity that contains them.  
   
 These definition entities have some substantial differences from the tables that store business and application data, for example:  
   
-- The properties for definition entities use many of the complex and enum types defined in <xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> and <xref:Microsoft.Dynamics.CRM.EnumTypeIndex> rather than the primitive data types used for properties in entities that inherit from <xref:Microsoft.Dynamics.CRM.crmbaseentity?text=crmbaseentity EntityType/>.  
+- The properties for definition entities use many of the complex and enum types defined in <xref:Microsoft.Dynamics.CRM.ComplexTypeIndex> and <xref:Microsoft.Dynamics.CRM.EnumTypeIndex> rather than the primitive data types used for properties in entities that inherit from <xref:Microsoft.Dynamics.CRM.crmbaseentity?text=crmbaseentity EntityType>.  
   
 - Definition entities follow a different naming convention and maintain the Pascal Case naming style used in the assemblies of the Organization service.  
   

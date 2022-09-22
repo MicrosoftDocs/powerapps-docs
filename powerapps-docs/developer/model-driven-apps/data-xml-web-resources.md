@@ -20,7 +20,7 @@ contributors:
 
 # Data (XML) Web resources
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/data-xml-web-resources -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/data-xml-web-resources -->
 
 Use Data (XML) Web resources to save and access data.  
   

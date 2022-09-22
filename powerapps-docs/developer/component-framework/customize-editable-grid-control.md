@@ -65,7 +65,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
    > [!NOTE]
    > If the function returns null or undefined, then the grid will use the internal renderer/editor for the targeted cells.
     
-1. After defining your custom cell renderers and editors, **package** the grid customizer control and **import** it to your Power Apps environment. Alternatively, you can use the `pac pcf push` command. More information: [PCF command](/power-platform/developer/cli/reference/pcf-command)
+1. After defining your custom cell renderers and editors, **package** the grid customizer control and **import** it to your Power Apps environment. Alternatively, you can use the [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) command.
 1. After publishing the grid customizer control, open the **Customize the system** panel from the **Settings > Customizations** menu.
 
    :::image type="content" source="media/customize-editable-grid-settings-customize-system.png" alt-text="Open the Customize the system panel from the Settings > Customizations menu":::
@@ -89,6 +89,16 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 1. Test your customizer by opening the main grid for the customized entity.
 1. Repeat steps 6-11 for any other entities whose grid needs a grid customizer control.
 
+## Best practices
+
+- Cell renderers and editors are user interface components. Do not use them to mutate data or metadata of the grid.
+- The customizer controls should be lightweight and fast so as to not affect overall grid performance.
+- To maintain the design consistency, follow [Fluent design principals](https://www.microsoft.com/design/fluent/#/) and use [Fluent controls](https://developer.microsoft.com/en-us/fluentui#/controls/web) in your customizers.
+- Make sure your custom renderer or editor is accessible.
+- The customizer function should be pure since the grid will call it multiple times to get customized elements and will expect the return value to be consistent.
+- The grid may dispose a customizer element at any time and call to get a new one at any time. Make sure to dispose of any internal state on unmount to prevent memory leaks.
+- Do not use renderers to override the values in the grid since the new values will not be used by the server to do filtering or sorting.
+
 ## Example
 
 You can find an example of a customized editable grid control here: [Customized editable grid](sample-controls/customized-editable-grid-control.md).
@@ -97,7 +107,7 @@ You can find an example of a customized editable grid control here: [Customized 
 
 [Power Apps component framework overview](overview.md)<br/>
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)
 
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]

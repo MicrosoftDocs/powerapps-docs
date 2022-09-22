@@ -26,7 +26,7 @@ Lookup
 
 ## Syntax
 
-`formContext.getControl(arg).addCustomFilter(filter, entityLogicaName)`
+`formContext.getControl(arg).addCustomFilter(filter, entityLogicalName)`
 
 ## Parameters
 

@@ -68,7 +68,6 @@ With open registration enabled, users aren't required to provide an invitation c
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Authentication and user management in Power Apps portals](/learn/modules/authentication-user-management/)
-
+[Authentication and user management in Power Apps portals](/training/modules/authentication-user-management/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

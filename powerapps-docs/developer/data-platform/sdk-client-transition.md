@@ -2,7 +2,7 @@
 title: "Transition client applications to Dataverse ServiceClient | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the benefits of and the changes needed to transitions your client application to use Dataverse ServiceClient class for web service connections." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/01/2022
+ms.date: 08/11/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "phecke" # GitHub ID
@@ -10,9 +10,9 @@ ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
@@ -34,7 +34,7 @@ The new Dataverse [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.
 
 ### MSAL authentication
 
-Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API use MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
+Microsoft Azure Active Directory Authentication Library (ADAL) support ends soon. Microsoft Authentication Library (MSAL) is the recommended authentication API going forward. Our new [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) API uses MSAL while our older [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) API uses ADAL.
 
 ### Performance and functional benefits
 
@@ -80,21 +80,24 @@ Leave your application projects and code as is. Continue using the Microsoft.Crm
 
 ## Code samples
 
-Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23-NETCore/ServiceClient) 
+Available here: [ServiceClient code samples](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/ServiceClient)
 
 ## Timeline
 
 The following table lists some important dates to keep in mind.
 
-| Timeframe | Event |
-| --- | --- |
-|June 2022|GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package|
-|December 2022|Microsoft support for ADAL ends|
-|At a future date|Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)|
+| Timeframe        | Event                                                                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| June 2022        | GA release of the [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client/) NuGet package |
+| December 2022    | Microsoft support for ADAL ends                                                                                                                      |
+| At a future date | Planned shutdown of the 2011 SOAP endpoint for access by client applications not using our service clients (`CrmServiceClient` or `ServiceClient`)   |
+
+> [!IMPORTANT]
+> The `CrmServiceClient` class will continue to function as documented even after ADAL authentication is turned off. Both service client classes will continue to function as documented after the 2011 SOAP endpoint has been turned off. If required, we may release an updated assembly containing revised service clients that your application will need to load at run-time.
 
 ### See also
-  
+
 [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)  
-[Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)  
+[Migrate applications to the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-migration)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

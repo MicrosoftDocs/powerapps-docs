@@ -20,7 +20,7 @@ items:
   - name: Get Microsoft Power Platform CLI
     href: get-powerapps-cli.md
   - name: Learn Power Apps component framework
-    href: /learn/paths/use-power-apps-component-framework
+    href: /training/paths/use-power-apps-component-framework
   - name: Tutorial
     items:
     - name: Create your first component
@@ -127,6 +127,8 @@ items:
           href: reference/client/getclient.md
         - name: getFormFactor
           href: reference/client/getformfactor.md
+        - name: isNetworkAvailable
+          href: reference/client/isnetworkavailable.md
         - name: isOffline
           href: reference/client/isoffline.md
       - name: Column
@@ -277,6 +279,8 @@ items:
           href: reference/formatting/parsedatefrominput.md
       - name: ICommand
         href: reference/icommand.md
+      - name: ImageObject
+        href: reference/imageobject.md
       - name: Linking
         href: reference/linking.md
         items:
