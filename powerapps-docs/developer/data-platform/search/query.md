@@ -23,11 +23,11 @@ The query operation returns search results based on a search term. In addition t
 |---------|---------|---------|---------|
 |`search`|string|**Required** The text to search with. |[search parameter](#search-parameter)|
 |`count`|bool|Whether to return the total record count.|[`count` parameter](#count-parameter) |
-|`entities`|string[]|Limits the scope of search to a sub-set of tables. |[entities parameter](#entities-parameter)|
-|`facets`|string[]|Facets support the ability to drill down into data results after they've been retrieved. | [facets parameter](#facets-parameter)|
+|`entities`|string|Limits the scope of search to a sub-set of tables. |[entities parameter](#entities-parameter)|
+|`facets`|string|Facets support the ability to drill down into data results after they've been retrieved. | [facets parameter](#facets-parameter)|
 |`filter`|string|Limits the scope of the search results returned. |[filter parameter](#filter-parameter)|
 |`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
-|`orderby`|string[]|Specifies how to order the results in order of precedence. |[orderby parameter](#orderby-parameter)|
+|`orderby`|string|Specifies how to order the results in order of precedence. |[orderby parameter](#orderby-parameter)|
 |`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 |`skip`|int|Specifies the number of search results to skip. |[skip and top parameters](#skip-and-top-parameters)|
 |`top`|int|Specifies the number of search results to retrieve. |[skip and top parameters](#skip-and-top-parameters)|
@@ -38,6 +38,9 @@ Details for the parameters in the table above can be found below.
 
 
 ### `search` parameter
+
+**Type**: string<br />
+**Optional**: false
 
 The search parameter contains the text to search. It is the only required parameter. Search term must be at least three characters long and has a 100 character limit.
 
@@ -57,15 +60,24 @@ Using the [`options` parameter](#options-parameter), you can enable [Lucerne Que
 
 ### `count` parameter
 
+**Type**: bool<br />
+**Optional**: true
+
 Whether to return the total record count.
 
 ### `entities` parameter
+
+**Type**: string<br />
+**Optional**: true
 
 By default all the tables enabled for search will be searched unless you specify a sub-set using the `entities` parameter. Set this parameter with an array of table logical names.
 
 To get a list of entities enabled for the environment use the [Search status](status.md) API and look for the entities listed by  `entitylogicalname` within `entitystatusresults`.
 
 ### `facets` parameter
+
+**Type**: string<br />
+**Optional**: true
 
 Facets support the ability to drill down into data results after they've been retrieved. By default, no facets are returned with search results.
 
@@ -80,6 +92,9 @@ TODO: Establish exactly what developers will do with the facets data and how to 
 ```
 
 ### `filter` parameter
+
+**Type**: string<br />
+**Optional**: true
 
 Filters limit the scope of the search results returned. Use filters to exclude unwanted results.
 
@@ -110,6 +125,9 @@ Filters use the following query operators:
 
 ### `options` parameter
 
+**Type**: string<br />
+**Optional**: true
+
 Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
 
 #### Lucerne Query Syntax
@@ -127,6 +145,9 @@ The Lucene query syntax supports the following functionality:
 
 ### `orderby` parameter
 
+**Type**: string<br />
+**Optional**: true
+
 Use the `orderby` parameter to override the default ordering. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
 Use a list of comma-separated clauses where each clause consists of a column name followed by `asc` (*ascending*, which is the default) or `desc` (descending).
@@ -139,59 +160,22 @@ If the query request includes a filter for a specific table type, `orderby` can 
 
 ### `propertybag` parameter
 
+**Type**: string<br />
+**Optional**: true
+
 A collection of the additional properties for search request. Eg. `appid`, `correlationid`.
 
 ### `skip` and `top` parameters
+
+**Type**: int<br />
+**Optional**: true
 
 You can use these parameters together with the [count parameter](#count-parameter) to create a paged experience.
 By default, as many as 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use top to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
 
 ## Response
 
-The following is an example of the response from a query.
-
-This is a template for an example
-
-#### [SDK for .NET](#tab/sdk)
-
-```csharp
-static void SDKExampleMethod(IOrganizationService service){
- TODO
-}
-```
-**Output**
-
-```
-TODO: The output of the SDK Sample
-```
-
-#### [Web API](#tab/webapi)
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
-{}
-```
-#### [Search endpoint](#tab/search)
-
-**Request**
-
-```http
-
-```
----
+The response from the query operation is an escaped string that includes JSON data.
 
 The unescaped response contains JSON using the following properties.
 
@@ -210,6 +194,9 @@ The following types are returned by the Query Response.
 
 ### ErrorDetail
 
+TODO: Why is this included? Why doesn't the service just return an error?
+GUESS: This will be a Cognitive Search error
+
 |Name|Type|Description|
 |---------|---------|---------|
 |`Code`|string|The error code.|
@@ -217,6 +204,8 @@ The following types are returned by the Query Response.
 |`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
 
 ### QueryResult
+
+Each `QueryResult` item returned in the response `Value` property represents a record in Dataverse.
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -260,18 +249,22 @@ static void SDKExampleMethod(IOrganizationService service){
 **Output**
 
 ```
-TODO: The output of the SDK Sample
+TODO: The Console Writeline output of the SDK Sample
 ```
 #### [Web API](#tab/webapi)
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
+POST [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
+
+{
+    
+}
 ```
 
 **Response**
@@ -281,7 +274,9 @@ HTTP/1.1 200 OK
 
 {}
 ```
-#### [Search endpoint](#tab/search)
+#### [Search 2.0 endpoint](#tab/search)
+
+The parameters and response value using the search 2.0 endpoint are identical to the Web API.
 
 **Request**
 
@@ -289,6 +284,13 @@ HTTP/1.1 200 OK
 POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 ```
 
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{}
+```
 ---
 ### See also
 

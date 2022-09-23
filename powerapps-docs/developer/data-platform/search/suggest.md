@@ -16,8 +16,80 @@ contributors:
 ---
 # Dataverse Search suggest
 
-Typically, you will use this API to support a richer search box experience. For example, as the user enters each character of their search term, you'd call this API and populate the search box's dropdown list with the suggested query results. 
+Typically, you will use this API to support a richer search box experience. For example, as the user enters each character of their search term, you'd call this API and populate the search box's dropdown list with the suggested query results.
 
+
+|Name  |Type  |Description  |More information|
+|---------|---------|---------|---------|
+|`search`|string|**Required** The text to search with. |[search parameter](#search-parameter)|
+|`entities`|string|The default is searching across all search–configured entities.|[`entities` parameter](#entities-parameter)|
+|`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
+|`fuzzy`|bool|Use fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
+|`orderby`|string|   List of comma-separated clauses where each clause is an attribute name followed by `asc` or `desc`.|[`orderby` parameter](#orderby-parameter)|
+|`propertybag`|string|A collection of additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
+|`top`|int|Number of suggestions to retrieve. The default is 5.|[`top` parameter](#top-parameter)|
+
+## Parameters
+
+Details for the parameters in the table above can be found below.
+
+
+### `search` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+Search term.
+
+### `entities` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+The default is searching across all search–configured entities.
+
+### `filter` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+Filter criteria to reduce results returned.
+
+### `fuzzy` parameter
+
+**Type**: bool<br />
+**Optional**: false
+
+Use fuzzy search to aid with misspellings. The default is false.
+
+### `options` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
+
+### `orderby` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+List of comma-separated clauses where each clause is an attribute name followed by `asc` or `desc`.
+
+### `propertybag` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+A collection of additional properties for search request. Eg. appid, correlationid.
+
+### `top` parameter
+
+**Type**: int<br />
+**Optional**: false
+
+Number of suggestions to retrieve. The default is 5.
 
 
 ## Examples
@@ -60,7 +132,7 @@ HTTP/1.1 200 OK
 {}
 ```
 
-#### [Search endpoint](#tab/search)
+#### [Search 2.0 endpoint](#tab/search)
 
 **Request**
 

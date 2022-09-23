@@ -89,7 +89,7 @@ HTTP/1.1 200 OK
 
 ```
 
-#### [Search endpoint](#tab/search)
+#### [Search 2.0 endpoint](#tab/search)
 
 **Request**
 

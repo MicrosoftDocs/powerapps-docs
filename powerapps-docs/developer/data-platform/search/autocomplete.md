@@ -22,6 +22,51 @@ Typically, you will use this API to support a richer search box experience. For 
 
 :::image type="content" source="../media/autocomplete-settings-example.png" alt-text="Example showing auto-complete with the word 'settings'":::
 
+In addition to a search term, the results returned can be influenced by passing values for the following parameters:
+
+|Name  |Type  |Description  |More information|
+|---------|---------|---------|---------|
+|`search`|string|**Required** Search Term|[`search` parameter](#search-parameter)|
+|`entities`|string|The default scope is searching across all search–configured entities and fields.|[`entities` parameter](#entities-parameter)|
+|`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
+|`fuzzy`|bool|Fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. lucene, besteffortsearch, groupranking, searchmodelall.|[`options` parameter](#options-parameter)|
+|`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
+
+## Parameters
+
+Details for the parameters in the table above can be found below.
+
+### `search` parameter
+
+**Type**: string<br />
+**Optional**: false
+
+### `entities` parameter
+
+**Type**: string<br />
+**Optional**: True
+
+### `filter` parameter
+
+**Type**: string<br />
+**Optional**: True
+
+### `fuzzy` parameter
+
+**Type**: bool<br />
+**Optional**: True
+
+### `options` parameter
+
+**Type**: string<br />
+**Optional**: True
+
+### `propertybag` parameter
+
+**Type**: string<br />
+**Optional**: True
+
 ## Examples
 
 ### Example: TODO
@@ -47,7 +92,7 @@ TODO: The output of the SDK Sample
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/searchquery HTTP/1.1
+POST [Organization URI]/api/data/v9.2/searchautocomplete HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -62,12 +107,12 @@ HTTP/1.1 200 OK
 {}
 ```
 
-#### [Search endpoint](#tab/search)
+#### [Search 2.0 endpoint](#tab/search)
 
 **Request**
 
 ```http
-POST [Organization URI]/api/search/v1.0/status HTTP/1.1
+POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
 ```
 
 **Response**

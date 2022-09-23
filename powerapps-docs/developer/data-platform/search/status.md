@@ -154,7 +154,7 @@ The `entitystatusresults` contains information about each table configured for s
 - `cmkstatus` refers to whether the environment has a customer managed key. More information: [Manage the encryption key](/power-platform/admin/manage-encryption-key)
 
 
-#### [Search endpoint](#tab/search)
+#### [Search 2.0 endpoint](#tab/search)
 
 **Request**
 

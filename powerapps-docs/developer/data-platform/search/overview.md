@@ -67,7 +67,7 @@ The [Dataverse native search 1.0](search1.0.md) has not been deprecated and cont
 
 Search provides three operations to support a user interface that enables searching for data.
 
-|SDK Message Name<br />Web API Action<br />Search Endpoint|Description|
+|SDK Message Name<br />Web API Action<br />Search 2.0 Endpoint|Description|
 |---------|---------|
 |`searchquery`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`/api/search/v2.0/query`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
 |`searchsuggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
@@ -75,7 +75,7 @@ Search provides three operations to support a user interface that enables search
 
 There are also two operations you can use to understand whether search is enabled and how it is configured.
 
-|SDK Message Name<br />Web API Function<br />Search Endpoint|Description|
+|SDK Message Name<br />Web API Function<br />Search 2.0 Endpoint|Description|
 |---------|---------|
 |`searchstatus`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
 |`searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
@@ -100,7 +100,7 @@ HTTP/1.1 400 Bad Request
 {"error":{"code":"0x80048d0b","message":"Dataverse Search feature is disabled for this organization."}}
 ```
 
-#### [Search endpoint](#tab/search)
+#### [Search 2.0 endpoint](#tab/search)
 
 **Response**
 
@@ -134,7 +134,7 @@ More information:
 
 ### Enable Columns
 
-The columns that are searchable for the table are determined by whether they are included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery)  table](../reference/entities/savedquery.md)
+The columns that are searchable for the table are determined by whether they are included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery)  table](../reference/entities/savedquery.md) and update it programmatically.
 
 More information:
 
@@ -143,7 +143,7 @@ More information:
 
 ## Service Protection Limits
 
-Dataverse search has service protection limits that are different from the Dataverse [Service protection API limits](../api-limits.md) that apply to the Web API and Dataverse SDK for .NET.
+When using either Web API and Dataverse SDK for .NET the common [Service protection API limits](../api-limits.md) will never be approached because Dataverse search applies a lower limit.
 
 Dataverse search allows a user to send 1 request per second. If this is exceeded, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error will be returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending additional requests. The value represents the number of seconds to wait.
 
