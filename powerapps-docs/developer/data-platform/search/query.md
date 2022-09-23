@@ -19,20 +19,18 @@ contributors:
 The query operation returns search results based on a search term. In addition to a search term, the results returned can be influenced by passing values for the following parameters:
 
 
-|Name  |Type  |Description  |
-|---------|---------|---------|
-|`search`|string|**Required** The text to search with. See [search parameter](#search-parameter)|
-|`entities`|string[]|Limits the scope of search to a sub-set of tables. See [entities parameter](#entities-parameter)|
+|Name  |Type  |Description  |More information|
+|---------|---------|---------|---------|
+|`search`|string|**Required** The text to search with. |[search parameter](#search-parameter)|
+|`entities`|string[]|Limits the scope of search to a sub-set of tables. |[entities parameter](#entities-parameter)|
 |`facets`|string[]|Facets support the ability to drill down into data results after they've been retrieved. See [facets parameter](#facets-parameter)|
-|`filter`|string|Limits the scope of the search results returned. See [filter parameter](#filter-parameter)|
-|`count`|bool|Whether to return the total record count. |
-|`skip`|int|Specifies the number of search results to skip. See [skip and top parameters](#skip-and-top-parameters)|
-|`top`|int|Specifies the number of search results to retrieve. See [skip and top parameters](#skip-and-top-parameters)|
-|`orderby`|string[]|Specifies how to order the results in order of precedence. See [orderby parameter](#orderby-parameter)|
-|`searchmode`|`any` \| `all`|Specifies whether any or all the search terms must be matched to count the document as a match. See [searchmode parameter](#searchmode-parameter)|
-|`searchtype`|`simple` \| `full`|Specifies the syntax of a search query. See [searchtype parameter](#searchtype-parameter)|
-|`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|
-|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|
+|`filter`|string|Limits the scope of the search results returned. |[filter parameter](#filter-parameter)|
+|`count`|bool|Whether to return the total record count.|[`count` parameter](#count-parameter) |
+|`skip`|int|Specifies the number of search results to skip. |[skip and top parameters](#skip-and-top-parameters)|
+|`top`|int|Specifies the number of search results to retrieve. |[skip and top parameters](#skip-and-top-parameters)|
+|`orderby`|string[]|Specifies how to order the results in order of precedence. |[orderby parameter](#orderby-parameter)|
+|`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
 
 ## Parameters
 
@@ -123,20 +121,13 @@ For a set of results that contain multiple table types, the list of clauses for 
 
 If the query request includes a filter for a specific table type, `orderby` can optionally specify table-specific columns.
 
-### `searchmode` parameter
+### `propertybag` parameter
 
-Specifies whether `any` or `all` the search terms must be matched to count the
-document as a match. The default is `any`.
+A collection of the additional properties for search request. Eg. `appid`, `correlationid`.
 
-The `searchmode` parameter on a query request controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).
+### `options` parameter
 
-Using `searchmode:any` increases the recall of queries by including more results, and by default will be interpreted as `OR NOT`. For example, `wifi -luxury` will match documents that either contain the term `wifi` or those that don't contain the term `luxury`.
-
-Using `searchmode:all` increases the precision of queries by including fewer results, and by default will be interpreted as `AND NOT`. For example, `wifi -luxury` will match documents that contain the term `wifi` and don't contain the term `luxury`.
-
-### `searchtype` parameter
-
-When you use `"searchtype": "full"`, you specify that Lucerne Query syntax be used.
+Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
 
 #### Lucerne Query Syntax
 
@@ -150,15 +141,6 @@ The Lucene query syntax supports the following functionality:
 | Term boosting| Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
 | Proximity search| Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
-
-
-### `propertybag` parameter
-
-A collection of the additional properties for search request. Eg. `appid`, `correlationid`.
-
-### `options` parameter
-
-Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
 
 ## Response
 
@@ -265,8 +247,18 @@ The following types are returned by the Query Response.
 
 ## Examples
 
-### Example: TODO
+#### [SDK for .NET](#tab/sdk)
 
+```csharp
+static void SDKExampleMethod(IOrganizationService service){
+ TODO
+}
+```
+**Output**
+
+```
+TODO: The output of the SDK Sample
+```
 #### [Web API](#tab/webapi)
 
 **Request**
@@ -286,8 +278,6 @@ HTTP/1.1 200 OK
 
 {}
 ```
-
-
 #### [Search endpoint](#tab/search)
 
 **Request**
@@ -295,22 +285,6 @@ HTTP/1.1 200 OK
 ```http
 POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 ```
-
-
-
-#### [SDK for .NET](#tab/sdk)
-
-```csharp
-static void SDKExampleMethod(IOrganizationService service){
- TODO
-}
-```
-**Output**
-
-```
-TODO: The output of the SDK Sample
-```
-
 
 ---
 ### See also

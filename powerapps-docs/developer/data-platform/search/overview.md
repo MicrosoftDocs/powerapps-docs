@@ -66,33 +66,48 @@ The [Dataverse native search 1.0](search1.0.md) has not been deprecated and cont
 
 Search provides three operations to support a user interface that enables searching for data.
 
-|Web API Action<br />Search Endpoint<br />SDK Message Name|Description|
+|SDK Message Name<br />Web API Action<br />Search Endpoint|Description|
 |---------|---------|
-|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`/api/search/v2.0/query`<br />`searchquery`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
-|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`/api/search/v2.0/suggest`<br />`searchsuggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
-|<xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`/api/search/v2.0/autocomplete`<br />`searchautocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
+|`searchquery`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`/api/search/v2.0/query`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
+|`searchsuggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
+|`searchautocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
 
 There are also two operations you can use to understand whether search is enabled and how it is configured.
 
-|Web API Function<br />Search Endpoint<br />SDK Message Name|Description|
+|SDK Message Name<br />Web API Function<br />Search Endpoint|Description|
 |---------|---------|
-|<xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`/api/search/v2.0/status`<br />`searchstatus`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
-|<xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`/api/search/v2.0/statistics`<br />`searchstatistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
+|`searchstatus`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
+|`searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
 
 
 ## Detect if search is enabled
 
 Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, an administrator must enable it.
 
-This is the error you will get when search is not enabled when using Web API or the Native search:
+If you use the query, suggest, or autocomplete operations when the environment is not enabled you will get these errors:
+
+#### [SDK for .NET](#tab/sdk)
+
+TODO
+
+#### [Web API](#tab/webapi)
+
+**Response**
 
 ```http
 HTTP/1.1 400 Bad Request
 {"error":{"code":"0x80048d0b","message":"Dataverse Search feature is disabled for this organization."}}
 ```
 
-TODO: Verify SDK Error is the same
+#### [Search endpoint](#tab/search)
 
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request
+{"error":{"code":"0x80048d0b","message":"Dataverse Search feature is disabled for this organization."}}
+```
+---
 
 You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search status](status.md) operation.
 
