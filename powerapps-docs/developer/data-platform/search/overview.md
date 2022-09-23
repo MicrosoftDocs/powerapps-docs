@@ -46,6 +46,7 @@ More information:
 
 - [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
 - [Use messages with the Organization service](../org-service/use-messages.md)
+- [Invoking Custom APIs](../custom-api.md#invoking-custom-apis)
 
 ### Web API
 
