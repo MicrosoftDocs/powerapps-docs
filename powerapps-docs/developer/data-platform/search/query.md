@@ -166,6 +166,20 @@ The following is an example of the response from a query.
 
 This is a template for an example
 
+
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+static void SDKExampleMethod(IOrganizationService service){
+ TODO
+}
+```
+**Output**
+
+```
+TODO: The output of the SDK Sample
+```
+
 #### [Web API](#tab/webapi)
 
 **Request**
@@ -192,22 +206,6 @@ HTTP/1.1 200 OK
 ```http
 
 ```
-
-
-#### [SDK for .NET](#tab/sdk)
-
-```csharp
-static void SDKExampleMethod(IOrganizationService service){
- TODO
-}
-```
-**Output**
-
-```
-TODO: The output of the SDK Sample
-```
-
-
 ---
 
 The unescaped response contains JSON using the following properties.
@@ -318,8 +316,10 @@ TODO: The output of the SDK Sample
 ### See also
 
 [Search for Dataverse records](overview.md)<br />
-[Dataverse Search query](query.md)
 [Dataverse Search suggest](suggest.md)<br />
-[Dataverse Search autocomplete](autocomplete.md)
+[Dataverse Search autocomplete](autocomplete.md)<br />
+[Dataverse Search status](status.md)<br />
+[Dataverse Search statistics](statistics.md)<br />
+[Dataverse Native Search 1.0](search1.0.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

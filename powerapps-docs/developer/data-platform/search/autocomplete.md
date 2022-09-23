@@ -27,21 +27,7 @@ Typically, you will use this API to support a richer search box experience. For 
 ### Example: TODO
 
 This is a template for an example
-#### [Search endpoint](#tab/search)
 
-**Request**
-
-```http
-POST [Organization URI]/api/search/v1.0/status HTTP/1.1
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
-{}
-```
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -75,6 +61,22 @@ HTTP/1.1 200 OK
 
 {}
 ```
+
+#### [Search endpoint](#tab/search)
+
+**Request**
+
+```http
+POST [Organization URI]/api/search/v1.0/status HTTP/1.1
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{}
+```
 ---
 
 ### See also
@@ -82,5 +84,8 @@ HTTP/1.1 200 OK
 [Search for Dataverse records](overview.md)<br />
 [Dataverse Search query](query.md)<br />
 [Dataverse Search suggest](suggest.md)<br />
+[Dataverse Search status](status.md)<br />
+[Dataverse Search statistics](statistics.md)<br />
+[Dataverse Native Search 1.0](search1.0.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

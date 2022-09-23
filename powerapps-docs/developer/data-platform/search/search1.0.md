@@ -501,8 +501,10 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 ### See also
 
 [Search for Dataverse records](overview.md)<br />
-[Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization)<br />
-[Compare search options in Microsoft Dataverse](../../../user/search.md)<br />
-[Connect with your Dataverse environment](../webapi/setup-postman-environment.md#connect-with-your-dataverse-environment)<br />
+[Dataverse Search query](query.md)<br />
+[Dataverse Search suggest](suggest.md)<br />
+[Dataverse Search autocomplete](autocomplete.md)<br />
+[Dataverse Search status](status.md)<br />
+[Dataverse Search statistics](statistics.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

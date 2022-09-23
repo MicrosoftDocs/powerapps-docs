@@ -30,25 +30,9 @@ Dataverse search delivers fast and comprehensive search results across multiple 
 
 Developers can use the search APIs three different ways:
 
+- The Dataverse SDK for .NET
 - The Web API `/api/data/v9.x` endpoint
 - The native search `/api/search/v2.0/` endpoint
-- The Dataverse SDK for .NET
-
-### Web API
-
-Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document). You can use these in the same way you use other Web API operations.
-
-More information:
-
-- [Use Web API actions](../webapi/use-web-api-actions.md)
-- [Use Web API functions](../webapi/use-web-api-functions.md)
-
-
-### Native search 2.0
-
-The native search 2.0 endpoint is not an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
-
-The [Dataverse native search 1.0](search1.0.md) has not been deprecated and continues to be supported.
 
 ### SDK for .NET
 
@@ -62,6 +46,21 @@ More information:
 
 - [Generate early-bound classes for the Organization service](../org-service/generate-early-bound-classes.md)
 - [Use messages with the Organization service](../org-service/use-messages.md)
+
+### Web API
+
+Search operations exposed with Web API are OData actions or functions described in the [CSDL $metadata document](../webapi/web-api-service-documents.md#csdl-metadata-document). You can use these in the same way you use other Web API operations.
+
+More information:
+
+- [Use Web API actions](../webapi/use-web-api-actions.md)
+- [Use Web API functions](../webapi/use-web-api-functions.md)
+
+### Native search 2.0
+
+The native search 2.0 endpoint is not an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
+
+The [Dataverse native search 1.0](search1.0.md) has not been deprecated and continues to be supported.
 
 ## Search operations
 
@@ -95,7 +94,7 @@ HTTP/1.1 400 Bad Request
 TODO: Verify SDK Error is the same
 
 
-You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Search Status](#search-status) operation.
+You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search status](status.md) operation.
 
 ### Check Organization table
 

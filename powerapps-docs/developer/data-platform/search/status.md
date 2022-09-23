@@ -171,6 +171,9 @@ The response from the search endpoint is the same as the Web API.
 
 [Search for Dataverse records](overview.md)<br />
 [Dataverse Search query](query.md)<br />
-[Dataverse Search autocomplete](autocomplete.md)
+[Dataverse Search suggest](suggest.md)<br />
+[Dataverse Search autocomplete](autocomplete.md)<br />
+[Dataverse Search statistics](statistics.md)<br />
+[Dataverse Native Search 1.0](search1.0.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
