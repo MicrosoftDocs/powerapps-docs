@@ -108,6 +108,8 @@ Use search status to know:
 - Whether search is enabled.
 - Which tables and columns are enabled for search.
 
+autocomplete-settings-example.png
+
 #### [Web API](#tab/webapi)
 
 **Request**
@@ -122,6 +124,8 @@ Accept: application/json
 ```
 
 The `response` property returned by <xref:Microsoft.Dynamics.CRM.searchstatusResponse?text=searchstatusResponse ComplexType> is an escaped string containing JSON data. The `status` property value can be either: `notprovisioned`, `provisioninginprogress`, or `provisioned`.
+
+When not provisioned, you should get a response like this:
 
 **Response**
 
@@ -198,7 +202,12 @@ When unescaped, the JSON of the `response` property looks like this:
 }
 ```
 
-The `entitystatusresults` contains information about each table configured for search. For each table, the `searchableindexedfieldinfomap` tells you which columns are included in search for that table.
+The `entitystatusresults` contains information about each table configured for search. For each table, the `searchableindexedfieldinfomap` tells you which columns are included in search for that table. The `indexfieldname` property is for internal use only.
+
+- `lockboxstatus` refers to the Power Platform Customer Lockbox. More information: [Securely access customer data using Customer Lockbox in Power Platform (preview)](/power-platform/admin/about-lockbox)
+- `cmkstatus` refers to whether the environment has a customer managed key. More information: [Manage the encryption key](/power-platform/admin/manage-encryption-key)
+
+
 
 #### [Search endpoint](#tab/search)
 
@@ -246,6 +255,31 @@ static void CheckSearchStatus(IOrganizationService service) {
 ```
 
 ---
+
+### Enable tables and columns for search
+
+Which tables and columns are enabled for search is driven by data in Dataverse.
+
+#### Enable Tables
+
+Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex?text=EntityMetadata.CanEnableSyncToExternalSearchIndex>.Value property is true can be enabled for Dataverse search.
+
+To enable a table for Dataverse Search, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex?text=EntityMetadata.SyncToExternalSearchIndex> boolean property to true.
+
+More information:
+
+- [Select tables for Dataverse search](/power-platform/admin/configure-relevance-search-organization#select-tables-for-dataverse-search)
+- [Set managed properties for Dataverse search](/power-platform/admin/configure-relevance-search-organization#set-managed-properties-for-dataverse-search)
+
+#### Enable Columns
+
+The columns that are searchable for the table are determined by whether they are included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery)  table](../reference/entities/savedquery.md)
+
+More information:
+
+- [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table)
+- [Customize views](../../model-driven-apps/customize-entity-views.md)
+
 
 ## Search statistics
 
@@ -339,6 +373,7 @@ StackTrace:
 Dataverse search has service protection limits that are different from the Dataverse [Service protection API limits](../api-limits.md) that apply to the Web API and Dataverse SDK for .NET.
 
 Dataverse search allows a user to send 1 request per second. If this is exceeded, a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error will be returned. If a `429` error is returned, you should wait until the period defined in the `Retry-After` response header value has passed before sending additional requests. The value represents the number of seconds to wait.
+
 
 ### See also
 

@@ -16,6 +16,11 @@ contributors:
 ---
 # Dataverse Search autocomplete
 
+Autocomplete API lets consumers send a partial search query term to Dataverse search and get back the search term that is potential user intent.
+
+Typically, you will use this API to support a richer search box experience. For example, as the user enters each character of their search term, you'd call this API and populate the search box's query with the autocomplete result to provide type-ahead word completion. For example: typing in set autocompletes to settings:
+
+:::image type="content" source="../media/autocomplete-settings-example.png" alt-text="Example showing auto-complete with the word 'settings'":::
 
 ## Examples
 
