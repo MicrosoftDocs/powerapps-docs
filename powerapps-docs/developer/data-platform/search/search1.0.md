@@ -1,6 +1,6 @@
 ---
-title: "Dataverse native search 1.0 (Microsoft Dataverse)| Microsoft Docs"
-description: "Dataverse native Search 1.0 remains available but we recommend you use Dataverse Search 2.0."
+title: "Dataverse Native Search 1.0 (Microsoft Dataverse)| Microsoft Docs"
+description: "Dataverse Native Search 1.0 remains available but we recommend you use Dataverse Search 2.0."
 ms.date: 09/22/2022
 ms.topic: article
 applies_to: 
@@ -17,7 +17,7 @@ contributors:
  - JimDaly
 ---
 
-# Dataverse native search 1.0
+# Dataverse Native Search 1.0
 
 > [!IMPORTANT]
 > This documentation is for the Dataverse native search API version 1.0.
