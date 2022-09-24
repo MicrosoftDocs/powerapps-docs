@@ -16,7 +16,9 @@ contributors:
 ---
 # Dataverse Search query
 
-The query operation returns search results based on a search term. In addition to a search term, the results returned can be influenced by passing values for the following parameters:
+The query operation returns search results based on a search term.
+
+In addition to a search term, the results returned can be influenced by passing values for the following parameters:
 
 
 |Name  |Type  |Description  |More information|
@@ -44,17 +46,21 @@ Details for the parameters in the table above can be found below.
 
 The search parameter contains the text to search. It is the only required parameter. Search term must be at least three characters long and has a 100 character limit.
 
+#### Simple Search syntax
+
 By default, the search parameter supports simple search syntax as described in the table below:
 
 | **Functionality** | **Description** |
 |---|---|
-| Boolean operators | AND operator; denoted by +<br/>OR operator; denoted by \|<br/>NOT operator; denoted by \- |
-| Precedence operators | A search term "hotel+(wifi \| luxury)" will search for results containing the term "hotel" and either "wifi" or "luxury" (or both). |
-| Wildcards            | Trailing wildcard are supported. For example, "Alp\*" searches for "alpine". |
-| Exact matches        | A query enclosed in quotation marks " ".|
+| Boolean operators | AND operator; denoted by `+`<br/>OR operator; denoted by `|`<br/>NOT operator; denoted by `-` |
+| Precedence operators | A search term `hotel+(wifi | luxury) `will search for results containing the term `hotel` and either `wifi` or `luxury` (or both). |
+| Wildcards            | Trailing wildcard are supported. For example, `Alp*` searches for "alpine". |
+| Exact matches        | A query enclosed in quotation marks `" "`.|
 
 > [!NOTE]
 > In order to use any search operators as part of the search text, escape the character by prefixing it with a single backslash (`\`). Special characters that require escaping include the following: `+ - & | ! ( ) { } [ ] ^ " ~ * ? : \ /`.
+
+For example, and escaped phone number might look like this: `\+1\(800\)555\-1234`.
 
 Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax).
 
@@ -63,7 +69,7 @@ Using the [`options` parameter](#options-parameter), you can enable [Lucerne Que
 **Type**: bool<br />
 **Optional**: true
 
-Whether to return the total record count.
+Whether to return the total record count. If this is not set the `Count` response property will be `-1`.
 
 ### `entities` parameter
 
@@ -74,6 +80,46 @@ By default all the tables enabled for search will be searched unless you specify
 
 To get a list of entities enabled for the environment use the [Search status](status.md) API and look for the entities listed by  `entitylogicalname` within `entitystatusresults`.
 
+The following table shows the schema of an entity:
+
+|Field Name|Type  |Description  |
+|---------|---------|---------|
+|`name`|string|Required. Logical name of the table. Specifies scope of the query.|
+|`selectColumns`|string[]|Optional. List of columns that needs to be projected when table documents are returned in response. If empty, only the table primary name will be returned.  |
+|`searchColumns`|string[]|Optional. List of columns to scope the query on.  If empty, only the table primary name will be searched on.|
+|`filter`|string|Optional. Filters applied on the entity. |
+
+#### Example
+
+This is an example of some JSON data that uses the schema described above.
+
+```json
+[
+   {
+      "name":"account",
+      "selectColumns":["name","address1_city"],
+      "searchColumns":["name","address1_city"],
+      "filter":"modifiedon ge 2018-01-01T00:00:00Z"
+   },
+   {
+      "name":"contact",
+      "selectColumns":["fullname","address1_city"],
+      "searchColumns":["fullname","address1_city"],
+      "filter":"modifiedon ge 2018-01-01T00:00:00Z"
+   }
+]
+```
+
+To use this data you must escape the string and pass it as the value of the `entities` parameter in the body of the request:
+
+```json
+{
+    "search": "maria",
+    "entities":"[{\"name\":\"account\",\"selectColumns\":[\"name\",\"address1_city\"],\"searchColumns\":[\"name\",\"address1_city\"],\"filter\":\"modifiedon ge 2018-01-01T00:00:00Z\"},{\"name\":\"contact\",\"selectColumns\":[\"fullname\",\"address1_city\"],\"searchColumns\":[\"fullname\",\"address1_city\"],\"filter\":\"modifiedon ge 2018-01-01T00:00:00Z\"}]"
+}
+```
+
+
 ### `facets` parameter
 
 **Type**: string<br />
@@ -81,15 +127,48 @@ To get a list of entities enabled for the environment use the [Search status](st
 
 Facets support the ability to drill down into data results after they've been retrieved. By default, no facets are returned with search results.
 
-TODO: Establish exactly what developers will do with the facets data and how to set them. This is a mystery:
+#### Facet definition
+
+Facets are defined as an array of strings, for example:
 
 ```
-  "facets": ["@search.entityname,count:100",  
-    "account.primarycontactid,count:100",  
-    "ownerid,count:100",  
-    "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
-    "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"]
+[
+"entityname,count:100",
+"account:primarycontactid,count:100",
+"ownerid,count:100",
+"modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
+"createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"
+]
 ```
+
+Each item in the array represents a different way to group the data returned by the query. For each property returned, you can specify appropriate faceting using the values in the following table:
+
+
+|Facet Type|Description|
+|---------|---------|
+|`count`|The maximum number of facet terms. The default is 10. There is no upper limit|
+|`sort` |Can be set to `count`, `-count`, `value`, `-value`. Use `count` to sort descending by `count`. Use `-count` to sort ascending by `count`. Use `value` to sort ascending by `value`. Use `-value` to sort descending by `value`.|
+|`values`|Set to pipe-delimited numeric or Edm.DateTimeOffset values specifying a dynamic set of facet entry values.The values must be listed in sequential, ascending order to get the expected results.|
+|`interval`|An integer interval greater than 0 for numbers, or minute, hour, day, week, month, quarter, year for date time values.|
+|`timeoffset`|Set to (`[+-]hh:mm`, `[+-]hhmm`, or `[+-]hh`). If used, the timeoffset parameter must be combined with the interval option, and only when applied to a field of type `Edm.DateTimeOffset`. The value specifies the UTC time offset to account for in setting time boundaries.|
+
+
+> [!NOTE]
+> `count` and `sort` can be combined in the same facet specification, but they cannot be combined with `interval` or `values`, and `interval` and `values` cannot be combined together.
+
+Set the `facets` value with an escaped string containing the definition of the facets.
+
+```json
+{
+    "search": "maria",
+    "facets": "[\"entityname,count:100\",\"account:primarycontactid,count:100\",\"ownerid,count:100\",\"modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00\",\"createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00\"]"    
+}
+```
+
+More information:
+
+- [Azure Cognitive Search: Add faceted navigation to a search app](/azure/search/search-faceted-navigation)
+- [Azure Cognitive Search REST API > Search Documents > Query Parameters](/rest/api/searchservice/search-documents#query-parameters)
 
 ### `filter` parameter
 
@@ -101,7 +180,6 @@ Filters limit the scope of the search results returned. Use filters to exclude u
 Apply filters using this syntax: `<table logical name>: <filter>` where the table logical name specifies the entity the filter should be applied to.
 
 Filters use the following query operators:
-
 
 |Operator|Description|Example|
 |--------|-----------|-------|
@@ -121,14 +199,21 @@ Filters use the following query operators:
 
 
 
-
-
 ### `options` parameter
 
 **Type**: string<br />
 **Optional**: true
 
-Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
+Options are settings configured to search a search term. Set the `options` value to a serialized array of these options, such as `["lucene","besteffortsearch","groupranking","searchmodelall"]`.
+
+These are the options:
+
+|Option|Description  |
+|---------|---------|
+|`lucene`|Enables [Lucerne Query Syntax](#lucerne-query-syntax)|
+|`besteffortsearch`|Enables intelligent query workflow to return probable set of results if no good matches are found for the search request terms.|
+|`groupranking`|Enable ranking of results in the response optimized for display in search results pages where results are grouped by table.|
+|`searchmodelall`|Specifiy whether all the search terms must be matched in order to consider the document as a match. Not specifying this flag will default to matching any word in the search term.|
 
 #### Lucerne Query Syntax
 
@@ -136,12 +221,12 @@ The Lucene query syntax supports the following functionality:
 
 | **Functionality** | **Description** |
 |---|---|
-| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
-| Wildcards| In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "/.\*pine/" |
-| Fuzzy search| Supports queries misspelled by up to two characters.<br/>"Uniersty\~" will return "University"<br/>"Blue\~1" will return "glue", "blues" |
-| Term boosting| Weighs specific terms in a query differently.<br/>"Rock\^2 electronic" will return results where the matches to "rock" are more important than matches to "electronic". |
-| Proximity search| Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, "airport hotel"\~5 returns results where "airport" and "hotel" are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
-| Regular expression (regex) search | For example, /\[mh\]otel/ matches "motel" or "hotel". |
+| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by `AND`, `&&`, `+`<br/>OR operator; denoted by `OR`, `||`<br/>NOT operator; denoted by `NOT`, `!`, `–` |
+| Wildcards| In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – `alp*`<br/>Leading wildcard - `/.*pine/` |
+| Fuzzy search| Supports queries misspelled by up to two characters.<br/>`Uniersty~` will return `University`<br/>`Blue~1` will return `glue`, `blues` |
+| Term boosting| Weighs specific terms in a query differently.<br/>`Rock^2 electronic` will return results where the matches to `rock` are more important than matches to `electronic`. |
+| Proximity search| Returns results where terms are within *x* words of each other, for more contextual results.<br/>For example, `"airport hotel"~5` returns results where `airport` and `hotel` are within five words of each other, thus boosting the chances of finding a hotel located close to an airport. |
+| Regular expression (regex) search | For example, `/[mh]otel/`  matches `motel` or `hotel`. |
 
 ### `orderby` parameter
 
@@ -171,7 +256,8 @@ A collection of the additional properties for search request. Eg. `appid`, `corr
 **Optional**: true
 
 You can use these parameters together with the [count parameter](#count-parameter) to create a paged experience.
-By default, as many as 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use top to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
+
+By default, as many as 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
 
 ## Response
 

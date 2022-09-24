@@ -22,6 +22,8 @@ Search statistics provides information about:
 - Storage size in megabytes
 - Number of documents
 
+**TODO**: Provide some information about why people might care about this data.
+
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
@@ -75,6 +77,10 @@ StackTrace:
 
 ```http
 GET [Organization URI]/api/data/v9.2/searchstatistics HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 ```
 
 **Response**

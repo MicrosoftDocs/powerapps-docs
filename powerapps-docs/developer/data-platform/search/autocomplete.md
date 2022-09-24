@@ -18,7 +18,7 @@ contributors:
 
 Autocomplete API lets consumers send a partial search query term to Dataverse search and get back the search term that is potential user intent.
 
-Typically, you will use this API to support a richer search box experience. For example, as the user enters each character of their search term, you'd call this API and populate the search box's query with the autocomplete result to provide type-ahead word completion. For example: typing in set autocompletes to settings:
+Use this API to support a richer search box experience. As the user enters each character of their search term, call autocomplete and populate the search box's query with the autocomplete result to provide type-ahead word completion. For example: typing in `set` autocompletes to `settings`:
 
 :::image type="content" source="../media/autocomplete-settings-example.png" alt-text="Example showing auto-complete with the word 'settings'":::
 
@@ -30,7 +30,7 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|The default scope is searching across all search–configured entities and fields.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. lucene, besteffortsearch, groupranking, searchmodelall.|[`options` parameter](#options-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
 |`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 
 ## Parameters
@@ -42,30 +42,42 @@ Details for the parameters in the table above can be found below.
 **Type**: string<br />
 **Optional**: false
 
+Search Term
+
 ### `entities` parameter
 
 **Type**: string<br />
 **Optional**: True
+
+The default scope is searching across all search–configured entities and fields.
 
 ### `filter` parameter
 
 **Type**: string<br />
 **Optional**: True
 
+Filter criteria to reduce results returned.
+
 ### `fuzzy` parameter
 
 **Type**: bool<br />
 **Optional**: True
+
+Fuzzy search to aid with misspellings. The default is false.
 
 ### `options` parameter
 
 **Type**: string<br />
 **Optional**: True
 
+Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
+
 ### `propertybag` parameter
 
 **Type**: string<br />
 **Optional**: True
+
+A collection of the additional properties for search request. Eg. appid, correlationid.
 
 ## Examples
 

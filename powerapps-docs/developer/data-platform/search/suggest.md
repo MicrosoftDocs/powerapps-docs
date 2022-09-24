@@ -16,7 +16,9 @@ contributors:
 ---
 # Dataverse Search suggest
 
-Typically, you will use this API to support a richer search box experience. For example, as the user enters each character of their search term, you'd call this API and populate the search box's dropdown list with the suggested query results.
+Use this API to support a richer search box experience. For example, as the user enters each character of their search term, call this API and populate the dropdown list of the search field with the suggested query results.
+
+In addition to a search term, the results returned can be influenced by passing values for the following parameters:
 
 
 |Name  |Type  |Description  |More information|
