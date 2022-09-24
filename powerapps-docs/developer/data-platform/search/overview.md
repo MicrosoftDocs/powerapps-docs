@@ -70,8 +70,8 @@ Search provides three operations to support a user interface that enables search
 |SDK Message Name<br />Web API Action<br />Search 2.0 Endpoint|Description|
 |---------|---------|
 |`searchquery`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchquery Action><br />`/api/search/v2.0/query`| Returns a search results page. <br /> See [Dataverse Search query](query.md)|
-|`searchsuggest`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchsuggest Action><br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
-|`searchautocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchquery?text=searchautocomplete Action><br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
+|`searchsuggest`<br /><xref:Microsoft.Dynamics.CRM.searchsuggest?text=searchsuggest Action><br />`/api/search/v2.0/suggest`|Provide suggestions as the user enters text into a form field. <br /> See [Dataverse Search suggest](suggest.md)|
+|`searchautocomplete`<br /><xref:Microsoft.Dynamics.CRM.searchautocomplete?text=searchautocomplete Action><br />`/api/search/v2.0/autocomplete`| Provide autocompletion of input as the user enters text into a form field.<br /> See [Dataverse Search autocomplete](autocomplete.md)|
 
 There are also two operations you can use to understand whether search is enabled and how it is configured.
 
@@ -79,6 +79,44 @@ There are also two operations you can use to understand whether search is enable
 |---------|---------|
 |`searchstatus`<br /><xref:Microsoft.Dynamics.CRM.searchstatus?text=searchstatus Function><br />`/api/search/v2.0/status`|Search status of an Organization.<br /> See [Dataverse Search status](status.md)|
 |`searchstatistics`<br /><xref:Microsoft.Dynamics.CRM.searchstatistics?text=searchstatistics Function><br />`/api/search/v2.0/statistics`|Provides organization storage size and document count.<br /> See [Dataverse Search statistics](statistics.md)|
+
+## Use Postman with Dataverse search
+
+If you have used Postman with Dataverse Web API you know how useful it is to try using the APIs. We have some instructions about setting up a Postman environment to authenticate with the Dataverse Web API here: [Set up a Postman environment](../webapi/setup-postman-environment.md).
+
+You can use the same instructions with the search operations using Web API functions and actions. If you want to use the native search 2.0 endpoint, simply change these two environment variables:
+
+|Variable|Web API Value|Search 2.0 Endpoint value|
+|---------|---------|---------|
+|`version`|`9.2`|`2.0`|
+|`webapiurl`|`{{url}}/api/data/v{{version}}/`|`{{url}}/api/search/v{{version}}/`|
+
+### Extract response JSON with Postman
+
+Each of the search operations returns JSON that has a `response` property. The `response` property is an escaped string that contains JSON data. It is difficult to read this string value, but you can use the Postman Visualize feature to transform this string value into readable JSON.
+
+1. In your Postman request select the **Tests** tab and enter the following script:
+
+   ```javascript
+   let responseString = JSON.stringify(JSON.parse(pm.response.json().response),null,1);
+   
+   template = '<pre>{{response}}</pre>';
+   
+   pm.visualizer.set(template, {
+       response: responseString
+   });
+   ```
+
+1. Execute your request and select the **Visualize** button.
+
+You can now see the unescaped JSON data returned in the `response` property.
+
+:::image type="content" source="../media/postman-query-visualize-script.png" alt-text="Postman query with test script to extract JSON from escaped string":::
+
+More information:
+
+- [Postman Learning Center: Visualizing responses](https://learning.postman.com/docs/sending-requests/visualizer/)
+- [Postman Learning Center: Visualizing responses > Rendering HTML](https://learning.postman.com/docs/sending-requests/visualizer/#rendering-html)
 
 
 ## Detect if search is enabled
@@ -116,6 +154,37 @@ You can detect whether the search service is enabled by checking the settings in
 
 The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column tells you whether search is enabled for the organization.
 
+You can test this using the following Web API query:
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/organizations?$select=isexternalsearchindexenabled HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#organizations(isexternalsearchindexenabled)",
+   "value": [
+      {
+         "@odata.etag": "W/\"73925407\"",
+         "isexternalsearchindexenabled": true,
+         "organizationid": "883278f5-07af-45eb-a0bc-3fea67caa544"
+      }
+   ]
+}
+```
+
 
 ## Enable tables and columns for search
 
@@ -123,9 +192,40 @@ Which tables and columns are enabled for search is driven by data in Dataverse.
 
 ### Enable Tables
 
-Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex?text=EntityMetadata.CanEnableSyncToExternalSearchIndex>.Value property is true can be enabled for Dataverse search.
+Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanEnableSyncToExternalSearchIndex?text=EntityMetadata.CanEnableSyncToExternalSearchIndex>`.Value` property is true can be enabled for Dataverse search. If the `CanEnableSyncToExternalSearchIndex.CanBeChanged` value is false, you cannot change the value. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
 To enable a table for Dataverse Search, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex?text=EntityMetadata.SyncToExternalSearchIndex> boolean property to true.
+
+You can check the values for a table with the Web API using the table logical name. Replace `account` in the query below with the logical name of the table you want to check.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')?$select=CanEnableSyncToExternalSearchIndex,SyncToExternalSearchIndex HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions(CanEnableSyncToExternalSearchIndex,SyncToExternalSearchIndex)/$entity",
+   "SyncToExternalSearchIndex": true,
+   "MetadataId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+   "CanEnableSyncToExternalSearchIndex": {
+      "Value": true,
+      "CanBeChanged": true,
+      "ManagedPropertyLogicalName": "canenablesynctoexternalsearchindex"
+   }
+}
+```
 
 More information:
 
@@ -134,7 +234,7 @@ More information:
 
 ### Enable Columns
 
-The columns that are searchable for the table are determined by whether they are included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery)  table](../reference/entities/savedquery.md) and update it programmatically.
+The columns that are searchable for the table are determined by whether they are included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
 
 More information:
 
