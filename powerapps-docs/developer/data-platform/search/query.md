@@ -62,7 +62,7 @@ By default, the search parameter supports simple search syntax as described in t
 
 For example, and escaped phone number might look like this: `\+1\(800\)555\-1234`.
 
-Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax).
+Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) which enables different operators..
 
 ### `count` parameter
 
@@ -76,9 +76,11 @@ Whether to return the total record count. If this is not set the `Count` respons
 **Type**: string<br />
 **Optional**: true
 
-By default all the tables enabled for search will be searched unless you specify a sub-set using the `entities` parameter. Set this parameter with an array of table logical names.
+By default all the tables enabled for search will be searched unless you specify a sub-set using the `entities` parameter. 
 
-To get a list of entities enabled for the environment use the [Search status](status.md) API and look for the entities listed by  `entitylogicalname` within `entitystatusresults`.
+When you set an entity, you can also specify which columns you want to return and which columns to search. You can also include filter criteria for the table.
+
+To get a list of tables enabled for the environment use the [Search status](status.md) API and look for the tables listed by  `entitylogicalname` within `entitystatusresults`.
 
 The following table shows the schema of an entity:
 
@@ -257,7 +259,7 @@ A collection of the additional properties for search request. Eg. `appid`, `corr
 
 You can use these parameters together with the [count parameter](#count-parameter) to create a paged experience.
 
-By default, as many as 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
+By default, up to 50 results will be returned at a time. You can use `top` to raise it as high as 100, but more commonly you will use `top` to specify a smaller result set, such as 10, and then use `skip` to bypass previously returned results when the user moves to the next page.
 
 ## Response
 
@@ -268,7 +270,7 @@ The unescaped response contains JSON using the following properties.
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`Error`|[ErrorDetail](#errordetail)|TODO: find out. Why is this included?|
+|`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
 |`Value`|[`QueryResult`](#queryresult)`[]`|A collection of matching records.|
 |`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If facets were requested in the query, a dictionary of facet values.|
 |`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
