@@ -40,8 +40,8 @@ Using the Web API, set the `HasNotes` property of the <xref:Microsoft.Dynamics.C
   
  To upload or remove an attachment, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> message, setting the `Annotation.Filename` and `Annotation.MimeType` columns. This uploads an attachment that has been decoded into a base64 string format. The [System.Convert.ToBase64String](/dotnet/api/system.convert.tobase64string) method can be used to convert the contents of a data file into a base64-formatted string. The maximum size of files that can be uploaded is determined by the **Organization.[MaxUploadFileSize**](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/reference/entities/task) property. This property is set in the **Email** tab of the **System Settings**. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB.  
  
->[!NOTE]
->The maximum upload file size limit applies to the size of the file in Base64 encoding. A Base64 encoding produces a file that is larger than the orginial unencoded file.
+> [!NOTE]
+> The maximum upload file size limit applies to the size of the file in Base64 encoding. A Base64 encoding produces a file that is larger than the orginial unencoded file.
   
 ## See also  
  [Sample: Upload, Retrieve, and Download an Attachment](org-service/samples/upload-retrieve-download-attachment.md)<br/>  
