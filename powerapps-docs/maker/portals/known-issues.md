@@ -56,7 +56,7 @@ contributors:
 
     :::image type="content" source="media/known-issues/azure-ad-graph-api.png" alt-text="Azure AD Graph API configuration.":::
 
-- When configuring the *Open in New Window* setting on the **Profile** [web link](/configure/manage-web-links.md), the profile page will not open in a new window. To resolve this issue, update the **Header** [web template](liquid/store-content-web-templates.md) by updating the [Liquid](liquid/liquid-overview.md) code in the `{% if profile_nav %}` section.
+- When configuring the *Open in New Window* setting on the **Profile** [web link](./configure/manage-web-links.md), the profile page will not open in a new window. To resolve this issue, update the **Header** [web template](liquid/store-content-web-templates.md) by updating the [Liquid](liquid/liquid-overview.md) code in the `{% if profile_nav %}` section.
 
     :::image type="content" source="media/known-issues/profile-weblink.png" alt-text="Showing line of code to update in the header web template.":::
 
@@ -130,7 +130,6 @@ contributors:
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
-
+[Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

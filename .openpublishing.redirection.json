@@ -14,6 +14,181 @@
       "source_path": "powerapps-docs/developer/data-platform/online-management-api.md",
       "redirect_url": "online-management-api/overview",
       "redirect_document_id": false
+    },  
+    {
+      "source_path": "powerapps-docs/developer/data-platform/walkthrough-registering-configuring-simplespa-application-adal-js.md",
+      "redirect_url": "quick-start-register-configure-simplespa-application-msal-js",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/data-platform/azure-synapse-link-copy-sql.md",
+      "redirect_url": "azure-synapse-link-pipelines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice.md",
+      "redirect_url": "webapiservice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-basic-operations.md",
+      "redirect_url": "webapiservice-basic-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-query-data.md",
+      "redirect_url": "webapiservice-query-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-conditional-operations.md",
+      "redirect_url": "webapiservice-conditional-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/functions-actions-csharp.md",
+      "redirect_url": "webapiservice-functions-and-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-parallel-operations.md",
+      "redirect_url": "webapiservice-parallel-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice-async-parallel-operations.md",
+      "redirect_url": "webapiservice-tpl-dataflow-parallel-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/web-service-error-codes.md",
+      "redirect_url": "../reference/web-service-error-codes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/web-api-aaduser-samples.md",
+      "redirect_url": "../aaduser-entity#aaduser-table-web-api-examples",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/use-alternate-key-create-record.md",
+      "redirect_url": "use-alternate-key-reference-record",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/virtual-entities/create-virtual-tables-using-connectors.md",
+      "redirect_url": "../../../../power-apps/maker/data-platform/create-virtual-tables-using-connectors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/access-discovery-service.md",
+      "redirect_url": "../../sample-discovery-service-crmserviceclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/samples/global-discovery-service-csharp.md",
+      "redirect_url": "../../sample-global-discovery-service-csharp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/discovery-service.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/discovery-orgsdk-to-webapi.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/discover-url-organization-web-api.md",
+      "redirect_url": "../discovery-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/formula-reference.md",
+      "redirect_url": "/power-platform/power-fx/formula-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/cognitive-services-api.md",
+      "redirect_url": "/connectors/cognitiveservicestextanalytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/common-issues-and-resolutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/troubleshoot-power-query-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/admin-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/admin-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/application-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/application-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/auth-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/auth-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/canvas-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/canvas-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/org-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/org-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/package-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/package-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/paportal-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/paportal-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/pcf-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/pcf-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/plugin-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/plugin-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/solution-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/solution-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/cli/reference/telemetry-command.md",
+      "redirect_url": "/power-platform/developer/cli/reference/telemetry-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/powerapps-cli.md",
+      "redirect_url": "/power-platform/developer/cli/introduction",
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/developer/component-framework/reference/entity/getvalue.md",
@@ -124,13 +299,13 @@
       "source_path": "powerapps-docs/developer/data-platform/configure-entities-attributes-auditing.md",
       "redirect_url": "../data-platform/auditing/auditing",
       "redirect_document_id": false
-     },
-     {
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/auditing-overview.md",
       "redirect_url": "../data-platform/auditing/overview",
       "redirect_document_id": false
-     }, 
-     {
+    },
+    {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/formContext-ui-sections.md",
       "redirect_url": "/power-apps/developer/model-driven-apps/clientapi/reference/formContext-ui-tab-sections",
       "redirect_document_id": "false"
@@ -3366,8 +3541,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api.md",
-      "redirect_url": "../data-platform/online-management-api",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
@@ -3841,33 +4016,33 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/authentication.md",
-      "redirect_url": "../../data-platform/online-management-api/authentication",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/authentication.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/get-started-online-management-api.md",
-      "redirect_url": "../../data-platform/online-management-api/get-started-online-management-api",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/get-started-online-management-api.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/operations-supported.md",
-      "redirect_url": "../../data-platform/online-management-api/operations-supported",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/operations-supported.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/overview.md",
-      "redirect_url": "../../data-platform/online-management-api/overview",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/overview.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/sample-authentication-helper.md",
-      "redirect_url": "../../data-platform/online-management-api/sample-authentication-helper",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/sample-authentication-helper.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/online-management-api/sample-quick-start.md",
-      "redirect_url": "../../data-platform/online-management-api/sample-quick-start",
+      "source_path": "powerapps-docs/developer/data-platform/online-management-api/sample-quick-start.md",
+      "redirect_url": "/power-platform/admin/programmability-extensibility-overview#available-tools",
       "redirect_document_id": false
     },
     {
@@ -6598,6 +6773,461 @@
     {
       "source_path": "powerapps-docs/maker/portals/supported-web-browsers.md",
       "redirect_url": "/power-apps/limits-and-config",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/data-types.md",
+      "redirect_url": "/power-platform/power-fx/reference/data-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-aggregates.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-aggregates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-assert.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-assert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-astype-istype.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-astype-istype",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-char.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-char",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-choices.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-choices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-clear-collect-clearcollect.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-clear-collect-clearcollect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-clock-calendar.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-clock-calendar",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-colors.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-colors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-concatenate.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-concatenate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-concurrent.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-concurrent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-datasourceinfo.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-datasourceinfo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-date-time.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-date-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-dateadd-datediff.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-dateadd-datediff",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-datetime-parts.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-datetime-parts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-datevalue-timevalue.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-datevalue-timevalue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-defaults.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-defaults",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-distinct.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-distinct",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-download.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-download",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-enable-disable.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-enable-disable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-encode-decode.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-encode-decode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-errors.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-exit.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-exit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-filter-lookup.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-filter-lookup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-find.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-find",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-first-last.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-first-last",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-forall.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-forall",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-form.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-form",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-groupby.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-groupby",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-guid.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-guid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-hashtags.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-hashtags",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-if.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-if",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-iferror.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-iferror",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-isblank-isempty.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-isblank-isempty",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-ismatch.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-ismatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-isnumeric.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-isnumeric",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-json.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-language.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-language",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-left-mid-right.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-left-mid-right",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-len.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-len",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-logicals.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-logicals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-lower-upper-proper.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-lower-upper-proper",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-mod.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-mod",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-navigate.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-navigate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-now-today-istoday.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-now-today-istoday",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-numericals.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-numericals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-param.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-param",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-patch.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-patch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-print.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-print",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-rand.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-rand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-readnfc.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-readnfc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-recordinfo.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-recordinfo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-refresh.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-refresh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-relate-unrelate.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-relate-unrelate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-remove-removeif.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-remove-removeif",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-replace-substitute.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-replace-substitute",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-requesthide.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-requesthide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-reset.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-reset",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-revert.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-revert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-round.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-round",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-savedata-loaddata.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-savedata-loaddata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-select.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-select",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-sequence.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-sequence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-set.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-set",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-setfocus.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-setfocus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-setproperty.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-setproperty",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-showerror.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-showerror",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-shuffle.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-shuffle",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-sort.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-sort",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-split.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-split",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-startswith.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-startswith",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-table-counts.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-table-counts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-table-shaping.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-table-shaping",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-table.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-table",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-text.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-text",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-trace.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-trace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-trig.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-trig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-trim.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-trim",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-update-updateif.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-update-updateif",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-updatecontext.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-updatecontext",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-user.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-validate.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-validate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-value.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-value",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-weeknum.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-weeknum",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/function-with.md",
+      "redirect_url": "/power-platform/power-fx/reference/function-with",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/object-app.md",
+      "redirect_url": "/power-platform/power-fx/reference/object-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/operators.md",
+      "redirect_url": "/power-platform/power-fx/reference/operators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/functions/signals.md",
+      "redirect_url": "/power-platform/power-fx/reference/signals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/change-dynamics-instance.md",
+      "redirect_url": "powerapps-docs/maker/portals/admin/update-dynamics365-instance.md",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
+      "redirect_url": "/dynamics365/customer-service/cs-email-template-builder",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/user/customize-insert-email-template.md",
+      "redirect_url": "/dynamics365/customer-service/customize-insert-email-template",
       "redirect_document_id": "false"
     }
   ]

@@ -31,7 +31,7 @@ Now you can create and join a Teams meeting from an appointment in your model-dr
 
 Your system administrator will need to enable the following items: 
 
-- Turn on the **Collaboration (preview)** feature called **End users can add and join Teams meeting from appointments in model-driven apps** for your environment. More information: [Manage feature settings](/power-platform/admin/settings-features).
+- Turn on the **Collaboration** feature called **End users can add and join Teams meeting from appointments in model-driven apps** for your environment. More information: [Manage feature settings](/power-platform/admin/settings-features).
 - Set up server side-sync for appointments. More information: [Set up server-side synchronization of email, appointments, contacts, and tasks](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks). Note, once server side-sync is setup it takes a few minutes for your meetings to sync between your app and Teams.
 
 > [!NOTE]

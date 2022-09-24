@@ -30,7 +30,8 @@ Late binding allows you to work with custom tables (entities) or columns (attrib
 
 ## Late-bound
 
-Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to tables and columns (entities and attributes) using their `LogicalName` property values: 
+Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class where you need to refer to table rows and columns (entities and attributes) using their `LogicalName` property values:
+
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
 
@@ -132,7 +133,7 @@ Which programming style you choose to use is up to you. The following table prov
 |You can verify entity, attribute, and relationship names at compile time|No compile time verification of entity, attribute, and relationship names|
 |You must generate entity classes|You don't need to generate entity classes|
 |Better IntelliSense support|Less IntelliSense support|
-|Less, more readable code| More, less readable code|
+|Less code to write; code is more readable| More code to write; code is less readable|
 |Very slightly less performant|Very slightly more performant|
 
 ## Mix early and late bound

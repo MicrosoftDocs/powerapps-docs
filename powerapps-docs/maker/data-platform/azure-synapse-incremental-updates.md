@@ -2,7 +2,7 @@
 title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 04/27/2022
+ms.date: 06/20/2022
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,12 +31,12 @@ Microsoft Dataverse data can continuously change through create, update, and del
 
 When creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table is stored under a separate *DataverseTableName* folder.
 
-> [!NOTE]
+> [!IMPORTANT]
 > This is a preview feature.
 > 
 > Timestamp and table folders are created only when there is a data update during the user-specified time interval.
 > 
-> This feature can only be enabled while creating an Azure Synapse Link for Dataverse with your Azure Synapse Workspace.
+> This feature will apply to all selected tables within Azure Synapse Link for Dataverse and, by default, all the tables selected will be assigned append-only mode with incremental updates.
 
 ## Prerequisites
 
@@ -68,11 +68,13 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
 ## View incremental folder enabled table data at Azure Synapse Analytics workspace
 
 1. Select the desired Azure Synapse Link, and select **Go to Azure Synapse Analytics workspace**.
-1. Expand **Lake Databases** from the left pane, select **dataverse**-*environmentName*-*sessionid*, and then expand **Tables**.  
+1. Expand **Lake Databases** from the left pane, select **dataverse**-*environmentName*-*organizationUniqueName*, and then expand **Tables**.  
 
 For each synced table, all stored records are merged into one complete table for efficient consumption. For more information about how to read incremental update in Azure Synapse Analytics workspace, go to [Read the incremental updates of Dataverse data](azure-synapse-link-incremental.md) 
 
-> [!NOTE]
+> [!NOTE] 
+> Near real-time data view is not supported when the view incremental folder feature is enabled. To view real-time data use snapshot data instead. More information: [Access near real-time data and read-only snapshot data](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data)
+> 
 > The built-in SQL template is ready for a quick table view. Right-click the table, and then select **New SQL Script – Select TOP 100 rows**. A SQL script appears. Select **Run** to check the result.
 
 ### See also

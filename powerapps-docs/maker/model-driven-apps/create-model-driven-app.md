@@ -77,7 +77,7 @@ For more information, go to the following articles:
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
 
-## Add comments (preview)
+## Add comments
 
 Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
 

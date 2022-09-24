@@ -171,7 +171,7 @@ After the cleanup runs, users who were able to access related tables only becaus
 
 
 ### See also
-[Monitor and manage system jobs](/power-platform/admin/monitor-manage-system-jobs) <br />
+[Monitor system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) <br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
 [Create Many-to-many (N:N) table relationships](create-edit-nn-relationships.md)
 

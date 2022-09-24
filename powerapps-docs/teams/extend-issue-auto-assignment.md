@@ -16,7 +16,7 @@ contributors:
 
 # Add business logic for automated task assignment
 
-In the Issue reporting template Power App for Microsoft Teams, you can specify a specific user for a type of issue. This will make tasks for that issue type automatically assigned in Planner to that user.
+In the Issue reporting template Power Apps for Microsoft Teams, you can specify a specific user for a type of issue. This will make tasks for that issue type automatically assigned in Planner to that user.
 
 But what if you want additional logic to further automate issue assignment?
 

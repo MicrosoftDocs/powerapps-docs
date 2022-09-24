@@ -1,7 +1,7 @@
 ---
 title: "Email table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Email table/entity."
-ms.date: 05/23/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Activity that is delivered using email protocols.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/emails(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |BackgroundSendEmail|<xref href="Microsoft.Dynamics.CRM.BackgroundSendEmail?text=BackgroundSendEmail Action" />|<xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest>|
@@ -1347,6 +1347,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [DescriptionBlobId](#BKMK_DescriptionBlobId)
+- [DescriptionBlobId_Name](#BKMK_DescriptionBlobId_Name)
 - [EmailReminderStatus](#BKMK_EmailReminderStatus)
 - [EmailSender](#BKMK_EmailSender)
 - [EmailSenderObjectTypeCode](#BKMK_EmailSenderObjectTypeCode)
@@ -1609,6 +1611,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_DescriptionBlobId"></a> DescriptionBlobId
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description|File that contains description content.|
+|DisplayName|Description File Id|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_DescriptionBlobId_Name"></a> DescriptionBlobId_Name
+
+**Added by**: Email Description Blob Store Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|descriptionblobid_name|
+|MaxLength|200|
 |RequiredLevel|None|
 |Type|String|
 
@@ -2754,6 +2789,6 @@ See the [email_acceptingentity_systemuser](systemuser.md#BKMK_email_acceptingent
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.email?text=email EntityType" />

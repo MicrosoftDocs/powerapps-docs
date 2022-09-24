@@ -7,22 +7,21 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Query connections by a record (early bound)
-
-
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-record-early-bound -->
 
-This sample shows how to query connections for a particular record. It creates connections between a contact and two accounts, and then searches for the contact’s connections. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueryByRecord).
+This sample shows how to query connections for a particular record. It creates connections between a contact and two accounts, and then searches for the contact’s connections. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryByRecord).
 
 ## How to run this sample
 
@@ -41,7 +40,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. Defines some anonymous types to define the range of possible connection property values.
 3. The `ConnectionRole` creates a connection role.
-4. The `ConnectionRoleObjectType` creates a connection role object type code record for account table. 
+4. The `ConnectionRoleObjectType` creates a connection role object type code record for account table.
 5. Creates few account and contact records for use in the connection.
 
 ### Demonstrate
@@ -51,6 +50,5 @@ The `QueryExpression` retrieves all the connections associated with the contact 
 ### Clean up
 
 Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

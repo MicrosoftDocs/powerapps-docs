@@ -1,7 +1,7 @@
 ---
 title: "Account table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Account table/entity."
-ms.date: 05/23/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Business that represents a customer or potential customer. The company that is b
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/accounts(*accountid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/accounts<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -3875,6 +3875,6 @@ See the [team_accounts](team.md#BKMK_team_accounts) one-to-many relationship for
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.account?text=account EntityType" />

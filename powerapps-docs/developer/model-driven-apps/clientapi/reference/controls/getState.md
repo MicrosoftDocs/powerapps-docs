@@ -3,7 +3,6 @@ title: "getState (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getState method.
 ms.author: jdaly
 author: adrianorth
-manager: kvivek
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
@@ -19,8 +18,6 @@ contributors:
 # getState (Client API reference)
 
 Returns the state of the timer control.
-
-This method is only supported for [Unified Interface](/dynamics365/get-started/whats-new/customer-engagement/new-in-july-2017-update#unified-interface-framework-for-new-apps). 
 
 ## Control types supported
 

@@ -82,7 +82,7 @@ One of the advantages of Microsoft Fluent UI is that it provides a consistent an
 
 ### Configuring `eslint`
 
-The template used by `pac pcf init` installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` now requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
+The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` now requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
 
 ## Defining the dataset properties
 
@@ -339,7 +339,7 @@ initializeIcons(undefined, { disableWarnings: true });
 > [!NOTE]
 > The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
 
-Add the following class fields underneath `export class GridCanvas`:
+Add the following class fields underneath `export class CanvasGrid`:
 
 ```typescript
 notifyOutputChanged: () => void;
@@ -918,7 +918,7 @@ ReactDOM.render(
     }),
 ```
 
-At this point, you can no longer test using the test harness because it doesn't provide support for sorting and filtering. Later, you can deploy using `pac pcf push` and then add to a canvas app for testing. If you wish, you can skip to that step to see how the code component looks inside canvas apps.
+At this point, you can no longer test using the test harness because it doesn't provide support for sorting and filtering. Later, you can deploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) and then add to a canvas app for testing. If you wish, you can skip to that step to see how the code component looks inside canvas apps.
 
 ### Updating `FilteredRecordCount` output property
 
@@ -1193,7 +1193,7 @@ Now that you've implemented all the features, you must deploy the code component
    > [!div class="mx-imgBorder"] 
    > ![Add new publisher.](media/field-component-4.png "Add new publisher")
 
-   Equally, this could be your own publisher, provided you update the publisher prefix parameter in the call to `pac pcf push` below.
+   Equally, this could be your own publisher, provided you update the publisher prefix parameter in the call to [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
 
 2. Once you've saved the publisher, you're ready to authorize the CLI against your environment so that we can push the compiled code component. At the command-line, use:
@@ -1298,9 +1298,9 @@ You'll also need to enable the filters to add the `Access-Control-Allow-Origin` 
 
 You'll need to **Empty cache and hard refresh** on your browser session for the **AutoResponder** file to be picked up. Once loaded, you can simply refresh the browser since Fiddler will add a cache control header to the file to prevent it from being cached.
 
-Once you're happy with your changes, you can increment the patch version in the manifest, and then redeploy using `pac pcf push`.
+Once you're happy with your changes, you can increment the patch version in the manifest, and then redeploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push).
 
-So far, you've deployed a development build, which is not optimized and will run slower at runtime. You can choose to deploy an optimized build using `pac pcf push` by editing the `CanvasGrid.pcfproj`. Underneath the `OutputPath`, add the following:
+So far, you've deployed a development build, which is not optimized and will run slower at runtime. You can choose to deploy an optimized build using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) by editing the `CanvasGrid.pcfproj`. Underneath the `OutputPath`, add the following:
 
 ```xml
 <PcfBuildMode>production</PcfBuildMode>

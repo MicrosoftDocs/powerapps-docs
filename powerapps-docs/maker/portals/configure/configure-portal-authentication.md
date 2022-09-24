@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: overview
 
-ms.date: 5/18/2022
+ms.date: 06/08/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -19,6 +19,9 @@ contributors:
 # Overview of authentication in Power Apps portals
 
 In Power Apps portals, each authenticated portal user is associated with a [contact record in Microsoft Dataverse](../../../developer/data-platform/customer-entities-account-contact.md#contact-table). Portal users must be assigned to [web roles](create-web-roles.md) to gain permissions beyond unauthenticated users. To configure permissions for a web role, configure its [webpage access and website access control rules](webpage-access-control.md). Portals allows portal users to sign in with their choice of an external account based on [ASP.NET Identity](https://www.asp.net/identity). Though not recommended, portals also allows a local contact membership provider-based account for users to sign in.
+
+> [!NOTE] 
+> Power Pages also allows makers to set up authentication. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
 > Portal users must have a unique email address. If two or more contact records (including deactivated contact records) have the same email address, the contacts won't be able to authenticate on the portal.
@@ -65,7 +68,6 @@ With open registration enabled, users aren't required to provide an invitation c
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Authentication and user management in Power Apps portals](/learn/modules/authentication-user-management/)
-
+[Authentication and user management in Power Apps portals](/learn/modules/authentication-user-management/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
-title: "Write Telemetry to your Application Insights resource using ILogger (preview)(Microsoft Dataverse) | Microsoft Docs"
+title: "Write Telemetry to your Application Insights resource using ILogger (Microsoft Dataverse) | Microsoft Docs"
 description: "When you enable Application Insights for your organization, any plug-ins written using the ILogger Interface provided in the SDK will write telemetry to your Application Insights resource."
-ms.date: 04/03/2022
+ms.date: 07/14/2022
 author: divka78
 ms.author: dikamath
 manager: sunilg
@@ -18,12 +18,10 @@ contributors:
  - phecke
 ---
 
-# Write Telemetry to your Application Insights resource using ILogger (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Write Telemetry to your Application Insights resource using ILogger
 
 > [!IMPORTANT]
-> To use this capability you must first enable the Application Insights integration preview feature. More information: [Preview: Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
+> To use this capability you must first enable the Application Insights integration feature. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
 > There is presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
 
 When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the Organization Service SDK assemblies will write telemetry to your Application Insights resource.
@@ -333,7 +331,7 @@ Within Application Insights, when you switch your query to use `exceptions` rath
 
 :::image type="content" source="media/application-insights-ilogger-cause-error-exceptions.png" alt-text="Switch your query to use exceptions rather than traces.":::
 
-The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
+The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
 
 > [!NOTE]
 > The SandboxRoleInstance `client_Type` is `PC`. This is because the plug-in runs in an isolated sandbox as a client rather than on the server.

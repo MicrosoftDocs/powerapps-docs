@@ -3,7 +3,6 @@ title: "Create your first component using Power Apps Component Framework in Micr
 description: "Learn how to implement code components using Power Apps component framework"
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -63,7 +62,7 @@ To create a new project:
    
 1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
    
-1. At the terminal prompt, create a new component project by passing basic parameters using the command.
+1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
     pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
@@ -344,7 +343,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
 1. Create a new folder **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
 
-2. Create a new solution project in the **LinearInputControl** folder using the following command:
+2. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
 
    ```CLI
      pac solution init --publisher-name Samples --publisher-prefix samples 
@@ -362,7 +361,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 
     > [!NOTE]
     >
-    > The path provided here is relate to the current **solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
+    > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
 
 4. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
 
@@ -412,7 +411,7 @@ To add the code component to a portal, follow the steps in the article [Use code
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
-[Microsoft Power Platform Build Tools](/powerapps/developer/data-platform/build-tools-overview)<br/>
+[Overview of tools and apps used with ALM](/power-platform/alm/tools-apps-used-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)<br/>
 [Debug code components](debugging-custom-controls.md)

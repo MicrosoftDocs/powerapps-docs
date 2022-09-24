@@ -7,7 +7,7 @@ ms.custom:
   - canvas
   - intro-internal
 ms.reviewer: tapanm
-ms.date: 04/20/2022
+ms.date: 08/25/2022
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -69,18 +69,25 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 ## Add to Teams using the web player
 
-You can also add canvas apps to Teams using the web player. There are two ways to run a canvas app using the web player.
+You can also add canvas apps to Teams using the web player.
 
 1. Go to [Power Apps](https://make.powerapps.com) > **Apps** > select the app to launch in a new browser tab.
+
 1. [Edit the app](../maker/canvas-apps/edit-app.md) > select ![Play the app.](media/embed-teams-app/play.png) or press **F5** to play the app.
 
-After the app is open using the web player, choose the **Add to Teams** button from the top-right side of the screen.
+1. After the app is open using the web player, choose the **Add to Teams** button from the top-right side of the screen.
 
-:::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams using web player.":::
+    :::image type="content" source="media/embed-teams-app/add-to-teams-web-player.png" alt-text="Add app to Teams using web player.":::
 
-When prompted, select **Open Microsoft Teams** to open Teams app, or select **Cancel** followed by **Use the web app instead** to open Teams web. And then, select **Add** to add the app to Teams.
+1. When prompted, select **Cancel**.
 
-You can also choose to add the app to a specific team using **Add to team**, or a specific chat using **Add to chat**.
+1. Select **Launch it now** to open the Teams app. Alternatively, you can also choose **Use the web app instead** to open the app in Teams web.
+
+> [!NOTE]
+> - To add canvas apps to Teams using the web player:
+>     - Your organization must have **Allow interaction with custom apps** turned on. More information: [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings)
+>     - Your organization must allow **Shared Power Apps**. More information: [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
+> - You can only add apps to Teams that belong to the same tenant as your Teams account. Otherwise, you'll see an error "App was not found in tenant".
 
 ## Publish the app to the Teams catalog
 

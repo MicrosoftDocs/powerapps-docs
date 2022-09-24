@@ -7,18 +7,17 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Create, retrieve, update, and delete a recurring appointment
-
-
 
 This sample shows how to create, retrieve, update, and delete a recurring appointment series. This sample uses the following common methods:
 
@@ -27,7 +26,7 @@ This sample shows how to create, retrieve, update, and delete a recurring appoin
 - [IOrganizationService.Update](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update)
 - [IOrganizationService.Delete](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.delete)
 
-You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDRecurringAppointment).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/CRUDRecurringAppointment).
 
 ## How to run this sample
 
@@ -47,17 +46,13 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. Define anonymous types to define the possible recurrence pattern values, possible values for days of the week and possible values for the recurrence rule pattern end type. 
+1. Define anonymous types to define the possible recurrence pattern values, possible values for days of the week and possible values for the recurrence rule pattern end type.
 1. The `RecurringAppointmentMaster` method creates a recurring appointment.
 1. The `QueryExpression` method retrieves the newly created recurring appointment.
 1. The `Update` method updates the subject, number of occurrences to 5, appointment interval to 2 for the retrieved recurring appointment.
 
-
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -52,8 +52,8 @@ Dataverse allows you to define, save, and execute two types of queries as listed
 
 |Query type|Description|
 |----------------|-----------------|
-|**Saved Query**|System-defined views for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType />. More information: [Customize table views](../../model-driven-apps/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType />. More information: [UserQuery (saved view) table](../saved-queries.md)|
+|**Saved Query**|System-defined views for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>. More information: [Customize table views](../../model-driven-apps/customize-entity-views.md)| 
+|**User Query**|Advanced Find searches saved by users for a table (entity). These views are stored in the <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType>. More information: [UserQuery (saved view) table](../saved-queries.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
@@ -247,15 +247,15 @@ OData-Version: 4.0
 
 ## See also
 
-[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
+[Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />

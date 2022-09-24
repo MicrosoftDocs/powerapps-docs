@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/12/2022
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -20,7 +20,8 @@ contributors:
 A custom domain can enhance your brand and help your customers more easily find your support resources. Once you provision your portal and acquire your domain name, you'll need an SSL certificate to set up a custom host name. After the SSL certificate is purchased, you can use a wizard to link your portal to a custom domain.  Only one custom domain name can be added to a portal.
 
 > [!IMPORTANT]
-> You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
+> - You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
+> - If you are evaluating the preview [Content Delivery Network (CDN)](../configure/configure-cdn.md) functionality, note that custom domain names are currently not supported using CDN.
 
 To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
@@ -71,7 +72,6 @@ If you want to change your existing custom domain name, you must do the followin
     
 ### See also
 
-[Microsoft Learn: Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
-
+[Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

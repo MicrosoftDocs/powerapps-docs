@@ -1,10 +1,10 @@
 ---
-title: Configure an image column on portals (preview)
+title: Configure an image column on portals 
 description: Learn how to configure an image column on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2022
+ms.date: 07/11/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -13,26 +13,9 @@ contributors:
     - nickdoelman
 ---
 
-# Configure an image column on portals (preview)
-
-[This topic is pre-release documentation and is subject to change.]
+# Configure an image column on portals 
 
 An image column stores an image file in a column in a Dataverse table. Add an image column to a form to upload, view, modify, and delete images. The form shows a thumbnail of the image if one is available.
-
-> [!NOTE]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
-## Prerequisites
-
-- **If you configure your site using the Portal Management app:** While the feature is in preview, you'll need to set the value of the site setting **Control/EnableImagePreview** to **true** to add image controls to a form.
-
-    :::image type="content" source="media/image-column/upload-image-preview.png" alt-text="Screenshot of the Control/EnableImagePreview site setting.":::
-
-    >[!IMPORTANT]
-    > This site setting is only required during the preview period.
-
-- **If you use [Liquid code](#liquid) or the [Web API](#web-api):** There's nothing more you need to do to add image controls to a form.
 
 ## Image URL
 
@@ -84,15 +67,12 @@ where:
 
 ### Example: Retrieve a default contact image
 
-> [!NOTE]
-> Make sure you have [set the appropriate permissions](#create-a-table-permission) on the contact table to read the record.
-
 ```xml
     {% fetchxml contacts %}
         <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
             <entity name="contact">
-                <attribute name="fullname">
-                <attribute name="entityimage">
+                <attribute name="fullname"/>
+                <attribute name="entityimage"/>
             </entity>
         </fetch>
     {% endfetchxml %}
@@ -190,42 +170,3 @@ First, you must create a site setting to allow authenticated users to upload a p
 
     :::image type="content" source="media/image-column/add-setting-showimage.png" alt-text="Screenshot of the Profile/ShowImage site setting.":::
 
-While the feature is in preview, also add or update the following site settings:
-
-- Set **Webapi/contact/enabled** to **true**.
-
-- Set **Webapi/contact/fields** to **entityimage**.
-
-:::image type="content" source="media/image-column/add-settings-webapi.png" alt-text="Screenshot of the webapi site settings.":::
-
-#### Create a table permission
-
-Next, you must create a table permission to allow authenticated users to upload a profile picture:
-
-1. In the left pane, under **Security**, select **Table Permissions**, and then select **New**.
-
-    :::image type="content" source="media/image-column/add-table-permission.png" alt-text="Screenshot of the Active Table Permissions view, with New highlighted.":::
-
-1. Set the permission details as follows:
-
-    - Enter a meaningful name for the permission. In our example, we've entered "Contact Profile Update Permission."
-
-    - In the **Table Name** list, select **Contact (contact)**.
-
-    - In **Website**, search for and select the name of your portal.
-
-    - In the **Access Type** list, select **Self**.
-
-    - Under **Privileges**, select **Read**, **Write**, **Append**, and **Append To**.
-
-    :::image type="content" source="media/image-column/add-table-permission-details.png" alt-text="Screenshot of the details of a new table permission called Contact Profile Update Permission.":::
-
-1. Select **Save & Close**.
-
-1. In the **Active Table Permissions** view, select **Contact Profile Update Permission** (or whatever you named your new permission).
-
-1. In the **Web Roles** section, select **Add Existing Web Role**.
-
-1. Search for and select **Authenticated Users**, and then select **Add**.
-
-    :::image type="content" source="media/image-column/add-auth-users-web-role.png" alt-text="Screenshot that shows Authenticated Users selected as a web role.":::
