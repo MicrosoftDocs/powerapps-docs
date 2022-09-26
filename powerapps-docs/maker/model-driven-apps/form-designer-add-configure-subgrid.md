@@ -2,7 +2,7 @@
 title: "Add and configure a subgrid component on a form | MicrosoftDocs"
 description: Learn how to add a subgrid on a model-driven app form
 ms.custom: ""
-ms.date: 05/03/2022
+ms.date: 09/26/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -68,7 +68,7 @@ These are the properties available to configure when using a subgrid component o
 | **Display options** | **Show chart only**  | Rather than a list of records a chart is displayed.  |
 | **Display options** | **Allow users to change chart**  | When **Show chart only** is selected, app users can change the chart displayed in the subgrid.  |
 | **Display options** | **Maximum number of rows**  | Determines the maximum number of records to display in the subgrid. The minimum number of rows displayed is 2 and the maximum is 250.  |
-| **Display options** | **Use available space** | *[Not supported in Unified Interface]*<br/>Determines whether the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Maximum number of rows**, people can navigate to additional pages to view the records. If **Use available space** is not chosen the form will provide space for the number of records defined by **Maximum number of rows** and people can navigate to additional pages to view any additional records.  |
+| **Display options** | **Use available space** | Note: This property only works with the legacy web client. It has no effect on Unified Interface. <br/><br/>Determines whether the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Maximum number of rows**, people can navigate to additional pages to view the records. If **Use available space** is not chosen the form will provide space for the number of records defined by **Maximum number of rows** and people can navigate to additional pages to view any additional records.  |
 | **Formatting**  | **Component width**  | When the section containing the subgrid has more than one column, you can set the column to occupy up to the number of columns that the section has.  |
 
 ## See also
