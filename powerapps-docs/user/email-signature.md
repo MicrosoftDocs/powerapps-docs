@@ -80,7 +80,7 @@ While you can create multiple email signatures depending on your needs, only one
 
 ## Add a default signature template to a queue
 
-Specify a default signature template for a queue to ensure that emails sent from the queue by different agents have consistent email signatures. When you send an email with the queue as the sender or reply to messages received by the queue, the default signature is added to the body of email. If you don't specify a default signature template for a queue, the application defaults the signature associated with the owner of the queue.
+Add a default signature template for a queue to ensure that emails sent with the queue as the sender have consistent email signatures. When you send an email with the queue as the sender or reply to messages received by the queue, the default signature is added to the body of email. If you don't specify a default signature template for a queue, the application defaults the signature associated with the owner of the queue.
 
 More information, see: [Add an email signature](#add-an-email-signature)
 
@@ -99,7 +99,7 @@ You can set up a default email signature for a queue as follows:
     1. Go to **Service Management**, and then select **Queues** in **Case Settings**.
   
 2. To create a queue, select **New**. To edit a queue, select the queue in the list of queues, and then select **Edit** on the command bar.  
-1. In the **EMAIL SETTINGS** section, specify the **Email Signature**.
+1. In the **EMAIL SETTINGS** section, specify the signature template in  **Email Signature**.
 
  ![Add a default signature template.](media\email-sig-temp-queue.png "Add a default signature template to a queue")
 
