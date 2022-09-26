@@ -166,7 +166,7 @@ The ten relationships limit is transitive, meaning if table B has N relationship
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
    
      > [!NOTE]
-     > You can only have up to ten related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
+     > You can only have up to 15 related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)
