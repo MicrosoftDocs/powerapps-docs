@@ -54,22 +54,22 @@ These are the properties available to configure when using a subgrid component o
 |---------|---------|---------|
 | **Display options** | **Label** | The localizable label for the subgrid visible to users. <br /><br />This property is required.|
 | **Display options** |  **Name** |  The unique name for the subgrid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /><br />This property is required. |
-| **Display options**   | **Hide label**  | The label can be hidden on the form.  |
+| **Display options** | **Hide label**  | The label can be hidden on the form.  |
 | **Display options** | **Hide on phone** |  The subgrid can be hidden to render a condensed version of the form on phone screens. |
 | **Display options** | **Show related records** |  When selected, the subgrid displays only records related to the current record that is displayed on the form. <br /><br />The **Table** drop-down list is also filtered to only list tables that are related to the current table. |
 | **Display options** | **Table** |  The table whose records you want to display in the subgrid. <br /><br />When **Show related records** is selected, the list of tables is filtered to show only tables that are related to the current table. In addition to the table name, the name of the lookup column is also displayed in parentheses. |
 | **Display options** | **Default view** |  The view of the table selected in the **Table** property that will be used to get and display the list of records in the subgrid. |
-| **Display options**  | **Team template**  | Note: This option is only available with the user table when the **Default view** is **Associated Record Team Members**. When available, sets the team template to use for the subgrid. More information: [Create a team template to control access](/power-platform/admin/create-team-template-add-entity-form) |
+| **Display options** | **Team template**  | Note: This option is only available with the user table when the **Default view** is **Associated Record Team Members**. When available, sets the team template to use for the subgrid. More information: [Create a team template to control access](/power-platform/admin/create-team-template-add-entity-form) |
 | **Display options** | **Allow users to change view** |  When selected, app users can change from the **Default view** to another view of the table selected in the **Table** property. |
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
-|**Display options**   | **Hide search box**  | When selected, the **Search** box won't appear on the upper right of the subgrid.  |
+| **Display options** | **Hide search box**  | When selected, the **Search** box won't appear on the upper right of the subgrid.  |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is cleared. |
-| **Display options**  | **Default chart**  | Select which chart to show if **Show chart only** is selected.  |
-|**Display options**   | **Show chart only**  | Rather than a list of records a chart is displayed.  |
-|**Display options**  | **Allow users to change chart**  | When **Show chart only** is selected, app users can change the chart displayed in the subgrid.  |
-| **Display options**  | **Maximum number of rows**  | Determines the maximum number of records to display in the subgrid. The minimum number of rows displayed is 2 and the maximum is 250.  |
-|**Display options**   | **Use available space**  | Determines whether the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Maximum number of rows**, people can navigate to additional pages to view the records. If **Use available space** is not chosen the form will provide space for the number of records defined by **Maximum number of rows** and people can navigate to additional pages to view any additional records.  |
-|**Formatting**   | **Component width**  | When the section containing the subgrid has more than one column, you can set the column to occupy up to the number of columns that the section has.  |
+| **Display options** | **Default chart**  | Select which chart to show if **Show chart only** is selected.  |
+| **Display options** | **Show chart only**  | Rather than a list of records a chart is displayed.  |
+| **Display options** | **Allow users to change chart**  | When **Show chart only** is selected, app users can change the chart displayed in the subgrid.  |
+| **Display options** | **Maximum number of rows**  | Determines the maximum number of records to display in the subgrid. The minimum number of rows displayed is 2 and the maximum is 250.  |
+| **Display options** | **Use available space** | *[Not supported in Unified Interface]*<br/>Determines whether the form will allow space for two records and will expand the space as the number of records increases. If the number exceeds the **Maximum number of rows**, people can navigate to additional pages to view the records. If **Use available space** is not chosen the form will provide space for the number of records defined by **Maximum number of rows** and people can navigate to additional pages to view any additional records.  |
+| **Formatting**  | **Component width**  | When the section containing the subgrid has more than one column, you can set the column to occupy up to the number of columns that the section has.  |
 
 ## See also
 
