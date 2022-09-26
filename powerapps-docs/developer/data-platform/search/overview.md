@@ -154,7 +154,28 @@ You can detect whether the search service is enabled by checking the settings in
 
 The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column tells you whether search is enabled for the organization.
 
-You can test this using the following Web API query:
+
+#### [SDK for .NET](#tab/sdk)
+
+This function will return the `IsExternalSearchIndexEnabled` property value for the organization.
+
+```csharp
+static bool IsExternalSearchIndexEnabled(IOrganizationService service) {
+
+    QueryExpression query = new QueryExpression("organization") { 
+        ColumnSet = new ColumnSet("isexternalsearchindexenabled")
+    };
+
+    EntityCollection organizations = service.RetrieveMultiple(query);
+    return (bool)organizations.Entities.FirstOrDefault()["isexternalsearchindexenabled"];
+}
+```
+
+More information: [Build queries with QueryExpression](../org-service/build-queries-with-queryexpression.md)
+
+#### [Web API](#tab/webapi)
+
+This Web API query will return the `IsExternalSearchIndexEnabled` property value for the organization.
 
 **Request**
 
@@ -185,6 +206,13 @@ OData-Version: 4.0
 }
 ```
 
+More information: [Query data using the Web API](../webapi/query-data-web-api.md)
+
+#### [Search 2.0 endpoint](#tab/search)
+
+You must use the SDK for .NET or Web API to check this setting.
+
+---
 
 ## Enable tables and columns for search
 
@@ -196,7 +224,47 @@ Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanE
 
 To enable a table for Dataverse Search, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex?text=EntityMetadata.SyncToExternalSearchIndex> boolean property to true.
 
-You can check the values for a table with the Web API using the table logical name. Replace `account` in the query below with the logical name of the table you want to check.
+You can check the values for a table with the Web API using the table logical name. Replace `account` in the queries below with the logical name of the table you want to check.
+
+
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+static void RetrieveSearchSettingsForTable(IOrganizationService service, string logicalName = "account") {
+
+    RetrieveMetadataChangesRequest request = new RetrieveMetadataChangesRequest() { 
+            Query = new EntityQueryExpression() { 
+                Properties = new MetadataPropertiesExpression(
+                    "CanEnableSyncToExternalSearchIndex", 
+                    "SyncToExternalSearchIndex")
+            }
+    };
+    request.Query.Criteria.Conditions.Add(
+        new MetadataConditionExpression(
+            propertyName: "LogicalName", 
+            conditionOperator: MetadataConditionOperator.Equals, 
+            value: logicalName));
+
+    var response = (RetrieveMetadataChangesResponse)service.Execute(request);
+
+    EntityMetadata table = response.EntityMetadata.FirstOrDefault();
+
+    Console.WriteLine($"CanEnableSyncToExternalSearchIndex: {table.CanEnableSyncToExternalSearchIndex.Value}");
+    Console.WriteLine($"SyncToExternalSearchIndex: {table.SyncToExternalSearchIndex}");
+}
+```
+
+**Output**
+
+```
+CanEnableSyncToExternalSearchIndex: True
+SyncToExternalSearchIndex: True
+```
+
+More information: [Retrieve and detect changes to table definitions](../org-service/metadata-retrieve-detect-changes.md)
+
+
+#### [Web API](#tab/webapi)
 
 **Request**
 
@@ -226,6 +294,14 @@ OData-Version: 4.0
    }
 }
 ```
+
+More information: [Query table definitions using the Web API](../webapi/query-metadata-web-api.md)
+
+#### [Search 2.0 endpoint](#tab/search)
+
+You must use the SDK for .NET or Web API to check this setting.
+
+---
 
 More information:
 
