@@ -55,7 +55,7 @@ Legend
 2. **Expand**. The **Expand** ![Expand icon.](media\email-expand-icon.png "xpand email") icon allows you to compose your email in a full-screen view and minimize when done.
 3. **Rich text editor**. This tool bar helps you  format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default.<BR>
   For more information, see [Use the rich text editor toolbar in email](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). 
-4. **User Personalization**. The [Set default.](media\personalization.png "personalization icon") icon allows you to set the default font and font size for your emails. Once set, the **Font** and **Font Size** display these values by default. 
+4. **User Personalization**. The ![Set default.](media\personalization.png "personalization icon") icon allows you to set the default font and font size for your emails. Once set, the **Font** and **Font Size** display these values by default. 
 1. **Body**. The body is where you compose and/or reply to an email.
 1. **Insert Signature**. Use this command to personalize your message.  
 1. **Insert Template**. This is used to apply an email template. <BR>
