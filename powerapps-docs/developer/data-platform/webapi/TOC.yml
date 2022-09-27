@@ -47,8 +47,10 @@
       href: query-data-web-api.md
     - name: Retrieve related rows with query
       href: retrieve-related-entities-query.md
-  - name: Retrieve and execute predefined queries
-    href: retrieve-and-execute-predefined-queries.md
+    - name: Use FetchXml with Web API
+      href: use-fetchxml-web-api.md
+    - name: Retrieve and execute predefined queries
+      href: retrieve-and-execute-predefined-queries.md
   - name: Create a table row
     href: create-entity-web-api.md
   - name: Retrieve a table row
