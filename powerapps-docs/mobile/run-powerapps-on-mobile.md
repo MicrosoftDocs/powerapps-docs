@@ -123,8 +123,7 @@ You can only add canvas apps to your list of favorite apps.
 
 ## Sort apps
 
-You can sort both canvas apps and model-driven apps.
-You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
+You can sort both canvas apps and model-driven apps. You can sort apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
 
 ![Sort menu.](media/sort-apps-iphone.png "Sort menu")
 
