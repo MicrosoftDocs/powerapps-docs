@@ -39,9 +39,6 @@
             - name: Web API
               tocHref: /power-apps/developer/data-platform/webapi/
               topicHref: /power-apps/developer/data-platform/webapi/index
-            - name: Search
-              tocHref: /power-apps/developer/data-platform/search/
-              topicHref: /power-apps/developer/data-platform/search/index
       - name: Create apps
         tocHref: /power-apps/developer/model-driven-apps/
         topicHref: /power-apps/maker/index
