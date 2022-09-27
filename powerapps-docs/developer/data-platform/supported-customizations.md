@@ -1,5 +1,5 @@
 ---
-title: "Supported customizations for Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Supported customizations for Microsoft Dataverse" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how you can customize Microsoft Dataverse using available tools." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
 ms.date: 09/02/2022
@@ -24,7 +24,7 @@ You can customize Microsoft Dataverse by using tools that are available in Power
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Dataverse. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
-Topics covered in technical articles published on Microsoft sites such as Microsoft Docs are supported, but might not be upgradable.
+Topics covered in technical articles published on Microsoft sites such as Microsoft Learn are supported, but might not be upgradable.
 
 ## Customizations using Power Apps
 
