@@ -111,7 +111,7 @@ The unescaped response contains JSON using the following properties.
 |Name|Type|Description|
 |---------|---------|---------|
 |`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
-|`Value`|[`SuggestResult`](#queryresult)`[]`|A collection of matching records.|
+|`Value`|[`SuggestResult`](#suggestresult)`[]`|A collection of matching records.|
 |`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
 
 ### Types
