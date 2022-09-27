@@ -26,7 +26,7 @@ In addition to a search term, the results returned can be influenced by passing 
 
 |Name  |Type  |Description  |More information|
 |---------|---------|---------|---------|
-|`search`|string|**Required** Search Term|[`search` parameter](#search-parameter)|
+|`search`|string|**Required**. Search Term|[`search` parameter](#search-parameter)|
 |`entities`|string|The default scope is searching across all search–configured entities and fields.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|

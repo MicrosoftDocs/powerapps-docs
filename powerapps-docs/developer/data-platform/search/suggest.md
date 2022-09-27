@@ -23,7 +23,7 @@ In addition to a search term, the results returned can be influenced by passing 
 
 |Name  |Type  |Description  |More information|
 |---------|---------|---------|---------|
-|`search`|string|**Required** The text to search with. |[search parameter](#search-parameter)|
+|`search`|string|**Required**. The text to search with. |[search parameter](#search-parameter)|
 |`entities`|string|The default is searching across all search–configured entities.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Use fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
