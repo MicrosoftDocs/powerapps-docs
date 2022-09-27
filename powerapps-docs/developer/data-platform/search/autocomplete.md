@@ -131,9 +131,11 @@ TODO: Use include if this is the same for all types
 
 ## Examples
 
-### Example: TODO
+The following examples show how to use the autocomplete operation.
 
-This is a template for an example
+### Example: TODO specific scenario
+
+This is a template for an example about how to achieve a specific scenario.
 
 
 #### [SDK for .NET](#tab/sdk)
@@ -153,7 +155,7 @@ static void SDKExampleMethod(IOrganizationService service){
       }
    };
 
-   var searchAutoCompleteResponse = service.Execute(autocompleteRequest);
+   OrganizationResponse searchAutoCompleteResponse = service.Execute(autocompleteRequest);
    string responseString = searchAutoCompleteResponse.Results["response"];
    
    //TODO: Parse the string to get the objects.

@@ -32,8 +32,12 @@ static void CheckSearchStatistics(IOrganizationService service)
 {
    try
    {
-      var searchstatisticsResponse = (searchstatisticsResponse)service.Execute(new searchstatisticsRequest());
-      Console.WriteLine(searchstatisticsResponse.response);
+
+      OrganizationResponse searchstatisticsResponse = service.Execute(new OrganizationRequest("searchstatistics"));
+  
+      string responseString = searchstatisticsResponse.Results["response"];
+
+      Console.WriteLine(responseString);
 
    }
    catch (FaultException<OrganizationServiceFault> osf)

@@ -26,10 +26,12 @@ Use search status to know:
 ```csharp
 static void CheckSearchStatus(IOrganizationService service) {
    try
-   {
-      var status = (searchstatusResponse)service.Execute(new searchstatusRequest());
+   {     
+      OrganizationResponse searchStatusResponse = (searchstatusResponse)service.Execute(new OrganizationRequest("searchstatus"));
+  
+      string responseString = searchStatusResponse.Results["response"];
 
-      Console.WriteLine(status.response);
+      Console.WriteLine(responseString);
       //Expect that this value is an escaped string containing JSON that must be parsed
    }
    catch (FaultException<OrganizationServiceFault> osf)
@@ -127,14 +129,11 @@ When unescaped, the JSON of the `response` property looks like this:
           "industrycode": { "indexfieldname": "a43" },
           "name": { "indexfieldname": "d_0" },
           "owningbusinessunit": { "indexfieldname": "c_0" },
-          "crdcb_testrollupfield": { "indexfieldname": "a45" },
           "ownerid": { "indexfieldname": "b_0" },
           "accountnumber": { "indexfieldname": "a46" },
           "telephone2": { "indexfieldname": "a47" },
           "versionnumber": { "indexfieldname": "e_0" },
-          "accountid": { "indexfieldname": "a_0" },
-          "crdcb_throwawaydate": { "indexfieldname": "a48" },
-          "crdcb_budget": { "indexfieldname": "a8f" }
+          "accountid": { "indexfieldname": "a_0" }
         }
       },
 
