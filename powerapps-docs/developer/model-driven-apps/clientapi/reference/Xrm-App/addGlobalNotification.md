@@ -137,7 +137,7 @@ var myAction =
 {
   actionLabel: "Learn more", 
   eventHandler: function () {
-        Xrm.Navigation.openUrl("https://docs.microsoft.com/powerapps/");
+        Xrm.Navigation.openUrl("https://learn.microsoft.com/powerapps/");
         // perform other operations as required on clicking
     }
 }

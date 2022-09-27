@@ -11,10 +11,25 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/controls/getoutput.md",
+      "redirect_url": "getoutputs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/glossary.md",
+      "redirect_url": "overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/aad-group-team.md",
+      "redirect_url": "../aad-group-team",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/walkthrough-registering-configuring-simplespa-application-adal-js.md",
       "redirect_url": "quick-start-register-configure-simplespa-application-msal-js",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/data-platform/azure-synapse-link-copy-sql.md",
       "redirect_url": "azure-synapse-link-pipelines",

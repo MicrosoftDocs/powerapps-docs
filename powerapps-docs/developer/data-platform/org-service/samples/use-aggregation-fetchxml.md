@@ -19,7 +19,7 @@ contributors:
 
 # Sample: Use aggregation in FetchXML
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
 
 This sample shows how to retrieve aggregate record data using FetchXML. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseAggregationInFetchXML).
 

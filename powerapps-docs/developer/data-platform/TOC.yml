@@ -24,6 +24,8 @@
       href: security-access-coding.md
     - name: Security roles and templates
       href: security-roles.md
+    - name: Active Directory group teams
+      href: aad-group-team.md
 - name: Work with data using code
   href: work-with-data.md
   items:

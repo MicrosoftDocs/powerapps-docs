@@ -59,7 +59,7 @@
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
         href: ../user/find-admin.md
-      - name: Set personal option
+      - name: Set personal options
         href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
@@ -221,6 +221,8 @@
     href: ./canvas-apps/intro-maker-portal.md
   - name: Find it with unified search
     href: search.md
+  - name: Get help from a virtual agent
+    href: ./common/virtual-agent.md 
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -1397,7 +1399,9 @@
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: Add a map on a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md               
+            href: ./model-driven-apps/configure-bing-maps-legacy.md
+          - name: Edit the related tab on a form
+            href: ./model-driven-apps/use-the-form-editor-legacy.md           
         - name: Design effective forms
           href: 
           items:
@@ -1522,8 +1526,6 @@
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
-        - name: Change navigation within a form
-          href: ./model-driven-apps/use-the-form-editor-legacy.md
           items:
           - name: Add form navigation for related tables
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
@@ -1571,6 +1573,12 @@
         href: ./model-driven-apps/add-reporting-to-app.md      
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md
+      - name: Power BI content management in Power Apps solutions (preview)
+        href: ./model-driven-apps/power-bi-content-management-power-apps-solutions.md
+      - name: Create Power BI report and dataset components (preview)
+        href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
+      - name: Customize and manage Power BI components (preview)
+        href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Use Excel and Word templates
@@ -2225,6 +2233,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2209.x
+                href: ./portals/versions/package-version-9.3.2209.md   
               - name: Package 9.3.2204.x
                 href: ./portals/versions/package-version-9.3.2204.md             
               - name: Package 9.3.2201.x
@@ -2859,7 +2869,40 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-
+- name: Cards (Preview)
+  items:
+    - name: What are cards?
+      href: ../cards/overview.md
+    - name: Design cards
+      items: 
+        - name: Card Designer overview
+          href: ../cards/make-a-card/designer-overview.md
+        - name: Add controls
+          href: ../cards/make-a-card/ui-elements/controls.md
+        - name: Add buttons
+          href: ../cards/make-a-card/ui-elements/use-buttons.md
+        - name: Add and configure screens
+          href: ../cards/make-a-card/screens/use-screens.md
+    - name: Connect to data and services
+      items:
+        - name: Add variables
+          href: ../cards/make-a-card/variables/variables.md
+        - name: Access connectors
+          href: ../cards/make-a-card/connectors/connector-intro.md
+    - name: Add business logic with Power Fx
+      href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
+    - name: Test and debug cards
+      href: ../cards/make-a-card/testing/debugging-cards.md
+    - name: Send a card in Teams
+      href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Tutorials
+      items:
+        - name: Create a simple card
+          href: ../cards/tutorials/hello-world-card.md
+        - name: Create a shopping list card
+          href: ../cards/tutorials/simple-shopping-list.md
+        - name: Create a card with data from Dataverse
+          href: ../cards/tutorials/dataverse-card.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions

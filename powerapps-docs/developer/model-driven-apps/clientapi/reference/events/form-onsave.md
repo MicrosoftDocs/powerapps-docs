@@ -4,9 +4,9 @@ description: Includes description and supported parameters for the form OnSave e
 ms.author: jdaly
 author: adrianorth
 manager: kvivek
-ms.date: 06/24/2022
+ms.date: 09/15/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -27,7 +27,9 @@ The `OnSave` event occurs when:
 - Code executes the [formContext.data.save](../formContext-data/save.md) method and there is unsaved data in the form.
 - Code executes the [formContext.data.refresh](../formContext-data/refresh.md) method passing a true value as the first parameter and there is unsaved data in the form.
 
-To determine which button was clicked to perform the save, use the getSaveMode method.
+[!INCLUDE [cc_book-instead-of-save](../../../../../includes/cc_book-instead-of-save.md)]
+
+To determine which button was clicked to perform the save, use the [getSaveMode method](../save-event-arguments/getSaveMode.md) method.
 
 You can cancel the save action by using the preventDefault method within the event arguments object. The preventDefault method is accessible by using the getEventArgs method that is part of the execution context. Execution context is automatically passed to the form event handler.
 

@@ -2,7 +2,7 @@
 title: "Use OAuth authentication with Microsoft Dataverse (Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate applications with Microsoft Dataverse using OAuth." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: has-adal-ref
-ms.date: 07/28/2022
+ms.date: 09/12/2022
 ms.reviewer: pehecke
 ms.topic: article
 author: ritesp # GitHub ID
@@ -141,45 +141,58 @@ The following is an example of a custom class derived from <xref:System.Net.Http
 class OAuthMessageHandler : DelegatingHandler
 {
     private AuthenticationHeaderValue authHeader;
-
     public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
             HttpMessageHandler innerHandler)
         : base(innerHandler)
     {
-
         string apiVersion = "9.2";
         string webApiUrl = $"{serviceUrl}/api/data/v{apiVersion}/";
-
-        //Build Microsoft.Identity.Client (MSAL) OAuth Token Request
         var authBuilder = PublicClientApplicationBuilder.Create(clientId)
                         .WithAuthority(AadAuthorityAudience.AzureAdMultipleOrgs)
                         .WithRedirectUri(redirectUrl)
                         .Build();
         var scope = serviceUrl + "//.default";
         string[] scopes = { scope };
-
-        AuthenticationResult authBuilderResult;
-        if (username != string.Empty && password != string.Empty)
+        // First try to get an authentication token from the cache using a hint.
+        AuthenticationResult authBuilderResult=null;
+        try
         {
-            //Make silent Microsoft.Identity.Client (MSAL) OAuth Token Request
-            var securePassword = new SecureString();
-            foreach (char ch in password) securePassword.AppendChar(ch);
-            authBuilderResult = authBuilder.AcquireTokenByUsernamePassword(scopes, username, securePassword)
-                        .ExecuteAsync().Result;
+            authBuilderResult = authBuilder.AcquireTokenSilent(scopes, username)
+               .ExecuteAsync().Result;
         }
-        else
+        catch (Exception ex)
         {
-            //Popup authentication dialog box to get token
-            authBuilderResult = authBuilder.AcquireTokenInteractive(scopes)
-                        .ExecuteAsync().Result;
+            System.Diagnostics.Debug.WriteLine(
+                $"Error acquiring auth token from cache:{System.Environment.NewLine}{ex}");
+            // Token cache request failed, so request a new token.
+            try
+            {
+                if (username != string.Empty && password != string.Empty)
+                {
+                    // Request a token based on username/password credentials.
+                    authBuilderResult = authBuilder.AcquireTokenByUsernamePassword(scopes, username, password)
+                                .ExecuteAsync().Result;
+                }
+                else
+                {
+                    // Prompt the user for credentials and get the token.
+                    authBuilderResult = authBuilder.AcquireTokenInteractive(scopes)
+                                .ExecuteAsync().Result;
+                }
+            }
+            catch (Exception msalex)
+            {
+                System.Diagnostics.Debug.WriteLine(
+                    $"Error acquiring auth token with user credentials:{System.Environment.NewLine}{msalex}");
+                throw;
+            }
         }
-
         //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
         authHeader = new AuthenticationHeaderValue("Bearer", authBuilderResult.AccessToken);
     }
 
     protected override Task<HttpResponseMessage> SendAsync(
-                HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+              HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
     {
         request.Headers.Authorization = authHeader;
         return base.SendAsync(request, cancellationToken);
