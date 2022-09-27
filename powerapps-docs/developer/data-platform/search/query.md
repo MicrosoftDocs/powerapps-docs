@@ -276,11 +276,11 @@ The unescaped response contains JSON using the following properties.
 |`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
 |`Count`|long| If `"Count": true` is included in the body of the request, the count of all documents that match the search, ignoring top and skip|
 
-## Types
+### Types
 
 The following types are returned by the Query Response.
 
-### ErrorDetail
+#### ErrorDetail
 
 TODO: Why is this included? Why doesn't the service just return an error?
 GUESS: This will be a Cognitive Search error
@@ -291,7 +291,7 @@ GUESS: This will be a Cognitive Search error
 |`Message`|string|The error message.|
 |`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
 
-### QueryResult
+#### QueryResult
 
 Each `QueryResult` item returned in the response `Value` property represents a record in Dataverse.
 
@@ -304,7 +304,7 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 |`Highlights`|`Dictionary<string, string[]>`|The highlights.|
 |`Score`|double|The document score.|
 
-### FacetResult
+#### FacetResult
 
 |Name|Type|Description|
 |---------|---------|---------|
@@ -316,7 +316,7 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 |`OptionalValue`|object|Additional or optional value of the facet, will be populated while faceting on lookups.|
 
 
-### QueryContext
+#### QueryContext
 
 |Name|Type|Description|
 |---------|---------|---------|

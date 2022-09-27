@@ -72,6 +72,14 @@ Use fuzzy search to aid with misspellings. The default is false.
 
 Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
 
+TODO: Internal docs say `advanced` is the only option for suggest, and the reason to choose it is:
+
+> Use 'advanced' if your suggest request needs to route through advanced suggest algorithm.
+
+What does this mean?
+
+- Are the other options mentioned valid here?
+
 ### `orderby` parameter
 
 **Type**: string<br />
@@ -93,6 +101,53 @@ A collection of additional properties for search request. Eg. appid, correlation
 
 Number of suggestions to retrieve. The default is 5.
 
+## Response
+
+The response from the suggest operation is an escaped string that includes JSON data.
+
+The unescaped response contains JSON using the following properties.
+
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
+|`Value`|[`SuggestResult`](#queryresult)`[]`|A collection of matching records.|
+|`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
+
+### Types
+
+The following types are returned by the Query Response.
+
+#### ErrorDetail
+
+TODO: Why is this included? Why doesn't the service just return an error?
+GUESS: This will be a Cognitive Search error
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`Code`|string|The error code.|
+|`Message`|string|The error message.|
+|`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
+
+#### SuggestResult
+
+Provides the suggested text.
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`Text`|string|Provides the suggested text.|
+|`Document`|`Dictionary<string, object>`|The document.|
+
+TODO: Explain what to do with the document.
+
+#### QueryContext
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`OriginalQuery`|string|The query string as specified in the request.|
+|`AlteredQuery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
+|`Reason`|string[]|The reason behind query alter decision by Dataverse search.|
+|`SpellSuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
 
 ## Examples
 

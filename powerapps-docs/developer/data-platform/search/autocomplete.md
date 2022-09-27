@@ -65,6 +65,8 @@ Filter criteria to reduce results returned.
 
 Fuzzy search to aid with misspellings. The default is false.
 
+When set to true, this API finds suggestions even if there is a substituted or missing character in the search text. The edit distance is 1 per query string. If the query string is multiple terms, there can only be one missing, extra, substituted, or transposed character in the entire string. Enabling fuzzy match can be a better experience in some scenarios, it does come at a performance cost, as fuzzy suggestion searches are slower and consume more resources.
+
 ### `options` parameter
 
 **Type**: string<br />
@@ -72,12 +74,60 @@ Fuzzy search to aid with misspellings. The default is false.
 
 Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.
 
+TODO: Same as with suggest. Internal docs say `advanced` is the only option for suggest, and the reason to choose it is:
+
+> Use 'advanced' if your autocomplete request needs to route through advanced algorithm. This is a no-op at this point of time. 
+
+What does this mean? Mark as **Internal use only**?
+
+- Are the other options mentioned valid here?
+
+
 ### `propertybag` parameter
 
 **Type**: string<br />
 **Optional**: True
 
 A collection of the additional properties for search request. Eg. appid, correlationid.
+
+## Response
+
+The response from the suggest operation is an escaped string that includes JSON data.
+
+The unescaped response contains JSON using the following properties.
+
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
+|`Value`|string|The text|
+|`QueryContext` |[QueryContext](#querycontext)|TODO: find out. It is always null. Why is it included?|
+
+### Types
+
+The following types are returned by the Query Response.
+
+#### ErrorDetail
+
+TODO: Why is this included? Why doesn't the service just return an error?
+GUESS: This will be a Cognitive Search error
+
+TODO: Use include if this is the same for all types
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`Code`|string|The error code.|
+|`Message`|string|The error message.|
+|`PropertyBag`|`Dictionary<string, object>`|Additional error information.|
+
+#### QueryContext
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`OriginalQuery`|string|The query string as specified in the request.|
+|`AlteredQuery`|string|The query string that Dataverse search used to perform the query. Dataverse search uses the altered query string if the original query string contained spelling mistakes or did not yield optimal results.|
+|`Reason`|string[]|The reason behind query alter decision by Dataverse search.|
+|`SpellSuggestions`|string[]|The spell suggestion that are the likely words that represent user's intent. This will be populated only when the query was altered by Dataverse search due to spell check.|
 
 ## Examples
 
