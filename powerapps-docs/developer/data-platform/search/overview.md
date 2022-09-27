@@ -123,11 +123,6 @@ More information:
 
 Dataverse search is enabled by default for production environments, but it is an opt-out feature so it could be turned off even in a production environment. If you are using an environment other than a production environment, an administrator must enable it.
 
-You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search status](status.md) operation.
-### Check Organization table
-
-The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column tells you whether search is enabled for the organization.
-
 ### Error when search not enabled
 
 If you use the query, suggest, or autocomplete operations when the environment is not enabled you will get these errors:
@@ -154,6 +149,12 @@ HTTP/1.1 400 Bad Request
 {"error":{"code":"0x80048d0b","message":"Dataverse Search feature is disabled for this organization."}}
 ```
 ---
+
+You can detect whether the search service is enabled by checking the settings in the organization table or by using the [Dataverse Search status](status.md) operation.
+
+### Check Organization table
+
+The [Organization table](../reference/entities/organization.md) contains a single row of data that controls how the organization is configured. The [IsExternalSearchIndexEnabled](../reference/entities/organization.md#BKMK_IsExternalSearchIndexEnabled) boolean column tells you whether search is enabled for the organization.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -225,7 +226,6 @@ Only those tables where the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanE
 To enable a table for Dataverse Search, set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.SyncToExternalSearchIndex?text=EntityMetadata.SyncToExternalSearchIndex> boolean property to true.
 
 You can check the values for a table with the SDK or Web API using the table logical name. Replace `account` in the queries below with the logical name of the table you want to check.
-
 
 #### [SDK for .NET](#tab/sdk)
 
