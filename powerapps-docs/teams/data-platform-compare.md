@@ -85,6 +85,11 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |Field-level security     |   No      |  Yes       |
 |Hierarchical security     |  No       |  Yes       |
 |Record sharing     |  No       |  Yes       |
+|Create Owner Teams**  | Yes      |  Yes       |
+|Assign Teams Roles to Owner Teams** | Yes     | Yes   |
+|Change record ownership** | Yes   | Yes  |
+
+** *can be done via custom PowerApps*
 
 ## Integration
 
