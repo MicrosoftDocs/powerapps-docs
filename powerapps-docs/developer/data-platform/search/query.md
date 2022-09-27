@@ -23,7 +23,7 @@ In addition to a search term, the results returned can be influenced by passing 
 
 |Name  |Type  |Description  |More information|
 |---------|---------|---------|---------|
-|`search`|string|**Required** The text to search with. |[search parameter](#search-parameter)|
+|`search`|string|**Required**. The text to search with. |[search parameter](#search-parameter)|
 |`count`|bool|Whether to return the total record count.|[`count` parameter](#count-parameter) |
 |`entities`|string|Limits the scope of search to a sub-set of tables. |[entities parameter](#entities-parameter)|
 |`facets`|string|Facets support the ability to drill down into data results after they've been retrieved. | [facets parameter](#facets-parameter)|
@@ -53,16 +53,16 @@ By default, the search parameter supports simple search syntax as described in t
 | **Functionality** | **Description** |
 |---|---|
 | Boolean operators | AND operator; denoted by `+`<br/>OR operator; denoted by `|`<br/>NOT operator; denoted by `-` |
-| Precedence operators | A search term `hotel+(wifi | luxury) `will search for results containing the term `hotel` and either `wifi` or `luxury` (or both). |
+| Precedence operators | A search term `hotel+(wifi | luxury)` will search for results containing the term `hotel` and either `wifi` or `luxury` (or both). |
 | Wildcards            | Trailing wildcard are supported. For example, `Alp*` searches for "alpine". |
 | Exact matches        | A query enclosed in quotation marks `" "`.|
 
 > [!NOTE]
 > In order to use any search operators as part of the search text, escape the character by prefixing it with a single backslash (`\`). Special characters that require escaping include the following: `+ - & | ! ( ) { } [ ] ^ " ~ * ? : \ /`.
 
-For example, and escaped phone number might look like this: `\+1\(800\)555\-1234`.
+For example, an escaped phone number might look like this: `\+1\(800\)555\-1234`.
 
-Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) which enables different operators..
+Using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) which enables different operators.
 
 ### `count` parameter
 
@@ -327,11 +327,33 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 
 ## Examples
 
+The following examples show how to use the query operation.
+
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
 static void SDKExampleMethod(IOrganizationService service){
- TODO
+   OrganizationRequest query = new OrganizationRequest("searchquery")
+   {
+      Parameters = new ParameterCollection
+      {
+         { "search", "TODO" },
+         { "count", 3 },
+         { "entities", "TODO" },
+         { "facets","TODO" },
+         { "filter","TODO" },
+         { "options","TODO" },
+         { "orderby","TODO" },
+         { "propertybag","TODO" },
+         { "skip",3 },
+         { "top",1 }
+      }
+   };
+
+   var searchQueryResponse = service.Execute(query);
+   string responseString = searchQueryResponse.Results["response"];
+   
+   //TODO: Parse the string to get the objects. How to use this without JSON.NET?
 }
 ```
 **Output**
@@ -351,6 +373,16 @@ If-None-Match: null
 Accept: application/json
 
 {
+ "search": "TODO",
+ "count": 3,
+ "entities": "TODO",
+ "facets": "TODO",
+ "filter": "TODO",
+ "options": "TODO",
+ "orderby": "TODO",
+ "propertybag": "TODO",
+ "skip": 3,
+ "top": 1
     
 }
 ```
@@ -360,7 +392,9 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 
-{}
+{
+    "response": "TODO"
+}
 ```
 #### [Search 2.0 endpoint](#tab/search)
 
@@ -370,6 +404,20 @@ The parameters and response value using the search 2.0 endpoint are identical to
 
 ```http
 POST [Organization URI]/api/search/v2.0/query HTTP/1.1
+
+{
+ "search": "TODO",
+ "count": 3,
+ "entities": "TODO",
+ "facets": "TODO",
+ "filter": "TODO",
+ "options": "TODO",
+ "orderby": "TODO",
+ "propertybag": "TODO",
+ "skip": 3,
+ "top": 1
+    
+}
 ```
 
 **Response**
@@ -377,7 +425,9 @@ POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 ```http
 HTTP/1.1 200 OK
 
-{}
+{
+    "response": "TODO"
+}
 ```
 ---
 ### See also
