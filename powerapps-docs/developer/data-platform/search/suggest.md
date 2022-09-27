@@ -1,7 +1,7 @@
 ---
 title: "Dataverse Search suggest (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use Dataverse search suggest to provide suggestions as the user enters text into a form field." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/12/2022
+ms.date: 09/27/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde # GitHub ID
@@ -27,7 +27,7 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|The default is searching across all search–configured entities.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Use fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`. TODO: I think `advanced` maybe the only valid parameter here.|[`options` parameter](#options-parameter)|
 |`orderby`|string|   List of comma-separated clauses where each clause is an attribute name followed by `asc` or `desc`.|[`orderby` parameter](#orderby-parameter)|
 |`propertybag`|string|A collection of additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 |`top`|int|Number of suggestions to retrieve. The default is 5.|[`top` parameter](#top-parameter)|
@@ -151,18 +151,37 @@ TODO: Explain what to do with the document.
 
 ## Examples
 
-### Example: TODO
+The following examples show how to use the suggest operation.
+### Example: TODO: Some specific scenario
 
 This is a template for an example
-
 
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
 static void SDKExampleMethod(IOrganizationService service){
- TODO
+    OrganizationRequest suggest = new OrganizationRequest("searchsuggest")
+   {
+      Parameters = new ParameterCollection
+      {
+         { "search", "TODO" },
+         { "entities", "TODO" },
+         { "filter","TODO" },
+         { "fuzzy", true },
+         { "options","TODO" },
+         { "orderby","TODO" },
+         { "propertybag","TODO" },
+         { "top",1 }
+      }
+   };
+
+   var searchSuggestResponse = service.Execute(suggest);
+   string responseString = searchSuggestResponse.Results["response"];
+   
+   //TODO: Parse the string to get the objects. 
 }
 ```
+
 **Output**
 
 ```
@@ -179,6 +198,18 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
+
+{
+ "search": "TODO",
+ "entities": "TODO",
+ "filter": "TODO",
+ "fuzzy": true,
+ "options": "TODO",
+ "orderby": "TODO",
+ "propertybag": "TODO",
+ "top": 1
+}
+
 ```
 
 **Response**
@@ -186,7 +217,9 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 
-{}
+{
+    "response": "TODO"
+}
 ```
 
 #### [Search 2.0 endpoint](#tab/search)
@@ -194,7 +227,18 @@ HTTP/1.1 200 OK
 **Request**
 
 ```http
-POST [Organization URI]/api/search/v1.0/status HTTP/1.1
+POST [Organization URI]/api/search/v2.0/status HTTP/1.1
+
+{
+ "search": "TODO",
+ "entities": "TODO",
+ "filter": "TODO",
+ "fuzzy": true,
+ "options": "TODO",
+ "orderby": "TODO",
+ "propertybag": "TODO",
+ "top": 1
+}
 ```
 
 **Response**
@@ -202,12 +246,12 @@ POST [Organization URI]/api/search/v1.0/status HTTP/1.1
 ```http
 HTTP/1.1 200 OK
 
-{}
+{
+    "response": "TODO"
+}
 ```
 
-
 ---
-
 
 ### See also
 

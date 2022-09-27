@@ -1,7 +1,7 @@
 ---
 title: "Dataverse Search autocomplete (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use Dataverse search autocomplete to provide autocompletion of input as the user enters text into a form field." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 09/12/2022
+ms.date: 09/27/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: mspilde # GitHub ID
@@ -30,7 +30,7 @@ In addition to a search term, the results returned can be influenced by passing 
 |`entities`|string|The default scope is searching across all search–configured entities and fields.|[`entities` parameter](#entities-parameter)|
 |`filter`|string|Filter criteria to reduce results returned.|[`filter` parameter](#filter-parameter)|
 |`fuzzy`|bool|Fuzzy search to aid with misspellings. The default is false.|[`fuzzy` parameter](#fuzzy-parameter)|
-|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`.|[`options` parameter](#options-parameter)|
+|`options`|string|Options are settings configured to search a search term. Eg. `lucene`, `besteffortsearch`, `groupranking`, `searchmodelall`. TODO: I think `advanced` maybe the only valid parameter here, and it may be a no-op.|[`options` parameter](#options-parameter)|
 |`propertybag`|string|A collection of the additional properties for search request. Eg. appid, correlationid.|[`propertybag` parameter](#propertybag-parameter)|
 
 ## Parameters
@@ -76,7 +76,7 @@ Options are settings configured to search a search term. Eg. `lucene`, `besteffo
 
 TODO: Same as with suggest. Internal docs say `advanced` is the only option for suggest, and the reason to choose it is:
 
-> Use 'advanced' if your autocomplete request needs to route through advanced algorithm. This is a no-op at this point of time. 
+> Use 'advanced' if your autocomplete request needs to route through advanced algorithm. This is a no-op at this point of time.
 
 What does this mean? Mark as **Internal use only**?
 
@@ -140,7 +140,23 @@ This is a template for an example
 
 ```csharp
 static void SDKExampleMethod(IOrganizationService service){
- TODO
+    OrganizationRequest autocompleteRequest = new OrganizationRequest("searchautocomplete")
+   {
+      Parameters = new ParameterCollection
+      {
+         { "search", "TODO" },
+         { "entities", "TODO" },
+         { "filter","TODO" },
+         { "fuzzy", true },
+         { "options","TODO" },
+         { "propertybag","TODO" }
+      }
+   };
+
+   var searchAutoCompleteResponse = service.Execute(autocompleteRequest);
+   string responseString = searchAutoCompleteResponse.Results["response"];
+   
+   //TODO: Parse the string to get the objects.
 }
 ```
 **Output**
@@ -159,6 +175,15 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
+
+{
+ "search": "TODO",
+ "entities": "TODO",
+ "filter": "TODO",
+ "fuzzy": true,
+ "options": "TODO",
+ "propertybag": "TODO"
+}
 ```
 
 **Response**
@@ -175,6 +200,15 @@ HTTP/1.1 200 OK
 
 ```http
 POST [Organization URI]/api/search/v2.0/autocomplete HTTP/1.1
+
+{
+ "search": "TODO",
+ "entities": "TODO",
+ "filter": "TODO",
+ "fuzzy": true,
+ "options": "TODO",
+ "propertybag": "TODO"
+}
 ```
 
 **Response**
@@ -184,6 +218,7 @@ HTTP/1.1 200 OK
 
 {}
 ```
+
 ---
 
 ### See also

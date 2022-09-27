@@ -38,7 +38,6 @@ In addition to a search term, the results returned can be influenced by passing 
 
 Details for the parameters in the table above can be found below.
 
-
 ### `search` parameter
 
 **Type**: string<br />
@@ -200,7 +199,6 @@ Filters use the following query operators:
 |`( )`|Precedence grouping|`account:(name eq 'sample') or name eq 'test') and revenue gt 5000`|
 
 
-
 ### `options` parameter
 
 **Type**: string<br />
@@ -329,6 +327,10 @@ Each `QueryResult` item returned in the response `Value` property represents a r
 
 The following examples show how to use the query operation.
 
+### TODO: Specific scenario
+
+If we will have more than one example here, we need to differentiate it from the others by the use case scenario.
+
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
@@ -338,29 +340,31 @@ static void SDKExampleMethod(IOrganizationService service){
       Parameters = new ParameterCollection
       {
          { "search", "TODO" },
-         { "count", 3 },
+         { "count", true },
          { "entities", "TODO" },
          { "facets","TODO" },
          { "filter","TODO" },
          { "options","TODO" },
          { "orderby","TODO" },
          { "propertybag","TODO" },
-         { "skip",3 },
-         { "top",1 }
+         { "skip", 3 },
+         { "top", 1 }
       }
    };
 
    var searchQueryResponse = service.Execute(query);
    string responseString = searchQueryResponse.Results["response"];
    
-   //TODO: Parse the string to get the objects. How to use this without JSON.NET?
+   //TODO: Parse the string to get the objects.
 }
 ```
+
 **Output**
 
 ```
 TODO: The Console Writeline output of the SDK Sample
 ```
+
 #### [Web API](#tab/webapi)
 
 **Request**
@@ -374,7 +378,7 @@ Accept: application/json
 
 {
  "search": "TODO",
- "count": 3,
+ "count": true,
  "entities": "TODO",
  "facets": "TODO",
  "filter": "TODO",
@@ -382,8 +386,7 @@ Accept: application/json
  "orderby": "TODO",
  "propertybag": "TODO",
  "skip": 3,
- "top": 1
-    
+ "top": 1    
 }
 ```
 
@@ -396,6 +399,7 @@ HTTP/1.1 200 OK
     "response": "TODO"
 }
 ```
+
 #### [Search 2.0 endpoint](#tab/search)
 
 The parameters and response value using the search 2.0 endpoint are identical to the Web API.
@@ -407,7 +411,7 @@ POST [Organization URI]/api/search/v2.0/query HTTP/1.1
 
 {
  "search": "TODO",
- "count": 3,
+ "count": true,
  "entities": "TODO",
  "facets": "TODO",
  "filter": "TODO",
@@ -429,6 +433,7 @@ HTTP/1.1 200 OK
     "response": "TODO"
 }
 ```
+
 ---
 ### See also
 
