@@ -113,9 +113,9 @@ With FetchXML you can apply simple paging by setting the `page` and `count` attr
 
 ### Paging large result sets
 
-When you are working with large result sets where the paging limits of 5000 are being hit, using a paging cookies with the query helps improve performance. 
+When you are working with large result sets where the paging limits of 5000 are being hit, useing paging cookies with the query helps improve performance.
 
-A paging cookie must be requested as an annotation. Set the `odata.include-annotations` preference to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` property will be returned with the result.
+A paging cookie must be requested as an annotation. Use the `prefer: odata.include-annotations` request header to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation will be returned with the result.
 
 The following series of requests show the use of paging cookie using this FetchXml:
 
@@ -211,7 +211,7 @@ In the response you can see that the `@Microsoft.Dynamics.CRM.morerecords` annot
 
 The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You will need to use the `pagingcookie` attribute value of that document in the next request.
 
-The `pagingcookie` attribute value is Url encoded *twice*. The decoded value looks like this:
+The `pagingcookie` attribute value is Url-encoded *twice*. The decoded value looks like this:
 
 ```xml
 <cookie page="1"><fullname last="Robert Lyon (sample)" first="Susanna Stubberod (sample)" /><contactid last="{30717E9C-643F-ED11-9DB0-002248225E95}" first="{20717E9C-643F-ED11-9DB0-002248225E95}" /></cookie>
