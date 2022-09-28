@@ -35,7 +35,7 @@ Install a pre-defined set of sample data.
 
 #### [SDK for .NET](#tab/sdk)
 
-Using the <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataRequest?text=InstallSampleDataRequest Class>
+Using the <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataRequest?text=InstallSampleDataRequest Class>.
 
 ```csharp
 static void InstallSampleData(IOrganizationService service)
@@ -45,12 +45,17 @@ static void InstallSampleData(IOrganizationService service)
 }
 ```
 
+More information:
+
+- [IOrganizationService Interface](org-service/iorganizationservice-interface.md)
+- [Use messages with the Organization service](org-service/use-messages.md)
+
 > [!NOTE]
-> The <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataResponse?text=InstallSampleDataResponse Class> returned by this operation doesn't include any properties to exampine.
+> The <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataResponse?text=InstallSampleDataResponse Class> returned by this operation doesn't include any properties to examine.
 
 #### [Web API](#tab/webapi)
 
-Using the <xref:Microsoft.Dynamics.CRM.InstallSampleData?text=InstallSampleData Action>
+Using the <xref:Microsoft.Dynamics.CRM.InstallSampleData?text=InstallSampleData Action>.
 
 ### Request
 
@@ -68,6 +73,8 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
+
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ---
 
@@ -87,8 +94,13 @@ static void UninstallSampleData(IOrganizationService service)
 }
 ```
 
+More information:
+
+- [IOrganizationService Interface](org-service/iorganizationservice-interface.md)
+- [Use messages with the Organization service](org-service/use-messages.md)
+
 > [!NOTE]
-> The <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse?text=InstallSampleDataResponse Class> returned by this operation doesn't include any properties to exampine.
+> The <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse?text=InstallSampleDataResponse Class> returned by this operation doesn't include any properties to examine.
 
 #### [Web API](#tab/webapi)
 
@@ -109,6 +121,9 @@ OData-Version: 4.0
 HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
+
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
 ---
 
 ### See Also
