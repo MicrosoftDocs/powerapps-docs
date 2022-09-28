@@ -49,8 +49,10 @@ The apps that meet the following criteria will be shown in the list of **Office*
 - Apps your admin marked as **Featured** in your tenant.
 - All first party model-driven apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
 
-> [!NOTE]
-> When a new app is shared with users it needs to meet the criteria listed above and it can take up to 24 hours for it to appear in the list of **Office** apps.
+### Known limitations
+1. When a new app is shared with users it needs to meet the criteria listed above and it can take up to 24 hours for it to appear in the list of **Office** apps.
+2. Some Model driven apps are not recording the last launched time. Until this is resolved, we recommend using [featured apps](https://learn.microsoft.com/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest). Note, featured apps will only appear to users that have access to an app. Featured apps does not mark an app to appear to all users.   
+3. Once an app is marked as featured, it may take up to seven days for this app to start appearing for users in Office.com/apps experiences. In early November 2022 we expect featured apps to appear in Office.com/apps experiences within a day.
 
 ### What if I cannot find an app?
 
