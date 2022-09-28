@@ -16,6 +16,9 @@ contributors:
 
 # Add geolocation
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 *Geolocation* is the identification of the real-world geographic location of an object. Geolocation is closely related to the use of positioning systems, but places a greater emphasis on determining a meaningful location (for example, a street address) rather than just a set of geographic coordinates. The word geolocation can also mean the latitude and longitude coordinates of a particular location.
 
 A managed form can be configured to display a map control either to display an existing location as a pin on a map or to provide the ability for the user to specify a location.

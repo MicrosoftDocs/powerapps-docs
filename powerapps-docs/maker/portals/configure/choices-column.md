@@ -17,6 +17,9 @@ contributors:
 
 # Configure a choices column on portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
 
 ## Basic forms and advanced forms

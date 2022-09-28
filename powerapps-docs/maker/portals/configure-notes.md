@@ -17,6 +17,9 @@ contributors:
 
 # Configure notes as attachments for basic and advanced forms
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 To add the ability to view notes and attachments on basic and advanced forms, you will need to complete the following steps:
 
 - [Enable attachments for the table in Microsoft Dataverse](../data-platform/data-platform-create-entity.md#create-a-table).

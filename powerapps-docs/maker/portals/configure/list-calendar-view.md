@@ -17,6 +17,9 @@ contributors:
 
 # List Calendar view
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 On the **Calendar View** tab, you can enable the list to render as a calendar view, with each individual record configured to act as a single event.
 
 The following field mappings can be configured to display list records as dated events on the calendar. The records need to include at minimum a date field.

@@ -16,6 +16,9 @@ contributors:
 
 # Manage web pages
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A web page represents a particular URL in a portals website, and is one of the core tables of the portals content management system. Through parent and child relationships to other web pages, this basic forms the hierarchy of a website (i.e., its site map).
 
 Web pages also form the basis for including other, specialized table types in the portal site map – web files, shortcuts, forums, advanced forms, and blogs are all situated in the portal site map through – and thus derive their URLs from – a relationship to a parent web page.

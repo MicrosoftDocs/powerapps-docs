@@ -17,6 +17,9 @@ contributors:
 
 # Adding a view details page
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 By setting the **Web Page for Details View** lookup to a webpage, the details of a record listed in the grid can be viewed as read-only or editable, depending on the configuration of the associated form or page.
 
 This page can be a customized page template, which may be created by using Liquid. The most common scenario is probably to have the details page be a webpage that either contains a basic form or advanced form.

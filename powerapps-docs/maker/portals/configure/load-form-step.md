@@ -16,6 +16,9 @@ contributors:
 
 # Define a load form and load tab step type
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 This step type allows the advanced form step to act as a basic form within the overall advanced form process. It loads a form with a similar set of options available as a Basic Form.
 
 ## Settings
