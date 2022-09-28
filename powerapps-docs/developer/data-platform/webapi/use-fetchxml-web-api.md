@@ -99,20 +99,258 @@ OData-Version: 4.0
 With FetchXML you can apply simple paging by setting the `page` and `count` attributes of the `fetch` element. For example, to set a query for accounts and limit the number of entities to 2 and to return just the first page, the following fetchXML:
 
 ```xml
-<fetch mapping="logical" page="1" count="2">  
- <entity name="account">  
-  <attribute name="accountid" />  
-  <attribute name="name" />  
-  <attribute name="industrycode" />  
- <order attribute="name" />  
- </entity>  
+<fetch mapping="logical"
+   page="1"
+   count="2">
+   <entity name="account">
+      <attribute name="accountid" />
+      <attribute name="name" />
+      <attribute name="industrycode" />
+      <order attribute="name" />
+   </entity>
 </fetch>
 ```
 
-When you are working with large result sets where the paging limits of 5000 are being hit, using a paging cookies with the query helps improve performance. More information:[Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)
+### Paging large result sets
+
+When you are working with large result sets where the paging limits of 5000 are being hit, using a paging cookies with the query helps improve performance. 
 
 A paging cookie must be requested as an annotation. Set the `odata.include-annotations` preference to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` property will be returned with the result.
 
+The following series of requests show the use of paging cookie using this FetchXml:
+
+```xml
+<fetch page='1'
+   count='3'
+   mapping='logical'
+   output-format='xml-platform'
+   version='1.0'
+   distinct='false'>
+   <entity name ='contact'>
+      <attribute name ='fullname' />
+      <attribute name ='jobtitle' />
+      <attribute name ='annualincome' />
+      <order descending ='true'
+         attribute='fullname' />
+      <filter type ='and'>
+         <condition value ='%(sample)%'
+            attribute='fullname'
+            operator='like' />
+         <condition value ='18717e9c-643f-ed11-9db0-002248225e95'
+            attribute='parentcustomerid'
+            operator='eq' />
+      </filter>
+   </entity>
+</fetch>
+```
+
+> [!NOTE]
+> This example is using a small `count` value (3) for brevity. Normally you won't use paging cookies for such small page sizes.
+
+#### First Page
+
+Send the first page with the `page` value set to `'1'`.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/contacts?fetchXml=%3Cfetch+page%3D%221%22+count%3D%223%22+mapping%3D%22logical%22+output-format%3D%22xml-platform%22+version%3D%221.0%22+distinct%3D%22false%22%3E%0D%0A++%3Centity+name%3D%22contact%22%3E%0D%0A++++%3Cattribute+name%3D%22fullname%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22jobtitle%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22annualincome%22+%2F%3E%0D%0A++++%3Corder+descending%3D%22true%22+attribute%3D%22fullname%22+%2F%3E%0D%0A++++%3Cfilter+type%3D%22and%22%3E%0D%0A++++++%3Ccondition+value%3D%22%25(sample)%25%22+attribute%3D%22fullname%22+operator%3D%22like%22+%2F%3E%0D%0A++++++%3Ccondition+value%3D%2218717e9c-643f-ed11-9db0-002248225e95%22+attribute%3D%22parentcustomerid%22+operator%3D%22eq%22+%2F%3E%0D%0A++++%3C%2Ffilter%3E%0D%0A++%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E&$count=true HTTP/1.1
+Prefer: odata.include-annotations="*"
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#contacts(fullname,jobtitle,annualincome,_transactioncurrencyid_value,transactioncurrencyid,contactid,transactioncurrencyid())",
+  "@odata.count": 8,
+  "@Microsoft.Dynamics.CRM.totalrecordcount": 8,
+  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+  "@Microsoft.Dynamics.CRM.globalmetadataversion": "74343461",
+  "@Microsoft.Dynamics.CRM.fetchxmlpagingcookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253cfullname%2520last%253d%2522Robert%2520Lyon%2520%2528sample%2529%2522%2520first%253d%2522Susanna%2520Stubberod%2520%2528sample%2529%2522%2520%252f%253e%253ccontactid%2520last%253d%2522%257b30717E9C-643F-ED11-9DB0-002248225E95%257d%2522%2520first%253d%2522%257b20717E9C-643F-ED11-9DB0-002248225E95%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />",
+  "@Microsoft.Dynamics.CRM.morerecords": true,
+  "value": [
+    {
+      "@odata.etag": "W/\"74359676\"",
+      "fullname": "Susanna Stubberod (sample)",
+      "jobtitle": "Senior Purchaser",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$52,000.00",
+      "annualincome": 52000.0,
+      "contactid": "20717e9c-643f-ed11-9db0-002248225e95"
+    },
+    {
+      "@odata.etag": "W/\"74359706\"",
+      "fullname": "Scott Konersmann (sample)",
+      "jobtitle": "Accounts Manager",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$38,000.00",
+      "annualincome": 38000.0,
+      "contactid": "2c717e9c-643f-ed11-9db0-002248225e95"
+    },
+    {
+      "@odata.etag": "W/\"74359716\"",
+      "fullname": "Robert Lyon (sample)",
+      "jobtitle": "Senior Technician",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$78,000.00",
+      "annualincome": 78000.0,
+      "contactid": "30717e9c-643f-ed11-9db0-002248225e95"
+    }
+  ]
+}
+```
+
+In the response you can see that the `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist that match the criteria.
+
+The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You will need to use the `pagingcookie` attribute value in the next request.
+
+The `pagingcookie` attribute value is Url encoded *twice*. The decoded value looks like this:
+
+```xml
+<cookie page="1"><fullname last="Robert Lyon (sample)" first="Susanna Stubberod (sample)" /><contactid last="{30717E9C-643F-ED11-9DB0-002248225E95}" first="{20717E9C-643F-ED11-9DB0-002248225E95}" /></cookie>
+```
+
+
+#### Following Pages
+
+In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist, you need to
+
+1. Increment the `fetch` element `page` attribute value.
+1. HTML encode the `pagingcookie` double URL decoded attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
+1. URL Encode the FetchXml value as you did in the first request.
+
+The FetchXml in the request below before URL encoding looks like this:
+
+```xml
+<fetch page="2" count="3" mapping="logical" output-format="xml-platform" version="1.0" distinct="false" paging-cookie="&lt;cookie page=&quot;1&quot;&gt;&lt;fullname last=&quot;Robert Lyon (sample)&quot; first=&quot;Susanna Stubberod (sample)&quot; /&gt;&lt;contactid last=&quot;{30717E9C-643F-ED11-9DB0-002248225E95}&quot; first=&quot;{20717E9C-643F-ED11-9DB0-002248225E95}&quot; /&gt;&lt;/cookie&gt;">
+  <entity name="contact">
+    <attribute name="fullname" />
+    <attribute name="jobtitle" />
+    <attribute name="annualincome" />
+    <order descending="true" attribute="fullname" />
+    <filter type="and">
+      <condition value="%(sample)%" attribute="fullname" operator="like" />
+      <condition value="18717e9c-643f-ed11-9db0-002248225e95" attribute="parentcustomerid" operator="eq" />
+    </filter>
+  </entity>
+</fetch>
+```
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/contacts?fetchXml=%3Cfetch+page%3D%222%22+count%3D%223%22+mapping%3D%22logical%22+output-format%3D%22xml-platform%22+version%3D%221.0%22+distinct%3D%22false%22+paging-cookie%3D%22%26lt%3Bcookie+page%3D%26quot%3B1%26quot%3B%26gt%3B%26lt%3Bfullname+last%3D%26quot%3BRobert+Lyon+(sample)%26quot%3B+first%3D%26quot%3BSusanna+Stubberod+(sample)%26quot%3B+%2F%26gt%3B%26lt%3Bcontactid+last%3D%26quot%3B%7B30717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+first%3D%26quot%3B%7B20717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+%2F%26gt%3B%26lt%3B%2Fcookie%26gt%3B%22%3E%0D%0A++%3Centity+name%3D%22contact%22%3E%0D%0A++++%3Cattribute+name%3D%22fullname%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22jobtitle%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22annualincome%22+%2F%3E%0D%0A++++%3Corder+descending%3D%22true%22+attribute%3D%22fullname%22+%2F%3E%0D%0A++++%3Cfilter+type%3D%22and%22%3E%0D%0A++++++%3Ccondition+value%3D%22%25(sample)%25%22+attribute%3D%22fullname%22+operator%3D%22like%22+%2F%3E%0D%0A++++++%3Ccondition+value%3D%2218717e9c-643f-ed11-9db0-002248225e95%22+attribute%3D%22parentcustomerid%22+operator%3D%22eq%22+%2F%3E%0D%0A++++%3C%2Ffilter%3E%0D%0A++%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E&$count=true HTTP/1.1
+Prefer: odata.include-annotations="*"
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#contacts(fullname,jobtitle,annualincome,_transactioncurrencyid_value,transactioncurrencyid,contactid,transactioncurrencyid())",
+  "@odata.count": 8,
+  "@Microsoft.Dynamics.CRM.totalrecordcount": 8,
+  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+  "@Microsoft.Dynamics.CRM.globalmetadataversion": "74343461",
+  "@Microsoft.Dynamics.CRM.fetchxmlpagingcookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25222%2522%253e%253cfullname%2520last%253d%2522Nancy%2520Anderson%2520%2528sample%2529%2522%2520first%253d%2522Rene%2520Valdes%2520%2528sample%2529%2522%2520%252f%253e%253ccontactid%2520last%253d%2522%257b24717E9C-643F-ED11-9DB0-002248225E95%257d%2522%2520first%253d%2522%257b38717E9C-643F-ED11-9DB0-002248225E95%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />",
+  "@Microsoft.Dynamics.CRM.morerecords": true,
+  "value": [
+    {
+      "@odata.etag": "W/\"74359736\"",
+      "fullname": "Rene Valdes (sample)",
+      "jobtitle": "Data Analyst III",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$86,000.00",
+      "annualincome": 86000.0,
+      "contactid": "38717e9c-643f-ed11-9db0-002248225e95"
+    },
+    {
+      "@odata.etag": "W/\"74359726\"",
+      "fullname": "Paul Cannon (sample)",
+      "jobtitle": "Ski Instructor",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$68,500.00",
+      "annualincome": 68500.0,
+      "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
+      "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
+      "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
+      "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1",
+      "contactid": "34717e9c-643f-ed11-9db0-002248225e95"
+    },
+    {
+      "@odata.etag": "W/\"74359686\"",
+      "fullname": "Nancy Anderson (sample)",
+      "jobtitle": "Activities Manager",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$55,500.00",
+      "annualincome": 55500.0,
+      "contactid": "24717e9c-643f-ed11-9db0-002248225e95"
+    }
+  ]
+}
+```
+
+
+
+#### Last Page
+
+In the final page the `@Microsoft.Dynamics.CRM.morerecords` annotation will not be included in the response.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/contacts?fetchXml=%3Cfetch+page%3D%223%22+count%3D%223%22+mapping%3D%22logical%22+output-format%3D%22xml-platform%22+version%3D%221.0%22+distinct%3D%22false%22+paging-cookie%3D%22%26lt%3Bcookie+page%3D%26quot%3B2%26quot%3B%26gt%3B%26lt%3Bfullname+last%3D%26quot%3BNancy+Anderson+(sample)%26quot%3B+first%3D%26quot%3BRene+Valdes+(sample)%26quot%3B+%2F%26gt%3B%26lt%3Bcontactid+last%3D%26quot%3B%7B24717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+first%3D%26quot%3B%7B38717E9C-643F-ED11-9DB0-002248225E95%7D%26quot%3B+%2F%26gt%3B%26lt%3B%2Fcookie%26gt%3B%22%3E%0D%0A++%3Centity+name%3D%22contact%22%3E%0D%0A++++%3Cattribute+name%3D%22fullname%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22jobtitle%22+%2F%3E%0D%0A++++%3Cattribute+name%3D%22annualincome%22+%2F%3E%0D%0A++++%3Corder+descending%3D%22true%22+attribute%3D%22fullname%22+%2F%3E%0D%0A++++%3Cfilter+type%3D%22and%22%3E%0D%0A++++++%3Ccondition+value%3D%22%25(sample)%25%22+attribute%3D%22fullname%22+operator%3D%22like%22+%2F%3E%0D%0A++++++%3Ccondition+value%3D%2218717e9c-643f-ed11-9db0-002248225e95%22+attribute%3D%22parentcustomerid%22+operator%3D%22eq%22+%2F%3E%0D%0A++++%3C%2Ffilter%3E%0D%0A++%3C%2Fentity%3E%0D%0A%3C%2Ffetch%3E&$count=true HTTP/1.1
+Prefer: odata.include-annotations="*"
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="*"
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#contacts(fullname,jobtitle,annualincome,_transactioncurrencyid_value,transactioncurrencyid,contactid,transactioncurrencyid())",
+  "@odata.count": 8,
+  "@Microsoft.Dynamics.CRM.totalrecordcount": 8,
+  "@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded": false,
+  "@Microsoft.Dynamics.CRM.globalmetadataversion": "74343461",
+  "value": [
+    {
+      "@odata.etag": "W/\"74359696\"",
+      "fullname": "Maria Cambell (sample)",
+      "jobtitle": "Accounts Manager",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$31,000.00",
+      "annualincome": 31000.0,
+      "contactid": "28717e9c-643f-ed11-9db0-002248225e95"
+    },
+    {
+      "@odata.etag": "W/\"74359746\"",
+      "fullname": "Jim Glynn (sample)",
+      "jobtitle": "Senior International Sales Manager",
+      "annualincome@OData.Community.Display.V1.FormattedValue": "$81,400.00",
+      "annualincome": 81400.0,
+      "contactid": "3c717e9c-643f-ed11-9db0-002248225e95"
+    }
+  ]
+}
+```
 
 <a name="bkmk_FetchXMLwithinBatch"></a>
 
