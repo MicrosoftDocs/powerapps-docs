@@ -101,7 +101,17 @@ When accessing email, there are a couple of options you can use.
 
    1. From the navigation bar, select the plus ![Plus icon.](media\email-plus-icon.png "email icon") icon.
    2. Select **Email** from the drop-down menu.
-
+  
+### Set the default font and font size
+  
+You can set the default font and font size for your email text. Perform the following steps:
+  
+  - On the email form, in the Rich text editor toolbar, select Settings.
+  - Specify the Font and Font Size in User Personalization. 
+  - Select Save. The application defaults the values specified in the Font and Font Size fields of the rich text editor toolbar.
+  
+  If your administrator has set default font and font size, the application displays the set values in the Font and Font Size fields of the rich text editor toolbar.
+  
 ## Reply to email in timeline
 When replying to emails in Timeline, the command bar in the top-right corner provides you with reply options. When you select an option, your email automatically is set and opens in that state ready for you to begin your message.  
 
