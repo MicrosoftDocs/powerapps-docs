@@ -356,7 +356,7 @@ Preference-Applied: odata.include-annotations="*"
 
 ## Use FetchXML within a batch request
 
-The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
+The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information: [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
 
 > [!NOTE]
 > Sending a `GET` request within a `$batch` allows for URLs up to 64 KB (65,536 characters) in length. Much more than with a normal `GET` request, but it isn't unlimited.
