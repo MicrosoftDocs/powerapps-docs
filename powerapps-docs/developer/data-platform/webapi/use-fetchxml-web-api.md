@@ -122,6 +122,7 @@ The following series of requests show the use of paging cookie using this FetchX
 ```xml
 <fetch page='1'
    count='3'
+   paging-cookie=''
    mapping='logical'
    output-format='xml-platform'
    version='1.0'
@@ -149,7 +150,7 @@ The following series of requests show the use of paging cookie using this FetchX
 
 #### First Page
 
-Send the first page with the `page` value set to `'1'`.
+Send the first page with the `page` value set to `'1'`. Using the `Prefer: odata.include-annotations="*"` request header will make sure that necessary annotations in the response are returned.
 
 **Request**
 
@@ -208,7 +209,7 @@ Preference-Applied: odata.include-annotations="*"
 
 In the response you can see that the `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist that match the criteria.
 
-The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You will need to use the `pagingcookie` attribute value in the next request.
+The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation value provides the paging information about the record returned. The `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` value is an XML document. You will need to use the `pagingcookie` attribute value of that document in the next request.
 
 The `pagingcookie` attribute value is Url encoded *twice*. The decoded value looks like this:
 
@@ -222,8 +223,11 @@ The `pagingcookie` attribute value is Url encoded *twice*. The decoded value loo
 In all subsequent requests where the previous page `@Microsoft.Dynamics.CRM.morerecords` annotation value indicates that more records exist, you need to
 
 1. Increment the `fetch` element `page` attribute value.
-1. HTML encode the `pagingcookie` double URL decoded attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
-1. URL Encode the FetchXml value as you did in the first request.
+1. URL decode the `pagingcookie` attribute value twice.
+1. XML encode the decoded `pagingcookie` attribute value and set it as the value of a `paging-cookie` attribute on the `fetch` element.
+   > [!NOTE]
+   > Whether you must explicitly XML encode the value may depend on the technology you use. In .NET this might be done for you when you set the an XML value to an attribute of another XML element.
+1. URL Encode the entire FetchXml value as you did in the first request.
 
 The FetchXml in the request below before URL encoding looks like this:
 
@@ -283,10 +287,6 @@ Preference-Applied: odata.include-annotations="*"
       "jobtitle": "Ski Instructor",
       "annualincome@OData.Community.Display.V1.FormattedValue": "$68,500.00",
       "annualincome": 68500.0,
-      "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
-      "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
-      "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
-      "_transactioncurrencyid_value": "228f42f8-e646-e111-8eb7-78e7d162ced1",
       "contactid": "34717e9c-643f-ed11-9db0-002248225e95"
     },
     {
@@ -305,7 +305,7 @@ Preference-Applied: odata.include-annotations="*"
 
 #### Last Page
 
-In the final page the `@Microsoft.Dynamics.CRM.morerecords` annotation will not be included in the response.
+In the final page the `@Microsoft.Dynamics.CRM.morerecords` and `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotations will not be included in the response.
 
 **Request**
 
