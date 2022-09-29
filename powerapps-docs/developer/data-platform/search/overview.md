@@ -61,7 +61,7 @@ More information:
 
 The native search 2.0 endpoint is not an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
 
-The [Dataverse native search 1.0](search1.0.md) has not been deprecated and continues to be supported.
+The [Dataverse legacy search](legacy.md) has not been deprecated and continues to be supported.
 
 ## Search operations
 
@@ -331,7 +331,7 @@ Dataverse search allows a user to send 1 request per second. If this is exceeded
 [Dataverse Search autocomplete](autocomplete.md)<br />
 [Dataverse Search status](status.md)<br />
 [Dataverse Search statistics](statistics.md)<br />
-[Dataverse Native Search 1.0](search1.0.md)
+[Dataverse legacy search](legacy.md)
 
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

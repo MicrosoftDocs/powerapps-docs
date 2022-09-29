@@ -260,6 +260,6 @@ HTTP/1.1 200 OK
 [Dataverse Search autocomplete](autocomplete.md)<br />
 [Dataverse Search status](status.md)<br />
 [Dataverse Search statistics](statistics.md)<br />
-[Dataverse Native Search 1.0](search1.0.md)
+[Dataverse legacy search](legacy.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]

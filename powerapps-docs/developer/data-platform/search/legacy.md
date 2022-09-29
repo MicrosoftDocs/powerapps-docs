@@ -1,6 +1,6 @@
 ---
 title: "Dataverse search (legacy) (Microsoft Dataverse)| Microsoft Docs"
-description: "Dataverse Native Search 1.0 remains available but we recommend you use Dataverse Search 2.0."
+description: "Dataverse legacy search remains available but we recommend you use Dataverse Search 2.0."
 ms.date: 09/22/2022
 ms.topic: article
 author: mspilde

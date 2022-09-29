@@ -46,8 +46,8 @@
         href: ./search/status.md
       - name: Statistics
         href: ./search/statistics.md
-      - name: Search 1.0
-        href: ./search/search1.0.md
+      - name: Legacy search
+        href: ./search/legacy.md
     - name: Create your own messages
       href: custom-actions.md
       items:

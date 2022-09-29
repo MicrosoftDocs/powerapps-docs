@@ -119,6 +119,6 @@ The response from the search endpoint is the same as the Web API.
 [Dataverse Search suggest](suggest.md)<br />
 [Dataverse Search autocomplete](autocomplete.md)<br />
 [Dataverse Search status](status.md)<br />
-[Dataverse Native Search 1.0](search1.0.md)
+[Dataverse legacy search](legacy.md)
 
 [!INCLUDE [footer-banner](../../../includes/footer-banner.md)]
