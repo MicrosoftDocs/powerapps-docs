@@ -181,10 +181,15 @@ To configure your app in offline mode, see:
 
 If you are having an issue with Power Apps for Windows then send a description of your issue with a screenshot and the session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). 
 
-To see get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
+To get the session ID, select the More button (...) > **Settings** and then copy the session ID. 
 
    > [!div class="mx-imgBorder"] 
    > ![See non-production apps.](media/non-prod-apps.png)
+
+## Log file
+A log file related to a Windows session of Power Apps for Windows, can be found in the following location: %LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState
+
+Use the log file to XXX.
 
 ## Deep links
 
