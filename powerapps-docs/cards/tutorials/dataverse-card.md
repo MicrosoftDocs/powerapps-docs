@@ -23,7 +23,7 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 ## Prerequisites
 
 - A [Power Apps](https://powerapps.microsoft.com/) account
-- [A card](../../tutorials/hello-world-card.md)
+- [A card](../tutorials/hello-world-card.md)
 
 ## Create a card
 

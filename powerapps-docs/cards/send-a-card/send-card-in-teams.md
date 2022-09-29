@@ -23,7 +23,7 @@ An easy way to share your cards is to include a link to them in Microsoft Teams.
 ## Prerequisites
 
 - A [Power Apps](https://powerapps.microsoft.com/) account
-- [A card](../../tutorials/hello-world-card.md)
+- [A card](../tutorials/hello-world-card.md)
 
 ## Add Power Apps to Teams
 
