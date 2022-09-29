@@ -20,13 +20,12 @@ contributors:
 > [!IMPORTANT]
 > This documentation is for the legacy Dataverse search endpoint. We recommend that you use the latest Dataverse search endpoint. More information: [Search for Dataverse records](overview.md)
 
-To begin using Dataverse native search 1.0, your application simply issues an HTTP POST
+To begin using the legacy Dataverse search (version 1.0), your application issues an HTTP POST
 request to start a Dataverse search. When searching
 data, specify optional properties in the request body to set criteria for how the environment
 data is to be searched.
 
-Dataverse native search 1.0 has three endpoints that can be used in the Power Apps web
-application UI:
+The legacy Dataverse search has three endpoints that can be used Power Apps ((make.powerapps.com)[https://make.powerapps.com)):
 
 - **Search**: `/api/search/v1.0/query` Provides a search results page.
 
