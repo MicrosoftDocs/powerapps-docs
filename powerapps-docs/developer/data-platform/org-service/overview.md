@@ -37,7 +37,7 @@ In this section we cover some key concepts about using provided SDK classes to c
 
 The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface provides a connection to the Organization service enabling applications to work with business data, and table and column definitions. There are two implementations of this interface in the SDK: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. For new application development, you should be using the `ServiceClient` class which supports newer authentication technologies (MSAL) and has a few additional features not available in `CrmServiceClient`. However, both client classes are mostly the same from an API perspective. You will see code samples in this documentation using either of these classes, and it is fairly easy to convert code that uses `CrmServiceClient` to use `ServiceClient`.
 
-More information: [Transition apps to Dataverse ServiceClient](../sdk-client-transition.md)
+More information: [Transition apps to Dataverse ServiceClient](../sdk-client-transition.md), [IOrganizationService Interface](iorganizationservice-interface.md)
 
 ### Web service operations
 
