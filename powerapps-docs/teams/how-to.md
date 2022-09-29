@@ -5,7 +5,7 @@ author: joel-lindstrom
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/28/2021
+ms.date: 09/28/2022
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: tapanm
@@ -40,10 +40,9 @@ Benefits of using the How-to app:
 
 Before using this app:
 
-1. Install the How to app.
-1. Set up the app for the first use.
+1. Install the app by side-loading the app manifest into Teams. You can get the app manifest from [here](https://github.com/OfficeDev/microsoft-teams-apps-howto). For more information and help with installing this app, read the documentation available with the app manifest.
 
-For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
+2. Set up the app for the first use.
 
 ## Building an Asset management app
 
