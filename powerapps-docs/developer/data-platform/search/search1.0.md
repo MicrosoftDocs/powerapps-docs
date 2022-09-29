@@ -1,10 +1,8 @@
 ---
-title: "Dataverse Native Search 1.0 (Microsoft Dataverse)| Microsoft Docs"
+title: "Dataverse search (legacy) (Microsoft Dataverse)| Microsoft Docs"
 description: "Dataverse Native Search 1.0 remains available but we recommend you use Dataverse Search 2.0."
 ms.date: 09/22/2022
 ms.topic: article
-applies_to: 
-  - Dynamics 365 (online)
 author: mspilde
 ms.author: mspilde
 ms.reviewer: jdaly
@@ -17,24 +15,17 @@ contributors:
  - JimDaly
 ---
 
-# Dataverse Native Search 1.0
+# Dataverse search (legacy)
 
 > [!IMPORTANT]
-> This documentation is for the Dataverse native search API version 1.0.
-> 
-> We recommend you use the Dataverse search 2.0 APIs.
->
-> More information: [Search for Dataverse records](overview.md)
+> This documentation is for the legacy Dataverse search endpoint. We recommend that you use the latest Dataverse search endpoint. More information: [Search for Dataverse records](overview.md)
 
-[!INCLUDE [cc-terminology](../includes/cc-terminology.md)]
-
-To begin using Dataverse native search 1.0, your application simply issues an HTTP POST
+To begin using the legacy Dataverse search (version 1.0), your application issues an HTTP POST
 request to start a Dataverse search. When searching
 data, specify optional properties in the request body to set criteria for how the environment
 data is to be searched.
 
-Dataverse native search 1.0 has three endpoints that can be used in the Power Apps web
-application UI:
+The legacy Dataverse search has three endpoints that can be used in Power Apps ([make.powerapps.com](https://make.powerapps.com)):
 
 - **Search**: `/api/search/v1.0/query` Provides a search results page.
 
