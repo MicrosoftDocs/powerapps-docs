@@ -100,7 +100,7 @@ More information:
 - [Use messages with the Organization service](org-service/use-messages.md)
 
 > [!NOTE]
-> The <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse?text=InstallSampleDataResponse Class> returned by this operation doesn't include any properties to examine.
+> The <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse?text=UninstallSampleDataResponse Class> returned by this operation doesn't include any properties to examine.
 
 #### [Web API](#tab/webapi)
 
