@@ -13,6 +13,9 @@ ms.reviewer: ndoelman
 
 # Add a redirect step type
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Redirect Step Type allow for a redirect of the User's browser session to another page in the portal or to an external URL. This is useful for seamlessly directing flow.
 
 | Name                                                            | Description                                                                                                                                                                                  |

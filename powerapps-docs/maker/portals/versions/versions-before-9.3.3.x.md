@@ -16,6 +16,9 @@ contributor:
 
 # Power Apps portals versions before 9.3.3.x
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In this article, you'll see a list of features added for Dynamics 365 Portals for versions earlier than 9.3.3.x. For more information on updates to Dynamics 365 Portals, see [portal capabilities for Microsoft Dynamics 365 Releases](https://support.microsoft.com/help/3181191).
 
 > [!NOTE]

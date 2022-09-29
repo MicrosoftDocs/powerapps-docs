@@ -17,6 +17,9 @@ contributors:
 
 # Search
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality.
 
 List search functionality in the portal uses FetchXML in the backend to search the columns defined in the list and then display the results.

@@ -16,6 +16,9 @@ contributors:
 
 # Configure advanced form metadata for portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Advanced Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 ## Add a new record

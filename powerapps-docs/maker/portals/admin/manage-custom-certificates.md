@@ -17,6 +17,9 @@ contributors:
 
 # Manage custom certificates
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 When extending portals functionality using a client-side API call with [OAuth 2.0 implicit grant flow](../oauth-implicit-grant-flow.md), it's best practice to use custom certificates to provide an additional level of security. You can upload you own custom certificates using the Power Apps portals admin center.
 
 ## Add new certificate

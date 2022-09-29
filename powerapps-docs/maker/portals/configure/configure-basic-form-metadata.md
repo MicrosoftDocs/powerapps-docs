@@ -17,6 +17,9 @@ contributors:
 
 # Configure basic form metadata for portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The basic form Metadata contains extra behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 > [!TIP]

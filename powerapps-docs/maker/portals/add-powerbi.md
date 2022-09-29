@@ -16,6 +16,9 @@ contributors:
 
 # Add Power BI
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 You can add a Power BI component on a page to display Power BI dashboards and reports on your portal.
 
 > [!NOTE]

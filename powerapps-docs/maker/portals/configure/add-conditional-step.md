@@ -16,6 +16,9 @@ contributors:
 
 # Add a conditional step type
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 An Advanced Form Step can be a 'Condition' type that indicates the step should evaluate an expression. If the expression evaluates to true then the next step is displayed. If the expression evaluates to false and if the 'Next Step If Condition Fails' has been specified, that step will be displayed. The current table is the target used to evaluate the expression against. Record Source defaults to the Record Source of the previous step.
 
 ## Attributes
