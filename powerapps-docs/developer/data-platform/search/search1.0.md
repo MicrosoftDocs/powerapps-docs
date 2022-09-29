@@ -25,7 +25,7 @@ request to start a Dataverse search. When searching
 data, specify optional properties in the request body to set criteria for how the environment
 data is to be searched.
 
-The legacy Dataverse search has three endpoints that can be used Power Apps ((make.powerapps.com)[https://make.powerapps.com)):
+The legacy Dataverse search has three endpoints that can be used in Power Apps ([make.powerapps.com](https://make.powerapps.com)):
 
 - **Search**: `/api/search/v1.0/query` Provides a search results page.
 
