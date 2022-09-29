@@ -22,7 +22,7 @@ Where to start depends on what problem you are trying to solve. This guide inclu
 
 ## Work with data using web services
 
-There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and (SOAP) Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK API.
+There are two different access points, each using a different protocol, for the business data web service: a RESTful (OData) data access point, and the Organization service endpoint. Your code can access the OData access point using the Web API, or the Organization service endpoint using the SDK for .NET.
 
 Which one you should use depends on the type of project you are working on. More information: [Work with data using code](work-with-data.md)
 
