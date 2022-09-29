@@ -60,7 +60,8 @@ Use the tool pane to add elements to your card.
 
 The card canvas is where you build your card by dragging connectors, variables, and elements from the tool pane.
 
-Fun fact: You can't resize a card in the card canvas. Cards automatically fit themselves to the location they're placed in.
+> [!NOTE]
+> You can't resize a card in the card canvas. Cards automatically fit themselves to the location they're placed in.
 
 ### Property pane
 

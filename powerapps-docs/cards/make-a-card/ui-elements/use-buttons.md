@@ -43,9 +43,9 @@ Buttons can do one of four things:
 
 You can add four types of buttons to your cards:
 
-- Run PowerFx <!--"PowerFx" should be changed to "Power Fx" in the UI and then updated in the docs.-->
+- Run PowerFx
 - Show Screen
-- Open Url <!--Note: "Url" should be changed to "URL" in the UI and then updated in the docs.-->
+- Open Url
 - Toggle Visibility
 
 #### Run PowerFx

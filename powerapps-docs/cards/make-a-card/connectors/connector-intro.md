@@ -19,7 +19,7 @@ Connectors allow your card to connect to other apps, data sources, and devices i
 
 ## Prerequisites
 
-- A [Power Apps](https://powerapps.microsoft.com/) account.
+- A [Power Apps](https://powerapps.microsoft.com/) account
 - [A card](../../tutorials/hello-world-card.md)
 
 ## Insert a connector

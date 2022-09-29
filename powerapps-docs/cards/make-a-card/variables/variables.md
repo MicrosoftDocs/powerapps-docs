@@ -13,6 +13,8 @@ ms.collection:
 
 # Add variables to a card (Preview)
 
+[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
+
 Variables store data for reuse. The data can be of different types, like table, text, or a number. Variables have unique names, which is how you refer to them in [Power Fx formulas](../../make-a-card/power-fx/intro-to-pfx.md). Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
 The value of a variable can be temporary, resetting after every card session, or permanent, shared across all sessions of a specific card instance.
