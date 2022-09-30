@@ -1,11 +1,11 @@
 ---
-title: Configure a site with Content Delivery Network (preview)
+title: Configure a site with Content Delivery Network
 description: Configure a site with Content Delivery Network
 author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/23/2022
+ms.date: 10/06/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -15,25 +15,16 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Content Delivery Network (preview)
-
-[This topic is pre-release documentation and is subject to change.]
+# Content Delivery Network
 
 A *content delivery network* is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on.":::
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
 When you enable Content Delivery Network on your portal, static content&mdash;like images, scripts, and style sheet files used to design your portal website&mdash;will be stored and served from the Content Delivery Network server closest to your location.  
 
 > [!NOTE] 
-> You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
-
-> [!NOTE]
->
+> - You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 > - You need to be a portal administrator to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. You can't enable Content Delivery Network for portals configured with a custom domain during preview. 
 > - Using a [custom domain name](../admin/add-custom-domain.md) on a site is currently not supported with using Content Delivery Network.
 > - [Restricting portal access by IP address](../admin/ip-address-restrict.md) on a site is currently not supported with using Content Delivery Network.
