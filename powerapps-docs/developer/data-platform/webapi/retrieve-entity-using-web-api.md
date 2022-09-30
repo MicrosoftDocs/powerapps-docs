@@ -1,7 +1,7 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 06/03/2022
+ms.date: 09/29/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -292,7 +292,7 @@ OData-Version: 4.0
 }
 ```
 
-### Retrieve related entities for an entity instance by expanding collection-valued navigation properties
+### Retrieve related records for a table row by expanding collection-valued navigation properties
 
 The following example demonstrates how you can retrieve all the tasks assigned to an account record.
 
@@ -337,6 +337,12 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
+> Paging is not available for rows returned using `$expand` on collection-valued navigation properties. The maximum number of records returned is 5000. If you need paging, alter your query to return the collection you are expanding. For example, with the example above you could use the following URL with paging:
+>
+> ```http
+> GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart
+> ```
+>
 > If you use nested `$expand` on collection-valued navigation properties, only the first level of data will be returned. Data for the second level will return an empty array. For example the following query:
 >
 > ```http
@@ -479,7 +485,7 @@ Requesting formatted values for individual record retrievals is done the same wa
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+[Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/09/2022
+ms.date: 09/30/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -15,6 +15,7 @@ search.app:
 contributors:
   - tapanm-msft
   - gregli-msft
+  - gesnaaggarwal
 ---
 
 # Co-authoring in canvas apps (experimental)
@@ -139,12 +140,11 @@ Since this feature is experimental, we welcome your feedback. The following list
   - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line&preserve-view=true)
 - Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
-- Selecting **Close** on the **File** menu may appear to delete your customizations in the app. No customizations have actually been deleted. Refresh the page to see all customizations again.
+- Selecting **Close** on the **File** menu may appear to delete your customizations in the app. However, customizations are not deleted. Refresh the page to see all customizations again.
 - If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
 - This feature does not support renaming of custom components.
 - If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. Afterwards, refresh your app to remove the lock.
-- This feature is not compatible with [Test Studio tests](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/test-studio).
-- This feature is not compatible with [Custom Pages](https://powerapps.microsoft.com/en-us/blog/custom-pages-for-converging-model-driven-apps-and-canvas-apps/#:~:text=Custom%20Pages%20in%20a%20model-driven%20app%20provide%20flexibility,an%20upfront%20decision%20between%20the%20canvas%20and%20model.)
+- This feature is not compatible with [Test Studio tests](test-studio.md) and [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md)
 
 ## Feedback to the community forum
 

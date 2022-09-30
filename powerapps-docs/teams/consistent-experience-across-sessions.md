@@ -49,7 +49,7 @@ The new team gets created and is listed under the Teams tab.
 
 ![Create a new Team](media/consistent-experience-across-sessions/create-a-new-team-1.gif "Create a new Team")
 
-## Create a Power App in Teams
+## Create a Power Apps app in Teams
 
 To create a Power Apps app in teams, we need to open Power Apps Studio in Teams as shown below.
 
@@ -73,7 +73,7 @@ To create a Power Apps app in teams, we need to open Power Apps Studio in Teams 
 
 1. Enter a name for the app **Persistent session example** app, and select **Save**.
 
-    ![Save a Power App in Teams](media/consistent-experience-across-sessions/create-a-new-team-5.png "Save a Power App in Teams")
+    ![Save a Power Apps app in Teams](media/consistent-experience-across-sessions/create-a-new-team-5.png "Save a Power Apps app in Teams")
 
     The app gets created with a gallery.
 
@@ -109,7 +109,7 @@ To create a Power Apps app in teams, we need to open Power Apps Studio in Teams 
 
 1. Select **Publish to Teams**.
 
-    ![Select  the Power App in Teams](media/consistent-experience-across-sessions/publish-the-power-app-in-microsoft-teams-1.png)
+    ![Select  the Power Apps app in Teams](media/consistent-experience-across-sessions/publish-the-power-app-in-microsoft-teams-1.png)
 
 1. Select **Next**.
 
