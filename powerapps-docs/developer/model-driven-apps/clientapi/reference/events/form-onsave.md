@@ -84,7 +84,7 @@ When using an async save the handler will wait for the promise to be fulfilled. 
 
 There may be scenarios where you want to halt the `OnSave` execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user's input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
 
-When the **disableAsyncTimeout is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
+When the **disableAsyncTimeout** is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
 
 This should be used with caution as it might affect the performance of the form save.
 
