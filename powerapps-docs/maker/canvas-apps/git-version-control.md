@@ -143,7 +143,8 @@ Since this feature is experimental, we welcome your feedback. The following list
 - If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
 - This feature does not support renaming of custom components.
 - If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. Afterwards, refresh your app to remove the lock.
-- This feature isn't compatible with [Test Studio tests](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/test-studio).
+- This feature is not compatible with [Test Studio tests](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/test-studio).
+- This feature is not compatible with [Custom Pages](https://powerapps.microsoft.com/en-us/blog/custom-pages-for-converging-model-driven-apps-and-canvas-apps/#:~:text=Custom%20Pages%20in%20a%20model-driven%20app%20provide%20flexibility,an%20upfront%20decision%20between%20the%20canvas%20and%20model.)
 
 ## Feedback to the community forum
 
