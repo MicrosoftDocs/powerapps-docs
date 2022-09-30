@@ -7,19 +7,19 @@ ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
 
 # Sample: Merge two records
 
-This sample shows how to merge two record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MergeTwoRecords).
+This sample shows how to merge two record. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/MergeTwoRecords).
 
 ## How to run this sample
 
@@ -40,14 +40,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `MergeRequest` method creates the request. 
+1. The `MergeRequest` method creates the request.
 2. The `Account` message creates another account to hold new data to merge into the table.
-
 
 ### Clean up
 
 Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

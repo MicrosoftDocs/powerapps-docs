@@ -105,10 +105,10 @@ To get the latest version of these tools, repeat these steps.
 
 [Developer tools](developer-tools.md)<br />
 [Visual Studio and the .NET Framework](org-service/visual-studio-dot-net-framework.md)<br />
-[Create early bound table classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
+[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)<br />
 [Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)<br />
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
-[Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
+[Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
 [Register a plug-in](register-plug-in.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

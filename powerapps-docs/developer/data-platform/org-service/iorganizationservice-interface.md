@@ -30,8 +30,8 @@ This interface is implemented in a number of classes that you can use in your co
 
 |Class|Description|
 |--|--|
-|<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>|This is the original low-level class which is used by WCF and the SOAP endpoint |
-|<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient>|This low-level class was created to enable OAuth authentication to the SOAP endpoint|
+|<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>|This is the original low-level class which is used by WCF and the Organization service endpoint |
+|<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient>|This low-level class was created to enable OAuth authentication to the Organization service endpoint|
 |<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>|This is the class you should use when creating .NET client applications. |
 
 > [!NOTE]

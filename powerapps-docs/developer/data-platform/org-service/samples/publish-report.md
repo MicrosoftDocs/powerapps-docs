@@ -7,19 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Publish reports
 
-
-This sample shows how to publish a report by creating a **Report** record and the related records that make it visible. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PublishReport).
+This sample shows how to publish a report by creating a **Report** record and the related records that make it visible. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/PublishReport).
 
 ## How to run this sample
 
@@ -43,6 +43,5 @@ Checks for the current version of the org.
 ### Clean up
 
 No clean up is required for this sample.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

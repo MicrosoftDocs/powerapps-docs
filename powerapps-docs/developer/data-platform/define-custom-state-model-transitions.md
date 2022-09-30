@@ -7,7 +7,6 @@ ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -21,7 +20,7 @@ contributors:
 You can specify custom state transitions for the `Incident` (Case) table or custom tables. The <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsStateModelAware?text=EntityMetadata.IsStateModelAware> property is `true` for tables that support state model transitions.
 
 > [!NOTE]
-> Although the `Incident` (Case) table isn't included in a default Microsoft Dataverse environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Although the `Incident` (Case) table isn't included in a default Microsoft Dataverse environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Case.cdm.json)
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
@@ -53,7 +52,7 @@ The table definitions for the columns defines what status values are valid for a
   
 This data is stored in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> class, which represents the options in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> class.  
   
-To view table definitions for your organization, install the Metadata Browser solution described in [Browse table definitions for your organization](browse-your-metadata.md). You can also browse the reference documentation for table in the [Table/entity reference](/reference/about-entity-reference.md).
+To view table definitions for your organization, install the Metadata Browser solution described in [Browse table definitions for your organization](browse-your-metadata.md). You can also browse the reference documentation for table in the [Table/entity reference](reference/about-entity-reference.md).
   
 <a name="BKMK_DetectValidStatusTransitions"></a>   
 

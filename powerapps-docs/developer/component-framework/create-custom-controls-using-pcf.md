@@ -25,7 +25,7 @@ To begin, open **Developer Command Prompt for VS 2017 or higher** after installi
 
 1. In the Developer Command Prompt, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_code_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
-3. Create a new component project by passing some basic parameters using the command:
+3. Create a new component project by passing some basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command:
 
     ```CLI
     pac pcf init --namespace <specify your namespace here> --name <Name of the code component> --template <component type>

@@ -67,8 +67,7 @@ To use the WYSIWYG editor:
 ### See also
 
 - [Create and manage web pages](create-manage-webpages.md)
-- [Microsoft Learn: Integration with Power BI](/learn/modules/portals-integration/3-power-bi)
+- [Integration with Power BI](/training/modules/portals-integration/3-power-bi)
 - [Work with templates](work-with-templates.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

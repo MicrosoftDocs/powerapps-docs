@@ -8,15 +8,16 @@ ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: sample
 ms.subservice: mda-developer
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
+
 # Sample: Export ribbon definitions
 
-This sample shows how to export ribbon definitions. It uses the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions).
+This sample shows how to export ribbon definitions. It uses the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> classes. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportRibbonDefinitions).
 
 ## How to run this sample
 
@@ -43,15 +44,14 @@ Checks for the current version of the org.
 
 No clean up is required for this sample
 
-  
-### See also  
- [Customize commands and the ribbon](customize-commands-ribbon.md)<br />
- [Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)<br />
- [Ribbon core schema](ribbon-core-schema.md)<br />
- [Ribbon types schema](ribbon-types-schema.md)<br />
- [Ribbon WSS schema](ribbon-wss-schema.md)<br />
- <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest><br />
- <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>
+### See also
 
+[Customize commands and the ribbon](customize-commands-ribbon.md)<br />
+[Pass parameters to a URL by using the ribbon](pass-parameters-url-by-using-ribbon.md)<br />
+[Ribbon core schema](ribbon-core-schema.md)<br />
+[Ribbon types schema](ribbon-types-schema.md)<br />
+[Ribbon WSS schema](ribbon-wss-schema.md)<br />
+<xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest><br />
+<xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
