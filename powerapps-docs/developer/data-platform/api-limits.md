@@ -182,7 +182,7 @@ More information:
 
 Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
 
-With the Organization Service SDK this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
+With the Organization Service SDK this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
 
 In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
 

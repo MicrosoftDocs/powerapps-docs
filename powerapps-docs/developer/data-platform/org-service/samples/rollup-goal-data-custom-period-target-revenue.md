@@ -16,7 +16,7 @@ search.app:
 
 # Sample: Rollup goal data for a custom period against the target revenue
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-custom-period-target-revenue -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-custom-period-target-revenue -->
 
 This sample shows how to roll up goal data for a custom period against the target revenue. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/RollupGoalData).
 

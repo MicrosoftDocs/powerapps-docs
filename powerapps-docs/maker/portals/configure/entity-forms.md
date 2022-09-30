@@ -237,6 +237,6 @@ To disable request validation, follow these steps:
 - [Advanced Forms metadata for portals](configure-web-form-metadata.md)  
 - [Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 - [Notes configuration for basic forms and Advanced Forms for portals](../configure-notes.md)
-- [Interact with Dataverse data using basic forms](/learn/modules/portals-access-data-platform/3-entity-forms)
+- [Interact with Dataverse data using basic forms](/training/modules/portals-access-data-platform/3-entity-forms)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -57,7 +57,7 @@ If you don't convert your portal to production within the seven-day suspension p
 
 ### See also
 
-[Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
+[Portal application lifecycle management](/training/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
 [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production) <br>
 [Convert an existing portal to capacity-based model](convert-portal.md#convert-an-existing-portal-to-capacity-based-model)
 
