@@ -17,7 +17,7 @@ contributors:
 
 # Add custom JavaScript to a form
 
-Both the [basic form](entity-forms.md) and [advanced form](web-form-properties.md) step records contain a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
+Both the [basic form](entity-forms.md) and [multistep form](web-form-properties.md) step records contain a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
 The custom block of JavaScript will be added to the bottom of the page just before the closing form tag element.
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
 ```
 
 > [!Important]
-> Adding a choice column to model-driven form to be used in an advanced form step or a basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
+> Adding a choice column to model-driven form to be used in an multistep form step or a basic form will appear on the portal page as a drop-down server control. Using custom JavaScript to add additional values to the control will result in an “Invalid postback or callback argument” message on the page submission.
 
 ## Additional client-side field validation
 Sometimes you might need to customize the validation of fields on the form. This example forces the user to specify an email only if the other field for preferred method of contact is set to Email.

@@ -32,7 +32,7 @@ The following table lists key terminology changes in portals.
 | Legacy term | Current term |
 | - | - |
 | Entity form | Basic form |
-| Web form | Advanced form |
+| Web form | Multistep form |
 | Entity list | List |
 | Entity permission | Table permission |
 | Entity Name | Table Name |

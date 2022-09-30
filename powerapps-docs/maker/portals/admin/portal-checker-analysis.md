@@ -33,9 +33,9 @@ This issue occurs when the **Search** site marker isn't available in your portal
     - **Page**: Select the webpage record that is set as the search page of your portal.
 1. Select **Save & Close**.
 
-## Anonymous access to Basic/Advanced forms and Lists
+## Anonymous access to Basic/Multistep forms and Lists
 
-Basic Forms, Advanced Forms and Lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Securing lists](../configure/securing-lists.md) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
+Basic Forms, Multistep Forms and Lists in portals can be excluded from enforcing table permissions by not selecting **Enable Table Permission** checkbox while creating or modifying these controls as explained in [Securing lists](../configure/securing-lists.md) and [Secure your forms](../configure/entity-forms.md#secure-your-forms) articles.
 
 This method is useful for quickly testing your configurations during development of portal, but not securing Lists and Forms on portal can have unintended consequences including unauthorized access to data. We don't advise this method to be used outside a secure dev or test environment.
 
@@ -49,16 +49,16 @@ To fix this issue for List/Basic forms:
 
 1. Update the property "Enable Table Permissions" for [Lists](../configure/securing-lists.md) or [Basic forms](../configure/entity-forms.md#secure-your-forms).
 
-To fix this issue for Advanced forms:
+To fix this issue for Multistep forms:
 
 > [!IMPORTANT]
-> Portal checker rule doesn't mention Advanced form steps that might have similar configuration.
+> Portal checker rule doesn't mention Multistep form steps that might have similar configuration.
 
 1. Open the [Portal Management app](../configure/configure-portal.md).
 
-1. On the left-pane, select **Advanced form**.
+1. On the left-pane, select **Multistep form**.
 
-1. Open each multistep form and go to **Advanced Form Steps**.
+1. Open each multistep form and go to **Multistep Form Steps**.
 
 1. Go through each step, and update the **Enable Table Permission** property to be enabled.
 

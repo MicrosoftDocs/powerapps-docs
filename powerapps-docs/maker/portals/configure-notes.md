@@ -224,7 +224,7 @@ However, when editing the note from the portal webpage, you see the note in HTML
 
 ## Notes configuration for multistep forms
 
-Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). Create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
+Multistep form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). Create a metadata record for the multistep form Step that has notes first, and then add the notes configuration metadata.
 
 ## Enable file attachment on form
 
