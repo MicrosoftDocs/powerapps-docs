@@ -1,20 +1,21 @@
 ﻿---
 title: "Tutorial: Use dataset code components"
 description: Learn how to add dataset-based code components to your Power Pages site.
-author: nickdoelman
+author: GitanjaliSingh33msft
 ms.topic: tutorial
 ms.custom: template-tutorial
 ms.date: 09/30/2022
 ms.subservice:
-ms.author: ndoelman 
-ms.reviewer: 
+ms.author: gisingh 
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - ProfessorKendrick
+    - GitanjaliSingh33msft
 ---
 # Tutorial: Use dataset code components
 
-In this tutorial, you'll create a sample component using Power Apps component framework.  Power Apps component framework empowers professional developers and app makers to crate code components for model-driven and canvas aps.  These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals](/power-apps/maker/portals/component-framework)
+In this tutorial, you'll create a sample component using Power Apps component framework.  Power Apps component framework empowers professional developers and app makers to crate code components for model-driven and canvas aps.  These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals](component-framework.md)
 
 > [!NOTE]
 > - This tutorial is based on the existing Power Apps component framework tutorial that walks you through [Power Apps grid control (preview)](/power-apps/maker/model-driven-apps/the-power-apps-grid-control) component on list and sub gird on blank page. You can also use any existing or new component, add it to any other web page for this tutorial. In this case, be sure to your component and web page when following the steps in this tutorial. To learn which code components are supported in portals, see [Use code components in portals](/powerapps/maker/portals/component-framework). 
@@ -117,7 +118,7 @@ The values of the properties that the code component expects need to be passed i
 {% codecomponent name: <ID or name> <property1:value> <property2:value> %}
 ```
 
-For more information, see [Liquid template tag for code components](/power-apps/maker/portals/component-framework-liquid).
+For more information, see [Liquid template tag for code components](component-framework.md-liquid).
 
 ## Limitations
 
@@ -125,4 +126,4 @@ Actions and metadata filter configuration on lists and subgrid are not supported
 
 ### See also
 
-[Use code components in Power Pages](/power-apps/maker/portals/component-framework)
+[Use code components in Power Pages](component-framework.md)
