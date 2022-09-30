@@ -70,7 +70,7 @@ In this step, you'll create a new basic form in portals and then add the compone
 
 Follow these steps to enable control on entity view in Dataverse. 
 
-1. Open the [Portal Management app](../configure/portal-management-app.md).
+1. Open the [Portal Management app](configure/configure-portal.md).
 
 1. Enter **Name**. For example, *Account list with code component*. 
 
@@ -86,7 +86,7 @@ Follow these steps to enable control on entity view in Dataverse. 
 
 ### Step 3.3 - Add the code component to sub grid 
 
-1. Open the [Portal Management app](../configure/portal-management-app.md).
+1. Open the [Portal Management app](configure/configure-portal.md).
 
 1. On the left pane, under **Content**, select **Basic Forms**. 
 
