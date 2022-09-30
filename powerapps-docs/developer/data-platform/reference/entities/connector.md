@@ -1,7 +1,7 @@
 ---
 title: "connector table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connector table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Connector Entity to support Solutioning Integration
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/connectors(*connectorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/connectors<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -70,6 +70,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [connectorId](#BKMK_connectorId)
 - [ConnectorInternalId](#BKMK_ConnectorInternalId)
 - [ConnectorType](#BKMK_ConnectorType)
+- [CustomCodeBlobContent](#BKMK_CustomCodeBlobContent)
 - [Description](#BKMK_Description)
 - [DisplayName](#BKMK_DisplayName)
 - [IconBlob](#BKMK_IconBlob)
@@ -94,8 +95,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Capability of a connector, i.e. "gateway" means the connector can connect to on-prem gateway|
-|DisplayName|capabilities|
+|Description|Capabilities|
+|DisplayName|Capabilities|
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|capabilities|
@@ -180,6 +181,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |0|NotSpecified||
 |1|CustomConnector||
 
+
+
+### <a name="BKMK_CustomCodeBlobContent"></a> CustomCodeBlobContent
+
+|Property|Value|
+|--------|-----|
+|Description|Custom Code for the Connector|
+|DisplayName|Custom Code Blob|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|customcodeblobcontent|
+|MaxLength|500000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Description"></a> Description
@@ -498,7 +515,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
-- [CustomCodeBlob_Name](#BKMK_CustomCodeBlob_Name)
 - [IconBlob_Timestamp](#BKMK_IconBlob_Timestamp)
 - [IconBlob_URL](#BKMK_IconBlob_URL)
 - [IconBlobId](#BKMK_IconBlobId)
@@ -674,24 +690,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|createdonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_CustomCodeBlob_Name"></a> CustomCodeBlob_Name
-
-**Added by**: Active Solution Solution
-
-|Property|Value|
-|--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|LogicalName|customcodeblob_name|
-|MaxLength|200|
-|RequiredLevel|None|
 |Type|String|
 
 
@@ -1061,6 +1059,7 @@ Listed by **SchemaName**.
 - [connector_BulkDeleteFailures](#BKMK_connector_BulkDeleteFailures)
 - [connector_PrincipalObjectAttributeAccesses](#BKMK_connector_PrincipalObjectAttributeAccesses)
 - [connector_connectionreference](#BKMK_connector_connectionreference)
+- [lk_connectioninstance_connectorid](#BKMK_lk_connectioninstance_connectorid)
 
 
 ### <a name="BKMK_connector_SyncErrors"></a> connector_SyncErrors
@@ -1215,6 +1214,23 @@ Same as the [connector_connectionreference](connectionreference.md#BKMK_connecto
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
+
+### <a name="BKMK_lk_connectioninstance_connectorid"></a> lk_connectioninstance_connectorid
+
+**Added by**: Connection Instance Solution Solution
+
+Same as the [lk_connectioninstance_connectorid](connectioninstance.md#BKMK_lk_connectioninstance_connectorid) many-to-one relationship for the [connectioninstance](connectioninstance.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|connectioninstance|
+|ReferencingAttribute|connectorid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|ConnectionInstance_connectorid_con|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
@@ -1274,6 +1290,6 @@ See the [business_unit_connector](businessunit.md#BKMK_business_unit_connector) 
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.connector?text=connector EntityType" />

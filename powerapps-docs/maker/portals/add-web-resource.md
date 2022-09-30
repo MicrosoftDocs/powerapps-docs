@@ -59,7 +59,7 @@ To see and interact with the file stored in Azure, you must add the web resource
 
 The new control will now be rendered on the page, giving you the ability to manage your attachments in Azure Storage.
 
-:::image type="content" source="media/enable-azure-storage/dataverse-form-azure.png" alt-text="File attachment added to Dataverse form on a model-driven Power App stored in Azure.":::
+:::image type="content" source="media/enable-azure-storage/dataverse-form-azure.png" alt-text="File attachment added to Dataverse form on a model-driven Power Apps stored in Azure.":::
 
 The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Dataverse; those files will be denoted with the paper-clip icon.
 

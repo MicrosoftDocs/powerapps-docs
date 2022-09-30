@@ -5,7 +5,7 @@ author: tahoon-ms
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 02/12/2021
+ms.date: 09/16/2022
 ms.subservice: canvas-maker
 ms.author: tahoon
 ms.reviewer: tapanm
@@ -33,7 +33,7 @@ You can change the screen name in the controls tree or properties panel in Power
 
 The first element on a screen is its name. It's visually hidden and accessible only to screen reader users.
 
-When a new screen loads, Power Apps focuses the screen name. If you use **[SetFocus](functions/function-setfocus.md)** immediately when the screen loads, the screen name will not be read. Consider creating a visible title and making it a [live region](accessible-apps-live-regions.md) to announce the change in context.
+When a new screen loads, Power Apps focuses the screen name. If you use **[SetFocus](functions/function-setfocus.md)** immediately when the screen loads, the screen name won't be read. Consider creating a visible title and making it a [live region](accessible-apps-live-regions.md) to announce the change in context.
 
 ## Logical control order
 
@@ -89,14 +89,61 @@ In this example, a **Gallery** row has a thumbnail and two pieces of text on the
 
 ## Logical keyboard navigation order
 
-**[TabIndex](controls/properties-accessibility.md)** specifies how controls can be reached by keyboard users. **TabIndex** should either be 0 or -1. With a logical control order as described above, there is little reason to have **TabIndex** greater than 0.
+**[TabIndex](controls/properties-accessibility.md)** specifies how controls can be reached by keyboard users. **TabIndex** should either be 0 or -1. With a logical control order as described above, there's little reason to have **TabIndex** greater than 0.
 
 Keyboard navigation order should follow visual flow of controls. If the navigation order is unexpected, you should first check if the app structure is logical.
 
 > [!NOTE]
 > Keyboard navigation order is not the same as control order. **TabIndex** only affects Tab key navigation. It does not change how screen reader users navigate an app linearly. Some screen reader users don't even use keyboards.
 
-For rare scenarios where the keyboard navigation order should be different from control order, you can customize **[TabIndex](controls/properties-accessibility.md)**.
+### Avoid custom tab indexes
+
+Custom tab indexes are those that are greater than zero. They're almost always a sign of bad design. There are better alternatives like creating an appropriate app structure or using **[SetFocus](/power-platform/power-fx/reference/function-setfocus)** to change focus.
+
+Avoid using custom tab indexes because of the following reasons.
+
+#### Accessibility
+It's a serious accessibility issue to have custom tab indexes. Screen reader users navigate an app using its logical structure. Custom tab indexes ignore that structure. Since screen reader users can also navigate using **Tab** key, they'll be confused when they get a different order from other methods of navigation.
+
+#### Usability
+Users can be confused when some items appear to be skipped. They can be disoriented when focus moves in an unpredictable order. This is even more problematic for users with cognitive disabilities.
+
+#### Maintenance
+App makers have to manually update the **TabIndex** of multiple controls whenever a new one is inserted. It's easy to miss an update or get the order wrong.
+
+#### Performance
+To support custom tab indexes, the Power Apps system has to examine all controls on the page and compute the appropriate order. This computation is an intensive process. Container controls like **Gallery** have complicated rules on how **TabIndex** works for child controls. The system maps the app maker's desired **TabIndex** to a different value to obey these rules. This is why even if TabIndex is set to zero for all controls, the actual HTML `tabindex` will be some positive number.
+
+#### Integration with other components
+Custom tab indexes only work with built-in controls. Controls that aren't integrated into Power Apps' tab index system will have an unexpected navigation order. This can be a problem for [code components](/power-apps/developer/component-framework/component-framework-for-canvas-apps). Developers of these components have to keep track of interactive elements and set tab index on them. They might use third-party libraries, which may not even provide a way to customize tab indexes. On the other hand, when all tab indexes are either 0 or -1, there's no need to involve Power Apps' tab index system. Any third-party component embedded in the app will automatically get the correct tab sequence.
+
+In the other direction, when canvas apps are embedded in another web page, custom tab indexes don't work. For example, in [custom pages](../model-driven-apps/model-app-page-overview.md). Power Apps can't control the elements outside the canvas app, so the overall tab navigation order will be illogical.
+
+### Simplified tab index (preview)
+
+To ensure that tab indexes are either 0 or -1, enable the app feature **Simplified tab index** from **Settings** > **Upcoming features**.
+
+:::image type="content" source="media/accessible-apps-structure/simplified-tab-index-setting.png" alt-text="Enabling the Simplified tab index app feature.":::
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+When this feature is enabled, all **TabIndex** values greater than zero will be treated as zero. This also disables Power Apps' tab index system so that it can integrate better with other components, as described above.
+
+### Workaround for custom tab sequence
+
+For rare scenarios where the keyboard navigation order should be different from visual order, you can position container controls carefully to have the same effect.
+
+In the example below, button A is above button B. The natural tab navigation order is A, then B.
+
+:::image type="content" source="media/accessible-apps-structure/simplified-tab-index-workaround-normal.png" alt-text="Two buttons with the same TabIndex, stacked vertically.":::
+
+To reverse the tab navigation order, put B in a Container control. Set the Y value of the Container to be above A. The app structure now has the Container (and B) before A. Hence, the tab navigation order is B, then A.
+
+:::image type="content" source="media/accessible-apps-structure/simplified-tab-index-workaround-container.png" alt-text="B is put in a container that appears before A.":::
+
+With this technique, screen reader users will also encounter B before A when navigating without the **Tab** key.
 
 ## Next steps
 

@@ -5,7 +5,7 @@ author: hemantgaur
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/25/2021
+ms.date: 09/06/2021
 ms.subservice: canvas-maker
 ms.author: hemantg
 search.audienceType:
@@ -23,7 +23,7 @@ contributors:
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> - This is an experimental feature.
+> - This is an experimental feature, and will be deprecated soon. Instead of using this experimental feature, consider [structuring an app appropriately](accessible-apps-structure.md#logical-control-order) to achieve the desired tab navigation order.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 When you're nesting controls such as containers and component instances, the user input value for [TabIndex](controls/properties-accessibility.md#tabindex) isn't respected sometimes. **Improved canvas keyboard navigation** experimental setting improves the navigation experience in this situation when **Tab** key is pressed on the keyboard helping focus on the desired container or control precisely and predictably.

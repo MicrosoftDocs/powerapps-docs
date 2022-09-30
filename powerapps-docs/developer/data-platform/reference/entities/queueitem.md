@@ -1,7 +1,7 @@
 ---
 title: "QueueItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ A specific item in a queue, such as a case record or an activity record.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |AddToQueue|<xref href="Microsoft.Dynamics.CRM.AddToQueue?text=AddToQueue Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/queueitems<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -74,6 +74,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Status](#BKMK_Status)
 - [StatusCode](#BKMK_StatusCode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [Title](#BKMK_Title)
 - [ToRecipients](#BKMK_ToRecipients)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
@@ -295,6 +296,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_Title"></a> Title
+
+|Property|Value|
+|--------|-----|
+|Description|Shows the title or name that describes the queue record. This value is copied from the record that was assigned to the queue.|
+|DisplayName|Title|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|title|
+|MaxLength|850|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ToRecipients"></a> ToRecipients
 
 |Property|Value|
@@ -398,7 +415,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningUser](#BKMK_OwningUser)
 - [QueueIdName](#BKMK_QueueIdName)
-- [Title](#BKMK_Title)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 - [WorkerIdModifiedOn](#BKMK_WorkerIdModifiedOn)
@@ -693,8 +709,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4216|Social Activity|For internal use only.|
 |4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10092|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10105|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10093|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10106|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
 
 
 
@@ -796,22 +812,6 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|queueidname|
 |MaxLength|400|
 |RequiredLevel|SystemRequired|
-|Type|String|
-
-
-### <a name="BKMK_Title"></a> Title
-
-|Property|Value|
-|--------|-----|
-|Description|Shows the title or name that describes the queue record. This value is copied from the record that was assigned to the queue.|
-|DisplayName|Title|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|title|
-|MaxLength|300|
-|RequiredLevel|None|
 |Type|String|
 
 
@@ -1098,6 +1098,6 @@ See the [msdyn_knowledgearticletemplate_QueueItems](msdyn_knowledgearticletempla
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.queueitem?text=queueitem EntityType" />

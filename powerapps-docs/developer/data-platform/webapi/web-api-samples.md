@@ -20,10 +20,6 @@ contributors:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You can use the Microsoft Dataverse Web API with a wide variety of programming languages or libraries. This guide provides a number of code samples demonstrating how to use the Web API in different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
-
-<!-- TODO:
-> [!NOTE]
-> With the availability of the new [Xrm.WebApi](../clientapi/reference/xrm-webapi.md) client API methods, we are working on updating the client-side JavaScript samples to use the new client API methods. Check back soon.   -->
   
 ## Web API samples list
 
@@ -32,11 +28,7 @@ The following table describes the Dataverse Web API samples and their language-s
 |Language-neutral description|C# implementation|Client-side JavaScript implementation|  
 |-----------------------------------|------------------------|--------------------------------------------|  
 |[Web API Samples](web-api-samples.md) (this topic)|[Web API Samples (C#)](web-api-samples-csharp.md)|[Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)|  
-<!-- TODO:
-|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
-|[Web API Query Data Sample](web-api-query-data-sample.md)|[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|   
-|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|[Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
-|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  -->  
+
   
 ### Groups of operations
 

@@ -1,7 +1,7 @@
 ---
 title: "Team table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Team table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Collection of system users that routinely collaborate. Teams can be used to simp
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |AddMembersTeam|<xref href="Microsoft.Dynamics.CRM.AddMembersTeam?text=AddMembersTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddMembersTeamRequest>|
 |ConvertOwnerTeamToAccessTeam|<xref href="Microsoft.Dynamics.CRM.ConvertOwnerTeamToAccessTeam?text=ConvertOwnerTeamToAccessTeam Action" />|<xref:Microsoft.Crm.Sdk.Messages.ConvertOwnerTeamToAccessTeamRequest>|
@@ -976,6 +976,7 @@ Listed by **SchemaName**.
 - [team_flowsession](#BKMK_team_flowsession)
 - [team_workflowbinary](#BKMK_team_workflowbinary)
 - [team_connectionreference](#BKMK_team_connectionreference)
+- [team_connectioninstance](#BKMK_team_connectioninstance)
 - [team_msdyn_aiconfiguration](#BKMK_team_msdyn_aiconfiguration)
 - [team_msdyn_aimodel](#BKMK_team_msdyn_aimodel)
 - [team_msdyn_aitemplate](#BKMK_team_msdyn_aitemplate)
@@ -1013,10 +1014,12 @@ Listed by **SchemaName**.
 - [team_keyvaultreference](#BKMK_team_keyvaultreference)
 - [team_managedidentity](#BKMK_team_managedidentity)
 - [team_appnotification](#BKMK_team_appnotification)
+- [team_msdyn_entitylinkchatconfiguration](#BKMK_team_msdyn_entitylinkchatconfiguration)
 - [team_msdyn_richtextfile](#BKMK_team_msdyn_richtextfile)
 - [team_msdyn_customcontrolextendedsettings](#BKMK_team_msdyn_customcontrolextendedsettings)
 - [team_msdyn_pmanalysishistory](#BKMK_team_msdyn_pmanalysishistory)
 - [team_msdyn_pminferredtask](#BKMK_team_msdyn_pminferredtask)
+- [team_msdyn_pmprocessusersettings](#BKMK_team_msdyn_pmprocessusersettings)
 - [team_msdyn_pmrecording](#BKMK_team_msdyn_pmrecording)
 - [team_msdyn_pmtemplate](#BKMK_team_msdyn_pmtemplate)
 - [team_msdyn_analysiscomponent](#BKMK_team_msdyn_analysiscomponent)
@@ -2200,6 +2203,23 @@ Same as the [team_connectionreference](connectionreference.md#BKMK_team_connecti
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_connectioninstance"></a> team_connectioninstance
+
+**Added by**: Active Solution Solution
+
+Same as the [team_connectioninstance](connectioninstance.md#BKMK_team_connectioninstance) many-to-one relationship for the [connectioninstance](connectioninstance.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|connectioninstance|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_connectioninstance|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_aiconfiguration"></a> team_msdyn_aiconfiguration
 
 **Added by**: Active Solution Solution
@@ -2829,6 +2849,23 @@ Same as the [team_appnotification](appnotification.md#BKMK_team_appnotification)
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_team_msdyn_entitylinkchatconfiguration"></a> team_msdyn_entitylinkchatconfiguration
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_entitylinkchatconfiguration](msdyn_entitylinkchatconfiguration.md#BKMK_team_msdyn_entitylinkchatconfiguration) many-to-one relationship for the [msdyn_entitylinkchatconfiguration](msdyn_entitylinkchatconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_entitylinkchatconfiguration|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|team_msdyn_entitylinkchatconfiguration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_team_msdyn_richtextfile"></a> team_msdyn_richtextfile
 
 **Added by**: Active Solution Solution
@@ -2893,6 +2930,23 @@ Same as the [team_msdyn_pminferredtask](msdyn_pminferredtask.md#BKMK_team_msdyn_
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|team_msdyn_pminferredtask|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_team_msdyn_pmprocessusersettings"></a> team_msdyn_pmprocessusersettings
+
+**Added by**: Active Solution Solution
+
+Same as the [team_msdyn_pmprocessusersettings](msdyn_pmprocessusersettings.md#BKMK_team_msdyn_pmprocessusersettings) many-to-one relationship for the [msdyn_pmprocessusersettings](msdyn_pmprocessusersettings.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmprocessusersettings|
+|ReferencingAttribute|owningteam|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|team_msdyn_pmprocessusersettings|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -3181,6 +3235,6 @@ IntersectEntityName: teamprofiles<br />
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.team?text=team EntityType" />

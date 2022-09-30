@@ -7,19 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Query connection roles by entity type code (early bound)
 
-
-This sample shows how to use a query to find a connection role for an account table by specifying an entity type code. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueryRoleByEntityType).
+This sample shows how to use a query to find a connection role for an account table by specifying an entity type code. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryRoleByEntityType).
 
 ## How to run this sample
 
@@ -42,11 +42,10 @@ Checks for the current version of the org.
 1. Defines some anonymous types to define the range of possible connection property values.
 2. The `ConnectionRole` creates a connection role.
 3. The `QueryExpression` queries all the connection roles.
-4. The `ConnectionRoleObjectTypeCode` creates a connection role object type code record for account table. 
+4. The `ConnectionRoleObjectTypeCode` creates a connection role object type code record for account table.
 
 ### Clean up
 
 Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: Configure a lookup component on a form | MicrosoftDocs"
 description: Learn how to create a lookup for a form
 ms.custom: ""
-ms.date: 07/27/2022
+ms.date: 08/05/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -55,25 +55,11 @@ These are the properties available to configure when using a lookup component on
 | **Display options** | **Show all views** |  When selected, app users can change from the **Default view** to all other views of the table selected in the **Table** property. <br /><br />This property is only available when **Allow users to change view** is selected. |
 | **Display options** | **Selected views** |  A list of views of the table selected in the **Table** property that app users can change to from the **Default view**. <br /><br />This property is only available when **Allow users to change view** is selected and **Show all views** is unselected. |
 | **Formatting**  | **Form field width**  | Determines the width in number of columns for the lookup column.  |
-| **Components**  | **+Component** | Configure a control for the lookup column, such as the form component control.  |
-
-## Configure lookup column filtering (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-These are the properties available to configure lookup filtering.
-
-> [!NOTE]
-> This is a preview feature
-
-<!-- After this feature moves to general availability, remove this section and move the below table into the table in the previous section. -->
-
-|Area  |Name  |Description  |
-|---------|---------|---------|
 | **Filtering**  | **Filter by related rows**  | When this is enabled, you can filter this lookup based on a row related to both the current table and this lookup. The rows that display in this lookup when users search for a row will then have additional filtering applied. This helps provide more relevant searches when setting the value of the lookup. <br /><br />By default, this is turned off.  |
 | **Filtering**  | **Relationship to current table** | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />The possible relationship combinations will be listed in the table following this one.  |
 | **Filtering**  | **Relationship to this lookup’s table**  | This dropdown list defines the relationship from the table of the related row you want to filter by to the target lookup's table. <br /><br />For the possible relationship combinations, go to [Table relationships available for a lookup column](#possible-relationship-combinations-for-a-lookup-column).   |
 | **Filtering**  | **Allow users to turn off filter**  | When this is enabled, users will have the option to turn off the filter you define here.  |
+| **Components**  | **+Component** | Configure a control for the lookup column, such as the form component control.  |
 
 ## Possible relationship combinations for a lookup column
 
