@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 08/25/2022
+ms.date: 09/30/2022
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,6 +21,7 @@ search.app:
   - D365CE
 contributors:
   - JasonHQX
+  - jovanpop
 ---
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
 
@@ -147,6 +148,9 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
 
 :::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
+
+> [!IMPORTANT]
+> Make sure that your serverless SQL pool in Azure Synapse Analytics workspace can access the Azure Data Lake storage account if you want to use snapshot data. Without managed identity access, the snapshot data table won't be accessible using the serverless SQL pool.
 
 ### What's next?
 
