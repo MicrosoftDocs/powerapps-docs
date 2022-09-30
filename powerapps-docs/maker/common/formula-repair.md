@@ -1,8 +1,8 @@
 ﻿---
-title: "Formula repair in Power Apps (experimental) | MicrosoftDocs"
+title: "Formula repair in Power Apps (preview) | MicrosoftDocs"
 description: Understand how to enable and use formula repair in Power Apps
 ms.custom: ""
-ms.date: 08/11/2022
+ms.date: 09/30/2022
 ms.reviewer: tapanm-msft
 ms.topic: overview
 author: norliu
@@ -17,7 +17,7 @@ contributors:
   - norliu
 ---
 
-# Formula repair in Power Apps (experimental)
+# Formula repair in Power Apps (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -33,7 +33,7 @@ Once you have Power Apps Studio open, go to the top menu bar, and select **Setti
 
 > [!IMPORTANT]
 > - This is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Use formula repair
 
