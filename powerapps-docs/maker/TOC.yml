@@ -2126,7 +2126,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md 
+            href: ./portals/component-framework-tutorial.md
+          - name: "Tutorial: Use dataset for code components in portals"
+            href: ./portals/tutorial-pcf-code.md 
           - name: "Tutorial: Configure rich text editor control on portals"
             href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
