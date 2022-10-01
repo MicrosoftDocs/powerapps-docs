@@ -1,7 +1,7 @@
 ---
 title: "Retrieve related table records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related table records by expanding the navigation properties."
-ms.date: 06/03/2022
+ms.date: 09/29/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -203,7 +203,10 @@ OData-Version: 4.0
 
 If you expand on collection-valued navigation properties to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise the collection will return an empty array.
 
-In either case an `@odata.nextLink` property will be returned for the related entities. If you want to retrieve the collection separately, you can use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
+In either case an `@odata.nextLink` property will be returned for the related entities. If you want to retrieve the collection separately, you can use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.
+
+> [!NOTE]
+> There is no paging available for collection-valued navigation properties returned using `$expand`. No more than 5000 records will be returned. If you require paging, use the URL in the `@odata.nextLink` property with the `Prefer: odata.maxpagesize` request header. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page).
 
 The following example retrieves the tasks assigned to the top 2 account records.  One has related tasks, the other does not.
   

@@ -233,7 +233,7 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
    // Create an named definition of an HttpClient that can be created in a component page
    builder.Services.AddHttpClient("CDSClient", client =>
    {
-       // See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors
+       // See https://learn.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors
        client.BaseAddress = new Uri($"{resourceUrl}/api/data/{version}/");
        client.Timeout = TimeSpan.FromSeconds(timeoutSeconds);
        client.DefaultRequestHeaders.Add("OData-Version", "4.0");
@@ -410,7 +410,7 @@ This is a new page that will display the account information.
        }
 
        //Just the properties of the Account EntityType used for this sample
-       // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/account
+       // See https://learn.microsoft.com/dynamics365/customer-engagement/web-api/account
        public class Account
        {
 
@@ -427,7 +427,7 @@ This is a new page that will display the account information.
        }
 
        //Just the properties of the Contact EntityType that are expanded from the Account entity
-       // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/contact
+       // See https://learn.microsoft.com/dynamics365/customer-engagement/web-api/contact
        public class Contact
        {
 
@@ -447,7 +447,7 @@ This is a new page that will display the account information.
        }
 
        //Contains data from the Web API
-       //See https://docs.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#parse-errors-from-the-response
+       //See https://learn.microsoft.com/powerapps/developer/data-platform/webapi/compose-http-requests-handle-errors#parse-errors-from-the-response
        public class ErrorDetail
        {
            public string code { get; set; }

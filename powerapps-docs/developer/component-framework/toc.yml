@@ -20,7 +20,7 @@ items:
   - name: Get Microsoft Power Platform CLI
     href: get-powerapps-cli.md
   - name: Learn Power Apps component framework
-    href: /learn/paths/use-power-apps-component-framework
+    href: /training/paths/use-power-apps-component-framework
   - name: Tutorial
     items:
     - name: Create your first component

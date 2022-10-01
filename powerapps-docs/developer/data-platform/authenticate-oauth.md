@@ -84,7 +84,7 @@ For a code sample that demonstrates use of MSAL libraries for authentication wit
 
 Dataverse supports application authentication with the Web API endpoint using the OAuth 2.0 protocol. For your custom .NET applications, use MSAL for application authentication with the Web API endpoint.
 
-Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) and [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) to handle authentication. The `CrmServiceClient` class currently uses ADAL for authentication while `ServiceClient` uses MSAL. Writing your application code to use these clients removes the need to manage authentication directly. Both clients work with the SOAP and Web API endpoints.
+Dataverse SDK for .NET includes client classes [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) and [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) to handle authentication. The `CrmServiceClient` class currently uses ADAL for authentication while `ServiceClient` uses MSAL. Writing your application code to use these clients removes the need to manage authentication directly. Both clients work with the SDK and Web API endpoints.
 
 ## Use the AccessToken with your requests
 

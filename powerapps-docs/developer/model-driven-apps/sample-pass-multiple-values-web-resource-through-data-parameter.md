@@ -16,7 +16,7 @@ search.app:
 ---
 # Sample: Pass multiple values to a  web resource through the data parameter
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-pass-multiple-values-web-resource-through-data-parameter -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-pass-multiple-values-web-resource-through-data-parameter -->
 
 An (HTML) web resource page can only accept a single custom parameter called `data`. To pass more than one value in the data parameter, you need to encode the parameters and decode the parameters in your page.  
   

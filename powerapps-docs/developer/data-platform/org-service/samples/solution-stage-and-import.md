@@ -17,7 +17,7 @@ search.app:
 
 # Sample: Solution staging with asynchronous import
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to perform the following actions with solutions:
 

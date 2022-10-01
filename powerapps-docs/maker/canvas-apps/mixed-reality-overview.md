@@ -66,7 +66,7 @@ Start adding the controls to your apps:
 
 ### See also
 
-[Build a 3D mobile app with Power Apps in mixed reality](/learn/modules/power-apps-tutorial/)
+[Build a 3D mobile app with Power Apps in mixed reality](/training/modules/power-apps-tutorial/)
 
 [Improve sales conversation by placing products directly in your customer's space with Mixed Reality](https://powerapps.microsoft.com/blog/improving-sales-conversion-by-placing-products-directly-in-your-customers-space-with-mixed-reality/)
 
