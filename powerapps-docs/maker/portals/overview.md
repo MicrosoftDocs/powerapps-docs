@@ -55,7 +55,7 @@ For more on the differences between add-on licenses and capacity-based licenses,
 ### See also
 
 [Terminology changes in Power Apps portals](terminology-changes.md) <br>
-[Get started with Power Apps portals](/learn/paths/get-started-power-apps-portals/) <br>
+[Get started with Power Apps portals](/training/paths/get-started-power-apps-portals/) <br>
 [Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
 [Available portal templates](portal-templates.md) <br>
 [Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>

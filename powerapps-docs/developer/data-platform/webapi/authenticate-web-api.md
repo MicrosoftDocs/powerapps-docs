@@ -22,9 +22,9 @@ The code you write to manage authentication when using the Web API depends on th
   
 ## Authenticate with JavaScript in web resources
 
-When you use the Web API with JavaScript within HTML web resources, form scripts, or ribbon commands you don’t need to include any code for authentication. In each of these cases the user is already authenticated by the application and authentication is managed by the application.  
+When you use the Web API with JavaScript within HTML web resources, form scripts, or ribbon commands you don't need to include any code for authentication. In each of these cases the user is already authenticated by the application and authentication is managed by the application.  
 
-If you’re creating a single page application (SPA) using JavaScript you can use the adal.js library as described in [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
+If you're creating a single page application (SPA) using JavaScript you can use the msal.js library as described in [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
   
 ### See also
  

@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 06/22/2021
+ms.date: 09/16/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -20,13 +20,13 @@ search.app:
 ---
 # Use timeline 
 
-
-Timeline is a control that allows you to view information that is connected to a row in a table and occurs over time in a single stream. Some information that can be logged into the timeline are notes and posts in addition to displaying activities such as emails, appointments, phone calls, and tasks.
+Timeline is a modernized and optimized control that helps provide you with at-a-glance understandability when working with your customers. You can use the timeline to view information that is connected to a row in a table and occurs over time in a single stream. Some information that can be logged into the timeline includes notes and posts, in addition to displaying activities such as emails, appointments, phone calls, and tasks.
 
 Timeline allows you to:
 - Access the command bar to perform common actions quickly
-- Filter and view important notes, posts, and activities using multiple filter options
-- View and manage email conversation threads with ease
+- Filter and view important notes, posts, and activities using multiple filter options, and keep the filtered settings across activities
+- Quickly view and manage email conversation threads with ease
+- Keep detailed customer records by attaching important files and images to posts
 
 ![Timeline Browser Overview.](media\timeline-browser-view.png "Timeline Browser Overview")
 
@@ -43,7 +43,7 @@ When enabled by your system administrator, you can use the icons that are displa
 - [Search row](#search-rows-on-timeline)
 - [Add attachments](#add-an-attachment-to-a-note-in-timeline)
 
-The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/powerapps/maker/model-driven-apps/set-up-timeline-control.md).
+The timeline dashboard displays only the entities that are configured for the signed-in user. So, what you see on the timeline may differ from what another user will see. The signed-in user will see any rows they've followed if those rows are configured to display on the dashboard. For example, if only email and appointments are configured to display, then the signed-in user will only see email that relates to them, which can be email they've sent, email sent to them, and email they follow. The same would be true for appointments in this scenario. For more information on setting up timeline, see [Set up the timeline control](/power-apps/maker/model-driven-apps/set-up-timeline-control).
 
 > [!Note]
 > The Notes feature is not available from the timeline. 
@@ -96,6 +96,14 @@ The following category and sub-category options are available on the filer menu:
 |Posts by                   |<li>Auto post</li><li>Users</li> |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li> |
 
+### Save filter settings
+  
+You can choose to save your filter settings so that you don't have to set them again each time you work with activities in the timeline.
+  
+To save your filter settings, after configureing the filters you want, select the ellipses, and then select **Remember my filters**.
+  
+![Remember filters functionality.](media\timeline-remember-filters.png "Remember my filters functionality")
+  
 ## Work with rows  
 
 When working with rows, you can view key information at a glance or expand rows to view more details. When you hover over a row, actions display that you can use.
@@ -108,9 +116,10 @@ When enabled by your system administrator, you can view timeline rows quickly in
 
 Legend
 1. The **Expand all records** ![Expand all rows.](media\timeline-expand-icon.png "Expand all rows") icon is used to expand all rows listed on the timeline.
-2. The carats in the bottom-right corner of rows allow you to expand (^) or minimize (v) display views.
-3. Each row has a list of commands relevant to their row type that displays in the top right corner for ease of use. 
-4. Row backgrounds change to grey when you hover over it, and it becomes transparent again when you move the mouse away.
+1. The **Modified on** timestamp displays the time the record was last updated.  
+1. Each row has a list of commands relevant to their row type that displays in the top right corner for ease of use. 
+1. Row backgrounds change to grey when you hover over it, and it becomes transparent again when you move the mouse away.
+1. The carats in the bottom-right corner of each row allow you to expand (^) or minimize (v) the display views.
 
 ## More commands
 
@@ -120,9 +129,19 @@ The **More commands** option contains refresh, sort, and email functionalities.
 
 Legend
 1. The **More commands** ![More commands.](media\timeline-more-commands-icon.png "More commands") icon, when expanded, provides additional functionality options.
-2. The **Refresh timeline** command updates row details in the timeline.
-3. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
-4. The **Always show email as conversations** or **Always show email as individual messages** command is used to enable or disable threaded email views.
+1. The **Refresh timeline** command updates row details in the timeline.
+1. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
+1. The **Show email as** command is used to enable or disable threaded email views.
+1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
+
+
+## View email inline in timeline
+
+If preferred, you can view email messages inline on the timeline rather than open them as separate pages.
+  
+To view an email directly in the timeline, on the row, select **View more**. The email is displayed on the same form. When you’re finished viewing the email, you can collapse the screen and return to the previous view of the form.
+
+![Inline view of email.](media\email-timeline-view.png "Inline view of email")
 
 ## Threaded email views in timeline
 
@@ -206,17 +225,42 @@ You can also enter a note and add it to a row, but you can only add one attachme
 When enabled by your system administrator, the **Note** field is displayed under the **Search** feature on timeline.
 
 ![Add a note to a row on timeline.](media\timeline-add-a-note-to-a-record.png "Add a note to a row on timeline")
-
-> [!NOTE] 
-> You can only add an attachment in a note.
-
+  
 **Post display view**
 
 When enabled by your system administrator, the **Post** field is also displayed under the **Search** feature on timeline.
 ![Add a post to a row on timeline.](media\timeline-add-a-post-to-a-record-1.png "Add a post to a row on timeline")
 
-> [!NOTE] 
-> You can't add an attachment in a post.
+### Add an attachment to a post
+
+You can add an attachment to a post, such an an image or a document. The supported file formats are as follows: .JPG, .PNG, and .PDF.
+  
+To add an attachment to a post:
+
+1. In the **Create a post** section in the timeline, select the **Attach** icon in the lower-left corner.
+   ![Attach icon in Create a post dialog.](media\add-attachment-post.png "Attach icon in Create a post dialog in timeline")
+
+1. Browse to the file you want to attach to the post, and then select it.
+1. Finish the edits you want to make to your post, and then in the timeline, select **Add post**.
+  
+### Preview an attachment in the timeline
+  
+You can view previews of attachments in the timeline if they are in the supported file format (.JPG, .PNG., or .PDF). Any attachment that is viewable inline on the timeline can be downloaded, whether or not a preview is available.
+  
+![Attachment preview dialog.](media\attachment-preview-timeline.png "Attachment preview dialog")
+
+To preview an attachment in the timeline, do either of the following steps:
+  
+In edit mode:
+1. Right-click the attachment, and then select **Preview**. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
+2. When you're finished viewing the attachment, select **Close** to return to the note or post.
+
+OR
+  
+In read mode:
+1. Select the attachment. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
+2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
+
 
 ### Access the command bar to perform actions
 
@@ -275,8 +319,8 @@ Legend
 5. Attached files are displayed at the bottom of the note.
 
 > [!NOTE]
-> - Only **Notes** have rich text capability, and it is only available in the timeline. 
-> - You can only format the message body of a note, not the title.
+> - Only **Notes** have rich text capability, and they're only available in the timeline. 
+> - You can only format the message body of a note; not the title.
 > - The rich text editor is available only for Unified Interface.
 > - If you create a rich text editor note in Unified Interface and then view the note in the web client, it will display in HTML syntax.
 > 
@@ -298,7 +342,7 @@ When you mouse over the profile image, you can view the user's detailed profile 
 
 ### Add an attachment to a note in timeline
 
-When enabled by your system administrator, you can add an attachment, such as a file, to a note in timeline to share with users.
+When enabled by your system administrator, you can add an attachment, such as a file, to a note in timeline to share with users. Any attachment that is viewable inline on the timeline can be downloaded, whether or not a preview is available.
 
 > [!NOTE]
 > - The list of allowed attachments is configured by your system administrator.
@@ -405,7 +449,17 @@ The following table describes the different formatting features and functionalit
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
 For more information, see [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
+  
+  
+## View a conversation transcript
+  
+In the timeline, you can view the transcripts of completed chats you've had from  conversation channels.
 
+To view a conversation transcript, select the **View more** link in the row for which you want to view the transcript. The row expands and the entire transcript is displayed inline.
+
+![Conversation transcript view.](media\timeline-transcript-view.png "Conversation transcript view")
+  
+  
 ## See also
 
 [Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)

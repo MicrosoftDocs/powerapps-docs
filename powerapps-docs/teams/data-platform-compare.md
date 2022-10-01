@@ -4,7 +4,7 @@ description: Explains the differences between Dataverse for Teams and Dataverse.
 author: Mattp123
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/16/2022
+ms.date: 09/27/2022
 ms.subservice: teams
 ms.author: olegov
 ms.reviewer: matp
@@ -85,6 +85,11 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |Field-level security     |   No      |  Yes       |
 |Hierarchical security     |  No       |  Yes       |
 |Record sharing     |  No       |  Yes       |
+|Create Owner Teams**  | Yes      |  Yes       |
+|Assign Teams Roles to Owner Teams<sup>1</sup> | Yes     | Yes   |
+|Change record ownership** | Yes   | Yes  |
+
+<sup>1</sup> *Can be done via a custom app in Power Apps* 
 
 ## Integration
 
