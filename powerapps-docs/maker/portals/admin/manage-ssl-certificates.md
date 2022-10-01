@@ -53,4 +53,4 @@ An SSL certificate is a PFX file that must:
 ### See also
 
 [Add a custom domain name](add-custom-domain.md)<br>
-[Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
+[Configure SSL certificates and custom domain names](/training/modules/portals-administration/2-custom-domain)

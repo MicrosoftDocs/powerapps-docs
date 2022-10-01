@@ -133,8 +133,8 @@ Once the provisioning request is successfully placed, a confirmation email notif
 [Common problems and resolutions while creating a portal](create-common-problems.md) <br>
 [Control portal creation in a tenant](control-portal-creation.md) <br>
 [Create additional portals in an environment](create-additional-portals.md) <br>
-[Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/) <br>
+[Administer Power Apps portals](/training/paths/administer-portals/) <br>
+[Access Dataverse in Power Apps portals](/training/modules/portals-access-data-platform/) <br>
 [Contact us sample](contact-us-sample.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

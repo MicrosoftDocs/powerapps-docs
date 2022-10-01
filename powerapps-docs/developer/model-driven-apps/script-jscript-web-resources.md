@@ -19,7 +19,7 @@ contributors:
 ---
 # Script (JScript) web resources
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/script-jscript-web-resources -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/script-jscript-web-resources -->
 
 Use Script(JScript) web resources to create a library of JavaScript functions that can be accessed from anywhere.  
   

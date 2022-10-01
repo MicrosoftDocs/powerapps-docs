@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/21/2022
+ms.date: 09/26/2022
 ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: ndoelman
@@ -42,6 +42,7 @@ The following articles provide details about the portals version updates:
 
 The following articles provide details about the starter portal package updates:
 
+- [Starter portal package version 9.3.2209.x](versions/package-version-9.3.2209.md)
 - [Starter portal package version 9.3.2204.x](versions/package-version-9.3.2204.md)
 - [Starter portal package version 9.3.2109.x](versions/package-version-9.3.2109.md)
 - [Starter portal package version 9.2.2108.x](versions/package-version-9.2.2108.md)

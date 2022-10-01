@@ -224,6 +224,6 @@ This problem can happen because of multiple reasons such as:
 
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
-- [Integration with Power BI](/learn/modules/portals-integration/3-power-bi)
+- [Integration with Power BI](/training/modules/portals-integration/3-power-bi)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
