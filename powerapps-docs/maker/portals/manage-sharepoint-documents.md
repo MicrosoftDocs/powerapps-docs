@@ -232,6 +232,6 @@ The below example demonstrates configuration using the Case table which needs th
 
 ### See also
 
-[Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
+[Document management with SharePoint](/training/modules/portals-integration/2-sharepoint)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

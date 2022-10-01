@@ -142,8 +142,8 @@ landingContent:
             url: model-driven-app-glossary.md    
           - text: Share an app
             url: share-model-driven-app.md
-          - text: Microsoft Learn
-            url: /learn/modules/get-started-with-model-driven-apps-in-powerapps/
+          - text: Learn module
+            url: /training/modules/get-started-with-model-driven-apps-in-powerapps/
       - linkListType: concept
         links:
           - text: Environments

@@ -310,7 +310,7 @@ static async Task ChunkedUploadAsync(
 
 To delete the file column data from storage, use the following APIs.
 
-Web API (REST) | .NET API (SOAP)
+Web API (REST) | SDK for .NET
 ------- | -------
 DELETE /api/data/v9.1/\<entity-type(id)\>/\<attribute-name\> | <xref:Microsoft.Crm.Sdk.Messages.DeleteFileRequest>
 

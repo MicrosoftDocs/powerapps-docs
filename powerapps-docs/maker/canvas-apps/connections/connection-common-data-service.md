@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/15/2022
+ms.date: 09/20/2022
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -68,10 +68,13 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
 | =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
 | \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
+| In (substring)                                                  | No             | Yes          | No         | No               | \-       |
+| In (membership) (preview)                                  | No             | Yes          | Yes        | No               | Yes      |
 | And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
 | IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
-| Sum, Min, Max, Avg                                              | Yes [5]        | \-           | \-         | No               | \-       |
+| Sum, Min, Max, Avg [5]                                          | Yes            | \-           | \-         | No               | \-       |
+| CountRows [6] [7], CountIf [5]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
 
 1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable.
 
@@ -81,20 +84,14 @@ Dataverse for processing (rather than processing locally within Power Apps).
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().
 
-4.  Supports comparisons. For example, Filter(TableName, MyCol = Blank()).
+4.  Supports comparisons. For example, `Filter(TableName, MyCol = Blank())`.
 
 5.  The aggregate functions are limited to a collection of 50,000 rows. If
-    needed, use the Filter function to select 50,000 rows from a larger set
-    before using the aggregate function.
+    needed, use the Filter function to select 50,000 
 
-> [!NOTE]
-> Choices, Guids, and Aggregate functions for Dataverse are supported only with
-the new version of the connector. Depending on the version of Power Apps that
-you're using, enable this connector with either the **Preview** switch titled **Relational data, choices, and other new features for Dataverse** or **Experimental** switch **Use the Dataverse connector**. To find these switches, select **Settings** > **Upcoming features** > **Preview** or **Experimental**.
+6.  CountRows on Dataverse uses a cached value. For non-cached values where the record count is expected to be under 50,000 records, use `CountIf(table, True)`.  
 
-## Dataverse and the improved data source experience
-
-If you created a canvas app with a Microsoft Dataverse connector prior to November 2019, then you might not have the benefit of the most current version of the Dataverse. Read [Dataverse connection improvements](../use-native-cds-connector.md) for more details and to upgrade your connection.
+7.  For CountRows, ensure that users have appropriate permissions to get totals for the table. 
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

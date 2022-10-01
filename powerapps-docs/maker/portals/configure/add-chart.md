@@ -146,6 +146,6 @@ The following table lists the charts that are currently not supported in portals
 
 ### See also
 
-[Model-driven charts in portals](/learn/modules/portals-integration/4-model-driven-charts)
+[Model-driven charts in portals](/training/modules/portals-integration/4-model-driven-charts)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -72,6 +72,6 @@ If you want to change your existing custom domain name, you must do the followin
     
 ### See also
 
-[Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
+[Configure SSL certificates and custom domain names](/training/modules/portals-administration/2-custom-domain)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

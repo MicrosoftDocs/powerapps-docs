@@ -1,20 +1,19 @@
 ---
 title: "Create a Custom API with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/21/2022
-ms.reviewer: "jdaly"
-
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.date: 09/27/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: dikamath # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Create a Custom API with code
 
@@ -31,75 +30,7 @@ Because Custom API data is saved in tables, you can programmatically create new 
 
 The tables in [Custom API tables](custom-api-tables.md) describe all the properties you can set using code.
 
-
-
-## Create a Custom API using the Web API
-
-This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
-
-This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/customapis HTTP/1.1
-MSCRM.SolutionUniqueName: CustomAPIExample
-Content-Type: application/json
-
-{
-    "allowedcustomprocessingsteptype": 0,
-    "boundentitylogicalname": null,
-    "uniquename": "sample_CustomAPIExample",
-    "displayname": "Custom API Example",
-    "bindingtype": 0,
-    "executeprivilegename": null,
-    "isfunction": false,
-    "isprivate": false,
-    "name": "sample_CustomAPIExample",
-    "description": "A simple example of a Custom API",
-    "iscustomizable": {
-                "Value": false
-            },
-    "CustomAPIRequestParameters": [
-        {
-            "type": 10,
-            "isoptional": false,
-            "displayname": "Custom API Example String Parameter",
-            "name": "sample_CustomAPIExample.StringParameter",
-            "uniquename": "StringParameter",
-            "logicalentityname": null,
-            "description": "The StringParameter request parameter for Custom API Example",
-            "iscustomizable": {
-                "Value": false
-                }
-        }
-    ],
-    "CustomAPIResponseProperties": [
-        {
-            "type": 10,
-            "name": "sample_CustomAPIExample.StringProperty",
-            "logicalentityname": null,
-            "displayname": "Custom API Example String Property",
-            "uniquename": "StringProperty",
-            "description": "The StringProperty response property for Custom API Example",
-            "iscustomizable": {
-                "Value": false
-                }
-        }
-    ],
-    "PluginTypeId@odata.bind": "plugintypes(00000000-0000-0000-0000-000000000001)"
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.1/customapis(b532b299-4684-eb11-a812-0022481d298f)
-```
-
-## Create a Custom API using the Organization Service
+#### [SDK for .NET](#tab/sdk)
 
 This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style. You can also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. More information:
 
@@ -177,6 +108,74 @@ createReq["SolutionUniqueName"] = solutionUniqueName;
 
 Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
 ```
+
+#### [Web API](#tab/webapi)
+
+This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
+
+This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.1/customapis HTTP/1.1
+MSCRM.SolutionUniqueName: CustomAPIExample
+Content-Type: application/json
+
+{
+    "allowedcustomprocessingsteptype": 0,
+    "boundentitylogicalname": null,
+    "uniquename": "sample_CustomAPIExample",
+    "displayname": "Custom API Example",
+    "bindingtype": 0,
+    "executeprivilegename": null,
+    "isfunction": false,
+    "isprivate": false,
+    "name": "sample_CustomAPIExample",
+    "description": "A simple example of a Custom API",
+    "iscustomizable": {
+                "Value": false
+            },
+    "CustomAPIRequestParameters": [
+        {
+            "type": 10,
+            "isoptional": false,
+            "displayname": "Custom API Example String Parameter",
+            "name": "sample_CustomAPIExample.StringParameter",
+            "uniquename": "StringParameter",
+            "logicalentityname": null,
+            "description": "The StringParameter request parameter for Custom API Example",
+            "iscustomizable": {
+                "Value": false
+                }
+        }
+    ],
+    "CustomAPIResponseProperties": [
+        {
+            "type": 10,
+            "name": "sample_CustomAPIExample.StringProperty",
+            "logicalentityname": null,
+            "displayname": "Custom API Example String Property",
+            "uniquename": "StringProperty",
+            "description": "The StringProperty response property for Custom API Example",
+            "iscustomizable": {
+                "Value": false
+                }
+        }
+    ],
+    "PluginTypeId@odata.bind": "plugintypes(00000000-0000-0000-0000-000000000001)"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: [Organization URI]/api/data/v9.1/customapis(b532b299-4684-eb11-a812-0022481d298f)
+```
+
+---
 
 ### See also
 
