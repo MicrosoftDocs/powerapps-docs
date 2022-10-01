@@ -4,7 +4,7 @@ description: "Describes the requirement to upgrade code to use Web API OData v4.
 suite: powerapps
 author: divka78
 ms.author: dikamath
-ms.date: 09/19/2022
+ms.date: 09/30/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -26,7 +26,7 @@ contributors:
 
 There are no immediate symptoms, but code using this endpoint will stop working when the deprecated endpoint is removed.
 
-We plan to remove this endpoint on November 11, 2022. [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval)
+We plan to remove this endpoint on April 30, 2023. [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval). The original removal date was November 11, 2022, but this was extended.
 
 ## Guidance
 
