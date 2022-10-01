@@ -15,6 +15,8 @@ contributors:
 ---
 # Tutorial: Use dataset code components
 
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this tutorial, you'll create a sample component using Power Apps component framework.  Power Apps component framework empowers professional developers and app makers to crate code components for model-driven and canvas aps.  These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals](component-framework.md)
 
 > [!NOTE]
