@@ -7,17 +7,18 @@ ms.topic: sample
 ms.author: mbarbour
 ms.reviewer: jdaly
 manager: jstrauss
-applies_to: 
+applies_to:
   - Microsoft Dataverse (online)
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - D365CE
   - PowerApps
-contributors: 
+contributors:
   - JimDaly
-  - phecke 
+  - phecke
 ---
+
 # Sample: Simplified connection quick start using Microsoft Dataverse
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
@@ -26,13 +27,13 @@ This sample shows how to connect to the Dataverse web services using the <xref:M
 
 ## Requirements
 
-The complete sample code can be found here [Sample: Quick start for Dataverse](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/QuickStartCS) 
+The complete sample code can be found here [Sample: Quick start for Dataverse](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/QuickStartCS)
 
-You must modify the `app.config` file with connection information for your Dataverse instance before running the sample. 
+You must modify the `app.config` file with connection information for your Dataverse instance before running the sample.
 
 ## Demonstrates
 
-This sample authenticates the user with the Dataverse web services by using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and methods. After obtaining a reference to the Organization web service, the sample performs basic create, update, retrieve, and delete operations on an `account` table. The sample also handles common exceptions. No helper code is used to establish a connection to the Organization web service.  
+This sample authenticates the user with the Dataverse web services by using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and methods. After obtaining a reference to the Organization web service, the sample performs basic create, update, retrieve, and delete operations on an `account` table. The sample also handles common exceptions. No helper code is used to establish a connection to the Organization web service.
 
 In addition, this sample supports `OAuth` authentication and advanced connection diagnostics. For more information on using diagnostics, see [Configure tracing for XRM Tooling](configure-tracing-xrm-tooling.md).
 
@@ -41,9 +42,9 @@ In addition, this sample supports `OAuth` authentication and advanced connection
 The following shows a sample `app.config file`. To use this, remove the comment characters “<!- -” at the beginning of the \<add … /> line and the “- ->” at the end on the line for the line that is relevant to your server and organization. Next, modify the data values as appropriate for your configuration.
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <connectionStrings>  
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
 
   <!--<add name="Connect"
   connectionString="
@@ -56,67 +57,67 @@ The following shows a sample `app.config file`. To use this, remove the comment 
   TokenCacheStorePath=d:\MyTokenCache;
   LoginPrompt=Auto"/>-->
 
-  </connectionStrings>  
-  <startup>  
-    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />  
-  </startup>  
-<system.diagnostics>  
-    <trace autoflush="true"/>  
-    <sources>  
-      <source name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchName="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchType="System.Diagnostics.SourceSwitch">  
-        <listeners>  
-          <add name="console" type="System.Diagnostics.ConsoleTraceListener"/>  
-          <add name="fileListener"/>  
-        </listeners>  
-      </source>  
-      <source name="Microsoft.Xrm.Tooling.CrmConnectControl" switchName="Microsoft.Xrm.Tooling.CrmConnectControl" switchType="System.Diagnostics.SourceSwitch">  
-        <listeners>  
-          <add name="console" type="System.Diagnostics.ConsoleTraceListener"/>  
-          <add name="fileListener"/>  
-        </listeners>  
-      </source>  
-      <source name="CrmSvcUtil" switchName="CrmSvcUtil" switchType="System.Diagnostics.SourceSwitch">  
-        <listeners>  
-          <add name="console" type="System.Diagnostics.ConsoleTraceListener"/>  
-          <add name="fileListener"/>  
-        </listeners>  
-      </source>  
-    </sources>  
-    <switches>  
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />
+  </startup>
+<system.diagnostics>
+    <trace autoflush="true"/>
+    <sources>
+      <source name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchName="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchType="System.Diagnostics.SourceSwitch">
+        <listeners>
+          <add name="console" type="System.Diagnostics.ConsoleTraceListener"/>
+          <add name="fileListener"/>
+        </listeners>
+      </source>
+      <source name="Microsoft.Xrm.Tooling.CrmConnectControl" switchName="Microsoft.Xrm.Tooling.CrmConnectControl" switchType="System.Diagnostics.SourceSwitch">
+        <listeners>
+          <add name="console" type="System.Diagnostics.ConsoleTraceListener"/>
+          <add name="fileListener"/>
+        </listeners>
+      </source>
+      <source name="CrmSvcUtil" switchName="CrmSvcUtil" switchType="System.Diagnostics.SourceSwitch">
+        <listeners>
+          <add name="console" type="System.Diagnostics.ConsoleTraceListener"/>
+          <add name="fileListener"/>
+        </listeners>
+      </source>
+    </sources>
+    <switches>
 
-      <!--Possible values for switches: Off, Error, Warning, Information, Verbose  
-                        Verbose:      includes Error, Warning, Info, Trace levels  
-                        Information:  includes Error, Warning, Info levels  
-                        Warning:      includes Error, Warning levels  
-                        Error:        includes Error level-->  
+      <!--Possible values for switches: Off, Error, Warning, Information, Verbose
+                        Verbose:      includes Error, Warning, Info, Trace levels
+                        Information:  includes Error, Warning, Info levels
+                        Warning:      includes Error, Warning levels
+                        Error:        includes Error level-->
 
-      <add name="Microsoft.Xrm.Tooling.CrmConnectControl" value="Off"/>  
-      <add name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" value="Error"/>  
-      <add name="CrmSvcUtil" value="Off"/>  
-    </switches>  
+      <add name="Microsoft.Xrm.Tooling.CrmConnectControl" value="Off"/>
+      <add name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" value="Error"/>
+      <add name="CrmSvcUtil" value="Off"/>
+    </switches>
 
-    <sharedListeners>  
-      <add name="fileListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="CrmSvcUtil.log"/>  
-    </sharedListeners>  
+    <sharedListeners>
+      <add name="fileListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="CrmSvcUtil.log"/>
+    </sharedListeners>
 
-  </system.diagnostics>  
-  <runtime>  
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-      <dependentAssembly>  
-        <assemblyIdentity name="Microsoft.Xrm.Sdk" publicKeyToken="31bf3856ad364e35" culture="neutral" />  
-        <bindingRedirect oldVersion="0.0.0.0-7.0.0.0" newVersion="8.0.0.0" />  
-      </dependentAssembly>  
-      <dependentAssembly>  
-        <assemblyIdentity name="Microsoft.Xrm.Sdk.Deployment" publicKeyToken="31bf3856ad364e35" culture="neutral" />  
-        <bindingRedirect oldVersion="0.0.0.0-7.0.0.0" newVersion="8.0.0.0" />  
-      </dependentAssembly>  
-      <dependentAssembly>  
-        <assemblyIdentity name="Microsoft.ServiceBus" publicKeyToken="31bf3856ad364e35" culture="neutral" />  
-        <bindingRedirect oldVersion="0.0.0.0-2.4.0.0" newVersion="2.4.0.0" />  
-      </dependentAssembly>  
-    </assemblyBinding>  
-  </runtime>  
-</configuration>  
+  </system.diagnostics>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Xrm.Sdk" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-7.0.0.0" newVersion="8.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Xrm.Sdk.Deployment" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-7.0.0.0" newVersion="8.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.ServiceBus" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.4.0.0" newVersion="2.4.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>
 ```
 
 ## Another Example
@@ -242,6 +243,5 @@ namespace PowerApps.Samples
 
 [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)<br />
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -122,7 +122,7 @@ These features and areas continue to use legacy terminology to ensure that exist
 
 ### See also
 
-[Microsoft Learn: Get started with Power Apps portals](/learn/paths/get-started-power-apps-portals/) <br>
+[Get started with Power Apps portals](/training/paths/get-started-power-apps-portals/) <br>
 [Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
 [Available portal templates](portal-templates.md) <br>
 [Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>

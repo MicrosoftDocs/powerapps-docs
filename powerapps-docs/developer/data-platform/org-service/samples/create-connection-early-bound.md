@@ -7,18 +7,19 @@ ms.author: jdaly
 manager: kvivek
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Create a connection
 
-This sample shows how to create a connection between an account and a contact table that have matching connection roles. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConnectionEarlyBound). 
+This sample shows how to create a connection between an account and a contact table that have matching connection roles. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ConnectionEarlyBound).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -28,7 +29,7 @@ This sample shows how to create a connection between an account and a contact ta
 
 ## What this sample does
 
-This sample shows how to create a connection between an account and a contact that have matching connection roles.  
+This sample shows how to create a connection between an account and a contact that have matching connection roles.
 
 ## How this sample works
 
@@ -43,12 +44,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Creates a connection between account and contact table. 
+1. Creates a connection between account and contact table.
 2. Assigns a connection role to a record.
 
 ### Clean up
 
 Display an option to delete the records created in [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

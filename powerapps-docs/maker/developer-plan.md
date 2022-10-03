@@ -5,7 +5,7 @@ author: marcelbf
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 07/20/2022
+ms.date: 08/01/2022
 ms.author: marcelbf
 ms.reviewer: tapanm
 contributors:
@@ -45,7 +45,7 @@ Anyone with a [work or school email address](signup-for-powerapps.md#faq) backe
 
 ## Where can I sign up for the Power Apps Developer Plan?
 
-Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevPlan). If you're an existing Power Apps user, you can also [create a developer environment](https://make.powerapps.com/community/signup).
+Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevPlan). 
 
 After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). You
 may need to select your developer environment from the top right of the screen. It will be shown with your name, for example "John Doe's environment." If there's already an environment with that name, the developer environment will be named "John Doe's (1) environment." You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
@@ -160,7 +160,11 @@ Resetting a developer environment isn't currently supported; however, it can be 
 
 However, even after deleting a user's developer environment, a new developer environment will be created when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have the **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new developer environment.
 
-To remove the Developer Plan capability from a user permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must explicitly block all "internal" consent plans in the tenant using PowerShell, or remove the **Microsoft Power Apps for Developer** license. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands), and [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
+To remove the Developer Plan capability from a user permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform the following actions:
+
+- Remove the **Microsoft Power Apps for Developer** license. For more information, see  [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
+- Disable [self-service sign-up](/azure/active-directory/enterprise-users/directory-self-service-signup).
+- Explicitly block all "internal" consent plans in the tenant using PowerShell. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
 No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps.

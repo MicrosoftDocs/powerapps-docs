@@ -3,28 +3,28 @@ title: "Sample: Solution staging with asynchronous import (Microsoft Dataverse) 
 description: "Demonstrates how to stage and asynchronously import a solution." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/05/2022
-ms.reviewer: 
+ms.reviewer:
 ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
 
 # Sample: Solution staging with asynchronous import
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to perform the following actions with solutions:
 
 - Stage a solution and check the validation results
 - Import the staged solution using an asynchronous job and check for job completion
 
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SolutionStagingAndImport).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/SolutionStagingAndImport).
 
 ## How to run this sample
 

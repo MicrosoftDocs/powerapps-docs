@@ -1,7 +1,7 @@
 ---
 title: "sharedworkspace table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the sharedworkspace table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ References a container that stores real-time collaboration data.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/sharedworkspaces<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/sharedworkspaces(*sharedworkspaceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -48,7 +48,7 @@ References a container that stores real-time collaboration data.
 |IsBPFEntity|False|
 |LogicalCollectionName|sharedworkspaces|
 |LogicalName|sharedworkspace|
-|OwnershipType|OrganizationOwned|
+|OwnershipType|None|
 |PrimaryIdAttribute|sharedworkspaceid|
 |PrimaryNameAttribute|name|
 |SchemaName|sharedworkspace|
@@ -59,6 +59,7 @@ References a container that stores real-time collaboration data.
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [DiscoveryEndpoint](#BKMK_DiscoveryEndpoint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [LastUsed](#BKMK_LastUsed)
 - [Name](#BKMK_Name)
@@ -73,6 +74,23 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 - [WorkspaceSchema](#BKMK_WorkspaceSchema)
 - [WorkspaceSchemaVersion](#BKMK_WorkspaceSchemaVersion)
+
+
+### <a name="BKMK_DiscoveryEndpoint"></a> DiscoveryEndpoint
+
+|Property|Value|
+|--------|-----|
+|Description|Discovery Endpoint|
+|DisplayName|Discovery Endpoint|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|discoveryendpoint|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -120,7 +138,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|name|
 |MaxLength|256|
-|RequiredLevel|None|
+|RequiredLevel|SystemRequired|
 |Type|String|
 
 
@@ -128,7 +146,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Orderer endpoint|
+|Description|Orderer Endpoint|
 |DisplayName|Orderer Endpoint|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -217,7 +235,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Storage endpoint|
+|Description|Storage Endpoint|
 |DisplayName|Storage Endpoint|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -815,6 +833,6 @@ See the [organization_sharedworkspace](organization.md#BKMK_organization_sharedw
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.sharedworkspace?text=sharedworkspace EntityType" />

@@ -1,7 +1,7 @@
 ---
 title: "PluginPackage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the PluginPackage table/entity."
-ms.date: 06/30/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ search.app:
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/pluginpackages<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/pluginpackages(*pluginpackageid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -291,6 +291,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [FileId](#BKMK_FileId)
 - [FileId_Name](#BKMK_FileId_Name)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
@@ -303,6 +304,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OrganizationId](#BKMK_OrganizationId)
 - [OrganizationIdName](#BKMK_OrganizationIdName)
 - [OverwriteTime](#BKMK_OverwriteTime)
+- [Package](#BKMK_Package)
+- [Package_Name](#BKMK_Package_Name)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -467,9 +470,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_FileId_Name"></a> FileId_Name
+### <a name="BKMK_FileId"></a> FileId
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description|Lookup to FileAttachment|
+|DisplayName|FileId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|fileid|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_FileId_Name"></a> FileId_Name
 
 |Property|Value|
 |--------|-----|
@@ -680,6 +694,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|DateTime|
 
 
+### <a name="BKMK_Package"></a> Package
+
+|Property|Value|
+|--------|-----|
+|Description|Lookup to FileAttachment|
+|DisplayName|Package|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|package|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_Package_Name"></a> Package_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|package_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
 **Added by**: Basic Solution Solution
@@ -884,6 +927,6 @@ See the [organization_pluginpackage](organization.md#BKMK_organization_pluginpac
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.pluginpackage?text=pluginpackage EntityType" />

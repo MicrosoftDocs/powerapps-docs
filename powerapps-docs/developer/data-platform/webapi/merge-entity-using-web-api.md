@@ -5,7 +5,6 @@ ms.date: 04/26/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -19,7 +18,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-When you find duplicate records you can combine them into one using the <xref:Microsoft.Dynamics.CRM.Merge> Action.
+When you find duplicate records you can combine them into one using the <xref:Microsoft.Dynamics.CRM.Merge?text=Merge Action>.
 
 > [!NOTE]
 > Only the following entity types can be merged:
@@ -27,13 +26,12 @@ When you find duplicate records you can combine them into one using the <xref:Mi
 > - <xref:Microsoft.Dynamics.CRM.contact>
 > - `lead`: Available with [Dynamics 365 for Sales](/dynamics365/sales/help-hub)
 > - `incident` : Available with [Dynamics 365 for Service](/dynamics365/customer-service/help-hub)
->    
+>
 >   See [Merge behavior for incident](#merge-behavior-for-incident)
 
-
 ## Merge action
-Merge is an unbound action that accepts four parameters:
 
+Merge is an unbound action that accepts four parameters:
 
 |Name  |Type  |Description| Optional|
 |---------|---------|---------|---------|
@@ -95,13 +93,13 @@ The merge behavior for `incident` (case) table is different from `account`, `con
 
    Merge operations for other tables are performed with a system user security context. Because incident merge operations are performed in the security context of the user, the user must have the security privileges to perform any of the actions, such as re-parenting related records, that are performed by the merge operation.
 
-   If the user merging records doesn’t have privileges for all the actions contained within the merge operation, the merge operation will fail and roll back to the original state.
+   If the user merging records doesn't have privileges for all the actions contained within the merge operation, the merge operation will fail and roll back to the original state.
 
 ### See also
 
 [Use Web API actions](use-web-api-actions.md)<br />
 [Merge duplicate records](../../../user/merge-duplicate-records.md)<br />
-<xref:Microsoft.Crm.Sdk.Messages.MergeRequest><br />
+<xref:Microsoft.Crm.Sdk.Messages.MergeRequest?text=MergeRequest Class><br />
 [Administration Guide: Merge data](/power-platform/admin/merge-data)<br />
 [Dynamics 365 for Service: Merge cases](/dynamics365/customer-service/customer-service-hub-user-guide-merge-cases)
 
