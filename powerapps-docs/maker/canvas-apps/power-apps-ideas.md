@@ -1,5 +1,5 @@
 ---
-title: Power Apps Ideas (preview)
+title: Power Apps Ideas
 description: Learn about how to use Power Apps Ideas, its limitations and supportability, and benefit from the generated formulas.
 author: norliu
 
@@ -8,7 +8,7 @@ ms.custom: canvas
 ms.date: 12/08/2021
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 search.audienceType: 
   - maker
 search.app: 
@@ -18,13 +18,8 @@ contributors:
   - tapanm-msft
 ---
 
-# Power Apps Ideas (preview)
+# Power Apps Ideas
 
-[This article is pre-release documentation and is subject to change.]
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 [Power Fx](/power-platform/power-fx/overview) is the open-source programming language for low code, and makes it possible for hundreds of millions of people with Excel-like skills to add advanced logic to their apps. However, sometimes it's not easy to write a formula, even for the most experienced Power Fx users, as it may sometimes take a lot of time searching for, learning about, and debugging complex formulas.
 
@@ -34,7 +29,9 @@ If you’re also struggling with Power Fx and you don’t actually want to spend
 
 ## Use Power Apps Ideas in your app
 
-To use Power Apps Ideas, you'll find an Ideas pane on the right side of your canvas app, next to **Properties** and **Advanced** tabs.
+When you're building a canvas app, Power Apps you will automatically suggest ideas for data tables and galleries. In the screenshot below, when you select the name field in a gallery, you'll see an idea for a formula that may want to use. However, if you select the plus icon next to **New record** you won't see an idea becuase we currently don’t have ideas for icons. 
+
+:::image type="content" source="media/power-apps-ideas/ideas-prompt.png" alt-text="Suggested ideas prompt.":::
 
 There are two methods to benefit from Power Apps Ideas in your app.
 
@@ -44,8 +41,6 @@ You can enter your requirements in plain natural language (currently limited to 
 
 For details, go to [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md).
 
-> [!NOTE]
-> This capability only works on the **Items** property of [Gallery](controls/control-gallery.md) and [Data table](controls/control-data-table.md) controls. For more information, see [limitations](power-apps-ideas-transform.md#limitations), and [supported functions](power-apps-ideas-transform.md#supported-power-fx-functions).
 
 ### Method 2: Transform examples to Power Fx formulas
 
@@ -58,6 +53,13 @@ For details, go to [Transform examples to Power Fx formulas](power-apps-ideas-tr
 
 > [!NOTE]
 > This method has support for specific capabilities. For more information, see [Supported and unsupported capabilities](power-apps-ideas-train-examples.md#supported-and-unsupported-capabilities).
+
+## Dismiss an idea
+
+If you don’t want to see Ideas, select the close button (**X**) and confirm you don’t want to see the prompt in the future. 
+
+To see Ideas again, right-click on the control to see suggested Ideas.
+
 
 ## Next steps
 
