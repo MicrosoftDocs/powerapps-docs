@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/30/2021
+ms.date: 10/03/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -106,9 +106,9 @@ When accessing email, there are a couple of options you can use.
   
 You can set the default font and font size for your email text. Perform the following steps:
   
-  - On the email form, in the Rich text editor tool bar, select ![Set default.](media\personalization.png "personalization icon").
-  - Specify the Font and Font Size in User Personalization. 
-  - Select Save. The application defaults the values specified in the Font and Font Size fields of the rich text editor toolbar.
+  - In the email editor, in the Rich text editor tool bar, select ![Set default.](media\personalization.png "personalization icon").
+  - In **User Personalization** specify the **Font** and **Font Size**. 
+  - Select **Ok**. The application defaults the values specified in the Font and Font Size fields of the rich text editor toolbar.
   
   If your administrator has set default font and font size, the application displays the set values in the Font and Font Size fields of the rich text editor toolbar.
   
