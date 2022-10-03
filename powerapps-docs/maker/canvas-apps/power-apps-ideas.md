@@ -56,8 +56,7 @@ For details, go to [Transform examples to Power Fx formulas](power-apps-ideas-tr
 
 ## Dismiss an idea
 
-If you don’t want to see Ideas, select the close button (**X**) and confirm you don’t want to see the prompt in the future. 
-
+If you don’t want to see Ideas, select the close button (**X**) and then confirm you don’t want to see Ideas anymore. 
 To see Ideas again, right-click on the control to see suggested Ideas.
 
 
