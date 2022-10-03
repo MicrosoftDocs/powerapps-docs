@@ -1,14 +1,14 @@
 ---
 title: Run apps in a web browser | Microsoft Docs
 description: In this topic, you learn how to run apps in a web browser
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/14/2022
 ms.subservice: end-user
-ms.author: mkaur
-manager: "kvivek"
+ms.author: sericks
+manager: tapanm-MSFT
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -23,7 +23,7 @@ search.app:
 
 When you create an app, or someone shares an app with you, you can run that app on the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md) or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
-For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). If you don't have the Power Apps mobile installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [Required privileges and supported devices](../mobile/run-powerapps-on-mobile.md#required-privileges-and-supported-devices).
+For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). If you don't have the Power Apps mobile app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [Required privileges and supported devices](../mobile/run-powerapps-on-mobile.md#required-privileges-and-supported-devices).
 
 > [!NOTE]
 > Using the web browser on your phone to run your model-driven apps isn't supported; you must use the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
@@ -50,9 +50,9 @@ The apps that meet the following criteria will be shown in the list of **Office*
 - All first party model-driven apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
 
 ### Known limitations
-1. When a new app is shared with users it needs to meet the criteria listed above and it can take up to 24 hours for it to appear in the list of **Office** apps.
-2. Some Model driven apps are not recording the last launched time. Until this is resolved, we recommend using [featured apps](https://learn.microsoft.com/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest). Note, featured apps will only appear to users that have access to an app. Featured apps does not mark an app to appear to all users.   
-3. Once an app is marked as featured, it may take up to seven days for this app to start appearing for users in Office.com/apps experiences. In early November 2022 we expect featured apps to appear in Office.com/apps experiences within a day.
+1. When a new app is shared with users, it needs to meet the criteria listed. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
+2. Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.   
+3. After an app is marked as featured, it may take up to seven days for this app to start appearing for users in Office.com/apps experiences. In early November 2022, we expect featured apps to appear in Office.com/apps experiences within a day.
 
 ### What if I cannot find an app?
 
