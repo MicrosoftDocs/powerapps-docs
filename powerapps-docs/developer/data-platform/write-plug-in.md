@@ -185,7 +185,7 @@ If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown.
 
 ### Monitor Performance
 
-Run-time information about plug-ins and custom workflow extensions is captured and store in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
+Run-time information about plug-ins and custom workflow extensions is captured and stored in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
 
 |**Column**|**Description**|
 |--|--|
