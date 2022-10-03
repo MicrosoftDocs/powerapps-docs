@@ -1,14 +1,14 @@
 ---
-title: "Transform natural language to Power Fx formulas (preview)"
+title: "Transform natural language to Power Fx formulas"
 description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 12/08/2021
+ms.date: 10/03/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -18,11 +18,22 @@ contributors:
   - tapanm-msft
 ---
 
-# Transform natural language to Power Fx formulas (preview)
+# Transform natural language to Power Fx formulas 
 
-[This article is pre-release documentation and is subject to change.]
 
 Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it now supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you've a gallery bound to one of these data sources, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
+
+
+Power Apps Ideas can generate ideas for formulas the following contrrols:
+
+- **Gallery**
+- **Data table**
+- **Text box**
+- **Drop down**
+- **Combo box**
+- **Text label** controls on different properties.
+
+Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the suppported controls and want to write a formulas for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
 
 For example, instead of figuring out how to write the following formula:
 ```powerapps-dot
@@ -39,15 +50,15 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
 1. Select **BrowseGallery1,** which is bound to the **Accounts** table.
 
-1. Go to the property pane on the right-side of the screen, and select the **Ideas** tab. <br> You'll see a large textbox with a few default examples.
+1. Select **Sort filter and search** on the ideas box. 
 
 1. Select one of the default suggestions to check how it works, or start to type in your own query in natural language such as English (en-us).
 
-    :::image type="content" source="media/power-apps-ideas/power-apps-ideas-c7-marked.png" alt-text="Get started with Power Apps Ideas.":::
+    :::image type="content" source="media/power-apps-ideas/suggested-ideas.png" alt-text="Get started with Power Apps Ideas.":::
 
-1. When typing, you can describe your requirements in your preferred way. But remember, more precise input will always yield to more accurate formula suggestions.
+1. When typing, you can use the default query, modify it, or describe in your own way.
 
-1. You'll see one or more formula suggestions produced. Let’s use the example `search 'Account Name' by 'TextSearchBox1'`. You'll see that the formula suggestion produced includes two parts:
+1. You'll see one or more formula suggestions produced. Let’s use the example `search 'Account Name' by 'TextSearchBox1'`. You'll see that the formula suggestion produced includes three parts:
 
     1. **Accounts** where the text in **TextSearchBox1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
 
