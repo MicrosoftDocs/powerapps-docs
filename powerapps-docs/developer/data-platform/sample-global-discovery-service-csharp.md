@@ -30,7 +30,7 @@ To run the sample:
 
 1. Download or clone the sample so that you have a local copy.
 1. Open the solution file in Visual Studio.
-1. Select which project will be the startup project, either `REST` or `ServceClient`.
+1. Select which project will be the startup project, either `REST` or `ServiceClient`.
 1. In Program.cs, edit the `Main` method to enter your user credentials:
 
    ```csharp
