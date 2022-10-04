@@ -4,7 +4,6 @@ author: denisem-msft
 ms.reviewer: "nabuthuk"
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
 ms.date: 11/24/2021
-
 ms.topic: "article"
 ms.subservice: dataverse-developer
 ms.author: demora
@@ -149,7 +148,7 @@ For each table chosen, select the behavior for importing that table in these set
 
     - The dataflow syncs data from the source environment's table to the target environment, and the same table schema is already defined in the target environment.
     - Ideally, use the same solution in both target and source environments to make data transfer seamless. Another advantage to having a predefined table is more control over which solution the table is defined in and the prefix.    
-    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [alternate key](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) on the target/existing table so the dataflow can determine whether to update existing records or create new ones.
+    - Choose **Delete rows that no longer exist in the query output**. This ensures that the relationships will map correctly because it maintains the values for the lookups. To use this feature, you must first define an [Define alternate keys to reference rows](../../maker/data-platform/define-alternate-keys-reference-records.md) on the target/existing table so the dataflow can determine whether to update existing records or create new ones.
       > [!NOTE]
       > This option should only be used if the goal is to make data in source and target the same. If another process in the destination environment adds data to the same table (or if there is other existing data in the table) it will be deleted by this dataflow.
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the columns.

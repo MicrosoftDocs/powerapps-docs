@@ -230,7 +230,7 @@ More information on chunking: [File columns](file-attributes.md).
 
 To use the legacy chunking to upload image data greater than 16MB in size, use the following APIs.
 
-|Web API (REST) | .NET API (SOAP)|
+|Web API | SDK for .NET |
 |------- | -------|
 |none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>|
 |PATCH /api/data/v9.1/\<entity-type(id)\>/\<image-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>|

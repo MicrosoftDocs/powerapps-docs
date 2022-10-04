@@ -7,21 +7,19 @@ ms.author: nhelgren
 ms.reviewer: pehecke
 manager: sunilg
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
   - phecke
 ---
 
 # Work with columns definitions
 
-
-
-This sample shows how to perform various actions on columns. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithAttributes).
+This sample shows how to perform various actions on columns. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithAttributes).
 
 ## How to run this sample
 
@@ -52,6 +50,5 @@ Checks for the current version of the org.
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

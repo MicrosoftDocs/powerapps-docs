@@ -18,7 +18,7 @@ contributors:
 ---
 # addOnOutputChange (Client API reference)
 
-Adds an event handler to the [OnOutputChange](../events/onselection.md) event. 
+Adds an event handler to the [OnOutputChange](../events/onoutputchange.md) event. 
 
 ## Control types supported
 

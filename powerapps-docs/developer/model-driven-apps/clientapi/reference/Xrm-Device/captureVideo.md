@@ -42,7 +42,7 @@ On success, returns a base64 encoded Video object with the values specified earl
 
 ## Exceptions
 
-See [Web service error codes](../../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

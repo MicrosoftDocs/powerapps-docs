@@ -200,7 +200,6 @@ If the site setting isn't present, then it will be treated as false by default a
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
-
+[Power App portal maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

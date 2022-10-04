@@ -19,14 +19,14 @@ contributors:
 ---
 # Barcode scanner control in Power Apps
 
-Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
+Scans barcodes, QR codes, and data-matrix codes on an Android, iOS, and Windows device.
 
 ## Description
 
-The control opens a native scanner on an Android or iOS device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
+The control opens a native scanner on an Android, iOS, and Windows device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
 
 > [!NOTE]
-> The barcode scanner control is only supported on Android and iOS devices. All other platforms will show a warning that some features of the app won't work.
+> The barcode scanner control is supported on an Android, iOS, and Windows device. All other platforms will show a warning that some features of the app won't work.
 
 ## Key properties
 
@@ -80,24 +80,28 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 
 ## Barcode Availability by Device
 
-| Barcode Type | Android | iOS |
-|--------------|:-------:|:---:|
-|QR_CODE|✔|✔|
-|DATA_MATRIX|✔|✔|
-|UPC_A|✔|✔|
-|UPC_E|✔|✔|
-|EAN_8|✔|✔|
-|EAN_13|✔|✔|
-|CODE_39|✔|✔|
-|CODE_93|✔|✔|
-|CODE_128|✔|✔|
-|CODABAR|✔|✖|
-|ITF|✔|✔|
-|RSS14|✔|✖|
-|PDF_417|✔|✔|
-|RSS_EXPANDED|✔|✖|
-|MSI|✖|✖|
-|AZTEC|✔|✔|
+| Barcode Type | Android | iOS | Windows |
+|--------------|:-------:|:---:|:---:|
+|QR_CODE|✔|✔|✔|
+|DATA_MATRIX|✔|✔|✖|
+|UPC_A|✔|✔|✔|
+|UPC_E|✔|✔|✔|
+|EAN_8|✔|✔|✔|
+|EAN_13|✔|✔|✔|
+|CODE_39|✔|✔|✔|
+|CODE_93|✔|✔|✖|
+|CODE_128|✔|✔|✔|
+|CODABAR|✔|✖|✔|
+|Databar Omnidirectional|✖|✖|✔|
+|Databar Stacked|✖|✖|✔|
+|GS1-DWCode|✖|✖|✔|
+|ITF|✔|✔|✖|
+|Interleaved 2 of 5|✖|✖|✔|
+|RSS14|✔|✖|✖|
+|PDF_417|✔|✔|✖|
+|RSS_EXPANDED|✔|✖|✖|
+|MSI|✖|✖|✖|
+|AZTEC|✔|✔|✖|
 
 > [!NOTE]
 > PDF_417 and AZTEC aren't supported in Auto mode.

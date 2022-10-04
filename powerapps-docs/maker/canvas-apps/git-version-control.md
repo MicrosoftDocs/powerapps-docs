@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/09/2022
+ms.date: 09/30/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -15,6 +15,7 @@ search.app:
 contributors:
   - tapanm-msft
   - gregli-msft
+  - gesnaaggarwal
 ---
 
 # Co-authoring in canvas apps (experimental)
@@ -22,6 +23,7 @@ contributors:
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
+>
 > - This feature is being rolled out and depending on your region, it may not be available for your tenant yet. Check the experimental switch described in [Enable Git version control](#enable-git-version-control) to know if the feature is available in your tenant.
 > - This is an experimental feature. It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
@@ -33,6 +35,7 @@ You can now use Git version control to enable more than one person to edit a can
 Any Git provider can be used with Power Apps Studio&mdash;such as [GitHub](https://github.com/) or [Azure DevOps](https://azure.microsoft.com/services/devops/). Use existing Git tools to see version history, create and manage pull requests, and do other version control tasks.
 
 > [!NOTE]
+>
 > - Before you begin, ensure you read [known limitations](#known-limitations) of this feature. Use of Git is evolving and may change how this feature works. For updates and to share your feedback about this feature, vist the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 > - Git version control is managed on a per-app basis. Each app must be individually added to Git version control.
 > - Once git version control is enabled, your app's autosave will be disabled. You will have to manually save or sync your changes.
@@ -51,6 +54,7 @@ Follow these steps to enable Git version control in your app.
    :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
    > [!TIP]
+   >
    > - This feature is being rolled out. If you don't see it in your tenant, it may not yet be deployed to your tenant yet. In that case, check again later.
    > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
@@ -68,7 +72,7 @@ Follow these steps to connect your app to Git.
 
    :::image type="content" source="media/git-version-control/connect-info.png" alt-text="Text input boxes to provide git connection information.":::
 
-   - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **/_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.
+   - **Git Repository URL**: The URL you would normally use with Git tools. For Azure DevOps, be sure to include the **/\_git/repo** portion of the URL, such as `https://contoso.visualstudio.com/_git/repo`.
    - **Branch**: The branch name to use.
    - **Directory**: The directory within the branch to use. You can't store a canvas app at the root of the branch.
 
@@ -128,7 +132,7 @@ Each save or synchronize that includes changes will result in a commit in Git. I
 Since this feature is experimental, we welcome your feedback. The following lists known limitations. We plan to remove most of these limitations in future versions.
 
 - This feature isn't compatible with [code components](../../developer/component-framework/create-custom-controls-using-pcf.md). Don't use this feature with apps that make of use of code components.
-- This feature doesn't work with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
+- This feature isn't compatible with on-premises Git repositories. The Git repo must be hosted on the web and accessible with username and personal access token.
 - Edits to the same property on the same control aren't merged. The last edit made will win.
 - You can't restore a canvas app to a previous version using the steps described in [Restore an app](restore-an-app.md) article. Instead, you'll have to use Git for restoring the app to a previous version. For more information, see the following resources:
   - [git-revert](https://git-scm.com/docs/git-revert)
@@ -136,10 +140,11 @@ Since this feature is experimental, we welcome your feedback. The following list
   - [Undo changes](/azure/devops/repos/git/undo?view=azure-devops&tabs=command-line&preserve-view=true)
 - Connecting multiple apps to the same git directory may cause problems. This includes making copies of your app and exporting and importing them.
 - Any existing files in the repository with names exceeding 180 characters in length may cause problems when connecting. We recommend using a dedicated repository for Git connected apps.
-- Selecting **Close** on the **File** menu may appear to delete your customizations in the app. This is a known issue, and no customizations have actually been deleted. Refresh the page to see all customizations again.
+- Selecting **Close** on the **File** menu may appear to delete your customizations in the app. However, customizations are not deleted. Refresh the page to see all customizations again.
 - If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
-- This feature does not support renaming of custom components. 
-- If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. And then, refresh your app to remove the lock.
+- This feature does not support renaming of custom components.
+- If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. Afterwards, refresh your app to remove the lock.
+- This feature is not compatible with [Test Studio tests](test-studio.md) and [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md)
 
 ## Feedback to the community forum
 

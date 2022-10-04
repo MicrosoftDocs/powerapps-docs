@@ -1,15 +1,12 @@
 ---
 title: "Data export service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 12/02/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "sabinn-msft" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: sabinn-msft # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "sabinn" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: sabinn # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -17,8 +14,6 @@ search.app:
   - D365CE
 ---
 # Data export service
-
-
 
 > [!NOTE]
 > Effective November 2021, Data Export Service was deprecated. Data Export Service will continue to work and will be fully supported until it reaches end-of-support and end-of-life in November 2022. More information: [https://aka.ms/DESDeprecationBlog](https://aka.ms/DESDeprecationBlog)
@@ -64,7 +59,7 @@ GRANT ALTER, REFERENCES, INSERT, DELETE, UPDATE, SELECT, EXECUTE ON SCHEMA::dbo 
   
 ```  
   
-For online solutions and services, Azure provides a [Key Vault](https://azure.microsoft.com/services/key-vault/) service to safeguard cryptographic keys, passwords, and other secrets.  To use Azure Key Vault, this customer-owned service must be configured so that permission is granted to "Dynamics 365 Data Export Service", which is used to safely store the SQL Azure connection string. To perform this configuration with a PowerShell script, see [How to set up Azure Key Vault](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt744592(v=crm.8)). Alternately, this service can be managed through its REST API; see [Key Vault management](/rest/api/keyvault/vaults).  
+For online solutions and services, Azure provides a [Key Vault](https://azure.microsoft.com/services/key-vault/) service to safeguard cryptographic keys, passwords, and other secrets.  To use Azure Key Vault, this customer-owned service must be configured so that permission is granted to "Dynamics 365 Data Export Service", which is used to safely store the SQL Azure connection string. To perform this configuration with a PowerShell script, see [How to set up Azure Key Vault](/power-platform/admin/replicate-data-microsoft-azure-sql-database#how-to-set-up-azure-key-vault). Alternately, this service can be managed through its REST API; see [Key Vault management](/rest/api/keyvault/keyvault/vaults).  
   
 It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
@@ -79,8 +74,9 @@ It is also advised that you add the domain https://discovery.crmreplication.azur
   
 <a name="bk_ApiQuickReference"></a>   
 
-### API Quick Reference  
- For the reader's convenience, these interfaces are summarized in the following tables.  
+### API Quick Reference
+
+For the reader's convenience, these interfaces are summarized in the following tables.  
   
  **Metadata operations** (`https://discovery.crmreplication.azure.net/crm/exporter/metadata/`)  
   
@@ -135,8 +131,9 @@ string accessToken = token.AccessToken;
   
 For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/v2-oauth2-auth-code-flow). For more information about Azure user security, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/authentication-vs-authorization).  
   
-### Error handling and failure processing  
- Once a profile is correctly configured, the synchronization process is typically highly reliable. However, if a record fails to synchronize, the following failure processing is applied:  
+### Error handling and failure processing
+
+Once a profile is correctly configured, the synchronization process is typically highly reliable. However, if a record fails to synchronize, the following failure processing is applied:  
   
 1. After the configured retry interval, another attempt is made to synchronize the record. This is repeated up to the configured maximum number of retries.  
   
@@ -174,9 +171,10 @@ RecordId: N/A, NotificationTime: , ChangeType: Trigger Initial Export, FailureRe
 Entity: account, RecordId: b2a19cdd-88df-e311-b8e5-6c3be5a8b200, NotificationTime: 8/31/2016 6:50:38 PM, ChangeType: New, FailureReason: Invalid object name 'dbo.hatest201_account'.  
 ```  
   
-### See also  
- [Manage your data in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
- [Import data](import-data.md)
+### See also
+
+[Manage your data in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
+[Import data](import-data.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

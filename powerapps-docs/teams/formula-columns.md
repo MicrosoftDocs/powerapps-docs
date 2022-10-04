@@ -1,7 +1,7 @@
 ---
 title: Work with Dataverse for Teams formula table columns | Microsoft Docs
 description: Explains how to create and use formula table columns in Dataverse for Teams.
-author: revachauhan
+author: divka78
 reviewer: mattp123
 ms.topic: conceptual
 ms.custom: 
