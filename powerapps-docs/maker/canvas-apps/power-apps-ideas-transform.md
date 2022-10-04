@@ -209,7 +209,7 @@ Functions supported by Power Apps Ideas feature:
       [Month](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
-      [Not](functions/function-logicalsy.md)
+      [Not](functions/function-logicals.md)
    :::column-end:::
    :::column span="":::
       [Now](functions/function-now-today-istoday.md)
