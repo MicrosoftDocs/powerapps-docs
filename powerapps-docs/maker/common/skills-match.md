@@ -35,11 +35,13 @@ To access maker matching resources:
 
 2. Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
 
-   ![Select ask a virtual agent.](media/skills-match/skills-match-1.png)
+   > [!div class="mx-imgBorder"]
+   > ![Select ask a virtual agent.](media/skills-match/skills-match-1.png)
 
 3. Interact with the chat bot to receive help.
 
-   ![Interact with the chat bot](media/skills-match/skills-match-2.png)
+   > [!div class="mx-imgBorder"]
+   > ![Interact with the chat bot](media/skills-match/skills-match-2.png)
 
 ## Virtual agent resources
 
@@ -57,21 +59,25 @@ During the first stage of engagement, your interaction with the virtual agent le
 
 For example, when you need help with a data export error that relates to connecting data, you'll start with the chat that includes text relevant to the data export error:
 
-![Demo of skills matching.](media/skills-match/skills-match-3.png)
+> [!div class="mx-imgBorder"]
+> ![Demo of skills matching.](media/skills-match/skills-match-3.png)
 
 From the list of topics that the chat bot suggests, you can then choose to be more specific to exporting data from Dataverse:
 
-![Find help with a specific error.](media/skills-match/skills-match-4.png)
+> [!div class="mx-imgBorder"]
+> ![Find help with a specific error.](media/skills-match/skills-match-4.png)
 
 ### Stage 2 – Organizational resources
 
 This stage begins once you choose **No** when asked whether the previous interaction solved your problem.
 
-![Second stage when your issue is not solved.](media/skills-match/skills-match-5.png)
+> [!div class="mx-imgBorder"]
+> ![Second stage when your issue is not solved.](media/skills-match/skills-match-5.png)
 
 When you choose **No**, you'll see the internal documentation, Yammer community and the Microsoft Teams group resources unique to your organization.
 
-![Get get from internal documentation.](media/skills-match/skills-match-6.png)
+> [!div class="mx-imgBorder"]
+> ![Get get from internal documentation.](media/skills-match/skills-match-6.png)
 
 > [!NOTE]
 > The internal documentation, Yammer community and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
@@ -80,7 +86,8 @@ When you choose **No**, you'll see the internal documentation, Yammer community 
 
 If you choose **Next** to find an advisor for your organization in the virtual agent interaction, you're then presented with a list of advisors that are available to provide help:
 
-![Find an advisor from your organization.](media/skills-match/skills-match-7.png)
+> [!div class="mx-imgBorder"]
+> ![Find an advisor from your organization.](media/skills-match/skills-match-7.png)
 
 If additional advisors are available to help, you can choose to view more advisors.
 
@@ -97,13 +104,16 @@ Advisors are identified one of two ways: via admin identification or the product
 
 When an advisor is identified, they receive an in-product popup notification asking whether they'd like to opt into the program to help other makers.
 
-![notification for advisors.](media/skills-match/skills-match-8.png)
+> [!div class="mx-imgBorder"]
+> ![notification for advisors.](media/skills-match/skills-match-8.png)
 
 ## Sign up using Power Apps profile screen
 
 Select **Settings** from the top-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
 
-![Sign up using Power Apps profile screen.](media/skills-match/skills-match-9.png)
+
+> [!div class="mx-imgBorder"]
+> ![Sign up using Power Apps profile screen.](media/skills-match/skills-match-9.png)
 
 Your organizational admin will be able to nominate you as a Power Apps Advisor via the Power Platform Admin Center, in which case you will receive an email and see the in-product notification shown above.
 
@@ -127,7 +137,8 @@ To add internal resources:
 
 3. Add the **Documentation**, **Teams Group** and **Yammer Community** links.
 
-   ![Add the Documentation, Teams Group and Yammer Community links.](media/skills-match/skills-match-10.png)
+   > [!div class="mx-imgBorder"]
+   > ![Add the Documentation, Teams Group and Yammer Community links.](media/skills-match/skills-match-10.png)
 
 4. Select **Save**.
 
@@ -141,9 +152,10 @@ To configure advisors:
 
 3. Select **Advisors** tab.
 
-   ![Configure advisors.](media/skills-match/skills-match-11.png)
+   > [!div class="mx-imgBorder"]
+   > ![Configure advisors.](media/skills-match/skills-match-11.png)
 
-4.  Configure advisor with the following options:
+4. Configure advisor with the following options:
 
     - **Add** an advisor - select **Add an advisor** to add an advisor.
 
