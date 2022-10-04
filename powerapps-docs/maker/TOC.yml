@@ -222,7 +222,9 @@
   - name: Find it with unified search
     href: search.md
   - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md 
+    href: ./common/virtual-agent.md   
+  - name: Maker matching using an integrated virtual agent (preview)
+    href: ./common/skills-match.md
 - name: Canvas apps
   items:
   - name: Canvas apps
