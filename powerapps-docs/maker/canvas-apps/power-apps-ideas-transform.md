@@ -50,23 +50,27 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
 1. Select **BrowseGallery1,** which is bound to the **Accounts** table.
 
-1. Select **Sort filter and search** on the ideas box. 
+1. Select **Sort, filter, and search** on the ideas box. 
 
-1. Select one of the default suggestions to check how it works, or start to type in your own query in natural language such as English (en-us).
+   :::image type="content" source="media/power-apps-ideas/sort-filter.png" alt-text="Sort, filter, and search.":::
 
-    :::image type="content" source="media/power-apps-ideas/suggested-ideas.png" alt-text="Get started with Power Apps Ideas.":::
+1. Select one of the default suggestions to check how it works, or start typing in your own query in natural language such as English (en-us).
 
-1. When typing, you can use the default query, modify it, or describe in your own way.
+    :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for shorting and filtering.":::
 
-1. You'll see one or more formula suggestions produced. Let’s use the example `search 'Account Name' by 'TextSearchBox1'`. You'll see that the formula suggestion produced includes three parts:
+1. When typing you can use the default query, modify it, or describe in your own way.
 
-    1. **Accounts** where the text in **TextSearchBox1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
+1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results and each of the formula suggestion produced includes three parts:
 
-    1. The formula suggestion in this scenario is `Search('Accounts', TextSearchBox1.Text, "name")`.
+    1. **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
+    
+    1. **Apply to: Items**: This is suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
+
+    1. The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
 
         :::image type="content" source="media/power-apps-ideas/Ideas_example_c7.png" alt-text="Suggested formula based on entered search scenario.":::
 
-1. When you select any suggested idea for a formula, the formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula, or modify it.
+1. Select a suggestion that you see fit and then select **Apply**. In this case, let's select the first suggestion since it's the best fit**. The formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula or modify it.
 
 ## More examples
 
@@ -74,40 +78,52 @@ Consider the following examples to inspire from while working with Power Apps Id
 
 | Scenario | Description | Ideas example |
 | --- | --- | --- |
-|**Sort your table** |Sort by a single column |sort Accounts by 'Account Name'|
-| | |sort Accounts by 'Account Name' A-Z|
-| | |sort Accounts by 'Account Name' Z-A|
-| |Sort by a few columns|sort Accounts by 'Account Name' and 'Created On'|
-| | |sort Accounts by 'Account Name' A-Z and 'Created On' latest on top|
-| |Sort existing tables |sort 'Gallery3' by 'Account Name' z to a|
-|**Filter or search table by some conditions**|A number condition|'Accounts' with length of 'Account Name' bigger than 10|
-| |A date condition|'Accounts' whose 'Created On' is last year, 'Accounts' whose 'Modified On' is within seven days of 'Created On'|
-| |A text condition|'Accounts' whose 'Account Name' contains "test"|
-| |A few conditions|'Accounts' whose s Name' contains "test" and 'Status' is Active|
-| |Search table by user input|search 'Accounts' by 'Account Name' in 'TextInput1'|
-| |Find a single record|find the first record in 'Accounts' where 'Account Name' contains "test"|
+|**Sort your table** |Sort by a single column |sort accounts by Account Name|
+| | |sort accounts by Account Name A-Z|
+| | |sort accounts by Account Name Z-A|
+| |sort accounts by Account Name and Created On|
+| | |sort Accounts by Account Name A-Z and Created On latest on top|
+| |Sort existing tables |sort Gallery3 by Account Name z to a|
+|**Filter or search table by some conditions**|A number condition|Accounts with length of Account Name bigger than 10|
+| |A date condition|accounts created a week ago accounts modified last 3 days|
+| |A text condition|accounts with name contains Karen'Accounts|
+| |A few conditions|accounts whose name contains Karen and created 7 days ago|
+| |A choice value|inactive accounts|
+| |Search table by user input|search accounts with name in textinput|
+| |Find a single record|first record in accounts where name contains Karen|
 | |Find records on the top or the bottom of the table|Top 10 Accounts|
 | | |Last 10 Accounts|
+|**Conditional formatting (apply to color and visible)** |A number condition|Accounts with length of Account Name bigger than 10|
+| |A date condition|red if created 7 days ago|
+| |A text condition|blue if name contains karen|
+|**Text generation** |Numbers|count of gallery sum of slider1 and slider2|
+||String|label4 and label5 Trim textinput1First 3 characters of TextInput1|
 
 ## Best practices
 
 To get the best results, here are some tips that you can follow when writing the plain natural language query in the Ideas pane.
 
-- Enter the complete context in the query. For example, if you need to filter a table by some conditions, be precise about which table to filter, which column to filter by, and what conditions need to be met.
-- Use IntelliSense as much as possible. IntelliSense could help the AI model recognize context, and understand data types better.
+- Leverage default queries to see what kind of scenarios are supported.
+- Be precise in your query. Ideas is can recognize controls such as tables and columns. However, if you don't get a suggestions, try using the full name of the assets you’re referencing. For example, use **TextInput1** when you have multiple text input controls in the app. This way the system knows which control you're referring to. 
 
 ## Limitations
 
 > [!NOTE]
 > We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
 
-Power Apps Ideas has the following limitations currently:
+Power Apps Ideas currently has the following limitations:
 
 - Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
-- Controls: Supports generating formulas for **Gallery** and **Data table** controls&mdash;on their **Items** property. Can recognize control value of TextInput, Dropdown, DatePicker, Slider, Toggle, Checkbox, Radio as input.
+- Recognizes control value of **TextInput**, **Dropdown**, **DatePicker**, **Slider**, **Toggle**, **Checkbox**, and **Radio** as input.
+
+   | Controls | Properties | 
+   | --- | --- |
+   | **Gallery**, **Data table**, **Drop down**, **Combo box** | Items |
+   | **Text Box**, **Label** | Text, Color, Visible |
+   
 - Data sources: Currently Ideas supports **Dataverse** tables, Microsoft Lists, Excel sheets.
-- Functions: Works best on table manipulation functions like `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. And also a list of basic functions for the conditions. See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
-- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No. Not supported: Lookup, File and Image.
+- Functions: See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
+- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No Lookup. Not supported: File and Image.
 - This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
 
 ## Supported Power Fx functions
