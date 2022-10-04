@@ -31,7 +31,7 @@ If you’re also struggling with Power Fx and you don’t actually want to spend
 
 When you're building a canvas app, Power Apps you will automatically suggest ideas for supported controls such as **Gallery**, **Data table**, **Text box**, **Drop down**, **Combo box**, and **Text label**. In the screenshot below, when you select the name field in a gallery, you'll see an idea for a formula that may want to use. However, if you select the plus icon next to **New record** you won't see an idea becuase we currently don’t have ideas for icons. 
 
-:::image type="content" source="media/power-apps-ideas/ideas-prompt.png" alt-text="Suggested ideas prompt.":::
+:::image type="content" source="media/power-apps-ideas/ideas-example.gif" alt-text="Suggested ideas prompt.":::
 
 There are two methods to benefit from Power Apps Ideas in your app.
 
