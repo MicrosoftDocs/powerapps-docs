@@ -36,7 +36,7 @@ For example, instead of figuring out how to write the following formula:
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 
-You can type in `'fullname' starts with Yvonne` instead.
+You can type in `'name starts with Yvonne` instead.
 
 To begin, let’s look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
 
