@@ -29,7 +29,7 @@ Power Apps Ideas can generate ideas for formulas the following controls on diffe
 - **Combo box**
 - **Text label** 
 
-Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the suppported controls and want to write a formulas for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
+Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the supported controls and want to write a formula for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
 
 For example, instead of figuring out how to write the following formula:
 ```powerapps-dot
@@ -38,7 +38,7 @@ Filter('Table1', StartsWith('fullname', "Yvonne"))
 
 You can type in `'fullname' starts with Yvonne` instead.
 
-To begin, let’s take a look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
+To begin, let’s look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
 
 You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using **Accounts** table from Dataverse.
 
@@ -48,17 +48,17 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
    :::image type="content" source="media/power-apps-ideas/sort-filter.png" alt-text="Sort, filter, and search.":::
 
-1. Select one of the default suggestions to check how it works, or start typing in your own query in natural language such as English (en-us).
+1. Select one of the default suggestions to check how it works or start typing in your own query in natural language such as English (en-us).
 
     :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for shorting and filtering.":::
 
-1. When typing you can use the default query, modify it, or describe in your own way.
+1. When typing you can use the default query, modify it, or describe it in your own way.
 
-1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results and each of the formula suggestion produced includes three parts:
+1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results and each of the formula suggestions produced includes three parts:
 
     1. **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
     
-    1. **Apply to: Items**: This is suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
+    1. **Apply to: Items**: This suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
 
     1. The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
 
@@ -80,7 +80,7 @@ Consider the following examples to inspire from while working with Power Apps Id
 | |Sort existing tables |sort Gallery3 by Account Name z to a|
 |**Filter or search table by some conditions**|A number condition|Accounts with length of Account Name bigger than 10|
 | |A date condition|accounts created a week ago accounts modified last 3 days|
-| |A text condition|accounts with name contains Karen'Accounts|
+| |A text condition|accounts with name contains Karen|
 | |A few conditions|accounts whose name contains Karen and created 7 days ago|
 | |A choice value|inactive accounts|
 | |Search table by user input|search accounts with name in textinput|
@@ -98,7 +98,7 @@ Consider the following examples to inspire from while working with Power Apps Id
 To get the best results, here are some tips that you can follow when writing the plain natural language query in the Ideas pane.
 
 - Leverage default queries to see what kind of scenarios are supported.
-- Be precise in your query. Ideas is can recognize controls such as tables and columns. However, if you don't get a suggestions, try using the full name of the assets you’re referencing. For example, use **TextInput1** when you have multiple text input controls in the app. This way the system knows which control you're referring to. 
+- Be precise in your query. Ideas can recognize controls such as tables and columns. However, if you don't get a suggestion, try using the full name of the assets you’re referencing. For example, use **TextInput1** when you have multiple text input controls in the app. This way the system knows which control you're referring to. 
 
 ## Limitations
 
@@ -118,7 +118,7 @@ Power Apps Ideas currently has the following limitations:
 - Data sources: Currently Ideas supports **Dataverse** tables, Microsoft Lists, Excel sheets.
 - Functions: See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
 - Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No Lookup. Not supported: File and Image.
-- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
+- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even if you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
 
 ## Supported Power Fx functions
 
