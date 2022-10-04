@@ -33,7 +33,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
     ![Power Apps Ideas demo.](media/power-apps-ideas/prose-entrypoint-c7.png "Find example to formula in Ideas pane")
 
-1. Enter your output in the **Desired format** text box. Or use one of the listed examples and then press Enter. <br> Select the generated formula.  
+1. Enter your output in the **Desired format** text box. Or use one of the listed examples, in this case **May 25, 2021**, and then press Enter. <br> Select the generated formula.  
 
     ```powerapps-dot
     Text(DateTimeValue(ThisItem.'Created On'), "mmmm d", "en-US")
