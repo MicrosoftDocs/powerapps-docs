@@ -38,8 +38,6 @@ Filter('Table1', StartsWith('fullname', "Yvonne"))
 
 You can type in `'fullname' starts with Yvonne` instead.
 
-![Power Apps Ideas demo.](media/power-apps-ideas/NL2FX-C7.gif "Animation that shows how Power Apps Ideas work")
-
 To begin, let’s take a look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
 
 You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using **Accounts** table from Dataverse.
@@ -242,7 +240,7 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [RoundDown](functions/function-round.md)
    :::column-end::::
-   ::column span="":::
+   :::column span="":::
       [RoundUp](functions/function-round.md)
    :::column-end:::
    :::column span="":::
