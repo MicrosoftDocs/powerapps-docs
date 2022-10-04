@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Organization service sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This quickstart will show you how to connect to the organization service of the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+description: "This quick start will show you how to connect to the Organization service of Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 09/30/2022
 author: JimDaly
 ms.author: jdaly
 manager: kvivek
@@ -20,29 +20,24 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This is where you begin working with the .NET SDK assemblies to work with data using Microsoft Dataverse.
+This topic shows you how to begin using classes in the SDK for .NET assemblies to work with Microsoft Dataverse business data. You will create a minimal console application to connect to your environment's Organization service using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class and execute a web service operation.
 
-In this quickstart, you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
-
-You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class, and you will display the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value.
+Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value which is the identifier of your Dataverse user account.
 
 > [!NOTE]
-> This quickstart example does not include error handling. This is a minimum example of what you need to connect to and use the Organization service.
-
+> This quick start example does not include error handling for brevity. This is a minimum code example of what you need to connect to and use the Organization service.
 
 ## Prerequisites
 
- - Visual Studio (2019 recommended)
+ - Visual Studio (2019 or later)
  - Internet connection
- - Valid user account for a Dataverse instance
-    - Your username
-    - Your password
- - Url to the Dataverse environment you want to connect with
+ - Logon credentials of a Dataverse system user account for the target environment
+ - URL address of the Dataverse environment you want to connect with
  - Basic understanding of the Visual C# language
 
 ## Create Visual Studio project
 
-1. Create a new Console App (.NET Framework) project using .NET Framework 4.6.2
+1. Create a new .NET console app project. For this project we are demonstrating .NET 6, but .NET Framework will also work.
 
     ![Start a console app project.](../media/quick-start-org-service-console-app-1.png)
 
