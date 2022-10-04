@@ -47,8 +47,8 @@ ISV Studio is a portal designed for third-party publishers to view how well thei
 
 3. Below the graph, you can see the same data in table format. Filters applied to the graph will apply to the table. The following columns are displayed:
 	- Tenant: Customer tenant name
-	- Billing Policy ID: ID for billing policy created.
-	- Environment ID: ID for customer environment consuming the flow.
+	- Billing Policy ID: Billing policy created.
+	- Environment ID: Customer environment consuming the flow.
 	- Billed Quantity: Consumed quantity based on meter category.
 	- Meter Category: Power Automate is currently the only available option
 	- Billing Date: Date the billing policy was created
