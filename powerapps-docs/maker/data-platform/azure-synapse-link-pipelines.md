@@ -38,19 +38,20 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 5. Create an Azure SQL database with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
 6. Create and configure an Azure integration runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
 
-## Use the solution template in Synapse Workspace
-
+## Use the solution template
+# [Synapse Analytics](#tab/synapse-analytics)
 1. In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Data** > **Azure Synapse Link**, select your desired Azure Synapse Link from the list, and then select **Go to Azure Synapse workspace**.
    :::image type="content" source="media/go-to-workspace.png" alt-text="Go to Azure Synapse Workspace":::
 
 1. Select **Integrate** > **Browse gallery**.
 1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the integration gallery.
 
-## Use the solution template in Azure Data Factory
-
+# [Azure Data Factory](#tab/data-factory)
 1. Go to the Azure portal and open Azure Data Factory Studio.
 1. Select **Add new resource** > **Pipeline** > **Template gallery**.
 1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the template gallery.
+
+---
 
 ## Configure the solution template
 

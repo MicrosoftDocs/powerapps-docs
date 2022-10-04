@@ -1,12 +1,12 @@
 ---
 title: Use Power Apps for Windows | Microsoft Docs
 description: Use Power Apps for Windows.
-author: mduelae
+author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 06/14/2022
+ms.date: 09/29/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -193,7 +193,6 @@ For more information on deep links, see [Use deep links with Power Apps mobile](
 ## Limitations and known issues
 - The following is not supported:
   - Advanced controls such as [sensors](../maker/canvas-apps/how-to/mobile-sensors.md).
-  - [Push notifications](power-apps-mobile-notification.md)
   - Pinning an app on Windows desktop
   - [Mixed reality controls](../maker/canvas-apps/mixed-reality-overview.md)
   - [NFC function](../maker/canvas-apps/functions/function-readnfc.md)
