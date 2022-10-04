@@ -1,5 +1,5 @@
 ---
-title: "Maker matching using an integrated virtual agent in Power Apps | MicrosoftDocs"
+title: "Maker matching using an integrated virtual agent in Power Apps (preview) | MicrosoftDocs"
 description: Maker matching using an integrated virtual agent in Power Apps. 
 ms.custom: ""
 ms.date: 10/5/2022
@@ -15,7 +15,13 @@ search.app:
   - PowerApps
 ---
 
-# Maker matching using an integrated virtual agent in Power Apps
+# Maker matching using an integrated virtual agent in Power Apps preview
+
+[This article is pre-release documentation and is subject to change.]
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 Maker matching is now available through an integrated chat bot in Power Apps. This feature allows you to find your organization's internal resources, as well as interact with experienced makers within your organization.
 
