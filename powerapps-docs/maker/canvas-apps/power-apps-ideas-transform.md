@@ -5,7 +5,7 @@ author: norliu
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 10/03/2022
+ms.date: 10/04/2022
 ms.subservice: canvas-maker
 ms.author: norliu
 ms.reviewer: mkaur
@@ -20,14 +20,14 @@ contributors:
 
 # Transform natural language to Power Fx formulas 
 
-Power Apps Ideas can generate ideas for formulas the following contrrols:
+Power Apps Ideas can generate ideas for formulas the following controls on different properties:
 
 - **Gallery**
 - **Data table**
 - **Text box**
 - **Drop down**
 - **Combo box**
-- **Text label** controls on different properties.
+- **Text label** 
 
 Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the suppported controls and want to write a formulas for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
 
