@@ -31,25 +31,25 @@ The integrated virtual agent is available in all 3 Power Apps experiences. Maker
 
 To access maker matching resources:
 
-1.  Sign in to [Power Apps](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2.  Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
+2. Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
 
-![](media/skills-match/skills-match-1.png)
+   ![Select ask a virtual agent.](media/skills-match/skills-match-1.png)
 
-3.  Interact with the chat bot to receive help.
+3. Interact with the chat bot to receive help.
 
-![Graphical user interface  application Description automatically generated](media/skills-match/skills-match-2.png)
+   ![Interact with the chat bot](media/skills-match/skills-match-2.png)
 
 ## Virtual agent resources
 
 When you interact with the chat bot, you'll be able to get help based on the key terms and phrases you enter. The engagement stages include:
 
--   Stage 1 – Microsoft documentation
+- Stage 1 – Microsoft documentation
 
--   Stage 2 – Organizational resources configured in the Power Platform admin center
+- Stage 2 – Organizational resources configured in the Power Platform admin center
 
--   Stage 3 – Advisor engagement within the organization
+- Stage 3 – Advisor engagement within the organization
 
 ### Stage 1 – Microsoft documentation
 
@@ -57,29 +57,30 @@ During the first stage of engagement, your interaction with the virtual agent le
 
 For example, when you need help with a data export error that relates to connecting data, you'll start with the chat that includes text relevant to the data export error:
 
-![](media/skills-match/skills-match-3.png)
+![Demo of skills matching.](media/skills-match/skills-match-3.png)
 
 From the list of topics that the chat bot suggests, you can then choose to be more specific to exporting data from Dataverse:
 
-![](media/skills-match/skills-match-4.png)
+![Find help with a specific error.](media/skills-match/skills-match-4.png)
 
 ### Stage 2 – Organizational resources
 
 This stage begins once you choose **No** when asked whether the previous interaction solved your problem.
 
-![](media/skills-match/skills-match-5.png)
+![Second stage when your issue is not solved.](media/skills-match/skills-match-5.png)
 
 When you choose **No**, you'll see the internal documentation, Yammer community and the Microsoft Teams group resources unique to your organization.
 
-![](media/skills-match/skills-match-6.png)
+![Get get from internal documentation.](media/skills-match/skills-match-6.png)
 
-**NOTE:** The internal documentation, Yammer community and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
+> [!NOTE]
+> The internal documentation, Yammer community and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
 
 ### Stage 3 – Advisor engagement
 
 If you choose **Next** to find an advisor for your organization in the virtual agent interaction, you're then presented with a list of advisors that are available to provide help:
 
-![](media/skills-match/skills-match-7.png)
+![Find an advisor from your organization.](media/skills-match/skills-match-7.png)
 
 If additional advisors are available to help, you can choose to view more advisors.
 
@@ -89,19 +90,20 @@ Select **Send message** to either initiate an email or a Teams chat with the adv
 
 Advisors are identified one of two ways: via admin identification or the product itself will invite successful makers based on their product usage.
 
-**NOTE:** After you sign up as an advisor, your Power Platform administrator has the ability to remove your profile as an advisor.
+> [!NOTE]
+> After you sign up as an advisor, your Power Platform administrator has the ability to remove your profile as an advisor.
 
 ## Signing up 
 
 When an advisor is identified, they receive an in-product popup notification asking whether they'd like to opt into the program to help other makers.
 
-![](media/skills-match/skills-match-8.png)
+![notification for advisors.](media/skills-match/skills-match-8.png)
 
 ## Sign up using Power Apps profile screen
 
 Select **Settings** from the top-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
 
-![](media/skills-match/skills-match-9.png)
+![Sign up using Power Apps profile screen.](media/skills-match/skills-match-9.png)
 
 Your organizational admin will be able to nominate you as a Power Apps Advisor via the Power Platform Admin Center, in which case you will receive an email and see the in-product notification shown above.
 
@@ -119,27 +121,27 @@ Along with advisor configuration, you can also configure internal resources to s
 
 To add internal resources:
 
-1.  Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
 
-2.  Select **Power Apps assets** from the left pane.
+2. Select **Power Apps assets** from the left pane.
 
-3.  Add the **Documentation**, **Teams Group** and **Yammer Community** links.
+3. Add the **Documentation**, **Teams Group** and **Yammer Community** links.
 
-![](media/skills-match/skills-match-10.png)
+   ![Add the Documentation, Teams Group and Yammer Community links.](media/skills-match/skills-match-10.png)
 
-4.  Select **Save**.
+4. Select **Save**.
 
 ## Configure advisors
 
 To configure advisors:
 
-1.  Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.com).
 
-2.  Select **Power Apps assets** from the left pane.
+2. Select **Power Apps assets** from the left pane.
 
-3.  Select **Advisors** tab.
+3. Select **Advisors** tab.
 
-![](media/skills-match/skills-match-11.png)
+   ![Configure advisors.](media/skills-match/skills-match-11.png)
 
 4.  Configure advisor with the following options:
 
@@ -147,18 +149,3 @@ To configure advisors:
 
     - **Remove** an advisor - choose an advisor by selecting … (ellipsis), and select **Remove**.
 
-# Preview disclaimer
-
-Preview features are features that aren't complete but are made available on a "preview" basis so customers can get early access and provide feedback. Preview features are not supported by Microsoft Support, may have limited or restricted functionality, aren't meant for production use, and may be available only in selected geographic areas.
-
-# Copyright
-
-This document is provided "as-is". Information and views expressed in this document, including URL and other Internet web site references, may change without notice.
-
-Some examples depicted herein are provided for illustration only and are fictitious. No real association or connection is intended or should be inferred.
-
-This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes. This document is confidential and proprietary to Microsoft. It is disclosed and can be used only pursuant to a non-disclosure agreement.
-
-© 2022 Microsoft. All rights reserved.
-
-Microsoft is trademark of the Microsoft group of companies. All other trademarks are property of their respective owners.
