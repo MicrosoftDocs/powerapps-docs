@@ -131,7 +131,16 @@ Power Apps Ideas currently has the following limitations:
 Functions supported by Power Apps Ideas feature:
 
 :::row:::
- :::column span="":::
+   :::column span="":::
+      [Abs](functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+      [Average](functions/function-aggregates.md)
+   :::column-end:::
+   :::column span="":::
+      [Concat](functions/function-concatenate.md)
+   :::column-end:::
+   :::column span="":::
       [Countif](functions/function-table-counts.md)
    :::column-end:::
    :::column span="":::
@@ -149,17 +158,28 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [DateTimeValue](functions/function-datevalue-timevalue.md)
    :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [DateAdd](functions/function-date-time.md)
+   :::column-end:::
+   :::column span="":::
+      [DateDiff](functions/function-date-time.md)
+   :::column-end:::
+   :::column span="":::
+      [DateTimeValue](functions/function-datevalue-timevalue.md)
+   :::column-end:::
    :::column span="":::
       [DateValue](functions/function-datevalue-timevalue.md)
    :::column-end:::
    :::column span="":::
       [Day](functions/function-datetime-parts.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [Distinct](functions/function-distinct.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [EndsWith](functions/function-startswith.md)
    :::column-end:::
@@ -173,6 +193,9 @@ Functions supported by Power Apps Ideas feature:
       [Hour](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
+      [If](functions/function-if.md)
+   :::column-end:::
+   :::column span="":::
       [IsBlank](functions/function-isblank-isempty.md)
    :::column-end:::
 :::row-end:::
@@ -184,22 +207,59 @@ Functions supported by Power Apps Ideas feature:
       [LastN](functions/function-first-last.md)
    :::column-end:::
    :::column span="":::
-      [Minute](functions/function-datetime-parts.md)
+      [Lower](functions/function-lower-upper-proper.md)
    :::column-end:::
    :::column span="":::
+      [Max](functions/function-aggregates.md)
+   :::column-end:::
+   :::column span="":::
+      [Min](functions/function-aggregates.md)
+   :::column-end:::
+   :::column span="":::
+      [Minute](functions/function-datetime-parts.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
       [Month](functions/function-datetime-parts.md)
+   :::column-end:::
+   :::column span="":::
+      [Not](functions/function-logicalsy.md)
    :::column-end:::
    :::column span="":::
       [Now](functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [Search](functions/function-filter-lookup.md)
+      [Power](functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+      [Proper](functions/function-lower-upper-proper.md)
+   :::column-end:::
+   :::column span="":::
+      [Rand](functions/function-rand.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
+      [Round](functions/function-round.md)
+   :::column-end::: 
+   :::column span="":::
+      [RoundDown](functions/function-round.md)
+   :::column-end::: :
+   ::column span="":::
+      [RoundUp](functions/function-round.md)
+   :::column-end:::
+   :::column span="":::
+      [Search](functions/function-filter-lookup.md)
+   :::column-end:::
+   :::column span="":::
       [Second](functions/function-datetime-parts.md)
    :::column-end:::
+   :::column span="":::
+      [Split](functions/function-split.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [Sort](functions/function-sort.md)
    :::column-end:::
@@ -208,6 +268,9 @@ Functions supported by Power Apps Ideas feature:
    :::column-end:::
    :::column span="":::
       [StartsWith](functions/function-startswith.md)
+   :::column-end:::
+   :::column span="":::
+      [Sum](functions/function-aggregates.md)
    :::column-end:::
    :::column span="":::
       [Time](functions/function-date-time.md)
@@ -221,16 +284,19 @@ Functions supported by Power Apps Ideas feature:
       [Today](functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
+      [Trim](functions/function-trim.md)
+   :::column-end:::
+   :::column span="":::
+      [TrimEnds](functions/function-trim.md)
+   :::column-end:::
+   :::column span="":::
+      [Upper](functions/function-lower-upper-proper.md)
+   :::column-end:::
+   :::column span="":::
       [Weekday](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Year](functions/function-datetime-parts.md)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="":::
    :::column-end:::
 :::row-end:::
 
