@@ -31,14 +31,14 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
 1. Select your target label. For this example, we'll use **Created On**. Select the date field and then select **Format data**.
 
-    ![Power Apps Ideas demo.](media/power-apps-ideas/rose-entrypoint-c7.png "Find example to formula in Ideas pane")
+    ![Power Apps Ideas demo.](media/power-apps-ideas/prose-entrypoint-c7.png "Find example to formula in Ideas pane")
 
 1. Enter your output in the **Desired format** text box. Or use one of the listed examples and then press Enter. <br> Select the generated formula.  
 
     ```powerapps-dot
     Text(DateTimeValue(ThisItem.'Created On'), "mmmm d", "en-US")
     ```
-    ![Select a desired format.](media/power-apps-ideas/rose-entrypoint-c7-1.png "Select a desired format.")
+    ![Select a desired format.](media/power-apps-ideas/prose-entrypoint-c7-1.png "Select a desired format.")
     
     The formula is updated in the formula bar. You can now check the rest of the items in your gallery to see if the formula did the manipulation that you wanted.
 
