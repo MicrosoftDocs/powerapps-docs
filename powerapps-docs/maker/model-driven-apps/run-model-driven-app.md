@@ -52,7 +52,7 @@ You may notice authentication prompts during your model-driven app session. Thes
 Additionally, some organizational or browser settings may increase the frequency of these prompts. We recommend reviewing your settings to help reduce authentication prompts during sessions.
 
 - **Third party cookies blocked in browser.** This will cause an authentication prompt to trigger each time you open a model-driven app. Note that opening the app in incognito mode or in the Safari web browser via ITP settings will usually block third-party cookies by default. [Enable third party cookies](../../troubleshooting-startup-issues.md) to reduce these prompts.
-- **Azure Active Directory conditional access or multi-factor authentication policies**. Policies specifically on Power Apps or Microsoft Graph will trigger additional authentication prompts. Contact your admin to review  your organization's Conditional Access or MFA policies.
+- **Azure Active Directory conditional access or multi-factor authentication policies**. Policies specifically on Power Apps or Microsoft Graph will trigger additional authentication prompts. Contact your admin to review  your organization's conditional access or MFA policies.
 
 ## Run an app on a tablet or phone
 
