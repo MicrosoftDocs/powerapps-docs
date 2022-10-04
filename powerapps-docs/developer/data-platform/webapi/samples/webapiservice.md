@@ -79,7 +79,7 @@ This method:
 
 This method facilitates returning a class that includes properties found in the ComplexTypes returned by OData Actions and Functions in Dataverse Web API.
 
-- Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) parameter. When using this method it is expected, but not required, that the request parameter is one of the [*Response classes](#response-classes) that derive from `HttpRequestMessage`.
+- Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) parameter. When using this method it is expected, but not required, that the request parameter is one of the [*Response classes](#response-classes) that derive from `HttpResponseMessage`.
 - Returns `Task<T>` where `T` is a class derived from `HttpResponseMessage`. See [*Response classes](#response-classes) for more information.
 - Calls the [SendAsync Method](#sendasync-method).
 - Uses the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension method to return the requested type.
