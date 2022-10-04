@@ -131,6 +131,12 @@ Power Apps Ideas currently has the following limitations:
 Functions supported by Power Apps Ideas feature:
 
 :::row:::
+ :::column span="":::
+      [Countif](functions/function-table-counts.md)
+   :::column-end:::
+   :::column span="":::
+      [Countrows](functions/function-table-counts.md)
+   :::column-end:::
    :::column span="":::
       [Date](functions/function-date-time.md)
    :::column-end:::
