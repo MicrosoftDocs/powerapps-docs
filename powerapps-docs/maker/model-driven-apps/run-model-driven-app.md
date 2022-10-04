@@ -42,6 +42,20 @@ To get the direct link to an app:
 
 To play the app, enter the URL in a web browser.
 
+## Authentication prompts while running a model-driven app 
+
+You may notice authentication prompts during your Model-driven app session. These are expected and required for certain features. Below highlights a list of some features that will trigger these prompts. This list is subject to change as new features are released. 
+
+- [Custom Pages](model-app-page-overview.md)
+- [Power Fx](commanding-use-powerfx.md)
+- Opening Office App Launcher from upper right of header
+- Clicking on "Add to Teams" button
+
+Additionally, some organizational or browser settings may increase the frequency of these prompts. We recommend reviewing your settings to help reduce auth prompts during sessions.
+
+1. **Third party cookies blocked in browser.** This will cause an auth prompt to trigger each time you open a Model-driven app. Please note that opening the app in incognito mode or in Safari via ITP settings will usually block third party cookies by default. [Enable third party cookies](../../troubleshooting-startup-issues.md) to reduce these prompts.
+1. **AAD Conditional Access or MFA policies**. Policies specifically on Power Apps or Microsoft Graph will trigger additional auth prompts. Please contact your admin to review  your organization's Conditional Access or MFA policies. 
+
 ## Run an app on a tablet or phone
 
 Use the app URL described in the earlier section to run a model-driven app on a tablet's web browser. For phones, users download the Power Apps mobile app from the relevant app store. Then, sign into the app, and select the specific app. More information: [Get started with Power Apps mobile](../../mobile/run-powerapps-on-mobile.md)
