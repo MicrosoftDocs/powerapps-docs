@@ -33,7 +33,7 @@ To work with and manipulate dates in a gallery using Power Apps Ideas:
 
     ![Power Apps Ideas demo.](media/power-apps-ideas/rose-entrypoint-c7.png "Find example to formula in Ideas pane")
 
-1. Enter your output in the **Desired format** text box. Or, use one of the listed examples and then press Enter. <br> Select the generated formula.  
+1. Enter your output in the **Desired format** text box. Or use one of the listed examples and then press Enter. <br> Select the generated formula.  
 
     ```powerapps-dot
     Text(DateTimeValue(ThisItem.'Created On'), "mmmm d", "en-US")
@@ -58,13 +58,13 @@ To work with text display in a gallery using Power Apps Ideas:
 
 ## Use Train with examples in your app
 
-In above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula will not work for all scenarios. This is because the above formula takes only the second word's initial in the name. And some account names have three or more words.
+In the above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula will not work for all scenarios. This is because the above formula takes only the second word's initial in the name. And some account names have three or more words.
 
 For example, "Alpine Ski House" becomes "Alpine S" whereas to have last word's initial, it should be "Alpine H".
 
 To achieve this scenario, use **Add examples** by providing such examples using the **Ideas** pane:
 
-1. Select **Add examples** and then select one of the value from your table. Type in the desired format. <br>
+1. Select **Add examples** and then select one of the values from your table. Type in the desired format. <br>
    
    You can add up to 20 examples but typically you only need two or three examples for Ideas to start working.
 
