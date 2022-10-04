@@ -1,6 +1,21 @@
-﻿---
-title: Maker matching using an integrated virtual agent in Power Apps
 ---
+title: "Maker matching using an integrated virtual agent in Power Apps | MicrosoftDocs"
+description: Maker matching using an integrated virtual agent in Power Apps. 
+ms.custom: ""
+ms.date: 10/5/2022
+ms.reviewer: "mkaur"
+ms.topic: overview
+author: "zankar.desai"
+ms.subservice: common
+ms.author: "mkaur"
+manager: "kvivek"
+search.audienceType: 
+  - maker, admin
+search.app: 
+  - PowerApps
+---
+
+# Maker matching using an integrated virtual agent in Power Apps
 
 Maker matching is now available through an integrated chat bot in Power Apps. This feature allows you to find your organization's internal resources, as well as interact with experienced makers within your organization.
 
@@ -20,11 +35,11 @@ To access maker matching resources:
 
 2.  Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
 
-![](media/image1.png)
+![](media/skills-match/skills-match-1.png)
 
 3.  Interact with the chat bot to receive help.
 
-![Graphical user interface  application Description automatically generated](media/image2.png)
+![Graphical user interface  application Description automatically generated](media/skills-match/skills-match-2.png)
 
 ## Virtual agent resources
 
@@ -42,21 +57,21 @@ During the first stage of engagement, your interaction with the virtual agent le
 
 For example, when you need help with a data export error that relates to connecting data, you'll start with the chat that includes text relevant to the data export error:
 
-![](media/image3.png)
+![](media/skills-match/skills-match-3.png)
 
 From the list of topics that the chat bot suggests, you can then choose to be more specific to exporting data from Dataverse:
 
-![](media/image4.png)
+![](media/skills-match/skills-match-4.png)
 
 ### Stage 2 – Organizational resources
 
 This stage begins once you choose **No** when asked whether the previous interaction solved your problem.
 
-![](media/image5.png)
+![](media/skills-match/skills-match-5.png)
 
 When you choose **No**, you'll see the internal documentation, Yammer community and the Microsoft Teams group resources unique to your organization.
 
-![](media/image6.png)
+![](media/skills-match/skills-match-6.png)
 
 **NOTE:** The internal documentation, Yammer community and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
 
@@ -64,7 +79,7 @@ When you choose **No**, you'll see the internal documentation, Yammer community 
 
 If you choose **Next** to find an advisor for your organization in the virtual agent interaction, you're then presented with a list of advisors that are available to provide help:
 
-![](media/image7.png)
+![](media/skills-match/skills-match-7.png)
 
 If additional advisors are available to help, you can choose to view more advisors.
 
@@ -80,13 +95,13 @@ Advisors are identified one of two ways: via admin identification or the product
 
 When an advisor is identified, they receive an in-product popup notification asking whether they'd like to opt into the program to help other makers.
 
-![](media/image8.png)
+![](media/skills-match/skills-match-8.png)
 
 ## Sign up using Power Apps profile screen
 
 Select **Settings** from the top-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
 
-![](media/image9.png)
+![](media/skills-match/skills-match-9.png)
 
 Your organizational admin will be able to nominate you as a Power Apps Advisor via the Power Platform Admin Center, in which case you will receive an email and see the in-product notification shown above.
 
@@ -110,7 +125,7 @@ To add internal resources:
 
 3.  Add the **Documentation**, **Teams Group** and **Yammer Community** links.
 
-![](media/image10.png)
+![](media/skills-match/skills-match-10.png)
 
 4.  Select **Save**.
 
@@ -124,7 +139,7 @@ To configure advisors:
 
 3.  Select **Advisors** tab.
 
-![](media/image11.png)
+![](media/skills-match/skills-match-11.png)
 
 4.  Configure advisor with the following options:
 
