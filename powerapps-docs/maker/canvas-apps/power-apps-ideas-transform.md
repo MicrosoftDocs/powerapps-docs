@@ -20,10 +20,6 @@ contributors:
 
 # Transform natural language to Power Fx formulas 
 
-
-Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it now supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you've a gallery bound to one of these data sources, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
-
-
 Power Apps Ideas can generate ideas for formulas the following contrrols:
 
 - **Gallery**
