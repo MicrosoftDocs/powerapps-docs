@@ -143,15 +143,6 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [Date](functions/function-date-time.md)
    :::column-end:::
-   :::column span="":::
-      [DateAdd](functions/function-date-time.md)
-   :::column-end:::
-   :::column span="":::
-      [DateDiff](functions/function-date-time.md)
-   :::column-end:::
-   :::column span="":::
-      [DateTimeValue](functions/function-datevalue-timevalue.md)
-   :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
