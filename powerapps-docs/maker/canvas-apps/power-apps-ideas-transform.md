@@ -89,7 +89,7 @@ Consider the following examples to inspire from while working with Power Apps Id
 | | |Last 10 Accounts|
 |**Conditional formatting (apply to color and visible)** |A number condition|Accounts with length of Account Name bigger than 10|
 | |A date condition|red if created 7 days ago|
-| |A text condition|blue if name contains karen|
+| |A text condition|blue if name contains Karen|
 |**Text generation** |Numbers|count of gallery sum of slider1 and slider2|
 ||String|label4 and label5 Trim textinput1First 3 characters of TextInput1|
 
