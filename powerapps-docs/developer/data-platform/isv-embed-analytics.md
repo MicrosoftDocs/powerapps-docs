@@ -36,7 +36,7 @@ ISV Studio is a portal designed for third-party publishers to view how well thei
 
 1. From the lefthand navigation menu, expand Embed Reporting to click Power Automate.
 
-![ISV Studio Embed Report Table](media/isvstudio-embed-menu.jpg)
+![ISV Studio Embed Report Navigation Menu](media/isvstudio-embed-menu.jpg)
 
 2. The Embed Reporting Power Automate page displays a usage report for the last 3-month in graph format for the pre-selected publisher. Graph features:
 	- Filter to view by tenant
@@ -57,7 +57,7 @@ ISV Studio is a portal designed for third-party publishers to view how well thei
 
 4. You can export the graph and table by hovering over the top-right corner to expand additional actions.
 
-![ISV Studio Embed Report Table](media/isvstudio-embed-export.jpg)
+![ISV Studio Embed Report Export](media/isvstudio-embed-export.jpg)
 
 ### See also
 
