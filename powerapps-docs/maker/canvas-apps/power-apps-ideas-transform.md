@@ -245,7 +245,7 @@ Functions supported by Power Apps Ideas feature:
    :::column-end::: 
    :::column span="":::
       [RoundDown](functions/function-round.md)
-   :::column-end::: :
+   :::column-end::::
    ::column span="":::
       [RoundUp](functions/function-round.md)
    :::column-end:::
