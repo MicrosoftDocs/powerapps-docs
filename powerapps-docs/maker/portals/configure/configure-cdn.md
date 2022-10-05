@@ -25,7 +25,7 @@ When you enable Content Delivery Network on your portal, static content&mdash;li
 
 > [!NOTE] 
 > - You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
-> - You need to be a portal administrator to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. You can't enable Content Delivery Network for portals configured with a custom domain during preview. 
+> - You need to be a [portal administrator](../admin/portal-admin-roles.md#required-roles-and-permissions) to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. You can't enable Content Delivery Network for portals configured with a custom domain during preview. 
 > - Using a [custom domain name](../admin/add-custom-domain.md) on a site is currently not supported with using Content Delivery Network.
 > - [Restricting portal access by IP address](../admin/ip-address-restrict.md) on a site is currently not supported with using Content Delivery Network.
 
