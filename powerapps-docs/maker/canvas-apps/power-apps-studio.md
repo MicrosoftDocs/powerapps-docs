@@ -165,7 +165,7 @@ Or, select the **Scenarios** and select a screen type based on the available sce
 > [!div class="mx-imgBorder"] 
 > ![Screen background color.](media/studio/pa-studio-background-color.png)
 
-Select a background color for a screen. You can select select from the list of standard colors or select the **Custom** table and choose your own color.
+Select a background color for a screen. You can select from the list of standard colors or select the **Custom** table and choose your own color.
 
 #### Background image
 
@@ -254,7 +254,7 @@ Select the name of the app to edit it.
 > [!div class="mx-imgBorder"] 
 > ![Share app.](media/studio/pa-studio-share-app.png)
 
-Lets you share the with other users and add them as co-owners of your app. You must save the app before you can share it.
+Lets you share the app with other users and add them as co-owners of your app. You must save the app before you can share it.
 
 ### App checker
 
@@ -273,7 +273,7 @@ Comments are notes that are associated with items in your app. Use comments to h
 
 ### Preview
 
-This will show a preview version of the app that you can interact with.
+This shows a preview version of the app that you can interact with.
 
 ### Save
 
@@ -284,40 +284,36 @@ This will show a preview version of the app that you can interact with.
 
 Save allows you to perform the following actions:
 
-- **Save** - Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
-- **Save with version notes** - Save and add notes about the updates you've made.
-- **Save as** - Duplicate the app by saving the app with a different name.
-- **Save and publish** - Allows you to both save the app, and publish it at the same time.
-- **Download a copy** - Downland a local copy of the app.
+- **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
+- **Save with version notes**: Save and add notes about the updates you've made.
+- **Save as**: Duplicate the app by saving the app with a different name.
+- **Save and publish**: Allows you to save the app and publish it at the same time.
+- **Download a copy**: Downland a local copy of the app.
 
 ### Publish
 
-Publishes the app’s current version. For more
-information about publishing an app, go to [Save and publish canvas apps](save-publish-app.md).
+Publishes the app’s current version. For more information about publishing an app, go to [Save and publish canvas apps](save-publish-app.md).
 
 ## 3 – Properties list
 
-Shows the list of available properties for the selected object on the canvas.
-The properties list changes based on your selection. For a complete list of all properties, go to [All properties](reference-properties.md#all-properties).
+Shows the list of available properties for the selected object on the canvas. The properties list changes based on your selection. For a complete list of all properties, go to [All properties](reference-properties.md#all-properties).
 
 > [!div class="mx-imgBorder"] 
 > ![Properties list.](media/studio/pa-studio-prop-list.png)
 
 ## 4 – Formula bar
 
-Use the formula bar to add, edit, or remove functions relevant to the selected
-object and the property selected from the properties list. For example, select
-the screen to update the background by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
+Use the formula bar to add, edit, or remove functions relevant to the selected object and the property selected from the properties list. For example, select the screen to update the background by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
 
 > [!div class="mx-imgBorder"] 
 > ![Formula bar.](media/studio/pa-studio-formula-bar.png)
 
-The formula bar is IntelliSense-enabled. When you start entering text that matches one or more functions, the formula bar shows the list of fuctions.
+The formula bar is IntelliSense-enabled. When you start entering text that matches one or more functions, the formula bar shows the list of functions.
 
 > [!div class="mx-imgBorder"] 
 > ![Function in the formula bar.](media/studio/pa-studio-formula-bar-1.png)
 
-When you select a fuction, the formula bar shows inline function help and highlights help text relevant to the cursor position.
+When you select a function, the formula bar shows inline function help and highlights help text relevant to the cursor position.
 
 > [!div class="mx-imgBorder"] 
 > ![Inline help for function in the formula bar.](media/studio/pa-studio-formula-bar-2.png)
@@ -327,28 +323,24 @@ If a formula returns an error, tips relevant to the syntax error and mitigation 
 > [!div class="mx-imgBorder"] 
 > ![Resolve errors in the formula bar.](media/studio/pa-studio-formula-bar-3.png)
 
-Similarly, you'll find help when working with complex functions, nested
-functions, or when correcting a formula syntax.
+Similarly, you'll find help when working with complex functions, nested functions, or when correcting a formula syntax.
 
-For a quick and easy function reference, you can also select the formula drop-down menu.
+For a quick and easy function reference, you can also select the formula dropdown menu.
 
 > [!div class="mx-imgBorder"] 
-> ![Formula drop-down menu.](media/studio/pa-studio-function-list.png)
+> ![Formula dropdown menu.](media/studio/pa-studio-function-list.png)
 
-Select an event type from the drop-down menu at the top of the dialog box, such as
-**Action** instead of **Text**.
+Select an event type from the dropdown menu at the top of the dialog box, such as **Action** instead of **Text**.
 
 > [!div class="mx-imgBorder"] 
 > ![Function event selection.](media/studio/pa-studio-select-function.png "Function event selection")
 
-Select an action that you want to add a function for. The available functions for the selected event type are dynamically updated
-depending on the object you select.
+Select an action that you want to add a function for. The available functions for the selected event type are dynamically updated depending on the object you select.
 
 > [!div class="mx-imgBorder"] 
 > ![Change in function event selection.](media/studio/pa-studio-select-function-1.png "Change in function event selection")
 
-For example, if you selected a button on the canvas, the available **Action** functions also include the function
-*ClearCollect()*.
+For example, if you selected a button on the canvas, the available **Action** functions also include the function *ClearCollect()*.
 
 > [!div class="mx-imgBorder"] 
 > ![Function ClearCollect() selected.](media/studio/pa-studio-select-function-2.png "Function ClearCollect() selected")
@@ -369,10 +361,10 @@ Switch between various authoring options while working with the app.
 > [!TIP]
 > You can also select the expand button to expand the list to include names instead of just icons.
 
-- **Tree view** - Shows a tree view of all screens and controls in the current app.
-- **Insert** - Allows you to add different controls to the screen.
-- **Data** - Add or remove data such as tables that the app connects to.
-- **Media** - Insert or remove media from the app.
+- **Tree view**: Shows a tree view of all screens and controls in the current app.
+- **Insert**: Allows you to add different controls to the screen.
+- **Data**: Add or remove data such as tables that the app connects to.
+- **Media**: Insert or remove media from the app.
 - **Power Automate**: Add a flow using the [Power Automate pane](working-with-flows.md).
 - **Advanced tools**: Allows you to access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
 - **Search**: Select to search for media, formulas, text, and more in your app. You can also do a search and replace.
@@ -389,34 +381,30 @@ Select the tree view to show the screens available in the app.
 > ![Tree view.](media/studio/pa-studio-tree-view.png)
 
 > [!TIP]
-> Select **App** in the tree view to work with app-specific controls or to
-change app behavior, such as adding a formula on *OnStart* event of the app.
+> Select **App** in the tree view to work with app-specific controls or to change app behavior, such as adding a formula on *OnStart* event of the app.
 
-Switch to the **Components** tab to work with component library features. You can add
-new components or reuse those that were already published from published
-component libraries. More information: [Component library](component-library.md)
+Switch to the **Components** tab to work with component library features. You can add new components or reuse those that were already published from published component libraries. More information: [Component library](component-library.md)
 
 > [!div class="mx-imgBorder"] 
 > ![Tree view - components.](media/studio/pa-studio-components-tab.png)
 
 ### Insert
 
-More information, see the [Insert](power-apps-studio.md#insert) section above.
+For information, see the [Insert](power-apps-studio.md#insert) section above.
 
 ### Data
 
 Add, refresh, or remove data sources from your canvas app. You can add one or more [connections](connections-list.md) by using data sources.  
 
-In addition to data stored within tables, there are many connectors available to interact with data in popular SaaS, services, and systems.
+In addition to data stored within tables, there are many connectors available to interact with data in popular software as a service (SaaS), services, and systems.
 
 > [!div class="mx-imgBorder"] 
 > ![Data.](media/studio/pa-studio-data.png)
 
-To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can
-enter text in the data source search box or select from the list of connectors.
+To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can enter text in the data source search box or select from the list of connectors.
 
 > [!div class="mx-imgBorder"] 
-> ![Select data source..](media/studio/pa-studio-data-source.png)
+> ![Select data source.](media/studio/pa-studio-data-source.png)
 
 More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
@@ -428,10 +416,7 @@ Select **Media** to add images, video, or audio files to your app. Adding media 
 > [!div class="mx-imgBorder"] 
 > ![Add media.](media/studio/pa-studio-add-media.png)
 
-If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
-using media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services),
-or from [Microsoft Stream](./controls/control-stream-video.md#example).
-More information: [Using multimedia files in Power Apps](add-images-pictures-audio-video.md)
+If you want to reference more media, consider using [audio and video controls with URLs](add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls), using media from [Azure Media Services](add-images-pictures-audio-video.md#add-media-from-azure-media-services), or from [Microsoft Stream](./controls/control-stream-video.md#example). More information: [Using multimedia files in Power Apps](add-images-pictures-audio-video.md)
 
 ## 7 – Canvas/screen
 
@@ -439,8 +424,7 @@ The canvas shows the currently selected screen from the left pane.
 
 ## 8 – Properties pane
 
-The properties pane shows properties and options available for the currently
-selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
+The properties pane shows properties and options available for the currently selected object on the canvas. The **Properties** tab shows generic options such as the name, color, size, or position. The **Advanced** tab shows more options for advanced customization. The advanced properties might sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
 
 > [!div class="mx-imgBorder"] 
 > ![Properties pane.](media/studio/pa-studio-prop-pane.png)
@@ -448,19 +432,15 @@ selected object on the canvas. The **Properties** tab shows generic options such
 
 ## 9 – Virtual agent
 
-Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. More information: [Get help building your app from a virtual agent](../common/virtual-agent.md).
+Real-time, in-product help is available from the documentation using the Power Platform virtual agent. The virtual agent can help answer questions about common scenarios. More information: [Get help building your app from a virtual agent](../common/virtual-agent.md)
 
 ## 10 – Screen selector
 
-Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the left pane by selecting the
-tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
+Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the left pane by selecting the tree view. If the current selection is inside a container, or inside an individual cell in a gallery, the selector shows the breadcrumbs for the parent elements at each level.
 
 ## 11 – Change canvas screen size
 
-You can zoom in or zoom out while authoring the canvas app. Select **Ctrl**+**0**
-**Fit to window** to fit the screen size
-based on the current authoring window size. The zoom percentage or screen size you use while
-authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
+You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size you use while authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
 
 ### See also
 
