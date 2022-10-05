@@ -80,4 +80,12 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
 
+Pasting images within the Rich Text Editor has some limitations:
+- CORS
+- Authentication
+- Image format support in browser
+- Type of image (inline vs URL)
+- How programs represent images differently when copying them
+
+
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
