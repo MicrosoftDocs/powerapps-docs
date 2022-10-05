@@ -1,6 +1,6 @@
 ---
-title: "Work offline on your mobile device (Dynamics 365 apps)| MicrosoftDocs"
-description: How to work on your mobile device in offline mode with the Dynamics 365 for phones and tablets app and Power Apps Mobile
+title: "Work offline on your mobile device | MicrosoftDocs"
+description: How to work on your mobile device in offline mode
 ms.custom: 
 ms.date: 12/10/2021
 ms.reviewer: kvivek
@@ -30,7 +30,6 @@ Work with your data in offline mode even when you don't have internet access. Th
 If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online. When the record is synchronized with the app, it follows the filter rule for availability in offline mode.
 
 > [!IMPORTANT]
-> - This topic covers how to use the Dynamics 365 for phones and tablets app and [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) in offline mode. The process is the same for both apps.
 > - There is a new experience to setup and use mobile offline for model-driven apps. For more information:
 >   - [Set up mobile offline](/powerapps/mobile/setup-mobile-offline)
 >   - [Use mobile offline-first](/powerapps/mobile/work-in-offline-mode)
@@ -39,17 +38,6 @@ If you're working on a record and lose network connection, any updates made to t
 
 Mobile offline mode is currently available for iOS and Android devices. To use the mobile offline feature, download the latest version of the mobile app from the app store.
 
-### Install Dynamics 365 phones and tablets app (for customer engagement apps in Dynamics 365 )
-
-For customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing), [install the Dynamics 365 phones and tablet app](install-dynamics-365-for-phones-and-tablets.md#install-the-app-from-your-devices-app-store).
-
-The following versions support mobile offline mode:
-
-- For iOS, version 13.19043.32 or later
-- For Android, version 4.3.19043.33 or later
-
-> [!NOTE]
-> The offline mode feature isn't supported for Dynamics 365 Customer Engagement (on-premises). To run your on-premises apps on the mobile app, go to [Use Dynamics 365 for phones and tablets to run Dynamics 365 Customer Engagement (on-premises) apps](../customerengagement/on-premises/basics/dynamics-365-phones-tablets-users-guide-onprem.md). 
 
 ### Install Power Apps Mobile (for Power Apps)
 
