@@ -135,7 +135,7 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 |*Date picker*|A control that the user can select to specify a date.|
 |*Button*|A control that the user can select to interact with the app.|
 
-For more information about the controls that you can insert, and their properties and definitions, go to [Controls and properties in Power Apps](reference-properties.md).
+For more information about the controls that you can insert, and their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
 
 #### Add data
 
@@ -205,7 +205,7 @@ More information: [Change screen size and orientation](set-aspect-ratio-portrait
 
 Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
 
-More information: [Understand experimental, preview, and deprecated features in Power Apps](working-with-experimental-preview.md)
+More information: [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md)
 
 ##### Support
 
@@ -444,4 +444,4 @@ You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **F
 
 ### See also
 
-[Understand Power Apps Studio in Dataverse in a Teams environment](/powerapps-docs/teams/understand-power-apps-studio.md)
+[Understand Power Apps Studio in Dataverse in a Teams environment](/power-apps/teams/understand-power-apps-studio.md)
