@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 10/5/2022
 ms.reviewer: "mkaur"
 ms.topic: overview
-author: "zankar.desai"
+author: "mduelae"
 ms.subservice: common
 ms.author: "mkaur"
 manager: "kvivek"
@@ -33,7 +33,7 @@ The integrated virtual agent is available in all three Power Apps experiences. M
 
 - **Advisor** – set individual preferences as an experienced Power Apps maker to help others.
 
-# Use maker matching
+## Use maker matching
 
 To access maker matching resources:
 
@@ -99,21 +99,21 @@ If additional advisors are available to help, you can choose to view more adviso
 
 Select **Send message** to either initiate an email or a Teams chat with the advisor depending on the advisor's preferred contact method.
 
-# Advisor identification
+## Advisor identification
 
 Advisors are identified one of two ways: via admin identification or the product itself will invite successful makers based on their product usage.
 
 > [!NOTE]
 > After you sign up as an advisor, your Power Platform administrator has the ability to remove your profile as an advisor.
 
-## Signing up 
+### Signing up 
 
 When an advisor is identified, they receive an in-product popup notification asking whether they'd like to opt into the program to help other makers.
 
 > [!div class="mx-imgBorder"]
 > ![notification for advisors.](media/skills-match/skills-match-8.png)
 
-## Sign up using Power Apps profile screen
+### Sign up using Power Apps profile screen
 
 Select **Settings** from the top-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
 
@@ -123,17 +123,19 @@ Select **Settings** from the top-right corner of the screen, and then choose **P
 
 Your organizational admin will be able to nominate you as a Power Apps Advisor via the Power Platform Admin Center, in which case you will receive an email and see the in-product notification shown above.
 
-Note: You will not see the 'Advisor program' tab under Power Apps settings if you have not been nominated as an advisor.
+> [!NOTE]
+> You will not see the 'Advisor program' tab under Power Apps settings if you have not been nominated as an advisor.
 
-# Administer maker matching for all makers and advisors
+## Administer maker matching for all makers and advisors
 
 You can administer and configure **the settings for maker matching** for all makers and advisors using the Power Platform admin center. In the admin center, you can also manually add or remove advisors.
 
-**NOTE:** By default, advisors are discovered via telemetry and added to the list automatically. As an administrator, you can add or remove advisors. Once removed, an advisor can still be discovered again via telemetry criteria.
+> [!NOTE]
+> By default, advisors are discovered via telemetry and added to the list automatically. As an administrator, you can add or remove advisors. Once removed, an advisor can still be discovered again via telemetry criteria.
 
 Along with advisor configuration, you can also configure internal resources to share with the makers that use the chat bot experience through the internal resources chat experience.
 
-## Add internal resources
+### Add internal resources
 
 To add internal resources:
 
@@ -148,7 +150,7 @@ To add internal resources:
 
 4. Select **Save**.
 
-## Configure advisors
+### Configure advisors
 
 To configure advisors:
 
