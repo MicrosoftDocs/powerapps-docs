@@ -73,11 +73,11 @@ Instead of using the available templates, you can create a flow from scratch, an
 1. When done, select **Save** from upper right corner of the screen.
 
     > [!TIP]
-    > For more information about customizing and configuring cloud flows, see **How-to** articles starting from [Add multiple actions and advanced options to a cloud flow](/power-automate/multi-step-logic-flow).
+    > For more information about customizing and configuring cloud flows, see the **How to** articles starting from [Add multiple actions and advanced options to a cloud flow](/power-automate/multi-step-logic-flow).
 
 ## Add an existing flow
 
-You may have access to the existing flows in the environment where you're creating your app. To add and use these flows in your app, select **Add flow**, and then choose the flow from the **Add a flow from this environment** section.
+You may have access to the existing flows in the environment where you're creating your app. To add and use these flows in your app, select **Add a flow**, and then choose the flow from the **Add a flow from this environment** section.
 
 :::image type="content" source="media/working-with-flows/add-existing-flow.png" alt-text="A screenshot showing the option to add existing flows from the current environment.":::
 
