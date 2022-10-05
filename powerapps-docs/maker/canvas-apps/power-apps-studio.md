@@ -19,37 +19,34 @@ contributors:
 # Understand Power Apps Studio
 
 
-When you create a canvas app by using any method, you're taken to the canvas app
-builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app. 
+When you create a canvas app by using any method, you're taken to the canvas app builder called Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app. 
 
 
 ## Overview of Power Apps Studio
 
 ![Screenshot of Power Apps Studio.](media/studio/pa-studio.png "Power Apps Studio")
 
-1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar) – dynamic command bar that shows different set of commands based on the control that's selected.
-1. [App actions](#2--app-actions) - options to rename, share, run the app checker, add comments, preview, save, or publish the app.
+1. [Power Apps Studio modern command bar](#1--power-apps-studio-modern-command-bar): Dynamic command bar that shows a different set of commands based on the control that's selected.
+ 
+1. [App actions](#2--app-actions): Options to rename, share, run the app checker, add comments, preview, save, or publish the app.
 
-1. [Properties list](#3--properties-list) - list of properties for the selected object.
+1. [Properties list](#3--properties-list): List of properties for the selected object.
 
-1. [Formula bar](#4--formula-bar) - compose or edit a formula for the selected property with one
-or more functions.
+1. [Formula bar](#4--formula-bar): Compose or edit a formula for the selected property with one or more functions.
 
-1. [App authoring menu](#5--app-authoring-menu) - selection pane to switch between data sources and
-insert options.
+1. [App authoring menu](#5--app-authoring-menu): Selection pane to switch between data sources and insert options.
 
-1. [App authoring options](#6--app-authoring-options) - details pane with options relevant to the selected
-menu item for authoring the app.
+1. [App authoring options](#6--app-authoring-options): Details pane with options relevant to the selected menu item for authoring the app.
 
-1. [Canvas/screen](#7--canvasscreen) - primary canvas for composing the app structure.
+1. [Canvas/screen](#7--canvasscreen): Primary canvas for composing the app structure.
 
 1. [Properties pane](#8--properties-pane) - properties list for the selected object in UI format.
 
-1. [Virtual agent](#9--virtual-agent) - get help building your app from a virtual agent.
+1. [Virtual agent](#9--virtual-agent): Get help building your app from a virtual agent.
 
-1. [Screen selector](#10--screen-selector) - switch between different screens in an app.
+1. [Screen selector](#10--screen-selector): Switch between different screens in an app.
 
-1. [Change canvas screen size](#11--change-canvas-screen-size) - change the size of the canvas during an authoring experience in Power Apps Studio.
+1. [Change canvas screen size](#11--change-canvas-screen-size): Change the size of the canvas during an authoring experience in Power Apps Studio.
 
 
 Let's understand each option in Power Apps Studio in detail.
@@ -57,8 +54,7 @@ Let's understand each option in Power Apps Studio in detail.
 
 ## 1 – Power Apps Studio modern command bar
 
-Power Apps Studio options are available on the command bar. The
-options are relevant to the current session and app-related settings. 
+Power Apps Studio options are available on the command bar. The options are relevant to the current session and app-related settings. 
 
 > [!div class="mx-imgBorder"] 
 > ![Power Apps Studio options.](media/studio/pa-studio-options.png)
@@ -68,10 +64,10 @@ options are relevant to the current session and app-related settings.
 
 The modern command bar displays the relevant set of commands depending on the control that is selected. 
 
-![This image shows how the command bar changes depending which control is selected.](media/studio/pa-studio-command-bar.gif)
+![This image shows how the command bar changes depending on which control is selected.](media/studio/pa-studio-command-bar.gif)
 
 
-The command bar changes when one of the following control or object is selected: 
+The command bar changes when one of the following controls or objects is selected: 
 
 1. App object
 2. Screen
@@ -80,8 +76,8 @@ The command bar changes when one of the following control or object is selected:
 5. Icon
 6. Blank form
 7. Form with data
-8. Blank gallary
-9. Gallary with data
+8. Blank gallery
+9. Gallery with data
 10. Label
 11. Text input
 12. Date picker
@@ -90,7 +86,7 @@ When more than one type of control is selected, the command bar shows the common
 
 ### Default command bar options
 
-When you open Power Apps Studio you will see the default command bar. 
+When you open Power Apps Studio you'll see the default command bar. 
 
 > [!div class="mx-imgBorder"] 
 > ![Power Apps Studio options.](media/studio/pa-studio-options.png)
@@ -104,17 +100,17 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 > [!div class="mx-imgBorder"] 
 > ![Undo and redo.](media/studio/pa-undo-redo.png)
 
-- **Undo** – undo the last action.
-- **Redo** – repeat the last action.
+- **Undo**: Undo the last action.
+- **Redo**: Repeat the last action.
 
 #### Cut, copy, and paste
 
 > [!div class="mx-imgBorder"] 
 > ![Cut, copy and paste.](media/studio/pa-studio-cut-copy-paste.png)
 
-- **Cut** – Cut the selection, and store it in the clipboard.
-- **Copy** – Copy the selection, and store it in the clipboard.
-- **Paste** - Paste the last cut, or copied selection from the clipboard.
+- **Cut**: Cut the selection, and store it in the clipboard.
+- **Copy**: Copy the selection, and store it in the clipboard.
+- **Paste**: Paste the last cut or copied selection from the clipboard.
 
 #### Insert
 
@@ -136,11 +132,10 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 |*Text input*|A box that shows text.|
 |*Vertical gallery*|A control that contains other controls and shows a set of data.|
 |*Rectangle*|A rectangular shape to configure the canvas appearance.|
-|*Date Picker*|A control that the user can select to specify a date.|
+|*Date picker*|A control that the user can select to specify a date.|
 |*Button*|A control that the user can select to interact with the app.|
 
-For more information about the controls that you can insert, and their properties
-and definitions, go to [Controls and properties in Power Apps](reference-properties.md).
+For more information about the controls that you can insert, and their properties and definitions, go to [Controls and properties in Power Apps](reference-properties.md).
 
 #### Add data
 
