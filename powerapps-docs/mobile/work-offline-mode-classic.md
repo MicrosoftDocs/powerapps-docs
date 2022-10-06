@@ -1,9 +1,9 @@
 ---
-title: "Work offline on your mobile device | MicrosoftDocs"
+title: Work offline on your mobile device (classic)
 description: How to work on your mobile device in offline mode
 ms.custom: 
-ms.date: 12/10/2021
-ms.reviewer: kvivek
+ms.date: 10/06/2022
+ms.reviewer: 
 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -11,9 +11,9 @@ ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 97
-ms.author: mkaur
-author: mduelae
-manager: kvivek
+ms.author: sericks
+author: sericks007
+manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
@@ -119,6 +119,6 @@ Conflict errors can be resolved based on the settings set by your admin:
 
 ## Mobile offline capabilities and limitations
 
-For information about the capabilities and limitations of mobile offline, go to [Mobile offline capabilities and limitations](mobile-offline-capabilities.md).
+For information about the capabilities and limitations of mobile offline, go to [Mobile offline capabilities and limitations](offline-capabilities.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
