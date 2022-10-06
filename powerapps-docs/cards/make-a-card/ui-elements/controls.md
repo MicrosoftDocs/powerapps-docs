@@ -1,5 +1,5 @@
 ---
-title: Add controls (Preview)
+title: Add controls (preview)
 description: Learn about the different controls available for cards.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add card controls (Preview)
+# Add card controls (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
