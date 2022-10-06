@@ -347,6 +347,10 @@ More information:
 
 The following are known issues that should be resolved before dependent assemblies for plug-ins becomes generally available.
 
+### Asynchronous plug-in steps do not work
+
+If you use dependent assemblies for a plug-in registered for an asynchronous step an error with the message `Expected non-empty Guid.` will occur.
+
 ### Plug-in profiler
 
 You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)

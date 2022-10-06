@@ -101,7 +101,7 @@ You can execute a FetchXML query by using either the **Web API** or the **Organi
 
 ### Using Web API
 
-You can pass a URL encoded FetchXml string to the appropriate entityset using the `fetchXml` query string parameter. More information: [Use custom FetchXML](webapi/retrieve-and-execute-predefined-queries.md#use-custom-fetchxml).
+You can pass a URL encoded FetchXml string to the appropriate entityset using the `fetchXml` query string parameter. More information: [Use FetchXml with Web API](webapi/use-fetchxml-web-api.md).
 
 ### Using Organization service
 

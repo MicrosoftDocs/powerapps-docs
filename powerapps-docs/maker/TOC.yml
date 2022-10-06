@@ -610,7 +610,7 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Use the Search pane (preview)
+        - name: Use the Search pane
           href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
@@ -622,6 +622,8 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Formula repair in canvas apps (preview)
+          href: common/formula-repair.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane 
@@ -1312,6 +1314,8 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+          - name: Formula repair in custom pages (preview)
+            href: common/formula-repair.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
       - name: Work with views
@@ -2126,7 +2130,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md 
+            href: ./portals/component-framework-tutorial.md
+          - name: "Tutorial: Use dataset for code components in portals"
+            href: ./portals/tutorial-pcf-code.md 
           - name: "Tutorial: Configure rich text editor control on portals"
             href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
