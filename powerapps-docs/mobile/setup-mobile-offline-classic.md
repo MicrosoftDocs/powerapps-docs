@@ -1,8 +1,8 @@
 ---
-title: "Configure mobile offline synchronization | MicrosoftDocs"
+title: Set up mobile offline (classic)
 ms.custom: Configure mobile offline synchronization
-description: Set up mobile offline for Dynamics 365 phones and tablets app and Power Apps mobile
-ms.date: 02/15/2022
+description: Set up mobile offline for Power Apps mobile and Dynamics 365 phones and tablets app and
+ms.date: 10/06/2022
 ms.reviewer: 
 
 ms.suite: 
@@ -11,9 +11,9 @@ ms.topic: article
 applies_to: Dynamics 365 apps
 ms.assetid: 7f992860-8c7b-48ba-806a-63a3634d209d
 caps.latest.revision: 1
-ms.author: mkaur
-author: mduelae
-manager: kvivek
+ms.author: sericks
+author: sericks007
+manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
@@ -23,7 +23,7 @@ search.app:
   - D365Sales
 ---
 
-## Set up mobile offline (classic)
+# Set up mobile offline (classic)
 
 ## Step 1: Enable tables for mobile offline synchronization 
  
