@@ -82,7 +82,7 @@ Add the following site settings from **Portals** > **Site Settings**. [!include[
 
 ## Configure basic or multistep forms 
 
-To view and add attachments stored in Azure on basic and multistep forms on your site, you will need to [configure notes as attachments](configure-notes.md) as well as add [basic form](configure-notes.md#notes-configuration-for-basic-forms) or [multistep form](configure-notes.md#notes-configuration-for-advanced-forms) metadata with the **File Attachment Location** set to **Azure Blob Storage**.
+To view and add attachments stored in Azure on basic and multistep forms on your site, you will need to [configure notes as attachments](configure-notes.md) as well as add [basic form](configure-notes.md#notes-configuration-for-basic-forms) or [multistep form](configure-notes.md#notes-configuration-for-multistep-forms) metadata with the **File Attachment Location** set to **Azure Blob Storage**.
 
 You can then add attachments to records on web pages.
 

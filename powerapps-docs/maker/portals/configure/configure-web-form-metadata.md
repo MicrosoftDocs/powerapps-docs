@@ -118,7 +118,7 @@ The following properties specify the location and content of custom description 
 | Use Attribute's Description Property |                                                                                       Select 'Yes' to use the description assigned to the attribute metadata on the table. Select 'No' to provide a custom description. Default is 'No'.                                                                                       |
 |             Description              | Custom text to be displayed on the form. Used in conjunction when Use Attribute's Description Property is set to 'No'. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## multistep form metadata type = Section
+## Multistep form metadata type = Section
 
 The following properties are displayed when the Type selected equals 'Section'.
 
