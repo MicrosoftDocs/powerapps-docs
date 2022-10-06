@@ -69,7 +69,7 @@ To change your existing custom domain name:
 
 ## Validate the custom domain
 
-The domain should be validated before associating to the endpoint and routes for content delivery network (CDN) enabled websites.  You should add TXT record to the domain DNS for the validation.  The TXT record is in the form of _dnsauth.<your_subdomain>.  In your DNS provider, manually create4 a new TXT record of name_dnsauth.<your_subdomain> with the record value.
+The domain should be validated before associating to the endpoint and routes for content delivery network (CDN) enabled websites.  You should add TXT record to the domain DNS for the validation.  The TXT record is in the form of _dnsauth.<your_subdomain>.  In your DNS provider, manually create a new TXT record of name_dnsauth.<your_subdomain> with the record value.
     
 ### See also
 
