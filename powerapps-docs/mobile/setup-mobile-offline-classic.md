@@ -125,7 +125,7 @@ To create a profile, follow the steps below.
     
    **Custom** Admins can define a custom filter based on the following rules. You can create filters up to three levels.  
 
-   | |  | |
+   |&nbsp; |&nbsp; |&nbsp; |
    |---------|---------|---------|
    |equal     |     not equal     |   gt – greater than      |
    |ge – greater than or equal to     |   le – less than or equal to      |   lt – less than      |
@@ -254,4 +254,4 @@ Enable mobile offline for a specific app from MyApps page.
   
 ## Mobile offline capabilities and limitations
 
-  For information on capabilities and limitations of mobile offline, see [Mobile offline capabilities and limitations](mobile-offline-capabilities.md).
+  For information on capabilities and limitations of mobile offline, see [Mobile offline capabilities and limitations](offline-capabilities.md).
