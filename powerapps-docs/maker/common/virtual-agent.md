@@ -27,9 +27,13 @@ You can connect to a virtual agent from the following areas:
 
 - [Power Apps Studio](../canvas-apps/power-apps-studio.md)
 
-When the left navigation menu is expanded the **Ask a virtual agent** button looks like this: ![Ask a virtual agent expanded menu.](media/bot/virtual-agent-expanded.png "Ask a virtual agent button in its expanded state")
+When you expand the left navigation menu, the **Ask a virtual agent** button looks like this: 
 
-When you hide the left navigation menu the **Ask a virtual agent** button looks like this: ![Ask a virtual agent hidden menu](media/bot/virtual-agent-hidden.png)
+![Ask a virtual agent expanded menu.](media/bot/virtual-agent-expanded.png "Ask a virtual agent button in its expanded state")
+
+When you hide the left navigation menu, the **Ask a virtual agent** button looks like this: 
+
+![Ask a virtual agent hidden menu](media/bot/virtual-agent-hidden.png)
 
 ## Access the virtual agent
 
