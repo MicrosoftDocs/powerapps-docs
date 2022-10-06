@@ -1,5 +1,5 @@
 ---
-title: Connectors overview (Preview)
+title: Connectors overview (preview)
 description: Learn about connectors and how you can use them to expand the capabilities of your cards.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Connectors (Preview)
+# Connectors (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
