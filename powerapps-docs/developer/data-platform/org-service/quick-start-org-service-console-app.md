@@ -28,6 +28,8 @@ Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xr
 > [!NOTE]
 > This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the Organization service.
 
+You can download the complete code sample from GitHub [quickstart-execute-request](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/).
+
 ## Prerequisites
 
  - Visual Studio (2019 or later)
@@ -38,7 +40,7 @@ Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xr
 
 ## Create Visual Studio project
 
-1. Create a new .NET console app project. For this project we are Visual Studio 2022 and targeting .NET 6, but .NET Framework will also work.
+1. Create a new .NET console app project. For this project we are using Visual Studio 2022 and targeting .NET 6, but .NET Framework will also work.
 
     ![Start a console app project.](../media/quick-start-org-service-console-app-1.png)
 
@@ -106,11 +108,15 @@ Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xr
     ```
 
 1. Change the values for the environment URL, username, and password as indicated by the TODO code comment.
-    You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md). You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
+
+    > [!NOTE]
+    > You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters.md). You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
+    >
+    > While this code sample places the username/password information in the code for simplicity, other code samples will use the more recommended approach of prompting for that information or storing it in a separate App.config or appsettings.json file.
 
 ## Run the program
 
-1. Press F5 to run the program. The output should look like this:
+1. Press F5 to run the program. The output should look something like this:
 
     ```bash
     User ID is 969effb0-98ae-478c-b547-53a2968c2e75
@@ -119,12 +125,12 @@ Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xr
 
 ## Next Steps
 
-The console app demonstrated how to connect to the Organization web service using a connection string, execute a web service message request, and access some data in the response. Next, you may want to look at common web service data operations like create, retrieve, update, and delete.
+The console app demonstrates how to connect to the Organization web service using a connection string, execute a web service message request, and access some data in the response. Next, you may want to look at common web service data operations like create, retrieve, update, and delete.
 
-The following articles will explain how to work with business data in Dataverse tables.
-[Entity class operations using the Organization service](entity-operations.md)<br />
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
+The following articles will explain how to work with business data in Dataverse tables.  
+[Entity class operations using the Organization service](entity-operations.md)  
+[Create table rows using the Organization Service](entity-operations-create.md)  
+[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)  
 [Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)
 
