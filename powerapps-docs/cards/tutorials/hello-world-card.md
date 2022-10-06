@@ -1,5 +1,5 @@
-﻿---
-title: Create a simple card (Preview)
+---
+title: Create a simple card (preview)
 description: Learn about basic elements of a card by creating a simple "Hello World" card
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Create a simple card (Preview)
+# Create a simple card (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
