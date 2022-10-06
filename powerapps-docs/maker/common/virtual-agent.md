@@ -40,17 +40,17 @@ When you hide the left navigation menu, the **Ask a virtual agent** button looks
 To access the virtual agent on the [Power Apps](https://make.preview.powerapps.com/) home page, select **Ask a virtual agent**.
 
 > [!div class="mx-imgBorder"]
->![Access the virtual agent from the Power Apps home page.](media/bot/home-page-maker-1.png)
+> ![Access the virtual agent from the Power Apps home page.](media/bot/home-page-maker-1.png)
 
 From the [model-driven app designer](../model-driven-apps/app-designer-overview.md), select **Ask a virtual agent**.
 
 > [!div class="mx-imgBorder"]
 > ![Access the virtual agent from the model-driven app designer.](media/bot/model-driven-designer-2.png)
 
-In [Power Apps studio](../canvas-apps/power-apps-studio.md), select **Ask virtual agent**.
+In [Power Apps Studio](../canvas-apps/power-apps-studio.md), select **Ask a virtual agent**.
 
 > [!div class="mx-imgBorder"]
-> ![Access the virtual agent from Power Apps studio.](media/bot/power-app-studio-3.png)
+> ![Access the virtual agent from Power Apps Studio.](media/bot/power-app-studio-3.png)
 
 ## Get help using the virtual agent
 
@@ -62,16 +62,17 @@ In [Power Apps studio](../canvas-apps/power-apps-studio.md), select **Ask virtua
 2. Select **App creation** to get help with Power Apps.
 
    > [!div class="mx-imgBorder"]
-   > ![Select app creation.](media/bot/virtual-agent-2.png)
+   > ![Select App creation.](media/bot/virtual-agent-2.png)
 
-**Note**: You can also ask questions about other parts of the Power Platform by selecting a different topic.
+   > [!NOTE] 
+   > You can also ask questions about other parts of the Power Platform by selecting a different topic.
 
 3. Select the area that you need help in or select **I need help with something else** to ask the bot a question.
 
    > [!div class="mx-imgBorder"]
    > ![Still need help.](media/bot/virtual-agent-3.png)
 
-If you still need help, select **No** to: **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
+If you still need help, select **No** when you see **Did this solve your problem?** The virtual agent will search for answers in the community and blogs to enhance your search.
 
 ## Restart or close a session
 
