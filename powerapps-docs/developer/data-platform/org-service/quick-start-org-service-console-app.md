@@ -1,11 +1,11 @@
 ---
-title: "Quickstart: Organization service sample (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This quickstart will show you how to connect to the organization service of the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
-author: JimDaly
-ms.author: jdaly
+title: "Quickstart: Execute an Organization service request (C#) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Demonstrates how to connect to the Organization service of Microsoft Dataverse and execute a request." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 10/05/2022
+author: phecke
+ms.author: pehecke
 manager: kvivek
-ms.reviewer: pehecke
+ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 
   - developer
@@ -16,74 +16,65 @@ contributors:
  - JimDaly
  - phecke
 ---
-# Quickstart: Organization service sample (C#)
+
+# Quickstart: Execute an Organization service request (C#)
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This is where you begin working with the .NET SDK assemblies to work with data using Microsoft Dataverse.
+This topic shows you how to begin using classes in the SDK for .NET assemblies to work with Microsoft Dataverse business data. You will create a minimal console application to connect to your environment's Organization service using the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class and execute a web service operation.
 
-In this quickstart, you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
-
-You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class, and you will display the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value.
+Your application will call the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class. The result returned from the web service is a populated <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value which is the unique identifier of your Dataverse system user account.
 
 > [!NOTE]
-> This quickstart example does not include error handling. This is a minimum example of what you need to connect to and use the Organization service.
+> This quick start example does not include exception handling for brevity. This is a minimum code example of what you need to connect to and use the Organization service.
 
+You can download the complete code sample from GitHub [quickstart-execute-request](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/orgsvc/C%23-NETCore/GetStarted/quickstart-execute-request/).
 
 ## Prerequisites
 
- - Visual Studio (2019 recommended)
+ - Visual Studio (2019 or later)
  - Internet connection
- - Valid user account for a Dataverse instance
-    - Your username
-    - Your password
- - Url to the Dataverse environment you want to connect with
+ - Logon credentials of a Dataverse system user account for the target environment
+ - URL address of the Dataverse environment you want to connect with
  - Basic understanding of the Visual C# language
 
 ## Create Visual Studio project
 
-1. Create a new Console App (.NET Framework) project using .NET Framework 4.6.2
+1. Create a new .NET console app project. For this project we are using Visual Studio 2022 and targeting .NET 6, but .NET Framework will also work.
 
     ![Start a console app project.](../media/quick-start-org-service-console-app-1.png)
-
-    > [!NOTE]
-    > This screenshot shows the name `OrgServiceQuickStart`, but you can choose to name the project and solution whatever you want. 
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
     ![Add NuGet package.](../media/quick-start-org-service-console-app-2.png)
 
-1. Browse for the latest version of the  `Microsoft.CrmSdk.XrmTooling.CoreAssembly` NuGet package and install it.
+1. Browse for the latest version of the  `Microsoft.PowerPlatform.Dataverse.Client` NuGet package and install it.
 
-    ![Install Microsoft.CrmSdk.XrmTooling.CoreAssembly NuGet package.](../media/quick-start-org-service-console-app-3.png)
+    ![Install Microsoft.PowerPlatform.Dataverse.Client NuGet package.](../media/quick-start-org-service-console-app-3.png)
 
 > [!NOTE]
-> You must select **I Accept** in the **Licence Acceptance** dialog.
+> Your will be prompted to OK the preview changes, and then select **I Accept** in the **Licence Acceptance** dialog.
 
-## Edit Program.cs
+## Add application code
 
-1. Add these using statements to the top of `Program.cs`
+1. In **Solution Explorer**, double-click Program.cs to edit that file. Replace the file's contents with the code shown below.
 
     ```csharp
     using Microsoft.Crm.Sdk.Messages;
-    using Microsoft.Xrm.Tooling.Connector;
-    ```
+    using Microsoft.PowerPlatform.Dataverse.Client;
 
-1. Replace the `Main` method with the following code. The supported values for *AuthType* are listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md).
+    class Program
+    {
+        // TODO Enter your Dataverse environment's URL and logon info.
+        static string url = "https://yourorg.crm.dynamics.com";
+        static string userName = "someone@myorg.onmicrosoft.com";
+        static string password = "password";
 
-    ```csharp
-    static void Main(string[] args)
-    {            
-        // e.g. https://yourorg.crm.dynamics.com
-        string url = "<your environment url>";
-        // e.g. you@yourorg.onmicrosoft.com
-        string userName = "<your user name>";
-        // e.g. y0urp455w0rd 
-        string password = "<your password>";
-
-        string conn = $@"
-        Url = {url};
+        // This service connection string uses the info provided above.
+        // The AppId and RedirectUri are provided for sample code testing.
+        static string connectionString = $@"
         AuthType = OAuth;
+        Url = {url};
         UserName = {userName};
         Password = {password};
         AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
@@ -91,54 +82,56 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
         LoginPrompt=Auto;
         RequireNewInstance = True";
 
-        using (var svc = new CrmServiceClient(conn))
+        static void Main(string[] args)
         {
+            using (ServiceClient serviceClient = new(connectionString))
+            {
+                if (serviceClient.IsReady)
+                {
+                    WhoAmIResponse response = 
+                        (WhoAmIResponse)serviceClient.Execute(new WhoAmIRequest());
 
-            WhoAmIRequest request = new WhoAmIRequest();
+                    Console.WriteLine("User ID is {0}.", response.UserId);
+                }
+                else
+                {
+                    Console.WriteLine(
+                        "A web service connection was not established.");
+                }
+            }
 
-            WhoAmIResponse response = (WhoAmIResponse)svc.Execute(request);
-
-            Console.WriteLine("Your UserId is {0}", response.UserId);
-
+            // Pause the console so it does not close.
             Console.WriteLine("Press any key to exit.");
             Console.ReadLine();
         }
     }
     ```
 
-1. Edit the following values to add information for your environment. You can find your environment URL in the Web application under **Settings > Customization > Developer Resources**.
+1. Change the values for the environment URL, username, and password as indicated by the TODO code comment.
 
-    ```csharp
-    // e.g. https://yourorg.crm.dynamics.com
-    string url = "<your environment url>";
-    // e.g. you@yourorg.onmicrosoft.com
-    string userName = "<your user name>";
-    // e.g. y0urp455w0rd
-    string password = "<your password>";
-    ```
+    > [!NOTE]
+    > You can find supported values for *AuthType* listed in [Connection string parameters](../xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters.md). You can find your environment URL in the legacy web application under **Settings > Customization > Developer Resources** or in Power Apps **Settings** (gear icon) > **Developer Resources**.
+    >
+    > While this code sample places the username/password information in the code for simplicity, other code samples will use the more recommended approach of prompting for that information or storing it in a separate App.config or appsettings.json file.
 
 ## Run the program
 
-1. Press F5 to run the program. The output should look like this:
+1. Press F5 to run the program. The output should look something like this:
 
     ```bash
-    Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
+    User ID is 969effb0-98ae-478c-b547-53a2968c2e75
     Press any key to exit.
     ```
 
-### Congratulations!
-
-You have successfully connected to the organization service.
-
 ## Next Steps
 
-These articles will explain how to work with Dataverse tables:
+The console app demonstrates how to connect to the Organization web service using a connection string, execute a web service message request, and access some data in the response. Next, you may want to look at common web service data operations like create, retrieve, update, and delete.
 
-[Entity class operations using the Organization service](entity-operations.md)<br />
-[Create table rows using the Organization Service](entity-operations-create.md)<br />
-[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)<br />
+The following articles will explain how to work with business data in Dataverse tables.  
+[Entity class operations using the Organization service](entity-operations.md)  
+[Create table rows using the Organization Service](entity-operations-create.md)  
+[Retrieve a table row using the Organization Service](entity-operations-retrieve.md)  
 [Update and delete table rows using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate table rows using the Organization Service](entity-operations-associate-disassociate.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
