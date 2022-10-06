@@ -17,24 +17,24 @@ contributors:
 
 # Configure multistep form metadata for portals
 
-The Advanced Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
+The Multistep Form Metadata contains additional behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
 
 ## Add a new record
 
-1. On the Advanced Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
+1. On the Multistep Form Step that has fields that you would like to modify, go to **Related** > **Metadata** 
 
-2. Select **New Advanced Form Metadata**.
+2. Select **New Multistep Form Metadata**.
 
-## Advanced form metadata properties
+## Multistep form metadata properties
 
 The following attributes provide additional styling and capabilities for elements on a form.
 
 | Name          | Description                                                                                                                                                                                                                                                                                                                                          |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Advanced Form Step | The Advanced Form Step associated with the Advanced Form Metadata record.                                                                                                                                                                                                                                                                                      |
+| Multistep Form Step | The Multistep Form Step associated with the Multistep Form Metadata record.                                                                                                                                                                                                                                                                                      |
 | Type          | Available options are:<ul><li>Attribute</li><li>Section</li><li>Tab</li></ul>Selecting Attribute as the Type value displays the appropriate options for modifying fields on the current form rendered for the related step. Selecting Section as the Type value displays the options available for modifying a section on the form. Selecting Tab as the Type value displays the options available for modifying a tab on a form.  |
 
-## Advanced form metadata type = Attribute
+## Multistep form metadata type = Attribute
 
 The following properties are displayed when the Type selected is 'Attribute'.
 
@@ -118,7 +118,7 @@ The following properties specify the location and content of custom description 
 | Use Attribute's Description Property |                                                                                       Select 'Yes' to use the description assigned to the attribute metadata on the table. Select 'No' to provide a custom description. Default is 'No'.                                                                                       |
 |             Description              | Custom text to be displayed on the form. Used in conjunction when Use Attribute's Description Property is set to 'No'. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Advanced Form metadata type = Section
+## multistep form metadata type = Section
 
 The following properties are displayed when the Type selected equals 'Section'.
 
@@ -142,10 +142,10 @@ The following properties are displayed when the Type selected equals 'Tab'
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Advanced Form properties for portals](web-form-properties.md)  
-[Advanced Form steps for portals](web-form-steps.md)  
-[Advanced Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Advanced Forms for portals](../configure-notes.md)  
+[Multistep form properties for portals](web-form-properties.md)  
+[Multistep form steps for portals](web-form-steps.md)  
+[Multistep form subgrid configuration for portals](configure-web-form-subgrid.md)  
+[Notes configuration for multistep forms for portals](../configure-notes.md)  
 
 
 
