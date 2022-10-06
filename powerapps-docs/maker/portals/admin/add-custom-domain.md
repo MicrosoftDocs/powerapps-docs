@@ -21,6 +21,7 @@ A custom domain can enhance your brand and help your customers more easily find 
 
 > [!IMPORTANT]
 > - You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
+> - This service is not available in government cloud and UAE region.
 
 To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 

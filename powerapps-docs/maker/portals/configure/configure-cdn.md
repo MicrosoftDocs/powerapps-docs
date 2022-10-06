@@ -27,6 +27,7 @@ When you enable Content Delivery Network on your portal, static content&mdash;li
 > - You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 > - You need to be a [portal administrator](../admin/portal-admin-roles.md#required-roles-and-permissions) to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. 
 > - [Restricting portal access by IP address](../admin/ip-address-restrict.md) on a site is currently not supported with using Content Delivery Network.
+> - This service is not available in Government Community Cloud (GCC), Government Community Cloud (GCC High), Department of Defense (DoD), and UAE region.
 
 ## Enable Content Delivery Network for a production portal 
 
