@@ -6,14 +6,14 @@ ms.reviewer: matp
 ms.topic: article
 author: NHelgren # GitHub ID
 ms.author: nhelgren
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
-  - phecke 
+  - phecke
 ---
 # Create virtual tables using the virtual connector provider (preview)
 
@@ -23,7 +23,7 @@ Virtual tables enable integrating data from external data sources by seamlessly 
 
 In this public preview release, we're introducing the virtual connector provider that supports creating virtual tables using the following connectors:
 
-- [SQL Server](/connectors/sql/) 
+- [SQL Server](/connectors/sql/)
 - Microsoft Excel Online ([Business](/connectors/excelonlinebusiness/))
 - [Microsoft SharePoint](/connectors/sharepointonline/)
 
@@ -98,37 +98,37 @@ Creating a virtual table with the virtual connector provider includes the follow
 
 Watch a 4-minute video showing how to create a virtual table with the SQL virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XLkU]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4XLkU>]
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 
 Watch a 4-minute video showing how to create a virtual table with the Excel virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4YcGf>]
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
-Watch a 4-minute video showing how to create a virtual table with the SharePoint virtual connector provider. 
+Watch a 4-minute video showing how to create a virtual table with the SharePoint virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcIk]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4YcIk>]
 
 ---
 
 1. Go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table.
-1. In the left navigation pane, select **Data** > **Connections**, and then select **New connection**.
+1. In the left navigation pane, select **Dataverse** > **Connections**, and then select **New connection**.
 
    :::image type="content" source="media/ve-create-connection.png" alt-text="Create new connection in power apps":::
 
 1. Select one of the following Virtual Connectors from the list of connections.
    - SQL Server
    - Microsoft Excel Online (Business)
-   - Microsoft SharePoint  
+   - Microsoft SharePoint
 1. You'll be asked to provide additional details to connect to the data source.
 
 # [SQL Server](#tab/sql)
 
-- Select your **Authentication type**. In this example SQL Authentication iss chosen.
-- Enter the required credentials to connect. In this case, enter the SQL server name and SQL database name. 
+- Select your **Authentication type**. In this example SQL Authentication is chosen.
+- Enter the required credentials to connect. In this case, enter the SQL server name and SQL database name.
 
    :::image type="content" source="media/ve-sql-connection-server.png" alt-text="Connect to SQL":::
 
@@ -157,7 +157,7 @@ Select **Create**, your current signed-in credentials will be used.
    :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
-  
+
 ### Create the connection reference
 
 1. Go to **Solutions**.
@@ -166,7 +166,6 @@ Select **Create**, your current signed-in credentials will be used.
 1. Enter **Display name**, select the connection you created for the **Connectors** option and then select the data connection that you've created.
 
    :::image type="content" source="media/ve-new-connection-reference.png" alt-text="New connection reference":::
-
 
 ### Create the data source
 
@@ -199,7 +198,7 @@ Now create the virtual table data source in Dataverse.
    - Microsoft Excel Online (Business)
       - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
    - Microsoft SharePoint
-      - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+      - Paste the URL to your SharePoint site in the Data Source field (ex: <https://contosoenvname.sharepoint.com/sites/sitename>)
 
 1. Select **Save**.
 
@@ -207,18 +206,20 @@ Now create the virtual table data source in Dataverse.
 
 With the connection reference and the virtual table data source setup, an **Entity Catalog** is automatically generated. The **Entity Catalog** is specific to the data source and will list all the tables that are in the respective data source.
 
-:::image type="content" source="media/ve-entity-catalog.png" alt-text="Entity Catalog":::
+:::image type="content" source="media/ve-entity-catalog2.png" alt-text="Entity Catalog":::
 
 > [!NOTE]
+>
 > - The creation of the entity catalog is an asynchronous process. Depending on your environment, this may take a few minutes.
 > - The tables displayed in the entity catalog are not virtual tables in themselves. You need to select from this list of tables representing the external data to create virtual table in Dataverse.
 
 #### View the entity catalog
-  
-- Select **Data** > **Tables**, and then select the entity catalog that was created. 
-- Select **Advanced Find** and use the **Look for:** column. The catalog will include a prefix **Entity Catalog for** followed by the connection reference (example: Entity Catalog for Adventure Works DB). Find the entity catalog for your respective data connection and select **Results** to display all the external data source tables.
 
-   :::image type="content" source="media/ve-advance-find-table-catalog.png" alt-text="Advanced find table catalog":::
+- Go back to to [Power Apps](https://make.powerapps.com)
+- Select **Dataverse** > **Tables**, and then select the entity catalog that was created.
+- Select **Advanced Find** and use the **Look for:** column. The catalog will include a prefix **Entity Catalog for** followed by the connection reference (example: Entity Catalog for [Entity Catalog for Adventure Works DB](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-adventureworks-sample-database-for-sql-server)). Find the entity catalog for your respective data connection and select **Results** to display all the external data source tables.
+
+   :::image type="content" source="media/ve-advance-find-table-catalog2.png" alt-text="Advanced find table catalog":::
 
   >[!Note]
   > Bulk creation of virtual tables is not supported currently. Even though the entity catalog allows you to select multiple tables, you will have to select one table at a time to create virtual tables.
@@ -261,7 +262,7 @@ The app is automatically generated using the entity catalog table.
 
 1. Save the record to create the virtual table.
 
-   > [!Note] 
+   > [!Note]
    > After the save completes, the form will "reset" with all fields shown as blank, this is normal.
 
 1. Return to the Power Apps home page and select **Data**. Your virtual table is now created with a "Custom Entity" prefix. It may take a few moments for the creation to complete.
@@ -290,36 +291,33 @@ For instance, you can't set up a relationship between a virtual table created us
 
 Virtual tables created using the virtual connector provider automatically creates all the columns that are represented in the external source table. This will also include columns on which relationships are defined. However, the relationship definition won't be automatically created. You'll have to define this relationship in Dataverse manually.
 
-The following example creates an N:1 relationship between a virtual table (**Service Request**) and a native table (**Account**). The column used to set up the relationship is **AccountId**. This column is the primary key in the account table and is a foreign key in the service request table.
+The following example creates an N:1 relationship between two virtual tables (**[SalesLT].[Product]**) and (**[SalesLT].[ProductCategory]**). The column used to set up the relationship is **ProductCategoryID**. This column is the primary key in the [SalesLT].[ProductCategory] table and is a foreign key in the [SalesLT].[Product] table.
 
-A representation of the **Service Request** virtual table is shown below. You'll notice that the **AccountId** column, which is the column used for relationship in the external source, is of type **Multiple Line of Text**. You need to have this column represented as a **Lookup** type to create a relationship.
+A representation of the **[SalesLT].[Product]** virtual table is shown below. You'll notice that the **ProductCategoryID** column, which is the column used for relationship in the external source, is of type **Whole number**. You need to have this column represented as a **Lookup** type to create a relationship.
 
-:::image type="content" source="media/ve-create-columns.png" alt-text="Create columns in virtual table":::
+:::image type="content" source="media/ve-create-columns2.png" alt-text="Create columns in virtual table":::
 
-1. Go to **Advanced settings > Settings > Customization** and choose **Customize the System**.
-1. In the left navigation pane, expand the **Entities** view and browse to the **Service Request** virtual table definition.
-1. Select the **Fields** view, select the **AccountId** column, and then select **Delete**.
+1. Go to **Tables** and choose **Custom Entity [SalesLT].[Product]**.
+1. In the **Schema** section select **Columns**
+1. Select the **ProductCategoryID** column, and then select **Delete**.
 1. Choose **Delete** to confirm the deletion of this column.
-1. To create the relationship, select the **N:1 Relationship** within the **Service Request** table.
-1. Select **New Many-to-1 Relationship**.
-1. Enter the following details to create the relationship between the **Service Request** virtual table and the **Account** table.
-   1. In the **Relationship Definition** section – set the **Primary Entity** column value to **Account**.
-   1. Optionally, if you want to edit the name of the relationship, you can do so in the **Name** column.
-   1. In the **Lookup Field** section, set the **Display Name** to **Account.**
-   1. The **Name** column automatically populates with the lookup column name.
-   1. Set the **External Name** value to **AccountId** (matching the column name in your source table).
-1. **Save**, and then close the relationship.
+1. To create the relationship, select **New column**
+    1. In the **New column** panel set the **Display name** value to **Product Category**
+    1. Set the **Data type** value to **Lookup**
+    1. In the **related table** drop-down choose **Custom Entity [SalesLT].[ProductCategory]**
+    1. **Important:** Open **Advanced options** - set **External name** to **ProductCategoryID** (matching the column name in your source table)
+1. **Save**
 
-      :::image type="content" source="media/ve-create-relationship.png" alt-text="Create relationship":::
+      :::image type="content" source="media/ve-create-lookupcolumn.png.png" alt-text="Create relationship":::
 
-1. Refer to the columns for the **Service Request** virtual table, and you'll notice that the **AccountId** column is a **Lookup** type. This column can now
+1. Refer to the columns for the **[SalesLT].[ProductCategory]** virtual table, and you'll notice that the **Product Category** column is a **Lookup** type. This column can now
 be added to forms and views to see all associated accounts for each of the service request record.
 
-   :::image type="content" source="media/ve-custom-table-columns.png" alt-text="Custom table columns":::
+   :::image type="content" source="media/ve-custom-table-columns2.png" alt-text="Custom table columns":::
 
 1. With the relationship established you can now create a new service request and pick accounts to associate them to.
 
-   :::image type="content" source="media/ve-new-custom-table.png" alt-text="New custom table":::
+   :::image type="content" source="media/ve-new-custom-table2.png" alt-text="New custom table":::
 
   > [!NOTE]
   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
@@ -328,7 +326,6 @@ be added to forms and views to see all associated accounts for each of the servi
 
 - The **Primary Key** column should be included in the create form if you didn't set up the column to increment during the design of the underlying source table automatically. You'll have to enter a valid value in the primary key column for an insert operation to succeed.
 - If **Entity Catalog** creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
-
 
 ## Known limitations
 
@@ -372,7 +369,7 @@ You currently can't select an **All** view for SharePoint columns on a virtual t
 
 - You're seeing only one (1) record in your virtual table even though you have more in your source table.<br />
   **Solution:** Check your source table and make sure it has primary key defined.
-  
+
 - I created a virtual table but I can't see it in "Tables".<br />
   **Solution**: Since the virtual table creation is asynchronous, you can check the status of the process in "System Jobs". Look for system jobs with a Name starting Microsoft.Wrm.DataProvider.Connector.Plugins.ConnectorGenerateVEPlugin and a "Regarding" column's value equal to the name of the new virtual table. If status is still In Progress, just wait for the job to complete. If there's an error, you can get details by clicking the system, job name hyperlink. In this example, table creation is still pending:
 
