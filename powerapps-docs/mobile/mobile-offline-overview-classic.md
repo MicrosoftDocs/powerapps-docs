@@ -23,7 +23,7 @@ search.app:
   - D365Sales
 ---
 
-# Configure mobile offline synchronization for your mobile app (classic)
+# Mobile offline overview (classic)
 
 Set up mobile offline synchronization to allow users to work in offline mode on their mobile device. Mobile offline allows users to use Power Apps in offline mode and interact with their data without internet connection.
 
