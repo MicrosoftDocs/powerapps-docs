@@ -57,7 +57,7 @@ ILogger is a common interface for capturing log information. The implementation 
 The following is an example of a plug-in using both ILogger and ITracingService.Trace.
 
 > [!NOTE]
-> Make sure you include `using Microsoft.Xrm.Sdk.PluginTelemetry;`. Don't use `using Microsoft.Extensions.Logging;`, otherwise the `Ilogger` instance will be null.
+> Make sure you include `using Microsoft.Xrm.Sdk.PluginTelemetry;`. Don't use `using Microsoft.Extensions.Logging;`, otherwise the `ILogger` instance will be null.
 
 ```csharp
 using Microsoft.Xrm.Sdk;
