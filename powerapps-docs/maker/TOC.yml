@@ -610,7 +610,7 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Use the Search pane (preview)
+        - name: Use the Search pane
           href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
