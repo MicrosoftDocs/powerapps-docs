@@ -22,7 +22,7 @@ search.app:
   - D365Sales
 ---
 
-# Mobile offline capabilities and limitations
+# Mobile offline capabilities and limitations (classic)
 
 Before you set-up the mobile app in offline mode be sure to read through the following capabilities, tips,  and limitations. 
 
