@@ -1,5 +1,5 @@
 ---
-title: Create a shopping list card (Preview)
+title: Create a shopping list card (preview)
 description: Learn about card basics while creating a simple shopping list card.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Create a shopping list card (Preview)
+# Create a shopping list card (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 

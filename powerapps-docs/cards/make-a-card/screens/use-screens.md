@@ -1,5 +1,5 @@
 ---
-title: Use screens (Preview)
+title: Use screens (preview)
 description: Learn how to build with screens.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Use screens (Preview)
+# Use screens (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Add buttons (Preview)
+title: Add buttons (preview)
 description: Learn how to build a card with buttons.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add buttons (Preview)
+# Add buttons (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
