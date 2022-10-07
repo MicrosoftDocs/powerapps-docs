@@ -39,25 +39,21 @@ To enable a table for mobile offline synchronization, follow the steps below.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
   
-2. On the left nav select **Data** to expand it and then select **Tables**.  
-
-   > [!div class="mx-imgBorder"]
-   > ![Go to tables.](media/maker-data-tables.png "Go to tables")
-   
+2. In the navigation pane, select **Dataverse** > **Tables**.  
   
-3. Select a table to enable for mobile offline such as **Account**.  
+3. Select the row for the table that you want to enable for mobile offline, such as **Account**.  
 
    > [!div class="mx-imgBorder"]
-   > ![Select Account.](media/select_account_table.png "Select Account")
+   > ![Select the row for the table that you want to enable for mobile offline.](media/SelectTable.png "Select the row for the table that you want to enable for mobile offline.")
  
 
-4. On the command bar, select **Settings**. 
+4. On the command bar, select **Properties**. 
 
    > [!div class="mx-imgBorder"]
-   >![Select settings.](media/select_settings.png "Select setting")
+   >![Select Properties.](media/SelectProperties.png "Select Properties.")
  
   
-5. On the **Edit table** pane, expand **Advanced options**. Under **Rows in this table** make sure **Can be taken offline** check box is selected and then select **Save**.
+5. On the **Edit table** pane, expand **Advanced options**. Under **Rows in this table**, make sure the **Can be taken offline** check box is selected, and then select **Save**.
 
    > [!div class="mx-imgBorder"]
    >![Select enable mobile offline check box.](media/enable_mobileoffline_checkbox.png "Select enable mobile offline check box")
