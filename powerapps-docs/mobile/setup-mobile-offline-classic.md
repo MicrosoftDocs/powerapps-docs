@@ -93,25 +93,27 @@ To create a profile, follow the steps below.
    >![Mobile Offline Profile screen.](media/mol_new_profile.png "Crearte new Mobile Offline Profile")
 
   
-6. Enter a name and description for your mobile offline profile. Select **Create** to create the mobile offline profile. Once the profile is created, select it to open the profile so you can continue editing it.  
+6. Enter a name and description for your mobile offline profile. Select **Create** to create the mobile offline profile.
     
    > [!div class="mx-imgBorder"]
    >![Name your mobile offline profile.](media/mol_sample_profile.png "Name your mobile offline profile")
   
-  
-7. In the **Data available offline** area, select **Add table** to add a table to the profile. 
+7. AFter the profile is created, select it to open the profile so you can continue editing it.  
+
+
+8. In the **Data available offline** area, select **Add table** to add a table to the profile. 
 
    > [!div class="mx-imgBorder"]
    >![Add table to the profile.](media/mol_add_table.png "Add table to the profile")
    
   
-8. Select a table from the list of tables shown. Only tables that can be enabled for mobile offline appear in the **Table** list and then select **Next**.
+9. Select a table from the list of tables shown. Only tables that can be enabled for mobile offline appear in the list. Select **Next**.
 
    > [!div class="mx-imgBorder"]
    >![Table list.](media/mol_add_table_1.png "Table list")
  
 
-9. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [Types of tables](/powerapps/maker/common-data-service/types-of-entities).
+10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [Types of tables](/powerapps/maker/common-data-service/types-of-entities).
 
 
 
@@ -123,7 +125,7 @@ To create a profile, follow the steps below.
   |**None**|  <ul><li>**Download related rows only**. Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> |        
  
     
-   **Custom** Admins can define a custom filter based on the following rules. You can create filters up to three levels.  
+   If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.  
 
    |&nbsp; |&nbsp; |&nbsp; |
    |---------|---------|---------|
@@ -138,42 +140,39 @@ To create a profile, follow the steps below.
    |not-end-with    |       |         |
 
  
-10. In the **Include [table name] rows related to these tables** area, select the related table relationships. You need to have added the table you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile. 
+11. In the **Include [table name] rows related to these tables** area, select the related table relationships. You need to have added the table you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile. 
 
     For example, if you select **Contact | Field name: Primary contact** this means for every contact, the system will also download the account related to it. 
      
     > [!div class="mx-imgBorder"]
     >![Add table relationship.](media/mol_add_relationship.png "Add table relationship")
   
-11. (optional) Select **Sync interval** and choose how often you want the table's data to automatically sync to people's devices. You can select a short interval such as **Every 5 minutes** or choose a less frequent interval to optimize the sync performance and user experience. Make the selection based on your business requirements and how often users make updates to the table. Typically the more static the data is, the less need for a frequent sync interval. 
+12. (**Optional**) Select **Sync interval** and choose how often you want the table's data to automatically sync to users's devices. You can select a short interval such as **Every 5 minutes** or choose a less frequent interval to optimize the sync performance and user experience. Make the selection based on your business requirements and how often users make updates to the table. Typically, the more static the data is, the less need for a frequent sync interval. 
 
 > [!NOTE]
 > Even if the value for **Sync interval** is set to be less frequent than, **Every 1 hour**, data will currently still be synched every hour. 
 > A sync is only initiated when there is connectivity and when the app is actively running on the user’s mobile device. For Android devices, once the sync is initiated it can be completed even in background.      
 > Dependencies, based on selected relationships and custom filters that includes related tables are analyzed at each sync request. This might result in a sync being triggered also for related tables.
   
-12. Select **Save** to add the table to your profile so you can continue editing it.
+13. Select **Save** to add the table to your profile so you can continue editing it.
 
 ### Step 2.1: Add users or team to a mobile offline profile 
 
-Once you've created a mobile offline profile, you can start adding users or team to the profile. This will make the profile available to the users or team so they can get the mobile offline experience that you've set up. 
+Once you've created a mobile offline profile, you can start adding users to the profile. This will make the profile available to the users so that they can get the mobile offline experience that you've set up. 
 
-A user or team can only be added to one offline profile at a time. If a user or team is added to another offline profile then you will get a warning stating that the user is already added to another offline profile. If you continue with the change then the user or team will be moved to the new profile. This may disrupt your users so it's recommended that you notify them when you move them to a different profile. 
+A user can only be added to one offline profile at a time. If a user is added to another offline profile, then you will get a warning stating that the user is already added to another offline profile. If you continue with the change, the user will be moved to the new profile. This may disrupt users, so it's recommended that you notify them when you move them to a different profile. 
 
 > [!NOTE]
-> A user must have a security role that has Read permissions on the mobile offline profile table to be able to use their mobile device in offline mode. 
+> To use a mobile device in offline mode, a user must have a security role that has read permissions to the table that was added to the mobile offline profile.  
 
 1.  If it’s not already open, select the profile name to open the mobile offline profile you want to add users to.
 
     > [!div class="mx-imgBorder"]
     >![Select offline profile.](media/select-offlineprofile.png "Select offline profile")
  
-2.  In the **People with offline access** area, select **Add people**.  
-
-    > [!div class="mx-imgBorder"]
-    >![Add a user.](media/mol_add_people.png "Add a user")
+2.  In the **Users with offline access** area, select **Add users**.  
   
-3.  Choose the user or team that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users. 
+3.  Choose the users or team that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users. 
   
 4.  When you’re done adding people, select **Save**.
   
