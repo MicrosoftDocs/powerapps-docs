@@ -1,5 +1,5 @@
 ---
-title: "Send a card in Teams (Preview)"
+title: "Share a card in Teams (preview)"
 description: "Learn how to share a card with your teammates"
 keywords: "Card Designer, Power Apps, cards, share a card, Teams, send a card"
 ms.date: 09/20/2022
@@ -12,7 +12,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Share a card in Microsoft Teams (Preview)
+# Share a card in Microsoft Teams (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 

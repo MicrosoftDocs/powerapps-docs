@@ -610,7 +610,7 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Use the Search pane (preview)
+        - name: Use the Search pane
           href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
@@ -1919,7 +1919,7 @@
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md  
-        - name: Content Delivery Network (preview)
+        - name: Content Delivery Network
           href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
@@ -2875,7 +2875,7 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-- name: Cards (Preview)
+- name: Cards (preview)
   items:
     - name: What are cards?
       href: ../cards/overview.md
