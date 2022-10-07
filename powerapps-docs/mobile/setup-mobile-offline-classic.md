@@ -98,7 +98,7 @@ To create a profile, follow the steps below.
    > [!div class="mx-imgBorder"]
    >![Name your mobile offline profile.](media/mol_sample_profile.png "Name your mobile offline profile")
   
-7. AFter the profile is created, select it to open the profile so you can continue editing it.  
+7. After the profile is created, select it to open the profile so you can continue editing it.  
 
 
 8. In the **Data available offline** area, select **Add table** to add a table to the profile. 
@@ -158,7 +158,7 @@ To create a profile, follow the steps below.
 
 ### Step 2.1: Add users or team to a mobile offline profile 
 
-Once you've created a mobile offline profile, you can start adding users to the profile. This will make the profile available to the users so that they can get the mobile offline experience that you've set up. 
+After you've created a mobile offline profile, you can start adding users to the profile. This will make the profile available to the users so that they can get the mobile offline experience that you've set up. 
 
 A user can only be added to one offline profile at a time. If a user is added to another offline profile, then you will get a warning stating that the user is already added to another offline profile. If you continue with the change, the user will be moved to the new profile. This may disrupt users, so it's recommended that you notify them when you move them to a different profile. 
 
@@ -195,8 +195,8 @@ Following these steps to publish the profile:
 
   It's not required to republish a mobile profile after users or team have been added.
 
-     > [!div class="mx-imgBorder"]
-     >![Publish offline profile.](media/mol_publish.png "Publish offline profile")
+    > [!div class="mx-imgBorder"]
+    > ![Publish offline profile.](media/mol_publish.png "Publish offline profile")
   
       > [!TIP]
       > **Solution export and import**  
