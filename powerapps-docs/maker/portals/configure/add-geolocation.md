@@ -63,7 +63,7 @@ The map control requires additional configuration to tell it what the IDs of the
 
 - For basic forms, see [Geolocation configuration for basic forms](entity-forms.md#geolocation-configuration-for-basic-forms).
 
-- For multistep forms, see [Geolocation configuration for multistep forms](web-form-properties.md#geolocation-configuration-for-advanced-form).
+- For multistep forms, see [Geolocation configuration for multistep forms](web-form-properties.md#geolocation-configuration-for-multistep-form).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
