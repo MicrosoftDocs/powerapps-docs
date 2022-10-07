@@ -172,7 +172,7 @@ A user can only be added to one offline profile at a time. If a user is added to
  
 2.  In the **Users with offline access** area, select **Add users**.  
   
-3.  Choose the users or team that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users. 
+3.  Choose the users that you want to add to the mobile offline profile. The actual users added based on teams are displayed under each team. User's that are added individually are displayed under individual users. 
   
 4.  When you’re done adding people, select **Save**.
   
@@ -193,17 +193,17 @@ Following these steps to publish the profile:
   
 2. When you’re done adding people and making any other changes to the mobile offline profile, select **Publish** so the data you specified can start syncing with your users’ mobile devices.  
 
-It's not required to republish a mobile profile after users or team have been added.
+  It's not required to republish a mobile profile after users or team have been added.
 
-   > [!div class="mx-imgBorder"]
-   >![Publish offline profile.](media/mol_publish.png "Publish offline profile")
+     > [!div class="mx-imgBorder"]
+     >![Publish offline profile.](media/mol_publish.png "Publish offline profile")
   
-   > [!TIP]
-   > **Solution export and import**  
-   >   
-   >  When exporting a solution that includes a mobile offline profile, always select the **Include table metadata** check box for each table you export.  
-   >   
-   >  After importing the solution into the target organization, publish all mobile offline profiles.  
+      > [!TIP]
+      > **Solution export and import**  
+      >   
+      >  When exporting a solution that includes a mobile offline profile, always select the **Include table metadata** check box for each table you export.  
+      >   
+      >  After importing the solution into the target organization, publish all mobile offline profiles.  
 
 ### Step 2.3: Set conflict detection for mobile offline  
 
