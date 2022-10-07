@@ -1661,7 +1661,7 @@
   - name: Mobile offline
     items:
     - name: Mobile offline overview (classic)
-      href: ../mobile/mobile-offline-overview.md
+      href: ../mobile/mobile-offline-overview-classic.md
     - name: Set up mobile offline (classic)
       href: ../mobile/setup-mobile-offline-classic.md
     - name: Mobile offline overview (preview)
