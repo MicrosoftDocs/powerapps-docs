@@ -690,17 +690,17 @@ The name of the Basic Form you wish to load.
 
 ## webform
 
-Fully renders a Power Apps-configured advanced form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.
+Fully renders a Power Apps-configured multistep form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.
 
-`{% webform name: 'My Advanced Form' %}`
+`{% webform name: 'My Multistep Form' %}`
 
 ### Parameters
 
 **name**
 
-The name of the Advanced Form you wish to load.
+The name of the Multistep Form you wish to load.
 
-`{% webform name:My Advanced Form %}`
+`{% webform name:My Multistep Form %}`
 
 ## codecomponent
 

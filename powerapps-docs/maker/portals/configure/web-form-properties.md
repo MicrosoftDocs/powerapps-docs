@@ -1,6 +1,6 @@
 ---
-title: Define advanced form properties for portals
-description: Learn how to configure advanced form properties for a portal.
+title: Define multistep form properties for portals
+description: Learn how to configure multistep form properties for a portal.
 author: sandhangitmsft
 
 ms.topic: conceptual
@@ -15,16 +15,16 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Define advanced form properties for portals
+# Define multistep form properties for portals
 
-The advanced form contains relationships to webpages and a start step to control the initialization of the form within the portal. The relationship to the webpage allows dynamic retrieval of the form definition for a given page node within the website.  
+The multistep form contains relationships to webpages and a start step to control the initialization of the form within the portal. The relationship to the webpage allows dynamic retrieval of the form definition for a given page node within the website.  
 
-The other options on the advanced form record itself control top-level preferences for the multiple-step process as a whole, for example whether you'd like to display a progress bar.
+The other options on the multistep form record itself control top-level preferences for the multiple-step process as a whole, for example whether you'd like to display a progress bar.
 
-To view existing multistep forms or to create new advanced forms, open the [Portal Management app](configure-portal.md) and go to **Portals** > **Multistep Forms**.
+To view existing multistep forms or to create new multistep forms, open the [Portal Management app](configure-portal.md) and go to **Portals** > **Multistep Forms**.
 
 > [!NOTE]
-> Before you continue, ensure you review [considerations](#considerations) for advanced forms.
+> Before you continue, ensure you review [considerations](#considerations) for multistep forms.
 
 When creating or editing a webpage from the the [Portal Management app](configure-portal.md), an **Multistep Form** can be specified in the lookup field provided on the **New Web Page** form.
 
@@ -88,13 +88,13 @@ Example:
 >[!NOTE]
 > Because of the recent changes related to browsers support for custom text in *beforeunload* event, the ability to specify a custom message using "Save changes" warning is limited to only Internet Explorer 11. More information: [onbeforeunload event in Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741880(v=vs.85)), [Browser compatibility](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event#browser_compatibility)
 
-## Geolocation configuration for advanced form
+## Geolocation configuration for multistep form
 
 A managed form can be configured to display a map control to either display an existing location as a pin on a map or to provide the ability for the user to specify a location. See [Add Geolocation](add-geolocation.md).
 
 The form's map control requires additional configuration to tell it what the IDs of the various location fields are, to assign values to them or retrieve values from them. The Multistep Form Step record has a section that defines these field mappings that you must assign values for. The field names will vary depending on the schema you have created.
 
-![Geolocation data in advanced form.](../media/geolocation-managed-form.png "Geolocation data in advanced form")
+![Geolocation data in multistep form.](../media/geolocation-managed-form.png "Geolocation data in multistep form")
 
 > [!Note]
 > The Geolocation section is not visible in the German Sovereign Cloud environment. If a user has enabled geolocation by using a different form, it will not be displayed during rendering on portal.

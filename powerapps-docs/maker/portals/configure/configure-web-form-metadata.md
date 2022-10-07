@@ -128,7 +128,7 @@ The following properties are displayed when the Type selected equals 'Section'.
 | Section Name |                                                                                           The name of the section on the table's form to be modified.                                                                                            |
 |    Label     | Replaces the default label assigned to the section on the table with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Advanced Form metadata type = Tab
+## Multistep Form metadata type = Tab
 
 The following properties are displayed when the Type selected equals 'Tab'
 

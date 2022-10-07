@@ -41,7 +41,7 @@ Each multistep form will be presented on the portal has one or more steps. These
 
 ## Considerations for multistep  form steps
 
-Advanced form steps can't be reused. If you try to use multistep  form step again, you'll see the following message:
+multistep form steps can't be reused. If you try to use multistep  form step again, you'll see the following message:
 
 "The step \<multistep  form step name\> has already been used earlier in this form. Update the multistep form to use each step only once, and try again."
 

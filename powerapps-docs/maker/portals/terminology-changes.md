@@ -67,12 +67,12 @@ The following table includes terminology changes inside Portal Management app.
 | View name for Entity Form | Entity Form Lookup View | Basic Form Lookup View |
 | View name for Entity Form | Inactive Entity Forms | Inactive Basic Forms |
 | View name for Entity Form | Quick Find Active Entity Forms | Quick Find Active Basic Forms |
-| View name for Web Form | Active Web Forms | Active Advanced Forms |
-| View name for Web Form | Inactive Web Forms | Inactive Advanced Forms |
-| View name for Web Form | Quick Find Active Web Forms | Quick Find Active Advanced Forms |
-| View name for Web Form | Web Form Advanced Find View | Advanced Form Advanced Find View |
-| View name for Web Form | Web Form Associated View | Advanced Form Associated View |
-| View name for Web Form | Web Form Lookup View | Advanced Form Lookup View |
+| View name for Web Form | Active Web Forms | Active Multistep Forms |
+| View name for Web Form | Inactive Web Forms | Inactive Multistep Forms |
+| View name for Web Form | Quick Find Active Web Forms | Quick Find Active Multistep Forms |
+| View name for Web Form | Web Form Advanced Find View | Multistep Form Advanced Find View |
+| View name for Web Form | Web Form Associated View | Multistep Form Associated View |
+| View name for Web Form | Web Form Lookup View | Multistep Form Lookup View |
 | Checkbox for Entity Permission | Enable Entity Permission | Enable Table Permission |
 | Lookup label for Parent Entity Permission | Parent Entity Permission | Parent Table Permission |
 | Tab name for entity reference | Entity Reference | Associated Table Reference |

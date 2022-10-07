@@ -100,7 +100,7 @@ if (window.jQuery) {
 
 - [Configure a portal](configure-portal.md)  
 - [Define basic forms](entity-forms.md)  
-- [Advanced Form steps for portals](web-form-steps.md)  
+- [Multistep Form steps for portals](web-form-steps.md)  
 - [Load Form/Load Tab step type](load-form-step.md)  
 - [Redirect step type](add-redirect-step.md)  
 - [Conditional step type](add-conditional-step.md)

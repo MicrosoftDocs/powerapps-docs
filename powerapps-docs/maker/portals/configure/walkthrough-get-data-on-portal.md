@@ -205,7 +205,7 @@ Finally, it’s worth mentioning that the Basic Form record has an assortment of
 ### See also
 
 [About basic forms](entity-forms.md) <br>
-[Define advanced form steps](web-form-steps.md)
+[Define multistep form steps](web-form-steps.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
