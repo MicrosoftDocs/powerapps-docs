@@ -1,14 +1,14 @@
 ---
 title: How to use a model-driven app on a mobile device | Microsoft Docs
 description: Learn how to use a custom model-driven app on a mobile device.
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 8/09/2022
+ms.date: 10/07/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -18,6 +18,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Use model-driven apps on Power Apps mobile
 
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Install Power Apps mobile](run-powerapps-on-mobile.md).
@@ -193,6 +194,12 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
 - Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the main set of commands to overflow menu. This gives priority to other commands including custom commands. 
+
+  | Before | After |
+  | :---:         |     :---:      |
+  | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
+  
+- On a mobile device, frontline workers need to consume lot of data on a small form factor. This necessitates scrolling and tab switching on the form. With a tab-based navigation across a form, user must be at the top of the page to navigate. This results in the need to scroll up and down the form to complete tasks which require navigating across multiple tabs. With the **Lock tabs at the top of forms on mobile and tablets** setting turned on, form tabs will be persisted on the top as users scroll, so users can easily switch tabs.
 
   | Before | After |
   | :---:         |     :---:      |
