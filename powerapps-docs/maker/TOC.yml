@@ -1668,10 +1668,10 @@
       href: ../mobile/mobile-offline-overview.md
     - name: Set up mobile offline (preview)
       href: ../mobile/setup-mobile-offline.md 
-    - name: Configure mobile offline profiles for images and files
-      href: ../mobile/offline-file-images.md
     - name: Enable and use offline-first (preview)
       href: ../mobile/work-in-offline-mode.md   
+    - name: Configure mobile offline profiles for images and files
+      href: ../mobile/offline-file-images.md
     - name: Offline profile guidelines
       href: ../mobile/mobile-offline-guidelines.md  
     - name: Work offline on your mobile device (classic)
