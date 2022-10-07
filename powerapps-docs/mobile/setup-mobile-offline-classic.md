@@ -60,7 +60,7 @@ To enable a table for mobile offline synchronization, follow the steps below.
 
 
    > [!NOTE]
-   > Keep in mind that the amount of data you make available to users while they’re offline can affect data sync times, device performance, and can affect the data usage rates  for devices on cellular network. The amount of data that gets downloaded to the device depends on: 
+   > Keep in mind that the amount of data you make available to users while they’re offline can affect data sync times, device performance, and can affect the data usage rates for devices on a cellular network. The amount of data that gets downloaded to the device depends on: 
    > -   The number of tables that you enable for mobile offline.  
    > -   The filters you set while creating mobile offline profiles.  
  
@@ -72,7 +72,7 @@ To create a profile, follow the steps below.
   
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-2. On the right, select **Environments**.
+2. In the navigation pane, select **Environments**.
 
    > [!div class="mx-imgBorder"]
    >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
@@ -87,7 +87,7 @@ To create a profile, follow the steps below.
    > [!div class="mx-imgBorder"]
    >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
   
-5. Select **New Profile** to create a new mobile offline profile. If you already have a profile that you want to edit, select it from the list.
+5. Select **New Profile** to create a new profile for mobile offline. If you already have a profile that you want to edit, select it from the list.
 
    > [!div class="mx-imgBorder"]
    >![Mobile Offline Profile screen.](media/mol_new_profile.png "Crearte new Mobile Offline Profile")
