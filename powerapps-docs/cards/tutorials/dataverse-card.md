@@ -1,5 +1,5 @@
 ---
-title: "Create a card with data from Dataverse (Preview)"
+title: "Create a card with data from Dataverse (preview)"
 description: "Create a card that uses connectors"
 keywords: "Card Designer, Power Apps, cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
@@ -12,7 +12,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Use the Dataverse connector (Preview)
+# Use the Dataverse connector (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 

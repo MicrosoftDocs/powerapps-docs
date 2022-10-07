@@ -1,11 +1,11 @@
 ---
-title: Configure a site with Content Delivery Network (preview)
+title: Configure a site with Content Delivery Network
 description: Configure a site with Content Delivery Network
 author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/23/2022
+ms.date: 10/06/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -17,7 +17,6 @@ contributors:
 
 # Content Delivery Network (preview)
 
-
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 [This topic is pre-release documentation and is subject to change.]
@@ -26,20 +25,13 @@ A *content delivery network* is a distributed network of servers that can effici
 
 :::image type="content" source="media/configure-cdn/cdn-diagram.png" alt-text="Diagram of the world showing Content Delivery Network servers on three different continents. Each server connects to users who are on, or near to, the continent the server is located on.":::
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-
 When you enable Content Delivery Network on your portal, static content&mdash;like images, scripts, and style sheet files used to design your portal website&mdash;will be stored and served from the Content Delivery Network server closest to your location.  
 
 > [!NOTE] 
-> You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
-
-> [!NOTE]
->
-> - You need to be a portal administrator to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. You can't enable Content Delivery Network for portals configured with a custom domain during preview. 
-> - Using a [custom domain name](../admin/add-custom-domain.md) on a site is currently not supported with using Content Delivery Network.
+> - You can also configure a site with Content Delivery Network in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+> - You need to be a [portal administrator](../admin/portal-admin-roles.md#required-roles-and-permissions) to enable Content Delivery Network. This feature is available for Power Apps portals. If you're using the Add-on license, you can't enable Content Delivery Network. Trial portals aren't supported for Content Delivery Network. 
 > - [Restricting portal access by IP address](../admin/ip-address-restrict.md) on a site is currently not supported with using Content Delivery Network.
+> - This service is not available in Government Community Cloud (GCC), Government Community Cloud (GCC High), Department of Defense (DoD), and UAE region.
 
 ## Enable Content Delivery Network for a production portal 
 
@@ -59,15 +51,11 @@ Content Delivery Network is available for production Power Apps portals. The ste
 
     :::image type="content" source="media/configure-cdn/manage-portal.png" alt-text="Choosing a portal to manage from the available list.":::
 
-1. Select **Manage Content Delivery Network**.
+1. Under Performance and Protection, turn on the **Content Delivery Network** toggle switch.
 
-    :::image type="content" source="media/configure-cdn/manage cdn.png" alt-text="Manage Content Delivery Network item.":::
+    :::image type="content" source="media/configure-cdn/enable-cdn.gif" alt-text="The enable cdn toggle switch in the on position.":::
 
-1. Turn on the **Content Delivery Network** toggle switch.
-
-    :::image type="content" source="media/configure-cdn/turn-on-cdn.png" alt-text="Toggle switch with Content Delivery Network feature enabled.":::
-
-It might take a few minutes to provision Content Delivery Network.
+    It might take a few minutes to provision Content Delivery Network.
 
 ## Enable Content Delivery Network while converting trial to production 
 
@@ -78,7 +66,8 @@ It might take a few minutes to provision Content Delivery Network.
 1. Select the **Enable the Content Delivery Network** checkbox. 
 
 1. Select **Confirm**.
-    :::image type="content" source="media/configure-cdn/confirm-cdn.png" alt-text="Message confirming you want to enable Content Delivery Network while converting trial to production.":::
+    
+    :::image type="content" source="media/configure-cdn/trial-conversion.gif" alt-text="Message confirming you want to enable Content Delivery Network while converting trial to production.":::
 
 ## Disable Content Delivery Network 
 
@@ -96,9 +85,9 @@ It might take a few minutes to provision Content Delivery Network.
 
 1. Turn off the **Content Delivery Network** toggle switch. 
 
-    :::image type="content" source="media/configure-cdn/disable-cdn.png" alt-text="Disable Content Delivery Network switch.":::
+    :::image type="content" source="media/configure-cdn/disable-cdn.gif" alt-text="Disable Content Delivery Network switch.":::
 
-It might take a few minutes for the process to disable Content Delivery Network.
+    It might take a few minutes for the process to disable Content Delivery Network.
 
 ## Clear the Content Delivery Network cache 
 

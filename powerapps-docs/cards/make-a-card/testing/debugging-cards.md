@@ -1,5 +1,5 @@
 ---
-title: Test and debug cards (Preview)
+title: Test and debug cards (preview)
 description: Learn how to test and debug your cards using the Play page
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Test and debug cards (Preview)
+# Test and debug cards (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
