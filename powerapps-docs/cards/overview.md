@@ -1,5 +1,5 @@
 ---
-title: What are cards? (Preview)
+title: What are cards (preview)?
 description: Learn about cards as a Power Apps capability and the business problems they can help you solve.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# What are cards?
+# What are cards (preview)?
 
 [This article is pre-release documentation and is subject to change.]
 
