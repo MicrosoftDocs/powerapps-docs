@@ -1809,7 +1809,7 @@
               items:
                 - name: Define multistep form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Advanced form steps
+                - name: Multistep form steps
                   items:
                     - name: Define multistep form steps
                       href: ./portals/configure/web-form-steps.md
