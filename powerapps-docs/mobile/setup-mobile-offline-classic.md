@@ -2,7 +2,7 @@
 title: Set up mobile offline (classic)
 ms.custom: Configure mobile offline synchronization
 description: Set up mobile offline for Power Apps mobile and Dynamics 365 phones and tablets app and
-ms.date: 10/06/2022
+ms.date: 10/07/2022
 ms.reviewer: 
 
 ms.suite: 
@@ -24,6 +24,10 @@ search.app:
 ---
 
 # Set up mobile offline (classic)
+
+Set up mobile offline synchronization to allow users to work in offline mode on their mobile device. Mobile offline allows users to use Power Apps in offline mode and interact with their data without an internet connection.
+
+The mobile app provides a rich offline experience that helps users stay productive. You can use basic commands such as create, read, update, and delete when you're offline. Once you're back online, the changes that you made on the mobile app are automatically synchronized with Microsoft Dataverse.
 
 ## Step 1: Enable tables for mobile offline synchronization 
  
