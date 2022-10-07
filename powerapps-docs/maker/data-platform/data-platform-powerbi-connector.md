@@ -134,6 +134,32 @@ This error can occur with the Dataverse connector when you run or design a repor
 :::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message.":::
 To work around this limit, optimize the query adding filters and dropping columns so that the query returns less data.
 
+#### Workaround
+If this error message occurs trying in Power BI trying to connect to a table with a very large number of lookups or choice columns the following manual workaround may allow you to connect to the table. The  Dynamics tables account, contact, and opportunity may encounter this issue if they are heavily customized with additional lookups or choice columns.
+
+To manually connect to the table in a Power BI report. 
+1. In report use "Transform Data" to load Power Query
+2. Create "New Source" "Blank Query"
+3. Name your query
+4. With new query click "Advanced Editor" in Query tab of ribbon.
+5. Replace query text with below query text. Change **"myenvironment.crmX"** to match your environment domain value. 
+
+```
+let
+    Source = CommonDataService.Database("<myenvironment.crmX>.dynamics.com"),
+    dbo_contact = Source{[Schema="dbo",Item="contact"]}[Data],
+    #"selectedcolumns" = Table.SelectColumns(dbo_contact,{"fullname", "emailaddress1"})
+in
+    #"selectedcolumns"
+```
+5. Click done.
+6. Click Choose columns to add any additional needed columns.
+7. Click "Close and Apply" in ribbon to save model changes. 
+8. When prompted choose "Direct Query" for the new query. 
+
+This new query can now be used in the report.
+
+
 ### Error message: Unable to connect (provider Named Pipes Provider, error: 40 – Could not open a connection to SQL Server)
 
 When this error message occurs, the connector fails to connect to the TDS endpoint. This can occur when the URL used with the connector includes *https://* and/or the ending */*.
