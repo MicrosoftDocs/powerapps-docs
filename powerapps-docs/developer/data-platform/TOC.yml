@@ -363,7 +363,7 @@
           href: configure-entity-relationship-cascading-behavior.md
     - name: Customize table and column mappings
       href: customize-entity-attribute-mappings.md
-    - name: Query Schema definitions
+    - name: Query schema definitions
       href: query-schema-definitions.md
     - name: Cache schema data
       href: cache-schema-data.md
