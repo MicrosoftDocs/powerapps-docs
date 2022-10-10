@@ -77,7 +77,7 @@ The table below summarizes the features associated with each portal template:
 | Web Notifications|  *| *|  *| *| *|* |*
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity|   *|  *|  *|   *| *|* |*
 | Identity Workflows| *|  *| *|   *| *|* |*
-| Advanced Forms|  *| *|    *| *| *|* |*
+| Multistep Forms|  *| *|    *| *| *|* |*
 | Feedback|   *|  *|  *| *| *|* |*
 ||
 

@@ -35,7 +35,7 @@ Currently supported features include:
 - Hyperlinks
 - Clear formatting
 
-To use the control inside a form, select the "Edit multi-line text" card, and customize it by inserting the RTE control.
+To use the control inside a form, select the **Edit multi-line tex** card, and customize it by inserting the RTE control.
 
 ## Key properties
 **[Default](properties-core.md)** – Input property for the initial text value shown in editor.
@@ -79,5 +79,14 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 ## Limitations
 
 You can only interact with the rich text editor control in Power Apps Studio when using the preview mode.
+
+Pasting images in the rich text editor has the following limitations:
+- Cross-Origin Resource Sharing (CORS) 
+- Authentication
+- Image format support in browser
+- Type of image (inline vs URL)
+- How programs represent images differently when they are copied.
+
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
