@@ -1,5 +1,5 @@
 ---
-title: Add connectors to a card (Preview)
+title: Add connectors to a card (preview)
 description: Learn how to add connectors to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to

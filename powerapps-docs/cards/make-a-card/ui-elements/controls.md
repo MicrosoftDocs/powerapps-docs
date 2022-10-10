@@ -1,5 +1,5 @@
 ---
-title: Add controls to a card (Preview)
+title: Add controls to a card (preview)
 description: Learn about controls you can add to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add controls to a card (Preview)
+# Add controls to a card (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 

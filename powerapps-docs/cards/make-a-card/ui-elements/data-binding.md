@@ -1,5 +1,5 @@
 ---
-title: Work with repeating controls in cards
+title: Work with repeating controls in cards (preview)
 description: Learn how to make controls repeat in a table in cards for Microsoft Power Apps.
 keywords: "Card Designer, Power Apps, cards, controls"
 ms.date: 09/20/2022
@@ -12,7 +12,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Data binding
+# Work with repeating controls in cards (preview)
 
 Data binding is used to repeat controls for a table variable using the **Repeat for every** advanced property.
 

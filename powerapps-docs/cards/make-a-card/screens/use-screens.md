@@ -1,5 +1,5 @@
 ---
-title: Add screens to a card (Preview)
+title: Add screens to a card (preview)
 description: Learn how to add screens to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# dd screens to a card (preview)
+# Add screens to a card (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Power Fx and cards overview (Preview)
+title: Power Fx and cards overview (preview)
 description: Learn about Power FX and how it's used to add business logic in cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: overview

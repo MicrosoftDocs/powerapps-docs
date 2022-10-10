@@ -1,5 +1,5 @@
 ---
-title: Card designer overview (Preview)
+title: Card designer overview (preview)
 description: Learn about the card designer.
 ms.date: 09/20/2022
 ms.topic: overview
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Card designer overview (Preview)
+# Card designer overview (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 

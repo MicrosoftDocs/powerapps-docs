@@ -1,6 +1,6 @@
 ---
 title: Create a shopping list card (preview)
-description: Learn about card basics while creating a simple shopping list card.
+description: Learn about the basic elements of a card by creating a shopping list card.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw

@@ -1,5 +1,5 @@
 ---
-title: Cards for Power Apps overview (Preview)
+title: Cards for Power Apps overview (preview)
 description: Learn about cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: overview
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Cards for Power Apps overview
+# Cards for Power Apps overview (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
