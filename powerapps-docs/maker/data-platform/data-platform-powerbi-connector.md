@@ -5,7 +5,7 @@ author: Mattp123
 manager: kvivek
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/24/2022
+ms.date: 10/10/2022
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -134,31 +134,32 @@ This error can occur with the Dataverse connector when you run or design a repor
 :::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message.":::
 To work around this limit, optimize the query adding filters and dropping columns so that the query returns less data.
 
-#### Workaround
-If this error message occurs trying in Power BI trying to connect to a table with a very large number of lookups or choice columns the following manual workaround may allow you to connect to the table. The  Dynamics tables account, contact, and opportunity may encounter this issue if they are heavily customized with additional lookups or choice columns.
+#### Workaround for very large number of lookups or choice columns
 
-To manually connect to the table in a Power BI report. 
-1. In report use "Transform Data" to load Power Query
-2. Create "New Source" "Blank Query"
-3. Name your query
-4. With new query click "Advanced Editor" in Query tab of ribbon.
-5. Replace query text with below query text. Change **"myenvironment.crmX"** to match your environment domain value. 
+If the error message occurs in Power BI when you try to connect to a table with a very large number of lookups or choice columns, the following manual workaround might allow you to connect to the table. The  account, contact, and opportunity table might encounter this issue when they are extensively customized with additional lookups or choice columns.
 
-```
-let
-    Source = CommonDataService.Database("<myenvironment.crmX>.dynamics.com"),
-    dbo_contact = Source{[Schema="dbo",Item="contact"]}[Data],
-    #"selectedcolumns" = Table.SelectColumns(dbo_contact,{"fullname", "emailaddress1"})
-in
-    #"selectedcolumns"
-```
-5. Click done.
-6. Click Choose columns to add any additional needed columns.
-7. Click "Close and Apply" in ribbon to save model changes. 
-8. When prompted choose "Direct Query" for the new query. 
+Manually connect to the table in a Power BI report:
 
-This new query can now be used in the report.
+1. In Power BI desktop with the report loaded, select **Transform Data** to load Power Query.
+2. Select **New Source** > **Blank Query**.
+3. **Name** your query.
+4. Select **Advanced Editor** on the **Home** tab of Power BI Desktop.
+5. Replace the query text with below query text. Then replace *myenvironment.crmX* with your environment domain value, such as *contoso.crm4*.
 
+   ```
+   let
+       Source = CommonDataService.Database("<myenvironment.crmX>.dynamics.com"),
+       dbo_contact = Source{[Schema="dbo",Item="contact"]}[Data],
+       #"selectedcolumns" = Table.SelectColumns(dbo_contact,{"fullname", "emailaddress1"})
+   in
+       #"selectedcolumns"
+   ```
+6. Select **Done**.
+7. Select **Choose columns** to add any additional needed columns.
+8. Select **Close and Apply** to save model changes.
+9. When prompted, select **Direct Query** for the new query.
+
+The query can now be used in the report.
 
 ### Error message: Unable to connect (provider Named Pipes Provider, error: 40 – Could not open a connection to SQL Server)
 
