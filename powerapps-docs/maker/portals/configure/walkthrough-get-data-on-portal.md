@@ -23,7 +23,7 @@ A basic form record allows an administrator to render a Power Apps form on a por
 
 This functionality can be taken advantage of for many reasons and use cases, but a common example of how this can be leveraged would be to build a new form under the Lead table within the **Customize the System** interface, then create a basic form record that can be surfaced on the portal to capture lead data through a contact page or some type of information request page. In fact, this specific example is used for the default **Contact Us** page within portals by default. Other examples include using a basic form for profile management or a single page survey.
 
-![Contact Us Advanced Form on the left, and its rendering in the portal on the right side.](media/contact-us-web-form.png "A Contact Us advanced form next to its rendering in the portal")
+![Contact Us Multistep Form on the left, and its rendering in the portal on the right side.](media/contact-us-web-form.png "A Contact Us Multistep form next to its rendering in the portal")
 
 Basic forms contain relationships to webpages and additional properties to control the initialization of the form within the portal. The relationship to a webpage allows dynamic retrieval of the form definition for a given page node within the portal website.
 
@@ -50,7 +50,7 @@ For this demonstration, let’s consider a scenario in which Contoso, Inc. would
 
 4. Open [Portal Management app](configure-portal.md) > **Basic Forms** and create a new basic form record. Name it **Suggestion**, set its **Table Name** field to **Suggestion (new_suggestion)**, set its **Form Name** to **Suggestion Form**, set its **Tab Name** to **Suggestion**, set its **Form Type** as **Insert**, and modify any of the other options as needed.
 
-5. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions**. Set its **Page Template** value to **Advanced Form**, set its **Basic Form** value to **Suggestion**, and add an introduction to the form. 
+5. Using [portals Studio](../portal-designer-anatomy.md), create a new child page named **Suggestions**. Set its **Page Template** value to **Multistep Form**, set its **Basic Form** value to **Suggestion**, and add an introduction to the form. 
    > [!Note]
    > The child page can also be created, depending on the user’s preference.
 
@@ -100,13 +100,13 @@ Beyond the simplistic setup that was discussed earlier, Lists support many other
 - Display the records from the list by using a Bing Maps view of the data 
 - Display the records from the list by using a Calendar View of the data.
 
-## Advanced Forms
+## Multistep Forms
 
-Advanced Forms allow users to define basic forms and custom logic to render data entry forms on a portal without the need for custom code. Advanced forms support single-step and multiple-step navigation, in addition to branching logic. Advanced forms are commonly used to produce surveys, such as the out-of-the-box “Case Satisfaction Survey” advanced forms, or to facilitate requests, such as the out-of-the-box “Open New Support Request” advanced form.
+Multistep Forms allow users to define basic forms and custom logic to render data entry forms on a portal without the need for custom code. Multistep forms support single-step and multiple-step navigation, in addition to branching logic. Multistep forms are commonly used to produce surveys, such as the out-of-the-box “Case Satisfaction Survey” multistep forms, or to facilitate requests, such as the out-of-the-box “Open New Support Request” multistep form.
 
-Advanced forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Advanced forms also have additional properties that can be specified to override some of the default behaviors and overcome some table metadata and form designer limitations.
+Multistep forms differ from basic forms in that they provide the ability for an administrator to specify one or more forms that are to be loaded to produce a single form or a wizard-style, multiple-step process with conditional branching logic. Multistep forms also have additional properties that can be specified to override some of the default behaviors and overcome some table metadata and form designer limitations.
 
-The best way to fully grasp how an advanced form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
+The best way to fully grasp how an multistep form is used within a portal is to provide an example of a use case scenario, and then go through the process of constructing the form and all its underlying parts. Earlier in this document, we went through the process of creating a custom basic form for users to submit suggestions and a custom list to expose these suggestions within a view on the portal. Let’s now assume that Contoso wants to survey its users on which of the submitted suggestions they would prefer to be implemented, and other information about their user base at the same time. The steps that the administrator would take to set up such a survey on the portal would be as follows:
 
 1. Create a custom table using [Power Apps](https://make.powerapps.com). More information: [Create a table](../../data-platform/data-platform-create-entity.md) <br>.  For this example, we’ll call the table **Survey**.  
 
@@ -150,10 +150,10 @@ The best way to fully grasp how an advanced form is used within a portal is to p
 
     Finally, drag the **Regarding Contact** field to the first section of the **General** tab to track which user filled out the survey. Save and close the form, and then select **Publish All Customizations**.
 
-17. Open [Portal Management app](configure-portal.md) > **Advanced Forms** and create a new advanced form named **Contoso Ltd. Survey**.  Set the **Authentication Required** field to **Yes** and the **Multiple Records Per User Permitted** field to **No**. Save the form, but keep it open.
+17. Open [Portal Management app](configure-portal.md) > **Multistep Forms** and create a new multistep form named **Contoso Ltd. Survey**.  Set the **Authentication Required** field to **Yes** and the **Multiple Records Per User Permitted** field to **No**. Save the form, but keep it open.
 
-18. On the “Contoso Ltd. Survey” Advanced Form record:
-    1. Open the **Start Step** lookup field, and select **New** to create a new Advanced Form Step.
+18. On the “Contoso Ltd. Survey” Multistep Form record:
+    1. Open the **Start Step** lookup field, and select **New** to create a new Multistep Form Step.
     2. Name the step **Survey Step 1**.
     3. Set the **Target Table Logical Name** to **Survey (new_survey)**.
     4. Set the **Form Name** to **Survey Step 1**.
@@ -161,10 +161,10 @@ The best way to fully grasp how an advanced form is used within a portal is to p
     6. Set the **Portal User Lookup Column** to **Regarding Contact (new_regardingcontact)**.
     7. Save the form, but keep it open.
 
-19. On the “Survey Step 1” Advanced Form Step record:
-    1. Open the **Next Step** lookup field, and select **New** to create a new Advanced Form Step.
+19. On the “Survey Step 1” Multistep Form Step record:
+    1. Open the **Next Step** lookup field, and select **New** to create a new Multistep Form Step.
     2. Name the step **Survey Step 2**.
-    3. Set the Advanced Form to **Contoso Ltd. Survey**.
+    3. Set the Multistep Form to **Contoso Ltd. Survey**.
     4. Set the **Target Table Logical Name** to **Survey (new_survey)**.
     5. Set the **Mode** to **Edit**.
     6. Set the **Form Name** to **Survey Step 2**.
@@ -172,12 +172,12 @@ The best way to fully grasp how an advanced form is used within a portal is to p
     8. Set the **Success Message** to “Thank you for taking the time to complete this survey!
     9. Make sure that the **Next Step** field is blank, and then save the form, but keep it open.
 
-20. On the “Survey Step 2” Advanced Form Step record:
-    1. Select the rightmost chevron in the main navigation and select **Metadata** to open the Advanced Form Metadata Associated View underneath the “Survey Step 2” record.
-    2. Select **Add New Advanced Form Metadata** and set the **Attribute Logical Name** on this new record to **Contoso Ltd. Rating (new_contosoltdrating)** and the **Style** to **Option Set as Horizontal Radio Button List**.
+20. On the “Survey Step 2” Multistep Form Step record:
+    1. Select the rightmost chevron in the main navigation and select **Metadata** to open the Multistep Form Metadata Associated View underneath the “Survey Step 2” record.
+    2. Select **Add New Multistep Form Metadata** and set the **Attribute Logical Name** on this new record to **Contoso Ltd. Rating (new_contosoltdrating)** and the **Style** to **Option Set as Horizontal Radio Button List**.
     3. Save and close all the open forms.
 
-21. In the [Portal Management app](configure-portal.md), go to **Web Pages** and create a new Web Page named **Contoso Ltd. Survey**.  Set the **Website** to **Contoso Ltd.”**, the **Parent Page** to **Home**, the **Partial URL** to **contoso-ltd-survey**, the **PageTemplate** to **Full Page**, the **Publishing State** to **Published**, and the Advanced Form to the “Contoso Ltd. Survey” that was created earlier.  Save the record.
+21. In the [Portal Management app](configure-portal.md), go to **Web Pages** and create a new Web Page named **Contoso Ltd. Survey**.  Set the **Website** to **Contoso Ltd.”**, the **Parent Page** to **Home**, the **Partial URL** to **contoso-ltd-survey**, the **PageTemplate** to **Full Page**, the **Publishing State** to **Published**, and the Multistep Form to the “Contoso Ltd. Survey” that was created earlier.  Save the record.
 
 Granted, these steps are very complex and require several records to work in tandem with one another to achieve the result. However, after the process is complete, users can navigate to the page that you’ve created on the portal and fill out the survey as intended.
 
@@ -185,7 +185,7 @@ Granted, these steps are very complex and require several records to work in tan
 
 ![Second step in the survey form rendered on a portal.](media/survey-step-2-form-rendered.png "Second step in the survey form rendered on a portal.")
 
-Each completed survey that is submitted will become a record within the **Portals** > **Survey** table, and this record will contain the contact who completed the advanced form along with all their responses for tabulation.
+Each completed survey that is submitted will become a record within the **Portals** > **Survey** table, and this record will contain the contact who completed the multistep form along with all their responses for tabulation.
 
 ## Form elements rendering
 
@@ -205,7 +205,7 @@ Finally, it’s worth mentioning that the Basic Form record has an assortment of
 ### See also
 
 [About basic forms](entity-forms.md) <br>
-[Define advanced form steps](web-form-steps.md)
+[Define multistep form steps](web-form-steps.md)
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
