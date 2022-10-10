@@ -38,10 +38,10 @@ The following table summarizes other ways you can retrieve schema definitions, b
 |Message|Description|
 |---------|---------|
 |`RetrieveAllEntities`|Retrieves data for all tables, including all columns, privileges, and relationships if you wish.<br />While you can use the `EntityFilters` parameter to exclude some parts, it is a very expensive operation.<br />See: <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest?text=RetrieveAllEntitiesRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesResponse?text=RetrieveAllEntitiesResponse> classes.|
-|`RetrieveEntity`|You can retrieve definition of any single table including all columns, privileges, and relationships if you wish. While you can use the `EntityFilters` parameter to exclude some data, you can’t select which specific properties you want.<br />See: [Retrieve and update a table](org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
-|`RetrieveAttribute`|You can retrieve the complete definition of any single attribute, but you can’t select which specific properties you want.<br />See: [Retrieve a column](org-service/metadata-attributemetadata.md#retrieve-a-column)|
-|`RetrieveRelationship`|You can retrieve the complete definition of any single relationship, but you can’t select which specific properties you want.<br />See: [Retrieve table row relationships](org-service/metadata-relationshipmetadata.md#retrieve-table-row-relationships)|
-|`RetrieveAllOptionSets`|You can retrieve information about all the global choices defined in the organization, but this doesn’t include choices that are only defined locally within a column.<br />See: [Insert, update, delete, and order global choices](org-service/metadata-global-option-set-options.md)|
+|`RetrieveEntity`|You can retrieve definition of any single table including all columns, privileges, and relationships if you wish. While you can use the `EntityFilters` parameter to exclude some data, you can't select which specific properties you want.<br />See: [Retrieve and update a table](org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
+|`RetrieveAttribute`|You can retrieve the complete definition of any single attribute, but you can't select which specific properties you want.<br />See: [Retrieve a column](org-service/metadata-attributemetadata.md#retrieve-a-column)|
+|`RetrieveRelationship`|You can retrieve the complete definition of any single relationship, but you can't select which specific properties you want.<br />See: [Retrieve table row relationships](org-service/metadata-relationshipmetadata.md#retrieve-table-row-relationships)|
+|`RetrieveAllOptionSets`|You can retrieve information about all the global choices defined in the organization, but this doesn't include choices that are only defined locally within a column.<br />See: [Insert, update, delete, and order global choices](org-service/metadata-global-option-set-options.md)|
 |`RetrieveEntityKey`|You can retrieve the definition for any alternate keys for a specific table. <br />See:[Retrieve and delete alternate keys](define-alternate-keys-entity.md#retrieve-and-delete-alternate-keys)|
 
 
@@ -50,10 +50,10 @@ The following table summarizes other ways you can retrieve schema definitions, b
 |Method|Description|
 |---------|---------|
 |<xref:Microsoft.Dynamics.CRM.RetrieveAllEntities?text=RetrieveAllEntities Function>|Retrieves data for all tables, including all columns, privileges, and relationships if you wish.<br />While you can use the `EntityFilters` parameter to exclude some parts, it is a very expensive operation.|
-|<xref:Microsoft.Dynamics.CRM.RetrieveEntity?text=RetrieveEntity Function>|You can retrieve definition of any single table including all columns, privileges, and relationships if you wish.<br />While you can use the `EntityFilters` parameter to exclude some data, you can’t select which specific properties you want, it is still an expensive operation.|
-|`EntityDefinitions` EntitySet|Enables a query for multiple table definitions using OData syntax to filter and select the properties you want to return. <br />Expand the `Attributes`,`Keys`,`ManyToManyRelationships`,`ManyToOneRelationships`, and `OneToManyRelationships` collection-valued navigation properties to get information about relationships, alternate keys and columns.<br/>Cannot return properties specific to column entity types that are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> without casting. Each query that expands `Attributes` can only cast to a single derived column type, so multiple requests may be required. For example, you can't get the `OptionSet` definitions for both a <xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata> column and a <xref:Microsoft.Dynamics.CRM.PicklistAttributeMetadata> column in the same request.<br/>If you don't need to manage a cache, and you don't need details about derived column entity types in a single request or you don't mind sending multiple requests, this may be all you need. <br/>See [Query table definitions using the Web API](webapi/query-metadata-web-api.md)|
+|<xref:Microsoft.Dynamics.CRM.RetrieveEntity?text=RetrieveEntity Function>|You can retrieve definition of any single table including all columns, privileges, and relationships if you wish.<br />While you can use the `EntityFilters` parameter to exclude some data, you can't select which specific properties you want, it is still an expensive operation.|
+|`EntityDefinitions` EntitySet|Enables a query for multiple table definitions using OData syntax to filter and select the properties you want to return. <br />Expand the `Attributes`,`Keys`,`ManyToManyRelationships`,`ManyToOneRelationships`, and `OneToManyRelationships` collection-valued navigation properties to get information about columns, alternate keys, and relationships.<br/>Cannot return properties specific to column entity types that are derived from <xref:Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType> without casting. Each query that expands `Attributes` can only cast to a single derived column type, so multiple requests may be required. For example, you can't get the `OptionSet` definitions for both a <xref:Microsoft.Dynamics.CRM.BooleanAttributeMetadata> column and a <xref:Microsoft.Dynamics.CRM.PicklistAttributeMetadata> column in the same request.<br/>If you don't need to manage a cache, and you don't need details about derived column entity types in a single request or you don't mind sending multiple requests, this may be all you need. <br/>See [Query table definitions using the Web API](webapi/query-metadata-web-api.md)|
 |`RelationshipDefinitions` EntitySet|Enables a query for multiple relationship definitions using OData syntax to filter and select the properties you want to return. <br />Contains data for both <xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata> and <xref:Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata> EntityTypes. You must cast your query to either of those types to select or filter based on properties they possess, otherwise you are limited to the shared properties from the base <xref:Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType> that those entity types are derived from. If you need to select or filter on specific properties from either derived types, you will need to send two separate requests. More information: [Use the Web API with table definitions](webapi/use-web-api-metadata.md) |
-|`GlobalOptionSetDefinitions` EntitySet|Enables a query for multiple *global* choice definitions using OData syntax to filter and select the properties you want to return.<br /> Doesn’t include choices that are only defined locally within a column.<br />Contains data for both <xref:Microsoft.Dynamics.CRM.BooleanOptionSetMetadata> and <xref:Microsoft.Dynamics.CRM.OptionSetMetadata> entity types. You must cast your query to either of those types to select or filter based on properties they possess, otherwise you are limited to the shared properties from the base <xref:Microsoft.Dynamics.CRM.OptionSetMetadataBase?text=OptionSetMetadataBase EntityType> that those entity types are derived from. For example, `OptionSetMetadataBase` doesn't include the `Options` property. If you need to select or filter on specific properties from either derived types, you will need to send two separate requests. More information: [Use the Web API with table definitions](webapi/use-web-api-metadata.md)|
+|`GlobalOptionSetDefinitions` EntitySet|Enables a query for multiple *global* choice definitions using OData syntax to filter and select the properties you want to return.<br /> Doesn't include choices that are only defined locally within a column.<br />Contains data for both <xref:Microsoft.Dynamics.CRM.BooleanOptionSetMetadata> and <xref:Microsoft.Dynamics.CRM.OptionSetMetadata> entity types. You must cast your query to either of those types to select or filter based on properties they possess, otherwise you are limited to the shared properties from the base <xref:Microsoft.Dynamics.CRM.OptionSetMetadataBase?text=OptionSetMetadataBase EntityType> that those entity types are derived from. For example, `OptionSetMetadataBase` doesn't include the `Options` property. If you need to select or filter on specific properties from either derived types, you will need to send two separate requests. More information: [Use the Web API with table definitions](webapi/use-web-api-metadata.md)|
 
 ---
 
@@ -167,10 +167,7 @@ This is the query as JSON:
 {
    "Properties": {
       "AllProperties": false,
-      "PropertyNames": [
-         "SchemaName",
-         "Attributes"
-      ]
+      "PropertyNames": ["SchemaName","Attributes"]
    },
    "Criteria": {
       "FilterOperator": "Or",
@@ -196,11 +193,10 @@ This is the query as JSON:
    "AttributeQuery": {
       "Properties": {
          "AllProperties": false,
-         "PropertyNames": [
-            "LogicalName"
-         ]
+         "PropertyNames": ["LogicalName"]
       },
       "Criteria": {
+         "FilterOperator": "And",
          "Conditions": [
             {
                "ConditionOperator": "Equals",
@@ -210,14 +206,11 @@ This is the query as JSON:
                   "Value": "True"
                }
             }
-         ],
-         "FilterOperator": "And"
+         ]
       }
    },
    "LabelQuery": {
-      "FilterLanguages": [
-         1033
-      ],
+      "FilterLanguages": [1033],
       "MissingLabelBehavior": 0
    }
 }
@@ -316,6 +309,25 @@ OData-Version: 4.0
 ---
 
 ## Create a query using EntityQueryExpression
+
+EntityQueryExpression has the following properties:
+
+#### [SDK for .NET](#tab/sdk)
+
+
+|Property|Description|
+|---------|---------|
+|Properties|A MetadataPropertiesExpression with a PropertyNames property that is simply a list of property names to return. Or you can set AllProperties to true to return all the properties.|
+|Criteria|A MetadataFilterExpression that has a FilterOperator control how a list of Conditions are evaluated. |
+|AttributeQuery|         |
+|RelationshipQuery|         |
+|KeyQuery|         |
+|LabelQuery|         |
+
+
+#### [Web API](#tab/webapi)
+
+---
 
 ## Limit data returned using MetadataFilterExpression
 
