@@ -176,8 +176,8 @@ A user can only be added to one offline profile at a time. If a user is added to
   
 4.  When you’re done adding people, select **Save**.
   
-  > [!NOTE]
-  > If you made any changes to an Azure Active Directory (Azure AD) group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
+   > [!NOTE]
+   > If you made any changes to an Azure Active Directory (Azure AD) group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
  
 ### Step 2.2: Publish a mobile offline profile
 
@@ -193,8 +193,8 @@ Following these steps to publish the profile:
 
   It's not required to republish a mobile profile after users or team have been added.
 
-    [!div class="mx-imgBorder"]
-    ![Publish offline profile.](media/mol_publish.png "Publish offline profile")
+  > [!div class="mx-imgBorder"]
+  >![Publish offline profile.](media/mol_publish.png "Publish offline profile")
   
       > [!TIP]
       > **Solution export and import**  
