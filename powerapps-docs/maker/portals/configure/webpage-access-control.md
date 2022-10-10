@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2022
+ms.date: 10/10/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -23,7 +23,7 @@ contributors:
 You use page permissions to control user access to portal webpages. For example, you can allow pages to be available anonymously for public access, or restrict access to users who have specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md)&mdash;such as downloadable documents, CSS files, or JS files&mdash;and you can also manage the inheritance of page permissions from the page to such child web files.
 
 > [!NOTE] 
-> You can also manage page permissions in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+> You can also manage page permissions in Power Pages. More information: [Page permissions in Power Pages](/power-pages/security/page-security)
 
 You can manage page permissions in two ways:
 

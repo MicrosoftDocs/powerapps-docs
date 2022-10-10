@@ -5,13 +5,14 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/29/2022
+ms.date: 10/06/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
     - gitanjalisingh33msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add the Azure Storage web resource to a form
@@ -20,7 +21,7 @@ contributors:
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 > [!NOTE]
-> The steps in this topic describe adding a component to view and add file attachments to Azure for a model-driven app. The control is not usable on a basic or advanced form component on a portal webpage. It is recommended to use a different Dataverse form for creating basic and advanced forms for the portal. See [Enable Azure storage](enable-azure-storage.md#configure-basic-or-advanced-forms) for more information on configuring portal forms to add and view attachments stored in Azure.
+> The steps in this topic describe adding a component to view and add file attachments to Azure for a model-driven app. The control is not usable on a basic or multistep form component on a portal webpage. It is recommended to use a different Dataverse form for creating basic and multistep forms for the portal. See [Enable Azure storage](enable-azure-storage.md#configure-basic-or-multistep-forms) for more information on configuring portal forms to add and view attachments stored in Azure.
 
 Attachments uploaded to Azure Storage (instead of directly to Microsoft Dataverse) can be managed by using notes in Dataverse.
 

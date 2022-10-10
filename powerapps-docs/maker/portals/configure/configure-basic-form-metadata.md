@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/21/2022
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,6 +13,7 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Configure basic form metadata for portals
@@ -126,7 +127,7 @@ The following properties specify the location and content of custom description 
 
 ## Basic form metadata type = Notes
 
-See [Configure notes as attachments for basic and advanced forms](../configure-notes.md)
+See [Configure notes as attachments for basic and multistep forms](../configure-notes.md)
 
 ## Basic form metadata type = Section
 

@@ -5,13 +5,14 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - GitanjaliSingh33msft
+    - ProfessorKendrick
 ---
 
 # Configure security using table permissions
@@ -64,7 +65,7 @@ This access type means that the list will only show the records of the selected 
 
 ### Self access type
 
-Self access type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or advanced forms to make changes to their own Contact record linked with their profile. The default profile page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or advanced forms that target their User Contact record. For example, see this sample scenario that allows staff of a car dealership to update their [contact details on their profile page](entity-permissions-studio-walkthrough.md#change-profile-details).
+Self access type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or multistep forms to make changes to their own Contact record linked with their profile. The default profile page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or multistep forms that target their User Contact record. For example, see this sample scenario that allows staff of a car dealership to update their [contact details on their profile page](entity-permissions-studio-walkthrough.md#change-profile-details).
 
 ### Parental access type
 

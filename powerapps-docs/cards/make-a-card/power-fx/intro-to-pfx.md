@@ -1,8 +1,8 @@
 ---
-title: Add business logic to cards with Power Fx (Preview)
-description: Learn about Power FX and how it's used in cards to add business logic.
+title: Power Fx and cards overview (preview)
+description: Learn about Power FX and how it's used to add business logic in cards for Microsoft Power Apps.
 ms.date: 09/20/2022
-ms.topic: article
+ms.topic: overview
 author: iaanw
 ms.author: iawilt
 manager: shellyha
@@ -11,30 +11,28 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add business logic with Power Fx (preview)
+# Power Fx and cards overview (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
-[Power Fx](/power-platform/power-fx/overview) is a low-code programming language available across the Power Platform, including cards. Cards can calculate values, perform other tasks, and respond to user input using [formulas](/power-platform/power-fx/formula-reference) expressed with Power Fx.
-
-For example, a formula might determine what happens when a user selects a button or enters text into a text input. Formulas can also be used to update variables and data sources. Expressions can be combined to create complex formulas that can handle advanced business logic.
+[Power Fx](/power-platform/power-fx/overview) is a low-code programming language available across the Power Platform, including in Power Apps cards. Cards can calculate values, perform tasks, and respond to user input using formulas expressed in Power Fx. Power Fx expressions can also update variables and data sources. Expressions can be combined to create complex formulas that can handle advanced business logic.
 
 ## Power Fx documentation
 
-The [Power Fx documentation](/power-platform/power-fx/overview) is the main source for information about Power Fx. Makers and developers working with cards will find the following articles helpful:
+The [Power Fx documentation](/power-platform/power-fx/overview) is the main source of information about Power Fx. When you're working with cards, you'll find the following articles especially helpful:
 
 - [Expression grammar](/power-platform/power-fx/expression-grammar)
 - [Operators](/power-platform/power-fx/operators)
 - [Variables](/power-platform/power-fx/variables)
 - [Formula reference](/power-platform/power-fx/formula-reference)
 
-## Known Power Fx limitations with cards
+## Known limitations of using Power Fx in cards
 
-There are some known limitations with cards and Power Fx. These include:
+The following Power Fx formulas don't work in cards or work with limitations:
 
-- All device sensor formulas don't work (**Acceleration**, **App**, **Compass**, **Connection**, and **Location**).
+- Device sensor formulas (**Acceleration**, **App**, **Compass**, **Connection**, and **Location**) don't work.
 - **SaveData**, **LoadData**, and **ClearData** don't work.
-- Form-related formulas don't work (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**).
-- **Collect**, **Patch**, and **Remove** only work for variables and Dataverse tables.
+- Form-related formulas (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**) don't work.
 - **Update** and **UpdateIf** don't work.
-- **Set** requires the type of the variable to match what you are trying to set it to and requires the variable to be already created using the variable creation.
+- **Collect**, **Patch**, and **Remove** work with variables and Dataverse tables only.
+- **Set** requires the variable to exist and the variable type to match what you're trying to set it to.

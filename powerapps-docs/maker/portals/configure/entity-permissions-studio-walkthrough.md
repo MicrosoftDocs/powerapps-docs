@@ -5,13 +5,14 @@ author: ckwan-ms
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2021
+ms.date: 09/01/2022
 ms.subservice: portals
 ms.author: ckwan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - ckwan-ms
+    - ProfessorKendrick
 ---
 
 # Tutorial: Configure table permissions using portals Studio
@@ -28,7 +29,7 @@ The goal of this scenario is to show you how to use portals Studio to configure 
 Before you begin with this scenario, understand how to use Power Apps portals Studio to configure table permissions. You'll also need a portal and access to the Dataverse environment.
 
 > [!NOTE]
-> This tutorial does not include configuration of webpages, basic or advanced forms, or Dataverse tables. The focus of this tutorial is the configuration of table permissions using Studio. To create pages and customize them, see [Build portals using portals Studio](../portal-designer-anatomy.md). To create and configure tables in Dataverse, see [Tables in Dataverse](../../data-platform/entity-overview.md).
+> This tutorial does not include configuration of webpages, basic or multistep forms, or Dataverse tables. The focus of this tutorial is the configuration of table permissions using Studio. To create pages and customize them, see [Build portals using portals Studio](../portal-designer-anatomy.md). To create and configure tables in Dataverse, see [Tables in Dataverse](../../data-platform/entity-overview.md).
 
 ## Scenario
 

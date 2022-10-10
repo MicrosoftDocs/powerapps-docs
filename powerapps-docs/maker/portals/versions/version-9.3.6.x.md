@@ -33,8 +33,8 @@ Portal host version 9.3.6.5 resolves the following issues:
 - Calendar Control - "Specific Timezone" option in the "Time Zone Display Mode" dropdown isn't honored, and the time is displayed according to default browser timezone of the portal user. After this release, this setting will be honored.
 - Custom plugin error doesn't show when the error occurs on a referenced table. For example, when uploading a file to annotation table on a basic form.
 - Code components - Sometimes when the value of a control is changed, updated value isn't shown on the form.
-- Advanced form - Configuration to set a target for **New** button in lookup dialog points to active advanced form instead of basic form; and doesn't work when set. This change will also require the portal package/solution version to be upgraded to 9.2.2103 or later.
-- Advanced form - Added check for use of only unique advanced form steps in an Advanced Form.
+- Multistep form - Configuration to set a target for **New** button in lookup dialog points to active multistep form instead of basic form; and doesn't work when set. This change will also require the portal package/solution version to be upgraded to 9.2.2103 or later.
+- Multistep Form - Added check for use of only unique multistep form steps in a multistep form.
 - Power BI integration - Azure AD guest users aren't able to access embedded Power BI components.
 - Captcha control - No alternative text is available for Captcha image, leading to screen readers being unable to inform users about using a shortcut for playing audio. After this release, the Captcha image will have an alternative text that will inform users to use a keyboard shortcut to play the audio describing the image.
 - Accessibility - Sorting dropdown on search page isn't visible at 400% zoom.
@@ -52,9 +52,9 @@ Portal host version 9.3.6.5 resolves the following issues:
 - Accessibility - "Previous" (<) and "Next" (>) controls under calendar button in Date/Time calendar control are set as group control.
 - Accessibility - No error message is provided to JAWS/NVDA when the maximum number of characters has been reached on a text field.
 - Accessibility - Screen readers don't announce search results on lookup modal dialog.
-- Accessibility - Keyboard focus isn't landed on the error message link after accessing the Next button in an advanced form without selecting the mandatory field rendered as a checkbox.
+- Accessibility - Keyboard focus isn't landed on the error message link after accessing the Next button in an multistep form without selecting the mandatory field rendered as a checkbox.
 - Accessibility - Screen reader/NVDA isn't narrating the displayed error message information completely upon invoking the Submit button on the page while navigating using down arrow mode.
-- Accessibility - Error is displayed visually, but isn't automatically announced by the screen reader when pressing Next in an advanced form without entering any text.
+- Accessibility - Error is displayed visually, but isn't automatically announced by the screen reader when pressing Next in a multistep form without entering any text.
 
 This release also contains performance updates, security fixes, and improves overall reliability of Power Apps portals.
 

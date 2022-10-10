@@ -36,7 +36,7 @@ For more information about creating a portal with starter portal package, go to 
 The package update includes the following enhancements to extend the capabilities of portals:
 
 - App level notification on Portal Management app for site visibility.
-- Renaming **advanced form** to **multistep form**.
+- Renaming **Multistep Form** to **multistep form**.
 - Data model change on **List** and **Basic Form metadata (subgrid)** to enable dataset-based language.
 
 ### See also

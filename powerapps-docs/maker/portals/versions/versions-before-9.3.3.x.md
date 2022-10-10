@@ -54,7 +54,7 @@ Dynamics 365 Portals version 9.0.10 for customer engagement apps brought the fol
 
 - **Restrict portal access by IP address**: As a portal administrator, you can now define a list of IP addresses that are allowed to access your portal. When a request to the portal is generated from any user, their IP address is evaluated against the allow list. If the IP address is not on the list, the portal displays a webpage with an HTTP 403 status code. More information: [Restrict portal access by IP address](../admin/ip-address-restrict.md)
 
-- **Manage SharePoint documents**: Dynamics 365 Portals now supports uploading and displaying documents to and from SharePoint directly on a basic form or advanced form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create folders to organize their documents. More information: [Manage SharePoint documents](../manage-sharepoint-documents.md)
+- **Manage SharePoint documents**: Dynamics 365 Portals now supports uploading and displaying documents to and from SharePoint directly on a basic form or multistep form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create folders to organize their documents. More information: [Manage SharePoint documents](../manage-sharepoint-documents.md)
 
 - **New portal content editor (preview)**: In this preview, a new and simplified portal editor is available for customizers of Dynamics 365 Portals to reduce the learning curve on customization and increase their productivity.
 
