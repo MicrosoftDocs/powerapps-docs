@@ -1,6 +1,6 @@
 ---
 title: Power Fx and cards overview (Preview)
-description: Learn about Power FX and how it's used to add business logic in Microsoft Power Apps cards.
+description: Learn about Power FX and how it's used to add business logic in cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: overview
 author: iaanw
@@ -34,5 +34,5 @@ The following Power Fx formulas don't work in cards or work with limitations:
 - **SaveData**, **LoadData**, and **ClearData** don't work.
 - Form-related formulas (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**) don't work.
 - **Update** and **UpdateIf** don't work.
-- **Collect**, **Patch**, and **Remove** work in variables and Dataverse tables only.
+- **Collect**, **Patch**, and **Remove** work with variables and Dataverse tables only.
 - **Set** requires the variable to exist and the variable type to match what you're trying to set it to.

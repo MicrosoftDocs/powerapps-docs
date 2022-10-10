@@ -1,6 +1,6 @@
 ---
 title: Share a card in Teams (Preview)
-description: Learn how to share a Microsoft Power Apps card with your teammates in Teams."
+description: Learn how to share a card with your teammates in Teams."
 keywords: "Card Designer, Power Apps, cards, share a card, Teams, send a card"
 ms.date: 09/20/2022
 ms.topic: article

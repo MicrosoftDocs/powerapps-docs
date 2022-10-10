@@ -1,6 +1,6 @@
 ---
 title: Add screens to a card (Preview)
-description: Learn how to add screens to your Microsoft Power Apps cards.
+description: Learn how to add screens to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -24,7 +24,7 @@ Cards can have multiple screens, each presenting a different interface for a spe
 
 ## Tree view
 
-View the screens in your card and the elements you've added to them using the card designer tree view.
+View the screens in your card and the controls you've added to them using the card designer tree view.
 
    :::image type="content" source="../../media/make-a-card/cards-tree-view.png" alt-text="Screenshot of the tree view in the card designer, showing a card named HelloWorldCard with two screens.":::
 
@@ -43,12 +43,14 @@ View the screens in your card and the elements you've added to them using the ca
 1. In the button properties pane, set **Type** to **Show Screen**.
 1. Set **Screen** to the screen you want the button to show, and then set **Title** to the label to display on the button.
 
+This will show a screen directly underneath the existing screen with both being interactive.
+
    :::image type="content" source="../../media/make-a-card/show-card-properties.png" alt-text="Screenshot of a Show Screen button properties pane in the card designer.":::
 
 ## Use a Power Fx expression to open a screen
 
-The Power Fx [Back](/power-platform/power-fx/reference/function-navigate#back) and [Navigate](/power-platform/power-fx/reference/function-navigate#navigate) functions also switch between screens.
+The Power Fx [Back](/power-platform/power-fx/reference/function-navigate#back) and [Navigate](/power-platform/power-fx/reference/function-navigate#navigate) functions switch between screens.
 
-The Show Screen button opens a screen and nothing more. The Power Fx Back and Navigate functions can be used outside of buttons and are appropriate for more complex screen-switching scenarios.
+The Show Screen button opens a screen underneath the existing screen, keeping both screens visible, while the Power Fx Back and Navigate functions change the screen that is visible to the user. The Back and Navigate functions can also be used outside of buttons and are appropriate for more complex screen-switching scenarios.
 
 For more information about Back and Navigate, see the [Power Fx reference documentation syntax](/power-platform/power-fx/reference/function-navigate#syntax), [examples](/power-platform/power-fx/reference/function-navigate#examples), and [step-by-step instructions](/power-platform/power-fx/reference/function-navigate#step-by-step).

@@ -1,6 +1,6 @@
 ---
 title: Add controls to a card (Preview)
-description: Learn about controls you can add to your Microsoft Power Apps cards.
+description: Learn about controls you can add to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -19,9 +19,9 @@ Controls are the building blocks of your card's interface and functionality. The
 
 There are three categories of controls that you can add to your card:
 
-- **Display**: Controls that display elements, including text, images, and other media
+- **Display**: Controls that display information, including text, images, and other media
 - **Input**: Controls that ask for information from users, such as text, numbers, and dates, or that allow the user to interact with the card, such as buttons and lists
-- **Layout**: Controls that modify the layout and appearance of card elements
+- **Layout**: Controls that modify the layout and appearance of controls
 
 ## Prerequisites
 
@@ -68,9 +68,9 @@ The following tables describe the card controls.
 
 | Item | Description |
 | --- | --- |
-| Container | A standard container, useable with any element<br>A container takes on the properties of the first element placed inside it. Only elements of the same type can be added to a container. |
+| Container | A standard container, useable with almost any control<br>A container takes on the properties of the first control placed inside it. Only controls of the same type can be added to a container. |
 | Button set | A container for a group of buttons |
 | Image set | A container for a group of images |
 | Fact set | A table of property-value pairs |
 | Column set | A container for columns |
-| Column  | Add to a column set to create dividers on the page<br>Empty columns aren't visible. You'll need to put another element (like a text input control) into a column to make it visible. |
+| Column  | Add to a column set to create dividers on the page<br>Empty columns aren't visible. You'll need to put another control (like a text input control) into a column to make it visible. |

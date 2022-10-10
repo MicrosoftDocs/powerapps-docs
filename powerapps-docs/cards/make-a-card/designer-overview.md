@@ -1,6 +1,6 @@
 ---
 title: Card designer overview (Preview)
-description: Learn about the Microsoft Power Apps card designer.
+description: Learn about the card designer.
 ms.date: 09/20/2022
 ms.topic: overview
 author: iaanw
@@ -44,21 +44,17 @@ Legend:
 Use the main menu to switch between the tools available in the card designer:
 
 - **Tree View**: View card elements as a hierarchy and view the relationships between elements
-- **Insert**: Add card elements
+- **Insert**: Add controls
 - **Data**: Add connectors to incorporate data from external sources
 - **Variables**: Store and reuse data
 
 ### Tool pane
 
-Use the tool pane to add elements to your card.
-
-- **Display**: Add text and media
-- **Input**: Add input controls to collect information from users
-- **Layout**: Add formatting and structural controls
+Use the tool pane to add and view card elements like controls, connectors, and variables to your card.
 
 ### Card canvas and card
 
-The card canvas is where you build your card by dragging connectors, variables, and elements from the tool pane.
+The card canvas is where you build your card by adding connectors, variables, and controls from the tool pane.
 
 > [!NOTE]
 > You can't resize a card in the card canvas. Cards automatically fit themselves to the location they're placed in.
@@ -84,10 +80,10 @@ You can also enter Power Fx expressions in some properties, creating low-code so
 
 ### Formula bar and Power Fx editor
 
-Use the formula bar to enter a Power Fx expression as a property of the selected card element; for example, to calculate a value when a button is clicked. The formula bar even assists you as you're writing an expression. [Learn more about Power FX](../make-a-card/power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
+Use the formula bar to enter a Power Fx expression as a property of the selected control; for example, to calculate a value when a button is clicked. The formula bar even assists you as you're writing an expression. [Learn more about Power FX](../make-a-card/power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
 
 > [!NOTE]
-> Some expressions that are supported in Power Apps aren't available for cards during preview.
+> Some expressions that are supported in Power Apps aren't available for cards. [See details](/make-a-card/power-fx/intro-to-pfx.md).
 
 ### Play button
 

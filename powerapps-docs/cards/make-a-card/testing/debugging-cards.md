@@ -1,6 +1,6 @@
 ---
 title: Test and debug cards (Preview)
-description: Learn how to test and debug Microsoft Power Apps cards.
+description: Learn how to test and debug cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -47,7 +47,7 @@ Legend:
 
 The example used in this section is from the [simple card tutorial](../../tutorials/hello-world-card.md).
 
-Test your card by interacting with all the elements in it. In the example below, the **Say Hello** button stores the user's text input in a variable, and then uses the value of the variable in the card title. If you're testing this card, you'll enter your name and select **Say Hello**, and then make sure the card title changes to reflect your input.
+Test your card by interacting with all the controls in it. In the example below, the **Say Hello** button stores the user's text input in a variable, and then uses the value of the variable in the card title. If you're testing this card, you'll enter your name and select **Say Hello**, and then make sure the card title changes to reflect your input.
 
 Before you interact with the card, its title is **Hello No Name**:
 

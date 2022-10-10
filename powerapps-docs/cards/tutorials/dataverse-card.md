@@ -1,6 +1,6 @@
 ---
 title: Create a card with data from Dataverse (Preview)
-description: Learn how to use Dataverse connectors in a Microsoft Power Apps card.
+description: Learn how to use Dataverse connectors in a card.
 keywords: "Card Designer, Power Apps, cards, tutorial, Dataverse, connectors"
 ms.date: 09/20/2022
 ms.topic: article
@@ -99,5 +99,5 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 You should always save your changes before you play a card. Select **Save**, and then select **Play**.
 
-Test all the elements in both screens in your card. The first screen should list all the accounts and allow you to type the name of an account to open a screen with more details. The second screen should show the account name and number and allow you to change the account name.
+Test all the controls in both screens in your card. The first screen should list all the accounts and allow you to type the name of an account to open a screen with more details. The second screen should show the account name and number and allow you to change the account name.
 <!--I kept getting an error when I tried to test my card. Please confirm in your own testing that the screens do in fact behave as described above.-->

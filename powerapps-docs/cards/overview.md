@@ -1,6 +1,6 @@
 ---
 title: Power Apps cards overview (Preview)
-description: Learn about Microsoft Power Apps cards.
+description: Learn about cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: overview
 author: iaanw
@@ -37,7 +37,7 @@ There are two key components of a card:
 
 ### Drag and drop UI elements in the card designer
 
-With the drag-and-drop card designer, add buttons, tables, labels, images, check boxes, text boxes, and many other elements to your cards, all without writing a single line of code.
+With the drag-and-drop card designer, add buttons, tables, labels, images, check boxes, text boxes, and many other controls to your cards, all without writing a single line of code.
 
 :::image type="content" source="media/overview/cards-designer-get-started.png" alt-text="Screenshot of the card designer in Power Apps, with two buttons added to a card.":::
 

@@ -1,6 +1,6 @@
 ---
 title: Create a simple card (Preview)
-description: Learn about the basic elements of a Microsoft Power Apps card by creating a simple "Hello World" card.
+description: Learn about the basic elements of a card by creating a simple "Hello World" card.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -40,7 +40,7 @@ In this tutorial, you'll create a card that asks the user to enter their name, a
 1. In the left pane, select **Insert**.
 1. In the tool pane, select **Input** to expand the category, and then select **Text input**.
 
-   :::image type="content" source="../media/hello-world-card/text-input-location.png" alt-text="Screenshot of the card designer tool pane with input elements shown and the Text input control highlighted.":::
+   :::image type="content" source="../media/hello-world-card/text-input-location.png" alt-text="Screenshot of the card designer tool pane with input controls shown and the Text input control highlighted.":::
 
 1. In the text input properties pane, set **Label** to *What's your name?*.
 

@@ -1,6 +1,6 @@
 ---
 title: Create a shopping list card (Preview)
-description: Learn about the basic elements of a Microsoft Power Apps card by creating a shopping list card.
+description: Learn about the basic elements of a card by creating a shopping list card.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -77,7 +77,7 @@ The list you created is empty, so in the final step, you'll give the user the ab
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/added-input-text-names.png" alt-text="Screenshot of variable names entered in the Name and Label properties of an input text box.":::
 
-   The **Name** property lets you refer to the control in a Power Fx expression. It has to be one word, with no spaces or special characters. The **Label** property is displayed in the card. The name and label of a card element don't have to be similar, as they are here, but using similar names makes it easier to keep track of card elements.
+   The **Name** property lets you refer to the control in a Power Fx expression. It has to be one word, with no spaces or special characters. The **Label** property is displayed in the card. The name and label of a control don't have to be similar, as they are here, but using similar names makes it easier to keep track of controls.
 
 ### Add a Power Fx button
 

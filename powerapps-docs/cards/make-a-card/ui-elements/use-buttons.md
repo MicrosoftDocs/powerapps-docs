@@ -1,6 +1,6 @@
 ---
 title: Add buttons to a card (Preview)
-description: Learn how to add interactive buttons to your Microsoft Power Apps cards.
+description: Learn how to add interactive buttons to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
