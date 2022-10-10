@@ -144,7 +144,7 @@ Manually connect to the table in a Power BI report:
 2. Select **New Source** > **Blank Query**.
 3. **Name** your query.
 4. Select **Advanced Editor** on the **Home** tab of Power BI Desktop.
-5. Replace the query text with below query text. Then replace *myenvironment.crmX* with your environment domain value, such as *contoso.crm4*.
+5. Replace the query text with below query text. 
 
    ```
    let
@@ -154,10 +154,11 @@ Manually connect to the table in a Power BI report:
    in
        #"selectedcolumns"
    ```
-6. Select **Done**.
-7. Select **Choose columns** to add any additional needed columns.
-8. Select **Close and Apply** to save model changes.
-9. When prompted, select **Direct Query** for the new query.
+6. Replace *myenvironment.crmX* in the query text with your environment domain value, such as *contoso.crm4*.
+7. Select **Done**.
+8. Select **Choose columns** to add any additional needed columns.
+9. Select **Close and Apply** to save model changes.
+10. When prompted, select **Direct Query** for the new query.
 
 The query can now be used in the report.
 
