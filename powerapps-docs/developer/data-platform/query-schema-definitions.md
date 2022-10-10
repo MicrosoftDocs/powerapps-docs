@@ -310,7 +310,7 @@ OData-Version: 4.0
 
 ## Create a query using EntityQueryExpression
 
-Use `EntityQueryExpression` to set the `RetrieveMetadataChanges` `Query` property. 
+Use `EntityQueryExpression` to set the `RetrieveMetadataChanges` `Query` property.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -321,14 +321,14 @@ EntityQueryExpression has the following properties:
 |`Properties`|MetadataPropertiesExpression|Set the `PropertyNames` to a list of property names to return. Or you can set `AllProperties` to true to return all the properties.|
 |`Criteria`|MetadataFilterExpression|See [Limit data returned using MetadataFilterExpression](#limit-data-returned-using-metadatafilterexpression)|
 |`AttributeQuery`|AttributeQueryExpression|Follows the same pattern as `EntityQueryExpression`. `AttributeQueryExpression` also has `Properties`, and `Criteria` to control which column definitions to return.<br /><br />**Note**: When using `AttributeQuery`, `Attributes` must be one of the `Properties` requested for the `EntityQueryExpression`.|
-|`RelationshipQuery`|RelationshipQueryExpression|Follows the same pattern as `EntityQueryExpression`. `RelationshipQueryExpression` also has `Properties`, and `Criteria` to control which relationship definitions to return.<br/><br />**Note**: When using `RelationshipQuery`, OneTo`ManyRelationships`, `ManyToOneRelationships`, or `ManyToManyRelationships` must be one of the `Properties` requested for the `EntityQueryExpression`.
-|
-|`KeyQuery`|EntityKeyQueryExpression|Follows the same pattern as `EntityQueryExpression`. `EntityKeyQueryExpression` also has `Properties`, and `Criteria` to control which alternate key definitions to return.<br /><br />**Note**: When using `KeyQuery`, `Keys` must be one of the `Properties` requested for the `EntityQueryExpression`.
-|
+|`RelationshipQuery`|RelationshipQueryExpression|Follows the same pattern as `EntityQueryExpression`. `RelationshipQueryExpression` also has `Properties`, and `Criteria` to control which relationship definitions to return.<br/><br />**Note**: When using `RelationshipQuery`, `OneToManyRelationships`, `ManyToOneRelationships`, or `ManyToManyRelationships` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`KeyQuery`|EntityKeyQueryExpression|Follows the same pattern as `EntityQueryExpression`. `EntityKeyQueryExpression` also has `Properties`, and `Criteria` to control which alternate key definitions to return.<br /><br />**Note**: When using `KeyQuery`, `Keys` must be one of the `Properties` requested for the `EntityQueryExpression`.|
 |`LabelQuery`|LabelQueryExpression|Use the`FilterLanguages` property to limit the languages that are returned. If an organization has many languages provisioned, you will receive labels for all languages which could add considerably to the data returned. If your app is for an individual user, you should include the user's preferred [LCID language code](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a). See [Retrieve the user's preferred language code](#retrieve-the-users-preferred-language-code)|
 
 
 #### [Web API](#tab/webapi)
+
+
 
 ---
 
@@ -339,7 +339,9 @@ EntityQueryExpression has the following properties:
 
 #### [SDK for .NET](#tab/sdk)
 
-MetadataFilterExpression has the following properties:
+Use MetadataFilterExpression for the `Criteria` property for EntityQueryExpression, AttributeQueryExpression, RelationshipQueryExpression, and EntityKeyQueryExpression.
+
+`MetadataFilterExpression` has the following properties:
 
 |Property|Type|Description|
 |---------|---------|---------|
@@ -349,17 +351,21 @@ MetadataFilterExpression has the following properties:
 
 #### [Web API](#tab/webapi)
 
+
+
 ---
 
 ## Set conditions using MetadataConditionExpression
 
 #### [SDK for .NET](#tab/sdk)
 
-MetadataConditionExpression has the following properties:
+Use MetadataConditionExpression for the MetadataFilterExpression `Conditions` property.
+
+`MetadataConditionExpression` has the following properties:
 
 |Property|Type|Description|
 |---------|---------|---------|
-|`ConditionOperator`|MetadataConditionOperator| Describes the type of comparison to apply to the `Value` property|
+|`ConditionOperator`|MetadataConditionOperator| Describes the type of comparison to apply to the `Value` property.|
 |`PropertyName`|string|The name of the property to evaluate|
 |`Value`|object|The value (or values) to compare.|
 
@@ -385,14 +391,122 @@ The `MetadataConditionOperator` Enum has the following members:
 
 ## Process data returned
 
-## Retrieve the user's preferred language code
-
 #### [SDK for .NET](#tab/sdk)
+
+The RetrieveMetadataChangesResponse has the following properties:
+
+|Property|Type|Description|
+|---------|---------|---------|
+|`EntityMetadata`|EntityMetadataCollection|The table definitions requested. When simply querying data, or when initializing a cache, this can be treated the same as the response from RetrieveAllEntities.|
+|`ServerVersionStamp`|string|A timestamp identifier for the metadata retrieved. When you manage a cache of schema definitions, use this value as the `ClientVersionStamp` property in subsequent requests so that only the changes since the previous request are returned.|
+|`DeletedMetadata`|DeletedMetadataCollection|Data for the items deleted since the previous request. This only contains data when RetrieveMetadataChanges is sent with the ClientVersionStamp and DeletedMetadataFilters parameters. For more information see [Cache Schema data](cache-schema-data.md)|
 
 
 #### [Web API](#tab/webapi)
 
 
+
+---
+
+
+## Retrieve the user's preferred language code
+
+#### [SDK for .NET](#tab/sdk)
+
+You can retrieve the user's preferred language from the [UserSettings.UILanguageId](reference/entities/usersettings.md#BKMK_UILanguageId) column.
+
+```csharp
+protected static int? RetrieveUserUILanguageCode(IOrganizationService service)
+{
+   // To get the current user's systemuserid
+   var whoIAm = (WhoAmIResponse)service.Execute(new WhoAmIRequest());
+
+   var query = new QueryExpression("usersettings")
+   {
+         ColumnSet = new ColumnSet("uilanguageid", "systemuserid"),
+         Criteria = new FilterExpression
+         {
+            Conditions = {
+                  {
+                     new ConditionExpression(
+                        attributeName:"systemuserid",
+                        conditionOperator:ConditionOperator.Equal,
+                        value: whoIAm.UserId)
+                  }
+            }
+         },
+         TopCount = 1
+   };
+
+   EntityCollection userSettings = service.RetrieveMultiple(query: query);
+   if (userSettings.Entities.Count > 0)
+   {
+         return (int)userSettings.Entities[0]["uilanguageid"];
+   }
+   return null;
+}
+```
+
+#### [Web API](#tab/webapi)
+
+First get the `UserId` using the <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function>.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/WhoAmI HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",
+  "BusinessUnitId": "38e0dbe4-131b-e111-ba3e-78e7d1620f5e",
+  "UserId": "4026be43-6b69-e111-8f65-78e7d1620f5e",
+  "OrganizationId": "883278f5-03af-45eb-a0bc-3fea67caa544"
+}
+```
+
+Then use the `UserId` value to filter the records from the <xref:Microsoft.Dynamics.CRM.usersettings?text=usersettings EntityType> to return the `uilanguageid` value.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/usersettingscollection?$select=uilanguageid&$filter=systemuserid eq 4026be43-6b69-e111-8f65-78e7d1620f5e&$top=1&$count=true HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#usersettingscollection(uilanguageid)",
+  "@odata.count": 1,
+  "value": [
+    {
+      "@odata.etag": "W/\"47652882\"",
+      "uilanguageid": 1033,
+      "systemuserid": "4026be43-6b69-e111-8f65-78e7d1620f5e"
+    }
+  ]
+}
+```
 
 ---
 
