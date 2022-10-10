@@ -419,6 +419,8 @@
           href: isv-install-failure-analytics.md
         - name: Auto App Updates (Preview)
           href: isv-app-management-autoupdate.md
+        - name: Embed Pay-as-you-go for ISVs (Preview)
+          href: isv-embed-analytics.md
 - name: Create applications
   href: connect-dataverse.md
   items:
