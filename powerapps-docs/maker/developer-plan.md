@@ -5,7 +5,7 @@ author: marcelbf
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 08/01/2022
+ms.date: 10/10/2022
 ms.author: marcelbf
 ms.reviewer: tapanm
 contributors:
@@ -134,7 +134,7 @@ see [Solutions](data-platform/solutions-overview.md).
 
 ### Will my Power Apps Developer Plan subscription ever expire?
 
-You can continue using your Power Apps Developer Plan for free as long as there's active usage and no abuse of the plan (for example, apps aren't used for production purposes and the capacity limits aren't exceeded).
+You can continue using your Power Apps Developer Plan for free as long as there's active usage and no abuse of the plan (for example, apps aren't used for production purposes and the capacity limits aren't exceeded). Environments created using Power Apps Developer Plan that are inactive for the last 90 days will be deleted after notifying the environment owners.
 
 ### Can I get or create multiple developer environments?
 
@@ -147,7 +147,7 @@ Both Power Apps Plan Trial and Power Apps Developer Plan are free, but are creat
 - **Power Apps Plan Trial** gives you the Power Apps per user plan for 30 days. This duration is meant for trying out production Power Apps applications. Once your trial
 expires, you can purchase a plan. If you're already using Power Apps with Office 365 or Dynamics 365, this is the right plan to test the premium functionalities of Power Apps, which are available with paid Power Apps plans.
 
-- **Power Apps Developer Plan** gives you perpetual access to the same Power Apps functionality available in paid plans (aligned with Trials), including Dataverse and Power Automate, but in a developer environment meant for development and test use only. A paid plan is required to deploy or run solutions in a production environment for production use.
+- **Power Apps Developer Plan** gives you access to the same Power Apps functionality available in paid plans (aligned with Trials), including Dataverse and Power Automate, but in a developer environment meant for development and test use only. A paid plan is required to deploy or run solutions in a production environment for production use.
 
 ### Can I sign up with my personal account?
 
