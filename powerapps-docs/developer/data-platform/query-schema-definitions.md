@@ -303,35 +303,98 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> The response above has been edited to remove properties with null values. All properties are returned with the EntityMetadata. Properties other than the `MetadataId` that are not requested will have null values. These were removed from the example response above for brevity.
+> The response above has been edited to remove properties with null values. All properties are returned with the `EntityMetadata`. Properties other than the `MetadataId` that are not requested will have null values. These were removed from the example response above for brevity. The actual response payload is much larger.
 
 
 ---
 
 ## Create a query using EntityQueryExpression
 
-EntityQueryExpression has the following properties:
+Use `EntityQueryExpression` to set the `RetrieveMetadataChanges` `Query` property. 
 
 #### [SDK for .NET](#tab/sdk)
 
+EntityQueryExpression has the following properties:
 
-|Property|Description|
-|---------|---------|
-|Properties|A MetadataPropertiesExpression with a PropertyNames property that is simply a list of property names to return. Or you can set AllProperties to true to return all the properties.|
-|Criteria|A MetadataFilterExpression that has a FilterOperator control how a list of Conditions are evaluated. |
-|AttributeQuery|         |
-|RelationshipQuery|         |
-|KeyQuery|         |
-|LabelQuery|         |
+|Property|Type|Description|
+|---------|---------|---------|
+|`Properties`|MetadataPropertiesExpression|Set the `PropertyNames` to a list of property names to return. Or you can set `AllProperties` to true to return all the properties.|
+|`Criteria`|MetadataFilterExpression|See [Limit data returned using MetadataFilterExpression](#limit-data-returned-using-metadatafilterexpression)|
+|`AttributeQuery`|AttributeQueryExpression|Follows the same pattern as `EntityQueryExpression`. `AttributeQueryExpression` also has `Properties`, and `Criteria` to control which column definitions to return.<br /><br />**Note**: When using `AttributeQuery`, `Attributes` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`RelationshipQuery`|RelationshipQueryExpression|Follows the same pattern as `EntityQueryExpression`. `RelationshipQueryExpression` also has `Properties`, and `Criteria` to control which relationship definitions to return.<br/><br />**Note**: When using `RelationshipQuery`, OneTo`ManyRelationships`, `ManyToOneRelationships`, or `ManyToManyRelationships` must be one of the `Properties` requested for the `EntityQueryExpression`.
+|
+|`KeyQuery`|EntityKeyQueryExpression|Follows the same pattern as `EntityQueryExpression`. `EntityKeyQueryExpression` also has `Properties`, and `Criteria` to control which alternate key definitions to return.<br /><br />**Note**: When using `KeyQuery`, `Keys` must be one of the `Properties` requested for the `EntityQueryExpression`.
+|
+|`LabelQuery`|LabelQueryExpression|Use the`FilterLanguages` property to limit the languages that are returned. If an organization has many languages provisioned, you will receive labels for all languages which could add considerably to the data returned. If your app is for an individual user, you should include the user's preferred [LCID language code](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a). See [Retrieve the user's preferred language code](#retrieve-the-users-preferred-language-code)|
 
 
 #### [Web API](#tab/webapi)
 
 ---
 
+> [!NOTE]
+> The `Query` parameter is optional, so you can use `RetrieveMetadataChanges` without any filters, but this is equivalent to using `RetrieveAllEntities`, a very expensive operation.
+
 ## Limit data returned using MetadataFilterExpression
 
+#### [SDK for .NET](#tab/sdk)
+
+MetadataFilterExpression has the following properties:
+
+|Property|Type|Description|
+|---------|---------|---------|
+|`FilterOperator`|LogicalOperator|Controls how the `Conditions` are evaluated. |
+|`Conditions`|DataCollection\<MetadataConditionExpression\>|A collection of conditions to evaluate. |
+|`Filters`|DataCollection\<MetadataFilterExpression\>|Additional filters to apply for a more complex query.|
+
+#### [Web API](#tab/webapi)
+
+---
+
+## Set conditions using MetadataConditionExpression
+
+#### [SDK for .NET](#tab/sdk)
+
+MetadataConditionExpression has the following properties:
+
+|Property|Type|Description|
+|---------|---------|---------|
+|`ConditionOperator`|MetadataConditionOperator| Describes the type of comparison to apply to the `Value` property|
+|`PropertyName`|string|The name of the property to evaluate|
+|`Value`|object|The value (or values) to compare.|
+
+#### [Web API](#tab/webapi)
+
+
+
+---
+
+### MetadataConditionOperator Enum values
+
+The `MetadataConditionOperator` Enum has the following members:
+
+|Field|Description|
+|---------|---------|
+|`Equals`|The values are compared for equality.|
+|`NotEquals`|The two values are not equal.|
+|`In`|The value exists in a list of values.|
+|`NotIn`|The given value is not matched to a value in a list.|
+|`GreaterThan`| The value is greater than the compared value.|
+|`LessThan`|The value is less than the compared value.|
+
+
 ## Process data returned
+
+## Retrieve the user's preferred language code
+
+#### [SDK for .NET](#tab/sdk)
+
+
+#### [Web API](#tab/webapi)
+
+
+
+---
 
 ### See also
 
