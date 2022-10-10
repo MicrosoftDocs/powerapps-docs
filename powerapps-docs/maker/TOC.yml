@@ -1805,13 +1805,13 @@
                   href: ./portals/configure/configure-basic-form-metadata.md
                 - name: Configure basic form subgrid
                   href: ./portals/configure/configure-basic-form-subgrid.md
-            - name: Work with advanced forms
+            - name: Work with multistep forms
               items:
-                - name: Define advanced form properties
+                - name: Define multistep form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Advanced form steps
+                - name: Multistep form steps
                   items:
-                    - name: Define advanced form steps
+                    - name: Define multistep form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1821,9 +1821,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure advanced form metadata
+                - name: Configure multistep form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure an advanced form subgrid
+                - name: Configure a multistep form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
