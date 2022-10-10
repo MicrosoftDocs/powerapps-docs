@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add screens to a card (Preview)
+# dd screens to a card (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 

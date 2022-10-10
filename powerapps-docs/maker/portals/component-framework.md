@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2022
+ms.date: 09/28/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -106,10 +106,6 @@ Portals supports restricted field types and formats for using code components. T
 More information: [Attributes list and descriptions](../../developer/component-framework/manifest-schema-reference/property.md#remarks)
 
 ### Unsupported code components in portals
-
--   [Data-set
-    components](../../developer/component-framework/sample-controls/data-set-grid-control.md)
-    aren’t supported.
 
 -   The following code component APIs aren’t supported:
 

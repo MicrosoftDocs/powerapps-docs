@@ -1,6 +1,6 @@
 ---
-title: Test and debug cards (Preview)
-description: Learn how to test and debug cards for Microsoft Power Apps.
+title: Test and debug cards (preview)
+description: Learn how to test and debug your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Test and debug cards (Preview)
+# Test and debug cards (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
@@ -82,7 +82,6 @@ The **JSON** tab displays the JSON representation of your card. A direct view of
 ### Output
 
 The **Output** tab displays any output from your card. This tab is available only when a card has output elements.
-<!--The Debug > Output tab still shows a placeholder sentence. Please pass along to the dev team.-->
 
 ### Info
 

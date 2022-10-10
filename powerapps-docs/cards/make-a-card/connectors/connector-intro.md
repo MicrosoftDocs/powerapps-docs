@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add connectors to a card (Preview)
+# Add connectors to a card (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 

@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Power Fx and cards overview (Preview)
+# Power Fx and cards overview (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
