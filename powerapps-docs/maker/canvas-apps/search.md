@@ -4,7 +4,7 @@ description: Learn how to use the Search pane inside Power Apps Studio to find t
 author: TashasEv
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/29/2022
 ms.subservice: canvas-maker
 ms.author: tashas
@@ -15,44 +15,20 @@ search.app:
 contributors:
   - tapanm-msft
   - TashasEv
+  - mduelae
 ---
 
-# Use the Search pane (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Use the Search pane 
 
 You can now use the Search pane to locate objects&mdash;like media files, variables, collections, and data sources&mdash;across your app. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what's being used by your app, where, and you can go right to those results to make any necessary updates. In addition, you can use the replace capability to update one or more instances of text, variables, collections, or formula references.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - This feature is being rolled out, and&mdash;depending on your region&mdash;it might not be available for your tenant yet.
+:::image type="content" source="media/search/search-pane-1.png" alt-text="The Search pane visible inside Power Apps Studio.":::
 
 ## Prerequisites
 
 - [Sign up](../signup-for-powerapps.md) for Power Apps.
 - [Create an app from a template](get-started-test-drive.md), [create a new app](data-platform-create-app.md), or [open an existing app](edit-app.md) in Power Apps.
 - [Learn how to configure a control](add-configure-controls.md).
-
-## Enable the Search pane
-
-The Search pane is enabled on new apps by default. However, you need to manually enable it on existing apps.
-
-To enable the Search pane on existing apps:
-
-1. Open an [existing](edit-app.md) app in Power Apps Studio.
-
-1. Select **Settings** at the top.
-
-1. Select **Upcoming features**.
-
-1. On the **Preview** tab, select **Search**.
-
-    :::image type="content" source="media/search/enable-search.png" alt-text="The Search feature listed in the preview section of upcoming features in settings.":::
-
-The Search pane is enabled.
-
-:::image type="content" source="media/search/search-pane-1.png" alt-text="The Search pane visible inside Power Apps Studio.":::
 
 ## Open the Search pane
 

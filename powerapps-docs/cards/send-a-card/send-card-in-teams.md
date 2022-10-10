@@ -1,6 +1,6 @@
 ---
-title: "Send a card in Teams (Preview)"
-description: "Learn how to share a card with your teammates"
+title: Share a card in Teams (preview)
+description: Learn how to share a card with your teammates in Teams."
 keywords: "Card Designer, Power Apps, cards, share a card, Teams, send a card"
 ms.date: 09/20/2022
 ms.topic: article
@@ -12,36 +12,46 @@ ms.custom:
 ms.collection: 
 ---
 
-# Share a card in Microsoft Teams (Preview)
+# Share a card in Teams (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
-Cards are shared in Microsoft Teams through specific links that are copyable from the Play page. Cards require the Power Apps Teams app to be installed in the chat or channel to work.
+An easy way to share your cards is to include a link to them in Microsoft Teams. The **Send** button on the **Play** page generates a link that you can copy and then paste into a chat, channel, or meeting. Power Apps must be installed in the Teams chat, channel, or meeting for the card to work.
 
-   :::image type="content" source="../media/send-a-card/card-in-teams.png" alt-text="Screenshot of card in teams." border="true":::
+   :::image type="content" source="../media/send-a-card/card-in-teams.png" alt-text="Screenshot of a Power Apps card shared in a Teams chat.":::
 
-## Add the Power Apps Teams app to conversations
+## Prerequisites
 
-The Power Apps Teams app identifies the card link, unfurls the card, and connects that card to the lightweight runtime. These all happen seamlessly when the app is added to the chat, channel, or meeting and when a card link is sent.
+- A [Power Apps](https://powerapps.microsoft.com/) account
+- [A card](../tutorials/hello-world-card.md)
 
-To add the Power Apps Teams app:
+## Add Power Apps to Teams
 
-1. Open Microsoft Teams and click the **Apps** icon in the left-hand menu.
-1. Search for "Power Apps" using the search bar in the top left and select the **Power Apps** app.
+The Power Apps app in Teams identifies the card link and displays the card in the chat, channel, or meeting in which the link was posted. Teams users, or a Teams admin, must install the Power Apps app in a chat, channel, or meeting for the linking to work.
 
-   :::image type="content" source="../media/send-a-card/power-apps-teams-app.png" alt-text="Screenshot of adding Power Apps in Teams." border="true":::
+1. In Microsoft Teams, select the **Apps** icon in the left bar.
+1. Search for and select the **Power Apps** app.
 
-1. Press the chevron next to the **Add** button to add the app to a team, chat, or meeting. You can also press the **Add** button to add the app to your personal scope, which is used for [apps in Teams](../../teams/create-apps-overview.md). Having the app installed in your personal scope will also make Teams prompt you when you send card links to add the app to that conversation.
-    1. If you see **Open**, then you have already added the **Power Apps** app to your personal scope. You will still need to add the app to the chat, channel, or meeting for cards to work.
+   :::image type="content" source="../media/send-a-card/power-apps-teams-app.png" alt-text="Screenshot of the Teams app search page, with the Power Apps app highlighted.":::
 
-   :::image type="content" source="../media/send-a-card/cards-add-teams-app.png" alt-text="Screenshot of the Open button options." border="true":::
+1. Select the arrow next to the **Add** button to add the app to a channel, chat, or meeting.
 
-## Get the card link
+   :::image type="content" source="../media/send-a-card/add-teams-app.png" alt-text="Screenshot of the Power Apps app page in Teams, with the Add button and add options highlighted.":::
 
-The card links points to the specific card instance that should be sent. On the Play page, pressing the **Send** button in the top right of the page will copy the card link. You can also directly copy your browser's address bar.  
+   Select the **Add** button itself to install the app in your [personal scope in Teams](../../teams/create-apps-overview.md).
 
-   :::image type="content" source="../media/send-a-card/send-card-play-page.png" alt-text="Screenshot of link to send from the Play page" border="true":::
+   If the button label is **Open**, not **Add**, then you've already installed the Power Apps app in your personal scope. You'll still need to add the app to a chat, channel, or meeting for cards to work in a Teams message.
 
-## Sending a card
+## Send the card link to Teams
 
-Paste the link you copied from the Play page into a chat, meeting, or Teams channel where the Power Apps Teams app is added. Teams will automatically unfurl the card, which you can send. You and the receiver(s) might be prompted to add the app if it hasn't been added already. There might also be a few seconds of delay before the card unfurls, depending on the complexity of the card.
+The card link points to a specific card instance that's previewed on the **Play** page.
+
+1. On the **Play** page, select **Send** to copy the card link.
+
+    You can also copy the URL in your browser's address bar.  
+
+   :::image type="content" source="../media/send-a-card/send-card-play-page.png" alt-text="Screenshot of a card link copied on the Play page.":::
+
+1. Paste the link in a Teams chat, meeting, or channel where the Power Apps app has been added.
+
+If the Power Apps app hasn't been added yet, you and the receivers may be prompted to add it before the card can be displayed. There may also be a brief delay before the card opens, depending on its complexity.
