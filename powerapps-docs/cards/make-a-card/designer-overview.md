@@ -1,5 +1,5 @@
 ---
-title: Card Designer overview (Preview)
+title: Card Designer overview (preview)
 description: Learn about the designer and how to create cards using it.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Card Designer overview (Preview)
+# Card Designer overview (preview)
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 

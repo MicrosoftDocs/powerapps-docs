@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: overview
 
-ms.date: 04/21/2021
+ms.date: 09/13/2021
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -17,6 +17,9 @@ contributors:
 # Portal Management app overview
 
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
+
+> [!NOTE]
+> To use the Portal Management app, you will need to be assigned the [system administrator role](/power-platform/admin/assign-security-roles) in the same Microsoft Dataverse environment as your site. 
 
 > [!NOTE]
 > The Portal Management app also lets you manage Power Pages. More information: [What is Power Pages](/power-pages/introduction).
@@ -45,7 +48,7 @@ If your web browser has any extensions such as ad-blockers, you may see a script
 
 ![Script error.](media/configure-portal/script-error.png "Script error") 
 
-This error occurs for forms such as [Web pages](web-page.md), [Basic Forms](entity-forms.md), [Lists](entity-lists.md), or [Advanced Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
+This error occurs for forms such as [Web pages](web-page.md), [Basic Forms](entity-forms.md), [Lists](entity-lists.md), or [Multistep Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

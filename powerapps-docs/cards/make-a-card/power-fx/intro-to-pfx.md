@@ -1,5 +1,5 @@
 ---
-title: Introduction to Power Fx (Preview)
+title: Add business logic to cards with Power Fx (Preview)
 description: Learn about Power FX and how it's used in cards to add business logic.
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Introduction to Power Fx (Preview)
+# Add business logic with Power Fx (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
