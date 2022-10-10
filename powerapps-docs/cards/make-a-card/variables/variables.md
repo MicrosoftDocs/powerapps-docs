@@ -1,5 +1,5 @@
 ---
-title: Use variables (Preview)
+title: Use variables (preview)
 description: Learn about storing data in variables
 ms.date: 09/20/2022
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom:
 ms.collection: 
 ---
 
-# Variables (Preview)
+# Variables (preview)
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
