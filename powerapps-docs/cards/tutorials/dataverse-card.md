@@ -69,7 +69,7 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 1. In the Tree View, select the **DetailsScreen** screen.
 
-1. Select the card title and set its **Text** property to *LookUp(account, 'Account Name' = enteredAccountName).'Account Name'*.
+1. Select the card title and set its **Text** property to *LookUp(account, 'Account Name' = EnteredAccountName).'Account Name'*.
 
     This expression changes the card title to a string that incorporates the account name. You can enter the expression in the formula bar or the properties pane.
 

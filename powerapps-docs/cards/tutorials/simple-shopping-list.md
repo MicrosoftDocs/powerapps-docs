@@ -45,7 +45,8 @@ The shopping list will hold individual items in separate lines of text. It looks
 
 1. In the left pane, select **Variables**.
 1. Select **+ New variable**.
-1. In the **New variable** window, enter *MyGroceryList* under **Name**. Set **Type** to **Table**. Leave the other values as they are.
+1. In the **New variable** window, enter *MyGroceryList* under **Name**. Set **Type** to **Table**.
+1. Select the curly brackets to the right of **Default value** and enter *""* between the brackets. This indicates that our table holds text values in a column implicitly called **Value**
 1. Select **Save**.
 
    :::image type="content" source="../media/tutorial-simple-shopping-list/setup-grocery-array-var.png" alt-text="Screenshot of the MyGroceryList variable properties pane.":::
@@ -61,9 +62,9 @@ The shopping list will hold individual items in separate lines of text. It looks
 
    Setting a text label's **Repeat for every** property repeats the text label for every item in the specified table. In this example, the table, `MyGroceryList`, is the variable you created. In other words, a separate text label is created in the card for every item in the grocery list.
 
-1. Select the **Properties** tab. Set **Text** to *ThisItem*.
+1. Select the **Properties** tab. Set **Text** to *ThisItem.Value*.
 
-   Assigning the system-defined variable `ThisItem` to the text label displays the value of the current item in the `MyGroceryList` array as the label text. *Array* is another term for a table variable. You can enter the variable name in the formula bar or the properties pane.
+   Assigning the system-defined variable `ThisItem.Value` to the text label displays the value of the current item in the `MyGroceryList` array as the label text. *Array* is another term for a table variable. You can enter the variable name in the formula bar or the properties pane.
 
     :::image type="content" source="../media/tutorial-simple-shopping-list/set-thisitem-value.png" alt-text="Screenshot of a variable name entered in the text label's Text property.":::
 
@@ -85,9 +86,9 @@ The list you created is empty, so in the final step, you'll give the user the ab
 1. In the tool pane, select **Input** to expand the category, and then select **Button**.
 1. In the button properties pane, set **Title** to *Add Item*.
 1. In the properties pane, select **PowerFx** to place your cursor in the formula bar.
-1. Type the following Power Fx expression in the formula bar: *Collect(MyGroceryList, NewItem)*
+1. Type the following Power Fx expression in the formula bar: *Collect(MyGroceryList, {Value: NewItem})*
 
-    This expression uses the Power Fx function **Collect** to append the value of the user's input, `NewItem`, to the `MyGroceryList` table variable. Since the expression is bound to the button's **OnSelect** property, it runs when the user selects the button.
+    This expression uses the Power Fx function **Collect** to append the value of the user's input, `NewItem`, to the `MyGroceryList` table variable in the implicit **Value** column. Since the expression is bound to the button's **OnSelect** property, it runs when the user selects the button.
 
     :::image type="content" source="../media/tutorial-simple-shopping-list/pfx-in-button.png" alt-text="Screenshot of the Power Fx expression in the formula bar, assigned to the button's OnSelect property.":::
 
