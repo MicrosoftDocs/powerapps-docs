@@ -4,7 +4,7 @@
   href: overview.md
 - name: Get started
   items:
-  - name: 'Quickstart: Create a console app'
+  - name: 'Quickstart: Execute service request'
     href: quick-start-org-service-console-app.md
   - name: Late and Early-bound programming
     href: early-bound-programming.md
