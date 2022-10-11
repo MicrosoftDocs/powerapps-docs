@@ -314,21 +314,30 @@ Use `EntityQueryExpression` to set the `RetrieveMetadataChanges` `Query` propert
 
 #### [SDK for .NET](#tab/sdk)
 
-EntityQueryExpression has the following properties:
+[EntityQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression) has the following properties:
 
 |Property|Type|Description|
 |---------|---------|---------|
-|`Properties`|MetadataPropertiesExpression|Set the `PropertyNames` to a list of property names to return. Or you can set `AllProperties` to true to return all the properties.|
-|`Criteria`|MetadataFilterExpression|See [Limit data returned using MetadataFilterExpression](#limit-data-returned-using-metadatafilterexpression)|
-|`AttributeQuery`|AttributeQueryExpression|Follows the same pattern as `EntityQueryExpression`. `AttributeQueryExpression` also has `Properties`, and `Criteria` to control which column definitions to return.<br /><br />**Note**: When using `AttributeQuery`, `Attributes` must be one of the `Properties` requested for the `EntityQueryExpression`.|
-|`RelationshipQuery`|RelationshipQueryExpression|Follows the same pattern as `EntityQueryExpression`. `RelationshipQueryExpression` also has `Properties`, and `Criteria` to control which relationship definitions to return.<br/><br />**Note**: When using `RelationshipQuery`, `OneToManyRelationships`, `ManyToOneRelationships`, or `ManyToManyRelationships` must be one of the `Properties` requested for the `EntityQueryExpression`.|
-|`KeyQuery`|EntityKeyQueryExpression|Follows the same pattern as `EntityQueryExpression`. `EntityKeyQueryExpression` also has `Properties`, and `Criteria` to control which alternate key definitions to return.<br /><br />**Note**: When using `KeyQuery`, `Keys` must be one of the `Properties` requested for the `EntityQueryExpression`.|
-|`LabelQuery`|LabelQueryExpression|Use the`FilterLanguages` property to limit the languages that are returned. If an organization has many languages provisioned, you will receive labels for all languages which could add considerably to the data returned. If your app is for an individual user, you should include the user's preferred [LCID language code](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a). See [Retrieve the user's preferred language code](#retrieve-the-users-preferred-language-code)|
+|`Properties`|[MetadataPropertiesExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataPropertiesExpression)|Set the `PropertyNames` to a list of property names to return. Or you can set `AllProperties` to true to return all the properties. For items that have them, you do not need to add the `MetadataId`, `LogicalName`, or `HasChanged` property names. These properties will always be included.|
+|`Criteria`|[MetadataFilterExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataPropertiesExpression)|See [Limit data returned using MetadataFilterExpression](#limit-data-returned-using-metadatafilterexpression)|
+|`AttributeQuery`|[AttributeQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression)|Follows the same pattern as `EntityQueryExpression`. `AttributeQueryExpression` also has `Properties`, and `Criteria` to control which column definitions to return.<br /><br />**Note**: When using `AttributeQuery`, `Attributes` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`RelationshipQuery`|[RelationshipQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.RelationshipQueryExpression)|Follows the same pattern as `EntityQueryExpression`. `RelationshipQueryExpression` also has `Properties`, and `Criteria` to control which relationship definitions to return.<br/><br />**Note**: When using `RelationshipQuery`, `OneToManyRelationships`, `ManyToOneRelationships`, or `ManyToManyRelationships` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`KeyQuery`|[EntityKeyQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityKeyQueryExpression)|Follows the same pattern as `EntityQueryExpression`. `EntityKeyQueryExpression` also has `Properties`, and `Criteria` to control which alternate key definitions to return.<br /><br />**Note**: When using `KeyQuery`, `Keys` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`LabelQuery`|[LabelQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression)|Use the`FilterLanguages` property to limit the languages that are returned. If an organization has many languages provisioned, you will receive labels for all languages which could add considerably to the data returned. If your app is for an individual user, you should include the user's preferred [LCID language code](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a). See [Retrieve the user's preferred language code](#retrieve-the-users-preferred-language-code)|
 
 
 #### [Web API](#tab/webapi)
 
+[EntityQueryExpression](xref:Microsoft.Dynamics.CRM.EntityQueryExpression) has the following properties:
 
+|Property|Type|Description|
+|---------|---------|---------|
+|`Properties`|[MetadataPropertiesExpression](xref:Microsoft.Dynamics.CRM.MetadataPropertiesExpression)|Set the `PropertyNames` to a list of property names to return. Or you can set `AllProperties` to true to return all the properties. For items that have them, you do not need to add the `MetadataId`, `LogicalName`, or `HasChanged` property names. These properties will always be included.|
+|`Criteria`|[MetadataFilterExpression](xref:Microsoft.Dynamics.CRM.MetadataFilterExpression)|See [Limit data returned using MetadataFilterExpression](#limit-data-returned-using-metadatafilterexpression)|
+|`AttributeQuery`|[AttributeQueryExpression](xref:Microsoft.Dynamics.CRM.AttributeQueryExpression)|Follows the same pattern as `EntityQueryExpression`. `AttributeQueryExpression` also has `Properties`, and `Criteria` to control which column definitions to return.<br /><br />**Note**: When using `AttributeQuery`, `Attributes` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`RelationshipQuery`|[RelationshipQueryExpression](xref:Microsoft.Dynamics.CRM.RelationshipQueryExpression)|Follows the same pattern as `EntityQueryExpression`. `RelationshipQueryExpression` also has `Properties`, and `Criteria` to control which relationship definitions to return.<br/><br />**Note**: When using `RelationshipQuery`, `OneToManyRelationships`, `ManyToOneRelationships`, or `ManyToManyRelationships` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`KeyQuery`|[EntityKeyQueryExpression](xref:Microsoft.Dynamics.CRM.EntityKeyQueryExpression)|Follows the same pattern as `EntityQueryExpression`. `EntityKeyQueryExpression` also has `Properties`, and `Criteria` to control which alternate key definitions to return.<br /><br />**Note**: When using `KeyQuery`, `Keys` must be one of the `Properties` requested for the `EntityQueryExpression`.|
+|`LabelQuery`|[LabelQueryExpression](xref:Microsoft.Dynamics.CRM.LabelQueryExpression)|Use the`FilterLanguages` property to limit the languages that are returned. If an organization has many languages provisioned, you will receive labels for all languages which could add considerably to the data returned. If your app is for an individual user, you should include the user's preferred [LCID language code](/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a). See [Retrieve the user's preferred language code](#retrieve-the-users-preferred-language-code)|
 
 ---
 
@@ -339,19 +348,27 @@ EntityQueryExpression has the following properties:
 
 #### [SDK for .NET](#tab/sdk)
 
-Use MetadataFilterExpression for the `Criteria` property for EntityQueryExpression, AttributeQueryExpression, RelationshipQueryExpression, and EntityKeyQueryExpression.
+Use [MetadataFilterExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression) for the `Criteria` property for [EntityQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression), [AttributeQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.AttributeQueryExpression), [RelationshipQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.RelationshipQueryExpression), and [EntityKeyQueryExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityKeyQueryExpression).
 
 `MetadataFilterExpression` has the following properties:
 
 |Property|Type|Description|
 |---------|---------|---------|
-|`FilterOperator`|LogicalOperator|Controls how the `Conditions` are evaluated. |
-|`Conditions`|DataCollection\<MetadataConditionExpression\>|A collection of conditions to evaluate. |
-|`Filters`|DataCollection\<MetadataFilterExpression\>|Additional filters to apply for a more complex query.|
+|`FilterOperator`|[LogicalOperator](xref:Microsoft.Xrm.Sdk.Query.LogicalOperator)|Controls how the `Conditions` are evaluated, either `And` or `Or`. |
+|`Conditions`|[DataCollection](xref:Microsoft.Xrm.Sdk.DataCollection`1)\<[MetadataConditionExpression](xref:Microsoft.Dynamics.CRM.MetadataConditionExpression)\>|A collection of conditions to evaluate. See [Set conditions using MetadataConditionExpression](#set-conditions-using-metadataconditionexpression) |
+|`Filters`|[DataCollection](xref:Microsoft.Xrm.Sdk.DataCollection`1)\<[MetadataFilterExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression)\>|Additional filters to apply for a more complex query.|
 
 #### [Web API](#tab/webapi)
 
+Use [MetadataFilterExpression](xref:Microsoft.Dynamics.CRM.MetadataFilterExpression) for the `Criteria` property for [EntityQueryExpression](xref:Microsoft.Dynamics.CRM.EntityQueryExpression), [AttributeQueryExpression](xref:Microsoft.Dynamics.CRM.AttributeQueryExpression), [RelationshipQueryExpression](xref:Microsoft.Dynamics.CRM.RelationshipQueryExpression), and [EntityKeyQueryExpression](xref:Microsoft.Dynamics.CRM.EntityKeyQueryExpression).
 
+`MetadataFilterExpression` has the following properties:
+
+|Property|Type|Description|
+|---------|---------|---------|
+|`FilterOperator`|[LogicalOperator](xref:Microsoft.Dynamics.CRM.LogicalOperator)|Controls how the `Conditions` are evaluated, either `And` or `Or`. |
+|`Conditions`|Collection([MetadataConditionExpression](xref:Microsoft.Dynamics.CRM.MetadataConditionExpression))|A collection of conditions to evaluate. See [Set conditions using MetadataConditionExpression](#set-conditions-using-metadataconditionexpression) |
+|`Filters`|Collection([MetadataFilterExpression](xref:Microsoft.Dynamics.CRM.MetadataFilterExpression))|Additional filters to apply for a more complex query.|
 
 ---
 
@@ -359,18 +376,50 @@ Use MetadataFilterExpression for the `Criteria` property for EntityQueryExpressi
 
 #### [SDK for .NET](#tab/sdk)
 
-Use MetadataConditionExpression for the MetadataFilterExpression `Conditions` property.
+Use [MetadataConditionExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionExpression) for the [MetadataFilterExpression](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataFilterExpression) `Conditions` property.
 
 `MetadataConditionExpression` has the following properties:
 
 |Property|Type|Description|
 |---------|---------|---------|
-|`ConditionOperator`|MetadataConditionOperator| Describes the type of comparison to apply to the `Value` property.|
+|`ConditionOperator`|[MetadataConditionOperator](xref:Microsoft.Xrm.Sdk.Metadata.Query.MetadataConditionOperator)| Describes the type of comparison to apply to the `Value` property.|
 |`PropertyName`|string|The name of the property to evaluate|
 |`Value`|object|The value (or values) to compare.|
 
+Only properties that represent simple data types, enumerations, [BooleanManagedProperty](xref:Microsoft.Xrm.Sdk.BooleanManagedProperty) or [AttributeRequiredLevelManagedProperty](xref:Microsoft.Xrm.Sdk.Metadata.AttributeRequiredLevelManagedProperty) types can be used in a `MetadataFilterExpression`. You cannot set conditions on any properties that are collections or labels. When a `BooleanManagedProperty` or `AttributeRequiredLevelManagedProperty` is specified, only the `Value` property is evaluated.
+
+
+
 #### [Web API](#tab/webapi)
 
+Use [MetadataConditionExpression](xref:Microsoft.Dynamics.CRM.MetadataConditionExpression) for the [MetadataFilterExpression](xref:Microsoft.Dynamics.CRM.MetadataFilterExpression) `Conditions` property.
+
+`MetadataConditionExpression` has the following properties:
+
+|Property|Type|Description|
+|---------|---------|---------|
+|`ConditionOperator`|[MetadataConditionOperator](xref:Microsoft.Dynamics.CRM.MetadataConditionOperator)| Describes the type of comparison to apply to the `Value` property.|
+|`PropertyName`|string|The name of the property to evaluate|
+|`Value`|[Object](xref:Microsoft.Dynamics.CRM.Object)|The value (or values) to compare.|
+
+Only properties that represent simple data types, enumerations, [BooleanManagedProperty](xref:Microsoft.Dynamics.CRM.BooleanManagedProperty) or [AttributeRequiredLevelManagedProperty](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty) types can be used in a `MetadataFilterExpression`. You cannot set conditions on any properties that are collections or labels. When a `BooleanManagedProperty` or `AttributeRequiredLevelManagedProperty` is specified, only the `Value` property is evaluated.
+
+The [Object ComplexType](xref:Microsoft.Dynamics.CRM.Object) has two string properties: `Type` and `Value`. To set the `Type` you must match the .NET type for the values that you are comparing. The following table shows the `Type` values to use.
+
+
+|Type|Type value  |
+|---------|---------|
+|[AttributeRequiredLevel](xref:Microsoft.Dynamics.CRM.AttributeRequiredLevel)|`"Microsoft.Xrm.Sdk.Metadata.AttributeRequiredLevel"`|
+|[AttributeTypeCode](xref:Microsoft.Dynamics.CRM.AttributeTypeCode)|`"Microsoft.Xrm.Sdk.Metadata.AttributeTypeCode"`|
+|[AttributeTypeDisplayName](xref:Microsoft.Dynamics.CRM.AttributeTypeDisplayName)|`"Microsoft.Xrm.Sdk.Metadata.AttributeTypeDisplayName"`|
+|[DateTimeOffset](xref:System.DateTimeOffset)|`"System.DateTime"`|
+|[Guid](xref:System.Guid)|`"System.Guid"`|
+|[OwnershipTypes](xref:Microsoft.Dynamics.CRM.OwnershipTypes)|`"Microsoft.Xrm.Sdk.Metadata.OwnershipTypes"`|
+|[RelationshipType](xref:Microsoft.Dynamics.CRM.RelationshipType)|"Microsoft.Xrm.Sdk.Metadata.RelationshipType"|
+|`Collection(string)`|`"System.String[]"`|
+|`bool`<br />[BooleanManagedProperty](xref:Microsoft.Dynamics.CRM.BooleanManagedProperty)|`"System.Boolean"`|
+|`int`|`"System.Int32"`|
+|`string`|`"System.String"`|
 
 
 ---
@@ -393,18 +442,24 @@ The `MetadataConditionOperator` Enum has the following members:
 
 #### [SDK for .NET](#tab/sdk)
 
-The RetrieveMetadataChangesResponse has the following properties:
+The [RetrieveMetadataChangesResponse](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse) has the following properties:
 
 |Property|Type|Description|
 |---------|---------|---------|
-|`EntityMetadata`|EntityMetadataCollection|The table definitions requested. When simply querying data, or when initializing a cache, this can be treated the same as the response from RetrieveAllEntities.|
+|`EntityMetadata`|[EntityMetadataCollection](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadataCollection)|The table definitions requested. When simply querying data, or when initializing a cache, this can be treated the same as the response from RetrieveAllEntities. If you want to access a specific column, relationship or alternate key definition, you must return the table definition that contains them.|
 |`ServerVersionStamp`|string|A timestamp identifier for the metadata retrieved. When you manage a cache of schema definitions, use this value as the `ClientVersionStamp` property in subsequent requests so that only the changes since the previous request are returned.|
-|`DeletedMetadata`|DeletedMetadataCollection|Data for the items deleted since the previous request. This only contains data when RetrieveMetadataChanges is sent with the ClientVersionStamp and DeletedMetadataFilters parameters. For more information see [Cache Schema data](cache-schema-data.md)|
+|`DeletedMetadata`|[DeletedMetadataCollection](xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection)|Data for the items deleted since the previous request. This only contains data when `RetrieveMetadataChanges` is sent with the `ClientVersionStamp` and `DeletedMetadataFilters` parameters. For more information see [Cache Schema data](cache-schema-data.md)|
 
 
 #### [Web API](#tab/webapi)
 
+The [RetrieveMetadataChangesResponse](xref:Microsoft.Dynamics.CRM.RetrieveMetadataChangesResponse) has the following properties:
 
+|Property|Type|Description|
+|---------|---------|---------|
+|`EntityMetadata`|Collection(<xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata>)|The table definitions requested. When simply querying data, or when initializing a cache, this can be treated the same as the response from RetrieveAllEntities. If you want to access a specific column, relationship or alternate key definition, you must return the table definition that contains them.|
+|`ServerVersionStamp`|`string`|A timestamp identifier for the metadata retrieved. When you manage a cache of schema definitions, use this value as the `ClientVersionStamp` property in subsequent requests so that only the changes since the previous request are returned.|
+|`DeletedMetadata`|[DeletedMetadataCollection](xref:Microsoft.Dynamics.CRM.DeletedMetadataCollection)|Data for the items deleted since the previous request. This only contains data when `RetrieveMetadataChanges` is sent with the `ClientVersionStamp` and `DeletedMetadataFilters` parameters. For more information see [Cache Schema data](cache-schema-data.md)|
 
 ---
 
@@ -513,6 +568,7 @@ OData-Version: 4.0
 ### See also
 
 [Cache Schema data](cache-schema-data.md)<br />
-[Organization Service: Table definitions in Microsoft Dataverse](entity-metadata.md)
+[Organization Service: Table definitions in Microsoft Dataverse](entity-metadata.md)<br />
+[Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
