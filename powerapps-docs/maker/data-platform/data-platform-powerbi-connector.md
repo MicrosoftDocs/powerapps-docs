@@ -5,7 +5,7 @@ author: Mattp123
 manager: kvivek
 ms.component: cds
 ms.topic: how-to
-ms.date: 05/24/2022
+ms.date: 10/10/2022
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -133,6 +133,34 @@ This error can occur with the Dataverse connector when you run or design a repor
 
 :::image type="content" source="media/tls-record-limit-exceeded.png" alt-text="TLS record limit exceeded error message.":::
 To work around this limit, optimize the query adding filters and dropping columns so that the query returns less data.
+
+#### Workaround for very large number of lookups or choice columns
+
+If the error message occurs in Power BI when you try to connect to a table with a very large number of lookups or choice columns, the following manual workaround might allow you to connect to the table. The  account, contact, and opportunity table might encounter this issue when they are extensively customized with additional lookups or choice columns.
+
+Manually connect to the table in a Power BI report:
+
+1. In Power BI desktop with the report loaded, select **Transform Data** to load Power Query.
+2. Select **New Source** > **Blank Query**.
+3. **Name** your query.
+4. Select **Advanced Editor** on the **Home** tab of Power BI Desktop.
+5. Replace the query text with below query text. 
+
+   ```
+   let
+       Source = CommonDataService.Database("<myenvironment.crmX>.dynamics.com"),
+       dbo_contact = Source{[Schema="dbo",Item="contact"]}[Data],
+       #"selectedcolumns" = Table.SelectColumns(dbo_contact,{"fullname", "emailaddress1"})
+   in
+       #"selectedcolumns"
+   ```
+6. Replace *myenvironment.crmX* in the query text with your environment domain value, such as *contoso.crm4*.
+7. Select **Done**.
+8. Select **Choose columns** to add any additional needed columns.
+9. Select **Close and Apply** to save model changes.
+10. When prompted, select **Direct Query** for the new query.
+
+The query can now be used in the report.
 
 ### Error message: Unable to connect (provider Named Pipes Provider, error: 40 – Could not open a connection to SQL Server)
 

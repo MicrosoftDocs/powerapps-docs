@@ -1,11 +1,10 @@
 ---
 title: "Retrieve and execute predefined queries (Microsoft Dataverse)| Microsoft Docs"
-description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve table data."
-ms.date: 04/06/2022
+description: "Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Read how you can use a predefined query to retrieve table data."
+ms.date: 09/27/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -17,7 +16,7 @@ contributors:
 
 # Retrieve and execute predefined queries
 
-Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+Microsoft Dataverse provides a way for administrators to create system views that are available to all users. Individual users can save the Advanced Find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. 
 
 > [!NOTE]
 > Unlike queries using the OData syntax, data returned from pre-defined queries or fetchXml will not return properties with `null` values. When the value is `null`, the property will not be included in the results.
@@ -80,171 +79,6 @@ In addition to simply applying the saved query to the main entity set collection
 ```http
 GET [Organization URI]/api/data/v9.0/accounts(8f390c24-9c72-e511-80d4-00155d2a68d1)/opportunity_parent_account/?savedQuery=00000000-0000-0000-00aa-000010003001
 ```
-
-<a name="bkmk_useFetchXML"></a>
-
-## Use custom FetchXML
-
-FetchXML is a proprietary query language that provides capabilities to perform aggregation. More information: [Use FetchXML to query data](../use-fetchxml-construct-query.md)
-
-You can pass URL encoded FetchXML as a query to the entity set corresponding to the root entity of the query using the `fetchXml` query string parameter to return the results from the Web API. For example, you can have the following FetchXML that has account as the entity.  
-
-```xml  
-<fetch mapping='logical'>
-   <entity name='account'>
-      <attribute name='accountid'/>
-      <attribute name='name'/>
-      <attribute name='accountnumber'/>      
-</entity>
-</fetch>
-```
-
-The URL encoded value of this FetchXML is as shown here.
-
-```text
-%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E
-```
-
-Most programming languages include a function to URL encode a string. For example, in JavaScript you use the [encodeURI](https://www.ecma-international.org/ecma-262/5.1/) function. You should URL encode any request that you send to any RESTful web service. If you paste a URL into the address bar of your browser it should URL encode the address automatically. The following example shows a GET request using the FetchXML shown previously using the entity set path for accounts.
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.0/accounts?fetchXml=%3Cfetch%20mapping%3D%27logical%27%3E%3Centity%20name%3D%27account%27%3E%3Cattribute%20name%3D%27accountid%27%2F%3E%3Cattribute%20name%3D%27name%27%2F%3E%3Cattribute%20name%3D%27accountnumber%27%2F%3E%3C%2Fentity%3E%3C%2Ffetch%3E HTTP/1.1
-Accept: application/json
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-
-{  
-  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,name)","value":[  
-    {  
-      "@odata.etag":"W/\"506678\"","accountid":"89390c24-9c72-e511-80d4-00155d2a68d1","name":"Fourth Coffee (sample)", "accountnumber":"1234",
-    },{  
-      "@odata.etag":"W/\"502172\"","accountid":"8b390c24-9c72-e511-80d4-00155d2a68d1","name":"Litware, Inc. (sample)"  
-    },{  
-      "@odata.etag":"W/\"502174\"","accountid":"8d390c24-9c72-e511-80d4-00155d2a68d1","name":"Adventure Works (sample)"  
-    },{  
-      "@odata.etag":"W/\"506705\"","accountid":"8f390c24-9c72-e511-80d4-00155d2a68d1","name":"Fabrikam, Inc. (sample)"  
-    },{  
-      "@odata.etag":"W/\"506701\"","accountid":"91390c24-9c72-e511-80d4-00155d2a68d1","name":"Blue Yonder Airlines (sample)"  
-    },{  
-      "@odata.etag":"W/\"502180\"","accountid":"93390c24-9c72-e511-80d4-00155d2a68d1","name":"City Power & Light (sample)"  
-    },{  
-      "@odata.etag":"W/\"502182\"","accountid":"95390c24-9c72-e511-80d4-00155d2a68d1","name":"Contoso Pharmaceuticals (sample)"  
-    },{  
-      "@odata.etag":"W/\"506704\"","accountid":"97390c24-9c72-e511-80d4-00155d2a68d1","name":"Alpine Ski House (sample)"  
-    },{  
-      "@odata.etag":"W/\"502186\"","accountid":"99390c24-9c72-e511-80d4-00155d2a68d1","name":"A. Datum Corporation (sample)"  
-    },{  
-      "@odata.etag":"W/\"502188\"","accountid":"9b390c24-9c72-e511-80d4-00155d2a68d1","name":"Coho Winery (sample)"  
-    },{  
-      "@odata.etag":"W/\"504177\"","accountid":"0a3238d4-f973-e511-80d4-00155d2a68d1","name":"Litware, Inc."  
-    }  
-  ]  
-}  
-```
-
-> [!NOTE]
-> Properties with null values will not be included in results returned using FetchXml. In the example above, only the first record returned has an `accountnumber` value.
-
-<a name="bkmk_WebAPIFetchPaging"></a>
-
-### Paging with FetchXML
-
-With FetchXML you can apply paging by setting the `page` and `count` attributes of the `fetch` element. For example, to set a query for accounts and limit the number of entities to 2 and to return just the first page, the following fetchXML:
-
-```xml
-<fetch mapping="logical" page="1" count="2">  
- <entity name="account">  
-  <attribute name="accountid" />  
-  <attribute name="name" />  
-  <attribute name="industrycode" />  
- <order attribute="name" />  
- </entity>  
-</fetch>
-```
-
-<!-- TODO:
-With a request using FetchXML you can also request a paging cookie and include it with your query. More information:[Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)   -->
-
-A paging cookie must be requested as an annotation. Set the `odata.include-annotations` preference to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` property will be returned with the result.
-
-<a name="bkmk_FetchXMLwithinBatch"></a>
-
-### Use FetchXML within a batch request
-
-The length of a URL in a `GET` request is limited. Including FetchXML as a parameter in the URL can reach this limit.  You can execute a `$batch` operation using a `POST` request as a way to move the FetchXML out of the URL and into the body of the request where this limit will not apply. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).
-
-> [!NOTE]
-> Sending a `GET` request within a Batch allows for URLs up to 32768 characters in length. Much more than with a normal `GET` request, but it isn't unlimited.
-
-#### Example
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.0/$batch HTTP/1.1
-
-Content-Type:multipart/mixed;boundary=batch_AAA123
-Accept:application/json
-OData-MaxVersion:4.0
-OData-Version:4.0
-
---batch_AAA123
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-
-GET [Organization URI]/api/data/v9.0/accounts?fetchXml=%3Cfetch%20mapping='logical'%3E%3Centity%20name='account'%3E%3Cattribute%20name='accountid'/%3E%3Cattribute%20name='name'/%3E%3Cattribute%20name='telephone1'/%3E%3Cattribute%20name='accountid'/%3E%3Cattribute%20name='creditonhold'/%3E%3C/entity%3E%3C/fetch%3E HTTP/1.1
-Content-Type: application/json
-OData-Version: 4.0
-OData-MaxVersion: 4.0
-
---batch_AAA123--
-```
-
-**Response**
-
-```json
---batchresponse_cbfd44cd-a322-484e-913b-49e18af44e34
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-
-HTTP/1.1 200 OK
-Content-Type: application/json; odata.metadata=minimal
-OData-Version: 4.0
-
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,name,telephone1,creditonhold)",
-   "value":[  
-      {  
-         "@odata.etag":"W/\"563737\"",
-         "accountid":"1f55c679-485e-e811-8151-000d3aa3c22a",
-         "name":"Fourth Coffee (sample)",
-         "telephone1":"+1-425-555-0121",
-         "creditonhold":false
-      },
-      {  
-         "@odata.etag":"W/\"563739\"",
-         "accountid":"2555c679-485e-e811-8151-000d3aa3c22a",
-         "name":"Litware, Inc. (sample)",
-         "telephone1":"+1-425-555-0120",
-         "creditonhold":false
-      }
-   ]
-}
---batchresponse_cbfd44cd-a322-484e-913b-49e18af44e34--
-```
-
-
-
 ## See also
 
 [Web API Query Data Sample (C#)](samples/webapiservice-query-data.md)<br />

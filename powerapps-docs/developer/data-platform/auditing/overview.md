@@ -73,6 +73,9 @@ Audit history data is stored in the [Auditing (Audit) table](../reference/entiti
 
 More information: [Retrieve the history of audited data change](retrieve-audit-data.md)
 
+> [!IMPORTANT]
+> Audit history is not available for tables in the mobile app.
+
 ## Delete audit data
 
 You may need to delete audit data because:
