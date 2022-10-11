@@ -169,3 +169,6 @@ To configure advisors:
 
     - **Remove** an advisor - choose an advisor by selecting … (ellipsis), and select **Remove**.
 
+## Known issues
+
+-  The virtual agent dialog may appear blank when you [restart the virtual agent](virtual-agent.md#restart-or-close-a-session). To fix the issue, refresh your browser page.
