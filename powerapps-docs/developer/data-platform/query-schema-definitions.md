@@ -461,6 +461,10 @@ The [RetrieveMetadataChangesResponse](xref:Microsoft.Dynamics.CRM.RetrieveMetada
 |`ServerVersionStamp`|`string`|A timestamp identifier for the metadata retrieved. When you manage a cache of schema definitions, use this value as the `ClientVersionStamp` property in subsequent requests so that only the changes since the previous request are returned.|
 |`DeletedMetadata`|[DeletedMetadataCollection](xref:Microsoft.Dynamics.CRM.DeletedMetadataCollection)|Data for the items deleted since the previous request. This only contains data when `RetrieveMetadataChanges` is sent with the `ClientVersionStamp` and `DeletedMetadataFilters` parameters. For more information see [Cache Schema data](cache-schema-data.md)|
 
+Please note that `EntityMetadata` property returns a collection of <xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata?text=ComplexEntityMetadata ComplexType>. This is different than the <xref:Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata  EntityType> used with the `EntityDefinitions` entity set used to create and update entity tables.
+
+All the types returned with `RetrieveMetadataChangesResponse.EntityMetadata`, [RetrieveAllEntitiesResponse.EntityMetadata](xref:Microsoft.Dynamics.CRM.RetrieveAllEntitiesResponse), and [RetrieveEntityResponse.EntityMetadata](xref:Microsoft.Dynamics.CRM.RetrieveEntityResponse) return these complex types that have corresponding entity types used when creating or updated schema definitions.
+
 ---
 
 
