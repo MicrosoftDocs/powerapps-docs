@@ -48,7 +48,7 @@ Anyone with a [work or school email address](signup-for-powerapps.md#faq) backe
 Sign up on the [Power Apps Developer Plan website](https://aka.ms/PowerAppsDevPlan). 
 
 After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). You
-may need to select your developer environment from the top right of the screen. It will be shown with your name, for example "John Doe's environment." If there's already an environment with that name, the developer environment will be named "John Doe's (1) environment." You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
+may need to select your developer environment from the top right of the screen. It will be shown with your name, for example "John Doe's environment." The new environment will be provisioned, it may take a couple of minutes to be available. You can see the progress of the creation in the [admin portal](https://admin.powerplatform.com). If there's already an environment with that name, the developer environment will be named "John Doe's (1) environment." You'll need to use this developer environment, instead of your tenant’s default environment, to use certain capabilities such as premium and custom connectors.
 
 ![Individual environment for Developer Plan.](media/developer-plan/select-environment.png "Individual environment for Developer Plan")
 
