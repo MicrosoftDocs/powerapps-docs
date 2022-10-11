@@ -1,8 +1,8 @@
 ---
 title: Create a shopping list card (preview)
-description: Learn about card basics while creating a simple shopping list card.
+description: Learn about the basic elements of a card by creating a shopping list card.
 ms.date: 09/20/2022
-ms.topic: article
+ms.topic: how-to
 author: iaanw
 ms.author: iawilt
 manager: shellyha
@@ -15,113 +15,89 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
-This tutorial shows you how to build a simple card that displays a shopping list and lets you add new items. At the end of this tutorial, your shopping list card will look like the example below:
+In this tutorial, you'll create a card that displays a shopping list and lets you add items. You'll use the [card designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
 
-:::image type="content" source="../media/tutorial-simple-shopping-list/shopping-list-card.png" alt-text="Screenshot of a finished simple shopping list card." border="true":::
+At the end of the tutorial, your shopping list card should look like the following example:
+
+:::image type="content" source="../media/tutorial-simple-shopping-list/shopping-list-card.png" alt-text="Screenshot of a finished shopping list card.":::
 
 ## Prerequisites
 
-- A [Power Apps](https://powerapps.microsoft.com/) account.
-- Familiarity with the [Card Designer](../make-a-card/designer-overview.md), [variables](../make-a-card/variables/variables.md), and [Power Fx](../make-a-card/power-fx/intro-to-pfx.md).
+- A [Power Apps](https://powerapps.microsoft.com/) account
 
 ## Create a card
 
-1. Go to [Power Apps](https://make.powerapps.com) and select **Cards (preview)** on the left.
+1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
+
+1. In the left pane, select **Cards (preview)**.
 
 1. Select **+ Create a card**.
 
-1. Enter "SimpleShoppingCard" under **Card name** and then select **Create**. The default card will appear, shown below.
+1. Under **Card name**, type *SimpleShoppingCard*, and then select **Create**.
 
-   :::image type="content" source="../media/tutorial-simple-shopping-list/default-blank-card.png" alt-text="Screenshot of a blank card." border="true":::
+1. Select the text **Your card title goes here**. In the text label properties pane, set **Text** to *Shopping List*.
 
-1. Select the top **Text label** and enter `Shopping List`. Then select the **Text label** and enter `Use the field below to add items to the list.`.
+1. Select the text **Add and remove element to customize your new card.** In the text label properties pane, set **Text** to *Use the box below to add items to the list*.
 
-## Add a new variable
+## Add a variable
 
-The shopping list will hold several individual lines of text, so you'll need to create a variable to hold these.
+The shopping list will hold individual items in separate lines of text. It looks like a table with a single column, with one grocery item in each row. That suggests you'll need to create a table variable to store your list.
 
-1. Select **Variables** then **New variable** to create a new variable.
-
-1. The **New variable** box will appear. Under name **Name** enter "myGroceryList".
-
-1. Set the variable **Type** to *Table*. Keep the **Value Persistance** set to **Temporary**.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/setup-grocery-array-var.png" alt-text="Screenshot of the my grocery list variable setup." border="true":::
-
-1. Select **Save** to create the `MyGroceryList` table variable.
-
-1. You should now see that your variable list contains one variable whose name is `MyGroceryList` and type is *Table*.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/my-grocery-list-array-var.png" alt-text="Screenshot of the fully set up my grocery list array variable." border="true":::
-
-## Add and configure the list
-
-Now that you have a table variable for your list, you need to add it to the card and configure it.
-
-1. Select **Insert** from the menu. Select **Display** then **Text label**.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-text-label.png" alt-text="Screenshot of where to find the Text label in the Insert>Display menu." border="true":::
-
-    A **Text label** will appear on the card underneath the Text labels you edited previously.
-
-1. With the empty Text label still selected, select the **Advanced** tab on the right. Select the **Repeat for every** field and enter `MyGroceryList`.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/advanced-pane-setup.png" alt-text="Screenshot of how to setup Advanced pane" border="true":::
-
-   This will repeat the Text label for every element in a given table. In this example, the table you're providing - `myGroceryList` - is the variable you created previously. This means that for every element in the grocery list, a separate text label is created in the card.
-
-1. Switch back to the **Properties** tab. In the **Text** field, enter `ThisItem`.
-
-   Assigning the `ThisItem` variable to the text label lets you view and display the current element of the `myGroceryList` array in the visible text of the Text label.
-
-## Add the input field and button
-
-The list you've created is currently empty, so the final step is to give the card the ability to add items to the list.
-
-1. Select **Insert** from the menu. Then select **Input** then **Text input**. A text input box will appear on the screen.
-
-1. Select the **Text input** control to display its properties.
-
-   - Set **Name** to `TheNewItem`.
-   - Set **Label** to `New Item:`.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/added-input-text-names.png" alt-text="Screenshot of added variable names to an input text box." border="true":::
-
-   > [!NOTE]
-   > The **Name** property lets you refer to the field from Power Fx and has to be one word. The **Label** property is displayed above the field; you can see it on the card to the left. These don't have to be similar as they are here (i.e. *TheNewItem* and "New Item:"), but it makes it easier to keep track of things.
-
-1. Select **Insert** then **Input** then **Button** to add a button to the card.
-
-   :::image type="content" source="../media/tutorial-simple-shopping-list/add-a-button.png" alt-text="Screenshot of adding a button to the card." border="true":::
-
-1. Select the button to see its properties. Set its **Title** to `Add a new item`.
-
-    > [!TIP]
-    > The **Type** property is set to **Run Power Fx**. Buttons can be used for other kinds of actions, but using a Power Fx expression is the most common.
-
+1. In the left pane, select **Variables**.
+1. Select **+ New variable**.
+1. In the **New variable** window, enter *MyGroceryList* under **Name**. Set **Type** to **Table**.
+1. Select the curly brackets to the right of **Default value** and enter *""* between the brackets. This indicates that our table holds text values in a column implicitly called **Value**
 1. Select **Save**.
 
-### Add the Power Fx expression
+   :::image type="content" source="../media/tutorial-simple-shopping-list/setup-grocery-array-var.png" alt-text="Screenshot of the MyGroceryList variable properties pane.":::
 
-1. With the button selected, add in the following line of code into the Power Fx editor at the top: `Collect(myGroceryList, theNewItem)`
+## Add a list to the card
 
-This PowerFX expression will append the contents of the `theNewItem` field to the `myGroceryList` table.
+1. In the left pane, select **Insert**.
+1. In the tool pane, select **Display** to expand the category, and then select **Text label**.
+1. In the text label properties pane, select the **Advanced** tab.
+1. Set **Repeat for every** to *MyGroceryList*.
 
-   | Variable          | Function in Power Fx                                                             |
-   | ----------------- | -------------------------------------------------------------------------------------- |
-   | `Collect`         | A built-in function that takes a table and an item and adds the item to the table. |
-   | `MyGroceryList`   | The first variable you created; an initially empty table.                              |
-   | `TheNewItem`      | The text input field above the button.                                                 |
+   :::image type="content" source="../media/tutorial-simple-shopping-list/advanced-pane-setup.png" alt-text="Screenshot of a text label's advanced properties pane, with MyGroceryList in the Repeat for every property.":::
+
+   Setting a text label's **Repeat for every** property repeats the text label for every item in the specified table. In this example, the table, `MyGroceryList`, is the variable you created. In other words, a separate text label is created in the card for every item in the grocery list.
+
+1. Select the **Properties** tab. Set **Text** to *ThisItem.Value*.
+
+   Assigning the system-defined variable `ThisItem.Value` to the text label displays the value of the current item in the `MyGroceryList` array as the label text. *Array* is another term for a table variable. You can enter the variable name in the formula bar or the properties pane.
+
+    :::image type="content" source="../media/tutorial-simple-shopping-list/set-thisitem-value.png" alt-text="Screenshot of a variable name entered in the text label's Text property.":::
+
+## Add an input box
+
+The list you created is empty, so in the final step, you'll give the user the ability to add items.
+
+1. In the left pane, select **Insert**.
+1. In the tool pane, select **Input** to expand the category, and then select **Text input**.
+1. In the text input properties pane, set **Name** to *NewItem* and set **Label** to *New Item:*.
+
+   :::image type="content" source="../media/tutorial-simple-shopping-list/added-input-text-names.png" alt-text="Screenshot of variable names entered in the Name and Label properties of an input text box.":::
+
+   The **Name** property lets you refer to the control in a Power Fx expression. It has to be one word, with no spaces or special characters. The **Label** property is displayed in the card. The name and label of a control don't have to be similar, as they are here, but using similar names makes it easier to keep track of controls.
+
+### Add a Power Fx button
+
+1. In the left pane, select **Insert**.
+1. In the tool pane, select **Input** to expand the category, and then select **Button**.
+1. In the button properties pane, set **Title** to *Add Item*.
+1. In the properties pane, select **PowerFx** to place your cursor in the formula bar.
+1. Type the following Power Fx expression in the formula bar: *Collect(MyGroceryList, {Value: NewItem})*
+
+    This expression uses the Power Fx function **Collect** to append the value of the user's input, `NewItem`, to the `MyGroceryList` table variable in the implicit **Value** column. Since the expression is bound to the button's **OnSelect** property, it runs when the user selects the button.
+
+    :::image type="content" source="../media/tutorial-simple-shopping-list/pfx-in-button.png" alt-text="Screenshot of the Power Fx expression in the formula bar, assigned to the button's OnSelect property.":::
 
 ## Test the card
 
-1. Save all of your changes by selecting **Save** at the top. Always save your changes before testing your card.
+You should always save your changes before you play a card. Select **Save**, and then select **Play**.
 
-1. Select the **Play** button in the upper right corner. This will launch your card in a new web page.
+Test your card by adding a few items to the grocery list.
 
-    :::image type="content" source="../media/tutorial-simple-shopping-list/play-button-in-cards.png" alt-text="Screenshot showing where the play button is." border="true":::
+## Next steps
 
-## Next Steps
-
-Learn how to make a more complex card with the [Dataverse](dataverse-card.md).
-
+Learn how to make a more complex card with [Microsoft Dataverse connectors](dataverse-card.md).
