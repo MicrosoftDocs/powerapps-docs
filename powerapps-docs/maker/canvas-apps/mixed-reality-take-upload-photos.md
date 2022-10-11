@@ -28,6 +28,7 @@ We'll cover the following tasks:
 - Connecting the **3D object** control to a **View in MR** control to view the 3D object in the real world
 - Adding a gallery control to view photos taken with the **View in MR** control
 - Uploading the photos to OneDrive with a Microsoft Power Automate flow
+- Uploading photos captured in mixed-reality to Dataverse
 
 ## Prerequisites
 
@@ -107,23 +108,23 @@ To make the photos in the gallery easier to see, you can add a full-size overlay
 
 ## Upload photos to OneDrive with a Power Automate flow
 
-Last, we'll create a workflow in Power Automate. The workflow uploads photos from the app to a folder named **MRPhotos** on OneDrive.
+Last, we'll create a workflow using the Power Automate pane. The workflow uploads photos from the app to a folder named **MRPhotos** on OneDrive.
 
 ### Create a flow in Power Automate
 
-1. Edit your app. Select **Action** > **Power Automate** > **Create a new flow**. (You may need to sign in to Power Automate first.)
-
-    :::image type="content" source="./media/augmented-upload-photo/open-automate.png" alt-text="A screenshot of an app in Microsoft Power Apps Studio, with a new Power Automate flow selected.":::
+1. Edit your app. On the app authoring menu, select **Power Automate** > **Create new flow**.
 
 1. Search for and select the Power Apps button template.
 
     :::image type="content" source="./media/augmented-upload-photo/create-power-apps-button.png" alt-text="A screenshot of the Power Automate template page, with the Power Apps button template selected.":::
+    
+1. In the **Create your flow** window, select **Edit in advanced mode**.    
 
 1. Select **Power Apps button** at the top of the window and enter a new name for your flow. In this example, we'll name the flow *Upload MR Photo*.
 
     :::image type="content" source="./media/augmented-upload-photo/rename-flow.png" alt-text="A screenshot of the Power Automate edit window, with the workflow name highlighted.":::
 
-1. In the PowerApps step in the workflow, select **...**, and then select **Delete**.
+1. Select Power Apps button at the top of the window and enter a new name for your flow. In this example, we'll name the flow Upload MR Photo.
 
     :::image type="content" source="./media/augmented-upload-photo/rename-flow-delete-trigger.png" alt-text="A screenshot of the Power Automate edit window, with the PowerApps step selected for deletion.":::
 
@@ -180,6 +181,16 @@ The complete flow should look like this:
 ### Add offline capability to your app
 
 You can use your app even when you have limited or no network connectivity using the [**SaveData** and **LoadData** functions](./functions/function-savedata-loaddata.md).
+
+## Upload photos captured in mixed-reality to Dataverse
+
+You can add photos to Dataverse tables through an Image data type column. Image columns in Dataverse have two required fields - Full and Value - which can be set to the ImageURI output of the MR controls.
+
+For example, if you wanted to upload the first photo captured by the Markup in MR control to a Dataverse column called Image:
+
+```powerapps-dot
+    Image: {Full: First(MarkupInMR.Photos).ImageURI, Value: First(MarkupInMR.Photos).ImageURI}
+```
 
 ### See also
 

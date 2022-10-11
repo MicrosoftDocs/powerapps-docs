@@ -6,9 +6,8 @@ summary: Learn how to write applications and web pages that can access Dataverse
 metadata:
   title: Dataverse developer documentation
   description: Provides access to highlighted areas within the Dataverse developer documentation
-  services: service
-  
-  ms.subservice: subservice
+  services: service  
+  ms.subservice: dataverse-developer
   ms.topic: landing-page 
   ms.collection: collection
   author: phecke
@@ -31,7 +30,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Introduction to Dataverse for developers
-            url: /learn/modules/intro-cds-developers-power-platform/
+            url: /training/modules/intro-cds-developers-power-platform/
          
           
   # Card

@@ -5,9 +5,9 @@ author: larryk78
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/31/2022
+ms.date: 06/06/2022
 ms.subservice: canvas-maker
-ms.author: lknibb
+ms.author: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -17,12 +17,12 @@ contributors:
   - larryk78
 ---
 
-# Code sign for Android
+# Code sign for Android 
 
-In this article, you'll learn about how to code sign for Android. You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
+In this article, you'll learn about how to code sign for Android (APK). You'll need to sign your app for Android if you selected Android as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
-> [!TIP]
-> For general guidance about signing an app for Android platforms, see [Sign your app](https://developer.android.com/studio/publish/app-signing).
+> [!IMPORTANT]
+> If you'd like to sign an AAB app for Google Play distribution instead, refer to [Sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## Prepare your PC
 
@@ -42,6 +42,7 @@ To generate a key, open a command prompt and run the following command:
 
 `keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 100`
 
+
 Parameters:
 
 - **genkey** - command to generate a key.
@@ -53,7 +54,17 @@ Parameters:
 
 Example:
 
-`keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
+
+
+- If preparing Keyvault, PATH_TO_KEYSTORE should have .pfx extension.
+
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
+
+
+- If preparing for manual signing, PATH_TO_KEYSTORE should have .jks extension.
+
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
+
 
 :::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
 
@@ -101,7 +112,7 @@ To sign the APK package, we'll use the [apksigner tool](https://developer.androi
 
     If using iOS, check the apksigner file from the **buildTools Version** directory:
 
-    Go to **SDK** directory > **build-tools** > **buildToolsVersion** > **lib**, and check the **apksigner.jar** file 
+    Go to **SDK** directory > **build-tools** > **buildToolsVersion** > **lib**, and check the **apksigner.jar** file 
 
 ### Use the apksigner file
 
@@ -120,7 +131,8 @@ More information: [Android Studio command line tools: **apksigner**](https://dev
 
 ## Distribute the app
 
-You can now host the package on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android).
+You can now host the package on a distribution service such as [App Center](how-to.md#test-and-distribute-mobile-app-package). To distribute using Microsoft Intune, see [Add an Android line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-android). To learn about giving an app access to the Intune app protection service, see [Give your app access to the Intune app protection service](/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+
 
 ### See also
 

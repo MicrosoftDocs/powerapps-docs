@@ -33,7 +33,7 @@ Virtual tables replace previous client-side and server-side approaches to integr
 
 ## Virtual tables, data providers and data sources
 
-A virtual table is a definition of a table in the Dataverse platform without the associated physical tables for table instances created in the Dataverse database. Instead during runtime, when a table instance is required, its state is dynamically retrieved from the associated external system. Each virtual table type is associated with a *virtual table data provider* and (optionally) some configuration information from an associated *virtual table data source*.
+A virtual table is a definition of a table in the Dataverse platform without the associated physical tables for records created in the Dataverse database. Instead during runtime, when a record is required, its state is dynamically retrieved from the associated external system. Each virtual table type is associated with a *virtual table data provider* and (optionally) some configuration information from an associated *virtual table data source*.
 
 <!-- TODO:
 A data provider is a particular type of Dataverse plug-in, which is registered against CRUD events that occur in the platform. More information: [Write a plug-in](../write-plugin.md) -->
@@ -48,7 +48,7 @@ If a data provider cannot be found for your external data source, you can develo
 
 ## Virtual table creation and mapping
 
-Initially, defining a virtual table is the same as defining a custom table: you specify the table, columns, and relationships for the new virtual table type. However, additionally, you then connect the virtual table to a data provider to manage data operations. The custom table type and its columns must be mapped to the corresponding data in the external data source.  For example, a virtual table might be represented as a row in an external relational database, and each of its columns might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual table names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this table instance. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
+Initially, defining a virtual table is the same as defining a custom table: you specify the table, columns, and relationships for the new virtual table type. However, additionally, you then connect the virtual table to a data provider to manage data operations. The custom table type and its columns must be mapped to the corresponding data in the external data source.  For example, a virtual table might be represented as a row in an external relational database, and each of its columns might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual table names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this record. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
 
 In this example, a corresponding virtual table data source would also be provided to supply user and connection information for the external database.
 

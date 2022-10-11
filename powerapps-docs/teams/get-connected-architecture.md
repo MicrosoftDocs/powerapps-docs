@@ -1,5 +1,5 @@
 ---
-title: Understand Get connected sample app architecture (preview) | Microsoft Docs
+title: Understand Get connected sample app architecture (preview)
 description: Learn about the architecture of the Get connected sample app.
 author: joel-lindstrom
 
@@ -478,7 +478,7 @@ The following variables are used in the about screen:
 #### About screen execution details
 
 1. Selecting the back button on the **conNavigtion_About** container navigates back to the Team Screen.
-1. Selecting the links the websites will open to the Microsoft docs.
+1. Selecting the links the websites will open to the articles in Microsoft Learn.
 
 ### See also
 

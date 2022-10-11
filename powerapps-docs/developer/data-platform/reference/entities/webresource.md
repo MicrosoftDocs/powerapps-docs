@@ -1,7 +1,7 @@
 ---
 title: "WebResource table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the WebResource table/entity."
-ms.date: 05/23/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -25,7 +25,7 @@ Data equivalent to files used in Web development. Web resources provide client-s
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Create|POST [*org URI*]/api/data/v9.0/webresourceset<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/webresourceset(*webresourceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
@@ -358,7 +358,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
+- [ContentFileRef](#BKMK_ContentFileRef)
 - [ContentFileRef_Name](#BKMK_ContentFileRef_Name)
+- [ContentJsonFileRef](#BKMK_ContentJsonFileRef)
 - [ContentJsonFileRef_Name](#BKMK_ContentJsonFileRef_Name)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedOn](#BKMK_CreatedOn)
@@ -403,9 +405,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 
 
+### <a name="BKMK_ContentFileRef"></a> ContentFileRef
+
+**Added by**: UnifiedClientWebResourceFileType Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Reference to the content file on Azure.|
+|DisplayName|ContentFileRef|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentfileref|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_ContentFileRef_Name"></a> ContentFileRef_Name
 
-**Added by**: Active Solution Solution
+**Added by**: UnifiedClientWebResourceFileType Solution
 
 |Property|Value|
 |--------|-----|
@@ -421,9 +438,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_ContentJsonFileRef"></a> ContentJsonFileRef
+
+**Added by**: UnifiedClientWebResourceFileType Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Reference to the Json content file on Azure.|
+|DisplayName|ContentJsonFileRef|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|contentjsonfileref|
+|RequiredLevel|None|
+|Type|File|
+
+
 ### <a name="BKMK_ContentJsonFileRef_Name"></a> ContentJsonFileRef_Name
 
-**Added by**: Active Solution Solution
+**Added by**: UnifiedClientWebResourceFileType Solution
 
 |Property|Value|
 |--------|-----|
@@ -862,6 +894,6 @@ See the [appactionrule_webresource_scripts](appactionrule.md#BKMK_appactionrule_
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.webresource?text=webresource EntityType" />

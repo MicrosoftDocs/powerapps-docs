@@ -31,7 +31,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: /learn/modules/introduction-common-data-service
+            url: /training/modules/introduction-common-data-service
 
   # Card
   - title: Define data
@@ -121,6 +121,8 @@ landingContent:
            url: create-solution.md
          - text: Export solutions
            url: export-solutions.md
+         - text: Validate solutions
+           url: use-powerapps-checker.md
          - text: More > 
            url: solution-layers.md
 

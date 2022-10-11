@@ -1,7 +1,7 @@
 ---
 title: "msdyn_richtextfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_richtextfile table/entity."
-ms.date: 05/23/2022
+ms.date: 08/31/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -27,7 +27,7 @@ Image or file attached to a rich text field
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/msdyn_richtextfiles(*msdyn_richtextfileid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/msdyn_richtextfiles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
@@ -316,6 +316,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_fileblob](#BKMK_msdyn_fileblob)
 - [msdyn_fileblob_Name](#BKMK_msdyn_fileblob_Name)
 - [msdyn_imageblob](#BKMK_msdyn_imageblob)
 - [msdyn_imageblob_Timestamp](#BKMK_msdyn_imageblob_Timestamp)
@@ -568,9 +569,20 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
-### <a name="BKMK_msdyn_fileblob_Name"></a> msdyn_fileblob_Name
+### <a name="BKMK_msdyn_fileblob"></a> msdyn_fileblob
 
-**Added by**: Active Solution Solution
+|Property|Value|
+|--------|-----|
+|Description|Base64 encoded file content for Rich Text Attachments|
+|DisplayName|File Blob|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_fileblob|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_fileblob_Name"></a> msdyn_fileblob_Name
 
 |Property|Value|
 |--------|-----|
@@ -938,6 +950,6 @@ See the [business_unit_msdyn_richtextfile](businessunit.md#BKMK_business_unit_ms
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.msdyn_richtextfile?text=msdyn_richtextfile EntityType" />

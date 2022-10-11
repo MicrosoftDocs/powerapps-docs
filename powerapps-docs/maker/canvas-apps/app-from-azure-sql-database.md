@@ -100,7 +100,6 @@ As a next step, use [Power Apps](https://make.powerapps.com) studio to customize
 
 - [Share a canvas app in Power Apps](share-app.md) </br>
 - [Add a data connection to a canvas app in Power Apps](add-data-connection.md#add-data-source)</br>
-- [Microsoft Learn: Customize a canvas app in Power Apps](/learn/modules/customize-apps-in-powerapps/)
-
+- [Customize a canvas app in Power Apps](/training/modules/customize-apps-in-powerapps/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

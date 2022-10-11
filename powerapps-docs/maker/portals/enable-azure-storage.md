@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/12/2021
+ms.date: 10/06/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,17 +13,18 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
 # Enable Azure Storage
 
-Azure Storage integration for portals enables you to take advantage of the greater file storage capability of Azure, using the same interface and providing the same user experience as for default file attachments. This feature is supported for web files, basic forms, and advanced forms.
+Azure Storage integration for portals enables you to take advantage of the greater file storage capability of Azure, using the same interface and providing the same user experience as for default file attachments. This feature is supported for web files, basic forms, and multistep forms.
 
 You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](/azure/storage/storage-create-storage-account#create-a-storage-account).
 
 After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageAccount**.
 
-Azure storage integration only works with **Notes** configured in Basic Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Microsoft Dataverse.
+Azure storage integration only works with **Notes** configured in basic form metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though portal comments also provide capability for files to be uploaded as attachments, these files are only stored in Microsoft Dataverse.
  
 > [!NOTE]
 > - You must enable attachments for the table in Microsoft Dataverse first before using this feature. More information: [Create a table](../data-platform/data-platform-create-entity.md#create-a-table)
@@ -79,7 +80,19 @@ Add the following site settings from **Portals** > **Site Settings**. [!include[
 |WebFiles/StorageLocation|AzureBlobStorage|
 |||
 
-With additional settings on portals [basic form](configure-notes.md#enable-file-attachment-on-form), your portal is ready to begin uploading and downloading files to and from Azure Storage. However, you cannot take full advantage of this feature until you [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md), and configure [basic forms](configure-notes.md#notes-configuration-for-basic-forms) or [advanced forms](configure-notes.md#notes-configuration-for-advanced-forms) to use it.
+## Configure basic or multistep forms 
+
+To view and add attachments stored in Azure on basic and multistep forms on your site, you will need to [configure notes as attachments](configure-notes.md) as well as add [basic form](configure-notes.md#notes-configuration-for-basic-forms) or [multistep form](configure-notes.md#notes-configuration-for-multistep-forms) metadata with the **File Attachment Location** set to **Azure Blob Storage**.
+
+You can then add attachments to records on web pages.
+
+:::image type="content" source="media/enable-azure-storage/basic-form.png" alt-text="File attachment added to basic form on a portal.":::
+
+Attachments uploaded via the site will be stored in Azure.
+
+:::image type="content" source="media/enable-azure-storage/attachment-in-azure.png" alt-text="File attachment stored in Azure.":::
+
+To view and access the attachments in a model-driven app (including Dynamics 365 apps) you will need [add a web resource to enable uploading attachments to Azure Storage](add-web-resource.md).
 
 ### See also
 
@@ -87,5 +100,3 @@ With additional settings on portals [basic form](configure-notes.md#enable-file-
 
 [Configure notes](configure-notes.md)
 
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -16,7 +16,10 @@ contributors:
 
 # Manage SharePoint documents
 
-Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on a basic form or advanced form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+Microsoft Dataverse supports integration with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] that enables you to use the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Dataverse. Power Apps portals now supports uploading and displaying documents to and from [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] directly on a basic form or multistep form in a portal. This allows portal users to view, download, add, and delete documents from a portal. Portal users can also create subfolders to organize their documents.
+
+> [!NOTE] 
+> You can also manage SharePoint documents in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
 
 > [!NOTE]
 > - Document management works only with [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)].
@@ -93,7 +96,7 @@ You can specify name and label as per your requirement. Save and publish the for
 
 ### Power Apps portals configuration
 
-Apart from the standard configuration required for basic form or advanced form, you must set the following properties to enable document management:
+Apart from the standard configuration required for basic form or multistep form, you must set the following properties to enable document management:
 
 - **Table Name** and **Form Name**: Enter the table and form names customized in the previous step, respectively.
 
@@ -108,8 +111,8 @@ Apart from the standard configuration required for basic form or advanced form, 
 
 Two table permission records are required to establish the necessary access to view and upload documents.
 
-- Permissions on the table of the table or advanced form: 
-    - Create a **Table Permission** record specifying the **Table Name** as the table of the basic form or advanced form configured previously. 
+- Permissions on the table of the table or multistep form: 
+    - Create a **Table Permission** record specifying the **Table Name** as the table of the basic form or multistep form configured previously. 
     - Select a **Access Type** and access type relationship that is appropriate to the behavior of the form that you want.
     - Enable **Read** and **Append To** privileges to allow read access to documents and optionally enable **Write** privilege to allow document uploads. Ignore the **Child Table Permissions** section for now since it will be populated by the next step.
 - Permissions on the **Document Location** with **Parent access type** referring to the previous permission record: 
@@ -121,7 +124,7 @@ Two table permission records are required to establish the necessary access to v
         - Include **Delete** to allow deletion of a document.
 
 > [!NOTE]
-> A corresponding child table permission on the **Document Location** table needs to be created for each instance of the parent table permission record that exists on the table of the table or advanced form where documents need to be shown.
+> A corresponding child table permission on the **Document Location** table needs to be created for each instance of the parent table permission record that exists on the table of the table or multistep form where documents need to be shown.
 
 ## Configure file upload size
 
@@ -192,8 +195,7 @@ The below example demonstrates configuration using the Case table which needs th
          
         d. If you’ve made any changes to the form, select **Save**.
 
-5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role
-) to make sure table permissions are granted to the users.
+5. Follow [Step 5](#step-5-create-appropriate-table-permission-and-assign-it-to-the-appropriate-web-role) to make sure table permissions are granted to the users.
 
    1. Go to the **Web Role** record that is associated to the user. For this sample, we’ll assume that the user has an Administrator web role.
 
@@ -230,7 +232,6 @@ The below example demonstrates configuration using the Case table which needs th
 
 ### See also
 
-[Microsoft Learn: Document management with SharePoint](/learn/modules/portals-integration/2-sharepoint)
-
+[Document management with SharePoint](/training/modules/portals-integration/2-sharepoint)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

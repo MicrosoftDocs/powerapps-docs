@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/11/2021
+ms.date: 10/07/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -14,6 +14,7 @@ searchScope:
 contributors:
     - nickdoelman
     - GitanjaliSingh33msft
+    - ProfessorKendrick
 ---
 
 # Terminology changes in Power Apps portals
@@ -32,7 +33,7 @@ The following table lists key terminology changes in portals.
 | Legacy term | Current term |
 | - | - |
 | Entity form | Basic form |
-| Web form | Advanced form |
+| Web form, Advanced form | Multistep form |
 | Entity list | List |
 | Entity permission | Table permission |
 | Entity Name | Table Name |
@@ -44,6 +45,9 @@ Terminology updates apply to references of legacy terms and any feature area or 
 ## Terminology changes inside Portal Management app
 
 The following table includes terminology changes inside Portal Management app.
+
+> [!NOTE]
+> In order to see the latest terminology changes reflected in the Portal Management app, you'll need to update to the latest solution packages.  More information: [Update the Power Apps portals solution](admin/update-portal-solution.md)
 
 | Feature area or location of the term |  Legacy term | Current term |
 | - | - | - |
@@ -67,12 +71,12 @@ The following table includes terminology changes inside Portal Management app.
 | View name for Entity Form | Entity Form Lookup View | Basic Form Lookup View |
 | View name for Entity Form | Inactive Entity Forms | Inactive Basic Forms |
 | View name for Entity Form | Quick Find Active Entity Forms | Quick Find Active Basic Forms |
-| View name for Web Form | Active Web Forms | Active Advanced Forms |
-| View name for Web Form | Inactive Web Forms | Inactive Advanced Forms |
-| View name for Web Form | Quick Find Active Web Forms | Quick Find Active Advanced Forms |
-| View name for Web Form | Web Form Advanced Find View | Advanced Form Advanced Find View |
-| View name for Web Form | Web Form Associated View | Advanced Form Associated View |
-| View name for Web Form | Web Form Lookup View | Advanced Form Lookup View |
+| View name for Web Form | Active Web Forms | Active Multistep Forms |
+| View name for Web Form | Inactive Web Forms | Inactive Multistep Forms |
+| View name for Web Form | Quick Find Active Web Forms | Quick Find Active Multistep Forms |
+| View name for Web Form | Web Form Advanced Find View | Multistep Form Advanced Find View |
+| View name for Web Form | Web Form Associated View | Multistep Form Associated View |
+| View name for Web Form | Web Form Lookup View | Multistep Form Lookup View |
 | Checkbox for Entity Permission | Enable Entity Permission | Enable Table Permission |
 | Lookup label for Parent Entity Permission | Parent Entity Permission | Parent Table Permission |
 | Tab name for entity reference | Entity Reference | Associated Table Reference |
@@ -122,7 +126,7 @@ These features and areas continue to use legacy terminology to ensure that exist
 
 ### See also
 
-[Microsoft Learn: Get started with Power Apps portals](/learn/paths/get-started-power-apps-portals/) <br>
+[Get started with Power Apps portals](/training/paths/get-started-power-apps-portals/) <br>
 [Power Apps portals lifecycle](admin/portal-lifecycle.md) <br>
 [Available portal templates](portal-templates.md) <br>
 [Portals connectivity to a Microsoft Dataverse environment](admin/connectivity.md) <br>

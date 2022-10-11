@@ -1,7 +1,7 @@
 ---
 title: "Retrieve related table records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related table records by expanding the navigation properties."
-ms.date: 04/06/2022
+ms.date: 09/29/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -25,12 +25,12 @@ Use the `$expand` system query option in the navigation properties to control wh
   
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.  
   
-If you include only the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.  
+If you include only the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.  
 
 > [!NOTE]
->  - You are limited to no more than 10 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
->  - To retrieve related entities for an entity instance, see [Retrieve related tables for a table by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated). 
-> - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+>  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
+>  - To retrieve related entities for an entity instance, see [Retrieve related records by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated). 
+> - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 > 
 
 <a name="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
@@ -130,7 +130,7 @@ OData-Version: 4.0
 You can expand single-valued navigation properties to multiple levels by nesting an `$expand` option within another `$expand` option.
 
 > [!NOTE]
-> There is no limit on the depth of nested `$expand` options, but the combined limit of 10 total `$expand` options in a query still applies.
+> There is no limit on the depth of nested `$expand` options, but the combined limit of 15 total `$expand` options in a query still applies.
 
 The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and finally to the `systemuser` who created the  `account` record.
 
@@ -199,11 +199,14 @@ OData-Version: 4.0
 
 <a name="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
-## Retrieve related tables by expanding collection-valued navigation properties
+## Retrieve related records by expanding collection-valued navigation properties
 
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise the collection will return an empty array.
+If you expand on collection-valued navigation properties to retrieve related entities for entity sets, only one level of depth is returned if there is data. Otherwise the collection will return an empty array.
 
-In either case an `@odata.nextLink` property will be returned for the related entities. If you want to retrieve the collection separately, you can use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
+In either case an `@odata.nextLink` property will be returned for the related entities. If you want to retrieve the collection separately, you can use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.
+
+> [!NOTE]
+> There is no paging available for collection-valued navigation properties returned using `$expand`. No more than 5000 records will be returned. If you require paging, use the URL in the `@odata.nextLink` property with the `Prefer: odata.maxpagesize` request header. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page).
 
 The following example retrieves the tasks assigned to the top 2 account records.  One has related tasks, the other does not.
   
@@ -271,9 +274,9 @@ OData-Version: 4.0
 
 <a name="bkmk_retrieverelatedentitysingleandcollectionnavprop"></a>
   
-## Retrieve related tables by expanding both single-valued and collection-valued navigation properties
+## Retrieve related records by expanding both single-valued and collection-valued navigation properties
 
-The following example demonstrates how you can expand related entities for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns one level of depth and an `@odata.nextLink` property for the related entities.  
+The following example demonstrates how you can expand related records for entity sets using both single and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related records for entity sets returns one level of depth and an `@odata.nextLink` property for the related entities.  
   
 In this example, we are retrieving the contact and tasks assigned to the top 2 accounts.  
   
@@ -357,9 +360,9 @@ The Web API allows you to use two lambda operators, which are `any` and `all` to
 [Query data using Web API](query-data-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Create a table using the Web API](create-entity-web-api.md)<br />
-[Retrieve a table using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete tables using the Web API](update-delete-entities-using-web-api.md)<br />
-[Associate and disassociate tables using the Web API](associate-disassociate-entities-using-web-api.md)
+[Create a table row using the Web API](create-entity-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

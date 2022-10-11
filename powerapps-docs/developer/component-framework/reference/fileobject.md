@@ -18,7 +18,7 @@ contributors:
 
 ## Available for
 
-Model-driven apps
+Model-driven and canvas apps.
 
 ## Properties
 
@@ -26,25 +26,29 @@ Model-driven apps
 
 Contents of the file.
 
-**Type**: `String`
+**Type**: `string`
 
 ### fileName
 
 Name of the file.
 
-**Type**: `String`
+**Type**: `string`
 
 ### fileSize
 
 Size of the file in KB.
 
-**Type**: `Number`
+**Type**: `number`
 
 ### mimeType
 
 File MIME type.
 
-**Type**: `String`
+**Type**: `string`
+
+## Sample controls
+
+[Image upload component](../sample-controls/image-upload-control.md)
 
 ## Related topics
 

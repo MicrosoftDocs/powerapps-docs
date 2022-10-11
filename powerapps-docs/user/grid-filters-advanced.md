@@ -25,9 +25,8 @@ searchScope:
   - Power Apps
 ---
 
-# Create and manage personal views on a grid page (preview)
+# Create and manage personal views on a grid page 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 In model-driven apps, views define the data that's displayed in tabular form on a grid page. System views are views that are created by your administrator and shared with you. You typically can't modify them. However, you can create and manage personal views. Personal views are available to you only unless you share them.
 
@@ -107,11 +106,21 @@ The following options are available when you add conditions in the filter editor
 
 To undo changes to the view filter at any time, select **Reset to default**.
 
+> [!TIP]
+> If you have the security privilege **Enable Download Fetch XML**, found under Miscellaneous Privileges section of the **Customization** tab within the security role definition page, you can download the FetchXML expression for a view. Contact your administrator if you need this capability.
+
 ## Sort the data
 
 Select a column heading, and then select how the view should sort data in the column. You can sort on one column at a time.
 
 Sorting options depend on the type of data. Alphanumeric columns can be sorted in A to Z (ascending) or Z to A (descending) order. Date columns can be sorted in older to newer (ascending) or newer to older (descending) order. An arrow to the right of the column name indicates the view is sorted on that column. The direction the arrow is pointing indicates whether the column is sorted in ascending or descending order.
+
+## Edit column width
+
+If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, as asterisk appears besige the view name to indicate that you edited the view and haven't saved it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
+
+> [!TIP]
+> Since the column width edits change the **minimum** width of the column, you may see column widths getting adjusted after the view is saved, to fill the available horizontal screen space.
 
 ## Save your view
 
@@ -238,6 +247,6 @@ To restore a hidden view:
 - **Assign**: Assigns ownership of the view to another user or team in your organization. This option appears only on personal views that you own.
 - **Delete**: Deletes the view. If you delete a personal view, the view is deleted for everyone who has access to it. This option appears only on personal views you have *Delete* permission to.
 - **Deactivate/Activate**: Deactivates or activates the view. If you deactivate or activate a personal view, the view becomes inactive or active for everyone who has access to it. This option appears only on personal views you have *Write* permission to.
-<!-- It's not clear to me how a deactivated list is different from a hidden list. Can you please elaborate? -->
+- **Download Fetch XML**: Download the FetchXML expression for the view. This capability is enabled by an administrator with the security privilege **Enable Download Fetch XML**, found under Miscellaneous Privileges section of the **Customization** tab within the security role definition page.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

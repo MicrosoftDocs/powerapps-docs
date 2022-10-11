@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/21/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,15 +13,19 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Configure basic form metadata for portals
 
-The Basic Form Metadata contains extra behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
+The basic form Metadata contains extra behavior modification logic to augment or override the functionality of form fields that is otherwise not possible with native basic form editing capabilities.
+
+> [!TIP]
+> If two or more basic form metadata records are created for the same attribute that have conflicting actions, the basic form metadata record that was created **first** will apply and the subsequent records will not.
 
 ## Add a new record
 
-1. On the Basic Form that has fields that you would like to modify, go to **Related** > **Basic Form Metadata** 
+1. On the basic form that has fields that you would like to modify, go to **Related** > **Basic Form Metadata** 
 
 2. Select **New Basic Form Metadata**.
 
@@ -31,7 +35,7 @@ The following attributes provide extra styling and capabilities for elements on 
 
 | Name          | Description                                                                                                                                                                                                                                                                                                                                          |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Basic Form | The Basic Form associated with the Basic Form Metadata record.                                                                                                                                                                                                                                                                                      |
+| Basic form | The basic form associated with the basic form Metadata record.                                                                                                                                                                                                                                                                                      |
 | Type          | Available options are:<ul><li>Attribute </li><li>Notes</li><li>Section</li><li>Subgrid</li><li>Tab</li><li>Timeline</li></ul> Each type represents appropriate options for the selection. |
 
 ## Basic form metadata type = Attribute
@@ -41,7 +45,7 @@ The following properties are displayed when the Type selected is 'Attribute'.
 
 |          Name          |                                                                                                                                                    Description                                                                                                                                                     |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Attribute Logical Name |                                                                                                                              The logical name of the attribute field to be modified.                                                                                                                               |
+| Attribute Logical Name |                                                                                                                              The logical name of the attribute field to be modified.<br> **Note:** Columns of type *choice* will not appear on the drop-down list of columns. You can enter the logical name of the choice column directly in the **Attribute Logical Name** text box.                                                                                                                              |
 |         Label          | Replaces the default label assigned to the attribute on the table with the text specified in this input. For each language pack installed and enabled for the Microsoft Dataverse environment a field will be available to enter the message in the associated language. |
 
 ### Control style
@@ -85,7 +89,7 @@ The following options specify a value to be set when the form is saved.
 
 ### Lookup Settings
 
-The lookup setting **Basic form for Create** is used to populate the Basic Form for creating a new record from the lookup when the metadata created for an attribute is of lookup type.
+The lookup setting **Basic form for Create** is used to populate the basic form for creating a new record from the lookup when the metadata created for an attribute is of lookup type.
 
 ### Validation
 
@@ -118,11 +122,11 @@ The following properties specify the location and content of custom description 
 | Use Attribute's Description Property |                                                                                       Select 'Yes' to use the description assigned to the attribute metadata on the table. Select 'No' to provide a custom description. Default is 'No'.                                                                                       |
 |             Description              | Custom text to be displayed on the form. Used in conjunction when Use Attribute's Description Property is set to 'No'. For each language pack installed and enabled for the Dataverse environment, a field will be available to enter the message in the associated language. |
 
-## Basic Form metadata type = Notes
+## Basic form metadata type = Notes
 
-See [Configure notes as attachments for basic and advanced forms](../configure-notes.md)
+See [Configure notes as attachments for basic and multistep forms](../configure-notes.md)
 
-## Basic Form metadata type = Section
+## Basic form metadata type = Section
 
 The following properties are displayed when the selected Type equals 'Section'.
 
@@ -132,11 +136,11 @@ The following properties are displayed when the selected Type equals 'Section'.
 | Section Name |                                                                                           The name of the section on the table's form to be modified.                                                                                            |
 |    Label     | Replaces the default label assigned to the section on the table with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Basic Form metadata type = Subgrid
+## Basic form metadata type = Subgrid
 
 See [Configure basic form subgrid](configure-basic-form-subgrid.md)
 
-## Basic Form metadata type = Tab
+## Basic form metadata type = Tab
 
 The following properties are displayed when the selected Type equals 'Tab'
 
@@ -146,7 +150,7 @@ The following properties are displayed when the selected Type equals 'Tab'
 | Tab Name |                                                                                           The name of the tab on the table's form to be modified.                                                                                            |
 |  Label   | Replaces the default label assigned to the tab on the table with the text specified in this input. For each language pack installed and enabled for the Dataverse environment a field will be available to enter the message in the associated language. |
 
-## Basic Form metadata type = Timeline
+## Basic form metadata type = Timeline
 
 The following properties are displayed when the selected Type equals 'Timeline'.
 
@@ -166,4 +170,3 @@ The following properties are displayed when the selected Type equals 'Timeline'.
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

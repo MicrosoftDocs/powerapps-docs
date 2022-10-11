@@ -39,7 +39,7 @@ If you already have the Microsoft Authenticator app installed and you're having 
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall Power Apps mobile.
 4. Reinstall the Microsoft Authenticator app and add your back up account.
-5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
+5. Reinstall [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and then sign in.
 
 
@@ -78,7 +78,7 @@ If the issue is still not fixed, then try these steps:
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall Power Apps mobile.
 4. Install Microsoft Authenticator again and add your back up accounts again.
-5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md#install-power-apps-mobile-app).
+5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and sign in.
 
 If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get. 
@@ -124,7 +124,7 @@ The Power Apps platform does not support accessing authenticated URLs, including
 
 ## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14 
 
-If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power App on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again.
+If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power Apps on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again.
 
 
 ## Flows created in a solution are not supported on Power Apps mobile

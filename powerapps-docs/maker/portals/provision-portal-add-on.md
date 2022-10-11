@@ -163,7 +163,7 @@ The table below summarizes the features associated with each portal option:
 | Web Notifications                      |  *                           | *              |  *                           | *                | *             |
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity                     |     *                         |  *              |     *                         |   *               | *             |
 | Identity Workflows                     | *                            |  *             |     *                         |   *               | *             |
-| Advanced Forms                              |  *                            | *               |    *                          | *                 | *             |
+| Multistep Forms                              |  *                            | *               |    *                          | *                 | *             |
 | Feedback                               |   *                           |  *              |  *                            | *                 | *             |
 ||
 
@@ -206,7 +206,6 @@ However, you can change the audience and type of portal after it's provisioned b
 
 ### See also
 
-[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
-
+[Administer Power Apps portals](/training/paths/administer-portals/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/11/2021
+ms.date: 09/26/2022
 ms.subservice: portals
 ms.author: dileeps
 ms.reviewer: ndoelman
@@ -22,6 +22,8 @@ This topic provides resources where you can learn about the new features that ha
 
 For information about the roadmap and new features releasing over the next few months, see:
 
+- [2022 release wave 1 plan](/power-platform-release-plan/2022wave1/power-apps-portals/)
+- [2021 release wave 2 plan](/power-platform-release-plan/2021wave2/power-apps-portals/)
 - [2021 release wave 1 plan](/power-platform-release-plan/2021wave1/power-apps-portals/)
 - [2020 release wave 2 plan](/power-platform-release-plan/2020wave2/power-apps/planned-features#power-apps-portals-improvements)
 - [2020 release wave 1 plan](/power-platform-release-plan/2020wave1/microsoft-powerapps/planned-features#power-apps-portals-improvements)
@@ -40,9 +42,11 @@ The following articles provide details about the portals version updates:
 
 The following articles provide details about the starter portal package updates:
 
-- [Starter portal package version version 9.3.2109.x](versions/package-version-9.3.2109.md)
-- [Starter portal package version version 9.2.2108.x](versions/package-version-9.2.2108.md)
-- [Starter portal package version version 9.2.2103.x](versions/package-version-9.2.2103.md)
+- [Starter portal package version 9.3.2209.x](versions/package-version-9.3.2209.md)
+- [Starter portal package version 9.3.2204.x](versions/package-version-9.3.2204.md)
+- [Starter portal package version 9.3.2109.x](versions/package-version-9.3.2109.md)
+- [Starter portal package version 9.2.2108.x](versions/package-version-9.2.2108.md)
+- [Starter portal package version 9.2.2103.x](versions/package-version-9.2.2103.md)
 - [Starter portal package version 9.2.2006.10](https://support.microsoft.com/topic/power-portal-packages-version-9-2-2006-10-release-b8357265-5148-c1a0-fdb0-d5ad7db30e10)
 - [Starter portal package version 9.2.2005.0](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2005-0-a0c176d0-d9dc-6236-87ea-243b92cd87b0)
 - [Starter portal package version 9.2.2003.2](https://support.microsoft.com/topic/dynamics-365-service-portal-solution-packages-release-9-2-2003-2-7f556cae-1f68-2b5f-3a11-b2b4977e49d8)

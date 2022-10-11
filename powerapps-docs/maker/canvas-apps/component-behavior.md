@@ -1,5 +1,5 @@
 ---
-title: Behavior formulas for components (preview)
+title: Behavior formulas for components (experimental)
 description: Do one or more tasks in canvas app when a component-based action occurs.
 author: hemantgaur
 ms.subservice: canvas-developer
@@ -16,20 +16,19 @@ contributors:
   - tapanm-msft
 ---
 
-# Behavior formulas for components (preview)
+# Behavior formulas for components (experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> This is an experimental feature. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances.
 
 For example, set a component's **OnReset** property to one or more formulas that do initialization and clear input. Reset values when the **Reset** function runs on the component instances.
 
 > [!NOTE]
-> The capability of using **OnReset** property for behavior formulas inside components is generally available. All other custom behavior properties for canvas components are still in preview.
+> The feature to create custom behavioral properties is currently experimental. However, you can use the default **OnReset** property that is available on all components in your production environment.
 
 ## OnReset
 

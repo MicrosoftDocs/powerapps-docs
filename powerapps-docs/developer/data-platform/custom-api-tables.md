@@ -1,20 +1,19 @@
 ---
 title: "CustomAPI tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes the tables and column values to use when creating Custom APIs." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/21/2022
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.date: 09/27/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: divka78 # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # CustomAPI tables
 
@@ -297,12 +296,12 @@ The table below includes selected columns of a Custom API table that you can set
 
 ## CustomAPIRequestParameter Table Columns
 
-A custom API isn’t required to have any parameters. There is no specified order for the parameters, they are identified by name.
+A custom API isn't required to have any parameters. There is no specified order for the parameters, they are identified by name.
 
 A parameter is related to a single Custom API. You cannot define multiple Custom APIs to use the same parameter definition. You can define multiple request parameter with the same `UniqueName` value if they are used by different Custom APIs.
 
 > [!NOTE]
-> If you define a bound table for your Custom API, the request parameter will be generated for you. You don’t need to create an input parameter for the table when the Custom API is bound to a table. More information: [Select a Binding Type](custom-api.md#select-a-binding-type)
+> If you define a bound table for your Custom API, the request parameter will be generated for you. You don't need to create an input parameter for the table when the Custom API is bound to a table. More information: [Select a Binding Type](custom-api.md#select-a-binding-type)
 
 The table shown below includes columns (attributes) of the Custom API Request Parameter table that you can set.
 
@@ -337,7 +336,7 @@ The table below includes columns (attributes) of the Custom API Response Propert
 |**Description**<br />`Description`<br />`description`|Text<br />String|Localized description for custom API response property  instances. For use when the message parameter is exposed to be called in an app. For example, as a [ToolTip](https://wikipedia.org/wiki/Tooltip).|
 |**Display Name** <br />`DisplayName`<br />`displayname`|Text<br />String|Localized display name for custom API response property  instances. For use when the message parameter is exposed to be called in an app.|
 |**Is Customizable**<br />`IsCustomizable`<br />`iscustomizable`|ManagedProperty|Whether the custom api response property can be customized or deleted when part of a managed solution.|
-|**Logical Entity Name**<br />`LogicalEntityName`<br />`logicalentityname`|Text<br />String|The logical name of the table bound to the custom API response property .<br/>**Cannot be changed after it is saved.**|
+|**Logical Entity Name**<br />`LogicalEntityName`<br />`logicalentityname`|Text<br />String|When **Entity** or **EntityReference** are selected as the **Type**, you can specify the logical name of the table bound to the custom API response property. You cannot specify a **Logical Entity Name** when you choose **EntityCollection** as the **Type**.<br/>**Cannot be changed after it is saved.**|
 |**Name**<br />`Name`<br />`name`|String|The primary name of the custom API response property .  This will display in the list of custom api request parameters when viewed in the solution. Use this to differentiate this parameter from others that share a common Unique Name. <br />This naming convention is recommended: `{Custom API Unique Name}.{Property UniqueName}`|
 |**Owner** <br />`OwnerId`<br />`ownerid`|Owner|A reference to the user or team that owns the API.|
 |**Type**<br />`Type`<br />`type`|Picklist|The data type of the custom API response property <ul> <li>**Value**: 0 **Label**: Boolean </li> <li>**Value**: 1 **Label**: DateTime</li> <li>**Value**: 2 **Label**: Decimal </li> <li>**Value**: 3 **Label**: Entity</li> <li>**Value**: 4 **Label**: EntityCollection </li> <li>**Value**: 5 **Label**: EntityReference</li> <li>**Value**: 6 **Label**: Float </li> <li>**Value**: 7 **Label**: Integer</li> <li>**Value**: 8 **Label**: Money </li> <li>**Value**: 9 **Label**: Picklist</li> <li>**Value**: 10 **Label**: String </li> <li>**Value**: 11 **Label**: StringArray </li> <li>**Value**: 12 **Label**: Guid </li> </ul>**Cannot be changed after it is saved.**|

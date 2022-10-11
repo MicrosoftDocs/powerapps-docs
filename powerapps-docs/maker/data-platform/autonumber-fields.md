@@ -73,7 +73,7 @@ Autonumber columns have a default seed value of 1000, but you may set a custom s
   
 2.  On the left pane expand **Data** and select **Tables**.
   
-3.  Select the table that you would like to add an autonumber column to and then select the **Columns** tab.
+3.  Select the table that you would like to add an autonumber column to and then select **Columns**.
   
 4.  On the toolbar, select **Add** column.  
   

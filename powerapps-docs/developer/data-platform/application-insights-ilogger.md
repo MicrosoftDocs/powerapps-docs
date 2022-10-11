@@ -1,12 +1,11 @@
 ---
-title: "Write Telemetry to your Application Insights resource using ILogger (preview)(Microsoft Dataverse) | Microsoft Docs"
+title: "Write Telemetry to your Application Insights resource using ILogger (Microsoft Dataverse) | Microsoft Docs"
 description: "When you enable Application Insights for your organization, any plug-ins written using the ILogger Interface provided in the SDK will write telemetry to your Application Insights resource."
-ms.date: 04/03/2022
+ms.date: 10/06/2022
 author: divka78
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
-ms.topic: "article"
+ms.topic: article
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -18,12 +17,10 @@ contributors:
  - phecke
 ---
 
-# Write Telemetry to your Application Insights resource using ILogger (Preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Write Telemetry to your Application Insights resource using ILogger
 
 > [!IMPORTANT]
-> To use this capability you must first enable the Application Insights integration preview feature. More information: [Preview: Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
+> To use this capability you must first enable the Application Insights integration feature. More information: [Analyze model-driven apps and Microsoft Dataverse telemetry with Application Insights](/power-platform/admin/analyze-telemetry)<p/>
 > There is presently no support of `ILogger` within a plug-in profiling/debug session of the Plug-in Registration tool or the Power Platform Tools extension for Visual Studio.
 
 When you enable Application Insights for your organization, any plug-ins written using the [ILogger Interface](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) provided in the Organization Service SDK assemblies will write telemetry to your Application Insights resource.
@@ -51,13 +48,16 @@ You should continue to use the [ITracingService.Trace](/dotnet/api/microsoft.xrm
 
 You should use [ILogger](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger) because it will allow for telemetry about what happens within a plug-in to be integrated with the larger scope of data captured with the Application Insights integration. The Application Insights integration will tell you when a plug-in executes, how long it takes to run and whether it makes any external http requests, but Microsoft cannot add any telemetry code within the plug-ins that people write to extend the behavior of the platform.
 
-If you are an ISV with a product that includes plug-ins, your customers who enable Application Insights will appreciate being able to see what is going on within your plug-ins and this data may help you support them if there are issues. But data captured using ILogger will only be sent to the subscribing customer’s resource. You will only be able to see data captured for your own environments when you have Application Insights enabled.
+If you are an ISV with a product that includes plug-ins, your customers who enable Application Insights will appreciate being able to see what is going on within your plug-ins and this data may help you support them if there are issues. But data captured using ILogger will only be sent to the subscribing customer's resource. You will only be able to see data captured for your own environments when you have Application Insights enabled.
 
 ## Use ILogger
 
 ILogger is a common interface for capturing log information. The implementation provided with the Organization Service SDK assemblies provides common methods to support establishing a scope and different levels of logging.  There is currently no setting to control what level of logs are written. The levels can be used within Application Insights to filter which logs to view.
 
 The following is an example of a plug-in using both ILogger and ITracingService.Trace.
+
+> [!NOTE]
+> Make sure you include `using Microsoft.Xrm.Sdk.PluginTelemetry;`. Don't use `using Microsoft.Extensions.Logging;`, otherwise the `ILogger` instance will be null.
 
 ```csharp
 using Microsoft.Xrm.Sdk;
@@ -333,7 +333,7 @@ Within Application Insights, when you switch your query to use `exceptions` rath
 
 :::image type="content" source="media/application-insights-ilogger-cause-error-exceptions.png" alt-text="Switch your query to use exceptions rather than traces.":::
 
-The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
+The one where `cloud_RoleInstance` equals `SandboxRoleInstance` is the one which was written because of the [ILogger LogError method](/dotnet/api/microsoft.xrm.sdk.plugintelemetry.ilogger.logerror). The other two represent different locations where the error was logged on the server. 
 
 > [!NOTE]
 > The SandboxRoleInstance `client_Type` is `PC`. This is because the plug-in runs in an isolated sandbox as a client rather than on the server.

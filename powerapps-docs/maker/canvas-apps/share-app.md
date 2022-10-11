@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/30/2022
+ms.date: 10/11/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -19,7 +19,7 @@ contributors:
 ---
 # Share a canvas app with your organization
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Azure Active Directory (Azure AD). If everyone would benefit from your app, specify that your entire organization can run it. To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md).
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and who can modify and even re-share it. Specify each user by name, or specify a security group in Azure Active Directory (Azure AD). If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Microsoft Dataverse](#dataverse) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -31,6 +31,10 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 - Give your app a meaningful name and a clear description, so that people know what your app does and they can easily find it in a list. Select **Settings** > specify a name, and then enter a description.
 
 - Whenever you make changes, you must save and publish the app again if you want others to see those changes.
+
+> [!NOTE]
+> - To learn about sharing apps outside of your organization, go to [Share a canvas app with guest users](share-app-guests.md).
+> - To learn about sharing limits applicable to canvas apps in managed environments, see [Sharing limits](/power-platform/admin/managed-environment-sharing-limits).
 
 ## Share an app
 

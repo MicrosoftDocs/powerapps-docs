@@ -1,20 +1,19 @@
 ---
 title: "Create a Custom API with code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can write code create custom APis." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/21/2022
-ms.reviewer: "jdaly"
-
-ms.topic: "article"
-author: "divka78" # GitHub ID
+ms.date: 09/27/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: dikamath # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Create a Custom API with code
 
@@ -31,9 +30,86 @@ Because Custom API data is saved in tables, you can programmatically create new 
 
 The tables in [Custom API tables](custom-api-tables.md) describe all the properties you can set using code.
 
+#### [SDK for .NET](#tab/sdk)
 
+This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style. You can also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient>. More information:
 
-## Create a Custom API using the Web API
+- [Use CrmServiceClient constructors to connect to Dataverse](xrm-tooling/use-crmserviceclient-constructors-connect.md)
+- [Late-bound and Early-bound programming using the Organization service](org-service/early-bound-programming.md)
+- [Create entities using the Organization Service](org-service/entity-operations-create.md)
+
+This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+
+This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
+
+```csharp
+string conn = $@"
+    Url = {url};
+    AuthType = OAuth;
+    UserName = {userName};
+    Password = {password};
+    AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
+    RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
+    LoginPrompt=Auto;
+    RequireNewInstance = True";
+
+//var service = new ServiceClient(conn);
+var service = new CrmServiceClient(conn);
+
+//The plug-in type
+var pluginType = new EntityReference("plugintype", new Guid("00000000-0000-0000-0000-000000000001"));
+var solutionUniqueName = "CustomAPIExample";
+
+//The custom API
+var customAPI = new CustomAPI
+{
+    AllowedCustomProcessingStepType = new OptionSetValue(0),//None
+    BindingType = new OptionSetValue(0), //Global
+    Description = "A simple example of a Custom API",
+    DisplayName = "Custom API Example",
+    ExecutePrivilegeName = null,
+    IsFunction = false,
+    IsPrivate = false,
+    Name = "sample_CustomAPIExample",
+    PluginTypeId = pluginType,
+    UniqueName = "sample_CustomAPIExample",
+    IsCustomizable = new BooleanManagedProperty(false),
+    customapi_customapirequestparameter = new List<CustomAPIRequestParameter>()
+    {
+        new CustomAPIRequestParameter {
+            Description = "The StringParameter request parameter for Custom API Example",
+            DisplayName = "Custom API Example String Parameter",
+            LogicalEntityName = null,
+            IsOptional = false,
+            Name = "sample_CustomAPIExample.StringParameter",
+            Type = new OptionSetValue(10), //String
+            UniqueName = "StringParameter",
+            IsCustomizable = new BooleanManagedProperty(false)
+        }
+    },
+    customapi_customapiresponseproperty = new List<CustomAPIResponseProperty>()
+    {
+        new CustomAPIResponseProperty {
+            Description = "The StringProperty response property for Custom API Example",
+            DisplayName = "Custom API Example String Property",
+            Name = "sample_CustomAPIExample.StringProperty",
+            Type = new OptionSetValue(10), //String
+            UniqueName = "StringProperty",
+            IsCustomizable = new BooleanManagedProperty(false)
+        }
+    }
+};
+
+var createReq = new CreateRequest
+{
+    Target = customAPI
+};
+createReq["SolutionUniqueName"] = solutionUniqueName;
+
+Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
+```
+
+#### [Web API](#tab/webapi)
 
 This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
@@ -99,91 +175,14 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.1/customapis(b532b299-4684-eb11-a812-0022481d298f)
 ```
 
-## Create a Custom API using the Organization Service
-
-This code uses the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> with a early-bound programming style: More information: 
-
-- [Use CrmServiceClient constructors to connect to Dataverse](xrm-tooling/use-crmserviceclient-constructors-connect.md)
-- [Late-bound and Early-bound programming using the Organization service](org-service/early-bound-programming.md)
-- [Create entities using the Organization Service](org-service/entity-operations-create.md)
-
-This example shows the creation of a Custom API action with one request parameter and one response property in a single operation. More information: [Create related entities in one operation](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
-
-This custom api is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with id = `00000000-0000-0000-0000-000000000001`.
-
-```csharp
-string conn = $@"
-    Url = {url};
-    AuthType = OAuth;
-    UserName = {userName};
-    Password = {password};
-    AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
-    RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
-    LoginPrompt=Auto;
-    RequireNewInstance = True";
-
-var service = new CrmServiceClient(conn);
-
-//The plug-in type
-var pluginType = new EntityReference("plugintype", new Guid("00000000-0000-0000-0000-000000000001"));
-var solutionUniqueName = "CustomAPIExample";
-
-//The custom API
-var customAPI = new CustomAPI
-{
-    AllowedCustomProcessingStepType = new OptionSetValue(0),//None
-    BindingType = new OptionSetValue(0), //Global
-    Description = "A simple example of a Custom API",
-    DisplayName = "Custom API Example",
-    ExecutePrivilegeName = null,
-    IsFunction = false,
-    IsPrivate = false,
-    Name = "sample_CustomAPIExample",
-    PluginTypeId = pluginType,
-    UniqueName = "sample_CustomAPIExample",
-    IsCustomizable = new BooleanManagedProperty(false),
-    customapi_customapirequestparameter = new List<CustomAPIRequestParameter>()
-    {
-        new CustomAPIRequestParameter {
-            Description = "The StringParameter request parameter for Custom API Example",
-            DisplayName = "Custom API Example String Parameter",
-            LogicalEntityName = null,
-            IsOptional = false,
-            Name = "sample_CustomAPIExample.StringParameter",
-            Type = new OptionSetValue(10), //String
-            UniqueName = "StringParameter",
-            IsCustomizable = new BooleanManagedProperty(false)
-        }
-    },
-    customapi_customapiresponseproperty = new List<CustomAPIResponseProperty>()
-    {
-        new CustomAPIResponseProperty {
-            Description = "The StringProperty response property for Custom API Example",
-            DisplayName = "Custom API Example String Property",
-            Name = "sample_CustomAPIExample.StringProperty",
-            Type = new OptionSetValue(10), //String
-            UniqueName = "StringProperty",
-            IsCustomizable = new BooleanManagedProperty(false)
-        }
-    }
-};
-
-var createReq = new CreateRequest
-{
-    Target = customAPI
-};
-createReq["SolutionUniqueName"] = solutionUniqueName;
-
-Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
-```
+---
 
 ### See also
 
 [Create and use Custom APIs](custom-api.md)<br/>
-[CustomAPI tables](custom-api-tables.md)<br/>
+[Custom API tables](custom-api-tables.md)<br/>
 [Create a Custom API using the plug-in registration tool](create-custom-api-prt.md)<br/>
 [Create a Custom API in Power Apps](create-custom-api-maker-portal.md)<br/>
 [Create a Custom API with solution files](create-custom-api-solution.md)<br/>
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

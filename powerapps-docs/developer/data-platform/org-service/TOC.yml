@@ -1,10 +1,10 @@
 - name: Work with data using code
   href: ../work-with-data.md
-- name: Use Organization Service
+- name: What is the Organization Service?
   href: overview.md
 - name: Get started
   items:
-  - name: 'Quickstart: Create a console app'
+  - name: 'Quickstart: Execute service request'
     href: quick-start-org-service-console-app.md
   - name: Late and Early-bound programming
     href: early-bound-programming.md
@@ -18,8 +18,6 @@
       href: subscribe-sdk-assembly-updates-using-nuget.md
     - name: Visual Studio and the .NET Framework
       href: visual-studio-dot-net-framework.md
-    - name: Discovery Service
-      href: discovery-service.md
     - name: Use XRM Tooling
       href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
 - name: Table  operations
@@ -114,6 +112,6 @@
   - name: Handle exceptions in your code
     href: handle-exceptions-code.md
   - name: Web service error codes
-    href: web-service-error-codes.md 
+    href: ../reference/web-service-error-codes.md 
 - name: Samples
   href: samples/toc.yml

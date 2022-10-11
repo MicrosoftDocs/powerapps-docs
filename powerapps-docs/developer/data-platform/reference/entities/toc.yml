@@ -82,6 +82,8 @@
   href: columnmapping.md
 - name: Connection
   href: connection.md
+- name: ConnectionInstance
+  href: connectioninstance.md
 - name: connectionreference
   href: connectionreference.md
 - name: ConnectionRole
@@ -276,16 +278,22 @@
   href: msdyn_analysisresult.md
 - name: msdyn_analysisresultdetail
   href: msdyn_analysisresultdetail.md
+- name: msdyn_appinsightsmetadata
+  href: msdyn_appinsightsmetadata.md
 - name: msdyn_componentlayer
   href: msdyn_componentlayer.md
 - name: msdyn_componentlayerdatasource
   href: msdyn_componentlayerdatasource.md
+- name: msdyn_customcontrolextendedsettings
+  href: msdyn_customcontrolextendedsettings.md
 - name: msdyn_dataflow
   href: msdyn_dataflow.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
 - name: msdyn_datalakeds
   href: msdyn_datalakeds.md
+- name: msdyn_entitylinkchatconfiguration
+  href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
   href: msdyn_entityrefreshhistory.md
 - name: msdyn_federatedarticle
@@ -326,6 +334,8 @@
   href: msdyn_pmanalysishistory.md
 - name: msdyn_pminferredtask
   href: msdyn_pminferredtask.md
+- name: msdyn_pmprocessusersettings
+  href: msdyn_pmprocessusersettings.md
 - name: msdyn_pmrecording
   href: msdyn_pmrecording.md
 - name: msdyn_pmtemplate
@@ -358,6 +368,8 @@
   href: msdyn_tour.md
 - name: msdynce_botcontent
   href: msdynce_botcontent.md
+- name: MsGraphResourceToSubscription
+  href: msgraphresourcetosubscription.md
 - name: NavigationSetting
   href: navigationsetting.md
 - name: NewProcess
@@ -564,6 +576,8 @@
   href: userquery.md
 - name: UserQueryVisualization
   href: userqueryvisualization.md
+- name: userrating
+  href: userrating.md
 - name: UserSettings
   href: usersettings.md
 - name: VirtualEntityMetadata

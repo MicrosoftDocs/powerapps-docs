@@ -45,7 +45,7 @@ Just as with any component, you must install [Visual Studio Code](https://code.v
 > [!NOTE]
 > These instructions expect that you have created code components before. If you have not, see this tutorial: [Create your first component](implementing-controls-using-typescript.md)
 
-There is a new `--framework` (`-fw`) parameter for the `pac pcf init` command. Set the value of this parameter to `react`.
+There is a new `--framework` (`-fw`) parameter for the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command. Set the value of this parameter to `react`.
 
 The following table shows the long form of the commands:
 
@@ -83,8 +83,8 @@ Within the [resources element](manifest-schema-reference/resources.md), you will
 ```xml
 <resources>
     <code path="index.ts" order="1" />
-	<platform-library name="React" version="16.8.6" />
-	<platform-library name="Fluent" version="8.29.0" />
+   <platform-library name="React" version="16.8.6" />
+   <platform-library name="Fluent" version="8.29.0" />
 </resources>
 ```
 > [!NOTE]
@@ -122,9 +122,7 @@ A: No. You must create a new control using the new template and then update the 
 [What are code components?](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
 [Use code components in Power Apps portals](../../maker/portals/component-framework.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-
-

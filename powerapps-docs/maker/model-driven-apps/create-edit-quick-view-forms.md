@@ -2,9 +2,8 @@
 title: "Create or edit model-driven app quick view forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick view form"
 ms.custom: ""
-ms.date: 07/23/2020
+ms.date: 07/29/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -41,7 +40,8 @@ In the example below notice the module that relates to a given lesson within the
   
 > [!NOTE]
 > - Data in quick view form controls can't be edited and they do not support form scripts. 
-> - Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles can't be assigned to quick view forms and they can't be activated or deactivated. Subgrids inside quick view forms will also not display a command bar.
+> - Because quick view forms are viewed using a quick view control in a form, they do not include header, footer, or navigation areas. Security roles can't be assigned to quick view forms and they can't be activated or deactivated.
+> - Custom controls aren't supported in quick view forms, and there is limited customization support for complex controls such as subgrids. If this is required, consider using a [Form component control](form-component-control.md)
   
 <a name="BKMK_CreateQFV"></a>
 
@@ -51,7 +51,7 @@ In the example below notice the module that relates to a given lesson within the
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.
+2. Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.
   
 3. On the toolbar, select **Add form** > **Quick View Form**.  
   
@@ -75,7 +75,7 @@ Quick view forms have a simplified layout because they are designed to be viewed
 
 1. Open the solution relevant to your table or access the table directly from the data option in the sidebar.
 
-1. Open the table you want, and then select the **Forms** tab.
+1. Open the table you want, and then select the **Forms** area.
 
 1. Either select the quick view form, or select **...** next to the form, and then select **Edit form in new tab**.
 
@@ -93,7 +93,7 @@ Quick view forms can only be added to a main form where a lookup column exists t
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.  
 
 3. Select a form, which **Type** is **Main**
 4. In the form designer, from the **Components** pane select **Quick view**.  

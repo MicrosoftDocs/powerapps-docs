@@ -7,22 +7,21 @@ ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Use aggregation in FetchXML
 
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
 
-
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
-
-This sample shows how to retrieve aggregate record data using FetchXML. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseAggregationInFetchXML).
+This sample shows how to retrieve aggregate record data using FetchXML. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/UseAggregationInFetchXML).
 
 ## What this sample does
 
@@ -52,12 +51,10 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `byweek` fetches the aggregate information about the opportunities that have been won by week.
 1. The `byday` fetches the aggregate information about the opportunities that have been won by day.
 1. The `byyrqtr` fetches the aggregate information about the opportunities that have been won by year and quarter.
-1. The `byyrqtr2` specifies the result order. 
-
+1. The `byyrqtr2` specifies the result order.
 
 ### Clean up
 
 Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

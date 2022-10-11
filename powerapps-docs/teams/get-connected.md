@@ -5,7 +5,7 @@ author: msftsamperl
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/04/2021
+ms.date: 09/28/2022
 ms.author: saperlmu
 ms.reviewer: tapanm
 contributors:
@@ -26,7 +26,7 @@ In this tutorial, learn about the Get connected app, and how to use it effective
 
 ## Overview
 
-The Get connected sample app for Microsoft Teams provides a simple way to connect and with people in your organization with similar skills.
+The Get connected sample app for Microsoft Teams provides a simple way to connect with people in your organization having similar skills.
 
 Benefits of using the Get connected app:
 
@@ -43,11 +43,9 @@ Benefits of using the Get connected app:
 
 Before using this app:
 
-1. Find the app in Teams store.
-1. Install the app.
-1. Set up the app for the first use.
+1. Install the app by side-loading the app manifest into Teams. You can get the app manifest from [here](https://github.com/OfficeDev/microsoft-teams-apps-getconnected). For more information and help with installing this app, read the documentation available with the app manifest.
 
-For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
+2. Set up the app for the first use.
 
 ## Open the Get connected app
 
