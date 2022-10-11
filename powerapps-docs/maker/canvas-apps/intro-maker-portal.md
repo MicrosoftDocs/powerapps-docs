@@ -69,6 +69,8 @@ With the enhanced environment picker, environments are grouped into two categori
 
 :::image type="content" source="media/intro-maker-portal/environment-picker2.png" alt-text="Environment picker to filter and select an environment":::
 
+Environments where you have either system administrator and/or system customizer security role membership appear under **Build apps with Dataverse**. The **Other environments** list displays environments where you have only environment maker or editing privileges to at least one of the canvas apps in the environment.
+
 > [!TIP]
 > Hover over an environment in the list to view the details of the environment.
 
