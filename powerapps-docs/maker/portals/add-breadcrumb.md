@@ -16,6 +16,9 @@ contributors:
 
 # Add breadcrumb
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Breadcrumb shows the links to pages in the hierarchy of the current page. This hierarchy allows users to follow through the trail up to the root page.
 
 To add breadcrumb component to your portal:

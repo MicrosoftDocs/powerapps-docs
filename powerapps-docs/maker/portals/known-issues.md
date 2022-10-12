@@ -19,6 +19,9 @@ contributors:
 
 # Known issues
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 ## General issues
 
 - You receive the following error message when configuring or using table fields:

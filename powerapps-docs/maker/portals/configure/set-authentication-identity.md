@@ -19,6 +19,9 @@ contributors:
 
 # Local authentication, registration, and other settings
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 > [!IMPORTANT]
 > - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 > - Configuring local authentication requires that you use the [Portal Management app](configure-portal.md) to configure the required site settings manually.

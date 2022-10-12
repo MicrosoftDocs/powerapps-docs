@@ -16,6 +16,9 @@ contributors:
 
 # Create and manage publishing states
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Publishing states allow for the definition of a content lifecycle in portals website. At a basic level, a publishing state can determine whether an associated table should be considered visible/published on a portal. In more complex configurations, they can define a multi-stage process for content review and publishing, with security restrictions on each stage.
 
 Publishing states can be used with [web pages](web-page.md), [web files](web-files.md), [web links](manage-web-links.md), forums, and advertisements.

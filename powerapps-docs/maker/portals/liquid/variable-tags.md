@@ -16,6 +16,9 @@ contributors:
 
 # Variable tags
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Variable tags are used to create new Liquid variables.
 
 ## assign

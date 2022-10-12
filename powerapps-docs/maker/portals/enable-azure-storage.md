@@ -18,6 +18,9 @@ contributors:
 
 # Enable Azure Storage
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Azure Storage integration for portals enables you to take advantage of the greater file storage capability of Azure, using the same interface and providing the same user experience as for default file attachments. This feature is supported for web files, basic forms, and multistep forms.
 
 You must create a storage account with **Resource manager** as the deployment model. [!include[More information](../../includes/proc-more-information.md)] [Create an Azure storage account](/azure/storage/storage-create-storage-account#create-a-storage-account).

@@ -16,6 +16,9 @@ contributors:
 
 # Render a website header and primary navigation bar
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Render a website header and primary navigation bar, using portals settings, snippets, weblinks, and sitemarkers. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md)  
 
 > [!Note]
