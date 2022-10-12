@@ -571,16 +571,11 @@ OData-Version: 4.0
 
 ---
 
-## Sample code
-
-For sample code, see:
-
-- .NET 6.0 C# using [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient):[RetrieveMetadataChanges Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Schema/RetrieveMetadataChanges)
-- .NET 6.0 C# using Web API: [RetrieveMetadataChanges Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges)
-
 ### See also
 
 [Cache Schema data](cache-schema-data.md)<br />
+[Web API Query schema definitions and detect changes Sample (C#)](webapi/samples/retrievemetadatachanges.md)<br />
+[SDK for .NET Query schema definitions and detect changes Sample (C#)](org-service/samples/query-metadata-changes.md)<br />
 [Organization Service: Table definitions in Microsoft Dataverse](entity-metadata.md)<br />
 [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 

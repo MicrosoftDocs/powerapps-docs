@@ -135,7 +135,7 @@ Notice that the `DeletedMetadataFilters` enum contains a member for `OptionSet`,
 ### See also
 
 [Web API Query schema definitions and detect changes Sample (C#)](webapi/samples/retrievemetadatachanges.md)<br />
-[SDK for .NET Query schema definitions and detect changes Sample (C#)](org-service/samples/query-metadata-changes.md)
+[SDK for .NET Query schema definitions and detect changes Sample (C#)](org-service/samples/query-metadata-changes.md)<br />
 [Query Schema Definitions](query-schema-definitions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
