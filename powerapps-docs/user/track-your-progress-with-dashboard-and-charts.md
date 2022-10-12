@@ -211,6 +211,8 @@ You can continue drilling further into the chart data. As you drill down deeper,
 
 - By design, charts in rollup column can't be displayed because rollup columns contain an aggregate value computed over the rows related to a specified row.
 
+- Chart drill-down is not available on charts in a subgrid or an associated grid.
+
 
 
 
