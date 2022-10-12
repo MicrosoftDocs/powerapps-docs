@@ -447,7 +447,7 @@ The [RetrieveMetadataChangesResponse](xref:Microsoft.Xrm.Sdk.Messages.RetrieveMe
 |Property|Type|Description|
 |---------|---------|---------|
 |`EntityMetadata`|[EntityMetadataCollection](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadataCollection)|The table definitions requested. When simply querying data, or when initializing a cache, this can be treated the same as the response from RetrieveAllEntities. If you want to access a specific column, relationship or alternate key definition, you must return the table definition that contains them.|
-|`ServerVersionStamp`|string|A timestamp identifier for the metadata retrieved. When you manage a cache of schema definitions, use this value as the `ClientVersionStamp` property in subsequent requests so that only the changes since the previous request are returned.|
+|`ServerVersionStamp`|`string`|A timestamp identifier for the metadata retrieved. When you manage a cache of schema definitions, use this value as the `ClientVersionStamp` property in subsequent requests so that only the changes since the previous request are returned.|
 |`DeletedMetadata`|[DeletedMetadataCollection](xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection)|Data for the items deleted since the previous request. This only contains data when `RetrieveMetadataChanges` is sent with the `ClientVersionStamp` and `DeletedMetadataFilters` parameters. For more information see [Cache Schema data](cache-schema-data.md)|
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Web API RetrieveMetadataChanges Sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "This sample demonstrates the use of the RetrieveMetadataChanges Function using the Dataverse Web API."
+title: "Web API Query schema definitions and detect changes sample (C#) (Microsoft Dataverse)| Microsoft Docs"
+description: "This sample demonstrates the use of the RetrieveMetadataChanges Function using the Dataverse Web API to schema definitions and detect changes so that you can create a persistent cache."
 ms.date: 10/12/2022
 author: NHelgren
 ms.author: nhelgren
@@ -14,7 +14,7 @@ contributors:
   - JimDaly
 ---
 
-# Web API RetrieveMetadataChanges Sample (C#)
+# Web API Query schema definitions and detect changes sample (C#)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
