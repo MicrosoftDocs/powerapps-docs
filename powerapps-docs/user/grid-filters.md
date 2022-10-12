@@ -76,6 +76,9 @@ Use the [filter editor](./grid-filters-advanced.md#select-filter-conditions-in-t
 ## Grid search
 
 Grid search enables you to filter the current view based on a keyword. When you choose the search box, an information tooltip appears indicating the list of columns on which a begins-with match is applied.
+
+> ![Information tooltip that indicates the list of columns on which a begins-with match is applied.](media/grid-search-tooltip.jpg "Information tooltip that indicates the list of columns on which a begins-with match is applied.")
+
 The search box can offer two different experiences, depending on how your administrator has configured search.
 
 ### Filter by keyword
@@ -88,7 +91,7 @@ If your administrator has turned on quick find, then the search box shows **Quic
 
 > [!NOTE]
 > Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*). 
-> ![Searching for keywords that begin with an asterisk will display a warning message.](media/grid-search-warning.jpg "Create a row")
+> ![Searching for keywords that begin with an asterisk will display a warning message.](media/grid-search-warning.jpg "Searching for keywords that begin with an asterisk will display a warning message.")
   
 
 ## Column filters
