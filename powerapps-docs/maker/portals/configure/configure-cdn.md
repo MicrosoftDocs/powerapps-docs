@@ -15,7 +15,11 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Content Delivery Network
+# Content Delivery Network (preview)
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
+[This topic is pre-release documentation and is subject to change.]
 
 A *content delivery network* is a distributed network of servers that can efficiently deliver web content to users. Content delivery networks store cached content on edge servers in point-of-presence (POP) locations that are close to users, to minimize latency.
 
