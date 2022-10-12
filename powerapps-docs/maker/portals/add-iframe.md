@@ -16,6 +16,9 @@ contributors:
 
 # Add IFrame
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Add IFrame component to your portal page to embed a webpage from any other website. 
 
 To add IFrame component:

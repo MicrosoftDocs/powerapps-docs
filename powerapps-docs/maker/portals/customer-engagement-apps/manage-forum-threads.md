@@ -13,6 +13,9 @@ contributors:
 
 # Manage forum threads
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A forum thread (sometimes called a topic) is a collection of posts, usually displayed from oldest to newest. A thread can contain any number of posts, including multiple posts from the same members, even if they were added to the thread one after the other. A thread is contained in a [forum](setup-manage-forums.md) and may have an associated date that is taken as the date of the last post. The content or purpose of the thread is identified by the first post, also known as the original post (OP). When a member posts in a thread, the thread jumps to the top because it is the latest updated thread. Similarly, other threads will jump to the top when they receive posts. Sometimes, a member posts in a thread for no reason but to “bump” that thread (cause it to be displayed as the top thread).. Threads that are important but rarely receive posts are made “sticky” (or, as it is sometimes called, pinned). A sticky thread will always appear in front of normal threads, often in its own section. A thread's popularity is measured on forums in reply (total posts minus one, the opening post, in most default forum settings) counts. Some forums also track page views.  
 
 ## Manage forum threads in Dynamics 365 Portals
