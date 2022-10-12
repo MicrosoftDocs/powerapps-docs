@@ -121,7 +121,8 @@ string conn = $@"
     LoginPrompt=Auto;
     RequireNewInstance = True";
 
-var service = new CrmServiceClient(conn); // Alternately, use ServiceClient
+var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var widgetSerialNumberAttributeRequest = new CreateAttributeRequest
   {
@@ -288,7 +289,9 @@ string conn = $@"
     LoginPrompt=Auto;
     RequireNewInstance = True";
 
-var service = new CrmServiceClient(conn); // Alternately, use ServiceClient
+var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
+
 //Define the seed 
 SetAutoNumberSeedRequest req = new SetAutoNumberSeedRequest();
 req.EntityName = "newWidget";

@@ -97,7 +97,8 @@ string conn = $@"
     LoginPrompt=Auto;
     RequireNewInstance = True";
 
-using (var svc = new CrmServiceClient(conn)) // Alternately, use ServiceClient
+// using (var svc = new ServiceClient(conn))
+using (var svc = new CrmServiceClient(conn))
 {
 
     // Instantiate QueryExpression query

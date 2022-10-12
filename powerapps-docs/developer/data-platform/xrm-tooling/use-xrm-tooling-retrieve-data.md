@@ -26,7 +26,9 @@ There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.Cr
   
 ## GetEntityDataById  
 
-This method searches for a table by the specified ID. In this sample, we specify null for the field list value to fetch all the columns of the specified table record (account), and then display the name of the retrieved account record.  
+This method searches for a table by the specified ID. In this sample, we specify null for the field list value to fetch all the columns of the specified table record (account), and then display the name of the retrieved account record.
+
+When using the `ServiceClient` class you can find the Get method here: <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.QueryExtensions.GetEntityDataById%2A?displayProperty=nameWithType>
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring); 
@@ -61,7 +63,9 @@ else
   
 ## GetEntityDataByFetchSearchEC  
 
-This method searches for the table based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.  
+This method searches for the table based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.
+
+When using the `ServiceClient` class, the query method can be found here: <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.QueryExtensions.GetEntityDataByFetchSearch%2A?displayProperty=nameWithType>
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);

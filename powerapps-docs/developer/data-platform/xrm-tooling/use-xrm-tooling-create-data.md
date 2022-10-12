@@ -28,6 +28,8 @@ There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.C
 
 This method is used to create any type of table data in Microsoft Dataverse. To use it, you need to know the schema name of the table you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.
 
+When using the `ServiceClient` class, you can find the `CreateNewRecord` method in the <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions?displayProperty=fullName> namespace.
+
 ```csharp
 CrmServiceClient svc = new CrmServiceClient("connectionstring");
 // ServiceClient svc = new ServiceClient("connectionstring");
@@ -69,7 +71,9 @@ In this example, we created a data payload object called `indata`. Next, we popu
   
 ## CreateAnnotation
   
-This method is used to create and attach a note object to any table record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to a table, or to attach files that are stored in Dataverse to a table. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner table in Dataverse. This example continues from the prior example to create a note on the newly created account.  
+This method is used to create and attach a note object to any table record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to a table, or to attach files that are stored in Dataverse to a table. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner table in Dataverse. This example continues from the prior example to create a note on the newly created account. 
+
+When using the `ServiceClient` class, you can find the `CreateAnnotation` method in the <xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions?displayProperty=fullName> namespace.
   
 ```csharp
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  

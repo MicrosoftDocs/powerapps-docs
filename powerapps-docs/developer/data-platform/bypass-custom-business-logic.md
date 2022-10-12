@@ -80,7 +80,8 @@ There are two ways to use this with the Organization Service.
 The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
 
 ```csharp
-var svc = new CrmServiceClient(conn); // ALternately, use ServiceClient
+var svc = new CrmServiceClient(conn);  
+// var svc = new  ServiceClient(conn);
 
 svc.BypassPluginExecution = true;
 
@@ -101,7 +102,8 @@ Because this setting is applied to the service, it will remain set for all reque
 The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class.
 
 ```csharp
-var svc = new CrmServiceClient(conn); // Alternately, use ServiceClient
+var svc = new CrmServiceClient(conn); 
+// var svc = new  ServiceClient(conn);
 
 var account = new Entity("account")
 {
