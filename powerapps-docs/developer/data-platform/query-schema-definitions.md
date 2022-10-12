@@ -1,5 +1,5 @@
 ---
-title: "Query Schema Definitions (Microsoft Dataverse) | Microsoft Docs"
+title: "Query schema definitions (Microsoft Dataverse) | Microsoft Docs"
 description: "Write a query to retrieve definitions of tables, columns, relationships, and labels for a Dataverse organization. Optionally, track changes to these definitions over time."
 ms.date: 10/12/2022
 ms.topic: article
@@ -16,7 +16,7 @@ contributors:
  - JimDaly
 ---
 
-# Query Schema Definitions
+# Query schema definitions
 
 Applications built using Dataverse need to be able to adapt to changes to schema definitions. New tables, columns, relationships, and labels can be added or changed via configuration or by importing a solution. Because applications need to be able to respond to these changes, they frequently depend on retrieving schema definitions when they start. However, the total amount of data describing the schema of a Dataverse organization can be very large. You need to be able to know how to get just the data you need.
 
