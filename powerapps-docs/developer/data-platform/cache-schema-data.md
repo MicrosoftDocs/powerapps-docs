@@ -31,6 +31,8 @@ The `RetrieveMetadataChanges` message provides two capabilities:
 
 After you define a query for the schema data you want to cache, you can use additional capabilities of the `RetrieveMetadataChanges` message to create and maintain a cache of Dataverse schema data.
 
+
+
 ## Create a cache
 
 As described in [Query Schema Definitions](query-schema-definitions.md), the first step is to create a query that defines the kind of schema information you are interested in.  Then use the `RetrieveMetadataChanges` message to execute that query and cache the schema definitions returned in your application. You should find a way to persist this data that is appropriate for the needs of your app. You might save it as a file that your application reads when it starts. You will also need to save data about the last time you ran the query.
@@ -40,14 +42,13 @@ Structure your cache in a way that makes sense for your application. To manage r
 
 There is no event available to detect when schema definition changes occur. Refreshing your cache should be driven by the needs of your application. This is typically when the application starts. But you might poll the system regularly if you want to detect changes over time.  Regardless of your strategy, it is important to keep track of the time you sent the previous request.
 
-The `RetrieveMetadataChangesResponse` `ServerVersionStamp` property contains information about the point in time the call to `RetrieveMetadataChanges` occurred. You must take the `ServerVersionStamp` value from the previous response and use it as the value for the `RetrieveMetadataChangesRequest.ClientVersionStamp` when you call it again using the same query.
+The `RetrieveMetadataChangesResponse.ServerVersionStamp` property contains information about the point in time the call to `RetrieveMetadataChanges` occurred. You must take the `ServerVersionStamp` value from the previous response and use it as the value for the `RetrieveMetadataChangesRequest.ClientVersionStamp` when you call it again using the same query.
 
-When you include the `ClientVersionStamp` property in the request, the `RetrieveMetadataChangesResponse.EntityMetadata` property returned will contain only the changed or added schema data since the previous call. See [Add changed items](#add-changed-items)
+When you include the `ClientVersionStamp` property in the request, the `RetrieveMetadataChangesResponse.EntityMetadata` property returned will contain only the changed or added schema data since the previous call. You can add them to your cache.
 
-If you also include the `DeletedMetadataFilters` parameter, any schema items were deleted since the previous call, they will be included in the `RetrieveMetadataChangesResponse.DeletedMetadata` property. See [Remove deleted items](#remove-deleted-items)
+If you also include the `DeletedMetadataFilters` parameter, any schema items were deleted since the previous call will be included in the `RetrieveMetadataChangesResponse.DeletedMetadata` property. You can remove them from your cache.
 
 This result should be much smaller and faster than executing the original query again.
-To update your cache data, you need to add any new or changed items to your cache and remove any deleted items.
 
 
 ## Manage expired cache
@@ -76,28 +77,67 @@ When a new option is added to an choice column, the following data in the hierar
 #### [SDK for .NET](#tab/sdk)
 
 - [EntityMetadataCollection](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadataCollection)
-   - [EntityMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata)
+   - [EntityMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata) The table definition.
       - [EntityMetadata.Attributes[]](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes)
-         - [EnumAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata)
+         - [EnumAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata) The base class for Choice columns.
             - [EnumAttributeMetadata.OptionSet](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet)
                - [OptionSetMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata)
                   - [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options)
-                     - [OptionMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata)
+                     - [OptionMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata) The new option.
                         - [OptionMetadata.Color](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Color)
-                        - [OptionMetadata.Description](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Description)
                         - [OptionMetadata.Label](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Label)
                         - [OptionMetadata.Value](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Value)
-                        - [OptionMetadata.HasChanged](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.HasChanged)
-
-#### [Web API](#tab/webapi)
-
----
+                        - [OptionMetadata.HasChanged](xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.HasChanged)
 
 You will know that the `EntityMetadata` and `EnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `OptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
 
 Only the newly created option will include data for the `Label` property. The `OptionMetadata.HasChanged` property will be true only when one of it's properties (like `Color` or `Label`) changes.
 
+#### [Web API](#tab/webapi)
+
+- Collection([ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata))
+   - [ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata)
+      - ComplexEntityMetadata.Attributes
+         - [ComplexEnumAttributeMetadata](xref:Microsoft.Dynamics.CRM.ComplexEnumAttributeMetadata) The base type for Choice columns.
+            - ComplexEnumAttributeMetadata.OptionSet
+               - [ComplexOptionSetMetadata](xref:Microsoft.Dynamics.CRM.ComplexOptionSetMetadata)
+                  - ComplexOptionSetMetadata.Options
+                     - [OptionMetadata](xref:Microsoft.Dynamics.CRM.OptionMetadata) The new option.
+                        - OptionMetadata.Color
+                        - OptionMetadata.Label
+                        - OptionMetadata.Value
+                        - OptionMetadata.HasChanged
+
+You will know that the `ComplexEntityMetadata` and `ComplexEnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `ComplexOptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
+
+Only the newly created option will include data for the `Label` property. The `OptionMetadata.HasChanged` property will be true only when one of it's properties (like `Color` or `Label`) changes.
+
+---
+
 ## Remove deleted items
+
+When you include both `ClientVersionStamp` and `DeletedMetadataFilters` parameters for a `RetrieveMetadataChanges` message, the `RetrieveMetadataChangesResponse.DeletedMetadata` property will contain data about any deleted items. This property is a `DeletedMetadataCollection` that contains a set of `Keys` and `Values`. The keys are `DeletedMetadataFilters` enum values and you can use these to access a sub-set the deleted values.
+
+> [!NOTE]
+> The `DeletedMetadataFilters` parameter is optional and there is some performance impact when you include it because the data is retrieved from the database directly rather than from the internal cache. Use it only when you must detect deleted items and set the filter value to the minimum amount of data you need to have returned.
+
+The deleted values are returned as a collection of `Guid` values. The values for deleted items is not filtered based on your query. There will be many `Guid` values which are not in your cache, but the `Guid` values for your cached item will be included. You must look for any matching `Guid` values and remove those items. Disregard any values that are not in your cache.
+
+> [!NOTE]
+> The definition of the Web API [DeletedMetadataFilters EnumType](xref:Microsoft.Dynamics.CRM.DeletedMetadataFilters) is slightly different from the SDK [DeletedMetadataFilters Enum](xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters).
+>
+> The [DeletedMetadataFilters EnumType](xref:Microsoft.Dynamics.CRM.DeletedMetadataFilters) doesn't have the `Entity` member. You must use `Default` instead.
+
+### Tracking Deleted Options
+
+Notice that the `DeletedMetadataFilters` enum contains a member for OptionSet, but not option. If any options are removed from a choice column, you will not find a reference to a specific option that was deleted. You will need to go to your cached options and compare them to the current options returned for that `OptionSet`.
+
+## Sample code
+
+For sample code, see:
+
+- .NET 6.0 C# using [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient):[RetrieveMetadataChanges Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Schema/RetrieveMetadataChanges)
+- .NET 6.0 C# using Web API: [RetrieveMetadataChanges Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges)
 
 ### See also
 
