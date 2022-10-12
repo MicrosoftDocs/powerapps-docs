@@ -30,7 +30,7 @@ Legend:
 1. **View selector**: Select to change views
 1. **Edit columns**: Select to add, remove, or reorder columns
 1. **Edit filters**: Select to filter the view with advanced queries
-1. [**Search this view** or **Quick find**](#grid-search): Show only the rows in the current view that match your search criteria
+1. [**Filter by keyword** or **Quick find**](#grid-search): Show only the rows in the current view that match your search criteria
 1. **Hierarchy icon**: Indicates the record is part of a hierarchy
 1. **Record counter**: The position of this page of records in the total number of records that are shown in the view
 1. **Page navigation**: Move forward or backward by page in the set of records that are shown in the view
@@ -75,15 +75,19 @@ Use the [filter editor](./grid-filters-advanced.md#select-filter-conditions-in-t
 
 ## Grid search
 
+Grid search enables you to filter the current view based on a keyword. When you choose the search box, an information tooltip appears indicating the list of columns on which a begins-with match is applied.
 The search box can offer two different experiences, depending on how your administrator has configured search.
 
-### Search this view
+### Filter by keyword
 
-**Search this view** is the default experience. When you enter text in the **Search this view** box, the system searches the current view. It displays the results in the same columns that are used in the current view.
+**Filter by keyword** is the default experience. When you enter text in the **Filter by keyword** box, the system filters the current view. It displays the results in the same columns that are used in the current view.
 
 ### Quick find
 
-If your administrator has turned on quick find, then the search box shows **Quick find** instead of **Search this view**. When you enter text in the **Quick find** box, the system searches the table's quick find view. It displays the results in the columns of the quick find view rather than the current view.
+If your administrator has turned on quick find, then the search box shows **Quick find**. When you enter text in the **Quick find** box, the system filters the table's quick find view. It displays the results in the columns of the quick find view rather than the current view.
+
+> [!NOTE]
+> Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*).
 
 ## Column filters
   
