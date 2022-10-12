@@ -1,13 +1,13 @@
 ---
 title: Explore data on a grid page
 description: Explore tabular data on a grid page in model-driven apps.
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/04/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
