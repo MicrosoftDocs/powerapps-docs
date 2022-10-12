@@ -42,11 +42,11 @@ Structure your cache in a way that makes sense for your application. To manage r
 
 There is no event available to detect when schema definition changes occur. Refreshing your cache should be driven by the needs of your application. This is typically when the application starts. But you might poll the system regularly if you want to detect changes over time.  Regardless of your strategy, it is important to keep track of the time you sent the previous request.
 
-The `RetrieveMetadataChangesResponse.ServerVersionStamp` property contains information about the point in time the call to `RetrieveMetadataChanges` occurred. You must take the `ServerVersionStamp` value from the previous response and use it as the value for the `RetrieveMetadataChangesRequest.ClientVersionStamp` when you call it again using the same query.
+The `RetrieveMetadataChangesResponse.ServerVersionStamp` property contains information about the point in time the request to `RetrieveMetadataChanges` occurred. You must take the `ServerVersionStamp` value from the previous response and use it as the value for the `RetrieveMetadataChangesRequest.ClientVersionStamp` when you send it again using the same query.
 
-When you include the `ClientVersionStamp` property in the request, the `RetrieveMetadataChangesResponse.EntityMetadata` property returned will contain only the changed or added schema data since the previous call. You can add them to your cache.
+When you include the `ClientVersionStamp` property in the request, the `RetrieveMetadataChangesResponse.EntityMetadata` property returned will contain only the changed or added schema data since the previous request. You can add them to your cache.
 
-If you also include the `DeletedMetadataFilters` parameter, any schema items were deleted since the previous call will be included in the `RetrieveMetadataChangesResponse.DeletedMetadata` property. You can remove them from your cache.
+If you also include the `DeletedMetadataFilters` parameter, any schema items deleted since the previous request will be included in the `RetrieveMetadataChangesResponse.DeletedMetadata` property. You can remove them from your cache.
 
 This result should be much smaller and faster than executing the original query again.
 
@@ -96,7 +96,7 @@ Only the newly created option will include data for the `Label` property. The `O
 #### [Web API](#tab/webapi)
 
 - Collection([ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata))
-   - [ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata)
+   - [ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata) The table definition.
       - ComplexEntityMetadata.Attributes
          - [ComplexEnumAttributeMetadata](xref:Microsoft.Dynamics.CRM.ComplexEnumAttributeMetadata) The base type for Choice columns.
             - ComplexEnumAttributeMetadata.OptionSet
@@ -130,17 +130,12 @@ The deleted values are returned as a collection of `Guid` values. The values for
 
 ### Tracking Deleted Options
 
-Notice that the `DeletedMetadataFilters` enum contains a member for OptionSet, but not option. If any options are removed from a choice column, you will not find a reference to a specific option that was deleted. You will need to go to your cached options and compare them to the current options returned for that `OptionSet`.
-
-## Sample code
-
-For sample code, see:
-
-- .NET 6.0 C# using [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient):[RetrieveMetadataChanges Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Schema/RetrieveMetadataChanges)
-- .NET 6.0 C# using Web API: [RetrieveMetadataChanges Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges)
+Notice that the `DeletedMetadataFilters` enum contains a member for `OptionSet`, but not option. If any options are removed from a choice column, you will not find a reference to a specific option that was deleted. You will need to go to your cached options and compare them to the current options returned for that `OptionSet`.
 
 ### See also
 
+[Web API Query schema definitions and detect changes Sample (C#)](webapi/samples/retrievemetadatachanges.md)<br />
+[SDK for .NET Query schema definitions and detect changes Sample (C#)](org-service/samples/query-metadata-changes.md)
 [Query Schema Definitions](query-schema-definitions.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
