@@ -22,14 +22,16 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for creating new data and associations. A create action using the XRM tooling API requires a data payload. The data payload takes the form of a `Dictionary<string, CrmDataTypeWrapper>` object. <xref:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper> is used to inform the interface what sort of handling needs to be applied to the data point you are referencing. Some of the methods for creating data are listed in this topic.  
+There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class, or the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class, for creating new data and associations. A create action using the XRM tooling API requires a data payload. The data payload takes the form of a `Dictionary<string, CrmDataTypeWrapper>` object. <xref:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper> is used to inform the interface what sort of handling needs to be applied to the data point you are referencing. Some of the methods for creating data are listed in this topic.  
   
 ## CreateNewRecord  
 
 This method is used to create any type of table data in Microsoft Dataverse. To use it, you need to know the schema name of the table you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.
 
 ```csharp
-CrmServiceClient svc = new CrmServiceClient("connectionstring");  
+CrmServiceClient svc = new CrmServiceClient("connectionstring");
+// ServiceClient svc = new ServiceClient("connectionstring");
+ 
 // Verify that you are connected  
 if (svc != null && svc.IsReady)  
 {  
@@ -71,7 +73,8 @@ This method is used to create and attach a note object to any table record. Whil
   
 ```csharp
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
-  
+// ServiceClient svc = new ServiceClient("connectionstring");
+
 // Verify that you are connected.  
 if (svc != null && svc.IsReady)  
 {  

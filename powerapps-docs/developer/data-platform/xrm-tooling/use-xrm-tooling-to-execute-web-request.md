@@ -17,7 +17,7 @@ search.app:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest%2A?displayProperty=nameWithType> method to execute a web request against XRM web API.
+You can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest%2A?displayProperty=nameWithType> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.ExecuteWebRequest%2A?displayProperty=nameWithType> methods to execute a web request against XRM web API.
 
 The following code sample demonstrates how you can execute a web request using `ExecuteCrmWebRequest` method.
 

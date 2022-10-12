@@ -398,7 +398,7 @@ RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
 LoginPrompt=Auto;
 RequireNewInstance = True";
 
-var service = new CrmServiceClient(conn);
+var service = new CrmServiceClient(conn); // Alternately, use ServiceClient
 
 var solutionUniqueName = " ContosoCustomerManagement ";
 

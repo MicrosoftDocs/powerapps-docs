@@ -208,7 +208,7 @@ HttpMessageHandler messageHandler = new OAuthMessageHandler(
 HttpClient httpClient = new HttpClient(messageHandler)
 ```
 
-If you are using CrmServiceClient, add the following to the AppSettings node in the App.config file.
+If you are using the `CrmServiceClient` or `ServiceCLient` classes, add the following to the AppSettings node in the App.config file.
 
 ```xml
 <add key="PreferConnectionAffinity" value="false" /> 
@@ -310,7 +310,7 @@ If you are using the Organization Service, we recommend that you use the <xref:M
 
 Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
 
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient  or ServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
 More information:
 

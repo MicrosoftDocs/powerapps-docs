@@ -74,7 +74,7 @@ string conn = $@"
     LoginPrompt=Auto;
     RequireNewInstance = True";
 
-var service = new CrmServiceClient(conn);
+var service = new CrmServiceClient(conn); // ALternately, use ServiceClient
 
 OptionSetValueCollection activities = new OptionSetValueCollection();
 activities.Add(new OptionSetValue(1)); //Swimming

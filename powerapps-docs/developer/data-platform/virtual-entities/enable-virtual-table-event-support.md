@@ -166,10 +166,10 @@ HTTP/1.1 204 No Content
 
 #### Using Organization Service
 
-Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).
+Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient). Alternately, the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class can also be used in the code example.
 
 ```csharp
-var service = new CrmServiceClient(conn);
+var service = new CrmServiceClient(conn); // ALternately, use ServiceClient
 
 var retrieveEntityRequest = new RetrieveEntityRequest
 {
@@ -362,7 +362,7 @@ When using the Organization Service, you can use either early or late binding ty
 This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types.
 
 ```csharp
-var service = new CrmServiceClient(conn);
+var service = new CrmServiceClient(conn); // ALternately, use ServiceClient
 
 //OnExternalCreated
 var createPerson = new new_people
@@ -414,7 +414,7 @@ var deleteRequest = new OnExternalDeletedRequest
 This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types.
 
 ```csharp
-var service = new CrmServiceClient(conn);
+var service = new CrmServiceClient(conn); // ALternately, use ServiceClient
 
   //OnExternalCreated
   Entity createPerson = new Entity("new_people");
