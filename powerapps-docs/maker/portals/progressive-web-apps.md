@@ -17,6 +17,9 @@ contributors:
 
 # Overview of portals as progressive web apps
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 You can enable your functional portal as a progressive web app (PWA), with native app–like look and feel, by using Power Apps portals Studio.
 
 With this feature, Power Apps portals now supports using progressive web app technology to provide multiplatform support to create an app that will work on all platforms (Android, iOS, Windows, and Chromebooks) and form factors (mobile, desktop, and tablet).

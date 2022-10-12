@@ -51,6 +51,7 @@ Monitor doesn't support the scenarios in the following table.
 
 |Description  |App type  |
 |---------|---------|
+|Monitor connected to apps running on a mobile device (native players).     |  Canvas    |
 |Monitor connected to a canvas app embedded in a model-driven app or custom page.     |  Canvas       |
 |Monitor connected to a SharePoint custom form app.     | Canvas        |
 |Monitor connected to a Microsoft Teams embedded app. As an alternative, you can play the app in a web player for diagnostics purposes.     | Canvas        |

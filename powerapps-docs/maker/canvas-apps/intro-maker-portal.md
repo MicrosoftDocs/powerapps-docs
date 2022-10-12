@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 08/11/2022
+ms.date: 10/11/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -15,6 +15,7 @@ search.app:
 contributors:
   - tapanm-msft
   - alaug
+  - Mattp123
 ---
 # Sign in to Power Apps for the first time
 
@@ -55,6 +56,32 @@ If you create an app in one environment, you won't be able to see it from anothe
 > - All users with the Environment Maker security role in an environment can see all model-driven apps in that environment, including the default environment. More information: [Model-driven app privileges to view and access apps](../model-driven-apps/app-visibility-privileges.md).
 
 For more information, see [Environments overview](/power-platform/admin/environments-overview).
+
+### Filter environments (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+With the enhanced environment picker, environments are grouped into two categories:  **Build apps with Dataverse** and **Other environments**. Select **Filter** to filter the list of environments by your role, data platform (Dataverse or none), and environment type, such as production or sandbox.
+
+> [!IMPORTANT]
+> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+
+:::image type="content" source="media/intro-maker-portal/environment-picker2.png" alt-text="Environment picker to filter and select an environment":::
+
+Environments where you have either system administrator and/or system customizer security role membership appear under **Build apps with Dataverse**. The **Other environments** list displays environments where you have only environment maker or editing privileges to at least one of the canvas apps in the environment.
+
+> [!TIP]
+> Hover over an environment in the list to view the details of the environment.
+
+#### Filtering by role
+
+|Filter role  |Power Platform role or description  |
+|---------|---------|
+|Admin     | System administrator <br /> Environment admin        |
+|Maker with data access     | System administrator <br />  System customizer        |
+|Maker without full data access     | Environment maker (with or without Dataverse)     |
+|Shared app contributor     | User without a maker-level security role assigned but with edit permission to at least one canvas app in the environment        |
 
 ## Choose an app type
 

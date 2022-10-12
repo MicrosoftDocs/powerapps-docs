@@ -16,6 +16,9 @@ contributors:
 
 # Manage SSL certificates
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You'll need an SSL certificate to set up a [custom host name](add-custom-domain.md). You can upload and update your own custom certificates by using the Power Apps portals admin center.
 
 ## SSL certificate requirements

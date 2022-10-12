@@ -16,6 +16,9 @@ contributors:
 
 # Search within file attachment content
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You can use the notes attachment to include downloadable files in knowledge base articles. You can also use web files to create an FAQ page with downloadable content.
 
 You can configure your portal to allow portal users to search within the attachment content of  knowledge base articles. This helps users to find the information that they're looking for.

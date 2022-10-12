@@ -18,6 +18,9 @@ contributors:
 
 # Configure an OpenID Connect provider for portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 [OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the [Open ID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html). OpenID Connect introduces the concept of an *ID token*, which is a security token that allows the client to verify the identity of the user. The ID token also gets basic profile information about users&mdash;also known as *claims*.
 
 This article explains how an identity provider that supports OpenID Connect can be integrated with Power Apps portals. Some of the examples of OpenID Connect providers for portals: [Azure Active Directory (Azure AD) B2C](configure-azure-ad-b2c-provider.md), [Azure AD](configure-openid-settings.md), [Azure AD with multiple tenants](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application).

@@ -75,14 +75,6 @@ Monitor also displays a notification that the monitoring session that's currentl
 
 ![Published app session.](media/monitor/published-app-session.png "Published app session")
 
-### For mobile apps
-
-Follow the above steps, but rather than selecting **Play published app**, select the chevron next to it and select **Get app mobile device link**.
-
-<!-- TODO: Add images -->
-
-Share the copied link with the user whose mobile app you want to monitor and have them open the published app using that link. Make sure the link is opened using Power Apps mobile, not a browser.
-
 ### Setting: Debug published app
 
 If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.
