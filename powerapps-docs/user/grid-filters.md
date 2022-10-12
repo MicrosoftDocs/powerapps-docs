@@ -77,7 +77,7 @@ Use the [filter editor](./grid-filters-advanced.md#select-filter-conditions-in-t
 
 Grid search enables you to filter the current view based on a keyword. When you choose the search box, an information tooltip appears indicating the list of columns on which a begins-with match is applied.
 
-> ![Information tooltip that indicates the list of columns on which a begins-with match is applied.](media/grid-search-tooltip.jpg "Information tooltip that indicates the list of columns on which a begins-with match is applied.")
+> ![Information tooltip that indicates the list of columns on which a begins-with match is applied.](media/Grid-search-tooltip.jpg "Information tooltip that indicates the list of columns on which a begins-with match is applied.")
 
 The search box can offer two different experiences, depending on how your administrator has configured search.
 
