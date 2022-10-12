@@ -28,7 +28,7 @@ This article contains information on supported device platforms, web browser req
 | --- | --- |
 | iOS |The latest version of iOS is always the recommended version to run Power Apps mobile. The previous version is the minimum required.|
 | Android |The latest version of Android is always the recommended version to run Power Apps mobile. The previous three versions are the minimum required to run Power Apps mobile. 
-| Windows | Windows 10 version 17763.0 or later to run [Power Apps for Windows (preview)](mobile/windows-app-install.md).
+| Windows | Windows 10 version 17763.0 or later to run [Power Apps for Windows](mobile/windows-app-install.md).
 
 > [!NOTE]
 > New major versions of iOS and Android are released each year. When a new version is released, if you're using the oldest previously supported version, you'll have 60 days to update your device to at least the new minimum supported version to continue to run Power Apps mobile.
