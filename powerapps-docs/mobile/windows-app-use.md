@@ -187,11 +187,11 @@ To get the session ID, select the More button (...) > **Settings** and then copy
    > ![See non-production apps.](media/non-prod-apps.png)
 
 ## Log files
-Open the following directory on your device to find the log files related to the Windows session for Power Apps:
+Open the following directory on your device to find the log files related to the Windows session for Power Apps for Windows:
 
 `%LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState`
 
-The Power Apps Support team can use the log files to investigate issues.
+The Power Apps support team can use the log files to investigate issues.
 
 ## Deep links
 
