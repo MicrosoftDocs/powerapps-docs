@@ -189,7 +189,7 @@ To get the session ID, select the More button (...) > **Settings** and then copy
 ## Log files
 Open the following directory on your device to find the log files related to the Windows session for Power Apps:
 
-%LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState
+`%LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState`
 
 The Power Apps Support team can use the log files to investigate issues.
 
