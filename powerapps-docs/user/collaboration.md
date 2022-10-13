@@ -35,7 +35,7 @@ You can also select a user's picture to see their online status, send them an em
 
 > [!NOTE]
 > - This is currently a preview feature. Your system administrator needs to turn on the **Copresence** feature in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
-> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact**, and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub) or stand-alone Power Apps.
+> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact**, and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub), or stand-alone Power Apps.
 
 ### View a user's status and picture
 
