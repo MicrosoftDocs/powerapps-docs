@@ -37,10 +37,10 @@ You can also select a user's picture to see their online status, send them an em
 
 ### View a user's status and picture
 
-App users, such as the record owner as well as the users appearing in grids and lookups are displayed with their picture and online status.  This feature is now available on all model driven apps and cannot be disabled.
+App users, such as the record owner, as well as the users appearing in grids and lookups are displayed with their picture and online status.  This feature is now available on all model-driven apps and cannot be disabled.
 
 > [!div class="mx-imgBorder"]
-> ![VView a user's online status.](media/collob-2.png "View a user's online status")
+> ![VView a user's online status.](media/collob-2.png "View a user's online status.")
 
 > [!NOTE]
 > This feature will be extended to user lookups and grid user columns. 
