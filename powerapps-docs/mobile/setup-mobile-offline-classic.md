@@ -149,10 +149,12 @@ To create a profile, follow the steps below.
   
 12. (**Optional**) Select **Sync interval** and choose how often you want the table's data to automatically sync to users's devices. You can select a short interval such as **Every 5 minutes** or choose a less frequent interval to optimize the sync performance and user experience. Make the selection based on your business requirements and how often users make updates to the table. Typically, the more static the data is, the less need for a frequent sync interval. 
 
-> [!NOTE]
-> Even if the value for **Sync interval** is set to be less frequent than, **Every 1 hour**, data will currently still be synched every hour. 
-> A sync is only initiated when there is connectivity and when the app is actively running on the user’s mobile device. For Android devices, once the sync is initiated it can be completed even in background.      
-> Dependencies, based on selected relationships and custom filters that includes related tables are analyzed at each sync request. This might result in a sync being triggered also for related tables.
+  > [!NOTE]
+  > Even if the value for **Sync interval** is set to be less frequent than, **Every 1 hour**, data will currently still be synched every hour. 
+  >
+  > A sync is only initiated when there is connectivity and when the app is actively running on the user’s mobile device. For Android devices, once the sync is initiated it can be completed even in background. 
+  >
+  > Dependencies, based on selected relationships and custom filters that includes related tables are analyzed at each sync request. This might result in a sync being triggered also for related tables.
   
 13. Select **Save** to add the table to your profile so you can continue editing it.
 
