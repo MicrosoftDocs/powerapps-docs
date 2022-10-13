@@ -207,15 +207,34 @@ Following these steps to publish the profile:
 
 ### Step 2.3: Set conflict detection for mobile offline  
 
-1. In the web app, go to **Settings**  > **Administration** and then select **System Settings**. For more information on system settings, see [System Settings dialog box](/power-platform/admin/system-settings-dialog).
+1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
-2. To configure conflict resolution behavior, select the **Mobile Client** tab.
+2. In the navigation pane, select **Environments**.
 
    > [!div class="mx-imgBorder"]
-   >![Set conflict detection for mobile offline.](media/mol_system_settings.png "Set conflict detection for mobile offline")
+   >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
+ 
+3. Choose an environment and then select **Settings**.
 
+   > [!div class="mx-imgBorder"]
+   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
+ 
+4. Expand **Users + permissions**,  and then select **Mobile configuration**.
 
-When there is a mismatch of data between client and server, conflict errors occur. To resolve the issue, choose one of the following settings:
+   > [!div class="mx-imgBorder"]
+   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
+  
+5. Select **Go to legacy** on the command bar.
+
+   > [!div class="mx-imgBorder"]
+   >![Go to legacy.](media/go-to-legacy.png "Go to legacy")
+  
+6. Select **Mobile Offline Settings**.
+
+   > [!div class="mx-imgBorder"]
+   >![Mobile Offline Settings](media/go-to-legacy.png "Mobile Offline Settings")
+  
+7. When there is a mismatch of data between client and server, conflict errors occur. To resolve the issue, choose one of the following settings:
 
 - Select **No** - Conflict detection for mobile offline is turned off, so whatever changes are made by a user in offline mode are automatically synced to the server when the user is back online, and client wins over server.
 
