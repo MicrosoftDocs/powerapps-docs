@@ -1,12 +1,12 @@
 ---
 title: "Create and join a Teams meeting from an appointment| MicrosoftDocs"
 description: Create and join a Teams meeting from an appointment
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/10/2022
+ms.date: 10/13/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
