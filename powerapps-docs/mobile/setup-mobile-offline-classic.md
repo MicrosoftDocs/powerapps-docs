@@ -236,21 +236,24 @@ Following these steps to publish the profile:
   
 7. When there is a mismatch of data between client and server, conflict errors occur. To resolve the issue, choose one of the following settings:
 
-- Select **No** - Conflict detection for mobile offline is turned off, so whatever changes are made by a user in offline mode are automatically synced to the server when the user is back online, and client wins over server.
+    - Select **No** - Conflict detection for mobile offline is turned off, so whatever changes are made by a user in offline mode are automatically synced to the server when the user is back online, and client wins over server.
 
-- Select **Yes** - Server wins over client.
+    - Select **Yes** - Server wins over client.
 
 ## Step 3: Enable the app module for offline
 
-Enable mobile offline for a specific app from MyApps page.
+Enable mobile offline for a specific app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-
-2. On the left nav select, **Apps** and then select the app that you want open. Then on the command bar select **Edit**. This will open the app in the **App Designer**.
+2. In the left navigation pane, select **Apps** and then select the app that you want open. On the command bar, select **Edit**. This will open the app in the **App Designer**.
 
    > [!div class="mx-imgBorder"]
    >![Open App Designer.](media/mol_edit_apps.png "Open App Designer")
+  
+3. In the command bar, select the elipses (...) icon and then select **Switch to classic**.
+  
+4. 
 
 3. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
 
