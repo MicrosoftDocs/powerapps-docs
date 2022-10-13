@@ -1,12 +1,11 @@
 ---
-title: "Tutorial: Write your first client script in model-driven apps| MicrosoftDocs"
-description: "This tutorial will help you write your first client script in model-driven apps."
+title: "Walkthrough: Write your first client script in model-driven apps| MicrosoftDocs"
+description: "This walkthrough will help you write your first client script in model-driven apps."
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
-ms.date: 04/01/2022
+ms.date: 10/13/2022
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: how-to
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
@@ -20,25 +19,112 @@ contributors:
 ---
 # Walkthrough: Write your first client script
 
-Ready to write your first client script to see things in action. Lets get started; we'll keep it simple.
+Ready to write your first client script to see things in action? Lets get started. We'll keep it simple.
 
 ## Objective
 
-After completing this walkthrough, you will know how to use your JavaScript code in model-driven apps, which involves the following steps at a high level:
+After completing this walkthrough, you will know how to use JavaScript code in model-driven apps, which involves the following steps at a high level:
 
-- Write your JavaScript code to address a business issue
-- Upload your JavaScript code as a web resource in model-driven apps
+- Write JavaScript code to address a business issue
+- Upload JavaScript code as a web resource in model-driven apps
 - Associate the JavaScript functions in the web resource to different client-side events in model-driven apps.
 
 We will draw your attention to important facts during the walkthrough, and provide references to actual methods as appropriate.
 
+## Step 0: Locate or Create a solution
+
+Solutions are the way that customizations can be transported from one environment to another. You should write and test your Javascript code in a development environment as part of an unmanaged solution. When you have finished testing, export the solution as a managed solution and import/install it in your production environment.
+
+There may already be an existing solution that your should use. The model-driven app you want to customize with your script should already be part of a solution. You may edit that solution or create a new solution that depends on another existing solution.
+
+To create a new solution:
+
+1. Navigate to [Power Apps](https://make.powerapps.com).
+1. In the left navigation pane, select **Solutions** and then select **New solution**.
+1. In the fly-out dialog, specify **Display name**, **Name**, and **Publisher**.
+
+   Most companies will have an existing publisher that they will always use. You should use that publisher. If you are the very first person, you get to create your own. Click **New Publisher** to open the **New Publisher** dialog. In this walkthrough, we will use a publisher with this definition:
+
+   :::image type="content" source="media/create-example-publisher.png" alt-text="Form to create a new publisher with information for Example Publisher":::
+
+   Notice the **Prefix** value. This should be something that identifies your company. In this case, we are using `example`.
+
+   This is the solution we will use in this walkthrough
+
+   :::image type="content" source="media/first-client-script-solution.png" alt-text="Solution form for the First Client Script Solution":::
+
+1. Locate or add a model-driven app to your solution.
+
+   Your new solution will not have any model-driven apps included in it. You will need to add an existing model-driven app or create a new one.
+
+   > [!NOTE]
+   > For the purpose of this walkthrough, it is best that the app includes the Account table. One of the scripts included below expects fields found in a form for the Account table.
+
+   **Add an existing model-driven app to your solution**
+   
+   1. In your solution, select **Add existing** > **App** > **Model-driven app**.
+
+   :::image type="content" source="media/add-existing-model-driven-app.png" alt-text="Add existing model-driven app":::
+
+   1. Select an existing app and click **Add**.
+
+   **Create a new model-driven app in your solution**
+
+   See the [Build your first model-driven app](../../../maker/model-driven-apps/build-first-model-driven-app.md) tutorial. Create an app that includes the Account table.
+
+
 ## Step 1: Write your custom JavaScript code
 
-The first step is to identify the business issue you are trying to address using client scripting. Once you have identified it, you need to write your JavaScript code containing the custom business logic that addresses your business issue. 
+The first step is to identify the business issue you are trying to address using client scripting. Once you have identified it, you need to write your JavaScript code containing the custom business logic that addresses your business issue.
 
-Model-driven apps do not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](/scripting/javascript/).
+Model-driven apps do not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](/visualstudio/javascript/javascript-in-visual-studio).
 
-You can review the complete sample code used in the walkthrough later in this article.
+This is the JavaScript code that this tutorial uses:
+
+```javascript
+// A namespace defined for the sample code
+// As a best practice, you should always define 
+// a unique namespace for your libraries
+var Example = window.Example || {};
+(function () {
+    // Define some global variables
+    var myUniqueId = "_myUniqueId"; // Define an ID for the notification
+    var currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName; // get current user name
+    var message = currentUserName + ": Your JavaScript code in action!";
+
+    // Code to run in the form OnLoad event
+    this.formOnLoad = function (executionContext) {
+        var formContext = executionContext.getFormContext();
+
+        // Display the form level notification as an INFO
+        formContext.ui.setFormNotification(message, "INFO", myUniqueId);
+
+        // Wait for 5 seconds before clearing the notification
+        window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);
+    }
+
+    // Code to run in the column OnChange event 
+    this.attributeOnChange = function (executionContext) {
+        var formContext = executionContext.getFormContext();
+
+        // Automatically set some column values if the account name contains "Contoso"
+        var accountName = formContext.getAttribute("name").getValue();
+        if (accountName.toLowerCase().search("contoso") != -1) {
+            formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
+            formContext.getAttribute("telephone1").setValue("425-555-0100");
+            formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
+        }
+    }
+
+    // Code to run in the form OnSave event 
+    this.formOnSave = function () {
+        // Display an alert dialog
+        Xrm.Navigation.openAlertDialog({ text: "Record saved." });
+    }
+}).call(Example);
+```
+
+Copy this code into a text file and save it with the name: `Example-form-script.js`.
 
 Let's look at the code in detail:
  
@@ -47,11 +133,12 @@ Let's look at the code in detail:
 - **Define namespace**: The code starts by defining a namespace for your custom script. As a best practice, you should always create namespaced JavaScript libraries to avoid having your functions overridden by functions in another library.
 
     ```JavaScript
-    var Sdk = window.Sdk || {};
+    var Example = window.Example || {};
     ``` 
-    In this case, all the functions defined in this library can be used as `Sdk.[functionName]`.
 
-- **Define global variables**: The following section defines some global variables to be used in the script. You now don't need to go through the form context to get the user name. Context information is now available globally using the **Xrm.Utility.**[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method.
+   In this case, all the functions defined in this library can be used as `Example.[functionName]`. You should choose a namespace that matches your solution publisher name.
+
+- **Define global variables**: The following section defines some global variables to be used in the script. Context information is available globally using the [Xrm.Utility.getGlobalContext](reference/xrm-utility/getGlobalContext.md) method.
 
     ```JavaScript
     // Define some global variables
@@ -59,9 +146,10 @@ Let's look at the code in detail:
     var currentUserName = Xrm.Utility.getGlobalContext().userSettings.userName; // get current user name
     var message = currentUserName + ": Your JavaScript code in action!";
     ```
-- **Code to execute on the OnLoad event**: This section contains the code that will be executed when the account form loads. For example, when you create a new account record or when you open an existing account record.
 
-    The code uses the `executionContext` object to get the `formContext` object. When we attach our code with the form event later, we will remember to select the option to pass the [execution context](clientapi-execution-context.md) to this function. Next, we display a form level notification using the [setFormNotification](reference/formContext-ui/setFormNotification.md) method. Next, we use the **setTimeOut** method to delay the execution of the [clearFormNotification](reference/formContext-ui/clearFormNotification.md) method to clear the notification after 5 seconds.
+- **Function to execute on the OnLoad event**: This section contains the function that will be executed when the account form loads. For example, when you create a new account record or when you open an existing account record.
+
+    The function uses the `executionContext` parameter to get the `formContext` object. When we attach our code with the form event later, we will remember to select the option to pass the [execution context](clientapi-execution-context.md) to this function. Next, we display a form level notification using the [formContext.ui.setFormNotification](reference/formContext-ui/setFormNotification.md) method. Next, we use the JavaScript [setTimeOut method](https://developer.mozilla.org/docs/Web/API/setTimeout) to delay the execution of the [formContext.ui.clearFormNotification](reference/formContext-ui/clearFormNotification.md) method to clear the notification after 5 seconds.
 
     ```JavaScript
     // Code to run in the form OnLoad event
@@ -75,7 +163,8 @@ Let's look at the code in detail:
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);        
     }
     ```
-- **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
+
+- **Function to execute on the OnChange event**: This function will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
 
     The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some columns in the account form.
 
@@ -94,9 +183,9 @@ Let's look at the code in detail:
     }
     ```
 
-- **Code to execute on the OnSave event**: The code in this section displays an alert dialog box using the [openAlertDialog](reference/xrm-navigation/openalertdialog.md) method. This dialog box displays a message with the **OK** button; user can close the alert by selecting **OK**.
+- **Function to execute on the OnSave event**: This function displays an alert dialog box using the [Xrm.Navigation.openAlertDialog](reference/xrm-navigation/openalertdialog.md) method. This dialog box displays a message with the **OK** button; user can close the alert by selecting **OK**.
 
-    We are not passing in the execution context in this function as it's not required to execute **Xrm.Utility.** methods. 
+    We are not passing in the execution context in this function as it's not required to execute **Xrm.Navigation.** methods.
 
     ```JavaScript
     // Code to run in the form OnSave event 
@@ -108,9 +197,38 @@ Let's look at the code in detail:
 
 ## Step 2: Add your JavaScript code in a Script web resource
 
-### [Unified Interface](#tab/unified-interface)
+<!-- ### [Unified Interface](#tab/unified-interface) -->
 
 Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
+
+
+1. In your solution select New > More > Web resource
+
+   :::image type="content" source="media/add-new-web-resource-to-solution.png" alt-text="Add a new web resource to your solution":::
+
+1. In the **New web resource** dialog, click **Choose file** and select the `Example-form-script.js` file you saved earlier.
+1. Type in the **Display name**, **Name**, and optionally a **Description**. Make sure the **Type** is **JavaScript (JS)**
+
+   :::image type="content" source="media/create-example-form-script-web-resource.png" alt-text="New web resource dialog to create example form script":::
+
+   > [!NOTE]
+   > Notice how the **Name** has a prefix that matches the solution publisher customization prefix. There are other ways to create web resources, but creating a web resource this way ensures that the Web Resource is part of your solution.
+
+1. In your solution, select **Objects** > **Apps** > **Your App** and click **Edit**.
+
+   :::image type="content" source="media/edit-account-example-app.png" alt-text="Edit the app in the solution":::
+
+1. Select the **Account form**, right-click the **Information** form and select **Edit**.
+
+   :::image type="content" source="media/edit-account-information-form.png" alt-text="Edit the account information form":::
+
+1. In the left navigation, select **Form Libraries** and click **Add library**.
+
+   :::image type="content" source="media/add-library-to-form.png" alt-text="Add library to form":::
+
+1. In the **Add JavaScript Library** dialog select **New web resource**.
+
+:::image type="content" source="media/add-javascript-library-dialog.png" alt-text="Add JavaScript Library dialog":::
 
 1. Navigate to [Power Apps](https://make.powerapps.com).
 1. In the left navigation pane, select **Data** and then select **Tables**.
@@ -131,7 +249,7 @@ Now that your code is ready, you want to associate it with events in model-drive
 1. Select **Save** to create the web resource containing your JavaScript code.
 1. Select **Publish** to publish your web resource.
 
-### [Legacy](#tab/legacy-ui)
+<!-- ### [Legacy](#tab/legacy-ui)
 
 Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
 
@@ -146,7 +264,7 @@ Now that your code is ready, you want to associate it with events in model-drive
 1. Choose **Save** to create the web resource containing your JavaScript code.
 1. Choose **Publish** to publish your web resource.
 
----
+--- -->
 
 ## Step 3: Associate Script web resource to a form
 
