@@ -4,7 +4,7 @@ description: Use Power Apps for Windows.
 author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/29/2022
+ms.date: 10/13/2022
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -186,10 +186,12 @@ To get the session ID, select the More button (...) > **Settings** and then copy
    > [!div class="mx-imgBorder"] 
    > ![See non-production apps.](media/non-prod-apps.png)
 
-## Log file
-A log file related to a Windows session of Power Apps for Windows, can be found in the following location: %LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState
+## Log files
+Open the following directory on your device to find the log files related to the Windows session for Power Apps:
 
-Use the log file to XXX.
+%LocalAppData%\Packages\MicrosoftCorporationII.PowerAppsforWindows10_8wekyb3d8bbwe\LocalState
+
+The Power Apps Support team can use the log files to investigate issues.
 
 ## Deep links
 
