@@ -1,5 +1,5 @@
 ---
-title: Work offline on your mobile device
+title: Work offline on your mobile device (classic)
 description: How to work on your mobile device in offline mode
 ms.custom: 
 ms.date: 10/06/2022
@@ -23,7 +23,7 @@ search.app:
   - D365Sales
 ---
 
-# Work offline on your mobile device
+# Work offline on your mobile device (classic)
 
 Work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete—along with some special commands—so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
 
