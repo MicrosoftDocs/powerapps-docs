@@ -91,6 +91,7 @@ If your administrator has turned on quick find, then the search box shows **Quic
 
 > [!NOTE]
 > Grid search keywords that begin with an asterisk (\*) will display a warning informing you that the search might be slower. If your administrator has turned on the [Prevent slow keyword filter for quick find terms on view pages](/power-platform/admin/settings-features) setting, then you cannot perform a search on keywords that begin with an asterisk (\*). 
+>
 > ![Searching for keywords that begin with an asterisk will display a warning message.](media/grid-search-warning-smaller.png "Searching for keywords that begin with an asterisk will display a warning message.")
   
 
