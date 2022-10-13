@@ -1660,13 +1660,13 @@
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
     items:
-    - name: Set up mobile offline (classic)
+    - name: Set up mobile offline
       items:
-      - name: Mobile offline overview (classic)
+      - name: Mobile offline overview
         href: ../mobile/mobile-offline-overview-classic.md
-      - name: Set up mobile offline (classic)
+      - name: Set up mobile offline
         href: ../mobile/setup-mobile-offline-classic.md
-      - name: Work offline on your mobile device (classic)
+      - name: Work offline on your mobile device
         href: ../mobile/work-offline-mode-classic.md
     - name: Set up mobile offline (preview)
       items:
