@@ -43,6 +43,9 @@ More information: [Service Protection API Limits](../api-limits.md)
 
 The [CrmServiceClient.Clone Method](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.clone) enables TPL to use the client with multiple threads.
 
+> [!NOTE]
+> You could also use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A?displayProperty=nameWithType> method in this sample code instead of <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone?displayProperty=nameWithType> with the same results.
+
 This simple sample will generate a number of account table records using the [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach).
 
 Then it will use that technique again to delete the tables created.

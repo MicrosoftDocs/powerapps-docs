@@ -26,6 +26,7 @@ The [connection string](/dotnet/api/microsoft.xrm.tooling.connector.crmservicecl
 
 ## See also
 
+<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.%23ctor%2A?displayProperty=nameWithType>  
 [Use XRM Tooling Windows PowerShell Cmdlets to connect to Dataverse](use-powershell-cmdlets-xrm-tooling-connect.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
