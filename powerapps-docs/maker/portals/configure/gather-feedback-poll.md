@@ -17,6 +17,9 @@ contributors:
 
 # Gather feedback by using polls on a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Polls give your web audiences a quick and easy way to voice their opinion on specific topics, and then immediately and automatically see feedback from their vote.
 
 Use the polls capability of portals to ask your audience about topics of interest and let them give single answers or let them submit the response from a list of options. Either way, their responses are instantly stored and associated with the applicable Contact record for immediate review or aggregate reporting. You can use polls as simple market research tools and, if you refresh or rotate the polls dynamically, you'll keep your website looking current and topical.

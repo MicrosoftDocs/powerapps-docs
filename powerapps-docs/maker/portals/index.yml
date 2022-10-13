@@ -23,13 +23,13 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: Power Pages (preview)
+          - text: Power Pages
             url: /power-pages/introduction 
           - text: Configure a file column on portals (preview)
             url: configure/file-column.md
           - text: Manage content security policy
             url: configure/manage-content-security-policy.md                       
-          - text: Content Delivery Network (preview)
+          - text: Content Delivery Network
             url: configure/configure-cdn.md
           - text: Configure Dataverse search in portals
             url: configure/search.md  
@@ -105,7 +105,7 @@ landingContent:
             url: configure/entity-forms.md
           - text: Lists
             url: configure/entity-lists.md
-          - text: Advanced forms
+          - text: Multistep forms
             url: configure/web-form-properties.md
 
   # Card

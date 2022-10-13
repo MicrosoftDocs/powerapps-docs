@@ -16,6 +16,9 @@ contributors:
 
 # Portals support for Microsoft Power Platform CLI
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Microsoft Power Platform CLI(Command Line Interface) is a simple, single-stop
 developer command-line interface that empowers developers and app makers to
 create code components.
@@ -32,7 +35,7 @@ configuration to source control and move portal configuration to any environment
 using Microsoft Power Platform CLI.
 
 > [!NOTE]
-> This feature is generally available starting with Power Platform CLI version 1.9.8. To learn about installing the latest version, see [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md#standalone-power-platform-cli).
+> This feature is generally available starting with Power Platform CLI version 1.9.8. To learn about installing the latest version, see [Install Microsoft Power Platform CLI](../../developer/data-platform/powerapps-cli.md).
 
 ### Why use Microsoft Power Platform CLI for portals development?
 

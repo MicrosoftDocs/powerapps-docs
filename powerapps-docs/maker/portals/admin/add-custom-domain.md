@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2022
+ms.date: 10/06/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -17,11 +17,13 @@ contributors:
 
 # Add a custom domain name
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A custom domain can enhance your brand and help your customers more easily find your support resources. Once you provision your portal and acquire your domain name, you'll need an SSL certificate to set up a custom host name. After the SSL certificate is purchased, you can use a wizard to link your portal to a custom domain.  Only one custom domain name can be added to a portal.
 
 > [!IMPORTANT]
 > - You can add a custom domain name to a portal only when the portal is in production state. For more information about portal stages, go to [portal lifecycle](portal-lifecycle.md).
-> - If you are evaluating the preview [Content Delivery Network (CDN)](../configure/configure-cdn.md) functionality, note that custom domain names are currently not supported using CDN.
 
 To learn about the roles required to perform this task, read [Admin roles required for portal administrative tasks](portal-admin-roles.md).
 
@@ -61,14 +63,16 @@ To learn about the roles required to perform this task, read [Admin roles requir
 
 ## Change current custom domain name
 
-If you want to change your existing custom domain name, you must do the following:
+To change your existing custom domain name:
 
 1. From the admin center, select Set up custom domains and SSL.
 1. Manually delete the current SSL binding.
 1. Manually delete the current assigned hostname.
 1. Rerun the wizard and follow the instructions outlined in **Add a custom domain name**.
 
+## Validate the custom domain
 
+The domain should be validated before associating to the endpoint and routes for content delivery network (CDN) enabled websites.  You should add TXT record to the domain DNS for the validation.  The TXT record is in the form of _dnsauth.<your_subdomain>.  In your DNS provider, manually create a new TXT record of name_dnsauth.<your_subdomain> with the record value.
     
 ### See also
 

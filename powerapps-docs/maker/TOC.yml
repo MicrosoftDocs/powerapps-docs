@@ -222,7 +222,9 @@
   - name: Find it with unified search
     href: search.md
   - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md 
+    href: ./common/virtual-agent.md   
+  - name: Maker matching using an integrated virtual agent (preview)
+    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -610,7 +612,7 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Use the Search pane (preview)
+        - name: Use the Search pane
           href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
@@ -622,6 +624,8 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Formula repair in canvas apps (preview)
+          href: common/formula-repair.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane 
@@ -1305,13 +1309,15 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: /powerapps-docs/maker/../canvas-apps/connections-list
+            href: ./canvas-apps/connections-list.md
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+          - name: Formula repair in custom pages (preview)
+            href: common/formula-repair.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
       - name: Work with views
@@ -1801,13 +1807,13 @@
                   href: ./portals/configure/configure-basic-form-metadata.md
                 - name: Configure basic form subgrid
                   href: ./portals/configure/configure-basic-form-subgrid.md
-            - name: Work with advanced forms
+            - name: Work with multistep forms
               items:
-                - name: Define advanced form properties
+                - name: Define multistep form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Advanced form steps
+                - name: Multistep form steps
                   items:
-                    - name: Define advanced form steps
+                    - name: Define multistep form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1817,9 +1823,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure advanced form metadata
+                - name: Configure multistep form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure an advanced form subgrid
+                - name: Configure a multistep form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1915,7 +1921,7 @@
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md  
-        - name: Content Delivery Network (preview)
+        - name: Content Delivery Network
           href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
@@ -2126,7 +2132,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md 
+            href: ./portals/component-framework-tutorial.md
+          - name: "Tutorial: Use dataset for code components in portals"
+            href: ./portals/tutorial-pcf-code.md 
           - name: "Tutorial: Configure rich text editor control on portals"
             href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
@@ -2869,7 +2877,7 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-- name: Cards (Preview)
+- name: Cards (preview)
   items:
     - name: What are cards?
       href: ../cards/overview.md

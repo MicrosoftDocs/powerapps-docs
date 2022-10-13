@@ -1,8 +1,8 @@
 ---
-title: Add buttons (Preview)
-description: Learn how to build a card with buttons.
+title: Add buttons to a card (preview)
+description: Learn how to add interactive buttons to your cards for Microsoft Power Apps.
 ms.date: 09/20/2022
-ms.topic: article
+ms.topic: how-to
 author: iaanw
 ms.author: iawilt
 manager: shellyha
@@ -11,67 +11,75 @@ ms.custom:
 ms.collection: 
 ---
 
-# Add buttons (Preview)
+# Add buttons to a card (preview)
 
-[!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
-
-Buttons are a type of control that let users perform actions in cards. They're a visual interface that makes it easy for users to do things with cards without entering any input aside from a click.
+Buttons are a type of control that lets users perform actions in cards without entering any input aside from a click. Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
 Buttons can do one of four things:
 
-1. Run Power Fx - when selected, the button will run a [Power Fx formula](../power-fx/intro-to-pfx.md)
-1. Show Screen - when selected, the button will go to the specified screen
-1. Open Url - when selected, the button will launch the given url in an external or embedded web browser
-1. Toggle Visibility - when selected, the button will show or hide other controls in the card
+- [Run a Power Fx expression](../power-fx/intro-to-pfx.md)
+- Open a screen
+- Open a URL in an external or embedded web browser
+- Show or hide other controls in the card
 
 ## Prerequisites
 
-- A [Power Apps](https://powerapps.microsoft.com/) account.
-- A card. For an example, see the [simple card tutorial](../../tutorials/hello-world-card.md).
-- Familiarity with the [Card Designer](../designer-overview.md).
+- A [Power Apps](https://powerapps.microsoft.com/) account
+- [A card](../../tutorials/hello-world-card.md)
 
-## Add a button to a card
+## Insert a button
 
-1. Go to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (Preview)** and then the card you want add a button to.
-1. Select **+ Insert** on the left. Then select **Button** to add a button to your card.
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
 
-    :::image type="content" source="../../media/use-buttons/add-button.png" alt-text="Screenshot of Button in Insert menu" border="true":::
+1. In the left pane of the card designer, select **Insert**.
 
-1. Now that the button is on your card, you can edit its properties. At a minimum, choose a button **Type** and add a button **Title** to display on the card, as shown below.
+1. In the tool pane, select the **Input** category to expand it, and then select **Button** to add a button to your card.
 
-    :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of button title change" border="true":::
+1. In the properties pane, enter a **Title** to display as the button label. Edit the other properties as needed.
 
-### Button type
+    :::image type="content" source="../../media/use-buttons/button-title.png" alt-text="Screenshot of a button's properties in the card designer, with the button title highlighted.":::
 
-There are four types of buttons you can add to your card:
+### Button types
+
+You can add four types of buttons to your cards:
 
 - Run PowerFx
 - Show Screen
 - Open Url
 - Toggle Visibility
 
-#### Run PowerFX
+#### Run PowerFx
 
-The **Run PowerFX** button type lets you use buttons to run Power Fx formulas. These formulas can be simple or complex, and when combined with buttons make it easy for users to navigate card logic.
+Use a **Run PowerFx** button to run Power Fx expressions. [Learn more about Power FX](../power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
 
-Set the **Type** to **Run PowerFX**. Then select the **Power Fx** link to add a formula to the Formula bar.
+Select the **Power Fx** link in the button properties pane to start entering an expression in the formula bar.
 
-When you test the button, the actions expressed by the Power Fx formula should happen.
+:::image type="content" source="../../media/use-buttons/button-powerfx.png" alt-text="Screenshot of a Run PowerFx button properties pane in the card designer.":::
 
 #### Show Screen
 
-The **Show Screen** button lets users select a button and then display a screen. For more information about screens, see the [screens](../screens/use-screens.md) article.
+Use a **Show Screen** button to display a specific screen. [Learn about screens in Power Apps](../screens/use-screens.md).
 
-Set the **Type** to **Show Screen** and then select a **Screen** to switch to. If you don't have any screens, only **main** will appear in the list. When the user selects the button, the new screen will appear under the card.
+In the button properties pane, set the **Type** to **Show Screen**, and then select a **Screen** to open. If you don't have any screens yet, only **main** will appear in the list.
+
+:::image type="content" source="../../media/use-buttons/button-screen.png" alt-text="Screenshot of a Show Screen button properties pane in the card designer.":::
 
 #### Open Url
 
-The **Open Url** button lets users select a button that opens a URL.
+Use an **Open Url** button to open a web page.
 
-Set the **Type** to **Open Url** and then enter a **Url**. When the user selects the button, the URL entered previously will open.
+In the button properties pane, set the **Type** to **Open Url** and then enter a **Url**.
+
+:::image type="content" source="../../media/use-buttons/button-url.png" alt-text="Screenshot of an Open Url button properties pane in the card designer.":::
 
 #### Toggle Visibility
 
-The **Toggle Visibility** button shows or hides other controls in the card.
+Use a **Toggle Visibility** button to show or hide other controls in the card.
 
-Set the **Type** to **Toggle Visibility**. Then select the **Target Elements** pane and select **+ Add new**. Enter the **ElementID** and toggle the **Visibility** property to make the element visible or invisible. Add as many elements as you want to toggle the visibility of.
+1. In the button properties pane, set the **Type** to **Toggle Visibility**.
+1. Select the **Target Elements** tab, and then select **+ Add new**.
+1. Enter the **ElementID** and toggle the **Visibility** property to make the element visible or invisible.
+
+    :::image type="content" source="../../media/use-buttons/button-visibility.png" alt-text="Screenshot of a Toggle Visibility button properties pane in the card designer, with the Target Elements tab shown.":::
+
+1. Continue to add elements as needed.

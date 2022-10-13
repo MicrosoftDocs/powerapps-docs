@@ -5,16 +5,20 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - ProfessorKendrick
 ---
 
 # Add geolocation
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 *Geolocation* is the identification of the real-world geographic location of an object. Geolocation is closely related to the use of positioning systems, but places a greater emphasis on determining a meaningful location (for example, a street address) rather than just a set of geographic coordinates. The word geolocation can also mean the latitude and longitude coordinates of a particular location.
 
@@ -62,7 +66,7 @@ The map control requires additional configuration to tell it what the IDs of the
 
 - For basic forms, see [Geolocation configuration for basic forms](entity-forms.md#geolocation-configuration-for-basic-forms).
 
-- For advanced forms, see [Geolocation configuration for advanced forms](web-form-properties.md#geolocation-configuration-for-advanced-form).
+- For multistep forms, see [Geolocation configuration for multistep forms](web-form-properties.md#geolocation-configuration-for-multistep-form).
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

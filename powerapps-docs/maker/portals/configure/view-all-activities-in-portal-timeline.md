@@ -16,6 +16,9 @@ contributors:
 
 # View activities in a portal timeline
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 While working on a case or interacting with a customer, you might create an activity such as an appointment, an email, or a phone call. When you navigate to the Timeline in your support portal, you might not find this activity because by default all activities aren't displayed in portal Timeline. 
 
 To view all activities in a portal Timeline: 

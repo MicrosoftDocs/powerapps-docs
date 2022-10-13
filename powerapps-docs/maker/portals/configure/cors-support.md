@@ -16,6 +16,9 @@ contributors:
 
 # Setup HTTP headers in portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain. You can configure CORS support in Power Apps portals using the Portal Management app by adding and configuring the site settings.
 
 The following site settings are used to configure CORS:

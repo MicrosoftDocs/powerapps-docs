@@ -5,7 +5,7 @@ author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/30/2022
+ms.date: 09/30/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -144,7 +144,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - If you open a non git connected app (for example, **App A**) from within a git connected app (for example, **App B**) (File > Open) and try to connect **App A** to a repository, **App A**'s git version control parameters will be the same as **App B**. When this happens, refresh your page and then try connecting **App A** to the repository again.
 - This feature does not support renaming of custom components.
 - If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. Afterwards, refresh your app to remove the lock.
-- This feature isn't compatible with [Test Studio tests](test-studio.md).
+- This feature is not compatible with [Test Studio tests](test-studio.md) and [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md)
 
 ## Feedback to the community forum
 

@@ -17,6 +17,9 @@ contributors:
 
 # List OData feeds
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 > [!NOTE]
 > This feature has been deprecated. Alternatively, use the [portals Web API](../web-api-overview.md) to interact with the data.
 

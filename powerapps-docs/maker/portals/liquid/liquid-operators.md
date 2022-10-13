@@ -16,6 +16,9 @@ contributors:
 
 # Understand Liquid operators
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Liquid has access to all common logical and comparison operators. These can be used in tags such as **if** and **unless**.
 
 ## Basic operators
