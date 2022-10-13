@@ -25,6 +25,7 @@ Collaborate with colleagues and share links in model-driven Power Apps the same 
 
 ### Multiplayer apps (preview)
 [This section is pre-release documentation and is subject to change.]
+
 When you're working on a record such as an **Opportunity**, **Account**, **Contact**, or **Case** you can also see other users that are working on the same record.
 
 You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
