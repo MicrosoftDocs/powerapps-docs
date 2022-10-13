@@ -285,4 +285,4 @@ See the article on [Code component application lifecycle management (ALM)](code-
 - [Code components for canvas apps](component-framework-for-canvas-apps.md)
 - [Create and build a code component](create-custom-controls-using-pcf.md)
 - [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)
-- [Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+- [Use code components in Power Pages](../../maker/portals/component-framework.md)

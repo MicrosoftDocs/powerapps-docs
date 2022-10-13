@@ -42,7 +42,13 @@ With Dataverse, XRM tooling enables you to connect to your Dataverse environment
 //Use the connection string named "MyCDSServer"  
 //from the configuration file  
 CrmServiceClient svc = new CrmServiceClient(ConnectionString);  
-```  
+```
+
+Alternately, you could use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class.
+
+```csharp
+ServiceClient svc = new ServiceClient(ConnectionString);  
+```
   
 > [!NOTE]
 > You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  

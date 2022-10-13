@@ -17,6 +17,9 @@ contributors:
 
 # List configuration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You can easily enable and configure actions (create, edit, delete, and so on) for records in a list. It's also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
 These settings are found on the **Options** tab in the **Grid Configuration** section of the list configuration in the [Portal Management app](configure-portal.md). By default, only **Basic Settings** are shown. Select **Advanced Settings** to see more settings.

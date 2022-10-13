@@ -123,6 +123,6 @@ A: No. You must create a new control using the new template and then update the 
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
-[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+[Use code components in Power Pages](../../maker/portals/component-framework.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

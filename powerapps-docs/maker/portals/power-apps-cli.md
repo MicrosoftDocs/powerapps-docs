@@ -16,6 +16,9 @@ contributors:
 
 # Portals support for Microsoft Power Platform CLI
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Microsoft Power Platform CLI(Command Line Interface) is a simple, single-stop
 developer command-line interface that empowers developers and app makers to
 create code components.
