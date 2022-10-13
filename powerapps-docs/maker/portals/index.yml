@@ -23,7 +23,7 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: Power Pages (preview)
+          - text: Power Pages
             url: /power-pages/introduction 
           - text: Configure a file column on portals (preview)
             url: configure/file-column.md
@@ -105,7 +105,7 @@ landingContent:
             url: configure/entity-forms.md
           - text: Lists
             url: configure/entity-lists.md
-          - text: Advanced forms
+          - text: Multistep forms
             url: configure/web-form-properties.md
 
   # Card

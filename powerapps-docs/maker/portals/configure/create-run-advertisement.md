@@ -16,6 +16,9 @@ contributors:
 
 # Create and run advertisements on a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Create text or image-based ads and have them run in multiple placements throughout your site. Randomize ads or select specific ads for specific placements. You can choose release and expiration dates for time-sensitive, scheduled content. Ads can be hyperlinked to any destination and open in the current window or a new window. Advertisements are displayed in the portal via two tables: The Ad Placement table and associated Ad table. Ads can be surfaced in many ways: with pre-made Liquid Templates available within portals via Liquid Templating/example Web Templates, or within the.aspx page via MVC actions.
 
 ## Create a new advertisement

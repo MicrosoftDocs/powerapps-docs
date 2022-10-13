@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/10/2021
+ms.date: 10/07/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Dataverse entity tags
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Microsoft Dataverse entity tags are used to load and display Dataverse data, or use other Power Apps portals framework services. These tags are Dataverse-specific extensions to the Liquid language.
 
@@ -66,9 +69,9 @@ Type of authentication required for the Power BI report or dashboard. Valid valu
 
 - **AAD**: Allows you to share secure Power BI reports or dashboards to Power BI Azure Active Directory authenticated users.
 
-- **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who doesn't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
+- **powerbiembedded**: Allows you to share the secure Power BI reports or dashboards to external users who don't have Power BI license or Azure Active Directory authentication setup. For information on Power BI Embedded service setup, see [Enable Power BI Embedded service](../admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service). 
 
-While adding the secure Power BI report or dashboard, ensure that it is shared with portal Azure Active Directory or Power BI Embedded services. 
+While adding the secure Power BI report or dashboard, ensure that it's shared with portal Azure Active Directory or Power BI Embedded services. 
 
 > [!NOTE]
 > The values for the `authentication_type` parameter are case insensitive.
@@ -81,7 +84,7 @@ You can also filter the report on one or more values. The syntax to filter a rep
 
 URL?filter=**Table**/**Field** eq '**value**'
 
-For example, say you want to filter the report to see data for a contact named Bert Hair. You must append the URL with the following:
+For example, say you want to filter the report to see data for a contact named Bert Hair. You must append the URL with the following data:
 
 ?filter=Executives/Executive eq 'Bert Hair'
 
@@ -174,9 +177,9 @@ certain classes on the containing element, as demonstrated here.
 
 ### Parameters
 
-The first parameter provided to editable is the editable object. For example, this may be a web link set, snippets, or the current page. The optional second parameter is to specify an attribute name or key within that object that is to be rendered and edited. This may be the name of a table attribute, or a snippet name, for example.
+The first parameter provided to editable is the editable object, such as a web link set, snippets, or the current page. The optional second parameter is to specify an attribute name or key within that object that is to be rendered and edited. This value may be the name of a table attribute, or a snippet name, for example.
 
-After these initial parameters, the tag supports a number of optional named parameters.
+After these initial parameters, the tag supports many optional named parameters.
 
 **class**
 
@@ -188,15 +191,15 @@ A default value to be rendered in the case that the editable item has no value.
 
 **escape**
 
-A Boolean value indicating whether a value rendered by this tag will be HTML-encoded. This is false by default.
+A Boolean value indicating whether a value rendered by this tag will be HTML-encoded. This value is false by default.
 
 **liquid**
 
-A Boolean value indicating whether any Liquid template code found within the text value rendered by this tag will be processed. This is true by default.
+A Boolean value indicating whether any Liquid template code found within the text value rendered by this tag will be processed. This value is true by default.
 
 **tag**
 
-The name of the container HTML tags that will be rendered by this tag. This tag will render div elements by default. It is generally recommended that you choose between div or span as a value for this parameter.
+The name of the container HTML tags that will be rendered by this tag. This tag will render div elements by default. It's recommended that you choose between div or span as a value for this parameter.
 
 **title**
 
@@ -210,7 +213,7 @@ A string value indicating the type of editing interface to be presented, for edi
 
 Loads a given list, by name or ID. The properties of the list can then be accessed using an [entitylist object](liquid-objects.md#entitylist) that will be available within the tag block. To render the actual result records of the list, use the [entityview](#entityview) tag within the block.  
 
-If the list is loaded successfully, the content within the block will be rendered. If the list is not found, the block content will not be rendered.
+If the list is loaded successfully, the content within the block will be rendered. If the list isn't found, the block content won't be rendered.
 
 ```
 {% entitylist name:My List %}
@@ -245,7 +248,7 @@ Loaded list {{ entitylist.adx_name }}.
 {% endentitylist %}
 ```
 
-Generally, literal GUID strings will not be used. Instead, id will be specified using a GUID property of another variable.
+Generally, literal GUID strings won't be used. Instead, id will be specified using a GUID property of another variable.
 
 ```
 {% entitylist id:page.adx_entitylist.id %}
@@ -297,7 +300,7 @@ Loaded list {{ entitylist.adx_name }}.
 
 Loads a given Power Apps view, by name or ID. The properties of the view ߝ view column metadata, paginated result records, etc. can then be accessed using an [entityview object](liquid-objects.md#entityview) that will be available within the tag block.  
 
-If the view is loaded successfully, the content within the block will be rendered. If the view is not found, the block content will not be rendered.
+If the view is loaded successfully, the content within the block will be rendered. If the view isn't found, the block content won't be rendered.
 
 ```
 {% entityview logical_name:'contact', name:"Active Contacts" %}
@@ -347,7 +350,7 @@ Loaded entity view {{ entityview.name }}.
 {% endentityview %}
 ```
 
-Generally, literal GUID strings will not be used. Instead, id will be specified using a GUID property of another variable.
+Generally, literal GUID strings won't be used. Instead, id will be specified using a GUID property of another variable.
 
 ```
 {% entityview id:request.params.view %}
@@ -443,9 +446,9 @@ Loaded entity view with {{ entityview.total_records }} total records.
 
 **page**
 
-Specifies the view result page to load. If this parameter is not specified, the first page of results will be loaded.
+Specifies the view result page to load. If this parameter isn't specified, the first page of results will be loaded.
 
-This parameter must be passed either an integer value, or a string that can be parsed as an integer. If a value is provided for this parameter, but the value is null or otherwise cannot be parsed as an integer, the first page of results will be loaded.
+This parameter must be passed either an integer value, or a string that can be parsed as an integer. If a value is provided for this parameter, but the value is null or otherwise can't be parsed as an integer, the first page of results will be loaded.
 
 ```
 {% entityview id:request.params.view, page:2 %}
@@ -469,7 +472,7 @@ Loaded page {{ entityview.page }} of entity view with {{ entityview.total_record
 
 Specifies the number of results to load for the current result page. If no value is provided for this parameter, and entityview is used within an [entitylist](#entitylist) block, the list page size will be used. If not within an entitylist block, a default value of 10 will be used.
 
-This parameter must be passed either an integer value, or a string that can be parsed as an integer. If a value is provided for this parameter, but the value is null or otherwise cannot be parsed as an integer, the default page size will be used.
+This parameter must be passed either an integer value, or a string that can be parsed as an integer. If a value is provided for this parameter, but the value is null or otherwise can't be parsed as an integer, the default page size will be used.
 
 ```
 {% entityview id:request.params.view, page_size:20 %}
@@ -690,17 +693,17 @@ The name of the Basic Form you wish to load.
 
 ## webform
 
-Fully renders a Power Apps-configured advanced form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template will not render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first will not be rendered.
+Fully renders a Power Apps-configured multistep form, by name or ID. The webform tag is only available for use in content rendered inside a [web template](store-content-web-templates.md) based page template. Attempting to use the tag inside a Rewrite-based Page Template won't render anything. You may only render a single entityform or webform tag per page. entityform or webform tags after the first won't be rendered.
 
-`{% webform name: 'My Advanced Form' %}`
+`{% webform name: 'My Multistep Form' %}`
 
 ### Parameters
 
 **name**
 
-The name of the Advanced Form you wish to load.
+The name of the Multistep Form you wish to load.
 
-`{% webform name:My Advanced Form %}`
+`{% webform name:My Multistep Form %}`
 
 ## codecomponent
 

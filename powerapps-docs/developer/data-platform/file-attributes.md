@@ -37,7 +37,7 @@ For information about types of files that are not allowed, see [System Settings 
 >  - User Delegation SAS Downloads are not supported
 >  - Chunking uploads and downloads are limited to a single chunk
 >  
->  File columns are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater. File columns are supported in Power Apps portals only in the [notes](../../maker/portals/configure-notes.md) (annotation) table.
+>  File columns are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater. File columns are supported in Power Pages only in the [notes](../../maker/portals/configure-notes.md) (annotation) table.
 
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
