@@ -1,14 +1,14 @@
 ---
 title: "View charts on a form page or in a row in model-driven apps| MicrosoftDocs"
 description: View charts on form page or in a row
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -39,11 +39,11 @@ Only an administrator can add charts to a row. For information, go to [Add a cha
 
 4. Select the chart view drop-down menu to choose between a system or personal view. 
 
-  - **My Charts**: Personal charts that can only be seen by the user who created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
-  - **System Charts**: Created by your administrator. By default, these charts are visible to all users. 
+     - **My Charts**: Personal charts that can only be seen by the user who created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
+     - **System Charts**: Created by your administrator. By default, these charts are visible to all users. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Choose between a system or personal chart view.](media/system_and_my_charts.png "Choose between a system or personal chart view") 
+      > [!div class="mx-imgBorder"]
+      > ![Choose between a system or personal chart view.](media/system_and_my_charts.png "Choose between a system or personal chart view") 
 
 ## Commands on a chart view
 
@@ -75,6 +75,9 @@ Legend:
 You can drill down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill-down option that you select will filter both chart and grid as shown in this illustration. 
 
 ![Drill down into a chart.](media/drill-down.gif "This illustration shows how the chart drill-down feature works")
+
+> [!NOTE]
+> Chart drill-down functionality is not available on charts in a subgrid or an associated grid.
 
 For more information on how to use the drill-down feature, go to [Drill-down in a chart](./track-your-progress-with-dashboard-and-charts.md#drill-down-in-a-chart).
 
