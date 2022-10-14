@@ -25,6 +25,9 @@ contributors:
 
 This sample shows how to connect to the Dataverse web services using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> and perform basic create, update, retrieve, and delete operations on a table. For more information about the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, see [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md).
 
+> [!NOTE]
+> You could also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> instead of <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> in this sample.
+
 ## Requirements
 
 The complete sample code can be found here [Sample: Quick start for Dataverse](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/QuickStartCS)
