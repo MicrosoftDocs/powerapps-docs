@@ -18,8 +18,6 @@ search.app:
 
 # Dataverse development tools
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 There are a number of developer tools that are needed for different aspects of Microsoft Dataverse code development. These tools are listed and described briefly below.
 
 |Tool|Description|NuGet Package|Documentation|
@@ -27,8 +25,8 @@ There are a number of developer tools that are needed for different aspects of M
 |Configuration Migration tool (CMT)|Transport configuration and test data from one environment to another|[Microsoft.CrmSdk.XrmTooling. ConfigurationMigration.Wpf](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf)|[Configuration Migraton tool](/power-platform/alm/configure-and-deploy-tools)|
 |Package Deployer (PD)|Deploy packages to Dataverse environments where the packages contain solutions, custom code, HTML files, and more|[Microsoft.CrmSdk.XrmTooling. PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf)|[Deploy a package](/power-platform/alm/package-deployer-tool#deploy-a-package)|
 |Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Microsoft.CrmSdk.XrmTooling. PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|[Register a plug-in](register-plug-in.md)|
-|SolutionPackager tool (SP)||[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)||
-|Code Generation tool (CG)||[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)||
+|SolutionPackager tool (SP)||[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|[SolutionPackager tool](/power-platform/alm/solution-packager-tool?branch=phecke-package-deployer)|
+|Code Generation tool (CG)||[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)|
 
 You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files. However, there is a better way for all except the Code Generation tool that we will describe below. The Code Generation tool functionality is planned to be integrated into the CLI in a future release.
 
