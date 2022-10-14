@@ -149,12 +149,12 @@ To create a profile, follow the steps below.
   
 12. (**Optional**) Select **Sync interval** and choose how often you want the table's data to automatically sync to users's devices. You can select a short interval such as **Every 5 minutes** or choose a less frequent interval to optimize the sync performance and user experience. Make the selection based on your business requirements and how often users make updates to the table. Typically, the more static the data is, the less need for a frequent sync interval. 
 
-  > [!NOTE]
-  > Even if the value for **Sync interval** is set to be less frequent than, **Every 1 hour**, data will currently still be synched every hour. 
-  >
-  > A sync is only initiated when there is connectivity and when the app is actively running on the user’s mobile device. For Android devices, once the sync is initiated it can be completed even in background. 
-  >
-  > Dependencies, based on selected relationships and custom filters that includes related tables are analyzed at each sync request. This might result in a sync being triggered also for related tables.
+    > [!NOTE]
+    > Even if the value for **Sync interval** is set to be less frequent than, **Every 1 hour**, data will currently still be synched every hour. 
+    >
+    > A sync is only initiated when there is connectivity and when the app is actively running on the user’s mobile device. For Android devices, once the sync is initiated it can be completed even in background. 
+    >
+    > Dependencies, based on selected relationships and custom filters that includes related tables are analyzed at each sync request. This might result in a sync being triggered also for related tables.
   
 13. Select **Save** to add the table to your profile so you can continue editing it.
 
@@ -178,8 +178,8 @@ A user can only be added to one offline profile at a time. If a user is added to
   
 4.  When you’re done adding people, select **Save**.
   
-   > [!NOTE]
-   > If you made any changes to an Azure Active Directory (Azure AD) group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
+    > [!NOTE]
+    > If you made any changes to an Azure Active Directory (Azure AD) group team, you must remove and add the team back to the mobile offline profile for the changes to take effect.
  
 ### Step 2.2: Publish a mobile offline profile
 
@@ -193,17 +193,17 @@ Following these steps to publish the profile:
   
 2. When you’re done adding people and making any other changes to the mobile offline profile, select **Publish** so the data you specified can start syncing with your users’ mobile devices.  
 
-  It's not required to republish a mobile profile after users or team have been added.
+   It's not required to republish a mobile profile after users or team have been added.
 
-  > [!div class="mx-imgBorder"]
-  >![Publish offline profile.](media/mol_publish.png "Publish offline profile")
+   > [!div class="mx-imgBorder"]
+   >![Publish offline profile.](media/mol_publish.png "Publish offline profile")
   
-  > [!TIP]
-  > **Solution export and import**  
-  >   
-  >  When exporting a solution that includes a mobile offline profile, always select the **Include table metadata** check box for each table you export.  
-  >   
-  >  After importing the solution into the target organization, publish all mobile offline profiles.  
+   > [!TIP]
+   > **Solution export and import**  
+   >   
+   >  When exporting a solution that includes a mobile offline profile, always select the **Include table metadata** check box for each table you export.  
+   >   
+   >  After importing the solution into the target organization, publish all mobile offline profiles.  
 
 ### Step 2.3: Set conflict detection for mobile offline  
 
