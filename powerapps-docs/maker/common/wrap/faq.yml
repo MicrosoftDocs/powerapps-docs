@@ -17,11 +17,15 @@ summary: |
 
 
 > [!NOTE]
-> Please note that the wrap feature in Power Apps does not support Customer Managed Keys (CMK) or Lockbox capabilities. Wrap for Power Apps uses Azure DevOps build pipelines to build mobile apps. Customer assets may be exposed in the build pipeline to Microsoft service operators. 
-
+> Please note that the 
 sections:
   - name: General
     questions:
+     - question: |
+          Does the wrap feature in Power Apps does not support Customer Managed Keys (CMK) or Lockbox capabilities?
+        answer: |
+          No. The wrap feature in Power Apps does not support Customer Managed Keys (CMK) or Lockbox capabilities. Wrap for Power Apps uses Azure DevOps build pipelines to build mobile apps.Customer assets may be exposed in the build pipeline to Microsoft service operators. 
+
       - question: |
           Can I create mobile apps with Power Apps?
         answer: |
