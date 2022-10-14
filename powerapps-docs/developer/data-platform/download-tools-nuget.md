@@ -7,7 +7,7 @@ ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
 author: marcelbf # GitHub ID
-ms.subservice: dataverse-developer
+ms.subservice: "dataverse-developer"
 ms.author: marcelbf
 search.audienceType: 
   - developer
