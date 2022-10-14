@@ -251,11 +251,12 @@ Enable mobile offline for a specific app.
    > [!div class="mx-imgBorder"]
    >![Open App Designer.](media/mol_edit_apps.png "Open App Designer")
   
-3. In the command bar, select the elipses (...) icon and then select **Switch to classic**.
+3. In the command bar, select the elipses (...) icon, and then select **Switch to classic**.
   
-4. 
-
-3. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
+   > [!div class="mx-imgBorder"]
+   >![Switch to classic option.](media/switch-to-classic.png "Switch to classic option")
+  
+4. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
 
    > [!div class="mx-imgBorder"]
    >![Enable mobile offline for the app.](media/mol_edit_app_designer.png "Enable mobile offline for the app")
@@ -263,7 +264,7 @@ Enable mobile offline for a specific app.
    > [!NOTE] 
    > You can add more than one profile for an app module.
 
-4. When you're done, at the top choose **Save** and then **Publish**.
+5. When you're done, at the top choose **Save** and then **Publish**.
 
    > [!div class="mx-imgBorder"]
    > ![Publish the app.](media/mol_publish_app.png "Publish the app")
@@ -271,8 +272,8 @@ Enable mobile offline for a specific app.
 
 ## Configure mobile offline profiles for images and files
 
-  For information on how to work with file and image columns in offline modeo , see [Configure mobile offline profiles for images and files](/powerapps/mobile/offline-file-images).
+For information on how to work with file and image columns in offline modeo , see [Configure mobile offline profiles for images and files](/powerapps/mobile/offline-file-images).
   
 ## Mobile offline capabilities and limitations
 
-  For information on capabilities and limitations of mobile offline, see [Mobile offline capabilities and limitations](offline-capabilities.md).
+For information on capabilities and limitations of mobile offline, see [Mobile offline capabilities and limitations](offline-capabilities.md).
