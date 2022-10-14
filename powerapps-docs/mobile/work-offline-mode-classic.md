@@ -31,17 +31,9 @@ If you're working on a record and lose network connection, any updates made to t
 
 > [!IMPORTANT]
 > - There is a new experience to setup and use mobile offline for model-driven apps. For more information:
->   - [Set up mobile offline](/powerapps/mobile/setup-mobile-offline)
->   - [Use mobile offline-first](/powerapps/mobile/work-in-offline-mode)
+>   - [Set up mobile offline (preview)](/powerapps/mobile/setup-mobile-offline)
+>   - [Enable and use mobile offline-first (preview)](/powerapps/mobile/work-in-offline-mode)
 
-
-## Install Power Apps mobile or desktop app
-
-Offline mode is currently available for iOS, Android, and Windows devices. To use the offline feature, download the latest version of the Power Apps app from the app store.
-
-For model-driven apps and canvas apps, [install Power Apps mobile](/powerapps/mobile/run-powerapps-on-mobile#install-power-apps-mobile-app) and [install Power Apps for Windows](windows-app-install.md)
-
-For information about supported devices for Power Apps Mobile, go to [Supported devices](/powerapps/mobile/run-powerapps-on-mobile#supported-devices).
 
 ## Download updates to work in offline mode
 
