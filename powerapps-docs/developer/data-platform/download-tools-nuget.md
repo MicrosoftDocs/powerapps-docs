@@ -1,6 +1,6 @@
 ---
 title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
-description: "Install and launch the Plug-in Registration, Package Deployment, and other Dataverse developer tools."
+description: "Download and launch the Plug-in Registration, Package Deployment, and other Dataverse development tools."
 ms.date: 10/13/2022
 ms.reviewer: pehecke
 ms.topic: article
@@ -33,7 +33,7 @@ You can download the NuGet package, rename the file's extension .nupkg to .zip, 
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
 
-## Download tools using Power Platform CLI
+## Download and launch tools using Power Platform CLI
 
 Make sure that you have version 1.19.3 (or newer) of the Power Platform CLI. Now get help on the tools.
 
@@ -129,7 +129,7 @@ The CLI does not delete older installed (cached) versions of the tools. That is 
 > pac tool <toolname> --clear
 ```
 
-## Use Solution Packager in Power Platform CLI
+## Use Solution Packager from Power Platform CLI
 
 While the Solution Packager standalone tool can be downloaded from NuGet, it is not necessary to do so. You can use the Solution Packager capability built into Power Platform CLI.
 
@@ -163,7 +163,7 @@ Usage: pac solution pack --zipfile [--folder] [--packagetype] [--log] [--errorle
   --processCanvasApps         (Preview) Pack/unpack any Canvas apps (.msapp) while processing the solution. default: false (alias: -pca)
 ```
 
-Similarly, for available options to unpack a solution use `pac solution unpack help`.
+Similarly, for available options to unpack a solution, use `pac solution unpack help`.
 
 ### See Also
 
