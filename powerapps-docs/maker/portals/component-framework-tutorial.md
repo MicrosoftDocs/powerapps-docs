@@ -17,6 +17,9 @@ contributors:
 
 # Tutorial: Use code components in portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this tutorial, you'll create a sample component using Power Apps component framework. You'll package this component to a Dataverse environment and add the component to a model-driven app. You'll then configure Power Apps portals to add the component to a basic form and add the basic form to a webpage. Finally, you'll visit the portals webpage and interact with the component.
 
 ## Prerequisites

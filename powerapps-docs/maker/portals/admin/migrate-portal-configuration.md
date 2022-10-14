@@ -16,6 +16,9 @@ contributors:
 
 # Migrate portal configuration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
 After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. 
@@ -53,6 +56,9 @@ Migration involves exporting the existing configuration from the source Microsof
 ## Transfer portal metadata
 
 # [Power Platform CLI](#tab/CLI)
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 ### Transfer portal configuration using Power Platform CLI
 
@@ -139,6 +145,9 @@ The Microsoft Power Platform CLI provides many features specifically for [portal
 > During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as tables, fields, forms or views imported separately as solutions.
 
 # [Configuration Migration Tool](#tab/CMT)
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 ### Transfer portal configuration using the Configuration Migration Tool
 
