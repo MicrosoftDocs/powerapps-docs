@@ -39,8 +39,8 @@ Only an administrator can add charts to a row. For information, go to [Add a cha
 
 4. Select the chart view drop-down menu to choose between a system or personal view. 
 
-    - **My Charts**: Personal charts that can only be seen by the user who created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
-    - **System Charts**: Created by your administrator. By default, these charts are visible to all users. 
+      - **My Charts**: Personal charts that can only be seen by the user who created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
+      - **System Charts**: Created by your administrator. By default, these charts are visible to all users. 
 
       > [!div class="mx-imgBorder"]
       > ![Choose between a system or personal chart view.](media/system_and_my_charts.png "Choose between a system or personal chart view") 
