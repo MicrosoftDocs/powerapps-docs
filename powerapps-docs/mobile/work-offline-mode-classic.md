@@ -2,7 +2,7 @@
 title: Work offline on your mobile device (classic)
 description: How to work on your mobile device in offline mode
 ms.custom: 
-ms.date: 10/06/2022
+ms.date: 10/13/2022
 ms.reviewer: 
 
 ms.suite: 
@@ -31,13 +31,13 @@ If you're working on a record and lose network connection, any updates made to t
 
 > [!IMPORTANT]
 > - There is a new experience to setup and use mobile offline for model-driven apps. For more information:
->   - [Set up mobile offline (preview)](/powerapps/mobile/setup-mobile-offline)
->   - [Enable and use mobile offline-first (preview)](/powerapps/mobile/work-in-offline-mode)
+>   - [Set up mobile offline (preview)](setup-mobile-offline.md)
+>   - [Enable and use mobile offline-first (preview)](work-in-offline-mode.md)
 
 
 ## Download updates to work in offline mode
 
-After you've installed the mobile app and your admin has [enabled mobile offline mode](setup-mobile-offline.md), the next time you access the mobile app you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
+After you've installed the mobile app and your admin has [enabled mobile offline mode](setup-mobile-offline-classic.md), the next time you access the mobile app you'll be prompted to download offline updates. After you download the updates, you can start using the mobile app in offline mode.
 
 - When you see the dialog box that asks you to download updates to work offline, select **Download**. 
 
