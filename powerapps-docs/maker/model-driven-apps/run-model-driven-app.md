@@ -44,9 +44,8 @@ To play the app, enter the URL in a web browser.
 You may notice authentication prompts during your model-driven app session. These prompts are expected and are required for certain features. Below highlights a list of features that trigger these prompts. This list is subject to change as new features are released: 
 
 - [Custom pages](model-app-page-overview.md).
-- [Power Fx](commanding-use-powerfx.md) expressions.
+- [Power Fx](commanding-use-powerfx.md) expressions with commands.
 - Opening the Office apps launcher located on the upper left of the app header.
-- Selecting the **Add to Teams** button.
 - [Collaboration feature](../../user/collaboration.md).
 
 Additionally, some organizational or browser settings may increase the frequency of these prompts. We recommend reviewing your settings to help reduce authentication prompts during sessions.

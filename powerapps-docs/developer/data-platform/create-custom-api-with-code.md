@@ -55,6 +55,7 @@ string conn = $@"
 
 //var service = new ServiceClient(conn);
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 //The plug-in type
 var pluginType = new EntityReference("plugintype", new Guid("00000000-0000-0000-0000-000000000001"));
