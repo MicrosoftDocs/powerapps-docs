@@ -50,7 +50,7 @@ You can add up to 10 levels of related table conditions using the filter editor 
 
 - When you open the **Edit filters** panel on certain Activity tables, you will see a condition filtering tables that are not valid for Unified Client. These conditions may not be a part of the FetchXML of the view.
 
-- When you choose the **Search for rows in a table using advanced filters** option or the **Advanced find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") with [modern, advanced find experience](/power-platform/admin/settings-features) enabled when working in a  **Dynamics 365 - Custom** app, you might see a loading spinner appear indefinitely.
+- When you choose the **Search for rows in a table using advanced filters** option or the **Advanced find** button ![Advanced find button.](media/advanced_filter_icon.png "Advanced find button") when working in a  **Dynamics 365 - Custom** app with a [modern, advanced find experience](/power-platform/admin/settings-features) enabled, you might see a loading spinner appear indefinitely.
 
 ## See also
 
