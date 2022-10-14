@@ -15,6 +15,10 @@ title: Frequently asked questions for wrap
 summary: |
   Frequently asked questions about the **wrap** feature are listed below. If you don't find an answer to your question, send an email to <pamobsup@microsoft.com> with your question.
 
+
+> [!NOTE]
+> Please note that the wrap feature in Power Apps does not support Customer Managed Keys (CMK) or Lockbox capabilities. Wrap for Power Apps uses Azure DevOps build pipelines to build mobile apps. Customer assets may be exposed in the build pipeline to Microsoft service operators. 
+
 sections:
   - name: General
     questions:
