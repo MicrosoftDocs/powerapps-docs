@@ -16,6 +16,9 @@ contributors:
 
 # Create and manage website bindings
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In a portal, the default method of selecting a website is finding a website by matching the name of the website defined in the web.config file of that particular portal. Website bindings provide alternative methods of selecting a website by using the host name when loading a portal or path of the request to select the appropriate website. This eliminates the need to modify separate web.config files for each version of a specific website. This streamlines the deployment of portals across various development, staging, and production environments. Furthermore, this allows a common portal codebase to operate multiple websites.
 
 ## Manage website bindings

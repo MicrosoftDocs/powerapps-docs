@@ -18,6 +18,9 @@ contributors:
 
 # Configure a WS-Federation provider for portals with Azure AD
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In this article, you'll learn about configuring a WS-Federation provider for portals by using Azure Active Directory (Azure AD).
 
 > [!NOTE]
