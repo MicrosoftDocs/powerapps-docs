@@ -6,9 +6,9 @@ ms.reviewer: pehecke
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: marcelbf # GitHub ID
+author: davidjenni # GitHub ID
 ms.subservice: "dataverse-developer"
-ms.author: marcelbf
+ms.author: davidjen
 search.audienceType: 
   - developer
 search.app: 
