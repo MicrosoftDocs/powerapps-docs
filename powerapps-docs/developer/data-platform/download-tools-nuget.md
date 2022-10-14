@@ -55,6 +55,8 @@ Usage: pac tool [list] [prt] [cmt] [pd]
   pd                          Launch Package Deployer (PD)
 ```
 
+More information: [pac tool](/power-platform/developer/cli/reference/tool)
+
 Now let's see what tools are installed.
 
 ```bash
@@ -66,7 +68,9 @@ PD       No        N/A     9.1.0.104 not yet installed; 'pac tool PD' will insta
 PRT      No        N/A     9.1.0.155 not yet installed; 'pac tool PRT' will install on first launch
 ```
 
-No tools are installed in the above example, but they will be installed on first launch. Let's download and launch PRT.
+No tools are installed in the above example, but they will be installed on first launch. More information: [pac tool list](/power-platform/developer/cli/reference/tool#pac-tool-list)
+
+Let's download and launch PRT.
 
 ```bash
 > pac tool prt
@@ -76,6 +80,8 @@ Shortcut in start menu created for 'Plugin Registration Tool'
 Installation complete
 Launched PRT (9.1.0.155).
 ```
+
+More information: [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt)
 
 Now our tool list looks like this.
 
@@ -89,6 +95,8 @@ PRT      Yes       9.1.0.155 9.1.0.155 ok
 ```
 
 Follow the same procedure to download and launch the CMT and PD tools. If a tool is already installed, the `pac tool <toolname>` command will simply launch the latest installed version of the tool.
+
+More information: [pac tool cmt](/power-platform/developer/cli/reference/tool#pac-tool-cmt), [pac tool pd](/power-platform/developer/cli/reference/tool#pac-tool-pd)
 
 ## Update tools using Power Platform CLI
 
