@@ -1,7 +1,7 @@
 ---
-title: "Download tools from NuGet (Microsoft Dataverse) | Microsoft Docs"
-description: "Download the Plug-in Registration, Package Deployment, and other developer tools from NuGet.org."
-ms.date: 06/24/2022
+title: "Dataverse development tools (Microsoft Dataverse) | Microsoft Docs"
+description: "Install and launch the Plug-in Registration, Package Deployment, and other Dataverse developer tools."
+ms.date: 10/13/2022
 ms.reviewer: pehecke
 ms.topic: article
 applies_to: 
@@ -16,99 +16,163 @@ search.app:
   - D365CE
 ---
 
-# Download tools from NuGet
+# Dataverse development tools
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can download tools used in code development from NuGet using the  PowerShell script found below. These tools include:
+There are a number of developer tools that are needed for different aspects of Microsoft Dataverse code development. These tools are listed and described briefly below.
 
-|Tool|NuGet Package|
-|-|-|
-|Code Generation tool `CrmSvcUtil.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
-|Configuration Migration tool `DataMigrationUtility.exe`|[Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf)|
-|Package Deployer `PackageDeployer.exe`|[Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf)|
-|Plug-in Registration tool `PluginRegistration.exe` |[Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|
-|SolutionPackager tool `SolutionPackager.exe`|[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)|
+|Tool|Description|NuGet Package|Documentation|
+|-|-|-|-|
+|Configuration Migration tool (CMT)|Transport configuration and test data from one environment to another|[Microsoft.CrmSdk.XrmTooling. ConfigurationMigration.Wpf](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf)|[Configuration Migraton tool](/power-platform/alm/configure-and-deploy-tools)|
+|Package Deployer (PD)|Deploy packages to Dataverse environments where the packages contain solutions, custom code, HTML files, and more|[Microsoft.CrmSdk.XrmTooling. PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf)|[Deploy a package](/power-platform/alm/package-deployer-tool#deploy-a-package)|
+|Plug-in Registration tool (PRT)|Registers custom code (plug-ins, custom workflow activities), service endpoints, and more|[Microsoft.CrmSdk.XrmTooling. PluginRegistrationTool](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool)|[Register a plug-in](register-plug-in.md)|
+|SolutionPackager tool (SP)||[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)||
+|Code Generation tool (CG)||[Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools)||
 
-## Download tools using PowerShell
+You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files. However, there is a better way for all except the Code Generation tool that we will describe below. The Code Generation tool functionality is planned to be integrated into the CLI in a future release.
 
-You can download all SDK tools using the PowerShell script provided below. Note that this script works with the version of Windows PowerShell that ships in Microsoft Windows 10. The script does not presently work with cross-platform versions of PowerShell based on .NET 5 or later (formerly .NET Core).
+> [!NOTE]
+> The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
 
-1. In your Windows Start menu, type `Windows Powershell` and open it.
-1. Navigate to the folder you want to install the tools to. For example if you want to install them in a `devtools` folder on your D: drive, type `cd D:\devtools`.
-1. Copy and paste the following PowerShell script into the PowerShell window and press Enter.
+## Download tools using Power Platform CLI
 
-    ```powershell
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
-    $targetNugetExe = ".\nuget.exe"
-    Remove-Item .\Tools -Force -Recurse -ErrorAction Ignore
-    Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
-    Set-Alias nuget $targetNugetExe -Scope Global -Verbose
+Make sure that you have version 1.19.3 (or newer) of the Power Platform CLI. Now get help on the tools.
 
-    if (-not (./nuget source | Where-Object { $_ -like "*https://api.nuget.org/v3/index.json*"})) {
-      .\nuget sources Add -Name nuget.org.v3 -Source  https://api.nuget.org/v3/index.json
-    }
+```bash
+> pac tool help
 
-    ##
-    ##Download Plug-in Registration tool
-    ##
-    ./nuget install Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool -O .\Tools
-    mkdir .\Tools\PluginRegistration
-    $prtFolder = (Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.'}).Name
-    Move-Item .\Tools\$prtFolder\tools\*.* .\Tools\PluginRegistration
-    Remove-Item .\Tools\$prtFolder -Force -Recurse
-    
-    ##
-    ##Download CoreTools
-    ##
-    ./nuget install  Microsoft.CrmSdk.CoreTools -O .\Tools
-    mkdir .\Tools\CoreTools
-    $coreToolsFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
-    Move-Item .\Tools\$coreToolsFolder\content\bin\coretools\*.* .\Tools\CoreTools
-    Remove-Item .\Tools\$coreToolsFolder -Force -Recurse
+Microsoft PowerPlatform CLI
+Version: 1.19.3
 
-    ##
-    ##Download Configuration Migration
-    ##
-    ./nuget install  Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf -O .\Tools
-    mkdir .\Tools\ConfigurationMigration
-    $configMigFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.ConfigurationMigration.Wpf.'}
-    Move-Item .\Tools\$configMigFolder\tools\*.* .\Tools\ConfigurationMigration
-    Remove-Item .\Tools\$configMigFolder -Force -Recurse
-    
-    ##
-    ##Download Package Deployer 
-    ##
-    ./nuget install  Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF -O .\Tools
-    mkdir .\Tools\PackageDeployment
-    $pdFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf.'}
-    Move-Item .\Tools\$pdFolder\tools\*.* .\Tools\PackageDeployment
-    Remove-Item .\Tools\$pdFolder -Force -Recurse
+Help: 
+Power Platform tools that can be installed and launched
 
-    ##
-    ##Remove NuGet.exe
-    ##
-    Remove-Item nuget.exe    
-    ```
+Commands: 
+Usage: pac tool [list] [prt] [cmt] [pd]
 
-1. You will find the tools in the following folders:
+  list                        List the launchable tools and their local install state and version.
+  prt                         Launch Plug-in Registration Tool (PRT)
+  cmt                         Launch Configuration Migration Tool (CMT)
+  pd                          Launch Package Deployer (PD)
+```
 
-- `[Your folder]\Tools\ConfigurationMigration`
-- `[Your folder]\Tools\CoreTools`
-- `[Your folder]\Tools\PackageDeployment`
-- `[Your folder]\Tools\PluginRegistration`
+Now let's see what tools are installed.
 
-To get the latest version of these tools, repeat these steps.
+```bash
+> pac tool list
 
-## See Also
+ToolName Installed Version Nuget     Status
+CMT      No        N/A     9.1.0.80  not yet installed; 'pac tool CMT' will install on first launch
+PD       No        N/A     9.1.0.104 not yet installed; 'pac tool PD' will install on first launch
+PRT      No        N/A     9.1.0.155 not yet installed; 'pac tool PRT' will install on first launch
+```
 
-[Developer tools](developer-tools.md)<br />
-[Visual Studio and the .NET Framework](org-service/visual-studio-dot-net-framework.md)<br />
-[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)<br />
-[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)<br />
-[Browse the metadata for your organization](browse-your-metadata.md)<br />
-[Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
-[Register a plug-in](register-plug-in.md)<br />
+No tools are installed in the above example, but they will be installed on first launch. Let's download and launch PRT.
+
+```bash
+> pac tool prt
+
+Installing 9.1.0.155 version of PRT....
+Shortcut in start menu created for 'Plugin Registration Tool'
+Installation complete
+Launched PRT (9.1.0.155).
+```
+
+Now our tool list looks like this.
+
+```bash
+> pac tool list
+
+ToolName Installed Version   Nuget     Status
+CMT      No        N/A       9.1.0.80  not yet installed; 'pac tool CMT' will install on first launch
+PD       No        N/A       9.1.0.104 not yet installed; 'pac tool PD' will install on first launch
+PRT      Yes       9.1.0.155 9.1.0.155 ok
+```
+
+Follow the same procedure to download and launch the CMT and PD tools. If a tool is already installed, the `pac tool <toolname>` command will simply launch the latest installed version of the tool.
+
+## Update tools using Power Platform CLI
+
+Updating the installed tools is very simple using the Power Platform CLI. Let's take a look at the tool list.
+
+```bash
+> pac tool list
+
+ToolName Installed Version   Nuget     Status
+CMT      No        N/A       9.1.0.80  not yet installed; 'pac tool CMT' will install on first launch
+PD       No        N/A       9.1.0.104 not yet installed; 'pac tool PD' will install on first launch
+PRT      Yes       9.1.0.155 9.1.0.155 ok
+```
+
+If there was a tool update available, the NuGet column would have a newer version number than the Installed Version column, and the Status column would contain instructions about how to update the tool. For example, say the PRT has an update, the Status column would say "Newer version available, run 'pac tool PRT --update'".
+
+We can take a look at the options available for any tool like so.
+
+```bash
+> pac tool prt help
+
+Microsoft PowerPlatform CLI
+Version: 1.19.3
+
+Help: 
+Launch Plug-in Registration Tool (PRT)
+
+Commands:
+Usage: pac tool prt [--update] [--clear]
+
+  --update                    Update tool to latest available version from nuget.org (alias: -u)
+  --clear                     Clear tool from local file cache (alias: -c)
+```
+
+The CLI does not delete older installed (cached) versions of the tools. That is up to you to do. You can delete those older versions, keeping the latest version, by using the --clear parameter.
+
+```bash
+> pac tool <toolname> --clear
+```
+
+## Use Solution Packager in Power Platform CLI
+
+While the Solution Packager standalone tool can be downloaded from NuGet, it is not necessary to do so. You can use the Solution Packager capability built into Power Platform CLI.
+
+```bash
+> pac solution pack help
+
+Microsoft PowerPlatform CLI
+Version: 1.19.3
+
+Help:
+Package solution components on local filesystem into solution.zip (SolutionPackager)
+
+Commands:
+Usage: pac solution pack --zipfile [--folder] [--packagetype] [--log] [--errorlevel] [--singleComponent] [--allowDelete] [--allowWrite] [--clobber] [--map] [--sourceLoc] [--localize] [--useLcid] [--useUnmanagedFileForMissingManaged] [--disablePluginRemap] [--processCanvasApps]
+
+  --zipfile                   The full path to the solution ZIP file (alias: -z)
+  --folder                    The path to the root folder on the local filesystem. When unpacking/extractins, this will be written to, when packing this will be read from. (alias: -f)
+  --packagetype               When unpacking/extracting, use to specify dual Managed and Unmanaged operation. When packing, use to specify Managed or Unmanaged from a previous unpack 'Both'. Can be: 'Unmanaged', 'Managed' or 'Both'; default: 'Unmanaged' (alias: -p) 
+  --log                       The path to the log file. (alias: -l)
+  --errorlevel                Minimum logging level for log output [Verbose|Info|Warning|Error|Off]; default: Info (alias: -e)       
+  --singleComponent           Only perform action on a single component type [WebResource|Plugin|Workflow|None]; default: None. (alias: -sc)
+  --allowDelete               Dictates if delete operations may occur; default: false. (alias: -ad)
+  --allowWrite                Dictates if write operations may occur; default: false. (alias: -aw)
+  --clobber                   Enables that files marked read-only can be deleted or overwritten; default: false. (alias: -c)
+  --map                       The full path to a mapping xml file from which to read component folders to pack. (alias: -m)
+  --sourceLoc                 Generates a template resource file. Valid only on Extract. Possible Values are auto or an LCID/ISO code of the language you wish to export. When Present, this will extract the string resources from the given locale as a neutral .resx. If auto or just the long or short form of the switch is specified the base locale for the solution will be used. (alias: -src)        
+  --localize                  Extract or merge all string resources into .resx files. (alias: -loc)
+  --useLcid                   Use LCID's (1033) rather than ISO codes (en-US) for language files. (alias: -lcid)
+  --useUnmanagedFileForMissingManaged Use the same XML source file when packaging for Managed and only Unmanaged XML file is found; applies to AppModuleSiteMap, AppModuleMap, FormXml files (alias: -same)
+  --disablePluginRemap        Disabled plug-in fully qualified type name remapping. default: false (alias: -dpm)
+  --processCanvasApps         (Preview) Pack/unpack any Canvas apps (.msapp) while processing the solution. default: false (alias: -pca)
+```
+
+Similarly, for available options to unpack a solution use `pac solution unpack help`.
+
+### See Also
+
+[Developer tools](developer-tools.md)  
+[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)  
+[Create extensions for the Code Generation tool](org-service/extend-code-generation-tool.md)  
+[Browse the metadata for your organization](browse-your-metadata.md)  
+[Deploy packages using Package Deployer and Windows PowerShell](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
