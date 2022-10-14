@@ -1,14 +1,14 @@
 ---
 title: "View charts on a form page or in a row in model-driven apps| MicrosoftDocs"
 description: View charts on form page or in a row
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -77,7 +77,7 @@ You can drill down into a segment on a chart and filter the data for that segmen
 ![Drill down into a chart.](media/drill-down.gif "This illustration shows how the chart drill-down feature works")
 
 > [!NOTE]
-> Chart drill-down is not available on charts in a subgrid or an associated grid.
+> Chart drill-down functionality is not available on charts in a subgrid or an associated grid.
 
 For more information on how to use the drill-down feature, go to [Drill-down in a chart](./track-your-progress-with-dashboard-and-charts.md#drill-down-in-a-chart).
 
