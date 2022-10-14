@@ -212,7 +212,7 @@ Following these steps to publish the profile:
 2. In the navigation pane, select **Environments**.
 
    > [!div class="mx-imgBorder"]
-   >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
+   >![Select a environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
 3. Choose an environment and then select **Settings**.
 
@@ -227,13 +227,13 @@ Following these steps to publish the profile:
 5. Select **Go to legacy** on the command bar.
 
    > [!div class="mx-imgBorder"]
-   >![Go to legacy.](media/go-to-legacy.png "Go to legacy")
+   >![Go to legacy option.](media/go-to-legacy.png "Go to legacy option.")
   
 6. Select **Mobile Offline Settings**.
 
    > [!div class="mx-imgBorder"]
-   >![Mobile Offline Settings](media/go-to-legacy.png "Mobile Offline Settings")
-  
+   >![Mobile offline settings](media/mobile-offline-settings.png "Mobile offline settings")
+   
 7. When there is a mismatch of data between client and server, conflict errors occur. To resolve the issue, choose one of the following settings:
 
     - Select **No** - Conflict detection for mobile offline is turned off, so whatever changes are made by a user in offline mode are automatically synced to the server when the user is back online, and client wins over server.
