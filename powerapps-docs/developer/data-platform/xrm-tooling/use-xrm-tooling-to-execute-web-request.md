@@ -1,6 +1,6 @@
 ---
-title: "Use XRM tooling to execute actions in Microsoft Dataverse| MicrosoftDocs"
-description: "You can use ExecuteCrmWebRequest with the CrmServiceClient class to perform operations using the Dataverse Web API"
+title: "Use the SDK for .NET to send requests to the Dataverse Web API | MicrosoftDocs"
+description: "You can use the SDK for .NET to send requests to the Dataverse Web API"
 ms.date: 10/15/2022
 ms.reviewer: jdaly
 applies_to: 
@@ -12,17 +12,17 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Use XRM tooling to execute a web request against Dataverse Web API
+# Use the SDK for .NET to send requests to the Dataverse Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-You can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest%2A?displayProperty=nameWithType> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.ExecuteWebRequest%2A?displayProperty=nameWithType> methods to execute a web request against XRM web API.
+> [!NOTE]
+> - The SDK for .NET enables a strongly typed programming model to work with data in Dataverse. When you use the SDK you don't need use Web API directly. However, you might choose to leverage the authentication capabilities of <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=nameWithType>  or <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> rather that instantiate your own `HttpClient` when testing operations using the Web API.
+> - This method is only applicable when the authentication type is specified as `OAuth` or `Certificate`.
+
+You can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.ExecuteWebRequest%2A?displayProperty=nameWithType> or <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest%2A?displayProperty=nameWithType> methods to execute a web request using Dataverse Web API.
 
 The following code sample demonstrates how you can execute a web request using `ExecuteCrmWebRequest` method.
-
->[!NOTE]
-> - This method is only applicable when the authentication type is specified as `OAuth` or `Certificate`.
-> - You should also be able to perform equivilent operations using the Organization Service. This method allows you to re-use the authentication capabilities of `CrmServiceClient` rather that instantiate your own `HttpClient` when you choose to use Web API rather than the Organization Service.
 
 ## Create a record
 
