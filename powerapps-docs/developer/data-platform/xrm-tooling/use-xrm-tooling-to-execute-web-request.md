@@ -1,5 +1,5 @@
 ---
-title: "Use the SDK for .NET to send requests to the Dataverse Web API | MicrosoftDocs"
+title: "Use ExecuteWebRequest to send requests to the Dataverse Web API | MicrosoftDocs"
 description: "You can use the SDK for .NET to send requests to the Dataverse Web API"
 ms.date: 10/15/2022
 ms.reviewer: jdaly
@@ -12,7 +12,7 @@ search.audienceType:
 search.app: 
   - D365CE
 ---
-# Use the SDK for .NET to send requests to the Dataverse Web API
+# Use ExecuteWebRequest to send requests to the Dataverse Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
