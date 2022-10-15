@@ -1,12 +1,11 @@
 ---
 title: "Use XRM tooling to execute actions in Microsoft Dataverse| MicrosoftDocs"
 description: "You can use ExecuteCrmWebRequest with the CrmServiceClient class to perform operations using the Dataverse Web API"
-ms.date: 04/01/2022
+ms.date: 10/15/2022
 ms.reviewer: jdaly
 applies_to: 
   - "Dynamics 365 (online)"
 ms.author: jdaly
-manager: kvivek
 author: JimDaly
 search.audienceType: 
   - developer
@@ -30,33 +29,33 @@ The following code sample demonstrates how you can execute a web request using `
 The following code sample demonstrates how to create a record using the `ExecuteCrmWebRequest` method. In this example, you will create an account, and then display the ID in the response object.  
 
 ```csharp
- Dictionary<string, List<string>> ODataHeaders = new Dictionary<string, List<string>>() {
-        { "Accept", new List<string>() { "application/json" } },
+static void ExecuteCrmWebRequestExample(ServiceClient service)
+{
+    // Common headers for all requests
+    Dictionary<string, List<string>> ODataHeaders = new() {
+        {"Accept", new List<string>() { "application/json" } },
         {"OData-MaxVersion", new List<string>(){"4.0"}},
-        {"OData-Version", new List<string>(){"4.0"}}
-      };
+        {"OData-Version", new List<string>(){"4.0"}},
+        {"If-None-Match", new List<string>(){"null"}}
+    };
 
-using (CrmServiceClient svc = new CrmServiceClient(conn))
- {
-    if (svc.IsReady)
+    //Create an account record
+    HttpResponseMessage createResponse = service.ExecuteWebRequest(
+        method: HttpMethod.Post,
+        queryString: "accounts",
+        body: new JObject { { "name","Test Account" } }.ToString(),
+        customHeaders: ODataHeaders,
+        contentType: "application/json");
+
+    if (createResponse.IsSuccessStatusCode)
     {
-      HttpResponseMessage response = svc.ExecuteCrmWebRequest(HttpMethod.Get, "accounts?$select=name", "{ \"name\":\"Test Account\"}", ODataHeaders, "application/json");
-
-    if (response.IsSuccessStatusCode)
-     {
-        var accountUri = response.Headers.GetValues("OData-EntityId").FirstOrDefault();
-        Console.WriteLine("Account URI: {0}", accountUri);
-       }
+        string accountUri = createResponse.Headers.GetValues("OData-EntityId").FirstOrDefault();
+        Console.WriteLine($"Account URI: :{accountUri}");
+    }
     else
-     {
-       Console.WriteLine(response.ReasonPhrase);
-        }
-
-  }
-    else
-      {
-        Console.WriteLine(svc.LastCrmError);
-           }
+    {
+        Console.WriteLine($"Create operation failed:{createResponse.ReasonPhrase}");
+    }
 }
 ```
 
