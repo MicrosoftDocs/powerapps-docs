@@ -1,9 +1,8 @@
 ---
 title: "entity.save (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Saves the record asynchronously with the option to close the form or open a new form after the save is completed.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "reference"
