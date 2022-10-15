@@ -14,10 +14,8 @@ search.app:
 ---
 # Use ExecuteWebRequest to send requests to the Dataverse Web API
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
 > [!NOTE]
-> - The SDK for .NET enables a strongly typed programming model to work with data in Dataverse. When you use the SDK you don't need use Web API directly. However, you might choose to leverage the authentication capabilities of <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=nameWithType>  or <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> rather that instantiate your own `HttpClient` when testing operations using the Web API.
+> - The SDK for .NET enables a strongly typed programming model to work with data in Dataverse. When you use the SDK you don't need use the Dataverse Web API directly. However, you might choose to leverage the authentication capabilities of <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> or <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> rather than instantiate your own `HttpClient` when testing operations using the Web API.
 > - This method is only applicable when the authentication type is specified as `OAuth` or `Certificate`.
 
 You can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.ExecuteWebRequest%2A?displayProperty=nameWithType> or <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmWebRequest%2A?displayProperty=nameWithType> methods to execute a web request using Dataverse Web API.
