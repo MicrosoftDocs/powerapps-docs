@@ -25,25 +25,28 @@ Ready to write your first client script to see things in action? Lets get starte
 
 After completing this walkthrough, you will know how to use JavaScript code in model-driven apps, which involves the following steps at a high level:
 
+- Locate or create a solution to add your work to
 - Write JavaScript code to address a business issue
-- Upload JavaScript code as a web resource in model-driven apps
-- Associate the JavaScript functions in the web resource to different client-side events in model-driven apps.
+- Upload your code as a web resource
+- Associate your web resource to a form
+- Configure form and field events
+- Test your code
 
-We will draw your attention to important facts during the walkthrough, and provide references to actual methods as appropriate.
-
-## Step 0: Locate or Create a solution
+## Step 1: Locate or create a solution
 
 Solutions are the way that customizations can be transported from one environment to another. You should write and test your Javascript code in a development environment as part of an unmanaged solution. When you have finished testing, export the solution as a managed solution and import/install it in your production environment.
 
-There may already be an existing solution that your should use. The model-driven app you want to customize with your script should already be part of a solution. You may edit that solution or create a new solution that depends on another existing solution.
+There may already be an existing solution that you should use. The model-driven app you want to customize with your script should already be part of a solution. You may edit that solution or create a new solution that depends on another existing solution.
 
-To create a new solution:
+### To create a new solution:
 
 1. Navigate to [Power Apps](https://make.powerapps.com).
 1. In the left navigation pane, select **Solutions** and then select **New solution**.
 1. In the fly-out dialog, specify **Display name**, **Name**, and **Publisher**.
 
-   Most companies will have an existing publisher that they will always use. You should use that publisher. If you are the very first person, you get to create your own. Click **New Publisher** to open the **New Publisher** dialog. In this walkthrough, we will use a publisher with this definition:
+   Most companies will have an existing publisher that they will always use. You should use that publisher. If you are the very first person, you get to create your own. 
+
+   Click **New Publisher** to open the **New Publisher** dialog. In this walkthrough, we will use a publisher with this definition:
 
    :::image type="content" source="media/create-example-publisher.png" alt-text="Form to create a new publisher with information for Example Publisher":::
 
@@ -55,7 +58,7 @@ To create a new solution:
 
 1. Locate or add a model-driven app to your solution.
 
-   Your new solution will not have any model-driven apps included in it. You will need to add an existing model-driven app or create a new one.
+   A new solution will not have any model-driven apps included in it. You will need to add an existing model-driven app or create a new one.
 
    > [!NOTE]
    > For the purpose of this walkthrough, make sure the app includes the Account table. The scripts and instructions below expects fields found in a form for the Account table.
@@ -70,16 +73,18 @@ To create a new solution:
 
    **Option B: Create a new model-driven app in your solution**
 
+   In your solution, you can select **New** > **App** > **Model-driven app**.
+
    See the [Build your first model-driven app](../../../maker/model-driven-apps/build-first-model-driven-app.md) tutorial. Create an app that includes the Account table.
 
 
-## Step 1: Write your custom JavaScript code
+## Step 2: Write your JavaScript code
 
 The first step is to identify the business issue you are trying to address using client scripting. Once you have identified it, you need to write your JavaScript code containing the custom business logic that addresses your business issue.
 
-Model-driven apps do not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](/visualstudio/javascript/javascript-in-visual-studio).
+Model-driven apps do not provide a JavaScript editor. Use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](/visualstudio/javascript/javascript-in-visual-studio).
 
-This is the JavaScript code that this tutorial uses:
+This is the JavaScript code that this walkthrough uses:
 
 ```javascript
 // A namespace defined for the sample code
@@ -126,9 +131,10 @@ var Example = window.Example || {};
 
 Copy this code into a text file and save it with the name: `Example-form-script.js`.
 
-Let's look at the code in detail:
- 
+
 ### Detailed code explanation
+
+Let's look at the code in detail:
 
 - **Define namespace**: The code starts by defining a namespace for your custom script. As a best practice, you should always create namespaced JavaScript libraries to avoid having your functions overridden by functions in another library.
 
@@ -149,11 +155,11 @@ Let's look at the code in detail:
 
 - **Function to execute on the OnLoad event**: This section contains the function that will be executed when the account form loads. For example, when you create a new account record or when you open an existing account record.
 
-   The function uses the `executionContext` parameter to get the `formContext` object. When you attach your code with the form event later, you must remember to select the option to pass the [execution context](clientapi-execution-context.md) to this function. 
+   The `Example.formOnLoad` function uses the `executionContext` parameter to get the `formContext` object. When you attach your code with the form event later, you must remember to select the option to pass the [execution context](clientapi-execution-context.md) to this function.
 
-   Next, you will display a form level notification using the [formContext.ui.setFormNotification](reference/formContext-ui/setFormNotification.md) method.
+   This function displays a form level notification using the [formContext.ui.setFormNotification](reference/formContext-ui/setFormNotification.md) method.
 
-   Next, you will use the JavaScript [setTimeOut method](https://developer.mozilla.org/docs/Web/API/setTimeout) to delay the execution of the [formContext.ui.clearFormNotification](reference/formContext-ui/clearFormNotification.md) method to clear the notification after 5 seconds.
+   Finally, this function uses the JavaScript [setTimeOut method](https://developer.mozilla.org/docs/Web/API/setTimeout) to delay the execution of the [formContext.ui.clearFormNotification](reference/formContext-ui/clearFormNotification.md) method to clear the notification after 5 seconds.
 
     ```JavaScript
     // Code to run in the form OnLoad event
@@ -168,9 +174,9 @@ Let's look at the code in detail:
     }
     ```
 
-- **Function to execute on the OnChange event**: This function will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
+- **Function to execute on the OnChange event**: The `Example.attributeOnChange` function will be associated with the **Account Name** column in the account form so that it gets executed **only** when you change the account name value.
 
-    The code performs a case-insensitive search for `Contoso` in the account name, and if present, automatically sets values for some columns in the account form.
+    This function performs a case-insensitive search for `Contoso` in the account `name`, and if present, sets values for the `websiteurl`, `telephone1`, and `description` columns in the account form.
 
     ```JavaScript
     // Code to run in the column OnChange event 
@@ -187,9 +193,10 @@ Let's look at the code in detail:
     }
     ```
 
-- **Function to execute on the OnSave event**: This function displays an alert dialog box using the [Xrm.Navigation.openAlertDialog](reference/xrm-navigation/openalertdialog.md) method. This dialog box displays a message with the **OK** button; user can close the alert by clicking **OK**.
+- **Function to execute on the OnSave event**: The `Example.formOnSave` function displays an alert dialog box using the [Xrm.Navigation.openAlertDialog](reference/xrm-navigation/openalertdialog.md) method. This dialog box displays a message with an **OK** button. The user can close the alert by clicking **OK**.
 
-    We are not passing in the execution context in this function as it's not required to execute **Xrm.Navigation.** methods.
+    > [!NOTE]
+    > This function doesn't use the execution context because the **Xrm.Navigation.** methods don't require them.
 
     ```JavaScript
     // Code to run in the form OnSave event 
@@ -199,10 +206,9 @@ Let's look at the code in detail:
     }
     ```
 
-## Step 2: Add your code in a JavaScript web resource
+## Step 3: Upload your code as a web resource
 
-Now that your code is ready, you must associate it with events in model-driven apps. Use [JavaScript web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
-
+Now that your code is ready, you need to upload it into your solution.
 
 1. In your solution select **New** > **More** > **Web resource**
 
@@ -214,9 +220,11 @@ Now that your code is ready, you must associate it with events in model-driven a
    :::image type="content" source="media/create-example-form-script-web-resource.png" alt-text="New web resource dialog to create example form script":::
 
    > [!NOTE]
-   > Notice how the **Name** has a prefix that matches the solution publisher customization prefix. There are other ways to create web resources, but creating a web resource this way ensures that the Web Resource is part of your solution.
+   > - Notice how the **Name** has a prefix that matches the solution publisher customization prefix. There are other ways to create web resources, but creating a web resource this way ensures that the Web Resource is part of your solution.
+   >
+   > - The name of the web resource is `example_example-form-script`.
 
-## Step 3: Associate JavaScript web resource to a form
+## Step 4: Associate your web resource to a form
 
 1. In your solution, select **Objects** > **Apps** > **Your App** and click **Edit**.
 
@@ -236,13 +244,13 @@ Now that your code is ready, you must associate it with events in model-driven a
 
 1. Select the **Example Script** web resource and click **Add**.
 
-## Step 4: Configure form events
+## Step 5: Configure form and field events
 
 1. Select the **Events** tab.
 
    :::image type="content" source="../media/form-event-handlers.png" alt-text="Form event handlers":::
 
-### Configure Form On Load event
+### Configure form On Load event
 
 1. Select **On Load** event handler and click **+ Event Handler**.
 
@@ -296,7 +304,7 @@ Now that your code is ready, you must associate it with events in model-driven a
 
 **Save** the form an click **Publish**.
 
-## Step 4: Test your JavaScript code
+## Step 6: Test your code
 
 It is recommended that you refresh your browser for the changes to take effect in your model-driven apps instance.
 
@@ -310,8 +318,8 @@ To test your code:
 
 ### Test form On Load function
 
-1. Click on any account record in the list to open it
-1. Verify that the notification appears
+1. Click on any account record in the list to open it.
+1. Verify that the notification appears.
 
    :::image type="content" source="media/form-onload-notification.png" alt-text="Notification on form load":::
 
@@ -319,7 +327,7 @@ To test your code:
 
 ### Test field On Change function
 
-1. Edit the Account Name to include "Contoso" in the name and move to the next column by pressing TAB. 
+1. Edit the Account Name to include "Contoso" in the name and move to the next column by pressing TAB.
 1. Verify the expected values set to the **Main Phone**, **Website**, and **Description** columns.
 
 :::image type="content" source="media/field-onchange-test.png" alt-text="Values set on field change":::
@@ -333,5 +341,13 @@ To test your code:
 
 1. Click **OK** to close the alert.
 
+
+### See also
+
+[Debug your JavaScript code for model-driven apps](debug-JavaScript-code.md)<br />
+[Events in forms and grids in model-driven apps](events-forms-grids.md)<br />
+[Form OnLoad event](reference/events/form-onload.md)<br />
+[Form OnSave event (Client API reference) in model-driven apps](reference/events/form-onsave.md)<br />
+[Column OnChange event (Client API reference)](reference/events/attribute-onchange.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
