@@ -221,7 +221,6 @@ Now that your code is ready, you need to upload it into your solution.
 
    > [!NOTE]
    > - Notice how the **Name** has a prefix that matches the solution publisher customization prefix. There are other ways to create web resources, but creating a web resource this way ensures that the Web Resource is part of your solution.
-   >
    > - The name of the web resource is `example_example-form-script`.
 
 ## Step 4: Associate your web resource to a form
