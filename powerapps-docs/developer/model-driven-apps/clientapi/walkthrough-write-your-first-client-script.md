@@ -329,7 +329,7 @@ To test your code:
 1. Edit the Account Name to include "Contoso" in the name and move to the next column by pressing TAB.
 1. Verify the expected values set to the **Main Phone**, **Website**, and **Description** columns.
 
-:::image type="content" source="media/field-onchange-test.png" alt-text="Values set on field change":::
+   :::image type="content" source="media/field-onchange-test.png" alt-text="Values set on field change":::
 
 ### Test form On Save function
 
