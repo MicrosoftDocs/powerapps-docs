@@ -1,7 +1,7 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.date: 04/06/2022
+ms.date: 10/17/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -20,6 +20,8 @@ contributors:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 You can group multiple operations into a single HTTP request using a batch operation. These operations will be performed sequentially in the order they are specified.
+
+The format to send `$batch` requests is defined in this section of the OData specification: [11.7 Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313). The content in this topic summarizes the specification requirements and provides Dataverse specific information and examples.
   
 <a name="bkmk_Whentousebatchrequests"></a>
 
