@@ -82,9 +82,9 @@ When a new option is added to an choice column, the following data in the hierar
                - [OptionSetMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata): `HasChanged` will be true.
                   - [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options): All options are returned.
                      - [OptionMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata)
-                        - [OptionMetadata.Color](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Color) : Only new option will have value, if set.
-                        - [OptionMetadata.Label](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Label) : Only new option will have value.
-                        - [OptionMetadata.Value](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Value)
+                        - [OptionMetadata.Color](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Color): Only new option will have value, if set.
+                        - [OptionMetadata.Label](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Label): Only new option will have value.
+                        - [OptionMetadata.Value](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Value): Always has value.
                         - [OptionMetadata.HasChanged](xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.HasChanged): Value will be null.
 
 You will know that the `EntityMetadata` and `EnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `OptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
@@ -103,7 +103,7 @@ Only the newly created option will include data for the `Label` property. The `O
                      - [OptionMetadata](xref:Microsoft.Dynamics.CRM.OptionMetadata)
                         - OptionMetadata.Color: Only new option will have value, if set.
                         - OptionMetadata.Label: Only new option will have value.
-                        - OptionMetadata.Value
+                        - OptionMetadata.Value: Always has value.
                         - OptionMetadata.HasChanged: Value will be null.
 
 You will know that the `ComplexEntityMetadata` and `ComplexEnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `ComplexOptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
