@@ -41,7 +41,9 @@ On the form component control configuration page, select the properties for the 
    - Select the **Lookup column** for the form.
    - Select the **Related form**. Depending on the related table configuration for the column:
       - If the column is connected to a single table (such as a lookup column), select the **Related form** to use.
+        :::image type="content" source="media/add-form-component.png" alt-text="Add form component control for a single related table":::
       - If the column is connected to multiple tables (polymorphic, such as the customer column), select **+ Related form** and then select **Add** to add the related form. Continue to select **+ Related form** > **Add** to add a related form for each related table.
+        :::image type="content" source="media/form-component-polymorphic.png" alt-text="Add form component for multiple related tables":::
    - By default, all client app types **Web**, **Phone**, and **Tablet** are enabled to display the form. Clear the client types where you don’t want the form displayed.
 1. Select **Done**.
 
