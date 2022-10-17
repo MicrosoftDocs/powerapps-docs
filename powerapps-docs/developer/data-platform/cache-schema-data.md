@@ -1,7 +1,7 @@
 ---
 title: "Cache schema data (Microsoft Dataverse) | Microsoft Docs"
 description: "Create a cache of schema definitions and track changes over time."
-ms.date: 10/12/2022
+ms.date: 10/17/2022
 ms.topic: article
 author: NHelgren
 ms.subservice: dataverse-developer
@@ -30,8 +30,6 @@ The `RetrieveMetadataChanges` message provides two capabilities:
 1. **Cache Management**: If you cache the schema definition data with your app, you can use `RetrieveMetadataChanges` to efficiently retrieve only the changes since your last query. Use the information about these changes to add or remove items in your cache. This may result in a significant improvement time for your application to start. This is the focus of this topic.
 
 After you define a query for the schema data you want to cache, you can use additional capabilities of the `RetrieveMetadataChanges` message to create and maintain a cache of Dataverse schema data.
-
-
 
 ## Create a cache
 
@@ -77,17 +75,17 @@ When a new option is added to an choice column, the following data in the hierar
 #### [SDK for .NET](#tab/sdk)
 
 - [EntityMetadataCollection](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadataCollection)
-   - [EntityMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata) The table definition.
+   - [EntityMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata): The table definition.
       - [EntityMetadata.Attributes[]](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.Attributes)
-         - [EnumAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata) The base class for Choice columns.
+         - [EnumAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata): The base class for Choice columns.
             - [EnumAttributeMetadata.OptionSet](xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata.OptionSet)
-               - [OptionSetMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata)
-                  - [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options)
-                     - [OptionMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata) The new option.
-                        - [OptionMetadata.Color](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Color)
-                        - [OptionMetadata.Label](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Label)
+               - [OptionSetMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata): `HasChanged` will be true.
+                  - [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options): All options are returned.
+                     - [OptionMetadata](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata)
+                        - [OptionMetadata.Color](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Color) : Only new option will have value, if set.
+                        - [OptionMetadata.Label](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Label) : Only new option will have value.
                         - [OptionMetadata.Value](xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata.Value)
-                        - [OptionMetadata.HasChanged](xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.HasChanged)
+                        - [OptionMetadata.HasChanged](xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.HasChanged): Value will be null.
 
 You will know that the `EntityMetadata` and `EnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `OptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
 
@@ -96,17 +94,17 @@ Only the newly created option will include data for the `Label` property. The `O
 #### [Web API](#tab/webapi)
 
 - Collection([ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata))
-   - [ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata) The table definition.
+   - [ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata): The table definition.
       - ComplexEntityMetadata.Attributes
-         - [ComplexEnumAttributeMetadata](xref:Microsoft.Dynamics.CRM.ComplexEnumAttributeMetadata) The base type for Choice columns.
+         - [ComplexEnumAttributeMetadata](xref:Microsoft.Dynamics.CRM.ComplexEnumAttributeMetadata): The base class for Choice columns.
             - ComplexEnumAttributeMetadata.OptionSet
-               - [ComplexOptionSetMetadata](xref:Microsoft.Dynamics.CRM.ComplexOptionSetMetadata)
-                  - ComplexOptionSetMetadata.Options
-                     - [OptionMetadata](xref:Microsoft.Dynamics.CRM.OptionMetadata) The new option.
-                        - OptionMetadata.Color
-                        - OptionMetadata.Label
+               - [ComplexOptionSetMetadata](xref:Microsoft.Dynamics.CRM.ComplexOptionSetMetadata): `HasChanged` will be true.
+                  - ComplexOptionSetMetadata.Options : All options are returned.
+                     - [OptionMetadata](xref:Microsoft.Dynamics.CRM.OptionMetadata)
+                        - OptionMetadata.Color: Only new option will have value, if set.
+                        - OptionMetadata.Label: Only new option will have value.
                         - OptionMetadata.Value
-                        - OptionMetadata.HasChanged
+                        - OptionMetadata.HasChanged: Value will be null.
 
 You will know that the `ComplexEntityMetadata` and `ComplexEnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `ComplexOptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
 
@@ -126,7 +124,7 @@ The deleted values are returned as a collection of `Guid` values. The values for
 > [!NOTE]
 > The definition of the Web API [DeletedMetadataFilters EnumType](xref:Microsoft.Dynamics.CRM.DeletedMetadataFilters) is slightly different from the SDK [DeletedMetadataFilters Enum](xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters).
 >
-> The [DeletedMetadataFilters EnumType](xref:Microsoft.Dynamics.CRM.DeletedMetadataFilters) doesn't have the `Entity` member. You must use `Default` instead.
+> The Web API [DeletedMetadataFilters EnumType](xref:Microsoft.Dynamics.CRM.DeletedMetadataFilters) doesn't have the `Entity` member. You must use `Default` instead.
 
 ### Tracking Deleted Options
 
