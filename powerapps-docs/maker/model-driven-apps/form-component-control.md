@@ -2,9 +2,8 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 08/15/2021
+ms.date: 10/17/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -36,7 +35,22 @@ For example, here's the form component on an **existing tab** on the main accoun
 
 ## Add the form component to a table main form
 
+1. Select a column that’s a lookup, customer, owner, partylist, or regarding column.
+1. On the left navigation pane, select **Components**, expand either **Input** or **Display**, and then select **Form**.
+On the form component control configuration page, select the properties for the control:  
+   - Select the **Lookup column** for the form.
+   - Select the **Related form**. Depending on the related table configuration for the column:
+      - If the column is connected to a single table (such as a lookup column), select the **Related form** to use.
+      - If the column is connected to multiple tables (polymorphic, such as the customer column), select **+ Related form** and then select **Add** to add the related form. Continue to select **+ Related form** > **Add** to add a related form for each related table.
+   - By default, all client app types **Web**, **Phone**, and **Tablet** are enabled to display the form. Clear the client types where you don’t want the form displayed.
+1. Select **Done**.
+
+## Add the form component using the classic experience
+
 In this example, the **Contact** standard main form is configured for the form component control that’s added to the account main form.
+
+> [!IMPORTANT]
+> The way you add a form component control has changed. We recommend that you use the latest experience. More information: [Add the form component to a table main form](#add-the-form-component-to-a-table-main-form)
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Dataverse**, and then select **Tables** in the left pane. Alternatively, select a [solution](model-driven-app-glossary.md#solution) from the menu and then select a table, such as **Account**.
