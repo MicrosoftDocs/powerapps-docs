@@ -44,6 +44,10 @@ The following is a selected list of community tools distributed via the XrmToolB
 |[SQL 4 CDS](https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/)|SQL 4 CDS allows you to use standard SQL syntax to query and manipulate your data and metadata in Dataverse|
 |[Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)|Create, update and get 360° View of Dataverse Custom APIs|
 
+## Power Tools
+
+Power Tools (https://powertoolsdev.com/) is a secure web app that connects to Dataverse and provides tools that help Power Platform and Dyanmics 365 administrators, analysts and developers do their work more efficiently.
+
 ## Browser Extensions
 
 ### Chromium Metadata Browser
