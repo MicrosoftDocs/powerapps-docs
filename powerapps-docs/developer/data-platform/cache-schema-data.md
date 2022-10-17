@@ -70,7 +70,7 @@ Each item in the hierarchy has a nullable boolean `HasChanged` value. When this 
 
 One area that may not seem intuitive is how options for choice columns are tracked. This is a good example to understand the `HasChanged` property.
 
-When a new option is added to an choice column, the following data in the hierarchy will be returned with the `RetrieveMetadataChangesResponse.EntityMetadata` property:
+When a new option is added to a choice column, the following data in the hierarchy will be returned with the `RetrieveMetadataChangesResponse.EntityMetadata` property:
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -93,18 +93,18 @@ Only the newly created option will include data for the `Label` property. The `O
 
 #### [Web API](#tab/webapi)
 
-- Collection([ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata))
+- `Collection(`[ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata)`)`
    - [ComplexEntityMetadata](xref:Microsoft.Dynamics.CRM.ComplexEntityMetadata): The table definition.
-      - ComplexEntityMetadata.Attributes
+      - `ComplexEntityMetadata.Attributes`
          - [ComplexEnumAttributeMetadata](xref:Microsoft.Dynamics.CRM.ComplexEnumAttributeMetadata): The base class for Choice columns.
-            - ComplexEnumAttributeMetadata.OptionSet
+            - `ComplexEnumAttributeMetadata.OptionSet`
                - [ComplexOptionSetMetadata](xref:Microsoft.Dynamics.CRM.ComplexOptionSetMetadata): `HasChanged` will be true.
-                  - ComplexOptionSetMetadata.Options : All options are returned.
+                  - `ComplexOptionSetMetadata.Options` : All options are returned.
                      - [OptionMetadata](xref:Microsoft.Dynamics.CRM.OptionMetadata)
-                        - OptionMetadata.Color: Only new option will have value, if set.
-                        - OptionMetadata.Label: Only new option will have value.
-                        - OptionMetadata.Value: Always has value.
-                        - OptionMetadata.HasChanged: Value will be null.
+                        - `OptionMetadata.Color`: Only new option will have value, if set.
+                        - `OptionMetadata.Label`: Only new option will have value.
+                        - `OptionMetadata.Value`: Always has value.
+                        - `OptionMetadata.HasChanged`: Value will be null.
 
 You will know that the `ComplexEntityMetadata` and `ComplexEnumAttributeMetadata` have not changed because the `HasChanged` property will be false. Only the `ComplexOptionSetMetadata.HasChanged` property will be true. All the current valid options will be returned. The `OptionMetadata.HasChanged` property for all the options, including the new one, will be null.
 
