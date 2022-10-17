@@ -17,6 +17,9 @@ contributors:
 
 # Sort lists
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A portal user can select a column header on the list to sort the data if the column is part of the table used to configure the Dataverse view used for the list. To enable sorting by columns displayed on the list from related tables, add a [site setting](configure-site-settings.md) named **Site/EnableSortingOnLinkedEntities** set to **true**.
 
 ### See also

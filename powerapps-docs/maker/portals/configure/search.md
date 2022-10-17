@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/07/2022
+ms.date: 10/10/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Search
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality.
 
@@ -100,7 +103,7 @@ Default value for Search/IndexQueryName is "Portal Search".
 
 The first column in the "Portal Search" view will show as the title of search result. Modify the column order in the “Portal Search” view to get a desired search result title.
 
-If the view isn't available for any table, it's not indexed and the results aren't displayed in global search.
+If the view isn't available for any table, it's not indexed, and the results aren't displayed in global search.
 
 > [!NOTE]
 > If you change the value of the Search/IndexQueryName site setting, you need to trigger a manual re-index of the build using steps defined in the [Rebuild full search index](#rebuild-full-search-index) section.
@@ -123,6 +126,8 @@ The following site settings are related to global search:
 | Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;<br />Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | Determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br />"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br />Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 
+> [!NOTE]
+> Intelligent search doesn't work when a complex Lucene syntax is used.  Clear the value in *Search/Query* [site settings](configure-site-settings.md) to make intelligent query work.
 
 ## Related content snippets
 

@@ -18,6 +18,9 @@ contributors:
 
 # Important upcoming changes and deprecations in Power Apps portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The announcements for changes and deprecations described in this article apply to Power Apps portals.
 
 Makers, developers, and IT pros can use this information to prepare for future releases.

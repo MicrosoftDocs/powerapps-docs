@@ -16,6 +16,9 @@ contributors:
 
 # Get data from customer engagement apps on the portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Power Apps portals has the ability to render&mdash;and allow the manipulation of&mdash; data on an internally facing or externally facing portal website. In this section, we will profile the tables that provide the foundation of this functionality and discuss the steps necessary to achieve it.
 
 ## Basic forms

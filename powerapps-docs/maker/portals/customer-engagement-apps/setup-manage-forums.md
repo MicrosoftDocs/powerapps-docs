@@ -13,6 +13,9 @@ contributors:
 
 # Set up and manage forums
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A forum is an online discussion that allows users to hold conversations in the form of posted messages. A discussion forum is hierarchical or tree-like in structure: a forum can contain a number of topics, also known as threads, and can be replied to by many users.
 
 ## Manage forums in Dynamics 365 Portals

@@ -17,6 +17,9 @@ contributors:
 
 # Configure a WS-Federation provider for portals with AD FS
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 > [!IMPORTANT]
 > The steps for the configuration of Active Directory Federation Services (AD FS) might vary depending on the version of your AD FS server.
 
