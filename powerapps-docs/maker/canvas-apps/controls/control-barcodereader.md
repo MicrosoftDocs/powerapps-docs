@@ -39,15 +39,15 @@ With your app open for [editing](../edit-app.md) in [Power Apps Studio](https://
 
 The control opens a native scanner on Android and iOS devices. The scanner supports the following scanning modes:
 
-- **Automatically scan**: The a barcode is scanned as soon as it is detected.
-- **Select to scan**: The user can determine which of the detected barcodes to scan. The control doesn't support scanning in a web browser.
+- **Automatically scan** – A barcode is scanned as soon as it's detected.
+- **Select to scan** – The user can determine which of the detected barcodes to scan. The control doesn't support scanning in a web browser.
 
 > [!NOTE]
 > The barcode scanner control is supported on Android and iOS devices. All other platforms will show a warning stating that some features of the app won't work.
 
 ## Key properties
 
-**Barcodes** – Output property that contains a table of the barcodes scanned with two columns: **Value**, and **Type**. **Value** is the the text value of the code that was scanned, while **Type** is the type of the code that was scanned.
+**Barcodes** – Output property that contains a table of the barcodes scanned with two columns: **Value**, and **Type**. **Value** is the text value of the code that was scanned, while **Type** is the type of the code that was scanned.
 
 **OnScan** – Actions to perform when a barcode is successfully scanned.
 
@@ -57,7 +57,7 @@ The control opens a native scanner on Android and iOS devices. The scanner suppo
 
 **BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. `'Microsoft.BarcodeReader.BarcodeType'.Code128 & 'Microsoft.BarcodeReader.BarcodeType'.Code39`.  **Default: Auto**
 
-**Scanning mode** - Whether to `Automatically scan` the first barcode detected in view or to allow the user to `Select to scan` which of the barcodes in view to scan.  
+**Scanning mode** - Whether to `Automatically scan` the first barcode detected in view or to allow the user to `Select to scan`, which of the barcodes in view to scan.  
 
 **PreferFrontCamera** - If enabled the barcode reader will default to using the front facing camera instead of the rear facing camera.
 
