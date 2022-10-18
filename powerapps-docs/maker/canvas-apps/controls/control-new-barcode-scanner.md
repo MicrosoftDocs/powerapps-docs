@@ -2,13 +2,12 @@
 title: Barcode scanner control in Power Apps
 description: Learn about the details, properties and examples of the Barcode scanner control in Power Apps.
 author: chmoncay
-
 ms.topic: reference
 ms.custom: canvas
-ms.date: 07/07/2021
+ms.date: 10/18/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mduelae
 search.audienceType:
   - maker
 search.app:
