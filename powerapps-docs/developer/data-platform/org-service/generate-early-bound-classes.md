@@ -21,10 +21,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package.
+*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files.
 
 > [!NOTE]
-> For information about downloading the code generation tool, see [Download tools from NuGet](../download-tools-NuGet.md).
+> For information about downloading the code generation tool, see [Dataverse development tools](../download-tools-NuGet.md).
 
 ## Generate Entity classes
 
@@ -51,7 +51,7 @@ These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.n
 
 The code generation tool takes several parameters that determine the contents of the file that is created. The parameters can be passed in from the command line when you run the tool or in a .NET-connected application configuration file. 
 
-Run the `CrmSvcUtil.exe` tool from the `Tools\CoreTools` folder created when you downloaded the tools using the script described in [Download tools from NuGet](../download-tools-NuGet.md). If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.  
+Run the `CrmSvcUtil.exe` tool from the `Tools\CoreTools` folder created when you downloaded the tools using the script described in [Dataverse development tools](../download-tools-NuGet.md). If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.  
 
 The following sample shows the format for running the tool from the command line with Dataverse. To use the interactive login, you can simply provide these options:
 
@@ -178,6 +178,6 @@ For more information on supported tracing options see [Configure tracing for XRM
 
 [Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
 [Developer tools and resources](../developer-tools.md)  
-[Download tools from NuGet](../download-tools-NuGet.md)
+[Dataverse development tools](../download-tools-NuGet.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
