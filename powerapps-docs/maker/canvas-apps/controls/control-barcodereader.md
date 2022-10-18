@@ -31,7 +31,7 @@ The barcode reader control is experimental and needs to be enabled to show up in
 
 ## Description
 
-The control opens a native scanner on Android and iOS devices. The scanner supports two scanning modes: **Automatically scan** where a barcode, a QR code, or a data-matrix code is automatically scanned when in view as well as **Select to scan** where. The control doesn't support scanning in a web browser.
+The control opens a native scanner on Android and iOS devices. The scanner supports two scanning modes: **Automatically scan** where a barcode is scanned as soon as it is detected as well as **Select to scan** where the user can determine which of the detected barcodes to scan. The control doesn't support scanning in a web browser.
 
 > [!NOTE]
 > The barcode scanner control is supported on Android and iOS devices. All other platforms will show a warning that some features of the app won't work.
@@ -48,7 +48,7 @@ The control opens a native scanner on Android and iOS devices. The scanner suppo
 
 **BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. `'Microsoft.BarcodeReader.BarcodeType'.Code128 & 'Microsoft.BarcodeReader.BarcodeType'.Code39`.  **Default: Auto**
 
-**Scanning mode** - Whether to **Automatically scan** the first barcode detected in view or to allow the user to **Select to scan** which of the barcodes in view to scan.  
+**Scanning mode** - Whether to `Automatically scan` the first barcode detected in view or to allow the user to `Select to scan` which of the barcodes in view to scan.  
 
 **PreferFrontCamera** - Whether the front-facing camera, when available, is used for scanning.
 
@@ -67,8 +67,6 @@ The control opens a native scanner on Android and iOS devices. The scanner suppo
 **[Height](properties-size-location.md)** – The height of the button that activates the scanner.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
-
-**Type** - The type of code that was detected in the scan that succeeded most recently.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -90,31 +88,23 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 
 ## Barcode Availability by Device
 
-| Barcode Type | Android | iOS | Windows |
-|--------------|:-------:|:---:|:---:|
-|QR_CODE|✔|✔|✔|
-|DATA_MATRIX|✔|✔|✖|
-|UPC_A|✔|✔|✔|
-|UPC_E|✔|✔|✔|
-|EAN_8|✔|✔|✔|
-|EAN_13|✔|✔|✔|
-|CODE_39|✔|✔|✔|
-|CODE_93|✔|✔|✖|
-|CODE_128|✔|✔|✔|
-|CODABAR|✔|✔|✔|
-|Databar Omnidirectional|✖|✖|✔|
-|Databar Stacked|✖|✖|✔|
-|GS1-DWCode|✖|✖|✔|
-|ITF|✔|✔|✖|
-|Interleaved 2 of 5|✖|✖|✔|
-|RSS14|✔|✖|✖|
-|PDF_417|✔|✔|✖|
-|RSS_EXPANDED|✔|✖|✖|
-|MSI|✖|✖|✖|
-|AZTEC|✔|✔|✖|
-
-> [!NOTE]
-> PDF_417 and AZTEC aren't supported in Auto mode.
+| Barcode Type | Supported on iOS and Android | Notes |
+|--------------|:---:|:--------:|
+| QR_CODE | ✔ | |
+| DATA_MATRIX | ✔ | |
+| AZTEC | ✔ | |
+| CODABAR | ✔ | |
+| CODE_128 | ✔ | |
+| CODE_39 | ✔ | |
+| CODE_93 | ✔ | |
+| EAN | ✔ | Supports EAN_8 and EAN_13 |
+| Interleaved 2 of 5 <br> ITF | ✔ | |
+| PDF_417 | ✔ |  | |
+| RSS14 <br> Databar 14 | ✔ | Supports Stacked and Omnidirectional |
+| RSS_EXPANDED <br> Databar Expanded | ✔ | Supports Stacked and Omnidirectional |
+| UPC | ✔ | Supports UPC_A and UPC_E |
+| GS1-DWCode | ✖ | |
+| MSI | ✖ | |
 
 ### See also
 
