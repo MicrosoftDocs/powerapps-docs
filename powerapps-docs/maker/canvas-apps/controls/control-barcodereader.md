@@ -1,5 +1,5 @@
 ---
-title: Barcode reader control in Power Apps (preview)
+title: Barcode reader control in Power Apps (experimental)
 description: Learn about the details, properties and examples of the Barcode reader control in Power Apps.
 author: anuitz
 ms.topic: reference
@@ -15,7 +15,7 @@ search.app:
 contributors:
   - anuitz
 ---
-# Barcode reader control in Power Apps (preview)
+# Barcode reader control in Power Apps (experimental)
 
 Scans barcodes, QR codes, and data-matrix codes on Android and iOS devices.
 
@@ -99,7 +99,7 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 | CODE_93 | ✔ | |
 | EAN | ✔ | Supports EAN_8 and EAN_13 |
 | Interleaved 2 of 5 <br> ITF | ✔ | |
-| PDF_417 | ✔ |  | |
+| PDF_417 | ✔ | |
 | RSS14 <br> Databar 14 | ✔ | Supports Stacked and Omnidirectional |
 | RSS_EXPANDED <br> Databar Expanded | ✔ | Supports Stacked and Omnidirectional |
 | UPC | ✔ | Supports UPC_A and UPC_E |
