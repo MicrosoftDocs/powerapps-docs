@@ -112,10 +112,10 @@ You can find two new controls added to the samples as part of this preview. Func
 
 ## Supported platform libraries list
 
-| Name   | Version |
-| ------ | ------- |
-| React  | 16.8.6  |
-| Fluent | 8.29.0  |
+| Name   | npm package name | Version |
+| ------ | ---------------- | ------- |
+| React  | react            | 16.8.6  |
+| Fluent | @fluentui/react  | 8.29.0  |
 
 ## FAQ
 
