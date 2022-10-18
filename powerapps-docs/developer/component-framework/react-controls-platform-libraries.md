@@ -2,10 +2,9 @@
 title: "React controls & platform libraries (Preview) | Microsoft Docs"
 description: "You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you are using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: jdaly
+ms.author: hemantg
 author: HemantGaur
-manager: kvivek
-ms.date: 03/31/2022
+ms.date: 10/18/2022
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -111,6 +110,8 @@ You can find two new controls added to the samples as part of this preview. Func
 |FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|[FacepileReact](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FacepileReactControl)|
 
 ## Supported platform libraries list
+
+Platform libraries are made available both at the build and runtime to the controls which are using platform libraries capability. Currently, the following versions are provided by the platform and these can also be found in the control manifest.
 
 | Name   | npm package name | Version |
 | ------ | ---------------- | ------- |
