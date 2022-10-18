@@ -29,7 +29,7 @@ contributors:
 > - This is an experimental feature. It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can use the experimental Git version control feature to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This feature was our first step in collaboration efforts that will soon allow multiple makers accessing the same app at the same time
+You can use the experimental Git version control feature to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. 
 
 
 [Git](https://git-scm.com/) is used as the backing store for this feature. After the initial setup with the connection to Git, any user can use this feature without any extra configuration steps except to authenticate with Git.
