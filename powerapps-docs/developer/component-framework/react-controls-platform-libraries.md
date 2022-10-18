@@ -105,11 +105,12 @@ React and Fluent libraries are not included in the package because they are shar
 You can find two new controls added to the samples as part of this preview. Functionally, they are the same as their standard version but will have much better performance.
 
 
-|Sample |Description|Link|
-|---------|---------|---------|
-|ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a React Control. |[ChoicesPickerReact Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerReactControl)|
-|FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|[FacepileReact](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FacepileReactControl)|
+## Supported platform libraries list
 
+| Name   | Version |
+| ------ | ------- |
+| React  | 16.8.6  |
+| Fluent | 8.29.0  |
 
 ## FAQ
 
