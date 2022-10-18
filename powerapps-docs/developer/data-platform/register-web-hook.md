@@ -20,7 +20,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-Use the Plug-in Registration tool to register a WebHook. To get the Plug-in Registration tool, see [Download tools from NuGet](download-tools-nuget.md).
+Use the Plug-in Registration tool to register a WebHook. To get the Plug-in Registration tool, see [Dataverse development tools](download-tools-nuget.md).
 
 In the Plug-in Registration tool there is a new **Register New WebHook** option to select.
 
