@@ -28,7 +28,7 @@ There are a number of developer tools that are needed for different aspects of M
 |SolutionPackager tool (SP)|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system|[SolutionPackager tool](/power-platform/alm/solution-packager-tool?branch=phecke-package-deployer)|
 |Code Generation tool (CG)|A command-line code generation tool that generates early-bound (strong-typed) .NET classes that represent the Entity Data Model (EDM) used by Dataverse|[Generate early-bound classes for the Organization service](org-service/generate-early-bound-classes.md)|
 
-You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files. However, there is a better way for all except the Code Generation tool that we will describe below. The Code Generation tool functionality is planned to be integrated into the CLI in a future release.
+All the above mentioned tools, with the exception of the Code Generation tool, is described below. The Code Generation tool functionality is planned to be integrated into the Power Platform CLI in a future release. For now, follow the provided Code Generation tool link in the table above for more information on installing and using that tool.
 
 > [!NOTE]
 > The CMT, PD, and PRT tools provide a Windows (WPF) user interface and only run on a Microsoft Windows operating system. Also, the `pac tool` command only is available on a Windows install of the CLI.
