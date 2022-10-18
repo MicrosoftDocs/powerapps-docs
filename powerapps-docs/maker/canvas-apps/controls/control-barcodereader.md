@@ -50,7 +50,7 @@ The control opens a native scanner on Android and iOS devices. The scanner suppo
 
 **Scanning mode** - Whether to `Automatically scan` the first barcode detected in view or to allow the user to `Select to scan` which of the barcodes in view to scan.  
 
-**PreferFrontCamera** - Whether the front-facing camera, when available, is used for scanning.
+**PreferFrontCamera** - If enabled the barcode reader will default to using the front facing camera instead of the rear facing camera.
 
 ## Additional properties
 
