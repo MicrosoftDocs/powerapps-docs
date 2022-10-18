@@ -82,7 +82,7 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 
 ### Visual alternatives
 
-* The barcode scanner is a button that doesn't display the scan result. Consider showing the scan result with a **[Label](control-text-box.md)** control. Set the label's **[Text](properties-core.md)** property to the barcode scanner's **First(Barcodes).Value** property. Set the label's **[Live](properties-accessibility.md)** property to **Polite** so that screen-reader users are notified of changes. This change makes the scanned value accessible to everyone, irrespective of visual ability.
+* The barcode scanner is a button that doesn't display the scan result. Consider showing the scan result with a **[Label](control-text-box.md)** control. Set the label's **[Text](properties-core.md)** property to `First(BarcodeReader.Barcodes).Value` where `BarcodeReader` is the name of the barcode reader control. Set the label's **[Live](properties-accessibility.md)** property to **Polite** so that screen-reader users are notified of changes. This change makes the scanned value accessible to everyone, irrespective of visual ability.
 
 * Users who have visual and motor disabilities might prefer not to point the camera at a barcode. Consider adding another form of input, such as a **[Text input](control-text-input.md)** control, for users to enter barcodes.
 
@@ -104,6 +104,7 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 | RSS_EXPANDED <br> Databar Expanded | ✔ | Supports Stacked and Omnidirectional |
 | UPC | ✔ | Supports UPC_A and UPC_E |
 | GS1-DWCode | ✖ | |
+| Micro QR Code | ✖ | |
 | MSI | ✖ | |
 
 ### See also
