@@ -13,9 +13,9 @@ ms.custom:
 ms.topic: article
 ms.subservice: pcf
 contributors:
- - HemantGaur
- - noazarur-microsoft
- - JimDaly
+  - HemantGaur
+  - noazarur-microsoft
+  - JimDaly
 ---
 
 # React controls & platform libraries (Preview)
@@ -49,13 +49,13 @@ There is a new `--framework` (`-fw`) parameter for the [pac pcf init](/power-pla
 
 The following table shows the long form of the commands:
 
-|Parameter  |Value  |
-|---------|---------|
-|`--name`     |`ReactSample`|
-|`--namespace`|`SampleNamespace`|
-|`--template`|`field`|
-|`--framework`|`react`|
-|`--run-npm-install`|`true` (default)|
+| Parameter           | Value             |
+| ------------------- | ----------------- |
+| `--name`            | `ReactSample`     |
+| `--namespace`       | `SampleNamespace` |
+| `--template`        | `field`           |
+| `--framework`       | `react`           |
+| `--run-npm-install` | `true` (default)  |
 
 The following PowerShell command uses the parameter shortcuts and will create a React component project and run `npm-install` in the folder where you run the command:
 
@@ -87,6 +87,7 @@ Within the [resources element](manifest-schema-reference/resources.md), you will
    <platform-library name="Fluent" version="8.29.0" />
 </resources>
 ```
+
 > [!NOTE]
 > Do not change the version numbers for these `platform-library` elements. These are the versions used by the platform.
 
