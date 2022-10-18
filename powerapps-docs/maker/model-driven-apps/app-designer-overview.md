@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 09/12/2022
+ms.date: 10/18/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -89,9 +89,13 @@ Find who's working on an app at the same time as you with copresence. Copresence
 > - This is a public preview feature. More information: Public previews for [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 > - This feature is being rolled out, and&mdash;depending on your region&mdash;it might not be available for your tenant yet.
 
+:::image type="content" source="media/co-authoring.png" alt-text="Co-authoring feature in app designer":::
+1. Command bar displays makers currently working in the app and allows you to chat or email them.
+1. Left navigation indicates what app component the maker is working on.
+
 ### How copresence works
 
-The first time someone joins your app in app designer while you working on it a notice appears that indicates other people are also working on the app. Advise is given to check with the other makers about the order you plan to make changes. Notice that it's possible that the other makers in the app might not want to save their changes.
+The first time someone joins your app in app designer while you working on it a notice appears that indicates other people are also working on the app. Advice is given to check with the other makers about the order you plan to make changes. Notice that it's possible that the other makers in the app might not want to save their changes.
 
 Icons of copresent makers appear in both the toolbar area and the left navigation pane showing where other makers are working in the app.
 
