@@ -21,7 +21,9 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files.
+*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.
+
+The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files. You may also need to unblock the file in the Properties dialog of File Explorer.
 
 > [!NOTE]
 > For information about downloading the code generation tool, see [Dataverse development tools](../download-tools-NuGet.md).
