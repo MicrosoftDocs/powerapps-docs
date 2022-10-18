@@ -65,6 +65,9 @@ To navigate to the default view of the table, pass table name as the first param
 Navigate( Accounts )
 ```
 
+> [!IMPORTANT]
+> Kindly Note that you need to add Accounts dataverse table to the custom page before publishing and testing.
+
 ### Navigate to specific system view of the table
 
 To navigate to a specific system view of the table, pass the GUID of the view.
