@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.date: 10/18/2022
 ms.subservice: canvas-maker
 ms.author: anuitz
-ms.reviewer: anuitz
+ms.reviewer: mkaur
 search.audienceType:
   - maker
 search.app:
@@ -19,9 +19,15 @@ contributors:
 
 Scans barcodes, QR codes, and data-matrix codes on Android and iOS devices.
 
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
 ## Prerequisites
 
 The barcode reader control is experimental and needs to be enabled to show up in the insert pane.
+
+With your app open for [editing](../edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open **Settings**
 1. Select **Upcoming features** in the left-hand menu and select the **Experimental** tab
@@ -31,10 +37,13 @@ The barcode reader control is experimental and needs to be enabled to show up in
 
 ## Description
 
-The control opens a native scanner on Android and iOS devices. The scanner supports two scanning modes: **Automatically scan** where a barcode is scanned as soon as it is detected as well as **Select to scan** where the user can determine which of the detected barcodes to scan. The control doesn't support scanning in a web browser.
+The control opens a native scanner on Android and iOS devices. The scanner supports the following scanning modes:
+
+- **Automatically scan**: The a barcode is scanned as soon as it is detected.
+- **Select to scan**: The user can determine which of the detected barcodes to scan. The control doesn't support scanning in a web browser.
 
 > [!NOTE]
-> The barcode scanner control is supported on Android and iOS devices. All other platforms will show a warning that some features of the app won't work.
+> The barcode scanner control is supported on Android and iOS devices. All other platforms will show a warning stating that some features of the app won't work.
 
 ## Key properties
 
