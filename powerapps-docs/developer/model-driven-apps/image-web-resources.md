@@ -47,7 +47,7 @@ With image web resources you can add images where you need them. Common uses inc
 Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of SVG over other image web resources is scale, smaller in size, and if the fill color is removed the model-driven app can control the icon color to avoid contrast issues.  When defining the SVG or before uploading it into the web resource please remove any "fill color" attributes. We recommend using SVG over other image types like PNG and JPG. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom table instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
 
 > [!NOTE]
-> Vector Format (SVG) web resources are treated like the [Script (JScript)](./script-jscript-web-resources.md) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.
+> Vector Format (SVG) web resources are treated like the [Script (JScript)](./script-jscript-web-resources.md) web resources, and carry the same security risks as JavaScript web resources because SVG files allow JScript embedding.
   
 <a name="BKMK_Limitations"></a>   
 
@@ -117,7 +117,7 @@ Use the `$webresource:` directive to specify a web resource image to use as an i
  [Web resources](web-resources.md)   
  [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
- [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)     
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)
 
