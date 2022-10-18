@@ -17,6 +17,9 @@ contributors:
 
 # Create and manage web files
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A web file represents downloadable file in a portals website, used to store images, documents, and any other file type.
 
 To store the actual contents of a given file, portals uses the attachment feature of the notes associated with a web file record. The file attachment of the newest note associated with the web file is used as the file content. As such, the size of web file content that can be supported by portals is determined by the note attachment size supported by your Dynamics 365 installation.

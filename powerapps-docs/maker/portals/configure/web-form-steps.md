@@ -17,6 +17,9 @@ contributors:
 
 # Define multistep  form steps for portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The multistep form Step provides the flow logic of the form's user experience such as steps and conditional branching. It also provided details about the rendering of a form and additional behavior.
 
 > [!NOTE]

@@ -16,6 +16,9 @@ contributors:
 
 # Iteration tags
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Iteration tags are used to run/render a block of code repeatedly.
 
 ## for

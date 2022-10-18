@@ -16,6 +16,9 @@ contributors:
 
 # Available Liquid filters
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Liquid filters are used to modify the output of strings, numbers, variables, and objects. They are separated from the value to which they are being applied by a |.
 
 `{{ 'hal 9000' | upcase }} <!-- Output: HAL 9000 -->`
