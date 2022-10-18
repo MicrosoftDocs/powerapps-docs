@@ -1,11 +1,11 @@
 ---
-title: Co-authoring in canvas apps (experimental)
-description: Learn how to enable co-authoring in Power Apps Studio for canvas apps (experimental).
+title: Use Git version control to edit canvas apps (experimental)
+description: Learn ho to connect to a Git repository and allow multiple users to work on the app at the same time (experimental).
 author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 09/30/2022
+ms.reviewer: mkaur
+ms.date: 10/18/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
@@ -15,10 +15,11 @@ search.app:
 contributors:
   - tapanm-msft
   - gregli-msft
+  - mkaur-msft
   - gesnaaggarwal
 ---
 
-# Co-authoring in canvas apps (experimental)
+# Use Git version control to edit canvas apps (experimental)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -28,7 +29,8 @@ contributors:
 > - This is an experimental feature. It is disabled by default and must be [enabled](#enable-git-version-control) before use.
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-You can now use Git version control to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This feature is a first step towards the Microsoft Office style of co-authoring experience for canvas apps.
+You can use the experimental Git version control feature to enable more than one person to edit a canvas app at the same time. With this feature, others won't get locked out of the app while one person is editing it. As changes are made and synchronized, they're automatically merged with other changes, and made available to all others editing the app. This feature was our first step in collaboration efforts that will soon allow multiple makers accessing the same app at the same time
+
 
 [Git](https://git-scm.com/) is used as the backing store for this feature. After the initial setup with the connection to Git, any user can use this feature without any extra configuration steps except to authenticate with Git.
 
@@ -54,9 +56,7 @@ Follow these steps to enable Git version control in your app.
    :::image type="content" source="media/git-version-control/enable-git.png" alt-text="Swtich to enable Git version control.":::
 
    > [!TIP]
-   >
-   > - This feature is being rolled out. If you don't see it in your tenant, it may not yet be deployed to your tenant yet. In that case, check again later.
-   > - For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
+   > For any other problem with this feature, visit the [Power Apps community forum](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1).
 
 ## Connect an app to Git
 
