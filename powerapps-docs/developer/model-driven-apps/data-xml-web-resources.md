@@ -38,7 +38,7 @@ Use Data (XML) Web resources to save and access data.
  [Web resources](web-resources.md)   
  [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
- [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md) 
 
