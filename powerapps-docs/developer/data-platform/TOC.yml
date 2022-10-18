@@ -470,10 +470,10 @@
   items:
     - name: Developer resources page
       href: view-download-developer-resources.md
-    - name: Developer tools
+    - name: Developer tools and resource overview
       href: developer-tools.md
       items:
-        - name: Download tools from NuGet
+        - name: Dataverse development tools
           href: download-tools-nuget.md
         - name: Power Platform CLI
           href: /power-platform/developer/cli/introduction
