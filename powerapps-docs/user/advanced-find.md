@@ -54,6 +54,8 @@ When your administrator enables the [modern advanced find experience](/power-pla
 
 3. You will be navigated to the table's grid page, with the default view for the table selected and the rows displayed in a read-only grid. The  [**Edit filters**](grid-filters-advanced.md) panel will be opened, so you can filter the data on that table. For more information, see [create and manage personal views for that table.](grid-filters-advanced.md)
 
+For more information on creating and managing system views, see [Create and edit public or system views.](../maker/model-driven-apps/create-or-edit-model-driven-app-view)
+
 ## Create, edit, or save a view using legacy advanced find
 
 If your administrator has not enabled the modern advanced find experience, you can find the rows you want by using the legacy Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives. 
