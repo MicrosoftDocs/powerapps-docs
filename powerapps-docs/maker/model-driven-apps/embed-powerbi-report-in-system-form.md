@@ -1,14 +1,11 @@
 ---
 title: "Embed a Power BI report in a model-driven app main form | MicrosoftDocs"
 description: Learn how to embed a Power BI report in a model-driven app form
-ms.custom: ""
 ms.date: 10/12/2021
-
 ms.topic: "how-to"
-author: "adrianorth"
+author: "sriharibs-msft"
 ms.subservice: mda-maker
-ms.author: "aorth"
-manager: "kvivek"
+ms.author: "srihas"
 ms.reviewer: "matp"
 search.audienceType: 
   - maker
