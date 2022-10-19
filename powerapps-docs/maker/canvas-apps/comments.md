@@ -31,7 +31,7 @@ You can add comments to different components or pages.
 
 Legend
 
-1. **Tree view**: Select a screens from the tree view and right-click to add a **New comment**.
+1. **Tree view**: Select a screen from the tree view and right-click to add a **New comment**.
 2. **Component**: In the canvas area, right-click on a component to add a **New comment**.
 3. **App actions**: Select **Comments** > **New** and then add your comments. 
 
@@ -45,7 +45,7 @@ If you tag a maker that doesn’t have access to the app then you’ll be prompt
 > [!div class="mx-imgBorder"] 
 > ![Make doesn't  have access.](media/comments/comments-access.png)
 
-When someone tags you in a comment, you'll receive an email that lets you know who tagged you and the the specific app that you're tagged in. It also includies the comment text with direct link to that comment.
+When someone tags you in a comment, you'll receive an email that lets you know who tagged you and the specific app that you're tagged in. It also includes the comment text with direct link to that comment.
 
 
 > [!div class="mx-imgBorder"] 
@@ -59,7 +59,7 @@ In the **Comments** pane, next to a comment, select **...**, and then select **E
 
 ## Resolve a comment
 
-Comments are commonly questions, feedback, or ideas that are important context to live alongside your app. But, they may not be active discussions anymore. You can resolve, or reopen a resolved, comment thread to better track the active comments.  
+Comments are commonly questions, feedback, or ideas that are important context to live alongside your app. But they may not be active discussions anymore. You can resolve, or reopen a resolved, comment thread to better track the active comments.  
 
 1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
 1. The comment thread appears as **Resolved**.
@@ -68,6 +68,6 @@ Comments are commonly questions, feedback, or ideas that are important context t
 ## Limitations 
 
 1. There's a limitation on how many users can access an app in edit mode in Power Apps Studio. If you have an app open and tag someone, the user will receive an email  notification, but the user has to wait for you to exit the app in order to see the comment and resolve it. 
-2. Commenting is't supported when you're working on a app using Git. 
+2. Comments aren't supported when you're working on an app using Git. 
 3. @mention are not supported for SharePoint custom PowerApps. For information: [Customize a Microsoft Lists or SharePoint form by using Power Apps](./maker/canvas-apps/customize-list-form).
 
