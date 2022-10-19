@@ -64,3 +64,10 @@ Comments are commonly questions, feedback, or ideas that are important context t
 1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
 1. The comment thread appears as **Resolved**.
 1. To reopen select <img src = "media/comments/reopen-thread-button.png" alt = "reopen comment thread button" width = "20" height = "20"> **Reopen thread** or <img src = "media/comments/delete-thread-button.png" alt = "Delete comment thread button" width = "20" height = "20"> **Delete thread** to remove the comment.
+
+## Limitations 
+
+1. There's a limitation on how many users can access an app in edit mode in Power Apps Studio. If you have an app open and tag someone, the user will receive an email  notification, but the user has to wait for you to exit the app in order to see the comment and resolve it. 
+2. Commenting is't supported when you're working on a app using Git. 
+3. @mention are not supported for SharePoint custom PowerApps. For information: [Customize a Microsoft Lists or SharePoint form by using Power Apps](./maker/canvas-apps/customize-list-form).
+
