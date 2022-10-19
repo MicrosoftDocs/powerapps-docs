@@ -22,7 +22,7 @@ contributors:
 
 Easily add comments when you’re building a canvas app in Power Apps Studio. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app. 
 
-You can add comments to different components or pages.
+You can add comments to different components or pages when you're building your app.
 
 
 > [!div class="mx-imgBorder"] 
