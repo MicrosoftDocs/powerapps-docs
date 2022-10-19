@@ -12,7 +12,7 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Coauthoring allows multiple makers—whether pro or citizen developer—to make changes to the app at the same time and see those changes in real time. As a result, teams can innovate together and build stronger connections between professional developers and business domain experts, a critical ingredient to maximizing low-code development. 
+Coauthoring allows multiple makers—whether pro or citizen developers—to make changes to the app at the same time and see those changes in real time. As a result, teams can innovate together and build stronger connections between professional developers and business domain experts, a critical ingredient to maximizing low-code development. 
 
 > [!IMPORTANT]
 > This is a preview feature. More information: [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
@@ -28,7 +28,7 @@ During this preview, the coauthoring feature must be turned on.
 
    :::image type="content" source="media/coauthoring-enable-feature.png" alt-text="Enable coauthoring setting":::
 
-## What can you coauthor in an app
+## What you can coauthor in an app
 
 Here's what multiple makers can do at the same time in the app while seeing each other's others changes in real-time.
 
@@ -41,12 +41,12 @@ Here's what multiple makers can do at the same time in the app while seeing each
 - Change order of the areas, groups, and subareas in the navigation pane.
 - Change **General**, **Features** and **Upcoming** tabs in the **Settings** dialog.  
 
-## How do I know we're coauthoring?
+## How to know you're coauthoring
 
-First, once there are more makers editing the app together with you, you’ll see their presence in the top navigation bar and the left menu. You can see what components they're working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
+First, once there are other makers editing the app together with you, you’ll see their presence in the top navigation bar and the left menu. You can see what components other makers are working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
 
 :::image type="content" source="media/coauthoring1.png" alt-text="App makers working in the app are displayed":::
-Once someone is adding or removing a page, all other makers will see it appearing on the left navigation bar with a sparkle graphic indicator. The sparkle remains displayed until you select that page. You won’t see a sparkle for the components and pages that you’ve added.
+When someone is adding or removing a page, all other makers will see it appearing on the left navigation bar with a sparkle graphic indicator. The sparkle remains displayed until you select that page. You won’t see a sparkle for the components and pages that you’ve added.
 
 :::image type="content" source="media/coauthoring2.png" alt-text="Sparkle graphic indicator appears when changes are made by other makers":::
 
