@@ -50,3 +50,5 @@ When your tagged in a comment, you'll receive an email letting you know that you
 
 > [!div class="mx-imgBorder"] 
 > ![Example email when you're tagged in a comment.](media/comments/comments-email.png)
+
+
