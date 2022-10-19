@@ -137,8 +137,11 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 
 ## Proxies
+Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
 
-Power Apps does not support running with a proxy enabled. Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app. Hence, if your app has any problems while loading when proxy is enabled, disable the proxy and then try again.
+- Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app.
+
+- Some proxies (such as Microsoft Defender for Cloud Apps, McAfee) may intercept and change the URL of an app or embedded app. For example, if there is a Dynamics app that is running under domain **org.crm.dynamics.com** or a Canvas app that is running under domain **apps.powerapps.com**, the platform will not support a proxy that change these domains to a custom domain such as **mycustomdomain.com**. This can cause unpredictable behavior when the platform tries to retrieve tokens that are necessary to run the app.
 
 ## Data types size limits
 
