@@ -17,7 +17,7 @@ contributors:
   
 ---
 
-# Add comments in a canvas app
+# Add comments in canvas apps
 
 
 Easily add comments when you’re building a canvas app in Power Apps Studio. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app. 
@@ -45,10 +45,22 @@ If you tag a maker that doesn’t have access to the app then you’ll be prompt
 > [!div class="mx-imgBorder"] 
 > ![Make doesn't  have access.](media/comments/comments-access.png)
 
-When your tagged in a comment, you'll receive an email letting you know that you've been tagged in a comment with the name of the user that tagged and the specific app. The email will contain the comment text and also have a link to that comment. 
+When someone tags you in a comment, you'll receive an email that lets you know who tagged you and the the specific app that you're tagged in. It also includies the comment text with direct link to that comment.
 
 
 > [!div class="mx-imgBorder"] 
 > ![Example email when you're tagged in a comment.](media/comments/comments-email.png)
 
+## Edit or delete a comment
 
+You can edit your comments or remove existing comments from appearing in the app.
+
+In the **Comments** pane, next to a comment, select **...**, and then select **Edit comment** or **Delete comment**.
+
+## Resolve a comment
+
+Comments are commonly questions, feedback, or ideas that are important context to live alongside your app. But, they may not be active discussions anymore. You can resolve, or reopen a resolved, comment thread to better track the active comments.  
+
+1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
+1. The comment thread appears as **Resolved**.
+1. To reopen select <img src = "media/comments/reopen-thread-button.png" alt = "reopen comment thread button" width = "20" height = "20"> **Reopen thread** or <img src = "media/comments/delete-thread-button.png" alt = "Delete comment thread button" width = "20" height = "20"> **Delete thread** to remove the comment.
