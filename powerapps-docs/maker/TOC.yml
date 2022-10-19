@@ -1551,6 +1551,15 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+    - name: Collaboration in model-driven apps
+      href:
+      items:
+      - name: Add comments 
+        href: ./model-driven-apps/comments.md 
+      - name: Copresence
+        href: ./model-driven-apps/copresence.md 
+      - name: Coauthoring 
+        href: ./model-driven-apps/coauthoring.md
     - name: Apply business logic in an app
       href: 
       items:
