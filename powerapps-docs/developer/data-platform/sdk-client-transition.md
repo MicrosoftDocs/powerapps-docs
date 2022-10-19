@@ -44,11 +44,11 @@ The Dataverse `ServiceClient` class supports a smaller interface surface, inline
 
 Below is a quick summary of the impact to certain types of coding projects.
 
-- Plug-ins or custom workflow activities - no changes, just business as usual
+- Plug-ins or custom workflow activities - no changes
 
-- New or existing online applications - this article is definitely for you
+- New or existing online applications - this article is for you
 
-- On-premise applications - this article is not for you, yet
+- On-premises applications - this article is not for you, yet
 
 ## What do you need to do?
 

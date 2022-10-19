@@ -147,7 +147,7 @@ Because of the capability for the HTML in web resources to be changed by using t
  [Web resources](web-resources.md)   
  [Create accessible web resources](create-accessible-web-resources.md)   
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
- [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)
