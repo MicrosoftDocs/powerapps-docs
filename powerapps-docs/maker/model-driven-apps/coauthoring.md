@@ -26,7 +26,37 @@ During this preview, the coauthoring feature must be turned on.
 1. Under **Coauthoring**, set **Enable coauthoring**, which lets people simultaneously edit model-driven apps together, to **On**.
 1. Select **Save**.
 
+   :::image type="content" source="media/coauthoring-enable-feature.png" alt-text="Enable coauthoring setting":::
 
+## What can you coauthor in an app
+
+Here's what multiple makers can do at the same time in the app while seeing each other's others changes in real-time.
+
+- Add and remove components, such as tables, dashboards, and custom pages, to and from the model-driven app.
+- Add and remove subcomponents, such as views, forms, and charts, to and from the tables in the model-driven app.
+- Add and remove areas, groups, and subareas to and from the navigation bar in the model-driven app.
+- Change properties of the model-driven app.
+- Change properties of the navigation pane.
+- Change properties of areas, groups, and subareas in the navigation pane, including **Display Options** and **Advanced Settings**.
+- Change order of the areas, groups, and subareas in the navigation pane.
+- Change **General**, **Features** and **Upcoming** tabs in the **Settings** dialog.  
+
+## How do I know we're coauthoring?
+
+First, once there are more makers editing the app together with you, you’ll see their presence in the top navigation bar and the left menu. You can see what components they're working on or what pages they have open. You'll also see them move through the components on the left navigation bar in real-time.
+
+:::image type="content" source="media/coauthoring1.png" alt-text="App makers working in the app are displayed":::
+Once someone is adding or removing a page, all other makers will see it appearing on the left navigation bar with a sparkle graphic indicator. The sparkle remains displayed until you select that page. You won’t see a sparkle for the components and pages that you’ve added.
+
+:::image type="content" source="media/coauthoring2.png" alt-text="Sparkle graphic indicator appears when changes are made by other makers":::
+
+Once someone removes the page, it disappears for other makers in real-time.
+
+## Limitations
+
+- Currently, there's no auto-save functionality, so you need to select the **Save** button to save changes. However, any maker that has access to the app can save the changes for others, as their changes are synced. Unsaved changes will be removed from the app in 24 hours.
+- Under **Settings**, changes to the **Features** and **Upcoming** sections must be saved from the settings dialog in order to be set. Users that don't see the changes immediately can close and open the settings dialog to see the most up-to-date settings.
+- Changes made in other designers, such as the view and form designers, won't be synchronized in real-time in the modern app designer.
 
 ## Next steps
 

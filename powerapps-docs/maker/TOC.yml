@@ -1556,9 +1556,9 @@
       items:
       - name: Add comments 
         href: ./model-driven-apps/comments.md 
-      - name: Copresence
+      - name: Copresence (preview)
         href: ./model-driven-apps/copresence.md 
-      - name: Coauthoring 
+      - name: Coauthoring (preview)
         href: ./model-driven-apps/coauthoring.md
     - name: Apply business logic in an app
       href: 
