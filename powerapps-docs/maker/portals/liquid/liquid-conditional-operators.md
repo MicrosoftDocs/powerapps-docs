@@ -16,6 +16,9 @@ contributors:
 
 # Available Liquid conditional operators
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 When used in conditional statements (**if**,**unless**), some Liquid values will be treated as true, and some will be treated as false.
 
 In Liquid, null and the Boolean value false are treated as false;everything else is treated as true. Empty strings, empty arrays, etc. are treated as true. For examples,

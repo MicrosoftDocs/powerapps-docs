@@ -19,6 +19,9 @@ ms.custom: intro-internal
 
 # Get started with the portal content editor
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 > [!IMPORTANT]
 > This feature is deprecated.  We recommend that you use [Power Apps portals Studio](portal-designer-anatomy.md) to edit the portal.
 >

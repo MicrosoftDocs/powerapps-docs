@@ -222,7 +222,9 @@
   - name: Find it with unified search
     href: search.md
   - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md 
+    href: ./common/virtual-agent.md   
+  - name: Maker matching using an integrated virtual agent (preview)
+    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -486,6 +488,8 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: Barcode reader (experimental)
+              href: ./canvas-apps/controls/control-barcodereader.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -1307,7 +1311,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: /powerapps-docs/maker/../canvas-apps/connections-list
+            href: ./canvas-apps/connections-list.md
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages

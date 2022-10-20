@@ -1,9 +1,8 @@
 ---
 title: entity.getEntityReference (Client API reference)
 description: Returns a lookup value that references a record.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "reference"

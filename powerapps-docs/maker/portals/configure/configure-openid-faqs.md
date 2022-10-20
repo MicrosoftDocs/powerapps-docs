@@ -17,6 +17,9 @@ contributors:
 
 # FAQs for using OpenID Connect in portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the [OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ## Do I require an OpenID Connect Auto-Discovery Document to integrate with portals?

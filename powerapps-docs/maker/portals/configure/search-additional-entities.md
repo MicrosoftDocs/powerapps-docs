@@ -16,6 +16,9 @@ contributors:
 
 # Walk-through: Configuring additional tables for global search  
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 ## Overview
 
 You can enable additional tables for search functionality. Configuring search for additional tables requires additional actions, which are described in this article. These explicit configuration steps ensure that no records will accidentally be made available using global search.

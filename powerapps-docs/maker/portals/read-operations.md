@@ -17,6 +17,9 @@ contributors:
 
 # Query data using portals Web API
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 ## Prerequisites
