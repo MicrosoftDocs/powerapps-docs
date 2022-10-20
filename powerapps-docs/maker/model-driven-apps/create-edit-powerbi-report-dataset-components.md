@@ -54,7 +54,7 @@ In this article, you'll learn how to do the following tasks:
 
 1. Open your Power Apps solution development environment.
     > [!NOTE]
-    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. More information: [Cross-geo operations](/power-bi/collaborate-share/power-apps-power-bi-integration-considerations#cross-geo-operations) more information. 
+    > During public preview, your Power Apps solution development environment must be created in the geography where the Power BI tenant is located. More information: [Cross-geo operations](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations) more information. 
 
 1. Create a new solution.
 
