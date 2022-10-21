@@ -103,13 +103,13 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
-## Create an app, portal, chatbot, or AI model
+## Create an app, websites, chatbot, or AI model
 
-From the **Home** page, you can create apps, Power Pages, chatbots, and AI models:
+From the **Home** page, you can create apps, websites, chatbots, and AI models:
 
 - [Get started with canvas apps](/powerapps/maker/canvas-apps/)
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
-- [Get started with Power Pages](/powerapps/maker/portals/)
+- [Get started with Power Pages](/power-pages/introduction)
 - [Get started with chatbots](/powerapps/chatbots)
 - [Get started with AI models](/powerapps/use-ai-builder)
 
