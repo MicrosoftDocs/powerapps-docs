@@ -135,7 +135,7 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A Canvas app that is added to a SharePoint site | SharePoint mobile |
+| A Canvas app that is added to a SharePoint site | <ul> <li> SharePoint mobile </li></ul> |
 
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
