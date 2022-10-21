@@ -89,7 +89,7 @@ In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from various sources.
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
-- **Portals** help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
+- **Power Pages** help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
 
 If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 
@@ -105,11 +105,11 @@ You can also search for an app by typing one or more characters in the search ba
 
 ## Create an app, portal, chatbot, or AI model
 
-From the **Home** page, you can create apps, portals, chatbots, and AI models:
+From the **Home** page, you can create apps, Power Pages, chatbots, and AI models:
 
 - [Get started with canvas apps](/powerapps/maker/canvas-apps/)
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
-- [Get started with portals](/powerapps/maker/portals/)
+- [Get started with Power Pages](/powerapps/maker/portals/)
 - [Get started with chatbots](/powerapps/chatbots)
 - [Get started with AI models](/powerapps/use-ai-builder)
 
