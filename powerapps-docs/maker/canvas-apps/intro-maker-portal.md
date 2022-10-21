@@ -126,7 +126,7 @@ Both options show links to this documentation set, Power Apps training on Micros
 
 ## Other common tasks
 
-By selecting options in the header and left navigation bar, you can do more than create and open apps, portals, chatbots, and AI models.
+By selecting options in the header and left navigation bar, you can do more than create and open apps, Power Pages, chatbots, and AI models.
 
 ### From the header
 
