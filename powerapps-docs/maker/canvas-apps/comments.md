@@ -38,7 +38,7 @@ Legend
 
 ## Use @mention in comments to tag someone for feedback
 
-Connect with your team of makers as you collaborate on creating your app. You can tag people in the comments by using **@**+ their name.
+Connect with other makers in your organization as you collaborate on creating your app. You can tag people in the comments by using **@**+ their name.
 
 If you tag a maker that doesn’t have access to the app, then you’ll be prompted to share the app with them.
 
