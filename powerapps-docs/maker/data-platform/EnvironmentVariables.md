@@ -139,7 +139,7 @@ The actual secrets are stored in Azure Key Vault and the environment variable re
 Environment variables referencing secrets aren't currently available from the dynamic content selector for use in flows.
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Portals, model-driven apps and app management preview features](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> This is a preview feature. More information: [Power Pages, model-driven apps and app management preview features](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
 
 ### Configure Azure Key Vault
 
