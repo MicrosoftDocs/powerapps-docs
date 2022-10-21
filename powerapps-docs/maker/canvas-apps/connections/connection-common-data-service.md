@@ -63,13 +63,13 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | **Item**                                                        | **Number [1]** | **Text [2]** | **Choice** | **DateTime [3]** | **Guid** |
 |-----------------------------------------------------------------|----------------|--------------|------------|------------------|----------|
 | Filter                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
-| Sort                                                            | Yes            | Yes          | No         | Yes              | \-       |
-| SortByColumns                                                   | Yes            | Yes          | No         | Yes              | \-       |
+| Sort                                                            | Yes            | Yes          | Yes        | Yes              | \-       |
+| SortByColumns                                                   | Yes            | Yes          | Yes        | Yes              | \-       |
 | Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
 | =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
 | \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
-| In (substring)                                                  | No             | Yes          | No         | No               | \-       |
-| In (membership) (preview)                                  | No             | Yes          | Yes        | No               | Yes      |
+| In (substring)                                                  | \-             | Yes          | \-         | \-               | \-       |
+| In (membership) (preview)                                       | Yes            | Yes          | Yes        | Yes              | Yes      |
 | And/Or/Not                                                      | Yes            | Yes          | Yes        | Yes              | Yes      |
 | StartsWith                                                      | \-             | Yes          | \-         | \-               | \-       |
 | IsBlank                                                         | Yes [4]        | Yes [4]      | No [4]     | Yes [4]          | Yes      |
