@@ -35,7 +35,7 @@ Now you can create and join a Teams meeting from an appointment in your model-dr
    > ![Open or create a new appointment.](media/teams-meeting-appt.png)   
 3. Enter the required information and in the **Details** section, set the **Teams meeting** toggle to, **Yes**.
 > [!IMPORTANT]
-> For the join link to be created successfully, the user enabling the meeting for Teams needs to be the Organizer. The Organizer field is not exposed by default on the Appointment form but the value defaults to the user who creates the meeting.
+> For the join link to be created successfully, the user enabling the meeting for Teams needs to be the meeting organizer. The organizer field is not exposed by default on the appointment form but the value defaults to the user who creates the meeting.
 
    > [!div class="mx-imgBorder"] 
    > ![Add a Teams meeting to an appointment.](media/teams-meeting-appt-1.png)  
