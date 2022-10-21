@@ -161,7 +161,7 @@ A web resource control configured to use a certain number of rows will have diff
 
  [Create Accessible web resources](create-accessible-web-resources.md)<br />
  [Web Page (HTML) web resources](webpage-html-web-resources.md)<br />
- [Script (JScript) web resources](script-jscript-web-resources.md)<br />
+ [JavaScript web resources](script-jscript-web-resources.md)<br />
  [Image web resources](image-web-resources.md)<br />
  [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
  [Data (XML) web resources](data-xml-web-resources.md)<br />
