@@ -35,7 +35,7 @@ For early access to upcoming changes in canvas apps, use the following environme
 - [Preview environments](#how-to-get-early-access-to-the-upcoming-updates) - Upcoming changes are typically rolled out to preview environments 1-2 weeks before they're available to all other regions.
 - [Sandbox environments](/power-platform/admin/sandbox-environments) - To access preview version of Power Apps on sandbox environments, use make.preview.powerapps.com. 
 
-### Portals, model-driven apps and app management
+### Power Pages, model-driven apps and app management
 
 You can create, manage, and share apps using [Power Apps][2] (make.powerapps.com). To use the preview functionalities, we recommend that you are in a [preview](#how-to-get-early-access-to-the-upcoming-updates) or [sandbox](/power-platform/admin/sandbox-environments) environment and not in a production environment. Then, go to the preview version of [Power Apps][3] (make.preview.powerapps.com).
 
@@ -69,9 +69,9 @@ You can provide feedback on the [Power Apps forum][8] and/or contact [support][9
 
 ## What are the known issues and limitations?
 
-1. **Power Apps portals and clients which are not available in preview**
+1. **Power Pages and clients which are not available in preview**
 
-   There are certain functionalities, services, and portals, which are available in preview:
+   There are certain functionalities, services, and Power Pages, which are available in preview:
    
    ![Available in preview.](media/table.png)
 
