@@ -39,7 +39,7 @@ In this experience you...
 :::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Preview program for Power Pages, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> This is a preview feature. More information: [Power Pages, model-driven apps and app management](../powerapps-preview-program.md#power-pages-model-driven-apps-and-app-management)
 
 ## How it works
 
