@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/18/2022
+ms.date: 10/21/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -135,14 +135,13 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A Canvas app that is added to a SharePoint site | <ul> <li> SharePoint mobile </li></ul> |
+| A canvas app that is added to a SharePoint site | <ul> <li> SharePoint mobile </li></ul> |
 
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.
 
 - Some proxies (such as Zscaler, Blue Coat) modify Power Apps requests by removing headers (CORS or authentication headers). Power Apps relies on these headers to load the app.
-
-- Some proxies (such as Microsoft Defender for Cloud Apps, McAfee) may intercept and change the URL of an app or embedded app. For example, if there is a Dynamics app that is running under domain **org.crm.dynamics.com** or a Canvas app that is running under domain **apps.powerapps.com**, the platform will not support a proxy that change these domains to a custom domain such as **mycustomdomain.com**. This can cause unpredictable behavior when the platform tries to retrieve tokens that are necessary to run the app.
+- Some proxies (such as Microsoft Defender for Cloud Apps, McAfee) may intercept and change the URL of an app or embedded app. For example, if there is a Dynamics 365 app that is running under domain **org.crm.dynamics.com** or a canvas app that is running under domain **apps.powerapps.com**, the platform will not support a proxy that change these domains to a custom domain such as **mycustomdomain.com**. This can cause unpredictable behavior when the platform tries to retrieve tokens that are necessary to run the app.
 
 ## Data types size limits
 
