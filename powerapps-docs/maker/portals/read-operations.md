@@ -135,6 +135,10 @@ The Web API supports these standard OData string query functions:
 | endswith     | *$filter=endswith(name,'Inc.')*     |
 | startswith   | *$filter=startswith(name,'a')*      |
 
+### Dataverse query functions
+
+The Web API supports Dataverse query functions to filter results. For more information, see [Web API Query Function Reference](/power-apps/developer/data-platform/webapi/reference/queryfunctions).
+
 ## Order results
 
 Specify the order in which items are returned using the **$orderby** system query option. Use the **asc** or **desc** suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the name and revenue properties of accounts ordered by ascending revenue and by descending name.
