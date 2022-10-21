@@ -86,7 +86,7 @@ Find who's working on an app at the same time as you with copresence. Copresence
 - The name of the maker who made the first save or the last save is displayed.
 
 > [!IMPORTANT]
-> - This is a public preview feature. More information: Public previews for [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> - This is a public preview feature. More information: Public previews for [Power Pages, model-driven apps and app management](../powerapps-preview-program.md#power-pages-model-driven-apps-and-app-management)
 > - This feature is being rolled out, and&mdash;depending on your region&mdash;it might not be available for your tenant yet.
 
 ### How copresence works
