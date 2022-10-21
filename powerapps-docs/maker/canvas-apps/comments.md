@@ -22,7 +22,7 @@ contributors:
 
 Easily add comments when you’re building a canvas app in Power Apps Studio. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app. 
 
-You can add comments to different components or pages when you're building your app.
+You can add comments to different components or pages.
 
 
 > [!div class="mx-imgBorder"] 
@@ -40,7 +40,7 @@ Legend
 
 Connect with your team of makers as you collaborate on creating your app. You can tag people in the comments by using **@**+ their name.
 
-If you tag a maker that doesn’t have access to the app then you’ll be prompted to share the app with them.
+If you tag a maker that doesn’t have access to the app, then you’ll be prompted to share the app with them.
 
 > [!div class="mx-imgBorder"] 
 > ![Make doesn't  have access.](media/comments/comments-access.png)
@@ -69,5 +69,5 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 1. There's a limitation on how many users can access an app in edit mode in Power Apps Studio. If you have an app open and tag someone, the user will receive an email  notification, but the user has to wait for you to exit the app in order to see the comment and resolve it. 
 2. Comments aren't supported when you're working on an app using Git. 
-3. @mention aren't supported for SharePoint custom PowerApps. For information: [Customize a Microsoft Lists or SharePoint form by using Power Apps](customize-list-form.md).
+3. @mention aren't supported for SharePoint custom Power Apps. For information: [Customize a Microsoft Lists or SharePoint form by using Power Apps](customize-list-form.md).
 
