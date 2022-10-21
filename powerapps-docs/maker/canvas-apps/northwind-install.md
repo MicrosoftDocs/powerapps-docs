@@ -32,7 +32,7 @@ Northwind Traders is a fictitious organization that manages orders, products, cu
 ## Download the solution
 
 > [!div class="nextstepaction"]
-> [Download the Northwind Traders Solution File](https://pwrappssamples.blob.core.windows.net/samples/NorthwindTraders_1_0_0_6.zip)
+> [Download the Northwind Traders Solution File](https://download.microsoft.com/download/f/8/d/f8ddbb69-5499-4776-bd41-00f3bae050a6/Management Studio(Standalone).zip)
 
 This [solution](../../developer/data-platform/introduction-solutions.md) file (.zip) contains the definitions of tables, choices, and business processes; the canvas and model-driven apps; and any other pieces that are used together.
 
