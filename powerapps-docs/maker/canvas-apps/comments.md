@@ -28,7 +28,6 @@ You can add comments to different components or pages.
 > [!div class="mx-imgBorder"] 
 > ![Add comments in Power Apps Studio.](media/comments/comments-canvas-apps.png)
 
-
 Legend
 
 1. **Tree view**: Select a screen from the tree view and right-click to add a **New comment**.
@@ -40,13 +39,12 @@ Legend
 
 Connect with other makers in your organization as you collaborate on creating your app. You can tag people in the comments by using **@**+ their name.
 
-If you tag a maker that doesn’t have access to the app, then you’ll be prompted to share the app with them.
+If you tag a maker that doesn’t have access to your app, then you’ll be prompted to share the app with them.
 
 > [!div class="mx-imgBorder"] 
 > ![Make doesn't  have access.](media/comments/comments-access.png)
 
-When someone tags you in a comment, you'll receive an email that lets you know who tagged you and the specific app that you're tagged in. It also includes the comment text with direct link to that comment.
-
+When someone tags you in a comment, you'll receive an email that lets you know which app you're tagged in and the person who tagged you. It also includes the comment text and a direct link to that comment.
 
 > [!div class="mx-imgBorder"] 
 > ![Example email when you're tagged in a comment.](media/comments/comments-email.png)
