@@ -23,6 +23,71 @@ File columns are different from the other two system columns that can store bina
 
 There are several different ways to work with file column data. Because binary files may be large, it is frequently necessary to split the file into multiple chunks, (or blocks) that can be sent or received sequentially or in parallel to improve performance.
 
+## Supporting columns
+
+Each file column has a supporting read-only string column that contains the name of the file. The schema name for this column has the same name as the file column, but has `_Name` appended to it. So if the schema name is `sample_FileColumn`, the supporting string column will be `sample_FileColumn_Name`. The logical name for the supporting column will be `sample_filecolumn_name`.
+
+## Behavior when retrieving normally
+
+If you include a file column in a retrieve or retrieve multiple operation, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. More information: [Use the DeleteFile message](#use-the-deletefile-message).
+
+**TODO**: Question: Can you do anything else with this Id?
+
+The following examples show what you can expect when retrieving data from file columns as you would with other columns:
+
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+static void RetrieveFileColumns(IOrganizationService service) {
+
+   Entity account = service.Retrieve(
+         "account", 
+         new Guid("352edda9-4c52-ed11-bba1-000d3a9933c9"), 
+         new ColumnSet("name", "sample_filecolumn", "sample_filecolumn_name"));
+
+   Console.WriteLine($"name: {account["name"]}");
+   Console.WriteLine($"sample_filecolumn: {account["sample_filecolumn"]}");
+   Console.WriteLine($"sample_filecolumn_name: {account["sample_filecolumn_name"]}");
+}
+```
+
+**Output**:
+
+```
+name: Contoso Ltd.
+sample_filecolumn: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
+sample_filecolumn_name: 25mb.pdf
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/accounts(352edda9-4c52-ed11-bba1-000d3a9933c9)?$select=name,sample_filecolumn,sample_filecolumn_name HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts(name,sample_filecolumn,sample_filecolumn_name)/$entity",
+    "@odata.etag": "W/\"75119522\"",
+    "name": "Contoso Ltd.",
+    "sample_filecolumn": "63a6afb7-4c52-ed11-bba1-000d3a9933c9",
+    "sample_filecolumn_name": "25mb.pdf",
+    "accountid": "352edda9-4c52-ed11-bba1-000d3a9933c9"
+}
+```
+
+---
+
 ## Upload Files
 
 There at three different ways to upload files to a file column:
@@ -350,7 +415,7 @@ The response includes the following headers.
 ```http
 HTTP/1.1 200 OK
 Accept-Ranges: bytes
-Location: [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value omitted for brevity>
+Location: [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity>
 OData-Version: 4.0
 x-ms-chunk-size: 4194304
 Access-Control-Expose-Headers: x-ms-chunk-size
@@ -367,19 +432,11 @@ Each request must contain that portion of the file in the body and the following
 |`x-ms-file-name`|The name of the file.|
 |[Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type)| Set to `application/octet-stream`|
 |[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />
-The value of the first request:<br />
-`bytes 0-4194303/25870370`<br />
-Indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25MB) in size. Each subsequent request will see this value increase until the entire file has been sent:<br />
-`bytes 4194304-8388607/25870370`<br />
-`bytes 8388608-12582911/25870370`<br />
-`bytes 12582912-16777215/25870370`<br />
-`bytes 16777216-20971519/25870370`<br />
-`bytes 20971520-25165823/25870370`<br />
-`bytes 25165824-25870369/25870370`<br />|
+The value of the first request:<br />`bytes 0-4194303/25870370`<br />Indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25MB) in size.<br />Each subsequent request will see this value increase until the entire file has been sent:<br />`bytes 4194304-8388607/25870370`<br />`bytes 8388608-12582911/25870370`<br />`bytes 12582912-16777215/25870370`<br />`bytes 16777216-20971519/25870370`<br />`bytes 20971520-25165823/25870370`<br />`bytes 25165824-25870369/25870370`<br />|
 |[Content-Length](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Length)|Indicates the size of the message. In the example above, this value for the last request will be `704546` rather than `4194304`|
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value omitted for brevity> HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity> HTTP/1.1
 x-ms-file-name: 25mb.pdf
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -516,11 +573,7 @@ Content-Length: 180
 
 **Response**
 
-The response is a [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) which provides:
 
-- The name of the file
-- The size of the file
-- The file continuation token to use in subsequent requests
 
 ```http
 HTTP/1.1 200 OK
@@ -534,25 +587,17 @@ OData-Version: 4.0
 }
 ```
 
-Based on the size of the file and the size of the block you will download, send additional requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below:
+The response is a [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) which provides:
+
+- `FileSizeInBytes`: The size of the file
+- `FileName`: The name of the file
+- `FileContinuationToken`: The file continuation token to use in subsequent requests
+
+Based on the size of the file and the size of the block you will download, send additional requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
 
 **Request**
 
-With each request the `Offset` value will increment by the amount of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
 
-
-|Offset|BlockLength|
-|---------|---------|
-|`0`|`4194304`|
-|`4194304`|`4194304`|
-|`8388608`|`4194304`|
-|`12582912`|`4194304`|
-|`16777216`|`4194304`|
-|`20971520`|`4194304`|
-|`25165824`|`4194304`|
-
-> [!NOTE]
-> The `BlockLength` value can be constant. It isn't required to be adjusted for the last request where the actual size last block downloaded was `704546`bytes.
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
@@ -569,6 +614,20 @@ Content-Length: 921
   "FileContinuationToken": "<file continuation token value removed for brevity>"
 }
 ```
+With each request the `Offset` value will increment by the amount of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
+
+|Request number|Offset|BlockLength|
+|---------|---------|---------|
+|1|`0`|`4194304`|
+|2|`4194304`|`4194304`|
+|3|`8388608`|`4194304`|
+|4|`12582912`|`4194304`|
+|5|`16777216`|`4194304`|
+|6|`20971520`|`4194304`|
+|7|`25165824`|`4194304`|
+
+> [!NOTE]
+> The `BlockLength` value can be constant. It isn't required to be adjusted for the last request where the actual size last block downloaded was `704546`bytes.
 
 **Response**
 
@@ -582,6 +641,7 @@ OData-Version: 4.0
   "Data": "<byte[] data removed for brevity>"
 }
 ```
+
 ---
 
 
