@@ -1,13 +1,12 @@
 ---
-title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about File columns that store file data within the application, supporting columns, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+title: "Create File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about how to create file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 10/23/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
