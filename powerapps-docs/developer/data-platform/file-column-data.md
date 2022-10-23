@@ -27,20 +27,20 @@ There are several different ways to work with file column data. Because binary f
 
 There at three different ways to upload files to a file column:
 
-- Use the Dataverse messages available to both the SDK and Web API
+- Use Dataverse messages available to both the SDK and Web API
 - Upload a file in a single request using Web API
 - Upload the file in chunks using Web API
 
-### Use the Dataverse messages to upload a file
+### Use Dataverse messages to upload a file
 
-Uploading a file this way requires using a set of three messages:
+You can use Dataverse messages using the SDK for .NET or Web API. Uploading a file this way requires using a set of three messages:
 
 
 |Message|Description|
 |---------|---------|
 |`InitializeFileBlocksUpload`|Use this message to indicate the column that you want to upload a file to. It returns a *file continuation token* that you can use to upload the file in blocks using the `UploadBlock` message.|
 |`UploadBlock`|Split your file into blocks and generate a *blockid* for each block. Then make multiple requests until all the blocks have been sent together with the file continuation token.|
-|`CommitFileBlocksUpload`|After you have sent requests for all the blocks using `UploadBlock`, use this message to commit the upload operation by sending:<br />- The list of generated blockids<br />- The name of the file<br />- The mime type of the file<br />- The file continuation token|
+|`CommitFileBlocksUpload`|After you have sent requests for all the blocks using `UploadBlock`, use this message to commit the upload operation by sending:<br />- The list of generated blockids<br />- The name of the file<br />- The [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file<br />- The file continuation token|
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -151,18 +151,18 @@ static Guid UploadFile(
 }
 ```
 
-This function includes some logic to try and get the mime type of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it is not provided. If not found it will set the mime type to `application/octet-stream`.
+This function includes some logic to try and get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it is not provided. If not found it will set the mime type to `application/octet-stream`.
 
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to set a file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2578e950-8e51-ed11-bba1-000d3a9933c9`.
+The following series of requests and responses show the interaction when using the Web API to set a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2578e950-8e51-ed11-bba1-000d3a9933c9`.
 
 **Request**
 
 This request uses the [InitializeFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUpload).
 
 ```http
-POST [Organization Uri]/api/data/v9.2/[InitializeFileBlocksUpload](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUpload) HTTP/1.1
+POST [Organization Uri]/api/data/v9.2/InitializeFileBlocksUpload HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -182,7 +182,7 @@ Content-Length: 207
 
 **Response**
 
-The response is a [InitializeFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUploadResponse)
+The response is a [InitializeFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
 
 ```http
 HTTP/1.1 200 OK
@@ -229,12 +229,12 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-After all the parts of the file have been sent using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock), use the [CommitFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUpload) to complete the upload using these properties:
+After all the parts of the file have been sent using multiple requests to the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock), use the [CommitFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUpload) to complete the upload using these properties:
 
 |Property|Description:  |
 |---------|---------|
 |`FileName`|The name of the file.|
-|`MimeType`|The mime type of the file.|
+|`MimeType`|The [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file.|
 |`BlockList`|An array of strings representing the `BlockId` values in the previous `UploadBlock` operations. The order of these strings represents the order the server will use to combine the blocks into the original file.|
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
 
@@ -268,7 +268,7 @@ Content-Length: 1213
 
 **Response**
 
-The [CommitFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUploadResponse) returns the `FileId` value you can use to delete the file using the [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile) and the `FileSizeInBytes`.
+The [CommitFileBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUploadResponse) returns the `FileSizeInBytes` and the `FileId` value you can use to delete the file using the [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
 
 ```http
 HTTP/1.1 200 OK
@@ -286,13 +286,399 @@ OData-Version: 4.0
 
 ### Upload a file in a single request using Web API
 
+If the size of the file is less than 128MB, you can upload the file in a single request using the Web API.
+
+The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
+
+**Request**
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/accounts(cc4ed4a2-8c51-ed11-bba1-000d3a993550)/sample_filecolumn HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/octet-stream
+x-ms-file-name: 4094kb.txt
+Content-Length: 4191273
+
+< binary content removed for brevity>
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
 ### Upload the file in chunks using Web API
+
+To upload your file in chunks using the Web API, use the following set of requests.
+
+The following example uploads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
+
+**Request**
+
+The first request includes these headers:
+
+- `x-ms-transfer-mode: chunked`
+- `x-ms-file-name: <name of the file>`
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn HTTP/1.1
+x-ms-transfer-mode: chunked
+x-ms-file-name: 25mb.pdf
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+The response [Location](https://developer.mozilla.org/docs/Web/HTTP/Headers/Location) header includes a URL to use in subsequent requests. It includes a `sessiontoken` query parameter that indicates that all the requests sent using it are part of the same operation.
+
+The response includes the following headers.
+
+|Header|Description|
+|---------|---------|
+|`x-ms-chunk-size`|Provides a recommended chunk size in bytes.|
+|[Accept-Ranges](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Ranges)|Indicates the server supports partial requests from the client for file downloads. The value `bytes` indicates that the range value in subsequent requests should be in bytes.|
+|[Access-Control-Expose-Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)|Indicates that the `x-ms-chunk-size` header value should be made available to scripts running in the browser, in response to a cross-origin request.|
+
+```http
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Location: [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value omitted for brevity>
+OData-Version: 4.0
+x-ms-chunk-size: 4194304
+Access-Control-Expose-Headers: x-ms-chunk-size
+```
+
+**Request**
+
+Subsequent requests should use the value of the `Location` header returned by the first request so that the `sessiontoken` value is included.
+
+Each request must contain that portion of the file in the body and the following headers:
+
+|Header|Description|
+|---------|---------|
+|`x-ms-file-name`|The name of the file.|
+|[Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type)| Set to `application/octet-stream`|
+|[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />
+The value of the first request:<br />
+`bytes 0-4194303/25870370`<br />
+Indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25MB) in size. Each subsequent request will see this value increase until the entire file has been sent:<br />
+`bytes 4194304-8388607/25870370`<br />
+`bytes 8388608-12582911/25870370`<br />
+`bytes 12582912-16777215/25870370`<br />
+`bytes 16777216-20971519/25870370`<br />
+`bytes 20971520-25165823/25870370`<br />
+`bytes 25165824-25870369/25870370`<br />|
+|[Content-Length](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Length)|Indicates the size of the message. In the example above, this value for the last request will be `704546` rather than `4194304`|
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value omitted for brevity> HTTP/1.1
+x-ms-file-name: 25mb.pdf
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/octet-stream
+Content-Range: bytes 0-4194303/25870370
+Content-Length: 4194304
+
+< byte[] content removed for brevity>
+```
+
+**Response**
+
+```http
+HTTP/1.1 206 PartialContent
+OData-Version: 4.0
+```
 
 ## Download Files
 
+There at three different ways to download files to a file column:
+
+- Use Dataverse messages available to both the SDK and Web API
+- Download a file in a single request using Web API
+- Download the file in chunks using Web API
+
+### Use Dataverse messages to download a file
+
+You can use Dataverse messages using the SDK for .NET or Web API. Downloading a file this way requires using a pair of messages:
+
+
+|Message|Description|
+|---------|---------|
+|`InitializeFileBlocksDownload`|Use this message to indicate the column that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
+|`DownloadBlock`|Request the size of the block, the offset value and the file continuation token.|
+
+Once you have downloaded all the blocks, you can join them to create the entire downloaded file.
+
+#### [SDK for .NET](#tab/sdk)
+
+You can use the following function to download a file using the SDK:
+
+```csharp
+/// <summary>
+/// Downloads a file
+/// </summary>
+/// <param name="service">The service</param>
+/// <param name="entityReference">A reference to the record with the file column</param>
+/// <param name="fileAttributeName">The name of the file column</param>
+/// <returns></returns>
+private static byte[] DownloadFile(
+            IOrganizationService service,
+            EntityReference entityReference,
+            string fileAttributeName)
+{
+   InitializeFileBlocksDownloadRequest initializeFileBlocksDownloadRequest = new()
+   {
+         Target = entityReference,
+         FileAttributeName = fileAttributeName
+   };
+
+   var initializeFileBlocksDownloadResponse =
+         (InitializeFileBlocksDownloadResponse)service.Execute(initializeFileBlocksDownloadRequest);
+
+   string fileContinuationToken = initializeFileBlocksDownloadResponse.FileContinuationToken;
+   long fileSizeInBytes = initializeFileBlocksDownloadResponse.FileSizeInBytes;
+
+   List<byte> fileBytes = new();
+
+   long offset = 0;
+   long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
+
+   // File size may be smaller than defined block size
+   if (fileSizeInBytes < blockSizeDownload)
+   {
+         blockSizeDownload = fileSizeInBytes;
+   }
+
+   while (fileSizeInBytes > 0)
+   {
+         // Prepare the request
+         DownloadBlockRequest downLoadBlockRequest = new()
+         {
+            BlockLength = blockSizeDownload,
+            FileContinuationToken = fileContinuationToken,
+            Offset = offset
+         };
+
+         // Send the request
+         var downloadBlockResponse =
+                  (DownloadBlockResponse)service.Execute(downLoadBlockRequest);
+
+         // Add the block returned to the list
+         fileBytes.AddRange(downloadBlockResponse.Data);
+
+         // Subtract the amount downloaded,
+         // which may make fileSizeInBytes < 0 and indicate
+         // no further blocks to download
+         fileSizeInBytes -= (int)blockSizeDownload;
+         // Increment the offset to start at the beginning of the next block.
+         offset += blockSizeDownload;
+   }
+
+   return fileBytes.ToArray();
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named `25mb.pdf` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2578e950-8e51-ed11-bba1-000d3a9933c9`.
+
+**Request**
+
+This request uses the [InitializeFileBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownload).
+
+```http
+POST [Organization Uri]/api/data/v9.2/InitializeFileBlocksDownload HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 180
+
+{
+  "Target": {
+    "accountid": "2578e950-8e51-ed11-bba1-000d3a9933c9",
+    "@odata.type": "Microsoft.Dynamics.CRM.account"
+  },
+  "FileAttributeName": "sample_filecolumn"
+}
+```
+
+**Response**
+
+The response is a [InitializeFileBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse) which provides:
+
+- The name of the file
+- The size of the file
+- The file continuation token to use in subsequent requests
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse",
+  "FileSizeInBytes": 25870370,
+  "FileName": "25mb.pdf",
+  "FileContinuationToken": "<file continuation token value removed for brevity>"
+}
+```
+
+Based on the size of the file and the size of the block you will download, send additional requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below:
+
+**Request**
+
+With each request the `Offset` value will increment by the amount of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
+
+
+|Offset|BlockLength|
+|---------|---------|
+|`0`|`4194304`|
+|`4194304`|`4194304`|
+|`8388608`|`4194304`|
+|`12582912`|`4194304`|
+|`16777216`|`4194304`|
+|`20971520`|`4194304`|
+|`25165824`|`4194304`|
+
+> [!NOTE]
+> The `BlockLength` value can be constant. It isn't required to be adjusted for the last request where the actual size last block downloaded was `704546`bytes.
+
+```http
+POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 921
+
+{
+  "Offset": 0,
+  "BlockLength": 4194304,
+  "FileContinuationToken": "<file continuation token value removed for brevity>"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.DownloadBlockResponse",
+  "Data": "<byte[] data removed for brevity>"
+}
+```
+---
+
+
+### Download a file in a single request using Web API
+
+If your file is not larger than 16MB you can download the file in a single request.
+
+> [!IMPORTANT]
+> If the file is larger than 16 MB the following error will be returned:
+> code: `0x80090001` message: `Maximum file size supported for download is [16] MB. File of [ <file size> MB] size may only be downloaded using staged chunk download`.
+
+The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/accounts(cc4ed4a2-8c51-ed11-bba1-000d3a993550)/sample_filecolumn/$value HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+The response includes the following headers.
+
+|Header|Description|
+|---------|---------|
+|`x-ms-file-size`|The size of the file in bytes.|
+|`x-ms-file-name`|The name of the file.|
+|`mimetype`|The [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file.|
+|[Access-Control-Expose-Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)|Indicates that the `x-ms-file-size`, `x-ms-file-name`, and `mimetype` header values should be made available to scripts running in the browser, in response to a cross-origin request.|
+
+```http
+HTTP/1.1 200 OK
+x-ms-file-size: 4191273
+x-ms-file-name: 4094kb.txt
+mimetype: text/plain
+Access-Control-Expose-Headers: x-ms-file-size; x-ms-file-name; mimetype
+
+< byte[] content removed for brevity. >
+```
+
+### Download the file in chunks using Web API
+
+If the file you are downloading is larger than 16MB, you must download it in chunks. To download your file in chunks using the Web API, use the following set of requests.
+
+The following example downloads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
+
+**Request**
+
+Use the [Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Range) header to specify the number of bytes to return using this format:<br />
+`<unit>=<range-start>-<range-end>`<br />
+Where the `unit` is bytes and the `range-start` for the first request is `0`.
+
+You won't know how many iterations are required to download the entire file until you get the first response where the `x-ms-file-size` response header tells you the size of the file.
+
+While the `<range-start>` is smaller than total size of the file, for each subsequent request increment the `<range-start>` and `<range-end>` values to request the next chunk of the file.
+
+```http
+GET [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn/$value HTTP/1.1
+Range: bytes=0-4194303
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+The response includes the following headers:
+
+|Header|Description|
+|---------|---------|
+|`x-ms-file-size`|The size of the file in bytes.|
+|`x-ms-file-name`|The name of the file.|
+|`x-ms-chunk-size`|Provides a recommended chunk size in bytes.|
+|`mimetype`|The [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file.|
+|[Access-Control-Expose-Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)|Indicates that the `x-ms-file-size`, `x-ms-file-name`, `x-ms-chunk-size`, and `mimetype` header values should be made available to scripts running in the browser, in response to a cross-origin request.|
+
+
+```http
+HTTP/1.1 206 PartialContent
+x-ms-file-size: 25870370
+x-ms-file-name: 25mb.pdf
+x-ms-chunk-size: 4194304
+mimetype: application/pdf
+Access-Control-Expose-Headers: x-ms-file-size; x-ms-file-name; x-ms-chunk-size; mimetype
+OData-Version: 4.0
+
+< byte[] content removed for brevity. >
+```
+
 ## Delete Files
 
-There at two different ways to upload files to a file column:
+There at two different ways to delete files to a file column:
 
 - Use the Dataverse `DeleteFile` message available to both the SDK and Web API
 - Send a DELETE request using Web API to the file column of the record.

@@ -84,6 +84,8 @@
       href: query-throttling.md
     - name: Query Hierarchical data
       href: query-hierarchical-data.md
+    - name: Use file column data
+      href: file-column-data.md
     - name: Audit data changes
       items:
         - name: Overview
