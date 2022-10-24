@@ -67,7 +67,7 @@ A few things to note:
    > [!NOTE]
    > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
  
-7. To add a pivot table, on the **Insert** tab, select **PivotTable**.
+7. To add a PivotTable, on the **Insert** tab, select **PivotTable**.
 
     > [!Note]
     > You must complete this step to insert the PivotTable.  The PivotTable is not created automatically.
