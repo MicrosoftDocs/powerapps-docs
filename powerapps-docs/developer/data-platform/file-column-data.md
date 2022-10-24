@@ -59,6 +59,8 @@ sample_filecolumn: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
 sample_filecolumn_name: 25mb.pdf
 ```
 
+More information: [What is the Organization service](org-service/overview.md)
+
 #### [Web API](#tab/webapi)
 
 **Request**
@@ -85,6 +87,8 @@ HTTP/1.1 200 OK
     "accountid": "352edda9-4c52-ed11-bba1-000d3a9933c9"
 }
 ```
+
+More information: [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
 
 ---
 
@@ -348,6 +352,8 @@ OData-Version: 4.0
 }
 ```
 
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
 ---
 
 
@@ -387,20 +393,22 @@ The following example uploads a PDF file named `25mb.pdf` to the file column nam
 
 **Request**
 
-The first request includes these headers:
+The first request must include this header:`x-ms-transfer-mode: chunked`
 
-- `x-ms-transfer-mode: chunked`
-- `x-ms-file-name: <name of the file>`
+Set the file name using the `x-ms-file-name` query parameter.
+
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?x-ms-file-name=25mb.pdf HTTP/1.1
 x-ms-transfer-mode: chunked
-x-ms-file-name: 25mb.pdf
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
 ```
+
+> [!NOTE]
+> The file name can also be included as a `x-ms-file-name` request header, but this will not support file names outside the ASCII character set. If the header is used, it will take precedence over the `x-ms-file-name` query parameter.
 
 **Response**
 
@@ -434,7 +442,7 @@ Each request must contain that portion of the file in the body and the following
 |`x-ms-file-name`|The name of the file.|
 |[Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type)| Set to `application/octet-stream`|
 |[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />The value of the first request: `bytes 0-4194303/25870370` indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25MB) in size.<br />Each subsequent request will see this value increase until the entire file has been sent:<br />`bytes 4194304-8388607/25870370`<br />`bytes 8388608-12582911/25870370`<br />`bytes 12582912-16777215/25870370`<br />`bytes 16777216-20971519/25870370`<br />`bytes 20971520-25165823/25870370`<br />`bytes 25165824-25870369/25870370`<br />|
-|[Content-Length](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Length)|Indicates the size of the message. In the example above, this value for the last request will be `704546` rather than `4194304`|
+|[Content-Length](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Length)|Indicates the size of the message. In the example above, this value for the last request will be `704546` rather than `4194304`.|
 
 ```http
 PATCH [Organization Uri]/api/data/v9.2/accounts(2a9ebdff-8c51-ed11-bba1-000d3a9933c9)/sample_filecolumn?sessiontoken=<sessiontoken value removed for brevity> HTTP/1.1
@@ -576,8 +584,6 @@ Content-Length: 180
 
 **Response**
 
-
-
 ```http
 HTTP/1.1 200 OK
 OData-Version: 4.0
@@ -600,8 +606,6 @@ Based on the size of the file and the size of the block you will download, send 
 
 **Request**
 
-
-
 ```http
 POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
 OData-MaxVersion: 4.0
@@ -617,6 +621,7 @@ Content-Length: 921
   "FileContinuationToken": "<file continuation token value removed for brevity>"
 }
 ```
+
 With each request the `Offset` value will increment by the amount of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
 
 |Request number|Offset|BlockLength|
@@ -630,7 +635,7 @@ With each request the `Offset` value will increment by the amount of bytes sent 
 |7|`25165824`|`4194304`|
 
 > [!NOTE]
-> The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size last block downloaded was `704546`bytes.
+> The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size of the last block downloaded was `704546`bytes.
 
 **Response**
 
@@ -644,12 +649,14 @@ OData-Version: 4.0
 }
 ```
 
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
 ---
 
 
 ### Download a file in a single request using Web API
 
-If your file is not larger than 16MB you can download the file in a single request.
+If your file is smaller than than 16MB you can download the file in a single request.
 
 If the file is larger than 16 MB the following error will be returned:
 **code**: `0x80090001` **message**: `Maximum file size supported for download is [16] MB. File of [ <file size> MB] size may only be downloaded using staged chunk download`.
@@ -765,7 +772,7 @@ static Guid DeleteFile(IOrganizationService service, Guid fileId)
 
 #### [Web API](#tab/webapi)
 
-Use the following request to delete a file with the Id using the Web API [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile);
+Use the following request to delete a file with the Id using the Web API [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DeleteFile HTTP/1.1
@@ -787,6 +794,9 @@ Content-Length: 56
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
+
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
 ---
 
 ### Send DELETE request to the file column
@@ -816,6 +826,7 @@ OData-Version: 4.0
 ### See Also
 
 [File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
-[Annotation (note) table](annotation-note-entity.md)
+[Annotation (note) table](annotation-note-entity.md)<br />
+[Attachment (ActivityMimeAttachment) table](reference/entities/activitymimeattachment.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
