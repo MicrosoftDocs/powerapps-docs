@@ -64,8 +64,8 @@ A few things to note:
    > [!div class="mx-imgBorder"] 
    > ![Enable content.](media/enable-content.png "Enable content") 
 
- > [!NOTE]
- > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
+   > [!NOTE]
+   > If don't see any data and you get an error, see [Refresh all doesn't work](export-excel-dynamic-worksheet.md#refresh-all-doesnt-work).
  
 7. To add a pivot table, on the **Insert** tab, select **PivotTable**.
 
