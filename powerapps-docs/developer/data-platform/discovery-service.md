@@ -261,7 +261,7 @@ While the `DiscoverOnlineOrganizationsAsync` method uses the same OData endpoint
 
 ## Use CrmServiceClient
 
-For .NET Full Framework applications you can continue to use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method> to call the Global Discovery Service.
+For .NET Framework applications you can continue to use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverGlobalOrganizations%2A?text=CrmServiceClient.DiscoverGlobalOrganizations Method> to call the Global Discovery Service.
 
 ```csharp
   // Set up user credentials

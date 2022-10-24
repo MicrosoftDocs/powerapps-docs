@@ -1,9 +1,8 @@
 ---
 title: entity.getId (Client API reference)
 description: Returns a string representing the GUID value for the record.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "reference"

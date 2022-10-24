@@ -1,9 +1,8 @@
 ---
 title: data.getIsDirty (Client API reference)
 description: Gets a boolean value indicating whether any columns in the form have been modified.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: "reference"

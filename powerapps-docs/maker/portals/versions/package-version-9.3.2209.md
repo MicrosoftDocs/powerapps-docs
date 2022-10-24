@@ -16,6 +16,9 @@ contributors:
 
 # Starter portal package version 9.3.2209.x
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Starter portal package version 9.3.2209.x is generally available. To learn how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
 
 In this article, you'll learn about the fixes and enhancements included in this update.
@@ -33,7 +36,7 @@ For more information about creating a portal with starter portal package, go to 
 The package update includes the following enhancements to extend the capabilities of portals:
 
 - App level notification on Portal Management app for site visibility.
-- Renaming **Multistep Form** to **multistep form**.
+- Renaming **Advanced Forms** to **Multistep Forms**.
 - Data model change on **List** and **Basic Form metadata (subgrid)** to enable dataset-based language.
 
 ### See also

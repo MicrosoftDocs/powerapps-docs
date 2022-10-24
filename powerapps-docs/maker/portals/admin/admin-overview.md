@@ -16,6 +16,9 @@ contributors:
 
 # Power Apps portals admin center
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Power Apps portals admin center allows you to perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
 > [!NOTE]

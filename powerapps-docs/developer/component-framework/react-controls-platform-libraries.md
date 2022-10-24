@@ -2,10 +2,9 @@
 title: "React controls & platform libraries (Preview) | Microsoft Docs"
 description: "You can achieve significant performance gains using React and platform libraries. When you use React and platform libraries, you are using the same infrastructure used by the Power Apps platform. This means you no longer have to package React and Fluent packages individually for each control."
 keywords: "Component Framework, code components, Power Apps controls"
-ms.author: jdaly
+ms.author: hemantg
 author: HemantGaur
-manager: kvivek
-ms.date: 03/31/2022
+ms.date: 10/18/2022
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -13,9 +12,9 @@ ms.custom:
 ms.topic: article
 ms.subservice: pcf
 contributors:
- - HemantGaur
- - noazarur-microsoft
- - JimDaly
+  - HemantGaur
+  - noazarur-microsoft
+  - JimDaly
 ---
 
 # React controls & platform libraries (Preview)
@@ -49,13 +48,13 @@ There is a new `--framework` (`-fw`) parameter for the [pac pcf init](/power-pla
 
 The following table shows the long form of the commands:
 
-|Parameter  |Value  |
-|---------|---------|
-|`--name`     |`ReactSample`|
-|`--namespace`|`SampleNamespace`|
-|`--template`|`field`|
-|`--framework`|`react`|
-|`--run-npm-install`|`true` (default)|
+| Parameter           | Value             |
+| ------------------- | ----------------- |
+| `--name`            | `ReactSample`     |
+| `--namespace`       | `SampleNamespace` |
+| `--template`        | `field`           |
+| `--framework`       | `react`           |
+| `--run-npm-install` | `true` (default)  |
 
 The following PowerShell command uses the parameter shortcuts and will create a React component project and run `npm-install` in the folder where you run the command:
 
@@ -87,6 +86,7 @@ Within the [resources element](manifest-schema-reference/resources.md), you will
    <platform-library name="Fluent" version="8.29.0" />
 </resources>
 ```
+
 > [!NOTE]
 > Do not change the version numbers for these `platform-library` elements. These are the versions used by the platform.
 
@@ -104,12 +104,19 @@ React and Fluent libraries are not included in the package because they are shar
 
 You can find two new controls added to the samples as part of this preview. Functionally, they are the same as their standard version but will have much better performance.
 
-
 |Sample |Description|Link|
 |---------|---------|---------|
 |ChoicesPickerReact|The standard [ChoicesPickerControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl) converted to be a React Control. |[ChoicesPickerReact Sample](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerReactControl)|
 |FacepileReact|The [ReactStandardControl](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ReactStandardControl)converted to be a React Control.|[FacepileReact](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/FacepileReactControl)|
 
+## Supported platform libraries list
+
+Platform libraries are made available both at the build and runtime to the controls which are using platform libraries capability. Currently, the following versions are provided by the platform and these can also be found in the control manifest.
+
+| Name   | npm package name | Version |
+| ------ | ---------------- | ------- |
+| React  | react            | 16.8.6  |
+| Fluent | @fluentui/react  | 8.29.0  |
 
 ## FAQ
 
@@ -123,6 +130,6 @@ A: No. You must create a new control using the new template and then update the 
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
-[Use code components in Power Apps portals](../../maker/portals/component-framework.md)
+[Use code components in Power Pages](../../maker/portals/component-framework.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

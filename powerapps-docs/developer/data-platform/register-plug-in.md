@@ -50,7 +50,7 @@ This topic describes how to register a plug-in assembly and step, and add them t
 
 You'll use the Plug-in Registration tool (PRT) to register your plug-in assemblies and steps.
 
-PRT is one of the tools available for download from NuGet. Follow the instructions in [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+PRT is one of the tools available for download from NuGet. Follow the instructions in [Dataverse development tools](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
 
 After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to connect to your Microsoft Dataverse environment.
 
