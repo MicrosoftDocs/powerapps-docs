@@ -67,7 +67,7 @@ The custom connectors feature is supported within single-session and multi-sessi
 The following functionality isn't available for the custom connectors feature:
 - Offline and offline-by-default scenarios
 - Dashboards
-- Locations where TimelineWallControl isn't available (such as converged apps, canvas apps, portals, custom pages, and so forth)
+- Locations where TimelineWallControl isn't available (such as converged apps, canvas apps, Power Pages, custom pages, and so forth)
 
 ## Known limitations
 

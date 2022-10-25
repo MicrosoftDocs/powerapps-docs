@@ -82,7 +82,7 @@ These properties are in effect when the control is focused.
 
 ## Disabled
 
-These properties are in effect when the control is disabled.  A control can be disabled if the **[Disabled](properties-core.md)** property is set to *true*.
+These properties are in effect when the control is disabled.  A control can be disabled if the **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **DisabledBorderColor** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
