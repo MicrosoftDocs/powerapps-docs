@@ -5,7 +5,7 @@ author: alaug
 ms.topic: conceptual
 ms.custom: intro-internal
 ms.reviewer: 
-ms.date: 10/11/2022
+ms.date: 10/25/2022
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -57,15 +57,9 @@ If you create an app in one environment, you won't be able to see it from anothe
 
 For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
-### Filter environments (preview)
+### Filter environments
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-With the enhanced environment picker, environments are grouped into two categories:  **Build apps with Dataverse** and **Other environments**. Select **Filter** to filter the list of environments by your role, data platform (Dataverse or none), and environment type, such as production or sandbox.
-
-> [!IMPORTANT]
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+With the environment picker, environments are grouped into two categories:  **Build apps with Dataverse** and **Other environments**. Select **Filter** to filter the list of environments by your role, data platform (Dataverse or none), and environment type, such as production or sandbox.
 
 :::image type="content" source="media/intro-maker-portal/environment-picker2.png" alt-text="Environment picker to filter and select an environment":::
 
