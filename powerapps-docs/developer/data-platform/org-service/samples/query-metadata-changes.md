@@ -1,7 +1,7 @@
 ---
 title: "Sample: Query schema definitions and detect changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to query schema definitions and detect definitions changes over time so you can maintain a persistent cache." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/12/2022
+ms.date: 10/24/2022
 author: NHelgren
 ms.author: nhelgren
 ms.topic: sample
@@ -18,6 +18,11 @@ contributors:
 # Query schema definitions and detect changes
 
 This sample shows how to retrieve and detect changes in table definitions using [RetrieveMetadataChangeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) method. You can view the sample at [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/Schema/RetrieveMetadataChanges)
+
+See these topics for explaination of functionality:
+
+- [Query schema definitions](../../query-schema-definitions.md)
+- [Cache Schema data](../../cache-schema-data.md)
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 

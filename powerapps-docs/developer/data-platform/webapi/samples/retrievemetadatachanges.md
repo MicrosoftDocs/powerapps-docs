@@ -18,7 +18,14 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-This .NET 6.0 sample demonstrates how to perform common data operations using the Dataverse Web API.
+This sample shows how to retrieve and detect changes in table definitions using the [RetrieveMetadataChanges Action] (xref:Microsoft.Dynamics.CRM.RetrieveMetadataChanges). 
+
+You can view the sample at [PowerApps-Samples/dataverse/webapi/C#-NETCore/Schema/RetrieveMetadataChanges/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23-NETx/RetrieveMetadataChanges)
+
+See these topics for explaination of functionality:
+
+- [Query schema definitions](../../query-schema-definitions.md)
+- [Cache Schema data](../../cache-schema-data.md)
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
 
