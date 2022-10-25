@@ -6,9 +6,9 @@ manager: tapanm-MSFT
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/13/2022
+ms.date: 10/25/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -56,5 +56,5 @@ Now you can create and join a Teams meeting from an appointment in your model-dr
    > ![Choose how you want to join the Teams meeting.](media/teams-meeting-appt-3.png)  
 
 > [!NOTE]
-> For the meeting to synchronize from Dynamics 365 to the user's calendar in Microsoft Outlook and Teams, the user needs to be configured for [appointment, contact, and task synchronization](power-platform/admin/choose-records-synchronize-dynamics-365-outlook-exchange). 
+> For the meeting to synchronize from Dynamics 365 to the user's calendar in Microsoft Outlook and Teams, the user needs to be configured for [appointment, contact, and task synchronization](power-platform/admin/choose-records-synchronize-dynamics-365-outlook-exchange.md). 
 
