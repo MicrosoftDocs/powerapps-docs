@@ -1677,16 +1677,28 @@
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
     items:
-    - name: Mobile offline overview (preview)
-      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (classic)
+      items:
+      - name: Mobile offline overview (classic)
+        href: ../mobile/mobile-offline-overview-classic.md
+      - name: Set up mobile offline (classic)
+        href: ../mobile/setup-mobile-offline-classic.md
+      - name: Work offline on your mobile device (classic)
+        href: ../mobile/work-offline-mode-classic.md
     - name: Set up mobile offline (preview)
-      href: ../mobile/setup-mobile-offline.md 
+      items:
+      - name: Mobile offline overview (preview)
+        href: ../mobile/mobile-offline-overview.md
+      - name: Set up mobile offline (preview)
+        href: ../mobile/setup-mobile-offline.md 
+      - name: Enable and use offline-first (preview)
+        href: ../mobile/work-in-offline-mode.md   
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
-    - name: Enable and use offline-first (preview)
-      href: ../mobile/work-in-offline-mode.md   
     - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md   
+      href: ../mobile/mobile-offline-guidelines.md  
+    - name: Mobile offline capabilities and limitations
+      href: ../mobile/offline-capabilities.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
