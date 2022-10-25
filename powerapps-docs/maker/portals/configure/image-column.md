@@ -20,6 +20,9 @@ contributors:
 
 An image column stores an image file in a column in a Dataverse table. Add an image column to a form to upload, view, modify, and delete images. The form shows a thumbnail of the image if one is available.
 
+> [!NOTE]
+> You can't upload a image file by using **insert** mode on a basic form or an multistep form step.
+
 ## Image URL
 
 The image URL indicates the full URL of where the image is stored.  This can be used for development and troubleshooting.
