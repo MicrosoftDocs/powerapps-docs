@@ -1554,7 +1554,7 @@
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
     - name: Collaboration in model-driven apps
-      href: collaboration-model-driven-apps.md
+      href: ./model-driven-apps/collaboration-model-driven-apps.md
       items:
       - name: Add comments 
         href: ./model-driven-apps/comments.md 
