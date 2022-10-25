@@ -41,7 +41,7 @@ There are several different ways to create a custom API:
 > [!NOTE]
 > Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables.
 >
-> There are several tools created and supported by the community to work with Custom API:
+> These are some of the tools created and supported by the community to work with Custom API:
 > - [Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)
 > - [Custom API Tester](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.CustomAPITester/)
 > - [Custom Action to Custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/)
