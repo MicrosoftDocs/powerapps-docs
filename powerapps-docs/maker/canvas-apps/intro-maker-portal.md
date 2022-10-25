@@ -89,7 +89,9 @@ In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from various sources.
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
-- **Portals** help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Dataverse, or even browse content anonymously.
+- **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
+
+In addition, Power Apps also allows you to create Power Pages website. More information: [What is Power Pages](/power-pages/introduction).
 
 If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 
@@ -103,13 +105,12 @@ On the **Apps** page, you can filter the list of apps based on criteria such as 
 
 You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
-## Create an app, portal, chatbot, or AI model
+## Create an app, chatbot, or AI model
 
-From the **Home** page, you can create apps, portals, chatbots, and AI models:
+From the **Home** page, you can create apps, websites, chatbots, and AI models:
 
 - [Get started with canvas apps](/powerapps/maker/canvas-apps/)
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
-- [Get started with portals](/powerapps/maker/portals/)
 - [Get started with chatbots](/powerapps/chatbots)
 - [Get started with AI models](/powerapps/use-ai-builder)
 
@@ -126,7 +127,7 @@ Both options show links to this documentation set, Power Apps training on Micros
 
 ## Other common tasks
 
-By selecting options in the header and left navigation bar, you can do more than create and open apps, portals, chatbots, and AI models.
+By selecting options in the header and left navigation bar, you can do more than create and open apps, chatbots, and AI models.
 
 ### From the header
 
