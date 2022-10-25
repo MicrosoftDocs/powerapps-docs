@@ -40,8 +40,6 @@ To create an app, you start with [make.powerapps.com](https://make.powerapps.com
 
 - **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
 
-- **Power Pages** is a secure, enterprise-grade, low-code software for creating, hosting, and administering modern external-facing business websites.  More information: [Power Pages capabilities](/power-pages/capabilities)
-
 Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
 
 ## Power Apps for app users
