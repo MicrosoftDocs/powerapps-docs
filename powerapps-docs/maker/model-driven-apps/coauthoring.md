@@ -15,7 +15,7 @@ ms.custom: template-how-to
 Coauthoring allows multiple makers—whether pro or citizen developers—to make changes to the app at the same time and see those changes in real time. As a result, teams can innovate together and build stronger connections between professional developers and business domain experts, a critical ingredient to maximizing low-code development. 
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> This is a preview feature. More information: [Power Pages, model-driven apps and app management](../powerapps-preview-program.md#power-pages-model-driven-apps-and-app-management)
 
 ## Prerequisites
 
