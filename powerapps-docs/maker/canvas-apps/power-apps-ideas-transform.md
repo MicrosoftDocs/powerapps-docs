@@ -1,14 +1,14 @@
 ---
-title: "Transform natural language to Power Fx formulas (preview)"
+title: "Transform natural language to Power Fx formulas"
 description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 12/08/2021
+ms.date: 10/04/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -18,44 +18,53 @@ contributors:
   - tapanm-msft
 ---
 
-# Transform natural language to Power Fx formulas (preview)
+# Transform natural language to Power Fx formulas 
 
-[This article is pre-release documentation and is subject to change.]
+Power Apps Ideas can generate ideas for formulas the following controls on different properties:
 
-Power Apps Ideas feature currently supports only **Gallery** and **Data table** controls for the **Items** property, and it now supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you've a gallery bound to one of these data sources, and are about to compose a formula for its **Items** property, you can benefit from Power Apps Ideas. 
+- **Gallery**
+- **Data table**
+- **Text box**
+- **Drop down**
+- **Combo box**
+- **Text label** 
+
+Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the supported controls and want to write a formula for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
 
 For example, instead of figuring out how to write the following formula:
 ```powerapps-dot
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 
-You can type in `'fullname' starts with Yvonne` instead.
+You can type in `'name starts with Yvonne` instead.
 
-![Power Apps Ideas demo.](media/power-apps-ideas/NL2FX-C7.gif "Animation that shows how Power Apps Ideas work")
-
-To begin, let’s take a look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
+To begin, let’s look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
 
 You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using **Accounts** table from Dataverse.
 
 1. Select **BrowseGallery1,** which is bound to the **Accounts** table.
 
-1. Go to the property pane on the right-side of the screen, and select the **Ideas** tab. <br> You'll see a large textbox with a few default examples.
+1. Select **Sort, filter, and search** on the ideas box. 
 
-1. Select one of the default suggestions to check how it works, or start to type in your own query in natural language such as English (en-us).
+   :::image type="content" source="media/power-apps-ideas/sort-filter.png" alt-text="Sort, filter, and search.":::
 
-    :::image type="content" source="media/power-apps-ideas/power-apps-ideas-c7-marked.png" alt-text="Get started with Power Apps Ideas.":::
+1. Select one of the default suggestions to check how it works or start typing in your own query in natural language such as English (en-us).
 
-1. When typing, you can describe your requirements in your preferred way. But remember, more precise input will always yield to more accurate formula suggestions.
+    :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for shorting and filtering.":::
 
-1. You'll see one or more formula suggestions produced. Let’s use the example `search 'Account Name' by 'TextSearchBox1'`. You'll see that the formula suggestion produced includes two parts:
+1. When typing you can use the default query, modify it, or describe it in your own way.
 
-    1. **Accounts** where the text in **TextSearchBox1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
+1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results and each of the formula suggestions produced includes three parts:
 
-    1. The formula suggestion in this scenario is `Search('Accounts', TextSearchBox1.Text, "name")`.
+    1. **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
+    
+    1. **Apply to: Items**: This suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
+
+    1. The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
 
         :::image type="content" source="media/power-apps-ideas/Ideas_example_c7.png" alt-text="Suggested formula based on entered search scenario.":::
 
-1. When you select any suggested idea for a formula, the formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula, or modify it.
+1. Select a suggestion that you see fit and then select **Apply**. In this case, let's select the first suggestion since it's the best fit**. The formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula or modify it.
 
 ## More examples
 
@@ -63,41 +72,53 @@ Consider the following examples to inspire from while working with Power Apps Id
 
 | Scenario | Description | Ideas example |
 | --- | --- | --- |
-|**Sort your table** |Sort by a single column |sort Accounts by 'Account Name'|
-| | |sort Accounts by 'Account Name' A-Z|
-| | |sort Accounts by 'Account Name' Z-A|
-| |Sort by a few columns|sort Accounts by 'Account Name' and 'Created On'|
-| | |sort Accounts by 'Account Name' A-Z and 'Created On' latest on top|
-| |Sort existing tables |sort 'Gallery3' by 'Account Name' z to a|
-|**Filter or search table by some conditions**|A number condition|'Accounts' with length of 'Account Name' bigger than 10|
-| |A date condition|'Accounts' whose 'Created On' is last year, 'Accounts' whose 'Modified On' is within seven days of 'Created On'|
-| |A text condition|'Accounts' whose 'Account Name' contains "test"|
-| |A few conditions|'Accounts' whose s Name' contains "test" and 'Status' is Active|
-| |Search table by user input|search 'Accounts' by 'Account Name' in 'TextInput1'|
-| |Find a single record|find the first record in 'Accounts' where 'Account Name' contains "test"|
+|**Sort your table** |Sort by a single column |sort accounts by Account Name|
+| | |sort accounts by Account Name A-Z|
+| | |sort accounts by Account Name Z-A|
+| |sort accounts by Account Name and Created On|
+| | |sort Accounts by Account Name A-Z and Created On latest on top|
+| |Sort existing tables |sort Gallery3 by Account Name z to a|
+|**Filter or search table by some conditions**|A number condition|Accounts with length of Account Name bigger than 10|
+| |A date condition|accounts created a week ago accounts modified last 3 days|
+| |A text condition|accounts with name contains Karen|
+| |A few conditions|accounts whose name contains Karen and created 7 days ago|
+| |A choice value|inactive accounts|
+| |Search table by user input|search accounts with name in textinput|
+| |Find a single record|first record in accounts where name contains Karen|
 | |Find records on the top or the bottom of the table|Top 10 Accounts|
 | | |Last 10 Accounts|
+|**Conditional formatting (apply to color and visible)** |A number condition|Accounts with length of Account Name bigger than 10|
+| |A date condition|red if created 7 days ago|
+| |A text condition|blue if name contains Karen|
+|**Text generation** |Numbers|count of gallery sum of slider1 and slider2|
+||String|label4 and label5 Trim textinput1First 3 characters of TextInput1|
 
 ## Best practices
 
 To get the best results, here are some tips that you can follow when writing the plain natural language query in the Ideas pane.
 
-- Enter the complete context in the query. For example, if you need to filter a table by some conditions, be precise about which table to filter, which column to filter by, and what conditions need to be met.
-- Use IntelliSense as much as possible. IntelliSense could help the AI model recognize context, and understand data types better.
+- Leverage default queries to see what kind of scenarios are supported.
+- Be precise in your query. Ideas can recognize controls such as tables and columns. However, if you don't get a suggestion, try using the full name of the assets you’re referencing. For example, use **TextInput1** when you have multiple text input controls in the app. This way the system knows which control you're referring to. 
 
 ## Limitations
 
 > [!NOTE]
 > We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
 
-Power Apps Ideas has the following limitations currently:
+Power Apps Ideas currently has the following limitations:
 
 - Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
-- Controls: Supports generating formulas for **Gallery** and **Data table** controls&mdash;on their **Items** property. Can recognize control value of TextInput, Dropdown, DatePicker, Slider, Toggle, Checkbox, Radio as input.
+- Recognizes control value of **TextInput**, **Dropdown**, **DatePicker**, **Slider**, **Toggle**, **Checkbox**, and **Radio** as input.
+
+   | Controls | Properties | 
+   | --- | --- |
+   | **Gallery**, **Data table**, **Drop down**, **Combo box** | Items |
+   | **Text Box**, **Label** | Text, Color, Visible |
+   
 - Data sources: Currently Ideas supports **Dataverse** tables, Microsoft Lists, Excel sheets.
-- Functions: Works best on table manipulation functions like `Search()`, `Filter()`, `Sort()`, `SortByColumns()`, `FirstN()`, and `LastN()`. And also a list of basic functions for the conditions. See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
-- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No. Not supported: Lookup, File and Image.
-- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
+- Functions: See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
+- Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No Lookup. Not supported: File and Image.
+- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even if you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
 
 ## Supported Power Fx functions
 
@@ -105,8 +126,25 @@ Functions supported by Power Apps Ideas feature:
 
 :::row:::
    :::column span="":::
+      [Abs](functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+      [Average](functions/function-aggregates.md)
+   :::column-end:::
+   :::column span="":::
+      [Concat](functions/function-concatenate.md)
+   :::column-end:::
+   :::column span="":::
+      [Countif](functions/function-table-counts.md)
+   :::column-end:::
+   :::column span="":::
+      [Countrows](functions/function-table-counts.md)
+   :::column-end:::
+   :::column span="":::
       [Date](functions/function-date-time.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [DateAdd](functions/function-date-time.md)
    :::column-end:::
@@ -122,11 +160,11 @@ Functions supported by Power Apps Ideas feature:
    :::column span="":::
       [Day](functions/function-datetime-parts.md)
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       [Distinct](functions/function-distinct.md)
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [EndsWith](functions/function-startswith.md)
    :::column-end:::
@@ -140,6 +178,9 @@ Functions supported by Power Apps Ideas feature:
       [Hour](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
+      [If](functions/function-if.md)
+   :::column-end:::
+   :::column span="":::
       [IsBlank](functions/function-isblank-isempty.md)
    :::column-end:::
 :::row-end:::
@@ -151,22 +192,59 @@ Functions supported by Power Apps Ideas feature:
       [LastN](functions/function-first-last.md)
    :::column-end:::
    :::column span="":::
-      [Minute](functions/function-datetime-parts.md)
+      [Lower](functions/function-lower-upper-proper.md)
    :::column-end:::
    :::column span="":::
+      [Max](functions/function-aggregates.md)
+   :::column-end:::
+   :::column span="":::
+      [Min](functions/function-aggregates.md)
+   :::column-end:::
+   :::column span="":::
+      [Minute](functions/function-datetime-parts.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
       [Month](functions/function-datetime-parts.md)
+   :::column-end:::
+   :::column span="":::
+      [Not](functions/function-logicals.md)
    :::column-end:::
    :::column span="":::
       [Now](functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
-      [Search](functions/function-filter-lookup.md)
+      [Power](functions/function-numericals.md)
+   :::column-end:::
+   :::column span="":::
+      [Proper](functions/function-lower-upper-proper.md)
+   :::column-end:::
+   :::column span="":::
+      [Rand](functions/function-rand.md)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
+      [Round](functions/function-round.md)
+   :::column-end::: 
+   :::column span="":::
+      [RoundDown](functions/function-round.md)
+   :::column-end:::
+   :::column span="":::
+      [RoundUp](functions/function-round.md)
+   :::column-end:::
+   :::column span="":::
+      [Search](functions/function-filter-lookup.md)
+   :::column-end:::
+   :::column span="":::
       [Second](functions/function-datetime-parts.md)
    :::column-end:::
+   :::column span="":::
+      [Split](functions/function-split.md)
+   :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       [Sort](functions/function-sort.md)
    :::column-end:::
@@ -175,6 +253,9 @@ Functions supported by Power Apps Ideas feature:
    :::column-end:::
    :::column span="":::
       [StartsWith](functions/function-startswith.md)
+   :::column-end:::
+   :::column span="":::
+      [Sum](functions/function-aggregates.md)
    :::column-end:::
    :::column span="":::
       [Time](functions/function-date-time.md)
@@ -188,16 +269,19 @@ Functions supported by Power Apps Ideas feature:
       [Today](functions/function-now-today-istoday.md)
    :::column-end:::
    :::column span="":::
+      [Trim](functions/function-trim.md)
+   :::column-end:::
+   :::column span="":::
+      [TrimEnds](functions/function-trim.md)
+   :::column-end:::
+   :::column span="":::
+      [Upper](functions/function-lower-upper-proper.md)
+   :::column-end:::
+   :::column span="":::
       [Weekday](functions/function-datetime-parts.md)
    :::column-end:::
    :::column span="":::
       [Year](functions/function-datetime-parts.md)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="":::
    :::column-end:::
 :::row-end:::
 
