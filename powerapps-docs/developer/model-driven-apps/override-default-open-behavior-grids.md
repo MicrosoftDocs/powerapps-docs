@@ -64,7 +64,7 @@ Create a web resource to change the default behavior. In the following example, 
    > [!div class="mx-imgBorder"]
    > ![Create a web resource.](media/create-new-web-resources.png "Create a web resource")
 
-5. Enter the name of the web resource,  and select the **Type** as **Script(JScript)**.
+5. Enter the name of the web resource,  and select the **Type** as **JavaScript (JS)**.
 
 6. Select **Text Editor**, copy the code shown below, paste it into the text editor, and enter the value of the URL you want to open:
 
