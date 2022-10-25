@@ -134,7 +134,7 @@ The Flow action menu in Power Apps mobile doesn't support flows created in a sol
 
 ### See also  
 
-[Power Pages known issues](../maker/portals/known-issues.md) <br/>
+[Power Pages known issues](/power-pages/known-issues) <br/>
 [Power Automate known issues](/power-automate/process-advisor-issues)
 
 
