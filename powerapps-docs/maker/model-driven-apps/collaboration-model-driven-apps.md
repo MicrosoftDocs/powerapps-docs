@@ -1,11 +1,11 @@
 ---
-title: #Required; page title is displayed in search results. Include the brand.
-description: #Required; article description that is displayed in search results. 
-author: #Required; your GitHub user alias, with correct capitalization.
-ms.author: #Required; microsoft alias of author; optional team alias.
-ms.topic: overview #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-ms.custom: template-overview #Required; leave this attribute/value as-is.
+title: Collaboration in model-driven apps
+description: App makers use collaboration features to assist teams in building model-driven app with Power Apps.
+author: Mattp123
+ms.author: matp
+ms.topic: overview 
+ms.date:  10/25/2022
+ms.custom: template-overview
 ---
 # Collaboration in model-driven apps
 
@@ -14,11 +14,10 @@ Collaboration features help fusion teams work together to build model-driven app
 > [!IMPORTANT]
 > Commenting is available for all model-driven app makers. For real-time collaboration, you will have either the copresence or coauthoring experience as the copresence and coauthoring features are being deployed separately:
 > - Most preview environments will have coauthoring available. More information: [Coauthoring in model-driven apps (preview)](coauthoring.md) 
-> - For preview environments that don’t have coauthoring available, or the setting is disabled, the environment will use copresence. Administrators can enable Coauthoring from the Power Platform admin center. More information: [Discover who's working on an app (preview)](copresence.md) 
+> - For preview environments that don’t have coauthoring available, or the setting is disabled, the environment will use copresence. Administrators can enable Coauthoring from the Power Platform admin center. More information: [Discover who's working on an app (preview)](copresence.md)
 
 ## Next steps
 
 [Add comments in model-driven apps](comments.md) <br />
 [Coauthoring in model-driven apps (preview)](coauthoring.md) <br />
-[Discover who's working on an app (preview)](copresence.md) 
-
+[Discover who's working on an app (preview)](copresence.md)
