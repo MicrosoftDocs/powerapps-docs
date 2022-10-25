@@ -65,9 +65,8 @@ If you don't have administrative access to the Power Platform admin center, ask 
 
 ### Review the environment's data loss prevention policies
 
-Geospatial controls use the Spatial Services connector to fetch map tiles and to look up and geocode addresses. Your Power Platform admin must make sure data loss prevention policies that apply to that connector don’t conflict with the policies that affect the controls. Learn more about data loss prevention policies for Power Platform
+Geospatial controls use the Spatial Services connector to fetch map tiles and to look up and geocode addresses. Your Power Platform admin must make sure data loss prevention policies that apply to that connector don’t conflict with the policies that affect the controls. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
-Your admin should confirm that the Microsoft Dataverse and Spatial Services connectors are classified under the same data group, typically **Business**. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
 ## Privacy and security considerations
 
