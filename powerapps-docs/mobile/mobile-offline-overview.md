@@ -46,7 +46,7 @@ After offline is configured, anyone who uses the [Power Apps mobile app](run-pow
 For more information, go to [Set up and use mobile offline-first](work-in-offline-mode.md).
 
 > [!IMPORTANT] 
-> - For information about the classic mobile offline setup, go to [Configure mobile offline synchronization](/dynamics365/mobile-app/setup-mobile-offline).
+> - For information about the mobile offline setup exerience that is generally available, go to [Mobile offline overview (classic)](mobile-offline-overview-classic.md).
 > - For more information about how to set up mobile offline for canvas apps, go to [Develop offline-capable canvas apps](../maker/canvas-apps/offline-apps.md)
 > - The offline-first experience is in general availability for Field Service mobile app. For more information, see [Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-2020-power-platform).
 
