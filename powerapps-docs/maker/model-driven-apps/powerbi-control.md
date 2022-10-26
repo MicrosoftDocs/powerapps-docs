@@ -1,0 +1,39 @@
+---
+title: Use the Power BI report control to add a report to a form with Power Apps
+description: The Power BI report control lets you add a report to a model-driven app form. 
+author: Mattp123
+ms.author: #Required; microsoft alias of author; optional team alias.
+ms.service: #Required; service per approved list. slug assigned by ACOM.
+ms.topic: how-to #Required; leave this attribute/value as-is.
+ms.date: #Required; mm/dd/yyyy format.
+ms.custom: template-how-to #Required; leave this attribute/value as-is.
+---
+# Use the Power BI report control to add a report
+
+Add a Power BI report to a model-driven app using the Power BI report control.
+
+## Prerequisites
+
+Embedding Power BI content is an optional feature and is disabled on all environments by default. Administrators must enable the setting before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards)
+
+## Add and configure the Power BI control to a form
+
+1. In the form designer, select **Components** on the left navigation pane, expand **Power BI**, and then select **Power BI Report**.
+1. Choose from the following properties: 
+   - **Report**. Select the Power BI report that you want displayed on the form.
+   - **Show filter pane**. When **True**, displays the filter pane in the Power BI report.
+   - **Expand filter pane by default**. When **True**, expands the filter pane by default.
+   - **Save filter updates**. When **True** and someone leaves the report, the filter will be saved and reapplied when the person returns.
+   - **Show action bar**. When **True**, displays the report’s action bar that contains commands such as File, Export, and Share.
+   - **Show bookmarks bar**. When **True**, displays the report’s bookmarks bar.
+   - **Show page navigation**. When **True**, displays the report’s page navigation.
+   - **Page navigation position**. When **True** determines which position, either left or bottom, to display the page navigation.
+   - **Background**.  Set the background to be the default white background or select **Transparent**.
+   - **JSON filter string**. The JSON filter string applied on the Power BI report for contextual filtering. More information: [Embed with contextual filtering](embed-powerbi-report-in-system-form.md#embed-with-contextual-filtering)
+   - **Show component on**. By default, all client app types **Web**, **Phone**, and **Tablet** are enabled to display the form. Clear the client types where you don’t want the Power BI report displayed.
+1. Select **Done**.
+1. **Save** and then **Publish** the form.
+
+## Next steps
+
+[Power BI reporting in model-driven apps and Dataverse](reporting-overview.md#power-bi-reporting)
