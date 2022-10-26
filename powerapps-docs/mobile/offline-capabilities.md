@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 10/06/2022
+ms.date: 10/26/2022
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -120,18 +120,20 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
 
-|Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
-|-------------|---------|--------|  
-|Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
-|JavaScript files referenced within an HTML web resource|Supported| Partially supported: The web resource needs to be opened at least once you are in online mode so that it's cached by your browser. Then it is handled for lifetime and or availability.|
-|HTML, JS, CSS, XML web resources embedded on a model-driven app form|Supported| Partially supported: The web resource needs to be opened at least once while online so that it's cached by the browser which will handle its lifetime and or availability.|
-|Other web resources embedded on a model-driven app form (like images, resx, etc.) <br> **Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes are not webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
-|Webpage (HTML web resource) via a model-driven app’s sitemap|Not supported|Not supported|
-|Custom JS files that create a fetchXML dynamically |Not supported|Not supported|
+    |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
+    |-------------|---------|--------|  
+    |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
+    |JavaScript files referenced within an HTML web resource|Supported| Partially supported: The web resource needs to be opened at least once you are in online mode so that it's cached by your browser. Then it is handled for lifetime and or availability.|
+    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Supported| Partially supported: The web resource needs to be opened at least once while online so that it's cached by the browser which will handle its lifetime and or availability.|
+    |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes are not webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
+    |Webpage (HTML web resource) via a model-driven app’s sitemap|Not supported|Not supported|
+    |Custom JS files that create a fetchXML dynamically |Not supported|Not supported|
 
-** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
+    ** Accessing RESX web resources as a dependency through Client API from within a JS file is supported.
 
-**Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client will not be re-evaluated by the client. The re-evaluation will happen on the server when the updated row is synced.
+- **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client will not be re-evaluated by the client. The re-evaluation will happen on the server when the updated row is synced.
+
+- **Mapped fields**: When you run an app in offline mode, mapped field aren’t prepopulated when you create a new record from a table that has fields mapped to another table. 
 
 ## Tips
 
