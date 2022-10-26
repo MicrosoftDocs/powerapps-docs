@@ -17,9 +17,9 @@ contributors:
 ---
 # Use file column data
 
-[File columns](../../maker/data-platform/types-of-fields.md#file-columns) store binary data. File columns may be in any custom or customizable Dataverse table.
+File columns store binary data. File columns may be in any custom or customizable Dataverse table.
 
-File columns are different from the other two system columns that can store binary data ([Note (Annotation) DocumentBody](reference/entities/annotation.md#BKMK_DocumentBody) and [Attachment (ActivityMimeAttachment) Body](reference/entities/activitymimeattachment.md#BKMK_Body)), because you cannot directly set the values in a create or update operation or retrieve the file data with the record. You must use the methods described in this topic to create, update, or delete binary data for file columns.
+File columns are different from the other system columns that can store binary data because you cannot directly set the values in a create or update operation or retrieve the file data with the record. You must use the methods described in this topic to create, update, or delete binary data for file columns.
 
 There are several different ways to work with file column data. Because binary files may be large, it is frequently necessary to split the file into multiple chunks, (or blocks) that can be sent or received sequentially or in parallel to improve performance.
 
@@ -27,18 +27,18 @@ There are several different ways to work with file column data. Because binary f
 
 Each file column has a supporting read-only string column that contains the name of the file. The schema name for this column has the same name as the file column, but has `_Name` appended to it. So if the schema name is `sample_FileColumn`, the supporting string column will be `sample_FileColumn_Name`. The logical name for the supporting column will be `sample_filecolumn_name`.
 
-## Behavior when retrieving normally
+## Behavior when retrieving
 
-If you include a file column in a retrieve or retrieve multiple operation, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. More information: [Use the DeleteFile message](#use-the-deletefile-message).
+When you retrieve a record and include a file colum, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There is no other use for this id other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
 
-**TODO**: Question: Can you do anything else with this Id?
+The following examples show what you can expect when retrieving data from file columns as you would with other columns.
 
-The following examples show what you can expect when retrieving data from file columns as you would with other columns:
+This example retrieves the  `name`, `sample_filecolumn`, and `sample_filecolumn_name` columns for  account record with the primary key value of `352edda9-4c52-ed11-bba1-000d3a9933c9`.
 
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static void RetrieveFileColumns(IOrganizationService service) {
+static void RetrieveAccountRecordWithFileColumns(IOrganizationService service) {
 
    Entity account = service.Retrieve(
          "account", 
@@ -58,6 +58,9 @@ name: Contoso Ltd.
 sample_filecolumn: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
 sample_filecolumn_name: 25mb.pdf
 ```
+
+> [!NOTE]
+> You must explicitly request the column to return the file id. If you use [ColumnSet.AllColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true in your query the file column will not be returned. If you used `new ColumnSet(true)` in the function above, the result would be a <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=fullName>.
 
 More information: [What is the Organization service](org-service/overview.md)
 
@@ -92,6 +95,8 @@ More information: [Retrieve a table row using the Web API](webapi/retrieve-entit
 
 ---
 
+
+
 ## Upload Files
 
 There at three different ways to upload files to a file column:
@@ -99,7 +104,7 @@ There at three different ways to upload files to a file column:
 - Use Dataverse messages available to both the SDK and Web API
 - Upload a file in a single request using Web API
 - Upload the file in chunks using Web API
-
+- 
 ### Use Dataverse messages to upload a file
 
 You can use Dataverse messages using the SDK for .NET or Web API. Uploading a file this way requires using a set of three messages:
@@ -107,7 +112,7 @@ You can use Dataverse messages using the SDK for .NET or Web API. Uploading a fi
 
 |Message|Description|
 |---------|---------|
-|`InitializeFileBlocksUpload`|Use this message to indicate the column that you want to upload a file to. It returns a *file continuation token* that you can use to upload the file in blocks using the `UploadBlock` message.|
+|`InitializeFileBlocksUpload`|Use this message to indicate the column that you want to upload a file to. It returns a *file continuation token* that you can use to upload the file in blocks using the `UploadBlock` message and with `CommitFileBlocksUpload`.|
 |`UploadBlock`|Split your file into blocks and generate a *blockid* for each block. Then make multiple requests until all the blocks have been sent together with the file continuation token.|
 |`CommitFileBlocksUpload`|After you have sent requests for all the blocks using `UploadBlock`, use this message to commit the upload operation by sending:<br />- The list of generated blockids<br />- The name of the file<br />- The [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file<br />- The file continuation token|
 
@@ -172,7 +177,7 @@ static Guid UploadFile(
 
          blockNumber++;
 
-         string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(blockNumber.ToString().PadLeft(16, '0')));
+         string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
 
          blockIds.Add(blockId);
 
@@ -270,9 +275,15 @@ You must then break the file up into blocks of 4MB or less and send each block u
 
 |Property|Description:  |
 |---------|---------|
-|`BlockId`|A string value that is unique within the set of blocks.<br />**TODO** Question: What are the requirements for this string? Length? Format? I tried setting it to a GUID string, but it threw an error.|
+|`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
 |`BlockData`|A byte[] less than 4MB in size representing the portion of the file being sent.|
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
+
+With .NET, you can generate a `BlockId` using this code:
+
+```csharp
+string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
+```
 
 
 **Request**
@@ -287,7 +298,7 @@ Content-Type: application/json; charset=utf-8
 Content-Length: 5593368
 
 {
-  "BlockId": "MDAwMDAwMDAwMDAwMDAwMQ==",
+  "BlockId": "OThjODg5NjgtNzM2Zi00YmI1LTgyNzktNmU2NzgwMTRiMzFk",
   "BlockData": "<byte[] data removed for brevity>",
   "FileContinuationToken": "<file continuation token value removed for brevity>"
 }
@@ -325,13 +336,13 @@ Content-Length: 1213
   "FileName": "25mb.pdf",
   "MimeType": "application/pdf",
   "BlockList": [
-    "MDAwMDAwMDAwMDAwMDAwMQ==",
-    "MDAwMDAwMDAwMDAwMDAwMg==",
-    "MDAwMDAwMDAwMDAwMDAwMw==",
-    "MDAwMDAwMDAwMDAwMDAwNA==",
-    "MDAwMDAwMDAwMDAwMDAwNQ==",
-    "MDAwMDAwMDAwMDAwMDAwNg==",
-    "MDAwMDAwMDAwMDAwMDAwNw=="
+    "OThjODg5NjgtNzM2Zi00YmI1LTgyNzktNmU2NzgwMTRiMzFk",
+    "ZWUxNzcxZjgtNjEwOC00NDk1LWI2NzMtODFkNDM3YjMyNTFm",
+    "YWMwYzhjMzEtY2U0My00NjUwLThlZmEtNjg3NDM5ZTA1MGJi",
+    "ZGM3NWQ2NjUtNTViMy00ODQ2LWE5NmQtNDE3ZGUyYTIxYjhi",
+    "NzE2OWYyZGEtZGQ1Ni00YWMwLWJiNWUtNjIyNDlkYzRiNmEy",
+    "ZmU2ZDMzNjQtMzg2My00ZGZlLWIwYjItMDc4NTY2MDE1MzY1",
+    "NWY1ZDAyMWUtNTJiNi00YjA5LTg4ZWItYzg3OTdhMDYxMTRl"
   ],
   "FileContinuationToken": "<file continuation token value removed for brevity>"
 }
@@ -753,7 +764,7 @@ There at two different ways to delete files to a file column:
 
 ### Use the DeleteFile message
 
-Using the unique identifier returned from the `CommitFileBlocksUploadResponse.FileId` or retrieved from from the column as described in [Behavior when retrieving normally](#behavior-when-retrieving-normally), you can delete the file using the `DeleteFile` message.
+Using the unique identifier returned from the `CommitFileBlocksUploadResponse.FileId` or retrieved from from the column as described in [Behavior when retrieving](#behavior-when-retrieving), you can delete the file using the `DeleteFile` message.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -801,7 +812,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ### Send DELETE request to the file column
 
-With the Web API, you can delete a file by sending a `DELETE` request to the location of the file resource.
+With the Web API, you can delete a file by sending a `DELETE` request to the location of the file resource. 
 
 The following example deletes file data for a column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
 
@@ -822,10 +833,12 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
+More information: [Delete a single property value](webapi/update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ### See Also
 
-[File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
+[Column data types > File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
+[File columns](file-attributes.md)<br />
 [Annotation (note) table](annotation-note-entity.md)<br />
 [Attachment (ActivityMimeAttachment) table](reference/entities/activitymimeattachment.md)
 
