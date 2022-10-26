@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 10/06/2022
+ms.date: 10/26/2022
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -24,7 +24,7 @@ search.app:
 
 # Mobile offline capabilities and limitations
 
-Before you set-up the mobile app in offline mode be sure to read through the following capabilities, tips,  and limitations. 
+Before you set-up the mobile app in offline mode, be sure to read through the following capabilities, tips,  and limitations. We recommend that you also review the [Offline profile guidelines](offline-capabilities.md).
 
 These tables and corresponding commands are available in offline mode.
   > [!NOTE]
