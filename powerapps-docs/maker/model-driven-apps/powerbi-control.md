@@ -2,11 +2,12 @@
 title: Use the Power BI report control to add a report to a form with Power Apps
 description: The Power BI report control lets you add a report to a model-driven app form. 
 author: Mattp123
-ms.author: #Required; microsoft alias of author; optional team alias.
-ms.service: #Required; service per approved list. slug assigned by ACOM.
-ms.topic: how-to #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
-ms.custom: template-how-to #Required; leave this attribute/value as-is.
+ms.author: matp
+ms.service: powerapps
+ms.subservice: mda-maker
+ms.topic: how-to
+ms.date: 10/26/2022
+ms.custom: template-how-to
 ---
 # Use the Power BI report control to add a report
 
