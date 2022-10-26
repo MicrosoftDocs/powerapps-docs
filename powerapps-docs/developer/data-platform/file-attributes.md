@@ -215,26 +215,25 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 
 ---
 
-When anyone tries to upload a file of this type the following error will be thrown
+When anyone tries to upload a file of this type the following error will be thrown:
 
-Error Code: `0x80043e09`
-Error Number: `-2147205623`
-Name: `AttachmentBlocked`
-Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
+> Name: `AttachmentBlocked`<br />
+> Code: `0x80043e09`<br />
+> Number: `-2147205623`<br />
+> Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
 
-## For customers using Customer Managed Keys (CMK)
+## Restrictions with Customer Managed Keys (CMK)
 
 > [!IMPORTANT]
-> Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
+> Some restrictions apply when using the File and enhanced Image data-types in Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
 > All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
-> limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob
-> storage.
+> limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
 > Other limitations:
 >  - User Delegation SAS Downloads are not supported
 >  - Chunking uploads and downloads are limited to a single chunk
 
 
-File columns are supported in Power Pages only in the [notes](../../maker/portals/configure-notes.md) (annotation) table.
+<!-- File columns are supported in Power Pages only in the [notes](../../maker/portals/configure-notes.md) (annotation) table. -->
 
 ### See Also
 

@@ -490,10 +490,10 @@ Before you upload a file you can check whether the size of the file exceeds the 
 
 If you try to upload a file that is too large, you will get the following error:
 
-Name: `unManagedidsattachmentinvalidfilesize`<br />
-Code: `0x80044a02`<br />
-Number: `-2147202558`<br />
-Message: `Attachment file size is too big.`
+> Name: `unManagedidsattachmentinvalidfilesize`<br />
+> Code: `0x80044a02`<br />
+> Number: `-2147202558`<br />
+> Message: `Attachment file size is too big.`
 
 You can use the following examples to check the maximum file size:
 
@@ -773,7 +773,11 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 If your file is smaller than than 16MB you can download the file in a single request.
 
 If the file is larger than 16 MB the following error will be returned:
-**code**: `0x80090001` **message**: `Maximum file size supported for download is [16] MB. File of [ <file size> MB] size may only be downloaded using staged chunk download`.
+
+> Name: `FileSizeExceededForNonChunkedRequest`<br />
+> Code: `0x80090001`<br />
+> Number: `-2146893823`<br />
+> Message: `Maximum file size supported for download is [16] MB. File of [ <file size> MB] size may only be downloaded using staged chunk download`.
 
 The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
 
