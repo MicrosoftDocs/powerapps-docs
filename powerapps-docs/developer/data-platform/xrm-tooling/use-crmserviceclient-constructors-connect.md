@@ -24,9 +24,12 @@ Use the various constructors to create an instance of the <xref:Microsoft.Xrm.To
 
 The [connection string](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor#Microsoft_Xrm_Tooling_Connector_CrmServiceClient__ctor_System_String_) constructor is the most easy, convenient way to get an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. More information: [Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)
 
+> [!NOTE]
+> Consider using the new `ServiceClient` class that brings in enhancements over the `CrmServiceClient` class, such as .NET cross-platform application support, MSAL authentication, ILogger support, and performance benefits. More information: [Transition client applications to Dataverse ServiceClient](../sdk-client-transition.md)
+
 ## See also
 
-<xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.%23ctor%2A?displayProperty=nameWithType>  
+[ServiceClient Constructors](/dotnet/api/microsoft.powerplatform.dataverse.client.serviceclient.-ctor)  
 [Use XRM Tooling Windows PowerShell Cmdlets to connect to Dataverse](use-powershell-cmdlets-xrm-tooling-connect.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

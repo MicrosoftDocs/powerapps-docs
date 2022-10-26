@@ -1,14 +1,14 @@
 ---
-title: "Transform examples to Power Fx formulas (preview)"
+title: "Transform examples to Power Fx formulas"
 description: Learn about how to train Power Apps with your own examples and generate formulas using Power Apps Ideas.
 author: norliu
 
 ms.topic: article
 ms.custom: canvas
-ms.date: 12/08/2021
+ms.date: 10/04/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -18,9 +18,8 @@ contributors:
   - tapanm-msft
 ---
 
-# Transform examples to Power Fx formulas (preview)
+# Transform examples to Power Fx formulas 
 
-[This article is pre-release documentation and is subject to change.]
 
 We all had the time when we struggled with manipulation of text when we’re building apps. Searching online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses [PROSE](https://www.microsoft.com/research/group/prose/) (Programming by Examples and Natural Language) so you can now just give us one or more desired output, and then Power Apps can automatically generate the formula for you.
 
@@ -30,25 +29,26 @@ Let's use a simple app to show you how to use this feature. You can follow [Crea
 
 To work with and manipulate dates in a gallery using Power Apps Ideas:
 
-1. Select your target label. For this example, we'll use **Created On**. Select the Ideas pane on the right-side of the screen, and you'll see a screen like the following:
+1. Select your target label. For this example, we'll use **Created On**. Select the date field and then select **Format data**.
 
-    ![Power Apps Ideas demo.](media/power-apps-ideas/Prose-entrypoint-c7.png "Find example to formula in Ideas pane")
+    ![Power Apps Ideas demo.](media/power-apps-ideas/prose-entrypoint-c7.png "Find example to formula in Ideas pane")
 
-1. Enter your desired output in the text box. For example, change "October 19, 2021 1:42 PM" to "October 19", and then press Enter. <br> Select the generated formula.  
+1. Enter your output in the **Desired format** text box. Or use one of the listed examples, in this case **May 25, 2021**, and then press Enter. <br> Select the generated formula.  
 
     ```powerapps-dot
     Text(DateTimeValue(ThisItem.'Created On'), "mmmm d", "en-US")
     ```
-
+    ![Select a desired format.](media/power-apps-ideas/prose-entrypoint-c7-1.png "Select a desired format.")
+    
     The formula is updated in the formula bar. You can now check the rest of the items in your gallery to see if the formula did the manipulation that you wanted.
 
 ## Work with text display in a gallery
 
 To work with text display in a gallery using Power Apps Ideas:
 
-1. Select your target label, such as **Account Name**, and then select the Ideas pane.
+1. Select your target label, such as **Account Name**, and then select **Format data**.
 
-1. Enter your desired output in the text box. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", press Enter, and then select the generated formula.
+1. Enter your output in the **Desired format** text box or use one of the listed examples. For example, change the Account Name from "Fourth Coffee (sample)" to "Fourth C", press Enter, and then select the generated formula.
 
     ```powerapps-dot
     Left(ThisItem.'Account Name', Find(" ", ThisItem.'Account Name') + 1) 
@@ -58,25 +58,17 @@ To work with text display in a gallery using Power Apps Ideas:
 
 ## Use Train with examples in your app
 
-In above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula will not work for all scenarios. This is because the above formula takes only the second word's initial in the name. And some account names have three or more words.
+In the above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula will not work for all scenarios. This is because the above formula takes only the second word's initial in the name. And some account names have three or more words.
 
 For example, "Alpine Ski House" becomes "Alpine S" whereas to have last word's initial, it should be "Alpine H".
 
-To achieve this scenario, use **Train with examples** by providing such examples using the **Ideas** tab:
+To achieve this scenario, use **Add examples** by providing such examples using the **Ideas** pane:
 
-1. Select **Train with examples** under the **Answers** pane, and give more examples in the side pane. In this example, we've given "Alpine H" as an example for "Alpine Ski House".
+1. Select **Add examples** and then select one of the values from your table. Type in the desired format. <br>
+   
+   You can add up to 20 examples but typically you only need two or three examples for Ideas to start working.
 
-    > [!NOTE]
-    > You don’t need to fill in all the boxes. Enter a few different examples for Power Apps Ideas to learn. 
-
-    ![Train with examples](media/power-apps-ideas/Train-with-examples-c7.png "Provide more examples for Ideas to learn")
-
-    > [!TIP]
-    > Ensure you've selected the label text inside the gallery on the canvas to see the **Answers** section in the **Ideas** tab.
-
-1. (Optional) If you have an example that’s not listed, you can also select **Add custom example** on the top.
-
-1. After you have finished adding examples, select **Get ideas**. This time Ideas pane is able to give you a suggestion of formula.
+1. Press Enter or select the arrow button (**->**) to see new ideas.
 
 1. Select and apply to see if it meets your needs.
 
@@ -100,6 +92,7 @@ The following capabilities aren't supported:
 
 - Math functions on number fields
 - Manipulating text from multiple columns
+- Formatting Lookup fields
 - Scenarios that include:
     - Branching
     - If/else patterns ([function If()](functions/function-if.md))
