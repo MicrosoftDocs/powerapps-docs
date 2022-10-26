@@ -17,16 +17,15 @@ contributors:
 ---
 # File columns
 
-A file column is used for storing file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. Files can also be uploaded and related to tables using the [Annotation (note) table](annotation-note-entity.md) when the `EntityMetadata.HasNotes` property is set to true.
+Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns.
 
 ## Create file columns
 
 The recommended way to create file columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [File columns](../../maker/data-platform/types-of-fields.md#file-columns).
 
 > [!NOTE]
-> A key consideration when creating file columns is the **Maximum file size**. The default setting for this is `32768`, or 32 MB. The maximum value is 131072 KB (131 MB). This value cannot be changed after you create the column.
-
-TODO: **Question**: I get no errors when is set the `MaxSizeInKB` to ridiculously high values. Is there a limit?
+> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). This value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
+> You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-entity-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
 
 You can also create file columns using the Dataverse SDK for .NET or using the Web API. The following examples show how:
 
@@ -59,9 +58,12 @@ public static void CreateFileColumn(IOrganizationService service, string entityL
 }
 ```
 
-Use the [FileAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB) property to set the maximum size. 
+Use the [FileAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB) property to set the maximum size.
 
-More information: [What is the Organization service](org-service/overview.md)
+More information:
+
+- [What is the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*)
 
 #### [Web API](#tab/webapi)
 
@@ -148,9 +150,40 @@ More information:
 
 ## Block certain types of files
 
-You can control which types of files are not allowed to be saved in file Columns. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
+You can control which types of files are not allowed to be saved in file Columns. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting. This setting also applies to files that can be set in the [Annotation (note)](annotation-note-entity.md) and [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) tables.
 
-You can also query and modify this data programmatically. It is stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. You can use the Web API to query this data:
+You can also query and modify this data programmatically. It is stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There is only one row in the organization table. You can use the SDK or Web API to query this data:
+
+
+#### [SDK for .NET](#tab/sdk)
+
+This function:
+
+```csharp
+protected static string RetrieveBlockedAttachments(IOrganizationService service) {
+
+   var query = new QueryExpression("organization")
+   {
+         ColumnSet = new ColumnSet("blockedattachments"),
+         TopCount = 1
+   };
+   EntityCollection results = service.RetrieveMultiple(query);
+   return (string)results.Entities.FirstOrDefault()["blockedattachments"];
+
+}
+```
+
+Returns a string value like this by default:
+
+`ade;adp;app;asa;ashx;asmx;asp;bas;bat;cdx;cer;chm;class;cmd;com;config;cpl;crt;csh;dll;exe;fxp;hlp;hta;htr;htw;ida;idc;idq;inf;ins;isp;its;jar;js;jse;ksh;lnk;mad;maf;mag;mam;maq;mar;mas;mat;mau;mav;maw;mda;mdb;mde;mdt;mdw;mdz;msc;msh;msh1;msh1xml;msh2;msh2xml;mshxml;msi;msp;mst;ops;pcd;pif;prf;prg;printer;pst;reg;rem;scf;scr;sct;shb;shs;shtm;shtml;soap;stm;tmp;url;vb;vbe;vbs;vsmacros;vss;vst;vsw;ws;wsc;wsf;wsh;svg`
+
+More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+
+#### [Web API](#tab/webapi)
+
+Use this request to return only the `blockedattachments` value of the organization record.
+
+**Request**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/organizations?$select=blockedattachments HTTP/1.1
@@ -178,6 +211,10 @@ OData-Version: 4.0
 }
 ```
 
+More information: [Query data using the Web API](webapi/query-data-web-api.md)
+
+---
+
 When anyone tries to upload a file of this type the following error will be thrown
 
 Error Code: `0x80043e09`
@@ -185,6 +222,7 @@ Error Number: `-2147205623`
 Name: `AttachmentBlocked`
 Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
 
+## For customers using Customer Managed Keys (CMK)
 
 > [!IMPORTANT]
 > Some restrictions do apply when using the File and enhanced Image data-types of the Microsoft Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
@@ -194,26 +232,13 @@ Message: `The attachment is either not a valid type or is too large. It cannot b
 > Other limitations:
 >  - User Delegation SAS Downloads are not supported
 >  - Chunking uploads and downloads are limited to a single chunk
->  
->  File columns are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater. File columns are supported in Power Pages only in the [notes](../../maker/portals/configure-notes.md) (annotation) table.
 
 
-<!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
-  
-## Supporting columns
-
-When a file column is added to a table some additional columns are created to support it.
-  
-### MaxSizeInKB column
-
-The `MaxSizeInKB` property represents the maximum size (in kilobytes) of the file data that the column can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
- 
- > [!NOTE]
- > `MaxSizeInKB` is set when the File column is added to a table. This cannot be changed after it is set.
-  
+File columns are supported in Power Pages only in the [notes](../../maker/portals/configure-notes.md) (annotation) table.
 
 ### See Also
 
-[Image columns](image-attributes.md)  
+[Use file column data](file-column-data.md)<br />
+[Image columns](image-attributes.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

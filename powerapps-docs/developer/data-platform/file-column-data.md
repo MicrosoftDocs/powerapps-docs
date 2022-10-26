@@ -19,21 +19,24 @@ contributors:
 
 File columns store binary data. File columns may be in any custom or customizable Dataverse table.
 
-File columns are different from the other system columns that can store binary data because you cannot directly set the values in a create or update operation or retrieve the file data with the record. You must use the methods described in this topic to create, update, or delete binary data for file columns.
+File columns are different from the other system columns that can store binary data because you cannot directly set the values in a create or update operation or retrieve the file data with the record. You must use the methods described in this topic to create, retrieve, update, or delete binary data for file columns.
 
-There are several different ways to work with file column data. Because binary files may be large, it is frequently necessary to split the file into multiple chunks, (or blocks) that can be sent or received sequentially or in parallel to improve performance.
+There are several different ways to work with file column data using Web API. All methods are supported equally. Choose the method that works best for you. Because binary files may be large, it is frequently necessary to split the file into multiple chunks, (or blocks) that can be sent or received sequentially or in parallel to improve performance.
 
-## Supporting columns
+## File name column
 
 Each file column has a supporting read-only string column that contains the name of the file. The schema name for this column has the same name as the file column, but has `_Name` appended to it. So if the schema name is `sample_FileColumn`, the supporting string column will be `sample_FileColumn_Name`. The logical name for the supporting column will be `sample_filecolumn_name`.
 
+> [!NOTE]
+> The file name column does not appear in the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) designer.
+
 ## Behavior when retrieving
 
-When you retrieve a record and include a file colum, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There is no other use for this id other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
+When you retrieve a record and include a file column, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There is no other use for this id other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
 
 The following examples show what you can expect when retrieving data from file columns as you would with other columns.
 
-This example retrieves the  `name`, `sample_filecolumn`, and `sample_filecolumn_name` columns for  account record with the primary key value of `352edda9-4c52-ed11-bba1-000d3a9933c9`.
+These examples retrieve the  `name`, `sample_filecolumn`, and `sample_filecolumn_name` columns for  account record with the primary key value of `352edda9-4c52-ed11-bba1-000d3a9933c9`.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -62,7 +65,10 @@ sample_filecolumn_name: 25mb.pdf
 > [!NOTE]
 > You must explicitly request the column to return the file id. If you use [ColumnSet.AllColumns](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true in your query the file column will not be returned. If you used `new ColumnSet(true)` in the function above, the result would be a <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=fullName>.
 
-More information: [What is the Organization service](org-service/overview.md)
+More information: 
+
+- [What is the Organization service](org-service/overview.md)
+- [IOrganizationService.Retrieve Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A)
 
 #### [Web API](#tab/webapi)
 
@@ -95,8 +101,6 @@ More information: [Retrieve a table row using the Web API](webapi/retrieve-entit
 
 ---
 
-
-
 ## Upload Files
 
 There at three different ways to upload files to a file column:
@@ -104,11 +108,13 @@ There at three different ways to upload files to a file column:
 - Use Dataverse messages available to both the SDK and Web API
 - Upload a file in a single request using Web API
 - Upload the file in chunks using Web API
-- 
+
+> [!NOTE]
+> You should verify whether the column maximum file size is large enough to accept the file you are uploading. More information: [Check maximum file size](#check-maximum-file-size).
+
 ### Use Dataverse messages to upload a file
 
 You can use Dataverse messages using the SDK for .NET or Web API. Uploading a file this way requires using a set of three messages:
-
 
 |Message|Description|
 |---------|---------|
@@ -225,7 +231,10 @@ static Guid UploadFile(
 }
 ```
 
-More information: [What is the Organization service](org-service/overview.md)
+More information: 
+
+- [What is the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 This function includes some logic to try and get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it is not provided. If not found it will set the mime type to `application/octet-stream`.
 
@@ -311,7 +320,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-After all the parts of the file have been sent using multiple requests to the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock), use the [CommitFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUpload) to complete the upload using these properties:
+After all the parts of the file have been sent using multiple requests using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock), use the [CommitFileBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitFileBlocksUpload) to complete the upload using these properties:
 
 |Property|Description:  |
 |---------|---------|
@@ -366,7 +375,6 @@ OData-Version: 4.0
 More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ---
-
 
 ### Upload a file in a single request using Web API
 
@@ -476,6 +484,98 @@ HTTP/1.1 206 PartialContent
 OData-Version: 4.0
 ```
 
+### Check maximum file size
+
+Before you upload a file you can check whether the size of the file exceeds the configured **Maximum file size** stored in the `MaxSizeInKB` property.
+
+If you try to upload a file that is too large, you will get the following error:
+
+Name: `unManagedidsattachmentinvalidfilesize`<br />
+Code: `0x80044a02`<br />
+Number: `-2147202558`<br />
+Message: `Attachment file size is too big.`
+
+You can use the following examples to check the maximum file size:
+
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+/// <summary>
+/// Retrieves the MaxSizeInKb property of a file column.
+/// </summary>
+/// <param name="service">IOrganizationService</param>
+/// <param name="entityLogicalName">The logical name of the table that has the column</param>
+/// <param name="fileColumnLogicalName">The logical name of the file column.</param>
+/// <returns></returns>
+/// <exception cref="Exception"></exception>
+public static int GetFileColumnMaxSizeInKb(IOrganizationService service, string entityLogicalName, string fileColumnLogicalName) {
+
+   RetrieveAttributeRequest retrieveAttributeRequest = new() { 
+         EntityLogicalName = entityLogicalName,
+         LogicalName = fileColumnLogicalName
+   };
+
+   RetrieveAttributeResponse retrieveAttributeResponse;
+   try
+   {
+         retrieveAttributeResponse = (RetrieveAttributeResponse)service.Execute(retrieveAttributeRequest);
+   }
+   catch (Exception)
+   {
+         throw;
+   }
+
+   if (retrieveAttributeResponse.AttributeMetadata is FileAttributeMetadata fileColumn)
+   {
+         return fileColumn.MaxSizeInKB.Value;
+   }
+   else
+   {
+         throw new Exception($"{entityLogicalName}.{fileColumnLogicalName} is not a file column.");
+   }
+}
+```
+
+More information:
+
+- [RetrieveAttributeRequest Class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest)
+- [FileAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB)
+
+#### [Web API](#tab/webapi)
+
+The following request returns the `MaxSizeInKB` value for a file column with the logical name `sample_filecolumn` in the `account` table.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='sample_filecolumn')/Microsoft.Dynamics.CRM.FileAttributeMetadata?$select=MaxSizeInKB HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.FileAttributeMetadata(MaxSizeInKB)/$entity",
+  "MaxSizeInKB": 102400,
+  "MetadataId": "f315e7f1-6355-ed11-bba3-000d3a9933c9"
+}
+```
+
+More information:
+
+- [Query table definitions using the Web API > Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+- [FileAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.FileAttributeMetadata)
+
+---
+
 ## Download Files
 
 There at three different ways to download files to a file column:
@@ -565,7 +665,10 @@ private static byte[] DownloadFile(
 }
 ```
 
-More information: [What is the Organization service](org-service/overview.md)
+More information: 
+
+- [What is the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
 
@@ -834,6 +937,7 @@ OData-Version: 4.0
 ```
 
 More information: [Delete a single property value](webapi/update-delete-entities-using-web-api.md#delete-a-single-property-value)
+
 
 ### See Also
 
