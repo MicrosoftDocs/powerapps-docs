@@ -112,6 +112,14 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 - To allow co-owners to run the app but no longer edit or share it, clear the **Co-owner** check box.
 - To stop sharing the app with that user or group, select the **Remove** (x) icon.
 
+## Share apps using Teams
+
+You can share a link to your app in a Teams chat. 
+
+
+
+
+
 ## Security group considerations
 
 - All existing members of the security group inherit the app permissions. New users joining the security group will inherit the security group permissions on the app. Users leaving the group will no longer have access through that group, but those users can continue to have access either by having permissions assigned to them directly or through membership in another security group.
