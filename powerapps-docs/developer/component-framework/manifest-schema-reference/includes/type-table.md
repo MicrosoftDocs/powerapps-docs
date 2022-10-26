@@ -9,6 +9,7 @@
 |Lookup.Simple|Allows for a single reference to a specific table. All custom lookups are this type.|
 |Multiple|This column can contain up to 1,048,576 text characters. You can set the maximum length to be less than this. When you add this column to a form, you can specify the size of the column.|
 |MultiSelectOptionSet|You can customize forms (main, quick create, and quick view) and email templates by adding choices columns. When you add choices column, you can specify multiple values that will be available for users to select. When users fill out the form they can select one, multiple, or all the values displayed in a drop-down list.|
+|Object|Object data type. Can only be used with output properties. |
 |OptionSet|This column provides a set of options. Each option has a number value and label. When added to a form, this column displays a control for users to select only one option. |
 |SingleLine.Email|This stores the string time in the format valid for Emails. Out-of-the-box Unified Interface controls automatically make them clickable links.|
 |SingleLine.Phone|This stores the string time in the format valid for Phone. Out-of-the-box Unified Interface controls automatically make them clickable links.|
