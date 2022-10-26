@@ -68,7 +68,7 @@ Update the getOutput method to return value for the output property.
 
 ```
 
-The onLoadData method will be called when “Load Data” button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or onOutputChanged event for client APIs.
+The onLoadData method will be called when “Load Data” button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or [onOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
 
 ```typescript
     private onLoadData = async () => {
