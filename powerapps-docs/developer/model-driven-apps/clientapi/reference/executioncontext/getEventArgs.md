@@ -27,7 +27,7 @@ Returns an object with methods to manage the events.
 
 **Type**: Object
 
-**Description**: When a specified error occurs, you can use the `getEventArgs` method of the execution context object to retrieve an object that may contain additional methods you can use. The table below describes the methods:
+**Description**: When a specified event occurs, you can use the `getEventArgs` method of the execution context object to retrieve an object that may contain additional methods you can use. The table below describes the methods:
 
 |Events|Return Object Methods|
 |-------|------------|
