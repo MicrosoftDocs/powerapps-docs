@@ -118,6 +118,9 @@ You can share a link to your app in a Teams chat. The user that you share the ap
 
 To share the app, copy the app link from your web browser and paste it into the Teams chat. Before you send the link you'll see a preview of your message.
 
+> [!div class="mx-imgBorder"]
+> ![Share your app using Teams.](media/share-app/teams-link.png "Share your app using Teams")
+
 Legend:
 
 1. **Link to app**: Select the web link to open the app.
@@ -127,8 +130,7 @@ Legend:
 5. **Launch app in Web**: Open the app directly in your browser.
 
 
-   > [!div class="mx-imgBorder"]
-   > ![Share your app using Teams.](media/share-app/teams-link.png "Share your app using Teams")
+
 
 
 ## Security group considerations
