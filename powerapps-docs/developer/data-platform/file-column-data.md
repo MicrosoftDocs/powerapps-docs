@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/23/2022
+ms.date: 10/27/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -285,14 +285,18 @@ You must then break the file up into blocks of 4MB or less and send each block u
 |Property|Description:  |
 |---------|---------|
 |`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
-|`BlockData`|A byte[] less than 4MB in size representing the portion of the file being sent.|
+|`BlockData`|A Base64 encoded string containing the byte[] less than 4MB in size representing the portion of the file being sent.|
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
 
-With .NET, you can generate a `BlockId` using this code:
 
-```csharp
-string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
-```
+> [!TIP]
+> With .NET, you can generate a `BlockId` using this code:
+> 
+> ```csharp
+> string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
+> ```
+>
+> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.;
 
 
 **Request**
@@ -308,7 +312,7 @@ Content-Length: 5593368
 
 {
   "BlockId": "OThjODg5NjgtNzM2Zi00YmI1LTgyNzktNmU2NzgwMTRiMzFk",
-  "BlockData": "<byte[] data removed for brevity>",
+  "BlockData": "<Base64 encoded string of byte[] data removed for brevity>",
   "FileContinuationToken": "<file continuation token value removed for brevity>"
 }
 ```
@@ -770,15 +774,6 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ### Download a file in a single request using Web API
 
-If your file is smaller than than 16MB you can download the file in a single request.
-
-If the file is larger than 16 MB the following error will be returned:
-
-> Name: `FileSizeExceededForNonChunkedRequest`<br />
-> Code: `0x80090001`<br />
-> Number: `-2146893823`<br />
-> Message: `Maximum file size supported for download is [16] MB. File of [ <file size> MB] size may only be downloaded using staged chunk download`.
-
 The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
 
 **Request**
@@ -814,7 +809,7 @@ Access-Control-Expose-Headers: x-ms-file-size; x-ms-file-name; mimetype
 
 ### Download the file in chunks using Web API
 
-If the file you are downloading is larger than 16MB, you must download it in chunks. To download your file in chunks using the Web API, use the following set of requests.
+To download your file in chunks using the Web API, use the following set of requests.
 
 The following example downloads a PDF file named `25mb.pdf` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `2a9ebdff-8c51-ed11-bba1-000d3a9933c9`.
 
