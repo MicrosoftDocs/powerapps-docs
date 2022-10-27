@@ -1,9 +1,8 @@
 ---
 title: "getEventArgs (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getEventArgs method that returns an object with methods to manage the **Save** event." 
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+ms.author: hemantg
+author: HemantGaur
 ms.date: 10/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
