@@ -4,7 +4,7 @@ description: Learn how to configure a file column to store binary data on portal
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/01/2022
+ms.date: 10/27/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -16,8 +16,6 @@ contributors:
 # Configure a file column on portals 
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
-
-[This topic is pre-release documentation and is subject to change.]
 
 A file column is used for storing binary data. This column is primarily used to store a single file, note, or attachment; however, it's possible to store other forms of binary data. You can configure a file column on basic and multistep forms to provide the capability to upload, view, modify, or delete the file. The file column can store files up to the specified maximum size of a Microsoft Dataverse table column.
 
