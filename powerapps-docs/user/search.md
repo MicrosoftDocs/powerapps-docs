@@ -1,14 +1,14 @@
 ---
 title: "Search options in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to to use the different search option
-author: mduelae
-manager: kvivek
+author: sericks
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/27/2020
+ms.date: 10/27/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
