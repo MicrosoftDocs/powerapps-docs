@@ -116,7 +116,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 You can share a link to your app in a Teams chat. The user that you share the app with needs to be on the same tenant and have access to the app that you're sharing.
 
-To share the app, copy the app link from your web browser and paste it into the Teams chat. Before you send the link you'll see a preview of your message.
+To share the app, copy the app link from your web browser and paste it into the Teams chat. Before you send the link, you'll see a preview of your message.
 
 > [!div class="mx-imgBorder"]
 > ![Share your app using Teams.](media/share-app/teams-link.png "Share your app using Teams")
@@ -128,9 +128,6 @@ Legend:
 3. **Name of app**: Shows the name of the app.
 4. **Add app to Teams**: Select to add the app to Teams.
 5. **Launch app in Web**: Open the app directly in your browser.
-
-
-
 
 
 ## Security group considerations
