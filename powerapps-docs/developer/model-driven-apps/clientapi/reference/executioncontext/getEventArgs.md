@@ -40,7 +40,7 @@ Returns an object with methods to manage the events.
 |[OnPostSearch](../events/postsearch.md)|None|
 |[PostSave Event](../events/postsave.md)|- [getEntityReference](../save-event-arguments/getEntityReference.md) Returns data about the record being saved.<br /> - [getIsSaveSuccess](../save-event-arguments/getIsSaveSuccess.md) Returns data about whether the save operation succeeded.<br /> -  [getSaveErrorInfo](../save-event-arguments/getSaveErrorInfo.md) If the save operation failed, returns data about why it failed.|
 |[OnProcessStatusChange](../events/onprocessstatuschange.md)|None|
-|[onPreProcessStatusChange](../events/onpreprocessstatuschange.md)|- **getStatus**: Returns the Business Process Flow status: `Active`, `Finished`, or `Aborted`.|
+|[OnPreProcessStatusChange](../events/onpreprocessstatuschange.md)|- **getStatus**: Returns the Business Process Flow status: `Active`, `Finished`, or `Aborted`.|
 |[OnPreStageChange event](../events/onprestagechange.md)|- **getStage**: Gets the stage object corresponding to the event triggered. Returns the selected stage in for the `OnStageSelected` event and next or previous stage objects for the `OnStageChange` event depending on direction moved. More information: [Stage methods](../formcontext-data-process.md#stage-methods).<br/>- **getDirection**: Gets the direction of the stage advance action. It returns a string value `Next` or `Previous`.|
 |[OnReadyStateComplete](../events/onreadystatecomplete.md)|None|
 |[OnRecordSelect](../events/grid-onrecordselect.md)|None|
