@@ -1,5 +1,5 @@
 ---
-title: Configure a file column on portals (preview)
+title: Configure a file column on portals 
 description: Learn how to configure a file column to store binary data on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
@@ -13,8 +13,7 @@ contributors:
     - nickdoelman
 ---
 
-# Configure a file column on portals (preview)
-
+# Configure a file column on portals 
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
@@ -25,18 +24,6 @@ A file column is used for storing binary data. This column is primarily used to 
 :::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalog. To populate the Product Catalog field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalog."::: 
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-> - This feature is available with portals website version [9.4.7.xx](/power-platform/released-versions/portals/portalupdate947x).
-
-## Enable the file control on form
-
-You must configure the site setting **Control/EnableFilePreview** and set its value to **true** to enable file controls on the form. You don't have to make any configuration to use file columns with Liquid code or Web API.
-
-:::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enabling file preview, with the value set to true.":::
-
-> [!IMPORTANT]
-> - This site setting is required during the preview period.
 > - You can't upload a file by using **Insert** mode on a basic form or an multistep form step.
 
 ## Liquid code
