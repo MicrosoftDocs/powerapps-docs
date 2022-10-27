@@ -11,13 +11,13 @@ ms.custom: template-how-to
 ---
 # Use the Power BI report control to add a report
 
-Add a Power BI report to a model-driven app using the Power BI report control.
+Add a Power BI report to a model-driven app form using the Power BI report control.
 
 ## Prerequisites
 
 Embedding Power BI content is an optional feature and is disabled on all environments by default. Administrators must enable the setting before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards)
 
-## Add and configure the Power BI control to a form
+## Add and configure the Power BI control on a form
 
 1. In the form designer, select **Components** on the left navigation pane, expand **Power BI**, and then select **Power BI Report**.
 1. Choose from the following properties: 
