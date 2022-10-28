@@ -189,7 +189,9 @@
   - name: Upload, retrieve, and download an attachment
     href: upload-retrieve-download-attachment.md
   - name: Use optimistic concurrency with update and delete operations
-    href: use-optimistic-concurrency-update-delete-operations.md 
+    href: use-optimistic-concurrency-update-delete-operations.md
+  - name: File Operations
+    href: file-operations.md
 - name: Field Level Security
   items:
   - name: Enable field security for a table
