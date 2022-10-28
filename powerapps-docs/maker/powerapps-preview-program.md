@@ -69,11 +69,14 @@ You can provide feedback on the [Power Apps forum][8] and/or contact [support][9
 
 ## What are the known issues and limitations?
 
-1. **Power Pages and clients which are not available in preview**
+1. **Clients not available in preview**
 
-   There are certain functionalities, services, and Power Pages, which are available in preview:
+   There are certain functionalities, and services available in preview:
    
-   ![Available in preview.](media/table.png)
+    | Create an app | Playing an app | Others | Available in preview? |
+    | - | - | - | - |
+    | Web studio | Web player | Flow, Connectors and Gateways | Yes |
+    | Desktop version of studio | Power Apps mobile for iOS, Android, and Windows | | No |
 
 2. **Using apps created in preview environments in production environments**
 
