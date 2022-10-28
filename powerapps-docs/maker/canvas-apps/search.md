@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use the Search pane (preview)
 description: Learn how to use the Search pane inside Power Apps Studio to find text.
 author: TashasEv
@@ -199,7 +199,7 @@ Similar to variables, replacing a result in the Collections category replaces th
 
 The Screens category shows individual replaceable results following the structure in the tree view, so you can replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, so you can pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
 
-:::image type="content" source="media/search/replace-screens.png" alt-text="Replaceing Screens results.":::
+:::image type="content" source="media/search/replace-screens.png" alt-text="Replacing Screens results.":::
 
 ### Completing the replacement and undoing replacements
 
