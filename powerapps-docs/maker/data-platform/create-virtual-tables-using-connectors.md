@@ -194,12 +194,13 @@ Now create the virtual table data source in Dataverse.
 
    :::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
 
+   Add your Dataset Value
    - SQL Server
-      - Leave the Data Source field empty
+      - Leave the Dataset Value field empty
    - Microsoft Excel Online (Business)
-      - Paste in the file name including extension. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
+      - Paste in the file name including extension into the Dataset Value. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
    - Microsoft SharePoint
-      - Paste the URL to your SharePoint site in the Data Source field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+      - Paste the URL to your SharePoint site in the Dataset Value field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
 
 1. Select **Save**.
 

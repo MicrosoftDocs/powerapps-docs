@@ -14,10 +14,6 @@ summary: This article provides information on frequently asked questions about e
 sections:
 - name: General
   questions:
-   - question: Does adding multiple Microsoft Dataverse tables simultaneously to the lake impact performance?
-     answer: |
-        Adding multiple tables to the Azure Synapse Link profile will impact performance in following scenario: 
-        - Delta sync: After the initial sync of tables are completed, any change in Dataverse for selected tables is added to a common queue in Azure Synapse Link. The queue is processed with a fixed set of parallel listeners. If you add more tables to the queue, Azure Synapse Link will process the messages, but if the number of messages are higher, it will add latency for data to sync to synapse and/or the data lake. 
    - question: How can I access my table relationships?
      answer: |
         To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a preexisting link.
@@ -57,7 +53,6 @@ sections:
      answer: |
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
         - Attachment
-        - Annotation
         - String Map
         - Calendar
    - question: Which Dataverse tables use Append only by default?
