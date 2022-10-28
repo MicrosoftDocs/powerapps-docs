@@ -18,6 +18,11 @@ contributors:
   - mduelae
 ---
 
+
+<!-- Note from editor: My only concern in this article is with the term "backstage." I'm not sure what it means when used here, but an entry in the style guide advises against using the term: https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=40724  -->
+
+
+
 # Use the Search pane 
 
 You can now use the Search pane to locate objects&mdash;like media files, variables, collections, and data sources&mdash;across your app. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what's being used by your app, where, and you can go right to those results to make any necessary updates. In addition, you can use the replace capability to update one or more instances of text, variables, collections, or formula references.
@@ -55,13 +60,13 @@ You can use more search options to further refine your search. These options are
 
 :::image type="content" source="media/search/more-search-options.png" alt-text="More search options under Categories in the filter option.":::
 
-- **Match case** returns search results that only match with the specified case.
+- **Match case** returns search results that only match the specified case.
 
-    In the following example, instances of **Snow** (uppercase) will appear as a match, but **snow** (lowercase) won't.
+    In the following example, instances of **Snow** (uppercase S) will appear as a match, but **snow** (lowercase S) won't.
 
     :::image type="content" source="media/search/match-case-1.png" alt-text="An example of matching the case for search results with results for the uppercase keyword.":::
 
-- **Match Whole Word** returns search results for exact matches of the entire sequence of characters.
+- **Match whole word** returns search results for exact matches of the entire sequence of characters.
 
     In the following example, **Snow** returns only a few results although **Snow** appears within names many times across all app objects.
 
@@ -119,13 +124,13 @@ Selecting a result under the **Data** header opens the **Data** pane, and prepop
 
 ### Media
 
-Selecting a result under the **Media** header opens the **Media** and prepopulates the search input for that pane with the selected result text.
+Selecting a result under the **Media** header opens the **Media** pane, and prepopulates the search input for that pane with the selected result text.
 
 :::image type="content" source="media/search/media.png" alt-text="Media selected from search results showing the relevant media details.":::
 
 ### Flows
 
-**Flows** header only appears if you've enabled the [Power Automate pane (preview)](working-with-flows.md). Selecting a result here opens the Power Automate pane and prepopulates the search input with the selected result text.
+The **Flows** header only appears if you've enabled the [Power Automate pane (preview)](working-with-flows.md). Selecting a result here opens the Power Automate pane and prepopulates the search input with the selected result text.
 
 :::image type="content" source="media/search/flows.png" alt-text="Flow selected from search results showing the relevant flow details.":::
 
@@ -149,7 +154,7 @@ If you make changes within the app, you'll need to refresh the results pane to s
 
 ## Clear the search term
 
-Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign to the right of the input area.
+Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** to the right of the input area.
 
 :::image type="content" source="media/search/clear-search-term.png" alt-text="Clear the search terms.":::
 
