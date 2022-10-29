@@ -121,6 +121,7 @@ You can share a link to your app in a Teams chat. The user that you share the ap
 >     - Your organization must have **Allow interaction with custom apps** turned on. More information: [Manage custom app policies and settings in Microsoft Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 >     - Your organization must allow **Shared Power Apps**. More information: [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
 > - If you're the sender or receiver and get a **This app cannot be found** error when you select **Add app to Teams**, this means you don't have access to the app. To get access, contact your admin.  
+> - If you're the sender and you don't have the Power Apps personal app installed in Teams, then a preview card will appear with a **Show Preview** button. To unfurl the full adaptive card, select **Show Preview**.
 
 
 To share the app, copy the app link from your web browser and paste it into the Teams chat. Before you send the link, you'll see a preview of your message.
