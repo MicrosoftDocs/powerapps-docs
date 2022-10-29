@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/27/2022
+ms.date: 10/28/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -942,7 +942,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 
 [Column data types > File columns](../../maker/data-platform/types-of-fields.md#file-columns)<br />
 [File columns](file-attributes.md)<br />
-[Annotation (note) table](annotation-note-entity.md)<br />
-[Attachment (ActivityMimeAttachment) table](reference/entities/activitymimeattachment.md)
+[Sample: File Operations using Dataverse SDK for .NET](org-service/samples/file-operations.md)<br />
+[Sample: File Operations using Dataverse Web API](webapi/samples/file-operations.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
