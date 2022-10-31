@@ -108,7 +108,7 @@ Consider the following examples for inspiration while working with Power Apps Id
 
 ## Best practices
 
-To get the best results, here are tips to follow when writing the plain natural language query in the Ideas pane.
+To get the best results, follow these tips when writing the plain natural language query in the Ideas pane.
 
 - Leverage default queries to see what kind of scenarios are supported.
 - Be precise in your query. Ideas can recognize controls such as tables and columns. However, if you don't get a suggestion, try using the full name of the assets you’re referencing. For example, use **TextInput1** when you have multiple text input controls in the app. This way the system knows which control you're referring to. 
@@ -128,7 +128,7 @@ Power Apps Ideas currently has the following limitations:
    | **Gallery**, **Data table**, **Drop down**, **Combo box** | Items |
    | **Text Box**, **Label** | Text, Color, Visible |
    
-- Data sources: Currently Ideas supports **Dataverse** tables, Microsoft Lists, and Excel sheets.
+- Data sources: Currently Ideas supports Dataverse tables, Microsoft Lists, and Excel sheets.
 - Functions: See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
 - Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No Lookup. Not supported: File and Image.
 - This feature's model understands some commonly used expressions in natural language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And it can understand most of the context so even if you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
