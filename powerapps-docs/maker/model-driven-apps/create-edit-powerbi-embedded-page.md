@@ -34,7 +34,8 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 
 1. If you have the Power BI Extensions (Preview) system solution installed, you can select a solution-aware Power BI report to be embedded in a system dashboard. You'll see the **Show reports in this environment only** option selected, and the dedicated environment Power BI workspace is pre-selected for you.
    :::image type="content" source="media/create-edit-powerbi-embedded-page/pbi-dashboard1.png" alt-text="Show reports in this environment only option":::
-   When you clear **Show reports in this environment only**, you can pick a Power BI report or a Power BI dashboard in any workspace.
+   
+   If you clear **Show reports in this environment only**, you can select a Power BI report or a Power BI dashboard in any workspace.
    
 1. Enter the following information in the **New Power BI embedded** dialog that appears:
    - Enter a **Display name** for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
