@@ -60,17 +60,17 @@ To work with text display in a gallery using Power Apps Ideas:
 
 ## Use Train with examples in your app
 
-In the above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula will not work for all scenarios. This is because the above formula takes only the second word's initial in the name. And some account names have three or more words.
+In the above scenario, if you wanted to include the first word of the account name along with the last word's initial, the above formula would not work for all scenarios. That's because the above formula takes only the second word's initial in the name. And some account names have three or more words.
 
-For example, "Alpine Ski House" becomes "Alpine S" whereas to have last word's initial, it should be "Alpine H".
+For example, "Alpine Ski House" becomes "Alpine S", whereas to have last word's initial, it should be "Alpine H".
 
 To achieve this scenario, use **Add examples** by providing such examples using the **Ideas** pane:
 
-1. Select **Add examples** and then select one of the values from your table. Type in the desired format. <br>
+1. Select **Add examples** and then select one of the values from your table. Type in the desired format. 
    
    You can add up to 20 examples but typically you only need two or three examples for Ideas to start working.
 
-1. Press Enter or select the arrow button (**->**) to see new ideas.
+1. Press Enter or select the arrow button (**>**) to see new ideas.
 
 1. Select and apply to see if it meets your needs.
 
@@ -78,7 +78,7 @@ To achieve this scenario, use **Add examples** by providing such examples using 
     First(Split(ThisItem.'Account Name', " ")).Result & Mid(Left(ThisItem.'Account Name', First(LastN(MatchAll(ThisItem.'Account Name', "\ "), 2)).StartMatch + 1), First(LastN(MatchAll(ThisItem.'Account Name', "\ "), 2)).StartMatch) 
     ```
 
-    You've just used **Transform examples to Power Fx formulas** capability and generated formula using Power Apps Ideas for the specific requirement that couldn't be achieved using the natural language alone.
+    Now you've used the **Transform examples to Power Fx formulas** capability and generated a formula using Power Apps Ideas for the specific requirement that couldn't be achieved using the natural language alone.
 
 ## Supported and unsupported capabilities
 
@@ -86,7 +86,7 @@ The following capabilities are supported:
 
 - Converting a single date field in a table to a different format
 - Converting a single text field in a table to a different format
-- Converting a single number field in a table to different format
+- Converting a single number field in a table to a different format
 - Works only for label text in a gallery
 - All available languages and data connectors as supported by Power Apps regions
 
