@@ -17,17 +17,17 @@ search.app:
 
 # Maker matching using an integrated virtual agent in Power Apps (preview)
 
-[This article is pre-release documentation and is subject to change.]
+[This article is prerelease documentation and is subject to change.]
 
 Maker matching is now available through an integrated chat bot in Power Apps. This feature allows you to find your organization's internal resources, as well as interact with experienced makers within your organization.
 
 The integrated virtual agent is available in all three Power Apps experiences. Maker matching enables the following personas:
 
-- **Maker** – use chat bot to get help from available documentation (internal and public) and other experienced makers in your organization (advisors).
+- **Maker**: Use chat bot to get help from available documentation (internal and public) and other experienced makers in your organization (advisors).
 
-- **Admin** – set internal documentation and add experienced individual makers to help new makers.
+- **Admin**: Set internal documentation and add experienced individual makers to help new makers.
 
-- **Advisor** – set individual preferences as an experienced Power Apps maker to help others.
+- **Advisor**: Set individual preferences as an experienced Power Apps maker to help others.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -42,12 +42,12 @@ To access maker matching resources:
 2. Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
 
    > [!div class="mx-imgBorder"]
-   > ![Select ask a virtual agent.](media/skills-match/skills-match-1.png)
+   > ![Select Ask a virtual agent.](media/skills-match/skills-match-1.png "Select Ask a virtual agent.")
 
 3. Interact with the chat bot to receive help.
 
    > [!div class="mx-imgBorder"]
-   > ![Interact with the chat bot](media/skills-match/skills-match-2.png)
+   > ![Interact with the chat bot.](media/skills-match/skills-match-2.png "Interact with the chat bot.")
 
 ## Virtual agent resources
 
@@ -58,6 +58,13 @@ When you interact with the chat bot, you'll be able to get help based on the key
 - Stage 2 – Organizational resources configured in the Power Platform admin center
 
 - Stage 3 – Advisor engagement within the organization
+
+
+
+
+
+
+
 
 ### Stage 1 – Microsoft documentation
 
