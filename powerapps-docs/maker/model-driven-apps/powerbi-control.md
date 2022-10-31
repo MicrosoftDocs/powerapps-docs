@@ -15,7 +15,8 @@ Add a Power BI report to a model-driven app form using the Power BI report contr
 
 ## Prerequisites
 
-Embedding Power BI content is an optional feature and is disabled on all environments by default. Administrators must enable the setting before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards)
+- Embedding Power BI content is an optional feature and is disabled on all environments by default. Administrators must enable the setting before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards)
+- The Power BI report control only works with main form types.
 
 ## Add and configure the Power BI control on a form
 
