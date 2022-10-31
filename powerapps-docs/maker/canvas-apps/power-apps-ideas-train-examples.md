@@ -102,5 +102,5 @@ The following capabilities aren't supported:
 ### See also
 
 - [Formula reference](formula-reference.md)
-- [Power Apps Ideas overview (preview)](power-apps-ideas.md)
-- [Transform natural language to Power Fx formulas (preview)](power-apps-ideas-transform.md)
+- [Power Apps Ideas overview](power-apps-ideas.md)
+- [Transform natural language to Power Fx formulas](power-apps-ideas-transform.md)
