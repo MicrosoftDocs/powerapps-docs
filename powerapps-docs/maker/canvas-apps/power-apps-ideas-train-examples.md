@@ -20,7 +20,7 @@ contributors:
 
 # Transform examples to Power Fx formulas 
 
-Most of us have struggled at times with manipulation of text when building apps. For help, we search online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses [PROSE](https://www.microsoft.com/research/group/prose/) (Programming by Examples and Natural Language) so you can now just give us one or more desired outputs, and then Power Apps can automatically generate the formula for you.
+Most of us have struggled at times with manipulation of text when building apps. For help, we search online for tips and examples, or tools to test RegEx patterns. **Train with examples** uses [PROSE](https://www.microsoft.com/research/group/prose/) (Programming by Examples and Natural Language) so you can now just provide one or more desired outputs, and then Power Apps can automatically generate the formula for you.
 
 Let's use a simple app to show how to use this feature. You can follow [Create an app from scratch](data-platform-create-app-scratch.md) to create a sample app. In the following example, we're using the **Accounts** table in Dataverse with sample data that you can choose to install while creating the environment. You can also use your own table if you don't have sample data.
 
