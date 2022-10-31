@@ -1,6 +1,6 @@
 ---
 title: "Transform natural language to Power Fx formulas"
-description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
+description: Learn how to use Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 
 ms.topic: article
@@ -20,6 +20,10 @@ contributors:
 
 # Transform natural language to Power Fx formulas 
 
+
+<!-- Something's missing in the next sentence. Should it say "... ideas for formulas using ..."? -->
+
+
 Power Apps Ideas can generate ideas for formulas the following controls on different properties:
 
 - **Gallery**
@@ -29,18 +33,23 @@ Power Apps Ideas can generate ideas for formulas the following controls on diffe
 - **Combo box**
 - **Text label** 
 
-Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the supported controls and want to write a formula for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
 
-For example, instead of figuring out how to write the following formula:
+<!-- In the next paragraph, "Dropdown" is one word, but it's two words in the previous list. The style guide uses it as one word, but we should follow the UI. Should it be two words throughout this article? -->
+
+
+Power Apps Ideas also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the supported controls and want to write a formula for Gallery or Dropdown items, or for Label’s text content, color, or visibility, then check out Power Apps Ideas.
+
+For example, instead of figuring out how to write the following formula ...
+
 ```powerapps-dot
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 
-You can type in `'name starts with Yvonne` instead.
+... You can type `'name starts with Yvonne` instead.
 
-To begin, let’s look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
+To begin, let’s look at a simple app to see how you can use Power Apps Ideas to help write formulas.
 
-You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using **Accounts** table from Dataverse.
+You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using the **Accounts** table from Dataverse.
 
 1. Select **BrowseGallery1,** which is bound to the **Accounts** table.
 
@@ -48,38 +57,38 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
    :::image type="content" source="media/power-apps-ideas/sort-filter.png" alt-text="Sort, filter, and search.":::
 
-1. Select one of the default suggestions to check how it works or start typing in your own query in natural language such as English (en-us).
+1. Select one of the default suggestions to check how it works or start entering your own query in natural language such as English (en-us).
 
-    :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for shorting and filtering.":::
+    :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for sorting and filtering.":::
 
 1. When typing you can use the default query, modify it, or describe it in your own way.
 
-1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results and each of the formula suggestions produced includes three parts:
+1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results. Each of those formula suggestions includes three parts:
 
-    1. **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
+    - **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
     
-    1. **Apply to: Items**: This suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
+    - **Apply to: Items**: This suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
 
-    1. The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
+    - The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
 
         :::image type="content" source="media/power-apps-ideas/Ideas_example_c7.png" alt-text="Suggested formula based on entered search scenario.":::
 
-1. Select a suggestion that you see fit and then select **Apply**. In this case, let's select the first suggestion since it's the best fit**. The formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula or modify it.
+1. Select your preferred suggestion and then select **Apply**. In this case, let's select the first suggestion since it's the best fit. The formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula or modify it.
 
 ## More examples
 
-Consider the following examples to inspire from while working with Power Apps Ideas.
+Consider the following examples for inspiration while working with Power Apps Ideas.
 
 | Scenario | Description | Ideas example |
 | --- | --- | --- |
-|**Sort your table** |Sort by a single column |sort accounts by Account Name|
+|**Sort your table** |Sort by a single column |Sort accounts by Account Name|
 | | |sort accounts by Account Name A-Z|
 | | |sort accounts by Account Name Z-A|
 | |sort accounts by Account Name and Created On|
 | | |sort Accounts by Account Name A-Z and Created On latest on top|
 | |Sort existing tables |sort Gallery3 by Account Name z to a|
-|**Filter or search table by some conditions**|A number condition|Accounts with length of Account Name bigger than 10|
-| |A date condition|accounts created a week ago accounts modified last 3 days|
+|**Filter or search table by some conditions**|A number condition|accounts with length of Account Name bigger than 10|
+| |A date condition|accounts created a week ago, accounts modified last 3 days|
 | |A text condition|accounts with name contains Karen|
 | |A few conditions|accounts whose name contains Karen and created 7 days ago|
 | |A choice value|inactive accounts|
@@ -92,6 +101,10 @@ Consider the following examples to inspire from while working with Power Apps Id
 | |A text condition|blue if name contains Karen|
 |**Text generation** |Numbers|count of gallery sum of slider1 and slider2|
 ||String|label4 and label5 Trim textinput1First 3 characters of TextInput1|
+
+
+<!-- Does the above row need a space between "textinput1 and First 3? -->
+
 
 ## Best practices
 
