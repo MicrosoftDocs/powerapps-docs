@@ -90,11 +90,11 @@ The following options are available when you add conditions in the filter editor
 
     :::image type="content" source="./media/filter-editor-add-condition-row.png" alt-text="A screenshot of the view filter editor, showing an added row.":::
     
-    If you're adding a condition on a column of type lookup, you can look up the record in the **Value** field. If your administrator has enabled [Show advanced lookup in lookup fields within Edit filters](/power-platform/admin/settings-features), you can choose **Advanced lookup** to see more fields and search for records within a specific view.
+    If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. If your administrator has enabled [Show advanced lookup in lookup fields within Edit filters](/power-platform/admin/settings-features), you can choose **Advanced lookup** to see more fields and search for records within a specific view.
     
     ![Advanced lookup option.](/media/AdvLookupInEditFilters.png)
     
-    ![Advanced lookup option.](/media/AdvLookupInEditFilters.png)
+    ![You can search for records withina specific view.](/media/AdvLookupInEditFilters2.png)
     
 - To add a group of conditions, select **Add group**. You can create multiple subconditions and group them using AND and OR operators to create an expression.
 
