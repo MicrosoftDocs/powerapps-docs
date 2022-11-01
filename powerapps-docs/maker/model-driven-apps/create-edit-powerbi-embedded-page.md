@@ -39,7 +39,7 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 
    :::image type="content" source="media/create-edit-powerbi-embedded-page/pbi-dashboard1.png" alt-text="Show reports in this environment only option":::
    
-   If you clear **Show reports in this environment only**, you can select a Power BI report or a Power BI dashboard in any workspace.
+   If you clear **Show reports in this environment only**, you can select a Power BI report or a Power BI dashboard from another workspace.
    
 1. Enter the following information in the **New Power BI embedded** dialog that appears:
    - Enter a **Display name** for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
