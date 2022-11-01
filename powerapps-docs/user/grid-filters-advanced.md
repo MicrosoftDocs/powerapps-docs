@@ -89,7 +89,9 @@ The following options are available when you add conditions in the filter editor
 - To add a condition, select **Add row**, and then select a column, an operator, and a value.
 
     :::image type="content" source="./media/filter-editor-add-condition-row.png" alt-text="A screenshot of the view filter editor, showing an added row.":::
-
+    
+    If you are adding a condition on a column of type lookup, you can lookup the record in the Value field. If youe administrator has enabled [Show advanced lookup in lookup fields within Edit filters](/power-platform/admin/settings-features), you can choose **Advanced lookup** to see more fields and search for records within a specific view.
+    
 - To add a group of conditions, select **Add group**. You can create multiple subconditions and group them using AND and OR operators to create an expression.
 
     :::image type="content" source="./media/filter-editor-add-condition-group.png" alt-text="A screenshot of the view filter editor, showing an added group of conditions.":::
