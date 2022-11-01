@@ -16,9 +16,6 @@ contributors:
 
 # Run Portal Checker
 
-
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
-
 Portal Checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal Checker helps to identify issues with a portal by looking at various configuration parameters and provides suggestions on how to fix them.
 
 When you run Portal Checker, the results are displayed in the **Diagnostic Results** section in a grid format. The results grid has the following columns:

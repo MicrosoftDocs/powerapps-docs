@@ -22,9 +22,9 @@ In this article, you'll learn about Portal Checker diagnostics results for cache
 
 ## Portal isn't displaying updated data from Microsoft Dataverse environment
 
-Any data displayed on the portal is rendered from the portal cache. This cache gets updated whenever data in the Dataverse environment is updated. However, this process can take up to 15 minutes. If changes are made in the metadata table of the portal (for example, webpages, web files, content snippet, or site setting), it's recommended to clear the cache manually or restart the portal from the Power Apps portals admin center. For information on how to clear cache, see [Clear the server-side cache for a portal](clear-server-side-cache.md). 
+Any data displayed on the portal is rendered from the portal cache. This cache gets updated whenever data in the Dataverse environment is updated. However, this process can take up to 15 minutes. If changes are made in the metadata table of the portal (for example, webpages, web files, content snippet, or site setting), it's recommended to clear the cache manually or restart the portal from the Power Apps portals admin center. For information on how to clear cache, see [Server-side cache in portals](clear-server-side-cache.md). 
 
-However, if you're seeing stale data for a long period of time in non-portal metadata tables, it could be because of one of the following issues:
+However, if you're seeing stale data for a long period of time in non-portal metadata tables, it could be because of one of the following issues.
 
 ### Tables not enabled for cache invalidation
 
@@ -36,7 +36,7 @@ If you're experiencing stale data issues in any of these tables, you can enable 
 
 ### Organization not enabled for change tracking
 
-Apart from each table being enabled for change tracking, organizations on a whole have to be enabled for change tracking as well. An organization is enabled for change tracking when a portal provisioning request is submitted. However, this can break if an organization is restored from an old database or reset. To fix this issue:
+Apart from each table being enabled for change tracking, organizations on the whole have to be enabled for change tracking as well. An organization is enabled for change tracking when a portal provisioning request is submitted. However, this can break if an organization is restored from an old database or reset. To fix this issue:
 
 1. Open [Power Apps portals admin center](admin-overview.md).
 2. In the **Portal Details** tab, select **Off** from the **Portal State** list.
@@ -44,7 +44,7 @@ Apart from each table being enabled for change tracking, organizations on a whol
 4. Select **On** from the **Portal State** list.
 5. Select **Update**.
 
-### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page.
+### I'm getting a "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page
 
 You may see a *Page Not Found* error message that appears different from the default error page content on the **Page Not Found** site marker and webpage.
 
@@ -67,5 +67,3 @@ For steps to change the site marker to point to the correct **Page Not Found** w
 ### See also
 
 [Run Portal Checker](portal-checker.md)
-
-

@@ -22,7 +22,7 @@ In this article, you'll learn about Portal Checker diagnostics results for porta
 
 ## Profile form isn't available for contact table
 
-The profile page is one of the common pages used in your portal for all profile-related issues. This page shows a form that can be used by users to update their profiles. The form used on this page comes from the **Profile Web Page** main form available in the Contact table. This form is created in your Dataverse environment when the portal is provisioned. This error is displayed when the **Profile** form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website, displaying a runtime error on your portal. This is an irreparable state and requires the portal to be reinstalled in the environment.
+The profile page is one of the common pages used in your portal for all profile-related issues. This page shows a form that lets users update their profiles. The form on this page comes from the **Profile Web Page** main form available in the Contact table. This form is created in your Dataverse environment when the portal is provisioned. This error is displayed when the **Profile** form is either deleted or disabled in your portal. This form is mandatory and deleting or disabling this form can break the whole website, displaying a runtime error on your portal. This is an irreparable state and requires the portal to be reinstalled in the environment.
 
 ### See also
 

@@ -1,6 +1,6 @@
 ---
-title: Portal checker startup issue
-description: Learn about Portal Checker diagnostics results for startup issue.
+title: Portal Checker startup issues
+description: Learn about Portal Checker diagnostics results for startup issues.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
@@ -16,15 +16,19 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Portal checker startup issue
 
-In this article, you'll learn about Portal Checker diagnostics results related to startup issues, and how to resolve any issues or problems found.
+<!-- In this and the other topics, it might be better to say "how to resolve common issues or problems," rather than "any," which implies that any issue is described here. -->
+
+
+# Portal Checker startup issues
+
+In this article, you'll learn about Portal Checker diagnostics results related to startup issues, and how to resolve any issues or problems.
 
 ## Portal doesn't load and displays server error
 
 This issue can be caused by several different reasons, such as when a portal isn't able to connect to the underlying Dataverse environment, the Dataverse environment doesn't exist or its URL has changed, or when a request to the Dataverse environment has timed out. When you run the Portal Checker tool, it will try to determine the exact reason and point you to the correct mitigation. 
 
-Below is a list of common causes for this error and their corresponding mitigation steps:
+Below is a list of common causes for this error and their corresponding mitigation steps.
 
 ### URL of the connected Microsoft Dataverse environment has changed 
 
@@ -39,11 +43,16 @@ Once this action is successfully completed, your Dataverse environment URL will 
 
 This issue occurs when the Dataverse environment is put in administration mode either when changing the organization from production to sandbox mode or manually by an organization administrator.
 
+
+
+<!-- It's better to name the page or section that you're linking to, rather than saying "here," but it isn't clear which steps on the page the reader should be looking at. I don't see any steps under "Administration mode." -->
+
+
 If this is the cause, you can disable administration mode by following the steps listed [here](/dynamics365/admin/manage-sandbox-instances#administration-mode). Once administration mode is disabled, your portal should work.
 
 ### Authentication connection between Dataverse environment and portal is broken
 
-This issue occurs when the authentication connection between the Dynamics 365 organization and the portal is broken because the Dataverse environment was either restored from a backup or was deleted and recreated from a backup. To fix this issue:
+This issue occurs when the authentication connection between the Dynamics 365 organization and the portal is broken because the Dataverse environment was either restored from a backup or was deleted and re-created from a backup. To fix this issue:
 
 1. Open [Power Apps portals admin center](admin-overview.md).
 1. In the **Portal Details** tab, select **Off** from the **Portal State** list.
@@ -73,18 +82,18 @@ This issue occurs when the website binding records for the portal are deleted fr
 1. Delete all the website binding records that are pointing to your portal. The **Sitename** field helps you to identify the website binding records for your portal.
 1. Restart the portal.
 
-Once you complete these steps, your portal will restart and should recreate website binding records automatically.
+Once you complete these steps, your portal will restart and should re-create website binding records automatically.
 
-There are situations in which the portal won't be able to recreate website binding records automatically, such as when the GUID of the website record available in your instance is different than the one created during default installation of your portal. In this situation, do the following:
+There are situations in which the portal won't be able to re-create website binding records automatically, such as when the GUID of the website record available in your instance is different than the one created during default installation of your portal. In this situation, do the following:
 
 1. Delete all website binding records related to your portal.
 1. Create a website binding record manually with the following values:
 
       - **Name**: This can be any string.
       - **Website**: Select the website record that you want to be rendered on your portal.
-      - **Sitename**: Type in the host name of your portal (i.e portal URL without `https://` in the beginning). If your portal is using a custom domain name, use that custom domain name here.
+      - **Sitename**: Type in the host name of your portal (portal URL without `https://` in the beginning). If your portal is using a custom domain name, use that custom domain name here.
       - Leave all other fields blank.
-1. Once website binding record is recreated, restart your portal from the Power Apps portals admin center.
+1. Once the website binding record is re-created, restart your portal from the Power Apps portals admin center.
 
 ### An unexpected error has occurred while trying to connect to your Microsoft Dataverse environment
 
