@@ -71,7 +71,7 @@ Getting started with model-driven apps is simple. You can begin with these topic
 
 Cards (preview) are micro-apps with lightweight UI elements that can be used across multiple applications that doesn't require any coding or IT expertise. You can quickly design and develop cards that can surface business data through Power Platform connectors, or use your own business logic for more customization.
 
-Get started with Cards (preview) with these topics:
+Get started with cards (preview) with these topics:
 
 - [What are cards for Power Apps (preview)?](../cards/overview.md)
 - [Card designer overview](../cards/make-a-card/designer-overview.md)
