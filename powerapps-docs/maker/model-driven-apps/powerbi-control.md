@@ -18,6 +18,8 @@ Add a Power BI report to a model-driven app form using the Power BI report contr
 > [!IMPORTANT]
 > This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
+:::image type="content" source="media/create-edit-powerbi-embedded-page/pbi-report-control-form.jpg" alt-text="Power BI report on a form":::
+
 ## Prerequisites
 
 - Microsoft Dataverse environments must have the Power BI Extensions solution installed. More information: [Install an app in the environment view](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view)
