@@ -9,13 +9,18 @@ ms.topic: how-to
 ms.date: 10/26/2022
 ms.custom: template-how-to
 ---
-# Use the Power BI report control to add a report
+# Use the Power BI report control to add a report (preview)
 
-Add a Power BI report to a model-driven app form using the Power BI report control.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+Add a Power BI report to a model-driven app form using the Power BI report control. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
+
+> [!IMPORTANT]
+> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ## Prerequisites
 
-- Embedding Power BI content is an optional feature and is disabled on all environments by default. Administrators must enable the setting before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards)
+- Microsoft Dataverse environments must have the Power BI Extensions solution installed. More information: [Install an app in the environment view](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view)
 - The Power BI report control only works with main form types.
 
 ## Add and configure the Power BI control on a form
