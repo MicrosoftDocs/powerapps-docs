@@ -41,8 +41,6 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: Use the Measure in MR control to take measurements 
-    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -444,6 +442,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Validate measurements in mixed reality using a spatial test filter
                 href: ./canvas-apps/mixed-reality-spatial-test.md
+              - name: Use the measure in MR control to take measurements 
+                href: ./canvas-apps/measure-your-space-in-mixed-reality.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
@@ -1878,7 +1878,7 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
-        - name: Configure file column (preview)
+        - name: Configure file column
           href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md

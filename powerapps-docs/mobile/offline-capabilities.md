@@ -24,7 +24,7 @@ search.app:
 
 # Mobile offline capabilities and limitations
 
-Before you set-up the mobile app in offline mode be sure to read through the following capabilities, tips,  and limitations. 
+Before you set-up the mobile app in offline mode, be sure to read through the following capabilities, tips,  and limitations. We recommend that you also review the [Offline profile guidelines](mobile-offline-guidelines.md).
 
 These tables and corresponding commands are available in offline mode.
   > [!NOTE]
