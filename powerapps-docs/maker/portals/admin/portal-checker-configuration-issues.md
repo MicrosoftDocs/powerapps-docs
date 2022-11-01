@@ -18,14 +18,7 @@ contributors:
 
 # Portal checker configuration issues
 
-<!-- In this and the other topics, it might be better to say "how to resolve common issues or problems," rather than "any," which implies that all issues are described here. -->
-
-
-In this article, you'll learn about Portal Checker diagnostics results related to configuration issues, and how to resolve any issues or problems.
-
-
-<!-- The Microsoft style guide advises against using (s) to indicate single or plural, and instead suggests just using plural. I've applied that to the following header. -->
-
+In this article, you'll learn about Portal Checker diagnostics results related to configuration issues, and how to resolve common issues or problems.
 
 ## Anonymous access to basic forms, lists, and advanced form steps
 
@@ -74,10 +67,6 @@ List components in portals can be enabled for OData feed by enabling [OData feed
 
 To find anonymous OData feeds enabled on your portal:
 
-
-<!-- In the following, a forward slash is used before an underscore (/_). Is the forward slash supposed to be visible? That's how it shows up on the review page. There are several places where this is the case. -->
-
-
 1. Go to '{Portal Url}/_odata' (for example, `https://contoso.powerappsportals.com/_odata`) in InPrivate mode without authenticating to the portal.
 
 1. In the UI, you'll see a list of all OData feeds enabled on your portal.
@@ -91,10 +80,6 @@ To find anonymous OData feeds enabled on your portal:
 
     ![Browse to OData feed](media/portal-checker-analysis/browse-to-enabled-odata-feeds.png "Browse to OData feed")
 
-
-<!-- In the following, do you want back ticks around '{table set name}' instead of apostrophes? -->
-
-
 1. If the OData field is available anonymously, it will return the data with an HTTP 200 response. If the feed isn't enabled anonymously, it will return an HTTP 403 response with a message “Access to OData, with the entity set name of '{table set name}', has been denied.”
 
 
@@ -102,9 +87,6 @@ To find anonymous OData feeds enabled on your portal:
 
 
 If you've unintended OData feed enabled on your portal anonymous, it could be because of one of these possibilities:
-
-
-<!-- Changing from a numbered to a bulleted list. -->
 
 - By not securing the list on which the OData feed is enabled as described in [Securing lists](../configure/securing-lists.md).
 

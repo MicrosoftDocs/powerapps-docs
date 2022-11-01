@@ -18,10 +18,7 @@ contributors:
 
 # Portal Checker performance
 
-
-<!-- In this and the other topics, it might be better to say "how to resolve common issues or problems," rather than "any," which implies that all issues are described here. -->
-
-In this article, you'll learn about Portal Checker diagnostics results related to performance issues, and how to resolve any issues or problems.
+In this article, you'll learn about Portal Checker diagnostics results related to performance issues, and how to resolve common issues or problems.
 
 ## Webpage tracking enabled
 
@@ -56,10 +53,6 @@ The Portal Checker tool will list all the web files that are enabled for page tr
 1. Bulk edit all the records and set this field to **No**.
 
 You also can go to each file listed in the Portal Checker results and set the value of the **Enable Tracking (Deprecated)** field to **No**. If you're on portal solution version 9.x, this field won't be displayed on the form and you might need to add it to the form first. 
-
-
-<!-- I changed "login" to "sign-in" below, which is what the style guide advises. -->
-
 
 ## Sign-in tracking enabled
 
@@ -105,10 +98,6 @@ The Portal Checker tool will check to see if footer output cache is disabled on 
 The web file table is used by a portal to store any static files you want to use on your portal. The main use case of this table is to store static content of your website such as CSS, JavaScript, image files, and so on. However, having a large number of these files can cause slowness during the startup of your portal.
 
 The Portal Checker tool will check for this scenario and provide you an indication if you have more than 500 active web files in your portal. If all of these files represent static content, you can take the following actions to mitigate this issue:
-
-
-<!-- Below, I changed CDN to Azure Content Delivery Network. Is that correct? If so, it shouldn't be abbreviated. -->
-
 
 - Use an external file server like Azure Blob Storage or Azure Content Delivery Network to store these files and then reference these files on the appropriate pages either within the page or in an underlying template.
 

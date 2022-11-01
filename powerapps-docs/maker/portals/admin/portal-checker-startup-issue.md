@@ -16,13 +16,9 @@ contributors:
     - ProfessorKendrick
 ---
 
-
-<!-- In this and the other topics, it might be better to say "how to resolve common issues or problems," rather than "any," which implies that any issue is described here. -->
-
-
 # Portal Checker startup issues
 
-In this article, you'll learn about Portal Checker diagnostics results related to startup issues, and how to resolve any issues or problems.
+In this article, you'll learn about Portal Checker diagnostics results related to startup issues, and how to resolve common issues or problems.
 
 ## Portal doesn't load and displays server error
 
