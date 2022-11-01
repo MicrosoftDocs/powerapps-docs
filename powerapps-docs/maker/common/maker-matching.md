@@ -39,7 +39,7 @@ To access maker matching resources:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
+2. Select **Ask a Virtual Agent** from the lower-left corner of the screen.
 
    > [!div class="mx-imgBorder"]
    > ![Select Ask a virtual agent.](media/skills-match/skills-match-1.png "Select Ask a virtual agent.")
@@ -123,7 +123,7 @@ Select **Settings** from the upper-right corner of the screen, and then choose *
 Your organizational admin will be able to nominate you as a Power Apps advisor via the Power Platform admin center, in which case you'll receive an email and see the in-product notification shown above.
 
 > [!NOTE]
-> You will not see the **Advisor program** tab under Power Apps settings if you have not been nominated as an advisor.
+> You won't see the **Advisor program** tab under Power Apps settings if you haven't been nominated as an advisor.
 
 ## Administer maker matching for all makers and advisors
 
