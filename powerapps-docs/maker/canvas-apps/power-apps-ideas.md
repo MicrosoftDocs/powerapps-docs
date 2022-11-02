@@ -30,10 +30,7 @@ If you’re struggling with Power Fx and don’t want to spend time on it, try P
 ## Use Power Apps Ideas in your app
 
 
-<!-- In the next sentence, should it be "Power Apps Ideas," or just remove the "you"? --> 
-
-
-When you're building a canvas app, Power Apps you will automatically suggest ideas for supported controls such as **Gallery**, **Data table**, **Text box**, **Drop down**, **Combo box**, and **Text label**. 
+When you're building a canvas app, Power Apps Ideas will automatically suggest ideas for supported controls such as **Gallery**, **Data table**, **Text box**, **Drop down**, **Combo box**, and **Text label**. 
 
 When you select the name field in a gallery, you'll see an idea for a formula that you may want to use. However, if you select the plus icon, then you won’t see an idea because we currently don’t have ideas for icons. 
 
