@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/28/2022
+ms.date: 11/02/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -481,10 +481,21 @@ Content-Length: 4194304
 < byte[] content removed for brevity>
 ```
 
+For each request that contains partial content, the response will be [206 PartialContent](https://developer.mozilla.org/docs/Web/HTTP/Status/206).
+
 **Response**
 
 ```http
 HTTP/1.1 206 PartialContent
+OData-Version: 4.0
+```
+
+For the final request that includes the last chunk of the file, the response will be [204 NoContent](https://developer.mozilla.org/docs/Web/HTTP/Status/204).
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
