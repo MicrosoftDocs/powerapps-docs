@@ -21,6 +21,8 @@ With the learning hub, you can explore documents, videos, and other resources th
 
 To access the learning hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane.
 
+![How to use the learning hub.](media/learn-hub.png "How to use the learning hub") 
+
 
 
 
