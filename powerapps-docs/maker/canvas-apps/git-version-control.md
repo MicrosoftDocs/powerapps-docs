@@ -145,6 +145,7 @@ Since this feature is experimental, we welcome your feedback. The following list
 - This feature does not support renaming of custom components.
 - If you see a message about the app being open for editing by another user, ask the referenced user to refresh the app. Afterwards, refresh your app to remove the lock.
 - This feature is not compatible with [Test Studio tests](test-studio.md) and [custom pages for model-driven apps](../model-driven-apps/model-app-page-overview.md)
+- This feature does not support the use of personal access tokens that are authorized for use with SAML single sign-on.
 
 ## Feedback to the community forum
 
