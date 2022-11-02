@@ -27,7 +27,7 @@ search.app:
 
 The default display name of some system tables, such as account and contact tables, is used in user interface text and error messages in Microsoft Dataverse. If you change the display name for a system table, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
 
-## Add a system table message
+## Add a message to a system table
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) (make.powerapps.com).
 1. Go to **Solutions**, open the solution that has the table you want, and then open the table.
