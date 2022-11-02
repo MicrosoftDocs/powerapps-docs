@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 09/07/2022
+ms.date: 11/02/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -16,7 +16,6 @@ contributors:
 ---
 
 # Portals Web API overview
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
@@ -45,6 +44,9 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 - [Create a record in a table](write-update-delete-operations.md#create-a-record-in-a-table)
 - [Update and delete records in a table](write-update-delete-operations.md#update-and-delete-records-by-using-the-web-api) 
 - [Associate and disassociate tables](write-update-delete-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
+
+> [!NOTE]
+> Calling actions using the portals Web API is not supported.
 
 ## Site settings for the Web API
 
