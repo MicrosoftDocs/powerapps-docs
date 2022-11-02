@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# How to use the learning hub
+# Use the learning hub
 
 With the learning hub, you can explore training material, get help from the Power Apps community, and other resources that will help make it easier for you to create and build Power Apps.
 
