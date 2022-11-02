@@ -4,7 +4,7 @@ description: Learn how end users, app makers, admins, and developers can use Pow
 author: KumarVivek
 ms.subservice: common
 ms.topic: overview
-ms.date: 10/19/2021
+ms.date: 10/21/2022
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -39,8 +39,6 @@ To create an app, you start with [make.powerapps.com](https://make.powerapps.com
 - **Power Apps Studio** is the app designer used for building canvas apps. The app designer makes creating apps feel more like building a slide deck in Microsoft PowerPoint. More information: [Generate an app from data](/powerapps/maker/canvas-apps/data-platform-create-app)  
 
 - **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
-
-- **Power Apps portals Studio** is a WYSIWYG design tool to add and configure webpages, components, forms, and lists. More information: [Power Apps portals Studio anatomy](/powerapps/maker/portals/portal-designer-anatomy)
 
 Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
 
