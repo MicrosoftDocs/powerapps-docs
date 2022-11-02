@@ -2,9 +2,8 @@
 title: "Edit system table messages with Power Apps | MicrosoftDocs"
 description: "Learn how to edit system table messages"
 ms.custom: ""
-ms.date: 05/15/2018
+ms.date: 11/02/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -26,11 +25,33 @@ search.app:
 ---
 # Edit system table messages
 
+The default display name of some system tables, such as account and contact tables, is used in user interface text and error messages in Microsoft Dataverse. If you change the display name for a system table, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
 
+## Add a system table message
 
-The default display name of some system tables is used in user interface text and error messages in Microsoft Dataverse. If you change the display name, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) (make.powerapps.com).
+1. Go to **Solutions**, open the solution that has the table you want, and then open the table.
+1. In the **Customizations** area, select **Messages**.
+   :::image type="content" source="media/open-messages-area.png" alt-text="Table messages area":::
+1. Select the message you want, and then select **Add**.
 
-You cannot edit system messages using the Power Apps portal, you must use solution explorer.
+## Edit a system table message
+
+1. Open the table that has the message you want to edit, and then in the **Customizations** area select **Messages**.
+1. Select the message, and then select **Edit** on the command bar. Enter the changes you want:   
+   :::image type="content" source="media/edit-table-message.png" alt-text="Edit a system table message":::
+      |Field|Description|  
+   |-----------|-----------------|  
+   |**Default display text**|Shows the original text, which isn't editable.|  
+   |**Custom display text**|Edit this text to change the message that is displayed.|  
+   |**Comment**|Optional. Include a comment about what you changed and why.|  
+
+1. Select **Done**.
+
+## Edit system table message using the classic experience
+
+> [!IMPORTANT]
+> There's a better way to edit system table messages. More information: [Edit system table messages](#edit-system-table-messages)
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
