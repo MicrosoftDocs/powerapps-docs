@@ -19,10 +19,6 @@ contributors:
 ---
 
 
-<!-- Note from editor: My only concern in this article is with the term "backstage." I'm not sure what it means when used here, but an entry in the style guide advises against using the term: https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=40724  -->
-
-
-
 # Use the Search pane 
 
 You can now use the Search pane to locate objects&mdash;like media files, variables, collections, and data sources&mdash;across your app. You can also use the Search pane to find repeated instances of strings in formulas. For example, using the Search pane, you can look for each instance of `HoverColor` to determine the setting for that property in other areas of your app. You can use the Search pane to learn more about what's being used by your app, where, and you can go right to those results to make any necessary updates. In addition, you can use the replace capability to update one or more instances of text, variables, collections, or formula references.
