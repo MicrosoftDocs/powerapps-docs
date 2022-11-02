@@ -23,4 +23,6 @@ search.app:
 
 # Sync Power Apps data offline in the background
 
-Content goes here.
+The offline synchronization process continues in the background as long as the app is not closed. The synchronization in the background relies on the OS capabilities which are different between iOS, Android and Windows.
+
+
