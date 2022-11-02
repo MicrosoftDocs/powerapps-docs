@@ -23,9 +23,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Edit system table messages
+# Edit system table messages (preview)
 
-The default display name of some system tables, such as account and contact tables, is used in user interface text and error messages in Microsoft Dataverse. If you change the display name for a system table, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.  
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+The default display name of some system tables, such as account and contact tables, is used in user interface text and error messages in Microsoft Dataverse. If you change the display name for a system table, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.
+
+> [!IMPORTANT]
+> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ## Add a message to a system table
 
