@@ -40,7 +40,8 @@ The default display name of some system tables, such as account and contact tabl
 1. Open the table that has the message you want to edit, and then in the **Customizations** area select **Messages**.
 1. Select the message, and then select **Edit** on the command bar. Enter the changes you want:   
    :::image type="content" source="media/edit-table-message.png" alt-text="Edit a system table message":::
-      |Field|Description|  
+
+   |Field|Description|  
    |-----------|-----------------|  
    |**Default display text**|Shows the original text, which isn't editable.|  
    |**Custom display text**|Edit this text to change the message that is displayed.|  
