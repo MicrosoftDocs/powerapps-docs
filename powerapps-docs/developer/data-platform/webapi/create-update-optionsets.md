@@ -1,7 +1,7 @@
 ---
 title: "Create and update choices (option sets) using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about creating and updating choices in Microsoft Dataverse."
-ms.date: 03/11/2022
+ms.date: 11/03/2022
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
@@ -23,7 +23,8 @@ contributors:
 
 Typically, you use *global* option sets to set table columns so that different columns can share the same set of options, which are maintained in one location. Unlike *local* option sets which are defined only for a specific column, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
  
-> [!NOTE] You can only change an existing managed option set if you are the publisher. In order to make a change such as rename option or delete option on these option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md)
+> [!NOTE]
+> You can only change an existing managed option set if you are the publisher. In order to make a change such as rename option or delete option on these option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md)
 
 When you define a global option set using a POST request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions`, 
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the 
