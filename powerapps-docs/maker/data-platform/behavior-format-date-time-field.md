@@ -55,6 +55,8 @@ Changing the column behavior affects the column values that are added or modifie
 
 When you import a solution that contains a Date column using the User Local behavior, you may have the option to change the behavior to **Date Only** or **Time Zone Independent**.  
 
+> [!NOTE] You can only change the behavior of an existing managed Date Only or Date Time field if you are the publisher. In order to make a change to these fields, an Upgrade must be made to the solution that added the Date Only or Date Time column. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md)
+
 ### Prevent changing behavior
 
 If you are distributing a custom date column in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set  managed properties for columns](set-managed-properties-for-field.md)
