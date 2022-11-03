@@ -59,6 +59,11 @@ sections:
           Primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
 
       - question: |
+        What are the advantages of including Secondary apps in the bundle, if I can still Launch() them without doing so?
+        answer: |
+          Including Secondary apps in the bundle provides a better Launch time performance when opening them for the first time. Howver, it is entirely optional to bundle Secondary apps with the Primary app. If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the app bundle.
+
+      - question: |
           Can I create B2C mobile apps with Power Apps?
         answer: |
           No. Power Apps is a platform for creating business applications and uses Azure Active Directory authentication. The wrap feature wraps existing canvas apps for the same set of end users.
