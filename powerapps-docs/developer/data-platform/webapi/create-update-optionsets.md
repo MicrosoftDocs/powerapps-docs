@@ -22,7 +22,7 @@ contributors:
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 Typically, you use *global* option sets to set table columns so that different columns can share the same set of options, which are maintained in one location. Unlike *local* option sets which are defined only for a specific column, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
- 
+
 > [!NOTE]
 > You can only change an existing managed option set if you are the publisher. In order to make a change such as rename option or delete option on these option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md)
 
