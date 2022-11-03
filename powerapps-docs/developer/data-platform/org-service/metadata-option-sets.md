@@ -24,7 +24,7 @@ contributors:
 Typically, you use _global_ choices (option sets) to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike _local_ choices which are defined only for a specific table column, you can reuse global choices. You will also see them used in request parameters in a manner similar to an enumeration.
 
 > [!NOTE]
-> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets.
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set.
 
 When you define a global choice by using <xref:Microsoft.Xrm.Sdk.Messages.CreateOptionSetRequest>,
 we recommend that you let the system assign a value. You do this by passing a **null** value when you create the
@@ -33,6 +33,7 @@ context of the publisher set for the solution that the choice is created in.
 This prefix helps reduce the chance of creating duplicate choices for a managed solution,
 and in any choices that are defined in organizations where your managed solution is installed. For more information,
 see [Merge choice options](/power-platform/alm/how-managed-solutions-merged).
+
 
 You can download the code sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/WorkWithOptionSets).
 
