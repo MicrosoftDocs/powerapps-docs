@@ -116,6 +116,9 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Add all the devices where the iPA needs to be installed
 
+ > [!NOTE]
+    > This step is not necessary for Enterprise/In-House distribution.
+
 1. Sign in to your developer account at <https://developer.apple.com> by selecting the **Account** tab.
 
 1. Go to [Certificates, IDs & Profiles &gt; Devices](https://developer.apple.com/account/resources/devices/list).
