@@ -206,6 +206,12 @@ The toggle control allows users to choose between binary values, such as on/off 
 
 Use the AI Builder business card reader control to detect business cards and extract their information. You can take photos directly in the component or load images that you've taken. More information: [Use the business card reader component in model-driven apps](/ai-builder/business-card-reader-component-model-driven)
 
+## Power BI
+
+### Power BI report
+
+Use the Power BI report control to add a Power BI report on the form. More information: [Use the Power BI report control to add a report](powerbi-control.md)
+
 ## More components controls
 
 Some components aren't displayed in the default **Components** list in the form designer but can be added to the list by selecting [Get more components](add-move-configure-or-delete-components-on-form.md#get-more-components).

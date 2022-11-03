@@ -17,17 +17,17 @@ search.app:
 
 # Maker matching using an integrated virtual agent in Power Apps (preview)
 
-[This article is pre-release documentation and is subject to change.]
+[This article is prerelease documentation and is subject to change.]
 
 Maker matching is now available through an integrated chat bot in Power Apps. This feature allows you to find your organization's internal resources, as well as interact with experienced makers within your organization.
 
 The integrated virtual agent is available in all three Power Apps experiences. Maker matching enables the following personas:
 
-- **Maker** – use chat bot to get help from available documentation (internal and public) and other experienced makers in your organization (advisors).
+- **Maker**: Use chat bot to get help from available documentation (internal and public) and other experienced makers in your organization (advisors).
 
-- **Admin** – set internal documentation and add experienced individual makers to help new makers.
+- **Admin**: Set internal documentation and add experienced individual makers to help new makers.
 
-- **Advisor** – set individual preferences as an experienced Power Apps maker to help others.
+- **Advisor**: Set individual preferences as an experienced Power Apps maker to help others.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -39,15 +39,15 @@ To access maker matching resources:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. Select **Ask a Virtual Agent** from the bottom-left corner of the screen.
+2. Select **Ask a Virtual Agent** from the lower-left corner of the screen.
 
    > [!div class="mx-imgBorder"]
-   > ![Select ask a virtual agent.](media/skills-match/skills-match-1.png)
+   > ![Select Ask a virtual agent.](media/skills-match/skills-match-1.png "Select Ask a virtual agent.")
 
 3. Interact with the chat bot to receive help.
 
    > [!div class="mx-imgBorder"]
-   > ![Interact with the chat bot](media/skills-match/skills-match-2.png)
+   > ![Interact with the chat bot.](media/skills-match/skills-match-2.png "Interact with the chat bot.")
 
 ## Virtual agent resources
 
@@ -66,38 +66,38 @@ During the first stage of engagement, your interaction with the virtual agent le
 For example, when you need help with a data export error that relates to connecting data, you'll start with the chat that includes text relevant to the data export error:
 
 > [!div class="mx-imgBorder"]
-> ![Demo of skills matching.](media/skills-match/skills-match-3.png)
+> ![Demo of skills matching.](media/skills-match/skills-match-3.png "Demo of skills matching.")
 
 From the list of topics that the chat bot suggests, you can then choose to be more specific to exporting data from Dataverse:
 
 > [!div class="mx-imgBorder"]
-> ![Find help with a specific error.](media/skills-match/skills-match-4.png)
+> ![Find help with a specific error.](media/skills-match/skills-match-4.png "Find help with a specific error.")
 
 ### Stage 2 – Organizational resources
 
 This stage begins once you choose **No** when asked whether the previous interaction solved your problem.
 
 > [!div class="mx-imgBorder"]
-> ![Second stage when your issue is not solved.](media/skills-match/skills-match-5.png)
+> ![Second stage when your issue is not solved.](media/skills-match/skills-match-5.png "Second stage when your issue is not solved.")
 
-When you choose **No**, you'll see the internal documentation, Yammer community and the Microsoft Teams group resources unique to your organization.
+When you choose **No**, you'll see the internal documentation, Yammer community, and the Microsoft Teams group resources unique to your organization.
 
 > [!div class="mx-imgBorder"]
-> ![Get get from internal documentation.](media/skills-match/skills-match-6.png)
+> ![Get help from internal documentation.](media/skills-match/skills-match-6.png "Get help from internal documentation.")
 
 > [!NOTE]
-> The internal documentation, Yammer community and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
+> The internal documentation, Yammer community, and Teams group information will only appear if they're [configured by your](#add-internal-resources) environment administrator using the Power Platform admin center.
 
 ### Stage 3 – Advisor engagement
 
-If you choose **Next** to find an advisor for your organization in the virtual agent interaction, you're then presented with a list of advisors that are available to provide help:
+If you choose **Next** to find an advisor for your organization in the virtual agent interaction, you're then presented with a list of advisors who are available to provide help:
 
 > [!div class="mx-imgBorder"]
-> ![Find an advisor from your organization.](media/skills-match/skills-match-7.png)
+> ![Find an advisor from your organization.](media/skills-match/skills-match-7.png "Find an advisor from your organization.")
 
 If additional advisors are available to help, you can choose to view more advisors.
 
-Select **Send message** to either initiate an email or a Teams chat with the advisor depending on the advisor's preferred contact method.
+Select **Send message** either to initiate an email or a Teams chat with the advisor depending on the advisor's preferred contact method.
 
 ## Advisor identification
 
@@ -108,32 +108,31 @@ Advisors are identified one of two ways: via admin identification or the product
 
 ### Signing up 
 
-When an advisor is identified, they receive an in-product popup notification asking whether they'd like to opt into the program to help other makers.
+When an advisor is identified, they receive an in-product pop-up notification asking whether they'd like to opt in to the program to help other makers.
 
 > [!div class="mx-imgBorder"]
-> ![notification for advisors.](media/skills-match/skills-match-8.png)
+> ![Notification for advisors.](media/skills-match/skills-match-8.png "Notification for advisors.")
 
 ### Sign up using Power Apps profile screen
 
-Select **Settings** from the top-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
-
+Select **Settings** from the upper-right corner of the screen, and then choose **Power Apps settings**. This lets you configure your profile for this feature. You'll be able to specify the communication preferences such as using email or Microsoft Teams chat.
 
 > [!div class="mx-imgBorder"]
-> ![Sign up using Power Apps profile screen.](media/skills-match/skills-match-9.png)
+> ![Sign up using Power Apps profile screen.](media/skills-match/skills-match-9.png "Sign up using Power Apps profile screen.")
 
-Your organizational admin will be able to nominate you as a Power Apps Advisor via the Power Platform Admin Center, in which case you will receive an email and see the in-product notification shown above.
+Your organizational admin will be able to nominate you as a Power Apps advisor via the Power Platform admin center, in which case you'll receive an email and see the in-product notification shown above.
 
 > [!NOTE]
-> You will not see the **Advisor program** tab under Power Apps settings if you have not been nominated as an advisor.
+> You won't see the **Advisor program** tab under Power Apps settings if you haven't been nominated as an advisor.
 
 ## Administer maker matching for all makers and advisors
 
 You can administer and configure **the settings for maker matching** for all makers and advisors using the Power Platform admin center. In the admin center, you can also manually add or remove advisors.
 
 > [!NOTE]
-> By default, advisors who are identified by the system and have opted into the Advisor program are added to the advisor list automatically. As an administrator, you can add or remove advisors. An advisor discovered via telemetry criteria, if removed by an administrator, can only be added back by an administrator.
+> By default, advisors who are identified by the system and have opted in to the advisor program are added to the advisor list automatically. As an administrator, you can add or remove advisors. An advisor discovered via telemetry criteria, if removed by an administrator, can only be added back by an administrator.
 
-Along with advisor configuration, you can also configure internal resources to share with the makers that use the chat bot experience through the internal resources chat experience.
+Along with advisor configuration, you can also configure internal resources to share with the makers who use the chat bot experience through the internal resources chat experience.
 
 ### Add internal resources
 
@@ -143,10 +142,10 @@ To add internal resources:
 
 2. Select **Power Apps assets** from the left pane.
 
-3. Add the **Documentation**, **Teams Group** and **Yammer Community** links.
+3. Add the **Documentation**, **Teams Group**, and **Yammer Community** links.
 
    > [!div class="mx-imgBorder"]
-   > ![Add the Documentation, Teams Group and Yammer Community links.](media/skills-match/skills-match-10.png)
+   > ![Add the Documentation, Teams Group, and Yammer Community links.](media/skills-match/skills-match-10.png "Add the Documentation, Teams Group, and Yammer Community links.")
 
 4. Select **Save**.
 
@@ -158,16 +157,16 @@ To configure advisors:
 
 2. Select **Power Apps assets** from the left pane.
 
-3. Select **Advisors** tab.
+3. Select the **Advisors** tab.
 
    > [!div class="mx-imgBorder"]
-   > ![Configure advisors.](media/skills-match/skills-match-11.png)
+   > ![Configure advisors.](media/skills-match/skills-match-11.png "Configure advisors.")
 
-4. Configure advisor with the following options:
+4. Configure an advisor with the following options:
 
-    - **Add** an advisor - select **Add an advisor** to add an advisor.
+    - To add an advisor, select **Add an advisor**.
 
-    - **Remove** an advisor - choose an advisor by selecting … (ellipsis), and select **Remove**.
+    - To remove an advisor, choose an advisor by selecting the ellipsis (**…**), and then select **Remove**.
 
 ## Known issues
 
