@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 11/02/2022
+ms.date: 11/03/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -46,7 +46,7 @@ The portals Web API offers a subset of capabilities for Dataverse operations tha
 - [Associate and disassociate tables](write-update-delete-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
 
 > [!NOTE]
-> Calling actions using the portals Web API is not supported.
+> Calling [actions](../developer/data-platform/webapi/use-web-api-actions.md) using the portals Web API is not supported.
 
 ## Site settings for the Web API
 
@@ -70,7 +70,7 @@ users are allowed to perform create, update, and delete operations on this entit
 | Site setting name | Site setting value|
 | - |- |
 | *Webapi/incident/enabled* | true |
-| *Webapi/incident/fields* | attr1,attr2,attr3 |
+| *Webapi/incident/fields* | attr1, attr2, attr3 |
 
 ## Security with the portals Web API
 
