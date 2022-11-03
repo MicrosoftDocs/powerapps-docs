@@ -26,6 +26,10 @@ You can also use the customization area in Dataverse to define the behavior and 
   
 > [!NOTE]
 >  All date and time columns in Dataverse support values as early as 1/1/1753 12:00 AM.  
+
+> [!NOTE] You can only change the behavior of an existing managed Date Only or Date Time field if you are the publisher. In order to make a change to these fields, an Upgrade must be made to the solution that added the Date Only or Date Time column. More information: [Upgrade or update a solution](../../../maker/data-platform/update-solutions.md)
+Behavior and format of the Date and Time column in Microsoft Dataverse - Power Apps | Microsoft Learn
+
   
 <a name="SpecifyBehavior"></a>   
 
