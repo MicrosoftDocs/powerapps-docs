@@ -2340,7 +2340,7 @@
         href: ./data-platform/edit-system-entity-messages.md
       - name: How to configure a table for feedback/ratings
         href: ./data-platform/configure-entity-feedback.md
-      - name: Azure Cosmos DB SQL API Data Provider
+      - name: Azure Cosmos DB for NoSQL Data Provider
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
