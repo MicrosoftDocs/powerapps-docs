@@ -34,7 +34,7 @@ Once you have Power Apps Studio open, go to the top menu bar, and select **Setti
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - This preview feature is in process of rolling out and might not be available in your region yet.
+> - This preview feature is in the process of rolling out and might not be available in your region yet.
 
 ## Use formula repair
 
