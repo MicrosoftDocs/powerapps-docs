@@ -1132,6 +1132,8 @@ The following table outlines a list of accessibility shortcuts available when us
 
 The rich text editor control is available when working offline with a basic configuration. The following is a list of supported plugins and formatting options when working offline. All configuration added through web resource files are not available while offline.
 	
+Images uploaded using the default configuration will not be available offline.
+	
 ### Plugins available for offline
 
 The following plugins are available to the rich text editor while offline.
