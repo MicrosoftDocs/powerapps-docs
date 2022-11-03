@@ -1,13 +1,12 @@
 ---
 title: "Behavior and format of the date and time column (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The DateTimeAttributeMetadata class is used to define and manage columns of type DateTime in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+ms.date: 11/03/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -26,6 +25,9 @@ You can also use the customization area in Dataverse to define the behavior and 
   
 > [!NOTE]
 >  All date and time columns in Dataverse support values as early as 1/1/1753 12:00 AM.  
+> 
+> If your Date Only or Date Time field is in a solution, you can only change the behavior of an existing managed field if you are the publisher. In order to make a change to these fields, an Upgrade must be made to the solution that added the Date Only or Date Time column. More information: [Upgrade or update a solution](../../maker/data-platform/update-solutions.md)
+
   
 <a name="SpecifyBehavior"></a>   
 
