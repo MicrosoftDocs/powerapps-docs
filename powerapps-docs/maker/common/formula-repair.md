@@ -2,7 +2,7 @@
 title: "Formula repair in Power Apps (preview) | MicrosoftDocs"
 description: Understand how to enable and use formula repair in Power Apps
 ms.custom: ""
-ms.date: 09/30/2022
+ms.date: 11/03/2022
 ms.reviewer: tapanm-msft
 ms.topic: overview
 author: norliu
@@ -27,13 +27,14 @@ When writing [Power Fx](/power-platform/power-fx/overview) formulas, errors are 
 
 Formula repair feature is available for [canvas apps](/power-apps/maker/canvas-apps/getting-started) and [custom pages](/power-apps/maker/model-driven-apps/model-app-page-overview).
 
-Once you have Power Apps Studio open, go to the top menu bar, and select **Settings** > **Upcoming features** > **Experimental**. You'll see the toggle for **Formula repair** feature. Select the toggle to turn the feature on to experience the advantage of automatic formula checks, and suggestions. 
+Once you have Power Apps Studio open, go to the top menu bar, and select **Settings** > **Upcoming features** > **Preview**. You'll see the toggle for **Formula repair** feature. Select the toggle to turn the feature on to experience the advantage of automatic formula checks, and suggestions. 
 
 :::image type="content" source="media/formula-repair/setting.png" alt-text="Formula repair - feature.":::
 
 > [!IMPORTANT]
-> - This is an experimental feature.
+> - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - This preview feature is in process of rolling out and might not be available in your region yet.
 
 ## Use formula repair
 
@@ -68,3 +69,4 @@ Several types of errors are discovered and suggested as a fix.
 - Formula repair won't be able to determine the expected values when you enter a complete incorrect control name. For example, if your control name is `MyLabel` and you try to enter `WrongLabel`. In this situation, formula repair feature won't be able to determine and suggest you to use the formula to reference `MyLabel` instead of `WrongLabel`.
 
 - Formula repair won't trigger if your formula has only warnings, or isn't showing any errors (even when the formula is incorrect).
+
