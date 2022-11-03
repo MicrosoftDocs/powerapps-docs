@@ -15,7 +15,7 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](../../includes/preview-include.md)]
 
-Connectors allow your card to connect to other apps, data sources, and devices in the cloud. Insert, modify, and remove them in the [card designer](../designer-overview.md). [Learn more about connectors in Power Platform](/connectors/connectors).
+Test Edit. Connectors allow your card to connect to other apps, data sources, and devices in the cloud. Insert, modify, and remove them in the [card designer](../designer-overview.md). [Learn more about connectors in Power Platform](/connectors/connectors).
 
 ## Prerequisites
 
