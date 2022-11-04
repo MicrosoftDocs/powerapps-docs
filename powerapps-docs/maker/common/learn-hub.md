@@ -41,6 +41,8 @@ Legend
 The banner at the top showcases latest announcements, trending posts, or information about upcoming Microsoft events. 
 
 
+> [!div class="mx-imgBorder"] 
+> ![Banner for the learning hub.](media/learn/learn-banner.png "Banner for learning hub") 
 
 ## Overview
 
