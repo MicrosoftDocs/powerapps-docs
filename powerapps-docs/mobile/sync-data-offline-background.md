@@ -23,7 +23,7 @@ search.app:
 
 # Sync Power Apps data offline in the background
 
-For a model-driven app to be available in offline mode, the app and user data must be downloaded on your device. This process is called *initial offline sync*. The initial offline sync for model-driven apps can continue as Power Apps runs in the background, as long as the app is not closed.
+For a model-driven app to be available in offline mode, the app and user data must be downloaded on your device. This process is called *initial offline sync*. The initial offline sync for model-driven apps can continue as Power Apps runs in the background, as long as the app isn't closed.
 
 The initial offline sync process that continues while Power Apps runs in the background relies on the operating system capabilities, which are different for iOS, Android, and Windows devices.
 
@@ -36,7 +36,7 @@ The initiated sync is suspended as soon as the app is in the background or when 
 | Example scenarios | What happens to the synchronization process |
 |-------------------------|-------------------------|
 | <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave the app open.</li></br><li>Screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended, and will resume in 15 minutes. |
-| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br><li>Stop working on device, so the screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended and will resume in 15 minutes. |
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br><li>Stop working on device, so the screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended, and will resume in 15 minutes. |
 | <ol type="1"></br><li>Open Power Apps.</li></br><li>Continue working in Power Apps, so that the screen doesn't lock.</li></br></ol> | The synch will continue until it is complete.<br><br>New syncs can start while Power Apps is in use. |
 | <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br></ol> | Active sync will pause and not complete.<br><br>New syncs will not start. |
 
