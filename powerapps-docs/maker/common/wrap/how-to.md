@@ -36,10 +36,16 @@ This feature requires the apps to be part of a solution. If your canvas apps are
 
 Create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
-When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
+> [!NOTE]
+> Wrap can be used by both single tenant and multitenant customers to create native mobile apps based on Power Apps canvas apps.
+
+When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory. Whether you are single or multitenant maker, select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap:
+
+:::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
+
 
 > [!IMPORTANT]
-> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
+> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
 > - To ensure the **Redirect URI** matches the [required format](#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** > **+ Add a platform** to add the platform instead.
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
