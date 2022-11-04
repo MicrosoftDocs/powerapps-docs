@@ -117,7 +117,7 @@ To create a distribution certificate, create a new certificate signing request f
 ## Add all the devices where the iPA needs to be installed
 
  > [!NOTE]
-    > This step is not necessary for Enterprise/In-House distribution.
+ > This step is not necessary for Enterprise/In-House distribution.
 
 1. Sign in to your developer account at <https://developer.apple.com> by selecting the **Account** tab.
 
@@ -175,7 +175,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. If signing with Enterprise certificate, open **exportOptions.plist** file in this folder with Xcode and change the value for "method" field inside the file to "enterprise".
  > [!NOTE]
-    > Enterprise signing is not supported with Keyvault signing yet.
+ > Enterprise signing is not supported with Keyvault signing yet.
 
 
 1. Enter `pwsh` to start PowerShell in the terminal.
