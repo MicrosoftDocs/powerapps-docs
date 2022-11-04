@@ -199,11 +199,9 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
   
-- On a mobile device, frontline workers need to consume lot of data on a small form factor. This necessitates scrolling and tab switching on the form. With a tab-based navigation across a form, user must be at the top of the page to navigate. This results in the need to scroll up and down the form to complete tasks which require navigating across multiple tabs. With the **Lock tabs at the top of forms on mobile and tablets** setting turned on, form tabs will be persisted on the top as users scroll, so users can easily switch tabs.
+- To keep the tabs at the top of a page always visible while users scroll through the data on the page, turn the **Lock tabs at the top of forms on mobile and tablets** setting on. This setting allows users to easily navigate to other tabs to complete their tasks.
 
-  | Before | After |
-  | :---:         |     :---:      |
-  | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
+  ![Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")
   
 ### Command bar optimization for tablets
 
