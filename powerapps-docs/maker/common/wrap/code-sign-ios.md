@@ -173,6 +173,11 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Open terminal, and change directory to the unzipped folder.
 
+1. If signing with Enterprise certificate, open **exportOptions.plist** file in this folder with Xcode and change the value for "method" field inside the file to "enterprise".
+ > [!NOTE]
+    > Enterprise signing is not supported with Keyvault signing yet.
+
+
 1. Enter `pwsh` to start PowerShell in the terminal.
 
 1. Run `./SignAndGenerateIPA.ps1` with the values for the "CodeSigningIdentity" and "ProvisioningProfilePath" parameters.
