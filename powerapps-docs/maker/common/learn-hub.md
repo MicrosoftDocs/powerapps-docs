@@ -28,14 +28,14 @@ With the learning hub, you can explore training material, get help from the Powe
 
 ## Banner
 
-The banner at the top showcases latest announcements, trending posts, or information about upcoming Microsoft events. 
+The banner at the top showcases latest announcements, trending posts, and information about upcoming Microsoft events. 
 
 > [!div class="mx-imgBorder"] 
 > ![Banner for the learning hub.](media/learn/learn-banner.png "Banner for learning hub") 
 
 ## Overview
 
-The **Overview** tab lists featured items such as training module, learning paths, posts from the community,  help articles, and YouTube channels.
+The **Overview** tab lists featured items such as training module, learning paths, posts from the community, help articles, and YouTube channels.
 
 > [!div class="mx-imgBorder"] 
 > ![Overview tab.](media/learn/overview-tab.png "Overview tab") 
