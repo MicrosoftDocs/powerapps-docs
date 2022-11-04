@@ -65,3 +65,6 @@ The **Community** tab provides access to content from the Power Apps community i
 ## Support
 
 Go to the **Support** tab to get help with common issues, report a problem, submit an idea, and get access to help topics.
+
+> [!div class="mx-imgBorder"] 
+> ![Support tab.](media/learn/learn-support.png "Support tab") 
