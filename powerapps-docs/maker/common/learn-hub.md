@@ -17,10 +17,10 @@ search.app:
 
 # Use the learning hub
 
-With the learning hub, you can explore training material, get help from the Power Apps community, and other resources that will help make it easier for you to create and build Power Apps.
+Use the learning hub, to explore training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 
 1. To access the learning hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane. 
-2. Select one of the tabs to get the information that you are looking for. 
+2. Select one of the tabs to access the information that you're looking for. 
 
 > [!div class="mx-imgBorder"] 
 > ![How to use the learning hub.](media/learn/learn-hub.png "How to use the learning hub") 
@@ -28,7 +28,7 @@ With the learning hub, you can explore training material, get help from the Powe
 
 ## Banner
 
-The banner at the top showcases latest announcements, trending posts, and information about upcoming Microsoft events. 
+The banner at the top showcases the latest announcements, trending posts, and information about upcoming Microsoft events. 
 
 > [!div class="mx-imgBorder"] 
 > ![Banner for the learning hub.](media/learn/learn-banner.png "Banner for learning hub") 
@@ -42,7 +42,7 @@ The **Overview** tab lists featured items such as training module, learning path
 
 ## Courses
 
-On the **Courses** tab get access guided learning such as learning path, modules, and training events.
+The **Courses** tab provides guided training such as learning path, modules, and training events.
 
 > [!div class="mx-imgBorder"] 
 > ![Courses tab.](media/learn/learn-courses.png "Courses tab") 
@@ -50,6 +50,9 @@ On the **Courses** tab get access guided learning such as learning path, modules
 ## Articles
 
 The **Articles** tab has information from public blogs articles.
+
+> [!div class="mx-imgBorder"] 
+> ![Articles tab.](media/learn/learn-articles.png "Articles tab") 
 
 
 ## Community
