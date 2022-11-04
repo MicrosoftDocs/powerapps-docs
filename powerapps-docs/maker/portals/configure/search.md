@@ -65,6 +65,9 @@ Benefits of global search include its ability to:
 - Global search of portals allows you to search for records across multiple tables. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 - Provides intelligent search by applying AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
 
+> [!NOTE]
+> Intelligent search doesn't work when Lucene syntax is used.  Clear the value in *Search/Query* [site settings](configure-site-settings.md) to make intelligent query work.
+
 In global search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, with matched works highlighted. 
 
 The following sections detail how global search works in Power Apps portals and describe the various configuration options available.
@@ -125,9 +128,6 @@ The following site settings are related to global search:
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
 | Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;<br />Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | Determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br />"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br />Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
-
-> [!NOTE]
-> Intelligent search doesn't work when a complex Lucene syntax is used.  Clear the value in *Search/Query* [site settings](configure-site-settings.md) to make intelligent query work.
 
 ## Related content snippets
 
