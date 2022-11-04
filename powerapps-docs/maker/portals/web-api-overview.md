@@ -285,7 +285,7 @@ Users will get a CDS error if they invoke a `GET` Web API request for tables tha
 
 To resolve this issue, the recommended solution is to use [FetchXML](/developer/data-platform/use-fetchxml-construct-query) in the OData query.
 
-Alternatively, or set the site setting *Webapi/\<table name\>/disableodatafilter* to `True`. 
+Alternatively, set the site setting *Webapi/\<table name\>/disableodatafilter* to `True`. 
 
 > [!IMPORTANT]
 > Changing the site setting *Webapi/\<table name\>/disableodatafilter* to `True` may result in slower performance for Web API `GET` calls.
