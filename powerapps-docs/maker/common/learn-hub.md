@@ -19,27 +19,17 @@ search.app:
 
 With the learning hub, you can explore training material, get help from the Power Apps community, and other resources that will help make it easier for you to create and build Power Apps.
 
-To access the learning hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane.
+To access the learning hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane. Then select one of the tabs to get the information that you are looking for. 
 
 > [!div class="mx-imgBorder"] 
 > ![How to use the learning hub.](media/learn/learn-hub.png "How to use the learning hub") 
 
 
-Legend
-
-1. **Banner**: Get the latest announcements, trending posts, or information about upcoming Microsoft events. 
-2. **Overview**: Lists featured items such as training module, learning paths, posts from the community, and help articles.
-3. **Courses**: Access guided learning such as learning path, modules, and training events. 
-4. **Articles**: Get information from public blogs articles.
-5. **Community**: Get access to content from the Power Apps community including user groups, networking events, Linkedin Power Apps community, and more. 
-6. **Support**: Get help with common issues, report a problem, submit an idea, and get access to help topics.
-7. **Previous/Next**: Select the previous or next button to access more topics.
-
+Select a tab to get access to the information that you are looking for. 
 
 ## Banner
 
 The banner at the top showcases latest announcements, trending posts, or information about upcoming Microsoft events. 
-
 
 > [!div class="mx-imgBorder"] 
 > ![Banner for the learning hub.](media/learn/learn-banner.png "Banner for learning hub") 
@@ -51,4 +41,19 @@ The **Overview** tab lists featured items such as training module, learning path
 > [!div class="mx-imgBorder"] 
 > ![Overview tab.](media/learn/overview-tab.png "Overview tab") 
 
+## Courses
 
+On the **Courses** tab get access guided learning such as learning path, modules, and training events.
+
+## Articles
+
+The **Articles** tab has information from public blogs articles.
+
+
+## Community
+
+The **Community** tab provides access to content from the Power Apps community including user groups, networking events, Linkedin Power Apps community, and more. 
+
+## Support
+
+Go to the **Support** tab to get help with common issues, report a problem, submit an idea, and get access to help topics.
