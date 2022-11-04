@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 10/27/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -45,9 +45,9 @@ These are the attributes common to all bindings.
 |-----|----------|
 |Name| A title to identify the website binding when viewing the records.|
 |Website|The [website](websites.md) that should be selected by the portal.|
-|Release Date|A date that determines when the website is allowed to be selected.|
-|Expiration Date|A date that determines when the website will stop being selected.|
-|||
+
+> [!NOTE]
+> The **Release Date** and **Expiration Date** attributes are legacy settings and no longer apply to selecting a website record.
 
 #### Application Settings
 
@@ -57,7 +57,6 @@ Specify values for these attributes for an application level binding. This bindi
 |-----|----------|
 |Site Name|The name of the IIS website.|
 |Virtual Path|The name of the IIS application under the website.|
-|||
 
 For Azure websites and cloud services, the site name and virtual path values are determined by the \<Site\> and \<VirtualApplication\> nodes of the **ServiceDefinition.csdef** file.
 
