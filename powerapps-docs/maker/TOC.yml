@@ -1694,7 +1694,9 @@
       - name: Set up mobile offline (preview)
         href: ../mobile/setup-mobile-offline.md 
       - name: Enable and use offline-first (preview)
-        href: ../mobile/work-in-offline-mode.md   
+        href: ../mobile/work-in-offline-mode.md 
+    - name: Sync Power Apps data offline in the background
+      href: ../mobile/sync-data-offline-background.md
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
     - name: Offline profile guidelines
