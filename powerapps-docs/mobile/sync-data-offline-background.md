@@ -37,8 +37,8 @@ The initiated sync is suspended as soon as the app is in the background or when 
 |-------------------------|-------------------------|
 | <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave the app open.</li></br><li>Screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended and will resume in 15 minutes. |
 | <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br><li>Stop working on device, so the screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended and will resume in 15 minutes. |
-| <ol type="1"></br><li>Open Power Apps.</li></br><li>Continue working in Power Apps, so that the screen doesn't lock.</li></br></ol> | The synch will continue until it is complete.</br>New syncs can start while Power Apps is in use. |
-| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br></ol> | Active sync will pause and not complete.</br>New syncs will not start. |
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Continue working in Power Apps, so that the screen doesn't lock.</li></br></ol> | The synch will continue until it is complete.<br><br>New syncs can start while Power Apps is in use. |
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br></ol> | Active sync will pause and not complete.<br><br>New syncs will not start. |
 
 ## Android devices
 
