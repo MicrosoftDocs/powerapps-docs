@@ -59,6 +59,9 @@ The **Articles** tab has information from public blogs articles.
 
 The **Community** tab provides access to content from the Power Apps community including user groups, networking events, Linkedin Power Apps community, and more. 
 
+> [!div class="mx-imgBorder"] 
+> ![Community tab.](media/learn/learn-community.png "Community tab") 
+
 ## Support
 
 Go to the **Support** tab to get help with common issues, report a problem, submit an idea, and get access to help topics.
