@@ -21,8 +21,8 @@ sections:
       - question: |
           Can single tenant customers use wrap with Power Apps? 
         answer: |
-          Yes. Both single tenant and multitenant customers can use wrap to create native mmobile app based on their Power Apps apps.
-    
+          Yes. Both single tenant and multitenant customers can use wrap. However, it is important to select the correct account type on Azure portal when registering a new app. See [App registraion](how-to.md#app-registration) for directions on how to select the correct account type to prepare your app for wrap.
+
       - question: |
           Does the wrap feature in Power Apps support Customer Managed Keys (CMK) or Lockbox capabilities?
         answer: |
