@@ -65,7 +65,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 > [!NOTE]
 > - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Occasionally, it may take a few minutes.
 > - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
-> - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here].(performance-tips.md#enable-preload-app-for-enhanced-performance).
+> - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here](performance-tips.md#enable-preload-app-for-enhanced-performance).
 
 ## Next steps
 
