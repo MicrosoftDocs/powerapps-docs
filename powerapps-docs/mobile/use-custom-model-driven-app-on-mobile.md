@@ -216,7 +216,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   5. Set the toggle for **Lock tabs at the top of forms on mobile and tablets** to **Yes**.
 
     > [!div class="mx-imgBorder"]
-    > !["Lock tabs at the top of the forms on mobile and tablets" setting](media/Loc-tabs-setting.png)
+    > !["Lock tabs at the top of the forms on mobile and tablets" setting](media/Lock-tabs-setting.png)
 
   6. Selct **Save**.
   
