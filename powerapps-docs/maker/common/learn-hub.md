@@ -36,7 +36,7 @@ The banner at the top showcases the latest announcements, trending posts, and in
 
 ## Overview
 
-The **Overview** tab lists featured items such as training module, learning paths, posts from the community, help articles, and training videos on YouTube.
+The **Overview** tab lists featured learning path and modules, posts from the community, help articles, and training videos on YouTube.
 
 > [!div class="mx-imgBorder"] 
 > ![Overview tab.](media/learn/overview-tab.png "Overview tab") 
@@ -58,7 +58,7 @@ The **Articles** tab has information from public blogs articles.
 
 ## Community
 
-The **Community** tab provides access to content from the Power Apps community including user groups, networking events, Linkedin Power Apps community, and more. 
+The **Community** tab provides access to content from the Power Apps community including user groups, networking events, LinkedIn Power Apps community, and more. 
 
 > [!div class="mx-imgBorder"] 
 > ![Community tab.](media/learn/learn-community.png "Community tab") 
