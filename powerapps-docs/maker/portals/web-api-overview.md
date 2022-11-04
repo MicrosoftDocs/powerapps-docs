@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 11/03/2022
+ms.date: 11/04/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -283,9 +283,12 @@ Portals Web API can't be used for the following configuration tables:
 
 Users will get a CDS error if they invoke a `GET` Web API request for tables that have multiple levels of *1 to many* or *many to many* [table permissions](/power-pages/security/table-permissions) with **parent** scope defined.
 
-To resolve this issue, you can use [FetchXML](/developer/data-platform/use-fetchxml-construct-query) in the OData query or set the site setting *Webapi/\<table name\>/disableodatafilter* to `False`. 
+To resolve this issue, you can use [FetchXML](/developer/data-platform/use-fetchxml-construct-query) in the OData query or set the site setting *Webapi/\<table name\>/disableodatafilter* to `True`. 
 
 The site setting will be available in portal version [9.4.10.68](/power-platform/released-versions/portals) or later.
+
+> [!IMPORTANT]
+> Changing the site setting *Webapi/\<table name\>/disableodatafilter* to `True` may result in slower performance for Web API `GET` calls.
 
 ## Next step
 
