@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/07/2022
+ms.date: 11/04/2022
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -202,6 +202,23 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
 - To keep the tabs at the top of a page always visible while users scroll through the data on the page, turn the **Lock tabs at the top of forms on mobile and tablets** setting on. This setting allows users to easily navigate to other tabs to complete their tasks.
 
   ![Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.](media/Lock-tabs.png "Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.")
+  
+  To turn the **Lock tabs at the top of forms on mobile and tablets** setting on, complete the following steps:
+  
+  1. Sign in to [Power Apps](https://make.powerapps.com/). 
+
+  2. On the left pane, select **Apps**, and then select the app that that contains the tabs you want to lock.
+
+  3. Select **More (...)** > **Edit** to open the modern app designer.
+
+  4. On the command bar, select **Settings**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select Settings on the command bar.](media/mobile-offline-image4.png)
+
+  5. Set the toggle for **Lock tabs at the top of forms on mobile and tablets** to **Yes**.
+
+  6. Selct **Save**.
   
 ### Command bar optimization for tablets
 
