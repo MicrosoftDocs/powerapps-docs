@@ -199,7 +199,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
   
-- To keep the tabs at the top of a page always visible while users scroll through the data on the page, turn the **Lock tabs at the top of forms on mobile and tablets** setting on. This setting allows users to easily navigate to other tabs to complete their tasks.
+- To keep the tabs at the top of a page always visible while users scroll through the data on the page, turn the **Lock tabs at the top of forms on mobile and tablets** setting on. This setting locks the tabs at the top of a page and allows users to easily navigate to other tabs to complete their tasks.
 
   ![Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.](media/Lock-tabs.png "Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.")
   
@@ -215,8 +215,8 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
 
   5. Set the toggle for **Lock tabs at the top of forms on mobile and tablets** to **Yes**.
 
-    > [!div class="mx-imgBorder"]
-    > !["Lock tabs at the top of the forms on mobile and tablets" setting](media/Lock-tabs-setting.png)
+     > [!div class="mx-imgBorder"]
+     > !["Lock tabs at the top of the forms on mobile and tablets" setting](media/Lock-tabs-setting.png)
 
   6. Selct **Save**.
   
