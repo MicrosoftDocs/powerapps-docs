@@ -1132,6 +1132,8 @@ The following table outlines a list of accessibility shortcuts available when us
 
 The rich text editor control is available when working offline with a basic configuration. The following is a list of supported plugins and formatting options when working offline. All configuration added through web resource files are not available while offline.
 	
+Images uploaded using the default configuration will not be available offline.
+	
 ### Plugins available for offline
 
 The following plugins are available to the rich text editor while offline.
@@ -1174,7 +1176,7 @@ A. Large content size can cause latency. More information: [Best practices for u
 
 ## Known issues
 
-- HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form which do not have the format set to RichText. For example, this occurs in views, subgrids, paginated reports, and portals.
+- HTML markup is displayed for columns configured to use the rich text editor control that are displayed in components other than a column on a form which do not have the format set to RichText. For example, this occurs in views, subgrids, paginated reports, and Power Pages.
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 To resolve this issue, see [Simple configuration](#simple-configuration) for the steps necessary to set the **Format** option to **Rich text**.

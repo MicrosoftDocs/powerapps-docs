@@ -57,7 +57,7 @@ conceptualContent:
           url: guidance/planning/introduction.md
           itemType: overview      
     
-    - title: Create apps and portals
+    - title: Create apps
       links:
         - text: Canvas apps
           url: maker/canvas-apps/index.yml
@@ -65,8 +65,8 @@ conceptualContent:
         - text: Model-driven apps
           url: maker/model-driven-apps/index.yml
           itemType: overview
-        - text: Portals
-          url: maker/portals/index.yml
+        - text: Cards
+          url: cards/overview.md
           itemType: overview             
     
     - title: Work with data platform
