@@ -33,12 +33,19 @@ The initial offline sync is limited on iOS devices.  The initial offline sync is
 
 The initiated sync is suspended as soon as the app is in the background or when the device is locked. However, the OS will continue the sync for up to 5 min at a time when the device is not used. This happens more frequently when the device is plugged in.
 
+| Example scenarios | What happens to the synchronization process |
+|-------------------------|-------------------------|
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave the app open.</li></br><li>Screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended and will resume in 15 minutes. |
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br><li>Stop working on device, so the screen locks.</li></br></ol> | If a sync is active while the screen is locked, the sync will be suspended and will resume in 15 minutes. |
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Continue working in Power Apps, so that the screen doesn't lock.</li></br></ol> | The synch will continue until it is complete.</br>New syncs can start while Power Apps is in use. |
+| <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave and go to another app.</li></br></ol> | Active sync will pause and not complete.</br>New syncs will not start. |
+
 ## Android devices
 
-The initial offline sync continues when the Power Apps runs in the background or when the device is locked. 
+The initial offline sync can continue when Power Apps runs in the background or when the device is locked. 
 
 ## Windows devices
-The initial offline sync continues when Power Apps is minimized or when the device is locked. 
+The initial offline sync can continue when Power Apps is minimized or when the device is locked. 
 
 If the device is on power saving mode and running on the battery, the sync will run for ten minutes only. After the ten minutes, the sync will be suspended until the user maximizes the app.
 
