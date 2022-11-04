@@ -171,12 +171,11 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
 
-1. Open terminal, and change directory to the unzipped folder.
-
 1. If signing with Enterprise certificate, open **exportOptions.plist** file in this folder with Xcode and change the value for "method" field inside the file to "enterprise".
  > [!NOTE]
  > Enterprise signing is not supported with Keyvault signing yet.
 
+1. Open terminal, and change directory to the unzipped folder.
 
 1. Enter `pwsh` to start PowerShell in the terminal.
 
