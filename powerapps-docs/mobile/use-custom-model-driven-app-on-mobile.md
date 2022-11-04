@@ -201,7 +201,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   
 - To keep the tabs at the top of a page always visible while users scroll through the data on the page, turn the **Lock tabs at the top of forms on mobile and tablets** setting on. This setting allows users to easily navigate to other tabs to complete their tasks.
 
-  ![Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.](media/Lock-tabs.pnf "Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.")
+  ![Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.](media/Lock-tabs.png "Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.")
   
 ### Command bar optimization for tablets
 
