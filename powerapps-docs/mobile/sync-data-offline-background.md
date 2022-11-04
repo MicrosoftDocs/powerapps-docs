@@ -25,7 +25,7 @@ search.app:
 
 For a model-driven app to be available in offline mode, the app and user data must be downloaded on your device. This process is called *initial offline sync*. The initial offline sync for model-driven apps can continue as Power Apps runs in the background, as long as the app is not closed.
 
-The synchronization process that occurs while Power Apps runs in the bacground relies on the operating system capabilites, which are different for iOS, Android, and Windows devices.
+The initial offline sync process that continues while Power Apps runs in the bacground relies on the operating system capabilites, which are different for iOS, Android, and Windows devices.
 
 ## iOS devices
 
