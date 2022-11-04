@@ -36,7 +36,7 @@ The banner at the top showcases the latest announcements, trending posts, and in
 
 ## Overview
 
-The **Overview** tab lists featured items such as training module, learning paths, posts from the community, help articles, and YouTube channels.
+The **Overview** tab lists featured items such as training module, learning paths, posts from the community, help articles, and traning videos on YouTube.
 
 > [!div class="mx-imgBorder"] 
 > ![Overview tab.](media/learn/overview-tab.png "Overview tab") 
