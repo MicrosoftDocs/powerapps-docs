@@ -44,6 +44,9 @@ The **Overview** tab lists featured items such as training module, learning path
 
 On the **Courses** tab get access guided learning such as learning path, modules, and training events.
 
+> [!div class="mx-imgBorder"] 
+> ![Courses tab.](media/learn/learn-courses.png "Courses tab") 
+
 ## Articles
 
 The **Articles** tab has information from public blogs articles.
