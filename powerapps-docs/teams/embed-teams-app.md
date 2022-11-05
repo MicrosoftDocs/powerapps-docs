@@ -144,7 +144,7 @@ The following context variables from Teams are supported:
 
 ## Improve the performance of your app
 
-You can optionally preload your app within Teams to increase performance. You can learn more about this capability [here](../maker/canvas-apps/performance-tips.md#enable-preload-app-for-enhanced-performance). 
+You can optionally preload your app within Teams to increase performance. For mor information: [Enable Preload app for enhanced performance](../maker/canvas-apps/performance-tips.md#enable-preload-app-for-enhanced-performance). 
 
 ### See also
 
