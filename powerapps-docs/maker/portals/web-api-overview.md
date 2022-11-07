@@ -60,7 +60,7 @@ You must enable the site setting to enable the portals Web API for your portal. 
 | *Webapi/\<table name\>/enabled* | Enables or disables the Web API for \<table name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
 | *Webapi/\<table name\>/fields*  | Defines the comma-separated list of attributes that can be modified with the Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**:  The value must be either an asterisk (**\***) or a comma-separated list of field names. <br> **Important**: This is a mandatory site setting. When this setting is missing, you'll see the error "No fields defined for this entity." |
 | *Webapi/error/innererror* | Enables or disables InnerError. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
-| *Webapi/\<table name\>/disableodatafilter* | Enables or disables the OData filter. <br> **Default:** `False` <br> **Valid values:** `True`, `False` See [known issues](#known-issues) for more information. The site setting is available in portal version [9.4.10.68](/power-platform/released-versions/portals) or later. |
+| *Webapi/\<table name\>/disableodatafilter* | Enables or disables the OData filter. <br> **Default:** `False` <br> **Valid values:** `True`, `False` See [known issues](#known-issues) for more information. The site setting is available in portal version [9.4.10.74](/power-platform/released-versions/portals) or later. |
 
 
 > [!NOTE]
@@ -290,7 +290,7 @@ Alternatively, set the site setting *Webapi/\<table name\>/disableodatafilter* t
 > [!IMPORTANT]
 > Changing the site setting *Webapi/\<table name\>/disableodatafilter* to `True` may result in slower performance for Web API `GET` calls.
 
-The site setting is available in portal version [9.4.10.68](/power-platform/released-versions/portals) or later.
+The site setting is available in portal version [9.4.10.74](/power-platform/released-versions/portals) or later.
 
 ## Next step
 
