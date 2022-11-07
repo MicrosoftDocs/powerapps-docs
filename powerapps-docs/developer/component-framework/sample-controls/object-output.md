@@ -3,7 +3,7 @@ title: "Object Output Component Sample| Microsoft Docs"
 description: "Learn how you can use the object outout APIs."
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 10/26/2022
+ms.date: 11/07/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -27,7 +27,6 @@ You can find the complete code sample here: [PowerApps-Samples/component-framewo
 
 The manifest includes an object type property called `Data`  and a hidden property called `DataSchema` . The DataSchema property is needed only for Canvas apps and used by platform to get the output object schema.
 We also need to create a property dependency between these two properties.
-
 
 ```typescript
 <!-- A hidden property used by Canvas to get the output object schema -->
@@ -68,7 +67,7 @@ Update the getOutput method to return value for the output property.
 
 ```
 
-The onLoadData method will be called when “Load Data” button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or [onOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
+The onLoadData method will be called when "Load Data" button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or [onOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
 
 ```typescript
     private onLoadData = async () => {
