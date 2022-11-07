@@ -1,15 +1,14 @@
 ---
 title: Switch to a different tenant in Power Apps for Windows
 description: Switch to a different tenant
-ms.custom: 
-ms.date: 11/07/2022
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: 
-ms.author: sericks
 author: sericks007
+ms.author: sericks
+ms.reviewer: 
+ms.topic: how-to
+ms.date: 11/07/2022
+ms.custom: 
+
+
 manager: tapanm-MSFT
 search.audienceType: 
   - admin
