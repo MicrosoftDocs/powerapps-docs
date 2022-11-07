@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 11/04/2022
+ms.date: 11/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -290,7 +290,7 @@ Alternatively, set the site setting *Webapi/\<table name\>/disableodatafilter* t
 > [!IMPORTANT]
 > Changing the site setting *Webapi/\<table name\>/disableodatafilter* to `True` may result in slower performance for Web API `GET` calls.
 
-The site setting will be available in portal version [9.4.10.68](/power-platform/released-versions/portals) or later.
+The site setting is available in portal version [9.4.10.68](/power-platform/released-versions/portals) or later.
 
 ## Next step
 
