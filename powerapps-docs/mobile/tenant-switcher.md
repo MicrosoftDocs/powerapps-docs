@@ -1,5 +1,5 @@
 ---
-title: Switch to a different tenant
+title: Switch to a different tenant in Power Apps for Windows
 description: Switch to a different tenant
 ms.custom: 
 ms.date: 11/07/2022
@@ -17,6 +17,6 @@ search.audienceType:
   - enduser
 ---
 
-# Switch to a different tenant
+# Switch to a different tenant in Power Apps for Windows
 
 Users can now switch to a different tenant, without having to log out of Power Apps, when using Power Apps for Windows. Users can specify the tenant they want to work in on the user profile page.
