@@ -443,6 +443,10 @@ items:
         href: manifest-schema-reference/manifest.md
       - name: platform-library
         href: manifest-schema-reference/platform-library.md
+      - name: property-dependencies
+        href: manifest-schema-reference/property-dependencies.md
+      - name: property-dependency
+        href: manifest-schema-reference/property-dependency.md                
       - name: property-set
         href: manifest-schema-reference/property-set.md
       - name: property
