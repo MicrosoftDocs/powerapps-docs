@@ -19,4 +19,4 @@ search.audienceType:
 
 # Switch to a different tenant
 
-Content goes here. 
+Users can now switch to a different tenant, without having to log out of Power Apps, when using Power Apps for Windows. Users can specify the tenant they want to work in on the user profile page.
