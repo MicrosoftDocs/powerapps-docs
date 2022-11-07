@@ -1707,6 +1707,8 @@
       href: ../mobile/windows-app-install.md
     - name: Use Power Apps for Windows 
       href: ../mobile/windows-app-use.md
+    - name: Switch to a different tenant in Power Apps for Windows
+      href: ../mobile/tenant-switcher.md
 - name: Portals
   items:
     - name: Portals
