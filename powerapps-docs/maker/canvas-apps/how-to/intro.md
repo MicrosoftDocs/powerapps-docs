@@ -1,54 +1,67 @@
-﻿---
-title: Working with the PDF function (Experimental)
+---
+title: Work with the PDF function in Power Apps (experimental) 
+description: Learn to use with the PDF function.
+author: tashaev
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: mkaur
+ms.date: 11/8/2022
+ms.author: tashas
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+contributors:
+    - tashaev
+    - mduelae
+    
+   
 ---
 
-# Intro
+# Work with the PDF function (experimental) 
 
 The PDF function allows you to generate a PDF document from the contents of a screen or certain types of controls. You can take the generated PDF and pass it to action connectors such as the Office 365 Outlook connector, or pass it to a Power Automate flow to achieve automation scenarios. You can also enable app users to download the generated PDF where they can then store or print a physical copy on an available printer.
 
+
+> [!IMPORTANT]
+> - This is an experimental feature.
+> - Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [**Understand experimental, preview, and deprecated features in Power Apps**](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-experimental-preview).
+> - The behavior that this article describes is available only when the PDF function experimental feature in [**Settings &gt; Upcoming features &gt; Experimental**](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-experimental-preview#controlling-which-features-are-enabled) is turned on (off by default).
+> - Your feedback is very valuable to us - please let us know what you think in the [**Power Apps experimental features community forum**](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
+
+
 In this article, we'll learn how to use the PDF function to create a PDF and use the generated PDF in several different ways.
 
-# Prerequisites
+## Prerequisites
 
--   [Sign up](https://docs.microsoft.com/en-us/powerapps/maker/signup-for-powerapps) for Power Apps, and then [sign in](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
+- [Sign up](https://docs.microsoft.com/en-us/powerapps/maker/signup-for-powerapps) for Power Apps, and then [sign in](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
--   Create an app or open an existing app in Power Apps. [Learn more about creating apps.](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app)
+- Create an app or open an existing app in Power Apps. [Learn more about creating apps.](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app)
 
-# Enable the PDF feature ** Important**
+## Enable the PDF feature
 
--   This is an experimental feature.
+Since the PDF function is an experimental featuere, it's disabled by default. To use the PDF feature, you'll need to turn it on manually.
 
-<!-- -->
-
--   Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [**Understand experimental, preview, and deprecated features in Power Apps**](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-experimental-preview).
-
--   The behavior that this article describes is available only when the PDF function experimental feature in [**Settings &gt; Upcoming features &gt; Experimental**](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-experimental-preview#controlling-which-features-are-enabled) is turned on (off by default).
-
--   Your feedback is very valuable to us - please let us know what you think in the [**Power Apps experimental features community forum**](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
-
-The PDF function will be disabled/not available by default while in an experimental phase. The setting will need to be enabled manually using the settings toggle switch. To enable the feature:
-
-1.  Open a [new](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/data-platform-create-app) or an [existing](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/edit-app) app in Power Apps Studio. [Learn more about creating apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app) or [create an app from a template](https://learn.microsoft.com/power-apps/maker/canvas-apps/get-started-test-drive).
+1.  To enable the PDF function, open a [new](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/data-platform-create-app) or an [existing](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/edit-app) app in Power Apps Studio. <br> [Learn more about creating apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app) or [create an app from a template](https://learn.microsoft.com/power-apps/maker/canvas-apps/get-started-test-drive).
 
 2.  Select **Settings** at the top.
 
 3.  Select **Upcoming features**.
 
-4.  Under the **Experimental** tab, select **PDF function** to turn on this feature.
+4.  On the **Experimental** tab, set the togglle to **On** for **PDF function**.
 
 ![](media/image1.png)
 
-The PDF function is now available to use in Power Apps Studio.
 
 # Use the PDF function to generate a PDF
 
-You can use the PDF function in any [behavior property](https://learn.microsoft.com/power-apps/maker/canvas-apps/working-with-formulas-in-depth) to generate a PDF. In the example below, we'll use the PDF function in the *OnSelect* property of a button, but you can also use *OnVisible*, *OnHidden*, or any other behavior property.
+You can use the PDF function in any [behavior property](https://learn.microsoft.com/power-apps/maker/canvas-apps/working-with-formulas-in-depth) to generate a PDF. In the example below, we'll use the PDF function in the 'OnSelect' property of a button, but you can also use 'OnVisible', 'OnHidden', or any other behavior property.
 
-1.  Select an existing button or add a new button to your canvas app.
+1. Select an existing button or add a new button to your canvas app.
 
-2.  In the *OnSelect* property of the button, enter the PDF Function and enter the target of the PDF function as a parameter. In this example, we'll target the screen. In our example, the name of the Screen is *SubmitInspectionScreen*. The name of your screen may be different. Enter the formula:
+2. In the'OnSelect' property of the button, enter the PDF Function and enter the target of the PDF function as a parameter. In this example, we'll target the screen. In our example, the name of the Screen is 'SubmitInspectionScreen'. The name of your screen may be different. Enter the formula:
 
-*PDF(SubmitInspectionScreen);*
+    'PDF(SubmitInspectionScreen);' 
 
 ![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and PDF SubmitInspectionScreen ](media/ appears in the formula bar. .png)
 
