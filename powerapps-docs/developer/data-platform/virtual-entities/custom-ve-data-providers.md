@@ -48,7 +48,7 @@ There are two general categories of data provider you can create using the virtu
 |Generic|"Bare metal" provider|These providers can flexibly translate FetchXML query expressions to the associated request to the external data source, then return the resulting records. Such a provider can be reused for all instances of this data source type. This approach is the most general but is more complicated to develop.  If the schema of the data source changes, the affected virtual tables must only be remapped.|
 |Targeted|LINQ provider for known schema|Such a provider only narrowly translates queries into the associated LINQ call to a known, existing data source instance. The data source must be a LINQ provider as described in the topic [Enabling a Data Source for LINQ Querying](/dotnet/csharp/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1). This approach is limited to a specific data source instance, but requires much less coding. If the schema of the data source changes, the data provider must be updated and rebuilt.|
 
-The standard OData v4 Data Provider and the Cosmos DB Data Provider are examples of generic providers.
+The standard OData v4 Data Provider and the Azure Cosmos DB Data Provider are examples of generic providers.
 
 ## Steps to use a custom data provider
 
@@ -90,8 +90,7 @@ If for any reason your code cannot achieve the expected result, you must throw t
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidMetadataException>| |
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.InvalidQueryException>|The specified query is invalid; for example it an invalid clause combination or unsupported comparison operator.|
 |<xref:Microsoft.Xrm.Sdk.Data.Exceptions.ObjectNotFoundException>|The specified record in the external data source does not exist.|
-|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.TimeoutException>|The external operation did not complete within the allowed time; for example, the result of a HTTP status 408 from the external data service.|
-
+|<xref:Microsoft.Xrm.Sdk.Data.Exceptions.TimeoutException>|The external operation did not complete within the allowed time; for example, the result of an HTTP status 408 from the external data service.|
 
 ### Plug-in registration
 
