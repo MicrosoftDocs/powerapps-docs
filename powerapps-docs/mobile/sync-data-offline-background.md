@@ -2,7 +2,7 @@
 title: Sync Power Apps data offline in the background
 description: Sync Power Apps data offline in the background.
 ms.custom: 
-ms.date: 11/03/2022
+ms.date: 11/08/2022
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -30,8 +30,6 @@ The initial offline sync process that continues while Power Apps runs in the bac
 ## iOS devices
 
 The initial offline sync is limited on iOS devices.  The initial offline sync is suspended as soon as the Power Apps app runs in the background or when the device is locked. However, the operating system will continue the initial offline sync, for up to five minutes at a time, when the device is not in use.
-
-The initiated sync is suspended as soon as the app is in the background or when the device is locked. However, the OS will continue the sync for up to 5 min at a time when the device is not used. This happens more frequently when the device is plugged in.
 
 | Example scenarios | What happens to the synchronization process |
 |-------------------------|-------------------------|
