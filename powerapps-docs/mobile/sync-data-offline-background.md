@@ -23,13 +23,15 @@ search.app:
 
 # Sync Power Apps data offline in the background
 
-For a model-driven app to be available in offline mode, the app and user data must be downloaded on your device. This process is called *initial offline sync*. The initial offline sync for model-driven apps can continue as Power Apps runs in the background, as long as the app isn't closed.
+For a model-driven app to be available in offline mode, the app and user data must be downloaded on your device. Downloading data to your device is called an *offline sync*. 
 
-The initial offline sync process that continues while Power Apps runs in the background relies on the operating system capabilities, which are different for iOS, Android, and Windows devices.
+Offline syncs for model-driven apps *will not* be initiated when Power Apps runs in the background. However, initiated offline syncs *can continue* as Power Apps runs in the background, as long as the app isn't closed.
+
+Offline syncs that continue while Power Apps runs in the background, rely on operating system capabilities, which are different for iOS, Android, and Windows devices.
 
 ## iOS devices
 
-The initial offline sync is limited on iOS devices.  The initial offline sync is suspended as soon as the Power Apps app runs in the background or when the device is locked. However, the operating system will continue the initial offline sync, for up to five minutes at a time, when the device is not in use.
+On iOS devices, an offline sync is suspended as soon as Power Apps is moved to the background or when the device is locked. However, the operating system will continue an offline sync, for up to five minutes at a time, when the device is not in use.
 
 | Example scenarios | What happens to the synchronization process |
 |-------------------------|-------------------------|
@@ -40,10 +42,10 @@ The initial offline sync is limited on iOS devices.  The initial offline sync is
 
 ## Android devices
 
-The initial offline sync can continue when Power Apps runs in the background or when the device is locked. 
+An offline sync can continue when Power Apps runs in the background or when the device is locked. 
 
 ## Windows devices
-The initial offline sync can continue when Power Apps is minimized or when the device is locked. 
+An offline sync can continue when Power Apps is minimized or when the device is locked. 
 
 If the device is on power saving mode and running on the battery, the sync will run for 10 minutes only. After the 10 minutes, the sync will be suspended until the user maximizes the app.
 
