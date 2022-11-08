@@ -101,6 +101,8 @@ items:
       href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: Object Output component
+      href: sample-controls/object-output.md
     - name: Property set table component
       href: sample-controls/data-set-component-canvas.md
     - name: React Facepile component
