@@ -173,8 +173,8 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. If signing with enterprise certificate, open the **exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
 
- > [!NOTE]
- > Enterprise signing is not supported with Keyvault signing.
+  > [!NOTE]
+  > Enterprise signing is not supported with Keyvault signing.
 
 1. Open terminal, and change directory to the unzipped folder.
 
@@ -182,8 +182,8 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Run `./SignAndGenerateIPA.ps1` with the values for the "CodeSigningIdentity" and "ProvisioningProfilePath" parameters.
 
- > [!NOTE]
- >  To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (the is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the the **Name** field under **Certificates** in the **.mobileprovision** file.
+   > [!NOTE]
+   >  To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (the is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the the **Name** field under **Certificates** in the **.mobileprovision** file.
 
     :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
