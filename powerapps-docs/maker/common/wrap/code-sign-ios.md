@@ -117,7 +117,7 @@ To create a distribution certificate, create a new certificate signing request f
 ## Add all the devices where the iPA needs to be installed
 
  > [!NOTE]
- > This step is not necessary for Enterprise/In-House distribution.
+ > This step is only necessary if you distributing to app to external users. It's not required if the app is only for internal users. 
 
 1. Sign in to your developer account at <https://developer.apple.com> by selecting the **Account** tab.
 
@@ -171,9 +171,10 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
 
-1. If signing with Enterprise certificate, open **exportOptions.plist** file in this folder with Xcode and change the value for "method" field inside the file to "enterprise".
+1. If signing with enterprise certificate, open the **exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
+
  > [!NOTE]
- > Enterprise signing is not supported with Keyvault signing yet.
+ > Enterprise signing is not supported with Keyvault signing.
 
 1. Open terminal, and change directory to the unzipped folder.
 
@@ -182,7 +183,7 @@ To create a distribution certificate, create a new certificate signing request f
 1. Run `./SignAndGenerateIPA.ps1` with the values for the "CodeSigningIdentity" and "ProvisioningProfilePath" parameters.
 
  > [!NOTE]
- >  To look up the vaule for "CodeSigningIdentity", right-click your **.mobileprovision** file (Provisioning Profile), then choose **More Info** menu option and scroll down to select **Preview**. Your "CodeSigningIdentity" value is stored in the the **Name** field under **Certificates** in **.mobileprovision** file.
+ >  To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (the is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the the **Name** field under **Certificates** in the **.mobileprovision** file.
 
     :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
