@@ -362,9 +362,11 @@ items:
         href: reference/react-control.md
         items:
         - name: destroy
-          href: reference/react-control/destroy.md
+          href: reference/react-control/destroy.md        
         - name: getOutputs
           href: reference/react-control/getOutputs.md
+        - name: getOutputSchema
+          href: reference/react-control/getoutputschema.md
         - name: init
           href: reference/react-control/init.md
         - name: updateView
@@ -391,6 +393,8 @@ items:
           href: reference/control/destroy.md
         - name: getOutputs
           href: reference/control/getOutputs.md
+        - name: getOutputSchema
+          href: reference/control/getoutputschema.md
         - name: init
           href: reference/control/init.md
         - name: updateView
