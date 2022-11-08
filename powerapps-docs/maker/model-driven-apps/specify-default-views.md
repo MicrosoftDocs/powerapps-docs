@@ -4,7 +4,6 @@ description: "Learn how to specify a default view"
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -39,6 +38,9 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 
     > [!div class="mx-imgBorder"] 
     > ![Set as default view.](media/set-as-default-menu-maker.png)
+
+> [!NOTE]
+> You can also specify the views that can be displayed in a model-driven app using the model-driven app designer. More information: [Manage views and charts](create-add-remove-forms-views-dashboards.md#manage-views-and-charts)
 
 ## Set the default view for a table in solution explorer
   
