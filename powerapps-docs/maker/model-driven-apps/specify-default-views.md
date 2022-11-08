@@ -1,5 +1,5 @@
 ---
-title: "Specify a model-driven app default view in Power Apps | MicrosoftDocs"
+title: "Specify a default view for a table in Power Apps | MicrosoftDocs"
 description: "Learn how to specify a default view"
 ms.custom: ""
 ms.date: 03/30/2020
@@ -24,9 +24,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Specify a model-driven app default view
-
-
+# Specify a default view for a table
 
 <a name="BKMK_SetDefaultView"></a>   
 
