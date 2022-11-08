@@ -21,11 +21,15 @@ This sample component shows how to use object type output properties. This compo
 
 Model-driven apps and Canvas apps
 
+## Prerequisites
+
+Familarity [creating code components](../implementing-controls-using-typescript.md).
+
 ## Code
 
-You can find the complete code sample here: [PowerApps-Samples/component-framework/PowerAppsGridCustomizerControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/PowerAppsGridCustomizerControl).
+You can find the complete code sample here: [PowerApps-Samples/component-framework/ObjectOutputControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ObjectOutputControl).
 
-The manifest includes an object type property called `Data`  and a hidden property called `DataSchema` . The DataSchema property is needed only for Canvas apps and used by platform to get the output object schema.
+The manifest includes an object type property called `Data` and a hidden property called `DataSchema` . The DataSchema property is needed only for Canvas apps and used by platform to get the output object schema.
 We also need to create a property dependency between these two properties.
 
 ```typescript
@@ -41,7 +45,7 @@ We also need to create a property dependency between these two properties.
 
 ```
 
-In the index.ts file we need to add getOutputSchema method to provide the output object schema. When the control is added to a Canvas App, the platform will call to this method prior to control initialization to receive the output object(s) schema(s). 
+In the index.ts file we need to add [getOutputSchema](../reference/control/getoutputschema.md) method to provide the output object schema. When the control is added to a Canvas App, the platform will call to this method prior to control initialization to receive the output object(s) schema(s). 
 
 ```typescript
 <!-- A hidden property used by Canvas to get the output object schema -->
@@ -56,7 +60,7 @@ In the index.ts file we need to add getOutputSchema method to provide the output
 
 ```
 
-Update the getOutput method to return value for the output property.
+Update the `getOutput` method to return value for the output property.
 
 ```typescript
     public getOutputs(): IOutputs {
@@ -67,7 +71,7 @@ Update the getOutput method to return value for the output property.
 
 ```
 
-The onLoadData method will be called when "Load Data" button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or [onOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
+The `onLoadData` method will be called when the **Load Data** button is pressed to load the data to the output object and notify the platform about the output changes. This will trigger onChange behavior in the Canvas App for the control or [onOutputChange](../../model-driven-apps/clientapi/reference/events/onoutputchange.md) event for client APIs.
 
 ```typescript
     private onLoadData = async () => {
@@ -78,8 +82,12 @@ The onLoadData method will be called when "Load Data" button is pressed to load 
 
 ```
 
-
 ### Related topics
 
+[onOutputChange Event](../../model-driven-apps/clientapi/reference/events/onoutputchange.md)<br />
+[StandardControl.getOutputSchema](../reference/control/getoutputschema.md)<br />
+[ReactControl.getOutputSchema](../reference/react-control/getoutputschema.md)<br />
+[StandardControl.getOutputs](../reference/control/getoutputs.md)<br />
+[ReactControl.getOutputs](../reference/react-control/getOutputs.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -86,7 +86,7 @@ Control has an object type output property called `MyOutputObject` and the value
 }; 
 ```
 
-GetOutputSchema implementation:
+`GetOutputSchema` implementation:
 
 ```typescript
 public async getOutputSchema(context: ComponentFramework.Context<IInputs>): 
