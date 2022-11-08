@@ -55,13 +55,13 @@ Since the PDF function is an experimental featuere, it's disabled by default. To
 
 # Use the PDF function to generate a PDF
 
-You can use the PDF function in any [behavior property](https://learn.microsoft.com/power-apps/maker/canvas-apps/working-with-formulas-in-depth) to generate a PDF. In the example below, we'll use the PDF function in the 'OnSelect' property of a button, but you can also use 'OnVisible', 'OnHidden', or any other behavior property.
+You can use the PDF function in any [behavior property](https://learn.microsoft.com/power-apps/maker/canvas-apps/working-with-formulas-in-depth) to generate a PDF. In the example below, we'll use the PDF function in the `OnSelect` property of a button, but you can also use `OnVisible`, `OnHidden`, or any other behavior property.
 
 1. Select an existing button or add a new button to your canvas app.
 
-2. In the'OnSelect' property of the button, enter the PDF Function and enter the target of the PDF function as a parameter. In this example, we'll target the screen. In our example, the name of the Screen is 'SubmitInspectionScreen'. The name of your screen may be different. Enter the formula:
+2. In the `OnSelect` property of the button, enter the PDF Function and enter the target of the PDF function as a parameter. In this example, we'll target the screen. In our example, the name of the Screen is `SubmitInspectionScreen`. The name of your screen may be different. Enter the formula:
 
-    'PDF(SubmitInspectionScreen);' 
+    `PDF(SubmitInspectionScreen);`
 
 ![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and PDF SubmitInspectionScreen ](media/ appears in the formula bar. .png)
 
@@ -77,7 +77,7 @@ The PDF function can only target content on the currently visible screen. You ca
 
 -   These examples work best when using an app with mutliple controls.
 
--   *SubmitInspectionScreen* is the name of the screen in this example. If the name of the screen where you've placed your button is not *SubmitInspectionScreen*, enter the name of the screen where you've added the button.
+-   `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`, enter the name of the screen where you've added the button.
 
 -   Note that in order see the generated PDF, additional steps must be taken. See the steps below.
 
@@ -89,15 +89,15 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
 
 1.  In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
-2.  In the button's *OnSelect* property, enter the formula:
+2.  In the button's `OnSelect` property, enter the formula:
 
-*Set(myPDF, PDF(SubmitInspectionScreen));*
+`Set(myPDF, PDF(SubmitInspectionScreen));`
 
 ![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and Set myPDF  PDF SubmitInspectionScreen  ](media/ appears in the formula bar. .png)
 
 6.  Select the Insert menu and add a PDF Viewer control.
 
-7.  Select the *Document* property from the properties drop down menu and enter*myPDF* in the formula bar.
+7.  Select the **Document** property from the properties drop down menu and enter `myPDF` in the formula bar.
 
 ![A screenshot of the Canvas app designer interface  PdfViewer1 shows as selected on the canvas and in the tree view  The property drop down has been set to Document  and myPDF appears in the formula bar  ](media/image4.png)
 
@@ -117,33 +117,33 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 1.  In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
-2.  In the button's *OnSelect* property, enter the formula:
+2.  In the button's `OnSelect` property, enter the formula:
 
-*Office365Outlook.SendEmailV2(*
+`Office365Outlook.SendEmailV2(`
 
-*"sample@email.com",*
+`"sample@email.com",`
 
-*"New Safety Inspection"*
+`"New Safety Inspection"`
 
-*"A new safety inspection has been submitted for your review. Please see attached.",*
+`"A new safety inspection has been submitted for your review. Please see attached.",`
 
-*{*
+`{`
 
-*Attachments: Table(*
+`Attachments: Table(`
 
-*{*
+`{`
 
-*Name: "submittedInspection.pdf",*
+`Name: "submittedInspection.pdf",`
 
-*ContentBytes: PDF(SubmitInspectionScreen)*
+`ContentBytes: PDF(SubmitInspectionScreen)`
 
-*}*
+`}`
 
-*)*
+`)`
 
-*}*
+`}`
 
-*);*
+`);`
 
 ![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and the following formula appears in the formula bar  Office365Outlook SendEmailV2   quot](media/sample@email.com&quot.png ", &quot")
 
@@ -163,11 +163,11 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 1.  In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
-2.  From the left pane, select the Power Automate button and select *Create new flow.*
+2.  From the left pane, select the Power Automate button and select **Create new flow**.
 
 ![A screenshot of the Power Automate pane in the canvas app designer  No flows have been added to the app  so a purple  quot](media/Create new flow&quot.png " button is shown. ")
 
-3.  Select *Create from blank*.
+3.  Select **Create from blank**.
 
 ![A screenshot of the top of the flow designer in the canvas app designer  The purple  quot](media/+ Create from blank&quot.png " button is shown. ")
 
@@ -179,7 +179,7 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 ![A screenshot of the flow designer in the canvas app designer  The phrase  quot](media/PowerApps (v2)&quot.png " is shown in the search input field. The filtered search results show the Power Apps V2 trigger under the Triggers tab. ")
 
-6.  Select the Power Apps V2 trigger to expand the flow node. Select *Add an input*.
+6.  Select the Power Apps V2 trigger to expand the flow node. Select **Add an input**.
 
 ![A screenshot of the flow designer in the canvas app designer  The Power Apps v2 trigger is shown in its expanded state  with  quot](media/+ Add an input&quot.png " option shown. ")
 
@@ -187,11 +187,11 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 ![A screenshot of the flow designer in the canvas app designer  The Power Apps v2 trigger is shown in its expanded state  with a selection of input options shown including the File input type  ](media/image11.png)
 
-8.  Select *Add an input* and choose the Text type. Rename the input to File name and update the description to "Please enter the name of the file."
+8.  Select **Add an input** and choose the Text type. Rename the input to File name and update the description to "Please enter the name of the file."
 
 ![A screenshot of the flow designer in the canvas app designer  The Power Apps v2 trigger is shown in its expanded state  now showing the two inputs configured as described in the step  ](media/image12.png)
 
-9.  Select *+New step* to add an action, and search for SharePoint. In the list of available SharePoint actions, select *Create file.*
+9.  Select **+New step** to add an action, and search for SharePoint. In the list of available SharePoint actions, select **Create file**.
 
 ![A screenshot of the flow designer in the canvas app designer  The  New step menu is expanded with SharePoint typed into the search input field  The create file action is shown highlighted int he filtered search results  ](media/image13.png)
 
@@ -211,25 +211,25 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 ![A screenshot of the Power Automate Pane in the Canvas app designer  The pane now shows the newly created flow from the previous steps  named PowerAppsV2  gt](media/Create File..png)
 
-15. Select the button on the canvas. In the button's *OnSelect* property, enter the formula:
+15. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
 
-*'PowerAppV2-&gt;Createfile'.Run(*
+`'PowerAppV2-&gt;Createfile'.Run(`
 
-*"NewInspectionReport.pdf",*
+`"NewInspectionReport.pdf",`
 
-*{*
+`{`
 
-*file: {*
+`file: {`
 
-*name: "NewInspectionReport.pdf",*
+`name: "NewInspectionReport.pdf",`
 
-*contentBytes: PDF(InspectionDetails)*
+`contentBytes: PDF(InspectionDetails)`
 
-*}*
+`}`
 
-*}*
+`}`
 
-*);*
+`);`
 
 ![A screenshot of the Canvas app designer interface  Button4 is selected  The property drop down has been set to OnSelect  and the following formula appears in the formula bar    39](media/PowerAppV2-&gt.png "Createfile&#39")
 
