@@ -22,6 +22,8 @@ Microsoft Dataverse includes a virtual table named AAD user (aaduser). This virt
 
 > [!NOTE]
 > Your results with AAD User may differ depending on where it is being used. AAD User in Dataverse will provide the full list of users on the Azure AD for the organization. AAD User in Dataverse for Teams is limited to providing all AAD Users who are also a member of the Team.
+> 
+>AAD User does not return groups or distribution lists.
 
 ## Lookups using AADUser
 
