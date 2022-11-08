@@ -1,6 +1,6 @@
 ---
 title: "ReactControl.getOutputSchema | MicrosoftDocs"
-description: "It is called by the framework prior to a component initialization. Returns an object schema based on nomenclature defined in manifest, for any output property of type object."
+description: "Called by the framework prior to a component initialization in a react control. Returns an object schema based on nomenclature defined in manifest, for any output property of type object."
 ms.author: noazarur
 author: noazarur-microsoft
 ms.date: 11/07/2022
