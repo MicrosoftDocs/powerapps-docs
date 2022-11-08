@@ -11,9 +11,9 @@ contributors:
  - JimDaly
 
 ---
-# StandardControl.getOutputSchema
+# ReactControl.getOutputSchema
 
-[!INCLUDE[./includes/getoutputschema-description.md](./includes/getoutputschema-description.md)]
+[!INCLUDE [getoutputschema-description](../control/includes/getoutputschema-description.md)]
 
 <!-- 
 

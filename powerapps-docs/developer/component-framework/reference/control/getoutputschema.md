@@ -15,7 +15,11 @@ contributors:
 
 [!INCLUDE[./includes/getoutputschema-description.md](./includes/getoutputschema-description.md)]
 
-<!-- Because this content should be the same as ReactControl.getOutputSchema, both topics will use this include -->
+<!-- 
+
+Because this content should be the same as ReactControl.getOutputSchema, both topics will use this include 
+so that the common content will exist in one place.
+-->
 [!INCLUDE [getoutputschema-content](../includes/getoutputschema-content.md)]
 
 
