@@ -4,7 +4,7 @@ description: "This first run tutorial shows you how to build a model-driven app 
 keywords: ""
 ms.date: 04/07/2022
 ms.custom: 
-ms.topic: getting-started
+ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
@@ -39,7 +39,7 @@ In this experience you...
 :::image type="content" source="media/onboarding-new-makers.gif" alt-text="Build an app in three steps experience":::
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Preview program for portals, model-driven apps and app management](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ## How it works
 

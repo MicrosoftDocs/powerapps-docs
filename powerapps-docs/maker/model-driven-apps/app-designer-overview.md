@@ -2,8 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 05/19/2022
-
+ms.date: 10/18/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -77,9 +76,6 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 ## Known limitation
 
 - The app’s URL can’t be specified.
-
-> [!TIP]
-> Select **Switch to classic** to use the classic designer to complete the app design tasks that aren't currently available in the modern designer.
 
 ## Next steps
 

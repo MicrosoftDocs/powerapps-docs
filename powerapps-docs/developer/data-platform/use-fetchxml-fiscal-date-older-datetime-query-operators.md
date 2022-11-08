@@ -2,12 +2,11 @@
 title: "Fiscal date and older than datetime query operators in FetchXML (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Find out how to use FetchXML fiscal data conditional operators and &quot;older than&quot; clauses for date and time values." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 03/22/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -166,10 +165,10 @@ A FetchXML query in Microsoft Dataverse can use special fiscal date values and *
 <condition attribute="<AttributeName>" operator="olderthan-x-years" value="<VALUE>" />  
 ```
 
-### See also  
- [Create Queries to Retrieve Data](/dynamics365/customer-engagement/developer/org-service/retrieve-data-queries-sdk-assemblies)   
- [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
- [Use a left outer join in FetchXML to query for records "not in"](/dynamics365/customer-engagement/developer/use-left-outer-join-fetchxml-query-records-not-in)
+### See also
 
+[Query data using the Organization service](org-service/entity-operations-query-data.md)<br />
+[Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
+[Use a left outer join in FetchXML to query for records "not in"](use-fetchxml-left-outer-join-query-records-not-in.md)<br />
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -7,20 +7,19 @@ ms.author: dikamath
 manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 contributors:
- - JimDaly
- - phecke
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Convert queries between FetchXML and QueryExpression
 
-
-
-This sample shows how to convert queries between FetchXML and QueryExpression. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Convertqueriesfetchqueryexpressions).
+This sample shows how to convert queries between FetchXML and QueryExpression. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/Convertqueriesfetchqueryexpressions).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -38,16 +37,15 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org. 
+1. Checks for the current version of the org.
 1. The `CreateRequireRecords` method creates an account and two contact records that are used by the sample.
 1. The `QueryExpression` builds a query expression that we will convert into FetchXML.
 1. The `DoFetchXmlToQueryExpressionConversion` class creates a Fetch query that we will convert into a query expression.
 1. The `conversionRequest` method converts the generated query expression into FetchXML and vice versa.
-1. Use the converted query to make retrieve multiple request. 
+1. Use the converted query to make retrieve multiple request.
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

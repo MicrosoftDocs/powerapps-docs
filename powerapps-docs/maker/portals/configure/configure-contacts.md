@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/15/2022
+ms.date: 08/24/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -18,7 +18,10 @@ contributors:
 
 # Configure a contact for use on a portal
 
-After filling out the basic information for a contact (or having a user fill out the sign-up form in a portal), go to the web authentication tab on the portal contact form to configure a contact by using local authentication. For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
+Fill out the basic information for a contact (or having a user fill out the sign-up form in a portal), then go to the web authentication tab on the portal contact form to configure a contact by using local authentication. For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). 
 
 > [!NOTE] 
 > You can also configure a contact in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
@@ -28,7 +31,7 @@ To configure a contact for portals by using local authentication, follow these i
 > [!IMPORTANT]
 > - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 
-Complete the change password workflow, and the necessary fields will be automatically configured. When you've done this, your contact will be configured for your portals.
+Complete the change password workflow, and the necessary fields will be automatically configured. When you've taken these steps, your contact will be configured for your portals.
 
 1. In the **Security** section, select **Contacts**.
 
@@ -54,18 +57,7 @@ For more information about federated authentication options, see [set authentica
 
 ## Change password for a contact from the Portal Management app
 
-In order to perform the following steps, you will need to be assigned either the **System Administrator**, or **System Customizer** [security roles](/power-platform/admin/database-security). 
-
-Alternatively, you can create a [field security profile](/power-platform/admin/field-level-security) with the following permissions for the **contact** table:
-
-| Schema name | Display name | Table | Privileges |
-| - | - | - | - |
-| adx_identity_logonenabled | Login Enabled | contact | Read, Update, Create |
-| adx_identity_passwordhash | Password Hash | contact | Read, Update, Create |
-| adx_identity_username | User Name | contact | Read, Update, Create |
-| sharepointemailaddress | SharePoint Email Address | user | Update, Create |
-
-Add the user or team that will need to perform these steps to the field security profile.
+In order to perform the following steps, you'll need to be assigned the **System Administrator** [security role](/power-platform/admin/database-security). 
 
 1. Open the [Portal Management app](configure-portal.md).
 
@@ -90,7 +82,7 @@ Add the user or team that will need to perform these steps to the field security
 
 ### Deprecation of business process flow
 
-Earlier versions of the change password process utilized a task flow which has been deprecated. In Dataverse security roles, the **Change Password for Portals Contact** privilege under the **Business Process Flows** tab no longer requires any options selected.
+Earlier versions of the change password process utilized a task flow, which has been deprecated. In Dataverse security roles, the **Change Password for Portals Contact** privilege under the **Business Process Flows** tab no longer requires any options selected.
 
 ### See also
 [Invite contacts to your portals](invite-contacts.md)  

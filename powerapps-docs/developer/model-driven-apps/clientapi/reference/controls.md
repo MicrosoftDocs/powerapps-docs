@@ -1,12 +1,11 @@
 ---
 title: "Controls in model-driven apps for Dynamics 365| MicrosoftDocs"
 description: A control represents an HTML element present on the form.
-ms.author: jdaly
+ms.author: aorth
 author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+ms.date: 08/17/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
@@ -52,13 +51,15 @@ These are the methods available for a Standard control.
 <ul>
 <li><a href="controls/getLabel.md" data-raw-source="[getLabel](controls/getLabel.md)">getLabel</a></li>
 <li><a href="controls/getName.md" data-raw-source="[getName](controls/getName.md)">getName</a></li>
+<li><a href="controls/getoutputs.md" data-raw-source="[getOutputs](controls/getoutputs.md)">getOutputs</a></li>
 <li><a href="controls/getParent.md" data-raw-source="[getParent](controls/getParent.md)">getParent</a></li>
 <li><a href="controls/getVisible.md" data-raw-source="[getVisible](controls/getVisible.md)">getVisible</a></li>
-<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
+
 </ul>
 </td>
 <td>
 <ul>
+<li><a href="controls/setDisabled.md" data-raw-source="[setDisabled](controls/setDisabled.md)">setDisabled</a></li>
 <li><a href="controls/setFocus.md" data-raw-source="[setFocus](controls/setFocus.md)">setFocus</a></li>
 <li><a href="controls/setLabel.md" data-raw-source="[setLabel](controls/setLabel.md)">setLabel</a></li>
 <li><a href="controls/setNotification.md" data-raw-source="[setNotification](controls/setNotification.md)">setNotification</a></li>
@@ -151,7 +152,7 @@ These are the methods available for knowledge base search control.
 </table>
 
 >[!NOTE]
->When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can’t be changed. 
+>When the knowledge base search control is added to the social pane, the name of the control will be "searchwidgetcontrol_notescontrol". This name can't be changed. 
 
 ## lookup control type
 

@@ -75,12 +75,13 @@ Accept: */*
 
 There are two ways to use this with the Organization Service.
 
-#### Set the CrmServiceClient.BypassPluginExecution property
+#### Set the BypassPluginExecution property
 
 The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
 
 ```csharp
-var svc = new CrmServiceClient(conn);
+var svc = new CrmServiceClient(conn);  
+// var svc = new  ServiceClient(conn);
 
 svc.BypassPluginExecution = true;
 
@@ -93,6 +94,7 @@ var account = new Entity("account")
 
 svc.Create(account);
 ```
+
 Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
 
 #### Set the value as an optional parameter
@@ -100,7 +102,8 @@ Because this setting is applied to the service, it will remain set for all reque
 The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class.
 
 ```csharp
-var svc = new CrmServiceClient(conn);
+var svc = new CrmServiceClient(conn); 
+// var svc = new  ServiceClient(conn);
 
 var account = new Entity("account")
 {
@@ -131,7 +134,7 @@ The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38
 
 # [Using Web API](#tab/webapi)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref href="Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action" />.
+Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action>.
 
 **Request**
 
@@ -152,7 +155,7 @@ OData-Version: 4.0
 }
 ```
 
-You must set the <xref href="Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege" />.`Depth` property to <xref href="Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth" />.`Global` (`3`) because this is a global privilege.
+You must set the <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege>.`Depth` property to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.`Global` (`3`) because this is a global privilege.
 
 **Response**
 
@@ -191,7 +194,7 @@ No. If a synchronous plug-in or real-time workflow in a Microsoft solution perfo
 
 ### Can I use this option for data operations I perform within a plug-in?
 
-Yes, But only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest). You cannot use the CrmServiceClient in a plug-in.
+Yes, But only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest). You cannot use the `CrmServiceClient` or `ServiceClient` classes in a plug-in.
 
 ### What about asychronous plug-in steps, asynchronous workflows and flows?
 

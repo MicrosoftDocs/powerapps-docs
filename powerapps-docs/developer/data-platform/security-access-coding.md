@@ -2,12 +2,11 @@
 title: "Verifying access in code (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use the security related APIs to verify user access to a record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 05/21/2022
-ms.reviewer: "pehecke"
-ms.topic: "article"
-author: "paulliew" # GitHub ID
+ms.reviewer: pehecke
+ms.topic: article
+author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+ms.author: paulliew # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -116,8 +115,7 @@ that isn't bound to a specific table.
 Some data operations require another user have access to a record. If you have
 just one specific user or team, you can test the other user using the `RetrievePrincipalAccess` message (<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess> function, <xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest> class).
 
-Get a list of all users and teams who have access rights and details about
-those access rights on a record using the the `RetrieveSharedPrincipalsAndAccess` message (<xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess> function, <xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest> class).
+The `RetrieveSharedPrincipalsAndAccess` message (Web API <xref:Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function> or .NET SDK <xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest?text=RetrieveSharedPrincipalsAndAccessRequest Class>) returns a list of all the users that a record has been shared with. It provides details about the access rights each user has because the record was shared with them.
 
 ## Check a user's security privileges
 

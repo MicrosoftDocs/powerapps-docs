@@ -75,7 +75,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 
 ### Custom Rule
 
- Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
+ Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [JavaScript web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
 
 ```JavaScript
 function EnableRule()

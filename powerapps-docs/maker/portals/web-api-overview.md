@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 ms.custom: 
-ms.date: 07/26/2022
+ms.date: 11/07/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -17,6 +17,8 @@ contributors:
 
 # Portals Web API overview
 
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The portals Web API enables a richer user experience inside Power Apps portals pages. You can use the Web API to perform create, read, update, and delete operations across all Microsoft Dataverse tables from your portals pages. For example, you can create a new account, update a contact, or change the [table permissions](configure/assign-entity-permissions.md) for a product by using the portals Web API instead of the Portal Management app.
 
 > [!NOTE] 
@@ -24,7 +26,7 @@ The portals Web API enables a richer user experience inside Power Apps portals p
 
 > [!IMPORTANT]
 > - **Your portal version must be 9.3.3.x or later for this feature to work**.
-> - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
+> - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration. Using the portals Web API to integrate with other Power Apps portals sites is also not supported.
 > - Portals Web API operations are limited to tables related to data&mdash;for example, accounts, contacts, or your custom tables. Configuring table metadata or portal configuration table data&mdash;for example, configuring portals tables such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [unsupported configuration tables](#unsupported-configuration-tables) later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md), so subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
 > - Portals Web API operations require a Power Apps portals license. For example, Web API calls made by anonymous users are counted towards page view capacity. Web API calls made by authenticated users (internal or external) are not counted towards page views, but require applicable licenses. More information: [Power Apps portals licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
@@ -33,12 +35,18 @@ The portals Web API enables a richer user experience inside Power Apps portals p
 
 The portals Web API offers a subset of capabilities for Dataverse operations that you can do by using the Dataverse API. We've kept the API format as similar as possible to reduce the learning curve.
 
+> [!NOTE]
+> Web API operations are case-sensitive.
+
 ### Web API operations available in portals
 
 - [Read records from a table](read-operations.md)
 - [Create a record in a table](write-update-delete-operations.md#create-a-record-in-a-table)
 - [Update and delete records in a table](write-update-delete-operations.md#update-and-delete-records-by-using-the-web-api) 
 - [Associate and disassociate tables](write-update-delete-operations.md#associate-and-disassociate-tables-by-using-the-web-api)
+
+> [!NOTE]
+> Calling [actions](../../developer/data-platform/webapi/use-web-api-actions.md) and [functions](../../developer/data-platform/webapi/use-web-api-functions.md) using the portals Web API is not supported.
 
 ## Site settings for the Web API
 
@@ -51,7 +59,9 @@ You must enable the site setting to enable the portals Web API for your portal. 
 | - |- |
 | *Webapi/\<table name\>/enabled* | Enables or disables the Web API for \<table name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
 | *Webapi/\<table name\>/fields*  | Defines the comma-separated list of attributes that can be modified with the Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**:  The value must be either an asterisk (**\***) or a comma-separated list of field names. <br> **Important**: This is a mandatory site setting. When this setting is missing, you'll see the error "No fields defined for this entity." |
-| *Webapi/error/innererror* | Enables or disables InnerError. <br> **Default:** `False` <br> **Valid values:** `True`, `False`
+| *Webapi/error/innererror* | Enables or disables InnerError. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
+| *Webapi/\<table name\>/disableodatafilter* | Enables or disables the OData filter. <br> **Default:** `False` <br> **Valid values:** `True`, `False` See [known issues](#known-issues) for more information. The site setting is available in portal version [9.4.10.74](/power-platform/released-versions/portals) or later. |
+
 
 > [!NOTE]
 > Site settings must be set to **Active** for changes to take effect.
@@ -62,7 +72,7 @@ users are allowed to perform create, update, and delete operations on this entit
 | Site setting name | Site setting value|
 | - |- |
 | *Webapi/incident/enabled* | true |
-| *Webapi/incident/fields* | attr1,attr2,attr3 |
+| *Webapi/incident/fields* | attr1, attr2, attr3 |
 
 ## Security with the portals Web API
 
@@ -268,6 +278,19 @@ Portals Web API can't be used for the following configuration tables:
 :::column:::
 	adx_webtemplate
 :::row-end:::
+
+## Known issues
+
+Users will get a CDS error if they invoke a `GET` Web API request for tables that have multiple levels of *1 to many* or *many to many* [table permissions](/power-pages/security/table-permissions) with **parent** scope defined.
+
+To resolve this issue, the recommended solution is to use [FetchXML](/developer/data-platform/use-fetchxml-construct-query) in the OData query.
+
+Alternatively, set the site setting *Webapi/\<table name\>/disableodatafilter* to `True`. 
+
+> [!IMPORTANT]
+> Changing the site setting *Webapi/\<table name\>/disableodatafilter* to `True` may result in slower performance for Web API `GET` calls.
+
+The site setting is available in portal version [9.4.10.74](/power-platform/released-versions/portals) or later.
 
 ## Next step
 

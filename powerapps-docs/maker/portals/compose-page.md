@@ -16,6 +16,9 @@ contributors:
 
 # WYSIWYG editor
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 After adding the required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG (What You See Is What You Get) editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
 
 - [Sections](add-sections.md)
@@ -67,8 +70,7 @@ To use the WYSIWYG editor:
 ### See also
 
 - [Create and manage web pages](create-manage-webpages.md)
-- [Microsoft Learn: Integration with Power BI](/learn/modules/portals-integration/3-power-bi)
+- [Integration with Power BI](/training/modules/portals-integration/3-power-bi)
 - [Work with templates](work-with-templates.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

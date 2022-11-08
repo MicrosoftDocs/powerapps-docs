@@ -27,7 +27,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
 > [!NOTE]
 >  This walkthrough applies to any Dataverse deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](/azure/service-bus-messaging/service-bus-authentication-and-authorization).  
 >   
-> You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
+> You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Dataverse development tools](download-tools-NuGet.md).
   
 ## Prerequisites  
 
@@ -76,7 +76,7 @@ A [ServiceEndpoint Table](reference/entities/serviceendpoint.md) contains config
 ### See also
 
 [Azure integration](azure-integration.md)<br />
-[Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+[What is Azure Service Bus?](/azure/service-bus-messaging/service-bus-messaging-overview)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

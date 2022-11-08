@@ -13,6 +13,9 @@ contributors:
 
 # Configure and manage category for knowledge articles
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 This section helps you understand how to create a new category for knowledge articles and associate it with an article. You'll also learn how to enable ratings for a knowledge article.
 
 ## Create a new category for knowledge articles

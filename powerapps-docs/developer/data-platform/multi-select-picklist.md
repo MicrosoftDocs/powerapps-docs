@@ -7,7 +7,6 @@ ms.topic: "article"
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -76,6 +75,7 @@ string conn = $@"
     RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 OptionSetValueCollection activities = new OptionSetValueCollection();
 activities.Add(new OptionSetValue(1)); //Swimming
@@ -404,8 +404,8 @@ var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
 [Column definitions](entity-attribute-metadata.md)<br />
 [Create a table row using the Web API](webapi/create-entity-web-api.md)<br />
 [Query Data using the Web API](webapi/query-data-web-api.md)<br />
-[Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
-[Sample: Work with column definitions](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
+[Work with column definitions](org-service/metadata-attributemetadata.md)<br />
+[Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
 [Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)
 
 

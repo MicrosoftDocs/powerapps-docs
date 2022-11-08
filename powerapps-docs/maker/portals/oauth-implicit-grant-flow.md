@@ -2,10 +2,9 @@
 title: Use OAuth 2.0 implicit grant flow within your portal
 description: Learn how to make client-side calls to external APIs and secure them by using OAuth implicit grant flow in your portal.
 author: gitanjalisingh33msft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2022
+ms.date: 09/21/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -19,13 +18,16 @@ contributors:
 
 # Use OAuth 2.0 implicit grant flow within your portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 This feature allows a customer to make client-side calls to external APIs and secure them using OAuth implicit grant flow. It provides an endpoint to obtain secure access tokens. These tokens will contain user identity information to be used by external APIs for authorization following OAuth 2.0 implicit grant flow. The identity information of a signed-in user is passed in a secured manner to the external AJAX calls, which helps developers to pass authentication context and will also help users secure their APIs.
 
 OAuth 2.0 implicit grant flow supports [token](#token-endpoint-details) endpoints that a client can call to get an ID token.
 
 ## Custom certificates 
 
-Custom certificates provide another layer of security while using the OAuth 2.0 end point. Use the [Power Platform admin center](/admin/manage-custom-certificates) to upload the custom certificate. After uploading the custom certificate, you need to update site settings as below 
+Using the default certificate for OAuth 2.0 implicit grant flow is [deprecated](important-changes-deprecations.md#oauth-20-implicit-grant-flow-within-your-portal). You will need to use a custom certificate while using the OAuth 2.0 endpoint. Use the [Power Platform admin center](/admin/manage-custom-certificates) to upload the custom certificate. After uploading the custom certificate, you need to update site settings as below: 
 
 1. Go to [portal settings](manage-existing-portals.md#settings) and select **Site Settings**. 
 

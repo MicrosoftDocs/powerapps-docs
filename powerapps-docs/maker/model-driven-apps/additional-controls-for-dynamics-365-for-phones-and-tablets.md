@@ -66,10 +66,10 @@ The read-only subgrid allows you to present a view of data related to the curren
 
 With editable grids, users can do rich in-line editing of records directly from views and subgrids whether they're using a web app, tablet, or phone. More information: [Make model-driven app grids (lists) editable using the editable grid control](make-grids-lists-editable-custom-control.md)
 
-### (Preview) Power Apps grid control
+### Power Apps grid control (preview)
 
 The Power Apps grid control represents the next evolution of the Power Apps grid control, allowing users to view, open, and edit records from views and subgrids. By default, the Power Apps grid control is read-only but you can configure it to be editable.
-> [!NOTE]
+> [!IMPORTANT]
 >
 > - This is a preview feature.
 >
@@ -205,6 +205,12 @@ The toggle control allows users to choose between binary values, such as on/off 
 ### Business card reader
 
 Use the AI Builder business card reader control to detect business cards and extract their information. You can take photos directly in the component or load images that you've taken. More information: [Use the business card reader component in model-driven apps](/ai-builder/business-card-reader-component-model-driven)
+
+## Power BI
+
+### Power BI report
+
+Use the Power BI report control to add a Power BI report on the form. More information: [Use the Power BI report control to add a report](powerbi-control.md)
 
 ## More components controls
 

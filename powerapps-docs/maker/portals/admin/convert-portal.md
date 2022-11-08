@@ -16,6 +16,9 @@ contributors:
 
 # Convert a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 As explained in the [portal lifecycle](portal-lifecycle.md) article earlier, a Power Apps portals goes through different stages. You can convert a portal from one stage to another, depending on what conversion is allowed, and whether the environment has the required license, or capacity.
 
 > [!IMPORTANT]
@@ -99,8 +102,7 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 ### See also
 
 - [Understand lifecycle of a portal](portal-lifecycle.md) <br>
-- [Microsoft Learn: Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Portal application lifecycle management](/training/modules/extend-power-app-portals/2-portal-application-lifecycle)
 - [Power Apps portals FAQ](../faq.yml)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

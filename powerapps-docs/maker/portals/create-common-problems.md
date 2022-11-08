@@ -16,6 +16,9 @@ contributors:
 
 # Common problems and resolutions while creating a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this article, you'll learn about the common problems that occur while creating a Power Apps portal, and how to resolve them.
 
 ## No permissions to create a portal

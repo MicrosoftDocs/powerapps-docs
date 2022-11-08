@@ -5,12 +5,12 @@ ms.date: 07/18/2022
 author: ImadYanni
 ms.author: iyanni
 ms.reviewer: jdaly
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
   - phecke
 ---
@@ -24,13 +24,13 @@ This Visual Studio solution contains two .NET 6.0 projects that demonstrate how 
 
 ## How to run this sample
 
-The sample source code is available on Github at [PowerApps-Samples/cds/DiscoveryService/](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/DiscoveryService).
+The sample source code is available on Github at [PowerApps-Samples/cds/DiscoveryService/](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/DiscoveryService).
 
 To run the sample:
 
 1. Download or clone the sample so that you have a local copy.
 1. Open the solution file in Visual Studio.
-1. Select which project will be the startup project, either `REST` or `ServceClient`.
+1. Select which project will be the startup project, either `REST` or `ServiceClient`.
 1. In Program.cs, edit the `Main` method to enter your user credentials:
 
    ```csharp
@@ -115,9 +115,9 @@ namespace PowerApps.Samples
         public string? TenantId { get; set; }
         public string? TrialExpirationDate { get; set; }
         public string? UniqueName { get; set; }
-        public string? UrlName { get; set; }       
+        public string? UrlName { get; set; }
         public string? Version { get; set; }
-        public string? Url { get; set; }              
+        public string? Url { get; set; }
     }
 }
 ```
@@ -550,7 +550,6 @@ namespace PowerApps.Samples
     }
 }
 ```
-
 
 ### See Also
 

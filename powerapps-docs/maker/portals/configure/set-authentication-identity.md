@@ -19,6 +19,9 @@ contributors:
 
 # Local authentication, registration, and other settings
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 > [!IMPORTANT]
 > - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 > - Configuring local authentication requires that you use the [Portal Management app](configure-portal.md) to configure the required site settings manually.
@@ -298,7 +301,7 @@ The following describes settings for modifying default authentication cookie beh
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Power Apps portals authentication settings](/learn/modules/authentication-user-management/2-authentication-settings)  
+[Power Apps portals authentication settings](/training/modules/authentication-user-management/2-authentication-settings)  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

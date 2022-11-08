@@ -5,20 +5,21 @@ ms.date: 07/18/2022
 author: ImadYanni
 ms.author: iyanni
 ms.reviewer: jdaly
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
   - phecke
 ---
+
 # Sample: Blazor WebAssembly with Global Discovery
 
 This sample shows how to use the Global Discovery service from a Blazor WebAssembly application.
 
-You can download the sample from [https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C#/BlazorCDS](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/BlazorCDS)
+You can download the sample from [https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C#/BlazorCDS](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/BlazorCDS)
 
 This sample is a modification of the steps in the [Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse](walkthrough-blazor-webassembly-single-tenant.md)
 
@@ -37,7 +38,7 @@ This sample demonstrates how to provide a select (drop-down) control in a web ap
 
 The `Pages/EnvironmentChooser.razor` file provides the user interface to allow users to select from available environments based on their credentials after they have logged in.
 
-This page depends on a named definition of an HttpClient (`GDSClient`) in  Program.cs that is configured to access the Global Discovery Service. Access to the Global Discovery Service is added to the available scopes when the user logs in. When the user selects a different environment, the `SelectedEnvUrl` in `Models/AppState.cs` changes.
+This page depends on a named definition of an HttpClient (`GDSClient`) in Program.cs that is configured to access the Global Discovery Service. Access to the Global Discovery Service is added to the available scopes when the user logs in. When the user selects a different environment, the `SelectedEnvUrl` in `Models/AppState.cs` changes.
 
 Access to the account records is provided by `Pages/FetchAccounts.razor` with an access token that depends on the selected environment.
 
@@ -53,11 +54,11 @@ To run this sample you must first configure an Azure Active Directory applicatio
 1. Select **New Registration**.
 1. Enter the following:
 
-   |Field|Value|
-   |---------|---------|
-   |Name|Your choice. You might use: `BlazorGlobalDiscoverySample`|
-   |Supported account types:|Accounts in this organization directory only (Single Tenant)|
-   |Redirect URI (optional)|`https://localhost:44363/authentication/login-callback`|
+   | Field                    | Value                                                        |
+   | ------------------------ | ------------------------------------------------------------ |
+   | Name                     | Your choice. You might use: `BlazorGlobalDiscoverySample`    |
+   | Supported account types: | Accounts in this organization directory only (Single Tenant) |
+   | Redirect URI (optional)  | `https://localhost:44363/authentication/login-callback`      |
 
 1. Click **Register**.
 1. Copy the **Application (client) ID** value. You will need this when you [Update the project](#update-the-project).
@@ -107,6 +108,5 @@ This sample makes no changes to data in your environment.
 
 [Discover user organizations](discovery-service.md)<br />
 [Sample: Global Discovery Service (C#)](sample-global-discovery-service-csharp.md)
-
 
 [!INCLUDE [footer-banner](../../includes/footer-banner.md)]

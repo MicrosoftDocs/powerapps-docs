@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/18/2022
+ms.date: 09/09/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Use the Visual Studio Code extension
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 ## Overview
 
@@ -39,17 +42,15 @@ help with code completion, assistance, and hinting while customizing portals
 interface using VS Code. Using the VS Code extension, you can also configure portals through the [portals
 support for Microsoft Power Platform CLI](power-apps-cli.md).
 
-![Animation that explains how to install and set Power Platform Tools with file icon theme.](media/vs-code-extension/install-set-icon-theme.gif "Animation that explains how to install and set Power Platform Tools with file icon theme")
+:::image type="content" source="media/vs-code-extension/install-pp-tools.gif" alt-text="Animation that explains how to install and set Power Platform Tools.":::
 
 ## Prerequisites
 
 Before using the VS Code extension for Power Apps portals, you must:
 
--   Download, install, and configure Visual Studio Code. More information:
-    [Download Visual Studio Code](https://code.visualstudio.com/Download)
+- Download, install, and configure Visual Studio Code. More information: [Download Visual Studio Code](https://code.visualstudio.com/Download)
 
--   Configure your environment and system for Power Apps portals CI/CD support
-    using CLI. More information: [Portals support for Microsoft Power Platform CLI (preview)](power-apps-cli.md)
+- Configure your environment and system for Power Apps portals CI/CD support using CLI. More information: [Portals support for Microsoft Power Platform CLI (preview)](power-apps-cli.md)
 
 ## Install VS Code extension
 
@@ -88,7 +89,7 @@ When customizing downloaded content using VS Code, you can now use IntelliSense
 for Power Apps portals
 [Liquid tags](liquid/liquid-tags.md).
 
-![Snippet with an example of entity liquid tag completion.](media/vs-code-extension/liquid-tag-completion.png "Snippet with an example of entity Liquid tag completio")
+![Snippet with an example of entity liquid tag completion.](media/vs-code-extension/liquid-tag-completion.png "Snippet with an example of entity Liquid tag completion.")
 
 ## File icons
 

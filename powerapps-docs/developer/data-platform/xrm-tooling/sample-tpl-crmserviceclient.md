@@ -7,17 +7,18 @@ ms.author: mbarbour
 ms.reviewer: pehecke
 manager: jstrauss
 ms.topic: sample
-applies_to: 
+applies_to:
   - "Dynamics 365 (online)"
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
-contributors: 
+contributors:
   - JimDaly
-  - phecke 
+  - phecke
 ---
+
 # Sample: Task Parallel Library with CrmServiceClient
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
@@ -26,13 +27,13 @@ Task Parallel Library (TPL) makes developers more productive by simplifying the 
 
 Adding parallelism and concurrency can significantly improve the total throughput for applications that need to perform a large number of Dataverse operations in a short period of time.
 
-Download the sample: [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/TPLCrmServiceClient)
+Download the sample: [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/TPLCrmServiceClient)
 
 ## How to run the sample
 
-1. Download and extract the sample so that you have a copy locally.  
-2. Open the `TPLCrmServiceClient.sln` file in Visual Studio.  
-3. Press **F5** to compile and run the program.  
+1. Download and extract the sample so that you have a copy locally.
+2. Open the `TPLCrmServiceClient.sln` file in Visual Studio.
+3. Press **F5** to compile and run the program.
 
 ## Demonstrates
 
@@ -42,11 +43,15 @@ More information: [Service Protection API Limits](../api-limits.md)
 
 The [CrmServiceClient.Clone Method](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.clone) enables TPL to use the client with multiple threads.
 
+> [!NOTE]
+> You could also use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A?displayProperty=nameWithType> method in this sample code instead of <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone?displayProperty=nameWithType> with the same results.
+
 This simple sample will generate a number of account table records using the [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach).
 
 Then it will use that technique again to delete the tables created.
 
 **NOTE**:
+
 > By default, this sample will create only 10 records, which is not enough to hit the service protection api limit errors. If you raise the `numberOfRecords` variable value to 10000, you can use Fiddler to observe how some of the requests will be rejected and re-tried.
 
 ## Code listing
@@ -66,7 +71,7 @@ namespace PowerApps.Samples
 {
     public partial class SampleProgram
     {
-       
+
         //How many records to create with this sample.
         private static readonly int numberOfRecords = 10;
 
@@ -189,7 +194,6 @@ namespace PowerApps.Samples
 ```
 
 SampleMethods.cs contains the definition of two static methods (`CreateEntities` and `DeleteEntities`) used in the code:
-
 
 ```csharp
 /// <summary>

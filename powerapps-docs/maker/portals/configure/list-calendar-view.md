@@ -17,6 +17,9 @@ contributors:
 
 # List Calendar view
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 On the **Calendar View** tab, you can enable the list to render as a calendar view, with each individual record configured to act as a single event.
 
 The following field mappings can be configured to display list records as dated events on the calendar. The records need to include at minimum a date field.
@@ -49,9 +52,8 @@ Once the specific fields are configured, a list calendar view will appear on the
 ### See also
 
 - [Work with lists](entity-lists.md)
-- [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Display multiple Dataverse records using lists](/training/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

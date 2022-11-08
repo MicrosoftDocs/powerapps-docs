@@ -88,7 +88,7 @@ Set up the new mobile offline experience in the [modern app designer](../maker/m
 7. Select an existing offline profile, or select **New profile with current app data**. To set up a new offline profile, go to the following section, [Set up a mobile offline profile](setup-mobile-offline.md#set-up-a-mobile-offline-profile).
     
     > [!NOTE]
-    >  If you edit an app that has more than one offline profile, that was created using the [classic offline experience](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** To use the new offline experience, your app can only have one offline profile.
+    >  If you edit an app that has more than one offline profile, that was created using the [offline experience that is generally available](/dynamics365/mobile-app/setup-mobile-offline#step-2-create-a-mobile-offline-profile-to-determine-what-data-will-be-available-while-offline), then you will get this message: **There is more than one mobile offline profile associated with this app, so you can't edit it here.** To use the new offline experience, your app can only have one offline profile.
     
     > [!div class="mx-imgBorder"]
     > ![Select an offline profile.](media/mobile-offline-image7.png)
@@ -144,8 +144,8 @@ The modern app designer can generate a default offline profile that's based on h
 
 Applying an appropriate filter for each of the tables configured in the offline profile is critical to limit the amount of data that's downloaded on users' devices.
 
-Keep in mind, that you can have ten related tables in a custom filter. You can also have ten relationships. These are distinct checks that might not add up.
-The ten relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
+Keep in mind, that you can have 15 related tables in a custom filter. You can also have 15 relationships. These are distinct checks that might not add up.
+The 15 relationships limit is transitive, meaning if table B has N relationships, and you add a reference to table B in table A, then it will increase the relationship count of A by N+1; one plus the N already in table B. This limit is per profile item for table in the profile.
 
 
 1. Select **Add table**.
@@ -166,7 +166,7 @@ The ten relationships limit is transitive, meaning if table B has N relationship
    4. **Sync interval** defines the sync frequency to be applied on the device to sync the data with the server. If a table's data doesn't change frequently—like a catalog or a product table—you might want to focus on only syncing data when necessary, for example refreshing only once a day.
    
      > [!NOTE]
-     > You can only have up to ten related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
+     > You can only have up to 15 related tables in an profile. If you exceed the limit, then you will get an error and won't be able to publish the offline profile.
       
       > [!div class="mx-imgBorder"]
       >![Screenshot showing the filters available for an offline table.](media/mobile-offline-image11.png)

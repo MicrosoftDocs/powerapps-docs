@@ -1,10 +1,10 @@
 ---
-title: Configure a file column on portals (preview)
+title: Configure a file column on portals 
 description: Learn how to configure a file column to store binary data on portals.
 author: nageshbhat-msft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2022
+ms.date: 10/27/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
@@ -13,28 +13,16 @@ contributors:
     - nickdoelman
 ---
 
-# Configure a file column on portals (preview)
+# Configure a file column on portals 
 
-[This topic is pre-release documentation and is subject to change.]
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
-A file column is used for storing binary data. This column is primarily used to store a single file, note, or attachment; however, it's possible to store other forms of binary data. You can configure a file column on basic and advanced forms to provide the capability to upload, view, modify, or delete the file. The file column can store files up to the specified maximum size of a Microsoft Dataverse table column.
+A file column is used for storing binary data. This column is primarily used to store a single file, note, or attachment; however, it's possible to store other forms of binary data. You can configure a file column on basic and multistep forms to provide the capability to upload, view, modify, or delete the file. The file column can store files up to the specified maximum size of a Microsoft Dataverse table column.
 
-:::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalogue. To populate the Product Catalogue field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalogue."::: 
-
-> [!NOTE]
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../../includes/cc-preview-features-definition.md)]
-> - This feature is available with portals website version [9.4.7.xx](/power-platform/released-versions/portals/portalupdate947x).
-
-## Enable the file control on form
-
-You must configure the site setting **Control/EnableFilePreview** and set its value to **true** to enable file controls on the form. You don't have to make any configuration to use file columns with Liquid code or Web API.
-
-:::image type="content" source="media/file-column/enable-file-preview.png" alt-text="Site settings menu for enabling file preview, with the value set to true.":::
+:::image type="content" source="media/file-column/file-upload.gif" alt-text="Animation of a table with fields for Product Number, Product Name,and Product Catalog. To populate the Product Catalog field, the user selects Choose File and then browses to a PDF file to upload and use for the Product Catalog."::: 
 
 > [!IMPORTANT]
-> - This site setting is required during the preview period.
-> - You can't upload a file by using **Insert** mode on a basic form or an advanced form step.
+> - You can't upload a file by using **Insert** mode on a basic form or an multistep form step.
 
 ## Liquid code
 
@@ -94,7 +82,7 @@ To retrieve file data, use the API request described in the following examples.
 GET /_api/<entity-type>(id)/<file-attribute-name>/$value
 ```
 
-File data transfers from the web service endpoints are limited to a maximum of 16 MB of data in a single service call. File data that exceeds 16 MB must be divided into 4-MB or smaller data blocks (chunks), where each block is received in a separate API call until all file data has been received. It's your responsibility to join the downloaded data blocks to form the complete data file, by combining the data blocks in the same sequence as the blocks were received.
+File data transfers from the web service endpoints are limited to a maximum of 16 MB of data in a single service call. File data exceeding 16 MB must be divided into 4 MB or smaller data blocks (chunks).  Each block is received in a separate API call until all file data has been received. It's your responsibility to join the downloaded data blocks to form the complete data file, by combining the data blocks in the same sequence as the blocks were received.
 
 #### Example: File download \< 16 MB
 

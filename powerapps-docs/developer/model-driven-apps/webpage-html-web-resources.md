@@ -141,13 +141,16 @@ Because of the capability for the HTML in web resources to be changed by using t
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
  If multiple values are passed in the data parameter, they will be automatically encoded. Logic must also be included to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
+ 
+> [!NOTE]
+> All characters included in the query string go through validation to ensure the validity of the parameters passed. If there are any parameters found to be not valid, the request will fail. For example, passing text values enclosed in angular brackets is considered an invalid parameter type.
 
 ### See also
 
  [Web resources](web-resources.md)   
  [Create accessible web resources](create-accessible-web-resources.md)   
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
- [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using JavaScript web resources](script-jscript-web-resources.md)   
  [Using Data (XML) web resources](data-xml-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)

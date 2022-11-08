@@ -37,9 +37,9 @@ highlightedContent:
       url: https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg
 
     # Card
-    - title: Power Apps training on Microsoft Learn
+    - title: Power Apps training
       itemType: learn
-      url: /learn/powerplatform/power-apps
+      url: /training/powerplatform/power-apps
 
 # conceptualContent section
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -57,7 +57,7 @@ conceptualContent:
           url: guidance/planning/introduction.md
           itemType: overview      
     
-    - title: Create apps and portals
+    - title: Create apps
       links:
         - text: Canvas apps
           url: maker/canvas-apps/index.yml
@@ -65,8 +65,8 @@ conceptualContent:
         - text: Model-driven apps
           url: maker/model-driven-apps/index.yml
           itemType: overview
-        - text: Portals
-          url: maker/portals/index.yml
+        - text: Cards
+          url: cards/overview.md
           itemType: overview             
     
     - title: Work with data platform

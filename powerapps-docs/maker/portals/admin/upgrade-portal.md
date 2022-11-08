@@ -16,6 +16,9 @@ contributors:
  
 # Upgrade a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 This section helps you understand the Dynamics 365 Portals release process to prepare for any new release properly and to reduce any impact on your customers. It also talks about various components which are part of your portal.
 
 A portal consists of the following components:
@@ -67,9 +70,8 @@ If you encounter any issue during the early upgrade phase, you can report it thr
 ### See also
 
 [Update portal solution](update-portal-solution.md) <br>
-[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
+[Power Apps portals maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 [Administer Power Platform](/power-platform/admin/admin-documentation) <br>
 [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -5,16 +5,20 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/28/2022
+ms.date: 09/21/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Roles required for portal administration
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Different administrative tasks in Power Apps portals can be performed by members of different roles. The admin and security roles required to do these tasks vary depending on the impact area.
 
@@ -33,7 +37,7 @@ The following table lists different administrative tasks for portals, and the ro
 | [Manage portal authentication key](manage-auth-key.md) | [Portal App owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Convert an existing portal to capacity-based model](convert-portal.md#convert-an-existing-portal-to-capacity-based-model) |  [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
-| [Create a portal](..\create-portal.md) | Required roles and permissions in Azure Active Directory (Azure AD): <ul> <li> Is [portal creation disabled](../control-portal-creation.md) in the tenant? </li> <ul> <li> If **No**, [permissions to register an app](/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in Azure AD are required. </li> <li> If **Yes**, only a [Global administrator](#global-administrator), [Dynamics 365 administrator](#dynamics-365-administrator), or [Power Platform administrator](#power-platform-administrator) can create a portal. </ul> </ul> <br> Required roles and permissions in Microsoft Power Platform (both are required): <ul> <li>A user account with [Read-Write Access Mode](#read-write-access-mode). </li> <li>[System administrator](#system-administrator) role. </li> </ul> <ul>   |
+| [Create a portal](..\create-portal.md) | Required roles and permissions in Microsoft Power Platform (**all** are required):<ul><li>A user account with [Read-Write Access Mode](#read-write-access-mode).</li><li>[System administrator](#system-administrator) role. </li><li>[Permissions to register an app](/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app) in Azure AD are required.</br><li>Is [portal creation disabled](../control-portal-creation.md) in the tenant? </li><ul><li> If **Yes**, in **addition** to the roles and permissions above, a user will also need at least one of the following roles to create a portal: [Global administrator](#global-administrator), [Dynamics 365 administrator](#dynamics-365-administrator), or [Power Platform administrator](#power-platform-administrator).</li></ul></ul>|
 | [Download the public key of a portal](get-public-key.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Import metadata translation](import-metadata-translation.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Reset a portal](reset-portal.md) | [Portal app owner](#portal-app-owner) and any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
@@ -53,6 +57,7 @@ The following table lists different administrative tasks for portals, and the ro
 | [Set up Power BI integration](set-up-power-bi-integration.md) | <ul><li> [Global administrator](#global-administrator)</li></ul> |
 | [Run portal checker](portal-checker.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Set up IP address restriction](ip-address-restrict.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Configure content delivery network](../configure/configure-cdn.md) |Any one of the following roles: <ul><li>[System administrator](#system-administrator)</li><li>[Dynamics 365 administrator](#dynamics-365-administrator)</li><li>[Power Platform administrator](#power-platform-administrator)</li><li>[Global administrator](#global-administrator)</li></ul> |
 
 ## Manage membership of the required roles
 
