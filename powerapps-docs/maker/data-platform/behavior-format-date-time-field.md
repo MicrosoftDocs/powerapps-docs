@@ -55,6 +55,9 @@ Changing the column behavior affects the column values that are added or modifie
 
 When you import a solution that contains a Date column using the User Local behavior, you may have the option to change the behavior to **Date Only** or **Time Zone Independent**.  
 
+> [!NOTE]
+> You can only change the behavior of an existing managed Date Only or Date Time field if you are the publisher. In order to make a change to these fields, an Upgrade must be made to the solution that added the Date Only or Date Time column. More information: [Upgrade or update a solution](update-solutions.md)
+
 ### Prevent changing behavior
 
 If you are distributing a custom date column in a managed solution, you can prevent people using your solution from changing the behavior by setting the **CanChangeDateTimeBehavior** managed property to **False**. More information: [Set  managed properties for columns](set-managed-properties-for-field.md)
@@ -78,16 +81,16 @@ You can use this behavior when time zone information isn't required, such as the
 
 This is caused by a lack of parity between the table column setting and the app form setting. When a table column is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
  
-This tells the form how to interpret the data it receives from the Dataverse. If the data retrieved from the store is time zone independent, but the form is set to local, the UTC data will be displayed as user local time based on the user’s time zone in their profile. The reverse is also true, a user local value from the store will be displayed as UTC if the form is set to UTC. Fortunately, the form’s date time zone values can be modified without disrupting the existing rows.
+This tells the form how to interpret the data it receives from the Dataverse. If the data retrieved from the store is time zone independent, but the form is set to local, the UTC data will be displayed as user local time based on the user's time zone in their profile. The reverse is also true, a user local value from the store will be displayed as UTC if the form is set to UTC. Fortunately, the form's date time zone values can be modified without disrupting the existing rows.
 
 ### I picked Date Only in my table column, but my form is showing a time picker along with the date
 
 This would happen if you chose a behavior of time zone independent or user local for your date only column. In the Dataverse it will store a time of 00:00:00 by default, but if you add the column to a form it will assume you need to set the time as well. If you leave the time pickers in the form, users can enter a time and it will be saved as something other than 00:00:00. How can you fix this
 * Edit the form and remove the time picker and associated formulas. This will save the time as 00:00:00 and will still allow for time zone-based date calculations.
-* If your column is currently set to user local, and you don’t need the date to be time zone calculated, you can change it to date only. This is a permanent change and cannot be undone. This change cannot be made to time zone-independent behavior columns. Always be careful changing behaviors as other apps, plugins, or workflows may be relying on the data.
+* If your column is currently set to user local, and you don't need the date to be time zone calculated, you can change it to date only. This is a permanent change and cannot be undone. This change cannot be made to time zone-independent behavior columns. Always be careful changing behaviors as other apps, plugins, or workflows may be relying on the data.
 
 ### I have a date only column, but it is showing the wrong date for some users
-If this happens, check the behavior that is set up for the date only column. If the column is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user’s time zone settings or if it displays it as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved row. Alternately, if you need this to be a static date that does not change and the column is currently user local, you can change the column behavior to Date Only. Be cautious though, this can't be undone.
+If this happens, check the behavior that is set up for the date only column. If the column is set to time zone independent or user local, the included timestamp will cause the date to appear differently for different users. The form display settings of UTC or Local will determine if the date displayed is calculated using the user's time zone settings or if it displays it as the UTC value. Changing the form values to UTC instead of user local will prevent time zone offset calculations and will display the UTC date for the saved row. Alternately, if you need this to be a static date that does not change and the column is currently user local, you can change the column behavior to Date Only. Be cautious though, this can't be undone.
 
 ### My (script/plug-in) is supposed to intercept the date submitted using the Universal Client before the user local conversion occurs, but instead it is being treated as User Local data 
 
