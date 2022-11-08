@@ -33,6 +33,8 @@ Offline syncs that continue while Power Apps runs in the background, rely on ope
 
 On iOS devices, an offline sync is suspended as soon as Power Apps is moved to the background or when the device is locked. However, the operating system will continue an offline sync, for up to five minutes at a time, when the device is not in use.
 
+The following table describes common scenarios and explains how the scynchronization processes if affected by the actions you take.
+
 | Example scenarios | What happens to the synchronization process |
 |-------------------------|-------------------------|
 | <ol type="1"></br><li>Open Power Apps.</li></br><li>Leave the app open.</li></br><li>Screen locks.</li></br></ol> | If an offline sync is active while the screen is locked, the offline sync will be suspended, and will resume in 15 minutes. |
