@@ -4,7 +4,6 @@ description: Learn about what the considerations are when you use reporting in m
 ms.custom: 
 ms.date: 09/27/2019
 ms.reviewer: 
-
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: conceptual
@@ -42,7 +41,7 @@ As the volume of data held in the app's database continues to grow it becomes mo
 
 ## Reporting infrastructure
 
-In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instance. Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  We do not place time restrictions on reports.  
+In an environment, the reporting infrastructure is shared and separate from the database. In this architecture, although customers share the resources required to run the report, each report runs against the customers’ individual database instance. Additionally, users can run as many reports as they need whenever they want to run them to meet business goals.  
   
 The reporting capabilities built in to Microsoft Dataverse are designed to let users run reports on datasets that span shorter periods of time. Considering this, note the following fixed settings:  
   
