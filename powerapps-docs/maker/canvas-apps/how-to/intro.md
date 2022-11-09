@@ -119,7 +119,7 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 2.  In the button's `OnSelect` property, enter the formula:
 
-Office365Outlook.SendEmailV2( 
+    Office365Outlook.SendEmailV2( 
 
     "sample@email.com", 
 
