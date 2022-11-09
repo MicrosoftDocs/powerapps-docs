@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 10/18/2022
+ms.date: 11/09/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
