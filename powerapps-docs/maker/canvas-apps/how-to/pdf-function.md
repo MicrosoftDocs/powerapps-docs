@@ -108,7 +108,7 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
 
 ### Method 2: Use an action connector 
 
-In this example, we'll generate a PDF that we then attach and send as an email. In this example, we use the Office 365 Outlook connector to send the email. More information: [365 Outlook connector.](/connectors/office365)
+In this example, we'll generate a PDF that we then attach and send as an email. In this example, we use the Office 365 Outlook connector to send the email. More information: [365 Outlook connector](/connectors/office365)
 
 1. In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
