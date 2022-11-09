@@ -42,74 +42,76 @@ In this article, we'll learn how to use the PDF function to create a PDF and use
 
 Since the PDF function is an experimental featuere, it's disabled by default. To use the PDF feature, you'll need to turn it on manually.
 
-1.  To enable the PDF function, open a [new](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/data-platform-create-app) or an [existing](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/edit-app) app in Power Apps Studio. <br> [Learn more about creating apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app) or [create an app from a template](https://learn.microsoft.com/power-apps/maker/canvas-apps/get-started-test-drive).
+1. To enable the PDF function, open a [new](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/data-platform-create-app) or an [existing](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/edit-app) app in Power Apps Studio. <br> [Learn more about creating apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/create-blank-app) or [create an app from a template](https://learn.microsoft.com/power-apps/maker/canvas-apps/get-started-test-drive).
 
-2.  Select **Settings** at the top.
+2. Select **Settings** at the top.
 
-3.  Select **Upcoming features**.
+3. Select **Upcoming features**.
 
-4.  On the **Experimental** tab, set the togglle to **On** for **PDF function**.
+4. On the **Experimental** tab, set the togglle to **On** for **PDF function**.
 
-![](media/image1.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Eable PDF-functionl.](media/pdf/print-pdf-enable-1.png)
 
 
-# Use the PDF function to generate a PDF
+## Use the PDF function to generate a PDF
 
 You can use the PDF function in any [behavior property](https://learn.microsoft.com/power-apps/maker/canvas-apps/working-with-formulas-in-depth) to generate a PDF. In the example below, we'll use the PDF function in the `OnSelect` property of a button, but you can also use `OnVisible`, `OnHidden`, or any other behavior property.
 
 1. Select an existing button or add a new button to your canvas app.
 
-2. In the `OnSelect` property of the button, enter the PDF Function and enter the target of the PDF function as a parameter. In this example, we'll target the screen. In our example, the name of the Screen is `SubmitInspectionScreen`. The name of your screen may be different. Enter the formula:
+2. In the `OnSelect` property of the button, enter the PDF function and enter the target of the PDF function as a parameter. In this example, we'll target the screen.    In our example, the name of the Screen is `SubmitInspectionScreen`. The name of your screen may be different. Enter the formula:
 
-    `PDF(SubmitInspectionScreen);`
+   `PDF(SubmitInspectionScreen);`
 
-![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and PDF SubmitInspectionScreen ](media/ appears in the formula bar. .png)
+   > [!div class="mx-imgBorder"] 
+   > ![PDF function for OnSelect property.](media/pdf/print-pdf-enter-formula-2.png)
 
-3.  Save and publish the app.
+3. Save and publish the app.
 
-4.  Play the app.
+4. Play the app.
 
-5.  Select the button you added. When you select the button, the PDF is generated and stored in memory for future use.
+5. Select the button you added. When you select the button, the PDF is generated and stored in memory for future use.
 
 The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we are doing in this example, or you can limit what content you pass in by specifying a container or gallery. [Learn more about PDF function targets here.](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
 
-**Note**
-
--   These examples work best when using an app with mutliple controls.
-
--   `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`, enter the name of the screen where you've added the button.
+> [!NOTE]
+> - These examples work best when using an app with mutliple controls.
+> - `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`, enter the name of the screen where you've added the button.
 
 -   Note that in order see the generated PDF, additional steps must be taken. See the steps below.
 
-# Work with the generated PDF
+## Work with the generated PDF
 
-## Method 1: Using the PDF Viewer control
+### Method 1: Using the PDF Viewer control
 
 In this example, we'll view the generated PDF using the PDF Viewer control.
 
-1.  In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
+1. In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
-2.  In the button's `OnSelect` property, enter the formula:
+2. In the button's `OnSelect` property, enter the formula:
 
-`Set(myPDF, PDF(SubmitInspectionScreen));`
+   `Set(myPDF, PDF(SubmitInspectionScreen));`
 
-![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and Set myPDF  PDF SubmitInspectionScreen  ](media/ appears in the formula bar. .png)
+   > [!div class="mx-imgBorder"] 
+   > ![Button's OnSelect property.](media/pdf/print-pdf-button-prop-3.png)
+   
+6. Select the Insert menu and add a PDF Viewer control.
 
-6.  Select the Insert menu and add a PDF Viewer control.
+7. Select the **Document** property from the properties drop down menu and enter **myPDF** in the formula bar.
 
-7.  Select the **Document** property from the properties drop down menu and enter `myPDF` in the formula bar.
+   > [!div class="mx-imgBorder"] 
+   > ![Document property.](media/pdf/print-pdf-document-prop-4.png)
 
-![A screenshot of the Canvas app designer interface  PdfViewer1 shows as selected on the canvas and in the tree view  The property drop down has been set to Document  and myPDF appears in the formula bar  ](media/image4.png)
+8. Save and publish the app.
 
-8.  Save and publish the app.
-
-9.  Play the app.
+9. Play the app.
 
 10. Select the button you added. When you select the button, the PDF is generated and stored in the variable, and is visible in the PDF viewer control.
 
-Note
 
--   The PDF viewer control will appear as a black shape inside the generated PDF. To exclude the PDF Viewer control from the generated PDF, place the desired PDF content inside of a container or gallery and target that instead of the screen. For example, *PDF(Container1)* or*PDF(Gallery1).*
+> [!NOTE]
+> The PDF viewer control will appear as a black shape inside the generated PDF. To exclude the PDF Viewer control from the generated PDF, place the desired PDF content inside of a container or gallery and target that instead of the screen. For example, *PDF(Container1)* or*PDF(Gallery1).*
 
 ## Method 2: Use an action connector 
 
@@ -119,39 +121,39 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 2.  In the button's `OnSelect` property, enter the formula:
 
-```
-Office365Outlook.SendEmailV2( 
+  ```
+  Office365Outlook.SendEmailV2( 
 
-    "sample@email.com", 
+     "sample@email.com", 
 
-    "New Safety Inspection" 
+     "New Safety Inspection" 
 
-    "A new safety inspection has been submitted for your review. Please see attached.", 
+      "A new safety inspection has been submitted for your review. Please see attached.", 
 
-    { 
+      { 
 
-        Attachments: Table( 
+         Attachments: Table( 
 
-            { 
+              { 
 
-                Name: "submittedInspection.pdf", 
+                  Name: "submittedInspection.pdf", 
 
-                ContentBytes: PDF(SubmitInspectionScreen) 
+                  ContentBytes: PDF(SubmitInspectionScreen) 
+  
+              } 
 
-            } 
+          ) 
 
-        ) 
+     } 
 
-    } 
+  ); 
+  ```
+   > [!div class="mx-imgBorder"] 
+   > ![Enter the Onselect button property.](media/pdf/print-pdf-onselect-button-5.png)
 
-); 
-```
+3. Save and publish the app.
 
-![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and the following formula appears in the formula bar  Office365Outlook SendEmailV2   quot](media/sample@email.com&quot.png ", &quot")
-
-3.  Save and publish the app.
-
-4.  Play the app.
+4. Play the app.
 
 5.  Select the button you added. When you select the button, the PDF is generated and an email is sent to the specified email address with the generated PDF included as an attachment.
 
