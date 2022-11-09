@@ -73,12 +73,12 @@ You can use the PDF function in any [behavior property](https://learn.microsoft.
 
 5. Select the button you added. When you select the button, the PDF is generated and stored in memory for future use.
 
-The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we are doing in this example, or you can limit what content you pass in by specifying a container or gallery. [Learn more about PDF function targets here.](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
+   The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we are doing in this example, or you can limit what content you pass in by specifying a container or gallery. [Learn more about PDF function targets here.](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
 
- > [!NOTE]
- > - These examples work best when using an app with mutliple controls.
- > - `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`,  enter the name of the screen where you've added the button.
- > To see the generated PDF, additional steps must be taken. See the steps below.
+  > [!NOTE]
+  > - These examples work best when using an app with mutliple controls.
+  > - `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`,  enter the name of the screen where you've added the button.
+  > - To see the generated PDF, additional steps must be taken. See the steps below.
 
 ## Work with the generated PDF
 
@@ -108,44 +108,45 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
 
 10. Select the button you added. When you select the button, the PDF is generated and stored in the variable, and is visible in the PDF viewer control.
 
-   > [!NOTE]
-   > The PDF viewer control will appear as a black shape inside the generated PDF. To exclude the PDF Viewer control from the generated PDF, place the desired PDF content inside of a container or gallery and target that instead of the screen. For example, *PDF(Container1)* or*PDF(Gallery1).*
+    > [!NOTE]
+    > The PDF viewer control will appear as a black shape inside the generated PDF. To exclude the PDF Viewer control from the generated PDF, place the desired PDF content inside of a container or gallery and target that instead of the screen. For example, *PDF(Container1)* or*PDF(Gallery1).*
 
 ### Method 2: Use an action connector 
 
 In this example, we'll generate a PDF which we then attach and send as an email. In this example, we use the Office 365 Outlook connector to send the email. [Learn more about the Office 365 Outlook connector.](https://learn.microsoft.com/connectors/office365/)
 
-1.  In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
+1. In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
-2.  In the button's `OnSelect` property, enter the formula:
+2. In the button's `OnSelect` property, enter the formula:
 
-  ```
-  Office365Outlook.SendEmailV2( 
+   ```
+   Office365Outlook.SendEmailV2( 
 
-     "sample@email.com", 
+      "sample@email.com", 
 
-     "New Safety Inspection" 
+       "New Safety Inspection" 
 
-      "A new safety inspection has been submitted for your review. Please see attached.", 
+       "A new safety inspection has been submitted for your review. Please see attached.", 
 
-      { 
+       { 
 
-         Attachments: Table( 
+           Attachments: Table( 
 
-              { 
+                { 
 
-                  Name: "submittedInspection.pdf", 
+                    Name: "submittedInspection.pdf", 
 
-                  ContentBytes: PDF(SubmitInspectionScreen) 
+                    ContentBytes: PDF(SubmitInspectionScreen) 
   
-              } 
+                } 
 
-          ) 
+            ) 
 
-     } 
+       } 
 
-  ); 
-  ```
+    ); 
+   ```
+   
    > [!div class="mx-imgBorder"] 
    > ![Enter the Onselect button property.](media/pdf/print-pdf-onselect-button-5.png)
 
