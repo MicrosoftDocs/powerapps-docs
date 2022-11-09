@@ -119,31 +119,31 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 2.  In the button's `OnSelect` property, enter the formula:
 
-`Office365Outlook.SendEmailV2(`
+Office365Outlook.SendEmailV2( 
 
-`"sample@email.com",`
+    "sample@email.com", 
 
-`"New Safety Inspection"`
+    "New Safety Inspection" 
 
-`"A new safety inspection has been submitted for your review. Please see attached.",`
+    "A new safety inspection has been submitted for your review. Please see attached.", 
 
-`{`
+    { 
 
-`Attachments: Table(`
+        Attachments: Table( 
 
-`{`
+            { 
 
-`Name: "submittedInspection.pdf",`
+                Name: "submittedInspection.pdf", 
 
-`ContentBytes: PDF(SubmitInspectionScreen)`
+                ContentBytes: PDF(SubmitInspectionScreen) 
 
-`}`
+            } 
 
-`)`
+        ) 
 
-`}`
+    } 
 
-`);`
+); 
 
 ![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and the following formula appears in the formula bar  Office365Outlook SendEmailV2   quot](media/sample@email.com&quot.png ", &quot")
 
@@ -213,23 +213,24 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 15. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
 
-`'PowerAppV2-&gt;Createfile'.Run(`
+'PowerAppV2->Createfile'.Run( 
 
-`"NewInspectionReport.pdf",`
+    "NewInspectionReport.pdf", 
 
-`{`
+    {         
 
-`file: {`
+        file: { 
 
-`name: "NewInspectionReport.pdf",`
+            name: "NewInspectionReport.pdf", 
 
-`contentBytes: PDF(InspectionDetails)`
+            contentBytes: PDF(InspectionDetails) 
 
-`}`
+        }               
 
-`}`
+    } 
 
-`);`
+);  
+
 
 ![A screenshot of the Canvas app designer interface  Button4 is selected  The property drop down has been set to OnSelect  and the following formula appears in the formula bar    39](media/PowerAppV2-&gt.png "Createfile&#39")
 
