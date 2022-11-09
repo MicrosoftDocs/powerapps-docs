@@ -44,11 +44,11 @@ If you find a problem with an app in Power Apps, you can help Microsoft troubles
 
 1. In the upper-left corner, select your profile picture.
 
-   ![Default Home screen.](media/default-home-screen.png "Default Home screen")
+   ![Default Home screen.](../../mobile/media/default-home-screen.png "Default Home screen")
 
 1. Select **Session details**.
 
-    ![Get a session ID from a phone or a tablet.](../mobile/media/get-sessionid/mobile.png "Get a session ID from a phone or a tablet")
+    ![Get a session ID from a phone or a tablet.](media/get-sessionid/mobile.png "Get a session ID from a phone or a tablet")
 
 ### When running an embedded canvas app or form
 
