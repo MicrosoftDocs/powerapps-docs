@@ -22,7 +22,7 @@ The PDF function allows you to generate a PDF document from the contents of a sc
 
 > [!IMPORTANT]
 > - This is an experimental feature.
-> - Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Understand experimental, preview, and retired features in canvas apps](../working-with-experimental-preview.md).
+> - Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Understand experimental, preview, and retired features in canvas apps](../working-with-experimental-preview.md).
 > - The behavior that this article describes is available only when the PDF function experimental feature in [Settings &gt; Upcoming features &gt; Experimental](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps experimental features community forum](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
 
@@ -68,7 +68,7 @@ You can use the PDF function in any [behavior property](../working-with-formulas
 
 5. Select the button you added. When you select the button, the PDF is generated and stored in memory for future use.
 
-   The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we're doing in this example, or you can limit what content you pass in by specifying a container or gallery. More information:[PDF function in Power Apps (experimental).](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
+   The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we're doing in this example, or you can limit what content you pass in by specifying a container or gallery. More information: [PDF function in Power Apps (experimental).](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
 
   > [!NOTE]
   > - These examples work best when using an app with multiple controls.
