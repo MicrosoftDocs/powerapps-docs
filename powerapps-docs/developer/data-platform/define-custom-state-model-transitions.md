@@ -36,7 +36,17 @@ Tables that support the concept of state have a pair of columns that capture thi
 |------------------|------------------|-----------------|  
 |`statecode`|**Status**|Represents the state of the record. For custom tables this is **Active** or **Inactive**. You can't add more state choices but you can change the choice labels.|  
 |`statuscode`|**Status Reason**|Represents a status that is linked to a specific state. Each state must have at least one possible status. You can add additional status choices and change the labels of existing choices.|  
-  
+
+> [!NOTE]
+> It is important to always pair `statecode` with the desired `statuscode` in update operations. When the `statecode` is updated without specifying a `statuscode`, the first `statuscode` item configured in the list of statuscodes will be used. 
+> For example, assume a case record  has a statuscode of 2 (On Hold). After running the code below, the statuscode will be updated to 1 even if it wasn't specified in the update operation.
+> ```csharp
+> var row = new Entity("incident", new Guid("ac1f2a46-6351-44f0-b42f-a478a2bb6e06"));
+> row["statecode"] = 0; //active
+> organizationService.Update(row);
+> ```
+> Furthermore, if auditing is enabled in the environment, on the table and on the `statuscode` column, there will be no audit logs of the example above since the actual update statement had no `statuscode` specified.
+
 The table definitions for the columns defines what status values are valid for a given state. For example, for the `Incident` (**Case**) table, the default state and status options are shown in the following table.  
   
 |State|Status|  
