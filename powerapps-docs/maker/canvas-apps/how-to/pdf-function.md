@@ -210,7 +210,7 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 11. In the File Name input area, select File name from the Dynamic Content menu, under PowerApps (V2). In the File Content input area, select File Content.
 
     > [!div class="mx-imgBorder"] 
-    > ![File contentt.](media/pdf/print-pdf-create-filet-14.png)
+    > ![File content.](media/pdf/print-pdf-create-file-14.png)
 
 12. Select Save.
 
