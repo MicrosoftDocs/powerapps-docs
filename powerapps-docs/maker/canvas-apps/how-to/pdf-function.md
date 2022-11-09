@@ -225,25 +225,25 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 15. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
 
-```
-'PowerAppV2->Createfile'.Run( 
+    ```
+    'PowerAppV2->Createfile'.Run( 
 
-    "NewInspectionReport.pdf", 
+       "NewInspectionReport.pdf", 
 
-    {         
+        {         
 
-        file: { 
+           file: { 
 
-            name: "NewInspectionReport.pdf", 
+                name: "NewInspectionReport.pdf", 
+  
+                contentBytes: PDF(InspectionDetails) 
 
-            contentBytes: PDF(InspectionDetails) 
+            }               
 
-        }               
+        } 
 
-    } 
-
-);  
-```
+    );  
+    ```
 
     > [!div class="mx-imgBorder"] 
     > ![Enter the formaula.](media/pdf/print-pdf-save-17.png)
