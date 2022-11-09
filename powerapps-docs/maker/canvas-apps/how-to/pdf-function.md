@@ -5,7 +5,7 @@ author: tashaev
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/8/2022
+ms.date: 11/9/2022
 ms.author: tashas
 search.audienceType:
   - maker
@@ -13,19 +13,16 @@ search.app:
   - PowerApps
 contributors:
     - tashaev
-    - mduelae
-    
-   
+    - mduelae  
 ---
 
 # Work with the PDF function (experimental) 
 
-The PDF function allows you to generate a PDF document from the contents of a screen or certain types of controls. You can take the generated PDF and pass it to action connectors such as the Office 365 Outlook connector, or pass it to a Power Automate flow to achieve automation scenarios. You can also enable app users to download the generated PDF where they can then store or print a physical copy on an available printer.
-
+The PDF function allows you to generate a PDF document from the contents of a screen or certain types of controls. You can take the generated PDF and pass it to action connectors such as the Office 365 Outlook connector, or pass it to a Power Automate flow to achieve automation scenarios. You can also enable app users to download the generated PDF and print it or save a copy.
 
 > [!IMPORTANT]
 > - This is an experimental feature.
-> - Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [**Understand experimental, preview, and deprecated features in Power Apps**](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-experimental-preview).
+> - Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. More information: [Understand experimental, preview, and deprecated features in Power Apps](/canvas-apps/working-with-experimental-preview).
 > - The behavior that this article describes is available only when the PDF function experimental feature in [**Settings &gt; Upcoming features &gt; Experimental**](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-experimental-preview#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [**Power Apps experimental features community forum**](https://powerusers.microsoft.com/t5/Power-Apps-Experimental-Features/bd-p/PA_ExperimentalFeatures).
 
