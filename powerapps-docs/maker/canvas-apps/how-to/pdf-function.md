@@ -75,11 +75,10 @@ You can use the PDF function in any [behavior property](https://learn.microsoft.
 
 The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we are doing in this example, or you can limit what content you pass in by specifying a container or gallery. [Learn more about PDF function targets here.](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
 
-> [!NOTE]
-> - These examples work best when using an app with mutliple controls.
-> - `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`, enter the name of the screen where you've added the button.
-
--   Note that in order see the generated PDF, additional steps must be taken. See the steps below.
+ > [!NOTE]
+ > - These examples work best when using an app with mutliple controls.
+ > - `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`,  enter the name of the screen where you've added the button.
+ > To see the generated PDF, additional steps must be taken. See the steps below.
 
 ## Work with the generated PDF
 
@@ -109,11 +108,10 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
 
 10. Select the button you added. When you select the button, the PDF is generated and stored in the variable, and is visible in the PDF viewer control.
 
+   > [!NOTE]
+   > The PDF viewer control will appear as a black shape inside the generated PDF. To exclude the PDF Viewer control from the generated PDF, place the desired PDF content inside of a container or gallery and target that instead of the screen. For example, *PDF(Container1)* or*PDF(Gallery1).*
 
-> [!NOTE]
-> The PDF viewer control will appear as a black shape inside the generated PDF. To exclude the PDF Viewer control from the generated PDF, place the desired PDF content inside of a container or gallery and target that instead of the screen. For example, *PDF(Container1)* or*PDF(Gallery1).*
-
-## Method 2: Use an action connector 
+### Method 2: Use an action connector 
 
 In this example, we'll generate a PDF which we then attach and send as an email. In this example, we use the Office 365 Outlook connector to send the email. [Learn more about the Office 365 Outlook connector.](https://learn.microsoft.com/connectors/office365/)
 
@@ -155,65 +153,75 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 4. Play the app.
 
-5.  Select the button you added. When you select the button, the PDF is generated and an email is sent to the specified email address with the generated PDF included as an attachment.
+5. Select the button you added. When you select the button, the PDF is generated and an email is sent to the specified email address with the generated PDF included as an attachment.
 
-Note
+  > [!NOTE]
+  > A sample email address has been included in this formula example.
 
--   A sample email address has been included in this formula example.
-
-## Method 3: Use in a Power Automate flow
+### Method 3: Use in a Power Automate flow
 
 In this example, we'll generate a PDF which then gets passed to a Power Automate flow for storage. In this example, we use the SharePoint connector to store the PDF in a document library. [Learn more about the SharePoint connector.](https://learn.microsoft.com/connectors/sharepointonline/)
 
-1.  In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
+1. In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
-2.  From the left pane, select the Power Automate button and select **Create new flow**.
+2. From the left pane, select the Power Automate button and select **Create new flow**.
 
-![A screenshot of the Power Automate pane in the canvas app designer  No flows have been added to the app  so a purple  quot](media/Create new flow&quot.png " button is shown. ")
+   > [!div class="mx-imgBorder"] 
+   > ![Create a new flow.](media/pdf/print-pdf-create-flow-6.png)
 
-3.  Select **Create from blank**.
+3. Select **Create from blank**.
 
-![A screenshot of the top of the flow designer in the canvas app designer  The purple  quot](media/+ Create from blank&quot.png " button is shown. ")
+   > [!div class="mx-imgBorder"] 
+   > ![Create a flow from blank.](media/pdf/print-pdf-create-from-blank-7.png)
 
-4.  For this example, we'll need the Power Apps V2 trigger. To add it, select the ellipses on the right side of the Power Apps trigger and select Delete.
+4. For this example, we'll need the Power Apps V2 trigger. To add it, select the ellipses on the right side of the Power Apps trigger and select Delete.
+   
+   > [!div class="mx-imgBorder"] 
+   > ![Delete flow.](media/pdf/print-pdf-delete-flow-8.png)
 
-![A screenshot of the flow designer in the canvas app designer  The Power Apps v1 trigger is shown  with the context menu open from the ellipsis on the right side of the trigger  The Delete option is highlighted  ](media/image8.png)
+5. Search for PowerApps (V2) and select the trigger to add it.
 
-5.  Search for PowerApps (V2) and select the trigger to add it.
+   > [!div class="mx-imgBorder"] 
+   > ![Select a trigger.](media/pdf/print-pdf-select-trigger-9.png)
 
-![A screenshot of the flow designer in the canvas app designer  The phrase  quot](media/PowerApps (v2)&quot.png " is shown in the search input field. The filtered search results show the Power Apps V2 trigger under the Triggers tab. ")
+6. Select the Power Apps V2 trigger to expand the flow node. Select **Add an input**.
 
-6.  Select the Power Apps V2 trigger to expand the flow node. Select **Add an input**.
+   > [!div class="mx-imgBorder"] 
+   > ![Add an input.](media/pdf/print-pdf-add-input-10.png)
 
-![A screenshot of the flow designer in the canvas app designer  The Power Apps v2 trigger is shown in its expanded state  with  quot](media/+ Add an input&quot.png " option shown. ")
+7. Choose the File type.
 
-7.  Choose the File type.
+   > [!div class="mx-imgBorder"] 
+   > ![Select a file typle.](media/pdf/print-pdf-file-11.png)
 
-![A screenshot of the flow designer in the canvas app designer  The Power Apps v2 trigger is shown in its expanded state  with a selection of input options shown including the File input type  ](media/image11.png)
+8. Select **Add an input** and choose the Text type. Rename the input to File name and update the description to "Please enter the name of the file." 
 
-8.  Select **Add an input** and choose the Text type. Rename the input to File name and update the description to "Please enter the name of the file."
+   > [!div class="mx-imgBorder"] 
+   > ![Enter file name.](media/pdf/print-pdf-add-input-12.png)
 
-![A screenshot of the flow designer in the canvas app designer  The Power Apps v2 trigger is shown in its expanded state  now showing the two inputs configured as described in the step  ](media/image12.png)
-
-9.  Select **+New step** to add an action, and search for SharePoint. In the list of available SharePoint actions, select **Create file**.
-
-![A screenshot of the flow designer in the canvas app designer  The  New step menu is expanded with SharePoint typed into the search input field  The create file action is shown highlighted int he filtered search results  ](media/image13.png)
+9. Select **+New step** to add an action, and search for SharePoint. In the list of available SharePoint actions, select **Create file**.
+   
+   > [!div class="mx-imgBorder"] 
+   > ![Create file.](media/pdf/print-pdf-create-file-13.png)
 
 10. Choose a site from the Site Address drop down or select Enter custom value to paste the URL to a site you have permission to add files to. Select the folder icon on the right for Folder Path and select a document library from the list which you have permissions to add files to.
 
 11. In the File Name input area, select File name from the Dynamic Content menu, under PowerApps (V2). In the File Content input area, select File Content.
 
-![A screenshot of the flow designer in the canvas app designer  A new SharePoint node has been added to the flow  The Site address and floder path fields ahve been completed but are obfuscated in the screenshot to protect sensitive information  The File Name and File Content fields show placeholders for data dynamically sent from Power Apps   the two inputs File name and File content from the Power Apps V2 trigger in the node above  A Dynamic Content callout showing the menu containing those placeholders is shown below and to the right of the File Name input field  ](media/image14.png)
+    > [!div class="mx-imgBorder"] 
+    > ![File contentt.](media/pdf/print-pdf-create-filet-14.png)
 
 12. Select Save.
 
 13. Select the X in the upper right corner of the dialog to close the modal.
 
-![A screenshot of the flow designer in the canvas app designer  The top of the window is shown with the  quot](media/X&quot.png " to close the window on the far right. ")
+    > [!div class="mx-imgBorder"] 
+    > ![Close the dialog box.](media/pdf/print-pdf-close-15.png)
 
 14. The Power Automate pane refreshes, and the newly created flow now appears.
 
-![A screenshot of the Power Automate Pane in the Canvas app designer  The pane now shows the newly created flow from the previous steps  named PowerAppsV2  gt](media/Create File..png)
+    > [!div class="mx-imgBorder"] 
+    > ![View the created flow.](media/pdf/print-pdf-flow-created-16.png)
 
 15. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
 
@@ -237,7 +245,8 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 );  
 ```
 
-![A screenshot of the Canvas app designer interface  Button4 is selected  The property drop down has been set to OnSelect  and the following formula appears in the formula bar    39](media/PowerAppV2-&gt.png "Createfile&#39")
+    > [!div class="mx-imgBorder"] 
+    > ![Enter the formaula.](media/pdf/print-pdf-save-17.png)
 
 16. Save and publish the app.
 
