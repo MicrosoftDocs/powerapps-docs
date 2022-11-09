@@ -27,7 +27,7 @@ The new model-driven app designer provides a modern WYSIWYG authoring experience
 
 Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
 
-   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added" lightbox="media/app-designer-layout.png":::
+   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added":::
 
 The app designer interface has the following areas:
 
@@ -58,7 +58,7 @@ The app designer interface has the following areas:
 
 7. Fit to screen - Quick action to fit the app preview to the available screen size.
 
-   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
+   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added."lightbox="media/app-designer-layout.png":::
 
 ## Navigation pane options
 
