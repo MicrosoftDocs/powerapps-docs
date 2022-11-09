@@ -119,7 +119,8 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 2.  In the button's `OnSelect` property, enter the formula:
 
-    Office365Outlook.SendEmailV2( 
+```
+Office365Outlook.SendEmailV2( 
 
     "sample@email.com", 
 
@@ -144,6 +145,7 @@ In this example, we'll generate a PDF which we then attach and send as an email.
     } 
 
 ); 
+```
 
 ![A screenshot of the Canvas app designer interface  Button4 shows as selected on the canvas and in the tree view  The property drop down has been set to OnSelect  and the following formula appears in the formula bar  Office365Outlook SendEmailV2   quot](media/sample@email.com&quot.png ", &quot")
 
@@ -213,6 +215,7 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 15. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
 
+```
 'PowerAppV2->Createfile'.Run( 
 
     "NewInspectionReport.pdf", 
@@ -230,7 +233,7 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
     } 
 
 );  
-
+```
 
 ![A screenshot of the Canvas app designer interface  Button4 is selected  The property drop down has been set to OnSelect  and the following formula appears in the formula bar    39](media/PowerAppV2-&gt.png "Createfile&#39")
 
