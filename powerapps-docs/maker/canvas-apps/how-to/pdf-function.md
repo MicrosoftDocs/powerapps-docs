@@ -68,10 +68,10 @@ You can use the PDF function in any [behavior property](../working-with-formulas
 
 5. Select the button you added. When you select the button, the PDF is generated and stored in memory for future use.
 
-   The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we are doing in this example, or you can limit what content you pass in by specifying a container or gallery. [Learn more about PDF function targets here.](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
+   The PDF function can only target content on the currently visible screen. You can pass in the entire screen as we're doing in this example, or you can limit what content you pass in by specifying a container or gallery. More information:[PDF function in Power Apps (experimental).](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
 
   > [!NOTE]
-  > - These examples work best when using an app with mutliple controls.
+  > - These examples work best when using an app with multiple controls.
   > - `SubmitInspectionScreen` is the name of the screen in this example. If the name of the screen where you've placed your button is not `SubmitInspectionScreen`,  enter the name of the screen where you've added the button.
   > - To see the generated PDF, additional steps must be taken. See the steps below.
 
@@ -108,7 +108,7 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
 
 ### Method 2: Use an action connector 
 
-In this example, we'll generate a PDF which we then attach and send as an email. In this example, we use the Office 365 Outlook connector to send the email. [Learn more about the Office 365 Outlook connector.](https://learn.microsoft.com/connectors/office365/)
+In this example, we'll generate a PDF that we then attach and send as an email. In this example, we use the Office 365 Outlook connector to send the email. More information: [365 Outlook connector.](/connectors/office365)
 
 1. In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
@@ -149,14 +149,14 @@ In this example, we'll generate a PDF which we then attach and send as an email.
 
 4. Play the app.
 
-5. Select the button you added. When you select the button, the PDF is generated and an email is sent to the specified email address with the generated PDF included as an attachment.
+5. Select the button you added. When you select the button, the PDF is generated, and an email is sent to the specified email address with the generated PDF included as an attachment.
 
   > [!NOTE]
   > A sample email address has been included in this formula example.
 
 ### Method 3: Use in a Power Automate flow
 
-In this example, we'll generate a PDF which then gets passed to a Power Automate flow for storage. In this example, we use the SharePoint connector to store the PDF in a document library. [Learn more about the SharePoint connector.](https://learn.microsoft.com/connectors/sharepointonline/)
+In this example, we'll generate a PDF that then gets passed to a Power Automate flow for storage. In this example, we use the SharePoint connector to store the PDF in a document library. More information: [SharePoint connector.](/connectors/sharepointonline)
 
 1. In the canvas app used in the previous example, select the button created in the previous steps or add a new button.
 
@@ -200,7 +200,7 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
    > [!div class="mx-imgBorder"] 
    > ![Create file.](media/pdf/print-pdf-create-file-13.png)
 
-10. Choose a site from the Site Address drop down or select Enter custom value to paste the URL to a site you have permission to add files to. Select the folder icon on the right for Folder Path and select a document library from the list which you have permissions to add files to.
+10. Choose a site from the Site Address drop down or select Enter custom value to paste the URL to a site you have permission to add files to. Select the folder icon on the right for Folder Path and select a document library from the list, which you have permissions to add files to.
 
 11. In the File Name input area, select File name from the Dynamic Content menu, under PowerApps (V2). In the File Content input area, select File Content.
 
@@ -242,7 +242,7 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
     ```
 
     > [!div class="mx-imgBorder"] 
-    > ![Enter the formaula.](media/pdf/print-pdf-save-17.png)
+    > ![Enter the formula.](media/pdf/print-pdf-save-17.png)
 
 16. Save and publish the app.
 
@@ -252,4 +252,4 @@ In this example, we'll generate a PDF which then gets passed to a Power Automate
 
 ### See also
 
-[PDF function in Power Apps (experimental)](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf)
+[PDF function in Power Apps (experimental)](/power-platform/power-fx/reference/function-pdf)
