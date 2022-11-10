@@ -1677,7 +1677,7 @@
     href: ../mobile/mobile-deep-links.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-  - name: Mobile offline
+  - name: Mobile offline for model-driven apps
     items:
     - name: Set up mobile offline (classic)
       items:
@@ -1695,7 +1695,7 @@
         href: ../mobile/setup-mobile-offline.md 
       - name: Enable and use offline-first (preview)
         href: ../mobile/work-in-offline-mode.md 
-    - name: Sync Power Apps data offline in the background
+    - name: Sync data in the background
       href: ../mobile/sync-data-offline-background.md
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
