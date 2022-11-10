@@ -28,7 +28,10 @@ search.app:
 
 Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG canvas app designer. Canvas apps also enable makers to connect and display data from over 400 data sources.
 
-## How embedding canvas apps can help you build better solutions
+> [!IMPORTANT]
+> There's a better way to bring a canvas app into a model-driven app. More information: [Integrating canvas apps using the modern app designer](#integrating-canvas-apps-using-the-modern-app-designer)
+
+## Embedded canvas apps can help you build better solutions
 
 With embedded canvas apps, makers can bring the power of canvas apps to their model-driven forms. Using embedded canvas apps, it's possible to create rich visual areas on a form and display data from a variety of sources right next to data from Microsoft Dataverse.
 
@@ -37,14 +40,17 @@ With embedded canvas apps, makers can bring the power of canvas apps to their mo
 
 Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app.
 
-## Integrating canvas apps using the modern app designer
+## Integrate canvas apps using custom pages in the modern app designer
 
-With the modern app designer, canvas apps can be accessed through a model-driven app by using a custom page. 
+With the modern app designer, canvas apps can be accessed through a model-driven app by using a custom page.
 
-> [!IMPORTANT]
-> There's a better way to bring a canvas app into a model-driven app. The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables or dashboards. When possible, we recommend that you use custom pages because they're a more performant way of bringing a canvas app into a model-driven app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
+The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables or dashboards. When possible, we recommend that you use a custom page instead of an embedded canvas app on a form because they're a more performant way of bringing a canvas app into a model-driven app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
 
-## Embedding using the classic designer (current)
+## Embed using the modern designer
+
+Select the **Canvas app** control to add a canvas app to a main form using the form designer. More information: [Add an embedded canvas app on a model-driven form](embedded-canvas-app-add-classic-designer.md)
+
+## Embed using the classic designer
 
 Add canvas apps from an environment into a model-driven app that can either be contextually aware, or simply render the app within the model-driven experience. <br />[Learn how to add an embedded canvas app on a model-driven form - classic designer](embedded-canvas-app-add-classic-designer.md).
 
