@@ -71,7 +71,7 @@ You can use the PDF function in any [behavior property](../working-with-formulas
 
 5. Select the button you added. When you select the button, the PDF is generated and stored in memory for future use.
 
-   The PDF function can only target content on the screen that is currently visible. You can pass in the entire screen as we're doing in this example, or you can limit what content that you want to pass by specifying a container or gallery. More information: [PDF function in Power Apps (experimental).](https://learn.microsoft.com/power-platform/power-fx/reference/function-pdf#syntax)
+   The PDF function can only target content on the screen that is currently visible. You can pass in the entire screen as we're doing in this example, or you can limit what content that you want to pass by specifying a container or gallery. More information: [PDF function in Power Apps (experimental).](/power-platform/power-fx/reference/function-pdf#syntax)
 
   > [!NOTE]
   > - These examples work best when using an app with multiple controls.
