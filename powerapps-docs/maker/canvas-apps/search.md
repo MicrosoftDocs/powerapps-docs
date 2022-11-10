@@ -82,13 +82,13 @@ Selecting search results in different areas of the Search pane will behave diffe
 
     There are several category headers inside the Search pane that you can use to navigate through the results. Categories such as **Variables**, **Collections**, **Data**, **Media**, **Flows**, and **Components** are referred to as **definitions**.
 
-    Selecting the results under such definition category headers takes you to the appropriate definition screen backstage (such as for Variables and Collections), or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, or Components).
+    Selecting the results under such definition category headers takes you to the appropriate information screen such as for Variables and Collections, or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, or Components).
 
 - **Instances** describe the search results that are tied to an individual app, screen, or control property in the formula bar. All these results are tied to the **Screens** category based on the structure found inside the **Tree View**. When you select a result under this **Screens** category, you'll be taken to that specific formula bar reference or the related control, as applicable.
 
 ### Variables
 
-Selecting a global or a context variable under the **Variables** header in the search results will take you to the information screen backstage for the selection.
+Selecting a global or a context variable under the **Variables** header in the search results will take you to the Variables information screen for the selection.
 
 As shown below, you're taken to the definition of the global or context variable depending on your selection from the search results available.
 
@@ -96,19 +96,19 @@ Search result:
 
 :::image type="content" source="media/search/variables-1.png" alt-text="Global and context variables available in search result.":::
 
-Depending on the selected global or context variable, you're taken to the backstage for the selected type of variable.
+Depending on the selected global or context variable, you're taken to the information screen for the selected type of variable.
 
 Global variable selected:
 
-:::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the backstage of the selected global variables.":::
+:::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the information screen of the selected global variables.":::
 
 Context variable selected:
 
-:::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
+:::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the information screen of the selected context variables.":::
 
 ### Collections
 
-Selecting a collection under the **Collections** header will take you to the information screen backstage for that collection.
+Selecting a collection under the **Collections** header will take you to the information screen for that collection.
 
 :::image type="content" source="media/search/collections-1.png" alt-text="Collections selected from search results showing the relevant collection details.":::
 
@@ -186,13 +186,13 @@ You can also interact with individual results in the results list directly to pe
 
 ### Replacing Variables results
 
-Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details backstage to review the usage before making the replacement.
+Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details on their information screen to review the usage before making the replacement.
 
 :::image type="content" source="media/search/variables.png" alt-text="Screen showing replacing variables results.":::
 
 ### Replacing Collections results
 
-Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details backstage prior to making the replacement.
+Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details on their information screen prior to making the replacement.
 
 :::image type="content" source="media/search/collections.png" alt-text="Screen showing replace collections results.":::
 
