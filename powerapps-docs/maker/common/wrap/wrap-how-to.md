@@ -1,6 +1,23 @@
 ﻿---
-title: Customize and build your mobile app using wrap (preview)
+title: Customize and build your mobile app (preview)
+description: Learn about how to use the wrap functionality to package one or more canvas apps into a native mobile app package.
+author: makolomi
+ms.topic: article
+ms.custom: canvas
+ms.reviewer: mkaur
+ms.date: 11/10/2022
+ms.subservice: canvas-maker
+ms.author: makolomi
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+contributors:
+  - mkaur
+  - makolomi
 ---
+
+# Customize and build your mobile app using wrap (preview)
 
 Use the wrap feature to package one or more canvas or model-driven app(s) as a single native mobile app package using the step-by-step wizard.
 
