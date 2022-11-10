@@ -97,7 +97,7 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
    
 6. On the command bar, select **Insert** > **PDF viewer (experimental)**.
 
-7. From the [properties  list](../power-apps-studio.md#3--properties-list) select the **Document** property and then enter **myPDF** in the formula bar.
+7. From the [properties  list](../power-apps-studio.md#3--properties-list,) select the **Document** property and then enter **myPDF** in the formula bar.
 
    > [!div class="mx-imgBorder"] 
    > ![Document property.](media/pdf/print-pdf-document-prop-4.png)
@@ -182,7 +182,7 @@ In this example, we'll generate a PDF that then gets passed to a Power Automate 
    > [!div class="mx-imgBorder"] 
    > ![Delete flow.](media/pdf/print-pdf-delete-flow-8.png)
 
-5. In the search box enter **PowerApps(V2)** and then select the trigger to add it.
+5. In the search box, enter **PowerApps(V2)** and then select the trigger to add it.
 
    > [!div class="mx-imgBorder"] 
    > ![Select a trigger.](media/pdf/print-pdf-select-trigger-9.png)
@@ -202,7 +202,7 @@ In this example, we'll generate a PDF that then gets passed to a Power Automate 
    > [!div class="mx-imgBorder"] 
    > ![Enter file name.](media/pdf/print-pdf-add-input-12.png)
 
-9. Select **+New step** to add an action. In the search box enter **SharePoint**. In the list of available SharePoint actions, select **Create file**.
+9. Select **+New step** to add an action. In the search box, enter **SharePoint**. In the list of available SharePoint actions, select **Create file**.
    
    > [!div class="mx-imgBorder"] 
    > ![Create file.](media/pdf/print-pdf-create-file-13.png)
@@ -213,24 +213,24 @@ In this example, we'll generate a PDF that then gets passed to a Power Automate 
 
 12. Select the **File Name** input. From the **Dynamic Content** tab, select a file name under **PowerApps (V2)**. 
 
-13. Select the **File Content** input select, **File Content** from the list.
+13. Select the **File Content** input and then select, **File Content** from the list.
 
     > [!div class="mx-imgBorder"] 
     > ![File content.](media/pdf/print-pdf-create-file-14.png)
 
-13. Select **Save**.
+14. Select **Save**.
 
-13. Select the **Close** to close the dialog box.
+15. Select the **Close** to close the dialog box.
 
     > [!div class="mx-imgBorder"] 
     > ![Close the dialog box.](media/pdf/print-pdf-close-15.png)
 
-14. The Power Automate pane refreshes, and you'll see the flow that you created.
+16. The Power Automate pane refreshes, and you'll see the flow that you created.
 
     > [!div class="mx-imgBorder"] 
     > ![View the created flow.](media/pdf/print-pdf-flow-created-16.png)
 
-15. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
+17. Select the button on the canvas. In the button's `OnSelect` property, enter the formula:
 
     ```
     'PowerAppV2->Createfile'.Run( 
@@ -255,11 +255,11 @@ In this example, we'll generate a PDF that then gets passed to a Power Automate 
     > [!div class="mx-imgBorder"] 
     > ![Enter the formula.](media/pdf/print-pdf-save-17.png)
 
-16. In the upper-right corner, select [**Save and publish**](../power-apps-studio.md#save).
+18. In the upper-right corner, select [**Save and publish**](../power-apps-studio.md#save).
 
-17. Play the app.
+19. Play the app.
 
-18. Select the button you added. When you select the button, the Power Automate flow runs and adds the generated PDF into the document library.
+20. Select the button you added. When you select the button, the Power Automate flow runs and adds the generated PDF into the document library.
 
 ### See also
 
