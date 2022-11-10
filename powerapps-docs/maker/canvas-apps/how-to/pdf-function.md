@@ -97,7 +97,7 @@ In this example, we'll view the generated PDF using the PDF Viewer control.
    
 6. On the command bar, select **Insert** > **PDF viewer (experimental)**.
 
-7. From the [properties  list](../power-apps-studio.md#3--properties-list,) select the **Document** property and then enter **myPDF** in the formula bar.
+7. From the [properties  list](../power-apps-studio.md#3--properties-list), select the **Document** property and then enter **myPDF** in the formula bar.
 
    > [!div class="mx-imgBorder"] 
    > ![Document property.](media/pdf/print-pdf-document-prop-4.png)
