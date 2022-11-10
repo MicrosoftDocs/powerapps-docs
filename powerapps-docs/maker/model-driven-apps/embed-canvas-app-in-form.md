@@ -29,7 +29,7 @@ search.app:
 Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG canvas app designer. Canvas apps also enable makers to connect and display data from over 400 data sources.
 
 > [!IMPORTANT]
-> There's a better way to bring a canvas app into a model-driven app. More information: [Integrating canvas apps using the modern app designer](#integrating-canvas-apps-using-the-modern-app-designer)
+> There's a better way to bring a canvas app into a model-driven app. More information: [Integrate canvas apps using custom pages in the modern app designer](#integrate-canvas-apps-using-custom-pages-in-the-modern-app-designer)
 
 ## Embedded canvas apps can help you build better solutions
 
