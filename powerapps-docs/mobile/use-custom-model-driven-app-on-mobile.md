@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/04/2022
+ms.date: 11/10/2022
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -181,9 +181,11 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 [This section has pre-release documentation and is subject to change.]
 
-Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
+This section describes enhancements that have been made to model-driven apps on mobile devices.
 
 ### Commanding improvements
+
+Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
 - The **Delete** command on a grid page is automatically hidden when a row is not selected thus, making room for other commands. When one or more rows is selected the **Delete** command is automatically displayed.
   
@@ -199,32 +201,17 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
   
-- To keep the tabs at the top of a page always visible while users scroll through the data on the page, turn the **Lock tabs at the top of forms on mobile and tablets** setting on. This setting locks the tabs at the top of a page and allows users to easily navigate to other tabs to complete their tasks.
-
-  ![Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.](media/Lock-tabs.png "Locked tabs at the top of a page allow you to easily navigate to other tabs to complete your tasks.")
-  
-  To turn the **Lock tabs at the top of forms on mobile and tablets** setting on, complete the following steps:
-  
-  1. Sign in to [Power Apps](https://make.powerapps.com/). 
-
-  2. On the left pane, select **Apps**, and then select the app that that contains the tabs you want to lock.
-
-  3. Select **More (...)** > **Edit** to open the modern app designer.
-
-  4. On the command bar, select **Settings**.
-
-  5. Set the toggle for **Lock tabs at the top of forms on mobile and tablets** to **Yes**.
-
-     > [!div class="mx-imgBorder"]
-     > !["Lock tabs at the top of the forms on mobile and tablets" setting](media/Lock-tabs-setting.png)
-
-  6. Selct **Save**.
-  
 ### Command bar optimization for tablets
 
 - The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top like to the web app.
 
     ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
+    
+### Lock tabs
+Your app make can choose to keep the tabs at the top of a page always visible while users scroll through the data on the page.
+
+
+
 
 
 
