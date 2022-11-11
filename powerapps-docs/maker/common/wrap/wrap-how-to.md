@@ -51,13 +51,13 @@ When you update your app and republish it, the app is automatically updated.
 
 ## Prerequisites
 
-1. You'll need access to [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
+You'll need access to:
+- [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
+- [App Center](https://appcenter.ms/) to add new organization and apps.
 
-2. You'll need access to [App Center](https://appcenter.ms/) to add new organization and apps.
+You'll need one or more canvas or model-driven apps (saved in a solution) that you can package for distribution to mobile users.
 
-3. You'll need one or more canvas or model-driven apps (saved in a solution) that you can package for distribution to mobile users.
-
-4. To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
+To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
 ## Create native mobile apps for iOS and Android
 
@@ -78,7 +78,8 @@ On the Select the app(s) to wrap step, select the solution, primary app, and any
 
 - Primary app: Select the app your end users will see when they launch the mobile app.
 
-Note: You can use the same Primary app in multiple wrap projects.
+  > [!NOTE]
+  > You can use the same Primary app in multiple wrap projects.
 
 - Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
 
