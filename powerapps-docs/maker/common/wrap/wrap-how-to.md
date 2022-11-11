@@ -1,11 +1,11 @@
 ---
 title: Customize and build your mobile app (preview)
-description: Learn about how to use the wrap functionality to package one or more canvas apps into a native mobile app package.
+description: Learn about how to use the wrap functionality to package a canvas or model-driven app into a native mobile app package.
 author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/10/2022
+ms.date: 11/11/2022
 ms.subservice: canvas-maker
 ms.author: makolomi
 search.audienceType: 
@@ -32,13 +32,12 @@ Adding secondary apps to a single mobile app package is optional. When you wrap 
 However, including secondary apps in the bundle provides a better launch time performance when opening them for the first time.
 
 > [!NOTE]
-> If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
+> If you have many secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
 
 You can use wrap feature to customize mobile app startup experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use throughout the native experiences of the wrapped mobile app.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
-- iOS (IPA package)
 - Android (APK package)
 - Google Play Store (AAB package)
 
@@ -81,7 +80,7 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
 
 On the Select the app(s) to wrap step, select the solution, primary app, and any secondary apps.
 
-- Solution: This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#link-an-existing-canvas-app-to-a-solution)  
+- Solution: This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)  
 
 - Primary app: Select the app your end users will see when they launch the mobile app.
 
