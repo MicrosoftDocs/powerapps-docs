@@ -21,7 +21,7 @@ contributors:
 
 Use the wrap feature to package one or more canvas or model-driven app(s) as a single native mobile app package using the step-by-step wizard.
 
-The **wrap** feature in Power Apps lets you create native mobile versions of your [canvas](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) and [model-driven apps](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/model-driven-app-overview) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
+The **wrap** feature in Power Apps lets you create native mobile versions of your[canvas apps](../../canvas-apps/getting-started.md) and [model-driven apps](../../model-driven-apps/model-driven-app-overview.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
 
 You can wrap multiple canvas and model-driven apps in a single mobile app package. The mobile app package needs one Primary app, which serves as the entry point for all other apps included in the mobile app package, which will be invoked as Secondary apps.
 
@@ -51,45 +51,45 @@ When you update your app and republish it, the app is automatically updated.
 
 ## Prerequisites
 
-1.  You'll need access to [<u>Azure portal</u>](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
+1. You'll need access to [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
 
-2.  You'll need access to [<u>App Center</u>](https://appcenter.ms/) to add new organization and apps.
+2. You'll need access to [App Center](https://appcenter.ms/) to add new organization and apps.
 
-3.  You'll need one or more canvas or model-driven apps (saved in a solution) that you can package for distribution to mobile users.
+3. You'll need one or more canvas or model-driven apps (saved in a solution) that you can package for distribution to mobile users.
 
-4.  To use Android platform, ensure you [<u>generate keys</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android#generate-keys), and then [<u>generate signature hash</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android#generate-signature-hash) before you [<u>register the app</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
+4. To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
 ## Create native mobile apps for iOS and Android
 
-1.  Sign in to [Power Apps](https://make.powerapp.com/).
+1. Sign in to [Power Apps](https://make.powerapp.com/).
 
-2.  On the **Home** screen, select **Existing app**.
+2. On the **Home** screen, select **Existing app**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Choose existing app.](media/how-to-v2/wrap-0.png "Choose existing app")
+   > [!div class="mx-imgBorder"] 
+   > ![Choose existing app.](media/how-to-v2/wrap-0.png "Choose existing app")
 
-3.  Select **Get started**.
+3. Select **Get started**.
 
 ### Select the app(s) to wrap
 
 On the Select the app(s) to wrap step, select the solution, primary app, and any secondary apps.
 
-- Solution: This feature requires the apps to be part of a [managed or unmanaged solution](https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Add an app to a solution](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/add-app-solution#link-an-existing-canvas-app-to-a-solution)
+- Solution: This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#link-an-existing-canvas-app-to-a-solution)  
 
--   Primary app: Select the app your end users will see when they launch the mobile app.
+- Primary app: Select the app your end users will see when they launch the mobile app.
 
 Note: You can use the same Primary app in multiple wrap projects.
 
--   Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
+- Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Choose app to app.](media/how-to-v2/wrap-1.png "Choose app to wrap")
+  > [!div class="mx-imgBorder"] 
+  > ![Choose app to app.](media/how-to-v2/wrap-1.png "Choose app to wrap")
 
 ### Choose mobile platform to target
 
 On the **Choose mobile platform to target** screen, select all platforms that your end users use on their mobile devices.
 
--   Set the **Sign my app** toggle to **ON** to code sign your app. More information: [Code sign for iOS](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-ios), [Code sign for Android](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android).
+- Set the **Sign my app** toggle to **ON** to code sign your app. More information: [Code sign for iOS](code-sign-ios.md), [Code sign for Android](code-sign-android.md).
 
 ### Configure branding
 
@@ -97,11 +97,11 @@ On the **Configure branding** screen, configure the appearance of your app.
 
 All five icons need to be selected for your wrapped mobile app.
 
-- **App preview**: Select the phone or tablet to see a preview of your customized app. Make sure you're using a supported device. More information: [Supported platforms for running apps using the Power Apps mobile app](https://learn.microsoft.com/en-us/power-apps/limits-and-config#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)
+- **App preview**: Select the phone or tablet to see a preview of your customized app. Make sure you're using a supported device. More information: [System requirements, limits, and configuration values for Power Apps](../../../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)
 
-- **Color palette:** Choose the app colors.
+- **Color palette**: Choose the app colors.
 
-- **Look and feel:** Select the look and feel of your app.
+- **Look and feel**: Select the look and feel of your app.
 
 ### Register your app
 
@@ -119,7 +119,7 @@ Examples for iOS:
 
 - **Redirect URI**: msauth.com.contoso.myapp://auth
 
-For Android, the **Redirect URI** requires the **Package name**, and the **Signature hash**. To create the signature hash, [<u>generate keys</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android#generate-keys), and then [<u>generate signature hash</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android#generate-signature-hash).
+For Android, the **Redirect URI** requires the **Package name**, and the **Signature hash**. To create the signature hash, [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash).
 
 Examples for Android:
 
@@ -127,8 +127,7 @@ Examples for Android:
 
 - **Redirect URI**: msauth://com.contoso.myapp/&lt;generated signature hash&gt;
 
-
-- **New app registration**: Select **+ New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [<u>Quickstart: Register an application with the Microsoft identity platform</u>](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
+- **New app registration**: Select **+ New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
@@ -141,15 +140,12 @@ However, you must select any of the options containing **Any Azure AD directory 
     
 The sign in experience for you users on your mobile wrapped up will still be scoped to a single tenant regardless of what type of account you choose in this step for your app.
 
-** Important**
+> [!IMPORTANT]
+> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
+> - To ensure the **Redirect URI** matches the [required format](how-to.md#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** &gt; **+ Add a platform** to add the platform instead.
+> - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
--   Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [**<u>Account types in Microsoft identity platform</u>**](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-supported-account-types)
-
--   To ensure the **Redirect URI** matches the [**<u>required format</u>**](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** &gt; **+ Add a platform** to add the platform instead.
-
--   You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
-
-After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [<u>Register an application</u>](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-an-application)
+After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
 ### Mange output
 
