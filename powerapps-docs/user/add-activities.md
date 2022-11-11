@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 09/16/2022
+ms.date: 11/11/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -101,6 +101,9 @@ The following category and sub-category options are available on the filer menu:
 You can choose to save your filter settings so that you don't have to set them again each time you work with activities in the timeline.
   
 To save your filter settings, after configureing the filters you want, select the ellipses, and then select **Remember my filters**.
+  
+> [!Note]
+> If you have a System Admin or Basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create, Read, and Write privileges and be added to the msdyn_customcontrolextendsettings entity for the setting to work.
   
 ![Remember filters functionality.](media\timeline-remember-filters.png "Remember my filters functionality")
   
