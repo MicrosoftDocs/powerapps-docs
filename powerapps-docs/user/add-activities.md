@@ -103,7 +103,7 @@ You can choose to save your filter settings so that you don't have to set them a
 To save your filter settings, after configureing the filters you want, select the ellipses, and then select **Remember my filters**.
   
 > [!Note]
-> If you have a System Admin or Basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create, Read, and Write privileges and be added to the msdyn_customcontrolextendsettings entity for the setting to work.
+> If you have a System Admin or Basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create, Read, and Write privileges and be added to the msdyn_customcontrolextendsettings entity for the setting to work. As of December 2, 2022, this setting will be available for all roles.
   
 ![Remember filters functionality.](media\timeline-remember-filters.png "Remember my filters functionality")
   
