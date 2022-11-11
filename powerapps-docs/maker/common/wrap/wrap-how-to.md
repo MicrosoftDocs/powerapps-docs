@@ -29,31 +29,27 @@ Adding Secondary apps to a single mobile app package is optional. When you wrap 
 
 However, including Secondary apps in the bundle provides a better launch time performance when opening them for the first time.
 
-**Note:** If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
+> [!NOTE]
+> If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
 
 You can use wrap feature to customize mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use throughout the native experiences of the wrapped mobile app.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
--   iOS (IPA package)
+- iOS (IPA package)
+- Android (APK package)
+- Google Play Store (AAB package)
 
--   Android (APK package)
+The wrap feature will wrap your canvas and model-driven apps in a native mobile app shell that you can digitally sign and distribute. More information:
 
--   Google Play Store (AAB package)
-
-The wrap feature will wrap your canvas and model-driven apps in a native mobile app shell that you can digitally sign and distribute.
-
-More information:
-
--   [Code sign for iOS](https://learn.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-ios)
-
--   [Code sign for Android](https://learn.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android)
+- [Code sign for iOS](code-sign-ios.md)
+- [Code sign for Android](code-sign-android.md)
 
 You can use Microsoft Intune, App Center or Apple Business Manager, Google Play Store to distribute your native mobile apps created with wrap.
 
 When you update your app and republish it, the app is automatically updated.
 
-# Prerequisites
+## Prerequisites
 
 1.  You'll need access to [<u>Azure portal</u>](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
 
@@ -63,7 +59,7 @@ When you update your app and republish it, the app is automatically updated.
 
 4.  To use Android platform, ensure you [<u>generate keys</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android#generate-keys), and then [<u>generate signature hash</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android#generate-signature-hash) before you [<u>register the app</u>](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
-# Create native mobile apps for iOS and Android
+## Create native mobile apps for iOS and Android
 
 1.  Sign in to [Power Apps](https://make.powerapp.com/).
 
@@ -77,7 +73,7 @@ When you update your app and republish it, the app is automatically updated.
 
 On the Select the app(s) to wrap step, select the solution, primary app, and any secondary apps.
 
--   Solution: This feature requires the apps to be part of a [managed or unmanaged solution](https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Add an app to a solution](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/add-app-solution#link-an-existing-canvas-app-to-a-solution)
+- Solution: This feature requires the apps to be part of a [managed or unmanaged solution](https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Add an app to a solution](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/add-app-solution#link-an-existing-canvas-app-to-a-solution)
 
 -   Primary app: Select the app your end users will see when they launch the mobile app.
 
@@ -129,7 +125,6 @@ Examples for Android:
 
 - **Redirect URI**: msauth://com.contoso.myapp/&lt;generated signature hash&gt;
 
-<!-- -->
 
 - **New app registration**: Select **+ New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [<u>Quickstart: Register an application with the Microsoft identity platform</u>](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 
