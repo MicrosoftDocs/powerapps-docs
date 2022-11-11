@@ -23,7 +23,7 @@ Use the wrap feature to package one or more canvas or model-driven app(s) as a s
 
 The **wrap** feature in Power Apps lets you create native mobile versions of your[canvas apps](../../canvas-apps/getting-started.md) and [model-driven apps](../../model-driven-apps/model-driven-app-overview.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
 
-You can wrap multiple canvas and model-driven apps in a single mobile app package. The mobile app package needs one Primary app, which serves as the entry point for all other apps included in the mobile app package, which will be invoked as Secondary apps.
+You can wrap multiple canvas and model-driven apps in a single mobile app package. The mobile app package needs one primary app, which serves as the entry point for all other apps. This includes the mobile app package, which will be invoked as secondary apps.
 
 Adding Secondary apps to a single mobile app package is optional. When you wrap only one app, the included app is automatically designated as a Primary app.
 
@@ -32,7 +32,7 @@ However, including Secondary apps in the bundle provides a better launch time pe
 > [!NOTE]
 > If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
 
-You can use wrap feature to customize mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use throughout the native experiences of the wrapped mobile app.
+You can use wrap feature to customize mobile app startup experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use throughout the native experiences of the wrapped mobile app.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
@@ -139,7 +139,7 @@ However, you must select any of the options containing **Any Azure AD directory 
  > [!div class="mx-imgBorder"] 
  > ![Register an app.](media/how-to-v2/wrap-2.png "Register an app")
     
-The sign in experience for you users on your mobile wrapped up will still be scoped to a single tenant regardless of what type of account you choose in this step for your app.
+The sign-in experience for users on the mobile wrapped up will still be scoped to a single tenant regardless of what type of account you choose in this step for your app.
 
 > [!IMPORTANT]
 > - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
@@ -148,9 +148,9 @@ The sign in experience for you users on your mobile wrapped up will still be sco
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
-### Mange output
+### Manage output
 
-On the **Mange output** screen, to setup automated app setup with the app center. To create a new app center container you will need your org and app name.
+On the **Manage output** screen, to set up automated app set up with the app center. To create a new app center container, you'll need your org and app name.
 
 - **Android**: Choose an existing location or select Configure manually.
 
