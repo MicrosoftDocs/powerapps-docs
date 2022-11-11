@@ -19,15 +19,17 @@ contributors:
 
 # Customize and build your mobile app using wrap (preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 Use the wrap feature to package one or more canvas or model-driven app(s) as a single native mobile app package using the step-by-step wizard.
 
-The **wrap** feature in Power Apps lets you create native mobile versions of your[canvas apps](../../canvas-apps/getting-started.md) and [model-driven apps](../../model-driven-apps/model-driven-app-overview.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
+The wrap feature in Power Apps lets you create native mobile versions of your[canvas apps](../../canvas-apps/getting-started.md) and [model-driven apps](../../model-driven-apps/model-driven-app-overview.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
 
 You can wrap multiple canvas and model-driven apps in a single mobile app package. The mobile app package needs one primary app, which serves as the entry point for all other apps. This includes the mobile app package, which will be invoked as secondary apps.
 
-Adding Secondary apps to a single mobile app package is optional. When you wrap only one app, the included app is automatically designated as a Primary app.
+Adding secondary apps to a single mobile app package is optional. When you wrap only one app, the included app is automatically designated as a Primary app.
 
-However, including Secondary apps in the bundle provides a better launch time performance when opening them for the first time.
+However, including secondary apps in the bundle provides a better launch time performance when opening them for the first time.
 
 > [!NOTE]
 > If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
@@ -48,6 +50,11 @@ The wrap feature will wrap your canvas and model-driven apps in a native mobile 
 You can use Microsoft Intune, App Center or Apple Business Manager, Google Play Store to distribute your native mobile apps created with wrap.
 
 When you update your app and republish it, the app is automatically updated.
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so  that customers can get early access and provide feedback.
+
 
 ## Prerequisites
 
