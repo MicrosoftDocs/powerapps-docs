@@ -65,7 +65,8 @@ When you update your app and republish it, the app is automatically updated.
 
 2.  On the **Home** screen, select **Existing app**.
 
-![](media/image1.emf)
+    > [!div class="mx-imgBorder"] 
+    > ![Choose existing app.](media/how-to-v2/wrap-0.png "Choose existing app")
 
 3.  Select **Get started**.
 
@@ -81,7 +82,8 @@ Note: You can use the same Primary app in multiple wrap projects.
 
 -   Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
 
-![](media/image2.emf)
+    > [!div class="mx-imgBorder"] 
+    > ![Choose app to app.](media/how-to-v2/wrap-1.png "Choose app to wrap")
 
 ### Choose mobile platform to target
 
@@ -134,8 +136,9 @@ Both single tenant and multitenant customers can use wrap to create native mobil
 
 However, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap:
 
-![](media/image3.png)
-
+ > [!div class="mx-imgBorder"] 
+ > ![Register an app.](media/how-to-v2/wrap-2.png "Register an app")
+    
 The sign in experience for you users on your mobile wrapped up will still be scoped to a single tenant regardless of what type of account you choose in this step for your app.
 
 ** Important**
