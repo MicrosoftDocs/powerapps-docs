@@ -456,7 +456,7 @@ For more information, see [Rich text editor control configurations](/model-drive
   
 ## View a conversation transcript
   
-In the timeline, you can view the transcripts of completed chats you've had in conversation channels. To view these transcripts, you must first be added to the prvReadmsdyn_transcript entity. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
+In the timeline, you can view the transcripts of completed chats you've had in conversation channels. To view these transcripts, you must prvReadmsdyn_transcript permission. More information: [Roles and permissions](/app-profile-manager/security-roles)
 
 To view a conversation transcript, select the **View more** link in the row for which you want to view the transcript. The row expands and the entire transcript is displayed inline.
 
