@@ -99,7 +99,7 @@ Attribute types can be any of the following. This is a partial list.
 |<xref:System.String>|**Multiple Lines of Text** and **Single Line of Text** attributes use this type. Another less common type that uses string are `EntityName` columns, which store a string value representing the logical name of a table. |
 
 > [!NOTE]
-> File columns are not available directly from the entity. You need to use a series of requests to upload or download data from file columns. More information: [Upload file data](../file-attributes.md#upload-file-data) and [Retrieve file data](../file-attributes.md#retrieve-file-data).
+> File columns are not available directly from the entity. You need to use a series of requests to upload or download data from file columns. More information: [Use file column data](../file-column-data.md).
 
 There are three different ways to interact with entity attributes using the late-bound style:
 - Use the indexer on the `Entity` class

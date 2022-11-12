@@ -17,7 +17,12 @@ summary: |
 
 sections:
   - name: General
-    questions:
+    questions:    
+      - question: |
+          Can single tenant customers use wrap with Power Apps? 
+        answer: |
+          Yes. Both single tenant and multitenant customers can use wrap. However, it is important to assign a correct account type for your app on Azure portal during new app registration. See [App registraion](how-to.md#app-registration) for directions on how to select a correct account type to prepare your app for wrap.
+
       - question: |
           Does the wrap feature in Power Apps support Customer Managed Keys (CMK) or Lockbox capabilities?
         answer: |
@@ -51,12 +56,17 @@ sections:
       - question: |
           Do I need to rewrap my mobile app after making changes to the canvas app(s) included in the package?
         answer: |
-          No. Published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your mobile app. However, we recommend that you wrap your mobile app on a [monthly basis](faq.yml#do-i-need-to-rewrap-my-mobile-app-frequently-).
+          No. Published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your mobile app. However, we recommend that you rewrap and redistribute your mobile app on a [monthly basis](faq.yml#do-i-need-to-rewrap-my-mobile-app-frequently-) to benefit from platform bug fixes, updates and new features.
 
       - question: |
           What are Primary and Secondary apps in the context of wrap?
         answer: |
           Primary app provides the main experience of your mobile app. Secondary apps are bundled for performance reasons and must be linked from your primary app. See [wrap multiple canvas apps together](overview.md#wrap-multiple-canvas-apps-together).
+
+      - question: |
+          What are the advantages of including Secondary apps in the bundle, if I can still Launch() them without doing so?
+        answer: |
+          Including Secondary apps in the bundle provides a better Launch time performance when opening them for the first time. Howver, it is entirely optional to bundle Secondary apps with the Primary app. If you have many Secondary apps, you may choose to not bundle them to reduce the total size of the app bundle.
 
       - question: |
           Can I create B2C mobile apps with Power Apps?
