@@ -203,14 +203,18 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   
 ### Command bar optimization for tablets
 
-- The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top like to the web app.
+The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top.
 
-    ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
+![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
+
+Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
     
 ### Lock tabs
 Your app maker can choose to keep the tabs at the top of a page and always visible while users scroll through the data on the page.
 
 ![Tabs are locked at the top of the page.](media/Lock-tabs.png "Tabs are locked at the top of the page.")
+
+Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
 
 
 
