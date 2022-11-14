@@ -210,7 +210,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
 ### Lock tabs
 Your app maker can choose to keep the tabs at the top of a page and always visible while users scroll through the data on the page.
 
-    ![Tabs are locked at the top of the page.](media/Lock-tabs.png "Tabs are locked at the top of the page.")
+![Tabs are locked at the top of the page.](media/Lock-tabs.png "Tabs are locked at the top of the page.")
 
 
 
