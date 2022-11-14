@@ -29,6 +29,16 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 >
 > You should create a new `Entity` instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the table row.
 
+> [!IMPORTANT]
+> If the `statecode` is being updated, it is important to always pair `statecode` with the desired `statuscode` in update operations. When the `statecode` is updated without specifying a `statuscode`, the first `statuscode` item configured in the list of statuscodes will be used. 
+> For example, assume a case record  has a statuscode of 2 (On Hold). After running the code below, the statuscode will be updated to 1 even if it wasn't specified in the update operation.
+> ```csharp
+> var row = new Entity("incident", new Guid("ac1f2a46-6351-44f0-b42f-a478a2bb6e06"));
+> row["statecode"] = 0; //active
+> organizationService.Update(row);
+> ```
+> Furthermore, if auditing is enabled in the environment, on the table and on the `statuscode` column, there will be no audit logs of the example above since the actual update statement had no `statuscode` specified.
+
 > [!NOTE]
 > The column definition includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these columns to a null value. If you attempt this you will get error code  `-2147220989` with the message `Attribute: <attribute name> cannot be set to NULL`.
 > 
