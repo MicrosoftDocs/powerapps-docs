@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/19/2022
+ms.date: 11/14/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -33,18 +33,13 @@ This happens when the URL of the Dataverse environment is changed by a user afte
 1. Open [Power Apps portals admin center](admin-overview.md).
 1. Go to **Portal Actions** > **Update Dynamics 365 URL**. 
 
-Once this action is successfully completed, your Dataverse environment URL will be updated and your portal will start working.
+Once this action is successfully completed, your Dataverse environment URL will be updated, and your portal will start working.
 
 ### Microsoft Dataverse environment connected to your portal is in administration mode
 
 This issue occurs when the Dataverse environment is put in administration mode either when changing the organization from production to sandbox mode or manually by an organization administrator.
 
-
-
-<!-- It's better to name the page or section that you're linking to, rather than saying "here," but it isn't clear which steps on the page the reader should be looking at. I don't see any steps under "Administration mode." -->
-
-
-If this is the cause, you can disable administration mode by following the steps listed [here](/dynamics365/admin/manage-sandbox-instances#administration-mode). Once administration mode is disabled, your portal should work.
+If this is the cause, you can disable administration mode by following the steps listed [here](/dynamics365/admin/admin-mode#set-administration-mode). Once administration mode is disabled, your portal should work.
 
 ### Authentication connection between Dataverse environment and portal is broken
 
@@ -78,7 +73,7 @@ This issue occurs when the website binding records for the portal are deleted fr
 1. Delete all the website binding records that are pointing to your portal. The **Sitename** field helps you to identify the website binding records for your portal.
 1. Restart the portal.
 
-Once you complete these steps, your portal will restart and should re-create website binding records automatically.
+Once you complete these steps, your portal will restart, and should re-create website binding records automatically.
 
 There are situations in which the portal won't be able to re-create website binding records automatically, such as when the GUID of the website record available in your instance is different than the one created during default installation of your portal. In this situation, do the following:
 

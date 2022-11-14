@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2022
+ms.date: 11/14/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -86,7 +86,7 @@ To find anonymous OData feeds enabled on your portal:
 <!-- Not sure what the following sentence means. Please review. -->
 
 
-If you've unintended OData feed enabled on your portal anonymous, it could be because of one of these possibilities:
+If you've unintentionally enabled anonymous access to an OData feed on your site, it could be because of one of these possibilities:
 
 - By not securing the list on which the OData feed is enabled as described in [Securing lists](../configure/securing-lists.md).
 
