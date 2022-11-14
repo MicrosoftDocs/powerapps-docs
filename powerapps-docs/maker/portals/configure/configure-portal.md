@@ -16,6 +16,9 @@ contributors:
 
 # Portal Management app overview
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
 
 > [!NOTE]
@@ -48,7 +51,7 @@ If your web browser has any extensions such as ad-blockers, you may see a script
 
 ![Script error.](media/configure-portal/script-error.png "Script error") 
 
-This error occurs for forms such as [Web pages](web-page.md), [Basic Forms](entity-forms.md), [Lists](entity-lists.md), or [Advanced Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
+This error occurs for forms such as [Web pages](web-page.md), [Basic Forms](entity-forms.md), [Lists](entity-lists.md), or [Multistep Form Steps](web-form-steps.md). To resolve this error, disable extensions such as ad-blockers in your browser. You may also use a different browser instead that doesn't have such extensions enabled.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

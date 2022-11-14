@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/27/2022
+ms.date: 11/02/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Portals support for Microsoft Power Platform CLI
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 Microsoft Power Platform CLI(Command Line Interface) is a simple, single-stop
 developer command-line interface that empowers developers and app makers to
@@ -231,9 +234,10 @@ Portals support for Microsoft Power Platform CLI is limited to the tables listed
 :::row-end:::
 
 > [!IMPORTANT]
-> Custom tables and portal template-specific tables (such as
+> - Custom tables and portal template-specific tables (such as
 blog, community, or ideas portal) are not supported for customization using
-Microsoft Power Platform CLI .
+Microsoft Power Platform CLI.
+> - Image file attachments to ad (adx_ad) records are not downloaded using the Power Platform CLI. As a workaround, use the **Image URL** field, or by adding an HTML reference in the **Copy** field to a [web file](/configure/web-files.md) record containing an image file.
 
 ## Install and verify Microsoft Power Platform CLI for portals
 

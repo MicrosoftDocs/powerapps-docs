@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 11/02/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -15,6 +15,8 @@ contributors:
 ---
 
 # Create and run advertisements on a portal
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Create text or image-based ads and have them run in multiple placements throughout your site. Randomize ads or select specific ads for specific placements. You can choose release and expiration dates for time-sensitive, scheduled content. Ads can be hyperlinked to any destination and open in the current window or a new window. Advertisements are displayed in the portal via two tables: The Ad Placement table and associated Ad table. Ads can be surfaced in many ways: with pre-made Liquid Templates available within portals via Liquid Templating/example Web Templates, or within the.aspx page via MVC actions.
 
@@ -94,10 +96,13 @@ The Ad Table has the following attributes:
 | Open In New Window |                                                                                                                                                                                                             Boolean. If set to true, the ad will open a new browser window when clicked.                                                                                                                                                                                                             |
 |       Title        |  A single line of text for the ad which can be displayed on the portal. Whether it is displayed is determined by a property on the AdPlacement control. This is primarily useful for text-based ads or simple one-line links that you want to place on the portal by using ad placements. If the title is displayed, by default it will be rendered as a hyperlink that points to the Redirect URL. This behavior may be altered by using a custom [web template](../liquid/store-content-web-templates.md).   |
 |        Copy        |                                                                      A multiple-line body of text or other web content that will be displayed in the ad placement. This allows the placement to be used in a similar way to content snippets, but it is best to avoid using them to serve simply as a bucket to hold content (use snippets for that). Instead, they are best used to display rotating image or textual content.                                                                      |
-|     Image URL      | The URL of the image that will be displayed by the ad. Optional; Use this field if you want the ad to render a static resource or a web file. The Image will be clickable and link to the redirect URL, if one is given. If an ad has a note attached to it with an image file attachment, the ad will render that as its image. This is possibly the most convenient way to set up images for ads, and ties the image directly to the ad. In this case, using the Image URL field is not necessary. |
+|     Image URL      | The URL of the image that will be displayed by the ad. Optional; Use this field if you want the ad to render a static resource or a web file. The image will be clickable and link to the redirect URL, if one is given. If an ad has a note attached to it with an image file attachment, the ad will render that as its image. In this case, using the **Image URL** field is not necessary. See the note below regarding image attachments and the Power Platform CLI. |
 |    Image width     |                                                                                                                                                                                    Width of the image. This field is not required but is recommended to ensure that the rendered ad is valid and accessible HTML                                                                                                                                                                                     |
 |    Image Height    |                                                                                                                                                                                    Height of the image. This field is not required but is recommended to ensure that the rendered ad is valid and accessible HTML                                                                                                                                                                                    |
 |   Image Alt Text   |                                                                                                                                                                                  Alt Text for the image. This field is not required but is recommended to ensure that the rendered ad is valid and accessible HTML.                                                                                                                                                                                  |
+
+> [!IMPORTANT]
+> Image file attachments to ad records are not downloaded using the [Power Platform CLI](../power-apps-cli.md). As a workaround, use the **Image URL** field, or by adding an HTML reference in the **Copy** field to a [web file](/web-files.md) record containing an image file.
 
 ### See also
 

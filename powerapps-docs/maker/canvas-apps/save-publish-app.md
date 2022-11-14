@@ -49,7 +49,8 @@ Power Apps can also periodically save the app every 2 minutes. If you've saved t
    ![Review Publish.](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
+   > - Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
+   > - To allow users to retrieve app details faster on app startup, certain data will be locally stored on users' devices in the browser cache. Information that will be stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits. Users can clear stored data based on [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues)
 
 ## Identify the live version
 
@@ -64,6 +65,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 > [!NOTE]
 > - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Occasionally, it may take a few minutes.
 > - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
+> - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here](performance-tips.md#enable-preload-app-for-enhanced-performance).
 
 ## Next steps
 

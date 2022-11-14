@@ -16,6 +16,9 @@ contributors:
 
 # Themes overview
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 
 In this article, you'll walk through the basic themes feature. For advanced theme customization, see [Edit CSS](edit-css.md).

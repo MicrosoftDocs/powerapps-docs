@@ -148,6 +148,23 @@ Depending on the configuration, Gallery can take longer to render the visible ro
 - Simplify the template. For example, consider reducing the number of controls, references to lookups.
 - Galleries with complex templates can benefit from having **DelayItemLoading** set to **true**, and **LoadingSpinner** set to **LoadingSpinner.Controls**. This change will improve the perceived experience when render time is longer. **DelayItemLoading** will also defer the rendering of templates which will allow the rest of the screen to render faster as both screen and gallery are not competing for resources.
 
+## Enable Preload app for enhanced performance
+
+You can optionally preload your app to increase performance.
+
+1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
+
+2. Select **More actions** (...) for the app you want to share, and then select **Settings**.
+
+3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load.
+
+![Preload app for enhanced performance.](./media/performance-tips/preload-app.png)
+    
+4. For the changes to take effect for apps embedded in Teams, remove and add your app into Teams again.
+
+    > [!NOTE]
+    > This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This behavior ensures that the data that an app retrieves from data sources won’t be available to unauthenticated users. Information in the compiled app includes&mdash;a collection of JavaScript files containing text authored in app controls, media assets (such as images), the app name, and the environment URL the app resides in. 
+
 ## Next steps
 
 Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.

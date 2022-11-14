@@ -17,6 +17,9 @@ contributors:
 
 # Implement a sample portal Web API component
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The following is an example of implementing a code component that uses the portal Web API to perform create, retrieve, update, and delete actions. The component renders four buttons, which can be clicked to invoke different Web API actions. The result of the Web API call is injected into an HTML `div` element at the bottom of the code component.
 
 :::image type="content" source="media/implement-webpi-component/webapi-component.png" alt-text="Example component using the portal Web API.":::

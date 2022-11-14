@@ -18,6 +18,9 @@ contributors:
 
 # Use the content editor to edit page content
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 You can use the portal content editor to edit text, create links, and display images on webpage. To use the portal content editor, you need the appropriate permissions and the content to be modified must be in the page template.
 
 To modify the content, point to the content to be modified, and then select the edit button that appears.

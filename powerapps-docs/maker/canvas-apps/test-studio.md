@@ -1,20 +1,20 @@
 ---
 title: Test Studio
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: maustinjones
+author: ChrisBal-MSFT
 
 ms.topic: conceptual
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 11/04/2022
 ms.subservice: canvas-maker
-ms.author: austinj
+ms.author: chrisbal
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
-  - mattgon
+  - mduelae
+  - ChrisBal-MSFT
   - maustinjones
 ms.custom:
   - intro-internal
@@ -34,6 +34,10 @@ Increased app changes can result in longer testing cycles. Eventually, regressio
 Power Apps Test Studio is a low-code solution to write, organize, and automate tests for canvas apps. In Test Studio, you can write tests using Power Apps expressions or use a recorder to save app interaction to automatically generate the expressions. You can play written tests back within the Test Studio to validate app functionality, and also run the tests in a web browser and build the automated tests into your app deployment process.
 
 ![Test Studio.](./media/test-studio/test-studio.png "Test Studio")
+
+## Prerequisites
+
+You must be creator or co-owner of an app to test the app with Test Studio.
 
 ## Test Studio terminology
 

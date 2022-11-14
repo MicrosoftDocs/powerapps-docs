@@ -914,7 +914,7 @@
     items:
     - name: Create accessible web resources
       href: create-accessible-web-resources.md
-  - name: Script (JScript) web resources
+  - name: JavaScript web resources
     href: script-jscript-web-resources.md
     items:
     - name: Script web resource development using Fiddler AutoResponder

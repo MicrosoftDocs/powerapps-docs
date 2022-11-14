@@ -13,6 +13,9 @@ contributors:
 
 # Engage with communities by using the community portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Keep your customer engagement strong by growing a community, publishing articles, gathering user feedback, and acting on user-provided ideas. With out-of-the-box solutions available with portals you can:
 
 - Allow your users to hold conversations by posting messages on a forum. A forum can contain a number of topics, also known as threads, and can be replied to by many users. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Set up and manage forums](setup-manage-forums.md)  

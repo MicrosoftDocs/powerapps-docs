@@ -41,8 +41,6 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: Use the Measure in MR control to take measurements 
-    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -219,10 +217,14 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Use the learning hub
+    href: ./common/learn-hub.md 
   - name: Find it with unified search
     href: search.md
   - name: Get help from a virtual agent
-    href: ./common/virtual-agent.md 
+    href: ./common/virtual-agent.md   
+  - name: Maker matching using an integrated virtual agent (preview)
+    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -362,6 +364,8 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
+          - name: Add comments (preview)
+            href: ./canvas-apps/comments.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -440,6 +444,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Validate measurements in mixed reality using a spatial test filter
                 href: ./canvas-apps/mixed-reality-spatial-test.md
+              - name: Use the measure in MR control to take measurements 
+                href: ./canvas-apps/measure-your-space-in-mixed-reality.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
@@ -486,6 +492,8 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: Barcode reader (experimental)
+              href: ./canvas-apps/controls/control-barcodereader.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -634,7 +642,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Power Apps Ideas (preview)
+        - name: Power Apps Ideas 
           items:
           - name: Power Apps Ideas
             href: ./canvas-apps/power-apps-ideas.md
@@ -1072,7 +1080,7 @@
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
-      - name: Use co-authoring in canvas apps (experimental)
+      - name: Use Git version control to edit canvas apps (experimental)
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
@@ -1307,7 +1315,7 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: /powerapps-docs/maker/../canvas-apps/connections-list
+            href: ./canvas-apps/connections-list.md
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
@@ -1460,6 +1468,8 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
+          - name: Add the Power BI report control (preview)
+            href: ./model-driven-apps/powerbi-control.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -1547,6 +1557,17 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+    - name: Collaboration in model-driven apps
+      href:
+      items:
+      - name: Collaboration overview
+        href: ./model-driven-apps/collaboration-model-driven-apps.md
+      - name: Add comments 
+        href: ./model-driven-apps/comments.md 
+      - name: Copresence (preview)
+        href: ./model-driven-apps/copresence.md 
+      - name: Coauthoring (preview)
+        href: ./model-driven-apps/coauthoring.md
     - name: Apply business logic in an app
       href: 
       items:
@@ -1660,16 +1681,28 @@
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
     items:
-    - name: Mobile offline overview (preview)
-      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (classic)
+      items:
+      - name: Mobile offline overview (classic)
+        href: ../mobile/mobile-offline-overview-classic.md
+      - name: Set up mobile offline (classic)
+        href: ../mobile/setup-mobile-offline-classic.md
+      - name: Work offline on your mobile device (classic)
+        href: ../mobile/work-offline-mode-classic.md
     - name: Set up mobile offline (preview)
-      href: ../mobile/setup-mobile-offline.md 
+      items:
+      - name: Mobile offline overview (preview)
+        href: ../mobile/mobile-offline-overview.md
+      - name: Set up mobile offline (preview)
+        href: ../mobile/setup-mobile-offline.md 
+      - name: Enable and use offline-first (preview)
+        href: ../mobile/work-in-offline-mode.md   
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
-    - name: Enable and use offline-first (preview)
-      href: ../mobile/work-in-offline-mode.md   
     - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md   
+      href: ../mobile/mobile-offline-guidelines.md  
+    - name: Mobile offline capabilities and limitations
+      href: ../mobile/offline-capabilities.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
@@ -1805,13 +1838,13 @@
                   href: ./portals/configure/configure-basic-form-metadata.md
                 - name: Configure basic form subgrid
                   href: ./portals/configure/configure-basic-form-subgrid.md
-            - name: Work with advanced forms
+            - name: Work with multistep forms
               items:
-                - name: Define advanced form properties
+                - name: Define multistep form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Advanced form steps
+                - name: Multistep form steps
                   items:
-                    - name: Define advanced form steps
+                    - name: Define multistep form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1821,9 +1854,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure advanced form metadata
+                - name: Configure multistep form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure an advanced form subgrid
+                - name: Configure a multistep form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1849,7 +1882,7 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
-        - name: Configure file column (preview)
+        - name: Configure file column
           href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
@@ -2309,7 +2342,7 @@
         href: ./data-platform/edit-system-entity-messages.md
       - name: How to configure a table for feedback/ratings
         href: ./data-platform/configure-entity-feedback.md
-      - name: Azure Cosmos DB SQL API Data Provider
+      - name: Azure Cosmos DB for NoSQL Data Provider
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md

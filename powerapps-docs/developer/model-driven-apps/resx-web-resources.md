@@ -46,7 +46,7 @@ For example, `Xrm.Utility.getResourceString("new_/strings/MyAppResources","hello
 [Create accessible web resources](create-accessible-web-resources.md)<br />
 [Web resource dependencies](web-resource-dependencies.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
-[Script (JScript) web resources](script-jscript-web-resources.md)<br />
+[JavaScript web resources](script-jscript-web-resources.md)<br />
 [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)<br />
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
 [Data (XML) Web resources](data-xml-web-resources.md)<br />

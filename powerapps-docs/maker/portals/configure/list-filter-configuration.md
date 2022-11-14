@@ -16,6 +16,9 @@ contributors:
 ---
 # List filter configuration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Adding the ability to filter records on a list is easy: enable the filtering option and then choose one or more filter types to display to users. It's possible to filter by an attribute that matches text provided by the user, or to select from a series of options. You can even design virtually any type of filter you can imagine by using Advanced Find.
 
 **Enable the list filter**
