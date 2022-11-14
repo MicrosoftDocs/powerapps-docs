@@ -210,7 +210,7 @@ The command bar on Power Apps mobile for tablets was at the bottom, now the comm
 Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
     
 ### Lock tabs
-Your app maker can choose to keep the tabs at the top of a form and always visible while users scroll through the data on the form.
+Your app maker can choose to lock the tabs at the top of a form so they are always visible while users scroll through the data on the form.
 
 ![Tabs are locked at the top of the form.](media/Lock-tabs.png "Tabs are locked at the top of the form.")
 
