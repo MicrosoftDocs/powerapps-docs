@@ -143,7 +143,7 @@ Here's an example of an Account.csv partitioned file and snapshot folder in the 
 Changes in Dataverse are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes.
 
     > [!NOTE]
-    > New Snapshot file is created only if there is a data updated.
+    > New Snapshot file is created only if there is a data update.
     > Only the latest five snapshot files will be retained. Stagnant Data will be automatically removed from your Azure Data Lake Storage Gen 2 Account.
 
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file.
