@@ -25,9 +25,10 @@ search.app:
 ---
 # Use controls for model-driven app data visualizations
 
-In this article, you learn how to configure a control for a column using the classic for designer.
+In this article, you learn how to configure a control for a column using the classic form designer.
 
-To add a control using the modern Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
+> [!IMPORTANT]
+> This article describes classic controls many of which are now deprecated. For information about how to add modern controls using the modern Power Apps form designer, go to [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form). For a list and descriptions of the current controls available for model-driven apps, go to [List of controls available for model-driven apps](additional-controls-for-dynamics-365-for-phones-and-tablets.md).
 
 ## Use a control using the classic form designer
 
