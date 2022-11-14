@@ -263,7 +263,7 @@ Use the `OptionsRecord` parameter to specify options for the dialog box. Not all
 Use the `Notify` function to display a banner at the top of the app that doesn't need to be dismissed.
 
 > [!NOTE]
-> The `Notify` function isn't currently available with canvas apps.
+> The `Confirm` function isn't currently available with canvas apps.
 
 ### Syntax
 
