@@ -31,6 +31,22 @@ The `If-Match: *` header ensures you don't create a new record by accidentally p
 > [!IMPORTANT]
 > When updating an entity, only include the properties you are changing in the request body. Simply updating the properties of an entity that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven't actually changed.
 
+> [!IMPORTANT]
+> If the `statecode` is being updated, it is important to always pair `statecode` with the desired `statuscode` in update operations. When the `statecode` is updated without specifying a `statuscode`, the first `statuscode` item configured in the list of statuscodes will be used. 
+> For example, assume a case record  has a statuscode of 2 (On Hold). After running the code below, the statuscode will be updated to 1 even if it wasn't specified in the update operation.
+> ```http
+> PATCH [Organization URI]/api/data/v9.2/incidents(ac1f2a46-6351-44f0-b42f-a478a2bb6e06) HTTP/1.1  
+> Content-Type: application/json  
+> OData-MaxVersion: 4.0  
+> OData-Version: 4.0
+> If-Match: *  
+>   
+> {  
+>     "statecode": 0
+> }  
+> ```
+> Furthermore, if auditing is enabled in the environment, on the table and on the `statuscode` column, there will be no audit logs of the example above since the actual update statement had no `statuscode` specified.
+
 > [!NOTE] 
 > The definition for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#column-requirement-level)
 
