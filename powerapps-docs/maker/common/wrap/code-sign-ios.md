@@ -183,9 +183,12 @@ To create a distribution certificate, create a new certificate signing request f
 1. Run `./SignAndGenerateIPA.ps1` with the values for the "CodeSigningIdentity" and "ProvisioningProfilePath" parameters.
 
    > [!NOTE]
-   >  To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (the is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the the **Name** field under **Certificates** in the **.mobileprovision** file.
+   >  'CodeSigningIdentity' is the name of the certificate that was created at the Apple developer website. To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (the is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the the **Name** field under **Certificates** in the **.mobileprovision** file.
 
-    :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
+ > [!TIP]
+> 'ProvisioningProfilePath' is the path to the provisioning profile file that you have downloaded from the Apple developer website in the previous step [**Create an iOS Provisioning Profile**](code-sign-ios.md#create-an-ios-provisioning-profile). For example, it could be located at /Users/username/Downloads/MyProvisioningProfile.mobileprovision on your computer.
+
+   :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
 1. After the script finishes, you'll see an .ipa  file created. In this example, **com.single.wrap.ipa**.
 
