@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/10/2022
+ms.date: 11/14/2022
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -208,7 +208,9 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
     ![Command bar on tablet.](media/command-bar-tablet.png "Command bar on tablet.")
     
 ### Lock tabs
-Your app make can choose to keep the tabs at the top of a page always visible while users scroll through the data on the page.
+Your app maker can choose to keep the tabs at the top of a page and always visible while users scroll through the data on the page.
+
+    ![Tabs are locked at the top of the page.](media/Lock-tabs-setting.png "Tabs are locked at the top of the page.")
 
 
 
