@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 05/26/2022
+ms.date: 11/15/2022
 ms.subservice: mda-maker
 ms.topic: article
 search.audienceType: 
@@ -69,7 +69,7 @@ More narrow scopes can override a broader scope command at every level. The most
       <uniquename>demo_DemoFestApp</uniquename>
     </appmoduleid>
    ```
-1. Change the value of the **appaction uniquename**. Changing any one of the last characters is sufficient (ie: from 1 to 2) or you can use more descriptive naming conventions if desired.
+1. Change the value of the **appaction uniquename**. Changing any one of the last characters is sufficient, such as from 1 to 2, or you can use more descriptive naming conventions if desired.
 
 
 Example XML.
@@ -116,7 +116,7 @@ After you've edited and saved the appaction.xml file, zip your solution in the s
     </appmoduleid>
    ```
 
-1. Change the value of the **appaction uniquename**. Changing any one of the last characters is sufficient (ie: from 1 to 2) or you can use more descriptive naming conventions if desired.
+1. Change the value of the **appaction uniquename**. Changing any one of the last characters is sufficient, such as from 1 to 2, or you can use more descriptive naming conventions if desired.
 
 
 1. **Delete** the **contextentity** and **contextvalue** nodes from the xml: 
