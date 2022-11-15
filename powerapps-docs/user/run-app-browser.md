@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/14/2022
+ms.date: 11/15/2022
 ms.subservice: end-user
 ms.author: sericks
 manager: tapanm-MSFT
@@ -44,11 +44,11 @@ The Home page may show several types of business apps.
 
 The apps that meet the following criteria will be shown in the list of **Office** apps:
 
-- Apps hosted in Production or Default environments.
+- Apps hosted in production or default environments.
 - Apps that you launched in the last week.
 - Apps that you created. 
 - Apps your admin marked as **Featured** in your tenant.
-- First party model-driven apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
+- First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
 
 ### Known limitations
 1. When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
