@@ -183,7 +183,14 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 This section describes enhancements that have been made to model-driven apps on mobile devices.
 
-### Commanding improvements
+### Lock tabs
+Your app maker can choose to lock the tabs at the top of a form so they are always visible while users scroll through the data on the form.
+
+![Tabs are locked at the top of the form.](media/Lock-tabs.png "Tabs are locked at the top of the form.")
+
+Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
+
+### Mobile commanding improvements
 
 Your app maker can enable [Mobile commanding improvements](../maker/model-driven-apps/app-properties.md#features) to provide easy access to contextual commands when you're using Power Apps mobile. Here's a list of improvements:
 
@@ -201,7 +208,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
   
-### Command bar optimization for tablets
+### Tablet optimization for command bar
 
 The command bar on Power Apps mobile for tablets was at the bottom, now the command bar is located at the top.
 
@@ -209,12 +216,6 @@ The command bar on Power Apps mobile for tablets was at the bottom, now the comm
 
 Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
     
-### Lock tabs
-Your app maker can choose to lock the tabs at the top of a form so they are always visible while users scroll through the data on the form.
-
-![Tabs are locked at the top of the form.](media/Lock-tabs.png "Tabs are locked at the top of the form.")
-
-Your app maker can turn on this feature. For more inforamtion, see [Features](../maker/model-driven-apps/app-properties.md#features).
 
 
 
