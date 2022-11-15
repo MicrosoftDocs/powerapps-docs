@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/26/2022
+ms.date: 11/11/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -19,7 +19,7 @@ contributors:
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
-The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain. You can configure CORS support in Power Apps portals using the Portal Management app by adding and configuring the site settings.
+The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain. You can configure CORS support in Power Apps portals using the Portal Management app by adding and configuring the [site settings](configure-site-settings.md).
 
 The following site settings are used to configure CORS:
 
