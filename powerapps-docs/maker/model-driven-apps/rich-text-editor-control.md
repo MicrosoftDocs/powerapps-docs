@@ -1172,6 +1172,11 @@ The following table describes the different formatting features and functionalit
 Q: Why are typed characters slow to display?
 
 A. Large content size can cause latency. More information: [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
+	
+Q: Why can't I upload an image, and why does the image preview fail to load?
+	
+A. This occurs when the file name is long, and contains many full-width characters. This is a limitation on the backend, and can be mitigated by shortening the file name. 
+![preview_fail](https://user-images.githubusercontent.com/35553346/202002538-f1915210-0d5a-4efc-a04d-48d825559c92.jpg)
 
 
 ## Known issues
