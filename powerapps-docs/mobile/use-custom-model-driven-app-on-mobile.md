@@ -183,7 +183,7 @@ From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map ic
 
 This section describes enhancements that have been made to model-driven apps on mobile devices.
 
-### Lock tabs
+### Lock tabs at the top of forms
 Your app maker can choose to lock the tabs at the top of a form so they are always visible while users scroll through the data on the form.
 
 ![Tabs are locked at the top of the form.](media/Lock-tabs.png "Tabs are locked at the top of the form.")
