@@ -124,7 +124,7 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
 
 ```SQL
-    %%sqls
+    %%sql
     DROP DATABASE <DATABASE_NAME> CASCADE
 ```
 
