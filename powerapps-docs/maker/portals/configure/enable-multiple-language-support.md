@@ -103,7 +103,7 @@ The table below shows all the languages currently available out of the box. This
 | Spanish (Traditional Sort) - Spain | es-ES             | 3082     | español                 |
 | Swedish - Sweden                   | sv-SE             | 1053     | svenska                 |
 | Thai - Thailand                    | th-TH             | 1054     | ไทย                     |
-| Turkish - Turkey                   | tr-TR             | 1055     | Türkçe                  |
+| Turkish - Republic of Türkiye      | tr-TR             | 1055     | Türkçe                  |
 | Ukrainian - Ukraine                | uk-UA             | 1058     | українська              |
 | Vietnamese - Vietnam               | vi-VN             | 1066     | Tiếng Việt              |
 
