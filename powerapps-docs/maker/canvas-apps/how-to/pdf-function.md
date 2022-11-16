@@ -5,7 +5,7 @@ author: tashaev
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/9/2022
+ms.date: 11/16/2022
 ms.author: tashas
 search.audienceType:
   - maker
@@ -39,8 +39,8 @@ Since the PDF function is an experimental feature, it's disabled by default. To 
 
 1. To enable the PDF function, open a [new](../data-platform-create-app.md) or [edit an existing app](../edit-app.md) in Power Apps Studio. 
 
-  > [!TIP]
-  > [Learn more about creating apps](../create-blank-app.md) or [create an app from a template](../get-started-test-drive.md).
+   > [!TIP]
+   > [Learn more about creating apps](../create-blank-app.md) or [create an app from a template](../get-started-test-drive.md).
 
 2. On the command bar, select **Settings**.
 
