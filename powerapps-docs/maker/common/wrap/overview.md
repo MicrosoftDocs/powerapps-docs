@@ -28,7 +28,7 @@ You can wrap a single or multiple canvas apps in a single mobile app package. Yo
 You can update the wrapped mobile apps by making and publishing changes to the canvas app(s) included in the mobile package on the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by existing, released versions of your wrapped mobile apps. 
 
 
-**Wrap** brings mobile application development platform (MADP) capabilities to Power Apps.
+**Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
 
 - **No-code mobile app development**&mdash;make mobile apps with no previous experienc
 - **Managed mobile app builds**&mdash;we generate the app for you
