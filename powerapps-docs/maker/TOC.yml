@@ -2938,6 +2938,8 @@
       href: ../cards/make-a-card/testing/debugging-cards.md
     - name: Send a card in Teams
       href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Manage cards
+      href: ../cards/manage-cards/manage-cards.md
     - name: Tutorials
       items:
         - name: Create a simple card
