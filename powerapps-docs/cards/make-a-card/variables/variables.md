@@ -74,4 +74,4 @@ A common use for variables is in Power Fx expressions. Refer to the variable by 
 
 ### Updating the value of a variable
 
-Variables can be updated using the [**Set**](https://learn.microsoft.com/power-platform/power-fx/reference/function-set) function, excluding table variables which are added to using the [**Collect**](https://learn.microsoft.com/power-platform/power-fx/reference/function-clear-collect-clearcollect) function.
+Variables can be updated using the [**Set**](/power-platform/power-fx/reference/function-set) function, excluding table variables which are added to using the [**Collect**](/power-platform/power-fx/reference/function-clear-collect-clearcollect) function.

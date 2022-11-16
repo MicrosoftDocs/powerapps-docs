@@ -19,7 +19,7 @@ This section shows you how to manage cards using security roles.
 
 ### Change who can create cards
 
-Cards are stored as rows in Dataverse within the **Card** table. Administrators can use [security roles to control who can create, read, and update cards](https://learn.microsoft.com/power-platform/admin/wp-security-cds#tablerecord-ownership).
+Cards are stored as rows in Dataverse within the **Card** table. Administrators can use [security roles to control who can create, read, and update cards](/power-platform/admin/wp-security-cds#tablerecord-ownership).
 
 For example, if the user is only assigned a security role that does not have permission to create rows in the **Card** table, then the user will not be able to create cards in the Maker Portal.
 

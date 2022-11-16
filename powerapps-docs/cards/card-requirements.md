@@ -1,6 +1,6 @@
 ---
 title: Requirements for cards
-description: Learn about cards for Microsoft Power Apps.
+description: Learn about the requirements for using Cards for Power Apps.
 ms.date: 11/16/2022
 ms.topic: overview
 author: iaanw
