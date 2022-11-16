@@ -41,7 +41,7 @@ Create a new registration for your app in the organizational directory using the
 
 Whether you are a single or multitenant maker, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap. Choose one of the following account types:
  - Accounts in any organzational directory (Any Azure AD directory - Multitenant)
- - Accounts in any orgnizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g.Skype, Xbox)
+ - Accounts in any orgnizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
 
 :::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
 
