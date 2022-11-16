@@ -18,7 +18,7 @@ contributors:
 
 # Work with the PDF function (experimental)
 
-The PDF function allows you to generate a PDF document from the contents of a screen or certain types of controls. You can take the generated PDF and pass it to action connectors such as the Office 365 Outlook connector, or pass it to a Power Automate flow to achieve automation scenarios. You can also enable app users to download the generated PDF and print it or save a copy.
+The PDF function allows you to generate a PDF document from the contents of a screen or certain types of controls. You can take the generated PDF and pass it to action connectors such as the Office 365 Outlook connector, or pass it to a Power Automate flow to achieve automation scenarios.
 
 > [!IMPORTANT]
 > - This is an experimental feature.
