@@ -46,6 +46,18 @@ As an example, you've created a card that counts how many times the user presses
 
 1. Select **Save**.
 
+### Using default value for tables and records
+
+Default value is used to set the structure for table and record variables. There are two ways to set the default value of a record or table variable: using a Power Fx expression or using JSON. You can toggle between whether you are using Power Fx or JSON using the icon on the right.
+
+:::image type="content" source="../../media/variables/default-value.png" alt-text="Screenshot of the how to toggle between JSON and Power Fx for setting the variable default value.":::
+
+Using a Power Fx expression is helpful when you want the variable to store data from a data source like Dataverse. For example, if you wanted a record that held a specific row from the **Account** table, you could set the default value to `First(account)`.
+
+Using JSON is helpful when you are using the variable to store custom data. For example, if you wanted to collect a list of people's names, you could set the default value to `[{"First Name": "John", "Last Name": "Doe"}]`.
+
+Variables are strongly typed and so setting the default value locks the variable into those types.
+
 ### Edit and delete variables
 
 To edit or delete a variable, select the ellipsis (**...**) to the right of the variable, and then select **Edit** or **Delete**.
@@ -54,8 +66,12 @@ To edit or delete a variable, select the ellipsis (**...**) to the right of the 
 
 ## Use variables in cards
 
-There are various ways to use variables in cards. [Learn about working with variables in Power Apps](/powerapps-docs/maker/canvas-apps/working-with-variables.md).
+There are various ways to use variables in cards. [Learn about working with variables in Power Apps](../../../maker/canvas-apps/working-with-variables.md).
 
 A common use for variables is in Power Fx expressions. Refer to the variable by name in your formula. For an example, go to the [simple card tutorial](../../tutorials/hello-world-card.md). Your variables are recognized in the formula bar as well.
 
 :::image type="content" source="../../media/variables/formula-bar-example.png" alt-text="Screenshot of an automatically filled variable name in the card designer formula bar.":::
+
+### Updating the value of a variable
+
+Variables can be updated using the [**Set**](https://learn.microsoft.com/power-platform/power-fx/reference/function-set) function, excluding table variables which are added to using the [**Collect**](https://learn.microsoft.com/power-platform/power-fx/reference/function-clear-collect-clearcollect) function.

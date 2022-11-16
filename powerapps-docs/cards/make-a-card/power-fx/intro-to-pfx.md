@@ -30,9 +30,12 @@ The [Power Fx documentation](/power-platform/power-fx/overview) is the main sour
 
 The following Power Fx formulas don't work in cards or work with limitations:
 
+- **Set** and **Collect** requires the variable to exist and the variable type to match what you're trying to set it to.
+- **Collect**, **Patch**, and **Remove** work with variables and Dataverse tables only.
+- **Defaults** is not supported, instead use **Collect**. For example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` do `Collect(account, {"Account Name": "Example Account"})`.
+- **User()** is not supported yet, instead use **Viewer**, which has a subset of information about the user viewing the card.
+- **Clear** and **ClearCollect** are not supported yet
+- **Update** and **UpdateIf** are not supported yet
 - Device sensor formulas (**Acceleration**, **App**, **Compass**, **Connection**, and **Location**) don't work.
 - **SaveData**, **LoadData**, and **ClearData** don't work.
 - Form-related formulas (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**) don't work.
-- **Update** and **UpdateIf** don't work.
-- **Collect**, **Patch**, and **Remove** work with variables and Dataverse tables only.
-- **Set** requires the variable to exist and the variable type to match what you're trying to set it to.

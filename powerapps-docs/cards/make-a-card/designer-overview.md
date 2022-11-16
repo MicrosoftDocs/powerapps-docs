@@ -83,7 +83,7 @@ You can also enter Power Fx expressions in some properties, creating low-code so
 Use the formula bar to enter a Power Fx expression as a property of the selected control; for example, to calculate a value when a button is clicked. The formula bar even assists you as you're writing an expression. [Learn more about Power FX](../make-a-card/power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
 
 > [!NOTE]
-> Some expressions that are supported in Power Apps aren't available for cards. [See details](/make-a-card/power-fx/intro-to-pfx.md).
+> Some expressions that are supported in Power Apps aren't available for cards. [See details](../make-a-card/power-fx/intro-to-pfx.md).
 
 ### Play button
 

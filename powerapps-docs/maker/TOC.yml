@@ -2914,6 +2914,8 @@
   items:
     - name: What are cards?
       href: ../cards/overview.md
+    - name: Requirements for cards
+      href: ../cards/card-requirements.md
     - name: Design cards
       items: 
         - name: Card Designer overview
