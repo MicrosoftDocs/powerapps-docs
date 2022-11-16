@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/14/2022
+ms.date: 11/15/2022
 ms.subservice: end-user
 ms.author: sericks
 manager: tapanm-MSFT
@@ -44,15 +44,15 @@ The Home page may show several types of business apps.
 
 The apps that meet the following criteria will be shown in the list of **Office** apps:
 
+- Apps hosted in production or default environments.
 - Apps that you launched in the last week.
 - Apps that you created. 
 - Apps your admin marked as **Featured** in your tenant.
-- All first party model-driven apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
+- First-party, model-driven apps such as Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service that you can access.
 
 ### Known limitations
 1. When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
-2. Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.   
-3. After an app is marked as **Featured**, it may take up to seven days for this app to start appearing for users in Office.com/apps experiences. In early November 2022, we expect featured apps to appear in Office.com/apps experiences within a day.
+2. Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.   
 
 ### What if I cannot find an app?
 
