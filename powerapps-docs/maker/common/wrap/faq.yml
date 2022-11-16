@@ -21,7 +21,7 @@ sections:
       - question: |
           Can single tenant customers use wrap with Power Apps? 
         answer: |
-          Yes. Both single tenant and multitenant customers can use wrap. However, it is important to assign a correct account type for your app on Azure portal during new app registration. See [App registraion](how-to.md#app-registration) for directions on how to select a correct account type to prepare your app for wrap.
+          Yes. Both single tenant and multitenant customers can use wrap. However, it is important to assign a correct account type for your app on Azure portal during new app registration. See [App registration](how-to.md#app-registration) for directions on how to select a correct account type to prepare your app for wrap.
 
       - question: |
           Does the wrap feature in Power Apps support Customer Managed Keys (CMK) or Lockbox capabilities?
