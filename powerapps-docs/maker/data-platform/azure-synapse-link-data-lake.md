@@ -2,9 +2,8 @@
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake | MicrosoftDocs"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps"
 ms.custom: ""
-ms.date: 08/17/2021
+ms.date: 11/14/2022
 ms.reviewer: "Mattp123"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -25,8 +24,6 @@ contributors:
 ---
 
 # Create an Azure Synapse Link for Dataverse with Azure Data Lake
-
-
 
 You can use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Data Lake Storage Gen2 to enable various analytics scenarios. This article shows you how to perform the following tasks:
 
@@ -141,6 +138,10 @@ Here's an example of an Account.csv partitioned file and snapshot folder in the 
 ![Accounts table snapshot.](media/export-data-lake-account-snapshots.png "Accounts table snapshot")
 
 Changes in Dataverse are continuously pushed to the corresponding CSV files by using the trickle feed engine. This is the T2 interval, where another snapshot is taken. *table*-T2.csv&mdash;for example, Accounts-T2.csv or Contacts-T2.csv (assuming there are changes for the table) &mdash;and model.json are updated to the new snapshot files. Any new person who views snapshot data from T2 onward is directed to the newer snapshot files. This way, the original snapshot viewer can continue to work on the older snapshot T1 files while newer viewers can read the latest updates. This is useful in scenarios that have longer-running downstream processes.
+
+> [!NOTE]
+> A new snapshot file is created only if there is a data update.
+> Only the latest five snapshot files will be retained. Stagnant data will be automatically removed from your Azure Data Lake Storage Gen 2 account.
 
 Here's an example of the model.json file, which always points to the latest time-stamped account snapshot file.
 
