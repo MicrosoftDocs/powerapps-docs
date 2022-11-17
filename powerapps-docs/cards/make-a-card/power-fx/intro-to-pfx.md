@@ -30,12 +30,12 @@ The [Power Fx documentation](/power-platform/power-fx/overview) is the main sour
 
 The following Power Fx formulas don't work in cards or work with limitations:
 
-- **Set** and **Collect** requires the variable to exist and the variable type to match what you're trying to set it to.
-- **Collect**, **Patch**, and **Remove** work with variables and Dataverse tables only.
-- **Defaults** is not supported, instead use **Collect**. For example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` do `Collect(account, {"Account Name": "Example Account"})`.
-- **User()** is not supported yet, instead use **Viewer**, which has a subset of information about the user viewing the card.
-- **Clear** and **ClearCollect** are not supported yet
-- **Update** and **UpdateIf** are not supported yet
-- Device sensor formulas (**Acceleration**, **App**, **Compass**, **Connection**, and **Location**) don't work.
-- **SaveData**, **LoadData**, and **ClearData** don't work.
-- Form-related formulas (**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**) don't work.
+- [**Set**](/power-platform/power-fx/reference/function-set) and [**Collect**](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) requires the variable to exist and the variable type to match what you're trying to set it to.
+- [**Collect**](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect), [**Patch**](/power-platform/power-fx/reference/function-patch), and [**Remove**](/power-platform/power-fx/reference/function-remove-removeif#remove-function) work with variables and Dataverse tables only.
+- [**Defaults**](/power-platform/power-fx/reference/function-defaults) is not supported, instead use [**Collect**](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect). For example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` do `Collect(account, {"Account Name": "Example Account"})`.
+- [**User()**](/power-platform/power-fx/reference/function-user) is not supported yet, instead use **Viewer**, which has a subset of information about the user viewing the card.
+- [**Clear**](/power-platform/power-fx/reference/function-clear-collect-clearcollect#clear) and [**ClearCollect**](/power-platform/power-fx/reference/function-clear-collect-clearcollect#clearcollect) are not supported yet
+- [**Update**](/power-platform/power-fx/reference/function-update-updateif#update-function) and [**UpdateIf**](/power-platform/power-fx/reference/function-update-updateif#updateif-function) are not supported yet
+- Device sensor formulas ([**Acceleration**, **App**, **Compass**, **Connection**, and **Location**](/power-platform/power-fx/reference/signals)) don't work.
+- [**SaveData**, **LoadData**, and **ClearData**](/power-platform/power-fx/reference/function-savedata-loaddata) don't work.
+- Form-related formulas ([**EditForm**, **NewForm**, **SubmitForm**, **ResetForm**, and **ViewForm**](/power-platform/power-fx/reference/function-form)) don't work.
