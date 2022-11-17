@@ -1,14 +1,15 @@
 ---
 title: Requirements for cards
 description: Learn about the requirements for using Cards for Power Apps.
-ms.date: 11/16/2022
+ms.date: 11/17/2022
 ms.topic: overview
-author: iaanw
-ms.author: iawilt
-manager: shellyha
+author: sericks007
+ms.author: sericks
+manager: tapanm-msft
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
+
 ---
 
 # Requirements for cards
@@ -21,24 +22,24 @@ Cards are available in environments with Dataverse.
 
 The table below shows the environment regions cards are supported in.
 
-| Environment Region | Supported |
+| Environment region | Supported in region |
 |--------------|:---:|
-| United States | ✔ |
-| Europe | ✔ |
-| Asia | ✔ |
-| Brazil | ✔ |
-| Australia | ✔ |
-| Japan | ✔ |
-| India | ✔ |
-| Canada | ✔ |
-| UK | ✔ |
-| Germany | ✖ |
-| Switzerland | ✖ |
-| UAE | ✖ |
-| South Africa | ✖ |
-| Korea | ✖ |
-| Norway | ✖ |
-| Sovereign-cloud regions | ✖ |
+| United States | Yes |
+| Europe | Yes |
+| Asia | Yes |
+| Brazil | Yes |
+| Australia | Yes |
+| Japan | Yes |
+| India | Yes |
+| Canada | Yes |
+| United Kingdom | Yes |
+| Germany | No |
+| Switzerland | No |
+| United Arab Emirates | No |
+| South Africa | No |
+| Korea | No |
+| Norway | No |
+| Sovereign-cloud regions | No |
 
 ## Supported platforms for authoring cards
 
