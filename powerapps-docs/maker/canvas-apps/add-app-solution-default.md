@@ -1,6 +1,6 @@
 ---
-title: Add canvas apps to solution by default (preview)
-description: In Power Apps, learn about how to configure environment for adding all new canvas apps to default solution through various methods.
+title: Add canvas apps and cloud flows to solution by default (preview)
+description: Learn about how to configure an environment to adding all new canvas apps and cloud flows to default solution through various methods.
 author: tapanm-msft
 
 ms.topic: article
@@ -17,17 +17,15 @@ contributors:
   - tapanm-msft
 ---
 
-# Add canvas apps to solution by default (preview)
+# Add canvas apps and cloud flows into Dataverse solution by default (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
-You can [create canvas apps from within a solution](add-app-solution.md) by initiating a canvas app creation from the solutions section in Power Apps. However, creating canvas apps inside solutions is optional, and requires manual steps.
+You can [create canvas apps from within a solution](add-app-solution.md) or [create a cloud flow in a solution](/power-automate/create-flow-solution) in the solutions section in Power Apps or Power Automate. However, creating canvas apps and cloud flows inside solutions is optional, and requires manual steps.
 
-Canvas apps can now be included and created from within a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
+Canvas apps and cloud flows can now be created in a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
 
-Canvas apps included in solution by default benefit from reusing Microsoft Dataverse components such as connection references and environment variables. This feature reduces overhead and redundancy to manage individual canvas apps that aren’t part of a solution.
-
-For example, an environment with hundreds of canvas apps that live outside of a solution requires manual efforts to move them into solution to enable ALM. Such manual intervention is eliminated with canvas apps added to solutions by default.
+Canvas apps and cloud flows in a solution are defined in Dataverse and are more manageable because of Dataverse capabilities including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), and solution-based [application lifecycle management (ALM)](/power-platform/alm). 
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -36,8 +34,8 @@ For example, an environment with hundreds of canvas apps that live outside of a 
 ## Prerequisites
 
 - Solutions are stored in Dataverse. A Power Platform environment must have a Dataverse database to use this feature. Environments created without a Dataverse database can’t use this feature.
-- You must have **Write** privilege to [CanvasApp table](../../developer/data-platform/reference/entities/canvasapp.md) to create canvas apps in solutions. For more information, see [security roles and privileges](/power-platform/admin/security-roles-privileges). 
-- A canvas app within a solution must be shared with you before you can view or edit.
+- You must have **Write** privilege to [CanvasApp table](../../developer/data-platform/reference/entities/canvasapp.md) to create canvas apps in solutions. You must have **Write** privilege to [Workflow table](../../developer/data-platform/reference/entities/workflow.md) to create cloud flows in solutions. For more information, see [security roles and privileges](/power-platform/admin/security-roles-privileges). 
+- A canvas app or cloud flow within a solution must be shared with you before you can view or edit.
 
 > [!IMPORTANT]
 > Ensure you review the [considerations](#considerations) before enabling canvas apps in solutions by default.
