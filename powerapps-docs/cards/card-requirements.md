@@ -14,7 +14,7 @@ ms.collection:
 
 # Requirements for cards
 
-[This article is pre-release documentation and is subject to change.]
+[!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
 This article contains information on requirements for cards to show up and work as expected.
 
