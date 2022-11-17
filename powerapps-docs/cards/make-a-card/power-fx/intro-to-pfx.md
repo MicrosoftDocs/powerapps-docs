@@ -33,8 +33,8 @@ The following table lists the Power Fx formulas that don't work in cards, or hav
 
 | Power Fx formula | Supported in cards | 
 |---------|:---:|
-| [Set](/power-platform/power-fx/reference/function-set) | Yes, however requires the variable to exist and the variable type to match what you're trying to set it to.|
-| [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) | Yes, however requires the variable to exist and the variable type to match what you're trying to set it to. |
+| [Set](/power-platform/power-fx/reference/function-set) | Yes<br><br>Requires the variable to exist and the variable type to match what you're trying to set it to.|
+| [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) | Yes<br><br>Requires the variable to exist and the variable type to match what you're trying to set it to. |
 | [Defaults](/power-platform/power-fx/reference/function-defaults) | No <br><br> Use [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) instead, for example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` use `Collect(account, {"Account Name": "Example Account"})`. |
 | [User()](/power-platform/power-fx/reference/function-user) | No <br><br>Instead use **Viewer**, which has a subset of information about the user viewing the card. |
 | [Clear](/power-platform/power-fx/reference/function-clear-collect-clearcollect#clear) | No |  
