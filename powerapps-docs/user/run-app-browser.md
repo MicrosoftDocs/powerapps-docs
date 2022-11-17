@@ -52,7 +52,8 @@ The apps that meet the following criteria will be shown in the list of **Office*
 
 ### Known limitations
 1. When a new app is shared with users, the app needs to meet the criteria listed above. Be aware that it can take up to 24 hours for the app to appear in the list of **Office** apps.
-2. Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.   
+2. Some model-driven apps are not recording the last launched time. Until this issue is resolved, we recommend using [featured apps](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerappasfeatured?view=pa-ps-latest&preserve-view=true). Note that featured apps will only appear to users who have access to the apps. Featured apps do not appear to all users.
+3. Until February 2023 there is a chance users will observe model driven apps they could access but can no longer. Also, there's a chance users will not see model driven apps they can access.    
 
 ### What if I cannot find an app?
 
