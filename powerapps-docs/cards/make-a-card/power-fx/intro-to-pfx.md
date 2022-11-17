@@ -32,7 +32,7 @@ The [Power Fx documentation](/power-platform/power-fx/overview) is the main sour
 The following table lists the Power Fx formulas that don't work in cards, or have limitations. All other functions are fully supported.
 
 | Power Fx formula | Supported in cards | 
-|---------|:---:|:------------------:|
+|---------|:---:|
 | [Set](/power-platform/power-fx/reference/function-set) | Yes, however requires the variable to exist and the variable type to match what you're trying to set it to.|
 | [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) | Yes, however requires the variable to exist and the variable type to match what you're trying to set it to. |
 | [Defaults](/power-platform/power-fx/reference/function-defaults) | No <br><br> Use [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) instead, for example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` use `Collect(account, {"Account Name": "Example Account"})`. |
