@@ -49,10 +49,10 @@ As an example, you've created a card that counts how many times the user presses
 
 ### Using the default value for tables and records
 
-The default value is used to set the structure for table and record variables. There are two ways to set the default value of a record or table variable: 
+The default value is used to set the structure for table and record variables. There are two ways to set the default value of a record or table variable:
 
 - Using a Power Fx expression
-- Using JSON 
+- Using JSON
 
 You can toggle between whether you are using Power Fx or JSON using the icon on the right.
 
