@@ -14,7 +14,7 @@ ms.collection:
 
 # Manage cards
 
-[!INCLUDEcards_preview_notice]
+[This article is pre-release documentation and is subject to change.]
 
 This article will help you use security roles to manage cards and explains how to delete a record.
 
