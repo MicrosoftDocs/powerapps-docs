@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: matp
 ms.service: powerapps
 ms.topic: how-to 
-ms.date: 10/19/2022
+ms.date: 11/17/2022
 ms.custom: template-how-to
 ---
 # Coauthoring in model-driven apps (preview)
@@ -57,7 +57,6 @@ Once someone removes the page, it disappears for other makers in real-time.
 - Currently, there's no auto-save functionality, so you need to select the **Save** button to save changes. However, any maker that has access to the app can save the changes for others, as their changes are synced. Unsaved changes will be removed from the app in 24 hours.
 - Under **Settings**, changes to the **Features** and **Upcoming** sections must be saved from the settings dialog in order to be set. Users that don't see the changes immediately can close and open the settings dialog to see the most up-to-date settings.
 - Changes made in other designers, such as the view and form designers, won't be synchronized in real-time in the modern app designer.
-- Currently, comments aren’t displayed to other makers in real-time. For comments to appear for other makers, the app must be saved.
 
 ## Next steps
 
