@@ -4,7 +4,6 @@ description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
 ms.date: 09/14/2021
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -50,13 +49,13 @@ The procedure to import the updated solution is similar to installing a new mana
 
 5. This page displays a yellow bar indicating **This solution package contains an update for a solution that is already installed**. To upgrade the solution, select **Next**. To view additional options, expand **Advanced settings**, and then select from the following solution action options:  
    - **Upgrade**
-        This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This is the recommended option as it will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
+        This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This option will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
    - **Stage for Upgrade**
         This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade will delete the old solution and any components that are not included in the new solution.
         
    - **Update**
-        This option replaces your solution with this version.  Components that are not in the newer solution won't be deleted and will remain in the system.  This option is not recommended as your destination environment will differ in configuration from your source environment and could cause issues that are difficult to reproduce and diagnose.
+        This option replaces your solution with this version.  Components that are not in the newer solution won't be deleted and will remain in the system. Be aware that this option might result in your destination environment differing in configuration from your source environment and could cause issues that are difficult to reproduce and diagnose.
         
 8. Decide whether to enable the following option for post import actions:
    - **Enable plug-in steps and flows included in the solution**  
