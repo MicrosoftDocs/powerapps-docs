@@ -1,17 +1,20 @@
 ---
 title: Manage cards
 description: Learn how to manage cards
-ms.date: 11/16/2022
+ms.date: 11/17/2022
 ms.topic: overview
-author: iaanw
-ms.author: iawilt
-manager: shellyha
+author: sericks007
+ms.author: sericks
+manager: tapanm-MSFT
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
+
 ---
 
 # Manage cards
+
+This article will help you use security roles to manage cards and explains how to delete a record.
 
 ## Administrate cards
 
