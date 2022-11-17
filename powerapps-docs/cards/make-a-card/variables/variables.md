@@ -1,14 +1,15 @@
 ---
 title: Add variables to a card (preview)
 description: Learn how to add variables to your cards for Microsoft Power Apps.
-ms.date: 09/20/2022
+ms.date: 11/17/2022
 ms.topic: how-to
-author: iaanw
-ms.author: iawilt
-manager: shellyha
+author: sericks007
+ms.author: sericks
+manager: tapanm-MSFT
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
+
 ---
 
 # Add variables to a card (preview)
@@ -46,13 +47,18 @@ As an example, you've created a card that counts how many times the user presses
 
 1. Select **Save**.
 
-### Using default value for tables and records
+### Using the default value for tables and records
 
-Default value is used to set the structure for table and record variables. There are two ways to set the default value of a record or table variable: using a Power Fx expression or using JSON. You can toggle between whether you are using Power Fx or JSON using the icon on the right.
+The default value is used to set the structure for table and record variables. There are two ways to set the default value of a record or table variable: 
+
+- Using a Power Fx expression
+- Using JSON 
+
+You can toggle between whether you are using Power Fx or JSON using the icon on the right.
 
 :::image type="content" source="../../media/variables/default-value.png" alt-text="Screenshot of the how to toggle between JSON and Power Fx for setting the variable default value.":::
 
-Using a Power Fx expression is helpful when you want the variable to store data from a data source like Dataverse. For example, if you wanted a record that held a specific row from the **Account** table, you could set the default value to `First(account)`.
+Using a Power Fx expression is helpful when you want the variable to store data from a data source, like Dataverse. For example, if you wanted a record that held a specific row from the **Account** table, you could set the default value to `First(account)`.
 
 Using JSON is helpful when you are using the variable to store custom data. For example, if you wanted to collect a list of people's names, you could set the default value to `[{"First Name": "John", "Last Name": "Doe"}]`.
 
