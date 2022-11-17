@@ -1,6 +1,6 @@
 ---
 title: Manage cards
-description: Learn how to manage cards
+description: This article will help you use security roles to manage cards and explains how to delete a record.
 ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
