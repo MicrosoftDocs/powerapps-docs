@@ -23,7 +23,7 @@ PostSave event occurs after the `OnSave` event is complete. This event is used t
 
 [!INCLUDE [cc_book-instead-of-save](../../../../../includes/cc_book-instead-of-save.md)]
 
-Use the [addOnPostSave](../controls/addOnPostSave.md) and [removeOnPostSave](../controls/removeOnPostSave.md) methods to manage event handlers for this event.
+Use the [addOnPostSave](../formContext-data-entity/addOnPostSave.md)  and [removeOnPostSave](../formContext-data-entity/removeOnPostSave.md) methods to manage event handlers for this event.
 
 > [!NOTE]
 > This method is supported only on Unified Interface
