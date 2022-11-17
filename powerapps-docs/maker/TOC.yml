@@ -2914,6 +2914,8 @@
   items:
     - name: What are cards?
       href: ../cards/overview.md
+    - name: Requirements for cards
+      href: ../cards/card-requirements.md
     - name: Design cards
       items: 
         - name: Card Designer overview
@@ -2936,6 +2938,8 @@
       href: ../cards/make-a-card/testing/debugging-cards.md
     - name: Send a card in Teams
       href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Manage cards
+      href: ../cards/manage-cards/manage-cards.md
     - name: Tutorials
       items:
         - name: Create a simple card
