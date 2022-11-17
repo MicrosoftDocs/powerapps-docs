@@ -14,6 +14,8 @@ ms.collection:
 
 # Requirements for cards
 
+[This article is pre-release documentation and is subject to change.]
+
 This article contains information on requirements for cards to show up and work as expected.
 
 ## Environment requirements
