@@ -18,7 +18,7 @@ contributors:
 ---
 # addOnPostSave (Client API reference)
 
-Adds an event handler to be called after the record is saved with success or failure.
+[!INCLUDE [addonpostsave-description](includes/addonpostsave-description.md)]
 
 ## Syntax
 

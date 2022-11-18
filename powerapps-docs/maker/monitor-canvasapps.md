@@ -75,6 +75,15 @@ Monitor also displays a notification that the monitoring session that's currentl
 
 ![Published app session.](media/monitor/published-app-session.png "Published app session")
 
+### For apps running on Power Apps mobile (preview)
+
+Follow the above steps, but select **Copy monitor link** instead of **Play published app**. Use the copied link on your device to open a monitored session for the published app. Make sure the link is opened using [Power Apps mobile](../mobile/run-powerapps-on-mobile.md), not a browser.
+
+> [!NOTE]
+> **Copy monitor link** is available in https://make.preview.powerapps.com
+
+![Copy monitor link.](media/monitor-copy-link.png "Copy monitor link")
+
 ### Setting: Debug published app
 
 If you want to view the source expressions in Monitor for the published app, you need to turn on the setting to publish the expressions with the app. This setting is similar to generating a debug file in traditional development. Publishing source expressions with your app is optional. Even when this setting is off, you'll be able to see the events happening in your app, but you won't be able to map these events to specific expressions or formulas.

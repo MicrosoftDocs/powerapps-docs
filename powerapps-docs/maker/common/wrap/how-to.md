@@ -36,10 +36,18 @@ This feature requires the apps to be part of a solution. If your canvas apps are
 
 Create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
-When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
+> [!NOTE]
+> Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
+
+Whether you are a single or multitenant maker, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap. Choose one of the following account types:
+ - Accounts in any organzational directory (Any Azure AD directory - Multitenant)
+ - Accounts in any orgnizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+
+:::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
+
 
 > [!IMPORTANT]
-> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
+> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
 > - To ensure the **Redirect URI** matches the [required format](#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** > **+ Add a platform** to add the platform instead.
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 

@@ -33,6 +33,8 @@ items:
       href: webapiservice-parallel-operations.md
     - name: TPL Dataflow Parallel Operations
       href: webapiservice-tpl-dataflow-parallel-operations.md
+    - name: File operations
+      href: file-operations.md
     - name: Query schema definitions and detect changes
       href: retrievemetadatachanges.md
 - name: (JavaScript) samples
