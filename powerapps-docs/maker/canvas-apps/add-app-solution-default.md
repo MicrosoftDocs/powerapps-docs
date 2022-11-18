@@ -33,8 +33,8 @@ Canvas apps and cloud flows in a solution are defined in Dataverse and are more 
 
 ## Prerequisites
 
-- Solutions are stored in Dataverse. A Power Platform environment must have a Dataverse database to use this feature. Environments created without a Dataverse database can’t use this feature.
-- You must have **Write** privilege to [CanvasApp table](../../developer/data-platform/reference/entities/canvasapp.md) to create canvas apps in solutions. You must have **Write** privilege to [Workflow table](../../developer/data-platform/reference/entities/workflow.md) to create cloud flows in solutions. For more information, see [security roles and privileges](/power-platform/admin/security-roles-privileges). 
+- Solutions are stored in Dataverse, so the environment must have a Dataverse database to use this feature. If needed, [add a Dataverse database](/power-platform/admin/create-database).
+- You must have **Write** privilege to [CanvasApp table](../../developer/data-platform/reference/entities/canvasapp.md) to create canvas apps in solutions. To create cloud flows in solutions, the [Environment Maker role](/power-platform/admin/database-security#predefined-security-roles) is recommended because there is a set of table permissions needed. For more information, see [security roles and privileges](/power-platform/admin/security-roles-privileges). 
 - A canvas app or cloud flow within a solution must be shared with you before you can view or edit.
 
 > [!IMPORTANT]
@@ -57,18 +57,21 @@ The following table summarizes which entry points benefit from canvas apps withi
 
 ## Supported entry points for cloud flows
 
-There are different entry points for creating cloud flows. The following table summarizes which entry points are suppported by the switch for creat
+There are different entry points for creating cloud flows. The following table summarizes which entry points are suppported by the switch for create in Dataverse solutions by default. 
 
 | Entry point | Available for cloud flows within a solution by default?  |
 | - | - |
-| [Create a cloud flow from blank](/power-automate/get-started-logic-flow) | Private Preview |
-| [Create a cloud flow from a template](/power-automate/get-started-logic-template) | Private Preview |
-| Create a cloud flow from API | Private Preview |
+| [Create a cloud flow from blank in portal](/power-automate/get-started-logic-flow) | Private Preview |
+| [Create a cloud flow from template in portal](/power-automate/get-started-logic-template) | Private Preview |
 | Create a cloud flow from Power Automate Management connector | Private Preview |
 | Create a cloud flow from PowerShell | Private Preview |
+| Create a cloud flow from Mobile App | Private Preview |
 | [Create a cloud flow from OneDrive](/power-automate/onedrive-business-launch-panel) | No |
 | [Create a cloud flow from SharePoint](https://support.microsoft.com/en-us/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No |
 | Create a cloud flow from other integration points, such as [the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | No | 
+
+> [!IMPORTANT]
+> - Unsupported entry points will fail to create any cloud flow until that support is added. Workaround: create using a supported entry point, such as creating directly in the Power Automate portal.
 
 ## Enable the feature
 
@@ -92,5 +95,8 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 - By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps. To learn about adding existing canvas apps to solutions, see [Add an existing canvas app to a solution](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 - When you toggle the feature switch in the Power Platform admin center, the Dataverse property `enablecanvasappsinsolutionsbydefault` in the organization table is updated.  The value can be reviewed using the following sample ODATA snippet: `[org URI]/api/data/v9.0/organizations`. More information: [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization)
 - If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
+- Monitor > Cloud flow activity page does not support solution cloud flows.
+- [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing are not updated for solution cloud flows.
+- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back. 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
