@@ -2340,7 +2340,7 @@
         href: ./data-platform/data-platform-delete-entity.md
       - name: How to display custom icons
         href: ./data-platform/display-custom-icons-instead.md
-      - name: How to edit system table messages
+      - name: How to edit system table messages (preview)
         href: ./data-platform/edit-system-entity-messages.md
       - name: How to configure a table for feedback/ratings
         href: ./data-platform/configure-entity-feedback.md
