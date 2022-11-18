@@ -40,13 +40,26 @@ Canvas apps and cloud flows in a solution are defined in Dataverse and are more 
 > [!IMPORTANT]
 > Ensure you review the [considerations](#considerations) before enabling canvas apps in solutions by default.
 
-## Supported methods
+## Supported entry points for canvas apps
 
-There are different methods available to get started while creating canvas apps. Canvas apps that are created within solution by default using this feature require the use of some of these methods. Hence, it becomes important to understand how this feature can be utilized. 
+There are different entry points that can be used to create canvas apps. Canvas apps that are created within solution by default using this feature require the use of some of these entry points. Hence, it becomes important to understand how this feature can be utilized. 
 
-The following table summarizes which methods benefit from canvas apps within solution by default.
+The following table summarizes which entry points benefit from canvas apps within solution by default.
 
-| Method | Available for canvas apps within a solution by default?  |
+| Entry point | Available for canvas apps within a solution by default?  |
+| - | - |
+| [Canvas apps from Dataverse](data-platform-create-app.md) | Yes |
+| Canvas apps from other data sources, such as [SharePoint](app-from-sharepoint.md), [Excel](get-started-create-from-data.md), [Azure Blob Storage](connections/connection-azure-blob-storage.md), and [others](connections-list.md#popular-connectors) | Yes |
+| [Blank canvas app](create-blank-app.md) </br> **NOTE**: [Power Apps](https://make.powerapps.com) > **Apps** > **New app** > **Canvas** also creates a blank canvas app. | Yes |
+| [Canvas apps from template](get-started-test-drive.md) | No |
+| Canvas apps created by [customizing SharePoint forms](customize-list-form.md) | No |
+| Canvas apps created directly from [Azure portal](https://portal.azure.com) using [Azure SQL Database](app-from-azure-sql-database.md) | No |
+
+## Supported entry points for cloud flows
+
+There are different entry points for creating cloud flows. The following table summarizes which entry points are suppported by the switch for creat
+
+| Entry point | Available for cloud flows within a solution by default?  |
 | - | - |
 | [Canvas apps from Dataverse](data-platform-create-app.md) | Yes |
 | Canvas apps from other data sources, such as [SharePoint](app-from-sharepoint.md), [Excel](get-started-create-from-data.md), [Azure Blob Storage](connections/connection-azure-blob-storage.md), and [others](connections-list.md#popular-connectors) | Yes |
@@ -57,29 +70,23 @@ The following table summarizes which methods benefit from canvas apps within sol
 
 ## Enable the feature
 
-This feature is disabled by default and must be enabled manually. To enable this feature, go to Power Platform admin center by going to **Environments** > select an environment > **Settings** > **Product** > **Features**, and enable the feature **Create new canvas apps as Dataverse solutions**. More information: [Manage feature settings](/power-platform/admin/settings-features)
+This feature is disabled by default and must be enabled manually. To enable this feature, go to Power Platform admin center by going to **Environments** > select an environment > **Settings** > **Product** > **Features**, and view the **Create in Dataverse solutions** switches. Toggle on the desired switch: Canvas apps and/or Cloud flows. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
-## Check canvas apps in solution
+## Check canvas apps and cloud flows in solutions
 
-To view canvas apps inside a solution, use the [solution view](../data-platform/solutions-area.md). Only users that have access to the canvas app added inside a solution can view the app in a solution view.
+To view canvas app and cloud flow objects inside a solution, use the [solution view](../data-platform/solutions-area.md). Only users that have access to the object added inside a solution can view it in a solution view.
 
-## Export and import standalone canvas app 
+## Export and import via solutions
 
-Once this feature is enabled, consider using solutions [export](../data-platform/export-solutions.md) and [import](../data-platform/import-update-export-solutions.md) instead of [export and import of standalone canvas app](export-import-app.md). 
+Once this feature is enabled, consider using solutions [export](../data-platform/export-solutions.md) and [import](../data-platform/import-update-export-solutions.md) instead of [export and import of canvas app packages](export-import-app.md). 
 
 ## Considerations
 
-- Increase in capacity consumption of Dataverse environment. 
-- Cost implications due to increased capacity consumption. 
+- Increase in capacity consumption of Dataverse environment and cost implications due to that increased capacity consumption. 
 - Known solution limitations related to canvas apps still apply to canvas apps created within solutions by default. 
 - This feature also enables the automatic creation of environment variables when adding data sources for your apps. 
-- By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps. To learn about adding canvas apps to solutions, see [Add an existing canvas app to a solution](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
-- When you toggle the feature switch in the Power Platform admin center, the Dataverse property `enablecanvasappsinsolutionsbydefault` in the organization table is updated.  The value can be reviewed using the following sample ODATA snippet.
-
-    `[org URI]/api/data/v9.0/organizations`
-
-    More information: [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization)
-
+- By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps. To learn about adding existing canvas apps to solutions, see [Add an existing canvas app to a solution](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
+- When you toggle the feature switch in the Power Platform admin center, the Dataverse property `enablecanvasappsinsolutionsbydefault` in the organization table is updated.  The value can be reviewed using the following sample ODATA snippet: `[org URI]/api/data/v9.0/organizations`. More information: [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization)
 - If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
