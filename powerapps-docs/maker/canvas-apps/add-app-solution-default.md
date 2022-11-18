@@ -61,16 +61,20 @@ There are different entry points for creating cloud flows. The following table s
 
 | Entry point | Available for cloud flows within a solution by default?  |
 | - | - |
-| [Canvas apps from Dataverse](data-platform-create-app.md) | Yes |
-| Canvas apps from other data sources, such as [SharePoint](app-from-sharepoint.md), [Excel](get-started-create-from-data.md), [Azure Blob Storage](connections/connection-azure-blob-storage.md), and [others](connections-list.md#popular-connectors) | Yes |
-| [Blank canvas app](create-blank-app.md) </br> **NOTE**: [Power Apps](https://make.powerapps.com) > **Apps** > **New app** > **Canvas** also creates a blank canvas app. | Yes |
-| [Canvas apps from template](get-started-test-drive.md) | No |
-| Canvas apps created by [customizing SharePoint forms](customize-list-form.md) | No |
-| Canvas apps created directly from [Azure portal](https://portal.azure.com) using [Azure SQL Database](app-from-azure-sql-database.md) | No |
+| [Create a cloud flow from blank](/power-automate/get-started-logic-flow) | Private Preview |
+| [Create a cloud flow from a template](/power-automate/get-started-logic-template) | Private Preview |
+| Create a cloud flow from API | Private Preview |
+| Create a cloud flow from Power Automate Management connector | Private Preview |
+| Create a cloud flow from PowerShell | Private Preview |
+| [Create a cloud flow from OneDrive](/power-automate/onedrive-business-launch-panel) | No |
+| [Create a cloud flow from SharePoint](https://support.microsoft.com/en-us/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No |
+| Create a cloud flow from other integration points, such as [the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | No | 
 
 ## Enable the feature
 
 This feature is disabled by default and must be enabled manually. To enable this feature, go to Power Platform admin center by going to **Environments** > select an environment > **Settings** > **Product** > **Features**, and view the **Create in Dataverse solutions** switches. Toggle on the desired switch: Canvas apps and/or Cloud flows. More information: [Manage feature settings](/power-platform/admin/settings-features)
+
+![image](https://user-images.githubusercontent.com/13593424/202789228-877e69a0-5b83-459b-afe3-63fb1fe37e3d.png)
 
 ## Check canvas apps and cloud flows in solutions
 
