@@ -1111,7 +1111,7 @@ A. Large content size can cause latency. More information: [Best practices for u
 
 Q: Why can't I upload an image, and why does the image preview fail to load?
 
-A. If the image filename is long or contains many full-width characters, it may fail to upload or the preview might not be displayed. Try shortening the file name and then upload it again.
+A. If the image file name is long or contains many full-width characters, it may fail to upload or the preview might not be displayed. Try shortening the file name and then upload it again.
 
    :::image type="content" source="media/rte-image-preview.png" alt-text="Image preview failure.":::
 
