@@ -23,9 +23,9 @@ The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as cus
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
-You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
+You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize your mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
 
-You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package on the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
+You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package using the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
 
 
 **Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
