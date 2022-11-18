@@ -120,7 +120,7 @@ You can insert videos and static images into your help pane. Videos and images a
 > Remember to copy the link URL for the video or image you want so you can paste it into your help pane. 
 
 Custom help panes support the following video sources:
-- Microsoft Stream (use for private content) 
+- Microsoft Stream Classic (use for private content) 
 - YouTube
 - Facebook
 - Vimeo
