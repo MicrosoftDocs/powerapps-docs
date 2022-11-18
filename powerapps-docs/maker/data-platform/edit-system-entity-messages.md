@@ -23,9 +23,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Edit system table messages
+# Edit system table messages (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 The default display name of some system tables, such as account and contact tables, is used in user interface text and error messages in Microsoft Dataverse. If you change the display name for a system table, you should also update any messages that use the default display name. For example, if you change the display name from *Account* to *Company*, you could still see an error message using the old name.
+
+> [!IMPORTANT]
+> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ## Add a message to a system table
 
@@ -54,7 +59,11 @@ The default display name of some system tables, such as account and contact tabl
 For developers looking for a way to work with these in code, the display strings are stored in the [DisplayString](../../developer/data-platform/reference/entities/displaystring.md) table. 
 
 The `DisplayString` table doesn’t contain the default display strings. The two attributes for this table that contain text are [CustomDisplayString](../../developer/data-platform/reference/entities/displaystring.md#BKMK_CustomDisplayString) and [PublishedDisplayString](../../developer/data-platform/reference/entities/displaystring.md#BKMK_PublishedDisplayString). By default, these attribute values are null unless the display string has been customized and published. The `PublishedDisplayString` value is read-only and reflects the currently published `CustomDisplayString`.
- 
+
+## Edit using the classic experience
+
+For information about how to edit system table messages using the classic experience, see [Edit system entity messages and display names](/dynamics365/customerengagement/on-premises/customize/edit-system-entity-messages).
+
 ## See also
 
 [Edit a table](edit-entities.md)<br />
