@@ -16,6 +16,9 @@ contributors:
 
 # Power Apps portals admin center
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Power Apps portals admin center allows you to perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
 > [!NOTE]
@@ -69,7 +72,7 @@ If you aren't a global administrator and you try to manage a portal that has alr
 
 ### See also
 
-- [Administer Power Apps portals](/learn/paths/administer-portals/)
-- [Power Apps portals architecture](/learn/modules/portals-architecture)
+- [Administer Power Apps portals](/training/paths/administer-portals/)
+- [Power Apps portals architecture](/training/modules/portals-architecture)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

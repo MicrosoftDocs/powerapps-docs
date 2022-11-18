@@ -103,11 +103,11 @@ When using the **Connect user** feature for a canvas app:
 
     ![Connect user - copy link.](media/monitor/copy-connect-user-link.png "Connect user - copy link")
 
-1. After you share the link, the user selects it to open the app and is notified that they're joining a monitoring session.
+1. After you share the link, the user selects it to open the app and is notified that they're joining a monitoring session. The same link can be used to open the app in a monitored session on [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 
     ![Connect user - join.](media/monitor/user-join.png "Connect user - join")
 
-The user can now interact with the app, and Monitor will show events for this interaction.
+The user can now interact with the app, and Monitor will show events for this interaction.   
 
 ## Next steps
 

@@ -16,6 +16,9 @@ contributors:
 
 # Maintenance mode for a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 There might be times when your website is under scheduled maintenance or is down because of temporary outage. When a customer accesses the website during maintenance, unpredictable behavior and intermittent unavailability might be experienced. 
 
 As a portal administrator, you can configure your portal to display a proper message to customers whenever a maintenance activity is going on (for example, "Solution packages are being upgraded.") You can benefit from this capability by enabling the maintenance mode on your portal. When the maintenance mode is enabled, a message is displayed, and the customers are restricted from browsing any webpages except the `<portal URL>/_services/about` page.
@@ -82,6 +85,6 @@ You can also choose to disable maintenance mode on your portal when the schedule
 
 ### See also
 
-[Power Apps portals maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
+[Power Apps portals maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

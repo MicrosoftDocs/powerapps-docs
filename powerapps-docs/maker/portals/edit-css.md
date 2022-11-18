@@ -16,6 +16,9 @@ contributors:
 
 # Edit CSS for themes
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
 
 > [!NOTE]
@@ -85,7 +88,7 @@ Or, depending on the customizer application used, it might only contain bootstra
 
 ### See also
 
-- [Advanced CSS in Power Apps portals](/learn/modules/extend-power-app-portals/4-portal-css)
-- [Advanced client-side development](/learn/modules/extend-power-app-portals/5-advanced-portal-development)
+- [Advanced CSS in Power Apps portals](/training/modules/extend-power-app-portals/4-portal-css)
+- [Advanced client-side development](/training/modules/extend-power-app-portals/5-advanced-portal-development)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

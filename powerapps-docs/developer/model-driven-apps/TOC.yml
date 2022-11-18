@@ -252,8 +252,6 @@
         href: clientapi/reference/controls/addOnLookupTagClick.md
       - name: addOnOutputChange
         href: clientapi/reference/controls/addonoutputchange.md
-      - name: addOnPostSave
-        href: clientapi/reference/controls/addOnPostSave.md
       - name: addOnPostSearch
         href: clientapi/reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -294,8 +292,8 @@
         href: clientapi/reference/controls/getObject.md
       - name: getOptions
         href: clientapi/reference/controls/getOptions.md
-      - name: getOutput
-        href: clientapi/reference/controls/getoutput.md
+      - name: getOutputs
+        href: clientapi/reference/controls/getoutputs.md
       - name: getParent
         href: clientapi/reference/controls/getParent.md
       - name: getSearchQuery
@@ -322,8 +320,6 @@
         href: clientapi/reference/controls/removeOnLookupTagClick.md
       - name: removeOnOutputChange
         href: clientapi/reference/controls/removeonoutputchange.md
-      - name: removeOnPostSave
-        href: clientapi/reference/controls/removeOnPostSave.md
       - name: removeOnPostSearch
         href: clientapi/reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened
@@ -374,6 +370,8 @@
     - name: formContext.data.entity
       href: clientapi/reference/formContext-data-entity.md
       items:
+      - name: addOnPostSave
+        href: clientapi/reference/formContext-data-entity/addOnPostSave.md
       - name: addOnSave
         href: clientapi/reference/formContext-data-entity/addOnSave.md
       - name: getDataXml
@@ -390,6 +388,8 @@
         href: clientapi/reference/formContext-data-entity/getPrimaryAttributeValue.md
       - name: isValid
         href: clientapi/reference/formContext-data-entity/isvalid.md
+      - name: removeOnPostSave
+        href: clientapi/reference/formContext-data-entity/removeOnPostSave.md
       - name: removeOnSave
         href: clientapi/reference/formContext-data-entity/removeOnSave.md
       - name: save
@@ -914,7 +914,7 @@
     items:
     - name: Create accessible web resources
       href: create-accessible-web-resources.md
-  - name: Script (JScript) web resources
+  - name: JavaScript web resources
     href: script-jscript-web-resources.md
     items:
     - name: Script web resource development using Fiddler AutoResponder

@@ -20,7 +20,7 @@ contributors:
 
 # Stylesheet (XSL) web resources
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/stylesheet-xsl-web-resources -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/stylesheet-xsl-web-resources -->
 
 Use Stylesheet (XSL) Web resources to transform XML data.
 
@@ -172,7 +172,7 @@ td {
 [Web Resources](web-resources.md)  
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)  
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)  
- [Using Script (JScript) Web Resources](script-jscript-web-resources.md)  
+ [Using JavaScript Web Resources](script-jscript-web-resources.md)  
  [Using Data (XML) Web Resources](data-xml-web-resources.md)  
  [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)
 

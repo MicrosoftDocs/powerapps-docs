@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 5/11/2022
+ms.date: 11/15/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -17,7 +17,12 @@ contributors:
 
 # Manage custom certificates
 
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 When extending portals functionality using a client-side API call with [OAuth 2.0 implicit grant flow](../oauth-implicit-grant-flow.md), it's best practice to use custom certificates to provide an additional level of security. You can upload you own custom certificates using the Power Apps portals admin center.
+
+> [!IMPORTANT]
+> You cannot re-use the same custom certificate to set up a [custom host name](add-custom-domain.md). See [SSL Certificates](manage-ssl-certificates.md).
 
 ## Add new certificate
 

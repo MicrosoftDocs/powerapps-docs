@@ -17,6 +17,9 @@ contributors:
 
 # Add custom JavaScript to a list
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The **Options** tab on the list configuration in the [Portal Management app](configure-portal.md) contains a text area where you can enter custom [!INCLUDE[pn-javascript](../../../includes/pn-javascript.md)]. If your page includes jQuery library, you can use that here as well. The script block will be added at the bottom of the webpage just before the page’s closing form tag.
 
 ![Custom JavaScript example.](../media/custom-javascript-example.png "Custom JavaScript example")  
@@ -48,6 +51,6 @@ $(document).ready(function (){
 ### See also
 
 - [Work with lists](entity-lists.md)
-- [Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Display multiple Dataverse records using lists](/training/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)

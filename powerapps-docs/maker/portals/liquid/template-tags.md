@@ -17,6 +17,9 @@ contributors:
 
 # Template tags
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Template tags control the output of a template in various ways, and allow the combination of multiple templates into a single output.
 
 ## fetchxml

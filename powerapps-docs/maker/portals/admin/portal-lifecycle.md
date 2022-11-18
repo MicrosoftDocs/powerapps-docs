@@ -16,6 +16,9 @@ contributors:
 
 # Power Apps portals lifecycle
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A portal is always created as a trial. A trial portal, which expires after 30 days, is useful for trying out its capabilities at no cost. After it expires, the portal is suspended and shut down. Seven days after it's suspended, the trial portal is deleted. You'll be notified at every stage of the portal lifecycle&mdash;nearing suspension, suspended, deleted, and converted from trial to production&mdash;through toast notifications and email.
 
 As an administrator, you can convert a trial or suspended portal to a production portal. When converting a portal from trial to production, you must ensure that the environment is also a production environment. You can't convert a trial portal to a production portal in a trial environment. If you delete the environment in which a trial portal is created, the portal is also deleted.
@@ -57,7 +60,7 @@ If you don't convert your portal to production within the seven-day suspension p
 
 ### See also
 
-[Portal application lifecycle management](/learn/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
+[Portal application lifecycle management](/training/modules/extend-power-app-portals/2-portal-application-lifecycle) <br>
 [Convert a portal from trial to production](convert-portal.md#convert-a-portal-from-trial-to-production) <br>
 [Convert an existing portal to capacity-based model](convert-portal.md#convert-an-existing-portal-to-capacity-based-model)
 

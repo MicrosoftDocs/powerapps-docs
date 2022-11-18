@@ -17,6 +17,9 @@ contributors:
 
 # Set up Power BI integration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Power BI is one of the best tools to deliver insights with simple and interactive visualization. To view dashboards and reports from Power BI on webpages in a portal, you must enable Power BI visualization from the Power Apps portals admin center. You can also embed dashboards and reports created in the new workspace of Power BI by enabling the Power BI Embedded service integration.
 
 > [!NOTE] 
@@ -224,6 +227,6 @@ This problem can happen because of multiple reasons such as:
 
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
-- [Integration with Power BI](/learn/modules/portals-integration/3-power-bi)
+- [Integration with Power BI](/training/modules/portals-integration/3-power-bi)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

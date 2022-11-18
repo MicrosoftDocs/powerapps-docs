@@ -144,20 +144,7 @@ The following context variables from Teams are supported:
 
 ## Improve the performance of your app
 
-You can optionally preload your app within Teams to increase performance.
-
-1. Sign in to [Power Apps](https://make.powerapps.com), and then select **Apps** in the menu.
-
-2. Select **More actions** (...) for the app you want to share in Teams, and then select **Settings**.
-
-3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load whenever embedded in Teams.
-
-    :::image type="content" source="media/embed-teams-app/preload-app.png" alt-text="Preload app for enhanced performance.":::
-
-4. For the changes to take effect, remove and add your app into Teams again.
-
-    > [!NOTE]
-    > This allows users to download the compiled app while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This behavior ensures that your app data won't be available to unauthenticated users. Information in the compiled app includes&mdash;a collection of JavaScript files containing text authored in app controls, media assets (such as images), the app name, and the environment URL the app resides in.  
+You can optionally preload your app within Teams to increase performance. For mor information: [Enable Preload app for enhanced performance](../maker/canvas-apps/performance-tips.md#enable-preload-app-for-enhanced-performance). 
 
 ### See also
 

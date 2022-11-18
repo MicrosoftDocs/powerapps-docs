@@ -41,8 +41,6 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: Use the Measure in MR control to take measurements 
-    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
@@ -59,7 +57,7 @@
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
         href: ../user/find-admin.md
-      - name: Set personal option
+      - name: Set personal options
         href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
@@ -219,8 +217,14 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Use the learning hub
+    href: ./common/learn-hub.md 
   - name: Find it with unified search
     href: search.md
+  - name: Get help from a virtual agent
+    href: ./common/virtual-agent.md   
+  - name: Maker matching using an integrated virtual agent (preview)
+    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -360,6 +364,8 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
+          - name: Add comments (preview)
+            href: ./canvas-apps/comments.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -438,6 +444,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Validate measurements in mixed reality using a spatial test filter
                 href: ./canvas-apps/mixed-reality-spatial-test.md
+              - name: Use the measure in MR control to take measurements 
+                href: ./canvas-apps/measure-your-space-in-mixed-reality.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
@@ -484,6 +492,8 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: Barcode reader (experimental)
+              href: ./canvas-apps/controls/control-barcodereader.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -608,7 +618,7 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Use the Search pane (preview)
+        - name: Use the Search pane
           href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
@@ -620,6 +630,8 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Formula repair in canvas apps (preview)
+          href: common/formula-repair.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane 
@@ -630,7 +642,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Power Apps Ideas (preview)
+        - name: Power Apps Ideas 
           items:
           - name: Power Apps Ideas
             href: ./canvas-apps/power-apps-ideas.md
@@ -1068,7 +1080,7 @@
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
-      - name: Use co-authoring in canvas apps (experimental)
+      - name: Use Git version control to edit canvas apps (experimental)
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
@@ -1094,6 +1106,8 @@
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
     - name: Create a canvas app with deep link to a specific screen
       href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1303,13 +1317,15 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: /powerapps-docs/maker/../canvas-apps/connections-list
+            href: ./canvas-apps/connections-list.md
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+          - name: Formula repair in custom pages (preview)
+            href: common/formula-repair.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
       - name: Work with views
@@ -1397,7 +1413,9 @@
           - name: Add a chart to a form
             href: ./model-driven-apps/add-chart-to-form.md
           - name: Add a map on a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md               
+            href: ./model-driven-apps/configure-bing-maps-legacy.md
+          - name: Edit the related tab on a form
+            href: ./model-driven-apps/use-the-form-editor-legacy.md           
         - name: Design effective forms
           href: 
           items:
@@ -1452,6 +1470,8 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
+          - name: Add the Power BI report control (preview)
+            href: ./model-driven-apps/powerbi-control.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -1522,8 +1542,6 @@
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
-        - name: Change navigation within a form
-          href: ./model-driven-apps/use-the-form-editor-legacy.md
           items:
           - name: Add form navigation for related tables
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
@@ -1541,6 +1559,17 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+    - name: Collaboration in model-driven apps
+      href:
+      items:
+      - name: Collaboration overview
+        href: ./model-driven-apps/collaboration-model-driven-apps.md
+      - name: Add comments 
+        href: ./model-driven-apps/comments.md 
+      - name: Copresence (preview)
+        href: ./model-driven-apps/copresence.md 
+      - name: Coauthoring (preview)
+        href: ./model-driven-apps/coauthoring.md
     - name: Apply business logic in an app
       href: 
       items:
@@ -1571,6 +1600,12 @@
         href: ./model-driven-apps/add-reporting-to-app.md      
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md
+      - name: Power BI content management in Power Apps solutions (preview)
+        href: ./model-driven-apps/power-bi-content-management-power-apps-solutions.md
+      - name: Create Power BI report and dataset components (preview)
+        href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
+      - name: Customize and manage Power BI components (preview)
+        href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Use Excel and Word templates
@@ -1648,16 +1683,28 @@
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
     items:
-    - name: Mobile offline overview (preview)
-      href: ../mobile/mobile-offline-overview.md
+    - name: Set up mobile offline (classic)
+      items:
+      - name: Mobile offline overview (classic)
+        href: ../mobile/mobile-offline-overview-classic.md
+      - name: Set up mobile offline (classic)
+        href: ../mobile/setup-mobile-offline-classic.md
+      - name: Work offline on your mobile device (classic)
+        href: ../mobile/work-offline-mode-classic.md
     - name: Set up mobile offline (preview)
-      href: ../mobile/setup-mobile-offline.md 
+      items:
+      - name: Mobile offline overview (preview)
+        href: ../mobile/mobile-offline-overview.md
+      - name: Set up mobile offline (preview)
+        href: ../mobile/setup-mobile-offline.md 
+      - name: Enable and use offline-first (preview)
+        href: ../mobile/work-in-offline-mode.md   
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
-    - name: Enable and use offline-first (preview)
-      href: ../mobile/work-in-offline-mode.md   
     - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md   
+      href: ../mobile/mobile-offline-guidelines.md  
+    - name: Mobile offline capabilities and limitations
+      href: ../mobile/offline-capabilities.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
@@ -1793,13 +1840,13 @@
                   href: ./portals/configure/configure-basic-form-metadata.md
                 - name: Configure basic form subgrid
                   href: ./portals/configure/configure-basic-form-subgrid.md
-            - name: Work with advanced forms
+            - name: Work with multistep forms
               items:
-                - name: Define advanced form properties
+                - name: Define multistep form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Advanced form steps
+                - name: Multistep form steps
                   items:
-                    - name: Define advanced form steps
+                    - name: Define multistep form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1809,9 +1856,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure advanced form metadata
+                - name: Configure multistep form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure an advanced form subgrid
+                - name: Configure a multistep form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1837,7 +1884,7 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
-        - name: Configure file column (preview)
+        - name: Configure file column
           href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
@@ -1907,7 +1954,7 @@
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md  
-        - name: Content Delivery Network (preview)
+        - name: Content Delivery Network
           href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
@@ -2118,7 +2165,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md 
+            href: ./portals/component-framework-tutorial.md
+          - name: "Tutorial: Use dataset for code components in portals"
+            href: ./portals/tutorial-pcf-code.md 
           - name: "Tutorial: Configure rich text editor control on portals"
             href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
@@ -2225,6 +2274,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2209.x
+                href: ./portals/versions/package-version-9.3.2209.md   
               - name: Package 9.3.2204.x
                 href: ./portals/versions/package-version-9.3.2204.md             
               - name: Package 9.3.2201.x
@@ -2293,7 +2344,7 @@
         href: ./data-platform/edit-system-entity-messages.md
       - name: How to configure a table for feedback/ratings
         href: ./data-platform/configure-entity-feedback.md
-      - name: Azure Cosmos DB SQL API Data Provider
+      - name: Azure Cosmos DB for NoSQL Data Provider
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
@@ -2859,7 +2910,44 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-
+- name: Cards (preview)
+  items:
+    - name: What are cards?
+      href: ../cards/overview.md
+    - name: Requirements for cards
+      href: ../cards/card-requirements.md
+    - name: Design cards
+      items: 
+        - name: Card Designer overview
+          href: ../cards/make-a-card/designer-overview.md
+        - name: Add controls
+          href: ../cards/make-a-card/ui-elements/controls.md
+        - name: Add buttons
+          href: ../cards/make-a-card/ui-elements/use-buttons.md
+        - name: Add and configure screens
+          href: ../cards/make-a-card/screens/use-screens.md
+    - name: Connect to data and services
+      items:
+        - name: Add variables
+          href: ../cards/make-a-card/variables/variables.md
+        - name: Access connectors
+          href: ../cards/make-a-card/connectors/connector-intro.md
+    - name: Add business logic with Power Fx
+      href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
+    - name: Test and debug cards
+      href: ../cards/make-a-card/testing/debugging-cards.md
+    - name: Send a card in Teams
+      href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Manage cards
+      href: ../cards/manage-cards/manage-cards.md
+    - name: Tutorials
+      items:
+        - name: Create a simple card
+          href: ../cards/tutorials/hello-world-card.md
+        - name: Create a shopping list card
+          href: ../cards/tutorials/simple-shopping-list.md
+        - name: Create a card with data from Dataverse
+          href: ../cards/tutorials/dataverse-card.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions

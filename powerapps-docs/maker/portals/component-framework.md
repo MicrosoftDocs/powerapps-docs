@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/07/2022
+ms.date: 09/28/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -17,6 +17,9 @@ contributors:
 ---
 
 # Use code components in portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Power Apps component framework overview](../../developer/component-framework/overview.md)
 
@@ -106,10 +109,6 @@ Portals supports restricted field types and formats for using code components. T
 More information: [Attributes list and descriptions](../../developer/component-framework/manifest-schema-reference/property.md#remarks)
 
 ### Unsupported code components in portals
-
--   [Data-set
-    components](../../developer/component-framework/sample-controls/data-set-grid-control.md)
-    aren’t supported.
 
 -   The following code component APIs aren’t supported:
 

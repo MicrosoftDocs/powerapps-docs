@@ -24,6 +24,8 @@
       href: security-access-coding.md
     - name: Security roles and templates
       href: security-roles.md
+    - name: Active Directory group teams
+      href: aad-group-team.md
 - name: Work with data using code
   href: work-with-data.md
   items:
@@ -82,6 +84,8 @@
       href: query-throttling.md
     - name: Query Hierarchical data
       href: query-hierarchical-data.md
+    - name: Use file column data
+      href: file-column-data.md
     - name: Audit data changes
       items:
         - name: Overview
@@ -361,6 +365,10 @@
           href: configure-entity-relationship-cascading-behavior.md
     - name: Customize table and column mappings
       href: customize-entity-attribute-mappings.md
+    - name: Query schema definitions
+      href: query-schema-definitions.md
+    - name: Cache schema data
+      href: cache-schema-data.md
     - name: Use connections to link records to each other
       href: connection-entities.md
       items:
@@ -413,6 +421,8 @@
           href: isv-install-failure-analytics.md
         - name: Auto App Updates (Preview)
           href: isv-app-management-autoupdate.md
+        - name: Embed Pay-as-you-go for ISVs (Preview)
+          href: isv-embed-analytics.md
 - name: Create applications
   href: connect-dataverse.md
   items:
@@ -466,10 +476,10 @@
   items:
     - name: Developer resources page
       href: view-download-developer-resources.md
-    - name: Developer tools
+    - name: Developer tools and resource overview
       href: developer-tools.md
       items:
-        - name: Download tools from NuGet
+        - name: Dataverse development tools
           href: download-tools-nuget.md
         - name: Power Platform CLI
           href: /power-platform/developer/cli/introduction

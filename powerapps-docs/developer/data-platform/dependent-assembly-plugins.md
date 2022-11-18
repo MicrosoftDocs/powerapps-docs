@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/23/2022
+ms.date: 10/27/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -25,12 +25,13 @@ It is frequently valuable to include another assembly or a resource file within 
 
 Without dependent assemblies, all plug-ins are registered as individual .NET Framework assemblies. The only way to include another assembly is to combine it into one using [ILMerge](https://github.com/dotnet/ILMerge). While ILMerge worked for many, it was never supported by Dataverse and it didn't always work. ILMerge is no longer being maintained.
 
-With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. Unlike ILMerge, you can also include other file resources, such as JSON files containing localized strings. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
+With dependent assemblies, rather than register an individual .NET assembly, you will upload a NuGet Package that contains your plug-in assembly AND any dependent assemblies. This NuGet package file is stored in a new table called [PluginPackage](reference/entities/pluginpackage.md). The contents of the NuGet package is stored in file storage rather than SQL.
 
 > [!IMPORTANT]
 > - This is a preview feature.
 > - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
+>
+> This document previously described a process to include additional files with the plug-in package that would be available in the assembly run-time. This capability will not be supported. We cannot guarantee that the runtime will allow access to these files.
 
 When you upload your NuGet package, any assemblies that contain classes that implement the <xref:Microsoft.Xrm.Sdk.IPlugin?text=IPlugin Interface> will be registered in [PluginAssembly](reference/entities/pluginassembly.md) table and associated with the `PluginPackage`. As you develop and maintain your project, you will continue to update the `PluginPackage` and changes to the related plugin assemblies will be managed on the server.
 
@@ -85,7 +86,7 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 |Tool/App|Instructions |
 |---------|---------|
 |**Microsoft Power Platform CLI**|You must have version 1.17 or higher.<br />The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
-|**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
+|**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Dataverse development tools](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ### Create a Visual Studio project
@@ -118,27 +119,6 @@ You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-e
 ### Add a dependent assembly without using NuGet
 
 If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
-
-### Add a file resource
-
-To include another file resource that will be available in the runtime for your plug-in.
-
-1. Add the file to your Visual Studio project.
-1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
-
-   :::image type="content" source="media/add-dependent-file-or-assembly.png" alt-text="Adding a file to the Visual Studio project.":::
-
-If you view the csproj file, you will find that an `ItemGroup` like following will be added by Visual Studio:
-
-```xml
-<ItemGroup>
-  <None Update="strings.localized.json">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </None>
-</ItemGroup> 
-```
-
-The file will be included with the NuGet package. You can verify by using NuGet Package Explorer.
 
 ### Use the Plug-in Registration tool
 
@@ -237,25 +217,6 @@ You can use [NuGet Package Explorer](https://www.microsoft.com/p/nuget-package-e
 
 If you have an assembly that is not distributed as a NuGet package, you can add it to your project as you normally do. In **Solution Explorer**, right-click **Dependencies** and choose **Add Assembly Reference...**. Select the assembly you want to add.
 
-#### Add a file resource with Power Platform Tools
-
-To include another file that will be available in the runtime for your plug-in.
-
-1. Add the file to your Visual Studio project.
-1. Set the **Copy to Output Directory** property of the file to **Copy if newer**.
-
-   :::image type="content" source="media/power-platform-add-strings.localized.json.png" alt-text="Set the Copy to Output Directory property of the file to Copy if newer":::
-
-If you unload the project file and view csproj file, you will find that an `ItemGroup` like following will be added by Visual Studio:
-
-```xml
-<ItemGroup>
-  <None Update="strings.localized.json">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </None>
-</ItemGroup> 
-```
-
 #### Deploy Plugin Packages for Power Platform Tools
 
 To deploy your plug-in package, in **Solution Explorer** right-click the plug-in project and select **Deploy** from the context menu.
@@ -345,7 +306,30 @@ More information:
 
 ## Known issues
 
-You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package.
+The following are known issues that should be resolved before dependent assemblies for plug-ins becomes generally available.
+
+### Asynchronous plug-in steps do not work
+
+If you use dependent assemblies for a plug-in registered for an asynchronous step an error with the message `Expected non-empty Guid.` will occur.
+
+### Plug-in profiler
+
+You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
+
+### Solution containing plugin package cannot include any steps using the plug-in
+
+When you prepare a solution that contains a plugin package, do not include any plug-in step registrations that use an assembly included in the plug-in package.
+
+The export of the solution will succeed, but you will not be able to import the solution. To test plug-ins that use a dependent assembly in a different environment, you must manually register the steps.
+
+### Users must be granted read access to plug-in package
+
+Any users without the System Administrator security role must be granted read access to the [PluginPackage table](reference/entities/pluginpackage.md).
+
+You can manually edit this for each security role following the steps here: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role). **Plugin Package** is located in the **Custom Entities** tab.
+
+:::image type="content" source="media/set-pluginpackage-read-access.png" alt-text="Setting plugin package read access.":::
+
 
 ### See also
 

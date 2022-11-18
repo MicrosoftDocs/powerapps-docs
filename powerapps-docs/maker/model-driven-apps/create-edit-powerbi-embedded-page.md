@@ -2,9 +2,8 @@
 title: "Create or edit a Power BI embedded system dashboard | MicrosoftDocs"
 description: Set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app.
 ms.custom: ""
-ms.date: 09/24/2020
+ms.date: 10/31/2022
 ms.reviewer: "matp"
-
 ms.topic: "how-to"
 ms.subservice: mda-maker
 ms.author: "aorth"
@@ -31,18 +30,27 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 
 1. Go to the **Solutions** area in <a href="https://make.powerapps.com">make.powerapps.com</a>, and then create or open an existing solution. 
 
-2. Select **New** > **Dashboards** > **Power BI embedded**.
+1. Select **New** > **Dashboards** > **Power BI embedded**.
 
-3. Enter the following information in the **New Power BI embedded** dialog that appears:
+1. If you have the Power BI Extensions (Preview) system solution installed, you can select a solution-aware Power BI report to be embedded in a system dashboard. You'll see the **Show reports in this environment only** option selected, and the dedicated environment Power BI workspace is pre-selected for you. 
+   > [!IMPORTANT]
+   > - This is a preview feature.
+   > - Admins can install the Power BI Extensions solution from the Power Platform admin center. More information: [Install an app in the environment view](/power-platform/admin/manage-apps#install-an-app-in-the-environment-view)
+
+   :::image type="content" source="media/create-edit-powerbi-embedded-page/pbi-dashboard1.png" alt-text="Show reports in this environment only option":::
+   
+   If you clear **Show reports in this environment only**, you can select a Power BI report or a Power BI dashboard from another workspace.
+   
+1. Enter the following information in the **New Power BI embedded** dialog that appears:
    - Enter a **Display name** for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
    - Select the type, either **Power BI report** or **Power BI dashboard**.
+   - Select **Use environment variable** if you want to replace a static workspace and report to use an environment variable from configuration. More information: [Environment variables overview](../data-platform/EnvironmentVariables.md)
    - Select a **Power BI workspace**.
    - Select a Power BI report or dashboard.
+     > [!div class="mx-imgBorder"] 
+     > ![New Dashboard Power BI embedded panel.](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-panel.png "New Dashboard Power BI embedded panel")
 
-    > [!div class="mx-imgBorder"] 
-    > ![New Dashboard Power BI embedded panel.](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-panel.png "New Dashboard Power BI embedded panel")
-
-4. Select **Save** to save and publish the system dashboard.
+1. Select **Save** to save and publish the system dashboard.
 
 ## Add a Power BI embedded page to a model-driven app
 

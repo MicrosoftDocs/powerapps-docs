@@ -16,6 +16,9 @@ contributors:
 
 # Update the Dynamics 365 instance for your portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You can use the Power Platform admin center to update the Dynamics 365 instance for your portal.
 
 > [!IMPORTANT]
