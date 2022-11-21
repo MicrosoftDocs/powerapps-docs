@@ -31,7 +31,7 @@ Canvas apps
 
 |Element|Description|
 |--|--|
-|[property-dependencies element](property-dependencies.md)|[!INCLUDE [property-dependencies-description](includes/property-dependencies-description.md)]|
+|[property-dependencies](property-dependencies.md)|[!INCLUDE [property-dependencies-description](includes/property-dependencies-description.md)]|
 
 ### Example
 
