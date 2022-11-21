@@ -29,7 +29,7 @@ Canvas apps
 
 |Element|Description|Occurrences|Available for|
 |--|--|--|-------|
-|[property-dependency ](property-dependency .md)|[!INCLUDE [property-dependency -description](includes/property-dependency-description.md)]|1 or more|Canvas apps |
+|[property-dependency](property-dependency.md)|[!INCLUDE [property-dependency-description](includes/property-dependency-description.md)]|1 or more|Canvas apps |
 
 ### Example
 
