@@ -2,7 +2,7 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 08/09/2022
+ms.date: 11/18/2022
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -43,7 +43,7 @@ App settings define important details about the app, like its title. You define 
     |**General** | **Icon** | Change the app icon by selecting **Select icon**, to browse and select an image web resource. This icon will be displayed on the preview tile of the app. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)|
     | **Advanced settings**   | **Unique name**  | Read-only property that displays the app unique name including the publisher prefix.  |
     | **Advanced settings**   | **Welcome page**   | This option allows a maker to select from the web resources available in your organization. The welcome pages created can contain information that's useful to users, such as links to videos, upgrade instructions, or getting started information. The welcome page is displayed when an app is opened. Users can select **Do not show this Welcome Screen next time** on the welcome page to disable the page so it doesn't appear the next time the app starts. Notice that the **Do not show this Welcome Screen next time** option is a user-level setting and can't be controlled by administrators or app makers. More information: [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md)  |
-    |**Advanced settings**  | **Primary mobile player**(preview)  | [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]<br />Determines which mobile player you want the model-driven app to be available from. By default, **Power Apps mobile** is selected. For example, if you want the model-driven app only available from the Dynamics 365 Sales mobile app, select **Dynamics 365 Sales**.<br /> - **Power Apps Mobile**. More information: [Use model-driven apps on Power Apps mobile](../../mobile/use-custom-model-driven-app-on-mobile.md) <br /> - **Dynamics 365 Sales**. More information: [Overview of Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) <br /> - **Field Service (Dynamics 365)**. More information: [Overview of the Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-power-app-overview) |
+    |**Advanced settings**  | **Primary mobile player**  | Determines which mobile player you want the model-driven app to be available from. By default, **Power Apps mobile** is selected. For example, if you want the model-driven app only available from the Dynamics 365 Sales mobile app, select **Dynamics 365 Sales**.<br><br> - **Power Apps Mobile**. More information: [Use model-driven apps on Power Apps mobile](../../mobile/use-custom-model-driven-app-on-mobile.md) <br /> - **Dynamics 365 Sales**. More information: [Overview of Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) <br /> - **Field Service (Dynamics 365)**. More information: [Overview of the Field Service (Dynamics 365) mobile app](/dynamics365/field-service/mobile-power-app-overview) |
 
 3. **Save** the app.  
 
@@ -57,9 +57,10 @@ Here are a few of the features available to app makers:
 
 - **Enable Power BI quick report visualizations on a table**. When enabled, lets app users view table data from a Power BI quick report. More information: [Visualize data in a view with Power BI service](../../user/visualize-in-power-bi.md)
 - **In app notifications**. When enabled, the app polls for new in-app notifications and displays them. More information: [Send in-app notifications within model-driven apps](../../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
+- **Lock tabs at the top of forms on mobile and tablets**. When enabled, tabs will remain visible at the top of a form while users scroll through the data on the form. More information: [Lock tabs at the top of forms](../../mobile/use-custom-model-driven-app-on-mobile.md#lock-tabs-at-the-top-of-forms)
+- **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction. More information: [Mobile commanding improvements](../../mobile/use-custom-model-driven-app-on-mobile.md#mobile-commanding-improvements)
 - **Offline setup from the app designer**. [Enable your app for offline use (preview)](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use-preview)
-- **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction.
-- **Table optimization for command bar**. When in enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets.
+- **Tablet optimization for command bar**. When in enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
 
 ## Known limitations
 

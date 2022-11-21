@@ -217,6 +217,8 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
+  - name: Use the learning hub
+    href: ./common/learn-hub.md 
   - name: Find it with unified search
     href: search.md
   - name: Get help from a virtual agent
@@ -1104,6 +1106,8 @@
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
     - name: Create a canvas app with deep link to a specific screen
       href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -2336,7 +2340,7 @@
         href: ./data-platform/data-platform-delete-entity.md
       - name: How to display custom icons
         href: ./data-platform/display-custom-icons-instead.md
-      - name: How to edit system table messages
+      - name: How to edit system table messages (preview)
         href: ./data-platform/edit-system-entity-messages.md
       - name: How to configure a table for feedback/ratings
         href: ./data-platform/configure-entity-feedback.md
@@ -2910,6 +2914,8 @@
   items:
     - name: What are cards?
       href: ../cards/overview.md
+    - name: Requirements for cards
+      href: ../cards/card-requirements.md
     - name: Design cards
       items: 
         - name: Card Designer overview
@@ -2932,6 +2938,8 @@
       href: ../cards/make-a-card/testing/debugging-cards.md
     - name: Send a card in Teams
       href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Manage cards
+      href: ../cards/manage-cards/manage-cards.md
     - name: Tutorials
       items:
         - name: Create a simple card
