@@ -16,7 +16,7 @@ search.audienceType:
   - enduser
 ---
 
-# Switch to a different tenant in Power Apps for Windows
+# Switch to a different tenant on mobile devices
 
 Users can now easily switch to a different tenant, without having to log out of Power Apps, when using Power Apps on mobile devices. Users can specify the tenant they want to work in on the user profile page.  This means that:
 
