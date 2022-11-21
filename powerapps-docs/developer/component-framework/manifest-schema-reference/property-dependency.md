@@ -23,19 +23,22 @@ Canvas apps
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|TODO|||||
-||||||
+|`input`||string|yes|Canvas apps|
+|`output`||string|yes|Canvas apps|
+|`required-for`||string|yes|Canvas apps|
 
 ## Parent Elements
 
 |Element|Description|
 |--|--|
-|TODO||
+|[property-dependencies element](property-dependencies.md)|[!INCLUDE [property-dependencies-description](includes/property-dependencies-description.md)]|
 
 ### Example
 
 ```XML
-TODO
+<property-dependencies>
+   <property-dependency input="Text" output="Photos" required-for="schema" />
+</property-dependencies>
 ```
 
 ### Related topics

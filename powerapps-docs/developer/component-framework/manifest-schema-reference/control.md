@@ -4,7 +4,7 @@ description: Defines the component's namespace, version and display information.
 ms.author: noazarur
 author: noazarur-microsoft
 manager: lwelicki
-ms.date: 05/27/2022
+ms.date: 11/21/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -47,6 +47,7 @@ Model-driven and canvas apps
 |[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|1|
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|0 or more|
+|[property-dependencies](property-dependencies.md)|[!INCLUDE [property-dependencies-description](includes/property-dependencies-description.md)]|0 or more|
 
 ## Example
 

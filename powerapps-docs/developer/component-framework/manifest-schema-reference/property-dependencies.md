@@ -3,7 +3,7 @@ title: property-dependencies Element | Microsoft Docs
 description: Defines a group of property-dependencies.
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 11/07/2022
+ms.date: 11/21/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -19,23 +19,24 @@ contributors:
 
 Canvas apps
 
-## Parameters
-
-|Name|Description|Type|Required|Available for|
-|--|--|--|--|-----|
-|TODO|||||
-||||||
-
 ## Parent Elements
 
 |Element|Description|
 |--|--|
-|TODO||
+|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
+
+## Child Elements
+
+|Element|Description|Occurrences|Available for|
+|--|--|--|-------|
+|[property-dependency ](property-dependency .md)|[!INCLUDE [property-dependency -description](includes/property-dependency-description.md)]|1 or more|Canvas apps |
 
 ### Example
 
 ```XML
-TODO
+<property-dependencies>
+   <property-dependency input="Text" output="Photos" required-for="schema" />
+</property-dependencies>
 ```
 
 ### Related topics
