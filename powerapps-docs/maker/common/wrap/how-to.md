@@ -1,11 +1,11 @@
 ﻿---
 title: Customize and build your mobile app
 description: Learn about how to use the wrap functionality to package one or more canvas apps into a native mobile app package.
-author: larryk78
+author: makolomi
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/31/2022
+ms.reviewer: mkaur
+ms.date: 11/21/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -13,7 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - makolomi
+  - mduelae
 ---
 
 # Customize and build your mobile app
@@ -89,8 +90,8 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 - **APIs my organization uses**
     - *Azure API Connections*
     - *PowerApps Service*
-    - *Power BI* (Optional, add only if your canvas app uses Power BI data)
-    - *Mobile Application Management* (Optional, add only if you intend to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
+    - *Power BI* (only required if your canvas app(s) use Power BI data)
+    - *Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
