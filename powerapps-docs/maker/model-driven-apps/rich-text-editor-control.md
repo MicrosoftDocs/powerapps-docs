@@ -1103,13 +1103,17 @@ The following table describes the different formatting features and functionalit
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 | | | | |
 
-
 ## Frequently asked questions
 
 Q: Why are typed characters slow to display?
 
 A. Large content size can cause latency. More information: [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 
+Q: Why can't I upload an image, and why does the image preview fail to load?
+
+A. If the image file name is long or contains many full-width characters, it may fail to upload or the preview might not be displayed. Try shortening the file name and then upload it again.
+
+   :::image type="content" source="media/rte-image-preview.png" alt-text="Image preview failure.":::
 
 ## Known issues
 
