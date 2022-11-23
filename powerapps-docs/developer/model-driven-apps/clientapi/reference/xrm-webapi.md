@@ -3,11 +3,9 @@ title: "Xrm.WebApi (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps."
 ms.author: jdaly
 author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+ms.date: 11/18/2022
 ms.reviewer: jdaly
-
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 
@@ -26,15 +24,16 @@ Provides properties and methods to use Web API to create and manage records and 
 
 ## Properties
 
-|Property | Description | 
-|----- |-----| 
+|Property | Description |
+|----- |-----|
 |[online](xrm-webapi/online.md)|[!INCLUDE[xrm-webapi/includes/online-description.md](xrm-webapi/includes/online-description.md)]|
 |[offline](xrm-webapi/offline.md)|[!INCLUDE[xrm-webapi/includes/offline-description.md](xrm-webapi/includes/offline-description.md)]|
 
 ## Methods
 With mobile offline configured, the source for these records will depend on the current client state.  In offline mode, the source is the offline data store.  In online mode, the source is the server.  If the client is offline-first (in preview), the methods in [online](xrm-webapi/online.md) can be used to access tables and records that are not part of the offline profile, as long as the client has network connectivity.
-|Method | Description | 
-|------ |-------------| 
+
+|Method | Description |
+|------ |-------------|
 |[createRecord](xrm-webapi/createRecord.md)|[!INCLUDE[xrm-webapi/includes/createRecord-description.md](xrm-webapi/includes/createRecord-description.md)]|
 |[deleteRecord](xrm-webapi/deleteRecord.md)|[!INCLUDE[xrm-webapi/includes/deleteRecord-description.md](xrm-webapi/includes/deleteRecord-description.md)]|
 |[retrieveRecord](xrm-webapi/retrieveRecord.md)|[!INCLUDE[xrm-webapi/includes/retrieveRecord-description.md](xrm-webapi/includes/retrieveRecord-description.md)]|
@@ -46,8 +45,7 @@ With mobile offline configured, the source for these records will depend on the 
 
 ### Related topics
 
-[Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)
-
+[Use the Microsoft Dataverse Web API](../../../data-platform/webapi/overview.md)<br />
 [Client API Xrm object](../clientapi-xrm.md)
 
 
