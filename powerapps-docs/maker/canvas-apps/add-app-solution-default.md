@@ -65,7 +65,7 @@ There are different entry points for creating cloud flows. The following table s
 | [Create a cloud flow from template in portal](/power-automate/get-started-logic-template) | Private Preview |
 | Create a cloud flow from Power Automate Management connector | Private Preview |
 | Create a cloud flow from PowerShell | Private Preview |
-| Create a cloud flow from Mobile App | Private Preview |
+| Create a cloud flow from Mobile App | No |
 | [Create a cloud flow from OneDrive](/power-automate/onedrive-business-launch-panel) | No |
 | [Create a cloud flow from SharePoint](https://support.microsoft.com/en-us/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No |
 | Create a cloud flow from other integration points, such as [the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | No | 
