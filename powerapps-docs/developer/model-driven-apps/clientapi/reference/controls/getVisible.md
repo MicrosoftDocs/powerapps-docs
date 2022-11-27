@@ -21,7 +21,7 @@ contributors:
 Returns a value that indicates whether the control is currently visible.
 
 > [!NOTE]
-> This applies only to the setting of the control and not to the tab or section that the control is within. This API will return true when the control is within a tab or section that is not visible.
+> `getVisible` only returns whether the control is configured to be visible. `getVisible` will return true when the control is within a section or tab that is hidden.
 
 ## Control types supported
 
