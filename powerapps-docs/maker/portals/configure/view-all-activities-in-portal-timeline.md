@@ -22,7 +22,7 @@ contributors:
 While working on a case or interacting with a customer, you might create an activity such as an appointment, an email, or a phone call. When you navigate to the Timeline in your support portal, you might not find this activity because by default all activities aren't displayed in portal Timeline. 
 
 > [!NOTE]
-> The ability to display both The ability to show both [notes](../configure-notes.md) and activities on the same form for a custom table is currently not supported with configuration.
+> The ability to display both [notes](../configure-notes.md) and activities on the same form for a custom table is currently not supported with configuration.
 
 To view all activities in a portal timeline: 
 
