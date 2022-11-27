@@ -65,7 +65,7 @@ To create a new project:
 1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
-    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
+    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field --run-npm-install
    ```
 
 1. The above command also runs the `npm install` command for you to setup the project build tools.
@@ -109,6 +109,14 @@ Make changes to the predefined manifest file, as shown here:
    - **display-name-key**: Display name of the property that is displayed on the UI.
    - **description-name-key**: Description of the property that is displayed on the UI. 
    - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type columns. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+      ```XML
+      <type-group name="numbers">
+         <type>Whole.None</type>
+         <type>Currency</type>
+         <type>FP</type>
+         <type>Decimal</type>
+      </type-group>
+      ```
    - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
    - **required**: Defines whether the property is required.
 
@@ -328,6 +336,23 @@ The component is compiled into the `out/controls/LinearInputControl` folder. The
 
    - bundle.js – Bundled component source code. 
    - ControlManifest.xml – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
+
+> [!NOTE]
+> eslint rules may impact your build, depending on how they have been configured. If you receive an error during build:
+> 
+> ```[Error] ESLint validation error```
+>
+> Check your eslint rules in .eslintrc.json and set linting rules to "warn". For example, if you receive the error:
+> 
+> ```error  'context' is defined but never used              no-unused-vars```
+> 
+> Then you would open .eslintrc.json and edit the rules to add a "warn" value for the rule "no-unused-vars":
+> ```json
+> "rules": {
+>   "no-unused-vars":["warn"]
+> }
+> ```
+> With the eslint rules updated, your control should build cleanly.
 
 ## Debugging your code component
 
