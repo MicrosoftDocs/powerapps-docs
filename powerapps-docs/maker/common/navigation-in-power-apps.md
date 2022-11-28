@@ -17,10 +17,7 @@ search.app:
 
 # How to navigate in Power Apps (preview)
 
-Finding what you need in  [Power Apps home page](https://make.powerapps.com) is much easier with the new navigation experience. 
-
-
-
+Finding what you need in the [Power Apps home page](https://make.powerapps.com) is easier with the new navigation experience. 
 
 > [!div class="mx-imgBorder"] 
-> ![How to use the learning hub.](media/learn/learn-hub.png "How to use the learning hub") 
+> ![Power Apps left navigation menu.](media/navigation/default-nav-1.png "Power Apps left navigation menu") 
