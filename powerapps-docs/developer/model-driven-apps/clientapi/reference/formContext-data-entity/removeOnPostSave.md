@@ -18,7 +18,7 @@ contributors:
 ---
 # removeOnPostSave (Client API reference)
 
-Removes the event handler from the [PostSave](../events/postsave.md) event.
+[!INCLUDE [removeonpostsave-description](includes/removeonpostsave-description.md)]
 
 ## Syntax
 
