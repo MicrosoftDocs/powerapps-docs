@@ -42,11 +42,11 @@ Canvas apps and cloud flows in a solution are defined in Dataverse and are more 
 
 ## Supported entry points for canvas apps
 
-There are different entry points that can be used to create canvas apps. Canvas apps that are created within solution by default using this feature require the use of some of these entry points. Hence, it becomes important to understand how this feature can be utilized. 
+There are different methods that can be used to create canvas apps. Canvas apps that are created within solution by default using this feature require the use of some of these entry points. Hence, it becomes important to understand how this feature can be utilized. 
 
 The following table summarizes which entry points benefit from canvas apps within solution by default.
 
-| Entry point | Available for canvas apps within a solution by default?  |
+| Method | Available for canvas apps within a solution by default?  |
 | - | - |
 | [Canvas apps from Dataverse](data-platform-create-app.md) | Yes |
 | Canvas apps from other data sources, such as [SharePoint](app-from-sharepoint.md), [Excel](get-started-create-from-data.md), [Azure Blob Storage](connections/connection-azure-blob-storage.md), and [others](connections-list.md#popular-connectors) | Yes |
