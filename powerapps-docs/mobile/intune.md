@@ -4,7 +4,7 @@ description: Manage mobile app with Microsoft Intune.
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 5/17/2022
+ms.date: 11/28/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
