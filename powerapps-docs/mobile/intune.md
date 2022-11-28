@@ -25,7 +25,7 @@ Mobile application management software enables IT administrators to apply and en
 Mobile application management is essential to organizations whose users use mobile app primarily because:
 
 1. Users frequently travel to multiple locations, and protecting sensitive company data is critical.
-2. Many organizations have a bring-your-own-device policy, meaning the mobile app needs management among many devices and apps for personal use.
+2. Many organizations have a bring-your-own-device policy, which means that the mobile app needs management among many devices and apps for personal use.
 
 With an Intune-enabled mobile app, IT administrators can:
 
