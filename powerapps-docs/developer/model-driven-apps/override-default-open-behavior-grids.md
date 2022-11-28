@@ -120,27 +120,37 @@ Create a custom button on the form where you want to change the default behavior
 1. Open the customization.xml file, copy the code below, replace the code inside the `RibbonDiffXml`:
 
      ```XML
-    <RibbonDiffXml>
-      <CustomActions>
-    <CustomAction Id="cr5c1.Mscrm.OpenRecordItem.CustomAction" Location="Mscrm.SubGrid.contact.MainTab.Management.Controls._children" Sequence="28">
-      <CommandUIDefinition>
-        <Button Alt="$LocLabels:Mscrm.OpenRecordItem.Alt" Command="Mscrm.OpenRecordItem" Id="Mscrm.OpenRecordItem" LabelText="$LocLabels:Mscrm.OpenRecordItem.LabelText" Sequence="28" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.OpenRecordItem.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.OpenRecordItem.ToolTipDescription" />
-      </CommandUIDefinition>
-    </CustomAction>
-    </CustomActions>
+   <RibbonDiffXml>
+     <CustomActions>
+       <CustomAction Id="cr5c1.Mscrm.OpenRecordItem.CustomAction"
+         Location="Mscrm.SubGrid.contact.MainTab.Management.Controls._children"
+         Sequence="28">
+         <CommandUIDefinition>
+           <Button Alt="$LocLabels:Mscrm.OpenRecordItem.Alt"
+             Command="Mscrm.OpenRecordItem"
+             Id="Mscrm.OpenRecordItem"
+             LabelText="$LocLabels:Mscrm.OpenRecordItem.LabelText"
+             Sequence="28"
+             TemplateAlias="o1"
+             ToolTipTitle="$LocLabels:Mscrm.OpenRecordItem.ToolTipTitle"
+             ToolTipDescription="$LocLabels:Mscrm.OpenRecordItem.ToolTipDescription" />
+         </CommandUIDefinition>
+       </CustomAction>
+     </CustomActions>
      <Templates>
-    <RibbonTemplates Id="Mscrm.Templates" />
-    </Templates>
-      <CommandDefinitions>
+       <RibbonTemplates Id="Mscrm.Templates" />
+     </Templates>
+     <CommandDefinitions>
        <CommandDefinition Id="Mscrm.OpenRecordItem">
-      <EnableRules />
-      <DisplayRules />
-      <Actions>
-        <JavaScriptFunction FunctionName="ChangeBehavior" Library="$webresource:cr5c1_samplescript" />
-      </Actions>
-      </CommandDefinition>
+         <EnableRules />
+         <DisplayRules />
+         <Actions>
+           <JavaScriptFunction FunctionName="ChangeBehavior"
+             Library="$webresource:cr5c1_samplescript" />
+         </Actions>
+       </CommandDefinition>
      </CommandDefinitions>
-      </RibbonDiffXml>
+   </RibbonDiffXml>
      ```
 
      > [!NOTE]

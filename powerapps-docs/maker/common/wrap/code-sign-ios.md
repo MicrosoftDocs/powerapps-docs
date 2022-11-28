@@ -116,6 +116,9 @@ To create a distribution certificate, create a new certificate signing request f
 
 ## Add all the devices where the iPA needs to be installed
 
+ > [!NOTE]
+ > This step is only necessary if you distributing to app to external users. It's not required if the app is only for internal users. 
+
 1. Sign in to your developer account at <https://developer.apple.com> by selecting the **Account** tab.
 
 1. Go to [Certificates, IDs & Profiles &gt; Devices](https://developer.apple.com/account/resources/devices/list).
@@ -168,13 +171,24 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
 
+1. If signing with enterprise certificate, open the **exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
+
+  > [!NOTE]
+  > Enterprise signing is not supported with Keyvault signing.
+
 1. Open terminal, and change directory to the unzipped folder.
 
 1. Enter `pwsh` to start PowerShell in the terminal.
 
 1. Run `./SignAndGenerateIPA.ps1` with the values for the "CodeSigningIdentity" and "ProvisioningProfilePath" parameters.
 
-    :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
+   > [!NOTE]
+   >  'CodeSigningIdentity' is the name of the certificate that was created at the Apple developer website. To look up the vaule for 'CodeSigningIdentity', right-click on the **.mobileprovision** file (this is the provisioning profile), then select **More Info**. Scroll down and select **Preview**. Your 'CodeSigningIdentity' value is stored in the the **Name** field under **Certificates** in the **.mobileprovision** file.
+
+ > [!TIP]
+> 'ProvisioningProfilePath' is the path to the provisioning profile file that you have downloaded from the Apple developer website in the previous step [**Create an iOS Provisioning Profile**](code-sign-ios.md#create-an-ios-provisioning-profile). For example, it could be located at /Users/username/Downloads/MyProvisioningProfile.mobileprovision on your computer.
+
+   :::image type="content" source="media/code-sign-ios/powershell.png" alt-text="Run PowerShell script.":::
 
 1. After the script finishes, you'll see an .ipa  file created. In this example, **com.single.wrap.ipa**.
 

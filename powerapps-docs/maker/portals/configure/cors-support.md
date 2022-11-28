@@ -1,25 +1,25 @@
 ---
-title: Setup HTTP headers in portals
-description: Learn how to setup HTTP headers in portals.
+title: Set up HTTP headers in portals
+description: Learn how to set up HTTP headers in portals.
 author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 11/11/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - sandhangitmsft
+    - nageshbhat-msft
 ---
 
-# Setup HTTP headers in portals
-
+# Set up HTTP headers in portals
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
-The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain. You can configure CORS support in Power Apps portals using the Portal Management app by adding and configuring the site settings.
+The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain. You can configure CORS support in Power Apps portals using the Portal Management app by adding and configuring the [site settings](configure-site-settings.md).
 
 The following site settings are used to configure CORS:
 
@@ -36,7 +36,12 @@ The following site settings are used to configure CORS:
 | HTTP/X-Frame-Options | X-Frame-Options | Indicates whether a browser should be allowed to render a page in a *\<frame\>*, *\<iframe\>*, *\<embed\>* or *\<object\>*.
 | HTTP/X-Content-Type-Options | X-Content-Type-Options | Disables MIME sniffing and forces browser to use the type given in *Content-Type*.
 
+## Frequently asked questions
+
+### Is it possible to add a **Cache-Control** in http response header?
+
+Cache-Control in http response header is added in all requests to the site, none of the Cache-Control directives are configurable. Cache-Control for anonymously accessible static files set to public. The **max-age** value is defaulted to 1 hour.
+
 For more information about how to configure site settings in portal, go to [Manage portal site settings](configure-site-settings.md#manage-portal-site-settings).
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
