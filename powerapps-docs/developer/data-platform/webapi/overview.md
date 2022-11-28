@@ -37,6 +37,8 @@ The Web API allows you to do all the same operations as the organization service
 Now that you have read an overview of the Web API, proceed to the [Get started with Dataverse Web API](get-started-dynamics-365-web-api-csharp.md) topic to learn how to write your first C# program in Visual Studio that uses the Web API.
 
 If you are a JavaScript developer and want to use the Web API in model-driven apps, navigate to [Client-side JavaScript using Web API in model-driven apps](get-started-web-api-client-side-javascript.md).
+
+To learn more about using the Dataverse Web API on cloud flows, see [Power Automate Web API](/power-automate/web-api) 
   
 ### Related Sections
 
