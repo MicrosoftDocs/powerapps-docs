@@ -17,7 +17,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Add canvas apps and cloud flows into Dataverse solution by default (preview)
+# Add canvas apps to solution by default (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
