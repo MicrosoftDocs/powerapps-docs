@@ -36,12 +36,17 @@ has the follwoing options:
 
 You can pin your most used pages in the navigation pane so you quickly access features that you use frequently. Links to other pages are availiable through the **More** link.
 
-When you sign in for the first time to the new navigation experience, you'll see a dialog box that helps you set up your left naviagtion pane. The system will automatically pin your most and recently used pages on the navigation pane. 
+When you sign in for the first time to the new navigation experience the system will automatically pin your most and recently used pages on the navigation pane. 
 
 > [!div class="mx-imgBorder"] 
 > ![First time sign in dialog box.](media/navigation/left-nav-dialog-2.png "First time signing in") 
 
 
-left-nav-dialog-1
+### Pin and unpin
 
-### Pin 
+To pin an page to the left navigation pane, select **More** and then choose the page that you want to pin.
+
+> [!div class="mx-imgBorder"] 
+> ![Pin an item.](media/navigation/pin-3.png "Pin an item") 
+
+
