@@ -44,9 +44,10 @@ When you sign in for the first time to the new navigation experience the system 
 
 ### Pin and unpin
 
-To pin an page to the left navigation pane, select **More** and then choose the page that you want to pin.
+To pin a page to the left navigation pane, select **More** and then choose the page that you want to pin.
 
 > [!div class="mx-imgBorder"] 
 > ![Pin an item.](media/navigation/pin-3.png "Pin an item") 
 
 
+To unpin a page, from the left navigation menu select **More** and for the page that you want to unpin select, **Unpin**.
