@@ -1,12 +1,11 @@
 ---
 title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
 description: Provides container for useful methods.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer

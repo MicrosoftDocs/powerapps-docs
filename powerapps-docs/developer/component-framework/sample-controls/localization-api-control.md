@@ -1,17 +1,24 @@
 ---
-title: " Localization API component| Microsoft Docs" 
+title: "Localization API component| Microsoft Docs" 
 description: "This sample showcases how localization is done for code components." 
-ms.author: jdaly
 author: noazarur-microsoft
-manager: kvivek
+ms.author: noazarur
 ms.date: 03/30/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Implementing localization API component
 
-This sample showcases how localization is done for code components. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
+This sample showcases how localization is done for code components. In this sample, we use the [Increment component](increment-control.md) to localize the text that is displayed on the increment button based on the user's selected language. 
 
 > [!NOTE]
 > Code component runtime localization is in Public Preview for Custom page and Canvas applications. More information: [Blog: Runtime localization support for Code components on Custom pages and Canvas apps](https://powerapps.microsoft.com/en-us/blog/runtime-localization-support-for-code-components-on-custom-pages-and-canvas-apps/). 
@@ -28,9 +35,9 @@ Model-driven and canvas apps
 
 You can download the complete sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LocalizationAPIControl).
 
-To localize an existing project, all you need to do is to create additional resource(resx) files, one each for a specific language as mentioned in the string web resources and include them as part of the control’s manifest file under the [resources](../reference/resources.md) node.  
+To localize an existing project, all you need to do is to create additional resource(resx) files, one each for a specific language as mentioned in the string web resources and include them as part of the control's manifest file under the [resources](../reference/resources.md) node.  
 
-Power Apps component framework identifies the user’s language and returns the strings from that language-specific resource file when you try to access the string using `context.resources.getString` method.
+Power Apps component framework identifies the user's language and returns the strings from that language-specific resource file when you try to access the string using `context.resources.getString` method.
 
 In this sample, two languages `Spanish` and `Finnish` with the language codes 3082 and 1035 respectively defined. We made a copy of the `Increment component` sample and renamed it to `Localization API`. All the corresponding files including the files in the subfolders are renamed accordingly.
 

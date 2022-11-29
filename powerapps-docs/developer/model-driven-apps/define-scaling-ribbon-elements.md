@@ -3,7 +3,6 @@ title: "Define scaling for ribbon elements (model-driven apps) | Microsoft Docs"
 description: "Learn about defining scaling for ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -22,7 +21,7 @@ contributors:
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-For application ribbons and updated form ribbons there is no scaling. Scaling only applies to forms for tables that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
+For application ribbons and updated form ribbons there is no scaling. Scaling only applies to forms for tables that weren't updated and list ribbons displayed using Dynamics 365 for Outlook.  
   
 The goal of the ribbon is to maintain visibility of relevant controls even when the horizontal size of the window changes. To achieve this, the UI definition allows you to control how controls in a group change size in response to changes in the size of the window. This is known as *scaling*.  
 
@@ -65,7 +64,7 @@ The following diagram shows how `MaxSize`, `Scale`, `Group`, `Layout` and `Overf
  Each `Scale` element in the `Scaling` element for a particular tab represents one scale step. Each `Scale` is applied sequentially by the order in which the `Scale` element appears. When reducing the horizontal space available for the ribbon, each scale element is applied in order from top down. When increasing the horizontal space available, from the smallest space the bottom scale element is in effect. Each of the available `Scale` elements are applied in order from the bottom to the top until all the `MaxSize` elements are in effect.  
   
 > [!NOTE]
-> The `Scale` element `Sequence` values aren’t used to determine the order in which scaling is applied. Scaling is applied by the relative order the `MaxSize` and `Scale` elements appear in the RibbonDiffXML. The `Sequence` value is important for both `MaxSize` and `Scale` elements because all the `MaxSize` elements must be grouped together above the `Scale` elements. When you add new `MaxSize` or `Scale` elements, be sure that you review the `Sequence` default value ranges assigned to all the `MaxSize` elements and the `Scale` elements. A common error is to assign `Sequence` values that could cause the ranges to overlap.  
+> The `Scale` element `Sequence` values aren't used to determine the order in which scaling is applied. Scaling is applied by the relative order the `MaxSize` and `Scale` elements appear in the RibbonDiffXML. The `Sequence` value is important for both `MaxSize` and `Scale` elements because all the `MaxSize` elements must be grouped together above the `Scale` elements. When you add new `MaxSize` or `Scale` elements, be sure that you review the `Sequence` default value ranges assigned to all the `MaxSize` elements and the `Scale` elements. A common error is to assign `Sequence` values that could cause the ranges to overlap.  
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   

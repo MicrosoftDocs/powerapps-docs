@@ -1,12 +1,11 @@
 ---
 title: "lookupObjects (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the lookupObjects method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
@@ -53,12 +52,12 @@ contributors:
 var lookupOptions = 
 {
   defaultEntityType: "account",
-	entityTypes: ["account"],
+   entityTypes: ["account"],
   allowMultiSelect: false,
-	defaultViewId:"0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10",
-	viewIds:["0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10","00000000-0000-0000-00AA-000010001003"],
-	searchText:"Allison",
-	filters: [{filterXml: "<filter type='or'><condition attribute='name' operator='like' value='A%' /></filter>",entityLogicalName: "account"}]
+   defaultViewId:"0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10",
+   viewIds:["0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10","00000000-0000-0000-00AA-000010001003"],
+   searchText:"Allison",
+   filters: [{filterXml: "<filter type='or'><condition attribute='name' operator='like' value='A%' /></filter>",entityLogicalName: "account"}]
 };
 
 // Get account records based on the lookup Options

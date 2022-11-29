@@ -3,7 +3,6 @@ title: "Form XML schema (model-driven apps) | Microsoft Docs" # Intent and produ
 description: "Learn about schema definition for form customizations." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -776,7 +775,7 @@ The following is the schema definition for form customizations for model-driven 
                           minOccurs="0"  
                           maxOccurs="1" />  
               <!--Web Resource related parameters. Included in this section since they   
-								can include Url, PassParameters etc-->  
+                        can include Url, PassParameters etc-->  
               <xs:element name="Height"  
                           type="xs:unsignedInt"  
                           minOccurs="0"  

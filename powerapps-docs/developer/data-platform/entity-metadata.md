@@ -1,19 +1,19 @@
 ---
 title: Table definitions in Microsoft Dataverse | Microsoft Docs
 description: Learn how to programmatically work with table definitions in Microsoft Dataverse.
-author: "mayadumesh" # GitHub ID
-manager: kvivek
-
+author: NHelgren
+ms.author: nhelgren
 ms.topic: article
 ms.date: 03/24/2021
 ms.subservice: dataverse-developer
-ms.author: jdaly
-ms.reviewer: phecke
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Table definitions in Microsoft Dataverse
@@ -141,7 +141,7 @@ For example, `PostComment`, `PostLike`, and `PostRole` are each children of the 
 
 ## Keys
 
-Each alternate key definition describes one or more columns in combination that will uniquely identify a table. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn’t support GUID unique identifier keys. You can define a single column value or combination of column values to uniquely identify a table. Adding an alternate key will enforce a uniqueness constraint on these columns. You will not be able to create or update another table record to have the same values.
+Each alternate key definition describes one or more columns in combination that will uniquely identify a table. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn't support GUID unique identifier keys. You can define a single column value or combination of column values to uniquely identify a table. Adding an alternate key will enforce a uniqueness constraint on these columns. You will not be able to create or update another table record to have the same values.
 
 More information: 
  - [Dataverse Customization Guide: Define alternate keys to reference Dataverse records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)

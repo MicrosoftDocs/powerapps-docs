@@ -1,12 +1,11 @@
 ---
 title: "Composite columns in model-driven apps in model-driven apps| MicrosoftDocs"
 description: "Some columns added to a form can represent multiple items of data. These composite columns behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly." 
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -16,7 +15,7 @@ search.app:
 contributors:
   - JimDaly
 ---
-# Composite columns 
+# Composite columns
 
 Some columns added to a form can represent multiple items of data. These *composite columns* behave differently from other columns when displayed in the web application and you must write scripts differently to use them properly.
 
@@ -293,7 +292,7 @@ For example, the **Address** column on a Contact form is a composite column. Sel
 
 ![An example of a composite column.](../../media/clientapi_compositeattribute.png "An example for composite column")
 
-Although not explicitly added to the form in the form editor, each of the columns that are part of the column are available to the form. Although you can read the value of the composite value using [getValue](attributes/getValue.md), you can’t use [setValue](attributes/setValue.md) to change the value of the composite column directly; you must set one or more of the columns referenced by the composite column.
+Although not explicitly added to the form in the form editor, each of the columns that are part of the column are available to the form. Although you can read the value of the composite value using [getValue](attributes/getValue.md), you can't use [setValue](attributes/setValue.md) to change the value of the composite column directly; you must set one or more of the columns referenced by the composite column.
 
 You can access the individual constituent controls displayed in the flyout by name. These controls use the following naming convention: \<**composite control name**>\_compositionLinkControl_\<**constituent column name**>. 
 

@@ -3,7 +3,7 @@ title: "Get started with model-driven apps customization using code | Microsoft 
 description: "You can customize model-driven apps by using tools that are available in Power Apps or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.subservice: mda-developer

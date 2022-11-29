@@ -1,12 +1,11 @@
 ---
 title: "control.getAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Returns the column that the control is bound to.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -20,7 +19,7 @@ contributors:
 
 Returns the column that the control is bound to.
 
-Controls that aren’t bound to a column (subgrid, web resource, and IFRAME) don’t have this method. An error will be thrown if you attempt to use this method on one of these controls. 
+Controls that aren't bound to a column (subgrid, web resource, and IFRAME) don't have this method. An error will be thrown if you attempt to use this method on one of these controls. 
 
 [!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
 

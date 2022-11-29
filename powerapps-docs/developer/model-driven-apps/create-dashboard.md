@@ -6,7 +6,6 @@ ms.topic: article
 author: mspilde # GitHub ID
 ms.subservice: mda-developer
 ms.author: mspilde # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
 ms.reviewer:
 search.audienceType:
   - developer
@@ -172,7 +171,7 @@ The customizations.xml file that is exported with an unmanaged solution contains
       <IsDefault>0</IsDefault>
       <FormXml>
          <forms type="dashboard">
-   *** Dashboard definition goes here. *** // See “Sample Dashboards” topic for the FormXML content to be used here.
+   *** Dashboard definition goes here. *** // See "Sample Dashboards" topic for the FormXML content to be used here.
          </forms>
       </FormXml>
    </Dashboard>

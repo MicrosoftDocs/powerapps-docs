@@ -3,7 +3,6 @@ title: "Define ribbon commands (model-driven apps) | Microsoft Docs" # Intent an
 description: "A Ribbon command creates a reusable definition that can be referenced by ribbon control elements." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -36,7 +35,7 @@ A *Ribbon* command creates a reusable definition that can be referenced by ribbo
 - **Actions**: Specifies what code executes when a ribbon control is used.  
   
 > [!IMPORTANT]
->  All command definitions are downloaded to a user's computer so that they can be evaluated at run time. This means that a user without the privileges to see a particular control in the ribbon can use the browser **View Source** command, review the code, and determine that a control exists that isn’t displayed to them.  
+>  All command definitions are downloaded to a user's computer so that they can be evaluated at run time. This means that a user without the privileges to see a particular control in the ribbon can use the browser **View Source** command, review the code, and determine that a control exists that isn't displayed to them.  
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   

@@ -1,12 +1,11 @@
 ---
 title: "getCurrentAppUrl (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getCurrentAppUrl method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer

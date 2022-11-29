@@ -5,7 +5,7 @@ Keywords: settings, settings environment value, settings app value, model-driven
 ms.subservice: dataverse-developer
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: how-to

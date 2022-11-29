@@ -6,6 +6,12 @@ author: jasongre
 ms.date: 07/25/2022
 ms.reviewer: jdaly
 ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 contributors:
  - JimDaly
  - aliry

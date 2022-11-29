@@ -1,13 +1,11 @@
 ---
 title: "Customize views (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about customizing the views." # 115-145 characters including spaces. This abstract displays in the search result."
-keywords: ""
+author: HemantGaur
+ms.author: hemantg
 ms.date: 04/01/2022
 ms.topic: article
-author: HemantGaur # GitHub ID
 ms.subservice: mda-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
   - developer

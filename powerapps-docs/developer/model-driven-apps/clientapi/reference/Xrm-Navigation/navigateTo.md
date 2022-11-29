@@ -1,12 +1,11 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the navigateTo method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
@@ -74,7 +73,7 @@ The relationship object, used in the [Entity record](#entity-record), contains t
 
 | Name | Type | Description |
 | --- | --- | --- |
-| attributeName	| String | Name of the column used for relationship. |
+| attributeName   | String | Name of the column used for relationship. |
 | name | String | Name of the relationship. |
 | navigationPropertyName | String | Name of the navigation property for this relationship. |
 | relationshipType | Number | Relationship type. Specify one of the following values: *0*:OneToMany, *1*:ManyToMany. |

@@ -8,7 +8,7 @@ ms.subservice: mda-developer
 ms.topic: article
 author: adrianorth
 ms.author: aorth 
-manager: lwelicki
+
 search.audienceType: 
   - maker
   - developer

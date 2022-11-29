@@ -1,12 +1,11 @@
 ---
 title: "attribute.getValue (Client API reference)| MicrosoftDocs"
 description: Retrieves the data value for a column.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 06/09/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 

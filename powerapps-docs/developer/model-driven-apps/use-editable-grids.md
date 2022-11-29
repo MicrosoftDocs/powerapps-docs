@@ -3,7 +3,7 @@ title: "Use editable grids in model-driven apps | Microsoft Docs" # Intent and p
 description: "Editable grid is a custom control that provides rich inline editing capabilities on web and mobile clients (Dynamics 365 for phones and Dynamics 365 for tablets) including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.author: hemantg
 author: HemantGaur
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

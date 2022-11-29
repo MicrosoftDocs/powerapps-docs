@@ -3,7 +3,7 @@ title: "When to edit customizations file (model-driven apps) | Microsoft Docs" #
 description: "This topic covers when to edit customizations file and different possible ways to do that" # 115-145 characters including spaces. This abstract displays in the search result.
 author: caburk
 ms.author: caburk
-manager: evlew
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

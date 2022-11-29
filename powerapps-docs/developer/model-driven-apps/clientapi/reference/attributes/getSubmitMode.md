@@ -1,12 +1,11 @@
 ---
 title: "getSubmitMode (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the getSubmitMode method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 

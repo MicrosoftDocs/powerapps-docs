@@ -3,7 +3,6 @@ title: "Define ribbon tab display rules (model-driven apps) | Microsoft Docs" # 
 description: "Learn about defining ribbon tab displays rules." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article

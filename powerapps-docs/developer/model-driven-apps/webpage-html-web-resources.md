@@ -3,7 +3,7 @@ title: "Webpage (HTML) Web Resources (model-driven apps) | Microsoft Docs" # Int
 description: "This topic covers how to implement HTML web resources and its capabilities and limitations" # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

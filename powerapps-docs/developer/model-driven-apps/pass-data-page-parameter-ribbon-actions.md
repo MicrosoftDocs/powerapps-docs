@@ -3,7 +3,7 @@ title: "Pass data from a page as a parameter to Ribbon actions (model-driven app
 description: "The topic describes options for using the <CrmParameter> element to retrieve these values. " # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"

@@ -1,12 +1,11 @@
 ---
 title: "Execution context (Client API reference)| MicrosoftDocs"
 description: Includes description and supported parameters for the executionContext method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "conceptual"
+ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"
 search.audienceType: 

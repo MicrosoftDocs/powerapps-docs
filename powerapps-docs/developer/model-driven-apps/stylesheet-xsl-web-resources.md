@@ -3,7 +3,7 @@ title: "Stylesheet (XSL) web resources  (model-driven apps) | Microsoft Docs" # 
 description: "Learn about using Stylesheet (XSL) Web resources to transform XML data." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
