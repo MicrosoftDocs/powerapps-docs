@@ -32,7 +32,7 @@ All of the sample in this article are based on the [Hospital Emergency Response 
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - Canvas component custom output properties can be used as an alternative to named formulas.  They are harder to use than named formulas, but are fully supported.  See below for more details.
 
-By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app.md#formulas-property).  For example:
+By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property).  For example:
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -194,8 +194,6 @@ To use the logic:
 1. Switch to the **Screens** tab in the **Tree view**.
 1. On the **Insert** pane on the left side of Studio, expand **Custom**, and insert your component.
 1. To calculate a value with the property, use *ComponentName.PropertyName*.
-
-By enabling [Enhanced component properties](https://powerapps.microsoft.com/en-us/blog/enhanced-component-properties/), an experimental feature at this time, output properties can also take parameters which can aid with splitting up logic.
 
 At this time, Canvas component custom output properties do not support imperative logic.
 
