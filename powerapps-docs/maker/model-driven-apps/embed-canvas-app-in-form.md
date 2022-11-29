@@ -52,7 +52,7 @@ Select the **Canvas app** control to add a canvas app to a main form using the f
 
 ## Embed using the classic designer
 
-Add canvas apps from an environment into a model-driven app that can either be contextually aware, or simply render the app within the model-driven experience. <br />[Learn how to add an embedded canvas app on a model-driven form - classic designer](embedded-canvas-app-add-classic-designer.md).
+Add canvas apps from an environment into a model-driven app that can either be contextually aware, or simply render the app within the model-driven experience. <br /> [Embed a canvas app using the classic experience](embedded-canvas-app-add-classic-designer.md#embed-a-canvas-app-using-the-classic-experience).
 
 ### Sharing embedded canvas apps
 
