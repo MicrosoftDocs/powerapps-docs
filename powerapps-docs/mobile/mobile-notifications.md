@@ -1,13 +1,13 @@
 ---
 title: Notifications in Power Apps mobile| Microsoft Docs
 description: How notifications work in Power Apps mobile
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 04/26/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
