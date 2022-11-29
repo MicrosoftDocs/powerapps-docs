@@ -218,7 +218,7 @@ btnAction_17.OnSelect =
     
         // Set the updates to static variables.
         Set(updatesFeedback,Patch(Defaults('App Feedbacks'), FormFeedback.Updates));
-        // Submit the first form. Subsequent actions can be found in the OnSuccess properties of each form.
+        // Submit the first form. Subsequent actions can be found in the OnSuccess.
         SubmitForm(FormFeedback);
         ,
     

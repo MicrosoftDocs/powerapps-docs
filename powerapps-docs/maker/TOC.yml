@@ -1245,7 +1245,7 @@
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
     - name: Build large apps
-      href: ./canvas-apps/working-with-data-sources.md      
+      href: ./canvas-apps/working-with-large-apps.md      
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
