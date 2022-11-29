@@ -222,7 +222,8 @@ btnAction_17.OnSelect =
         SubmitForm(FormFeedback);
         ,
     
-        Notify("Please complete all fields before proceeding",NotificationType.Warning,2000)
+        Notify("Please complete all fields before proceeding",
+               NotificationType.Warning,2000)
     );
 ```
 
@@ -241,11 +242,12 @@ btnSubmit.OnSelect =
     
         // Set the updates to static variables.
         Set(updatesFeedback,Patch(Defaults('App Feedbacks'), FormFeedback.Updates));
-        // Submit the first form. Subsequent actions can be found in the OnSuccess properties of each form.
+        // Submit the first form. Subsequent actions can be found in OnSuccess.
         SubmitForm(FormFeedback);
         ,
     
-        Notify("Please complete all fields before proceeding",NotificationType.Warning,2000)
+        Notify("Please complete all fields before proceeding",
+               NotificationType.Warning,2000)
     );
 
 btnAction_17.OnSelect = 
@@ -270,7 +272,8 @@ If(
     IsBlank(ThisItem.Screen),
     If(IsBlank(ThisItem.PowerAppID), 
         Launch(ThisItem.URL),           
-        Launch("/providers/Microsoft.PowerApps/apps/" & ThisItem.PowerAppID, "FacilityID", Home_Facility_DD.Selected.Id)
+        Launch("/providers/Microsoft.PowerApps/apps/" & ThisItem.PowerAppID, 
+               "FacilityID", Home_Facility_DD.Selected.Id)
     ),
     Navigate(
         ThisItem.Screen,
