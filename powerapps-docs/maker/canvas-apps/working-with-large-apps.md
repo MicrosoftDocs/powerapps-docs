@@ -121,7 +121,7 @@ Our studies has shown that nearly all apps with a long Studio load time have at 
 
 Making matters worse, copy and paste of a control will duplicate long formulas on the control's properties without it being realized.  Power Apps is modeled after Excel where multiple copies of a formula are common, but in Excel formulas are limited to one expression and are capped at 8,000 characters.  Power Apps formulas can grow much longer with the introduction of imperative logic and the chaining operator (`;` or `;;` depending on locale).
 
-The general solution is to split long formulas into smaller parts and to reuse those parts, as was done with the transition of **Set**/**Collect** in **App.OnStart** to named formulas in **App.Formulas** above.  In other programming languages, these parts are often referred to as subroutines or user defined functions.  Named formulas are a simple form of user defined functions without parameters and without side effects.
+The general solution is to split long formulas into smaller parts and to reuse those parts, as was done with the transition of **Set**/**Collect** in **App.OnStart** to named formulas in **App.Formulas** above.  In other programming languages, these parts are often referred to as subroutines or user defined functions.  Named formulas can be thought of as a simple form of user defined functions without parameters and without side effects.
 
 ### Use named formulas everywhere
 
