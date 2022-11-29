@@ -51,3 +51,18 @@ To pin a page to the left navigation pane, select **More** and then choose the p
 
 
 To unpin a page, from the left navigation menu select **More** and for the page that you want to unpin select, **Unpin**.
+
+### Move up or move down
+
+Once you pinned a few items you can also move them up or down them up or down the list. 
+
+To move an item up or down, select the more button next to the page that you want o move and then select **MOve up** or **Move down**.
+
+
+> [!div class="mx-imgBorder"] 
+> ![Move up or down.](media/navigation/move-up-down-4.png "Move up or down") 
+
+
+
+
+
