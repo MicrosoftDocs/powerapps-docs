@@ -1,6 +1,6 @@
 ---
-title: "How to use the learning hub | MicrosoftDocs"
-description: How to use the learning hub. 
+title: "How to use the learn hub | MicrosoftDocs"
+description: How to use the learn hub. 
 ms.custom: ""
 ms.date: 11/2/2022
 ms.reviewer: "mkaur"
