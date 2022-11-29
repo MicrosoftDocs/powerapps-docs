@@ -1,12 +1,11 @@
 ---
 title: "setNotification (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the setNotification method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -18,7 +17,7 @@ contributors:
 ---
 # setNotification (Client API reference)
 
-Displays an error message for the control to indicate that data isn’t valid. When this method is used,  a red "X" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message. 
+Displays an error message for the control to indicate that data isn't valid. When this method is used,  a red "X" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message. 
 
 ## Control types supported
 
