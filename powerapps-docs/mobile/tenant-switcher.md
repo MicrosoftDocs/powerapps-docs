@@ -5,7 +5,7 @@ author: sericks007
 ms.author: sericks
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 11/18/2022
+ms.date: 11/29/2022
 ms.custom: 
 
 
@@ -20,7 +20,7 @@ search.audienceType:
 
 Users can now easily switch to a different tenant, without having to log out of Power Apps, when using Power Apps on mobile devices. Users can specify the tenant they want to work in on the user profile page.  This means that:
 
-- Users no longer need to sign ou of Power Apps to switch tenants.
+- Users no longer need to sign out of Power Apps to switch tenants.
 - Users can now access shared apps from a list on the user profile page.
 
 The following image shows how you can select a different tenant from the list on the user profile page.
