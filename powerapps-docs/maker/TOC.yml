@@ -1675,6 +1675,8 @@
     href: ../mobile/power-apps-mobile-notification.md
   - name: Use deep links with Power Apps mobile
     href: ../mobile/mobile-deep-links.md
+  - name: Switch to a different tenant in Power Apps for Windows
+    href: ../mobile/tenant-switcher.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
   - name: Mobile offline
@@ -1707,8 +1709,6 @@
       href: ../mobile/windows-app-install.md
     - name: Use Power Apps for Windows 
       href: ../mobile/windows-app-use.md
-    - name: Switch to a different tenant in Power Apps for Windows
-      href: ../mobile/tenant-switcher.md
 - name: Portals
   items:
     - name: Portals
