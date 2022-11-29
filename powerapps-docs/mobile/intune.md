@@ -4,7 +4,7 @@ description: Manage mobile app with Microsoft Intune.
 author: mduelae
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 5/17/2022
+ms.date: 11/28/2022
 ms.subservice: mobile
 ms.author: mkaur
 ms.custom: ""
@@ -21,15 +21,15 @@ searchScope:
 
 # Manage your mobile app with Microsoft Intune
 
-Mobile application management is software that enables IT administrators to apply and enforce corporate policies on mobile apps. One mobile application management option for IT administrators is Microsoft Intune, which offers a suite of features that lets you publish, push, configure, secure, monitor, and update mobile apps - including Power Apps mobile, [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app), and [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide).
-Mobile application management is important to organizations whose users use mobile app primarily because:
+Mobile application management software enables IT administrators to apply and enforce corporate policies on mobile apps. One mobile application management option for IT administrators is Microsoft Intune, which offers a suite of features that lets you publish, push, configure, secure, monitor, and update mobile apps - including Power Apps mobile, [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app), and [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide).
+Mobile application management is essential to organizations whose users use mobile app primarily because:
 
 1. Users frequently travel to multiple locations, and protecting sensitive company data is critical.
-2. Many organizations have a bring-your-own-device policy, which means the mobile app needs management among many different kinds of devices and apps for personal use.
+2. Many organizations have a bring-your-own-device policy, which means that the mobile app needs management among many devices and apps for personal use.
 
 With an Intune-enabled mobile app, IT administrators can:
 
-- Add and assign the mobile app to user groups and devices, including users in specific groups, devices in specific groups, and more.
+- Add and assign the mobile app to user groups and devices, including users in specific groups, devices in particular groups, and more.
 - See reports and track app usage.
 - Limit sharing of corporate data among apps by restricting data leakage through cut, copy, paste, and save-as.
 - Provide encryption at rest.
