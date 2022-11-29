@@ -32,7 +32,7 @@ All of the sample in this article are based on the [Hospital Emergency Response 
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - Canvas component custom output properties can be used as an alternative to named formulas.  They are harder to use than named formulas, but are fully supported.  See below fore more details.
 
-By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with [Named formulas](https://learn.microsoft.com/power-platform/power-fx/reference/object-app#formulas-property).  For example:
+By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app.md#formulas-property).  For example:
 
 ```powerapps-dot
 // Get the color of text on a dark background.
