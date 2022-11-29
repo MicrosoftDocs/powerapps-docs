@@ -1,12 +1,12 @@
 ---
 title: Use deep links with Power Apps  mobile| Microsoft Docs
 description: How to configure deep links for Power Apps mobile.
-author: mduelae
+author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 5/20/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
