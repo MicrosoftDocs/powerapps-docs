@@ -15,9 +15,9 @@ search.app:
   - PowerApps
 ---
 
-# Use the learning hub
+# Use the learn hub
 
-With the learning hub, you can explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
+With the learn hub, you can explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 
 1. To access the learning hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane. 
 2. Select one of the tabs to access the information that you're looking for.
