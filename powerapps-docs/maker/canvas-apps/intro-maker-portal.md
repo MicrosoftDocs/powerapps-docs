@@ -36,9 +36,7 @@ has the follwoing options:
 
 You can pin your most used pages in the navigation pane so you quickly access features that you use frequently. Links to other pages are availiable through the **More** link.
 
-
-
-With the new navigation experience when you sign in for the first time, the system will automatically pin your most and recently used pages on the navigation pane. However, can customize the middle section of the left navigation pane to your preference. The **More** menu will also be the last item in the middle section.  
+With the new navigation experience when you sign in for the first time, the system will automatically pin your most and recently used pages on the navigation pane. You can also customize the middle section of the left navigation pane to your preference. The **More** menu will also be the last item in the middle section.  
 
 > [!div class="mx-imgBorder"] 
 > ![First time sign in dialog box.](media/navigation/left-nav-dialog-2.png "First time signing in") 
@@ -59,7 +57,6 @@ To unpin a page, from the left navigation menu select **More** and for the page 
 Once you pinned a few items you can also move them up or down them up or down the list. 
 
 To move an item up or down, select the more button next to the page that you want to move and then select **MOve up** or **Move down**.
-
 
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/navigation/move-up-down-4.png "Move up or down") 
