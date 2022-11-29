@@ -263,9 +263,11 @@ Also note that some logic splitting had already been done, as the comment mentio
 
 ## Partition the app
 
-Some apps grow to thousands of controls and hundred of data sources, and this volume of objects will slow down Studio.  
+Some apps grow to thousands of controls and hundred of data sources, and this volume of objects will slow down Studio.  As with long formulas, large apps can be split into smaller apps that work together as one user experience.  
 
-As with long formulas, large apps can be split into smaller apps that work together as one user experience.  The **Launch** function used to navigate between the smaller apps including any needed context.
+### Separate Canvas apps
+
+The **Launch** function used to navigate between the smaller apps including any needed context.
 
 This approach was used in the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  An app was created for each of the major area of the overall app, one each for staffing, equipment, supplies, etc.  A canvas component was created that was shared between the apps through a component library that served as a switchboard, that each app would initially display shown here in the section of the screen:
 
@@ -289,5 +291,9 @@ If(
 ```
 
 Note that any state in the original app will be lost when **Launch** to another app is done.  Be sure to save any state before performing the **Launch** and/or pass state to the target app with parameters that are read with the **Param** function.
+
+### Model driven apps with Custom pages
+
+Another way to partition a Canvas app is to split it into [Custom pages](../model-driven-apps/model-app-page-overview.md).  Custom pages each act as a mini Canvas app, with a model driven app for navigation.  Custom pages support strongly typed input parameters which can make passing state between custom pages easier and less error prone.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
