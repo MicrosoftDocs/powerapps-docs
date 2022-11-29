@@ -50,7 +50,7 @@ Find what you need with the new left navigation experience. If this is the first
 - **Power Platform**: Takes you to Power Platform admin centers.
 
 > [!div class="mx-imgBorder"]
-> ![Power Apps left navigation pane.](media/navigation/default-nav-1.png "Power Apps left navigation pane")
+> ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
 
 
 ### Pin and unpin
