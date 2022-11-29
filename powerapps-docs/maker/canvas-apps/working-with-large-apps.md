@@ -32,7 +32,7 @@ All of the sample in this article are based on the [Hospital Emergency Response 
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - Canvas component custom output properties can be used as an alternative to named formulas.  They are harder to use than named formulas, but are fully supported.  See below fore more details.
 
-By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with *Named formulas*.  For example:
+By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with [Named formulas](https://learn.microsoft.com/power-platform/power-fx/reference/object-app#formulas-property).  For example:
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -69,9 +69,9 @@ If(
 );
 ```
 
-As imperative logic, these **Set** and **Collect** calls must be evaluated, in order, before the first screen is displayed, which slows end user app load time.  This formula is also complex for Studio to analyze as the entire **App.OnStart** must be considered as a whole.
+As imperative logic, these **Set** and **Collect** calls must be evaluated, in order, before the first screen is displayed, which slows end user app load time.  This formula is also complex for Studio to analyze as the entire **App.OnStart** must be considered as a whole, order preserved, errors aggregated, final result returned.
 
-There is a better way.  Use **App.Formulas** instead of **App.OnStart** and define these variables and collections as named formulas instead:
+There is a better way.  Use **App.Formulas** instead of **App.OnStart** and define these variables and collections as named formulas:
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -105,11 +105,11 @@ ParamFacility =
     );
 ```
 
-This may seem like a small change, but it isn't.  **Each of these named formulas is completely independent and can be analyzed by Studio independently.**  Which effectively means we have split a large **App.OnStart** into smaller pieces.  This can make a huge difference for Studio app load time.
+This may seem like a small change, but it isn't.  **Each of these named formulas is completely independent and can be analyzed by Studio independently.**  Which effectively means we have split a large **App.OnStart** into smaller pieces.  This can make a huge difference for Studio app load time, in some cases we have seen Studio load time drop by 80% by making this one change.
 
-End user app load time has also improved because we don't need to evaluate these formulas until they are actually needed.  The first screen of the app is displayed immediately without waiting.
+End user app load time will also improve because we don't need to evaluate these formulas until they are actually needed.  The first screen of the app is displayed immediately without waiting.
 
-Note that named formulas are immutable.  You cannot use **Set** with them.  Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should be continue to be used.  But, more often than not, a global variable does not need to be changed and a named formula is a better alternative.
+Note that named formulas can't be used for all cases.  Named formulas are immutable and cannot be used with **Set**.  Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should be continue to be used.  But, more often than not, global variables are used in **OnStart** to setup static values that don't change, and in those cases a named formula is preferred.
 
 ## Split up long formulas
 
@@ -121,7 +121,7 @@ Making matters worse, copy and paste of a control will duplicate long formulas o
 
 The general solution is to split long formulas into smaller parts and to reuse those parts, as was done with the transition of **App.OnStart** to **App.Formulas** above.  In other programming languages, these parts are often referred to as subroutines or user defined functions.  
 
-### Use Named formulas everywhere
+### Use named formulas everywhere
 
 Named formulas were used above as a replacement for **App.OnStart**.  But they can be used anywhere in an app to replace a calculation.  For example, this logic appears in **App.OnVisible** for one of the sample screens:
 
@@ -172,7 +172,7 @@ MySplashSelectionsCollection =
     };
 ```
 
-A large formula has been split up, making Studio analysis much faster.
+A large formula has been split up, making Studio analysis much faster.  **ParamFacility** was extracted as a named formula earlier when we moved most of the **Set** calls from **App.OnStart** to named formulas in **App.Formulas**.
 
 ### Use Canvas components
 
@@ -195,9 +195,9 @@ To use the logic:
 
 At this time, Canvas component custom output properties do not support imperative logic.
 
-### Use Select with a hidden control
+### Use Select with a hidden control for imperative logic
 
-Named formulas are great, but at this time they cannot be used with imperative logic.
+Named formulas are great, but at this time they cannot be used with imperative logic.  Imperative logic is used to modify state with **Set** and **Collect**, notify the user with **Notify**, navigate to another screen or app with **Navigate** and **Launch**, and write back values to a database with **Patch**, **SubmitForm**, or **RemoveIf**.
 
 A common trick for splitting up imperative logic is to use the **OnSelect** property of a hidden control.  Here's how it works:
 1. Add a **Button** control to a screen.
@@ -255,9 +255,13 @@ btnAction_17.OnSelect =
     Select( btnSubmit );
 ```
 
-And just like that, we have split up imperative logic.  Note that the above technique only works on the same screen, but there are also techniques that work across screens, for example using the **Toggle** control and then the toggling of a bound variable.
+And just like that, we have split up imperative logic into smaller chunks.  Note that the above technique only works on the same screen, but there are also techniques that are slightly more complicated that work across screens. For example, using the **Toggle** control, setting **OnCheck** to the desired logic to run, setting **Default** to a global variables, and then toggling the global variable with `Set( global, true ); Set( global, false )` at the point you want to run the logic.
+
+Also note that some logic splitting had already been done, as the comment mentions that "Subsequent actions can be found in OnSuccess."  This event runs imperative logic after the record has been successfully submitted, a solution specific to the **SubmitForm** function.
 
 ## Partition the app
+
+Some apps grow to thousands of controls and hundred of data sources, and this volume of objects will slow down Studio.  
 
 As with long formulas, large apps can be split into smaller apps that work together as one user experience.  The **Launch** function used to navigate between the smaller apps including any needed context.
 
