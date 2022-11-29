@@ -20,8 +20,6 @@ search.app:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-> [!div class="mx-imgBorder"]
-> ![Power Apps left navigation pane.](media/navigation/default-nav-1.png "Power Apps left navigation pane")
 
 ## Left navigation pane (preview)
 
