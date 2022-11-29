@@ -485,7 +485,7 @@ The above piece of code returns a result with a schema like:
 }
 ```
 #### For mobile offline scenario
-Similarly to the online scenario, use the **$expand** system query option to retrieve data from related tables. For navigation properties based on one-to-many and many-to-one relationships, the result will have the same schema as in the online scenario. Many-to-many relationships are not supported.
+Similar to the online scenario, use the **$expand** system query option to retrieve data from related tables. For navigation properties based on one-to-many and many-to-one relationships, the result will have the same schema as in the online scenario. Many-to-many relationships are not supported.
 
 #### For mobile offline scenario (@odata.nextLink)
 Another option is the following multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
