@@ -23,4 +23,14 @@ search.app:
 
 # Open an app in Power Apps mobile by scanning a QR code
 
-Text goes here.
+Users can easily open a Power Apps canvas app on their mobile device by scanning a QR code, shown in [Power Apps](https://make.powerapps.com), from their desktop computer.  To do this, complete the following steps on your desktop computer.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+2. In the left pane, select **Apps**.
+3. Select the check mark icon next to the canvas app that you want to open on your mobile device.
+4. Select the **More Commands** (**...**) icon, and then select **Details**.
+5. A page showing the details of your canvas app is shown. With your mobile device, scan the QR code.
+
+  ![With your mobile device, scan the QR code.](media/QR-code.png "With your mobile device, scan the QR code.")
+
+
