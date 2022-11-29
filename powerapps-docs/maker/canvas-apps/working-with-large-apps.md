@@ -1,6 +1,6 @@
 ---
-title: Working with large apps
-description: Learn how to work with large and complex apps in Power Apps Studio.
+title: Build large apps
+description: Learn how to work efficiently with large and complex apps in Power Apps Studio.
 author: gregli-MSFT
 ms.topic: conceptual
 ms.custom: canvas
