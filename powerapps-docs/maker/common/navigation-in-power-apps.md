@@ -17,7 +17,10 @@ search.app:
 
 # How to navigate in Power Apps (preview)
 
-Finding what you need in the [Power Apps home page](https://make.powerapps.com) is easier with the new navigation experience. 
+Find what you need in the [Power Apps home page](https://make.powerapps.com) with the new navigation experience. By default, the left navigation pane includes Home, Create, Learn, Apps, More, and Power Platform menau items. 
+
+
+
 
 > [!div class="mx-imgBorder"] 
-> ![Power Apps left navigation menu.](media/navigation/default-nav-1.png "Power Apps left navigation menu") 
+> ![Power Apps left navigation pane.](media/navigation/default-nav-1.png "Power Apps left navigation pane") 
