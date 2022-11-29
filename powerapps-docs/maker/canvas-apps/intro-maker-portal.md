@@ -1,5 +1,5 @@
 ---
-title: "How to navigate the Power Apps home page| MicrosoftDocs"
+title: "Navigate the Power Apps home page| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
 ms.date: 11/28/2022
@@ -16,7 +16,7 @@ search.app:
 ---
 
 
-# How to navigate the Power Apps home page (preview)
+# Navigate the Power Apps home page (preview)
 
 Find what you need in the [Power Apps home page](https://make.powerapps.com) with the new navigation experience. The default menu on the left navigation pane has the following options:
 
