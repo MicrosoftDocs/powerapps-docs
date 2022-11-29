@@ -16,9 +16,16 @@ search.app:
 ---
 
 
-# Navigation pane on the Power Apps home page (preview)
+# Navigate the Power Apps home page (preview)
 
-Find what you need on the [Power Apps home page](https://make.powerapps.com) with the new navigation experience. The default menu on the left navigation pane has the following options:
+The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
+
+> [!div class="mx-imgBorder"]
+> ![Power Apps left navigation pane.](media/navigation/default-nav-1.png "Power Apps left navigation pane")
+
+## Left navigation pane (preview)
+
+Find what you need with the new left navigation experience. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the menu items:
 
 - **Home**: Takes you to the Power Apps home page.
 - **Create**: This is where you create apps.
@@ -30,7 +37,8 @@ Find what you need on the [Power Apps home page](https://make.powerapps.com) wit
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/navigation/default-nav-1.png "Power Apps left navigation pane")
 
-## Left navigation pane
+
+### Pin and unpin
 
 You can pin your most used pages in the navigation pane so you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item it appear in the middle section, aboce the **More** menu. 
 
@@ -38,8 +46,6 @@ When you sign in for the first with the new navigation, the system will automati
 
 > [!div class="mx-imgBorder"]
 > ![First time sign in dialog box.](media/navigation/left-nav-dialog-2.png "First time signing in")
-
-### Pin and unpin
 
 To pin a page to the left navigation pane, select **More** and then choose the page that you want to pin.
 
