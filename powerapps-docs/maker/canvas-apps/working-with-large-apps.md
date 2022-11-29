@@ -17,7 +17,7 @@ search.app:
 
 # Build large apps
 
-Most of the articles in this section cover the runtime performance of apps as experienced by end users.  For example, articles include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
+Most of the articles in this section of the docs cover the runtime performance of apps as experienced by end users.  For example, articles include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
 
 This article covers a different aspect of performance: the maker's experience.  As apps become large and complex, Power Apps Studio needs to load and manage a large number of controls, formulas, and data sources, with interdependencies that grow exponentially.  App load time for Studio can slow and features such as IntelliSense and color coding can lag.  
 
@@ -192,6 +192,8 @@ To use the logic:
 1. Switch to the **Screens** tab in the **Tree view**.
 1. On the **Insert** pane on the left side of Studio, expand **Custom**, and insert your component.
 1. To calculate a value with the property, use *ComponentName.PropertyName*.
+
+By enabling [Enhanced component properties](https://powerapps.microsoft.com/en-us/blog/enhanced-component-properties/), an experimental feature at this time, output properties can also take parameters which can aid with splitting up logic.
 
 At this time, Canvas component custom output properties do not support imperative logic.
 
