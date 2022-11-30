@@ -26,8 +26,8 @@ You can select options in these general areas:
 
 1. [Left navigation pane](#1--left-navigation-pane)
 2. [Search bar at the top](#2--search-bar)
-3. [Header on the top right of the page](#3--header-on-the-top-right-on-the-page)
-4. [Large icons that feature prominently in the middle of the page]()
+3. [Enviroment information and settings](#3--environment-information-and-settingse)
+4. [Build apps](#4--build-apps)
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
 > [!div class="mx-imgBorder"]
@@ -84,7 +84,7 @@ Use the **Search** to find apps, create app, or find help documentation.
 To find your app, start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
 
 
-## 3 – Header on the top right on the page
+## 3 – Environment information and settings
 
 View your environment information and settings.
 
@@ -122,6 +122,9 @@ In the header, select the question mark icon to find more information about eith
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
 You'll find link to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+
+
+## 4 – Build apps
 
 ## 5 – Ask a virtual agent
 
