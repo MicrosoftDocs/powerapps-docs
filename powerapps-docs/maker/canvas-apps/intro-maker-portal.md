@@ -80,7 +80,7 @@ To move an item up or down, select the more button next to the page that you wan
 
 ## 2 – Search 
 
-Use the **Search** to find apps, create app, or find help documentation. 
+Use the **Search** to find apps, create apps, or find help documentation. 
 
 To find your app, start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
 
