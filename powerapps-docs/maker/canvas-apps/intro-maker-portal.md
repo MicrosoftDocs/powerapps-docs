@@ -20,12 +20,13 @@ search.app:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-You can select options in four general areas:
+You can select options in five general areas:
 
 1. The left navigation pane. 
 2. The search bar.
 3. The header along the top of the page.
 4. The large icons that feature prominently in the middle of the page.
+5. Virtual agent
 
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
