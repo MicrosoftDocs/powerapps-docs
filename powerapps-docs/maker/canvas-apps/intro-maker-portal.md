@@ -18,6 +18,8 @@ search.app:
 
 # Get started with Power Apps (preview)
 
+[This article is prerelease documentation and is subject to change.]
+
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
 You can select options in these general areas:
@@ -31,7 +33,11 @@ You can select options in these general areas:
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
 
-## Left navigation pane (preview)
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+
+## Left navigation pane 
 
 Find what you need with the new left navigation experience. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
 
