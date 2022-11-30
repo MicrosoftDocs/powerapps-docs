@@ -3,7 +3,7 @@ title: "Sample charts (model-driven apps) | Microsoft Docs" # Intent and product
 description: "The topic contains sample charts along with the respective data description and presentation XML strings." # 115-145 characters including spaces. This abstract displays in the search result.
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
