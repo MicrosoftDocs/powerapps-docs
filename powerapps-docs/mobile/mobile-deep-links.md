@@ -38,6 +38,11 @@ Deep links for Power Apps mobile should start with the following:
 
 ```ms-apps://<org-url>_<app-id>?tenantId=<tenant-id>&isShortcut=true&appType=AppModule&openApp=true&restartApp=true&forceOfflineDataSync=true```
 
+Deep links for wrapped native mobile apps should start with the following:
+
+```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
+
+
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
 | &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps                                                                     |
