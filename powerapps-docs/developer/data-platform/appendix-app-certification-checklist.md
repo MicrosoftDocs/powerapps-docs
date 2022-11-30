@@ -2,9 +2,8 @@
 title: "Appendix: App certification checklist (PowerApps) | Microsoft Docs"
 description: "The app certification checklist provides you information about the checks that your model-driven, canvas apps and flows have to go through before it can be published on AppSource."
 ms.custom: ""
-ms.date: 03/20/2019
+ms.date: 11/29/2022
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "omarcdoc" 
 ms.subservice: dataverse-developer
@@ -87,8 +86,8 @@ The following checklist provides the list of validations performed by Microsoft 
 <li>Manually validate the code to see if the custom code is retrieving any customer data from target environment.</li>
 <li>Publisher can run code in their package as part of deployment.</li>
 <li>They can access anything that the deploying customer can access inside the Dataverse Instance that the deployment is occurring against.</li>
-<li>They can add Service Accounts to Dataverse, with a consent flow disclosing that the Service Account is being added , this generally requires <a href="/azure/architecture/guide/resilience/azure-ad-secure-single-page-application">Single Page Application</a>, and in case of 1st parties, the consent is automatic.</li>
-<li>Any service account added to the customers tenant should not be granted Maker, System Admin or System customizer.  They should have a custom security role providing least privilege access to what the account needs to do.</li>
+<li>They can add service accounts to Dataverse with a consent flow disclosing that the service account is being added. This generally requires <a href="/azure/architecture/guide/resilience/azure-ad-secure-single-page-application">Single Page Application</a>, and in case of first parties, the consent is automatic.</li>
+<li>Any service account added to the customers tenant should not be granted Maker, System Admin, or System customizer security roles. They should have a custom security role providing least privilege access to what the account needs to do.</li>
 </ul>
 </td>
 </tr>
