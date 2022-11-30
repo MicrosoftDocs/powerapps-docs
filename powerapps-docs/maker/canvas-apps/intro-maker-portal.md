@@ -132,7 +132,7 @@ You can accesss the following settings:
 - **Contact preferences**: Update your contact information.
 
 > [!div class="mx-imgBorder"]
-> ![Power Apps settings](media/intro-maker-portal/power-apps-setttings.png)
+> ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
 ## Help
 
