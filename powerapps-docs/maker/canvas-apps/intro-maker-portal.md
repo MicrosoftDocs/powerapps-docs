@@ -34,7 +34,7 @@ You can select options in four general areas:
 
 Find what you need with the new left navigation experience. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
 
-- **Home**: Takes you to the Power Apps home where you can create apps, websites, chatbots, and AI models. 
+- **Home**: Takes you to the Power Apps home page.
 - **Create**: This is where you create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 - **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 - **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
@@ -70,6 +70,9 @@ To move an item up or down, select the more button next to the page that you wan
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
 
+## Search
+
+The the **Search** to find apps, create app, or find help documentation. 
 
 ## Choose an environment
 
@@ -108,3 +111,26 @@ Environments where you have either system administrator and/or system customizer
 > - When you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
 
 For more information, see [Environments overview](/power-platform/admin/environments-overview).
+
+## Notifications
+
+When you have notification you will see them in the notication center. Notifications are stored in the notification center until you dismiss them or when they expire. 
+
+## Settings
+
+You can accesss the following settings:
+
+- **Admin center**: Opens another windows and go to your Power Platform admin center.
+- **Plans(s)**: View the your licenses.
+- **Advanced settings**:
+- **Session details**:
+- ** **:
+- ** **:
+- ** **:
+- ** **:
+- ** **:
+- ** **:
+
+
+> [!div class="mx-imgBorder"]
+> ![Power Apps settings](media/intro-maker-portal/power-apps-setttings.png)
