@@ -74,6 +74,8 @@ To move an item up or down, select the more button next to the page that you wan
 
 The the **Search** to find apps, create app, or find help documentation. 
 
+To find your app start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
+
 ## Choose an environment
 
 Whether you're creating an app, a flow, a data connection, or a table in Microsoft Dataverse, much of what you do in Power Apps is contained in a specific environment. Environments create boundaries between different types of work. For example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one. If you have the appropriate permissions, you might even be able to create your own environments.
@@ -121,7 +123,7 @@ When you have notification you will see them in the notication center. Notificat
 You can accesss the following settings:
 
 - **Admin center**: Opens another windows and go to your Power Platform admin center.
-- **Plans(s)**: View the your licenses.
+- **Plans(s)**: View the your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
 - **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](power-platform/admin/admin-settings#environment-settings-are-moving).
 - **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
 - **Developer resources**: Access developer resources.
