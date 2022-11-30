@@ -20,31 +20,22 @@ search.app:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-You can select options in three general areas:
+You can select options in four general areas:
 
-- The left navigation pane 
+1. The left navigation pane. 
+2. The search bar.
+3. The header along the top of the page.
+4. The large icons that feature prominently in the middle of the page.
 
-  > [!div class="mx-imgBorder"]
-  > ![Navigation bar.](media/intro-maker-portal/left-nav-0.png)
-    
-- The header along the top of the page
-
-  > [!div class="mx-imgBorder"]
-  > ![Header for environment selection.](media/intro-maker-portal/header.png)
-
-- The large icons that feature prominently in the middle of the page
-
-  > [!div class="mx-imgBorder"]
-  > ![Center area of the home page.](media/intro-maker-portal/center-area.png)
-
-For best results, start by ensuring that the home page is set to the right environment.
+> [!div class="mx-imgBorder"]
+> ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
 
 ## Left navigation pane (preview)
 
 Find what you need with the new left navigation experience. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
 
 - **Home**: Takes you to the Power Apps home where you can create apps, websites, chatbots, and AI models. 
-- **Create**: This is where you create apps.
+- **Create**: This is where you create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 - **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 - **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 - **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
@@ -86,7 +77,8 @@ Whether you're creating an app, a flow, a data connection, or a table in Microso
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
-![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
+> [!div class="mx-imgBorder"]
+> ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
 With the environment selector, environments are grouped into two categories:  **Build apps with Dataverse** and **Other environments**. Select **Filter** to filter the list of environments by your role, data platform (Dataverse or none), and environment type, such as production or sandbox.
 
