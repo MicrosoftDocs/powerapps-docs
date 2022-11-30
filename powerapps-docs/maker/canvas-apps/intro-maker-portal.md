@@ -20,13 +20,13 @@ search.app:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-You can select options in five general areas:
+You can select options in these general areas:
 
-1. The left navigation pane. 
-2. The search bar.
-3. The header along the top of the page.
-4. The large icons that feature prominently in the middle of the page.
-5. Virtual agent
+1. Left navigation pane
+2. Search bar at the top
+3. Header along the top of the page
+4. Large icons that feature prominently in the middle of the page.
+5. Get help from a virtual agent 
 
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
@@ -146,3 +146,6 @@ In the header, select the question mark icon to find more information about eith
 
 You'll find link to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
+## Ask a virtual agent
+
+Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)
