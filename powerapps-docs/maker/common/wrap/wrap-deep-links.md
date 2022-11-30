@@ -14,11 +14,11 @@ search.app:
   - PowerApps
 ---
 
-Deep links let users move from one application to another on computers and mobile devices. Simple examples include a mobile app deep-linking to Facebook to sign in, an email address deep-linking to a mail app to compose a message, or a website deep-linking to an app store to download a related mobile app.
+Deep links let users move from one application to another on computers and mobile devices. For example, a mobile app can deep link to Facebook to sign in. Deep linking an email address could open an email app to allow users to start composing a message. A website could use a deep link to an app store to start download for a specfic mobile app.
 
-# Creating deep links for wrapped mobile apps
+# Using deep links with wrapped mobile apps
 
-Deep links for wrapped native mobile apps should start with the following:
+You can deep link into a wrapped native mobile app from other apps. Deep links for wrapped mobile apps should start with the following:
 
 ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
 
@@ -26,4 +26,6 @@ Deep links for wrapped native mobile apps should start with the following:
 |----------------------|------------------------------------------------------------------------------|
 | &lt;app-id&gt;       | Opens the correct app module                                                 |
 | &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+
   
+ For information on how to deep link into other apps in Power Apps, refer to [Use deep links with Power Apps mobile](/mobile/mobile-deep-links.md).
