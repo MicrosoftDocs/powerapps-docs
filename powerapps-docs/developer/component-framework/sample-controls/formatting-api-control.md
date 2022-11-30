@@ -1,15 +1,19 @@
 ---
 title: Formatting API component | Microsoft Docs
 description: This sample component explores the various methods available as part of the Power Apps component framework formatting API.
-keywords:
-ms.author: jdaly
 author: noazarur-microsoft
-manager: kvivek
+ms.author: noazarur
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Implementing formatting API component
