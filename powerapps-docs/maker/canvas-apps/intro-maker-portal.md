@@ -28,7 +28,7 @@ You can select options in these general areas:
 2. [Search bar at the top](#2--search-bar)
 3. [Header on the top right of the page](#3--header-on-the-top-right-on-the-page)
 4. [Large icons that feature prominently in the middle of the page]()
-5. [Get help from a virtual agent])(#5--ask-a-virtual-agent) 
+5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
