@@ -18,13 +18,18 @@ contributors:
 
 # Use CreateMultiple and UpdateMultiple (Preview)
 
-Use the [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) and [UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) classes to create or update records in bulk much faster than any other method.
+The `CreateMultiple` and `UpdateMultiple` messages are unique because they are optimized for performance when performing the same operation on the same table. Use these messages to create records faster than any other method.
 
-The `CreateMultiple` and `UpdateMultiple` messages are unique because they are optimized for performance when performing the same operation on the same table. Performance is greatly improved because these messages apply all the operations in a single transaction rather than as separate operations on individual rows. This design also enables the opportunity to improve performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` and `Update` events.
+Performance is improved because these messages apply all the operations in a single transaction rather than as separate operations on individual rows. This design also enables the opportunity to improve performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` and `Update` events.
 
 ## CreateMultiple
 
+The [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) 
+
+
 ## UpdateMultiple
+
+[UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) 
 
 ## Plug-ins and other event handlers
 
