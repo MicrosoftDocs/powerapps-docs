@@ -1,6 +1,6 @@
 ---
-title: "How to use the learning hub | MicrosoftDocs"
-description: How to use the learning hub. 
+title: "How to use the learn hub | MicrosoftDocs"
+description: How to use the learn hub. 
 ms.custom: ""
 ms.date: 11/2/2022
 ms.reviewer: "mkaur"
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
 ---
 
-# Use the learning hub
+# Use the learn hub
 
-With the learning hub, you can explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
+With the learn hub, you can explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 
-1. To access the learning hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane. 
+1. To access the learn hub, go to the [Power Apps home page](https://make.powerapps.com) and select **Learn** on the left pane. 
 2. Select one of the tabs to access the information that you're looking for.
 3. Use the **Previous** and **Next** buttons to see more items. 
 
@@ -36,14 +36,14 @@ The banner at the top showcases the latest announcements, trending posts, and in
 
 ## Overview
 
-The **Overview** tab lists featured learning path and modules, posts from the community, help articles, and training videos on YouTube.
+The **Overview** tab lists featured training paths and modules, posts from the community, help articles, and training videos on YouTube.
 
 > [!div class="mx-imgBorder"] 
 > ![Overview tab.](media/learn/overview-tab.png "Overview tab") 
 
 ## Courses
 
-The **Courses** tab provides guided training such as learning path, modules, and training events.
+The **Courses** tab provides guided training such as training paths, modules, and training events.
 
 > [!div class="mx-imgBorder"] 
 > ![Courses tab.](media/learn/learn-courses.png "Courses tab") 
