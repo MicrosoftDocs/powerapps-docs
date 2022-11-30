@@ -122,15 +122,24 @@ You can accesss the following settings:
 
 - **Admin center**: Opens another windows and go to your Power Platform admin center.
 - **Plans(s)**: View the your licenses.
-- **Advanced settings**:
-- **Session details**:
-- ** **:
-- ** **:
-- ** **:
-- ** **:
-- ** **:
-- ** **:
-
+- **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](power-platform/admin/admin-settings#environment-settings-are-moving).
+- **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
+- **Developer resources**: Access developer resources.
+- **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
+- **DevTools**: Access DevToos.
+- **Themes**: From the list of themes select a theme for your organization.
+- **Password**: Change your password.
+- **Contact preferences**: Update your contact information.
 
 > [!div class="mx-imgBorder"]
 > ![Power Apps settings](media/intro-maker-portal/power-apps-setttings.png)
+
+## Help
+
+In the header, select the question mark icon to find more information about either canvas apps or model-driven apps.
+
+> [!div class="mx-imgBorder"]
+> ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
+
+You'll find link to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+
