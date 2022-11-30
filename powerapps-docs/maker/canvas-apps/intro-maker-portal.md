@@ -22,16 +22,15 @@ search.app:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-You can select options in these general areas:
-
-1. [Left navigation pane](#1--left-navigation-pane)
-2. [Search bar at the top](#2--search-bar)
-3. [Enviroment information and settings](#3--environment-information-and-settingse)
-4. [Build apps](#4--build-apps)
-5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
+
+1. [Left navigation pane](#1--left-navigation-pane)
+2. [Search bar at the top](#2--search-bar)
+3. [Enviroment information and settings](#3--environment-information-and-settings)
+4. [Build apps](#4--build-apps)
+5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -92,13 +91,19 @@ View your environment information and settings.
 
 For best results, start by ensuring that the home page is set to the right environment. More information [Sign in to Power Apps](sign-in.md).
 
+> [!div class="mx-imgBorder"] 
+> ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
+
 ### Notifications
 
-When you have notification you will see them in the notication center. Notifications are stored in the notification center until you dismiss them or when they expire. 
+Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire. 
 
 ### Settings
 
 Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
+
+> [!div class="mx-imgBorder"]
+> ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
 - **Admin center**: Opens another windows and go to your Power Platform admin center.
 - **Plans(s)**: View the your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
@@ -110,9 +115,6 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Themes**: From the list of themes select a theme for your organization.
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.
-
-> [!div class="mx-imgBorder"]
-> ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
 ### Help
 
