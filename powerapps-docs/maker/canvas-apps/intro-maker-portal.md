@@ -126,6 +126,25 @@ You'll find link to documentation, Power Apps training on Microsoft Learn, the P
 
 ## 4 – Build apps
 
+Start building apps which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes. 
+
+In Power Apps, you can create and run these types of apps:
+
+- **Canvas apps** support designing custom UI and connecting to data from various sources.
+- **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
+- **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
+
+In addition, Power Apps also allows you to create Power Pages website. More information: [What is Power Pages](/power-pages/introduction).
+
+If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
+
+From the **Home** page, you can create apps, websites, chatbots, and AI models:
+
+- [Get started with canvas apps](/powerapps/maker/canvas-apps/)
+- [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
+- [Get started with chatbots](/powerapps/chatbots)
+- [Get started with AI models](/powerapps/use-ai-builder)
+
 ## 5 – Ask a virtual agent
 
 Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)
