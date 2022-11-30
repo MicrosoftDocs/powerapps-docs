@@ -40,7 +40,7 @@ Find what you need with the new left navigation experience. If this is the first
 - **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 - **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 - **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
-- **Power Platform**: Takes you to Power Platform admin centers.
+- **Power Platform**: Links to the Power Platform admin center.
 
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
