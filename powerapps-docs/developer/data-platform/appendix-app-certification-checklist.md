@@ -85,9 +85,9 @@ The following checklist provides the list of validations performed by Microsoft 
 <li>Check any custom code provided inside Package Deployer. Validate the code before approving the app to AppSource.</li>
 <li>Manually validate the code to see if the custom code is retrieving any customer data from target environment.</li>
 <li>Publisher can run code in their package as part of deployment.</li>
-<li>They can access anything that the deploying customer can access inside the Dataverse instance that the deployment is occurring against.</li>
-<li>They can add service accounts to Dataverse with a consent flow disclosing that the service account is being added. This generally requires <a href="/azure/architecture/guide/resilience/azure-ad-secure-single-page-application">Single Page Application</a>, and in case of first parties, the consent is automatic.</li>
-<li>Any service account added to the customers tenant should not be granted Maker, System Admin, or System customizer security roles. They should have a custom security role providing least privilege access to what the account needs to do.</li>
+<li>Publisher can access anything that the deploying customer can access inside the Dataverse instance whwre the deployment is happening.</li>
+<li>Publisher can add service accounts to Dataverse with a consent flow disclosing that the service account is being added. This generally requires <a href="/azure/architecture/guide/resilience/azure-ad-secure-single-page-application">Single Page Application</a>, and in case of first parties, the consent is automatic.</li>
+<li>Any service account added to the customers tenant should not be granted Maker, System Admin, or System customizer security roles. Publisher should have a custom security role providing least privilege access to what the account needs to do.</li>
 </ul>
 </td>
 </tr>
