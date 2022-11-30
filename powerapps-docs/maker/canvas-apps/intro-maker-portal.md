@@ -29,18 +29,15 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 Legend:
 
 1. [Left navigation pane](#1--left-navigation-pane)
-2. [Search bar at the top](#2--search-bar)
+2. [Search](#2--search)
 3. [Enviroment information and settings](#3--environment-information-and-settings)
 4. [Build apps](#4--build-apps)
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ## 1 – Left navigation pane 
 
-Find what you need with the new left navigation experience. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
+Find what you need with the new left navigation pane. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
 
 - **Home**: Takes you to the Power Apps home page.
 - **Create**: This is where you create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
@@ -52,6 +49,9 @@ Find what you need with the new left navigation experience. If this is the first
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ### Pin and unpin
 
@@ -78,7 +78,7 @@ To move an item up or down, select the more button next to the page that you wan
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
 
-## 2 – Search bar
+## 2 – Search 
 
 Use the **Search** to find apps, create app, or find help documentation. 
 
