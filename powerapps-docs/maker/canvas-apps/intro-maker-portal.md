@@ -26,6 +26,8 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
 
+Legend:
+
 1. [Left navigation pane](#1--left-navigation-pane)
 2. [Search bar at the top](#2--search-bar)
 3. [Enviroment information and settings](#3--environment-information-and-settings)
