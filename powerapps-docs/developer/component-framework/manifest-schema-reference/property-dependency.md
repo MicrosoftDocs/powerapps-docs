@@ -3,7 +3,7 @@ title: property-dependency Element | Microsoft Docs
 description: A property dependency in the property-dependencies node. Defines dependency between two properties.
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 11/07/2022
+ms.date: 11/30/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -23,9 +23,9 @@ Canvas apps
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`input`||string|yes|Canvas apps|
-|`output`||string|yes|Canvas apps|
-|`required-for`||string|yes|Canvas apps|
+|`input`|The name of the input property.|string|yes|Canvas apps|
+|`output`|The name of the output property.|string|yes|Canvas apps|
+|`required-for`|Helps identify the property dependency requirement. Currently, the only supported value is `schema`. |string|yes|Canvas apps|
 
 ## Parent Elements
 
