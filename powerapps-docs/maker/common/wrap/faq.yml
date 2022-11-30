@@ -42,6 +42,11 @@ sections:
           How do I digitally sign my mobile app?
         answer: |
           Signing instructions are provided for [Android](code-sign-android.md) and [iOS](code-sign-ios.md).
+          
+       - question: |
+          Can I use Xcode to digitally sign my mobile apps for iOS?
+        answer: |
+          No. Signing your mobile app with Xcode is not supported in wrap. To dititally sign your wrapped mobile app package for iOS, refer to the instructions provided [here](code-sign-ios.md).
 
       - question: |
           How do I distribute my mobile app?
