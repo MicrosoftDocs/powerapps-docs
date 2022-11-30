@@ -1,5 +1,5 @@
 ---
-title: "Navigate the Power Apps home page| MicrosoftDocs"
+title: "Get started with Power Apps| MicrosoftDocs"
 description: How to navigate the Power Apps home page. 
 ms.custom: ""
 ms.date: 11/28/2022
@@ -16,7 +16,7 @@ search.app:
 ---
 
 
-# Navigate the Power Apps home page (preview)
+# Get started with Power Apps (preview)
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
