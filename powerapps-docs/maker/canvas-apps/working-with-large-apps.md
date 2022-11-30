@@ -1,6 +1,6 @@
 ---
-title: Build large apps
-description: Learn how to work efficiently with large and complex apps in Power Apps Studio.
+title: Build large and complex Canvas apps
+description: Learn how to work efficiently with large and complex Canvas apps in Power Apps Studio.
 author: gregli-MSFT
 ms.topic: conceptual
 ms.custom: canvas
@@ -15,7 +15,7 @@ search.app:
 
 ---
 
-# Build large apps
+# Build large and complex Canvas apps
 
 Most of the articles in this section of the docs cover the runtime performance of apps as experienced by end users.  For example, articles include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
 
@@ -174,7 +174,7 @@ MySplashSelectionsCollection =
     };
 ```
 
-A large formula has been split up, making Studio analysis much faster.  **ParamFacility** was extracted as a named formula earlier when we moved most of the **Set** calls from **App.OnStart** to named formulas in **App.Formulas**.
+A large formula has been split up, making Studio analysis faster.  **ParamFacility** was extracted as a named formula earlier when we moved most of the **Set** calls from **App.OnStart** to named formulas in **App.Formulas**.
 
 ### Use Canvas components
 
