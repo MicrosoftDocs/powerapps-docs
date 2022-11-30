@@ -24,11 +24,11 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 
 You can select options in these general areas:
 
-1. Left navigation pane
-2. Search bar at the top
-3. Header along the top of the page
-4. Large icons that feature prominently in the middle of the page.
-5. Get help from a virtual agent 
+1. [Left navigation pane](#1--left-navigation-pane)
+2. [Search bar at the top](#2--search-bar)
+3. [Header on the top right of the page](#3--header-on-the-top-right-on-the-page)
+4. [Large icons that feature prominently in the middle of the page]()
+5. [Get help from a virtual agent])(#5--ask-a-virtual-agent) 
 
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
@@ -37,7 +37,7 @@ You can select options in these general areas:
 > - This is a preview feature.
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Left navigation pane 
+## 1 – Left navigation pane 
 
 Find what you need with the new left navigation experience. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
 
@@ -77,23 +77,28 @@ To move an item up or down, select the more button next to the page that you wan
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
 
-## Search
+## 2 – Search bar
 
 Use the **Search** to find apps, create app, or find help documentation. 
 
 To find your app, start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
 
-## Choose an environment
 
-For best results, start by ensuring that the home page is set to the right environment. More information []().
+## 3 – Header on the top right on the page
 
-## Notifications
+View your environment information and settings.
+
+### Choose an environment
+
+For best results, start by ensuring that the home page is set to the right environment. More information [Sign in to Power Apps](sign-in.md).
+
+### Notifications
 
 When you have notification you will see them in the notication center. Notifications are stored in the notification center until you dismiss them or when they expire. 
 
-## Settings
+### Settings
 
-You can accesss the following settings:
+Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
 
 - **Admin center**: Opens another windows and go to your Power Platform admin center.
 - **Plans(s)**: View the your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
@@ -109,7 +114,7 @@ You can accesss the following settings:
 > [!div class="mx-imgBorder"]
 > ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
-## Help
+### Help
 
 In the header, select the question mark icon to find more information about either canvas apps or model-driven apps.
 
@@ -118,6 +123,6 @@ In the header, select the question mark icon to find more information about eith
 
 You'll find link to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
-## Ask a virtual agent
+## 5 – Ask a virtual agent
 
 Get contextual help while building your app using the Power Platform virtual agent. More information: [Get help building your app from a virtual agent](/power-apps/maker/common/virtual-agent)
