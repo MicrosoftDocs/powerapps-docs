@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/21/2022
+ms.date: 11/15/2022
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -97,7 +97,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| \*.dynamics.com | https | Microsoft Dataverse |
+| https://*.crm#.dynamics.com and http://*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://*.crm#.dynamics.com and https://*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
@@ -135,7 +135,7 @@ The following table shows some of the examples where embedding a canvas app isn'
 | A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
 | A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
 | A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A canvas app that is added to a SharePoint site | <ul> <li> SharePoint mobile </li></ul> |
+| A SharePoint page | <ul> <li> SharePoint mobile </li></ul> |
 
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.

@@ -2,14 +2,19 @@
 title: DataSet Grid component for canvas apps | Microsoft Docs
 description: This sample shows how to create a dataset component for canvas apps. The dataset component also showcases how to use the dataset API methods to get column metadata, record data, page through data, and handle navigation.
 keywords:
-ms.author: jdaly
 author: noazarur-microsoft
-manager: kvivek
+ms.author: noazarur
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Implementing dataset component for canvas apps
@@ -34,7 +39,7 @@ You can download the complete sample component from [here](https://github.com/mi
 > Some of the dataset API methods are still not supported in canvas apps. See, [individual API documentation](../reference/index.md) for availability details.
 > See, [Dataset component for model-driven apps](data-set-grid-control.md) to learn more about how dataset type components are implemented in model-driven apps.
 
-In this sample, the column information is extracted using the  `context.parameters.[dataset_property_name].columns`. It’s an array type. The ways to access them are the same for both canvas and model-driven apps.
+In this sample, the column information is extracted using the  `context.parameters.[dataset_property_name].columns`. It's an array type. The ways to access them are the same for both canvas and model-driven apps.
 
 You can define multiple datasets in the manifest. The first dataset in the manifest is as the primary dataset. When configuring the multi dataset component, the primary dataset property always has name `Items`. All non-primary dataset properties will have a `_Items` suffix after the dataset name. 
 
@@ -70,7 +75,7 @@ In this preview for canvas apps, only a limited set of [filtering](../reference/
 
 **View**
 
-In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It’s up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Microsoft Dataverse as a source. Selecting a view applies the view’s filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
+In model-driven apps, views are required for dataset components to get the column's information. In canvas apps, views are used as a filter. It's up to the app maker to decide which columns to be added for each of the component. A view can be selected after a source is selected for the dataset component. This is applicable only when you choose Microsoft Dataverse as a source. Selecting a view applies the view's filter to the source. The view name and view id can be retrieved using the `context.parameters.[dataset_property_name].getTitle()` and `context.parameters.[dataset_property_name].getViewId()` methods.
 
 ### Related topics
 

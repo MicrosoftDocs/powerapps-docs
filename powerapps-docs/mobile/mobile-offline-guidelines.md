@@ -1,14 +1,14 @@
 ---
 title: Offline profile guidelines
 description: Guidance for optimizing offline profiles for model-driven apps.
-author: trdehove
+author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 07/08/2022
 ms.subservice: mobile
-ms.author: trdehove
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: mkaur
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
