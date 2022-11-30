@@ -19,4 +19,11 @@ Deep links let users move from one application to another on computers and mobil
 # Creating deep links for wrapped mobile apps
 
 Deep links for wrapped native mobile apps should start with the following:
-*ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>*
+
+```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
+
+| **Parameter**        | **Description**                                                              |
+|----------------------|------------------------------------------------------------------------------|
+| &lt;app-id&gt;       | Opens the correct app module                                                 |
+| &lt;tenantId&gt;     | Connects to the correct tenant                                               |
+  
