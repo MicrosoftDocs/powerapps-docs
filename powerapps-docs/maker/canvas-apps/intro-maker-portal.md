@@ -104,9 +104,6 @@ Select the bell icon to see notifications. Notifications are stored in the notif
 
 Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
 
-> [!div class="mx-imgBorder"]
-> ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
-
 - **Admin center**: Opens another windows and go to your Power Platform admin center.
 - **Plans(s)**: View the your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
 - **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](power-platform/admin/admin-settings#environment-settings-are-moving).
@@ -117,6 +114,9 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Themes**: From the list of themes select a theme for your organization.
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.
+
+> [!div class="mx-imgBorder"]
+> ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
 ### Help
 
