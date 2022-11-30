@@ -20,6 +20,9 @@ contributors:
 
 In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
+ > [!Important]
+ > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
+
 ## Prerequisites
 
 You'll need the following information to get started:
