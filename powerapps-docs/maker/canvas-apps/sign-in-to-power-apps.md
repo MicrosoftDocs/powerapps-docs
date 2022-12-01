@@ -1,5 +1,5 @@
 ---
-title: Sign in to Power Apps for the first time
+title: Sign in to Power Apps
 description: Learn about signing in to Power Apps for the first time, choosing an environment, creating an app, playing or editing an app, and other common tasks.
 author: alaug
 ms.topic: conceptual
@@ -17,7 +17,7 @@ contributors:
   - alaug
   - Mattp123
 ---
-# Sign in to Power Apps for the first time
+# Sign in to Power Apps 
 
 When you sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
