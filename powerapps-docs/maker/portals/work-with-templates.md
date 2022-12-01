@@ -25,9 +25,6 @@ The built-in templates are available according to the portal you provision. You 
 - Page with title
 - Page with child links
 
-> [!NOTE] 
-> You can also work with templates in Power Pages. More information: [What is Power Pages](/power-pages/introduction)
-
 > [!IMPORTANT]
 > It is recommended not to edit **Default studio template**, **Profile**, and **Search** templates.
 
