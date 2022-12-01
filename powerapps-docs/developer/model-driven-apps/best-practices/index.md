@@ -1,18 +1,9 @@
 ---
 title: "Developers: Best practices and guidance for model-driven apps | Microsoft Docs"
 description: Best practices and guidance for developers of model-driven apps in Power Apps.
-services: ''
 suite: powerapps
-documentationcenter: na
 author: jowells
-manager: austinj
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 04/14/2021
 ms.subservice: mda-developer
 ms.author: jowells
