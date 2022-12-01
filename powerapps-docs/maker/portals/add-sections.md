@@ -35,27 +35,27 @@ To add sections:
 
 1. In the properties pane on the right side of the screen, enter or select the following information:
 
-       - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
+    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
 
         > [!div class=mx-imgBorder]
         > ![Min Height.](media/section-props-height.png "Min Height")  
 
-        - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
+    - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
 
         > [!div class=mx-imgBorder]
         > ![Alignment in the section.](media/section-props-align.png "Alignment in the section")  
 
-        - **Background**: Select if you'd like to have color or an image as the section background.
+    - **Background**: Select if you'd like to have color or an image as the section background.
 
-        - **Fill**: Select a color for the background.
+    - **Fill**: Select a color for the background.
 
-            > [!div class=mx-imgBorder]
-            > ![Fill color in the section.](media/section-props-fill.png "Fill color in the section")  
+        > [!div class=mx-imgBorder]
+        > ![Fill color in the section.](media/section-props-fill.png "Fill color in the section")  
 
-        - **Image**: Select an image from the list. If you would like to upload a new image, select **Upload image**.
+    - **Image**: Select an image from the list. If you would like to upload a new image, select **Upload image**.
 
-            > [!div class=mx-imgBorder]
-            > ![Add image in the section.](media/section-props-image.png "Add image in the section")  
+        > [!div class=mx-imgBorder]
+        > ![Add image in the section.](media/section-props-image.png "Add image in the section")  
 
 1. Add the required portal component in the section.
 
