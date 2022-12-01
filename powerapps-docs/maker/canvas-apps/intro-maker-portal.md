@@ -114,8 +114,8 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.
 
-> [!div class="mx-imgBorder"]
-> ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
+  > [!div class="mx-imgBorder"]
+  > ![Power Apps settings](media/intro-maker-portal/power-apps-settings.png)
 
 ### Help
 
