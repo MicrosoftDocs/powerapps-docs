@@ -18,8 +18,6 @@ search.app:
 
 # Get started with Power Apps 
 
-[This article is prerelease documentation and is subject to change.]
-
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
 
@@ -35,7 +33,7 @@ Legend:
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
 
-## 1 – Left navigation pane (preview)
+## 1 – Left navigation pane 
 
 Find what you need with the new left navigation pane. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
 
