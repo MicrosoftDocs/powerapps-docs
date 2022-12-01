@@ -5,13 +5,14 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 09/13/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Power Apps portals Studio
