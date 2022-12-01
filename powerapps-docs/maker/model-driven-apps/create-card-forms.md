@@ -47,7 +47,7 @@ Although card forms can be created and edited in the same way as other form type
 ## Add a card form to a view
 
 > [!IMPORTANT]
-> To add a custom card form to a view requires the deprecated **Read-only Grid** control. The **Read-only Grid** has been deprecated so it is no longer the default grid control for tables in Dataverse. However, while the control remains available you can select it for a table to use to create a card form view.
+> To add a custom card form to a view requires the deprecated **Read-only Grid** control. The **Read-only Grid** has been deprecated so it is no longer the default grid control for tables in Dataverse. However, while the control remains available you can select it for a table to use to create a card form view. More information: [Configure a grid control for a table](additional-controls-for-dynamics-365-for-phones-and-tablets.md#configure-a-grid-control-for-a-table)
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Expand **Data**, select the table you want, and then select the **Views** area.
