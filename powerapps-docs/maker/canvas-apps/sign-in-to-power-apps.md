@@ -21,7 +21,8 @@ contributors:
 
 To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com).
 
-![Power Apps sign in.](media/intro-maker-portal/power-apps-signin.png)
+> [!div class="mx-imgBorder"] 
+> ![Power Apps sign in.](media/intro-maker-portal/power-apps-signin.png)
 
 ## Choose an environment
 
@@ -29,7 +30,8 @@ Whether you're creating an app, a flow, a data connection, or a table in Microso
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
-![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
+> [!div class="mx-imgBorder"] 
+> ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
 With the environment selector, environments are grouped into two categories:  **Build apps with Dataverse** and **Other environments**. Select **Filter** to filter the list of environments by your role, data platform (Dataverse or none), and environment type, such as production or sandbox.
 
