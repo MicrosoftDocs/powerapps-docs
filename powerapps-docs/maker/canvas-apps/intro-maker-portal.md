@@ -49,13 +49,10 @@ Find what you need with the new left navigation pane. If this is the first time 
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 ### Pin and unpin
 
-Pin your most used pages in the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
+Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
 
 When you sign in to the new navigation experience, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference. 
 
