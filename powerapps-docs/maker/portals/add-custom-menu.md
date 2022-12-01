@@ -1,21 +1,21 @@
 ---
 title: Add custom menu
-description: Learn about how to add custom menu component to a Power Apps portals page using portals Studio.
+description: Learn how to add custom menu component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add custom menu
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
