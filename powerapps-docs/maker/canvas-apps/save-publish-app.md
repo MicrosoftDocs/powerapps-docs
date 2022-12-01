@@ -24,8 +24,6 @@ Whenever you save changes to a canvas app, you automatically publish them only f
 
 For information about how to share an app, see [Share an app](share-app.md).
 
-## Save changes to an app
-
  With your app open for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select **Save** and perform the following actions:
 
 - **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
@@ -43,14 +41,6 @@ Power Apps can also periodically save the app every 2 minutes. If you've saved t
 
 ![Auto save setting.](./media/save-publish-app/autosave.png)
 
-## Publish an app
-
-1. In Power Apps Studio, select **Save** on the **File** menu (on the left edge), and then select **Publish**.
-
-    ![Publish app.](./media/save-publish-app/publish-app.png)
-2. In the **Publish** dialog box, select **Publish this version** to publish the app to all users with whom the app is shared.
-
-   ![Review Publish.](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
    > - Whenever you publish a canvas app, your app will be upgraded to run on the latest version of Power Apps – which means it will get the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
