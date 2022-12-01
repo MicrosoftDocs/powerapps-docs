@@ -1,13 +1,13 @@
 ---
 title: Set up push notification for the Power Apps mobile app| Microsoft Docs
 description: Learn how to send push notifications for Power Apps mobile.
-author: anuitz
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 1/24/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
