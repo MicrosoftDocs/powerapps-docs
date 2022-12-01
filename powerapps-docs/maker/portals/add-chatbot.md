@@ -85,7 +85,7 @@ After changing the web template, ensure you select **Sync configuration** to upd
 > [!NOTE]
 > Any changes to the Power Virtual Agents web template other than the parameters explained above are not supported.
 
-## Other considerations
+## Additional considerations
 
 Consider the following when using a Power Virtual Agents chatbot inside portals:
 
