@@ -19,8 +19,9 @@ contributors:
 ---
 # Sign in to Power Apps 
 
-Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to create, edit, or play your apps.
+To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com).
 
+![Environment switcher.](media/intro-maker-portal/power-apps-signin.png)
 
 ## Choose an environment
 
