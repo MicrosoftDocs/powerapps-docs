@@ -55,7 +55,7 @@ Find what you need with the new left navigation pane. If this is the first time,
 
 ### Pin and unpin
 
-Pin your most used pages to the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
+Pin your most used pages in the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
 
 When you sign in for the first with the new navigation, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference. 
 
@@ -75,9 +75,9 @@ To unpin a page, select the more button next to the page that you want to unpin,
 
 ### Move up or move down
 
-Once you pinned a few items you can also move them up or down them up or down the list.
+When you have a few pages pinned in the navigation pane you can start moving them up or down.
 
-To move an item up or down, select the more button next to the page that you want to move, and then select **Move up** or **Move down**.
+To move a page up or down, select the more button next to the page that you want to move, and then select **Move up** or **Move down**.
 
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
