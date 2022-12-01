@@ -24,12 +24,19 @@ Performance is improved because these messages apply all the operations in a sin
 
 ## CreateMultiple
 
-The [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) 
+The [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) `Targets` property is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) populated with records to create.
 
+Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request.
+
+The [CreateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplereponse) `Ids` property is a `Guid[]` containing the id values of the created records.
 
 ## UpdateMultiple
 
-[UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) 
+The [UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) `Targets` property is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) populated with data for records to update.
+
+Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request.
+
+The [CreateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplereponse) has no useful properties. If the operation is successful it is returned.
 
 ## Plug-ins and other event handlers
 
@@ -180,6 +187,7 @@ At this time we don't support using `CreateMultiple` or `UpdateMultiple` within 
 ### See Also
 
 [Write plug-ins for CreateMultiple and UpdateMultiple](../write-plugin-multiple-operation.md)<br />
+[Sample: Use CreateMultiple and UpdateMultiple](samples/create-update-multiple.md)<br />
 [Use messages with the Organization service](use-messages.md)<br />
 [Use ExecuteTransaction](use-executetransaction.md)<br />
 [Execute multiple requests using the Organization service](execute-multiple-requests.md)

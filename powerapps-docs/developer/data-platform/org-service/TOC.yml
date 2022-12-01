@@ -57,7 +57,7 @@
   href: use-messages.md
 - name: Special Operations
   items:
-  - name: Use CreateMultiple and UpdateMultiple (Preview)
+  - name: Use CreateMultiple & UpdateMultiple (Preview)
     href: use-createmultiple-updatemultiple.md
   - name: Use ExecuteAsync
     href: use-executeAsync.md
