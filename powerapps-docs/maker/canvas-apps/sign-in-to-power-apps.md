@@ -19,7 +19,9 @@ contributors:
 ---
 # Sign in to Power Apps 
 
-To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). To get started using Power Apps, see [Get started with Power Apps](intro-maker-portal.md).
+To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
+
+For mormation on getting started, see [Get started with Power Apps](intro-maker-portal.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Power Apps sign in.](media/intro-maker-portal/power-apps-signin.png)
