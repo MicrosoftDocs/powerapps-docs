@@ -108,7 +108,7 @@ Select the bell icon to see notifications. Notifications are stored in the notif
 
 Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
 
-- **Admin center**: Opens another windows and go to your Power Platform admin center.
+- **Admin center**: Opens another windows and goes to the Power Platform admin center.
 - **Plans(s)**: View your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
 - **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](power-platform/admin/admin-settings#environment-settings-are-moving).
 - **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
@@ -129,7 +129,7 @@ In the header, select the question mark icon to find more information about eith
 > [!div class="mx-imgBorder"]
 > ![List of model-driven apps with an ellipsis menu open.](media/intro-maker-portal/help-icon.png)
 
-You'll find link to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
+You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
 
 ## 4 – Build apps
