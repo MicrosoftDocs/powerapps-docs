@@ -1,12 +1,11 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 04/19/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
@@ -48,10 +47,10 @@ contributors:
    <p>OData system query options or FetchXML query to retrieve your data. </p>
    <ul>
     <li>Following system query options are supported: <b>$select</b>, <b>$top</b>, <b>$filter</b>, <b>$expand</b>, and <b>$orderby</b>.</li>
-    <li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
+    <li>Use the <b>$expand</b> system query option to control what data from related tables is returned. If you just include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the <b>$select</b> system query option in parentheses after the navigation property name. Use this for both <i>single-valued</i> and <i>collection-valued</i> navigation properties. Note that for offline we only support nested <b>$select</b> option inside the  <b>$expand</b>.</li>
     <li>To specify a FetchXML query, use the `fetchXml` column to specify the query.</li>
    </ul>
-   <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
+   <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for a table record by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using <b>$select</b>, all properties will be returned.</li>
    <p>You specify the query options starting with `?`. You can also specify multiple system query options by using `&` to separate the query options.
    <p>When you specify an OData query string for the `options` parameter, the query <b>should be encoded</b> for special characters.
    <p>When you specify a FetchXML query for the `options` parameter, the query <b>should not be encoded</b>.
@@ -253,7 +252,7 @@ VM5595:6
 Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257bAAA19CDD-88DF-E311-B8E5-6C3BE5A8B200%257d%2522%2520first%253d%2522%257b475B158C-541C-E511-80D3-3863BB347BA8%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E
 ```
 
-Use the query part in the URL in the `nextLink` property as the value for the `options` parameter in your subsequent **retrieveMultipleRecords** call to request the next set of records. Don’t change or append any additional system query options to the value. For every subsequent request for additional pages, you should use the same `maxPageSize` value used in the original retrieve multiple request. Also, cache the results returned or the value of the nextLink property so that previously retrieved pages can be returned. 
+Use the query part in the URL in the `nextLink` property as the value for the `options` parameter in your subsequent **retrieveMultipleRecords** call to request the next set of records. Don't change or append any additional system query options to the value. For every subsequent request for additional pages, you should use the same `maxPageSize` value used in the original retrieve multiple request. Also, cache the results returned or the value of the nextLink property so that previously retrieved pages can be returned. 
 
 For example, to get the next page of records, we will pass in the query part of the `nextLink` URL to the `options` parameter:
 
@@ -318,24 +317,24 @@ This example will display 3 records and return a FetchXML Paging Cookie to the r
 
 ```JSON
 {
-	"entities": [
-		{
-			"@odata.etag": "W/\"1035542\"",
-			"accountid": "aca19cdd-88df-e311-b8e5-6c3be5a8b200",
-			"name": "Blue Yonder Airlines"
-		},
-		{
-			"@odata.etag": "W/\"1031348\"",
-			"accountid": "aea19cdd-88df-e311-b8e5-6c3be5a8b200",
-			"name": "City Power & Light"
-		},
-		{
-			"@odata.etag": "W/\"1035543\"",
-			"accountid": "b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
-			"name": "Coho Winery"
-		}
-	],
-	"fetchXmlPagingCookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b0748C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520first%253d%2522%257bFC47C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />"
+   "entities": [
+      {
+         "@odata.etag": "W/\"1035542\"",
+         "accountid": "aca19cdd-88df-e311-b8e5-6c3be5a8b200",
+         "name": "Blue Yonder Airlines"
+      },
+      {
+         "@odata.etag": "W/\"1031348\"",
+         "accountid": "aea19cdd-88df-e311-b8e5-6c3be5a8b200",
+         "name": "City Power & Light"
+      },
+      {
+         "@odata.etag": "W/\"1035543\"",
+         "accountid": "b0a19cdd-88df-e311-b8e5-6c3be5a8b200",
+         "name": "Coho Winery"
+      }
+   ],
+   "fetchXmlPagingCookie": "<cookie pagenumber=\"2\" pagingcookie=\"%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b0748C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520first%253d%2522%257bFC47C6EC-55A8-EB11-B1B5-000D3AFEF6FA%257d%2522%2520%252f%253e%253c%252fcookie%253e\" istracking=\"False\" />"
 }
 ```
 
@@ -471,17 +470,17 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=prim
 The above piece of code returns a result with a schema like:
 ```JSON
 {
-	"entities": [
-		{
-			"@odata.etag": "W/\"1459919\"",
-			"name": "Test Account",
-			"accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
-			"primarycontactid": {
-				"contactid": "6c63a1b7-19c6-ea11-a81a-000d3af5e732",
-				"fullname": "Test Contact"
-			}
-		}
-	]
+   "entities": [
+      {
+         "@odata.etag": "W/\"1459919\"",
+         "name": "Test Account",
+         "accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+         "primarycontactid": {
+            "contactid": "6c63a1b7-19c6-ea11-a81a-000d3af5e732",
+            "fullname": "Test Contact"
+         }
+      }
+   ]
 }
 ```
 
