@@ -11,7 +11,7 @@
   - name: Power Apps preview program
     href: powerapps-preview-program.md
   - name: Sign in to Power Apps
-    href:  ./common/sign-in.md
+    href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
   - name: "What's new?"
