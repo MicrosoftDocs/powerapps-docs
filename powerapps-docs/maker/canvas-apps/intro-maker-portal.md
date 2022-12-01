@@ -55,9 +55,9 @@ Find what you need with the new left navigation pane. If this is the first time,
 
 ### Pin and unpin
 
-You can pin your most used pages in the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item it appears in the middle section, above the **More** menu. 
+Pin your most used pages in the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
 
-When you sign in for the first with the new navigation, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can customize the middle section of the left navigation pane to your preference. 
+When you sign in for the first with the new navigation, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference. 
 
 > [!div class="mx-imgBorder"]
 > ![First time sign in dialog box.](media/intro-maker-portal/left-nav-dialog-2.png "First time signing in")
@@ -68,6 +68,10 @@ To pin a page to the left navigation pane, select **More** and then choose the p
 > ![Pin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
 To unpin a page, from the left navigation menu select the more button next to the page that you want to unpin, and then select **Unpin**.
+
+> [!div class="mx-imgBorder"]
+> ![Unpin an item.](media/intro-maker-portal/unpin-3.1.png "Unpin an item")
+
 
 ### Move up or move down
 
