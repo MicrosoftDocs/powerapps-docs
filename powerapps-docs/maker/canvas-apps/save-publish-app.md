@@ -26,16 +26,20 @@ For information about how to share an app, see [Share an app](share-app.md).
 
 ## Save changes to an app
 
-In Power Apps Studio, select **Save** on the **File** menu (on the left edge), and then follow either of these steps:
+ With your app open for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select **Save** and perform the following actions:
 
-* If you've never saved the app before, selecting **Save** from the **File** menu automatically takes you to **Save as**. Select location as **The cloud**, provide a name for it, and then select **Save**. <br> 
+- **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
+- **Save with version notes**: Save and add notes about the updates you've made.
+- **Save as**: Duplicate the app by saving the app with a different name.
+- **Save and publish**: Allows you to save the app and publish it at the same time.
+- **Download a copy**: Downland a local copy of the app.
 
-    ![Save new app.](./media/save-publish-app/save-as.png)
-* If the app has ever been saved, select **Save**. You can also leave version specific notes or comments.  
 
-    ![Save updated app.](./media/save-publish-app/save-app.png)
+> [!div class="mx-imgBorder"] 
+> ![Studio save options.](media/studio/pa-studio-save-options.png)
 
-Power Apps can also periodically save the app every 2 minutes. If you've saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** setting from the **Account** tab on the **File** menu.
+
+Power Apps can also periodically save the app every 2 minutes. If you've saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** by going to **Setting** > **General**.
 
 ![Auto save setting.](./media/save-publish-app/autosave.png)
 
