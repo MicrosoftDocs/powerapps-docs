@@ -32,7 +32,7 @@ All of the sample in this article are based on the [Hospital Emergency Response 
 > - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 > - Canvas component custom output properties can be used as an alternative to named formulas.  They are harder to use than named formulas, but are fully supported.  See below for more details.
 
-By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property).  For example:
+By far, the easiest and best way to improve both Studio app load time and end user app load time is to replace variable and collection initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property).  For example:
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -69,9 +69,9 @@ If(
 );
 ```
 
-As imperative logic, these **Set** and **Collect** calls must be evaluated, in order, before the first screen is displayed, which slows end user app load time.  This formula is also complex for Studio to analyze as the entire **App.OnStart** must be considered as a whole, order preserved, errors aggregated, final result returned.
+As a sequence of statements, these **Set** and **Collect** calls must be evaluated in order before the first screen is displayed, which slows end user app load time.  This formula is also complex for Studio to analyze as the entire **App.OnStart** must be considered as a whole, order preserved, errors aggregated, final result returned.
 
-There is a better way.  Use **App.Formulas** instead of **App.OnStart** and define these variables and collections as named formulas.  The points at which the variables were used does not need to be modified:
+There's a better way.  Use **App.Formulas** instead of **App.OnStart** and define these variables and collections as named formulas.  The points at which the variables were used does not need to be modified:
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -105,19 +105,19 @@ ParamFacility =
     );
 ```
 
-This may seem like a small change, but it isn't.  **Each of these named formulas is completely independent and can be analyzed by Studio independently.**  Which effectively means we have split a large **App.OnStart** into smaller pieces.  This can make a huge difference for Studio app load time, in some cases we have seen Studio load time drop by 80% by making this one change.
+This change may seem small, but it can have a huge impact.  **Each of these named formulas is completely independent and can be analyzed by Studio independently.**  Which effectively means we have split a large **App.OnStart** into smaller pieces.  In some cases we have seen Studio load time drop by 80% by making this one change.
 
-End user app load time will also improve because we don't need to evaluate these formulas until they are actually needed.  The first screen of the app is displayed immediately without waiting.
+End user app load time will also improve because we don't need to evaluate these formulas until the result is actually used.  The first screen of the app is displayed immediately without waiting.
 
-Note that named formulas can't be used for all cases.  Named formulas are immutable and cannot be used with **Set**.  Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should continue to be used.  But, more often than not, global variables are used in **OnStart** to setup static values that don't change, and in those cases a named formula is preferred.  Since named formulas are immutable, the prefix `var` short for "variable" as a naming convention is no longer appropriate, but was not modified in this example because it would require changes to the rest of the app to match.
+Named formulas can't be used for all situations as they are immutable and cannot be used with **Set**.  Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should continue to be used.  But, more often than not, global variables are used in **OnStart** to set up static values that don't change, and in those cases a named formula is preferred.  Since named formulas are immutable, the prefix `var` short for "variable" as a naming convention is no longer appropriate, but was not modified in this example because it would require changes to the rest of the app to match.
 
-Finally, it is tempting to place a named formula in **App.OnStart**, but they simply do not belong there.  As an **On** behavior property, **App.OnStart** evaluates each of its statements in order, creating global variables, talking to databases etc, only once when the app is loaded.  Instead named formulas are formulas that define how to calculate something *whenever needed* and are always true.  It is this true formula nature that allows them to be independent and allows the app to finish loading before they are evaluated.
+Finally, it is tempting to place a named formula in **App.OnStart**, but they simply do not belong there.  As an **On** behavior property, **App.OnStart** evaluates each of its statements in order, creating global variables, and talking to databases *only once when the app is loaded*.  Instead named formulas are formulas that define how to calculate something *whenever needed* and are always true.  It is this true formula nature that allows them to be independent and allows the app to finish loading before they are evaluated.
 
 ## Split up long formulas
 
 **App.OnStart** is one of the worst offenders for long formulas and definitely where you should start.  But it isn't the only case.
 
-Our studies has shown that nearly all apps with a long Studio load time have at least one formula that is over 256,000 characters.  Some apps with the longest load times have formulas that are over 1 million characters.  For a single formula, that is a lot of characters and puts a significant strain on Studio.
+Our studies have shown that nearly all apps with a long Studio load time have at least one formula that is over 256,000 characters.  Some apps with the longest load times have formulas that are over 1 million characters.  That is a lot of characters for a single formula and puts a significant strain on Studio.
 
 Making matters worse, copy and paste of a control will duplicate long formulas on the control's properties without it being realized.  Power Apps is modeled after Excel where multiple copies of a formula are common, but in Excel formulas are limited to one expression and are capped at 8,000 characters.  Power Apps formulas can grow much longer with the introduction of imperative logic and the chaining operator (`;` or `;;` depending on locale).
 
@@ -125,7 +125,7 @@ The general solution is to split long formulas into smaller parts and to reuse t
 
 ### Use named formulas everywhere
 
-Named formulas were used above as a replacement for **App.OnStart**.  But they can be used anywhere in an app to replace a calculation.  For example, this logic appears in **App.OnVisible** for one of the sample screens:
+Named formulas were used above as a replacement for **App.OnStart**.  But they can be used anywhere in an app to replace a calculation.  For example, this logic appears in **Screen.OnVisible** for one of the sample screens:
 
 ```powerapps-dot
 ClearCollect(
@@ -152,7 +152,7 @@ ClearCollect(
 ); 
 ```
 
-This can be split into a set of named formulas, which also improves the readability:
+This formula can be split into a set of named formulas, which also improves the readability:
 
 ```powerapps-dot
 MyRegion = LookUp(
@@ -180,7 +180,7 @@ A large formula has been split up, making Studio analysis faster.  **ParamFacili
 
 Canvas components are most often used to create a UI control that can be placed on the Canvas just like a control.  But, they can also be used without UI to perform calculations with custom output properties being an alternative to named formulas.  Compared to named formulas, they are easier to share across apps with component libraries, harder to configure and use requiring an instance, but most importantly are fully supported while named formulas are still experimental.
 
-To split logic out:
+To split logic:
 1. Switch to the **Components** tab in the **Tree view**.
 1. Create a new component.
 1. In the **Properties** pane, turn on **Access app scope**.
@@ -257,7 +257,7 @@ btnAction_17.OnSelect =
     Select( btnSubmit );
 ```
 
-And just like that, we have split up imperative logic into smaller chunks.  Note that the above technique only works on the same screen, but there are also techniques that are slightly more complicated that work across screens. For example, using the **Toggle** control, setting **OnCheck** to the desired logic to run, setting **Default** to a global variables, and then toggling the global variable with `Set( global, true ); Set( global, false )` at the point you want to run the logic.
+And just like that, we have split up imperative logic into smaller chunks.  Note that the above technique only works on the same screen, but there are also techniques that are slightly more complicated that work across screens. For example, using the **Toggle** control, setting **OnCheck** to the desired logic to run, setting **Default** to a global variable, and then toggling the global variable with `Set( global, true ); Set( global, false )` at the point you want to run the logic.
 
 Also note that some logic splitting had already been done, as the comment mentions that "Subsequent actions can be found in OnSuccess."  This event runs imperative logic after the record has been successfully submitted, a solution specific to the **SubmitForm** function.
 
@@ -290,10 +290,10 @@ If(
 );
 ```
 
-Note that any state in the original app will be lost when **Launch** to another app is done.  Be sure to save any state before performing the **Launch** and/or pass state to the target app with parameters that are read with the **Param** function.
+Note that any state in the original app will be lost when **Launch** to another app is done.  Be sure to save any state before performing the **Launch** by writing to a database or calling **SaveData** and/or pass state to the target app with parameters that are read with the **Param** function.
 
 ### Model-driven app with Custom pages
 
-Sections can also be implemented as [Custom pages](../model-driven-apps/model-app-page-overview.md).  Custom pages each act as a mini Canvas app, with a model driven app container for navigation.  Custom pages support strongly typed input parameters which can make passing state between custom pages easier and less error prone.
+Sections can also be implemented as [Custom pages](../model-driven-apps/model-app-page-overview.md).  Custom pages each act as a mini Canvas app, with a model driven app container for navigation.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
