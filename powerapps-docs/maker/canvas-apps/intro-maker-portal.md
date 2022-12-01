@@ -28,7 +28,7 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 
 Legend:
 
-1. [Left navigation pane](#1--left-navigation-pane)
+1. [Left navigation pane](#1--left-navigation-pane-preview)
 2. [Search](#2--search)
 3. [Environment information and settings](#3--environment-information-and-settings)
 4. [Build apps](#4--build-apps)
