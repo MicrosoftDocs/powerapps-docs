@@ -30,17 +30,17 @@ Legend:
 
 1. [Left navigation pane](#1--left-navigation-pane)
 2. [Search](#2--search)
-3. [Enviroment information and settings](#3--environment-information-and-settings)
+3. [Environment information and settings](#3--environment-information-and-settings)
 4. [Build apps](#4--build-apps)
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
 
 
 ## 1 – Left navigation pane 
 
-Find what you need with the new left navigation pane. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
+Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
 
 - **Home**: Takes you to the Power Apps home page.
-- **Create**: This is where you create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
+- **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 - **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 - **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 - **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
@@ -55,7 +55,7 @@ Find what you need with the new left navigation pane. If this is the first time 
 
 ### Pin and unpin
 
-You can pin your most used pages in the navigation pane so you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item it appear in the middle section, aboce the **More** menu. 
+You can pin your most used pages in the navigation pane so you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item it appears in the middle section, above the **More** menu. 
 
 When you sign in for the first with the new navigation, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can customize the middle section of the left navigation pane to your preference. 
 
@@ -67,7 +67,7 @@ To pin a page to the left navigation pane, select **More** and then choose the p
 > [!div class="mx-imgBorder"]
 > ![Pin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
-To unpin a page, from the left navigation menu select the more button next to the page that you want to unpin and then select **Unpin**.
+To unpin a page, from the left navigation menu select the more button next to the page that you want to unpin, and then select **Unpin**.
 
 ### Move up or move down
 
@@ -105,13 +105,13 @@ Select the bell icon to see notifications. Notifications are stored in the notif
 Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
 
 - **Admin center**: Opens another windows and go to your Power Platform admin center.
-- **Plans(s)**: View the your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
+- **Plans(s)**: View your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
 - **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](power-platform/admin/admin-settings#environment-settings-are-moving).
 - **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
 - **Developer resources**: Access developer resources.
 - **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
 - **DevTools**: Access DevToos.
-- **Themes**: From the list of themes select a theme for your organization.
+- **Themes**: From the list of themes, select a theme for your organization.
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.
 
@@ -130,7 +130,7 @@ You'll find link to documentation, Power Apps training on Microsoft Learn, the P
 
 ## 4 – Build apps
 
-Start building apps which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes. 
+Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes. 
 
 In Power Apps, you can create and run these types of apps:
 
