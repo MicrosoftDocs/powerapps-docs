@@ -1,7 +1,7 @@
 ---
 title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
-ms.date: 08/17/2022
+ms.date: 10/14/2022
 ms.reviewer: phecke
 ms.topic: article
 author: shmcarth # GitHub ID
@@ -26,17 +26,9 @@ Developers will use the following tools and resources when working with solution
 
 *Microsoft Power Platform CLI* - a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle features, and to authenticate and work with Microsoft Dataverse environments, solution packages, portals, code components, and so on. To learn more about the tool, see [What is Microsoft Power Platform CLI?](powerapps-cli.md).
 
-## Tools available for download from NuGet
+## Dataverse development tools
 
-The following tools are distributed in NuGet packages. The [Download tools from NuGet](download-tools-nuget.md) topic includes a PowerShell script you can use to download and extract the latest versions of these tools.
-
-|Tool  |Description  |
-|---------|---------|
-|Code Generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the Entity Data Model used by the Organization service. <br />More information: <br />[Organization service](work-with-data.md#organization-service)<br />[Create early bound table classes with the Code Generation tool](org-service/generate-early-bound-classes.md)|
-|Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom tables. This tool is not designed to move business data. <br /> More information: [Dataverse Administrator Guide: Move configuration data across environments and organizations with the Configuration Migration tool](/power-platform/admin/manage-configuration-data)|
-|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Dataverse environments. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy packages](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />[Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)|
-|Plug-in Registration tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to data transaction events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Register a plug-in](register-plug-in.md)|
-|SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Dataverse compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development](/power-platform/alm/team-development-alm)<br />[SolutionPackager tool](/power-platform/alm/solution-packager-tool)|
+There are several tools commonly used during Dataverse code development. Some of these tools have a user interface and some are command driven. The [Dataverse development tools](download-tools-nuget.md) topic describes how to easily install, update, and launch these tools from the Microsoft Power Platform CLI.
 
 ## Dataverse SDK for .NET
 

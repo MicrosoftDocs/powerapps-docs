@@ -33,8 +33,8 @@ This new page can be more flexible than a model-driven app form, view, or dashbo
 | Monitor support for custom pages | General Availability |
 | Authoring custom pages | General Availability | Modern app designer and canvas designer are expected to be used to author custom page that are supported at runtime |
 | Canvas components in custom pages | General Availability |
-| Custom page in Teams model-driven app | General Availability |
-| Custom page in mobile online | General Availability | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
+| Custom page in Teams model-driven app | Public preview |
+| Custom page in mobile online | Public preview | iOS must allow enabling “Allow cross site tracking” that can be prevented by device management |
 
 ## Examples of custom pages
 

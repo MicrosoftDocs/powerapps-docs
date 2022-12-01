@@ -17,6 +17,9 @@ contributors:
 
 # Roles required for portal administration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Different administrative tasks in Power Apps portals can be performed by members of different roles. The admin and security roles required to do these tasks vary depending on the impact area.
 
 For example, some tasks might require the user to be a member of admin roles in [Microsoft 365](/microsoft-365/admin/add-users/about-admin-roles?preserve-view=true&view=o365-worldwide), and others might need membership to security roles in the [Microsoft Power Platform environment](/power-platform/admin/database-security).

@@ -1,12 +1,11 @@
 ---
 title: "isAvailableOffline (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the isAvailableOffline method.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -48,7 +47,7 @@ contributors:
 
 **Type**: Boolean.
 
-**Description**: true if the table is present in user’s profile and is currently available for use in offline mode; otherwise false.
+**Description**: true if the table is present in user's profile and is currently available for use in offline mode; otherwise false.
 
 [Xrm.WebApi.offline](offline.md)
 

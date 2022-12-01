@@ -3,7 +3,7 @@ title: "Visualization data description schema (model-driven apps) | Microsoft Do
 description: "The following is the schema for the data description XML string for charts in visualization. This can be used to validate the contents of the data description XML string while creating a chart." # 115-145 characters including spaces. This abstract displays in the search result.
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference

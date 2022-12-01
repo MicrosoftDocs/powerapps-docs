@@ -16,6 +16,9 @@ contributors:
 
 # Add text box
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 A text box component allows you to add text inside your portal page.
 
 To add text box:

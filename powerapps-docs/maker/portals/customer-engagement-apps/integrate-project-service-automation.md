@@ -13,6 +13,9 @@ contributors:
 
 # Integrate Project Service Automation
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The [!include[](../../../includes/pn-project-service-auto.md)] solution for Dynamics 365 can now be installed on a partner portal ([!include[](../../../includes/pn-project-service-auto.md)] for Dynamics 365 and Partner Portal solutions must be installed first). With this solution installed, customers and partners will be able to view projects and confirmed, bookable resources. Customers will also be able to approve quotes, view invoices, and view contract and order forms.
 
 ## View projects on the partner portal

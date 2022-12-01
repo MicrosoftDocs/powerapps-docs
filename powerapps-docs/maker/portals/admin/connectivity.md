@@ -16,6 +16,9 @@ contributors:
 
 # Portals connectivity to a Microsoft Dataverse environment
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A portal connects to a Dataverse environment using an Azure Active Directory application. The application is created in the same tenant where the portal is provisioned. The application is registered with the Dataverse environment during the portal provisioning process.
 
 :::image type="content" source="media/connectivity/connect-with-dynamics.png" alt-text="Connecting a portal with Dataverse environment.":::

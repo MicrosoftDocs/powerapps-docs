@@ -16,6 +16,9 @@ contributors:
 
 # Liquid template tag for code components
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 [This article is pre-release documentation and is subject to change.]
 
 Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps. These code components can provide an enhanced experience for users working with data on forms, views, and dashboards. More information: [Use code components in portals](component-framework.md)

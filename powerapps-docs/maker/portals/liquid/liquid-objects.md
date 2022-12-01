@@ -17,6 +17,9 @@ contributors:
 
 # Available Liquid objects
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
 To access an object attribute by name, use a period (.). To render an object's attribute in a template, wrap it in {{ and }}.

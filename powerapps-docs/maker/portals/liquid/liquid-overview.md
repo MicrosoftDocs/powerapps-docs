@@ -16,6 +16,9 @@ contributors:
 
 # Work with Liquid templates
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Liquid is an open-source template language integrated into portals. It can be used to add dynamic content to pages, and to create a wide variety of custom templates. 
 
 > [!NOTE] 

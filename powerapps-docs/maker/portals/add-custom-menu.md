@@ -16,6 +16,9 @@ contributors:
 
 # Add custom menu
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 By default, the menu on the website is created automatically based on the hierarchy of the webpages. It's called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
 
 After you create the web link set:

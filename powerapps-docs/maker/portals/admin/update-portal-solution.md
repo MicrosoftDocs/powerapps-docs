@@ -16,6 +16,9 @@ contributors:
 
 # Update the Power Apps portals solution
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 A Power Apps portal consists of solutions from different packages in an environment. You can use the Power Platform admin center to:
 
 - View the details of installed packages (such as the version details).

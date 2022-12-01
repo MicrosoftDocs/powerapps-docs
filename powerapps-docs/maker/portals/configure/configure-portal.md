@@ -16,6 +16,9 @@ contributors:
 
 # Portal Management app overview
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
 
 > [!NOTE]

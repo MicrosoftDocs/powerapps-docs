@@ -17,6 +17,9 @@ contributors:
 
 # View portal error logs
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Portal administrators and developers use Power Apps portals to create websites for their customers. Developers often debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
 > [!NOTE]

@@ -3,7 +3,7 @@ title: "Stylesheet (XSL) web resources  (model-driven apps) | Microsoft Docs" # 
 description: "Learn about using Stylesheet (XSL) Web resources to transform XML data." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -172,7 +172,7 @@ td {
 [Web Resources](web-resources.md)  
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)  
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)  
- [Using Script (JScript) Web Resources](script-jscript-web-resources.md)  
+ [Using JavaScript Web Resources](script-jscript-web-resources.md)  
  [Using Data (XML) Web Resources](data-xml-web-resources.md)  
  [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)
 

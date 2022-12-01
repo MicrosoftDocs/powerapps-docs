@@ -17,6 +17,9 @@ contributors:
 
 # Query data using portals Web API
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 You can use [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample read operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 ## Prerequisites
@@ -131,6 +134,10 @@ The Web API supports these standard OData string query functions:
 | contains     | *$filter=contains(name,'(sample)')* |
 | endswith     | *$filter=endswith(name,'Inc.')*     |
 | startswith   | *$filter=startswith(name,'a')*      |
+
+### Dataverse query functions
+
+The Web API supports Dataverse query functions to filter results. For more information, see [Web API Query Function Reference](/power-apps/developer/data-platform/webapi/reference/queryfunctions).
 
 ## Order results
 

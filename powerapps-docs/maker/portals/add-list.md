@@ -17,6 +17,9 @@ contributors:
 
 # Add list
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 List is a data-driven configuration to render a list of records without the need for a developer to surface the grid in the portal.
 
 Lists use [Dataverse views](/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  

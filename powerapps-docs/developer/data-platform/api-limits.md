@@ -208,7 +208,7 @@ HttpMessageHandler messageHandler = new OAuthMessageHandler(
 HttpClient httpClient = new HttpClient(messageHandler)
 ```
 
-If you are using CrmServiceClient, add the following to the AppSettings node in the App.config file.
+If you are using the `CrmServiceClient` or `ServiceCLient` classes, add the following to the AppSettings node in the App.config file.
 
 ```xml
 <add key="PreferConnectionAffinity" value="false" /> 
@@ -306,11 +306,11 @@ See these examples using the [WebAPIService class library (C#)](webapi/samples/w
 
 ## Using the Organization Service
 
-If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned. 
+If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
 
 Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
 
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient  or ServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
 More information:
 

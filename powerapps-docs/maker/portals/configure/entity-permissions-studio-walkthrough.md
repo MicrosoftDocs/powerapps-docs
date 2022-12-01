@@ -17,6 +17,9 @@ contributors:
 
 # Tutorial: Configure table permissions using portals Studio
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In the previous article, you learned how to configure security in portals by using table permissions in the Power Apps portals Studio. This article will walk you through the process with step-by-step instructions using an example scenario.
 
 The goal of this scenario is to show you how to use portals Studio to configure table permissions with a real case study. The scenario showcases using each [access type available in portals Studio](entity-permissions-studio.md#available-access-types-in-studio) to match a real-world business requirement with the relevant Microsoft Dataverse tables and table relationships.

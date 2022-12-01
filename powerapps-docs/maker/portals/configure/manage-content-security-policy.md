@@ -1,4 +1,4 @@
-﻿---
+---
 title: Manage Content Security Policy
 description: Learn how to manage Content Security Policy (CSP)
 author: nabha
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Manage Content Security Policy
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Content Security Policy (CSP) is an extra layer of security that helps detect and mitigate some types of web attacks such as data theft, site defacement, or the distribution of malware. CSP provides an extensive set of policy directives that help control the resources that a site page is allowed to load. Each directive defines the restrictions for a specific type of resource.
 

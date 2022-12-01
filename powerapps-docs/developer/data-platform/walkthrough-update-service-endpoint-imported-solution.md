@@ -26,7 +26,7 @@ Follow these steps to set the SAS Key for each service endpoint after solution i
   
 ## Update the SAS Key  
   
-1. Run the Plug-in Registration tool, which is available for download from NuGet. More information: [Download tools from NuGet](download-tools-nuget.md)
+1. Run the Plug-in Registration tool, which is available for download from NuGet. More information: [Dataverse development tools](download-tools-nuget.md)
   
 1. Using the Plug-in Registration tool, sign in to the organization that contains the imported solution.  
   

@@ -17,6 +17,9 @@ contributors:
 
 # Manage page permissions
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You use page permissions to control user access to portal webpages. For example, you can allow pages to be available anonymously for public access, or restrict access to users who have specific roles. Depending on business requirements, you can manage the inheritance of page permissions from a parent page to a child page. A page can have child [web files](web-files.md)&mdash;such as downloadable documents, CSS files, or JS files&mdash;and you can also manage the inheritance of page permissions from the page to such child web files.
 
 > [!NOTE] 
