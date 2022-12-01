@@ -5,17 +5,17 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/21/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add chatbot to a page
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
@@ -85,7 +85,7 @@ After changing the web template, ensure you select **Sync configuration** to upd
 > [!NOTE]
 > Any changes to the Power Virtual Agents web template other than the parameters explained above are not supported.
 
-## Additional considerations
+## Other considerations
 
 Consider the following when using a Power Virtual Agents chatbot inside portals:
 
