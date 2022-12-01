@@ -219,7 +219,7 @@
   items:
   - name: Overview
     href: index.md
-  - name: Use the learning hub
+  - name: Use the learn hub
     href: ./common/learn-hub.md 
   - name: Find it with unified search
     href: search.md
