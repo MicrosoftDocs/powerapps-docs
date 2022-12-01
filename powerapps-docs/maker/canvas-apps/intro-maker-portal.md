@@ -91,7 +91,7 @@ View your environment information and settings.
 
 ### Choose an environment
 
-For best results, start by ensuring that the home page is set to the right environment. More information [Sign in to Power Apps](sign-in.md).
+For best results, start by ensuring that the home page is set to the right environment. More information [Choose an environment](sign-in-to-power-apps.md#choose-an-environment).
 
 > [!div class="mx-imgBorder"] 
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
