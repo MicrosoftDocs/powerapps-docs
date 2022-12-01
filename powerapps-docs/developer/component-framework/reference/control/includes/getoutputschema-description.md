@@ -1,0 +1,1 @@
+It is called by the framework prior to a component initialization. Returns an object schema based on nomenclature defined in manifest, for any output property of type object. 
