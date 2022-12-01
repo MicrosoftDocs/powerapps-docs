@@ -21,8 +21,7 @@ contributors:
 
 You can add a Power BI component on a page to display Power BI dashboards and reports on your portal.
 
-> [!NOTE]
-> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
+Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
 
 To add a Power BI component to a webpage:
 
