@@ -176,6 +176,34 @@ MySplashSelectionsCollection =
 
 A large formula has been split up, making Studio analysis faster.  **ParamFacility** was extracted as a named formula earlier when we moved most of the **Set** calls from **App.OnStart** to named formulas in **App.Formulas**.
 
+Named formulas are evaluated only when needed.  If the original intent of putting this work in **Screen.OnVisible** was to avoid doing work until the screen was shown, moving to named formulas in the global **App.Formulas** will not change this.
+
+### Use the With function
+
+Within a single formula, the **With** function can also be used to split up logic.  This can better scope the logic to just one place.  The trick is to create a record in the first paraamter with the values desired as fields, and then use those as in the second paramater as the return value from **With**.  For example, the above example can be written as just one named formula:
+
+```powerapps-dot
+MySplashSelectionsCollection = 
+    With( { MyRegion: LookUp(
+                            Regions,
+                            Region = MyParamRegion
+                      ),
+            MyFacility: LookUp(
+                            FacilitiesList,
+                            Id = GUID(Param("FacilityID")
+                      ) 
+           },
+           {
+                MySystemCol: MyRegion.System.'System Name',
+                MyRegionCol: MyRegion.'Region Name',
+                MyFacilityCol: ParamFacility,
+                MyFacilityColID:  MyFacility.Id
+           }
+    )
+```
+
+One downside is that `MyFacility` can't use `MyRegion` because they are defined within the same **With**, a problem not present with named formulas.  One solution is to nest **With** functions and use the **As** keyword to name the record for each to give easy access to all of the **With** variables.  
+
 ### Use Canvas components
 
 Canvas components are most often used to create a UI control that can be placed on the Canvas just like a control.  But, they can also be used without UI to perform calculations with custom output properties being an alternative to named formulas.  Compared to named formulas, they are easier to share across apps with component libraries, harder to configure and use requiring an instance, but most importantly are fully supported while named formulas are still experimental.
