@@ -55,7 +55,7 @@ Find what you need with the new left navigation pane. If this is the first time,
 
 ### Pin and unpin
 
-Pin your most used pages in the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
+Pin your most used pages to the navigation pane so can you quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
 
 When you sign in for the first with the new navigation, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference. 
 
