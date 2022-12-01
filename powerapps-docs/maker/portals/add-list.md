@@ -1,14 +1,14 @@
 ---
 title: Add list
-description: Learn about how to add list component to a Power Apps portals page using portals Studio.
+description: Learn how to add list component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
@@ -16,7 +16,6 @@ contributors:
 ---
 
 # Add list
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
