@@ -1,21 +1,21 @@
 ---
 title: WYSIWYG editor
-description: Learn about how to customize page using Power Apps portals Studio through the WYSIWYG editor.
+description: Learn how to customize page using Power Apps portals Studio through the WYSIWYG editor.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/10/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # WYSIWYG editor
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
