@@ -1,6 +1,6 @@
 ---
 title: "Sample: Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to execute multiple organization messages requests by using a single web service method call." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to perform bulk create and update operations by using a single web service method call." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/12/2022
 author: divka78
 ms.author: dikamath
