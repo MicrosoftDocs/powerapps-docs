@@ -1,0 +1,1 @@
+Defines a group of property-dependencies.
