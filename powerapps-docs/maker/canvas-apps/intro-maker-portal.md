@@ -37,7 +37,7 @@ Legend:
 
 ## 1 – Left navigation pane 
 
-Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the default left navigation pane will show the following menu items:
+Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
 
 - **Home**: Takes you to the Power Apps home page.
 - **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
