@@ -1,21 +1,21 @@
 ---
 title: Add sections
-description: Learn about how to add sections to a page in Power Apps portals using portals Studio.
+description: Learn how to add sections to a page in Power Apps portals using portals Studio.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add sections
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
@@ -23,17 +23,17 @@ Sections allow you to define a structure for your page and arrange portal compon
 
 To add sections:
 
-1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
 
-2.    Select the page on which you want to add a section.
+1. Select the page on which you want to add a section.
 
-3.    Select an editable element on the canvas.
+1. Select an editable element on the canvas.
 
-4.    Select **Components** ![components icon.](media/components-icon.png "Components icon") from left side of the screen.
+1. Select **Components** ![components icon.](media/components-icon.png "Components icon") from left side of the screen.
 
-5.    Under **Section layout**, select the section type to be inserted.
+1. Under **Section layout**, select the section type to be inserted.
 
-6.    In the properties pane on the right side of the screen, enter or select the following information:
+1. In the properties pane on the right side of the screen, enter or select the following information:
 
        - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
 
@@ -57,7 +57,7 @@ To add sections:
             > [!div class=mx-imgBorder]
             > ![Add image in the section.](media/section-props-image.png "Add image in the section")  
 
-7.    Add the required portal component in the section.
+1. Add the required portal component in the section.
 
 ## Next steps
 
