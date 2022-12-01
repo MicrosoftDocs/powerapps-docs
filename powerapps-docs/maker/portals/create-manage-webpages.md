@@ -17,7 +17,7 @@ contributors:
 
 # Create and manage webpages
 
-[!INCLUDE[cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 A webpage is a document that is identified by a unique URL in a website. It's one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 

@@ -1,6 +1,6 @@
 ---
 title: Work with templates
-description: Learn how to work with templates in portal.
+description: Learn how to work with templates in portals.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
@@ -17,8 +17,7 @@ contributors:
 
 # Work with templates
 
-
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 The built-in templates are available according to the portal you provision. You can edit the templates by using the code editor. For example, the following built-in templates are available when you provision a Dataverse starter portal:
 

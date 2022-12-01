@@ -17,7 +17,7 @@ contributors:
 
 # Add image
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 Image component allows you to add images to your portal page.
 

@@ -17,7 +17,7 @@ contributors:
 
 # Add list
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 List is a data-driven configuration to render a list of records without the need for a developer to surface the grid in the portal.
 

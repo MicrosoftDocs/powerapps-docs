@@ -17,7 +17,7 @@ contributors:
 
 # WYSIWYG editor
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 After adding required webpages and managing their hierarchy in the sitemap, you can add various components. The WYSIWYG (What You See Is What You Get) editor allows you to add and edit the required components on the canvas easily. You can add and edit the following components on the canvas:
 
