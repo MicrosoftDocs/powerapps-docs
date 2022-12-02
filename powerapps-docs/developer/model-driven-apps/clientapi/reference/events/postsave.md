@@ -1,9 +1,8 @@
 ---
 title: "PostSave Event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Information about PostSave event methods.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
+ms.author: aorth
 ms.date: 09/15/2022
 ms.reviewer: jdaly
 ms.topic: reference

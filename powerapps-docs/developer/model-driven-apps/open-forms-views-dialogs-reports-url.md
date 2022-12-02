@@ -1,12 +1,11 @@
 ---
 title: "Open apps, forms, views, dialogs, and reports with a URL (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn more about URL addressable elements that enable you to include links to forms, views, dialogs, and reports in other applications" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.author: jdaly
 author: HemantGaur
-manager: lwelicki
+ms.author: hemantg
 ms.date: 04/06/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -114,9 +113,9 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 |  Parameter   |    Description    |
 |--------------|------------------------------|
 |   **etn**    |  The logical name of the table. **Important:**  Do not use the **etc** (table type code) parameter that contains an integer code for the table. This integer code varies for custom tables in different organizations.  |
-| **extraqs**  |  Optional for forms. This parameter contains encoded parameters within this parameter.<br /><br /> Use this parameter to pass values to a form. For more information, see [Set column values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).<br /><br /> When a table has more than one form defined, you can use this parameter to specify which form to open by passing the encoded parameter `formid` with the value equal to the ID value of the form. For example, to open a form with the ID of ‘6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf’, include this value in the `extraqs` parameter: `formid%3D6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf%0D%0A`.     |
+| **extraqs**  |  Optional for forms. This parameter contains encoded parameters within this parameter.<br /><br /> Use this parameter to pass values to a form. For more information, see [Set column values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).<br /><br /> When a table has more than one form defined, you can use this parameter to specify which form to open by passing the encoded parameter `formid` with the value equal to the ID value of the form. For example, to open a form with the ID of '6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf', include this value in the `extraqs` parameter: `formid%3D6009c1fe-ae99-4a41-a59f-a6f1cf8b9daf%0D%0A`.     |
 | **pagetype** |  The type of page. There are two possible values:<br /><br /> - **entityrecord**<br />  Displays a record form.<br />- **entitylist**<br /> Displays an  view.  |
-|    **id**    |   Optional for forms. Use this when you open a specific table record. Pass in the encoded GUID identifier for the table. The encoded version of the GUID substitutes opening and closing brackets “{“ and “}” with “%7B” and “%7D”, respectively, for example `{91330924-802A-4B0D-A900-34FD9D790829}` is `%7B91330924-802A-4B0D-A900-34FD9D790829%7D`.|
+|    **id**    |   Optional for forms. Use this when you open a specific table record. Pass in the encoded GUID identifier for the table. The encoded version of the GUID substitutes opening and closing brackets "{" and "}" with "%7B" and "%7D", respectively, for example `{91330924-802A-4B0D-A900-34FD9D790829}` is `%7B91330924-802A-4B0D-A900-34FD9D790829%7D`.|
 |  **viewid**  |   Required for views. This is the ID of the `savedquery` or `userquery` table record that defines the view. The easiest way to get the URL for a view is to copy it. For more information, see [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL).|
 | **viewtype** |   Defines the view type. Possible values are as follows:<br /><br /> - **1039**<br />     Use for a system view. The `viewid` represents the Id of a `savedquery` record.<br />- **4230**<br />     Use for a personal view. The `viewid` represents the Id of a `userquery` record.  |
 |   `navbar`   | Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap.<br /><br /> -   `on`<br />     The navigation bar is displayed. This is the default behavior if the `navbar` parameter is not used.<br />-   `off`<br />     The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.<br />-   `entity`<br />     On a form, only the navigation options for related tables are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original record. |
@@ -161,7 +160,7 @@ Url="/main.aspx?appid=e2bc1066-488f-eb11-b1ac-000d3a56ead9&pagetype=entitylist&e
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
 
 > [!NOTE]
-> If you specify the view using the `/main.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
+> If you specify the view using the `/main.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user's most recent selection and the initial default view displays after they close and re-open their browser.  
 
 <a name="BKMK_OpenADialogProcess"></a>   
 

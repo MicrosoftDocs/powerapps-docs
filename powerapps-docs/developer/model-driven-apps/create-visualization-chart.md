@@ -3,7 +3,6 @@ title: "Create a visualization (chart) (model-driven apps) | Microsoft Docs" # I
 description: "The topic shows how to create a chart visualization and a web resource visualization." # 115-145 characters including spaces. This abstract displays in the search result."
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -30,7 +29,7 @@ To create a visualization programmatically, you must create a record for the [Sa
 
 Before creating a visualization, make sure that you are aware of the following:
 
-- **Type of visualization**: If you want your visualizations to be available across the organization and don’t want to manage the access levels at a more detailed level, you might want to create an organization-owned visualization. However, if you’re concerned about the access privileges and security of your visualization, consider creating a user-owned visualization where you have more control over who can access it.
+- **Type of visualization**: If you want your visualizations to be available across the organization and don't want to manage the access levels at a more detailed level, you might want to create an organization-owned visualization. However, if you're concerned about the access privileges and security of your visualization, consider creating a user-owned visualization where you have more control over who can access it.
 
   > [!NOTE]
   > Organization-owned visualizations can only be created by those users who have the System Administrator or System Customizer role.
@@ -55,7 +54,7 @@ For a sample multi-series chart and the corresponding data description and prese
 
 ## Create a web resource visualization
 
-Visualizations containing web resources don’t require you to specify the data description and presentation description XML strings. The following sample demonstrates how to create an organization-owned visualization containing a web resource by using the SDK.
+Visualizations containing web resources don't require you to specify the data description and presentation description XML strings. The following sample demonstrates how to create an organization-owned visualization containing a web resource by using the SDK.
 
 ```csharp
 var newWebResourceVisualization = new SavedQueryVisualization()
