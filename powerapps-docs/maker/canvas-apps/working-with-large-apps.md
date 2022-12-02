@@ -23,7 +23,7 @@ This article covers a different aspect of performance: the maker's experience.  
 
 Use the recommendations in this article to better work with large and complex apps in Power Apps Studio.  Fortunately these recommendations also help with runtime performance too.
 
-All of the sample in this article are based on the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  
+All of the examples in this article are based on the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  
 
 ## Use App.Formulas instead of App.OnStart
 
@@ -111,7 +111,7 @@ End user app load time will also improve because we don't need to evaluate these
 
 Named formulas can't be used for all situations as they're immutable and can't be used with **Set**.  Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should continue to be used.  But, more often than not, global variables are used in **OnStart** to set up static values that don't change, and in those cases a named formula is preferred.  Since named formulas are immutable, the prefix `var` short for "variable" as a naming convention is no longer appropriate, but wasn't modified in this example because it would require changes to the rest of the app to match.
 
-Finally, it's tempting to place a named formula in **App.OnStart**, but they simply don't belong there.  As an **On** behavior property, **App.OnStart** evaluates each of its statements in order, creating global variables, and talking to databases *only once when the app is loaded*.  Instead named formulas are formulas that define how to calculate something *whenever needed* and are always true.  It's this formula nature that allows them to be independent and allows the app to finish loading before the're evaluated.
+Finally, it's tempting to place a named formula in **App.OnStart**, but they simply don't belong there.  As an **On** behavior property, **App.OnStart** evaluates each of its statements in order, creating global variables, and talking to databases *only once when the app is loaded*.  Instead named formulas are formulas that define how to calculate something *whenever needed* and are always true.  It's this formula nature that allows them to be independent and allows the app to finish loading before they're evaluated.
 
 ## Split up long formulas
 
@@ -176,7 +176,7 @@ MySplashSelectionsCollection =
 
 A large formula has been split up, making Studio analysis faster.  **ParamFacility** was extracted as a named formula earlier when we moved most of the **Set** calls from **App.OnStart** to named formulas in **App.Formulas**.
 
-Named formulas are evaluated only when needed.  If the original intent of putting this work in **Screen.OnVisible** was to avoid doing work until the screen was shown, moving to named formulas in the global **App.Formulas** won't change this.
+Named formulas are evaluated only when their values are needed.  If the original intent of using **Screen.OnVisible** was to defer work until the screen was shown, then the work will still be deferred as global named formulas in **App.Formulas**.
 
 ### Use the With function
 
@@ -206,7 +206,7 @@ One downside is that `MyFacility` can't use `MyRegion` because they're defined w
 
 ### Use Canvas components
 
-Canvas components are most often used to create a UI control that can be placed on the canvas just like a control.  But, they can also be used without UI to perform calculations with custom output properties being an alternative to named formulas.  Compared to named formulas, they are easier to share across apps with component libraries, harder to configure and use requiring an instance, but most importantly are fully supported while named formulas are still experimental.
+Canvas components are most often used to create a UI control that can be placed on the canvas just like a control.  But, they can also be used without UI to perform calculations with custom output properties being an alternative to named formulas.  Canvas components are easy to share across apps with component libraries and are fully supported, but are harder to configure and use than named formulas.
 
 To split logic:
 1. Switch to the **Components** tab in the **Tree view**.
@@ -223,11 +223,11 @@ To use the logic:
 1. On the **Insert** pane on the left side of Studio, expand **Custom**, and insert your component.
 1. To calculate a value with the property, use *ComponentName.PropertyName*.
 
-At this time, canvas component custom output properties do not support imperative logic.
+At this time, canvas component custom output properties don't support imperative logic.
 
 ### Use Select with a hidden control for imperative logic
 
-Named formulas are great, but at this time they cannot be used with imperative logic.  Imperative logic is used to modify state with **Set** and **Collect**, notify the user with **Notify**, navigate to another screen or app with **Navigate** and **Launch**, and write back values to a database with **Patch**, **SubmitForm**, or **RemoveIf**.
+Named formulas are great, but at this time they can't be used with imperative logic.  Imperative logic is used to modify state with **Set** and **Collect**, notify the user with **Notify**, navigate to another screen or app with **Navigate** and **Launch**, and write back values to a database with **Patch**, **SubmitForm**, or **RemoveIf**.
 
 A common trick for splitting up imperative logic is to use the **OnSelect** property of a hidden control.  Here's how it works:
 1. Add a **Button** control to a screen.
@@ -235,7 +235,7 @@ A common trick for splitting up imperative logic is to use the **OnSelect** prop
 1. Set the **Visible** property to false.  No need for the end user to see it or interact with it.
 1. Call `Select( Button )` when you want to execute the imperative logic. 
 
-For example, one of the screens of our sample has this **OnSelect** property on a **Button** control.  This simple example is for illustration purposes only, normally you would only do this for longer formulas:
+For example, one of the screens of our sample has this **OnSelect** property on a **Button** control.  This simple example is for illustration purposes only, normally you would only use this technique for longer formulas:
 
 ```powerapps-dot
 btnAction_17.OnSelect = 
@@ -297,7 +297,7 @@ Some apps grow to thousands of controls and hundred of data sources, and this vo
 
 Sections can be implemented in separate canvas apps.  The **Launch** function is used to navigate between the separate apps and pass any needed context.
 
-This approach was used in the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  An app was created for each of the major area of the overall app, one each for staffing, equipment, supplies, etc.  A canvas component was created that was shared between the apps through a component library that served as a switchboard, that each app would initially display shown here in the section of the screen:
+This approach was used in the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  An app was created for each of the major areas of the overall app, one each for managing staffing, equipment, supplies, etc.  A common switchboard component is shared between the apps through a component library that each app shows on their startup screens:
 
 ![Hospital Emergency Response Sample solution canvas app running on a phone, showing the switchboard canvas component](media/working-with-large-apps/app-components.png)
 
