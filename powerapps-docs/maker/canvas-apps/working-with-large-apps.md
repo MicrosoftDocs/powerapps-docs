@@ -19,7 +19,7 @@ search.app:
 
 Most of the topics in this section of the docs cover the runtime performance of apps as experienced by end users. For example, topics include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
 
-This topic covers performance for the the maker experience. As apps become large and complex, Power Apps Studio needs to load and manage a large number of controls, formulas, and data sources, with interdependencies that grow exponentially. App load time for Power Apps Studio can slow and features such as IntelliSense and color coding can lag.  
+This topic covers performance for the maker experience. As apps become large and complex, Power Apps Studio needs to load and manage a large number of controls, formulas, and data sources, with interdependencies that grow exponentially. App load time for Power Apps Studio can slow and features such as IntelliSense and color coding can lag.  
 
 Use the recommendations in this topic to better work with large and complex apps in Power Apps Studio. These recommendations also help with runtime performance for your apps.
 
