@@ -3,7 +3,6 @@ title: "Customization XML reference (model-driven apps) | Microsoft Docs" # Inte
 description: "The customizations.xml file is one of the files included in an exported unmanaged solution. The file contains all or selected portions of the customizations and configurations for your system" # 115-145 characters including spaces. This abstract displays in the search result."
 author: caburk
 ms.author: caburk
-manager: evlew
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

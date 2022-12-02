@@ -2,7 +2,7 @@
 title: "Update a solution | MicrosoftDocs"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
-ms.date: 09/14/2021
+ms.date: 01/18/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -24,7 +24,6 @@ search.app:
 ---
 
 # Upgrade or update a solution  
-
 
 There are times when you need to update an existing managed solution. To update the solution, follow these steps:
 
@@ -55,7 +54,7 @@ The procedure to import the updated solution is similar to installing a new mana
         This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade will delete the old solution and any components that are not included in the new solution.
         
    - **Update**
-        This option replaces your solution with this version.  Components that are not in the newer solution won't be deleted and will remain in the system. Be aware that this option might result in your destination environment differing in configuration from your source environment and could cause issues that are difficult to reproduce and diagnose.
+        This option replaces your solution with this version. Components that are not in the newer solution won't be deleted and will remain in the system. Be aware that the source and destination environment may differ if components were deleted in the source environment. This option has the best performance by typically finishing in less time than the upgrade methods.
         
 8. Decide whether to enable the following option for post import actions:
    - **Enable plug-in steps and flows included in the solution**  

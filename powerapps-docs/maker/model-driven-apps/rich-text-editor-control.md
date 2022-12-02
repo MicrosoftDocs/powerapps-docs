@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 06/14/2022
+ms.date: 11/18/2022
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -958,84 +958,21 @@ Set this ```defaultSupportedProps``` property in your configuration file. Each v
 
 ## Use the default web resource for organization-wide changes
 
-The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control.
+The default RTE webresource is available with the display name RTEGlobalConfiguration.json. This configuration is used for all instances of the RTE control and can be used to make organization-wide changes. This includes RTE used in timeline rich-text notes, knowledge management, and single and multi-line fields that are configured to use the RTE control. 
+By default, RTEGlobalConfiguration.json is empty. Based on your business requirements, you can specify the values you want to customize in this file. Use the non-editable RTEGlobalConfiguration.json as a sample to add the parameters in the required structure format.
 
-```json
-{
-	"defaultSupportedProps": {
-		"allowedIframeDomains": [],
-		"autoGrow_onStartup": true,
-		"basicEntities": true,
-		"browserContextMenuOnCtrl": true,
-		"copyFormatting_allowRules": true,
-		"customConfig": "",
-		"dialog_backgroundCoverColor": "black",
-		"disableNativeSpellChecker": false,
-		"enterMode": 3,
-		"extraPlugins": "accessibilityhelp,autogrow,autolink,basicstyles,bidi,blockquote,button,collapser,colorbutton,colordialog,confighelper,contextmenu,copyformatting,dialog,editorplaceholder,filetools,find,floatpanel,font,iframerestrictor,indentblock,justify,panel,panelbutton,pastefromword,quicktable,selectall,stickystyles,superimage,tableresize,tableselection,tabletools",
-		"fillEmptyBlocks": true,
-		"font_defaultLabel": "Segoe UI",
-		"font_names": "Angsana New/'Angsana New', 'Leelawadee UI', Sathu, serif;Arial/Arial, Helvetica, sans-serif;Arial Black/'Arial Black', Arial, sans-serif;Calibri Light/'Calibri Light', 'Helvetica Light', sans-serif;Calibri/Calibri, Helvetica, sans-serif;Cambria/Cambria, Georgia, serif;Candara/Candara, Optima, sans-serif;Century Gothic/'Century Gothic', sans-serif;Comic Sans MS/'Comic Sans MS';Consolas/Consolas, Courier, monospace;Constantia/Constantia, 'Hoefler Text', serif;Corbel/Corbel, Skia, sans-serif;Cordia New/'Cordia New', 'Leelawadee UI', Silom, sans-serif;Courier New/'Courier New';DaunPenh/DaunPenh, 'Leelawadee UI', 'Khmer MN', sans-serif;Franklin Gothic Book/'Franklin Gothic Book', 'Avenir Next Condensed', sans-serif;Franklin Gothic Demi/'Franklin Gothic Demi', 'Avenir Next Condensed Demi Bold', sans-serif;Franklin Gothic Medium/'Franklin Gothic Medium', 'Avenir Next Condensed Medium', sans-serif;Garamond/Garamond, Georgia, serif;Gautami/Gautami, 'Nirmala UI', 'Telugu MN', sans-serif;Georgia/Georgia, serif;Impact/Impact, Charcoal, sans-serif;Iskoola Pota/'Iskoola Pota', 'Nirmala UI', 'Sinhala MN', sans-serif;Kalinga/Kalinga, 'Nirmala UI', 'Oriya MN', sans-serif;Kartika/Kartika, 'Nirmala UI', 'Malayalam MN', sans-serif;Latha/Latha, 'Nirmala UI', 'Tamil MN', sans-serif;Leelawadee UI/'Leelawadee UI', Thonburi, sans-serif;Lucida Console/'Lucida Console', Monaco, monospace;Lucida Handwriting/'Lucida Handwriting', 'Apple Chancery', cursive;Lucida Sans Unicode/'Lucida Sans Unicode';Mangal/Mangal, 'Nirmala UI', 'Devanagari Sangam MN', sans-serif;Nirmala UI/'Nirmala UI', sans-serif;Nyala/Nyala, Kefa, sans-serif;Palatino Linotype/'Palatino Linotype', 'Book Antiqua', Palatino, serif;Raavi/Raavi, 'Nirmala UI', 'Gurmukhi MN', sans-serif;Segoe UI/'Segoe UI', 'Helvetica Neue', sans-serif;Shruti/Shruti, 'Nirmala UI', 'Gujarati Sangam MN', sans-serif;Sitka Heading/'Sitka Heading', Cochin, serif;Sitka Text/'Sitka Text', Cochin, serif;Sylfaen/Sylfaen, Mshtakan, Menlo, serif;TW Cen MT/'TW Cen MT', 'Century Gothic', sans-serif;Tahoma/Tahoma, Geneva, sans-serif;Times New Roman/'Times New Roman', Times, serif;Times/Times, 'Times New Roman', serif;Trebuchet MS/'Trebuchet MS';Tunga/Tunga, 'Nirmala UI', 'Kannada MN', sans-serif;Verdana/Verdana, Geneva, sans-serif;Vrinda/Vrinda, 'Nirmala UI', 'Bangla MN', sans-serif;メイリオ/Meiryo, メイリオ, 'Hiragino Sans', sans-serif;仿宋/FangSong, 仿宋, STFangsong, serif;微軟正黑體/'Microsoft JhengHei', 微軟正黑體, 'Apple LiGothic', sans-serif;微软雅黑/'Microsoft YaHei', 微软雅黑, STHeiti, sans-serif;新宋体/NSimSun, 新宋体, SimSun, 宋体, SimSun-ExtB, 宋体-ExtB, STSong, serif;新細明體/PMingLiU, 新細明體, PMingLiU-ExtB, 新細明體-ExtB, 'Apple LiSung', serif;楷体/KaiTi, 楷体, STKaiti, serif;標楷體/DFKai-SB, 標楷體, BiauKai, serif;游ゴシック/'Yu Gothic', 游ゴシック, YuGothic, sans-serif;游明朝/'Yu Mincho', 游明朝, YuMincho, serif;隶书/SimLi, 隶书, 'Baoli SC', serif;黑体/SimHei, 黑体, STHeiti, sans-serif;굴림/Gulim, 굴림, 'Nanum Gothic', sans-serif;궁서/Gungsuh, 궁서, GungSeo, serif;돋움/Dotum, 돋움, AppleGothic, sans-serif;맑은 고딕/'Malgun Gothic', '맑은 고딕', AppleGothic, sans-serif;바탕/Batang, 바탕, AppleMyungjo, serif;바탕체/BatangChe, 바탕체, AppleMyungjo, serif;ＭＳ Ｐゴシック/'MS PGothic', 'ＭＳ Ｐゴシック', 'MS Gothic', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', sans-serif;ＭＳ Ｐ明朝/'MS PMincho', 'ＭＳ Ｐ明朝', 'MS Mincho', 'ＭＳ 明朝', 'Hiragino Mincho ProN', serif",
-		"fontSize_defaultLabel": "9",
-		"fontSize_sizes": "8/8pt;9/9pt;10/10pt;11/11pt;12/12pt;14/14pt;16/16pt;18/18pt;20/20pt;22/22pt;24/24pt;26/26pt;28/28pt;36/36pt;48/48pt;72/72pt;",
-		"height": 185,
-		"keystrokes": [],
-		"linkDefaultProtocol": "https://",
-		"listStylePosition": "inside",
-		"pasteAzureBlobImageAsBase64": false,
-		"qtCellBorderColor": "rgb(171, 171, 171)",
-		"qtCellBorderStyle": "solid",
-		"qtCellBorderWidth": "1px",
-		"qtCellPadding": "1",
-		"qtCellSpacing": "0",
-		"qtCellWith": "120px",
-		"pasteFilter": null,
-		"qtColumns": 8,
-		"qtRows": 6,
-		"qtStyle": {
-			"border-collapse": "collapse",
-			"font-size": "9pt"
-		},
-		"removeDialogTabs": "flash:Upload;link:upload",
-		"removePlugins": "a11yhelp,codemirror,magicline,scayt,showborders",
-		"skin": "superowa",
-		"stickyStyle": {
-			"font-size": "9pt",
-			"font-family": "'Segoe UI','Helvetica Neue',sans-serif"
-		},
-		"stickyStyles_defaultTag": "div",
-		"superimageImageMaxSize": 5,
-		"toolbarcollapser_enableResizer": true,
-		"toolbarLocation": "bottom",
-		"uploadRecordId": []
-	},
-	"attachmentEntity": {
-		"name": "msdyn_richtextfiles",
-		"fileAttributeName": "msdyn_fileblob"
-	},
-	"disableContentSanitization": true,
-	"disableDefaultImageProcessing": false,
-	"disableImages": false,
-	"imageEntity": {
-		"imageEntityName": "msdyn_richtextfiles",
-		"imageFileAttributeName": "msdyn_imageblob"
-	},
-	"readOnlySettings": {
-	},
-	"sanitizerAllowlist": {
-		"attributes": [],
-		"cssProperties": [],
-		"domains": [],
-		"protocols": [],
-		"tags": []
-	},
-	"showAsTabControl": false,
-	"showFullScreenExpander": false,
-	"showHtml": false,
-	"showPreview": false,
-	"showPreviewHeaderWarning": false
-}
-``` 
+An example of the custom values you can add to the RTEGlobalConfiguration.json is:
+
+  ```
+  {
+     "defaultSupportedProps": {
+             "height": 300,
+	     "toolbarLocation" : "top"
+      }
+   }   
+  ```
+
+
 ## Find the current setting for a rich text editor configuration
 
 1. In a Microsoft Edge or Google Chrome web browser, run your model-driven app and open a form that has the rich text editor control, such as an account row.
@@ -1166,13 +1103,17 @@ The following table describes the different formatting features and functionalit
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 | | | | |
 
-
 ## Frequently asked questions
 
 Q: Why are typed characters slow to display?
 
 A. Large content size can cause latency. More information: [Best practices for using the rich text editor](#best-practices-for-using-the-rich-text-editor). Spelling or grammar checks can also slow the typing performance.
 
+Q: Why can't I upload an image, and why does the image preview fail to load?
+
+A. If the image file name is long or contains many full-width characters, it may fail to upload or the preview might not be displayed. Try shortening the file name and then upload it again.
+
+   :::image type="content" source="media/rte-image-preview.png" alt-text="Image preview failure.":::
 
 ## Known issues
 
