@@ -17,11 +17,11 @@ search.app:
 
 # Build large and complex canvas apps
 
-Most of the articles in this section of the docs cover the runtime performance of apps as experienced by end users.  For example, articles include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
+Most of the topics in this section of the docs cover the runtime performance of apps as experienced by end users. For example, topics include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
 
-This article covers a different aspect of performance: the maker's experience.  As apps become large and complex, Power Apps Studio needs to load and manage a large number of controls, formulas, and data sources, with interdependencies that grow exponentially.  App load time for Studio can slow and features such as IntelliSense and color coding can lag.  
+This topic covers performance for the the maker experience. As apps become large and complex, Power Apps Studio needs to load and manage a large number of controls, formulas, and data sources, with interdependencies that grow exponentially. App load time for Power Apps Studio can slow and features such as IntelliSense and color coding can lag.  
 
-Use the recommendations in this article to better work with large and complex apps in Power Apps Studio.  Fortunately these recommendations also help with runtime performance too.
+Use the recommendations in this topic to better work with large and complex apps in Power Apps Studio. These recommendations also help with runtime performance.
 
 All of the examples in this article are based on the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  
 
