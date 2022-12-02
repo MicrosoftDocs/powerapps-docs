@@ -18,68 +18,47 @@ contributors:
 
 # Use CreateMultiple and UpdateMultiple (Preview)
 
-The `CreateMultiple` and `UpdateMultiple` messages are unique because they are optimized for performance when performing the same operation on the same table. Use these messages to create records faster than any other method.
+The `CreateMultiple` and `UpdateMultiple` messages are unique because they are optimized for performance when performing the same operation on the same table. Use these messages to create and update records faster than any other method.
 
-Performance is improved because these messages apply all the operations in a single transaction rather than as separate operations on individual rows. This design also enables the opportunity to improve performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` and `Update` events.
+Performance is improved because these messages apply the data operations in a single transaction rather than as separate operations on individual rows. This design also enables the opportunity to improve performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual `Create` and `Update` events.
 
-## CreateMultiple
+## Usage
 
-The [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) `Targets` property is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) populated with records to create.
+The .NET SDK classes to use these messages are just like the individual operation classes, except they support multiple entities.
 
-Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request.
+### CreateMultiple
 
-The [CreateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplereponse) `Ids` property is a `Guid[]` containing the id values of the created records.
+Use the [CreateMultipleRequest class](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) to prepare a [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) of records to create using the [Targets Property](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest.targets). Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request. This will return a [CreateMultipleResponse class](/dotnet/api/microsoft.xrm.sdk.messages.createmultipleresponse) and the [Ids Property](/dotnet/api/microsoft.xrm.sdk.messages.createmultipleresponse.ids) will contain the Guid identifiers for the records created.
 
-## UpdateMultiple
+### UpdateMultiple
 
-The [UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) `Targets` property is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) populated with data for records to update.
-
-Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request.
-
-The [CreateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplereponse) has no useful properties. If the operation is successful it is returned.
+Use the [UpdateMultipleRequest class](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) to prepare a [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) of records to be updated using the [Targets Property](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.targets). Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request. While this can return an [CreateMultipleResponse class](/dotnet/api/microsoft.xrm.sdk.messages.updatemultipleresponse), there are no useful properties in that class so you will usually not use it. You will know the operation succeeded when it doesn't return an error.
 
 ## Plug-ins and other event handlers
 
-When `CreateMultiple` and `UpdateMultiple` messages are used the respective `Create` and `Update` events occur for each item in the `Targets` parameter. This means that any existing plug-ins or other event handlers for the `Create` and `Update` events will continue to work as they always have. You are not required to write new plug-ins to manage events raised by these messages.
+Each time a plug-in is invoked, some time is required to instantiate the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is instantiated once and can process all the operations with greater efficiency.
 
-When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with a single entity passed in the `Targets` parameter. This means that you can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events.
+To enable you to move your logic to the most efficient message, the message processing pipeline for the single and multiple versions of the create and update operations are now merged. What does this mean?
 
-Each time a plug-in is invoked, some time is required to instantiate the plug-in class containing the logic. For `Create` or `Update`, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is instantiated once and can process hundreds of operations with greater efficiency.
+This means:
 
-With the introduction of the `CreateMultiple` and `UpdateMultiple` messages we recommend that you begin to move any existing synchronous logic from `Create` and `Update` events to `CreateMultiple` and `UpdateMultiple` events. If you are introducing new logic, use the `CreateMultiple` and `UpdateMultiple` events rather than `Create` and `Update`. There is no need to move asynchronous logic, such as Power Automate flows, to use these events.
+- When `CreateMultiple` and `UpdateMultiple` messages are used the respective `Create` and `Update` events occur for each item in the `Targets` parameter. Any existing plug-ins or other event handlers for the `Create` and `Update` events will continue to work as they always have. You are not required to write new plug-ins to manage events raised by these messages.
+- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with a single entity passed in the `Targets` parameter. You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events.
+
+With the introduction of the `CreateMultiple` and `UpdateMultiple` messages, for best performance we recommend that you begin to move any existing synchronous logic from `Create` and `Update` events to `CreateMultiple` and `UpdateMultiple` events. If you are introducing new logic, use the `CreateMultiple` and `UpdateMultiple` events rather than `Create` and `Update`. For asynchronous logic, such as Power Automate flows, there is no direct performance gain by moving logic to the multiple versions of these events.
 
 > [!IMPORTANT]
-> With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because it may be necessary while developing plug-ins. It is the plug-in developer's responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event.
+> With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because it may be necessary while developing plug-ins. It is the plug-in developer's responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event and removed from the single version of the event. Otherwise, the logic will be applied twice.
 
 ## Limitations
 
 Keep these limitations in mind when using `CreateMultiple` and `UpdateMultiple` messages.
 
-### Message Size and Time limits
-
-The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so with large bulk data projects there is incentive to try and use the largest possible number.
-
-There is currently no set limit on the number of entities you might try to send with your requests, but generally we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
-
-#### Message size limits
-
-When you have a plug-in registered for the `CreateMultiple` and `UpdateMultiple` messages you may encounter the [Message size exceeded when sending context to Sandbox](../troubleshoot-plug-in.md#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB.
-
-This error will not occur if there is no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
-
-#### Time Limits
-
-If you are using the Dataverse Service client, you may encounter this error `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
-
-The default timeout set using Dataverse Service client is 4 minutes.
-<!-- Can/should it be increased? -->
-
-
 ### Limited to certain tables
 
 Currently, `CreateMultiple` and `UpdateMultiple` messages are limited to those tables which have been created recently. You can use these messages on a new custom table you create. Eventually, these messages will be enabled for all tables that support individual `Create` and `Update` messages.
 
-As the number of tables that support these messages increases, you can test individual tables using the examples below.
+You can test whether individual tables support these messages using the examples below.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -166,8 +145,28 @@ OData-Version: 4.0
     ]
 }
 ```
-
 ---
+
+### Message Size and Time limits
+
+The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so with large bulk data projects there is incentive to try and use the largest possible number.
+
+There is currently no set limit on the number of entities you might try to send with your requests, but generally we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+
+#### Message size limits
+
+When you have a plug-in registered for the `CreateMultiple` and `UpdateMultiple` messages you may encounter the [Message size exceeded when sending context to Sandbox](../troubleshoot-plug-in.md#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB.
+
+This error will not occur if there is no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
+
+#### Time Limits
+
+If you are using the Dataverse Service client, you may encounter this error `The request channel timed out attempting to send after 00:04:00. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.`
+
+The default timeout set using Dataverse Service client is 4 minutes, which is very long for any synchronous operation. You can change this using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property, but you should consider reducing the number of entities passed in the `Targets` parameter first.
+
+
+
 
 ### No continue on error
 
