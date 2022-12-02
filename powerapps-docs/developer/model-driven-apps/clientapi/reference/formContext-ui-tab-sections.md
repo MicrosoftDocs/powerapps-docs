@@ -1,12 +1,11 @@
 ---
 title: "formContext.ui Tab Sections (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "A section contains methods to manage how it appears as well as accessing the tab that contains the section."
-ms.author: hemantg
 author: HemantGaur
-manager: lwelicki
+ms.author: hemantg
 ms.date: 05/31/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 ms.subservice: mda-developer
 search.audienceType: 

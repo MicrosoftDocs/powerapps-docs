@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use the Search pane (preview)
 description: Learn how to use the Search pane inside Power Apps Studio to find text.
 author: TashasEv
@@ -17,6 +17,7 @@ contributors:
   - TashasEv
   - mduelae
 ---
+
 
 # Use the Search pane 
 
@@ -55,13 +56,13 @@ You can use more search options to further refine your search. These options are
 
 :::image type="content" source="media/search/more-search-options.png" alt-text="More search options under Categories in the filter option.":::
 
-- **Match case** returns search results that only match with the specified case.
+- **Match case** returns search results that only match the specified case.
 
-    In the following example, instances of **Snow** (uppercase) will appear as a match, but **snow** (lowercase) won't.
+    In the following example, instances of **Snow** (uppercase S) will appear as a match, but **snow** (lowercase S) won't.
 
     :::image type="content" source="media/search/match-case-1.png" alt-text="An example of matching the case for search results with results for the uppercase keyword.":::
 
-- **Match Whole Word** returns search results for exact matches of the entire sequence of characters.
+- **Match whole word** returns search results for exact matches of the entire sequence of characters.
 
     In the following example, **Snow** returns only a few results although **Snow** appears within names many times across all app objects.
 
@@ -81,13 +82,13 @@ Selecting search results in different areas of the Search pane will behave diffe
 
     There are several category headers inside the Search pane that you can use to navigate through the results. Categories such as **Variables**, **Collections**, **Data**, **Media**, **Flows**, and **Components** are referred to as **definitions**.
 
-    Selecting the results under such definition category headers takes you to the appropriate definition screen backstage (such as for Variables and Collections), or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, or Components).
+    Selecting the results under such definition category headers takes you to the appropriate information screen such as for Variables and Collections, or to the appropriate pane where that object is available in your app (such as Data, Media, Flows, or Components).
 
 - **Instances** describe the search results that are tied to an individual app, screen, or control property in the formula bar. All these results are tied to the **Screens** category based on the structure found inside the **Tree View**. When you select a result under this **Screens** category, you'll be taken to that specific formula bar reference or the related control, as applicable.
 
 ### Variables
 
-Selecting a global or a context variable under the **Variables** header in the search results will take you to the information screen backstage for the selection.
+Selecting a global or a context variable under the **Variables** header in the search results will take you to the Variables information screen for the selection.
 
 As shown below, you're taken to the definition of the global or context variable depending on your selection from the search results available.
 
@@ -95,19 +96,19 @@ Search result:
 
 :::image type="content" source="media/search/variables-1.png" alt-text="Global and context variables available in search result.":::
 
-Depending on the selected global or context variable, you're taken to the backstage for the selected type of variable.
+Depending on the selected global or context variable, you're taken to the information screen for the selected type of variable.
 
 Global variable selected:
 
-:::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the backstage of the selected global variables.":::
+:::image type="content" source="media/search/global-variable.png" alt-text="Selecting a global variable takes you to the information screen of the selected global variables.":::
 
 Context variable selected:
 
-:::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the backstage of the selected context variables.":::
+:::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the information screen of the selected context variables.":::
 
 ### Collections
 
-Selecting a collection under the **Collections** header will take you to the information screen backstage for that collection.
+Selecting a collection under the **Collections** header will take you to the information screen for that collection.
 
 :::image type="content" source="media/search/collections-1.png" alt-text="Collections selected from search results showing the relevant collection details.":::
 
@@ -119,13 +120,13 @@ Selecting a result under the **Data** header opens the **Data** pane, and prepop
 
 ### Media
 
-Selecting a result under the **Media** header opens the **Media** and prepopulates the search input for that pane with the selected result text.
+Selecting a result under the **Media** header opens the **Media** pane, and prepopulates the search input for that pane with the selected result text.
 
 :::image type="content" source="media/search/media.png" alt-text="Media selected from search results showing the relevant media details.":::
 
 ### Flows
 
-**Flows** header only appears if you've enabled the [Power Automate pane (preview)](working-with-flows.md). Selecting a result here opens the Power Automate pane and prepopulates the search input with the selected result text.
+The **Flows** header only appears if you've enabled the [Power Automate pane (preview)](working-with-flows.md). Selecting a result here opens the Power Automate pane and prepopulates the search input with the selected result text.
 
 :::image type="content" source="media/search/flows.png" alt-text="Flow selected from search results showing the relevant flow details.":::
 
@@ -149,7 +150,7 @@ If you make changes within the app, you'll need to refresh the results pane to s
 
 ## Clear the search term
 
-Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** sign to the right of the input area.
+Search terms and results are kept until you no longer need them. To clear the search term and results, select the **X** to the right of the input area.
 
 :::image type="content" source="media/search/clear-search-term.png" alt-text="Clear the search terms.":::
 
@@ -185,13 +186,13 @@ You can also interact with individual results in the results list directly to pe
 
 ### Replacing Variables results
 
-Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details backstage to review the usage before making the replacement.
+Performing a replacement for results in the Variables category replaces the variable name at the definition level, meaning all instances of the matching variable name will be replaced across the entire app. You can also view the variable details on their information screen to review the usage before making the replacement.
 
 :::image type="content" source="media/search/variables.png" alt-text="Screen showing replacing variables results.":::
 
 ### Replacing Collections results
 
-Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details backstage prior to making the replacement.
+Similar to variables, replacing a result in the Collections category replaces the collection name at the definition level, replacing all matching instances of the collection name across the app. You can view collection details on their information screen prior to making the replacement.
 
 :::image type="content" source="media/search/collections.png" alt-text="Screen showing replace collections results.":::
 
@@ -199,7 +200,7 @@ Similar to variables, replacing a result in the Collections category replaces th
 
 The Screens category shows individual replaceable results following the structure in the tree view, so you can replace text in formulas, formula references, and control names. Replacements made in the Screens category only replace the single instance of the selected matching result, so you can pick and choose what you'd like to replace. You can also review the formula match before making the replacement.
 
-:::image type="content" source="media/search/replace-screens.png" alt-text="Replaceing Screens results.":::
+:::image type="content" source="media/search/replace-screens.png" alt-text="Replacing Screens results.":::
 
 ### Completing the replacement and undoing replacements
 

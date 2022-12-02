@@ -16,6 +16,9 @@ contributors:
 
 # Release updates
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 This topic provides resources where you can learn about the new features that have been recently released and features that will be releasing over the next few months.
 
 ## Portals release plans

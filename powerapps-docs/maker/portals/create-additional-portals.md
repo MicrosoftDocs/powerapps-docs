@@ -17,6 +17,9 @@ contributors:
 
 # Create additional portals in an environment
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The ability to create additional environments is determined by the template chosen for the new portal. The following table explains the limits for creating additional portals in an environment.
 
 | Environment type | Template | Limit | Additional information |

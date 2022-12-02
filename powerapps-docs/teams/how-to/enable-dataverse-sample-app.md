@@ -19,7 +19,7 @@ contributors:
 
 **Microsoft Dataverse for Teams** is a built-in, low-code data platform for Microsoft Teams that empowers users to build custom apps, bots, and flows in Teams by using Power Apps, Power Virtual Agents, and Power Automate. Dataverse for Teams&mdash;built on Microsoft Dataverse&mdash;provides relational data storage, rich data types, enterprise-grade governance, and one-select solution deployment to the Teams app store. More information: [Dataverse for Teams overview](../overview-data-platform.md).
 
-In this article, we'll cover how to provision Dataverse for Teams and Power Apps in your Teams team.
+This article will cover how to provision Dataverse for Teams and Power Apps in your Teams team.
 
 Watch this video to learn how to enable Power Apps and Dataverse for Teams:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Ur]
@@ -64,7 +64,7 @@ You now have Dataverse for Teams and Power Apps in your team!
 
 ## Install a sample app
 
-The second way to provision Dataverse for Teams in your team is by installing one of the ready-made sample apps for Teams. These are fully functional apps that provide a complete experience, but are also easy to enhance and configure to meet your specifications.
+The second way to provision Dataverse for Teams in your team is by installing one of the ready-made sample apps for Teams. These fully functional apps provide a complete experience and are easy to enhance and configure to meet your specifications.
 
 To learn more about the sample apps for Teams, see [Use sample apps from teams store](../use-sample-apps-from-teams-store.md).
 
@@ -72,7 +72,7 @@ In this example, we're going to install the [Employee Ideas](../employee-ideas.m
 
 ## Installing Employee Ideas sample app
 
-The Employee Ideas app template for Teams enables team members to quickly generate and organize ideas by campaigns. The app can be installed from the Teams store.
+The Employee Ideas app template for Teams enables team members to generate and organize ideas by campaigns quickly. The app can be installed from the Teams store.
 
 1. Create a team in Teams. If you continue from the earlier section, you can reuse the team created earlier.
 

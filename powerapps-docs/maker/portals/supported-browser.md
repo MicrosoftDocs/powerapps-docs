@@ -16,6 +16,9 @@ contributors:
 
 # Supported web browsers for Power Apps portals Studio
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The supported browsers for Power Apps portals Studio are listed below.
 
 | **Browser**                     | **Operating system**           |

@@ -5,16 +5,20 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - GitanjaliSingh33msft
+    - ProfessorKendrick
 ---
 
 # Configure security using table permissions
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 To apply security in portals to individual records, use table permissions. You add table permissions to web roles so you can define roles in your organization that correspond logically to the privileges and concepts of record ownership and access. Remember that a given contact can belong to any number of roles, and a given role can contain any number of table permissions. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Create web roles for portals](create-web-roles.md).
 
@@ -61,7 +65,7 @@ This access type means that the list will only show the records of the selected 
 
 ### Self access type
 
-Self access type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or advanced forms to make changes to their own Contact record linked with their profile. The default profile page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or advanced forms that target their User Contact record. For example, see this sample scenario that allows staff of a car dealership to update their [contact details on their profile page](entity-permissions-studio-walkthrough.md#change-profile-details).
+Self access type allows you to define the rights a user has to their own Contact (Identity) record. Users can use basic forms or multistep forms to make changes to their own Contact record linked with their profile. The default profile page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom basic forms or multistep forms that target their User Contact record. For example, see this sample scenario that allows staff of a car dealership to update their [contact details on their profile page](entity-permissions-studio-walkthrough.md#change-profile-details).
 
 ### Parental access type
 

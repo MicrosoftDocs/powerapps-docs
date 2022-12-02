@@ -46,7 +46,7 @@ Permission to apps and the data that they use in Teams are based on the followin
 When assigning security to a table, the following are the permissions that you can assign:
 
 - **Full Access** – Allows end users to see and edit all records in the table.
-- **Collaborate** – Allows end users to see all records and create new records. But they can only edit or delete their own records. An example for when you want to use collaborate is "up votes" in the Ideas the Perspectives app. You want each user of the app to view the up-votes of other users. But they shouldn't be able tor change the votes for any users other than their own.
+- **Collaborate** – Allows end users to see all records and create new records. But they can only edit or delete their own records. An example for when you want to use collaborate is "up votes" in the Ideas the Perspectives app. You want each user of the app to view the up-votes of other users. But they shouldn't be able to change the votes for any users other than their own.
 - **Reference** – Provides a read-only view of data. Users can't create, edit, or delete any records. An example is in Bulletins app&mdash;if you want users to read bulletin records but not edit them, you'd give them **Reference** permission on the **Bulletin** table.
 - **Private** – Users can create new records. Additionally, they can view, edit, or delete their own records only. An example is in the Issue reporting app&mdash;if you want users to only be able to create and see their own issue records in Dataverse, you'd give them **Private** permission on the **Issue Report** table.
 

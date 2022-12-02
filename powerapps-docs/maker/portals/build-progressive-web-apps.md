@@ -17,6 +17,9 @@ contributors:
 
 # Build a portal as a progressive web app
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 ## Prerequisites
 
 - Your portal package version must be [9.2.2103.1 or later](/power-platform/released-versions/portals) to use this feature.

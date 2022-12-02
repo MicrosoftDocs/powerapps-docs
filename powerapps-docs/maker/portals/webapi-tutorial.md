@@ -17,6 +17,9 @@ contributors:
 
 # Tutorial: Use portal Web API
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this tutorial, you'll set up a webpage and custom web template that will use the Web API to read, write, update, and delete records from the contact table.
 
 > [!Note]

@@ -5,23 +5,25 @@ author: nageshbhat-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 3/01/2022
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nageshbhat-msft
     - nickdoelman
-    - professorkendrick
+    - ProfessorKendrick
 ---
 
 # Configure a choices column on portals
 
-Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
-## Basic forms and advanced forms
+Makers can design [basic forms](entity-forms.md) and [multistep forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
 
-You can design a [basic form](entity-forms.md) or an [advanced form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.
+## Basic forms and multistep forms
+
+You can design a [basic form](entity-forms.md) or an [multistep form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.
 
 :::image type="complex" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
 Screen showing a list of outdoor activities being created. The user expands the Select or search options box and selects some activities from the list that appears. The selected activities appear at the top of the window. The user enters the letters C a m in the box, and then selects the option Camping when it appears. At the top of the window in the list of activities, the user selects the Close button next to one of the options to deselect it.
@@ -151,7 +153,7 @@ Body –
 
 ## Known issues
 
-Choices control will not be available in [basic and advanced form metadata](configure-basic-form-metadata.md) to apply extra behavior modification logic or override the functionality of form fields.
+Choices control will not be available in [basic and multistep form metadata](configure-basic-form-metadata.md) to apply extra behavior modification logic or override the functionality of form fields.
 
  
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

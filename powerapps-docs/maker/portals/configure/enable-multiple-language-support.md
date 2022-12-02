@@ -17,6 +17,9 @@ contributors:
 
 # Enable multiple-language portal support
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Business isn't confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
 > [!NOTE] 

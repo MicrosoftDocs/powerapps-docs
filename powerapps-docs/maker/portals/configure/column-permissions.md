@@ -16,6 +16,9 @@ contributors:
 
 # Configure column permissions
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In portals, [table permissions](assign-entity-permissions.md) are used to apply security to individual Dataverse table records. You can add column permissions to individual table columns. Column permissions are an optional configuration that you associate with [web roles](create-web-roles.md).
 
 > [!NOTE]

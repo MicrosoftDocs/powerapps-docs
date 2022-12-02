@@ -1,12 +1,12 @@
 ---
 title: Use deep links with Power Apps  mobile| Microsoft Docs
 description: How to configure deep links for Power Apps mobile.
-author: mduelae
+author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 5/20/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -40,7 +40,7 @@ Deep links for Power Apps mobile should start with the following:
 
 | **Parameter**        | **Description**                                                              |
 |----------------------|------------------------------------------------------------------------------|
-| &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps-sales` -> Dynamics 365 Sales</li><li>`ms-apps` -> Power Apps                                                                     |
+| &lt;targeted-app&gt; | <ul><li>`ms-dynamicsxrm` -> Dynamics 365 for phones</li><li> `ms-apps-fs` -> Field Service</li><li>`ms-apps` -> Power Apps                                                                     |
 | &lt;org-url&gt;      | Connects to the correct org URL                                              |
 | &lt;app-id&gt;       | Opens the correct app module                                                 |
 | tenantId             | Connects to the correct tenant                                               |

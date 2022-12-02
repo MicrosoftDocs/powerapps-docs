@@ -13,6 +13,9 @@ contributors:
 
 # Configure web roles for a partner relationship management (PRM) portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Web roles for the Partner Relationship Management (PRM) portal grant specific access to the different areas of the portal. By assigning the appropriate roles, you can grant your primary partner contacts the right permissions to manage their team members and streamline their processes.
 
 - **Partner administrator**: Partner administrators are contacts who serve as the primary contact for a partner account. They are responsible for adding and deactivating their team members and for any administrative activities related to their partner account information. Partner administrators can:
