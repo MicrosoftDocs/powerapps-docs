@@ -1,4 +1,4 @@
----
+;---
 title: Modern, refreshed look for model-driven apps (preview)
 description: This article describes the modern, refreshed look for model-driven apps
 author: sericks007
@@ -17,5 +17,7 @@ search.app:
 ---
 
 # Modern, refreshed look for model-driven apps (preview)
+
+[This topic is pre-release documentation and is subject to change.]
 
 Model-driven apps...
