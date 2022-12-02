@@ -20,4 +20,12 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-Model-driven apps...
+Model-driven apps have a modern, refreshed look when the **Try the new look and feel (preview)** feature has been turned on by makers of the apps.  This new look provides updated styling including fonts, colors, borders, shadows, and more that align to the [Microsoft Fluent design system](https://www.microsoft.com/design/fluent/#/). The updated look makes model-driven apps easy-to-use so you can accomplish your goals efficiently.
+
+The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for pro-dev extensibility and allows support for dark mode in the future. 
+
+## What’s included with the new look
+
+After the app setting is enabled, you will see the new, modern interface in model-driven apps. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the current, read-only grid.
+
+
