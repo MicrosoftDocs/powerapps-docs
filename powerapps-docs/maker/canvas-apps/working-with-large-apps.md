@@ -105,9 +105,9 @@ ParamFacility =
     );
 ```
 
-This change may seem small, but it can have a huge impact. Each of these named formulas is completely independent and can be analyzed by Studio independently. Which effectively means we have split a large **App.OnStart** into smaller pieces. In some cases, we have seen Power Apps Studio load time drop by 80% by making this change.
+This change may seem small, but it can have a huge impact. Each of these named formulas is independent and can be analyzed by Studio independently. Which effectively means we have split a large **App.OnStart** into smaller pieces. In some cases, we have seen Power Apps Studio load time drop by 80% by making this change.
 
-End user app load time will also improve because we don't need to evaluate these formulas until the result is actually used. The first screen of the app is displayed immediately without waiting.
+End user app load time will also improve because we don't need to evaluate these formulas until the result is used. The first screen of the app is displayed immediately without waiting.
 
 Named formulas can't be used for all situations as they're immutable and can't be used with **Set**. Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should continue to be used. But, more often than not, global variables are used in **OnStart** to set up static values that don't change, and in those cases a named formula is preferred. Since named formulas are immutable, the prefix `var` short for "variable" as a naming convention is no longer appropriate, but wasn't modified in this example because it would require changes to the rest of the app to match.
 
@@ -117,7 +117,7 @@ Finally, it's tempting to place a named formula in **App.OnStart**, but they sim
 
 **App.OnStart** is one of the worst offenders for long formulas and definitely where you should start but it isn't the only case.
 
-Our studies have shown that nearly all apps with a long Power Apps Studio load time have at least one formula that is over 256,000 characters. Some apps with the longest load times have formulas that are over one million characters. That is a lot of characters for a single formula and puts a significant strain on Power Apps Studio.
+Our studies have shown that nearly all apps with a long Power Apps Studio load time have at least one formula that is over 256,000 characters. Some apps with the longest load times have formulas that are over 1 million characters. That is a lot of characters for a single formula and puts a significant strain on Power Apps Studio.
 
 Making matters worse, copy and paste of a control will duplicate long formulas on the control's properties without it being realized. Power Apps is modeled after Excel where multiple copies of a formula are common, but in Excel formulas are limited to one expression and are capped at 8,000 characters. Power Apps formulas can grow much longer with the introduction of imperative logic and the chaining operator (`;` or `;;` depending on locale).
 
