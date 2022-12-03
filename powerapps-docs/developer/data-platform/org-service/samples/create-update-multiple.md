@@ -18,14 +18,11 @@ contributors:
 
 # Sample: Use CreateMultiple and UpdateMultiple
 
-This sample shows how to perform bulk create and update operations by using a single web service method call, passing [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) and [UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) and as parameters.
-
-These messages are optimized to provide the most performant way to create or update records with Dataverse.
+This sample shows how to perform bulk create and update operations using several different approaches including the use of [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) and [UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest). These messages are optimized to provide the most performant way to create or update records with Dataverse.
 
 This sample is a Visual Studio .NET 6.0 solution that contains 4 different projects that perform the same operations in different ways so that you can compare the performance of each method.
 
-<!-- TODO: add link -->
-You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExecutemultipleRequests).
+You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/CreateUpdateMultiple).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
@@ -40,7 +37,7 @@ You can download the sample from [here](https://github.com/microsoft/PowerApps-S
 1. Open the [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/CreateUpdateMultiple/CreateUpdateMultiple.sln](TODO) file using Visual Studio 2022.
 1. Edit the appsettings.json file. Set the connection string `Url` and `Username` parameters as appropriate for your test environment.
 1. The environment Url can be found in the Power Platform admin center. It has the form `https://<environment-name>.crm.dynamics.com`.
-1. Build the solution, and then run the desired project.
+1. Build the solution, select the desired project as the startup project and press F5 to run the console application in debug mode.
 
 When the sample runs, you will be prompted in the default browser to select an environment user account and enter a password. To avoid having to do this every time you run a sample, insert a `Password` parameter into the connection string in the appsettings.json file. For example:
 
@@ -56,13 +53,13 @@ When the sample runs, you will be prompted in the default browser to select an e
 
 ## What this sample does
 
-This sample is a Visual Studio 2022 solution that contains 4 projects that perform the same operations:
+This sample is a .NET 6.0 Visual Studio 2022 solution that contains 4 projects that perform the same operations:
 
 1. Create a new custom table named `sample_example` if it doesn't already exist.
-1. Prepare a configurable set of entities for the custom table representing records to create.
+1. Prepare a configurable number of entity instances for the custom table representing records to create.
 1. Create the records. Each project uses a different method.
-1. Update the set of entities that were created by appending text to the name.
-1. Update the records using the same method they were created
+1. Update the set of entity instances that were created by appending text to the `sample_name` attribute.
+1. Update the records using the same method they were created.
 1. Use the the `BulkDeleteRequest` to delete the records created and report on the success of this request.
 1. Delete the custom `sample_example` table created in the first step.
 
@@ -72,17 +69,9 @@ Each project uses a shared set of settings in the `Settings.cs` file that allow 
 - `BypassCustomPluginExecution`: Whether custom plug-in logic should be bypassed. This is useful to observe the performance impact of plug-ins registered on events for the table.
 - `DeleteTable`: Whether to delete the custom `sample_example` table at the end of the sample. If you want to test plug-ins that use events on this table, this will preserve the table so you can run the samples multiple times while testing plug-ins.
 
-These settings are in the Settings.cs file that is included in each project. Apply the change in one project and they will be set for all of them.
+The `Settings.cs` file is included in each project. Apply the change in one project and they will be set for all of them.
 
-The `ExecuteMultipleRequest` message is intended to be used in a scenario where it contains data that is needed to execute one or more messages requests as a single batch operation, and optionally return a collection of results.
-
-## How this sample works
-
-By default the **CreateUpdateMultiple** project should be set as the startup project for the solution. To try any of the other samples, select the project in Solution Explorer and choose Set as startup project.
-
-### Demonstrate
-
-As mentioned in [What this sample does](#what-this-sample-does) above, this sample demonstrates how to create and update records in bulk for a custom table created by the sample. To do this, it must create a custom table and clean up when you finish running the sample.
+### Supporting examples
 
 The shared `Utility.cs` class contains static methods to perform operations that are common in each sample. These are not the primary focus of the sample, but might be of interest:
 
@@ -94,16 +83,83 @@ The shared `Utility.cs` class contains static methods to perform operations that
 |`CreateExampleTable`|Creates the table used by projects in this solution if it doesn't already exist.|
 |`DeleteExampleTable`|Deletes the table used by projects in this solution, unless the `DeleteTable` setting is false.|
 
+## How this sample works
+
+By default the **CreateUpdateMultiple** project should be set as the startup project for the solution. To try any of the other samples, select the project in Solution Explorer and choose Set as startup project.
+
+### Demonstrate
+
+As mentioned in [What this sample does](#what-this-sample-does) above, this sample demonstrates how to create and update records in bulk for a custom table created by the sample. To do this, it must create a custom table and clean up when you finish running the sample.
+
 Details about each project and the default output are described below:
 
 #### CreateUpdateMultiple
-<!-- TODO -->
+
+<!-- Can't link using xref at this time -->
+This project uses [CreateMultipleRequest](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) and [UpdateMultipleRequest](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) classes to perform bulk create and update operations.
+
+This project sends two requests, each attempting to complete operations for the total configured number of records.
+
+The output of this project with 100 records will include this:
+
+```
+Sending CreateMultipleRequest...
+        Created 100 records in 1 seconds.
+Preparing 100 records to update..
+Sending UpdateMultipleRequest...
+        Updated 100 records in 3 seconds.
+```
+
 #### ExecuteMultiple
-<!-- TODO -->
+
+This project uses the [ExecuteMultipleRequest class](xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest) class to perform bulk create and update operations.
+
+Because `ExecuteMultiple` is limited to 1000 requests and the sample may be configured to create more records than that, this project will chunk the total number of requests into groups of 1000 and will send as many requests as needed to perform the respective operations.
+
+The output of this project with 100 records will include this:
+
+```
+Sending 1 ExecuteMultipleRequest to create...
+ Sending ExecuteMultipleRequest 1...
+        Created 100 records in 4 seconds.
+Preparing 100 records to update...
+Sending 1 ExecuteMultipleRequest to update...
+ Sending ExecuteMultipleRequest 1...
+        Updated 100 records in 4 seconds.
+```
+
 #### ParallelCreateUpdate
-<!-- TODO -->
+
+This project uses the [System.Threading.Tasks.Parallel Class](xref:System.Threading.Tasks.Parallel) together with the [ServiceClient.Clone Method](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone) to perform individual create and update operations using multiple threads.
+
+The number of threads used will depend on the [ServiceClient.RecommendedDegreesOfParallelism Property](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism), which is based on the value of the `x-ms-dop-hint` response header. The `x-ms-dop-hint` response header provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide good results for a given environment.
+
+The output of this project with 100 records will include this:
+
+```
+Sending create requests in parallel...
+        Created 100 records in 3 seconds.
+Preparing 100 records to update..
+Sending update requests in parallel...
+        Updated 100 records in 3 seconds.
+```
+
+
 #### SimpleLoop
-<!-- TODO -->
+
+This project simply loops through the list of prepared Entity instances to perform create and update individual operations sequentially using the [CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) and [UpdateRequest](hxref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) classes.
+
+This sample represents the case where no effort is applied to maximize throughput. It should represent the worst case for performance.
+
+The output of this project with 100 records will include this:
+
+```
+Sending create requests one at a time...
+        Created 100 records in 10 seconds.
+Preparing 100 records to update..
+Sending update requests one at a time...
+        Updated 100 records in 12 seconds.
+```
 
 ### Clean up
 
