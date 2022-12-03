@@ -227,6 +227,8 @@ items:
     href: web-access-plugin.md
   - name: IsSystemAdmin Custom API
     href: issystemadmin-customapi-sample-plugin.md
+  - name: CreateMultiple & UpdateMultiple plug-ins
+    href: createmultiple-updatemultiple-plugin.md
 - name: Query Data
   items:
   - name: Query data using LINQ
