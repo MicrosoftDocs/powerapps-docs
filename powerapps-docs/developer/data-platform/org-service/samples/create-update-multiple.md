@@ -34,7 +34,7 @@ You can download the sample from [here](https://github.com/microsoft/PowerApps-S
 ## How to run this sample
 
 1. Clone or download the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repository.
-1. Open the [PowerApps-Samples/dataverse/orgsvc/C#-NETCore/CreateUpdateMultiple/CreateUpdateMultiple.sln](TODO) file using Visual Studio 2022.
+1. Open the `PowerApps-Samples/dataverse/orgsvc/C#-NETCore/CreateUpdateMultiple/CreateUpdateMultiple.sln` file using Visual Studio 2022.
 1. Edit the appsettings.json file. Set the connection string `Url` and `Username` parameters as appropriate for your test environment.
 1. The environment Url can be found in the Power Platform admin center. It has the form `https://<environment-name>.crm.dynamics.com`.
 1. Build the solution, select the desired project as the startup project and press F5 to run the console application in debug mode.
@@ -130,7 +130,7 @@ Sending 1 ExecuteMultipleRequest to update...
 
 #### ParallelCreateUpdate
 
-This project uses the [System.Threading.Tasks.Parallel Class](xref:System.Threading.Tasks.Parallel) together with the [ServiceClient.Clone Method](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone) to perform individual create and update operations using multiple threads.
+This project uses the [System.Threading.Tasks.Parallel Class](xref:System.Threading.Tasks.Parallel) together with the [ServiceClient.Clone Method](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) to perform individual create and update operations using multiple threads.
 
 The number of threads used will depend on the [ServiceClient.RecommendedDegreesOfParallelism Property](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism), which is based on the value of the `x-ms-dop-hint` response header. The `x-ms-dop-hint` response header provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide good results for a given environment.
 
@@ -147,7 +147,7 @@ Sending update requests in parallel...
 
 #### SimpleLoop
 
-This project simply loops through the list of prepared Entity instances to perform create and update individual operations sequentially using the [CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) and [UpdateRequest](hxref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) classes.
+This project simply loops through the list of prepared Entity instances to perform create and update individual operations sequentially using the [CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) and [UpdateRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) classes.
 
 This sample represents the case where no effort is applied to maximize throughput. It should represent the worst case for performance.
 
