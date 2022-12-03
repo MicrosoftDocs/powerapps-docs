@@ -32,23 +32,25 @@ Use the [CreateMultipleRequest class](/dotnet/api/microsoft.xrm.sdk.messages.cre
 
 ### UpdateMultiple
 
-Use the [UpdateMultipleRequest class](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) to prepare a [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) of records to be updated using the [Targets Property](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.targets). Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request. While this can return an [CreateMultipleResponse class](/dotnet/api/microsoft.xrm.sdk.messages.updatemultipleresponse), there are no useful properties in that class so you will usually not use it. You will know the operation succeeded when it doesn't return an error.
+Use the [UpdateMultipleRequest class](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) to prepare a [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) of records to be updated using the [Targets Property](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.targets). Use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request. While this can return an [UpdateMultipleResponse class](/dotnet/api/microsoft.xrm.sdk.messages.updatemultipleresponse), there are no useful properties in that class so you will usually not use it. You will know the operation succeeded when it doesn't return an error.
 
 ## Plug-ins and other event handlers
 
 Each time a plug-in is invoked, some time is required to instantiate the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is instantiated once and can process all the operations with greater efficiency.
 
-To enable you to move your logic to the most efficient message, the message processing pipeline for the single and multiple versions of the create and update operations are now merged. What does this mean?
+To enable you to move your logic to the most efficient message, the message processing pipeline for the single and multiple versions of the create and update operations are now *merged*. What does this mean?
 
 This means:
 
-- When `CreateMultiple` and `UpdateMultiple` messages are used the respective `Create` and `Update` events occur for each item in the `Targets` parameter. Any existing plug-ins or other event handlers for the `Create` and `Update` events will continue to work as they always have. You are not required to write new plug-ins to manage events raised by these messages.
-- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with a single entity passed in the `Targets` parameter. You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events.
+- When `CreateMultiple` and `UpdateMultiple` messages are used the respective `Create` and `Update` events occur for each Entity instance in the `Targets` parameter. Any existing plug-ins or other event handlers for the `Create` and `Update` events will continue to work as they always have. You are not required to write new plug-ins to manage events raised by these messages.
+- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with a single Entity instance passed in the `Targets` parameter. You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events and the logic will be applied for single or multiple operations.
 
 With the introduction of the `CreateMultiple` and `UpdateMultiple` messages, for best performance we recommend that you begin to move any existing synchronous logic from `Create` and `Update` events to `CreateMultiple` and `UpdateMultiple` events. If you are introducing new logic, use the `CreateMultiple` and `UpdateMultiple` events rather than `Create` and `Update`. For asynchronous logic, such as Power Automate flows, there is no direct performance gain by moving logic to the multiple versions of these events.
 
 > [!IMPORTANT]
-> With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because it may be necessary while developing plug-ins. It is the plug-in developer's responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event and removed from the single version of the event. Otherwise, the logic will be applied twice.
+> With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because it may be necessary while developing plug-ins.
+>
+> It is the plug-in developer's responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event and removed from the single version of the event. Otherwise, the logic will be applied twice.
 
 ## Limitations
 
@@ -56,7 +58,7 @@ Keep these limitations in mind when using `CreateMultiple` and `UpdateMultiple` 
 
 ### Limited to certain tables
 
-Currently, `CreateMultiple` and `UpdateMultiple` messages are limited to those tables which have been created recently. You can use these messages on a new custom table you create. Eventually, these messages will be enabled for all tables that support individual `Create` and `Update` messages.
+Currently, `CreateMultiple` and `UpdateMultiple` messages are limited to those tables which have been created recently. You can use these messages on a new custom table you create. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
 
 You can test whether individual tables support these messages using the examples below.
 
@@ -165,14 +167,11 @@ If you are using the Dataverse Service client, you may encounter this error `The
 
 The default timeout set using Dataverse Service client is 4 minutes, which is very long for any synchronous operation. You can change this using the static [ServiceClient.MaxConnectionTimeout](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.MaxConnectionTimeout) property, but you should consider reducing the number of entities passed in the `Targets` parameter first.
 
-
-
-
 ### No continue on error
 
 The `ExecuteMultiple` message supports the option that will continue processing requests even when one or more requests fail. Due to the fact that `CreateMultiple` and `UpdateMultiple` messages achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue on error behaviors.
 
-You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that will allow the set of operations to fall back to use `ExecuteMultiple` when `CreateMultiple` and `UpdateMultiple` messages fail.
+You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that will allow the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail.
 
 ### .NET SDK only
 
