@@ -1121,6 +1121,9 @@ A. If the image file name is long or contains many full-width characters, it may
 > [!div class="mx-imgBorder"] 
 > ![HTML markup displayed in a column on a subgrid.](media/html-markup-issue.png)
 To resolve this issue, see [Simple configuration](#simple-configuration) for the steps necessary to set the **Format** option to **Rich text**.
+	
+- When creating a note in Timeline, "$&" is converted to "{3}amp;"
+> To resolve this, add `"removePlugins": "stickystyles"` to your configuration file.
 
 
 ### See also
