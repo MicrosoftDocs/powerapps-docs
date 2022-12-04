@@ -38,7 +38,7 @@ The first major difference is that the multiple version of these messages has a 
 
 ### Entity Images
 
-The other major difference is that entity images configured in the step registration for your plug-ins will also be provided as an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4) which provides the [PreEntityImagesCollection](dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4.preentityimagescollection) and [PostEntityImagesCollection](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4.postentityimagescollection) properties. These arrays provide access to the same entity images in an array that is synchronized with the EntityCollection.
+The other major difference is that entity images configured in the step registration for your plug-ins will also be provided as an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4) which provides the [PreEntityImagesCollection](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4.preentityimagescollection) and [PostEntityImagesCollection](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4.postentityimagescollection) properties. These arrays provide access to the same entity images in an array that is synchronized with the EntityCollection.
 
 If you are using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collection of entity images are available to your plug-in.
 
@@ -132,7 +132,7 @@ if (context.InputParameters.Contains("Targets") && context.InputParameters["Targ
       int count = 0;
       foreach (Entity entity in entityCollection.Entities)
       {
-            EntityImageCollection entityImages = context.PreEntityImagesCollection[0];
+            EntityImageCollection entityImages = context.PreEntityImagesCollection[count];
 
             // Verify expected entity image from step registration
             if (entityImages.TryGetValue("example_preimage", out Entity preImage))
