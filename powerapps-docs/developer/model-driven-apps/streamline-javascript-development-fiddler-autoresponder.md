@@ -24,7 +24,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
 
 1. [Download](https://www.telerik.com/download/fiddler) and install Fiddler.
 1. Open Fiddler and from the menu bar, go to **Tools**, and then select **Options**.
-2. Select the **HTTPS** tab in the dialog box and check the **Capture HTTPS CONNECTS** and **Decrypt HTTPS traffic** checkboxes so that the HTTPS traffic is captured and then decrypted.
+1. Select the **HTTPS** tab in the dialog box and check the **Capture HTTPS CONNECTS** and **Decrypt HTTPS traffic** checkboxes so that the HTTPS traffic is captured and then decrypted.
 
    :::image type="content" source="media/fiddler-https-options.png" alt-text="Select the marked checkboxes in the HTTP tab":::
 
@@ -38,7 +38,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
 ## Configure AutoResponder
 
 1. Open the page in the model-driven app that you want to debug.
-2. Start the Fiddler trace capture by clicking the **Capturing** button in the bottom left corner.
+1. Start the Fiddler trace capture by clicking the **Capturing** button in the bottom left corner.
 
    :::image type="content" source="media/fiddler-start-capturing.png" alt-text="Click on Capturing button to start capturing HTTPS traffic.":::
 
@@ -46,8 +46,8 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
    > If you want to capture HTTPS traffic only from a particular host, on the **Filters** tab, in the **Hosts** area, in the **-No Host Filter-** drop-down select **Show only the following Hosts** from the menu and enter the list of domains from which you wish to see traffic, separated by semi-colon. More information: [Filters reference](https://docs.telerik.com/fiddler/KnowledgeBase/Filters).
    > ![Filter traffic displayed in Fiddler UI.](media/fiddler-filter-traffic.png "Filter traffic displayed in Fiddler UI")
 
-3. Perform any operation necessary to load the script you are testing. You can stop the capture by clicking the same **Capturing** button again.
-4. Select the trace log sessions from the left pane and search for the file you want to setup the AutoResponder for.
+1. Perform any operation necessary to load the script you are testing. You can stop the capture by clicking the same **Capturing** button again.
+1. Select the trace log sessions from the left pane and search for the file you want to setup the AutoResponder for.
 
    For example, if the code you want to debug is in a JavaScript web resource named `new_testscript.js`, use the **Find** button to open the  **Find Sessions** dialog box and search for the name of the webresource.
 
@@ -81,7 +81,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
    /WebResources/new_testscript.js
    ```
 
-   The bottom row is left blank. Type the path to your local file on your disk on this bottom row and <strong>Save</strong>.
+   The bottom row is left blank. Type the path to your local file on your disk on this bottom row and **Save**.
 
    :::image type="content" source="media/fiddler-save-rule.PNG" alt-text="Add path to your local file in Rule editor":::
 
@@ -91,9 +91,9 @@ By following the steps above, you have configured Fiddler to listen to the reque
 ## Update and test your code
 
 1. Apply changes to your local file.
-2. Start Fiddler trace capture again and go back to your browser and hard reload the page with empty cache.
-3. In the browser developer tools you can see that the file that is now received will be the local one.
-4. Continue repeating this process while updating your code until you get the results you require.
+1. Start Fiddler trace capture again and go back to your browser and hard reload the page with empty cache.
+1. In the browser developer tools you can see that the file that is now received will be the local one.
+1. Continue repeating this process while updating your code until you get the results you require.
 
 
 ## See Also
