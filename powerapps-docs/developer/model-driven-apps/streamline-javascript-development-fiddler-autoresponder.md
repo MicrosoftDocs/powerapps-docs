@@ -3,10 +3,9 @@ title: "Script web resource development using Fiddler AutoResponder (model-drive
 description: "Learn about how to setup and use AutoResponder in Fiddler for local debugging of JavaScript web resources." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-
-ms.date: 04/01/2022
+ms.date: 12/04/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -50,20 +49,26 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
    ![Select the two highlighted checkboxes.](media/fiddler-select-checkbox.png "Select the two highlighted checkboxes")<br />
 7. Ensure that you still have the session related to your target file selected and then click on the **Add Rule** button in the **AutoResponder** section. This adds a new entry into the rules table.<br />
    ![Add new rule.](media/fiddler-add-rule.png "Add new rule")
-8. When the rule is selected, the **Rule Editor** at the bottom has the top row populated with the Session URL related to your file and prefixed with a string like `EXACT:`.<br />
-   You can then edit the string to match to simplify it. With web resources, the URL will contain generated values in the URL or in a query string to make sure that the latest published version is included in the response. You will probably see the `EXACT` value will look something like this:<br />
-    ```
-    EXACT:https://<org URL>/%7B636556138760000160%7D/WebResources/new_testscript.js?    ver=-1229805553
-    ```<br />
-    You can simplify this to remove the generated values and use this instead:<br />
-    ```
-    /WebResources/new_testscript.js
-    ```<br />
-   The bottom row is left blank. Type the path to your local file on your disk on this bottom row and <strong>Save</strong>.<br />
-   ![Add path to your local file in Rule editor.](media/fiddler-save-rule.png "Add path to your local file in Rule editor")<br />
+8. When the rule is selected, the **Rule Editor** at the bottom has the top row populated with the Session URL related to your file and prefixed with a string like `EXACT:`.
+
+   You can then edit the string to match to simplify it. With web resources, the URL will contain generated values in the URL or in a query string to make sure that the latest published version is included in the response. You will probably see the `EXACT` value will look something like this:
+
+   ```
+   EXACT:https://<org URL>/%7B636556138760000160%7D/WebResources/new_testscript.js?    ver=-1229805553
+   ```
+
+   You can simplify this to remove the generated values and use this instead:
+
+   ```
+   /WebResources/new_testscript.js
+   ```
+
+   The bottom row is left blank. Type the path to your local file on your disk on this bottom row and <strong>Save</strong>.
+
+   :::image type="content" source="media/fiddler-save-rule.PNG" alt-text="Add path to your local file in Rule editor":::
 
 
-By following the above steps, Fiddler is configured to listen to the requests and responds with the local file instead of passing the request over the network.
+By following the steps above, you have configured Fiddler to listen to the requests and responds with the local file instead of passing the request over the network.
 
 ## Update and test your code
 
