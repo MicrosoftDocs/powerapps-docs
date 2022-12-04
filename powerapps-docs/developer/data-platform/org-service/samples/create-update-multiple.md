@@ -96,7 +96,7 @@ Details about each project and the default output are described below:
 #### CreateUpdateMultiple
 
 <!-- Can't link using xref at this time -->
-This project uses [CreateMultipleRequest](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) and [UpdateMultipleRequest](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) classes to perform bulk create and update operations.
+This project uses [CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest) and [UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest) classes to perform bulk create and update operations.
 
 This project sends two requests, each attempting to complete operations for the total configured number of records.
 
