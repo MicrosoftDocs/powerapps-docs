@@ -77,7 +77,7 @@ Now you'll set the navigation to use a context that we'll use to take the user t
 
     :::image type="content" source="media/deep-linking/set-account-detail.png" alt-text="AccountVal.":::
 
-1. [Save](../save-publish-app.md#save-changes-to-an-app) with the name "Account deep linking".
+1. [Save](../save-publish-app.md) with the name "Account deep linking".
 
 ## Get the App ID
 

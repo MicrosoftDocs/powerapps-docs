@@ -17,7 +17,7 @@ contributors:
 ---
 # setNotification (Client API reference)
 
-Displays an error message for the control to indicate that data isn’t valid. When this method is used,  a red "X" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message.
+Displays an error message for the control to indicate that data isn't valid. When this method is used,  a red "X" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message.
 
 > [!NOTE]
 > Always make sure that the control you are using `setNotification` with is visible on the form.

@@ -82,11 +82,11 @@ To work around this, you can display a custom card by configuring the table to u
 1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop-down list.
 1. Select **OK**, and then **Publish** the customization.
 
-### UI limitations and differences from the read-only grid control
-
+### UI limitations and differences 
 - The grid doesn't currently support any theme customizations
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
+- Reordering columns from the grid column headers is not supported. 
 
 ### See also
 
