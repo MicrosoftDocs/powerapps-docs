@@ -214,6 +214,7 @@ There are no plans to change `Retrieve` and `RetrieveMultiple` message behavior.
 
 [Write plug-ins for CreateMultiple and UpdateMultiple](../write-plugin-multiple-operation.md)<br />
 [Sample: Use CreateMultiple and UpdateMultiple](samples/create-update-multiple.md)<br />
+[Sample: CreateMultiple and UpdateMultiple plug-ins](samples/createmultiple-updatemultiple-plugin.md)<br />
 [Use messages with the Organization service](use-messages.md)<br />
 
 

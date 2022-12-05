@@ -22,6 +22,9 @@ This sample shows how to perform bulk create and update operations using several
 
 This sample is a Visual Studio .NET 6.0 solution that contains 4 different projects that perform the same operations in different ways so that you can compare the performance of each method.
 
+> [!NOTE]
+> The [Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md) is designed to work together with this sample to demonstrate how plug-ins can be migrated from `Create` and `Update` to `CreateMultiple` and `UpdateMultiple` messages.
+
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/CreateUpdateMultiple).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
@@ -56,12 +59,12 @@ When the sample runs, you will be prompted in the default browser to select an e
 This sample is a .NET 6.0 Visual Studio 2022 solution that contains 4 projects that perform the same operations:
 
 1. Create a new custom table named `sample_example` if it doesn't already exist.
-1. Prepare a configurable number of entity instances for the custom table representing records to create.
-1. Create the records. Each project uses a different method.
+1. Prepare a configurable number of `sample_example` entity instances for the custom table representing records to create.
+1. Create the `sample_example` records. Each project uses a different method.
 1. Update the set of entity instances that were created by appending text to the `sample_name` attribute.
-1. Update the records using the same method they were created.
-1. Use the the `BulkDeleteRequest` to delete the records created and report on the success of this request.
-1. Delete the custom `sample_example` table created in the first step.
+1. Update the `sample_example` records using the same method they were created.
+1. Use a [BulkDeleteRequest](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) to delete the `sample_example` records created and report on the success of this request.
+1. Delete the custom `sample_example` table created in the first step, unless configured not to.
 
 Each project uses a shared set of settings in the `Settings.cs` file that allow you to control:
 
@@ -85,7 +88,7 @@ The shared `Utility.cs` class contains static methods to perform operations that
 
 ## How this sample works
 
-By default the **CreateUpdateMultiple** project should be set as the startup project for the solution. To try any of the other samples, select the project in Solution Explorer and choose Set as startup project.
+By default the **CreateUpdateMultiple** project should be set as the startup project for the solution. To try any of the other samples, select the project in Solution Explorer and choose **Set as startup project**.
 
 ### Demonstrate
 
@@ -119,6 +122,7 @@ Because `ExecuteMultiple` is limited to 1000 requests and the sample may be conf
 The output of this project with 100 records will include this:
 
 ```
+Preparing 100 records to create...
 Sending 1 ExecuteMultipleRequest to create...
  Sending ExecuteMultipleRequest 1...
         Created 100 records in 4 seconds.
@@ -126,6 +130,21 @@ Preparing 100 records to update...
 Sending 1 ExecuteMultipleRequest to update...
  Sending ExecuteMultipleRequest 1...
         Updated 100 records in 4 seconds.
+```
+
+The output of this project with 2000 records will include this:
+
+```
+Preparing 2000 records to create...
+Sending 2 ExecuteMultipleRequests to create...
+ Sending ExecuteMultipleRequest 1...
+ Sending ExecuteMultipleRequest 2...
+        Created 2000 records in 58 seconds.
+Preparing 2000 records to update...
+Sending 2 ExecuteMultipleRequests to update...
+ Sending ExecuteMultipleRequest 1...
+ Sending ExecuteMultipleRequest 2...
+        Updated 2000 records in 76 seconds.
 ```
 
 #### ParallelCreateUpdate
@@ -149,7 +168,8 @@ Sending update requests in parallel...
 
 This project simply loops through the list of prepared Entity instances to perform create and update individual operations sequentially using the [CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) and [UpdateRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest) classes.
 
-This sample represents the case where no effort is applied to maximize throughput. It should represent the worst case for performance.
+> [!NOTE]
+> This sample represents the case where no effort is applied to maximize throughput. It should represent the worst case for performance.
 
 The output of this project with 100 records will include this:
 
@@ -169,5 +189,7 @@ By default, when each project in the solution completes successfully, all the re
 ### See Also
 
 [Use CreateMultiple and UpdateMultiple (Preview)](../use-createmultiple-updatemultiple.md)<br />
+
+[Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
