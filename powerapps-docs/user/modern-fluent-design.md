@@ -26,6 +26,6 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 
 ## What’s included with the new look
 
-After the app setting is enabled, you will see the new, modern interface in model-driven apps. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the current, read-only grid.
+After the app setting is enabled for a model-driven app, you will see the new, modern interface in the app. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the read-only grid.
 
 
