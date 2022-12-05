@@ -3,7 +3,7 @@ title: Optimize performance for Create and Update operations | Microsoft Docs
 description: Choose the best approach when creating or updating large numbers records.
 author: divka78
 ms.topic: article
-ms.date: 11/28/2022
+ms.date: 12/12/2022
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
