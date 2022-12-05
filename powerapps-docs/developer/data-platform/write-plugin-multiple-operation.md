@@ -48,7 +48,7 @@ If you are using the `PluginBase` class that is the standard when initializing p
 
 The following are two examples, one with some basic logic for `Update`, and another with logic for `UpdateMultiple`. Both of these access entity images registered with the step.
 
-### Update Single
+### [Update Single](#tab/single)
 
 This example simply updates the `sample_description` attribute with information about whether the `sample_name` value has changed. It refers to an entity image named `example_preimage` that was registered with the step.
 
@@ -118,9 +118,9 @@ else
 }
 ```
 
-### Update Multiple
+### [Update Multiple](#tab/multiple)
 
-This example applies the same logic as the one above, except the `Entity` and the `EntityImageCollection` are synchronized using an `count` variable while using a `foreach` loop through the `EntityCollection`.
+This example applies the same logic as [[Update Single](#tab/single)](#update-singletabsingle), except the `Entity` and the `EntityImageCollection` are synchronized using an `count` variable while using a `foreach` loop through the `EntityCollection`.
 
 This example also includes the `count` when using the `localPluginContext.Trace` method and is less verbose to only include traces when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
 
@@ -202,6 +202,7 @@ else
 }
 ```
 
+---
 
 ### See also
 

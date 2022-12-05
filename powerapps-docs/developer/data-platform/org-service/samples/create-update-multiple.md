@@ -22,9 +22,6 @@ This sample shows how to perform bulk create and update operations using several
 
 This sample is a Visual Studio .NET 6.0 solution that contains 4 different projects that perform the same operations in different ways so that you can compare the performance of each method.
 
-> [!NOTE]
-> The [Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md) is designed to work together with this sample to demonstrate how plug-ins can be migrated from `Create` and `Update` to `CreateMultiple` and `UpdateMultiple` messages.
-
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23-NETCore/CreateUpdateMultiple).
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
@@ -92,6 +89,9 @@ The shared `Utility.cs` class contains static methods to perform operations that
 ## How this sample works
 
 By default the **CreateUpdateMultiple** project should be set as the startup project for the solution. To try any of the other samples, select the project in Solution Explorer and choose **Set as startup project**.
+
+> [!NOTE]
+> The [Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md) is designed to work together with this sample to demonstrate how plug-ins can be migrated from `Create` and `Update` to `CreateMultiple` and `UpdateMultiple` messages.
 
 ### Demonstrate
 
