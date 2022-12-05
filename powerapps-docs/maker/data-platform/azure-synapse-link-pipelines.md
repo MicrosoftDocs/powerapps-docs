@@ -2,7 +2,7 @@
 title: "Copy Dataverse data into Azure SQL | MicrosoftDocs"
 description: "Learn how to run Azure Synapse pipelines with your exported Dataverse table data"
 ms.custom: ""
-ms.date: 08/18/2022
+ms.date: 12/05/2022
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
