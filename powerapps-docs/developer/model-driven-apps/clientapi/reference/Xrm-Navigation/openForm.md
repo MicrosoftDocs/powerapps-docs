@@ -1,12 +1,11 @@
 ---
 title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the openForm method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
-ms.date: 03/12/2022
+author: HemantGaur
+ms.author: hemantg
+ms.date: 12/01/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
@@ -234,7 +233,7 @@ formParameters["description"] = "Default values for this record were set program
 
 // Set lookup column
 formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
-formParameters["preferredsystemuseridname"] = " Admin user"; // Name of the user.
+formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
 formParameters["preferredsystemuseridtype"] = "systemuser"; // Table name.
 // End of set lookup column
 

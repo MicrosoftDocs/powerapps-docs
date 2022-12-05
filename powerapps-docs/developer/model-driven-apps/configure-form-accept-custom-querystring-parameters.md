@@ -1,9 +1,8 @@
 ---
 title: "Configure a form to accept custom querystring parameters (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about configuring a form to accept custom querystring parameters. Use these parameters to set default values when you create a new record in the application." # 115-145 characters including spaces. This abstract displays in the search result."
-ms.author: jdaly
 author: HemantGaur
-manager: lwelicki
+ms.author: hemantg
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -47,7 +46,7 @@ The ability to pass values to a web page by using query strings represents a con
   
  The following describes the `querystringparameter` element parameters, `name` and `type`:  
   
-- **name**. Each name column must contain at least one underscore ('\_') character, but the name of the query string parameter cannot begin with an underscore. The name also can’t start with “crm\_”. We strongly recommend that you use the customization prefix of the solution publisher as the naming convention. It's also recommended not to have the name  (querystringparameter name) be the same as the name of a column on the table. A valid `querystringparameter` name value is “myISV_contact_specialvalue”.  
+- **name**. Each name column must contain at least one underscore ('\_') character, but the name of the query string parameter cannot begin with an underscore. The name also can't start with "crm\_". We strongly recommend that you use the customization prefix of the solution publisher as the naming convention. It's also recommended not to have the name  (querystringparameter name) be the same as the name of a column on the table. A valid `querystringparameter` name value is "myISV_contact_specialvalue".  
   
     > [!IMPORTANT]
     >  If a `querystringparameter` element name is not unique, it may be overwritten by another parameter definition using a different data type.  
@@ -69,7 +68,7 @@ The ability to pass values to a web page by using query strings represents a con
     -   PositiveInteger  
   
         > [!NOTE]
-        >  PositiveInteger includes “0” in the range of valid values.  
+        >  PositiveInteger includes "0" in the range of valid values.  
   
     -   SafeString  
   
