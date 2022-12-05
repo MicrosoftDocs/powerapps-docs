@@ -58,7 +58,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate authentication type. To do this, select **Test connection to validate the connectivity,** and then select **Create**.
 1. Similar to the previous steps, create a linked service to Azure SQL Database where Dataverse data will be synced.
 1. Once **Inputs** are configured, select **Use this template**.
-   :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template" lightbox="media/article-folder-name/ADLSG2-use-this-template.png":::
+   :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template" lightbox="media/ADLSG2-use-this-template.png":::
 
 1. Now a trigger can be added to automate this pipeline, so that the pipeline can always process files when incremental updates are completed periodically. Go to **Manage** > **Trigger**, and create a trigger using the following properties:
    - **Name**: Enter a name for the trigger, such as *triggerModelJson*.
