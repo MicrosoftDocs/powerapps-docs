@@ -19,6 +19,13 @@ contributors:
 
 This sample provides several Plug-in types that demonstrate how to write plug-ins for the `CreateMultiple` and `UpdateMultiple` messages.
 
+> [!IMPORTANT]
+> The plug-ins in this sample are designed to work together with the operations in [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md). If you want to test these plug-ins, you need to:
+>  - Build the solution to create the assembly.
+>  - Register the assembly using the Plug-in registration tool (PRT).
+>  - Register steps for the plug-in as described below.
+>  - Run one or more of the projects in the [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md)
+
 ## Prerequisites
 
 - Access to Dataverse with system administrator or system customizer privileges.
@@ -44,11 +51,12 @@ This sample provides several Plug-in types that demonstrate how to write plug-in
   
   More information:  [Register a plug-in](../../register-plug-in.md)
 
-1. Run any of the projects in the [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md), but set a break point before the records are deleted.
-1. In [Power Apps](https://make.powerapps.com/), navigate to **Dataverse** > **Tables** and locate the **Example** table.
-1. Click the **Edit** button to view the records created.
-1. Add the **Description** column to the view.
-1. Repeat and observe the differences when different projects in the [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md) are run. The `Description` field should include the name of the project.
+1. Run any of the projects in the [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md), but set a break point before the records are deleted. This will create records that you can then inspect.
+1. To inspect the records:
+   1. In [Power Apps](https://make.powerapps.com/), navigate to **Dataverse** > **Tables** and locate the **Example** table. It should be visible under the **Custom** tab.
+   1. Click the **Edit** button to view the records created.
+   1. Add the **Description** column to the view.
+   1. Repeat and observe the differences when different projects in the [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md) are run. The `Description` field should include the name of the project.
 1. Turn on tracing and view the traces written to the `PluginTraceLog` Table. The [XrmToolBox Plugin Trace Viewer](https://jonasr.app/ptv/) is recommended for this. More information: [Tracing and logging](../../logging-tracing.md).
 
 ## What this sample does
@@ -57,28 +65,31 @@ This sample provides an experience where you can observe and interact with plug-
 
 This sample depends on the [Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md) so that the merged message processing pipeline behaviors can be verified.
 
-The **Create and Update Multiple Sample** contains 4 separate projects that do the same thing in different ways.
+The **Create and Update Multiple Sample** contains 4 separate projects that do the same thing in different ways. The following steps describe what the **Create and Update Multiple Sample** projects do and how the plug-ins in this sample interact with those operations.
 
 1. Create a new custom table named `sample_example` if it doesn't already exist.
 1. Prepare a configurable number of `sample_example` entity instances for the custom table representing records to create.
+
+   Each record has the  `sample_name` column value set with an incrementing number. The first value is `sample record 0000001`.
+
 1. Create the `sample_example` records. Each project uses a different method.
    
    > [!NOTE]
-   > Each project will pass a `tag` parameter with the name of the project so that it is available as a shared variable to the plug-in. This value will be used by the `CreateMultiplePreOp.cs` plug-in in this sample.
+   > Each project will pass a `tag` parameter with the name of the project so that it is available as a shared variable to the plug-in. This value will be used by the `CreateMultiplePreOp.cs` plug-in in this sample. More information [Add a shared variable from the Organization Service](../use-messages.md#add-a-shared-variable-from-the-organization-service)
    >
-   > The `FollowupPluginSingle.cs` OR `FollowupPluginMultiple.cs` plug-ins in this sample create a follow up task record on create.
+   > The `FollowupPluginSingle.cs` OR `FollowupPluginMultiple.cs` plug-ins in this sample create a follow up task record on create on the `Create` OR `CreateMultiple` message respectively.
 
-1. Update the set of entity instances that were created by appending text to the `sample_name` attribute.
+1. Update the set of entity instances that were created by appending text to the `sample_name` attribute. The first value is `sample record 0000001 Updated`.
 1. Update the `sample_example` records using the same method they were created.
 
    > [!NOTE]
-   > The `UpdateSingle.cs` OR `UpdateMultiple.cs` plug-ins in this sample update the `sample_description` attribute with information about the changes.
+   > The `UpdateSingle.cs` OR `UpdateMultiple.cs` plug-ins in this sample update the `sample_description` attribute showing the old and new value for the `sample_name` attribute.
 
 1. Use a [BulkDeleteRequest](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) to delete the `sample_example` records created and report on the success of this request.
-1. Delete the custom `sample_example` table created in the first step, unless configured not to.
+1. Delete the custom `sample_example` table created in the first step, unless the setting `DeleteTable` is set to `false`.
 
 > [!IMPORTANT]
-> To run this sample you must first run the **Create and Update Multiple Sample** with the setting `DeleteTable` set to `false`. This will create the table this sample depends on.
+> To run this sample you must first run the **Create and Update Multiple Sample** with the setting `DeleteTable` set to `false`. This will create the table this sample depends on and allow you to register steps for the plug-ins.
 
 ### Plug-in Type list
 
@@ -90,8 +101,8 @@ This sample contains the following plug-in types designed to interact with the o
 |`CreateMultiplePreOp.cs`|CreateMultiple|PreOperation (20)|Sets the `sample_description` attribute value to `$"'tag' value for Create = '{tagValue}'."` where `tagValue` is the value set using the optional `tag` parameter. |
 |`FollowupPluginMultiple.cs`|CreateMultiple|PostOperation (40)|This is the replacement for `FollowupPluginSingle.cs`.<br />Creates a `task` record associated with the `sample_example` record created.|
 |`FollowupPluginSingle.cs`|Create|PostOperation (40)|Creates a `task` record associated with the `sample_example` record created.|
-|`UpdateMultiple.cs`|UpdateMultiple|PostOperation (40)|This is the replacement for `UpdateSingle.cs`.<br />Uses an Entity image named `example_preimages` from the matching item in the `PreEntityImagesCollection` to compare the original `sample_name` value with the value in the update operation. When the values are different, append a message to the `sample_description` attribute value: `$"\\r\\n - 'sample_name' changed from '{oldName}' to '{newName}'."`, where `oldName` is the original value and `newName` is the new value.|
-|`UpdateSingle.cs`|Update|PostOperation (40)|Uses a `PreEntityImage` named `example_preimage` to compare the original `sample_name` value with the value in the update operation. When the values are different, append a message to the `sample_description` attribute value: `$"\\r\\n - 'sample_name' changed from '{oldName}' to '{newName}'."`, where `oldName` is the original value and `newName` is the new value.|
+|`UpdateMultiple.cs`|UpdateMultiple|PostOperation (40)|This is the replacement for `UpdateSingle.cs`.<br />Uses an Entity image named `example_preimages` from the matching item in the `PreEntityImagesCollection` to compare the original `sample_name` value with the value in the update operation.<br /><br />When the values are different, append a message to the `sample_description` attribute value: `$"\\r\\n - 'sample_name' changed from '{oldName}' to '{newName}'."`, where `oldName` is the original value and `newName` is the new value.|
+|`UpdateSingle.cs`|Update|PostOperation (40)|Uses a `PreEntityImage` named `example_preimage` to compare the original `sample_name` value with the value in the update operation.<br /><br />When the values are different, append a message to the `sample_description` attribute value: `$"\\r\\n - 'sample_name' changed from '{oldName}' to '{newName}'."`, where `oldName` is the original value and `newName` is the new value.|
 
 ## How this sample works
 
@@ -119,6 +130,7 @@ After you finish running this sample you should unregister the `xMultiplePluginS
 
 [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)<br />
 [Use CreateMultiple and UpdateMultiple (Preview)](../use-createmultiple-updatemultiple.md)<br />
+[Sample: Use CreateMultiple and UpdateMultiple](create-update-multiple.md)
 
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

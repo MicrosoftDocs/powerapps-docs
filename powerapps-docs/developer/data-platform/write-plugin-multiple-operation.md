@@ -26,7 +26,7 @@ If you have existing plug-ins for the `Create` and `Update` messages for tables 
 
 ## Is updating plug-ins required?
 
-There is no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic will continue to be applied when applications use `CreateMultiple` or `UpdateMultiple`. This is because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the message. 
+There is no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic will continue to be applied when applications use `CreateMultiple` or `UpdateMultiple`. This is because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the message. More information: [Message pipelines merged](org-service/use-createmultiple-updatemultiple.md#message-pipelines-merged)
 
 However, only plug-ins written for the multiple version of these messages will enable optimum performance when developers use `CreateMultiple` and `UpdateMultiple`. Over time, as more applications choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations will become the standard, and plug-ins written for single operations will be the exception.
 
@@ -42,7 +42,7 @@ The multiple version of these messages has a `Targets` parameter that is an [Ent
 
 Entity images configured in the step registration for your plug-ins are an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4) which provides the [PreEntityImagesCollection](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4.preentityimagescollection) and [PostEntityImagesCollection](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4.postentityimagescollection) properties. These arrays provide access to the same entity images in an array that is synchronized with the EntityCollection.
 
-If you are using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collection of entity images are available to your plug-in.
+If you are using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, in the `PluginBase.cs` file you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collections of entity images are available to your plug-in.
 
 ## Example
 
@@ -122,7 +122,7 @@ else
 
 This example applies the same logic as the one above, except the `Entity` and the `EntityImageCollection` are synchronized using an `count` variable while using a `foreach` loop through the `EntityCollection`.
 
-This example also includes the count when using the `localPluginContext.Trace` method and is less verbose to only include traces when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
+This example also includes the `count` when using the `localPluginContext.Trace` method and is less verbose to only include traces when error conditions occur. The amount of data that you can write to the trace log table is limited, so you should try to avoid writing traces for each iteration.
 
 ```csharp
 // Verify input parameters

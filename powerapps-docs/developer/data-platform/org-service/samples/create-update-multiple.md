@@ -60,6 +60,9 @@ This sample is a .NET 6.0 Visual Studio 2022 solution that contains 4 projects t
 
 1. Create a new custom table named `sample_example` if it doesn't already exist.
 1. Prepare a configurable number of `sample_example` entity instances for the custom table representing records to create.
+
+   Each record has the  `sample_name` column value set with an incrementing number. The first value is `sample record 0000001`.
+
 1. Create the `sample_example` records. Each project uses a different method.
 1. Update the set of entity instances that were created by appending text to the `sample_name` attribute.
 1. Update the `sample_example` records using the same method they were created.
@@ -189,7 +192,7 @@ By default, when each project in the solution completes successfully, all the re
 ### See Also
 
 [Use CreateMultiple and UpdateMultiple (Preview)](../use-createmultiple-updatemultiple.md)<br />
-
+[Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../../write-plugin-multiple-operation.md)<br />
 [Sample: CreateMultiple and UpdateMultiple plug-ins](createmultiple-updatemultiple-plugin.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]
