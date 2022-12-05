@@ -65,9 +65,15 @@ The **Create and Update Multiple Sample** contains 4 separate projects that do t
    
    > [!NOTE]
    > Each project will pass a `tag` parameter with the name of the project so that it is available as a shared variable to the plug-in. This value will be used by the `CreateMultiplePreOp.cs` plug-in in this sample.
+   >
+   > The `FollowupPluginSingle.cs` OR `FollowupPluginMultiple.cs` plug-ins in this sample create a follow up task record on create.
 
 1. Update the set of entity instances that were created by appending text to the `sample_name` attribute.
 1. Update the `sample_example` records using the same method they were created.
+
+   > [!NOTE]
+   > The `UpdateSingle.cs` OR `UpdateMultiple.cs` plug-ins in this sample update the `sample_description` attribute with information about the changes.
+
 1. Use a [BulkDeleteRequest](xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest) to delete the `sample_example` records created and report on the success of this request.
 1. Delete the custom `sample_example` table created in the first step, unless configured not to.
 
@@ -76,11 +82,11 @@ The **Create and Update Multiple Sample** contains 4 separate projects that do t
 
 ### Plug-in Type list
 
-This sample contains the following plug-in types designed to interact with the operations performed by the **Create and Update Multiple Sample**, or to help visualize the changes to the [IPluginExecutionContext4](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4) with each message.
+This sample contains the following plug-in types designed to interact with the operations performed by the **Create and Update Multiple Sample**, or to help capture the changes with each message.
 
 |Plug-in Type|Message|Stage|Description|
 |---------|---------|---------|---------|
-|`ContextWriter.cs`|Any|Any|Use this plug-in to write details of the `IPluginExecutionContext4` to the trace log so that you can see the values being passed. Add entity images in the step registration to view the content.|
+|`ContextWriter.cs`|Any|Any|Use this plug-in to write details of the [IPluginExecutionContext4](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4) to the trace log so that you can see the values being passed. Add entity images in the step registration to view the content.|
 |`CreateMultiplePreOp.cs`|CreateMultiple|PreOperation (20)|Sets the `sample_description` attribute value to `$"'tag' value for Create = '{tagValue}'."` where `tagValue` is the value set using the optional `tag` parameter. |
 |`FollowupPluginMultiple.cs`|CreateMultiple|PostOperation (40)|This is the replacement for `FollowupPluginSingle.cs`.<br />Creates a `task` record associated with the `sample_example` record created.|
 |`FollowupPluginSingle.cs`|Create|PostOperation (40)|Creates a `task` record associated with the `sample_example` record created.|
@@ -96,6 +102,8 @@ Two of the plug-ins, `FollowupPluginSingle.cs` and `UpdateSingle.cs`, represent 
 By contrasting these plug-ins, you can observe how logic applied for the single operation can be modified to work with the operation that includes multiple entities.
 
 The `ContextWriter.cs` plug-in captures data from the [IPluginExecutionContext4 Interface](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4?view=dataverse-sdk-latest) and writes it to the [PluginTraceLog](../../reference/entities/plugintracelog.md) so that you can see the data passed to the plug-in.
+
+<!-- TODO: When the bugs are fixed, include examples of the plug-in trace log here -->
 
 ## Demonstrates
 
