@@ -93,7 +93,8 @@ sections:
         answer: |
           Yes. However, you need to grant *Power BI* API permission to all your apps that use Power BI data during the [App Registration](how-to.md#app-registration) step. More information: [Configure API permissions](how-to.md#configure-api-permissions).
           
-       - question: |
+
+      - question: |
           Can I deep link into a wrapped mobile app?
         answer: |
           Yes. You can use ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>``` schema to deep link into your wrapped mobile apps. Refer to [Using deep links with wrapped mobile apps](wrap-deep-links.md) for more information.
