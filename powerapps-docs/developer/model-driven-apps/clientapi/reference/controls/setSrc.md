@@ -36,7 +36,7 @@ iframe, webresource
 
 ### Related topics
 
-[getSrc](getSrc.md)
+[getSrc](getSrc.md)<br/>
 [Known issues: Component from an IFRAME](/power-platform/admin/doc-management-known-issues#components-from-an-iframe)
 
 
