@@ -151,32 +151,6 @@ By default a custom page uses a single screen to encourage separation of the app
 > [!div class="mx-imgBorder"]
 > ![Custom page enable multiple screens](media/page-powerfx-in-model-app/custom-page-enable-multiple-screens.png "Custom page enable multiple screens")
 
-## Confirm function
-
-The `Confirm` function displays a dialog box on top of the current screen. Two buttons are provided: a confirm button and a cancel button, which default to localized versions of "OK" and "Cancel", respectively. The user must confirm or cancel before the dialog box is dismissed and the function returns. Besides the dialog button, cancel can also be selected with the Esc key or other gestures that are platform specific.
-
-The `Message` parameter is displayed in the body of the dialog box. If the message is very long, it will either be truncated or a scroll bar provided.
-
-Use the `OptionsRecord` parameter to specify options for the dialog box. Not all options are available on every platform and are handled on a best effort basis. 
-
-> [!NOTE]
-> The options in the table below aren't currently available with canvas apps.
-
-|Option Field  |Description  |
-|---------|---------|
-|ConfirmButton     |The text to display on the *confirm* button, replacing the default, localized "OK" text.         |
-|CancelButton     |The text to display on the *cancel* button, replacing the default, localized "Cancel" text.         |
-|Title     |The text to display as the *title* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.         |
-|Subtitle     |   The text to display as the *subtitle* of the dialog box. A larger, bolder font than the message font may be used to display this text. If this value is very long, it will be truncated.      |
-
-`Confirm` returns true if the confirm button was selected, false otherwise.
-
-### Syntax
-
-**Confirm**( Message [, OptionsRecord ] )
-- `Message` - Required. Message to display to the user.
-- `OptionsRecord` - Optional. Provide advanced options for the dialog. Not all options are available on every platform and are handled on a best effort basis. At this time, in canvas apps, none of these options are supported.
-
 ### Known issues
 
 - The `Navigate` function doesn't have support for opening a model or custom page to a dialog. All navigation from a custom page opens inline.
