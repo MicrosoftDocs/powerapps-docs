@@ -19,7 +19,7 @@ contributors:
 
 Deep links let users move from one application to another on computers and mobile devices. For example, a mobile app can deep link to Facebook to sign in. Deep linking an email address could open an email app to allow users to start composing a message. A website could use a deep link to an app store to start download for a specfic mobile app.
 
-You can deep link into a wrapped native mobile app from other apps. Deep links for wrapped mobile apps should start with the following:
+You can deep link to a wrapped native mobile app from other apps. Deep links for wrapped mobile apps should start with the following:
 
 ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>```
 
