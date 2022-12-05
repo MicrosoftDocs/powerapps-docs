@@ -15,7 +15,7 @@ search.app:
 contributors:
   - mkaur-msft
 ---
-# Using deep links with wrapped mobile apps
+# Use deep links with wrapped mobile apps
 
 Deep links let users move from one application to another on computers and mobile devices. For example, a mobile app can deep link to Facebook to sign in. Deep linking an email address could open an email app to allow users to start composing a message. A website could use a deep link to an app store to start download for a specfic mobile app.
 
