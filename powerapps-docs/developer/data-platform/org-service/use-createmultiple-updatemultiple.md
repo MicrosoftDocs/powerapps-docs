@@ -26,10 +26,10 @@ The .NET SDK classes to use these messages are just like the individual operatio
 
 |Message Name|Request Class|Response Class|
 |---------|---------|---------|
-|`Create`|[CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest)<br/>Property:<br/>[Target](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest.Target)|[CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse)<br/>Property:<br/>[id](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse.id)|
-|`CreateMultiple`|[CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest)<br/>Property:<br/>[Targets](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest.targets)|[CreateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.createmultipleresponse)<br />Property:<br />[Ids](/dotnet/api/microsoft.xrm.sdk.messages.createmultipleresponse.ids)|
-|`Update`|[UpdateRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest)<br/>Properties:<br/>[Target](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target)<br />[ConcurrencyBehavior](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.ConcurrencyBehavior)|[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse)|
-|`UpdateMultiple`|[UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest)<br/>Properties:<br/>[Targets](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.targets)<br />[ConcurrencyBehavior](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.concurrencybehavior)|[UpdateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.updatemultipleresponse)|
+|`Create`|[CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest)<br/>Property:[Target](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest.Target)|[CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse)<br/>Property:[id](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse.id)|
+|`CreateMultiple`|[CreateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest)<br/>Property:[Targets](/dotnet/api/microsoft.xrm.sdk.messages.createmultiplerequest.targets)|[CreateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.createmultipleresponse)<br />Property:[Ids](/dotnet/api/microsoft.xrm.sdk.messages.createmultipleresponse.ids)|
+|`Update`|[UpdateRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest)<br/>Properties:<br/>- [Target](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target)<br />- [ConcurrencyBehavior](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.ConcurrencyBehavior)|[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse)|
+|`UpdateMultiple`|[UpdateMultipleRequest](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest)<br/>Properties:<br/>- [Targets](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.targets)<br />- [ConcurrencyBehavior](/dotnet/api/microsoft.xrm.sdk.messages.updatemultiplerequest.concurrencybehavior)|[UpdateMultipleResponse](/dotnet/api/microsoft.xrm.sdk.messages.updatemultipleresponse)|
 
 As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request and the response type will be returned.
 
@@ -39,7 +39,7 @@ Consider this: If you create a *single* record using `Create` or `CreateMultiple
 
 Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events.
 
-Each time a plug-in is invoked, some milliseconds are required to instantiate the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is instantiated once and can process all the operations with greater efficiency.
+Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the operations with greater efficiency.
 
 ## Message pipelines merged
 
@@ -73,7 +73,7 @@ You can test whether individual tables support these messages today using the ex
 
 #### [SDK for .NET](#tab/sdk)
 
-This static method can be used to detect whether a given table supports any specific named message, including `CreateMultiple` or `UpdateMultiple`.
+Use this static method to detect whether a given table supports any specific named message, including `CreateMultiple` or `UpdateMultiple`.
 
 ```csharp
 /// <summary>
@@ -128,7 +128,7 @@ public static bool IsMessageAvailable(
 
 #### [Web API](#tab/webapi)
 
-The following `GET` request detects whether the `CreateMultiple` message is available for a custom table with the logical name`sample_example`. Replace the `@message` and `@table` parameters for the message and table you want to test.
+Use the following `GET` request to detect whether a message is available for a table. The request below tests whether the `sample_example` table supports the `CreateMultiple` message.  Replace the `@message` and `@table` parameter values for the message and table you want to test.
 
 **Request**
 
@@ -161,9 +161,9 @@ OData-Version: 4.0
 
 ### Message Size and Time limits
 
-The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so with projects that perform bulk operations there is incentive to try and use the largest possible number.
+The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so there is incentive to try and use the largest possible number with projects that perform bulk operations.
 
-There is currently no set limit on the number of entities you might try to send with your requests, but generally we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+There is currently no set limit on the number of entities you might try to send with your requests. If you send too many the request will fail. You will need to experiment to find the best number. Generally, we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
 #### Message size limits
 
@@ -200,7 +200,7 @@ The following are frequently asked question related to the introduction of these
 
 ### Will there be an UpsertMultiple?
 
-We are still evaluating whether an `UpsertMultiple` is necessary.
+We are still evaluating whether an `UpsertMultiple` message is necessary.
 
 ### Will there be a DeleteMultiple?
 
