@@ -86,7 +86,6 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
    :::image type="content" source="media/ADLSG2-publish-all.png" alt-text="Select Publish all" lightbox="media/ADLSG2-publish-all.png":::
 
 1. Select **Publish** to publish all the changes.
-   :::image type="content" source="media/ADLSG2-publish2.png" alt-text="Select Publish to complete the publishing":::
 
 ### Add an event subscription filter
 
