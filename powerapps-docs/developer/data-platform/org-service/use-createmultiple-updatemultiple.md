@@ -210,6 +210,26 @@ There are no plans to have `DeleteMultiple`. Delete operations frequently includ
 
 There are no plans to change `Retrieve` and `RetrieveMultiple` message behavior. Attempting to merge the message pipeline for these messages would be highly problematic because these have been separate messages for many years and developers have always needed to maintain logic for them separately. Also, we discourage applying custom logic for these messages due to the impact they can have on performance. More information: [Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages](../best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md)
 
+### How are API limits applied?
+
+There are two kinds of API limits: Service Protection limits and Entitlement limits.
+
+#### Service Protection limits
+
+These limits protect the service from extraordinary requests and are evaluated. When these limits are exceeded and error will be returned. These limits have 3 facets, and two of them are evaluated on a 5-minute sliding window.
+
+Each `CreateMultiple` and `UpdateMultiple` request counts as single request that will accrue to the limit of 6000 requests per user, per server, during the 5-minute window. By grouping multiple requests with these messages, the likelihood of triggering this limit is reduced.
+
+However, because each request may take longer, and if you are sending request in parallel, you are more likely to trigger the execution time limit that is 20 minutes per user, per server.
+
+More information: [Service protection API limits](../api-limits.md)
+
+#### Entitlement limits
+
+These limits are on the number of data operations a user is entitled to perform in a 24 hour period. These are based on data changes, so each item included in the `Targets` parameter of a `CreateMultiple` and `UpdateMultiple` request will accrue to this limit. These messages do not provide a means to bypass these limits.
+
+More information: [Entitlement limits](../../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+
 ### See Also
 
 [Write plug-ins for CreateMultiple and UpdateMultiple](../write-plugin-multiple-operation.md)<br />
