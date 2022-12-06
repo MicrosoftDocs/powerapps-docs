@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/26/2022
+ms.date: 12/06/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -38,6 +38,10 @@ The package update includes the following enhancements to extend the capabilitie
 - App level notification on Portal Management app for site visibility.
 - Renaming **Advanced Forms** to **Multistep Forms**.
 - Data model change on **List** and **Basic Form metadata (subgrid)** to enable dataset-based language.
+
+## Fixes
+
+- Designer tab is removed to address security issue with WYSIWYG HTML editor. You will need to edit the content using HTML in the Portal Management app.
 
 ### See also
 
