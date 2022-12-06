@@ -2,7 +2,7 @@
 title: "Add an embedded canvas app on a model-driven form | MicrosoftDocs"
 description: Learn how to embed a canvas app into a model-driven form in Power Apps
 ms.custom: ""
-ms.date: 03/16/2021
+ms.date: 12/06/2022
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -40,34 +40,28 @@ To embed a canvas app on a model-driven app main form, such as the main form for
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Choose the environment, select Solutions from the left navigation pane, and then open the solution that has the table where you want to add a canvas app to a main form.
-1. Open the table, select **Forms**, and then open the **Main** form you want.  
-1. In the form designer, select the section on the form where you want the embedded canvas app to appear.
-1. On the form designer command bar select **Form field**, and then add a form field to the section, such as *Account Name*.
+1. Open the table, select **Forms**, and then open the **Main** form you want.
 
    > [!TIP]
-   > You may want to change the table column display name that you add to something more meaningful, such as the name of the canvas app or a short description of the canvas app that you’re embedding onto the form.
+   > By default, the canvas app component label is **New canvas app**. You may want to change the canvas app label name to something more meaningful, such as the name of the canvas app or a short description of the canvas app that you’re embedding onto the form.
 
-1. On the right properties pane expand **Components**, and then select **+ Component** to open the **Add component** pane. Select the the **Canvas app** component.
+1. On the left navigation pane select **Components**, expand **Display**, and then select the **Canvas app** component.
 
 1. The following properties can be configured for the control.
-   - The **Entity name** area lets you specify the following properties:
+   - The optional **Entity name** area lets you specify the following properties:
 
-       - **Bind to table column**: When **Bind to table column** is selected, the **Static value** property changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when **Bind to table column** is selected for the **Entity name**, at app runtime the value of the table name takes the value of the **Table column** specified.
-           > [!IMPORTANT]
-           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control.
+       - **Bind to table column**: When the **Bind to table column** is selected, the **Static value** property changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when **Bind to table column** is selected for the **Entity name**, at app runtime the value of the table name takes the value of the **Table column** specified.
 
        - **Static value**: Use this to add a name for you to refer to the canvas app. Notice that this value has no effect on the embedded canvas app. It is meant only to serve as a reference point.
-   - The **App Name** area specifies the name of the canvas app.
-       - **Bind to table column**: When you select **Bind to table column**, the **Static value** property changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the Table column, such as the value from a custom text column.
-           > [!IMPORTANT]
-           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control.
+   - The **App Name** optional area specifies the name of the canvas app.
+       - **Bind to table column**: When you select the **Bind to table column**, the **Static value** property changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the Table column, such as the value from a custom text column.
 
        - **Static value**: Specifies the name of the canvas app to embed. The model-driven form looks for the canvas app with the specified name in the current environment. If a canvas app with that name can't be found in the environment, the canvas app control will use the App ID to load the canvas app. Enter the app name for an existing canvas app.
 
-   - The **App ID** area specifies the app ID for the canvas app.
+   - The required **App ID** area specifies the app ID for the canvas app.
        - **Bind to table column**: When you select **Bind to table column**, the list changes to allow you to select what table column to bind to. When you choose to bind to a table column, the column will be defined by the table column value. For example, when you select **Bind to table column** for the **App Name**, at app runtime the value of the app name takes the value of the column, such as the value from a custom text column.
            > [!IMPORTANT]
-           > For most situations, we don’t recommend using the **Bind to table column** option with the canvas app control as this would require the correct app ID to be shown in a field within the record.
+           > For most situations, we don’t recommend using the **Bind to table column** option for the App ID as this would require the correct app ID to be shown in a field within the record.
 
        - **Static value**: Enter the app ID for an existing canvas app. The canvas app ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
   

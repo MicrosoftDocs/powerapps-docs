@@ -2,7 +2,7 @@
 title: "Embed a canvas app on a model-driven form | MicrosoftDocs"
 description: "With embedded canvas apps, app makers can bring the power of canvas apps to their Power Apps model-driven forms." 
 ms.custom: "Steps to embedding a canvas app on a form"
-ms.date: 11/10/2022
+ms.date: 06/25/2019
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,9 +28,6 @@ search.app:
 
 Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG canvas app designer. Canvas apps also enable makers to connect and display data from over 400 data sources.
 
-> [!IMPORTANT]
-> There's a better way to bring a canvas app into a model-driven app. More information: [Integrate canvas apps using custom pages in the modern app designer](#integrate-canvas-apps-using-custom-pages-in-the-modern-app-designer)
-
 ## Embedded canvas apps can help you build better solutions
 
 With embedded canvas apps, makers can bring the power of canvas apps to their model-driven forms. Using embedded canvas apps, it's possible to create rich visual areas on a form and display data from a variety of sources right next to data from Microsoft Dataverse.
@@ -44,7 +41,7 @@ Canvas apps are embedded in model-driven forms in the same way other custom cont
 
 With the modern app designer, canvas apps can be accessed through a model-driven app by using a custom page.
 
-The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables or dashboards. When possible, we recommend that you use a custom page instead of an embedded canvas app on a form because they're a more performant way of bringing a canvas app into a model-driven app. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
+The modern app designer introduced the concept of [pages](model-driven-app-glossary.md#page), which can contain either canvas apps or Dataverse components, such as tables or dashboards.
 
 ## Embed using the modern designer
 
