@@ -5,10 +5,10 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 10/10/2022
+ms.date: 12/02/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,7 +16,6 @@ contributors:
 ---
 
 # Search
-
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
@@ -118,8 +117,8 @@ The following site settings are related to global search:
 | Name    | Default value     | Description       |
 |-----------------------|--------------------|-------------|
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br />If you're using out-of-the-box web templates and you turn off this setting, the search box won't be displayed in the header and on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
-| Search/EnableDataverseSearch | True | A Boolean value that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .NET based search.  <br /><br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. |
-| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on other tables on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
+| Search/EnableDataverseSearch | True | A Boolean value that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .NET based search.  <br />If the setting doesn't exist, the value defaults to true.<br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. |
+| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on other tables on your portal. <br /> Requires *Search/Enabled* set to *True* when used.  |
 | Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;<br />Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,<br />adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br />Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment". <br /> **Note**: <ul> <li> Values in the filter dropdown will have the table's plural name instead of the key value defined here. </li> <li> When using multiple tables, the filter dropdown will have the name of the first table in the comma separated list. </li> </ul>  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
 | Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2<br /> -_logicalname:adx_webfile\~0.9 adx_partialurl:<br />(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:<br />adx_communityforumthread\~0.9   | This setting adds other weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br />For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
