@@ -65,7 +65,7 @@ To embed a canvas app on a model-driven app main form, such as the main form for
 
        - **Static value**: Enter the app ID for an existing canvas app. The canvas app ID can be found on Power Apps, go to **Apps**, select the canvas app, and then select **Details** on the command bar.
   
-     - **Show component on**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
+    - **Show component on**. Specifies the client type to display the embedded canvas app. Choose from **Web**, **Mobile**, and **Tablet**.
      :::image type="content" source="media/add-canvas-app-control.png" alt-text="Add the canvas app control to a table column.":::
  
 10. Select **Done**. Then, to publish your app to make it available to users, select **Publish**.
