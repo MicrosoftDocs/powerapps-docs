@@ -2,7 +2,7 @@
 title: "Copy Dataverse data into Azure SQL | MicrosoftDocs"
 description: "Learn how to run Azure Synapse pipelines with your exported Dataverse table data"
 ms.custom: ""
-ms.date: 08/18/2022
+ms.date: 12/05/2022
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -58,7 +58,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 1. Create a linked service to Azure Data Lake Storage Gen2, which is connected to Dataverse using the appropriate authentication type. To do this, select **Test connection to validate the connectivity,** and then select **Create**.
 1. Similar to the previous steps, create a linked service to Azure SQL Database where Dataverse data will be synced.
 1. Once **Inputs** are configured, select **Use this template**.
-   :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template":::
+   :::image type="content" source="media/ADLSG2-use-this-template.png" alt-text="Use this template" lightbox="media/ADLSG2-use-this-template.png":::
 
 1. Now a trigger can be added to automate this pipeline, so that the pipeline can always process files when incremental updates are completed periodically. Go to **Manage** > **Trigger**, and create a trigger using the following properties:
    - **Name**: Enter a name for the trigger, such as *triggerModelJson*.
@@ -75,7 +75,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 1. Select **Continue** to proceed to the next screen.
 1. On the next screen, the trigger validates the matching files. Select **OK** to create the trigger.
 1. Associate the trigger with a pipeline. Go to the pipeline imported earlier, and then select **Add trigger** > **New/Edit**.
-   :::image type="content" source="media/ADLSG2-add-trigger-pipeline.png" alt-text="Create a trigger for the pipeline.":::
+   :::image type="content" source="media/ADLSG2-add-trigger-pipeline.png" alt-text="Create a trigger for the pipeline." lightbox="media/ADLSG2-add-trigger-pipeline.png":::
 1. Select the trigger in the earlier step, and then select **Continue** to proceed to the next screen where the trigger validates the matching files.
 1. Select **Continue** to proceed to the next screen.
 1. In the **Trigger Run Parameter** section, enter the below parameters, and then select **OK**.
@@ -83,10 +83,9 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
    - **Folder**: `@split(triggerBody().folderPath,'/')[1]`  
 1. After associating the trigger with the pipeline, select **Validate all**. 
 1. Once validation succeeds, select **Publish All**.
-   :::image type="content" source="media/ADLSG2-publish-all.png" alt-text="Select Publish all":::
+   :::image type="content" source="media/ADLSG2-publish-all.png" alt-text="Select Publish all" lightbox="media/ADLSG2-publish-all.png":::
 
 1. Select **Publish** to publish all the changes.
-   :::image type="content" source="media/ADLSG2-publish2.png" alt-text="Select Publish to complete the publishing":::
 
 ### Add an event subscription filter
 

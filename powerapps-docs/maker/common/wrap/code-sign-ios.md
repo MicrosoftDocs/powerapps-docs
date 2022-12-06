@@ -20,6 +20,9 @@ contributors:
 
 In this article, you'll learn about how to code sign for iOS. You'll need to sign your app for iOS if you selected iOS as one of the [platforms](overview.md#app-platforms) while creating and building your [wrap project](how-to.md#create-a-wrap-project).
 
+ > [!Important]
+ > Using Xcode to digitally sign your wrapped mobile apps for iOS is not supported. Follow the instructions below to sign your wrapped mobile app packages for iOS correctly.
+
 ## Prerequisites
 
 You'll need the following information to get started:
@@ -171,7 +174,7 @@ To create a distribution certificate, create a new certificate signing request f
 
 1. Download and unzip the **iOS-Archive.zip** file from App Center. This creates a folder named after the [Bundle ID](how-to.md#bundle-id). In the example below, the Bundle ID is **com.single.wrap**.
 
-1. If signing with enterprise certificate, open the **exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
+1. If signing with enterprise certificate, open the **Distribution-exportOptions.plist** file. Open the folder with Xcode and change the value for the **method** field inside the file to **enterprise**.
 
   > [!NOTE]
   > Enterprise signing is not supported with Keyvault signing.

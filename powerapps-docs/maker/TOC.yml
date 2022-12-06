@@ -217,7 +217,7 @@
     href: index.md
   - name: Sign in to Power Apps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Use the learning hub
+  - name: Use the learn hub
     href: ./common/learn-hub.md 
   - name: Find it with unified search
     href: search.md
@@ -1206,6 +1206,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Use deep links with wrapped mobile apps
+        href: ./common/wrap/wrap-deep-links.md
       - name: Frequently asked questions
         href: ./common/wrap/faq.yml
   - name: For developers
@@ -1244,6 +1246,8 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
+    - name: Build large and complex apps
+      href: ./canvas-apps/working-with-large-apps.md      
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1683,7 +1687,7 @@
     href: ../mobile/scan-QR-code.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
-  - name: Mobile offline
+  - name: Mobile offline for model-driven apps
     items:
     - name: Set up mobile offline (classic)
       items:
@@ -1700,7 +1704,9 @@
       - name: Set up mobile offline (preview)
         href: ../mobile/setup-mobile-offline.md 
       - name: Enable and use offline-first (preview)
-        href: ../mobile/work-in-offline-mode.md   
+        href: ../mobile/work-in-offline-mode.md 
+    - name: Sync data in the background
+      href: ../mobile/sync-data-offline-background.md
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
     - name: Offline profile guidelines
