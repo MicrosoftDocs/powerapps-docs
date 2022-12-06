@@ -44,11 +44,12 @@ The package update includes the following enhancements to extend the capabilitie
 The designer tab is removed in the Portal Management app to address a security issue with the legacy WYSIWYG HTML editor. Going forward, you will need to edit the content directly using HTML code. 
 
 This will affect the following when editing or modifying HTML code using the Portal Management app:
-    - Content Snippets
-    - Web Links
-    - Web Pages
-    - Ads
-    - Polls
+
+- Content Snippets
+- Web Links
+- Web Pages
+- Ads
+- Polls
 
 ### See also
 
