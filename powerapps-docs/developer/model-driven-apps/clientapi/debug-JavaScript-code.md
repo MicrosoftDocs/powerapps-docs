@@ -6,7 +6,7 @@ applies_to:
   - "Dynamics 365 (online)"
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 search.audienceType: 
