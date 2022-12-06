@@ -61,7 +61,7 @@ Not only can you use portals Studio to customize your portal, you can manage pag
 
     ![Select a page in portals Studio.](media/webpage-access-control/select-page.png "Select a page in portals Studio")
 
-1. On the **Component** pane (right side of screen), expand **Permissions**.
+1. On the **Component** pane (on the right side of the screen), expand **Permissions**.
 
     ![Expand permissions.](media/webpage-access-control/permissions.png "Expand permissions")
 
