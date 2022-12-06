@@ -86,6 +86,8 @@ Because Dataverse isn't specific to the Teams environment, it delivers more opti
 |Hierarchical security     |  No       |  Yes       |
 |Record sharing     |  No       |  Yes       |
 |Create Owner Teams**  | Yes      |  Yes       |
+|Create AAD Group Teams  | No      |  Yes       |
+|Record sharing to Group Teams | No      |  Yes       |
 |Assign Teams Roles to Owner Teams<sup>1</sup> | Yes     | Yes   |
 |Change record ownership** | Yes   | Yes  |
 

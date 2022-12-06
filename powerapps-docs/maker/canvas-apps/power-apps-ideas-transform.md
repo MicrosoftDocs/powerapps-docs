@@ -1,6 +1,6 @@
 ---
 title: "Transform natural language to Power Fx formulas"
-description: Learn about using Power Apps Ideas to transform natural language into Power Fx formulas.
+description: Learn how to use Power Apps Ideas to transform natural language into Power Fx formulas.
 author: norliu
 
 ms.topic: article
@@ -20,7 +20,8 @@ contributors:
 
 # Transform natural language to Power Fx formulas 
 
-Power Apps Ideas can generate ideas for formulas the following controls on different properties:
+
+Power Apps Ideas can generate ideas for formulas using the following controls on different properties:
 
 - **Gallery**
 - **Data table**
@@ -29,18 +30,20 @@ Power Apps Ideas can generate ideas for formulas the following controls on diffe
 - **Combo box**
 - **Text label** 
 
-Power Apps idea also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the supported controls and want to write a formula for Gallery or Dropdown’s items, Label’s text content, color, visibility then check out Power Apps Ideas.
 
-For example, instead of figuring out how to write the following formula:
+Power Apps Ideas also supports Microsoft Dataverse, Microsoft Lists, SharePoint library, and Excel as connectors. So, if you're using one of the supported controls and want to write a formula for Gallery or Dropdown items, or for Label’s text content, color, or visibility, then check out Power Apps Ideas.
+
+For example, instead of figuring out how to write the following formula ...
+
 ```powerapps-dot
 Filter('Table1', StartsWith('fullname', "Yvonne"))
 ```
 
-You can type in `'name starts with Yvonne` instead.
+... You can type `'name starts with Yvonne` instead.
 
-To begin, let’s look at a simple app to see how we can use the Power Apps Ideas to help write formulas.
+To begin, let’s look at a simple app to see how you can use Power Apps Ideas to help write formulas.
 
-You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using **Accounts** table from Dataverse.
+You can follow the steps mentioned in [Create a canvas app from Microsoft Dataverse](data-platform-create-app.md) to generate that app using the **Accounts** table from Dataverse.
 
 1. Select **BrowseGallery1,** which is bound to the **Accounts** table.
 
@@ -48,54 +51,56 @@ You can follow the steps mentioned in [Create a canvas app from Microsoft Datave
 
    :::image type="content" source="media/power-apps-ideas/sort-filter.png" alt-text="Sort, filter, and search.":::
 
-1. Select one of the default suggestions to check how it works or start typing in your own query in natural language such as English (en-us).
+1. Select one of the default suggestions to check how it works or start entering your own query in natural language such as English (en-us).
 
-    :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for shorting and filtering.":::
+    :::image type="content" source="media/power-apps-ideas/sort-filter-ideas.png" alt-text="Suggested ideas for sorting and filtering.":::
 
 1. When typing you can use the default query, modify it, or describe it in your own way.
 
-1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results and each of the formula suggestions produced includes three parts:
+1. You'll see one or more formula suggestions produced. Let’s use the example **search accounts where name in textinput**. You'll see two suggestions in the results. Each of those formula suggestions includes three parts:
 
-    1. **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing&mdash;so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
+    - **Accounts** where the text in **TextInput1** appears in **name**. This is trying to explain what the suggested formula is doing so that it's easier for users who aren't familiar with Power Fx to understand the result. The names of the components used in the app are shown in bold.
     
-    1. **Apply to: Items**: This suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
+    - **Apply to: Items**: This suggests which property the formula will be applied to. As Power Apps controls have many properties, Ideas can identify which property a formula should be applied to.
 
-    1. The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
+    - The formula suggestion in this scenario is `Search('Accounts', TextInput1.Text, "name")`.
 
         :::image type="content" source="media/power-apps-ideas/Ideas_example_c7.png" alt-text="Suggested formula based on entered search scenario.":::
 
-1. Select a suggestion that you see fit and then select **Apply**. In this case, let's select the first suggestion since it's the best fit**. The formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula or modify it.
+1. Select your preferred suggestion and then select **Apply**. In this case, let's select the first suggestion since it's the best fit. The formula gets updated automatically and runs so you can check the result in your app. You can then decide whether to keep the selected formula or modify it.
 
 ## More examples
 
-Consider the following examples to inspire from while working with Power Apps Ideas.
+Consider the following examples for inspiration while working with Power Apps Ideas.
 
 | Scenario | Description | Ideas example |
 | --- | --- | --- |
 |**Sort your table** |Sort by a single column |sort accounts by Account Name|
 | | |sort accounts by Account Name A-Z|
 | | |sort accounts by Account Name Z-A|
-| |sort accounts by Account Name and Created On|
-| | |sort Accounts by Account Name A-Z and Created On latest on top|
-| |Sort existing tables |sort Gallery3 by Account Name z to a|
-|**Filter or search table by some conditions**|A number condition|Accounts with length of Account Name bigger than 10|
-| |A date condition|accounts created a week ago accounts modified last 3 days|
+| |Sort accounts by Account Name and Created On|
+| | |sort accounts by Account Name A-Z and Created On latest on top|
+| |Sort existing tables |sort Gallery3 by Account Name Z to A|
+|**Filter or search table by some conditions**|A number condition|accounts with length of Account Name bigger than 10|
+| |A date condition|accounts created a week ago, accounts modified last 3 days|
 | |A text condition|accounts with name contains Karen|
 | |A few conditions|accounts whose name contains Karen and created 7 days ago|
 | |A choice value|inactive accounts|
 | |Search table by user input|search accounts with name in textinput|
 | |Find a single record|first record in accounts where name contains Karen|
-| |Find records on the top or the bottom of the table|Top 10 Accounts|
-| | |Last 10 Accounts|
-|**Conditional formatting (apply to color and visible)** |A number condition|Accounts with length of Account Name bigger than 10|
+| |Find records on the top or the bottom of the table|top 10 accounts|
+| | |last 10 accounts|
+|**Conditional formatting (apply to color and visible)** |A number condition|accounts with length of Account Name bigger than 10|
 | |A date condition|red if created 7 days ago|
 | |A text condition|blue if name contains Karen|
 |**Text generation** |Numbers|count of gallery sum of slider1 and slider2|
 ||String|label4 and label5 Trim textinput1First 3 characters of TextInput1|
 
+
+
 ## Best practices
 
-To get the best results, here are some tips that you can follow when writing the plain natural language query in the Ideas pane.
+To get the best results, follow these tips when writing the plain natural language query in the Ideas pane.
 
 - Leverage default queries to see what kind of scenarios are supported.
 - Be precise in your query. Ideas can recognize controls such as tables and columns. However, if you don't get a suggestion, try using the full name of the assets you’re referencing. For example, use **TextInput1** when you have multiple text input controls in the app. This way the system knows which control you're referring to. 
@@ -103,11 +108,11 @@ To get the best results, here are some tips that you can follow when writing the
 ## Limitations
 
 > [!NOTE]
-> We're improving the model to make it better and to accomplish more complex tasks, support more functions, controls, and properties. If you have a wish list, submit ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
+> We're improving the model so it can accomplish more complex tasks and support more functions, controls, and properties. If you have a wish list, submit your ideas through [Power Apps Ideas - Power Platform Community](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas).
 
 Power Apps Ideas currently has the following limitations:
 
-- Regions and language: Currently available in environments created inside United States, with English (en-us) set as the browser's default language.
+- Regions and language: Currently available in environments created inside the United States, with English (en-us) set as the browser's default language.
 - Recognizes control value of **TextInput**, **Dropdown**, **DatePicker**, **Slider**, **Toggle**, **Checkbox**, and **Radio** as input.
 
    | Controls | Properties | 
@@ -115,14 +120,14 @@ Power Apps Ideas currently has the following limitations:
    | **Gallery**, **Data table**, **Drop down**, **Combo box** | Items |
    | **Text Box**, **Label** | Text, Color, Visible |
    
-- Data sources: Currently Ideas supports **Dataverse** tables, Microsoft Lists, Excel sheets.
+- Data sources: Currently Ideas supports Dataverse tables, Microsoft Lists, and Excel sheets.
 - Functions: See [Supported Power Fx functions](#supported-power-fx-functions). We’ll continue to add support for more functions.
 - Data types: Supports Text, Whole Number, Date and Time, Date Only, Decimal Number, Choice, Choices, Yes/No Lookup. Not supported: File and Image.
-- This feature's model understands some commonly used expressions in natural  language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And can understand most of the context so even if you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
+- This feature's model understands some commonly used expressions in natural language. For example, it can translate from `latest on top`, `big to small` to a descending order and `oldest on top`, `small to big` to ascending order. And it can understand most of the context so even if you didn't specify the table names, it will make the best prediction based on the current table that is bound to the control.<br>  
 
 ## Supported Power Fx functions
 
-Functions supported by Power Apps Ideas feature:
+Functions supported by the Power Apps Ideas feature:
 
 :::row:::
    :::column span="":::
@@ -285,12 +290,13 @@ Functions supported by Power Apps Ideas feature:
    :::column-end:::
 :::row-end:::
 
-## Giving us feedback
+## Give feedback to Microsoft
 
-If you have any feedback for this feature, e.g. you find the formula suggestions inaccurate or you have suggestions, ideas to share with us, you can easily find the feedback card in the Ideas panel. By clicking send feedback, you can write down your thoughts. Note, please don't include any confidential or personal information in your feedback. 
+If you have feedback for this feature—for example, you find the formula suggestions inaccurate or you have suggestions or ideas to share with us—you can find the feedback card in the Ideas panel. By selecting Send feedback, you can enter your thoughts. (Don't include confidential or personal information in your feedback.) 
+
 
 Microsoft is committed to developing and deploying AI technologies in a responsible manner. If you find any inappropriate or absurd results generated by Power Apps
-Ideas, in the same feedback card, you will see a [Report it now](https://msrc.microsoft.com/report/abuse) link below the feedback box which can help us keep our AI model behaving in a responsible manner. For a timely response, ensure to select **Threat type** as "URL" and **Incident type** as "Responsible AI" as shown in the following screenshot.
+Ideas, look in the same feedback card for a [Report it now](https://msrc.microsoft.com/report/abuse) link below the feedback box that can help us keep our AI model behaving in a responsible manner. For a timely response, select **Threat type** as "URL" and **Incident type** as "Responsible AI" as shown in the following screenshot.
 
 :::image type="content" source="media/power-apps-ideas/ideas-feedback-channel.png" alt-text="Give us feedback.":::
 
@@ -301,4 +307,4 @@ Ideas, in the same feedback card, you will see a [Report it now](https://msrc.mi
 ### See also
 
 - [Formula reference](formula-reference.md)
-- [Power Apps Ideas overview (preview)](power-apps-ideas.md)
+- [Power Apps Ideas overview](power-apps-ideas.md)

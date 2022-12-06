@@ -25,7 +25,8 @@ contributors:
 >This is a preview feature.
 >[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-Easily add comments when you’re building a canvas app in [Power Apps Studio](power-apps-studio.md). Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app. 
+Easily add comments when you’re building a canvas app in [Power Apps Studio](power-apps-studio.md). Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app. To allow other makers to add comments, make sure to share the app with them.
+
 
 You can add comments to different components or pages.
 

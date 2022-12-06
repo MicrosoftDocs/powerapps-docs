@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 10/18/2022
+ms.date: 11/09/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -58,7 +58,7 @@ The app designer interface has the following areas:
 
 7. Fit to screen - Quick action to fit the app preview to the available screen size.
 
-   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
+   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added."lightbox="media/app-designer-layout.png":::
 
 ## Navigation pane options
 

@@ -1,12 +1,11 @@
 ---
 title: "addOnPostSave (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addOnPostSave method.
-ms.author: jdaly
-author: adrianorth
-manager: kvivek
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -18,7 +17,7 @@ contributors:
 ---
 # addOnPostSave (Client API reference)
 
-Adds an event handler to be called after the record is saved with success or failure.
+[!INCLUDE [addonpostsave-description](includes/addonpostsave-description.md)]
 
 ## Syntax
 

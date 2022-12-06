@@ -4,7 +4,7 @@ description: "Use the Power Apps component framework to create code components t
 ms.author: noazarur
 author: noazarur-microsoft
 manager: lwelicki
-ms.date: 05/27/2022
+ms.date: 11/27/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -21,7 +21,7 @@ Code components are a type of solution component, which means they can be includ
 > [!div class="mx-imgBorder"] 
 > ![Code components.](media/code-components.gif "Code components")
 
-Code components can be including into a solution and then imported into Microsoft Dataverse environment. Once the solution containing code components is imported, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
+You can include code components in a solution and then import the solution into a Microsoft Dataverse environment. Once the solution containing code components is imported, system administrators and system customizers can configure columns, subgrids, views, and dashboard subgrids to use in place of default components. You can add these code components to both **model-driven and canvas apps**. 
 
 Code components consist of three elements:
 
