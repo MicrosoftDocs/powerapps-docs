@@ -216,7 +216,7 @@ There are two kinds of API limits: Service Protection limits and Entitlement lim
 
 #### Service Protection limits
 
-These limits protect the service from extraordinary requests that may impact shared resources. When these limits are exceeded an error will be returned. These limits have 3 facets, and two of them are evaluated on a 5-minute sliding window apply when using these messages.
+These limits protect the service from extraordinary requests that may impact shared resources. When these limits are exceeded an error will be returned. These limits have 3 facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
 
 - **Number of requests**: Each `CreateMultiple` and `UpdateMultiple` request counts as single request that will accrue to the limit of 6000 requests per user, per server, during the 5-minute window. By grouping multiple requests with these messages, the likelihood of hitting this limit is reduced.
 - **Execution time**: Because each request may take longer, and if you are sending request in parallel, you are more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window.
