@@ -27,7 +27,7 @@ When your application needs to send a large number of requests to Dataverse you 
 
 ## Optimize your connection
 
-When using .NET and sending requests in parallel, you can apply the following configuration changes so your requests are not limited by default settings:
+When using .NET and sending requests in parallel, apply the following configuration changes so your requests are not limited by default settings:
 
 ```csharp
 // Change max connections from .NET to a remote service default: 2
@@ -48,7 +48,7 @@ More information:
 
 ## Optimum degree of parallelism (DOP)
 
-Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocatied may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism. However, the `x-ms-dop-hint` response header returns an integer value between 1 and 1024 that should provide good results for a given environment.
+Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocatied may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism. However, the `x-ms-dop-hint` response header returns an integer value that should provide good results for a given environment.
 
 When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. You can set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) to define a maximum number of concurrent tasks.
 
@@ -62,14 +62,15 @@ There is a specific error returned when this limit is reached:
 |------------|------------|-------------------------------------|
 |`-2147015898`|`0x80072326`|`Number of concurrent requests exceeded the limit of 52.`|
 
-You can also mitigate the liklihood of this error occurring by sending your requests to all the servers that support the environment.
+You can also mitigate the liklihood of this error occurring by sending your requests to all the servers that support the environment by disabling sever affinity.
 
 ## Server affinity
 
-When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. If you remove this cookie, each request you send will be routed any of the eligible servers. This increases throughput because limits are applied per server. This simply allows you to use more servers if they are available.
+When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. Interactive client applications, especially browser clients, benefit from this because it allows for re-using data cached on the server. Web browsers always have server affinity enabled and it cannot be disabled.
 
-> [!NOTE]
-> This strategy should only be used by applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
+When sending requests in parallel from your client applcation, you can gain performance benefits by disabling this cookie. Each request you send will be routed any of the eligible servers. Not only does this increase total throughput, it also helps reduce impact of service protection limits because each limit is applied per server.
+
+Following are some examples showing how to disable server affinity with .NET.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -91,6 +92,26 @@ HttpMessageHandler messageHandler = new OAuthMessageHandler(
 HttpClient httpClient = new HttpClient(messageHandler)
 ```
 
+If you are using dependency injection, you can use the [ConfigurePrimaryHttpMessageHandler](xref:Microsoft.Extensions.DependencyInjection.HttpClientBuilderExtensions.ConfigurePrimaryHttpMessageHandler%2A) method to set the [HttpClientHandler.UseCookies property](xref:System.Net.Http.HttpClientHandler.UseCookies) to false.
+
+```csharp
+IHostBuilder builder = Host.CreateDefaultBuilder();
+
+builder.ConfigureServices(services =>
+{
+   services.AddHttpClient(
+      name: "ClientName",
+      configureClient: ConfigureHttpClientDelegate
+      )
+   .ConfigurePrimaryHttpMessageHandler(() =>
+      new HttpClientHandler
+      {
+            UseCookies = false
+      }
+   );
+});
+```
+
 ---
 
 ## Examples
@@ -100,6 +121,43 @@ HttpClient httpClient = new HttpClient(messageHandler)
 With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in both [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) and [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can leverage the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) which simplifies the process of adding parallelism and concurrency to applications.
 
 The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism?displayProperty=fullName> when you use <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName>.
+
+```csharp
+/// <summary>
+/// Creates records in parallel
+/// </summary>
+/// <param name="serviceClient">The authenticated ServiceClient instance.</param>
+/// <param name="entityList">The list of entities to create.</param>
+/// <returns>The id values of the created records.</returns>
+static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> entityList)
+{
+    ConcurrentBag<Guid> ids = new ConcurrentBag<Guid>();
+ 
+    Parallel.ForEach(entityList,
+        new ParallelOptions()
+        {
+            MaxDegreeOfParallelism = serviceClient.RecommendedDegreesOfParallelism
+        },
+        () =>
+        {
+            //Clone the ServiceClient for each thread
+            return serviceClient.Clone();
+        },
+        (entity, loopState, index, threadLocalSvc) =>
+        {
+            ids.Add(threadLocalSvc.Create(entity));
+
+            return threadLocalSvc;
+        },
+        (threadLocalSvc) =>
+        {
+            //Dispose the cloned ServiceClient instance
+            threadLocalSvc?.Dispose();
+        }
+    );
+    return ids.ToArray();
+}
+```
 
 ### [Web API](#tab/webapi)
 
