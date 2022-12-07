@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/31/2022
+ms.date: 11/27/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -30,7 +30,8 @@ To add the ability to view notes and attachments on basic and multistep forms, y
 - Configure [table permissions](configure/assign-entity-permissions.md) for the notes (annotations) table.
 
 > [!NOTE]
-> In order for a note to appear on the web page, the description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*). Notes added through a form on a webpage will have the prefix automatically added.
+> - In order for a note to appear on the web page, the description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*). Notes added through a form on a webpage will have the prefix automatically added.
+> - The ability to show both notes and [activities](./configure/view-all-activities-in-portal-timeline.md) on the same form for a custom table is currently not supported with configuration.
 
 ## Notes configuration for basic forms
 
