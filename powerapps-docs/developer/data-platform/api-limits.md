@@ -67,6 +67,75 @@ If the client is an interactive application, you should display a message that t
 
 If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current task using [Task.Delay](/dotnet/api/system.threading.tasks.task.delay) or equivalent methods.
 
+#### [SDK for .NET](#tab/sdk)
+
+
+If you are using the SDK for .NET, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
+
+Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
+
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+
+More information:
+
+- [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
+- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Dataverse](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
+
+
+#### [Web API](#tab/webapi)
+
+If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
+
+If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [WebAPIService class library (C#)](webapi/samples/webapiservice.md).
+
+```csharp
+/// <summary>
+/// Specifies the Retry policies
+/// </summary>
+/// <param name="config">Configuration data for the service</param>
+/// <returns></returns>
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy(Config config)
+{
+    return HttpPolicyExtensions
+      .HandleTransientHttpError()
+      .OrResult(httpResponseMessage => httpResponseMessage.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+      .WaitAndRetryAsync(
+         retryCount: config.MaxRetries,
+         sleepDurationProvider: (count, response, context) =>
+         {
+            int seconds;
+            HttpResponseHeaders headers = response.Result.Headers;
+
+            if (headers.Contains("Retry-After"))
+            {
+               seconds = int.Parse(headers.GetValues("Retry-After").FirstOrDefault());
+            }
+            else
+            {
+               seconds = (int)Math.Pow(2, count);
+            }
+            return TimeSpan.FromSeconds(seconds);
+         },
+         onRetryAsync: (_, _, _, _) => { return Task.CompletedTask; }
+      );
+}
+```
+
+This example uses [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
+
+#### HTTP Response headers
+
+If you are using HTTP requests with the Web API, you can track the remaining limit values with the following HTTP response headers:
+
+|Header  |Value Description  |
+|---------|---------|
+|`x-ms-ratelimit-burst-remaining-xrm-requests`|The remaining number of requests for this connection|
+|`x-ms-ratelimit-time-remaining-xrm-requests`|The remaining combined duration for all connections using the same user account|
+
+You should not depend on these values to control how many requests you send. They are intended for debugging purposes. If you are removing the affinity cookie, these values are re-set when you connect to a different server.
+
+---
+
 ## How Service Protection API Limits are enforced
 
 Two of the service protection API limits are evaluated within a 5 minute (300 second) sliding window. If either limits are exceeded within the preceding 300 seconds, a service protection API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
@@ -190,75 +259,12 @@ This section describes ways that you can design your clients and systems to avoi
 
 ### Update your client application
 
-Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the SDK for .NET](#using-the-sdk-for-net) or [Using the Web API](#using-the-web-api) sections below.
+Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns to [Retry operations](#retry-operations) described above.
 
 ### Move towards real-time integration
 
 Remember that the main point of service protection API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact service protection limits will have.
 
-## Using the Web API
-
-If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
-
-If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [WebAPIService class library (C#)](webapi/samples/webapiservice.md).
-
-```csharp
-/// <summary>
-/// Specifies the Retry policies
-/// </summary>
-/// <param name="config">Configuration data for the service</param>
-/// <returns></returns>
-static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy(Config config)
-{
-    return HttpPolicyExtensions
-      .HandleTransientHttpError()
-      .OrResult(httpResponseMessage => httpResponseMessage.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-      .WaitAndRetryAsync(
-         retryCount: config.MaxRetries,
-         sleepDurationProvider: (count, response, context) =>
-         {
-            int seconds;
-            HttpResponseHeaders headers = response.Result.Headers;
-
-            if (headers.Contains("Retry-After"))
-            {
-               seconds = int.Parse(headers.GetValues("Retry-After").FirstOrDefault());
-            }
-            else
-            {
-               seconds = (int)Math.Pow(2, count);
-            }
-            return TimeSpan.FromSeconds(seconds);
-         },
-         onRetryAsync: (_, _, _, _) => { return Task.CompletedTask; }
-      );
-}
-```
-
-This example uses [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
-
-### HTTP Response headers
-
-If you are using HTTP requests with the Web API, you can track the remaining limit values with the following HTTP response headers:
-
-|Header  |Value Description  |
-|---------|---------|
-|`x-ms-ratelimit-burst-remaining-xrm-requests`|The remaining number of requests for this connection|
-|`x-ms-ratelimit-time-remaining-xrm-requests`|The remaining combined duration for all connections using the same user account|
-
-You should not depend on these values to control how many requests you send. They are intended for debugging purposes. If you are removing the affinity cookie, these values are re-set when you connect to a different server.
-## Using the SDK for .NET
-
-If you are using the SDK for .NET, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
-
-Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
-
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
-
-More information:
-
-- [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
-- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Dataverse](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
 
 ## Frequently asked questions
 
