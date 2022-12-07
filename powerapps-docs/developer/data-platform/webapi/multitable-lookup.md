@@ -21,7 +21,7 @@ Multi-table lookup type columns allow a user to use a specific table that has
 multiple one-to-many (1:N) relationships to other tables in the environment. A single lookup
 type column can refer to multiple other tables. A lookup value submitted to the
 multi-table type column will be matched to a record in any of the related
-tables.
+tables. Multi-table lookups can be created with both local tables and virtual tables as referenced tables.
 
 Multi-table types are currently built into Microsoft Dataverse as static types like
 Customer, which connects to Account and Contact. This new feature gives users the
