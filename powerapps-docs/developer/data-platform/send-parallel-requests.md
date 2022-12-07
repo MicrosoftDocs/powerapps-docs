@@ -116,11 +116,15 @@ builder.ConfigureServices(services =>
 
 ## Examples
 
+The following .NET examples show use of [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) with Dataverse.
+
 ### [SDK for .NET](#tab/sdk)
 
 With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in both [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) and [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can leverage the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) which simplifies the process of adding parallelism and concurrency to applications.
 
-The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism?displayProperty=fullName> when you use <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName>.
+The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting [ParallelOptions.MaxDegreeOfParallelism](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) when you use [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A).
+
+The id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. When sending requests in parallel there is no way to know the order in which the responses will be returned.
 
 ```csharp
 /// <summary>
@@ -161,6 +165,69 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
 
 ### [Web API](#tab/webapi)
 
+The following static method example shows the use of an authenticated [HttpClient](xref:System.Net.Http.HttpClient) that has been configured with a [BaseAddress Property](xref:System.Net.Http.HttpClient.BaseAddress) set to the Dataverse Web API Uri.
+
+This method first sends a request using the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) and then accesses the `x-ms-dop-hint` value from the response, which is used to set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism).
+
+Then it uses [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) to send the requests.
+
+It then parses the id values of the records and sets them into a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. When sending requests in parallel there is no way to know the order in which the responses will be returned.
+
+```csharp
+/// <summary>
+/// Creates account records in parallel
+/// </summary>
+/// <param name="client">Authenticated HttpClient instance</param>
+/// <param name="entityList">List of JObject representing account records</param>
+/// <returns>The id values of the created records.</returns>
+static async Task<Guid[]> CreateRecordsInParallel(HttpClient client, List<JObject> entityList)
+{
+   ConcurrentBag<Guid> ids = new ConcurrentBag<Guid>();
+
+   HttpResponseMessage whoAmIResponse = await client.SendAsync(new HttpRequestMessage
+   {
+         Method = HttpMethod.Get,
+         RequestUri = new Uri(
+         uriString: "WhoAmI",
+         uriKind: UriKind.Relative)
+   });
+
+   int recommendedDegreeOfParallelism = int.Parse(whoAmIResponse.Headers.GetValues("x-ms-dop-hint").FirstOrDefault());
+
+   var parallelOptions = new ParallelOptions() { MaxDegreeOfParallelism = recommendedDegreeOfParallelism };
+
+   // Send the requests in parallel
+   await Parallel.ForEachAsync(entityList, parallelOptions, async (jObject, token) =>
+   {
+        // Send the request to create an account record.
+         var createResponse = await client.SendAsync(new HttpRequestMessage()
+         {
+            Method = HttpMethod.Post,
+            RequestUri = new Uri(
+            uriString: "accounts",
+            uriKind: UriKind.Relative),
+            Content = new StringContent(
+               content: jObject.ToString(),
+               encoding: System.Text.Encoding.UTF8,
+               mediaType: "application/json")
+         });
+
+         string? uri = createResponse.Headers.GetValues("OData-EntityId").FirstOrDefault();
+
+         // Parse the Id from the URI returned
+         int firstParen = uri.LastIndexOf('(') + 1;
+         int lastParen = uri.LastIndexOf(')');
+
+         if (Guid.TryParse(uri[firstParen..lastParen], out Guid id))
+         {
+            ids.Add(id);
+         }
+
+   });
+
+   return ids.ToArray();
+}
+```
 
 ---
 
