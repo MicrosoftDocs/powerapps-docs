@@ -235,5 +235,8 @@ static async Task<Guid[]> CreateRecordsInParallel(HttpClient client, List<JObjec
 ### See also
 
 [Service protection API limits](api-limits.md)<br />
+[Web API WebApiService Parallel Operations Sample (C#)](webapi/samples/webapiservice-parallel-operations.md)<br />
+[Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapi/samples/webapiservice-tpl-dataflow-parallel-operations.md)<br />
+[Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

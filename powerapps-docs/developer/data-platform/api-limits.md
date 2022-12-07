@@ -1,7 +1,7 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 12/05/2022
+ms.date: 12/07/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78
@@ -167,14 +167,7 @@ Don't try to calculate how many requests to send at a time. Each environment can
 
 ### Use multiple threads
 
-The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
-
-The `x-ms-dop-hint` response header value provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide good results for a given environment. The value of this header will be an integer between 1 and 1024. When using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, the `RecommendedDegreesOfParallelism` property will return this value.
-
-More information:
-
-- [Use Task Parallel Library with Web API](#use-task-parallel-library-with-web-api)
-- [Use Task Parallel Library with CrmServiceClient](#use-task-parallel-library-with-crmserviceclient)
+The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput. More information: [Send parallel requests](send-parallel-requests.md)
 
 ### Avoid large batches
 
@@ -190,45 +183,6 @@ When using the Web API, the smaller JSON payload sent over the wire for individu
 
 > [!NOTE]
 > Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
-
-### Remove the affinity cookie
-
-When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. If you remove this cookie, each request you send will be routed any of the eligible servers. This increases throughput because limits are applied per server. This simply allows you to use more servers if they are available.
-
-> [!NOTE]
-> This strategy should only be used by applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
-
-The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegating-message-handler)
-
-```csharp
-HttpMessageHandler messageHandler = new OAuthMessageHandler(
-    config,
-    new HttpClientHandler() { UseCookies = false }
-    );
-HttpClient httpClient = new HttpClient(messageHandler)
-```
-
-If you are using the `CrmServiceClient` or `ServiceCLient` classes, add the following to the AppSettings node in the App.config file.
-
-```xml
-<add key="PreferConnectionAffinity" value="false" /> 
-```
-
-### Optimize your connection
-
-You can expect greater throughput by optimizing the connection. Supporting .NET sample code uses these settings:
-
-```csharp
-//Change max connections from .NET to a remote service default: 2
-System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
-//Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
-System.Threading.ThreadPool.SetMinThreads(100, 100);
-//Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
-System.Net.ServicePointManager.Expect100Continue = false;
-//Can decrease overall transmission overhead but can cause delay in data packet arrival
-System.Net.ServicePointManager.UseNagleAlgorithm = false;
-```
-More information: [Managing Connections](/dotnet/framework/network-programming/managing-connections)
 
 ## Strategies to manage Service Protection API limits
 
@@ -293,17 +247,6 @@ If you are using HTTP requests with the Web API, you can track the remaining lim
 |`x-ms-ratelimit-time-remaining-xrm-requests`|The remaining combined duration for all connections using the same user account|
 
 You should not depend on these values to control how many requests you send. They are intended for debugging purposes. If you are removing the affinity cookie, these values are re-set when you connect to a different server.
-
-### Use Task Parallel Library with Web API
-
-To achieve optimum throughput, you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
-
-See these examples using the [WebAPIService class library (C#)](webapi/samples/webapiservice.md):
-
-- [Web API CDSWebApiService Parallel Operations Sample (C#)](webapi/samples/webapiservice-parallel-operations.md)
-- [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapi/samples/webapiservice-tpl-dataflow-parallel-operations.md)
-
-
 ## Using the Organization Service
 
 If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
@@ -316,12 +259,6 @@ More information:
 
 - [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
 - [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Dataverse](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
-
-### Use Task Parallel Library with CrmServiceClient
-
-To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
-
-TPL can be used with either <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> because both classes include a `Clone` method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
 
 ## Frequently asked questions
 
