@@ -75,6 +75,10 @@ If the client is an interactive application, you should display a message that t
 
 If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current task using [Task.Delay](/dotnet/api/system.threading.tasks.task.delay) or equivalent methods.
 
+### How to re-try
+
+The following describes how to retry .NET applications using the Dataverse SDK for .NET or Web API:
+
 #### [SDK for .NET](#tab/sdk)
 
 
@@ -224,9 +228,9 @@ This limit tracks the number of concurrent requests.
 
 Client applications are not limited to sending requests individually in succession. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously. The server can detect when it is responding to multiple requests from the same user simultaneously. If this number of concurrent requests is exceeded, this error will be thrown.
 
-Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control.
+Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control. When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed 52. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
 
-When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed 52. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
+More information: [Send parallel requests](send-parallel-requests.md)
 
 ## How to maximize throughput
 
