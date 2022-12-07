@@ -4,7 +4,7 @@ description: Best practices and guidance of client side scripting for developers
 suite: powerapps
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article

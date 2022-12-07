@@ -1,10 +1,9 @@
 ---
 title: "Form OnSave event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the form OnSave event.
-ms.author: jdaly
 author: adrianorth
-manager: kvivek
-ms.date: 09/15/2022
+ms.author: aorth
+ms.date: 12/06/2022
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -78,13 +77,17 @@ To use async onSave handlers you will need to enable it through an app setting:
 
     ![Async OnSave app setting](../../../media/async_onSave_app_settings.png "Async OnSave app setting")
 
-### Async onSave timeouts
+### Async OnSave timeouts
 
-When using an async save the handler will wait for the promise to be fulfilled. To ensure that a save completes in a timely manner the handler throws a timeout exception after 10 seconds to let you know to tune the async `OnSave` event for better performance.
+When using an async `OnSave` handler, the form will wait for the promise returned by the handler to be fulfilled. To ensure that the form save completes in a timely manner, the handler will throw a timeout exception after 10 seconds to let you know to tune the async `OnSave` handler for better performance.
 
-There may be scenarios where you want to halt the `OnSave` execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user's input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
+There may be scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation will wait for the promise to resolve, you can call the **disableAsyncTimeout** method:
 
-When the **disableAsyncTimeout** is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
+```JavaScript
+executioncontext.getEventArgs().disableAsyncTimeout();
+```
+
+When **disableAsyncTimeout** is called, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
 
 This should be used with caution as it might affect the performance of the form save.
 
