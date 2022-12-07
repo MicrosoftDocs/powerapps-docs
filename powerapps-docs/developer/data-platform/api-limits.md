@@ -59,6 +59,14 @@ When a service protection API limit error occurs, it will provide a value indica
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
 - With the SDK for .NET, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
 
+### The Retry-After duration
+
+The `Retry-After` duration will depend on the nature of the operations that have been sent in the preceding 5 minute period. The more demanding the requests are, the longer it will take for the server to recover.
+
+Today, because of the way the limits are evaluated, you can expect to exceed the number of requests and execution time limits for a 5 minute period before the service protection API limits will take effect. However, exceeding the number of concurrent requests will immediately return an error. If the application continues to send such demanding requests, the duration will be extended to minimize the impact on shared resources. This will cause the individual retry-after duration period to be longer, which means your application will see longer periods of inactivity while it is waiting. This behavior may change in the future.
+
+When possible, we recommend trying to achieve a consistent rate by starting with a lower number of requests and gradually increasing until you start hitting the service protection API limits. After that, let the server tell you how many requests it can handle within a 5 minute period. Keeping your maximum number of requests limited within this 5 minute period and gradually increasing will keep the retry-after duration low, optimizing your total throughput and minimizing server resource spikes.
+
 ### Interactive application re-try
 
 If the client is an interactive application, you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
@@ -168,13 +176,7 @@ The following table describes the default service protection API limits enforced
 > [!IMPORTANT]
 > These limits are subject to change and may vary between different environments. These numbers represent default values and are provided to give you some idea of what values you can expect.
 
-### The Retry-After duration
 
-The `Retry-After` duration will depend on the nature of the operations that have been sent in the preceding 5 minute period. The more demanding the requests are, the longer it will take for the server to recover.
-
-Today, because of the way the limits are evaluated, you can expect to exceed the number of requests and execution time limits for a 5 minute period before the service protection API limits will take effect. However, exceeding the number of concurrent requests will immediately return an error. If the application continues to send such demanding requests, the duration will be extended to minimize the impact on shared resources. This will cause the individual retry-after duration period to be longer, which means your application will see longer periods of inactivity while it is waiting. This behavior may change in the future.
-
-When possible, we recommend trying to achieve a consistent rate by starting with a lower number of requests and gradually increasing until you start hitting the service protection API limits. After that, let the server tell you how many requests it can handle within a 5 minute period. Keeping your maximum number of requests limited within this 5 minute period and gradually increasing will keep the retry-after duration low, optimizing your total throughput and minimizing server resource spikes.
 
 ## Service Protection API Limit Errors returned
 
