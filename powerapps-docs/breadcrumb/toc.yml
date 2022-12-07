@@ -9,3 +9,6 @@
     - name: Power Apps
       tocHref: /power-apps/
       topicHref: /power-apps/
+      - name: Dataverse
+        tocHref: /power-apps/developer/data-platform/
+        topicHref: /power-apps/developer/data-platform/
