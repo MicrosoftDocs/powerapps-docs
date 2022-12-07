@@ -5,7 +5,7 @@ ms.date: 12/12/2022
 author: divka78
 ms.author: dikamath
 ms.reviewer: jdaly
-ms.topic: get-started-article
+ms.topic: article
 search.audienceType: 
   - developer
 search.app: 
@@ -21,7 +21,7 @@ contributors:
 When your application needs to send a large number of requests to Dataverse you can achieve much higher total throughput by sending requests in parallel using multiple threads. Dataverse is designed to support multiple concurrent users, so sending requests in parallel leverages this strength.
 
 > [!NOTE]
-> In plug-ins, sending parallel requests is not supported. More information: [Do not use parallel execution within plug-ins and workflow activities](best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md)
+> Sending parallel requests within a plug-in is not supported. More information: [Do not use parallel execution within plug-ins and workflow activities](best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md)
 
 
 
@@ -48,7 +48,9 @@ More information:
 
 ## Optimum degree of parallelism (DOP)
 
-Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocatied may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism. However, the `x-ms-dop-hint` response header returns an integer value that should provide good results for a given environment.
+Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocated may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism.
+
+The `x-ms-dop-hint` response header returns an integer value that provides a recommended degree of parallelism you can use.
 
 When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. You can set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) to define a maximum number of concurrent tasks.
 
@@ -62,7 +64,7 @@ There is a specific error returned when this limit is reached:
 |------------|------------|-------------------------------------|
 |`-2147015898`|`0x80072326`|`Number of concurrent requests exceeded the limit of 52.`|
 
-You can also mitigate the liklihood of this error occurring by sending your requests to all the servers that support the environment by disabling sever affinity.
+You can also mitigate the liklihood of this error occurring by sending your requests to all the servers that support the environment by disabling server affinity.
 
 ## Server affinity
 
@@ -120,11 +122,11 @@ The following .NET examples show use of [Task Parallel Library (TPL)](/dotnet/st
 
 ### [SDK for .NET](#tab/sdk)
 
-With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in both [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) and [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can leverage the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) which simplifies the process of adding parallelism and concurrency to applications.
+With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in both [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) and [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can use the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl).
 
 The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting [ParallelOptions.MaxDegreeOfParallelism](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) when you use [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A).
 
-The id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. When sending requests in parallel there is no way to know the order in which the responses will be returned.
+In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter.
 
 ```csharp
 /// <summary>
@@ -167,11 +169,9 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
 
 The following static method example shows the use of an authenticated [HttpClient](xref:System.Net.Http.HttpClient) that has been configured with a [BaseAddress Property](xref:System.Net.Http.HttpClient.BaseAddress) set to the Dataverse Web API Uri.
 
-This method first sends a request using the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) and then accesses the `x-ms-dop-hint` value from the response, which is used to set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism).
+This method first sends a request using the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) which includes the `x-ms-dop-hint` response header. This value is used to set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism). Then it uses [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) to send the requests using the those options.
 
-Then it uses [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) to send the requests.
-
-It then parses the id values of the records and sets them into a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. When sending requests in parallel there is no way to know the order in which the responses will be returned.
+The method then parses the id values of the records and sets them into a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter.
 
 ```csharp
 /// <summary>
