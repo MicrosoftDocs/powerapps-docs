@@ -48,9 +48,7 @@ More information:
 
 ## Optimum degree of parallelism (DOP)
 
-Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocated may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism.
-
-The `x-ms-dop-hint` response header returns an integer value that provides a recommended degree of parallelism you can use.
+Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocated may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism. Instead, use the integer value returned from the `x-ms-dop-hint` response header. This value provides a recommended degree of parallelism for the environment.
 
 When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. You can set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) to define a maximum number of concurrent tasks.
 
@@ -126,7 +124,7 @@ With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Datave
 
 The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting [ParallelOptions.MaxDegreeOfParallelism](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) when you use [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A).
 
-In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter.
+In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
 ```csharp
 /// <summary>
@@ -169,9 +167,9 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
 
 The following static method example shows the use of an authenticated [HttpClient](xref:System.Net.Http.HttpClient) that has been configured with a [BaseAddress Property](xref:System.Net.Http.HttpClient.BaseAddress) set to the Dataverse Web API Uri.
 
-This method first sends a request using the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) which includes the `x-ms-dop-hint` response header. This value is used to set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism). Then it uses [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) to send the requests using the those options.
+This method first sends a request using the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI), but the data in the body of the response is not used. The `x-ms-dop-hint` response header value is what is needed. This value is used to set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism). Then it uses [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) to send the requests using the those options.
 
-The method then parses the id values of the records and sets them into a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter.
+The method then parses the id values of the records and sets them into a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
 ```csharp
 /// <summary>
