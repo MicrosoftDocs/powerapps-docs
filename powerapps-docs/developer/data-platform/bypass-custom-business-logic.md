@@ -198,7 +198,7 @@ Yes, But only when the plug-in is running in the context of a user who has the `
 
 ### What about asychronous plug-in steps, asynchronous workflows and flows?
 
-Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly contribute to the cost of processing the records, therefore it is not by passed by this parameter.
+Asynchronous logic is bypassed in terms of plug-in steps and asynchronous workflows. Power Automate flows are not impacted by the flag.
 
 ## See also
 
