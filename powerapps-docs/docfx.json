@@ -45,7 +45,6 @@
         "AshleyWoodruff"
       ],
       "breadcrumb_path": "breadcrumb/toc.yml",
-      "extendBreadcrumb": true,
       "ms.suite": "office",
       "titleSuffix": "Power Apps",
       "feedback_system": "GitHub",
