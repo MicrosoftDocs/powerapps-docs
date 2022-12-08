@@ -71,7 +71,7 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 1. Select the card title and set its **Text** property to *LookUp(account, 'Account Name' = EnteredAccountName).'Account Name'*.
 
-    This expression changes the card title to a string that incorporates the account name. You can enter the expression in the formula bar or the properties pane.
+    This expression changes the card title to a string incorporating the account name. You can enter the expression in the formula bar or the properties pane.
 
     :::image type="content" source="..\media\tutorial-dataverse-card\details-title-pfx.png" alt-text="Screenshot of the Detailsscreen title set to a Power Fx expression.":::
 
@@ -97,6 +97,6 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 ## Test the card
 
-You should always save your changes before you play a card. Select **Save**, and then select **Play**.
+You should permanently save your changes before you play a card. Select **Save**, and then select **Play**.
 
-Test all the controls in both screens in your card. The first screen should list all the accounts and allow you to type the name of an account to open a screen with more details. The second screen should show the account name and number and allow you to change the account name.
+Test all the controls on both screens on your card. The first screen should list all the accounts and allow you to type the name of an account to open a screen with more details. The second screen should show the account name and number and enable you to change the account name.
