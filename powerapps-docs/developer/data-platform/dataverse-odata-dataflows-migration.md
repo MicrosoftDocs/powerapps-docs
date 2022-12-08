@@ -1,19 +1,23 @@
 ---
 title: Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 author: denisem-msft
-ms.reviewer: "nabuthuk"
+ms.reviewer: jdaly
 description: Migrate data between Microsoft Dataverse environments using dataflows OData connector.
-ms.date: 11/24/2021
-ms.topic: "article"
+ms.date: 10/03/2022
+ms.topic: article
 ms.subservice: dataverse-developer
 ms.author: demora
 search.app: 
   - PowerApps
+contributors:
+ - JimDaly
 ---
 
 # Migrate data between Microsoft Dataverse environments using the dataflows OData connector
 
-
+> [!NOTE]
+> Consider using the [Power Query Dataverse Connector](/power-query/connectors/dataverse) with Dataflows rather than the OData connector. 
+> Dataflows are the recommended method to migrate data between Dataverse environments. More information [What are dataflows?](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)
 
 Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Dataverse. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Dataverse. 
 

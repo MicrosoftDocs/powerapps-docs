@@ -13,6 +13,9 @@ contributors:
 
 # Display file attachments with knowledge articles
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Knowledge articles help you achieve self-service. As a Knowledge Manager, you might want to share some downloadable files along with your articles to provide detailed information or a case study. You can author knowledge articles and add them as notes attachments that can be used by users. These attachments aren't displayed automatically on portals, thereby limiting the effectiveness of self-service.
 
 To display knowledge articles with downloadable file attachments, you must [create the site setting](../configure/configure-site-settings.md) KnowledgeManagement/DisplayNotes, and set the value to true. When you set the site setting to true, knowledge articles are displayed along with their attachments, so portal users can search for these attachments.

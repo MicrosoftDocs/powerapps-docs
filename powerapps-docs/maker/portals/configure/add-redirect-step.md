@@ -13,6 +13,9 @@ ms.reviewer: ndoelman
 
 # Add a redirect step type
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Redirect Step Type allow for a redirect of the User's browser session to another page in the portal or to an external URL. This is useful for seamlessly directing flow.
 
 | Name                                                            | Description                                                                                                                                                                                  |
@@ -30,7 +33,7 @@ The Redirect Step Type allow for a redirect of the User's browser session to ano
 
 [Configure a portal](configure-portal.md)  
 [Define basic forms](entity-forms.md)  
-[Advanced Form steps for portals](web-form-steps.md)  
+[Multistep Form steps for portals](web-form-steps.md)  
 [Load Form/Load Tab step type](load-form-step.md)  
 [Conditional step type](add-conditional-step.md)  
 [Add custom JavaScript](add-custom-javascript.md)  

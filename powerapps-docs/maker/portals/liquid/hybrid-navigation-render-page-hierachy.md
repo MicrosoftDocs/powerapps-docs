@@ -16,6 +16,9 @@ contributors:
 
 # Render up to three levels of page hierarchy by using hybrid navigation
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 This example renders a type of hybrid navigation, based on the portal site map, that renders up to three levels of page hierarchy. The rules for this component are:
 
 * The ancestor pages of the current page are shown back to the Home page (or to the maximum depth specified by the optional depth\_offset parameter). 

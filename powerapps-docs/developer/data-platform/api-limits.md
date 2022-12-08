@@ -182,7 +182,7 @@ More information:
 
 Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
 
-With the Organization Service SDK this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
+With the Organization Service SDK this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
 
 In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
 
@@ -208,7 +208,7 @@ HttpMessageHandler messageHandler = new OAuthMessageHandler(
 HttpClient httpClient = new HttpClient(messageHandler)
 ```
 
-If you are using CrmServiceClient, add the following to the AppSettings node in the App.config file.
+If you are using the `CrmServiceClient` or `ServiceCLient` classes, add the following to the AppSettings node in the App.config file.
 
 ```xml
 <add key="PreferConnectionAffinity" value="false" /> 
@@ -306,11 +306,11 @@ See these examples using the [WebAPIService class library (C#)](webapi/samples/w
 
 ## Using the Organization Service
 
-If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned. 
+If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
 
 Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
 
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient  or ServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
 More information:
 

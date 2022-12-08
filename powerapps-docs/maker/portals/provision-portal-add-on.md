@@ -16,6 +16,9 @@ contributors:
 
 # Provision a portal using the older portal add-on
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
 
 > [!NOTE]
@@ -163,7 +166,7 @@ The table below summarizes the features associated with each portal option:
 | Web Notifications                      |  *                           | *              |  *                           | *                | *             |
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity                     |     *                         |  *              |     *                         |   *               | *             |
 | Identity Workflows                     | *                            |  *             |     *                         |   *               | *             |
-| Advanced Forms                              |  *                            | *               |    *                          | *                 | *             |
+| Multistep Forms                              |  *                            | *               |    *                          | *                 | *             |
 | Feedback                               |   *                           |  *              |  *                            | *                 | *             |
 ||
 

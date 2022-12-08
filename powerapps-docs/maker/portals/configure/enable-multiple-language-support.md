@@ -17,6 +17,9 @@ contributors:
 
 # Enable multiple-language portal support
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Business isn't confined to a single region or a language. A single portal can display content in multiple languages to reach customers around the world. The content of your portal can be translated into multiple languages while maintaining a single content hierarchy.
 
 > [!NOTE] 
@@ -100,7 +103,7 @@ The table below shows all the languages currently available out of the box. This
 | Spanish (Traditional Sort) - Spain | es-ES             | 3082     | español                 |
 | Swedish - Sweden                   | sv-SE             | 1053     | svenska                 |
 | Thai - Thailand                    | th-TH             | 1054     | ไทย                     |
-| Turkish - Turkey                   | tr-TR             | 1055     | Türkçe                  |
+| Turkish - Türkiye                  | tr-TR             | 1055     | Türkçe                  |
 | Ukrainian - Ukraine                | uk-UA             | 1058     | українська              |
 | Vietnamese - Vietnam               | vi-VN             | 1066     | Tiếng Việt              |
 

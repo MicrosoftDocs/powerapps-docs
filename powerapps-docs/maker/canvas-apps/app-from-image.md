@@ -1,5 +1,5 @@
 ﻿---
-title: Create a canvas app from an image (preview)
+title: Create a canvas app from an image 
 description: Learn about how to use your own designs saved in image formats and create canvas apps from them.
 author: norliu
 ms.topic: article
@@ -17,17 +17,12 @@ contributors:
   - tapanm-msft
 ---
 
-# Create a canvas app from an image (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Create a canvas app from an image 
 
 The app making journey typically involve a design phase to plan out what the app should look like. Whether the design is based on an existing paper form, a whiteboard drawing, or even an image of a legacy app, it can take a considerable amount of time to build the app from scratch.
 
 With the **Image to app** feature, you can now create an app from a visual design and connect it to data through a few simple steps in the guided interface. This feature makes it easy for makers of all skill levels to jumpstart the app development process.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
 > - The styling of the components in the app, such as fonts and colors, will be based on the **Office Blue** theme in Power Apps.
@@ -47,7 +42,7 @@ With the **Image to app** feature, you can now create an app from a visual desig
 
     :::image type="content" source="media/app-from-image/select-create.png" alt-text="Select Create from the left-pane":::
 
-1. Select **Image (preview)**.
+1. Select **Image**.
 
     :::image type="content" source="media/app-from-image/select-image.png" alt-text="Select Image (preview) from the available cards.":::
 

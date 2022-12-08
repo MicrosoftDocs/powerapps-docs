@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 09/16/2022
+ms.date: 11/11/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -100,7 +100,10 @@ The following category and sub-category options are available on the filer menu:
   
 You can choose to save your filter settings so that you don't have to set them again each time you work with activities in the timeline.
   
-To save your filter settings, after configureing the filters you want, select the ellipses, and then select **Remember my filters**.
+To save your filter settings, after configuring the filters you want, select the ellipses, and then select **Remember my filters**.
+  
+> [!Note]
+> If you have a system administrator or basic user role, Remember my filters works by default. If you don't have either of these roles, you must have Create/Read/Write privileges to be added to the msdyn_customcontrolextendedsettings entity for the setting to work.
   
 ![Remember filters functionality.](media\timeline-remember-filters.png "Remember my filters functionality")
   
@@ -338,7 +341,7 @@ When you mouse over the profile image, you can view the user's detailed profile 
 ![View user profile card.](media\timeline_at_2_profile_card.png "View user profile card")
 
 > [!NOTE]
-> You can mention only a system user, i.e. a team member within your organization, in a note.
+> You can mention only a system user in a note. For example, a team member within your organization.
 
 ### Add an attachment to a note in timeline
 
@@ -453,7 +456,7 @@ For more information, see [Rich text editor control configurations](/model-drive
   
 ## View a conversation transcript
   
-In the timeline, you can view the transcripts of completed chats you've had from  conversation channels.
+In the timeline, you can view the transcripts of completed chats you've had in conversation channels. To view these transcripts, you must have prvReadmsdyn_transcript permission. More information: [Roles and permissions](/dynamics365/app-profile-manager/security-roles)
 
 To view a conversation transcript, select the **View more** link in the row for which you want to view the transcript. The row expands and the entire transcript is displayed inline.
 

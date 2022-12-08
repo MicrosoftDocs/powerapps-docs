@@ -16,6 +16,9 @@ contributors:
 
 # Add a chart created in a model-driven app to a webpage in portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/portals-entity-tags.md#chart). You can add the chart Liquid tag in:
 
 - The **Copy** field on a webpage.

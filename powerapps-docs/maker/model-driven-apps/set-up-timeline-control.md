@@ -32,7 +32,7 @@ App makers have the ability to configure the information displayed on the timeli
 
 ## Add a timeline
 
-A timeline control is located on a form within a table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. Notice that there can be only one timeline per form.
+A timeline control is located on a form within a table. Any timeline control that's on a form can be configured. For example, an account table has three standard forms, and each of those forms can have a timeline that can be configured. 
 
 ### Display a custom table in a timeline
 
@@ -162,6 +162,9 @@ The following category and subcategory options are available on the filer menu:
 |Activity due date (active) |<li>Next 30 days</li><li>Next 7 days</li><li>Next 24 hours</li><li>Last 24 hours</li><li>Last 7 days</li>   <li>Last 30 days</li>                   |
 |Posts by                   |<li>Auto post</li><li>Users</li>                          |
 |Modified date              |<li>Last 24 hours</li><li>Last 7 days</li><li>Last 30 days</li>                   |
+
+> [!NOTE]
+> By default, the fax and letter records are disabled on the timeline.
 
 <sup>1</sup> Requires a Dynamics 365 app
 

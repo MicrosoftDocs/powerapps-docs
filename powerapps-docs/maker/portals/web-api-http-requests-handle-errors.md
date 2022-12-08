@@ -16,6 +16,9 @@ contributors:
 
 # Compose HTTP requests and handle errors for the portals Web API
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
 > [!IMPORTANT]

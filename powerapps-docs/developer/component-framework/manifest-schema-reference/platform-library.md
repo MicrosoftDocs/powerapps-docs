@@ -38,7 +38,7 @@ Model-driven and canvas apps
 
 ```xml
 <resources>
-    <code path="index.ts" order="1" />
+   <code path="index.ts" order="1" />
    <platform-library name="React" version="16.8.6" />
    <platform-library name="Fluent" version="8.29.0" />
 </resources>

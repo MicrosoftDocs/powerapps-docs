@@ -16,6 +16,9 @@ contributors:
 
 # Use faceted search to improve portal search
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Portal content may be searched by using filters based on characteristics of the content. The filters implemented by faceted portal search allow customers to find the content they want more quickly than a traditional search.
 
 ## Enable or disable faceted search

@@ -57,7 +57,7 @@ After you deploy this app, end users can use the connection deployed with your a
 
 ## Real-world uses of implicit connection
 
-There are valid use cases for both implicit and explicit authentication methods. Consider security model, and ease of development when choosing your approach. As a general rule, use an explicit authentication method for any situation where you've a business requirement where data must be restricted on a row or column basis.
+There are valid use cases for both implicit and explicit authentication methods. Consider security model, and ease of development when choosing your approach. As a general rule, use an explicit authentication method for any situation where you have a business requirement where data must be restricted on a row or column basis.
 
 For an example of explicit connection use case, consider a sales manager who should only be allowed to see price discounts or base cost data that is in the same table where another sales professional needs to see product and price.
 

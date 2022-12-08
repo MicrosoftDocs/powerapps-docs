@@ -16,6 +16,9 @@ contributors:
 
 # Starter portal package version 9.2.2103.x
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Starter portal package version 9.2.2103.x is generally available. To learn how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
 
 In this article, you'll learn about the fixes and enhancements included in this update.

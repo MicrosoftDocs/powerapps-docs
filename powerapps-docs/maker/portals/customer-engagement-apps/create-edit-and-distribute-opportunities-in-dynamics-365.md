@@ -13,6 +13,9 @@ contributors:
 
 # Create, edit, and distribute opportunities
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In your partner portal, you can use opportunities to notify your partners of sales prospects that they can follow up on. You may have opportunities for existing customers or from new customers, and by distributing them to your partners, you can create new revenue sources or strengthen relationships with current customers.
 
 Distributing opportunities to specific partners can also help connect customers with the sellers who have the right knowledge and skills for their specific needs.

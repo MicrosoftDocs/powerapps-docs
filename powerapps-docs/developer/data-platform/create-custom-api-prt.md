@@ -17,7 +17,7 @@ contributors:
 ---
 # Create a Custom API using the plug-in registration tool
 
-The plug-in registration tool (PRT) includes a designer to create Custom API. The PRT is a Windows client application that is part of the developer tools you can download from NuGet.  See [Download tools from NuGet](download-tools-nuget.md) for information about downloading these tools.
+The plug-in registration tool (PRT) includes a designer to create Custom API. The PRT is a Windows client application that is part of the developer tools you can download from NuGet.  See [Dataverse development tools](download-tools-nuget.md) for information about downloading these tools.
 
 [!INCLUDE [cc-connect-plugin-registration-tool](includes/cc-connect-plugin-registration-tool.md)]
 

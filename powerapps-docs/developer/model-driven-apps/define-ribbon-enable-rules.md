@@ -3,7 +3,6 @@ title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Inten
 description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -75,7 +74,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 
 ### Custom Rule
 
- Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
+ Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [JavaScript web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
 
 ```JavaScript
 function EnableRule()

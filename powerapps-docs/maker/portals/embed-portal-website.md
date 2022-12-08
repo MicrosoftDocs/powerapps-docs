@@ -17,6 +17,9 @@ contributors:
 
 # Embed a portal in another website by using an iframe
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 One of the most common ways of using portal applications is to embed portal functionality inside another website. Usually the other website already exists, but you want to enhance its abilities and add new functions that work with your data surfaced through the portal application.
 
 In this scenario, it's easier to embed your portal functionality rather than build it from scratch. This article explains the steps to embed a portal application in a different website by using an iframe.
@@ -58,7 +61,7 @@ Iframes are disabled on new portals by default, to ensure that no one can embed 
 
 After you complete the previous step, all you need to do to embed the portal experience into your website is to use the [HTML iframe tag](https://www.w3schools.com/html/html_iframe.asp) to embed the whole site or specific pages, as required.
   
-We recommend that the portal domain name be a sibling or a child of the domain name of the site where you're embedding the portal in an iframe. For example, if your root website is `www.contoso.com`, the portal domain name should be `portal.contoso.com`. This is important to ensure that the cookies used by the portal won't be classified as [third-party cookies and be blocked by the browser (blog)](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html). Otherwise, functionality such as Captcha and basic/advanced form redirection might not work properly. To set up a custom domain name on your portal, go to [Add a custom domain name](admin/add-custom-domain.md).
+We recommend that the portal domain name be a sibling or a child of the domain name of the site where you're embedding the portal in an iframe. For example, if your root website is `www.contoso.com`, the portal domain name should be `portal.contoso.com`. This is important to ensure that the cookies used by the portal won't be classified as [third-party cookies and be blocked by the browser (blog)](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html). Otherwise, functionality such as Captcha and basic/multistep form redirection might not work properly. To set up a custom domain name on your portal, go to [Add a custom domain name](admin/add-custom-domain.md).
 
 ## Step 3. Handle headers and footers
 
