@@ -97,7 +97,7 @@ This sample contains the following plug-in types designed to interact with the o
 
 |Plug-in Type|Message|Stage|Description|
 |---------|---------|---------|---------|
-|`ContextWriter.cs`|Any|Any|Use this plug-in to write details of the [IPluginExecutionContext4](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4) to the trace log so that you can see the values being passed. Add entity images in the step registration to view the content.|
+|`ContextWriter.cs`|Any|Any|Use this plug-in to write details of the [IPluginExecutionContext4](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4) to the trace log so that you can see the values being passed. Add entity images in the step registration to view the content.|
 |`CreateMultiplePreOp.cs`|CreateMultiple|PreOperation (20)|Sets the `sample_description` attribute value to `$"'tag' value for Create = '{tagValue}'."` where `tagValue` is the value set using the optional `tag` parameter. |
 |`FollowupPluginMultiple.cs`|CreateMultiple|PostOperation (40)|This is the replacement for `FollowupPluginSingle.cs`.<br /><br />Applies the same action as `FollowupPluginSingle.cs`.|
 |`FollowupPluginSingle.cs`|Create|PostOperation (40)|Creates a `task` record associated with the `sample_example` record created.|
