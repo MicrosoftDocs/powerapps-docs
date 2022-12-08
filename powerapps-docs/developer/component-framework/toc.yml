@@ -101,6 +101,8 @@ items:
       href: sample-controls/multi-select-option-set-control.md
     - name: Navigation API component
       href: sample-controls/navigation-api-control.md
+    - name: Object Output component
+      href: sample-controls/object-output.md
     - name: Property set table component
       href: sample-controls/data-set-component-canvas.md
     - name: React Facepile component
@@ -366,9 +368,11 @@ items:
         href: reference/react-control.md
         items:
         - name: destroy
-          href: reference/react-control/destroy.md
+          href: reference/react-control/destroy.md        
         - name: getOutputs
           href: reference/react-control/getOutputs.md
+        - name: getOutputSchema
+          href: reference/react-control/getoutputschema.md
         - name: init
           href: reference/react-control/init.md
         - name: updateView
@@ -395,6 +399,8 @@ items:
           href: reference/control/destroy.md
         - name: getOutputs
           href: reference/control/getOutputs.md
+        - name: getOutputSchema
+          href: reference/control/getoutputschema.md
         - name: init
           href: reference/control/init.md
         - name: updateView
@@ -447,6 +453,10 @@ items:
         href: manifest-schema-reference/manifest.md
       - name: platform-library
         href: manifest-schema-reference/platform-library.md
+      - name: property-dependencies
+        href: manifest-schema-reference/property-dependencies.md
+      - name: property-dependency
+        href: manifest-schema-reference/property-dependency.md                
       - name: property-set
         href: manifest-schema-reference/property-set.md
       - name: property
