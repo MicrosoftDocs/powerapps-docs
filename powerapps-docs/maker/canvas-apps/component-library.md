@@ -1,10 +1,10 @@
 ---
 title: Component library
 description: Learn about working with a library of reusable components for canvas apps.
-author: hemantgaur
+author: jorisde
 ms.subservice: canvas-developer
 ms.topic: article
-ms.date: 06/16/2022
+ms.date: 10/10/2022
 ms.author: hemantg
 ms.reviewer: tapanm
 search.audienceType:
@@ -12,9 +12,8 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - hemantgaur
+  - jorisdg
   - tapanm-msft
-  - ProfessorKendrick
 ---
 
 # Component library
@@ -171,6 +170,11 @@ If a component library is referenced by a canvas app, it can't be deleted. This 
 ## Component library permissions
 
 Sharing a component library works the same way you share a canvas app. When you share a component library, you allow others to reuse the component library. Once shared, others can edit the component library and import components from this shared component library for creating and editing apps. If shared as a co-owner, a user can use, edit, and share a component library but not delete or change the owner.
+
+Additional considerations when sharing component libraries to security groups:
+
+- You can't use the [sharing UI](share-app.md#share-an-app) when sharing component libraries created as part of a solution. Instead, use [Set-PowerAppRoleAssignment cmdlet](/powershell/module/microsoft.powerapps.administration.powershell/set-adminpowerapproleassignment#parameters) with **CanEdit** permission level to share the component libraries with the selected security group.
+- Component libraries created in a Power Platform environment [without a Dataverse database](/power-platform/admin/create-environment#create-an-environment-in-the-power-platform-admin-center) shared as **Co-owner** automatically grant **CanEdit** permission to the selected security group.
 
 ## Known limitations
 

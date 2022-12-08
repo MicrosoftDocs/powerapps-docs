@@ -87,6 +87,10 @@ Pasting images in the rich text editor has the following limitations:
 - Type of image (inline vs URL)
 - How programs represent images differently when they are copied.
 
+> [!NOTE]
+> Browsers represent image data differently, some browsers will capture the image as raw image data while others may get a reference to a URL which may not be accessible after pasting.
 
+> [!TIP]
+>  Using a screen clipping or screen shotting tool to copy / paste images will provide the best experience.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

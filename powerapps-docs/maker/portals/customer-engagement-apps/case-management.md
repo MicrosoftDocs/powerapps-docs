@@ -14,6 +14,9 @@ contributors:
 
 # Manage cases in portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The use of cases will vary depending on your type of organization. Typically, cases are used to track and resolve different types of customer issues. When cases are surfaced via a portal, users can create or even comment on cases themselves, bypassing the need to speak directly with people in your organization. Users can also review and update any of the information originally provided in the case record, whether the case is open or closed. 
 
 The forms that are displayed on the portal for creating and updating cases can be customized allowing you to control what fields are visible to the user.

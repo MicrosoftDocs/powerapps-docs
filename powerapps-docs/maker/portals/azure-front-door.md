@@ -15,6 +15,9 @@ contributors:
 
 # Set up Azure Front Door with portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 As a portal maker, you can use Azure Front Door with Power Apps portals to use its edge caching and web application firewall (WAF) capabilities. In this article, you'll learn how to set up [Azure Front Door](/azure/frontdoor/overview) with portals.
 
 > [!NOTE] 

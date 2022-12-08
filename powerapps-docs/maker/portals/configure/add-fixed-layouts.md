@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Add fixed page layouts
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 When you add a new webpage to a portal by using [Power Apps portals Studio](../portal-designer-anatomy.md), you can choose either **Layouts** or **Fixed layouts**. If there are no fixed layouts available in portals Studio but you'd like to use the layout of an existing web template, you can add these templates as fixed page layouts by creating page template records with the [Portal Management app](configure-portal.md).
 
 :::image type="content" source="media/add-fixed-layouts/no-fixed-layouts.png" alt-text="Screenshot showing the message 'There are no fixed layouts.'":::

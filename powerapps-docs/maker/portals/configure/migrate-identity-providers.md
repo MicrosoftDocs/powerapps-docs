@@ -17,6 +17,9 @@ contributors:
 
 # Migrate identity providers to Azure AD B2C
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The portals feature supports a configurable security system that lets you support multiple authentication systems. The portal includes its own local credentials in addition to federating with external identity providers by using standard protocols such as OIDC, SAML, and WS-Federation. Going forward, we recommend that you use only the Azure AD B2C identity provider for authentication and that you deprecate other identity providers.
 
 > [!IMPORTANT]

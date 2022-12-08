@@ -17,6 +17,9 @@ contributors:
 
 # Tutorial: Configure the rich text editor control on portals 
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this tutorial, you'll configure Power Apps portals to add the [rich text editor control](../model-driven-apps/rich-text-editor-control.md) to a basic form and then add the basic form to a webpage. Portal users will be able interact with the rich text editor control to format text on the form.
 
 ## Prerequisites

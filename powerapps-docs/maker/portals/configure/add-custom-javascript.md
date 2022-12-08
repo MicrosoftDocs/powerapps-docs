@@ -17,6 +17,9 @@ contributors:
 
 # Add custom JavaScript to a form
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Both the [basic form](entity-forms.md) and [multistep form](web-form-properties.md) step records contain a field named **Custom JavaScript** that can be used to store JavaScript code to allow you to extend or modify the form's visual display or function.
 
 The custom block of JavaScript will be added to the bottom of the page just before the closing form tag element.

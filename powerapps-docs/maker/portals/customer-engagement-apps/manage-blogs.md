@@ -13,6 +13,9 @@ contributors:
 
 # Manage blogs
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Learn how to manage blog comments and blog posts both within portals and from the portal content editor.
 
 ## Manage blogs in Dynamics 365 Portals

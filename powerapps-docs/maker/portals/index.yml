@@ -23,7 +23,7 @@ landingContent:
     linkLists:
        - linkListType: whats-new
          links:
-          - text: Power Pages (preview)
+          - text: Power Pages
             url: /power-pages/introduction 
           - text: Configure a file column on portals (preview)
             url: configure/file-column.md

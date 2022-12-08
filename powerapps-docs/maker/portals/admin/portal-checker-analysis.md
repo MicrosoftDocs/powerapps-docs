@@ -18,6 +18,9 @@ contributors:
 
 # Analyze and resolve Portal Checker diagnostics results
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In this article, you'll learn about Portal Checker diagnostics results, and how to resolve any issues or problems found.
 
 ## An active Search site marker isn't available for this portal

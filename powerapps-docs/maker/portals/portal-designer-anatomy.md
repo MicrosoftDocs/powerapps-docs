@@ -16,6 +16,9 @@ contributors:
 
 # Power Apps portals Studio
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 You can use Power Apps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists.
 
 > [!NOTE]

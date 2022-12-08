@@ -3,7 +3,6 @@ title: "Create, manage, and publish model-driven apps using code | Microsoft Doc
 description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps." # 115-145 characters including spaces. This abstract displays in the search result."
 author: caburk
 ms.author: caburk
-manager: evlew
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -89,17 +88,17 @@ OData-Version: 4.0
 Accept: application/json
 
 {
-	"AppId":"dd621d4a-d898-e711-80e7-00155db763be",
-	"Components":[
-		{
-			"savedqueryid":"00000000-0000-0000-00aa-000000666000",
-			"@odata.type":"Microsoft.Dynamics.CRM.savedquery"
-		},
-		{
-			"formid":"c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
-			"@odata.type":"Microsoft.Dynamics.CRM.systemform"
-		}
-	]
+   "AppId":"dd621d4a-d898-e711-80e7-00155db763be",
+   "Components":[
+      {
+         "savedqueryid":"00000000-0000-0000-00aa-000000666000",
+         "@odata.type":"Microsoft.Dynamics.CRM.savedquery"
+      },
+      {
+         "formid":"c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
+         "@odata.type":"Microsoft.Dynamics.CRM.systemform"
+      }
+   ]
 }
 ```
 
@@ -115,13 +114,13 @@ OData-Version: 4.0
 Accept: application/json
 
 {
-	"AppId":"dd621d4a-d898-e711-80e7-00155db763be",
-	"Components":[
-		{
-			"savedqueryid":"00000000-0000-0000-00aa-000000666000",
-			"@odata.type":"Microsoft.Dynamics.CRM.savedquery"
-		}
-	]
+   "AppId":"dd621d4a-d898-e711-80e7-00155db763be",
+   "Components":[
+      {
+         "savedqueryid":"00000000-0000-0000-00aa-000000666000",
+         "@odata.type":"Microsoft.Dynamics.CRM.savedquery"
+      }
+   ]
 }
 ```
 
@@ -173,7 +172,7 @@ OData-Version: 4.0
             },
             {
                 "ErrorType": "Warning",
-                "Message": "Account doesn’t reference a form or view. App users will see all forms and views.",
+                "Message": "Account doesn't reference a form or view. App users will see all forms and views.",
                 "DisplayName": null,
                 "ComponentId": "00000000-0000-0000-0000-000000000000",
                 "ComponentType": 0,
@@ -227,7 +226,7 @@ Accept: application/json
 To disassociate a security role from a model-driven app, you use the DELETE request with the same navigation property. For example:
 
 ```
-DELETE	[Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)/appmoduleroles_association/$ref?$id=[Organization URI]/api/data/v9.0/roles(<roleId)
+DELETE   [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)/appmoduleroles_association/$ref?$id=[Organization URI]/api/data/v9.0/roles(<roleId)
 ```
 
 ## Manage your model-driven apps and its components

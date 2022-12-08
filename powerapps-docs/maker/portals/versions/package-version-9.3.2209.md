@@ -5,7 +5,7 @@ author: GitanjaliSingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/26/2022
+ms.date: 12/08/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Starter portal package version 9.3.2209.x
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Starter portal package version 9.3.2209.x is generally available. To learn how to update your portal solution, go to [Update the Power Apps portals solution](../admin/update-portal-solution.md).
 
@@ -33,8 +36,22 @@ For more information about creating a portal with starter portal package, go to 
 The package update includes the following enhancements to extend the capabilities of portals:
 
 - App level notification on Portal Management app for site visibility.
-- Renaming **Multistep Form** to **multistep form**.
+- Changed **Advanced Forms** to **Multistep Forms**.
 - Data model change on **List** and **Basic Form metadata (subgrid)** to enable dataset-based language.
+
+## Fixes
+
+The designer tab is removed in the Portal Management app to address a security issue with the legacy WYSIWYG HTML editor. Going forward, you will need to edit the content directly using HTML code. 
+
+This will affect the following when editing or modifying HTML code using the Portal Management app:
+
+- Content Snippets
+- Web Links
+- Web Link Sets
+- Web Pages
+- Shortcuts
+- Ads
+- Polls
 
 ### See also
 

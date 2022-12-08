@@ -17,6 +17,9 @@ contributors:
 
 # Define multistep form properties for portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The multistep form contains relationships to webpages and a start step to control the initialization of the form within the portal. The relationship to the webpage allows dynamic retrieval of the form definition for a given page node within the website.  
 
 The other options on the multistep form record itself control top-level preferences for the multiple-step process as a whole, for example whether you'd like to display a progress bar.
