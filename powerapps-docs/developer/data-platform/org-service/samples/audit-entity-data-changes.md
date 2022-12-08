@@ -41,8 +41,6 @@ This sample does the following:
 8. Use the `RetrieveAuditDetails` message via the [RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest) to display some of the audit details.
 9. Return the environent auditing to the original state and delete the account record created.
 
-The `RetrieveRecordChangeHistory` message is intended to be used in a scenario where it contains data that is needed to retrieve the audit history for a table.
-
 ## How this sample works
 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
