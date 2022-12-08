@@ -36,7 +36,7 @@ This sample does the following:
 3. Use the `RetrieveRecordChangeHistory` message via the [RetrieveRecordChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveRecordChangeHistoryRequest) to retrieve the history of the account record created in step 2.
 4. Display some of the details information in each audit record
 5. Update the account record.
-6. Retrieve the change history of the attribute using the `RetrieveAttributeChangeHistory` message with the [RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistory).
+6. Retrieve the change history of the attribute using the `RetrieveAttributeChangeHistory` message with the [RetrieveAttributeChangeHistoryRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAttributeChangeHistoryRequest).
 7. Display the attribute change history
 8. Use the `RetrieveAuditDetails` message via the [RetrieveAuditDetailsRequest Class](xref:Microsoft.Crm.Sdk.Messages.RetrieveAuditDetailsRequest) to display some of the audit details.
 9. Return the environent auditing to the original state and delete the account record created.
