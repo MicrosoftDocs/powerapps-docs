@@ -1,12 +1,12 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -27,9 +27,9 @@ Top level of the Microsoft Dynamics 365 business hierarchy. The organization can
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Retrieve|GET [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/organizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/organizations(*organizationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/organizations(*organizationid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/organizations<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/organizations(*organizationid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -61,7 +61,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AdvancedColumnFilteringEnabled](#BKMK_AdvancedColumnFilteringEnabled)
 - [AdvancedFilteringEnabled](#BKMK_AdvancedFilteringEnabled)
 - [AdvancedLookupEnabled](#BKMK_AdvancedLookupEnabled)
+- [AdvancedLookupInEditFilter](#BKMK_AdvancedLookupInEditFilter)
 - [AllowAddressBookSyncs](#BKMK_AllowAddressBookSyncs)
+- [AllowApplicationUserAccess](#BKMK_AllowApplicationUserAccess)
 - [AllowAutoResponseCreation](#BKMK_AllowAutoResponseCreation)
 - [AllowAutoUnsubscribe](#BKMK_AllowAutoUnsubscribe)
 - [AllowAutoUnsubscribeAcknowledgement](#BKMK_AllowAutoUnsubscribeAcknowledgement)
@@ -69,9 +71,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowedIpRangeForFirewall](#BKMK_AllowedIpRangeForFirewall)
 - [AllowEntityOnlyAudit](#BKMK_AllowEntityOnlyAudit)
 - [AllowLeadingWildcardsInGridSearch](#BKMK_AllowLeadingWildcardsInGridSearch)
+- [AllowLeadingWildcardsInQuickFind](#BKMK_AllowLeadingWildcardsInQuickFind)
 - [AllowLegacyClientExperience](#BKMK_AllowLegacyClientExperience)
 - [AllowLegacyDialogsEmbedding](#BKMK_AllowLegacyDialogsEmbedding)
 - [AllowMarketingEmailExecution](#BKMK_AllowMarketingEmailExecution)
+- [AllowMicrosoftTrustedServiceTags](#BKMK_AllowMicrosoftTrustedServiceTags)
 - [AllowOfflineScheduledSyncs](#BKMK_AllowOfflineScheduledSyncs)
 - [AllowOutlookScheduledSyncs](#BKMK_AllowOutlookScheduledSyncs)
 - [AllowRedirectAdminSettingsToModernUI](#BKMK_AllowRedirectAdminSettingsToModernUI)
@@ -129,6 +133,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DateFormatCode](#BKMK_DateFormatCode)
 - [DateFormatString](#BKMK_DateFormatString)
 - [DateSeparator](#BKMK_DateSeparator)
+- [DaysBeforeInactiveTeamsChatSyncDisabled](#BKMK_DaysBeforeInactiveTeamsChatSyncDisabled)
 - [DecimalSymbol](#BKMK_DecimalSymbol)
 - [DefaultCountryCode](#BKMK_DefaultCountryCode)
 - [DefaultCrmCustomName](#BKMK_DefaultCrmCustomName)
@@ -147,6 +152,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableAsyncMergeAPIForUCI](#BKMK_EnableAsyncMergeAPIForUCI)
 - [EnableBingMapsIntegration](#BKMK_EnableBingMapsIntegration)
 - [EnableCanvasAppsInSolutionsByDefault](#BKMK_EnableCanvasAppsInSolutionsByDefault)
+- [EnableFlowsInSolutionByDefault](#BKMK_EnableFlowsInSolutionByDefault)
 - [EnableImmersiveSkypeIntegration](#BKMK_EnableImmersiveSkypeIntegration)
 - [EnableIpBasedCookieBinding](#BKMK_EnableIpBasedCookieBinding)
 - [EnableIpBasedFirewallRule](#BKMK_EnableIpBasedFirewallRule)
@@ -160,7 +166,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [EnableUnifiedClientCDN](#BKMK_EnableUnifiedClientCDN)
 - [EnableUnifiedInterfaceShellRefresh](#BKMK_EnableUnifiedInterfaceShellRefresh)
 - [EnforceReadOnlyPlugins](#BKMK_EnforceReadOnlyPlugins)
-- [EnforceValidations](#BKMK_EnforceValidations)
 - [EntityImage](#BKMK_EntityImage)
 - [ExpireChangeTrackingInDays](#BKMK_ExpireChangeTrackingInDays)
 - [ExpireSubscriptionsInDays](#BKMK_ExpireSubscriptionsInDays)
@@ -274,6 +279,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsRichTextNotesEnabled](#BKMK_IsRichTextNotesEnabled)
 - [IsRpaAutoscaleAadJoinEnabled](#BKMK_IsRpaAutoscaleAadJoinEnabled)
 - [IsRpaAutoscaleEnabled](#BKMK_IsRpaAutoscaleEnabled)
+- [IsRpaBoxEnabled](#BKMK_IsRpaBoxEnabled)
 - [IsRpaUnattendedEnabled](#BKMK_IsRpaUnattendedEnabled)
 - [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
 - [IsSharingInOrgAllowed](#BKMK_IsSharingInOrgAllowed)
@@ -317,7 +323,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [MinOutlookSyncInterval](#BKMK_MinOutlookSyncInterval)
 - [MobileOfflineSyncInterval](#BKMK_MobileOfflineSyncInterval)
 - [ModernAdvancedFindFiltering](#BKMK_ModernAdvancedFindFiltering)
+- [ModernAppDesignerCoauthoringEnabled](#BKMK_ModernAppDesignerCoauthoringEnabled)
 - [Name](#BKMK_Name)
+- [NaturalLanguageAssistFilter](#BKMK_NaturalLanguageAssistFilter)
 - [NegativeCurrencyFormatCode](#BKMK_NegativeCurrencyFormatCode)
 - [NegativeFormatCode](#BKMK_NegativeFormatCode)
 - [NewSearchExperienceEnabled](#BKMK_NewSearchExperienceEnabled)
@@ -340,6 +348,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [PluginTraceLogSetting](#BKMK_PluginTraceLogSetting)
 - [PMDesignator](#BKMK_PMDesignator)
 - [PostMessageWhitelistDomains](#BKMK_PostMessageWhitelistDomains)
+- [PowerBIAutomaticPermissionsAssignment](#BKMK_PowerBIAutomaticPermissionsAssignment)
+- [PowerBIComponentsCreate](#BKMK_PowerBIComponentsCreate)
 - [PowerBiFeatureEnabled](#BKMK_PowerBiFeatureEnabled)
 - [PricingDecimalPrecision](#BKMK_PricingDecimalPrecision)
 - [PrivacyStatementUrl](#BKMK_PrivacyStatementUrl)
@@ -398,9 +408,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SyncOptInSelection](#BKMK_SyncOptInSelection)
 - [SyncOptInSelectionStatus](#BKMK_SyncOptInSelectionStatus)
 - [SystemUserId](#BKMK_SystemUserId)
+- [TableScopedDVSearchInApps](#BKMK_TableScopedDVSearchInApps)
 - [TagMaxAggressiveCycles](#BKMK_TagMaxAggressiveCycles)
 - [TagPollingPeriod](#BKMK_TagPollingPeriod)
 - [TaskBasedFlowEnabled](#BKMK_TaskBasedFlowEnabled)
+- [TeamsChatDataSync](#BKMK_TeamsChatDataSync)
 - [TelemetryInstrumentationKey](#BKMK_TelemetryInstrumentationKey)
 - [TextAnalyticsEnabled](#BKMK_TextAnalyticsEnabled)
 - [TimeFormatCode](#BKMK_TimeFormatCode)
@@ -425,6 +437,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UserRatingEnabled](#BKMK_UserRatingEnabled)
 - [UseSkypeProtocol](#BKMK_UseSkypeProtocol)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+- [ValidationMode](#BKMK_ValidationMode)
 - [WebResourceHash](#BKMK_WebResourceHash)
 - [WeekStartDayCode](#BKMK_WeekStartDayCode)
 - [WidgetProperties](#BKMK_WidgetProperties)
@@ -496,8 +509,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Information on whether filtering activity based on entity in app.|
-|DisplayName|Enable Rich Editing Experience for Appointment|
+|Description|Whether to show only activities configured in this app or all activities in the 'New activity' button.|
+|DisplayName|Show only activities configured in the app when accessing 'New activity' button|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|activitytypefilterv2|
@@ -615,6 +628,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_AdvancedLookupInEditFilter"></a> AdvancedLookupInEditFilter
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enables advanced lookup in grid edit filter panel|
+|DisplayName|Enable Advanced Lookup In Edit Filter|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|advancedlookupineditfilter|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_AllowAddressBookSyncs"></a> AllowAddressBookSyncs
 
 |Property|Value|
@@ -628,6 +659,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### AllowAddressBookSyncs Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AllowApplicationUserAccess"></a> AllowApplicationUserAccess
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether all application users are allowed to access the environment|
+|DisplayName|Allow All Application Users Access.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowapplicationuseraccess|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowApplicationUserAccess Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -743,7 +799,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|allowediprangeforfirewall|
-|MaxLength|100|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -795,6 +851,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_AllowLeadingWildcardsInQuickFind"></a> AllowLeadingWildcardsInQuickFind
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enables ends-with searches in grids with the use of a leading wildcard on all tables in the environment|
+|DisplayName|Allow Leading Wildcards In Quick Find|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|allowleadingwildcardsinquickfind|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_AllowLegacyClientExperience"></a> AllowLegacyClientExperience
@@ -856,6 +930,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### AllowMarketingEmailExecution Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_AllowMicrosoftTrustedServiceTags"></a> AllowMicrosoftTrustedServiceTags
+
+**Added by**: AuthenticationExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether Microsoft Trusted Service Tags are allowed|
+|DisplayName|Allow Microsoft Trusted Service Tags|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowmicrosofttrustedservicetags|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### AllowMicrosoftTrustedServiceTags Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -1149,8 +1248,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Information on whether Teams meeting experience for Appointment is enabled.|
-|DisplayName|Enable teams Meeting experience for appointment|
+|Description|Whether Teams meetings experience for appointments is enabled.|
+|DisplayName|Enable Teams meetings for appointments|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|appointmentwithteamsmeetingv2|
@@ -1951,6 +2050,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_DaysBeforeInactiveTeamsChatSyncDisabled"></a> DaysBeforeInactiveTeamsChatSyncDisabled
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Days of inactivity before sync is disabled for a Teams Chat.|
+|DisplayName|Days Before Inactive Teams Chat Sync Disabled|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|daysbeforeinactiveteamschatsyncdisabled|
+|MaxValue|28|
+|MinValue|1|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_DecimalSymbol"></a> DecimalSymbol
 
 |Property|Value|
@@ -2295,6 +2412,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_EnableFlowsInSolutionByDefault"></a> EnableFlowsInSolutionByDefault
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the creation of flows is within a solution by default for this organization.|
+|DisplayName|Enable the creation of flows within a solution by default.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|enableflowsinsolutionbydefault|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### EnableFlowsInSolutionByDefault Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_EnableImmersiveSkypeIntegration"></a> EnableImmersiveSkypeIntegration
 
 |Property|Value|
@@ -2592,31 +2734,6 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### EnforceReadOnlyPlugins Choices/Options
-
-|Value|Label|Description|
-|-----|-----|--------|
-|1|Yes||
-|0|No||
-
-**DefaultValue**: 0
-
-
-
-### <a name="BKMK_EnforceValidations"></a> EnforceValidations
-
-**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
-
-|Property|Value|
-|--------|-----|
-|Description|Indicates whether validation enforcement has been enabled for this organization's apps.|
-|DisplayName|Enforce validations for this organization's apps|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|enforcevalidations|
-|RequiredLevel|SystemRequired|
-|Type|Boolean|
-
-#### EnforceValidations Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -5041,6 +5158,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_IsRpaBoxEnabled"></a> IsRpaBoxEnabled
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether RPA Box feature is enabled in this organization.|
+|DisplayName|Enable RPA Box feature for this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrpaboxenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRpaBoxEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 1
+
+
+
 ### <a name="BKMK_IsRpaUnattendedEnabled"></a> IsRpaUnattendedEnabled
 
 **Added by**: Power Automate Extensions core package Solution
@@ -5821,6 +5963,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_ModernAppDesignerCoauthoringEnabled"></a> ModernAppDesignerCoauthoringEnabled
+
+**Added by**: Maker Portal Collaboration Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether coauthoring is enabled in modern app designer|
+|DisplayName|Coauthoring in Modern App Designer Enabled|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modernappdesignercoauthoringenabled|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### ModernAppDesignerCoauthoringEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_Name"></a> Name
 
 |Property|Value|
@@ -5836,6 +6003,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|160|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_NaturalLanguageAssistFilter"></a> NaturalLanguageAssistFilter
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enables Natural Language Assist Filter.|
+|DisplayName|Natural Language Assist|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|naturallanguageassistfilter|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### NaturalLanguageAssistFilter Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_NegativeCurrencyFormatCode"></a> NegativeCurrencyFormatCode
@@ -6249,6 +6441,56 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|500|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_PowerBIAutomaticPermissionsAssignment"></a> PowerBIAutomaticPermissionsAssignment
+
+**Added by**: Power BI Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether automatic permissions assignment to Power BI has been enabled for the organization|
+|DisplayName|Power BI automatic permissions assignment|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerbiautomaticpermissionsassignment|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### PowerBIAutomaticPermissionsAssignment Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_PowerBIComponentsCreate"></a> PowerBIComponentsCreate
+
+**Added by**: Power BI Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether creation of Power BI components has been enabled for the organization|
+|DisplayName|Power BI components creation|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerbicomponentscreate|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### PowerBIComponentsCreate Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_PowerBiFeatureEnabled"></a> PowerBiFeatureEnabled
@@ -7352,6 +7594,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_TableScopedDVSearchInApps"></a> TableScopedDVSearchInApps
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Controls the appearance of option to search over a single DV search indexed table in model-driven apps’ global search in the header.|
+|DisplayName|Table Scoped Dataverse Search In Apps|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|tablescopeddvsearchinapps|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### TableScopedDVSearchInApps Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_TagMaxAggressiveCycles"></a> TagMaxAggressiveCycles
 
 |Property|Value|
@@ -7397,6 +7664,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Boolean|
 
 #### TaskBasedFlowEnabled Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_TeamsChatDataSync"></a> TeamsChatDataSync
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Information on whether Teams Chat Data Sync is enabled.|
+|DisplayName|Enable Teams Chat Data Sync.|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|teamschatdatasync|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### TeamsChatDataSync Choices/Options
 
 |Value|Label|Description|
 |-----|-----|--------|
@@ -7860,6 +8152,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_ValidationMode"></a> ValidationMode
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Validation mode for apps in this environment|
+|DisplayName|Validation mode for apps in this environment|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|validationmode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ValidationMode Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Off||
+|1|Warn||
+|2|Block||
+
 
 
 ### <a name="BKMK_WebResourceHash"></a> WebResourceHash
@@ -8871,8 +9187,6 @@ Listed by **SchemaName**.
 - [organization_relationshipattribute](#BKMK_organization_relationshipattribute)
 - [organization_catalog](#BKMK_organization_catalog)
 - [organization_catalogassignment](#BKMK_organization_catalogassignment)
-- [organization_sharedobject](#BKMK_organization_sharedobject)
-- [organization_sharedworkspace](#BKMK_organization_sharedworkspace)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
 - [organization_datalakeworkspace](#BKMK_organization_datalakeworkspace)
 - [organization_datalakeworkspacepermission](#BKMK_organization_datalakeworkspacepermission)
@@ -8894,6 +9208,7 @@ Listed by **SchemaName**.
 - [organization_organizationdatasyncsubscriptionentity](#BKMK_organization_organizationdatasyncsubscriptionentity)
 - [organization_organizationdatasyncstate](#BKMK_organization_organizationdatasyncstate)
 - [organization_msdyn_appinsightsmetadata](#BKMK_organization_msdyn_appinsightsmetadata)
+- [organization_msdyn_workflowactionstatus](#BKMK_organization_msdyn_workflowactionstatus)
 - [organization_userrating](#BKMK_organization_userrating)
 - [organization_msdyn_insightsstorevirtualentity](#BKMK_organization_msdyn_insightsstorevirtualentity)
 - [organization_appaction](#BKMK_organization_appaction)
@@ -10056,40 +10371,6 @@ Same as the [organization_catalogassignment](catalogassignment.md#BKMK_organizat
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_organization_sharedobject"></a> organization_sharedobject
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_sharedobject](sharedobject.md#BKMK_organization_sharedobject) many-to-one relationship for the [sharedobject](sharedobject.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sharedobject|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_sharedobject|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_organization_sharedworkspace"></a> organization_sharedworkspace
-
-**Added by**: Active Solution Solution
-
-Same as the [organization_sharedworkspace](sharedworkspace.md#BKMK_organization_sharedworkspace) many-to-one relationship for the [sharedworkspace](sharedworkspace.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|sharedworkspace|
-|ReferencingAttribute|organizationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|organization_sharedworkspace|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
 ### <a name="BKMK_organization_entityanalyticsconfig"></a> organization_entityanalyticsconfig
 
 **Added by**: Advanced Analytics Infrastructure Solution
@@ -10443,6 +10724,23 @@ Same as the [organization_msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.m
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|organization_msdyn_appinsightsmetadata|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_workflowactionstatus"></a> organization_msdyn_workflowactionstatus
+
+**Added by**: Active Solution Solution
+
+Same as the [organization_msdyn_workflowactionstatus](msdyn_workflowactionstatus.md#BKMK_organization_msdyn_workflowactionstatus) many-to-one relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_workflowactionstatus|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_workflowactionstatus|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
