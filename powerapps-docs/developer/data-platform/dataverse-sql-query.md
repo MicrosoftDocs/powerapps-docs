@@ -162,6 +162,13 @@ The solution is to verify the TCP ports 1433 or 5558 from the client are unblock
 
 If the connection is successful a line "TcpTestSucceeded : True" will be returned.
 
+In some cases traffic may be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
+
+3. Take the address returned from the above command as "RemoteAddress"
+4. Run the Test-NetConnection -ComputerName <RemoteAddress> -port 1433
+  
+This should return "TcpTestSucceeded : True"
+
 #### Establish a telnet session to the TDS endpoint
 
 1. On a Microsoft Windows computer, install/enable telnet.
