@@ -634,7 +634,8 @@
         href: clientapi/reference/formcontext-ui-tabs/setLabel.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-tabs/setVisible.md
-      - name: Tab sections
+      - name: formContext.ui.tabs Sections
+        expanded: true
         href: clientapi/reference/formContext-ui-tab-sections.md
         items:
         - name: getLabel
