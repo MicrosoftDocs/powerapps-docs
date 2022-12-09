@@ -3,10 +3,9 @@ title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
 description: Troubleshooting and known issues for the Power Apps mobile app 
 author: sericks007
 manager: tapanm-MSFT
-
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/12/2021
+ms.date: 12/09/2022
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -117,10 +116,6 @@ standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/P
 ## Unable to download SharePoint attachment in the mobile app
 
 The Power Apps platform does not support accessing authenticated URLs, including SharePoint attachments. If you run a Power Apps application in a web browser and it tries to access a SharePoint attachment, it may work if you are signed-in to SharePoint in another tab. This is because web browsers support multiple signed-in users, and sign-ins are valid across browser tabs. However, the Power Apps mobile app is not a web browser, so does not benefit from this browser-based behavior.
-
-## Power Automate Flow menu opens a blank Login to Flow screen on iOS 14
-
-If you encounter a blank **Login to Flow** page when using the Power Automate Flow menu in a Power Apps on mobile, enable **Allow Cross-Website Tracking** in **iOS Settings** > **Power Apps** and open the app again.
 
 ## Flows created in a solution are not supported on Power Apps mobile
 
@@ -258,11 +253,6 @@ If you're an admin, you can avoid users getting this error by making sure all mo
   
   Verify the source of the messages. If the source is Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises), these events don’t pose a security threat and can be ignored.  
   
-## By design: “—d” added to URL  
-  
- To improve the reliability of DNS resolutions to Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organizations, Dynamics 365 for mobile modifies the organization URL used when signing in. When a user signs in, the Dynamics 365 mobile app adds “—d” (two dashes + d) to the URL. For example, if the organization URL is **<https://contoso.crm.dynamics.com>**, [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)] will change the URL to **<https://contoso--d.crm.dynamics.com>**.  
-  
- If a user needs to retry signing in, they’ll see “—d” in the web address. They can sign in with the modified URL or reset it to the URL normally used.  
   
 ## Data cached for offline viewing remains after the entity is no longer enabled for Dynamics 365 for mobile
  In  Dynamics 365 for mobile, record data is cached as the user visits the record so the user can access the data when going offline.  
@@ -281,11 +271,6 @@ If you're an admin, you can avoid users getting this error by making sure all mo
 - **Android**: [How to force close Android apps](https://support.google.com/android/answer/9079646?hl=en#close_apps)  
   
 **Cause 2**: You may be seeing a different form than the one you customized. If you have multiple forms for an entity, you will see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
-
-
-## Deep links may not open on your mobile device due to email based sign in limitations.
-Deep links can only be invoked in the context of the currently opened app. While the mobile app doesn't need to be running at the time the deep link is invoked, you must have been in an app in the same organization when you exited the mobile app.
-To work around this issue, make sure that you have an app that is in the same organization open on your device when you invoke a link.
 
 ## Native Android or iOS links are not supported
 The Dynamics 365 mobile app does not support universal links on iOS and Android app links on Android.
