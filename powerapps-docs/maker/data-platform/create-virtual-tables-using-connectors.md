@@ -71,7 +71,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 Creating a virtual table in Power Apps (make.powerapps.com) with the virtual connector provider includes the following steps:
 
-1. Choose to create a table using an external data source.
+1. Create a table using an external data source.
 1. Create the connection.
 1. Create a connection reference (optional).
 1. Choose your connection details.
@@ -83,34 +83,55 @@ Creating a virtual table in Power Apps (make.powerapps.com) with the virtual con
 
 In Power Apps, create a virtual table either from a solution or from a list of tables.
 
-#### Create a virtual table from a solution
+#### Select the data source connection
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** on the left hand navigation pane.
 1. Open an existing solution or create a new one.
 1. Select **New** on the command bar, select **Table**, and then select **Table from external data**.
    :::image type="content" source="media/table-from-external-data-command.png" alt-text="Create a table from external data command":::
-1. A wizard appears. You can either select an existing connection or choose to create a new connection:
+1. Choose from the following options for the connection:
+   - To use an existing connection, select the connection you want.
+   - If you have an existing connection but wish to create a new one, select **New Connection**, and complete the information on your screen that appears on a new browser tab.
+   - If you don't have a connection for the data source you want, select **+Add Connection** next to the data source, and complete the information on your screen that appears on a new browser tab.
+1. [Configure the connection](#configure-the-connection)
 
-   - If you want to use an existing connection, select the connection you want, and then select **Next**.
-   - If you have an existing connection but wish to create a new one, select **New Connection**.
-   - If you don't have any connections select **+Add Connection**.
+### Configure the connection
 
-1. Select your authentication method, depending on the authentication method selected you are prompted to provide credential information required to create the connection. 
-   > [!IMPORTANT]
-   > These are the credentials used for all authentication for the virtual table so use credentials that have the appropriate permissions with SQL Server.
-   - **Service Principle**: Tenant, clientID, client secret.
-   - **Azure AD**: Select and sign in with your credentials.
-   - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments of SQL Server only).
-   - **Windows Authentication**: Server name, database name, user name, password, gateway (on-premises deployments of SQL Server only).
-   - **Windows Authentication (non-shared)**: User name, password, gateway.
-1. Select **Create**.
+1. Depending on the data source:
+   - For SharePoint connections, select or enter the SharePoint URL and then select **Next**. Select the SharePoint list, and then select **Next**. Accept or change the following properties, and then select **Next**.
+      - **Display name**: Enter the display name.
+      - **Plural name**: Enter the plural name.
+      - **Schema name**: Provide a schema name that will be prepended with the solution publisher name.
+      - **Primary field**: Select the primary field.
+   - For SQL connections, select your authentication method, depending on the authentication method selected you are prompted to provide credential information required to create the connection. 
+      > [!IMPORTANT]
+      > These are the credentials used for all authentication for the virtual table so use credentials that have the appropriate permissions with SQL Server.
+      - **Service Principle**: Tenant, clientID, client secret.
+      - **Azure AD**: Select and sign in with your credentials.
+      - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments of SQL Server only).
+      - **Windows Authentication**: Server name, database name, user name, password, gateway (on-premises deployments of SQL Server only).
+      - **Windows Authentication (non-shared)**: User name, password, gateway.
+ 1. Select **Finish**.
+ 1. Review the results and then select **Finish** to create the virtual table.
+ 
+
+
+
 1. Switch to your browser tab with the wizard, and select **Refresh**.
-1. Select your connection.
+ 1. Select your connection, and then select **Next**.
 
-##### Create and select the connection reference (optional)
 
-1. Your connection reference will automatically be created for you along with the virtual table unless you select **Advanced Options** and then select the **Manually Configure Connection Reference** option.
+##### Create the connection reference (optional)
 
+When you create a virtual table, your connection reference will automatically be created for you along with the virtual table unless you select **Advanced Options** and then select the **Manually Configure Connection Reference**.
+
+> [!NOTE]
+> - The benefit of optionally naming your connection reference is because it can be easier to find later if you need details about it.
+> - If you are using an existing connection you can select an existing connection reference or create a new one. Creating a new connection reference is only used if you want to segment your virtual tables into completely unrelated solutions for use later.
+
+When you manually configure your connection reference, you will be taken to the **Connection Reference** page. Select or name your connection reference and click **Next**.
+
+Select or name your connection reference and select **Next**.
 
 1. Select the environment where you want to install the solution. If you agree to the terms and conditions, select **Install**. Once the installation is complete, you'll see the **Virtual connectors in Dataverse** app installed under **Environments -> [your environment name] -> Dynamics 365 apps**.
 
