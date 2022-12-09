@@ -77,6 +77,13 @@ To move a page up or down, select the more button next to the page that you want
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
 
+### Power Platform
+
+From the left navigation pane, select **Power Platform** to access Power Platform services such as Power Platform Admin Center, Power BI, and Power Automate. 
+
+> [!div class="mx-imgBorder"] 
+> ![Access Power Platform services.](media/intro-maker-portal/power-platform-services.png "Access Power Platform service")
+
 ## 2 – Search 
 
 Use the **Search** to find apps, create apps, or find help documentation. 
