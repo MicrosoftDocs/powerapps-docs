@@ -2336,8 +2336,13 @@
       href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
-    - name: Virtual table OData v4 data provider
-      href: ./data-platform/virtual-entity-odata-provider-requirements.md
+      items:
+      - name: Virtual table OData v4 data provider
+        href: ./data-platform/virtual-entity-odata-provider-requirements.md
+      - name: Create a virtual table using a connection (preview)
+        href: ./data-platform/create-virtual-tables-using-connection.md
+      - name: Create a virtual table using a virtual connector provider for Excel
+        href: ./data-platform/create-virtual-tables-using-connectors.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
