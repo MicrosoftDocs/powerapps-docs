@@ -165,7 +165,7 @@ If the connection is successful a line "TcpTestSucceeded : True" will be returne
 In some cases traffic may be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
 
 3. Take the address returned from the above command as "RemoteAddress"
-4. Run the Test-NetConnection -ComputerName <RemoteAddress> -port 1433
+4. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
   
 This should return "TcpTestSucceeded : True"
 
