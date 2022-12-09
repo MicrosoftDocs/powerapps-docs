@@ -93,37 +93,30 @@ In Power Apps, create a virtual table either from a solution or from a list of t
    - To use an existing connection, select the connection you want.
    - If you have an existing connection but wish to create a new one, select **New Connection**, and complete the information on your screen that appears on a new browser tab.
    - If you don't have a connection for the data source you want, select **+Add Connection** next to the data source, and complete the information on your screen that appears on a new browser tab.
+   - More information about creating a connection: [Create a SQL Server connection](/connectors/sql/#creating-a-connection) and [SharePoint connector](/connectors/sharepointonline/)
+
+1. Select the connection reference, and then select **Next**.
 1. [Configure the connection](#configure-the-connection)
 
-### Configure the connection
+#### Configure the connection
 
 1. Depending on the data source:
-   - For SharePoint connections, select or enter the SharePoint URL and then select **Next**. Select the SharePoint list, and then select **Next**. Accept or change the following properties, and then select **Next**.
-      - **Display name**: Enter the display name.
-      - **Plural name**: Enter the plural name.
-      - **Schema name**: Provide a schema name that will be prepended with the solution publisher name.
-      - **Primary field**: Select the primary field.
-   - For SQL connections, select your authentication method, depending on the authentication method selected you are prompted to provide credential information required to create the connection. 
-      > [!IMPORTANT]
-      > These are the credentials used for all authentication for the virtual table so use credentials that have the appropriate permissions with SQL Server.
-      - **Service Principle**: Tenant, clientID, client secret.
-      - **Azure AD**: Select and sign in with your credentials.
-      - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments of SQL Server only).
-      - **Windows Authentication**: Server name, database name, user name, password, gateway (on-premises deployments of SQL Server only).
-      - **Windows Authentication (non-shared)**: User name, password, gateway.
- 1. Select **Finish**.
- 1. Review the results and then select **Finish** to create the virtual table.
- 
+   - For SharePoint connections: 
+      1. Paste the URL of your SharePoint site in the provided field, or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Graph and your Azure Active Directory credentials. Select **Next**. 
+      > [!NOTE]
+      > If you are entering your SharePoint URL, only include the information up to the site name, such as *https://microsoft.sharepoint.com/teams/Contoso*.
+      1. **Search** your SharePoint site for a specific list, or select the one you want from the provided list, and then select **Next**.
+      1. You can choose to modify the suggested table names by selecting [Configure table and column names that will be used in Dataverse](#configure-table-and-column-names-that-will-be-used-in-dataverse)
 
+   - For SQL connections, enter the **SQL Server name** and **SQL database name**, and then select **Next**.  
+      1. Select a table. Either **Search** the SQL database for a specific table and select it or select a table from the available tables.
+      1. You can choose to modify the suggested table names by selecting [Configure table and column names that will be used in Dataverse](#configure-table-and-column-names-that-will-be-used-in-dataverse)
 
+1. Select **Next**.
 
-1. Switch to your browser tab with the wizard, and select **Refresh**.
- 1. Select your connection, and then select **Next**.
+##### Manually create the connection reference (optional)
 
-
-##### Create the connection reference (optional)
-
-When you create a virtual table, your connection reference will automatically be created for you along with the virtual table unless you select **Advanced Options** and then select the **Manually Configure Connection Reference**.
+When you create a virtual table, your connection reference will automatically be created for you along with the virtual table. However, you can expand **Advanced Options** and then select the **Manually Configure Connection Reference** to manually create a connection reference for the virtual table.
 
 > [!NOTE]
 > - The benefit of optionally naming your connection reference is because it can be easier to find later if you need details about it.
@@ -133,6 +126,33 @@ When you manually configure your connection reference, you will be taken to the 
 
 Select or name your connection reference and select **Next**.
 
+##### Configure table and column names that will be used in Dataverse
+
+1. If you want to **Configure table and column names that will be used in Dataverse**, accept or change the following properties, and then select **Next**
+   - **Display name**: The name that will be used to identify your virtual table.
+   - **Plural name**: The plural of the virtual table name, used in appropriate situations where you refer to one or more record from the table, such as *Customer* is the table for multiple records refereed to as *Customers*.
+   - **Schema name**: The logical name Dataverse uses for the virtual table, which includes the solution publisher prefix.
+   - **Primary field**: This is the text value to be used when looking up records on your virtual table. Only string fields may be selected. A primary key is a required field but will be chosen by Dataverse.
+ 1. Choose if you would like to rename any of your columns. The following fields are provided: 
+   - **External column**. This is the schema name of the column in the data source. This property is read only.
+   - **Display name**. The name that's used to identify your column. 
+   - **Schema name**. The logical name Dataverse will use for the column that will include your solution publisher prefix.
+   There's a **Quick Format Names** option on the page, this will provide suggested name changes and can be useful if you have a large number of fields that include prefixed values from your SQL server such as &lt;tablename&gt;.&lt;column name&gt;. For example, *Database12.Products* would change to **Products**.
+
+##### Complete the setup
+
+1. The **Review and Finish** page shows you the table you are connecting to in your data source, and the table that will be created in Dataverse.
+   > [!NOTE]
+   > Select **Choose a different table** takes you back to the table selection screen. selecting **Edit Configuration of Table** takes you to the **Configuration** screen.
+1.	If everything is correct select **Next**.
+
+Once the table is created you are taken directly to your new virtual table where you can view your data and begin working with it. 
+
+> [!NOTE]
+> When you attempt to create a virtual table that already exists, you receive a message that the table already exists and that you will be re-creating it. You will not be able to change the primary field or schema name if this is the case. Re-creating the table will update any column changes that were made in the data source on the table.
+
+
+
 1. Select the environment where you want to install the solution. If you agree to the terms and conditions, select **Install**. Once the installation is complete, you'll see the **Virtual connectors in Dataverse** app installed under **Environments -> [your environment name] -> Dynamics 365 apps**.
 
    :::image type="content" source="media/ve-select-the-environment.png" alt-text="Select environment to install connector":::
@@ -141,7 +161,7 @@ Select or name your connection reference and select **Next**.
 
    :::image type="content" source="media/ve-select-virtual-connectors-solution.png" alt-text="Virtual connector provider solution":::
 
-### Create the connection
+### Videos that show how to create the connection
 
 # [SQL Server](#tab/sql)
 
@@ -162,6 +182,7 @@ Watch a 4-minute video showing how to create a virtual table with the SharePoint
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcIk]
 
 ---
+
 
 1. Go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table.
 1. In the left navigation pane, select **Data** > **Connections**, and then select **New connection**.
@@ -206,7 +227,8 @@ Select **Create**, your current signed-in credentials will be used.
    :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
-  
+
+<!--  
 ### Create the connection reference
 
 1. Go to **Solutions**.
@@ -325,11 +347,11 @@ The app is automatically generated using the entity catalog table.
 > - All columns in the external data are automatically mapped to Dataverse types that are supported by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
 > - Virtual tables require there to be at least one string field to use as the **Primary Name** column.
 
-Once you've created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows.
+Once you've created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows. -->
 
-### Setting up virtual table relationship
+### Virtual table relationships
 
-Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and N:N relationships. Relationships can be established between:
+Virtual tables are  enabled for relationships. You can set up 1:N, N:1, N:N, and custom multi-table relationships. Relationships can be established between:
 
 - Local tables in Dataverse and virtual tables.
 - Virtual tables and other virtual tables from the same provider, for example SQL->SQL.
