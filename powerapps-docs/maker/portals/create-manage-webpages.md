@@ -5,21 +5,21 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/08/2021
+ms.date: 11/29/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Create and manage webpages
 
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
-
-A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
+A webpage is a document that is identified by a unique URL in a website. It's one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
 > If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
@@ -44,23 +44,23 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
     - **Partial URL**: The URL path segment used to build the portal URL of this page.
 
-    - **Template**: Page template used to render this page on the portal. If required, you can choose another template from the list.
+    - **Template**: Page template used to render this page on the portal. If necessary, you can choose another template from the list.
 
         > [!div class=mx-imgBorder]
         > ![webpage properties.](media/webpage-props.png "Webpage properties")
 
-The webpages you create are added and their hierarchy are displayed in the **Pages and navigation** pane. To view the this pane, select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+The webpages you create are added and their hierarchy are displayed in the **Pages and navigation** pane. To view this pane, select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
-Let's say you have created a few webpages for your portal. The page hierarchy looks as follows:
+Let's say you've created a few webpages for your portal. The page hierarchy looks as follows:
 
 ![pages pane.](media/pages-pane.png "Pages pane")  
 
-The primary menu on the website is created automatically based on the hierarchy of the webpages. It is called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It's called the **Default** menu. You can also create a custom menu to display on the website. More information: [Add a custom menu](add-custom-menu.md)
 
 > [!div class=mx-imgBorder]
 > ![website navigation.](media/website-navigation.png "Website navigation")
 
-If you are working with a portal created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you're working with a portal created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
 > [!IMPORTANT]
 > When **Default** navigation menu is selected, the new pages are added to the **Default** web link set. However, direct changes to the **Default** navigation menu using [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio) is not supported.
@@ -70,13 +70,13 @@ If you are working with a portal created in an environment containing customer e
 
 ## Manage webpage
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-1.  Select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
+1. Select **Pages and navigation** ![pages icon.](media/pages-icon.png "Pages icon") from the toolbelt on the left side of the screen.  
 
-1.  Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
+1. Hover over the page you want to manage and select the **Ellipsis** button (…) for the webpage you want to manage. Alternately. you can right-click the page you want to manage.
 
-1.  Select the required action from the context menu:
+1. Select the required action from the context menu:
 
     - **Hide in default menu**: Hide the page from being displayed in the sitemap through default menu.
 
@@ -106,8 +106,7 @@ If you are working with a portal created in an environment containing customer e
 
 ### See also
 
-[Work with templates](work-with-templates.md) <br>
+[Work with templates](work-with-templates.md) <br />
 [Work with themes](theme-overview.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
