@@ -17,7 +17,7 @@ contributors:
   - tapanm-msft
 ---
 
-# Add canvas apps to solution by default (preview)
+# Add canvas apps and cloud flows to solution by default (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -68,10 +68,10 @@ There are different entry points for creating cloud flows. The following table s
 | Create a cloud flow from Mobile App | No |
 | [Create a cloud flow from OneDrive](/power-automate/onedrive-business-launch-panel) | No |
 | [Create a cloud flow from SharePoint](https://support.microsoft.com/en-us/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No |
-| Create a cloud flow from other integration points, such as [the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | No | 
+| Create a cloud flow from other integration points, such as [the Excel add-in](/business-applications-release-notes/april18/microsoft-flow/build-run-flows-excel) | No | Create a cloud flow from legacy package import | No | 
 
 > [!IMPORTANT]
-> - Unsupported entry points will fail to create any cloud flow until that support is added. Workaround: create using a supported entry point, such as creating directly in the Power Automate portal.
+> - Unsupported entry points will fail to create any cloud flow until support is added to create a solution cloud flow via that entry point. Workaround: create using a supported entry point, such as creating directly in the Power Automate portal.
 
 ## Enable the feature
 
