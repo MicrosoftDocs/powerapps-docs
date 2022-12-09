@@ -125,8 +125,6 @@ The Flow action menu in Power Apps mobile doesn't support flows created in a sol
 
 
 
-
-
 ## Error: Contact your administrator for access to your organizations mobile apps
 
 When using the Dynamics 365 mobile app, you encounter the following message: **Contact your administrator for access to your organizations mobile apps**. 
@@ -134,7 +132,89 @@ When using the Dynamics 365 mobile app, you encounter the following message: **C
 To check for recently-added apps, select Refresh. If you can’t find your app, change your search criteria and try again.**
 
  For more information see, [Troubleshoot "We can’t find any apps for your role"  error message](https://support.microsoft.com/help/4486472/we-can-t-find-any-apps-for-your-role-message-in-dynamics-365-for-phone).
+ 
+## The list of apps is empty
 
+Make sure the user has a [default security role](/power-platform/admin/security-roles-privileges) assigned to them such as **Basic**. This is in addition to any custom security role assigned to the user. For more information, see [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).
+
+## Error message: This record is unavailable
+If this message appears when a user starts the mobile app, and then selects the **Home** button, or **Dashboards** from the menu, the user likely doesn’t have access to the expected dashboards.  
+
+## Flows created in a solution is not supported 
+The Flow action menu in Dynamics 365 for phones and tablets app doesn't support flows created in a solution.
+
+## Error message: Your server is not available or does not support this application  
+ **Cause 1**: The Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) server is down. Verify that the server is on and connected to your network.  
+ 
+ **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](../mobile-app/support-phones-tablets.md). 
+  
+ **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device  
+
+## Error message: You haven't been authorized to use this app. Check with your system administrator to update your settings
+ **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).  
+  
+ **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user has not been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
+ 
+ If the user has the Global Administrator or Service Administrator role and you’re able to sign in to on the web app to perform certain administrative actions, but you can’t perform end user tasks, such as creating records (for example, accounts, contacts, and leads) or configuring Dynamics 365 for mobile. When you sign in to the web app, you may notice that not all areas appear within the navigation (for example, Sales and Marketing are missing):  
+ 
+Access the **Active** users section in the admin center and verify you have a **Dynamics 365 Customer Engagement Plan** license assigned to your user record.  
+  
+   > [!div class="mx-imgBorder"]
+   > ![License.](media/customer_engagement_lic.png "Dynamics 365 Customer Engagement Plan License")  
+
+## Error message: Sorry, something went wrong while initializing the app. Please try again, or restart the app  
+ **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements)).  
+  
+ **Cause 2**: See the following KB article:  
+  
+ An error occurs in the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] app for users in child business units. For more information, see [Sorry, something went wrong while initializing the app](https://support.microsoft.com/kb/2899860).  
+  
+ **Sample Trace Message for Cause 2**:  
+  
+ `Error Message:System.NullReferenceException: Object reference not set to an instance of an object.`   
+ `Microsoft.Crm.Application.WebServices.ApplicationMetadataService.<>c__DisplayClass30.<UserRolesChanged>b__2d(Entity role)`   
+  `at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)`   
+  `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.UserRolesChanged(Guid[] clientUserRoles, DateTime syncTime, ExecutionContext context)`   
+ `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.RetrieveUserContext(UserContextRetrieveRequest userContextRetrieveRequest)`  
+ 
+## Error message: The language installed on your company’s system isn’t available on the app. Please contact your system administrator to set up a supported language
+ **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and tablets](./support-phones-tablets.md#supported-languages-for--and-).
+
+## Error message: The process assigned to this record is unavailable or has been deleted 
+ If you receive this message for a record which has a non-deleted process assigned to it, you should manually synchronize Dynamics 365 mobile app data with Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app data. Close the mobile app, reopen it, and then choose to download the latest customizations. This procedure forces the mobile app to check for updated customizations. Recently viewed data while you were connected is cached and synched. Record data like Accounts or Contacts are not synched.
+ 
+## Event 10001 messages appear in the Event Log when you run Dynamics 365 for mobile. 
+ The following event may be recorded multiple times to the Event Log, when **Show Analytic and Debug Logs** is enabled, on the device where Dynamics 365 for mobile is running. Notice that, by default, **Show Analytic and Debug Logs** is disabled in [!INCLUDE[pn_Event_Viewer](../includes/pn-event-viewer.md)] and these messages won’t be recorded. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Enable Analytic and Debug Logs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749492(v=ws.11))  
+  
+- Event Id: 10001  
+  
+- Message: `SEC7131 : Security of a sandboxed iframe is potentially compromised by allowing script and same origin access.`  
+  
+  Verify the source of the messages. If the source is Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises), these events don’t pose a security threat and can be ignored.  
+  
+## Data cached for offline viewing remains after the entity is no longer enabled for Dynamics 365 for mobile
+ In  Dynamics 365 for mobile, record data is cached as the user visits the record so the user can access the data when going offline.  
+  
+ This cached data persists after the entity is no longer enabled for Dynamics 365 for mobile (**Settings** > **Customizations** > **Customize the System** > [select an entity] > under **Outlook & Mobile**, deselect **[!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]**).  
+  
+ To remove the cached data, the user must sign out of mobile app, or the app must be reconfigured or uninstalled.  
+    
+ ## Customization changes do not appear in the mobile app
+ **Cause 1**: The customizations (metadata) from Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization are cached on your device. The app checks for updated metadata after 24 hours or any time you reopen the app. For customization changes to become available immediately, you must completely close and then reopen the app. If new metadata is found, you will be prompted to download it. For more information on how to completely close an app, refer to the help for your operating system or reference one of the articles provided:  
+  
+- **Windows 10**: [How do I close an app?](https://support.microsoft.com/help/4027154/windows-close-an-app-in-windows-10)  
+  
+- **iPad**: [Force an app to close](https://support.apple.com/kb/ht5137)  
+  
+- **Android**: [How to force close Android apps](https://support.google.com/android/answer/9079646?hl=en#close_apps)  
+  
+**Cause 2**: You may be seeing a different form than the one you customized. If you have multiple forms for an entity, you will see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
+
+ ## Native Android or iOS links are not supported
+The Dynamics 365 mobile app does not support universal links on iOS and Android app links on Android.
+  
+ 
+ 
 ## Error message: in Android, AUTH_FAILED_INTUNE_POLICY_REQUIRED AADSTS53005: Application needs to enforce Intune protection policies
 
 Contact your administrator or help desk and make sure that your user is under Intune app protection policies.
@@ -144,17 +224,6 @@ On your device, go to **Settings** > **General** > **Accounts** and remove any a
 ## Error message: Access Denied. This app must be protected with an Intune policy before you can access company data
 
 Contact your administrator or help desk and verify that Intune app protection policies are applied for your user account.
-
-## The list of apps is empty
-
-Make sure the user has a [default security role](/power-platform/admin/security-roles-privileges) assigned to them such as **Basic**. This is in addition to any custom security role assigned to the user. For more information, see [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).
-
-## Error message: This record is unavailable
-If this message appears when a user starts the mobile app, and then selects the **Home** button, or **Dashboards** from the menu, the user likely doesn’t have access to the expected dashboards.  
-
-
-## Flows created in a solution is not supported 
-The Flow action menu in Dynamics 365 for phones and tablets app doesn't support flows created in a solution.
 
 ### Admin instructions to resolve the issue
 
@@ -197,84 +266,8 @@ If you're an admin, you can avoid users getting this error by making sure all mo
   
 5. Add the components you want on your dashboard and select **Save**.  
   
-6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.  
-  
-## Error message: Your server is not available or does not support this application  
- **Cause 1**: The Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) server is down. Verify that the server is on and connected to your network.  
- 
- **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](../mobile-app/support-phones-tablets.md). 
-  
- **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device  
-  
-  
-## Error message: You haven't been authorized to use this app. Check with your system administrator to update your settings
- **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).  
-  
- **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user has not been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
- 
- If the user has the Global Administrator or Service Administrator role and you’re able to sign in to on the web app to perform certain administrative actions, but you can’t perform end user tasks, such as creating records (for example, accounts, contacts, and leads) or configuring Dynamics 365 for mobile. When you sign in to the web app, you may notice that not all areas appear within the navigation (for example, Sales and Marketing are missing):  
-  
-  
- Access the **Active** users section in the admin center and verify you have a **Dynamics 365 Customer Engagement Plan** license assigned to your user record.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![License.](media/customer_engagement_lic.png "Dynamics 365 Customer Engagement Plan License")  
-  
-  
-## Error message: Sorry, something went wrong while initializing the app. Please try again, or restart the app  
- **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements)).  
-  
- **Cause 2**: See the following KB article:  
-  
- An error occurs in the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] app for users in child business units. For more information, see [Sorry, something went wrong while initializing the app](https://support.microsoft.com/kb/2899860).  
-  
- **Sample Trace Message for Cause 2**:  
-  
- `Error Message:System.NullReferenceException: Object reference not set to an instance of an object.`   
- `Microsoft.Crm.Application.WebServices.ApplicationMetadataService.<>c__DisplayClass30.<UserRolesChanged>b__2d(Entity role)`   
-  `at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)`   
-  `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.UserRolesChanged(Guid[] clientUserRoles, DateTime syncTime, ExecutionContext context)`   
- `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.RetrieveUserContext(UserContextRetrieveRequest userContextRetrieveRequest)`  
- 
-  
-## Error message: The language installed on your company’s system isn’t available on the app. Please contact your system administrator to set up a supported language
- **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and tablets](./support-phones-tablets.md#supported-languages-for--and-).
-  
-## Error message: The process assigned to this record is unavailable or has been deleted 
- If you receive this message for a record which has a non-deleted process assigned to it, you should manually synchronize Dynamics 365 mobile app data with Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app data. Close the mobile app, reopen it, and then choose to download the latest customizations. This procedure forces the mobile app to check for updated customizations. Recently viewed data while you were connected is cached and synched. Record data like Accounts or Contacts are not synched.
-  
+6. In the mobile app, follow the previous procedure to select your new dashboard and set it as your home page.    
 
-## Event 10001 messages appear in the Event Log when you run Dynamics 365 for mobile. 
- The following event may be recorded multiple times to the Event Log, when **Show Analytic and Debug Logs** is enabled, on the device where Dynamics 365 for mobile is running. Notice that, by default, **Show Analytic and Debug Logs** is disabled in [!INCLUDE[pn_Event_Viewer](../includes/pn-event-viewer.md)] and these messages won’t be recorded. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Enable Analytic and Debug Logs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749492(v=ws.11))  
-  
-- Event Id: 10001  
-  
-- Message: `SEC7131 : Security of a sandboxed iframe is potentially compromised by allowing script and same origin access.`  
-  
-  Verify the source of the messages. If the source is Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises), these events don’t pose a security threat and can be ignored.  
-  
-  
-## Data cached for offline viewing remains after the entity is no longer enabled for Dynamics 365 for mobile
- In  Dynamics 365 for mobile, record data is cached as the user visits the record so the user can access the data when going offline.  
-  
- This cached data persists after the entity is no longer enabled for Dynamics 365 for mobile (**Settings** > **Customizations** > **Customize the System** > [select an entity] > under **Outlook & Mobile**, deselect **[!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]**).  
-  
- To remove the cached data, the user must sign out of mobile app, or the app must be reconfigured or uninstalled.  
-  
-## Customization changes do not appear in the mobile app
- **Cause 1**: The customizations (metadata) from Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization are cached on your device. The app checks for updated metadata after 24 hours or any time you reopen the app. For customization changes to become available immediately, you must completely close and then reopen the app. If new metadata is found, you will be prompted to download it. For more information on how to completely close an app, refer to the help for your operating system or reference one of the articles provided:  
-  
-- **Windows 10**: [How do I close an app?](https://support.microsoft.com/help/4027154/windows-close-an-app-in-windows-10)  
-  
-- **iPad**: [Force an app to close](https://support.apple.com/kb/ht5137)  
-  
-- **Android**: [How to force close Android apps](https://support.google.com/android/answer/9079646?hl=en#close_apps)  
-  
-**Cause 2**: You may be seeing a different form than the one you customized. If you have multiple forms for an entity, you will see the first form in the form order that you have access to. This is different than the web application where you see the last form you used and have the ability to change between forms. 
-
-## Native Android or iOS links are not supported
-The Dynamics 365 mobile app does not support universal links on iOS and Android app links on Android.
-  
 ## Issue still not resolved?  
 If the information provided previously doesn’t resolve your issue, either [Post your issue in the Power App Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1) or [Contact Technical Support](https://powerapps.microsoft.com/support/).
 
