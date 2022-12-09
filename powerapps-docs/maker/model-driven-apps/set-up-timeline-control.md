@@ -591,6 +591,9 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
 1.	Enter the desired size limit for attachments, and then select **Save**.
 
+## Known Issues
+ - When creating a note in Timeline, the character string "$&" is converted to "{3}amp;"
+> This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. See the [rich text documentation](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/rich-text-editor-control#create-and-use-advanced-configuration-for-the-rich-text-editor-control) for more information.
 
 ### See also
 
