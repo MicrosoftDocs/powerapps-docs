@@ -43,28 +43,13 @@ Creating a virtual table in Power Apps with the virtual connector provider inclu
 
    :::image type="content" source="media/ve-select-virtual-connectors-solution.png" alt-text="Virtual connector provider solution":::
 
-### Videos that show how to create the connection
-
-# [SQL Server](#tab/sql)
-
-Watch a 4-minute video showing how to create a virtual table with the SQL virtual connector provider.
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XLkU]
-
-# [Microsoft Excel Online (Business)](#tab/excel)
+### Video that shows how to create the connection
 
 Watch a 4-minute video showing how to create a virtual table with the Excel virtual connector provider.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
 
-# [Microsoft SharePoint](#tab/sharepoint)
-
-Watch a 4-minute video showing how to create a virtual table with the SharePoint virtual connector provider. 
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcIk]
-
----
-
+## Create the connection
 
 1. Go to [Power Apps](https://make.powerapps.com), select the environment in which you would like to set up the virtual table.
 1. In the left navigation pane, select **Data** > **Connections**, and then select **New connection**.
@@ -110,7 +95,6 @@ Select **Create**, your current signed-in credentials will be used.
 
 ---
 
-<!--  
 ### Create the connection reference
 
 1. Go to **Solutions**.
@@ -119,7 +103,6 @@ Select **Create**, your current signed-in credentials will be used.
 1. Enter **Display name**, select the connection you created for the **Connectors** option and then select the data connection that you've created.
 
    :::image type="content" source="media/ve-new-connection-reference.png" alt-text="New connection reference":::
-
 
 ### Create the data source
 
@@ -229,7 +212,7 @@ The app is automatically generated using the entity catalog table.
 > - All columns in the external data are automatically mapped to Dataverse types that are supported by the connector. You can review the virtual table details and make changes by navigating to **Settings -> Customization – Entities** view.
 > - Virtual tables require there to be at least one string field to use as the **Primary Name** column.
 
-Once you've created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows. -->
+Once you've created a virtual table, you can work with it much the same way as any other table. You can start defining the relationships with other tables, in the environment and use them in your Power Apps and Power Automate flows.
 
 ### Virtual table relationships
 

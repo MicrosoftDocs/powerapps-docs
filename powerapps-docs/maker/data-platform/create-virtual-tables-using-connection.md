@@ -12,7 +12,7 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions, apps, flows, and more can use virtual tables as if they were native Dataverse tables. Virtual tables allow for full create, read, update, and delete privileges unless the data source they are connecting to specifically forbids it. More information about virtual tables: [Create and edit virtual tables that contain data from an external data source](maker/data-platform/create-edit-virtual-entities.md).
+Virtual tables enable integrating data from external data sources by seamlessly representing that data as tables in Microsoft Dataverse, without data replication. Solutions, apps, flows, and more can use virtual tables as if they were native Dataverse tables. Virtual tables allow for full create, read, update, and delete privileges unless the data source they are connecting to specifically forbids it. More information about virtual tables: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md).
 
 In this public preview release, we're introducing a new user experience using the Maker portal to create virtual tables using the following virtual connector providers:
 
@@ -47,7 +47,7 @@ Application lifecycle management (ALM) is supported for virtual tables created u
 More information about application lifecycle management (ALM) and solutions:
 
 - [Application lifecycle management (ALM) in Microsoft Power Platform](/power-platform/alm/)
-- [Solutions overview](maker/data-platform/solutions-overview.md)
+- [Solutions overview](solutions-overview.md)
 
 ## Prerequisites
 
@@ -60,12 +60,6 @@ To create a virtual table, you must have a Microsoft Dataverse license through P
 Watch a 4-minute video showing how to create a virtual table with the SQL virtual connector provider.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XLkU]
-
-# [Microsoft Excel Online (Business)](#tab/excel)
-
-Watch a 4-minute video showing how to create a virtual table with the Excel virtual connector provider.
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
