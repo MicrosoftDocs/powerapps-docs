@@ -56,7 +56,7 @@ The following table summarizes which entry points benefit from canvas apps withi
 
 ## Supported entry points for cloud flows
 
-There are different entry points for creating cloud flows. The following table summarizes which entry points are suppported by the switch for create in Dataverse solutions by default. 
+There are different entry points for creating cloud flows. The following table summarizes which entry points are supported by the switch for create in Dataverse solutions by default. 
 
 | Entry point | Available for cloud flows within a solution by default?  |
 | - | - |
