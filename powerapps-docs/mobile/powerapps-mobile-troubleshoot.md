@@ -151,6 +151,7 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
  **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device  
 
 ## Error message: You haven't been authorized to use this app. Check with your system administrator to update your settings
+
  **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).  
   
  **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user has not been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
@@ -163,6 +164,7 @@ Access the **Active** users section in the admin center and verify you have a **
    > ![License.](media/customer_engagement_lic.png "Dynamics 365 Customer Engagement Plan License")  
 
 ## Error message: Sorry, something went wrong while initializing the app. Please try again, or restart the app  
+
  **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements)).  
   
  **Cause 2**: See the following KB article:  
