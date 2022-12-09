@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/30/2022
+ms.date: 12/09/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -15,7 +15,6 @@ contributors:
 ---
 
 # Add a Power BI report or dashboard to a webpage in a portal
-
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
@@ -118,7 +117,9 @@ You can use [powerbi-client JavaScript library](https://github.com/microsoft/Pow
 Below is a sample JavaScript to update the report settings or to handle events. This sample disables filter pane, disables page navigation, and enables *dataSelected* event.
 
 > [!IMPORTANT]
-> Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
+> - Use powerbi-client JavaScript library to disable or enable filter pane. However, if you want to restrict access to data or configure security, use [Row-level security (RLS) with Power BI](/power-bi/admin/service-admin-rls). Disabling filter pane doesn't restrict data access, and it can be re-enabled using JavaScript library code.
+> - The powerbi-client JavaScript library is supports **PowerBI Embedded** flow.
+> - The powerbi-client JavaScript library does not support **Azure Active Directory** (AAD) flow.
 
 ```javascript
 $(document).ready(function () {
