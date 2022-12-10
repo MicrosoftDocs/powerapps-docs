@@ -1,14 +1,14 @@
 ---
 title: "Track your progress with dashboards and charts in model-driven apps| MicrosoftDocs"
 description: How to use charts in Power Apps.
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 9/14/2020
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -210,6 +210,8 @@ You can continue drilling further into the chart data. As you drill down deeper,
 - Chart displays zero values when there is no data. With Unified Interface for model-driven apps you can still select a chart with zero value and drill down in to the data. More information: [Chart displays zero values when there is no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) 
 
 - By design, charts in rollup column can't be displayed because rollup columns contain an aggregate value computed over the rows related to a specified row.
+
+- Chart drill-down functionality is not available on charts in a subgrid or an associated grid.
 
 
 

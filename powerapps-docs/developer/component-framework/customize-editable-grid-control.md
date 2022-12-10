@@ -17,7 +17,7 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist that have special needs requiring modification of the out-of-the-box visuals and user interactions. To faciltate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
+The  [Power Apps grid control (preview)](../../maker/model-driven-apps/the-power-apps-grid-control.md) uses modern Microsoft Fluent controls to allow users to see and edit values in grid cells. Scenarios may exist that have special needs requiring modification of the out-of-the-box visuals and user interactions. To facilitate this, the Power Apps grid control provides extensibility APIs that allow the grid interface to be customized. Using these APIs, makers can implement a grid customizer control (code component) to provide custom cell renderer and editor components to the grid.
 
 :::image type="content" source="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png" alt-text="Custom cell renderers for the Power Apps grid control" lightbox="../../maker/model-driven-apps/media/power-apps-grid-custom-renderers.png":::
 
@@ -93,7 +93,7 @@ The template control is included in the [PowerApps-Samples](https://github.com/m
 
 - Cell renderers and editors are user interface components. Do not use them to mutate data or metadata of the grid.
 - The customizer controls should be lightweight and fast so as to not affect overall grid performance.
-- To maintain the design consistency, follow [Fluent design principals](https://www.microsoft.com/design/fluent/#/) and use [Fluent controls](https://developer.microsoft.com/en-us/fluentui#/controls/web) in your customizers.
+- To maintain the design consistency, follow [Fluent design principles](https://www.microsoft.com/design/fluent/#/) and use [Fluent controls](https://developer.microsoft.com/en-us/fluentui#/controls/web) in your customizers.
 - Make sure your custom renderer or editor is accessible.
 - The customizer function should be pure since the grid will call it multiple times to get customized elements and will expect the return value to be consistent.
 - The grid may dispose a customizer element at any time and call to get a new one at any time. Make sure to dispose of any internal state on unmount to prevent memory leaks.

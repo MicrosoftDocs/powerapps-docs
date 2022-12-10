@@ -18,6 +18,9 @@ contributors:
 
 # Configure a contact for use on a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Fill out the basic information for a contact (or having a user fill out the sign-up form in a portal), then go to the web authentication tab on the portal contact form to configure a contact by using local authentication. For more information about federated authentication options, see [Set authentication identity for a portal](set-authentication-identity.md). 
 
 > [!NOTE] 

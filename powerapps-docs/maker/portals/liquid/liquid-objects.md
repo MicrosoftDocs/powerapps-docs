@@ -5,16 +5,20 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/20/2022
+ms.date: 09/01/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - GitanjaliSingh33msft
+    - ProfessorKendrick
 ---
 
 # Available Liquid objects
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
@@ -566,7 +570,7 @@ This is child page number 3.
 
 ## forums
 
-Provides the ability to access and render Forums and Forum Threads. The ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET advanced forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
+Provides the ability to access and render Forums and Forum Threads. The ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET multistep  forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
 
 The forums object allows you to select a Forum or Forum Threads:
 

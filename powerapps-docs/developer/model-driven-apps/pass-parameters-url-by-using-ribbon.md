@@ -3,7 +3,7 @@ title: "Pass parameters to a URL by using the ribbon (model-driven apps) | Micro
 description: "Learn about passing parameters to a URL by using the ribbon" # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"

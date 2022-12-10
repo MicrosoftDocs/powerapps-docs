@@ -16,6 +16,9 @@ contributors:
 
 # Progressive search
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Getting accurate search results when a portal has several [additional tables](search-additional-entities.md) enabled for search can become difficult. A complex permissions structure for individual tables and records adds to this difficulty. Searching for content on such portals may end up with a records count that doesn't match the number shown on the search results page.
 
 ## Overview

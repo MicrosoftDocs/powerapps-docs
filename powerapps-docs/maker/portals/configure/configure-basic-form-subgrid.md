@@ -17,6 +17,9 @@ contributors:
 
 # Configure Basic form subgrids
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 If the Microsoft Dataverse form used for a basic form has an embedded subgrid, a read-only subgrid will appear on the page and display the corresponding records in a read-only list. A user must have the appropriate [table permissions](assign-entity-permissions.md) in order to see the list of related records.
 
 To configure [list](list-configuration.md) capabilities such as create, update, delete, and other features on the subgrid on the form, you'll need to create a [basic form metadata record](configure-basic-form-metadata.md).

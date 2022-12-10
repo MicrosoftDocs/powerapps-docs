@@ -3,7 +3,7 @@ title: "Understand charts: Underlying data and chart representation (model-drive
 description: "Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the category axis and the y axis is called the series axis." # 115-145 characters including spaces. This abstract displays in the search result.
 author: mspilde
 ms.author: mspilde
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "article"

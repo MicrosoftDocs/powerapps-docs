@@ -7,7 +7,7 @@ ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/20/2022
+ms.date: 11/23/2022
 ms.topic: overview
 search.audienceType: 
   - maker
@@ -19,7 +19,9 @@ contributors:
 ---
 # Environment variables overview
 
-Applications often require different configuration settings or input parameters when deployed to different environments. Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during application lifecycle management (ALM) operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
+Environment variables enable the basic application lifecycle management (ALM) scenario of moving an applications between Power Platform environments. In this scenario, the applications stay exactly the same except for a few key external application references (such as tables, connections, and keys) that are different between the source environment and the destination environment. The applications requires the structure of the tables or connections to be exactly the same between the source and the destination environments, with some differences. Environment variables allow you to specify which of these different external references should be updated as the application is moved across environments.
+
+Environment variables store the parameter keys and values, which then serve as input to various other application objects. Separating the parameters from the consuming objects allows you to change the values within the same environment or when you migrate solutions to other environments. The alternative is leaving hard-coded parameter values within the components that use them. This is often problematic; especially when the values need to be changed during ALM operations. Because environment variables are solution components, you can transport the references (keys) and change the values when solutions are migrated to other environments.
 
 > [!NOTE]
 > New capabilities for data sources are just now being deployed and may not be available yet in your region.
@@ -49,7 +51,7 @@ Environment variables can be created and modified within the modern solution int
    - **Data Type**. Select from **Decimal number**, **Text**, **JSON**, **Two options**, **Data source**, or **Secret**.
      >[!NOTE]
      > 
-     > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database.
+     > - If **Data source** is the selected type, you'll also need to select the **connector**, a valid **connection** for the selected connector, and the **parameter type**. However, the connection is not stored as part of the environment variable. The connection is only used for retrieving available parameter values such as the SharePoint sites you have access to, or the lists associated with a site. For certain parameters such as SharePoint lists, you'll also need to select a parent data source environment variable such as the SharePoint site. Once saved, these will be related in the database.
      >
      > - If **Secret** is the selected type, additional information to set up and configure Azure Key Vault is needed to allow Power Platform to access the secret.
    - **Current Value**. Also known as the value. This property is optional and is a part of the environment variable value table. When a value is present it will be used, even if a default value is also present. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into separate JSON files within the exported solution.zip file and can be edited offline. More information: [How do I remove a value from an environment variable?](#how-do-i-remove-a-value-from-an-environment-variable)
@@ -139,7 +141,7 @@ The actual secrets are stored in Azure Key Vault and the environment variable re
 Environment variables referencing secrets aren't currently available from the dynamic content selector for use in flows.
 
 > [!IMPORTANT]
-> This is a preview feature. More information: [Portals, model-driven apps and app management preview features](../powerapps-preview-program.md#portals-model-driven-apps-and-app-management)
+> This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
 
 ### Configure Azure Key Vault
 

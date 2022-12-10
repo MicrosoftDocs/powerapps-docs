@@ -66,7 +66,7 @@ To avoid this when using the late-bound style, you can use two strategies:
 
 ## Use FetchXML with FetchExpression
 
-FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Web API : Retrieve and execute predefined queries > Use custom FetchXML](../webapi/retrieve-and-execute-predefined-queries.md#use-custom-fetchxml)
+FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Use FetchXml with Web API](../webapi/use-fetchxml-web-api.md)
 
 The following example shows a simple query to return up to 50 matching account rows where the `address1_city` value equals `Redmond`, ordered by `name`.
 
@@ -101,7 +101,7 @@ More information:
 
 - [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
 - [FetchXML schema](../fetchxml-schema.md)
-- [Work with Quick Find’s search item limit](../quick-find-limit.md)
+- [Work with Quick Find's search item limit](../quick-find-limit.md)
 - [Page large result sets with FetchXML](page-large-result-sets-with-fetchxml.md)
 - [Use FetchXML aggregation](../use-fetchxml-aggregation.md)
 - [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)

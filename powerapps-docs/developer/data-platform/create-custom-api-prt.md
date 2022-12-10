@@ -1,22 +1,23 @@
 ---
 title: "Create a Custom API using the plug-in registration tool (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create a Custom API using the plug-in registration tool" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/19/2022
-ms.reviewer: "jdaly"
-ms.topic: "article"
-author: "marcelbf" # GitHub ID
+ms.date: 09/27/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: marcelbf # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: marcelbf # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Create a Custom API using the plug-in registration tool
 
-The plug-in registration tool (PRT) includes a designer to create Custom API. The PRT is a Windows client application that is part of the developer tools you can download from NuGet.  See [Download tools from NuGet](download-tools-nuget.md) for information about downloading these tools.
+The plug-in registration tool (PRT) includes a designer to create Custom API. The PRT is a Windows client application that is part of the developer tools you can download from NuGet.  See [Dataverse development tools](download-tools-nuget.md) for information about downloading these tools.
 
 [!INCLUDE [cc-connect-plugin-registration-tool](includes/cc-connect-plugin-registration-tool.md)]
 
@@ -87,7 +88,7 @@ Use the information in the table below to create the Response Property. For more
 |**Name**|The primary name of the custom API response property. This naming convention is recommended to differentiate this parameter from others that share a common Unique Name: `{Custom API Unique Name}.{Property UniqueName}`|Yes|
 |**Unique Name**|This will be the name of the property returned when you call the Custom API.|**No**|
 |**Type**|Select the type of the property. <br/>Boolean<br/>DateTime<br/>Decimal<br/>Entity<br/>EntityCollection<br/>EntityReference<br/>Float<br/>Integer<br/>Money<br/>Picklist<br/>String<br/>StringArray<br/>Guid<br/>|**No**|
-|**Logical Entity Name**|When **Entity**, **EntityCollection**, or **EntityReference** is selected as the **Type**, you can specify the table.|**No**|
+|**Logical Entity Name**|When **Entity** or **EntityReference** are selected as the **Type**, you can specify the table. You cannot specify a **Logical Entity Name** when you choose **EntityCollection** as the **Type**.|**No**|
 |**Description**|Localizable description.|Yes|
 
 ## View a list of Custom API

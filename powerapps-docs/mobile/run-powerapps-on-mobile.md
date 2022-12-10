@@ -1,13 +1,13 @@
 ---
 title: Run canvas apps or model-driven apps on Power Apps mobile | Microsoft Docs
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 04/6/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -123,8 +123,8 @@ You can only add canvas apps to your list of favorite apps.
 
 ## Sort apps
 
-You can sort both canvas apps and model-driven apps.
-You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
+You can sort both canvas apps and model-driven apps. 
+You can sort apps alphabetically by name or by modified date. The sort option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
 
 ![Sort menu.](media/sort-apps-iphone.png "Sort menu")
 

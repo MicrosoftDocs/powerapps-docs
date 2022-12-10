@@ -13,6 +13,9 @@ contributors:
 
 # Crowdsource ideas
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Learn how to manage Forum Ideas, Idea Comments, and Idea Votes.
 
 ## Manage idea forums

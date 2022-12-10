@@ -1,10 +1,9 @@
 ---
 title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Microsoft Dataverse displays commands in different ways depending on the table and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
-ms.date: 05/24/2022
+author: caburk
+ms.author: caburk
+ms.date: 10/03/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -35,6 +34,10 @@ The articles in this section introduce you to key concepts that you must underst
 ## Troubleshoot ribbon issues
 
 If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
+
+## Reference documentation
+
+You can find reference documentation for Ribbon XML elements here: [Ribbon XML reference](/previous-versions/dynamicscrm-2016/developers-guide/gg327947%28v=crm.8%29). This documentation is not maintained and includes many elements that are no longer relevant. It provides information about the elements defined in the ribbon schema files: [Ribbon core schema](ribbon-core-schema.md), [Ribbon types schema](ribbon-types-schema.md), and [Ribbon WSS schema](ribbon-wss-schema.md). There are some remarks within this reference that may be helpful.
 
 
 ## Community tool

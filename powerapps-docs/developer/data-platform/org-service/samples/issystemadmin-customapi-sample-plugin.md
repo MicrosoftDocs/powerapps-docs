@@ -1,10 +1,9 @@
 ---
 title: "Sample: IsSystemAdmin Custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a plug-in to support a Custom API"
-ms.date: 04/03/2022
+ms.date: 09/27/2022
 author: divka78
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
@@ -76,7 +75,7 @@ This Custom API is defined with the following data:
 }
 ```
 
-You can use this data to create the Custom API using Postman and the Web API by following the example here: [Create a Custom API using the Web API](../../create-custom-api-with-code.md#create-a-custom-api-using-the-web-api).
+You can use this data to create the Custom API using Postman and the Web API by following the example here: [Create a Custom API with code](../../create-custom-api-with-code.md).
 
 For information about the values passed see these topics: [CustomAPI tables](../../custom-api-tables.md)
 

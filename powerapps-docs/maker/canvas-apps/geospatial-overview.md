@@ -36,11 +36,6 @@ Before you can use geospatial features in your apps, your Power Platform adminis
 1. Enable geospatial features in the Power Platform admin center for the environment you intend to use. The geospatial features require their own terms of service, which your admin must review and agree to.
 2. Make sure the geospatial controls aren't blocked by the environment's data loss prevention policies.
 
->[!IMPORTANT]
->Your app must be connected to the **Organizations** data source to use geospatial controls. The data source is included whenever you insert a geospatial control in an app. If you manually delete it, you'll need to connect it again.
->
->1. With the geospatial control selected, open the **Data** tab, and then select **Add data**.
->2. Search for and select **Organizations**.
 
 ### Enable geospatial features for the environment
 
@@ -70,9 +65,8 @@ If you don't have administrative access to the Power Platform admin center, ask 
 
 ### Review the environment's data loss prevention policies
 
-Geospatial controls use the Microsoft Dataverse and Spatial Services connectors to fetch map tiles and to look up and geocode addresses. Your Power Platform admin must make sure data loss prevention policies that apply to those connectors don't conflict with policies that affect the controls.
+Geospatial controls use the Spatial Services connector to fetch map tiles and to look up and geocode addresses. Your Power Platform admin must make sure data loss prevention policies that apply to that connector don’t conflict with the policies that affect the controls. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
-Your admin should confirm that the Microsoft Dataverse and Spatial Services connectors are classified under the same data group, typically **Business**. [Learn more about data loss prevention policies for Power Platform](/power-platform/admin/prevent-data-loss).
 
 ## Privacy and security considerations
 

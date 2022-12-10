@@ -17,6 +17,9 @@ contributors:
 
 # Enhanced view filter for lists
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You can use Table Permissions if you want to secure records.  If you want to filter records based on the current portal user’s context, you can configure a filter on the underlying model-driven view definition used by the List using the [Dataverse view designer](../../model-driven-apps/create-edit-view-filters.md). This feature supports filtering of the current user, user's parent account, or website at any depth. Build the view filter to match any single contact record and the code will replace its value with the actual value at runtime&mdash;no need to assign values to fields in the Filter Conditions section.
 
 - The control will find all condition elements where uitype="contact" and set the value to the actual value of the current portal user's contact ID.

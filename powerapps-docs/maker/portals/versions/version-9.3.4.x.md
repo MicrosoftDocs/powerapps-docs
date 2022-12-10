@@ -16,6 +16,9 @@ contributor:
 
 # Power Apps portals version 9.3.4.x
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Power Apps portals version 9.3.4.x is in Early Upgrade phase. To keep track of upcoming changes, check the [Message center](/microsoft-365/admin/manage/message-center) for release schedules in your geographical region.
 
 This article describes the features, enhancements, and scope of the release.

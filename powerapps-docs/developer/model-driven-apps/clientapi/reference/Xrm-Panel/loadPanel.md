@@ -3,11 +3,11 @@ title: "loadPanel| MicrosoftDocs"
 description: Includes description and supported parameters for the loadPanel method.
 ms.date: 04/17/2022
 ms.service: powerapps
-ms.topic: "reference"
+ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 author: adrianorth
 ms.author: aorth
-manager: lwelicki
+
 search.audienceType: 
   - developer
 search.app: 

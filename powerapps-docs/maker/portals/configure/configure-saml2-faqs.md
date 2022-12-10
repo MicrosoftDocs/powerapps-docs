@@ -18,6 +18,9 @@ contributors:
 
 # FAQs for using SAML 2.0 in portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 This article includes information about common Power Apps portals scenarios and frequently asked questions for using an authentication provider that conforms to the Security Assertion Markup Language (SAML) 2.0 standard.
 
 ## Does portals support SAML 1.0&ndash;based providers?

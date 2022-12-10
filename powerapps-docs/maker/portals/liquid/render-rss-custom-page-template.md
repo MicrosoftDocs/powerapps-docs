@@ -16,6 +16,9 @@ contributors:
 
 # Create a custom page template to render an RSS feed
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In this example, we'll create a custom page template to render an [RSS feed](https://en.wikipedia.org/wiki/RSS) of news articles, using Liquid and a Web Template Page Template. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Store source content by using web templates](store-content-web-templates.md)  
 
 ## Step 1: Create a new Power Apps view
