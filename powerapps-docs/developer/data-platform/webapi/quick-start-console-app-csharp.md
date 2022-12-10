@@ -139,7 +139,7 @@ Follow these next steps to add code for the main program.
                if (response.IsSuccessStatusCode)
                {
                   // Parse the JSON formatted service response (WhoAmIResponse) to obtain the user ID value.
-                  // See https://docs.microsoft.com/dynamics365/customer-engagement/web-api/whoamiresponse
+                  // See https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/whoamiresponse
                   Guid userId = new();
 
                   string jsonContent = await response.Content.ReadAsStringAsync();
