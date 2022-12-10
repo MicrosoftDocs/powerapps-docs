@@ -156,7 +156,7 @@ Follow these next steps to add code for the main program.
                   // WhoAmIResponse whoAmIresponse = JsonSerializer.Deserialize<WhoAmIResponse>(jsonContent);
                   // userId = whoAmIresponse.UserId;
 
-                  Console.WriteLine("Your user ID is {0}", userId.ToString());
+                  Console.WriteLine($"Your user ID is {userId}");
                }
                else
                {
