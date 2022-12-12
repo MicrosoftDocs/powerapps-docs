@@ -219,6 +219,26 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$f
     }
 );
 ```
+
+Similarly you can can use the FetchXML parameter while offline to retrieve the name and primarycontactid property for accounts that have a primary contact that matches a condition:
+
+```JavaScript
+var fetchXml = "?fetchXml=<fetch mapping='logical'><entity name='account'><attribute name='name'/><attribute name='primarycontactid'/><link-entity name='contact' from='contactid' to='primarycontactid'><filter type='and'><condition attribute='lastname' operator='eq' value='Contosso'/></filter></link-entity></entity></fetch>";
+
+Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }                    
+
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
 ### Specify the number of tables to return in a page
 
 The following example demonstrates the use of the `maxPageSize` parameter to specify the number of records (3) to be displayed in a page.
