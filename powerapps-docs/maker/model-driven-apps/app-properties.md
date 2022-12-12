@@ -2,7 +2,7 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 11/18/2022
+ms.date: 12/12/2022
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -61,6 +61,7 @@ Here are a few of the features available to app makers:
 - **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction. More information: [Mobile commanding improvements](../../mobile/use-custom-model-driven-app-on-mobile.md#mobile-commanding-improvements)
 - **Offline setup from the app designer**. [Enable your app for offline use (preview)](../../mobile/setup-mobile-offline.md#enable-your-app-for-offline-use-preview)
 - **Tablet optimization for command bar**. When in enabled, replaces the native command bar at the bottom of the screen with the web command bar located at the top of the screen on tablets. More information: [Tablet optimization for command bar](../../mobile/use-custom-model-driven-app-on-mobile.md#tablet-optimization-for-command-bar)
+- **Try the new look and feel**. This is a preview feature. Enables the new look for existing and new model-driven apps. This setting is disabled by default and will not affect the model-driven app until enabled. More information: [Modern, refreshed look for model-driven apps (preview)](../../user/modern-fluent-design.md)
 
 ## Known limitations
 
