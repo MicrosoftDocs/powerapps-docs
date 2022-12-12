@@ -32,7 +32,7 @@ The updated visuals make use of several new patterns across the app and page typ
 
 ![Floating command bar](media/red-new-command-bar.png)
 
-As a comparison, the command bar was not in a seperate section in previous versions of the user interface, as shown in the following image.
+As a comparison, the command bar was not in a separate section in previous versions of the user interface, as shown in the following image.
 
 ![Command bar in the previous style](media/red-old-command-bar.png)
 
