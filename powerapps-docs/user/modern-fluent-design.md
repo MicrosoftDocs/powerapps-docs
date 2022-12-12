@@ -39,7 +39,7 @@ As a comparison, the command bar was not in a seperate section in previous versi
 With the new look, Power Apps and Dynamics 365 apps are moving away from the classic theme customizations and will introduce a new theming capability in the future that builds on the Fluent design system.  
 
 ## Enable the new look
-Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look and feel (preview)** feature for each model-driven app. For more information, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md#features).
+Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look and feel (preview)** feature for each model-driven app. Model-driven apps that are part of the preview, will automatically get incremental enhancements on a weekly basis. For more information, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md#features).
 
 ## Provide feedback on the new look
 After enabling the **Try the new look and feel (preview)** feature and using your model-driven apps, you can provide feedback on the new look on the [Power Apps Custom Page Feedback discussion thread](https://powerusers.microsoft.com/t5/Building-Power-Apps/Power-Apps-Custom-Page-Feedback-discussion-thread/m-p/1203993#M315697) web page.
