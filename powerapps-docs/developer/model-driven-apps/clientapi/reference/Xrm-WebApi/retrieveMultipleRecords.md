@@ -220,7 +220,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$f
 );
 ```
 
-Similarly you can can use the FetchXML parameter while offline to retrieve the name and primarycontactid property for accounts that have a primary contact that matches a condition:
+Similarly you can use the FetchXML parameter while offline to retrieve the name and primarycontactid property for accounts that have a primary contact that matches a condition:
 
 ```JavaScript
 var fetchXml = "?fetchXml=<fetch mapping='logical'><entity name='account'><attribute name='name'/><attribute name='primarycontactid'/><link-entity name='contact' from='contactid' to='primarycontactid'><filter type='and'><condition attribute='lastname' operator='eq' value='Contosso'/></filter></link-entity></entity></fetch>";
