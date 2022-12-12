@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/19/2022
+ms.date: 12/12/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -15,7 +15,6 @@ contributors:
 ---
 
 # Search within file attachment content
-
 
 [!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
@@ -45,7 +44,11 @@ When you search for a term, the search results also include attachments. If the 
 
 ### Search through knowledge article attachments on the portal
 
-You can enable the portal to search through knowledge article attachments by setting the **Sync knowledge article attachments to portal** option to **Yes** in the Dynamics 365 Customer Service admin center or Customer Service Hub app. This allows Dataverse search to look through knowledge article attachments and make information easily accessible to knowledge consumers. With this attachment capability, you won’t need to use the notes attachments for the portal. Knowledge article attachments will automatically be synced to the notes attachment. More information: [Update knowledge article attachments for portal](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article?tabs=customerserviceadmincenter#update-knowledge-article-attachments-for-portal)
+If your site uses Lucene .NET [search](search.md), you can enable the portal to search through knowledge article attachments by setting the **Sync knowledge article attachments to portal** option to **Yes** in the Dynamics 365 Customer Service admin center or Customer Service Hub app. 
+
+The ability to search through article attachments is active by default on sites using Dataverse search.
+
+This allows search to look through knowledge article attachments and make information easily accessible to knowledge consumers. With this attachment capability, you won’t need to use the notes attachments for the portal. Knowledge article attachments will automatically be synced to the notes attachment. More information: [Update knowledge article attachments for portal](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article?tabs=customerserviceadmincenter#update-knowledge-article-attachments-for-portal)
 
 ## Update portal configurations
 
