@@ -24,6 +24,10 @@ Model-driven apps have a modern, refreshed look when the **Try the new look and 
 
 The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future. 
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+
 ## What’s included with the new look
 
 After the **Try the new look and feel (preview)** feature has been enabled for a model-driven app, you will see the new, modern interface in the app. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the read-only grid. New Fluent-based field controls are used in many forms.
