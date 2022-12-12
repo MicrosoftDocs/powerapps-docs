@@ -28,7 +28,13 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 
 After the **Try the new look and feel (preview)** feature has been enabled for a model-driven app, you will see the new, modern interface in the app. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the read-only grid. New Fluent-based field controls are used in many forms.
 
-The updated visuals make use of several new patterns across the app and page types. Drop shadows and brighter background colors are used to create elevation, which aids in the separation of sections and focuses attention on the primary content. The floating command bar style aligns with the Microsoft 365 commanding experience and has consistent spacing, rounded corners, and elevation.   
+The updated visuals make use of several new patterns across the app and page types. Drop shadows and brighter background colors are used to create elevation, which aids in the separation of sections and focuses attention on the primary content. The floating command bar style aligns with the Microsoft 365 commanding experience and has consistent spacing, rounded corners, and elevation. For example, notice the floating command bar in the following image.
+
+![Floating command bar](media/snippet-new-command-bar.png)
+
+As a comparison, the command bar was not elevated in a seperate section before.
+
+![Command bar in the previous style](media/snippet-old-command-bar.png)
 
 With the new look, Power Apps and Dynamics 365 apps are moving away from the classic theme customizations and will introduce a new theming capability in the future that builds on the Fluent design system.  
 
