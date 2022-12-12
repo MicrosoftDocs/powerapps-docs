@@ -32,7 +32,7 @@ The updated visuals make use of several new patterns across the app and page typ
 
 ![Floating command bar](media/snippet-new-command-bar.png)
 
-As a comparison, the command bar was not elevated in a seperate section before.
+As a comparison, the command bar was not elevated in a seperate section in previous versions of the user interface.
 
 ![Command bar in the previous style](media/snippet-old-command-bar.png)
 
