@@ -29,8 +29,8 @@ Virtual tables include the following components:
 - Data Provider – defines the behavior of the virtual table.
 - Connection – this sets up the ability to connect to the data source and authentication.
 - Connection reference – this provides a way for Dataverse to use the connection to the data source.
-- 
-- If you were to create a virtual table using a custom data provider, you would need to write plugins that define how every Dataverse API would interact with the API on the system where the data is stored. This is a long process which requires knowledge of coding. Virtual connector providers streamline the creation experience by automating some of the creation for you and removing the need to use code to create the virtual tables.
+
+If you were to create a virtual table using a custom data provider, you'll need to write plugins that define how every Dataverse API would interact with the API on the system where the data is stored. This is a long process which requires knowledge of coding. Virtual connector providers streamline the creation experience by automating some of the creation for you and removing the need to use code to create the virtual tables.
 
 When you establish a remote connection to an external source using a connector data source, the virtual connector provider automatically retrieves a list of all the available tables and lists by retrieving table definitions (metadata) from the external data source. You then select these tables and lists to generate the virtual table.
 
@@ -53,7 +53,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-### Videos that show how to create the connection
+## Videos that show how to create the connection
 
 # [SQL Server](#tab/sql)
 
