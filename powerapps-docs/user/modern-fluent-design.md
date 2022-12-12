@@ -30,11 +30,11 @@ After the **Try the new look and feel (preview)** feature has been enabled for a
 
 The updated visuals make use of several new patterns across the app and page types. Drop shadows and brighter background colors are used to create elevation, which aids in the separation of sections and focuses attention on the primary content. The floating command bar style aligns with the Microsoft 365 commanding experience and has consistent spacing, rounded corners, and elevation. For example, notice the floating command bar in the following image.
 
-![Floating command bar](media/snippet-new-command-bar.png)
+![Floating command bar](media/red-new-command-bar.png)
 
 As a comparison, the command bar was not in a seperate section in previous versions of the user interface, as shown in the following image.
 
-![Command bar in the previous style](media/snippet-old-command-bar.png)
+![Command bar in the previous style](media/red-old-command-bar.png)
 
 With the new look, Power Apps and Dynamics 365 apps are moving away from the classic theme customizations and will introduce a new theming capability in the future that builds on the Fluent design system.  
 
