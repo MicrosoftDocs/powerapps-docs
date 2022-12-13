@@ -22,14 +22,14 @@ You can use the notes attachment to include downloadable files in knowledge base
 
 You can configure your portal to allow portal users to search within the attachment content of  knowledge base articles. This helps users to find the information that they're looking for.
 
-In knowledge base articles, any notes attachment with the defined prefix are indexed. In web files, the latest notes attachment are indexed.
+In knowledge base articles, any notes attachment with the defined prefix is indexed. In web files, the latest notes attachment is indexed.
 
 To index the attachments, you must create the following site settings and set their value to **True**:
 
 |Site setting|Description|
 |------------|-----------|
-|Search/IndexNotesAttachments|Indicates whether the content of notes attachments in  knowledge base articles and web files should be indexed. By default, it is set to **False**.|
-|KnowledgeManagement/DisplayNotes|Indicates whether to index attachments of knowledge base articles. By default, it is set to **False**.|
+|Search/IndexNotesAttachments|Indicates whether the content of notes attachments in  knowledge base articles and web files should be indexed. By default, it's set to **False**.|
+|KnowledgeManagement/DisplayNotes|Indicates whether to index attachments of knowledge base articles. By default, it's set to **False**.|
 |||
 
 > [!NOTE]
@@ -44,15 +44,13 @@ When you search for a term, the search results also include attachments. If the 
 
 ### Search through knowledge article attachments on the portal
 
-If your site uses Lucene .NET [search](search.md), you can enable the portal to search through knowledge article attachments by setting the **Sync knowledge article attachments to portal** option to **Yes** in the Dynamics 365 Customer Service admin center or Customer Service Hub app. 
-
-The ability to search through article attachments is active by default on sites using Dataverse search.
+If your site uses Lucene .NET [search](search.md), you can enable the portal to search through knowledge article attachments by setting the **Sync knowledge article attachments to portal** option to **Yes** in the Dynamics 365 Customer Service admin center or Customer Service Hub app. You don't need to configure this option if your site is using Dataverse search, you'll be able to search through knowledge article attachments by default.
 
 This allows search to look through knowledge article attachments and make information easily accessible to knowledge consumers. With this attachment capability, you won’t need to use the notes attachments for the portal. Knowledge article attachments will automatically be synced to the notes attachment. More information: [Update knowledge article attachments for portal](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article?tabs=customerserviceadmincenter#update-knowledge-article-attachments-for-portal)
 
 ## Update portal configurations
 
-If you already have a portal before April 2018 and you have upgraded your portal to the latest version, you must use the following configurations to have the same user experience as a new portal installation.
+If you already have a portal before April 2018 and you've upgraded your portal to the latest version, you must use the following configurations to have the same user experience as a new portal installation.
 
 **Content Snippets**
 
