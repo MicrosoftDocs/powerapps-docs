@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/13/2022
+ms.date: 12/01/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78 # GitHub ID
@@ -47,7 +47,6 @@ If you have questions or issues with this feature you can contact technical supp
 
 The following limitations apply to dependent assembly plug-ins.
 
-- A plugin package is limited to 16 MB in size or 50 assemblies.
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
 
@@ -86,7 +85,7 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 |Tool/App|Instructions |
 |---------|---------|
 |**Microsoft Power Platform CLI**|You must have version 1.17 or higher.<br />The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
-|**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Download tools from NuGet](download-tools-nuget.md).|
+|**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Dataverse development tools](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ### Create a Visual Studio project
@@ -321,8 +320,6 @@ You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in pac
 When you prepare a solution that contains a plugin package, do not include any plug-in step registrations that use an assembly included in the plug-in package.
 
 The export of the solution will succeed, but you will not be able to import the solution. To test plug-ins that use a dependent assembly in a different environment, you must manually register the steps.
-
-One exception for this are Custom APIs which use an assembly for the main operation stage. There is no separate step registration for this specific step. More information: [Create and use Custom APIs](custom-api.md)
 
 ### Users must be granted read access to plug-in package
 

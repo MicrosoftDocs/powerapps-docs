@@ -53,7 +53,7 @@ User and team management is the area of Microsoft Dataverse where you can create
 >  A user's set of privileges is a union of privileges from the user's roles and privileges from all teams’ roles in which the user is a member.  
 
 
- Non-interactive users are often used when writing service-to-service code because they do not use up a license. Dataverse allows for five free non-interactive users. To disable a non-interactive user, update the user record changing the `accessmode` value to any other value. The user will be disabled automatically.
+ Non-interactive users are often used when writing service-to-service code because they do not use up a license. Dataverse allows for seven free non-interactive users. To disable a non-interactive user, update the user record changing the `accessmode` value to any other value. The user will be disabled automatically.
 
 ## Community tools
 

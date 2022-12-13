@@ -1,12 +1,12 @@
 ---
 title: "Configure mobile offline profiles for files and images| Microsoft Docs"
 description: Configure mobile offline profiles for files and images.
-author: mduelae
+author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 02/15/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 

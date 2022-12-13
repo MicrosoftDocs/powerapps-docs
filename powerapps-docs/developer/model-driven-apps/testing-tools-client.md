@@ -6,7 +6,7 @@ ms.topic: article
 author: aengusheaney # GitHub ID
 ms.subservice: mda-developer
 ms.author: AHEANEY # MSFT alias of Microsoft employees only
-manager: lwelicki # MSFT alias of manager or PM counterpart
+ # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 

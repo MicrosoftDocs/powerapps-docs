@@ -49,7 +49,7 @@ The NuGet SDK are found under the [crmsdk](https://www.nuget.org/profiles/crmsdk
 
 ## Download Tools from NuGet
 
-You can download tools used in development from NuGet using the powershell script found in this topic: [Download tools from NuGet](../download-tools-nuget.md)
+You can download tools used in development from NuGet using the powershell script found in this topic: [Dataverse development tools](../download-tools-nuget.md)
   
 ### See also
 

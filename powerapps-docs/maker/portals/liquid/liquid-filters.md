@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 11/11/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -95,7 +95,6 @@ Group #2: {{ group2 | join: ', ' }}
 
 Group #1 + Group #2: {{ group1 | concat: group2 | join: ', ' }}
 
-Group #1 + Leslie: {{ group1 | concat: 'Leslie' | join: ', ' }}
 ```
 
 **Output**
@@ -107,7 +106,6 @@ Group #2: Joan, Bill
 
 Group #1 + Group #2: John, Pete, Hannah, Joan, Bill
 
-Group #1 + Leslie: John, Pete, Hannah, Leslie
 ```
 
 ### except
