@@ -82,11 +82,11 @@ Setting this to false can decrease overall transmission overhead but can cause d
 
 Part of the service that Dataverse provides is managing resource allocation for environments. Production environments that are heavily used by many licenced users will have more resources allocated to them. The number and capabilities of the servers allocated may vary over time, so there is no fixed number that you should apply to get the optimum degree of parallelism. Instead, use the integer value returned from the `x-ms-dop-hint` response header. This value provides a recommended degree of parallelism for the environment.
 
-When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. You can set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) to define a maximum number of concurrent tasks.
+When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the client running the code. If the number CPU cores exceeds the best match for the environment you may be sending too many requests. You can set the [ParallelOptions.MaxDegreeOfParallelism Property](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) to define a maximum number of concurrent tasks.
 
 ### Service protection limits
 
-One of the three facets monitored for service protection limits is the number of concurrent requests. By default this value is 52 but it may be higher. An error will be returned if the limit is exceeded. If you are depending on the `x-ms-dop-hint` response header value to control the degree of parallelism, you should rarely hit this limit. If you encounter this error, you should reduce the number of concurrent threads.
+One of the three facets monitored for service protection limits is the number of concurrent requests. By default this value is 52 but it may be higher. An error will be returned if the limit is exceeded. If you are depending on the `x-ms-dop-hint` response header value to limit the degree of parallelism, you should rarely hit this limit. If you encounter this error, you should reduce the number of concurrent threads.
 
 There is a specific error returned when this limit is reached:
 
@@ -158,11 +158,13 @@ The following .NET examples show use of [Task Parallel Library (TPL)](/dotnet/st
 
 The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting [ParallelOptions.MaxDegreeOfParallelism](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) when you use [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A).
 
+These examples also show setting the [EnableAffinityCookie](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.EnableAffinityCookie) property to false.
+
 In this the examples below, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
 ### Using ServiceClient with .NET 6 or higher
 
-With .NET 6 or higher you can use the [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) method with the asychronous methods included with [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), such as [CreateAsync](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.CreateAsync%2A)
+With .NET 6 or higher you can use the [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) method with the asychronous methods included with [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), such as [CreateAsync](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.CreateAsync%2A).
 
 ```csharp
 /// <summary>
@@ -176,6 +178,9 @@ static async Task<Guid[]> CreateRecordsInParallel(
     List<Entity> entityList)
 {
     ConcurrentBag<Guid> ids = new();
+
+    // Disable affinity cookie
+    serviceClient.EnableAffinityCookie = false;
 
     var parallelOptions = new ParallelOptions()
     { MaxDegreeOfParallelism = 
@@ -195,13 +200,13 @@ static async Task<Guid[]> CreateRecordsInParallel(
 
 ### Using CrmServiceClient with .NET Framework
 
-When using .NET Framework, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can use the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A) method.
+When using .NET Framework, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can use the [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A) method.
 
 ```csharp
 /// <summary>
 /// Creates records in parallel
 /// </summary>
-/// <param name="serviceClient">The authenticated CrmServiceClient instance.</param>
+/// <param name="crmServiceClient">The authenticated CrmServiceClient instance.</param>
 /// <param name="entityList">The list of entities to create.</param>
 /// <returns>The id values of the created records.</returns>
 static Guid[] CreateRecordsInParallel(
@@ -209,6 +214,9 @@ static Guid[] CreateRecordsInParallel(
     List<Entity> entityList)
 {
    ConcurrentBag<Guid> ids = new ConcurrentBag<Guid>();
+
+    // Disable affinity cookie
+    crmServiceClient.EnableAffinityCookie = false;
 
    Parallel.ForEach(entityList,
       new ParallelOptions()
