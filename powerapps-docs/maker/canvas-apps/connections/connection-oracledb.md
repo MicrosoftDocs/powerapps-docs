@@ -23,7 +23,7 @@ List tables, and create, read, update, and delete table rows in an Oracle databa
 
 ## Prerequisites
 * Oracle 9 and later
-* Oracle Data Access Client (ODAC) software 11.2 or greater
+* Oracle Data Access Client (ODAC) software 11.2 or later
 * Installation of an on-premises data gateway
 * Installation of the Oracle client SDK
 
