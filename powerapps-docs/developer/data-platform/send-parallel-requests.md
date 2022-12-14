@@ -162,51 +162,49 @@ The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfPar
 
 In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
-   #### [.NET Framework](#tab/dotnetfullframework)
+#### [.NET Framework](#tab/sdk/dotnetfullframework)
 
-   ```csharp
-   /// <summary>
-   /// Creates records in parallel
-   /// </summary>
-   /// <param name="serviceClient">The authenticated ServiceClient instance.</param>
-   /// <param name="entityList">The list of entities to create.</param>
-   /// <returns>The id values of the created records.</returns>
-   static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> entityList)
-   {
-      ConcurrentBag<Guid> ids = new ConcurrentBag<Guid>();
-   
-      Parallel.ForEach(entityList,
-         new ParallelOptions()
-         {
-               MaxDegreeOfParallelism = serviceClient.RecommendedDegreesOfParallelism
-         },
-         () =>
-         {
-               //Clone the ServiceClient for each thread
-               return serviceClient.Clone();
-         },
-         (entity, loopState, index, threadLocalSvc) =>
-         {
-               ids.Add(threadLocalSvc.Create(entity));
+```csharp
+/// <summary>
+/// Creates records in parallel
+/// </summary>
+/// <param name="serviceClient">The authenticated ServiceClient instance.</param>
+/// <param name="entityList">The list of entities to create.</param>
+/// <returns>The id values of the created records.</returns>
+static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> entityList)
+{
+   ConcurrentBag<Guid> ids = new ConcurrentBag<Guid>();
 
-               return threadLocalSvc;
-         },
-         (threadLocalSvc) =>
-         {
-               //Dispose the cloned ServiceClient instance
-               threadLocalSvc?.Dispose();
-         }
-      );
-      return ids.ToArray();
-   }
-   ```
+   Parallel.ForEach(entityList,
+      new ParallelOptions()
+      {
+            MaxDegreeOfParallelism = serviceClient.RecommendedDegreesOfParallelism
+      },
+      () =>
+      {
+            //Clone the ServiceClient for each thread
+            return serviceClient.Clone();
+      },
+      (entity, loopState, index, threadLocalSvc) =>
+      {
+            ids.Add(threadLocalSvc.Create(entity));
 
-   #### [.NET Core](#tab/dotnetcore)
+            return threadLocalSvc;
+      },
+      (threadLocalSvc) =>
+      {
+            //Dispose the cloned ServiceClient instance
+            threadLocalSvc?.Dispose();
+      }
+   );
+   return ids.ToArray();
+}
+```
 
-   .net core sample goes here
+#### [.NET Core](#tab/sdk/dotnetcore)
 
+.net core sample goes here
 
-   ---
 
 ### [Web API](#tab/webapi)
 
