@@ -104,7 +104,7 @@ When sending requests in parallel from your client applcation, you can gain perf
 
 Following are some examples showing how to disable server affinity with .NET.
 
-### [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 If you are using the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes, add the following to the `AppSettings` node in the `App.config` file.
 
@@ -116,7 +116,7 @@ You can also set the value of the <xref:Microsoft.PowerPlatform.Dataverse.Client
 
 This can also be set using the [ServiceClient(ConnectionOptions, Boolean, ConfigurationOptions)](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.%23ctor%2A#microsoft-powerplatform-dataverse-client-serviceclient-ctor(microsoft-powerplatform-dataverse-client-model-connectionoptions-system-boolean-microsoft-powerplatform-dataverse-client-model-configurationoptions)) constructor using the [ConfigurationOptions.EnableAffinityCookie](xref:Microsoft.PowerPlatform.Dataverse.Client.Model.ConfigurationOptions.EnableAffinityCookie) property.
 
-### [Web API](#tab/webapi)
+# [Web API](#tab/webapi)
 
 For .NET applications using [HttpClient](xref:System.Net.Http.HttpClient) with the Web API, the following code shows how to disable cookies using a custom [HttpMessageHandler](xref:System.Net.Http.HttpMessageHandler).
 
@@ -154,7 +154,7 @@ builder.ConfigureServices(services =>
 
 The following .NET examples show use of [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) with Dataverse.
 
-### [SDK for .NET](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in both [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) and [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can use the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl).
 
@@ -162,7 +162,7 @@ The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfPar
 
 In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
-#### [.NET Framework](#tab/dotnetfullframework/sdk)
+# [.NET Framework](#tab/dotnetfullframework/sdk)
 
 ```csharp
 /// <summary>
@@ -201,13 +201,13 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
 }
 ```
 
-#### [.NET Core](#tab/dotnetcore/sdk)
+# [.NET Core](#tab/dotnetcore/sdk)
 
 .net core sample goes here
 
 ---
 
-### [Web API](#tab/webapi)
+# [Web API](#tab/webapi)
 
 The following static method example shows the use of an authenticated [HttpClient](xref:System.Net.Http.HttpClient) that has been configured with a [BaseAddress Property](xref:System.Net.Http.HttpClient.BaseAddress) set to the Dataverse Web API Uri.
 
