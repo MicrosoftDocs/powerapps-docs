@@ -72,7 +72,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Steps to create a virtual table in the Power Apps
+## Steps to create a virtual table in Power Apps
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -391,6 +391,8 @@ Once you've created a virtual table, you can work with it much the same way as a
 
 ### See also
 
-<!-- Links to new articles for Virtual table relationships and Known issues and tshooting virtual tables.-->
+[Setting up a virtual table relationship](setup-virtual-table-relationships.md)
+
+[Known limitations and troubleshooting with virtual tables](limits-tshoot-virtual-tables.md)
 
 [Developers Guide: Get started with virtual tables (entities)](../../developer/data-platform/virtual-entities/get-started-ve.md)
