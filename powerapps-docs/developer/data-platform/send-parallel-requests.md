@@ -50,11 +50,13 @@ More information: <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProp
 
 ### System.Net.ServicePointManager settings
 
-With .NET Framework, [ServicePointManager](xref:System.Net.ServicePointManager) is a static class used to create, maintain, and delete instances of the [ServicePoint](xref:System.Net.ServicePoint) class. Use these settings with the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. These settings should also apply when using [HttpClient](xref:System.Net.Http.HttpClient) with Web API in .NET Framework. But in .NET Core Microsoft recommends settings in `HttpClient` instead.
+With .NET Framework, [ServicePointManager](xref:System.Net.ServicePointManager) is a static class used to create, maintain, and delete instances of the [ServicePoint](xref:System.Net.ServicePoint) class. Use these settings with the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. These settings should also apply when using [HttpClient](xref:System.Net.Http.HttpClient) with Web API in .NET Framework, but with .NET Core Microsoft recommends settings in `HttpClient` instead.
 
 ### DefaultConnectionLimit
 
 This value is ultimately limited by the hardware. If it is set too high, it will be throttled by other means. The key point is that it should be raised above the default value, and at least equal to the number of concurrent requests you intend to send.
+
+With .NET Core using `HttpClient`, this is controled by the [HttpClientHandler.MaxConnectionsPerServer](xref:System.Net.Http.HttpClientHandler.MaxConnectionsPerServer) and the default value is [int.MaxValue](xref:System.Int32.MaxValue).
 
 More information:
 
