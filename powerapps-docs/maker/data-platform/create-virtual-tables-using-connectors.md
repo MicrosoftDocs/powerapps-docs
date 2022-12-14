@@ -27,7 +27,7 @@ Virtual tables enable integrating data from external data sources by seamlessly 
 >   - SQL Server
 >   - Microsoft SharePoint
 
-You can create a virtual table for Excel using the virtual connector provider by following the earlier process described later in this document.
+You can create a virtual table for Excel using the virtual connector provider by following the earlier process. More information: [Create the virtual table for Microsoft Excel](#create-the-virtual-table-for-microsoft-excel)
 
 To learn more about supported actions and limitations with the connector, go to:
 
