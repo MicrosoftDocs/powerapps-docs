@@ -1,12 +1,12 @@
 ---
 title: "SyncError table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SyncError table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -27,14 +27,14 @@ Failure reason and other detailed information for a record that failed to sync.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/syncerrors<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/syncerrors<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/syncerrors(*syncerrorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/syncerrors<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/syncerrors(*syncerrorid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/syncerrors(*syncerrorid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/syncerrors<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/syncerrors(*syncerrorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/syncerrors(*syncerrorid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -274,7 +274,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,activitymimeattachment,activityparty,annotation,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,attachment,attributeimageconfig,bot,botcomponent,businessdatalocalizedlabel,businessunit,canvasappextendedmetadata,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,category,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,comment,connection,connectioninstance,connectionreference,connectionrole,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,duplicaterule,duplicaterulecondition,email,emailserverprofile,entityanalyticsconfig,entityimageconfig,entityindex,environmentvariabledefinition,environmentvariablevalue,expiredprocess,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,feedback,fieldpermission,fieldsecurityprofile,fileattachment,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowsession,goal,goalrollupquery,holidaywrapper,importmap,indexattributes,internaladdress,internalcatalogassignment,kbarticle,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailbox,mailmergetemplate,managedidentity,metric,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pmanalysishistory,msdyn_pminferredtask,msdyn_pmprocessusersettings,msdyn_pmrecording,msdyn_pmtemplate,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msgraphresourcetosubscription,newprocess,offlinecommanddefinition,organization,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,pluginpackage,position,postfollow,privilegesremovalsetting,processsession,processstage,processstageparameter,processtrigger,provisionlanguageforuser,publisher,queue,queueitem,recurringappointmentmaster,relationshipattribute,report,reportcategory,revokeinheritedaccessrecordstracker,role,rollupfield,savedquery,savedqueryvisualization,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharepointdocumentlocation,sharepointsite,sla,slaitem,slakpiinstance,socialactivity,socialprofile,solution,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,subject,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,syncerror,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,teamtemplate,template,territory,transactioncurrency,translationprocess,usermobileofflineprofilemembership,userquery,userqueryvisualization,userrating,virtualentitymetadata,workflow,workflowbinary|
+|Targets|account,activityfileattachment,activitymimeattachment,activityparty,annotation,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,attachment,attributeimageconfig,bot,botcomponent,businessdatalocalizedlabel,businessunit,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,category,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,chat,comment,connection,connectioninstance,connectionreference,connectionrole,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowbinary,duplicaterule,duplicaterulecondition,email,emailserverprofile,entityanalyticsconfig,entityimageconfig,entityindex,environmentvariabledefinition,environmentvariablevalue,expiredprocess,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,feedback,fieldpermission,fieldsecurityprofile,fileattachment,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,goal,goalrollupquery,holidaywrapper,importmap,indexattributes,internaladdress,internalcatalogassignment,kbarticle,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailbox,mailmergetemplate,managedidentity,metric,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pmanalysishistory,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_workflowactionstatus,msgraphresourcetosubscription,newprocess,offlinecommanddefinition,organization,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,pluginpackage,position,postfollow,powerbidataset,powerbimashupparameter,powerbireport,powerfxrule,privilegesremovalsetting,processsession,processstage,processstageparameter,processtrigger,provisionlanguageforuser,publisher,queue,queueitem,recurringappointmentmaster,relationshipattribute,report,reportcategory,revokeinheritedaccessrecordstracker,role,rollupfield,savedquery,savedqueryvisualization,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharepointdocumentlocation,sharepointsite,sla,slaitem,slakpiinstance,socialactivity,socialprofile,solution,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,subject,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,syncerror,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,teamtemplate,template,territory,transactioncurrency,translationprocess,usermobileofflineprofilemembership,userquery,userqueryvisualization,userrating,virtualentitymetadata,workflow,workflowbinary|
 |Type|Lookup|
 
 
@@ -889,13 +889,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [connector_SyncErrors](#BKMK_connector_SyncErrors)
 - [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
 - [environmentvariablevalue_SyncErrors](#BKMK_environmentvariablevalue_SyncErrors)
+- [workflowbinary_SyncErrors](#BKMK_workflowbinary_SyncErrors)
 - [flowmachine_SyncErrors](#BKMK_flowmachine_SyncErrors)
 - [flowmachinegroup_SyncErrors](#BKMK_flowmachinegroup_SyncErrors)
 - [flowmachineimage_SyncErrors](#BKMK_flowmachineimage_SyncErrors)
 - [flowmachineimageversion_SyncErrors](#BKMK_flowmachineimageversion_SyncErrors)
+- [flowmachinenetwork_SyncErrors](#BKMK_flowmachinenetwork_SyncErrors)
 - [processstageparameter_SyncErrors](#BKMK_processstageparameter_SyncErrors)
+- [desktopflowbinary_SyncErrors](#BKMK_desktopflowbinary_SyncErrors)
 - [flowsession_SyncErrors](#BKMK_flowsession_SyncErrors)
-- [workflowbinary_SyncErrors](#BKMK_workflowbinary_SyncErrors)
 - [connectionreference_SyncErrors](#BKMK_connectionreference_SyncErrors)
 - [connectioninstance_SyncErrors](#BKMK_connectioninstance_SyncErrors)
 - [msdyn_aiconfiguration_SyncErrors](#BKMK_msdyn_aiconfiguration_SyncErrors)
@@ -927,6 +929,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgemanagementsetting_SyncErrors](#BKMK_msdyn_knowledgemanagementsetting_SyncErrors)
 - [msdyn_federatedarticle_SyncErrors](#BKMK_msdyn_federatedarticle_SyncErrors)
 - [msdyn_federatedarticleincident_SyncErrors](#BKMK_msdyn_federatedarticleincident_SyncErrors)
+- [msdyn_integratedsearchprovider_SyncErrors](#BKMK_msdyn_integratedsearchprovider_SyncErrors)
 - [msdyn_kmfederatedsearchconfig_SyncErrors](#BKMK_msdyn_kmfederatedsearchconfig_SyncErrors)
 - [msdyn_knowledgearticleimage_SyncErrors](#BKMK_msdyn_knowledgearticleimage_SyncErrors)
 - [msdyn_knowledgeinteractioninsight_SyncErrors](#BKMK_msdyn_knowledgeinteractioninsight_SyncErrors)
@@ -938,6 +941,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgepersonalfilter_SyncErrors](#BKMK_msdyn_knowledgepersonalfilter_SyncErrors)
 - [msdyn_knowledgesearchfilter_SyncErrors](#BKMK_msdyn_knowledgesearchfilter_SyncErrors)
 - [pluginpackage_SyncErrors](#BKMK_pluginpackage_SyncErrors)
+- [powerfxrule_SyncErrors](#BKMK_powerfxrule_SyncErrors)
 - [keyvaultreference_SyncErrors](#BKMK_keyvaultreference_SyncErrors)
 - [managedidentity_SyncErrors](#BKMK_managedidentity_SyncErrors)
 - [msgraphresourcetosubscription_SyncErrors](#BKMK_msgraphresourcetosubscription_SyncErrors)
@@ -946,19 +950,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organizationdatasyncsubscriptionentity_SyncErrors](#BKMK_organizationdatasyncsubscriptionentity_SyncErrors)
 - [organizationdatasyncstate_SyncErrors](#BKMK_organizationdatasyncstate_SyncErrors)
 - [msdyn_appinsightsmetadata_SyncErrors](#BKMK_msdyn_appinsightsmetadata_SyncErrors)
+- [msdyn_workflowactionstatus_SyncErrors](#BKMK_msdyn_workflowactionstatus_SyncErrors)
 - [userrating_SyncErrors](#BKMK_userrating_SyncErrors)
 - [msdyn_insightsstorevirtualentity_SyncErrors](#BKMK_msdyn_insightsstorevirtualentity_SyncErrors)
 - [appaction_SyncErrors](#BKMK_appaction_SyncErrors)
 - [appactionmigration_SyncErrors](#BKMK_appactionmigration_SyncErrors)
 - [appactionrule_SyncErrors](#BKMK_appactionrule_SyncErrors)
+- [card_SyncErrors](#BKMK_card_SyncErrors)
 - [msdyn_entitylinkchatconfiguration_SyncErrors](#BKMK_msdyn_entitylinkchatconfiguration_SyncErrors)
 - [msdyn_richtextfile_SyncErrors](#BKMK_msdyn_richtextfile_SyncErrors)
 - [msdyn_customcontrolextendedsettings_SyncErrors](#BKMK_msdyn_customcontrolextendedsettings_SyncErrors)
 - [msdyn_pmanalysishistory_SyncErrors](#BKMK_msdyn_pmanalysishistory_SyncErrors)
+- [msdyn_pmcalendar_SyncErrors](#BKMK_msdyn_pmcalendar_SyncErrors)
+- [msdyn_pmcalendarversion_SyncErrors](#BKMK_msdyn_pmcalendarversion_SyncErrors)
 - [msdyn_pminferredtask_SyncErrors](#BKMK_msdyn_pminferredtask_SyncErrors)
+- [msdyn_pmprocessextendedmetadataversion_SyncErrors](#BKMK_msdyn_pmprocessextendedmetadataversion_SyncErrors)
 - [msdyn_pmprocessusersettings_SyncErrors](#BKMK_msdyn_pmprocessusersettings_SyncErrors)
+- [msdyn_pmprocessversion_SyncErrors](#BKMK_msdyn_pmprocessversion_SyncErrors)
 - [msdyn_pmrecording_SyncErrors](#BKMK_msdyn_pmrecording_SyncErrors)
 - [msdyn_pmtemplate_SyncErrors](#BKMK_msdyn_pmtemplate_SyncErrors)
+- [msdyn_pmview_SyncErrors](#BKMK_msdyn_pmview_SyncErrors)
 - [msdyn_analysiscomponent_SyncErrors](#BKMK_msdyn_analysiscomponent_SyncErrors)
 - [msdyn_analysisjob_SyncErrors](#BKMK_msdyn_analysisjob_SyncErrors)
 - [msdyn_analysisresult_SyncErrors](#BKMK_msdyn_analysisresult_SyncErrors)
@@ -966,6 +977,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_solutionhealthrule_SyncErrors](#BKMK_msdyn_solutionhealthrule_SyncErrors)
 - [msdyn_solutionhealthruleargument_SyncErrors](#BKMK_msdyn_solutionhealthruleargument_SyncErrors)
 - [msdyn_solutionhealthruleset_SyncErrors](#BKMK_msdyn_solutionhealthruleset_SyncErrors)
+- [powerbidataset_SyncErrors](#BKMK_powerbidataset_SyncErrors)
+- [powerbimashupparameter_SyncErrors](#BKMK_powerbimashupparameter_SyncErrors)
+- [powerbireport_SyncErrors](#BKMK_powerbireport_SyncErrors)
 
 
 ### <a name="BKMK_KnowledgeBaseRecord_SyncErrors"></a> KnowledgeBaseRecord_SyncErrors
@@ -1522,6 +1536,12 @@ See the [environmentvariabledefinition_SyncErrors](environmentvariabledefinition
 
 See the [environmentvariablevalue_SyncErrors](environmentvariablevalue.md#BKMK_environmentvariablevalue_SyncErrors) one-to-many relationship for the [environmentvariablevalue](environmentvariablevalue.md) table/entity.
 
+### <a name="BKMK_workflowbinary_SyncErrors"></a> workflowbinary_SyncErrors
+
+**Added by**: Power Automate Extensions Workflow Binary package Solution
+
+See the [workflowbinary_SyncErrors](workflowbinary.md#BKMK_workflowbinary_SyncErrors) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
+
 ### <a name="BKMK_flowmachine_SyncErrors"></a> flowmachine_SyncErrors
 
 **Added by**: Power Automate Extensions core package Solution
@@ -1546,23 +1566,29 @@ See the [flowmachineimage_SyncErrors](flowmachineimage.md#BKMK_flowmachineimage_
 
 See the [flowmachineimageversion_SyncErrors](flowmachineimageversion.md#BKMK_flowmachineimageversion_SyncErrors) one-to-many relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
 
+### <a name="BKMK_flowmachinenetwork_SyncErrors"></a> flowmachinenetwork_SyncErrors
+
+**Added by**: Power Automate Extensions core package Solution
+
+See the [flowmachinenetwork_SyncErrors](flowmachinenetwork.md#BKMK_flowmachinenetwork_SyncErrors) one-to-many relationship for the [flowmachinenetwork](flowmachinenetwork.md) table/entity.
+
 ### <a name="BKMK_processstageparameter_SyncErrors"></a> processstageparameter_SyncErrors
 
 **Added by**: Power Automate Extensions core package Solution
 
 See the [processstageparameter_SyncErrors](processstageparameter.md#BKMK_processstageparameter_SyncErrors) one-to-many relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
+### <a name="BKMK_desktopflowbinary_SyncErrors"></a> desktopflowbinary_SyncErrors
+
+**Added by**: Power Automate Extensions core package Solution
+
+See the [desktopflowbinary_SyncErrors](desktopflowbinary.md#BKMK_desktopflowbinary_SyncErrors) one-to-many relationship for the [desktopflowbinary](desktopflowbinary.md) table/entity.
+
 ### <a name="BKMK_flowsession_SyncErrors"></a> flowsession_SyncErrors
 
 **Added by**: Power Automate Extensions core package Solution
 
 See the [flowsession_SyncErrors](flowsession.md#BKMK_flowsession_SyncErrors) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
-
-### <a name="BKMK_workflowbinary_SyncErrors"></a> workflowbinary_SyncErrors
-
-**Added by**: Power Automate Extensions core package Solution
-
-See the [workflowbinary_SyncErrors](workflowbinary.md#BKMK_workflowbinary_SyncErrors) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
 ### <a name="BKMK_connectionreference_SyncErrors"></a> connectionreference_SyncErrors
 
@@ -1750,6 +1776,12 @@ See the [msdyn_federatedarticle_SyncErrors](msdyn_federatedarticle.md#BKMK_msdyn
 
 See the [msdyn_federatedarticleincident_SyncErrors](msdyn_federatedarticleincident.md#BKMK_msdyn_federatedarticleincident_SyncErrors) one-to-many relationship for the [msdyn_federatedarticleincident](msdyn_federatedarticleincident.md) table/entity.
 
+### <a name="BKMK_msdyn_integratedsearchprovider_SyncErrors"></a> msdyn_integratedsearchprovider_SyncErrors
+
+**Added by**: Knowledge Management Online Features Solution
+
+See the [msdyn_integratedsearchprovider_SyncErrors](msdyn_integratedsearchprovider.md#BKMK_msdyn_integratedsearchprovider_SyncErrors) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
+
 ### <a name="BKMK_msdyn_kmfederatedsearchconfig_SyncErrors"></a> msdyn_kmfederatedsearchconfig_SyncErrors
 
 **Added by**: Knowledge Management Online Features Solution
@@ -1816,6 +1848,12 @@ See the [msdyn_knowledgesearchfilter_SyncErrors](msdyn_knowledgesearchfilter.md#
 
 See the [pluginpackage_SyncErrors](pluginpackage.md#BKMK_pluginpackage_SyncErrors) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
 
+### <a name="BKMK_powerfxrule_SyncErrors"></a> powerfxrule_SyncErrors
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_SyncErrors](powerfxrule.md#BKMK_powerfxrule_SyncErrors) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
 ### <a name="BKMK_keyvaultreference_SyncErrors"></a> keyvaultreference_SyncErrors
 
 **Added by**: ManagedIdentityExtensions Solution
@@ -1864,6 +1902,12 @@ See the [organizationdatasyncstate_SyncErrors](organizationdatasyncstate.md#BKMK
 
 See the [msdyn_appinsightsmetadata_SyncErrors](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_SyncErrors) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
 
+### <a name="BKMK_msdyn_workflowactionstatus_SyncErrors"></a> msdyn_workflowactionstatus_SyncErrors
+
+**Added by**: Insights App Platform Solution
+
+See the [msdyn_workflowactionstatus_SyncErrors](msdyn_workflowactionstatus.md#BKMK_msdyn_workflowactionstatus_SyncErrors) one-to-many relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
+
 ### <a name="BKMK_userrating_SyncErrors"></a> userrating_SyncErrors
 
 **Added by**: User Rating Solution
@@ -1894,6 +1938,12 @@ See the [appactionmigration_SyncErrors](appactionmigration.md#BKMK_appactionmigr
 
 See the [appactionrule_SyncErrors](appactionrule.md#BKMK_appactionrule_SyncErrors) one-to-many relationship for the [appactionrule](appactionrule.md) table/entity.
 
+### <a name="BKMK_card_SyncErrors"></a> card_SyncErrors
+
+**Added by**: Power Apps cards Solution
+
+See the [card_SyncErrors](card.md#BKMK_card_SyncErrors) one-to-many relationship for the [card](card.md) table/entity.
+
 ### <a name="BKMK_msdyn_entitylinkchatconfiguration_SyncErrors"></a> msdyn_entitylinkchatconfiguration_SyncErrors
 
 **Added by**: Teams Chat Settings Solution Solution
@@ -1918,17 +1968,41 @@ See the [msdyn_customcontrolextendedsettings_SyncErrors](msdyn_customcontrolexte
 
 See the [msdyn_pmanalysishistory_SyncErrors](msdyn_pmanalysishistory.md#BKMK_msdyn_pmanalysishistory_SyncErrors) one-to-many relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
 
+### <a name="BKMK_msdyn_pmcalendar_SyncErrors"></a> msdyn_pmcalendar_SyncErrors
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmcalendar_SyncErrors](msdyn_pmcalendar.md#BKMK_msdyn_pmcalendar_SyncErrors) one-to-many relationship for the [msdyn_pmcalendar](msdyn_pmcalendar.md) table/entity.
+
+### <a name="BKMK_msdyn_pmcalendarversion_SyncErrors"></a> msdyn_pmcalendarversion_SyncErrors
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmcalendarversion_SyncErrors](msdyn_pmcalendarversion.md#BKMK_msdyn_pmcalendarversion_SyncErrors) one-to-many relationship for the [msdyn_pmcalendarversion](msdyn_pmcalendarversion.md) table/entity.
+
 ### <a name="BKMK_msdyn_pminferredtask_SyncErrors"></a> msdyn_pminferredtask_SyncErrors
 
 **Added by**: Process Mining Solution
 
 See the [msdyn_pminferredtask_SyncErrors](msdyn_pminferredtask.md#BKMK_msdyn_pminferredtask_SyncErrors) one-to-many relationship for the [msdyn_pminferredtask](msdyn_pminferredtask.md) table/entity.
 
+### <a name="BKMK_msdyn_pmprocessextendedmetadataversion_SyncErrors"></a> msdyn_pmprocessextendedmetadataversion_SyncErrors
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmprocessextendedmetadataversion_SyncErrors](msdyn_pmprocessextendedmetadataversion.md#BKMK_msdyn_pmprocessextendedmetadataversion_SyncErrors) one-to-many relationship for the [msdyn_pmprocessextendedmetadataversion](msdyn_pmprocessextendedmetadataversion.md) table/entity.
+
 ### <a name="BKMK_msdyn_pmprocessusersettings_SyncErrors"></a> msdyn_pmprocessusersettings_SyncErrors
 
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmprocessusersettings_SyncErrors](msdyn_pmprocessusersettings.md#BKMK_msdyn_pmprocessusersettings_SyncErrors) one-to-many relationship for the [msdyn_pmprocessusersettings](msdyn_pmprocessusersettings.md) table/entity.
+
+### <a name="BKMK_msdyn_pmprocessversion_SyncErrors"></a> msdyn_pmprocessversion_SyncErrors
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmprocessversion_SyncErrors](msdyn_pmprocessversion.md#BKMK_msdyn_pmprocessversion_SyncErrors) one-to-many relationship for the [msdyn_pmprocessversion](msdyn_pmprocessversion.md) table/entity.
 
 ### <a name="BKMK_msdyn_pmrecording_SyncErrors"></a> msdyn_pmrecording_SyncErrors
 
@@ -1941,6 +2015,12 @@ See the [msdyn_pmrecording_SyncErrors](msdyn_pmrecording.md#BKMK_msdyn_pmrecordi
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmtemplate_SyncErrors](msdyn_pmtemplate.md#BKMK_msdyn_pmtemplate_SyncErrors) one-to-many relationship for the [msdyn_pmtemplate](msdyn_pmtemplate.md) table/entity.
+
+### <a name="BKMK_msdyn_pmview_SyncErrors"></a> msdyn_pmview_SyncErrors
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmview_SyncErrors](msdyn_pmview.md#BKMK_msdyn_pmview_SyncErrors) one-to-many relationship for the [msdyn_pmview](msdyn_pmview.md) table/entity.
 
 ### <a name="BKMK_msdyn_analysiscomponent_SyncErrors"></a> msdyn_analysiscomponent_SyncErrors
 
@@ -1983,6 +2063,24 @@ See the [msdyn_solutionhealthruleargument_SyncErrors](msdyn_solutionhealthrulear
 **Added by**: Power Apps Checker Solution
 
 See the [msdyn_solutionhealthruleset_SyncErrors](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_SyncErrors) one-to-many relationship for the [msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md) table/entity.
+
+### <a name="BKMK_powerbidataset_SyncErrors"></a> powerbidataset_SyncErrors
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbidataset_SyncErrors](powerbidataset.md#BKMK_powerbidataset_SyncErrors) one-to-many relationship for the [powerbidataset](powerbidataset.md) table/entity.
+
+### <a name="BKMK_powerbimashupparameter_SyncErrors"></a> powerbimashupparameter_SyncErrors
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbimashupparameter_SyncErrors](powerbimashupparameter.md#BKMK_powerbimashupparameter_SyncErrors) one-to-many relationship for the [powerbimashupparameter](powerbimashupparameter.md) table/entity.
+
+### <a name="BKMK_powerbireport_SyncErrors"></a> powerbireport_SyncErrors
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbireport_SyncErrors](powerbireport.md#BKMK_powerbireport_SyncErrors) one-to-many relationship for the [powerbireport](powerbireport.md) table/entity.
 
 ### See also
 

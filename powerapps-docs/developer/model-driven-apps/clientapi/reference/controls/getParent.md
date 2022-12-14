@@ -29,7 +29,7 @@ All
 
 ## Return Value
 
-**Type**: [formContext-ui Tab sections](../formContext-ui-tab-sections.md) object
+**Type**: [formContext.ui.tabs section](../formContext-ui-tab-sections.md) object
 
 
 
