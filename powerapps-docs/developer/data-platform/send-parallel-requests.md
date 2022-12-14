@@ -23,62 +23,6 @@ When your application needs to send a large number of requests to Dataverse you 
 > [!NOTE]
 > Sending parallel requests within a plug-in is not supported. More information: [Do not use parallel execution within plug-ins and workflow activities](best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins.md)
 
-## Optimize your connection
-
-When using .NET and sending requests in parallel, apply configuration changes like the following so your requests are not limited by default settings:
-
-```csharp
-// Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
-ThreadPool.SetMinThreads(100, 100);
-// Change max connections from .NET to a remote service default: 2
-System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
-// Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
-System.Net.ServicePointManager.Expect100Continue = false;
-// Can decrease overall transmission overhead but can cause delay in data packet arrival
-System.Net.ServicePointManager.UseNagleAlgorithm = false;
-```
-
-### ThreadPool.SetMinThreads
-
-This sets the minimum number of threads the thread pool creates on demand, as new requests are made, before switching to an algorithm for managing thread creation and destruction.
-
-By default, the minimum number of threads is set to the processor count. You can use `SetMinThreads` to increase the minimum number of threads, such as to temporarily work around issues where some queued work items or tasks block thread pool threads. Those blockages sometimes lead to a situation where all worker or I/O completion threads are blocked (starvation). However, increasing the minimum number of threads might degrade performance in other ways.
-
-The numbers you should use can vary according to the hardware. The numbers you use would be lower for a consumption based Azure function than for code running on a dedicated host with high-end hardware.
-
-More information: <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=fullName>
-
-### System.Net.ServicePointManager settings
-
-With .NET Framework, [ServicePointManager](xref:System.Net.ServicePointManager) is a static class used to create, maintain, and delete instances of the [ServicePoint](xref:System.Net.ServicePoint) class. Use these settings with the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. These settings should also apply when using [HttpClient](xref:System.Net.Http.HttpClient) with Web API in .NET Framework, but with .NET Core Microsoft recommends settings in `HttpClient` instead.
-
-### DefaultConnectionLimit
-
-This value is ultimately limited by the hardware. If it is set too high, it will be throttled by other means. The key point is that it should be raised above the default value, and at least equal to the number of concurrent requests you intend to send.
-
-With .NET Core using `HttpClient`, this is controled by the [HttpClientHandler.MaxConnectionsPerServer](xref:System.Net.Http.HttpClientHandler.MaxConnectionsPerServer) and the default value is [int.MaxValue](xref:System.Int32.MaxValue).
-
-More information:
-
-- <xref:System.Net.ServicePointManager.DefaultConnectionLimit?displayProperty=fullName>
-- [.NET Framework Connection Pool Limits and the new Azure SDK for .NET](https://devblogs.microsoft.com/azure-sdk/net-framework-connection-pool-limits/)
-- [Configuring ServicePointManager for WebJobs](https://github.com/Azure/azure-webjobs-sdk/wiki/ServicePointManager-settings-for-WebJobs)
-- [HttpClientHandler.MaxConnectionsPerServer](xref:System.Net.Http.HttpClientHandler.MaxConnectionsPerServer)
-
-### Expect100Continue
-
-When this property is set to true, the client will wait for a round-trip confirms a connection to the server. For `HttpClient` the default value of [HttpRequestHeaders.ExpectContinue](xref:System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue) is false.
-
-More information:
-
-- <xref:System.Net.ServicePointManager.Expect100Continue?displayProperty=fullName>
-- [100 Continue](https://developer.mozilla.org/docs/Web/HTTP/Status/100)
-
-### UseNagleAlgorithm
-
-The Nagle algorithm is used to reduce network traffic by buffering small packets of data and transmitting them as a single packet. This process is also referred to as "nagling"; it is widely used because it reduces the number of packets transmitted and lowers the overhead per packet.
-
-Setting this to false can decrease overall transmission overhead but can cause delay in data packet arrival. More information: <xref:System.Net.ServicePointManager.UseNagleAlgorithm?displayProperty=fullName>
 
 ## Optimum degree of parallelism (DOP)
 
@@ -151,6 +95,62 @@ builder.ConfigureServices(services =>
 ```
 
 ---
+
+## Optimize your connection
+
+When using .NET and sending requests in parallel, apply configuration changes like the following so your requests are not limited by default settings:
+
+```csharp
+// Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
+ThreadPool.SetMinThreads(100, 100);
+// Change max connections from .NET to a remote service default: 2
+System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
+// Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
+System.Net.ServicePointManager.Expect100Continue = false;
+// Can decrease overall transmission overhead but can cause delay in data packet arrival
+System.Net.ServicePointManager.UseNagleAlgorithm = false;
+```
+### ThreadPool.SetMinThreads
+
+This sets the minimum number of threads the thread pool creates on demand, as new requests are made, before switching to an algorithm for managing thread creation and destruction.
+
+By default, the minimum number of threads is set to the processor count. You can use `SetMinThreads` to increase the minimum number of threads, such as to temporarily work around issues where some queued work items or tasks block thread pool threads. Those blockages sometimes lead to a situation where all worker or I/O completion threads are blocked (starvation). However, increasing the minimum number of threads might degrade performance in other ways.
+
+The numbers you should use can vary according to the hardware. The numbers you use would be lower for a consumption based Azure function than for code running on a dedicated host with high-end hardware.
+
+More information: <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=fullName>
+
+### System.Net.ServicePointManager settings
+
+With .NET Framework, [ServicePointManager](xref:System.Net.ServicePointManager) is a static class used to create, maintain, and delete instances of the [ServicePoint](xref:System.Net.ServicePoint) class. Use these settings with the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. These settings should also apply when using [HttpClient](xref:System.Net.Http.HttpClient) with Web API in .NET Framework, but with .NET Core Microsoft recommends settings in `HttpClient` instead.
+
+### DefaultConnectionLimit
+
+This value is ultimately limited by the hardware. If it is set too high, it will be throttled by other means. The key point is that it should be raised above the default value, and at least equal to the number of concurrent requests you intend to send.
+
+With .NET Core using `HttpClient`, this is controlled by the [HttpClientHandler.MaxConnectionsPerServer](xref:System.Net.Http.HttpClientHandler.MaxConnectionsPerServer) and the default value is [int.MaxValue](xref:System.Int32.MaxValue).
+
+More information:
+
+- <xref:System.Net.ServicePointManager.DefaultConnectionLimit?displayProperty=fullName>
+- [.NET Framework Connection Pool Limits and the new Azure SDK for .NET](https://devblogs.microsoft.com/azure-sdk/net-framework-connection-pool-limits/)
+- [Configuring ServicePointManager for WebJobs](https://github.com/Azure/azure-webjobs-sdk/wiki/ServicePointManager-settings-for-WebJobs)
+- [HttpClientHandler.MaxConnectionsPerServer](xref:System.Net.Http.HttpClientHandler.MaxConnectionsPerServer)
+
+### Expect100Continue
+
+When this property is set to true, the client will wait for a round-trip confirms a connection to the server. For `HttpClient` the default value of [HttpRequestHeaders.ExpectContinue](xref:System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue) is false.
+
+More information:
+
+- <xref:System.Net.ServicePointManager.Expect100Continue?displayProperty=fullName>
+- [100 Continue](https://developer.mozilla.org/docs/Web/HTTP/Status/100)
+
+### UseNagleAlgorithm
+
+The Nagle algorithm is used to reduce network traffic by buffering small packets of data and transmitting them as a single packet. This process is also referred to as "nagling"; it is widely used because it reduces the number of packets transmitted and lowers the overhead per packet. Setting this to false can decrease overall transmission overhead but can cause delay in data packet arrival.
+
+More information: <xref:System.Net.ServicePointManager.UseNagleAlgorithm?displayProperty=fullName>
 
 ## Examples
 
