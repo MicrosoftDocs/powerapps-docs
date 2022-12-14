@@ -154,15 +154,15 @@ builder.ConfigureServices(services =>
 
 The following .NET examples show use of [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) with Dataverse.
 
-# [SDK for .NET](#tab/sdk)
-
-With the Dataverse SDK for .NET, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in both [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) and [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can use the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl).
+### [SDK for .NET](#tab/sdk)
 
 The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfParallelism](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.RecommendedDegreesOfParallelism) property in either `ServiceClient` or  `CrmServiceClient`. You should use this value when setting [ParallelOptions.MaxDegreeOfParallelism](xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism) when you use [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A).
 
-In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
+In this the examples below, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
+### Using ServiceClient with .NET 6 or higher
 
+With .NET 6 or higher you can use the [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) method with the asychronous methods included with [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), such as [CreateAsync](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.CreateAsync%2A)
 
 ```csharp
 /// <summary>
@@ -171,19 +171,54 @@ In this example, the id values of the responses are added to a [ConcurrentBag](x
 /// <param name="serviceClient">The authenticated ServiceClient instance.</param>
 /// <param name="entityList">The list of entities to create.</param>
 /// <returns>The id values of the created records.</returns>
-static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> entityList)
+static async Task<Guid[]> CreateRecordsInParallel(
+    ServiceClient serviceClient, 
+    List<Entity> entityList)
+{
+    ConcurrentBag<Guid> ids = new();
+
+    var parallelOptions = new ParallelOptions()
+    { MaxDegreeOfParallelism = 
+        serviceClient.RecommendedDegreesOfParallelism };
+
+    await Parallel.ForEachAsync(
+        source: entityList,
+        parallelOptions: parallelOptions,
+        async (entity, token) =>
+        {
+            ids.Add(await serviceClient.CreateAsync(entity, token));
+        });
+
+    return ids.ToArray();
+}
+```
+
+### Using CrmServiceClient with .NET Framework
+
+When using .NET Framework, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) allows duplicating an existing connection to Dataverse so that you can use the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A) method.
+
+```csharp
+/// <summary>
+/// Creates records in parallel
+/// </summary>
+/// <param name="serviceClient">The authenticated CrmServiceClient instance.</param>
+/// <param name="entityList">The list of entities to create.</param>
+/// <returns>The id values of the created records.</returns>
+static Guid[] CreateRecordsInParallel(
+    CrmServiceClient crmServiceClient, 
+    List<Entity> entityList)
 {
    ConcurrentBag<Guid> ids = new ConcurrentBag<Guid>();
 
    Parallel.ForEach(entityList,
       new ParallelOptions()
       {
-            MaxDegreeOfParallelism = serviceClient.RecommendedDegreesOfParallelism
+            MaxDegreeOfParallelism = crmServiceClient.RecommendedDegreesOfParallelism
       },
       () =>
       {
-            //Clone the ServiceClient for each thread
-            return serviceClient.Clone();
+            //Clone the CrmServiceClient for each thread
+            return crmServiceClient.Clone();
       },
       (entity, loopState, index, threadLocalSvc) =>
       {
@@ -193,7 +228,7 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
       },
       (threadLocalSvc) =>
       {
-            //Dispose the cloned ServiceClient instance
+            //Dispose the cloned crmServiceClient instance
             threadLocalSvc?.Dispose();
       }
    );
@@ -201,7 +236,7 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
 }
 ```
 
-# [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
 The following static method example shows the use of an authenticated [HttpClient](xref:System.Net.Http.HttpClient) that has been configured with a [BaseAddress Property](xref:System.Net.Http.HttpClient.BaseAddress) set to the Dataverse Web API Uri.
 
