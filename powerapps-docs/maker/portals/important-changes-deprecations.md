@@ -35,7 +35,7 @@ Starting October 2022 with website version 9.4.9.xx, any new site created in Pow
 At launch, users with the system administrator role along with [service admins](/power-platform/admin/use-service-admin-role-manage-tenant) will by default have privilege to change site visibility status (private to public or vice versa). 
 
 > [!Note] 
-> All system administrators being able to change the site visibility will only be for a certain duration after which service admins will need to explicitly specify whether all system administrators are allowed to change site visibility. However, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
+> Beginning February 1st, 2023, service admins need to explicitly specify which system administrators are allowed to change site visibility; however, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
