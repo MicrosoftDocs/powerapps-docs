@@ -50,7 +50,7 @@ More information: <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProp
 
 ### System.Net.ServicePointManager settings
 
-[ServicePointManager](xref:System.Net.ServicePointManager) is a static class used to create, maintain, and delete instances of the [ServicePoint](xref:System.Net.ServicePoint) class. Use these settings with the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. These settings should also apply when using [HttpClient](xref:System.Net.Http.HttpClient) with Web API in .NET Framework. But in .NET Core Microsoft recommends settings in `HttpClient` instead.
+With .NET Framework, [ServicePointManager](xref:System.Net.ServicePointManager) is a static class used to create, maintain, and delete instances of the [ServicePoint](xref:System.Net.ServicePoint) class. Use these settings with the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes. These settings should also apply when using [HttpClient](xref:System.Net.Http.HttpClient) with Web API in .NET Framework. But in .NET Core Microsoft recommends settings in `HttpClient` instead.
 
 ### DefaultConnectionLimit
 
@@ -104,7 +104,7 @@ When sending requests in parallel from your client applcation, you can gain perf
 
 Following are some examples showing how to disable server affinity with .NET.
 
-# [SDK for .NET](#tab/sdk)
+### [SDK for .NET](#tab/sdk)
 
 If you are using the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient)  or [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) classes, add the following to the `AppSettings` node in the `App.config` file.
 
@@ -116,7 +116,7 @@ You can also set the value of the <xref:Microsoft.PowerPlatform.Dataverse.Client
 
 This can also be set using the [ServiceClient(ConnectionOptions, Boolean, ConfigurationOptions)](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.%23ctor%2A#microsoft-powerplatform-dataverse-client-serviceclient-ctor(microsoft-powerplatform-dataverse-client-model-connectionoptions-system-boolean-microsoft-powerplatform-dataverse-client-model-configurationoptions)) constructor using the [ConfigurationOptions.EnableAffinityCookie](xref:Microsoft.PowerPlatform.Dataverse.Client.Model.ConfigurationOptions.EnableAffinityCookie) property.
 
-# [Web API](#tab/webapi)
+### [Web API](#tab/webapi)
 
 For .NET applications using [HttpClient](xref:System.Net.Http.HttpClient) with the Web API, the following code shows how to disable cookies using a custom [HttpMessageHandler](xref:System.Net.Http.HttpMessageHandler).
 
