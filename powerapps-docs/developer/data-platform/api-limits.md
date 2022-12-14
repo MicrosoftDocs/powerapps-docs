@@ -1,7 +1,7 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 12/07/2022
+ms.date: 12/18/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: divka78
@@ -175,7 +175,7 @@ The following table describes the default service protection API limits enforced
 |--|--|--|
 |Number of requests|The cumulative number of requests made by the user.|6000 within the 5 minute sliding window|
 |Execution time|The combined execution time of all requests made by the user.| 20 minutes (1200 seconds) within the 5 minute sliding window|
-|Number of concurrent requests|The number of concurrent requests made by the user|52|
+|Number of concurrent requests|The number of concurrent requests made by the user|52 or higher|
 
 > [!IMPORTANT]
 > These limits are subject to change and may vary between different environments. These numbers represent default values and are provided to give you some idea of what values you can expect.
@@ -226,9 +226,9 @@ This limit tracks the number of concurrent requests.
 |------------|------------|-------------------------------------|
 |`-2147015898`|`0x80072326`|`Number of concurrent requests exceeded the limit of 52.`|
 
-Client applications are not limited to sending requests individually in succession. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously. The server can detect when it is responding to multiple requests from the same user simultaneously. If this number of concurrent requests is exceeded, this error will be thrown.
+Client applications are not limited to sending individual requests sequentially. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously. The server can detect when it is responding to multiple requests from the same user simultaneously. If this number of concurrent requests is exceeded, this error will be thrown. The limit may be higher than 52 in some cases.
 
-Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control. When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed 52. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
+Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control. When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed the limit. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
 
 More information: [Send parallel requests](send-parallel-requests.md)
 
