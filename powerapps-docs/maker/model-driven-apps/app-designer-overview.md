@@ -36,6 +36,7 @@ The app designer interface has the following areas:
    - **Back**. Closes the model-driven app designer and returns you to the Power Apps website (make.powerapps.com).
    - **New page**. Creates a new page for one or more table forms and views or table dashboards for the app.
    - **Settings**. Opens the app properties such as name and description. <!-- and whether the app can be used offline-->
+   - **Edit form**. Launches the Form Designer to edit the default form shown in the app preview.
    - **Switch to classic**. Opens the app in the classic app designer.
    - **Save**. Saves the app.
    - **Publish**. Makes the changes made available to other users.
@@ -50,7 +51,7 @@ The app designer interface has the following areas:
    - **Data**. Provides a view of all available tables that are currently used within your app and a view of all tables that are available in your environment.
    - **Automation**. Displays business process flows that are a part of this app. You can add, remove, or create new business process flows to the app.
 
-4. Property pane – Displays properties of the selected component and also allows you to make changes.
+4. Property pane – Displays properties of the selected component and associated forms and views with the selected entity. Clicking on the pencil or elipsis launches the Form or View Designer. 
 
 5. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
 
@@ -68,8 +69,7 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 1. **Show Pinned**. Enabled by default. When selected, displays the pages that have been pinned. App users select the push-pin icon next to a record listed under **Recent** to add it to their pinned rows.
 1. **Enable collapsible groups**. Disabled by default. When selected, subareas displayed under groups in the site map can be expanded or collapsed.
 1. **Enable Areas**. Disabled by default. When selected, new areas can be added to the app. For apps with existing multiple areas, this setting is enabled by default. You can't disable this setting while the app has multiple areas.
-1. **Enable web resources**. Disabled by default. When selected, web resources can be added to the app as a type of subarea. More information: [Add a web resource to an app (preview)](create-edit-web-resources.md#add-a-web-resource-to-an-app-preview).
-1. **Enable URLs**. Disabled by default. When selected, URLs can be added to the app as a type of subarea. More information: [Add a URL to an app](app-navigation.md#add-a-url-to-an-app)
+
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
