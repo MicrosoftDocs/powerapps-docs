@@ -162,7 +162,7 @@ The `x-ms-dop-hint` response value is available via the [RecommendedDegreesOfPar
 
 In this example, the id values of the responses are added to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of Guids. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. The order of the Guids returned by this method cannot be expected to match the order of the items sent in the `entityList` parameter.
 
-#### [.NET Framework](#tab/sdk/dotnetfullframework)
+#### [.NET Framework](#tab/dotnetfullframework/sdk)
 
 ```csharp
 /// <summary>
@@ -201,10 +201,11 @@ static Guid[] CreateRecordsInParallel(ServiceClient serviceClient, List<Entity> 
 }
 ```
 
-#### [.NET Core](#tab/sdk/dotnetcore)
+#### [.NET Core](#tab/dotnetcore/sdk)
 
 .net core sample goes here
 
+---
 
 ### [Web API](#tab/webapi)
 
