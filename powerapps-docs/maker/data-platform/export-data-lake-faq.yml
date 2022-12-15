@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 02/10/2021
+  ms.date: 12/15/2022
   ms.author: sabinn
   ms.reviewer: 
   contributors: JasonHQX
@@ -14,9 +14,9 @@ summary: This article provides information on frequently asked questions about e
 sections:
 - name: General
   questions:
-   - question: Can I create, update or delete the data file in the Azure storage manully?
+   - question: Can I create, update or delete the data file in the Azure storage manually?
      answer: |
-        Data files should not be modified by customer and no customer files should be placed in the data folders. 
+        Data files should not be modified by a customer and no customer files should be placed in the data folders. 
    - question: How can I access my table relationships?
      answer: |
         To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a preexisting link.
