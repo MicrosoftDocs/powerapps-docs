@@ -7,12 +7,12 @@
     },
     {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/controls/removeOnPostSave.md",
-      "redirect_url": "../../formContext-data-entity/removeOnPostSave",
+      "redirect_url": "../formContext-data-entity/removeonpostave",
       "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/developer/model-driven-apps/clientapi/reference/controls/addOnPostSave.md",
-      "redirect_url": "../../formContext-data-entity/addOnPostSave",
+      "redirect_url": "../formcontext-data-entity/addonpostsave",
       "redirect_document_id": false
     },
     {

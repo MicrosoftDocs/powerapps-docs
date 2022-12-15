@@ -71,7 +71,7 @@ There are different entry points for creating cloud flows. The following table s
 | Create a cloud flow from legacy package import | No |
 
 > [!IMPORTANT]
-> - Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. Workaround: create using a supported entry point, such as creating directly in the Power Automate portal.
+> Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. Workaround: create using a supported entry point, such as creating directly in the Power Automate portal.
 
 ## Enable the feature
 
