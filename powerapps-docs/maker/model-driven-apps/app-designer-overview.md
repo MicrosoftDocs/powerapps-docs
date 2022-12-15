@@ -2,7 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 11/09/2022
+ms.date: 12/15/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -36,7 +36,7 @@ The app designer interface has the following areas:
    - **Back**. Closes the model-driven app designer and returns you to the Power Apps website (make.powerapps.com).
    - **New page**. Creates a new page for one or more table forms and views or table dashboards for the app.
    - **Settings**. Opens the app properties such as name and description. <!-- and whether the app can be used offline-->
-   - **Edit form**. Launches the Form Designer to edit the default form shown in the app preview.
+   - **Edit form**. Opens the form designer to edit the default form shown in the app preview.
    - **Switch to classic**. Opens the app in the classic app designer.
    - **Save**. Saves the app.
    - **Publish**. Makes the changes made available to other users.
@@ -51,7 +51,7 @@ The app designer interface has the following areas:
    - **Data**. Provides a view of all available tables that are currently used within your app and a view of all tables that are available in your environment.
    - **Automation**. Displays business process flows that are a part of this app. You can add, remove, or create new business process flows to the app.
 
-4. Property pane – Displays properties of the selected component and associated forms and views with the selected entity. Clicking on the pencil or elipsis launches the Form or View Designer. 
+4. Property pane – Displays properties of the selected component and associated forms and views with the selected entity. Selecting the pencil or elipsis opens the form or view designer. 
 
 5. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
 
