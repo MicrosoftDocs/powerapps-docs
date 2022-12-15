@@ -76,10 +76,6 @@ To create a new project:
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
-1. After npm install, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
-   ```
-   npm run refreshTypes
-   ```
  
    
 ## Implementing manifest
@@ -103,7 +99,7 @@ Make changes to the predefined manifest file, as shown here:
       <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of the column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+1. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of the column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
@@ -116,7 +112,7 @@ Make changes to the predefined manifest file, as shown here:
      <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
      ```
 
-3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
+1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
 
    - **code**: Refers to the path where all the resource files are located.
 
@@ -147,7 +143,12 @@ Make changes to the predefined manifest file, as shown here:
      </manifest>
      ```
 
-4. Save the changes to the `ControlManifest.Input.xml` file.
+1. Save the changes to the `ControlManifest.Input.xml` file.
+
+1. After editing the manifest, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+   ```
+   npm run refreshTypes
+   ```
 
 ## Implementing component logic
 
