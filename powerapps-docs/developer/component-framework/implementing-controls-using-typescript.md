@@ -3,7 +3,7 @@ title: "Create your first component using Power Apps Component Framework in Micr
 description: "Learn how to implement code components using Power Apps component framework"
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 05/27/2022
+ms.date: 12/15/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -65,7 +65,7 @@ To create a new project:
 1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
-    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
+    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field --run-npm-install
    ```
 
 1. The above command also runs the `npm install` command for you to setup the project build tools.

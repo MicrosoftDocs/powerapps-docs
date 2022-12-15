@@ -2,9 +2,8 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 09/16/2022
+ms.date: 12/15/2022
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -402,8 +401,6 @@ The activity rollup type can be configured for timelines on forms for the accoun
 More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
 
 ![Activity rollup type.](media\activity-rollup-type.png "Activity rollup type")
-
-
   
 ### Timeline performance
 
@@ -591,6 +588,10 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
 1.	Enter the desired size limit for attachments, and then select **Save**.
 
+## Known issues
+  
+- When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+> This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
 
 ### See also
 
