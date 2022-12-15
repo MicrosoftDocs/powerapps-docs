@@ -126,18 +126,17 @@ To add the license information from the CSV files (created above) to the solutio
 
 1. To create the solution zip file, execute the MSBuild command shown below from the project folder. MSBuild is included in Visual Studio installations.
 
-  ```msbuild
-  msbuild /t:build /restore -p:Configuration=Release
-  ```
+    ```msbuild
+    msbuild /t:build /restore -p:Configuration=Release
+    ```
 
-  The resulting solution zip file can be found in the bin/Release folder of the project.
+    The resulting solution zip file can be found in the bin/Release folder of the project.
 
 1. To validate whether the licensing information is included, after the solution is built, look for the licensing information in your solution `customizations.xml` file.
 
 1. Import the unmanaged solution you just built into an environment, and then export it as a managed solution.  
-  You may delete the imported solution from the environment afterwards since it is no longer needed.
-  More information: [Import solutions](../../maker/data-platform/import-update-export-solutions.md)
-, [Export solutions](../../maker/data-platform/export-solutions.md)
+
+    You may delete the imported solution from the environment afterwards since it is no longer needed. More information: [Import solutions](../../maker/data-platform/import-update-export-solutions.md), [Export solutions](../../maker/data-platform/export-solutions.md)
 
 1. To create the AppSource package, see [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
