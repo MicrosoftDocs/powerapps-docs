@@ -142,4 +142,5 @@ To add the license information from the CSV files (created above) to the solutio
 
 ## See also
 
+[Step 2: Create a managed solution for your app](create-solution-app-appsource.md)  
 [Appendix: App certification checklist](appendix-app-certification-checklist.md)
