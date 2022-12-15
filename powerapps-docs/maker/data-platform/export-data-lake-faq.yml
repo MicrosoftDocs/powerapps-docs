@@ -52,6 +52,9 @@ sections:
    - question: When do I use Append only mode for a historical view of changes?
      answer: |
          Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
+   - question: Why do I see duplicated version numbers when I export data using Append only mode?   
+     answer: |
+         For append only mode, if Azure Synapse Link for Dataverse does not get an acknowledgement from the Azure data lake that the data has been committed due to any reason such as network delays, Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
    - question: Which Dataverse tables are not supported for export?
      answer: |
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
