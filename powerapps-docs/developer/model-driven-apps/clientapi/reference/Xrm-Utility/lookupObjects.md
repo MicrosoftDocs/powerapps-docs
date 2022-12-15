@@ -1,8 +1,8 @@
 ---
 title: "lookupObjects (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the lookupObjects method.
-author: adrianorth
-ms.author: aorth
+author: chmoncay
+ms.author: chmoncay
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
