@@ -34,6 +34,9 @@ sections:
         Deleting a row is handled differently based on which data write options you choose:
         - In-place update: This is the default mode and when you delete a table row in this mode, the row is also deleted from the corresponding data partition in the Azure Data Lake. In other words, data is hard deleted from the destination. 
         - Append-only: In this mode, when a Dataverse table row is deleted, it is not hard deleted from the destination. Instead, a row is added and set as isDeleted=True to the file in the corresponding data partition in Azure Data Lake.
+   - question:  Why the Model.json file increases/changes the lengths for the data types and does not keep what is defined in the Dataverse?
+     answer: |
+        Model.json keeps Database length for the fields size. Dataverse has a concept of Database length for each field. If you create a field with a field size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in DV. It does that by keeping DBLength to 200 and MaxLength to 100. What you see in Model.json is DBLength and if you use that for downstream processes you will never provision lesser space for your Dataverse fields.
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
