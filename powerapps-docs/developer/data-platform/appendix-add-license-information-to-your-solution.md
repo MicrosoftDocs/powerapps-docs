@@ -1,7 +1,7 @@
 ---
 title: "Appendix: Add licensing information to your solution | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This article outlines the required steps to take license service IDs created in Partner Center and add them to the table definitions of your Dataverse solution." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/01/2022
+ms.date: 12/14/2022
 author: mikkelsen2000
 ms.author: pemikkel
 ms.reviewer: pehecke
@@ -53,6 +53,8 @@ Use Microsoft Power Platform CLI commands to clone the solution. To clone a solu
     pac solution clone --name <your solution name> --outputDirectory <your chosen output directory>
     ```
 
+You should now have a solution project in the specified output folder. 
+
 ## Create licensing files
 
 To add licensing information to your solution, you need to create two `.CSV` files using the text editor of your choice. The following are the two files that you need to create:
@@ -93,7 +95,6 @@ The plan definition file must include the following columns laid out in the form
 
 **More info URL:** This is a URL where you would like to direct users to get more information about your solution, in the event they run into a license check error.
 
-
 ### Plan mapping file
  
 The plan mapping file must include the following columns laid out in the format shown in the example below: 
@@ -104,8 +105,6 @@ The plan mapping file must include the following columns laid out in the format 
 **Service ID:** This is created automatically when you create a plan in the Partner Center as part of the offer creation. Copy it from partner center into the plan definition file. More information: [Create plans in Partner Center](/azure/marketplace/dynamics-365-customer-engage-plans).
 
 **Component name:** The solution component that you would like to restrict access to using license management. This name must match the name of the component in the **Name** column in the Power Apps solution viewer (image above).
-
-
 
 Once you have created your own licensing CSV files, the next step is to add the information from these files to your solution. 
 
@@ -125,9 +124,21 @@ To add the license information from the CSV files (created above) to the solutio
  
 ## Build the solution and create an AppSource package
 
-1. To build a solution, see [Create a managed solution for your app](/powerapps/developer/data-platform/create-solution-app-appsource). 
+1. To create the solution zip file, execute the MSBuild command shown below from the project folder. MSBuild is included in Visual Studio installations.
+
+  ```msbuild
+  msbuild /t:build /restore -p:Configuration=Release
+  ```
+
+  The resulting solution zip file can be found in the bin/Release folder of the project.
 
 1. To validate whether the licensing information is included, after the solution is built, look for the licensing information in your solution `customizations.xml` file.
+
+1. Import the unmanaged solution you just built into an environment, and then export it as a managed solution.  
+  You may delete the imported solution from the environment afterwards since it is no longer needed.
+  More information: [Import solutions](../../maker/data-platform/import-update-export-solutions.md)
+, [Export solutions](../../maker/data-platform/export-solutions.md)
+
 1. To create the AppSource package, see [Create an AppSource package for your app](/powerapps/developer/data-platform/create-package-app-appsource).
 
 ## See also
