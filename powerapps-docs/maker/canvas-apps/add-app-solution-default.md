@@ -95,8 +95,14 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 - By default, this feature saves all canvas apps to the default solution named **Common Data Services Default Solution** published by **Microsoft Dataverse Default Publisher**. However, we recommend that you use a non-default solution for canvas apps. To learn about adding existing canvas apps to solutions, see [Add an existing canvas app to a solution](add-app-solution.md#add-an-existing-canvas-app-to-a-solution).
 - When you toggle one of the feature switches in the Power Platform admin center, the Dataverse properties `enablecanvasappsinsolutionsbydefault` or 'enableFlowsInSolutionByDefault' in the organization table are updated.  The values can be reviewed using the following sample ODATA snippet: `[org URI]/api/data/v9.0/organizations`. More information: [Organization table reference](/power-apps/developer/data-platform/reference/entities/organization)
 - If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
-- Monitor > Cloud flow activity page does not support solution cloud flows.
-- [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing are not updated for solution cloud flows.
 - Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back. 
+
+## Known issues
+
+- Monitor > Cloud flow activity page does not currently support solution cloud flows.
+- [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing are not updated for solution cloud flows.
+- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) does not return solution cloud flows that have not previously been turned on (published) since the identifier returned is the Logic Apps ID. In the future, this API will be updated to return the Workflow ID as the identifier for solution cloud flows so all solution cloud flows can be returned.
+- The [List Flows API](/connectors/flowmanagement/#list-my-flows) does not return any solution cloud flows. In the future, this will be updated to return solution cloud flows when the [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) is updated.
+
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
