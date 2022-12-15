@@ -94,17 +94,31 @@ Make changes to the predefined manifest file, as shown here:
    - **control-type**: The code component type. Only *standard* types of code components are supported.
 
      ```XML
-      <?xml version="1.0" encoding="utf-8" ?>
-      <manifest>
+     <?xml version="1.0" encoding="utf-8" ?>
+     <manifest>
       <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
+        <!-- TODO: Add type-group, property, and resources elements here -->
+      </control>
+     </manifest>
      ```
 
-1. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of the column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` in the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
+
+     ```XML
+     <type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Currency</type>
+      <type>FP</type>
+      <type>Decimal</type>
+     </type-group>
+     ```
+
+1. Add the [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.  Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
-   - **description-name-key**: Description of the property that is displayed on the UI. 
-   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type columns. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+   - **description-name-key**: Description of the property that is displayed on the UI.
+   - **of-type-group**: Use the `of-type-group` attribute when you want refer to the name of a specific type group. Here, we are referring to the `type-group` named `numbers` created in the previous step.
    - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
    - **required**: Defines whether the property is required.
 
@@ -122,7 +136,8 @@ Make changes to the predefined manifest file, as shown here:
         <css path="css/LinearInputControl.css" order="1" />
       </resources>
       ```
-      The overall manifest file should look something like this: 
+
+      The completed manifest file should look like this: 
 
      ```XML
      <?xml version="1.0" encoding="utf-8" ?>
@@ -145,6 +160,7 @@ Make changes to the predefined manifest file, as shown here:
 
 1. Save the changes to the `ControlManifest.Input.xml` file.
 1. After making changes to the manifest, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+
    ```
    npm run refreshTypes
    ```
