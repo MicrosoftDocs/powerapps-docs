@@ -65,7 +65,7 @@ To create a new project:
 1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
-    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
+    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field --run-npm-install
    ```
 
 1. The above command also runs the `npm install` command for you to setup the project build tools.
@@ -96,8 +96,13 @@ Make changes to the predefined manifest file, as shown here:
      ```XML
      <?xml version="1.0" encoding="utf-8" ?>
      <manifest>
-      <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
-        <!-- TODO: Add type-group, property, and resources elements here -->
+      <control namespace="SampleNamespace"
+         constructor="LinearInputControl"
+         version="1.1.0"
+         display-name-key="LinearInputControl_Display_Key"
+         description-key="LinearInputControl_Desc_Key"
+         control-type="standard">
+         <!-- TODO: Add type-group, property, and resources elements here -->
       </control>
      </manifest>
      ```
@@ -123,7 +128,12 @@ Make changes to the predefined manifest file, as shown here:
    - **required**: Defines whether the property is required.
 
      ```XML
-     <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+     <property name="controlValue"
+      display-name-key="controlValue_Display_Key"
+      description-key="controlValue_Desc_Key"
+      of-type-group="numbers"
+      usage="bound"
+      required="true" />
      ```
 
 1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
@@ -132,30 +142,44 @@ Make changes to the predefined manifest file, as shown here:
 
       ```XML
       <resources>
-        <code path="index.ts" order="1" />
-        <css path="css/LinearInputControl.css" order="1" />
+       <code path="index.ts"
+            order="1" />
+       <css path="css/LinearInputControl.css"
+            order="1" />
       </resources>
       ```
 
       The completed manifest file should look like this: 
 
      ```XML
-     <?xml version="1.0" encoding="utf-8" ?>
-     <manifest>
-       <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
-           <type-group name="numbers">
-              <type>Whole.None</type>
-              <type>Currency</type>
-              <type>FP</type>
-              <type>Decimal</type>
-           </type-group>
-           <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-         <resources>
-           <code path="index.ts" order="1" />
-           <css path="css/LinearInputControl.css" order="1" />
-         </resources>
-       </control>
-     </manifest>
+      <?xml version="1.0" encoding="utf-8" ?>
+      <manifest>
+         <control namespace="SampleNamespace"
+            constructor="LinearInputControl"
+            version="1.1.0"
+            display-name-key="LinearInputControl_Display_Key"
+            description-key="LinearInputControl_Desc_Key"
+            control-type="standard">
+            <type-group name="numbers">
+               <type>Whole.None</type>
+               <type>Currency</type>
+               <type>FP</type>
+               <type>Decimal</type>
+            </type-group>
+            <property name="controlValue"
+               display-name-key="controlValue_Display_Key"
+               description-key="controlValue_Desc_Key"
+               of-type-group="numbers"
+               usage="bound"
+               required="true" />
+            <resources>
+               <code path="index.ts"
+                  order="1" />
+               <css path="css/LinearInputControl.css"
+                  order="1" />
+            </resources>
+         </control>
+      </manifest>
      ```
 
 1. Save the changes to the `ControlManifest.Input.xml` file.
