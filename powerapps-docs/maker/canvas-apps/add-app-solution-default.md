@@ -101,7 +101,7 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 
 - Monitor > Cloud flow activity page does not currently support solution cloud flows.
 - [Audit log events for cloud flow permissions](/power-platform/admin/logging-power-automate#see-audited-events) that provide visibility into sharing are not updated for solution cloud flows.
-- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) does not return solution cloud flows that have not previously been turned on (published) since the identifier returned is the Logic Apps ID. In the future, this API will be updated to return the Workflow ID as the identifier for solution cloud flows so all solution cloud flows can be returned.
+- The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) does not return solution cloud flows that have not previously been turned on (published) since the identifier returned is the Logic Apps ID and unpublished flows don't yet have a Logic Apps ID. In the future, this API will be updated to return all solution cloud flows.
 - The [List Flows API](/connectors/flowmanagement/#list-my-flows) does not return any solution cloud flows. In the future, this will be updated to return solution cloud flows when the [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) is updated.
 
 
