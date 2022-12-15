@@ -34,6 +34,9 @@ When creating an app, remember to optimize the app to run on the lowest-specific
 > [!NOTE]
 > Since app restarts are caused by the operating system restricting the amount of memory and processing an app can do, it might take a combination of the mitigations suggested below to minimize app restarts. The more memory and processing can be reduced - both in total and at once - the less likely an app restart will be.
 
+> [!TIP]
+> You can [connect a mobile app session to Monitor](../maker/monitor-canvasapps.md#for-apps-running-on-power-apps-mobile-preview) to see where your app is doing heavy processing or memory-intensive operations. Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs.
+
 | Problem | Root Cause | Mitigation |
 |---------|---------|---------|
 | App restarts when loading a specific screen | If a specific screen is running too many formulas at once, the app can have too much processing and be restarted by the operating system. | Limit the number of controls on a screen and the number of formulas being run when the screen is loaded - which might require splitting up screens. <br><br> Avoid control dependency between screens. <br><br> Prevent the user from taking action during high-processing moments (e.g. when a large gallery with multiple filters / lookups is loading). <br><br> Consider using named formulas. <br><br> Consider using the 'Delayed Load' app setting. |
