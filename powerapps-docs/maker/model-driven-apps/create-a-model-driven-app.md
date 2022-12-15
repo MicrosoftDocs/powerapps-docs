@@ -70,7 +70,7 @@ Next, you add a new page to the model-driven app.
 1. Select **Contact views** to display the table views and charts right pane:
    - To remove a view, under **In this app** next to the view your want to remove select **...** > **Remove**. 
    - To add a view, under **Not in this app** next to the view you want to add select **...** > **+ Add**.
-   - To edit a view, next to the view select **...** > **Edit** or **Edit in a new tab**.
+   - To edit a view, next to the view select **...** > **Edit** or **Edit in new tab**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 
