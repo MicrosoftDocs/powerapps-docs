@@ -26,7 +26,7 @@ This section shows you how to manage cards using security roles.
 
 Cards are stored as rows in Dataverse within the **Card** table. Administrators can use [security roles to control who can create, read, and update cards](/power-platform/admin/wp-security-cds#tablerecord-ownership).
 
-For example, if the user is only assigned to a security role that does not have permission to create rows in the **Card** table, then the user will not be able to create cards.
+For example, if the user is only assigned to a security role that does not have permission to create rows in the **Card** table, then the user won't be able to create cards.
 
 Note that a user will still be able to receive and use cards sent in Teams, regardless of the security role assigned to the user, as those cards are accessed by the Cards for Power Apps service.
 
@@ -57,4 +57,4 @@ This section shows you how to delete a card.
 
 ### Delete a card as the administrator
 
-If the owner of an app is unavailable, it is currently not possible for an administrator, such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin to delete a card. We are working on enabling this capability.
+If the owner of an app is unavailable, it is currently not possible for an administrator, such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin to delete a card. We're working on enabling this capability.
