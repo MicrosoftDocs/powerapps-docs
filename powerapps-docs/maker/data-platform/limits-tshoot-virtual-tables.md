@@ -18,10 +18,28 @@ The following is a list of known limitations for virtual tables created using th
 
 ## General
 
+- The table or list used must include at least one string field to be used as the primary field, and one GUID field. Without these the virtual table can't be created and an error will be generated during the table details retrieval stage.
+- Dataverse can only create columns that include data types compatible with Dataverse. This includes the following data types:
+   - String
+   - Multiline text (memo)
+   - Whole Number/Integer
+   - Decimal
+   - Float
+   - Date/time
+   - Yes/No (boolean)
+   - Choices (multi-value select)
+   - Hyperlink/Url
+   - Lookup
+- Data types not supported for virtual tables:
+   - File and attachments
+   - Image
 - Maximum length of characters allowed for a text column in a virtual table is 4000 characters. If the source table has a maximum character limit greater than this value, any create/update operation exceeding the max character limit will result in a validation error, and the operation will fail.
-- Virtual table queries are limited to return 250 records. If you've a 1:N or N:N relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
+- Virtual table queries are limited to return 250 records. If you've a 1:N or N custom multi-table (polymorphic) relationship with a virtual table, any query exceeding this limit will fail and provide an error. Use filtering in your query to reduce the record set as a workaround to this limitation.
 - Audit functionality isn't available for Virtual Tables, this is because Dataverse can only perform and store audit data for locally stored data.
-- Rollups can't be calculated for virtual tables, this is because rollups are a server side calculation in Dataverse, which requires the data to be stored locally.
+- Rollups and calculated fields can't be calculated for virtual tables. This is because rollups are a server side calculation in Dataverse, which requires the data to be stored locally.
+- The **AAD User** virtual table provided by Microsoft only allows read access.
+- Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This is because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse an error will be provided indicating the record can't be saved because it exceeds the maximum size.
+
 
 ## For each data source
 
@@ -31,9 +49,22 @@ The following are limitations for each data source.
 
 - SQL data type bigint columns in the source table will be mapped as a decimal data type in Dataverse virtual tables. When platform support is available for bigint mapping to a whole number, previously created columns in the virtual table will need to be deleted, and new columns should be created.
 - SQL Server tables without primary keys: Any non-string field can be selected as the primary key. The virtual table should be created successfully. RetrieveMultiple will work, the other operations will fail with the following error message (coming from SQL connector): "APIM request wasn't successful: BadRequest: No primary key exists in table".
+- SQL views can be used to create a virtual table but they will only provide read operations.
 - SQL Server tables with a string primary key: The SQL string primary key will be the only option available for the virtual table primary key. The virtual table creation will succeed, but fail at runtime with this error: "String primary keys are supported only if they can be parsed as GUID". SQL Server string primary keys are supported only if the values can be parsed as GUID.
 - SQL Server tables without non-primary key string fields: The primary field list will be empty and the user won't be able to create the virtual table. At least one non-primary key string field is required.
-- SQL Server Connector Limitations: see [SQL Server connector reference](/connectors/sql/).
+- For SQL Server Connector limitations, go to [SQL Server connector reference](/connectors/sql/).
+- •	The following column types cannot be included in a virtual table at this time:
+o	Time
+o	Datetime2
+o	Image
+o	Geometry
+o	Geography
+o	Cursor
+o	HierarchyID
+o	XML
+o	RowVersion
+•o	Sqlvariant
+
 
 # [Microsoft Excel Online (Business)](#tab/excel)
 

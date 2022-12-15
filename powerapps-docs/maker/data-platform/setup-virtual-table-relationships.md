@@ -8,10 +8,9 @@ ms.topic: conceptual
 ms.date: 10/28/2022
 ms.custom: template-concept
 ---
-
 # Setting up a virtual table relationship
 
-Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and N:N relationships. Relationships can be established between:
+Virtual tables are  enabled for relationships. You can set up 1:N, N:1, and custom multi-table (polymorphic) relationships. Relationships can be established between:
 
 - Local tables in Dataverse and virtual tables.
 - Virtual tables and other virtual tables from the same provider, for example SQL->SQL.
@@ -56,10 +55,9 @@ be added to forms and views to see all associated accounts for each of the servi
   > [!NOTE]
   > You will have to edit the forms and views for this table to include the lookup column and other required columns prior to operation on the virtual table.
 
-## Tips
+## Tip
 
 - The **Primary Key** column should be included in the create form if you didn't set up the column to increment during the design of the underlying source table automatically. You'll have to enter a valid value in the primary key column for an insert operation to succeed.
-- If **Entity Catalog** creation takes a long time, you can check the job completion status by navigating to **Settings -> System Jobs** view.
 
 ## Next steps
 
