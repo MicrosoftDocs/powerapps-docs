@@ -4,7 +4,7 @@ description: Learn about device platform and web browser requirements, limits, a
 author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 12/02/2022
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
   - alaug
   - amchern

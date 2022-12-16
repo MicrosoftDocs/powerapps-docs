@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/25/2022
 ms.subservice: teams
 ms.author: mabolan
@@ -17,7 +17,7 @@ search.app:
 contributors:
   - alaug
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 # Embed a canvas app as personal app in Teams
 

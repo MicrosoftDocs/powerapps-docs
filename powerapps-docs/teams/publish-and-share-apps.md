@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 04/07/2021
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ---
 
 # Publish your app in Teams

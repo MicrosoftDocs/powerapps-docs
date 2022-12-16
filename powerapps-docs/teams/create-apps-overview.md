@@ -11,7 +11,7 @@ ms.author: kvivek
 ms.reviewer: kvivek
 contributors:
   - kvivek
-  - tapanm-msft
+  - mduelae
 ---
 # Create apps in Microsoft Teams by using Power Apps
 

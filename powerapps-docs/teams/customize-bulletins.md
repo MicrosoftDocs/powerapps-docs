@@ -8,11 +8,11 @@ ms.custom:
 ms.subservice: teams
 ms.date: 07/13/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
   - sbahl10
 ---
 

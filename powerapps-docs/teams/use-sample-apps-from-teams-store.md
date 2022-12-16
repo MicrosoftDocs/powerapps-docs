@@ -8,9 +8,9 @@ ms.custom: intro-internal
 ms.date: 10/04/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Use sample apps from the Microsoft Teams store
