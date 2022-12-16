@@ -54,6 +54,7 @@ The table below describes how rows are handled in the lake against CUD events fo
 
 > [!NOTE]
 > For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a as a new row in the lake and the `isDeleted` column is set to True.
+> Dirty read(**ALOW_INCONSISTENT_READ**) for serverless is enabled for Append only mode. **ALOW_INCONSISTENT_READS** means that user is able to read the files that can be constantly modified while the SELECT query is running. Results will be consistent and equivalent to reading a snapshot of the file. (It is not equivalent to db snapshot isolation because of the different snapshot generation time.)
 
 Here are some more details on when to use either of the options.
 
