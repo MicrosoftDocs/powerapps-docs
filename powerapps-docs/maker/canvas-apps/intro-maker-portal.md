@@ -13,6 +13,10 @@ search.audienceType:
   - maker, admin
 search.app: 
   - PowerApps
+contributors:
+  - mduelae
+  - alaug
+  - Mattp123
 ---
 
 

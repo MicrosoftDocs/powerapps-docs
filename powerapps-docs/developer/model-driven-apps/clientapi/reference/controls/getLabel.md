@@ -1,8 +1,8 @@
 ---
 title: control.getLabel (Client API reference)
 description: Includes description and supported parameters for the control.getLabel method.
-author: HemantGaur
-ms.author: hemantg
+author: chmoncay
+ms.author: chmoncay
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
