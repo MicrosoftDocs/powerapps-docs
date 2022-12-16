@@ -106,7 +106,6 @@ Watch a short video showing how to create a virtual table with the SharePoint vi
    :::image type="content" source="media/ve-select-datasource.png" alt-text="Select an existing datasource or create one":::
 1. You're directed to a new tab in your browser. Select your authentication method. Depending on the authentication method selected, you'll be asked to provide credential information required to create the connection.
 
-
 <a name="SQL-or-SharePoint"></a>
 
 # [SQL Server](#tab/sql)
