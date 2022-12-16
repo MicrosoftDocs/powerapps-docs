@@ -18,6 +18,9 @@ contributors:
 
 In this article, learn about the frequently asked questions and the answers about using the sample apps available in the Teams store.
 
+> [!IMPORTANT]
+> For any issues, feedback, support, or changes related to sample apps, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
+
 ## When I try to install a sample app, I get an error that the app is already in the team.
 
 You may see the following error when you try to install a sample app in a team that already has the app installed, but you’re not the app owner, or the team owner.
