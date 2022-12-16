@@ -49,9 +49,15 @@ sections:
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
-   - question: When do I use Append only mode for a historical view of changes?
+   - question: What is append only mode and what is the difference betwwen append only and in-place update mode?
+     answer: |
+        In append only mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. For more information: [Advanced Configuration Options in Azure Synapse Link](azure-synapse-link-advanced-configuration.md)
+   - question: When do I use append only mode for a historical view of changes?
      answer: |
          Append only mode is the recommended option for writing Dataverse table data to the lake, especially when the data volumes are high within a partition with frequently changing data. Again, this is a commonly used and highly recommended option for enterprise customers. Additionally, you can choose to use this mode for scenarios where the intent is to incrementally review changes from Dataverse and process the changes for ETL, AI, and ML scenarios. Append only mode provides a history of changes, instead of the latest change or in place update, and enables several time series from AI scenarios, such as prediction or forecasting analytics based on historical values. 
+   - question: How do I retrieve the most up-to-date row of each record and exclude deleted rows when I export data in append only mode?
+     answer: |
+        In append only mode, you should identify the latest version of record with the same id using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on latest version.
    - question: Which Dataverse tables are not supported for export?
      answer: |
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
