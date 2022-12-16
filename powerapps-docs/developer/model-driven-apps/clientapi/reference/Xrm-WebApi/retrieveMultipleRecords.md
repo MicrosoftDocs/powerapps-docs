@@ -3,7 +3,7 @@ title: "retrieveMultipleRecords (Client API reference) in model-driven apps| Mic
 description: Includes description and supported parameters for the retrieveMultipleRecords method.
 author: adrianorth
 ms.author: aorth
-ms.date: 04/19/2022
+ms.date: 12/15/2022
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -222,7 +222,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,primarycontactid&$f
 
 #### Using FetchXML to retrieve or filter by lookup properties (online and offline scenario)
 
-You can use the FetchXML parameter while online or offline to retrieve the name and primarycontactid property for accounts that have a primary contact that matches a condition:
+You can use the `FetchXML` parameter while online or offline to retrieve the `name` and `primarycontactid` property for account records that have a primary contact that matches a condition:
 
 ```JavaScript
 var fetchXml = "?fetchXml=<fetch mapping='logical'><entity name='account'><attribute name='name'/><attribute name='primarycontactid'/><link-entity name='contact' from='contactid' to='primarycontactid'><filter type='and'><condition attribute='lastname' operator='eq' value='Contoso'/></filter></link-entity></entity></fetch>";
@@ -241,6 +241,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", fetchXml).then(
     }
 );
 ```
+
 ### Specify the number of tables to return in a page
 
 The following example demonstrates the use of the `maxPageSize` parameter to specify the number of records (3) to be displayed in a page.
