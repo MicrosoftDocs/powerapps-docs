@@ -18,7 +18,7 @@ contributors:
 Several sample apps are available for use in Microsoft Teams that you can download from [here](https://github.com/microsoft/teams-powerapps-app-templates). You can choose the sample app that best fits your business requirement and quickly install it to get started. Sample apps created with Power Apps typically consist of multiple components such as apps, flows, and tables.
 
 > [!IMPORTANT]
-> Sample apps available for download at https://github.com/microsoft/teams-powerapps-app-templates are provided as-is. For any issues, feedback, support, or changes related to sample apps, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit a GitHub issue or a pull request.
+> Sample apps available for [download](https://github.com/microsoft/teams-powerapps-app-templates) are provided as-is. For any issues, feedback, support, or changes related to sample apps, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
 
 ## Available sample apps
 
@@ -74,8 +74,8 @@ The following tutorial shows how to install the Employee ideas app. You can use 
 To learn about installing sample apps, go to https://github.com/microsoft/teams-powerapps-app-templates.
 
 > [!NOTE]
-> - If you don't see the sample apps, check whether the [app permission policies in Microsoft Teams](/microsoftteams/teams-app-permission-policies) are configured to block some, or all Microsoft apps.
-> - Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
+> - Installing sample apps automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
+> - If you can't upload or install uploaded sample apps, check your [app permission policies in Microsoft Teams](/microsoftteams/teams-app-permission-policies).
 
 ## Run the sample app
 
