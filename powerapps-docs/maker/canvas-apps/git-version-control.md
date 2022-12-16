@@ -13,7 +13,7 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
   - mkaur-msft
   - gesnaaggarwal

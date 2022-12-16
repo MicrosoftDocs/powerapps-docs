@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 02/02/2022
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - matthewbolanos
   - msftman
   - amchern
