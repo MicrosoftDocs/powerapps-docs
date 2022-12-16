@@ -4,7 +4,7 @@ description: Learn about how to work with data sources that use dynamic schema i
 author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/15/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedMicrosoft
 ---
 

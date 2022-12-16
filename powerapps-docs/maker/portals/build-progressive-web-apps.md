@@ -11,7 +11,7 @@ ms.author: avishwakarma
 ms.reviewer: ndoelman
 contributors:
     - ankitavish
-    - tapanm-msft
+    - mduelae
     - nickdoelman
 ---
 

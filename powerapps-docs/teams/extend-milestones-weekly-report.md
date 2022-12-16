@@ -8,11 +8,11 @@ ms.date: 06/25/2021
 author: joel-lindstrom
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - joel-lindstrom
-  - tapanm-msft
+  - mduelae
 ---
 
 # Send weekly report on project status from the Milestones sample app
