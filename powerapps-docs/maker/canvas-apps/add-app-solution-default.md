@@ -111,6 +111,6 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 
 - The [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) doesn't return solution cloud flows that haven't previously been turned on (published) since the identifier returned is the Logic Apps ID and unpublished flows don't yet have a Logic Apps ID. This API will be updated later to return all solution cloud flows.
 
-- The [List Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. Fhis will be updated later to return solution cloud flows when the [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) is updated.
+- The [List Flows API](/connectors/flowmanagement/#list-my-flows) doesn't return any solution cloud flows. This will be updated later to return solution cloud flows when the [List Flows as Admin API](/connectors/flowmanagement/#list-flows-as-admin) is updated.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
