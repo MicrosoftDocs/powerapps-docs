@@ -32,10 +32,10 @@ An activity party represents a person or group associated with an activity. An a
 |-------------------------|-----------|-----------------|  
 |Sender|1|Specifies the sender.|  
 |To Recipient|2|Specifies the recipient in the To field.|  
-|Cc Recipient|3|Specifies the recipient in the Cc field.|  
-|Bcc Recipient|4|Specifies the recipient in the Bcc field.|  
-|Required Attendee|5|Specifies a required attendee.|  
-|Optional Attendee|6|Specifies an optional attendee.|  
+|CC Recipient|3|Specifies the recipient in the Cc field.|  
+|BCC Recipient|4|Specifies the recipient in the Bcc field.|  
+|Required attendee|5|Specifies a required attendee.|  
+|Optional attendee|6|Specifies an optional attendee.|  
 |Organizer|7|Specifies the activity organizer.|  
 |Regarding|8|Specifies the regarding item.|  
 |Owner|9|Specifies the activity owner.|  
@@ -55,15 +55,15 @@ Not all activity party types are available for each activity in Dataverse, excep
   
 |Activity entity name|Supported activity party type|Activity attribute|  
 |--------------------------|-----------------------------------|------------------------|  
-|Appointment|Optional Attendee<br />Organizer<br />Required Attendee|Appointment.OptionalAttendees<br />Appointment.Organizer<br />Appointment.RequiredAttendees|  
+|Appointment|Optional attendee<br />Organizer<br />Required attendee|Appointment.OptionalAttendees<br />Appointment.Organizer<br />Appointment.RequiredAttendees|  
 |CampaignActivity|Sender|CampaignActivity.Partners<br />CampaignActivity.From|  
 |CampaignResponse|Customer|CampaignResponse.Customer<br />CampaignResponse.Partner<br />CampaignResponse.From|  
 |Chat|Chat Participant|None|  
-|Email|Bcc Recipient<br />Cc Recipient<br />Sender<br />To Recipient|Email.Bcc<br />Email.Cc<br />Email.From<br />Email.To|  
+|Email|BCC Recipient<br />CC Recipient<br />Sender<br />To Recipient|Email.Bcc<br />Email.Cc<br />Email.From<br />Email.To|  
 |Fax|Sender<br />To Recipient|Fax.From<br />Fax.To|  
-|Letter|Bcc Recipient<br />Sender<br />To Recipient|Letter.Bcc<br />Letter.From<br />Letter.To|  
+|Letter|BCC Recipient<br />Sender<br />To Recipient|Letter.Bcc<br />Letter.From<br />Letter.To|  
 |PhoneCall|Sender<br />To Recipient|PhoneCall.From<br />PhoneCall.To|  
-|RecurringAppointmentMaster|Optional Attendee<br />Organizer<br />Required Attendee|RecurringAppointmentMaster.OptionalAttendees<br />RecurringAppointmentMaster.Organizer<br />RecurringAppointmentMaster.RequiredAttendees|  
+|RecurringAppointmentMaster|Optional attendee<br />Organizer<br />Required attendee|RecurringAppointmentMaster.OptionalAttendees<br />RecurringAppointmentMaster.Organizer<br />RecurringAppointmentMaster.RequiredAttendees|  
 |ServiceAppointment|Customer<br />Resource|ServiceAppointment.Customers<br />ServiceAppointment.Resources|  
   
 ### See also  
