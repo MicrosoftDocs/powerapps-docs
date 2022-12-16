@@ -90,18 +90,4 @@ In Power Automate instead, the send an email action is presented in a graphical 
 
 Sending an email from Power Apps directly is faster for experienced makers, but the more details are required&mdash;such as attachment files and formatted text. For the less experienced makers, sending the email with Power Automate flow might be easier.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

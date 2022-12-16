@@ -37,7 +37,7 @@ Watch this video to learn how to configure table permissions:
 Permission to apps and the data that they use in Teams are based on the following roles in Teams team.
 
 - **Owner** - A team member with the owner role. This includes the creator of the team, and anyone who has been given the owner role by another users. Owners get full access to the data used in apps in the team.
-- **Member** - A team member who isn't an owner. By default, team members get full access like owners, but you can also change the permission for team members. You might want to restrict members from being able to edit certain tables. For example, in the [Bulletins app for Teams](bulletins.md), if you wanted to have members be able to read the bulletins but not edit them, you could give team members **Reference** permission on the **Bulletins** table.
+- **Member** - A team member who isn't an owner. By default, team members get full access like owners, but you can also change the permission for team members. You might want to restrict members from being able to edit certain tables. 
 - **Guest** - A guest is someone outside of your organization who is added to the team. By default, guests can create records, but not view records created by others.
 - **Colleagues with access**: With Power Apps for Teams, you can share an app with Azure AD security group whose members need not be part of the Teams team where the app was built. This enables you to add users to the application without having to add them to the specific team, and opens up “Broad Distribution” scenarios. For example, you may want to build an app that is enabled for every accountant in the organization, or even every employee in that organization.
 
@@ -159,18 +159,5 @@ Once we have the personas defined, relate these personas to the team role to whi
 
 For more details about the recommended table permissions for the sample apps for Teams, see articles about deploying sample apps broadly, such as [Deploy Profile + as broad distribution app](deploy-profile-plus-broad-distribution.md).
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected sample app](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

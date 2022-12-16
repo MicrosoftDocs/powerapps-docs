@@ -7494,6 +7494,21 @@
       "source_path": "powerapps-docs/teams/use-sample-apps-from-teams-store.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/how-to/enable-dataverse-sample-app.md",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/bulletins.md",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/when-create-teams-apps.md",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_document_id": "false"
     }
   ]
 }

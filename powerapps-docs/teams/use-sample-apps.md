@@ -124,18 +124,5 @@ Updates to the sample apps are published immediately. If you already have a samp
 
 For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sample-apps-faqs.md).
 
-### See also
-
-- [Boards sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives sample app](perspectives.md)
-- [Profile+ sample app](profile-app.md)
-- [Get Connected sample app](get-connected.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

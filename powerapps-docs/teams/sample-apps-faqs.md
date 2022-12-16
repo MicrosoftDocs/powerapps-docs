@@ -61,18 +61,5 @@ If a user isn't allowed to create tasks using a mobile device in the Inspection 
 
 If your inspection forms are loading slowly, reduce the size of images used in the inspection steps. Users can't interact with the form before all images on the form are loaded.
 
-### See also
-
-- [Customize sample apps](customize-sample-apps.md)
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

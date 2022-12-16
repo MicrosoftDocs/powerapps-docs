@@ -55,15 +55,7 @@ More information: [Edit an app in Power Apps Studio](manage-your-apps.md#edit-an
 
 ## Remove sample data
 
-When you install sample apps, the tables are pre-populated with sample data. The following table lists the sample apps and the list of tables with the sample data to be removed:
-
-| Sample app | Tables |
-| - | - |
-| [Bulletins](bulletins.md) | Bulletins <br> Bulletin Bookmarks <br> Bulletin Categories <br> Bulletin Contacts <br> Bulletin FAQs <br> Bulletin FAQ Categories <br> Bulletin Links <br> Bulletin Link Categories <br> Bulletin Read Receipts
-| [Employee ideas](employee-ideas.md) | Employee Ideas <br> Employee Idea Campaigns <br> Employee Idea Files <br> Employee Idea Questions <br> Employee Idea Responses |
-| [Inspection](inspection.md) |     Area Inspection Steps <br> Area Inspections <br> Area Inspection Checklist Steps <br> Area Inspection Checklists <br> Area Inspection Locations <br> Area Inspection Location Types <br> Area Inspection Groups <br> Area Inspection Task|
-| [Issue reporting](issue-reporting.md) | Issue Reports <br> Issue Report Questions <br> Issue Report Templates <br> Issue Report Categories |
-| [Milestones](milestones.md) | Projects <br> Project Activities <br> Project Milestones <br> Project Team Members <br> Project User Settings <br> Project Work items <br> Project Work Item Categories <br> Project Work Item Priorities <br> Project Work Item Statuses
+When you install sample apps, the tables might be pre-populated with sample data. The following table lists the sample apps and the list of tables with the sample data to be removed:
 
 To remove data from the sample apps:
 
@@ -366,19 +358,5 @@ To save and publish the changes to the sample app:
 To add published version of an app to a new tab in a different channel, Select ![Add a tab.](media/publish-app-9.png) (Add a tab) for the channel you want, and then select **Save + close**.
 
 More information: [Publish and add an app to Teams](publish-and-share-apps.md)
-
-### See also
-
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -262,18 +262,4 @@ To see an example of Planner integration, check out the [Issue Reporting](issue-
 
 This integration can be easily extended to add logic to automatically assign the Planner Tasks or [provide notifications for issue tasks](extend-issue-sign-up-notification.md).
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
