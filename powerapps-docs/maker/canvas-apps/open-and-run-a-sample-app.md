@@ -7,7 +7,7 @@ ms.topic: overview
 ms.custom: 
   - canvas
   - intro-internal
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: wimcoor
@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - wimcoor
 ---
 # Create a canvas app from a sample template in Power Apps

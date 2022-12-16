@@ -7,14 +7,14 @@ ms.custom: canvas
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
 # Create a canvas app from an image 

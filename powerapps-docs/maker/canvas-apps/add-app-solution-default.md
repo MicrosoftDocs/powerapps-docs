@@ -4,7 +4,7 @@ description: Learn how to configure an environment to adding all new canvas apps
 author: tapanm-msft
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/10/2022
 ms.subservice: canvas-maker
 ms.author: hasharaf
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Add canvas apps and cloud flows to solution by default (preview)
