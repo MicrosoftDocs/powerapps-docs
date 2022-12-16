@@ -8,13 +8,13 @@ ms.custom: canvas
 ms.date: 06/15/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType:
   - maker
 search.app:
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Web barcode scanner control (experimental) in Power Apps

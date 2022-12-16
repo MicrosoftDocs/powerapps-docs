@@ -6,14 +6,14 @@ ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 07/22/2022
 ms.author: hemantg
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType:
   - maker
 search.app:
   - PowerApps
 contributors:
   - hemantgaur
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ms.custom: intro-internal
 ---

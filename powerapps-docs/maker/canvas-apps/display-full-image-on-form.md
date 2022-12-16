@@ -21,7 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattp123
 ---
 # Display a full-sized image on a canvas app form
