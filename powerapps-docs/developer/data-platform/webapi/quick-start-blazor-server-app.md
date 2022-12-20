@@ -164,7 +164,7 @@ To enable calls to Dataverse you must edit three files in the application:
 
 - appsettings.json
 - Program.cs
-- FetchData.razor
+- Pages/FetchData.razor
 
 ### appsettings.json
 
@@ -187,7 +187,7 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
 
 ### Program.cs
 
-1. To access the value of the Web API base URI in the settings, add this line in the `Main` method below <br />`var builder = WebApplication.CreateBuilder(args);`
+1. To access the value of the Web API base URI in the settings, add the line below commented with `// Get BaseUri from appsettings.json`  in the `Main` method below <br />`var builder = WebApplication.CreateBuilder(args);`
 
    ```csharp
    public static void Main(string[] args)
@@ -212,11 +212,11 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
     - [AddInMemoryTokenCaches Method](xref:Microsoft.Identity.Web.MicrosoftIdentityAppCallsWebApiAuthenticationBuilder.AddInMemoryTokenCaches%2A) Enables caching the token issued for requests.
 
 
-### FetchData.razor
+### Pages/FetchData.razor
 
-The default `FetchData.razor` component retrieves some weather forecast data. We are going to replace this completely.
+The default `Pages/FetchData.razor` component retrieves some weather forecast data. We are going to replace this completely.
 
-Copy the following code and replace all the code in `FetchData.razor`:
+Copy the following code and replace all the code in `Pages/FetchData.razor`:
 
 ```razor
 @page "/fetchdata"
