@@ -48,6 +48,8 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
 1. In the **Configure your new project** dialog, set the **Project name**, and **Location**. Then click **Next**.
 
+    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-2.5.png" alt-text="Enter project name and location":::
+
    In this example we will use **DataverseWebApiBlazorServerQuickStart** as the **Project name**.
 
 1. In the **Additional information** dialog specify **Framework** and **Authentication type**.
@@ -60,11 +62,11 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-3.png" alt-text="Set the Authentication type to Microsoft identity platform":::
 
 1. Click **Create** to create the project.
-1. When the project opens you will see a **Required components** dialog. Click **Next**.
+1. The project template opens a **Required components** dialog. Click **Next**.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-4.png" alt-text="Required components":::
 
-1. In the **Microsoft identity platform** dialog sure that the selected Azure account has permissions to manage applications in Azure AD and the selected tenant is the one that is associated with your Power Platform environment.
+1. In the **Microsoft identity platform** dialog, make sure that the selected Azure account has permissions to manage applications in Azure AD and the selected tenant is the one associated with your Power Platform environment.
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-5.png" alt-text="Microsoft identity platform dialog":::
 
@@ -274,7 +276,7 @@ else
         }
         catch (Exception)
         {
-            throw;
+            throw new Exception("Error getting access token.");
         }
 
         // Set the auth token
@@ -290,10 +292,11 @@ else
         }
         else
         {
-            throw new Exception("Error sending request");
+            throw new Exception("Error sending request.");
         }
     }
 
+    // Used with System.Text.Json.JsonSerializer.Deserialize to deserialize response body
     public class WhoAmIResponse
     {
         public Guid BusinessUnitId { get; set; }
