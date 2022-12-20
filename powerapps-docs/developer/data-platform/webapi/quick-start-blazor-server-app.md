@@ -16,7 +16,7 @@ search.app:
 
 In this quickstart, you'll create a Blazor Server application to connect to your Microsoft Dataverse environment using the Web API.
 
-You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response will be a [WhoAmIResponse ComplexType ](xref:Microsoft.Dynamics.CRM.WhoAmIResponse)[WhoAmIResponse](/dynamics365/customer-engagement/web-api/whoamiresponse). After call completion, the `WhoAmIResponse` properties are displayed.
+You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). The response will be a [WhoAmIResponse ComplexType ](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). After call completion, the `WhoAmIResponse` properties are displayed.
 
 > [!NOTE]
 > This is a very simple example to show how to get connected with a minimum of code.
@@ -155,7 +155,7 @@ To enable calls to Dataverse you must edit three files in the application:
 
 There are several places in the other files that require a reference to the base uri used to access the Dataverse Web API. Adding this to the `appsettings.json` allows you to set this in one place.
 
-Add the following below `"AllowedHosts": "*"` where `\<your org>` represents the base url to access the Dataverse Web API. If you are not sure what this is, see [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions).
+Add the following below `"AllowedHosts": "*"` where `<your org>` represents the base url to access the Dataverse Web API. If you are not sure what this is, see [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions).
 
 ```json
   "AllowedHosts": "*",
