@@ -114,12 +114,12 @@ The Visual Studio template created a registered application using the informatio
 
 1. In the **Add a client secret** fly-out, enter a **Description** and **Expires** duration, then click **Add**.
 
-   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-14.png" alt-text="Add a client secret:::
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-14.png" alt-text="Add a client secret":::
 
    > [!IMPORTANT]
    > Copy the secret now. You can't access it after you leave this page.
 
-   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.png" alt-text="Add a client secret:::
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.png" alt-text="Copy the client secret":::
 
 1. In Visual Studio, within your Blazor Server app, open `appsettings.json` and add an entry for `ClientSecret` with the secret value. The contents of the `appsettings.json` file should look like this:
     
