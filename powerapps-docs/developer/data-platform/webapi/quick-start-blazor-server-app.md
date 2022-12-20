@@ -77,7 +77,20 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
    In this example we are using the name *Dataverse Web Api Blazor Server Quick Start*. We will search for the application using this name in a later step.
 
-1. Click **Finish**. 
+1. Click **Next**.
+
+    > [!IMPORTANT]
+    > Don't do anything in this step.  Do not click **Finish**.
+
+   This step provides capabilities to connect to Microsoft Graph or another API, but this isn't necessary for this quickstart.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.5.png" alt-text="Additional settings step.":::
+
+1. Click **Next**. This step summarizes the changes that will be made to the project.
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-6.6.png" alt-text="Summary of changes":::
+
+1. Click **Finish**.
 
    The **Dependency configuration progress** dialog shows the automated steps performed by the template to register the application.
 
@@ -123,7 +136,7 @@ The Visual Studio template created a registered application using the informatio
 
    :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.png" alt-text="Copy the client secret":::
 
-1. In Visual Studio, within your Blazor Server app, open `appsettings.json` and add an entry for `ClientSecret` with the secret value. The contents of the `appsettings.json` file should look like this:
+1. In Visual Studio, within your Blazor Server app project, open `appsettings.json` and add an entry for `ClientSecret` with the secret value. The contents of the `appsettings.json` file should look like this:
     
     ```json
     {
@@ -311,9 +324,16 @@ else
 
 The application is now ready!
 
-Press F5 to run the program. The output should look like this:
+1. Press F5 to run the program. The first time the program runs you should see this consent dialog:
 
-:::image type="content" source="../media/quick-start-blazor-server-app-csharp-16.png" alt-text="final result":::
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-15.5.png" alt-text="Consent dialog":::
+
+1. Click **Accept**.
+1. Click **Fetch data**.
+
+   The output should look like this:
+
+   :::image type="content" source="../media/quick-start-blazor-server-app-csharp-16.png" alt-text="final result":::
 
 **Congratulations!** You have successfully connected to the Web API.
 
