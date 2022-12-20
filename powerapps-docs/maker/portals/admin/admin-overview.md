@@ -22,7 +22,7 @@ contributors:
 The Power Apps portals admin center allows you to perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
 > [!IMPORTANT]
-> The Power Apps portal admin center is now deprecated and no longer available as of June 2023. Use the new [Power Pages admin hub](/power-pages/admin/admin-overview) in the Power Platform admin center. 
+> The Power Apps portals admin center is now deprecated and no longer available as of June 2023. Use the new [Power Pages admin hub](/power-pages/admin/admin-overview) in the Power Platform admin center. 
 
 ## Open Power Apps portals admin center
 
