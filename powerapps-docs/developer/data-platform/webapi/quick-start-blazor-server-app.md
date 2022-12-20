@@ -317,7 +317,7 @@ Press F5 to run the program. The output should look like this:
 
 **Congratulations!** You have successfully connected to the Web API.
 
-This quickstart sample shows a simple approach to create a Visual Studio project.
+This quickstart shows a simple approach to create a Blazor Server web application that connects to data in Dataverse.
 
 ### See Also
 
