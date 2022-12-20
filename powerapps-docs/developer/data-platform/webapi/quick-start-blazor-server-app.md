@@ -79,8 +79,8 @@ You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` re
 
 1. Click **Next**.
 
-    > [!IMPORTANT]
-    > Don't do anything in this step.  Do not click **Finish**.
+    > [!NOTE]
+    > You don't need to do anything in this step.
 
    This step provides capabilities to connect to Microsoft Graph or another API, but this isn't necessary for this quickstart.
 
@@ -187,7 +187,7 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
 
 ### Program.cs
 
-1. To access the value of the Web API base URI in the settings, add the line below commented with `// Get BaseUri from appsettings.json`  in the `Main` method below <br />`var builder = WebApplication.CreateBuilder(args);`
+1. To access the value of the Web API base URI in the settings, add the line below commented with `// Get BaseUri from appsettings.json`  in the `Main` method below the line: <br />`var builder = WebApplication.CreateBuilder(args);`
 
    ```csharp
    public static void Main(string[] args)
@@ -198,7 +198,7 @@ Add the following below `"AllowedHosts": "*"` where `<your org>` represents the 
      string dataverseBaseUri = builder.Configuration.GetSection("DataverseConfig").GetValue<string>("BaseUri");
    ```
 
-1. Add the following two lines below <br />`.AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))`
+1. Add the following two lines below the line: <br />`.AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))`
 
    ```csharp
    // Add services to the container.
