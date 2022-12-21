@@ -24,7 +24,7 @@ A list in which the user can select one or multiple items.
 A **List Box** control always shows all available choices (unlike a **[Drop down](control-drop-down.md)** control) and in which the user can choose more than one item at a time (unlike a **[Radio](control-radio.md)** control).
 
 ## Key properties
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before it is changed by the user. You can only have one default selected item.  If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
@@ -95,7 +95,7 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
-**Selected** – The data record that represents the selected item.  You can only have one default selected item.  If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
+**Selected** – The data record that represents the selected item.
 
 **SelectedItems** - **Read-only**. Represents a datatable of selected items for a multiselect listbox.
 
