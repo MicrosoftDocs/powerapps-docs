@@ -1,7 +1,7 @@
 ---
 title: "Generate early-bound classes for the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about a command-line code generation tool for use with Microsoft Dataverse. This tool generates early-bound .NET Framework classes that represent the Entity Data Model used by Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/03/2022
+ms.date: 12/21/2022
 author: kkanakas
 ms.author: kartikka
 manager: pemikkel
@@ -97,7 +97,7 @@ CrmSvcUtil.exe ^
 - For the `username` and `password` parameters, type the user name and password that is used to sign in to Dataverse. 
 - For the `url` parameter, you can look up the correct URL in the web application by selecting **Settings**, navigating to **Customizations**, and then choosing **Developer Resources**. The URL is shown under **Organization Service**.  
 
-To list the supported command-line parameters, use the following command.
+To view the latest supported command-line parameters, use the following command.
 
 ```ms-dos
 CrmSvcUtil.exe /?  
@@ -109,24 +109,32 @@ CrmSvcUtil.exe /?
 
 The following table lists the code generation tool parameters and a gives a brief description of their use.  
   
-|Parameter|Shortcut|Description|Required|
-|--|--|--|--|
-|`deviceid`|`di`|No longer needed|False|
-|`devicepassword`|`dp`|No longer needed|False|
-|`domain`|`d`|The domain to authenticate against when you connect to an on-premises server.|False|
-|`url`||The URL for the Organization service.|True unless you use `interactivelogin`|
-|`out`|`o`|The file name for the generated code.|True|
-|`language`|`l`|The language to generate the code in. This can be either “CS” or “VB”. The default value is “CS”.|False|
-|`namespace`|`n`|The namespace for the generated code. The default is the global namespace.|False|  
-|`username`|`u`|The user name to use when you connect to the server for authentication.|False|  
-|`password`|`p`|The password to use when you connect to the server for authentication.|False|  
-|`servicecontextname`||The name of the generated organization service context class. If no value is supplied, no service context is created.|False|
-|`help`|`?`|Show usage information.|False|
-|`nologo`||Suppress the banner at runtime.|False|
-|`generateActions`||Generate request and response classes for custom actions.|False|
-|`interactivelogin`|`il`|When used, a dialog to log into the Dataverse service is displayed. All other connection related parameters specified on the command line are ignored.|False|  
-|`connectionstring`|`connstr`|Contains information, provided as a single string, for connecting to a Dataverse organization. All other connection related parameters specified on the command line are ignored. For more information see [Use connection strings in XRM tooling to connect to Dataverse](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md).|False|
-
+|Parameter|Shortcut|Description|
+|--|--|--|
+|`url`||The URL for the Organization service. Required, unless you use `interactivelogin`|
+|`out`|`o`|The file name for the generated code. Required|
+|`language`|`l`|The language to generate the code in. This can be either “CS” or “VB”. The default value is “CS”.|
+|`namespace`|`n`|The namespace for the generated code. The default is the global namespace.| 
+|`username`|`u`|The user name to use when you connect to the server for authentication.|  
+|`password`|`p`|The password to use when you connect to the server for authentication.|
+|`domain`|`d`|The domain to authenticate against when you connect to an on-premises server.|
+|`servicecontextname`||The name of the generated organization service context class. If no value is supplied, no service context is created.
+|`help`|`?`|Show usage information.|
+|`nologo`||Suppress the banner at runtime.|
+|`generateActions`||Generate request and response classes for custom actions.|
+|`interactivelogin`|`il`|When used, a dialog to log into the Dataverse service is displayed. All other connection related parameters specified on the command line are ignored.| 
+|`connectionstring`|`connstr`|Contains information, provided as a single string, for connecting to a Dataverse organization. All other connection related parameters specified on the command line are ignored. For more information see [Use connection strings in XRM tooling to connect to Dataverse](../xrm-tooling/use-connection-strings-xrm-tooling-connect.md).|
+|`suppressGeneratedCodeAttribute`|`sgca`|Suppresses the GeneratedCodeAttribute on all classes|
+|`emitfieldsclasses`|`emitfc`|Generate a Fields class per entity that contains all of the field names at the time of code generation|
+|`entitynamesfilter`| |Filters the list of entities retrieved when reading data from Dataverse. Passed in as a semicolon separated list using the form <entitylogicalname>;<entitylogicalname>;...|
+|`messagenamesfilter`| |Filters the list of messages that are retrieved when reading data from Dataverse. Passed in as a semicolon separated list. Required messages ( Create, Update, Delete, Retrieve, RetrieveMultiple, Associate and DisAssociate) are always included. A * can be used to proceed or trail a message allowing for all messages starting with or ending with a string. The list takes the form <messagename>;<messagename>;...|
+|`splitfiles`| |Splits the output into files by type, organized by entity, message, and optionsets. when enabled, the `out` property is ignored and `outdirectory` is required instead|
+|`outdirectory`|`outdir`|Write entity, message and optionset files to a specified output directory. Valid only with the `splitfiles` option|
+|`entitytypesfolder`| |Folder name that will contain entities. THe default folder name is "Entities". Valid only with the `splitfiles` option.|
+|`messagestypesfolder`| |Folder name that will contain messages. The default name is "Messages". Valid only with the `splitfiles` option|
+|`optionsetstypesfolder`| |Folder name that will contain optionsets. The default name is "OptionSets". Valid only with `splitfiles` option|
+|`generateGlobalOptionSets`| |Emit all global optionsets. Note: if an entity contains a reference to a global optionset, it will be emitted even if this switch is not present|
+|`legacyMode`| |Disable emitting optionsets and many newer code features to support compatibility with older custom extensions|
 
 <a name="bkmk_sampleconfig"></a>
 
@@ -175,7 +183,7 @@ For more information on supported tracing options see [Configure tracing for XRM
 
 ### See Also
 
-[Late-bound and early-bound programming using the Organization service](early-bound-programming.md)  
+[Late-bound and early-bound programming](early-bound-programming.md)  
 [Sample: Early-bound table operations](samples/early-bound-entity-operations.md)
 
 [Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
