@@ -4,7 +4,7 @@ description: See the available functions, responses, and examples for SharePoint
 author: NickWaggoner
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/11/2021
 ms.subservice: canvas-maker
 ms.author: niwaggon
@@ -13,7 +13,7 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to SharePoint from a canvas app

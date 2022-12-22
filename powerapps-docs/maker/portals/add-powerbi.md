@@ -8,20 +8,20 @@ ms.custom:
 ms.date: 12/22/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add Power BI
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 You can add a Power BI component on a page to display Power BI dashboards and reports on your portal.
 
-> [!NOTE]
-> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
+Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
 
 To add a Power BI component to a webpage:
 
@@ -51,7 +51,7 @@ To add a Power BI component to a webpage:
             > [!NOTE]
             > Ensure you've shared Power BI workspaces with the maker and target portal users.
 
-        3. **Publish to web** - Allows you to share Power BI dashboards or reports to anyone on the internet.
+        1. **Publish to web** - Allows you to share Power BI dashboards or reports to anyone on the internet.
 
         For more information about access types, go to [Power BI access type considerations](#power-bi-access-type-considerations).
 
@@ -131,10 +131,10 @@ Embedding multiple Power BI workspaces may need extra considerations. Refer to t
 
 ### See also
 
-[Set up Power BI integration](admin/set-up-power-bi-integration.md) <br>
-[Add a Power BI report or dashboard to a web page in portal](admin/add-powerbi-report.md) <br>
-[Power Apps portals Studio](portal-designer-anatomy.md) <br>
-[Create and manage webpages](create-manage-webpages.md) <br>
+[Set up Power BI integration](admin/set-up-power-bi-integration.md) <br />
+[Add a Power BI report or dashboard to a web page in portal](admin/add-powerbi-report.md) <br />
+[Power Apps portals Studio](portal-designer-anatomy.md) <br />
+[Create and manage webpages](create-manage-webpages.md) <br />
 [WYSIWYG editor](compose-page.md)
 
 

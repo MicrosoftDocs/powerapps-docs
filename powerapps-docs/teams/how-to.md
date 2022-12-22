@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 09/28/2022
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - joel-lindstrom
-  - tapanm-msft
+  - mduelae
 ---
 
 # Use How to sample app (preview)

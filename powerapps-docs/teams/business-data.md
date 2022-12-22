@@ -7,9 +7,9 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 10/06/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-    - tapanm-msft
+    - mduelae
     - msftsamperl
     - joel-lindstrom
 ---

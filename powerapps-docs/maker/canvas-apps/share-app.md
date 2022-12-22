@@ -4,7 +4,7 @@ description: Learn about how to share canvas apps by giving other users in your 
 author: alaug
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/11/2022
 ms.subservice: canvas-maker
 ms.author: alaug
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
   - msftsamperl
 ---
