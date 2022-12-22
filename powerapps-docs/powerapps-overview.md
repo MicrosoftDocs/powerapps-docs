@@ -10,7 +10,7 @@ ms.reviewer: kvivek
 searchScope:
   - "Power Apps"
 contributors:
-  - tapanm-msft
+  - mduelae
   - KumarVivek
   - evlew
 ---

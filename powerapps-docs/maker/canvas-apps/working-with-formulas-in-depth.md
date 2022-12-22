@@ -5,7 +5,7 @@ author: gregli-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/10/2015
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Understand behavior formulas for canvas apps

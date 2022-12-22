@@ -21,7 +21,7 @@ contributors:
 
 
 
-Many developers strongly advocate including unit testing as part of their development process. Others are not convinced. Microsoft Dataverse doesn't provide testing framework tools, but you should be aware that there are community tools available that you can use. A popular framework for server-side development is [Fake Xrm Easy](https://dynamicsvalue.com/home). This framework can be combined with your choice of .NET framework testing frameworks. [FakeItEasy](https://fakeiteasy.github.io/) is a common choice.
+Many developers strongly advocate including unit testing as part of their development process. Microsoft Dataverse doesn't provide testing framework tools, but you should be aware that there are community tools available that you can use. A popular framework for server-side development is [Fake Xrm Easy](https://dynamicsvalue.com/home). This framework can be combined with your choice of .NET framework testing frameworks. [FakeItEasy](https://fakeiteasy.github.io/) is a common choice.
 
 > [!NOTE]
 > Microsoft does not provide support for tools created by the community. If you have any issues with a community tool, please contact the publisher.

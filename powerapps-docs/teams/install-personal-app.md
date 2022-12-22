@@ -10,7 +10,7 @@ ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: 
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Install the Power Apps personal app in Microsoft Teams

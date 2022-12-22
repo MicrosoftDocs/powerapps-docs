@@ -11,7 +11,7 @@ ms.reviewer: matp
 contributors:
   - mattp123
   - hemantgaur
-  - tapanm-msft
+  - mduelae
   - ProfessorKendrick
 ---
 # How are Dataverse for Teams and Dataverse different?

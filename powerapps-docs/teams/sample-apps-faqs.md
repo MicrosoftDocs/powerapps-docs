@@ -8,10 +8,10 @@ ms.custom:
 ms.date: 10/05/2020
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Frequently Asked Questions (FAQs) for sample apps

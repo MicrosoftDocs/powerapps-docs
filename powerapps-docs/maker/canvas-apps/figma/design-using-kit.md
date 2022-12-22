@@ -4,7 +4,7 @@ description: Learn about the various components that the "Create Apps from Figma
 author: tapanm-msft
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/24/2022
 ms.subservice: canvas-maker
 ms.author: kaagar
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Design your app using the UI kit (preview)
