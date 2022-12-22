@@ -5,7 +5,7 @@ author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
-ms.subservice: portals
+ms.subservice: kkendrick
 ms.author: ndoelman
 contributors:
     - nickdoelman
