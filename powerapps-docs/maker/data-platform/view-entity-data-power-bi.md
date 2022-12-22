@@ -25,6 +25,13 @@ row data that you can access from your environment is read-only. Data access
 uses the Dataverse security model that is the same used to access
 table row data using a Power Apps app.
 
+> [!TIP]
+> The [Power BI modeling guidance for Power Platform](/power-bi/guidance/powerbi-modeling-guidance-for-power-platform) article provides implementation guidance and best practices on how to create a Power BI data model that connects to Microsoft  Dataverse:
+> - Performance and security considerations when connecting Power BI to Dataverse
+> - Dataverse connector best practices
+> - Working with large datasets using Azure Synapse Link for Dataverse
+> - Considerations for DirectQuery
+
 ## Prerequisites
 
 * Enable the Tabular Data Stream (TDS) endpoint (on by default). More information: [Manage feature settings](/power-platform/admin/settings-features).
