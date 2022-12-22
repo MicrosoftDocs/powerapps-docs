@@ -118,8 +118,8 @@ The following list explains Power BI access types in brief and lists access type
 - Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
 - Power BI dashboards and reports connected to a shared dataset present on a different workspace aren't supported.
 - Paginated Power BI reports aren't supported.
-- If you're using Power BI Embedded to provide reports and dashboards for your customers, refer to the [powerbi-client JavaScript library](/admin/add-powerbi-report.md#how-to-use-powerbi-client-javascript-library-in-portals) for advanced customizations. 
-- If you're using the Power BI Embedded for your own organizations and want to hide the filter pane, refer to [hide filter pane in reading mode](/power-bi/create-reports/power-bi-report-filter?tabs=powerbi-desktop#hide-the-filters-pane-in-reading-mode) in the Power BI documentation.  
+- If you're using Power BI **Embed for your customers** access type to provide reports and dashboards for your customers, refer to the [powerbi-client JavaScript library](/admin/add-powerbi-report.md#how-to-use-powerbi-client-javascript-library-in-portals) for advanced customizations. 
+- If you're using the Power BI **Embed for your organization** access type and want to hide the filter pane, refer to [hide filter pane in reading mode](/power-bi/create-reports/power-bi-report-filter?tabs=powerbi-desktop#hide-the-filters-pane-in-reading-mode) in the Power BI documentation.  
 
 ### Power BI performance and optimization considerations
 
