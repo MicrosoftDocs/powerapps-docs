@@ -8,7 +8,7 @@ ms.custom: intro-internal
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
