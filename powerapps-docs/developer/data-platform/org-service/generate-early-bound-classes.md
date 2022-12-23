@@ -1,7 +1,7 @@
 ---
 title: "Generate early-bound classes for the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about a command-line code generation tool for use with Microsoft Dataverse. This tool generates early-bound .NET Framework classes that represent the Entity Data Model used by Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/21/2022
+ms.date: 12/22/2022
 author: kkanakas
 ms.author: kartikka
 manager: pemikkel
@@ -21,16 +21,16 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse.
+*CrmSvcUtil* is a command-line code generation tool for use with Microsoft Dataverse. The tool generates early-bound .NET Framework classes that represent the Entity Data Model (EDM) used by Dataverse. To generate cross-platform .NET (Core) classes, use the [modelbuilder](/power-platform/developer/cli/reference/modelbuilder) argument of Power Platform CLI.
 
 The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. You can download the NuGet package, rename the file's extension .nupkg to .zip, and extract the files. You may also need to unblock the file in the Properties dialog of File Explorer.
 
 > [!NOTE]
-> For information about downloading the code generation tool, see [Dataverse development tools](../download-tools-NuGet.md).
+> For more information about available tools, including the code generation tool, see [Dataverse development tools](../download-tools-NuGet.md).
 
 ## Generate Entity classes
 
-The CrmSvcUtil tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for tables in your organization. This includes custom tables and columns. This output file contains one class derived from <xref:Microsoft.Xrm.Sdk.Entity> for each table, providing early binding and IntelliSense support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create extensions for the Code Generation Tool](extend-code-generation-tool.md).  
+The CrmSvcUtil tool creates a Microsoft Visual C# or Visual Basic .NET output file that contains strongly-typed classes for tables in your environment. This includes custom tables and columns. This output file contains one class derived from <xref:Microsoft.Xrm.Sdk.Entity> for each table, providing early binding and IntelliSense support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also write extensions for this tool to customize its functionality. For more information, see [Create extensions for the Code Generation Tool](extend-code-generation-tool.md).  
 
 ## Generate an OrganizationServiceContext class
 
@@ -38,14 +38,14 @@ The tool can also be used to generate a class derived from the <xref:Microsoft.X
 
 ## Use generated classes
 
-The classes created by the code generation tool are designed to be built into a class library that can be referenced by projects that use Dataverse. After you have generated the class file using the tool, you should add the file to your Visual Studio project. You must also add references to several assemblies that the generated classes are dependent upon.  
+The classes created by the code generation tool are designed to be built into a class library that can be referenced by projects that use Dataverse. After you have generated the class file(s) using the tool, you should add the file(s) to your Visual Studio project. You must also add references to several assemblies that the generated classes are dependent upon.  
 
 The following lists assemblies that must be referenced in your project when you use the generated code file.  
 
 - `Microsoft.Crm.Sdk.Proxy.dll`  
 - `Microsoft.Xrm.Sdk.dll` 
 
-These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Use this NuGet packages to add these assemblies to your Visual Studio project.
+These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) or [Microsoft.PowerPlatform.Dataverse.Client](https://www.nuget.org/packages/Microsoft.PowerPlatform.Dataverse.Client) NuGet package. Use one of these NuGet packages to add the required assemblies to your Visual Studio project.
 
 <a name="bkmk_RuntheCodeGenerationUtility"></a>
 
@@ -53,9 +53,9 @@ These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.n
 
 The code generation tool takes several parameters that determine the contents of the file that is created. The parameters can be passed in from the command line when you run the tool or in a .NET-connected application configuration file. 
 
-Run the `CrmSvcUtil.exe` tool from the `Tools\CoreTools` folder created when you downloaded the tools using the script described in [Dataverse development tools](../download-tools-NuGet.md). If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.  
+Run the `CrmSvcUtil.exe` application from the folder where it is installed. If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.
 
-The following sample shows the format for running the tool from the command line with Dataverse. To use the interactive login, you can simply provide these options:
+The following sample shows the format for running the tool from the command line with Dataverse. To use an interactive environment login, you can simply provide these options:
 
 ```ms-dos
 CrmSvcUtil.exe /interactivelogin ^
@@ -94,8 +94,8 @@ CrmSvcUtil.exe ^
 > [!NOTE]
 > The examples above uses the carat (`^`) character to break up the list of parameters for readability. You can compose the command parameters with arguments using notepad and then paste it into the command line.
 
-- For the `username` and `password` parameters, type the user name and password that is used to sign in to Dataverse. 
-- For the `url` parameter, you can look up the correct URL in the web application by selecting **Settings**, navigating to **Customizations**, and then choosing **Developer Resources**. The URL is shown under **Organization Service**.  
+- For the `username` and `password` parameters, type the user name and password that is used to sign in to your Dataverse environment. 
+- For the `url` parameter you can look up the correct URL in Power Apps, or in the legacy web application by selecting **Settings**, navigating to **Customizations**, and then choosing **Developer Resources**. The URL is shown under **Organization Service**.  
 
 To view the latest supported command-line parameters, use the following command.
 
@@ -107,7 +107,7 @@ CrmSvcUtil.exe /?
 
 ## Parameters
 
-The following table lists the code generation tool parameters and a gives a brief description of their use.  
+The following table lists the code generation tool parameters at the time when this topic was last updated, and provides a brief description of command parameter use.  
   
 |Parameter|Shortcut|Description|
 |--|--|--|
@@ -175,7 +175,7 @@ For more information on supported tracing options see [Configure tracing for XRM
 
 ## Community tools
 
-**Early Bound Generator** is a tool that XrmToolbox community. Please see the [Developer tools and resources](../developer-tools.md) topic for more community developed tools.
+**Early Bound Generator** is a tool from the XrmToolbox community. Please see the [Developer tools and resources](../developer-tools.md) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
