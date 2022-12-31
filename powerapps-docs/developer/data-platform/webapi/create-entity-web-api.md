@@ -4,7 +4,7 @@ description: "Read how to create a POST request to send data to create a table r
 ms.date: 08/05/2022
 ms.service: powerapps
 ms.topic: article
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 

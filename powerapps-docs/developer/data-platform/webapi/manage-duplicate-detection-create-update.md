@@ -5,7 +5,7 @@ ms.date: 12/31/2022
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-author: divka78
+author: divkamath
 ms.author: dikamath
 search.audienceType: 
   - developer

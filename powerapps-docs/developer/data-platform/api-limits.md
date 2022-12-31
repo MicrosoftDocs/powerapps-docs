@@ -4,7 +4,7 @@ description: "Understand what a developer needs to do to manage service protecti
 ms.date: 09/15/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78
+author: divkamath
 ms.subservice: dataverse-developer
 ms.author: dikamath 
 search.audienceType: 
