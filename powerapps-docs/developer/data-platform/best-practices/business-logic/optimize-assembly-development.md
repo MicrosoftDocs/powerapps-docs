@@ -3,7 +3,7 @@ title: "Optimize custom assembly development | MicrosoftDocs"
 description: "Consider merging separate plug-ins/custom workflow activities into a single custom assembly to improve performance and maintainability and move plug-ins/custom workflow activities into multiple custom assemblies if an assembly size is near the sandbox assembly size constraints."
 suite: powerapps
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke
