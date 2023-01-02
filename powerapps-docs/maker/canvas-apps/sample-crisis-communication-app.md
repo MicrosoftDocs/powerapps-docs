@@ -5,7 +5,7 @@ author: matthewbolanos
 
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 04/27/2020
 ms.subservice: canvas-maker
 ms.author: mabolan
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - matthewbolanos
   - kumarvivek
 ---

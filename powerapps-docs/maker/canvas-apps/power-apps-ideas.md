@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
 # Power Apps Ideas
