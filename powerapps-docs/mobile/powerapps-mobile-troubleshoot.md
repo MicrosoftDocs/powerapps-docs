@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/12/2021
+ms.date: 01/03/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -102,11 +102,11 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 ## App resets when running it on Power Apps mobile
 
-When you run a canvas or model-driven app on Power Apps mobile it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, and the web browser suspends the page because it is consuming too much power.
+When you run a canvas or model-driven app on Power Apps mobile, it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large, complex webpage and the web browser suspends the page because it is consuming too much power.
 
-On Android, this app restart can look like a crash because the app is completely closed and the user is taken to the home screen of the device.
+On Android devices, this app restart can look like a crash because the app is completely closed and the user is taken to the home screen of the device.
 
-If you experience a reset while using a canvas app, contact your app developer, and see [Prevent canvas app restarts](../mobile/power-apps-mobile-canvas-app-restarts.md)
+If you experience a reset while using a canvas app, contact your app developer, and see [Prevent canvas app restarts](../mobile/power-apps-mobile-canvas-app-restarts.md).
 
 ## Unable to download SharePoint attachment in the mobile app
 
