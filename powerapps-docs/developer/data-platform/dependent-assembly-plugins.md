@@ -4,7 +4,7 @@ description: "Learn how to include additional assemblies that your plug-in assem
 ms.date: 12/01/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 manager: sunilg # MSFT alias of manager or PM counterpart

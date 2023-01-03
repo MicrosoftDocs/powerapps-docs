@@ -3,7 +3,7 @@ title: "Formula repair in Power Apps (preview) | MicrosoftDocs"
 description: Understand how to enable and use formula repair in Power Apps
 ms.custom: ""
 ms.date: 11/03/2022
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 ms.topic: overview
 author: norliu
 ms.subservice: common
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - norliu
 ---
 

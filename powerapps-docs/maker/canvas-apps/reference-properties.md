@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 ms.date: 01/06/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 

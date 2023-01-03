@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/18/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Enable consistent experience across sessions using LoadData and SaveData functions

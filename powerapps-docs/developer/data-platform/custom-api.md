@@ -1,7 +1,7 @@
 ---
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.date: 07/29/2022
 ms.reviewer: jdaly

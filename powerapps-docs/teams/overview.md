@@ -13,7 +13,7 @@ searchScope:
   - "Power Apps"
 contributors:
   - kumarvivek
-  - tapanm-msft
+  - mduelae
 ---
 # Power Apps and Microsoft Teams integration
 

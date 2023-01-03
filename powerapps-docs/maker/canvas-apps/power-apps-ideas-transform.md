@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
 # Transform natural language to Power Fx formulas 

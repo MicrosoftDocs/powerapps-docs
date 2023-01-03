@@ -5,7 +5,7 @@ author: yifwang
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 04/03/2018
 ms.subservice: canvas-maker
 ms.author: yifwang
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - yifwang
 ---
 # Format a table in Excel and naming tips
