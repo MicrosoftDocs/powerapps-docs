@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps (preview)
 description: This article describes the modern, refreshed look for model-driven apps
 author: sericks007
 ms.topic: overview
-ms.date: 12/05/2022
+ms.date: 01/03/2023
 ms.subservice: end-user
 ms.author: sericks
 manager: tapanm-MSFT
@@ -58,5 +58,11 @@ Makers can enable the new look for existing and new model-driven apps in the app
 
 ## Provide feedback on the new look
 After enabling the **Try the new look and feel (preview)** feature and using your model-driven apps, you can provide feedback on the new look on the [Power Apps Custom Page Feedback discussion thread](https://powerusers.microsoft.com/t5/Building-Power-Apps/Power-Apps-Custom-Page-Feedback-discussion-thread/m-p/1203993#M315697) web page.
+
+## Known limitations
+Be aware of the following limitations for the modern, refreshed look for model-driven apps:
+
+- The mobile app, Mail app, and Embedded Teams mode do not suppot the modern, refreshed look and are not part of the preview.
+- Dynamics 365 applications are not fully tested. Please do not enable this preview in any production applications.
 
 
