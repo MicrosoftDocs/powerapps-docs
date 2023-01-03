@@ -117,11 +117,12 @@ Watch a short video showing how to create a virtual table with the SharePoint vi
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
 
-- **Service Principle**: Tenant, clientID, client secret.
+
 - **Azure AD**: Select and sign in with your credentials.
 - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments only).
--**Windows Authentication**: Server name, database name, user name, password, gateway (on-premises deployments only).
-- **Windows Authentication** (non-shared): User name, password, gateway.
+-**Windows Authentication**: Available soon
+- **Windows Authentication** (non-shared): Available soon
+- **Service Principle**: Available soon
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
