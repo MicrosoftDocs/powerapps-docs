@@ -21,8 +21,8 @@ contributors:
 In the [Portal Management app](configure-portal.md), you can view **Website Bindings** metadata records. These records provide the link between the site metadata stored in Microsoft Dataverse and the Power Pages site Azure web application.
 
 > [!WARNING]
-> You should be careful while modifying the website binding records as they may cause your site to no longer function.
-> It is recommended that you can manage this association by selecting the **Edit** option in the **Site Details** section in the Power Pages hub of the [Power Platform admin center](/power-pages/admin/admin-overview#site-details) and selecting the **Website Record** value.
+> - You should be careful while modifying the website binding records as they may cause your site to no longer function.
+> - It is recommended that you manage this association by selecting the **Edit** option in the **Site Details** section in the Power Pages hub of the [Power Platform admin center](/power-pages/admin/admin-overview#site-details) and selecting the **Website Record** value.
 
 ## Website binding attributes
 
