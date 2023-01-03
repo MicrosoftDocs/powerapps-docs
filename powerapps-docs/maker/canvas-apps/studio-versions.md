@@ -5,7 +5,7 @@ author: emcoope-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/15/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 

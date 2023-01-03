@@ -4,7 +4,7 @@ description: "Learn how to find and analyze performance data on plug-ins executi
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78"
+author: "divkamath"
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
 manager: "kvivek"

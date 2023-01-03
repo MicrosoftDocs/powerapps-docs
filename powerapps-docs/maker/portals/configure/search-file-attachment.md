@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 12/12/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -71,35 +71,35 @@ The Faceted Search - Results Template web template is revised to display files a
 ```
 {% assign openTag = '{{' %}
 {% assign closingTag = '}}' %}
-{%raw%}
-  <script id=search-view-results type=text/x-handlebars-template>
+ {%raw%}
+  <script id="search-view-results" type="text/x-handlebars-template">
    {{#if items}}
-    <div class=page-header>
-     <h3>{%endraw%}{{openTag}} stringFormat {{ resx.Search_Results_Format_String }} firstResultNumber lastResultNumber itemCount {{closingTag}}{%raw%}
-      <em class=querytext>{{{query}}}</em>
+    <div class="page-header">
+     <h2>{%endraw%}{{openTag}} stringFormat "{{ resx.Search_Results_Format_String }}" firstResultNumber lastResultNumber itemCount {{closingTag}}{%raw%}
+      <em class="querytext">{{{query}}}</em>
       {{#if isResetVisible}}
        <a class="btn btn-default btn-sm facet-clear-all" role="button" title="{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}" tabIndex="0">{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}</a>
       {{/if}}
-     </h3>
+     </h2>
     </div>
    <ul>
     {{#each items}}
      <li>
-      <h3><a title={{title}} href={{url}}>{{#if parent}}<span class=glyphicon glyphicon-file pull-left text-muted aria-hidden=true></span>{{/if}}{{title}}</a></h3>
-      <p class=fragment>{{{fragment}}}</p>
+      <h3><a title="{{title}}" href="{{url}}">{{#if parent}}<span class="glyphicon glyphicon-file pull-left text-muted" aria-hidden="true"></span>{{/if}}{{title}}</a></h3>
+      <p class="fragment">{{{fragment}}}</p>
       {{#if parent}}
-       <p class=small related-article>{%endraw%}{{ resx.Related_Article }}{%raw%}: <a title={{parent.title}} href={{parent.absoluteUrl}}>{{parent.title}}</a></p>
+       <p class="small related-article">{%endraw%}{{ resx.Related_Article }}{%raw%}: <a title="{{parent.title}}" href="{{parent.absoluteUrl}}">{{parent.title}}</a></p>
       {{/if}}
-      <ul class=note-group small list-unstyled>
+      <ul class="note-group small list-unstyled">
        {{#if relatedNotes}}
         {{#each relatedNotes}}
-         <li class=note-item>
+         <li class="note-item">
          {{#if isImage}}
-          <a target=_blank title={{title}} href={{absoluteUrl}}><span class=glyphicon glyphicon-file aria-hidden=true></span>&nbsp;{{title}}</a>
+          <a target="_blank" title="{{title}}" href="{{absoluteUrl}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;{{title}}</a>
          {{else}}
-          <a title={{title}} href={{absoluteUrl}}><span class=glyphicon glyphicon-file aria-hidden=true></span>&nbsp;{{title}}</a>
+          <a title="{{title}}" href="{{absoluteUrl}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;{{title}}</a>
          {{/if}}
-         <p class=fragment text-muted>{{{fragment}}}</p>
+         <p class="fragment text-muted">{{{fragment}}}</p>
          </li>
         {{/each}}
         {{/if}}
@@ -108,14 +108,14 @@ The Faceted Search - Results Template web template is revised to display files a
     {{/each}}
    </ul>
    {{else}}
-    <h2>{%endraw%}{{ resx.Search_No_Results_Found }}{%raw%}<em class=querytext>{{{query}}}</em>
+    <h2>{%endraw%}{{ resx.Search_No_Results_Found }}{%raw%}<em class="querytext">{{{query}}}</em>
      {{#if isResetVisible}}
       <a class="btn btn-default btn-sm facet-clear-all" role="button" title="{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}" tabIndex="0">{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}</a>
      {{/if}}
     </h2>
    {{/if}}
   </script>
-{%endraw%}
+ {%endraw%}
 ```
 
 **Site Settings**
