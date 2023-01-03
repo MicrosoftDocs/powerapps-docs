@@ -17,7 +17,7 @@ contributors:
 ---
 # Use image column data
 
-You can store image data in Dataverse using image columns or file columns.
+You can store image data in Dataverse using image columns or file columns. You can use the APIs for file columns with image columns.
 Image columns have some special behaviors and limitations to support displaying images within applications.
 
 The following table introduces some of the differences between image and file columns.
@@ -31,7 +31,105 @@ The following table introduces some of the differences between image and file co
 |**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record.|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
 |**Set with Create**|When the image column is the *primary image*, you can set image columns with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
 |**Return with Retrieve**|You can retrieve thumb-nail sized images with other record data using retrieve.|The value returned is the file id.|
-|**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|Not available for file columns, but you can compose a URL to download the file directly from the Web API. See [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
+|**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|You can compose a URL to download the file directly from the Web API. See [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
+
+## Maximum image size
+
+Just like file columns, you can specify the maximum size of data stored in an image column using the `MaxSizeInKb` property. However the maximum allowed size is 30MB.
+
+If you try to upload a file that is too large, you will get the following error:
+
+> Name: `ProcessImageFailure`<br />
+> Code: `0x80072553`<br />
+> Number: `-2147015341`<br />
+> Message: `Error occured when processing image. Reason: File size is too big. MaxSize: 0 MB, Uploaded filesize: 0 MB.`
+
+You can use the following examples to check the maximum file size:
+
+#### [SDK for .NET](#tab/sdk)
+
+The following static `GetImageColumnMaxSizeInKb` method returns the `MaxSizeInKB` value for an [ImageAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata) column.
+
+```csharp
+/// <summary>
+/// Retrieves the MaxSizeInKb property of an image column.
+/// </summary>
+/// <param name="service">IOrganizationService</param>
+/// <param name="entityLogicalName">The logical name of the table that has the column</param>
+/// <param name="imageColumnLogicalName">The logical name of the image column.</param>
+/// <returns></returns>
+/// <exception cref="Exception"></exception>
+public static int GetImageColumnMaxSizeInKb(
+   IOrganizationService service, 
+   string entityLogicalName, 
+   string imageColumnLogicalName) 
+{
+
+   RetrieveAttributeRequest retrieveAttributeRequest = new() { 
+         EntityLogicalName = entityLogicalName,
+         LogicalName = imageColumnLogicalName
+   };
+
+   RetrieveAttributeResponse retrieveAttributeResponse;
+   try
+   {
+         retrieveAttributeResponse = (RetrieveAttributeResponse)service.Execute(retrieveAttributeRequest);
+   }
+   catch (Exception)
+   {
+         throw;
+   }
+
+   if (retrieveAttributeResponse.AttributeMetadata is ImageAttributeMetadata imageColumn)
+   {
+         return imageColumn.MaxSizeInKB.Value;
+   }
+   else
+   {
+         throw new Exception($"{entityLogicalName}.{imageColumnLogicalName} is not a image column.");
+   }
+}
+```
+
+More information:
+
+- [RetrieveAttributeRequest Class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest)
+- [ImageAttributeMetadata.MaxSizeInKB](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.MaxSizeInKB)
+
+#### [Web API](#tab/webapi)
+
+The following request returns the `MaxSizeInKB` value for an [ImageAttributeMetadata](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata) column with the logical name `sample_imagecolumn` in the `account` table.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='sample_imagecolumn')/Microsoft.Dynamics.CRM.ImageAttributeMetadata?$select=MaxSizeInKB HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata(MaxSizeInKB)/$entity",
+  "MaxSizeInKB": 102400,
+  "MetadataId": "f315e7f1-6355-ed11-bba3-000d3a9933c9"
+}
+```
+
+More information:
+
+- [Query table definitions using the Web API > Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
+- [ImageAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata)
+
+---
 
 ## Image file types
 
@@ -54,30 +152,170 @@ If you try to save a file that is not one of these types, you will get the follo
 
 ## Full-size and thumbnail-sized images
 
-When an image column value is set, Dataverse will automatically generate a thumb-nail sized image that is suitable for use as an icon in an application. For example, in model-driven apps a thumbnail-sized image can be displayed in the application.
+When an image column value is set, Dataverse will automatically generate a thumbnail-sized image that is suitable for use as an icon in an application. For example, in model-driven apps a thumbnail-sized image can be displayed in the application.
 
-If the image column is configured to store a full-sized image, a file up to 30MB in size can be saved and downloaded separately from the thumbnail-sized image. The [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) indicates whether an image column will store a full-sized image.
+If the image column is configured to store a full-sized image, a file up to 30MB in size can be saved and downloaded separately from the thumbnail-sized image. The [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) controls whether an image column will store a full-sized image.
 
 ### Detect which image columns support full-sized images
 
-TODO: 
- - Check Metadata to verify single column
- - use [Image Attribute Configuration (AttributeImageConfig)  table/entity reference](reference/entities/attributeimageconfig.md) to check the system for any image attribute metadata that support full-sized images
+You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to retrieve a list of image columns that support full-sized images using the `parententitylogicalname`, `attributelogicalname`, and `canstorefullimage` column values.
+
+# [SDK for .NET](#tab/sdk)
+
+```csharp
+static void PrintFullSizedImageColumns(IOrganizationService service)
+{
+    QueryExpression query = new QueryExpression("attributeimageconfig")
+    {
+        ColumnSet = new ColumnSet("parententitylogicalname", "attributelogicalname"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions =
+            {
+                new ConditionExpression(
+                    attributeName: "canstorefullimage",
+                    conditionOperator: ConditionOperator.Equal,
+                    value: true)
+            }
+        }
+    };
+
+    EntityCollection response = service.RetrieveMultiple(query);
+    foreach (Entity record in response.Entities)
+    {
+        Console.WriteLine($"{record["parententitylogicalname"]}.{record["attributelogicalname"]}");
+    }
+}
+```
+
+**Output**
+
+```
+account.sample_sampleimage
+```
+
+# [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/attributeimageconfigs?$select=parententitylogicalname,attributelogicalname&$filter=canstorefullimage%20eq%20true HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Allow: OPTIONS,GET,HEAD,POST
+Content-Type: application/json; odata.metadata=minimal; odata.streaming=true
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#attributeimageconfigs(parententitylogicalname,attributelogicalname)",
+  "value": [
+    {
+      "@odata.etag": "W/\"76501240\"",
+      "parententitylogicalname": "account",
+      "attributelogicalname": "sample_sampleimage",
+      "attributeimageconfigid": "b8c1750f-c24f-ea11-a813-000d3a5391c8"
+    }
+  ]
+}
+```
+
+---
+
+You can also query schema definitions to return columns where [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) is true. More information: [Query schema definitions](query-schema-definitions.md)
 
 ### Re-size rules for thumbnail-sized images
 
-When a thumbnail-sized image is generated, it is cropped and re-sized according to the following rules:
-
-TODO
+When a thumbnail-sized image is generated, it is cropped and re-sized to a square shape according to the following rules:
+  
+- Images with at least one side larger than 144 pixels are cropped on center to 144x144.  
+- Images with both sides smaller than 144 are cropped square to their smallest side.  
+  
+The following table shows two examples.  
+  
+|Before|After|  
+|------------|-----------|  
+|:::image type="content" source="media/crm-itpro-cust-imagebeforeresize.png" alt-text="Image before resize":::<br /><br /> 300x428|:::image type="content" source="media/crm-itpro-cust-imageafterresize.jpg" alt-text="image after resize":::<br /><br /> 144x144|  
+|:::image type="content" source="media/crm-itpro-cust-imagebeforeresizeexample2.png" alt-text="smaller image resize before":::<br /><br /> 91x130|:::image type="content" source="media/crm-itpro-cust-imageafterresizeexample2.jpg" alt-text="smaller image resize after":::<br /><br /> 91x91|
 
 ## Primary Images
 
-Each table can have multiple image columns associated with it, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table. When this is set to true, the value for any other image columns for the table will change to false. The [EntityMetadata.PrimaryImageAttribute property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryImageAttribute) returns the logical name of the image column that is the current primary image.
+Each table can have multiple image columns associated with it, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table. 
 
-TODO
-Detect whether a column is the primary image
- - individually
- - Use [Entity Image Configuration (EntityImageConfig)  table/entity reference](reference/entities/entityimageconfig.md)
+The `IsPrimaryImage` value is ignored when the column is created, it will only apply when the column is updated. When `IsPrimaryImage` is set to true, the `IsPrimaryImage` value for any other image columns for the table will change to false. If the column that is the current primary image column is deleted, one of any other available image columns will become the primary image.
+
+The [EntityMetadata.PrimaryImageAttribute property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryImageAttribute) returns the logical name of the image column that is the current primary image.
+
+You can also query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to determine which image columns represent the current primary image using the `parententitylogicalname` and `primaryimageattribute` column values.
+
+# [SDK for .NET](#tab/sdk)
+
+```csharp
+static void PrintPrimaryImageColumns(IOrganizationService service)
+{
+    QueryExpression query = new QueryExpression("entityimageconfig")
+    {
+        ColumnSet = new ColumnSet("parententitylogicalname", "primaryimageattribute"),
+    };
+
+    EntityCollection response = service.RetrieveMultiple(query);
+    foreach (Entity record in response.Entities)
+    {
+        Console.WriteLine($"{record["parententitylogicalname"]}.{record["primaryimageattribute"]}");
+    }
+}
+```
+
+**Output**
+
+```
+account.sample_sampleimage
+```
+
+# [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/entityimageconfigs?$select=parententitylogicalname,primaryimageattribute HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Allow: OPTIONS,GET,HEAD,POST
+Content-Type: application/json; odata.metadata=minimal; odata.streaming=true
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#entityimageconfigs(parententitylogicalname,primaryimageattribute)",
+  "value": [
+    {
+      "@odata.etag": "W/\"76501240\"",
+      "parententitylogicalname": "account",
+      "primaryimageattribute": "sample_sampleimage",
+      "entityimageconfigid": "b8c1750f-c24f-ea11-a813-000d3a5391c8"
+    }
+  ]
+}
+```
+
+---
+
 
 ## Download URL
 
