@@ -19,7 +19,7 @@ contributors:
 [!INCLUDE[./includes/openForm-description.md](./includes/openForm-description.md)]
 
 > [!NOTE]
-> To open a main form as a dialog, use the `Xrm.Navigation.navigateTo` method instead. See [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/customize-entity-forms#open-main-form-in-a-dialog-using-client-api) for details.
+> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. More information: [Open main form in a dialog using client API](../../../customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
 ## Syntax
 
@@ -126,7 +126,8 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 
 ## Remarks
 
-You must use this method to open table or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openEntityForm) and  [Xrm.Utility.openQuickCreate](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openQuickCreate) methods. 
+You must use this method to open table or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openEntityForm) and  [Xrm.Utility.openQuickCreate](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openQuickCreate) methods.
+
 Use [setActiveProcess](../formcontext-data-process/activeprocess/setactiveprocess.md) to display a particular business process and [setActiveProcessInstance](../formcontext-data-process/setactiveprocessinstance.md) to display a particular business process instance on the form.
  
 
