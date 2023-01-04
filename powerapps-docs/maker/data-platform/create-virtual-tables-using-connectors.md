@@ -120,9 +120,6 @@ Watch a short video showing how to create a virtual table with the SharePoint vi
 
 - **Azure AD**: Select and sign in with your credentials.
 - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments only).
-- **Windows Authentication**: Available soon
-- **Windows Authentication** (non-shared): Available soon
-- **Service Principle**: Available soon
 
 # [Microsoft SharePoint](#tab/sharepoint)
 
