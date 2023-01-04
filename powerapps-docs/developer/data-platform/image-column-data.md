@@ -252,10 +252,7 @@ The following table shows two examples.
 
 ## Primary Images
 
-Each table can have multiple image columns, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table. 
-
-<!-- Does this belong here? -->
-The `IsPrimaryImage` value is ignored when the column is created, it will only apply when the column is updated. When `IsPrimaryImage` is set to true, the `IsPrimaryImage` value for any other image columns for the table will change to false. If the column that is the current primary image column is deleted, one of any other available image columns will become the primary image.
+Each table can have multiple image columns, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table.
 
 The [EntityMetadata.PrimaryImageAttribute property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryImageAttribute) returns the logical name of the image column that is the current primary image.
 
@@ -391,6 +388,10 @@ static void RetrieveAndUpdateImageColumn(IOrganizationService service) {
     service.Update(accountForUpdate);               
 }
 ```
+
+> [!NOTE]
+> Image columns are not included if you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true. For performance reasons you must explicitly specify that you want to retrieve image data.
+
 
 # [Web API](#tab/webapi)
 

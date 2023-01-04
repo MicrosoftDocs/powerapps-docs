@@ -4,7 +4,7 @@ description: Learn how to programmatically work with table definitions in Micros
 author: NHelgren
 ms.author: nhelgren
 ms.topic: article
-ms.date: 03/24/2021
+ms.date: 01/04/2023
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType: 
@@ -45,14 +45,14 @@ Each table also has three properties that can display localized values:
 |`DisplayCollectionName`|A plural form of the display name. i.e. Accounts|
 |`Description`|A short sentence describing the table i.e. *Business that represents a customer or potential customer. The company that is billed in business transactions.*|
 
-These are the localizable values that are used to refer to the tables in an app. These values can be changed at any time. To add or edit localized values see  [Dataverse Customization Guide: Translate customized table and column text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the tables in an app. These values can be changed at any time. To add or edit localized values see  [Translate customized table, form, and column text into other languages](../../maker/data-platform/export-customized-entity-field-text-translation.md).
 
 
 ## Primary key
 
 The `PrimaryIdAttribute` property value is the logical name of the column that is the primary key for the table.
 
-By default, all tables have a single GUID unique identifier column. This is usually named *&lt; table logical name &gt;*+ `Id`.
+By default, all tables have a single GUID unique identifier column. This is usually named: `<table logical name>Id`.
 
 ## Primary name
 
@@ -65,24 +65,18 @@ The `PrimaryNameAttribute` property value is the logical name of the column that
 
 ## Entity images
 
-The `PrimaryImageAttribute` property value is the logical name of the column that stores the image data for the table record. Each table can have only one image column and the logical name of that column is always `entityimage`.
+The `PrimaryImageAttribute` property value is the logical name of the image column that has been chosen to represent the entity record. This image may be displayed in an application.
 
 **Example**: The [Contact table](reference/entities/contact.md) [EntityImage](reference/entities/contact.md#BKMK_EntityImage) column can store a picture of the contact.
 
-For performance reasons, entity images are not included in retrieve operations unless explicitly requested.
-
-Each table that supports entity images will have three supporting columns.
-
-|SchemaName|Type|Description|
-|--|--|--|
-|`EntityImage_Timestamp` |`BigIntType`|The value represents when the image was last updated and is used to help make sure that the latest version of the image is downloaded and cached on the client.|
-|`EntityImage_URL`|`StringType`|An absolute URL to display the entity image in a client.|
-|`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image.|
-
-More information: [Image columns](image-attributes.md), [Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
-
 > [!NOTE]
 > This is different from the icon displayed for a table in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
+
+More information:
+
+- [Image columns](image-attributes.md)
+- [Use image column data](image-column-data.md)
+- [Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
 
 ## Types of tables
 
