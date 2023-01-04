@@ -94,9 +94,9 @@ These steps describe how to create a virtual table from a solution. Use similar 
 
 ### Create the virtual table
 
-Watch a short video showing how to create a virtual table with the SharePoint virtual connector provider. 
+Watch a short video showing how to create a virtual table with the virtual connector provider.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcIk]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE5e1m9]
 
 1. In the **New table from external data** wizard you can either select an existing connection if you've one or choose to create a new connection.  
 
@@ -110,10 +110,6 @@ Watch a short video showing how to create a virtual table with the SharePoint vi
 
 # [SQL Server](#tab/sql)
 
-<!-- Watch a short video showing how to create a virtual table with a virtual connector provider. The video specifically uses SQL, but aside from the connection details all the other steps are the same.
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XLkU] -->
-
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
 
@@ -122,10 +118,6 @@ Watch a short video showing how to create a virtual table with the SharePoint vi
 - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments only).
 
 # [Microsoft SharePoint](#tab/sharepoint)
-
-<!-- Watch a short video showing how to create a virtual table with the SharePoint virtual connector provider. 
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcIk] -->
 
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions in SharePoint.
