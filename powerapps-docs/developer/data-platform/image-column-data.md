@@ -29,7 +29,7 @@ The following table introduces some of the differences between image and file co
 |**File Types**|Only [Image file types](#image-file-types)|All file types allowed by the [Organization.BlockedAttachments value](reference/entities/organization.md#BKMK_BlockedAttachments). More information: [Block certain types of files](file-attributes.md#block-certain-types-of-files) |
 |**Set with Update**|You can set image column data with other record data using update.|You can only upload files individually to file column properties.|
 |**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record. More information: [Delete images](#delete-images)|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
-|**Set with Create**|When the image column is the *primary image*, you can set image columns with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
+|**Set with Create**|When the image column is the *primary image*, you can set image data with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
 |**Return with Retrieve**|You can retrieve thumb-nail sized images with other record data using retrieve.|The value returned is the file id. More information: [Behavior when retrieving](file-column-data.md#behavior-when-retrieving)|
 |**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|There is no string column with a download URL, but you can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
 
@@ -152,7 +152,7 @@ If you try to save a file that is not one of these types, you will get the follo
 
 ## Full-size and thumbnail-sized images
 
-When an image column value is set, Dataverse will automatically generate a thumbnail-sized image that is suitable for use as an icon in an application. For example, in model-driven apps a thumbnail-sized image can be displayed in the application.
+When an image column value is set, Dataverse will automatically generate a thumbnail-sized image that is suitable for use as an icon in an application.
 
 If the image column is configured to store a full-sized image, a file up to the configured `MaxSizeInKb` can be saved and downloaded separately from the thumbnail-sized image. The [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) controls whether an image column will store a full-sized image.
 

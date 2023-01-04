@@ -7,7 +7,6 @@ ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -126,21 +125,19 @@ More information:
 
 ## Update image columns
 
-In addition to the properties inherited from the [AttributeMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata), you can also update the following properties of the [ImageAttributeMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata).
-
-using Dataverse APIs.
+In addition to the properties inherited from the [AttributeMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata) | [AttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.AttributeMetadata), you can also update the following properties of the [ImageAttributeMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata) | [ImageAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.ImageAttributeMetadata).
 
 
 |Property|Label |Description  |
 |---------|---------|---------|
 |`MaxSizeInKB`|**Maximum image size**|Set this value to the smallest useable data size appropriate for your particular application. The default setting for this is `10240`, or 10 MB. The maximum value is `30720` KB (30 MB). This value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the image column, but you can change it using the API.|
-|`CanStoreFullImage`|**Can store full images**|When this is false, only thumbnail-sized images will be available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.|
-|`IsPrimaryImage`|**Primary image column**|Whether the column will be the one image column used to represent a table row in applications.<br /><br />If there is only one image column for a table, this will be set by default. When another image column already exists for a table, this value will be ignored if passed when creating a new image column. However, you can update the column after you create it to make the other column the primary image column. <br /><br />If you delete a column that is the current primary image column, another image column for the table will be selected automatically to be the current primary image column.|
+|`CanStoreFullImage`|**Can store full images**|When this is false, only thumbnail-sized images will be available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.<br /><br />You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to find which image columns support full-sized images. More information: [Detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)<br /><br />**Note**: While you can change this, we recommend you don't. When an image is uploaded the current value of this property determines whether a full-sized image will be saved. You can see inconsistent results for images that were saved when the value of this property was different.  |
+|`IsPrimaryImage`|**Primary image column**|Whether the column will be the one image column used to represent a table row in applications.<br /><br />If there is only one image column for a table, this will be set by default. When another image column already exists for a table, this value will be ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column. <br /><br />If you delete a column that is the current primary image column, another image column for the table will be selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
 
 > [!NOTE]
 > The `MaxHeight` and `MaxWidth` values are always 144 and cannot be changed. These define the size of the thumbnail-sized images that are created for every image column value.
 
-More information: 
+More information:
 - [Update a column using Web API](webapi/create-update-entity-definitions-using-web-api.md#update-a-column)
 - [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
 
@@ -223,12 +220,16 @@ static void GetImageColumns(IOrganizationService service, string tableLogicalNam
 
 # [Web API](#tab/webapi)
 
-This request will return all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: 
+This request will return all the image column definitions for the account table. The filtering is provided by specifying `/Microsoft.Dynamics.CRM.ImageAttributeMetadata` in the URL. More information: [Retrieving attributes](webapi/query-metadata-web-api.md#retrieving-attributes)
 
 **Request**
 
 ```http
-GET https://crmue.api.crm.dynamics.com/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata?$select=SchemaName,CanStoreFullImage,MaxSizeInKB,IsPrimaryImage
+GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata?$select=SchemaName,CanStoreFullImage,MaxSizeInKB,IsPrimaryImage
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
 ```
 
 **Response**
@@ -239,7 +240,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-  "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata(SchemaName,CanStoreFullImage,MaxSizeInKB)",
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions('account')/Attributes/Microsoft.Dynamics.CRM.ImageAttributeMetadata(SchemaName,CanStoreFullImage,MaxSizeInKB)",
   "value": [
     {
       "SchemaName": "sample_ImageColumn",
