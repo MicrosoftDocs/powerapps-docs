@@ -17,7 +17,7 @@ contributors:
 ---
 # Use image column data
 
-You can store image data in Dataverse using image columns or file columns. You can use the APIs for file columns with image columns.
+You can store image data in Dataverse using image columns or file columns. You can use many of the APIs for file columns with image columns.
 Image columns have some special behaviors and limitations to support displaying images within applications.
 
 The following table introduces some of the differences between image and file columns.
@@ -28,7 +28,7 @@ The following table introduces some of the differences between image and file co
 |**File Size**|Limited to 30MB.|Up to 10GB.|
 |**File Types**|Only [Image file types](#image-file-types)|All file types allowed by the [Organization.BlockedAttachments value](reference/entities/organization.md#BKMK_BlockedAttachments). More information: [Block certain types of files](file-attributes.md#block-certain-types-of-files) |
 |**Set with Update**|You can set image column data with other record data using update.|You can only upload files individually to file column properties.|
-|**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record.|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
+|**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record. More information: [Delete images](#delete-images)|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
 |**Set with Create**|When the image column is the *primary image*, you can set image columns with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
 |**Return with Retrieve**|You can retrieve thumb-nail sized images with other record data using retrieve.|The value returned is the file id. More information: [Behavior when retrieving](file-column-data.md#behavior-when-retrieving)|
 |**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|You can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
@@ -248,7 +248,7 @@ The following table shows two examples.
 
 ## Primary Images
 
-Each table can have multiple image columns associated with it, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table. 
+Each table can have multiple image columns, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table. 
 
 <!-- Does this belong here? -->
 The `IsPrimaryImage` value is ignored when the column is created, it will only apply when the column is updated. When `IsPrimaryImage` is set to true, the `IsPrimaryImage` value for any other image columns for the table will change to false. If the column that is the current primary image column is deleted, one of any other available image columns will become the primary image.
@@ -443,7 +443,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
 ```
 
-Some libraries you may use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), will automatically convert these encoded string values to `byte[]` so you might not even notice it.
+Some libraries you may use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), will automatically convert these encoded string values to `byte[]` so you might not even notice that the transport protocol is using base 64 strings.
 
 For more information abut base 64 encoded strings see:
  - [Base64 - MDN Web Docs Glossary](https://developer.mozilla.org/docs/Glossary/Base64)
