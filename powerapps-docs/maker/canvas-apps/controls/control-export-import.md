@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/09/2020
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Export and Import controls in Power Apps

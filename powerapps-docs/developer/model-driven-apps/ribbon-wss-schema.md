@@ -3,7 +3,7 @@ title: "Ribbon WSS schema (model-driven apps) | Microsoft Docs" # Intent and pro
 description: "The following is the schema definition for the ribbon types WSS of an import/export customization file. It is included from the Ribbon Core Schema." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference

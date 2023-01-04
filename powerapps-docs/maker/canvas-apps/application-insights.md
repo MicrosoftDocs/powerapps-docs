@@ -4,7 +4,7 @@ description: Learn about how to analyze app telemetry of canvas apps using Appli
 author: mattgon
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/23/2022
 ms.subservice: canvas-maker
 ms.author: austinj
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - maustinjones 
   - mattgon
 ---

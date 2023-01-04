@@ -1,10 +1,10 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/27/2022
+ms.date: 12/01/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 manager: sunilg # MSFT alias of manager or PM counterpart
@@ -47,7 +47,6 @@ If you have questions or issues with this feature you can contact technical supp
 
 The following limitations apply to dependent assembly plug-ins.
 
-- A plugin package is limited to 16 MB in size or 50 assemblies.
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
 

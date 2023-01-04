@@ -4,7 +4,7 @@ description: In this series of tutorials, we'll explore how to build out a basic
 author: NickWaggoner
 
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/18/2020
 ms.subservice: canvas-maker
 ms.author: niwaggon
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
 ms.custom:

@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 11/02/2022
+ms.date: 11/08/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -29,6 +29,12 @@ Each file column has a supporting read-only string column that contains the name
 
 > [!NOTE]
 > The file name column does not appear in the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) designer.
+
+## Relationship to FileAttachment table
+
+When a file column is created for a table, a new one-to-many relationship is created between the table and the `FileAttachment` table. The name of the relationship is `{table logical name}_FileAttachments`. For example, if the file column is part of the account table, the relationship name will be `account_FileAttachments`.
+
+You can use this relationship to return additional data about the file column and any other file columns for the table. More information: [Retrieve additional information about files for a record](#retrieve-additional-information-about-files-for-a-record).
 
 ## Behavior when retrieving
 
@@ -98,6 +104,121 @@ HTTP/1.1 200 OK
 ```
 
 More information: [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
+
+---
+
+### Retrieve additional information about files for a record
+
+You can use the relationship between the file column table and the `FileAttachment` table to return information about all file columns associated to that table row.
+
+#### [SDK for .NET](#tab/sdk)
+
+The `RetrieveAccountRecordWithFileData` static method below will return information about all the file columns that contain data related to the `account` record with the matching `accountid` value.
+
+```csharp
+static void RetrieveAccountRecordWithFileData(IOrganizationService service, Guid accountid)
+{
+    // Create query for related records
+    var relationshipQueryCollection = new RelationshipQueryCollection {
+        {
+            new Relationship("account_FileAttachments"),
+            new QueryExpression("fileattachment"){
+                ColumnSet = new ColumnSet(
+                                "createdon",
+                                "mimetype",
+                                "filesizeinbytes",
+                                "filename",
+                                "regardingfieldname",
+                                "fileattachmentid")
+            }
+        }
+    };
+
+    // Include the related query with the Retrieve Request
+    RetrieveRequest request = new RetrieveRequest
+    {
+        ColumnSet = new ColumnSet("accountid"),
+        RelatedEntitiesQuery = relationshipQueryCollection,
+        Target = new EntityReference("account", accountid)
+    };
+
+    // Send the request
+    RetrieveResponse response = (RetrieveResponse)service.Execute(request);
+
+    //Display related FileAttachment data for the account record
+    response.Entity.RelatedEntities[new Relationship("account_FileAttachments")]
+        .Entities.ToList().ForEach(e =>
+        {
+            Console.WriteLine($"createdon: {e.FormattedValues["createdon"]}");
+            Console.WriteLine($"mimetype: {e["mimetype"]}");
+            Console.WriteLine($"filesizeinbytes: {e.FormattedValues["filesizeinbytes"]}");
+            Console.WriteLine($"filename: {e["filename"]}");
+            Console.WriteLine($"regardingfieldname: {e["regardingfieldname"]}");
+            Console.WriteLine($"fileattachmentid: {e["fileattachmentid"]}");
+        });
+}
+```
+
+**Output**:
+
+In this case, there is a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
+
+```
+createdon: 10/22/2022 2:01 PM
+mimetype: application/pdf
+filesizeinbytes: 25,870,370
+filename: 25mb.pdf
+regardingfieldname: sample_filecolumn
+fileattachmentid: 63a6afb7-4c52-ed11-bba1-000d3a9933c9
+```
+
+More information:
+
+- [What is the Organization service](org-service/overview.md)
+- [Retrieve with related rows](org-service/entity-operations-retrieve.md#retrieve-with-related-rows)
+
+#### [Web API](#tab/webapi)
+
+The request below below will return information about all the file columns that contain data related to the `account` record with `accountid` equal to `352edda9-4c52-ed11-bba1-000d3a9933c9`.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts(352edda9-4c52-ed11-bba1-000d3a9933c9)?$filter=sample_filecolumn%20ne%20null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+In this case, there is a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(accountid,account_FileAttachments(createdon,mimetype,filesizeinbytes,filename,regardingfieldname))/$entity",
+  "@odata.etag": "W/\"75119522\"",
+  "accountid": "352edda9-4c52-ed11-bba1-000d3a9933c9",
+  "account_FileAttachments": [
+    {
+      "@odata.etag": "W/\"75119363\"",
+      "createdon": "2022-10-22T21:01:45Z",
+      "mimetype": "application/pdf",
+      "filesizeinbytes": 25870370,
+      "filename": "25mb.pdf",
+      "regardingfieldname": "sample_filecolumn",
+      "fileattachmentid": "63a6afb7-4c52-ed11-bba1-000d3a9933c9"
+    }
+  ]
+}
+```
+
+More information: [Retrieve with related rows](org-service/entity-operations-retrieve.md#retrieve-with-related-rows)
 
 ---
 

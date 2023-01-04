@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 09/06/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - chmoncay
   - tahoon-ms
-  - tapanm-msft
+  - mduelae
 ---
 # Accessibility properties for Power Apps
 

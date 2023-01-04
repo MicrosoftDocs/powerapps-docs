@@ -1,12 +1,12 @@
 ---
 title: "Field Sharing (PrincipalObjectAttributeAccess)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Field Sharing (PrincipalObjectAttributeAccess)  table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -27,11 +27,11 @@ Defines CRM security principals (users and teams) access rights to secured field
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/principalobjectattributeaccessset<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/principalobjectattributeaccessset<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/principalobjectattributeaccessset<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/principalobjectattributeaccessset<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -90,7 +90,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|objectid|
 |RequiredLevel|SystemRequired|
-|Targets|account,activityfileattachment,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,attributeimageconfig,bot,botcomponent,businessunit,canvasappextendedmetadata,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,chat,comment,connection,connectioninstance,connectionreference,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,email,entityanalyticsconfig,entityimageconfig,entityindex,environmentvariabledefinition,environmentvariablevalue,exportsolutionupload,fax,featurecontrolsetting,feedback,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowsession,goal,holidaywrapper,indexattributes,internalcatalogassignment,kbarticle,keyvaultreference,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailmergetemplate,managedidentity,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pmanalysishistory,msdyn_pminferredtask,msdyn_pmprocessusersettings,msdyn_pmrecording,msdyn_pmtemplate,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msgraphresourcetosubscription,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,pluginpackage,position,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,queue,queueitem,recurringappointmentmaster,relationshipattribute,reportcategory,revokeinheritedaccessrecordstracker,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,territory,usermobileofflineprofilemembership,userrating,virtualentitymetadata,workflowbinary|
+|Targets|account,activityfileattachment,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,attributeimageconfig,bot,botcomponent,businessunit,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,chat,comment,connection,connectioninstance,connectionreference,connector,contact,conversationtranscript,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowbinary,email,entityanalyticsconfig,entityimageconfig,entityindex,environmentvariabledefinition,environmentvariablevalue,exportsolutionupload,fax,featurecontrolsetting,feedback,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,flowsession,goal,holidaywrapper,indexattributes,internalcatalogassignment,kbarticle,keyvaultreference,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailmergetemplate,managedidentity,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pmanalysishistory,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_workflowactionstatus,msgraphresourcetosubscription,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,pluginpackage,position,powerbidataset,powerbimashupparameter,powerbireport,powerfxrule,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,queue,queueitem,recurringappointmentmaster,relationshipattribute,reportcategory,revokeinheritedaccessrecordstracker,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,territory,usermobileofflineprofilemembership,userrating,virtualentitymetadata,workflowbinary|
 |Type|Lookup|
 
 
@@ -347,13 +347,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [connector_PrincipalObjectAttributeAccesses](#BKMK_connector_PrincipalObjectAttributeAccesses)
 - [environmentvariabledefinition_PrincipalObjectAttributeAccesses](#BKMK_environmentvariabledefinition_PrincipalObjectAttributeAccesses)
 - [environmentvariablevalue_PrincipalObjectAttributeAccesses](#BKMK_environmentvariablevalue_PrincipalObjectAttributeAccesses)
+- [workflowbinary_PrincipalObjectAttributeAccesses](#BKMK_workflowbinary_PrincipalObjectAttributeAccesses)
 - [flowmachine_PrincipalObjectAttributeAccesses](#BKMK_flowmachine_PrincipalObjectAttributeAccesses)
 - [flowmachinegroup_PrincipalObjectAttributeAccesses](#BKMK_flowmachinegroup_PrincipalObjectAttributeAccesses)
 - [flowmachineimage_PrincipalObjectAttributeAccesses](#BKMK_flowmachineimage_PrincipalObjectAttributeAccesses)
 - [flowmachineimageversion_PrincipalObjectAttributeAccesses](#BKMK_flowmachineimageversion_PrincipalObjectAttributeAccesses)
+- [flowmachinenetwork_PrincipalObjectAttributeAccesses](#BKMK_flowmachinenetwork_PrincipalObjectAttributeAccesses)
 - [processstageparameter_PrincipalObjectAttributeAccesses](#BKMK_processstageparameter_PrincipalObjectAttributeAccesses)
+- [desktopflowbinary_PrincipalObjectAttributeAccesses](#BKMK_desktopflowbinary_PrincipalObjectAttributeAccesses)
 - [flowsession_PrincipalObjectAttributeAccesses](#BKMK_flowsession_PrincipalObjectAttributeAccesses)
-- [workflowbinary_PrincipalObjectAttributeAccesses](#BKMK_workflowbinary_PrincipalObjectAttributeAccesses)
 - [connectionreference_PrincipalObjectAttributeAccesses](#BKMK_connectionreference_PrincipalObjectAttributeAccesses)
 - [connectioninstance_PrincipalObjectAttributeAccesses](#BKMK_connectioninstance_PrincipalObjectAttributeAccesses)
 - [msdyn_aiconfiguration_PrincipalObjectAttributeAccesses](#BKMK_msdyn_aiconfiguration_PrincipalObjectAttributeAccesses)
@@ -385,6 +387,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgemanagementsetting_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgemanagementsetting_PrincipalObjectAttributeAccesses)
 - [msdyn_federatedarticle_PrincipalObjectAttributeAccesses](#BKMK_msdyn_federatedarticle_PrincipalObjectAttributeAccesses)
 - [msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses](#BKMK_msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses)
+- [msdyn_integratedsearchprovider_PrincipalObjectAttributeAccesses](#BKMK_msdyn_integratedsearchprovider_PrincipalObjectAttributeAccesses)
 - [msdyn_kmfederatedsearchconfig_PrincipalObjectAttributeAccesses](#BKMK_msdyn_kmfederatedsearchconfig_PrincipalObjectAttributeAccesses)
 - [msdyn_knowledgearticleimage_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgearticleimage_PrincipalObjectAttributeAccesses)
 - [msdyn_knowledgeinteractioninsight_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgeinteractioninsight_PrincipalObjectAttributeAccesses)
@@ -396,6 +399,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgepersonalfilter_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgepersonalfilter_PrincipalObjectAttributeAccesses)
 - [msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses](#BKMK_msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses)
 - [pluginpackage_PrincipalObjectAttributeAccesses](#BKMK_pluginpackage_PrincipalObjectAttributeAccesses)
+- [powerfxrule_PrincipalObjectAttributeAccesses](#BKMK_powerfxrule_PrincipalObjectAttributeAccesses)
 - [keyvaultreference_PrincipalObjectAttributeAccesses](#BKMK_keyvaultreference_PrincipalObjectAttributeAccesses)
 - [managedidentity_PrincipalObjectAttributeAccesses](#BKMK_managedidentity_PrincipalObjectAttributeAccesses)
 - [msgraphresourcetosubscription_PrincipalObjectAttributeAccesses](#BKMK_msgraphresourcetosubscription_PrincipalObjectAttributeAccesses)
@@ -404,19 +408,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses](#BKMK_organizationdatasyncsubscriptionentity_PrincipalObjectAttributeAccesses)
 - [organizationdatasyncstate_PrincipalObjectAttributeAccesses](#BKMK_organizationdatasyncstate_PrincipalObjectAttributeAccesses)
 - [msdyn_appinsightsmetadata_PrincipalObjectAttributeAccesses](#BKMK_msdyn_appinsightsmetadata_PrincipalObjectAttributeAccesses)
+- [msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses](#BKMK_msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses)
 - [userrating_PrincipalObjectAttributeAccesses](#BKMK_userrating_PrincipalObjectAttributeAccesses)
 - [msdyn_insightsstorevirtualentity_PrincipalObjectAttributeAccesses](#BKMK_msdyn_insightsstorevirtualentity_PrincipalObjectAttributeAccesses)
 - [appaction_PrincipalObjectAttributeAccesses](#BKMK_appaction_PrincipalObjectAttributeAccesses)
 - [appactionmigration_PrincipalObjectAttributeAccesses](#BKMK_appactionmigration_PrincipalObjectAttributeAccesses)
 - [appactionrule_PrincipalObjectAttributeAccesses](#BKMK_appactionrule_PrincipalObjectAttributeAccesses)
+- [card_PrincipalObjectAttributeAccesses](#BKMK_card_PrincipalObjectAttributeAccesses)
 - [msdyn_entitylinkchatconfiguration_PrincipalObjectAttributeAccesses](#BKMK_msdyn_entitylinkchatconfiguration_PrincipalObjectAttributeAccesses)
 - [msdyn_richtextfile_PrincipalObjectAttributeAccesses](#BKMK_msdyn_richtextfile_PrincipalObjectAttributeAccesses)
 - [msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses](#BKMK_msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses)
 - [msdyn_pmanalysishistory_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmanalysishistory_PrincipalObjectAttributeAccesses)
+- [msdyn_pmcalendar_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmcalendar_PrincipalObjectAttributeAccesses)
+- [msdyn_pmcalendarversion_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmcalendarversion_PrincipalObjectAttributeAccesses)
 - [msdyn_pminferredtask_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pminferredtask_PrincipalObjectAttributeAccesses)
+- [msdyn_pmprocessextendedmetadataversion_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmprocessextendedmetadataversion_PrincipalObjectAttributeAccesses)
 - [msdyn_pmprocessusersettings_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmprocessusersettings_PrincipalObjectAttributeAccesses)
+- [msdyn_pmprocessversion_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmprocessversion_PrincipalObjectAttributeAccesses)
 - [msdyn_pmrecording_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmrecording_PrincipalObjectAttributeAccesses)
 - [msdyn_pmtemplate_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmtemplate_PrincipalObjectAttributeAccesses)
+- [msdyn_pmview_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmview_PrincipalObjectAttributeAccesses)
 - [msdyn_analysiscomponent_PrincipalObjectAttributeAccesses](#BKMK_msdyn_analysiscomponent_PrincipalObjectAttributeAccesses)
 - [msdyn_analysisjob_PrincipalObjectAttributeAccesses](#BKMK_msdyn_analysisjob_PrincipalObjectAttributeAccesses)
 - [msdyn_analysisresult_PrincipalObjectAttributeAccesses](#BKMK_msdyn_analysisresult_PrincipalObjectAttributeAccesses)
@@ -424,6 +435,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses](#BKMK_msdyn_solutionhealthrule_PrincipalObjectAttributeAccesses)
 - [msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses](#BKMK_msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses)
 - [msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses](#BKMK_msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses)
+- [powerbidataset_PrincipalObjectAttributeAccesses](#BKMK_powerbidataset_PrincipalObjectAttributeAccesses)
+- [powerbimashupparameter_PrincipalObjectAttributeAccesses](#BKMK_powerbimashupparameter_PrincipalObjectAttributeAccesses)
+- [powerbireport_PrincipalObjectAttributeAccesses](#BKMK_powerbireport_PrincipalObjectAttributeAccesses)
 
 
 ### <a name="BKMK_account_principalobjectattributeaccess"></a> account_principalobjectattributeaccess
@@ -800,6 +814,12 @@ See the [environmentvariabledefinition_PrincipalObjectAttributeAccesses](environ
 
 See the [environmentvariablevalue_PrincipalObjectAttributeAccesses](environmentvariablevalue.md#BKMK_environmentvariablevalue_PrincipalObjectAttributeAccesses) one-to-many relationship for the [environmentvariablevalue](environmentvariablevalue.md) table/entity.
 
+### <a name="BKMK_workflowbinary_PrincipalObjectAttributeAccesses"></a> workflowbinary_PrincipalObjectAttributeAccesses
+
+**Added by**: Power Automate Extensions Workflow Binary package Solution
+
+See the [workflowbinary_PrincipalObjectAttributeAccesses](workflowbinary.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
+
 ### <a name="BKMK_flowmachine_PrincipalObjectAttributeAccesses"></a> flowmachine_PrincipalObjectAttributeAccesses
 
 **Added by**: Power Automate Extensions core package Solution
@@ -824,23 +844,29 @@ See the [flowmachineimage_PrincipalObjectAttributeAccesses](flowmachineimage.md#
 
 See the [flowmachineimageversion_PrincipalObjectAttributeAccesses](flowmachineimageversion.md#BKMK_flowmachineimageversion_PrincipalObjectAttributeAccesses) one-to-many relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
 
+### <a name="BKMK_flowmachinenetwork_PrincipalObjectAttributeAccesses"></a> flowmachinenetwork_PrincipalObjectAttributeAccesses
+
+**Added by**: Power Automate Extensions core package Solution
+
+See the [flowmachinenetwork_PrincipalObjectAttributeAccesses](flowmachinenetwork.md#BKMK_flowmachinenetwork_PrincipalObjectAttributeAccesses) one-to-many relationship for the [flowmachinenetwork](flowmachinenetwork.md) table/entity.
+
 ### <a name="BKMK_processstageparameter_PrincipalObjectAttributeAccesses"></a> processstageparameter_PrincipalObjectAttributeAccesses
 
 **Added by**: Power Automate Extensions core package Solution
 
 See the [processstageparameter_PrincipalObjectAttributeAccesses](processstageparameter.md#BKMK_processstageparameter_PrincipalObjectAttributeAccesses) one-to-many relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
+### <a name="BKMK_desktopflowbinary_PrincipalObjectAttributeAccesses"></a> desktopflowbinary_PrincipalObjectAttributeAccesses
+
+**Added by**: Power Automate Extensions core package Solution
+
+See the [desktopflowbinary_PrincipalObjectAttributeAccesses](desktopflowbinary.md#BKMK_desktopflowbinary_PrincipalObjectAttributeAccesses) one-to-many relationship for the [desktopflowbinary](desktopflowbinary.md) table/entity.
+
 ### <a name="BKMK_flowsession_PrincipalObjectAttributeAccesses"></a> flowsession_PrincipalObjectAttributeAccesses
 
 **Added by**: Power Automate Extensions core package Solution
 
 See the [flowsession_PrincipalObjectAttributeAccesses](flowsession.md#BKMK_flowsession_PrincipalObjectAttributeAccesses) one-to-many relationship for the [flowsession](flowsession.md) table/entity.
-
-### <a name="BKMK_workflowbinary_PrincipalObjectAttributeAccesses"></a> workflowbinary_PrincipalObjectAttributeAccesses
-
-**Added by**: Power Automate Extensions core package Solution
-
-See the [workflowbinary_PrincipalObjectAttributeAccesses](workflowbinary.md#BKMK_workflowbinary_PrincipalObjectAttributeAccesses) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
 
 ### <a name="BKMK_connectionreference_PrincipalObjectAttributeAccesses"></a> connectionreference_PrincipalObjectAttributeAccesses
 
@@ -1028,6 +1054,12 @@ See the [msdyn_federatedarticle_PrincipalObjectAttributeAccesses](msdyn_federate
 
 See the [msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses](msdyn_federatedarticleincident.md#BKMK_msdyn_federatedarticleincident_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_federatedarticleincident](msdyn_federatedarticleincident.md) table/entity.
 
+### <a name="BKMK_msdyn_integratedsearchprovider_PrincipalObjectAttributeAccesses"></a> msdyn_integratedsearchprovider_PrincipalObjectAttributeAccesses
+
+**Added by**: Knowledge Management Online Features Solution
+
+See the [msdyn_integratedsearchprovider_PrincipalObjectAttributeAccesses](msdyn_integratedsearchprovider.md#BKMK_msdyn_integratedsearchprovider_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
+
 ### <a name="BKMK_msdyn_kmfederatedsearchconfig_PrincipalObjectAttributeAccesses"></a> msdyn_kmfederatedsearchconfig_PrincipalObjectAttributeAccesses
 
 **Added by**: Knowledge Management Online Features Solution
@@ -1094,6 +1126,12 @@ See the [msdyn_knowledgesearchfilter_PrincipalObjectAttributeAccesses](msdyn_kno
 
 See the [pluginpackage_PrincipalObjectAttributeAccesses](pluginpackage.md#BKMK_pluginpackage_PrincipalObjectAttributeAccesses) one-to-many relationship for the [pluginpackage](pluginpackage.md) table/entity.
 
+### <a name="BKMK_powerfxrule_PrincipalObjectAttributeAccesses"></a> powerfxrule_PrincipalObjectAttributeAccesses
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_PrincipalObjectAttributeAccesses](powerfxrule.md#BKMK_powerfxrule_PrincipalObjectAttributeAccesses) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
 ### <a name="BKMK_keyvaultreference_PrincipalObjectAttributeAccesses"></a> keyvaultreference_PrincipalObjectAttributeAccesses
 
 **Added by**: ManagedIdentityExtensions Solution
@@ -1142,6 +1180,12 @@ See the [organizationdatasyncstate_PrincipalObjectAttributeAccesses](organizatio
 
 See the [msdyn_appinsightsmetadata_PrincipalObjectAttributeAccesses](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
 
+### <a name="BKMK_msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses"></a> msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses
+
+**Added by**: Insights App Platform Solution
+
+See the [msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses](msdyn_workflowactionstatus.md#BKMK_msdyn_workflowactionstatus_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
+
 ### <a name="BKMK_userrating_PrincipalObjectAttributeAccesses"></a> userrating_PrincipalObjectAttributeAccesses
 
 **Added by**: User Rating Solution
@@ -1172,6 +1216,12 @@ See the [appactionmigration_PrincipalObjectAttributeAccesses](appactionmigration
 
 See the [appactionrule_PrincipalObjectAttributeAccesses](appactionrule.md#BKMK_appactionrule_PrincipalObjectAttributeAccesses) one-to-many relationship for the [appactionrule](appactionrule.md) table/entity.
 
+### <a name="BKMK_card_PrincipalObjectAttributeAccesses"></a> card_PrincipalObjectAttributeAccesses
+
+**Added by**: Power Apps cards Solution
+
+See the [card_PrincipalObjectAttributeAccesses](card.md#BKMK_card_PrincipalObjectAttributeAccesses) one-to-many relationship for the [card](card.md) table/entity.
+
 ### <a name="BKMK_msdyn_entitylinkchatconfiguration_PrincipalObjectAttributeAccesses"></a> msdyn_entitylinkchatconfiguration_PrincipalObjectAttributeAccesses
 
 **Added by**: Teams Chat Settings Solution Solution
@@ -1196,17 +1246,41 @@ See the [msdyn_customcontrolextendedsettings_PrincipalObjectAttributeAccesses](m
 
 See the [msdyn_pmanalysishistory_PrincipalObjectAttributeAccesses](msdyn_pmanalysishistory.md#BKMK_msdyn_pmanalysishistory_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
 
+### <a name="BKMK_msdyn_pmcalendar_PrincipalObjectAttributeAccesses"></a> msdyn_pmcalendar_PrincipalObjectAttributeAccesses
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmcalendar_PrincipalObjectAttributeAccesses](msdyn_pmcalendar.md#BKMK_msdyn_pmcalendar_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmcalendar](msdyn_pmcalendar.md) table/entity.
+
+### <a name="BKMK_msdyn_pmcalendarversion_PrincipalObjectAttributeAccesses"></a> msdyn_pmcalendarversion_PrincipalObjectAttributeAccesses
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmcalendarversion_PrincipalObjectAttributeAccesses](msdyn_pmcalendarversion.md#BKMK_msdyn_pmcalendarversion_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmcalendarversion](msdyn_pmcalendarversion.md) table/entity.
+
 ### <a name="BKMK_msdyn_pminferredtask_PrincipalObjectAttributeAccesses"></a> msdyn_pminferredtask_PrincipalObjectAttributeAccesses
 
 **Added by**: Process Mining Solution
 
 See the [msdyn_pminferredtask_PrincipalObjectAttributeAccesses](msdyn_pminferredtask.md#BKMK_msdyn_pminferredtask_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pminferredtask](msdyn_pminferredtask.md) table/entity.
 
+### <a name="BKMK_msdyn_pmprocessextendedmetadataversion_PrincipalObjectAttributeAccesses"></a> msdyn_pmprocessextendedmetadataversion_PrincipalObjectAttributeAccesses
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmprocessextendedmetadataversion_PrincipalObjectAttributeAccesses](msdyn_pmprocessextendedmetadataversion.md#BKMK_msdyn_pmprocessextendedmetadataversion_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmprocessextendedmetadataversion](msdyn_pmprocessextendedmetadataversion.md) table/entity.
+
 ### <a name="BKMK_msdyn_pmprocessusersettings_PrincipalObjectAttributeAccesses"></a> msdyn_pmprocessusersettings_PrincipalObjectAttributeAccesses
 
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmprocessusersettings_PrincipalObjectAttributeAccesses](msdyn_pmprocessusersettings.md#BKMK_msdyn_pmprocessusersettings_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmprocessusersettings](msdyn_pmprocessusersettings.md) table/entity.
+
+### <a name="BKMK_msdyn_pmprocessversion_PrincipalObjectAttributeAccesses"></a> msdyn_pmprocessversion_PrincipalObjectAttributeAccesses
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmprocessversion_PrincipalObjectAttributeAccesses](msdyn_pmprocessversion.md#BKMK_msdyn_pmprocessversion_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmprocessversion](msdyn_pmprocessversion.md) table/entity.
 
 ### <a name="BKMK_msdyn_pmrecording_PrincipalObjectAttributeAccesses"></a> msdyn_pmrecording_PrincipalObjectAttributeAccesses
 
@@ -1219,6 +1293,12 @@ See the [msdyn_pmrecording_PrincipalObjectAttributeAccesses](msdyn_pmrecording.m
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmtemplate_PrincipalObjectAttributeAccesses](msdyn_pmtemplate.md#BKMK_msdyn_pmtemplate_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmtemplate](msdyn_pmtemplate.md) table/entity.
+
+### <a name="BKMK_msdyn_pmview_PrincipalObjectAttributeAccesses"></a> msdyn_pmview_PrincipalObjectAttributeAccesses
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmview_PrincipalObjectAttributeAccesses](msdyn_pmview.md#BKMK_msdyn_pmview_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_pmview](msdyn_pmview.md) table/entity.
 
 ### <a name="BKMK_msdyn_analysiscomponent_PrincipalObjectAttributeAccesses"></a> msdyn_analysiscomponent_PrincipalObjectAttributeAccesses
 
@@ -1261,6 +1341,24 @@ See the [msdyn_solutionhealthruleargument_PrincipalObjectAttributeAccesses](msdy
 **Added by**: Power Apps Checker Solution
 
 See the [msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_PrincipalObjectAttributeAccesses) one-to-many relationship for the [msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md) table/entity.
+
+### <a name="BKMK_powerbidataset_PrincipalObjectAttributeAccesses"></a> powerbidataset_PrincipalObjectAttributeAccesses
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbidataset_PrincipalObjectAttributeAccesses](powerbidataset.md#BKMK_powerbidataset_PrincipalObjectAttributeAccesses) one-to-many relationship for the [powerbidataset](powerbidataset.md) table/entity.
+
+### <a name="BKMK_powerbimashupparameter_PrincipalObjectAttributeAccesses"></a> powerbimashupparameter_PrincipalObjectAttributeAccesses
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbimashupparameter_PrincipalObjectAttributeAccesses](powerbimashupparameter.md#BKMK_powerbimashupparameter_PrincipalObjectAttributeAccesses) one-to-many relationship for the [powerbimashupparameter](powerbimashupparameter.md) table/entity.
+
+### <a name="BKMK_powerbireport_PrincipalObjectAttributeAccesses"></a> powerbireport_PrincipalObjectAttributeAccesses
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbireport_PrincipalObjectAttributeAccesses](powerbireport.md#BKMK_powerbireport_PrincipalObjectAttributeAccesses) one-to-many relationship for the [powerbireport](powerbireport.md) table/entity.
 
 ### See also
 

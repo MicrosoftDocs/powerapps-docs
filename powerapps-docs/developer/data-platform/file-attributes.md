@@ -17,7 +17,7 @@ contributors:
 ---
 # File columns
 
-Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns.
+Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This topic is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
 
 ## Create file columns
 

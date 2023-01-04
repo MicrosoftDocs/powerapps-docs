@@ -2,7 +2,7 @@
 title: " Assign a record to a team (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke

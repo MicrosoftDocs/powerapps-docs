@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/17/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Add notifications to make your apps collaborative
 
-Apps in Microsoft Teams are designed to enable collaboration between people in your organization. When you have an app that has a hand-off of information, such as group A doing something that group B then needs to process, if everything happens in the app, users may miss important updates and processes might stall.
+Apps in Microsoft Teams are designed to enable collaboration between people in your organization. When you have an app that has a hand-off of information, such as group A doing something that group B then needs to process, if everything happens in the app, users may miss important updates, and processes might stall.
 
-Using notifications for critical events in your apps in Teams enhances collaboration by proactively letting users know that there's something that needs their attention, or needs to be done.
+Using notifications for critical events in your apps in Teams enhances collaboration by proactively letting users know that something needs their attention or needs to be done.
 
 Teams and Power Platform give you many options in the ways that you can notify people.
 
@@ -33,7 +33,7 @@ Watch this video to learn how to add notifications to make your apps collaborati
 
 ## Choose the right notification type
 
-How should you decide what type of notification to use? Many people default to email notifications, but many people also complain that they receive too many emails. Email is an acceptable type of notification, but it should be used sparingly. Especially for urgent notifications, as frequently emails aren't seen immediately.
+How should you decide what type of notification to use? Many people default to email notifications, but many people also complain that they receive too many emails. Email is an acceptable type of notification, but it should be used sparingly. Especially for urgent notifications, as frequent emails are only seen after a period of time.
 
 Here are some questions to ask when defining the appropriate type of notification:
 

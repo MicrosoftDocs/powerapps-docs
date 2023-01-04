@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 06/13/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Deploy Issue reporting app as broad distribution app

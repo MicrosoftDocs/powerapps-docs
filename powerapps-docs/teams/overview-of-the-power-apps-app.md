@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 
@@ -163,8 +163,8 @@ While creating canvas aps using Power Apps from the Teams interface, you need to
 | [Formula](../maker/canvas-apps/formula-reference.md)                            | A combination of one or more functions to accomplish a certain task or action.                                                                                                                                 |
 | [Screen](../maker/canvas-apps/add-screen-context-variables.md)                  | The visible area of an app enclosing available visible controls. An app can have multiple screens.                                                                                                               |
 | [Component](../maker/canvas-apps/create-component.md)                           | Reusable combinations of controls that can be defined, saved, and used for new apps, as defined by the maker or user.                                                                                     |
-| [Save an app](../maker/canvas-apps/save-publish-app.md#save-changes-to-an-app)  | Saving an app for the first time, or saving new changes to an app.                                                                                                                                           |
-| [Publish an app](../maker/canvas-apps/save-publish-app.md#publish-an-app)       | Making an app available to the app store for general consumption.                                                                                                                                            |
+| [Save an app](../maker/canvas-apps/save-publish-app.md)  | Saving an app for the first time, or saving new changes to an app.                                                                                                                                           |
+| [Publish an app](../maker/canvas-apps/save-publish-app.md)       | Making an app available to the app store for general consumption.                                                                                                                                            |
 | [Versions](../maker/canvas-apps/save-publish-app.md#identify-the-live-version)  | Each time an app is saved, a new version is created that you can [restore](../maker/canvas-apps/restore-an-app.md) by using functionality available at the time you save the app. |
 | [Share an app](../maker/canvas-apps/share-app.md)                               | Allowing users or groups to use the app, as consumers or co-owners.                                                                                                                                          |
 

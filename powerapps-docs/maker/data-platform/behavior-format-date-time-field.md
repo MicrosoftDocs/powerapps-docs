@@ -2,9 +2,8 @@
 title: "Behavior and format of the Date and Time column in Microsoft Dataverse | MicrosoftDocs"
 description: Understand the format of date and time columns. 
 ms.custom: ""
-ms.date: 05/25/2018
+ms.date: 11/11/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -25,8 +24,6 @@ search.app:
   - D365CE
 ---
 # Behavior and format of the Date and Time column
-
-
 
 In Microsoft Dataverse, the Date and Time data type is used in many standard table columns. Depending on what kind of date the column represents, you can choose different column behaviors: **User Local**, **Date Only**, or **Time-Zone Independent**.  
   
@@ -79,7 +76,7 @@ You can use this behavior when time zone information isn't required, such as the
 
 ### For my Date/Time column I was expecting (UTC/Local) and I am seeing the opposite value
 
-This is caused by a lack of parity between the table column setting and the app form setting. When a table column is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the app form also has a setting of UTC or Local. 
+This is caused by a lack of parity between the table column setting and the canvas app form setting. When a table column is configured for Time Zone Independent or User Local, it determines if the time zone offset is honored or not when the data is being retrieved from the store. However, the canvas app form also has a setting of UTC or Local. Notice that this potential conflict doesn't occur with model-driven app forms.
  
 This tells the form how to interpret the data it receives from the Dataverse. If the data retrieved from the store is time zone independent, but the form is set to local, the UTC data will be displayed as user local time based on the user's time zone in their profile. The reverse is also true, a user local value from the store will be displayed as UTC if the form is set to UTC. Fortunately, the form's date time zone values can be modified without disrupting the existing rows.
 

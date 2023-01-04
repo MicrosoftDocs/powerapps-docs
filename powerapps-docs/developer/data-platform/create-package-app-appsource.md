@@ -25,7 +25,7 @@ You must create an AppSource package (.zip file) to include your solution and de
 |[Content_Types].xml|File that provides MIME type information of the file type extensions included in the AppSource package. Typically, these are .config, .dll, .exe, .xml, and .zip file types, but you can add almost any file type that is supported by Windows.|
 |Icon file|An image file for the appsource package icon; size should be 32x32 pixels. Valid image formats are PNG and JPG.|
 |HTML file|File containing your License terms.|
-|input.xml|Files that describes the assets in your AppSource package.|
+|Input.xml|Files that describes the assets in your AppSource package.|
 
 
 ## Create a Package file
@@ -84,9 +84,9 @@ Create an icon file of size 32x32 to display along with the preferred solution n
 
 Create an HTML file containing your license terms. You can have an HTML file per language to display the license terms in the user selected language if your app supports multiple languages.
 
-## Create input.xml file
+## Create Input.xml file
 
-Create an *input.xml* file that provides information about your package and the contents of the package. Here is the contents of a sample **input.xml** file; each element is explained later in the table.
+Create an *Input.xml* file that provides information about your package and the contents of the package. Here is the contents of a sample **Input.xml** file; each element is explained later in the table.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -110,7 +110,7 @@ Create an *input.xml* file that provides information about your package and the 
 ```
 
 
-Here is a description of the elements in the **input.xml** file.
+Here is a description of the elements in the **Input.xml** file.
 
 |Element|Description|
 |--|--|
