@@ -140,41 +140,6 @@ Watch a short video showing how to create a virtual table with the virtual conne
 4. After the connection is created, go back to your browser tab with the wizard and select **Refresh**.
 5. Select your connection.
 
-<!-- 
-## Create a virtual table using a connection
-
-In Power Apps, create a virtual table either from a solution or from a list of tables.
-
-### Select the data source connection
-
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** on the left hand navigation pane.
-1. Open an existing solution or create a new one.
-1. Select **New** on the command bar, select **Table**, and then select **Table from external data**.
-   :::image type="content" source="media/table-from-external-data-command.png" alt-text="Create a table from external data command":::
-1. Choose from the following options for the connection:
-   - To use an existing connection, select the connection you want.
-   - If you have an existing connection but wish to create a new one, select **New Connection**, and complete the information on your screen that appears on a new browser tab.
-   - If you don't have a connection for the data source you want, select **+Add Connection** next to the data source, and complete the information on your screen that appears on a new browser tab.
-   - More information about creating a connection: [Create a SQL Server connection](/connectors/sql/#creating-a-connection) and [SharePoint connector](/connectors/sharepointonline/)
-
-1. Select the connection reference, and then select **Next**.
-1. [Configure the connection](#configure-the-connection)
-
-### Configure the connection
-
-1. Depending on the data source:
-   - For SharePoint connections: 
-      1. Paste the URL of your SharePoint site in the provided field, or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Graph and your Azure Active Directory credentials. Select **Next**. 
-      > [!NOTE]
-      > If you are entering your SharePoint URL, only include the information up to the site name, such as *https://microsoft.sharepoint.com/teams/Contoso*.
-      1. **Search** your SharePoint site for a specific list, or select the one you want from the provided list, and then select **Next**.
-      1. You can choose to modify the suggested table names by selecting [Configure table and column names that will be used in Dataverse](#configure-table-and-column-names-that-will-be-used-in-dataverse)
-
-   - For SQL connections, enter the **SQL Server name** and **SQL database name**, and then select **Next**.  
-      1. Select a table. Either **Search** the SQL database for a specific table and select it or select a table from the available tables.
-      1. You can choose to modify the suggested table names by selecting [Configure table and column names that will be used in Dataverse](#configure-table-and-column-names-that-will-be-used-in-dataverse)
-
-1. Select **Next**. -->
 
 ### Create and select a connection reference (optional)
 
@@ -195,6 +160,8 @@ To create a connection reference, when you're creating the connection for the vi
 1. On the **Connection Reference** page, select or name your connection reference, and then select **Next**.
 
    - If you chose SQL and Azure AD as your authentication method, you'll be asked for your SQL server name and database name. Provide these and select **Next**.
+   
+### Configure your Data
    - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Azure AD credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as *https://microsoft.sharepoint.com/teams/Contoso*.
 
 1. A page is displayed where you can either search your data source for a specific table or list, or select a table or list from the provided list. 
