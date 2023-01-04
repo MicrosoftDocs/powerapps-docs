@@ -4,7 +4,7 @@ description: Learn about the details, properties and examples of the PDF viewer 
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/17/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # PDF viewer control (experimental) in Power Apps

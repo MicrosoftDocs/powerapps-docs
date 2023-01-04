@@ -7,11 +7,11 @@ ms.custom:
 ms.date: 07/19/2021
 author: joel-lindstrom
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Remove the Planner dependency for task creation in the Issue reporting sample app

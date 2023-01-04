@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
 # Transform examples to Power Fx formulas 

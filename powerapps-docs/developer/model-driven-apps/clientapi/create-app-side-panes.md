@@ -1,8 +1,8 @@
 ---
 title: "Creating side panes by using a client API in model-driven apps" 
 description: Learn how to create side panes in model-driven apps by using a client API.
-author: HemantGaur
-ms.author: hemantg
+author: adrianorth
+ms.author: aorth
 
 ms.date: 04/17/2022
 ms.reviewer: jdaly

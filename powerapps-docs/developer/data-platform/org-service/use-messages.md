@@ -3,7 +3,7 @@ title: "Use messages with the Organization service (Microsoft Dataverse) | Micro
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke
