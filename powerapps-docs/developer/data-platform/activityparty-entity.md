@@ -4,9 +4,9 @@ description: "An activity party represents a person or group associated with an 
 ms.date: 01/04/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: dmartens # GitHub ID
+author: DanaMartens # GitHub ID
 ms.subservice: dataverse-developer
-ms.author:  # MSFT alias of Microsoft employees only
+ms.author: dmartens
 search.audienceType: 
   - developer
 search.app: 
