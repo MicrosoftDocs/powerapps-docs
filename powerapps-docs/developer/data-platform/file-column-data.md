@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 11/08/2022
+ms.date: 01/08/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -231,7 +231,8 @@ There at three different ways to upload files to a file column:
 - Upload the file in chunks using Web API
 
 > [!NOTE]
-> You should verify whether the column maximum file size is large enough to accept the file you are uploading. More information: [Check maximum file size](#check-maximum-file-size).
+> - You should verify whether the column maximum file size is large enough to accept the file you are uploading. More information: [Check maximum file size](#check-maximum-file-size).
+> - You can also use these APIs to upload image column data. More information: [Use image column data](image-column-data.md)
 
 ### Use Dataverse messages to upload a file
 

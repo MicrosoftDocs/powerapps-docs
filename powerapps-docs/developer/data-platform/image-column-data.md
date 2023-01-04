@@ -31,7 +31,7 @@ The following table introduces some of the differences between image and file co
 |**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record. More information: [Delete images](#delete-images)|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
 |**Set with Create**|When the image column is the *primary image*, you can set image columns with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
 |**Return with Retrieve**|You can retrieve thumb-nail sized images with other record data using retrieve.|The value returned is the file id. More information: [Behavior when retrieving](file-column-data.md#behavior-when-retrieving)|
-|**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|You can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
+|**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|There is no string column with a download URL, but you can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
 
 ## Maximum image size
 
@@ -162,6 +162,8 @@ You can query the [Image Attribute Configuration (AttributeImageConfig)  table](
 
 # [SDK for .NET](#tab/sdk)
 
+The static `PrintFullSizedImageColumns` method will write the names of the table and image columns that can store full-sized images.
+
 ```csharp
 static void PrintFullSizedImageColumns(IOrganizationService service)
 {
@@ -196,10 +198,12 @@ account.sample_sampleimage
 
 # [Web API](#tab/webapi)
 
+This request will return the names of the table and image columns that can store full-sized images.
+
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/attributeimageconfigs?$select=parententitylogicalname,attributelogicalname&$filter=canstorefullimage%20eq%20true HTTP/1.1
+GET [Organization URI]/api/data/v9.2/attributeimageconfigs?$select=parententitylogicalname,attributelogicalname&$filter=canstorefullimage eq true HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -234,7 +238,7 @@ You can also query schema definitions to return columns where [ImageAttributeMet
 
 ### Re-size rules for thumbnail-sized images
 
-When a thumbnail-sized image is generated, it is cropped and re-sized to a square shape according to the following rules:
+To generate a thumbnail-sized image, Dataverse will crop and re-size the image to a square shape according to the following rules:
   
 - Images with at least one side larger than 144 pixels are cropped on center to 144x144.  
 - Images with both sides smaller than 144 are cropped square to their smallest side.  
@@ -259,6 +263,8 @@ You can also query the [Entity Image Configuration (EntityImageConfig)  table](r
 
 # [SDK for .NET](#tab/sdk)
 
+The static `PrintPrimaryImageColumns` method below will write the table and image column names of all primary image columns.
+
 ```csharp
 static void PrintPrimaryImageColumns(IOrganizationService service)
 {
@@ -282,6 +288,8 @@ account.sample_sampleimage
 ```
 
 # [Web API](#tab/webapi)
+
+The request below will return the table and image column names of all primary image columns.
 
 **Request**
 
@@ -319,15 +327,15 @@ OData-Version: 4.0
 
 ## Download URL
 
-Each image column has the following companion columns, but none of them appear within [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Each image column has the following companion columns, but none of them appear within the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) designer.
 
-|Column |Naming convention |Description |
-|---------|---------|---------|
-|Image Id|`<image column name>Id`|A unique identifier for the image.|
-|Time Stamp|`<image column name>_Timestamp`|Represents when the image was last updated. This value helps make sure the latest version of the image is downloaded rather than the client using a cached version that was retrieved before.|
-|URL|`<image column name>_URL`|A relative URL to download a thumbnail-sized version of the image|
+|Column |Type|Naming convention |Description |
+|---------|---------|---------|---------|
+|Image Id|Unique identifier|`<image column name>Id`|A unique identifier for the image.|
+|Time Stamp|BigInt|`<image column name>_Timestamp`|Represents when the image was last updated. This value helps make sure the latest version of the image is downloaded rather than the client using a cached version that was retrieved before.|
+|URL|string|`<image column name>_URL`|A relative URL to download a thumbnail-sized version of the image|
 
-The image id and time stamp column values do not have any use cases except that they are used to within the URL.
+The image id and time stamp column values do not have any use cases except that they are used to within the URL string column value.
 
 When the column for a record contains data, the download URL will be a relative URL using the following format:
 
@@ -374,8 +382,8 @@ static void RetrieveAndUpdateImageColumn(IOrganizationService service) {
     // Instantiate a new entity for update with new image
     Entity accountForUpdate = new("account") { 
         Attributes = {
-            { "accountid",accountid },
-            { "sample_imagecolumn", File.ReadAllBytes("new_image.png")}
+            { "accountid", accountid },
+            { imageColumnLogicalName , File.ReadAllBytes("new_image.png")}
         }
     };
 
@@ -438,7 +446,6 @@ Content-Length: 5220
 
 ```http
 HTTP/1.1 204 NoContent
-Location: [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
 OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
 ```
@@ -465,6 +472,8 @@ When you create a record, you can only set the value of the current primary imag
 > Number: `-2146892665`<br />
 > Message: `Non-primary image attribute <image column logical name> of entity <table logical name> is not allowed to upload during Create operation.`
 
+More information: [Primary Images](#primary-images)
+
 ### Only thumbnail images can be retrieved
 
 The image data you access via record properties will always be the thumbnail-sized images. To access full-sized images you must download them. More information: [Download images](#download-images)
@@ -472,11 +481,11 @@ The image data you access via record properties will always be the thumbnail-siz
 
 ## Upload images
 
-Use the same APIs you use to upload files to upload images. More information: [Upload Files](file-column-data.md#upload-files)
+Use the same APIs you use to upload files to upload images individually. More information: [Upload Files](file-column-data.md#upload-files)
 
 ## Download images
 
-Use the same APIs you use to download files to download images.
+Use the same APIs you use to download files to download images, but be aware of the following differences.
 
 ### Using Dataverse messages
 
@@ -491,7 +500,7 @@ If the image column doesn't support full-sized images, or if the [ImageAttribute
 
 ### Using Web API
 
-If you use other methods to download images using the Web API, the thumbnail-sized image will be downloaded by default. To downoad the full-sized image you must append this parameter to the URL: `?size=full`.
+If you use other methods to download images using the Web API, the thumbnail-sized image will be downloaded by default. To download the full-sized image you must append this parameter to the URL: `?size=full`.
 
 If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) was false when the image was uploaded, the response will return `204 No Content`.
 
@@ -499,11 +508,11 @@ More information: [Download Files](file-column-data.md#download-files)
 
 ## Delete images
 
-How you delete images depends on whether you are using the SDK or Web API
+You can delete images by setting the image column value for the record to null as you would for any other property.
 
 # [SDK for .NET](#tab/sdk)
 
-Simply set the value of the image attribute to null and update the the entity.
+Simply set the value of the image attribute to null and update the the entity. More information: [Basic update](org-service/entity-operations-update-delete.md#basic-update)
 
 # [Web API](#tab/webapi)
 
@@ -538,6 +547,8 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9)
 ```
 
+More information: [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update)
+
 ### Use PUT and set the image column value to null
 
 **Request**
@@ -560,6 +571,10 @@ Content-Length: 15
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
+
+More information: [Update a single property value](webapi/update-delete-entities-using-web-api.md#update-a-single-property-value)
+
+
 ### Use DELETE with the resource URL referencing the image column
 
 **Request**
@@ -578,6 +593,8 @@ Accept: application/json
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
+
+More information: [Delete a single property value](webapi/update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ---
 
