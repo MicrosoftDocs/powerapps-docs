@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 09/02/2021
 ms.subservice: teams
 ms.author: nhelgren
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Enable Power Apps and Dataverse for Teams in Microsoft Teams

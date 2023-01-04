@@ -4,7 +4,7 @@ description: Describes Test Studio with overview, terminology, best practices, a
 author: ChrisBal-MSFT
 
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/04/2022
 ms.subservice: canvas-maker
 ms.author: chrisbal

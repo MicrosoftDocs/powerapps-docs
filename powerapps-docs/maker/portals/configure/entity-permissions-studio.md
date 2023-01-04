@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 05/27/2021
 ms.subservice: portals
 ms.author: ckwan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - ckwan-ms

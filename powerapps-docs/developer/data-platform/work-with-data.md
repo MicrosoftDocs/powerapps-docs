@@ -4,7 +4,7 @@ description: "Microsoft Dataverse provides web services and APIs that you can us
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID Temp owner
+author: "divkamath" # GitHub ID Temp owner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart

@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 06/22/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - joel-lindstrom
-  - tapanm-msft
+  - mduelae
 ---
 
 # How to deploy Profile+ app as broad distribution app (preview)

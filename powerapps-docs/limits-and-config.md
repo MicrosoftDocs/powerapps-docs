@@ -4,8 +4,8 @@ description: Learn about device platform and web browser requirements, limits, a
 author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 12/02/2022
+ms.reviewer: mkaur
+ms.date: 01/04/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
   - alaug
   - amchern
@@ -86,12 +86,11 @@ This list identifies all services to which Power Apps communicates and their usa
 
 | Domain(s) | Protocols | Uses |
 | --- | --- | --- |
-| api.bap.microsoft.com<br/>api.businessappdiscovery.microsoft.com | https | Environment permissions management|
+| api.bap.microsoft.com | https | Environment permissions management|
 | management.azure.com |https |Power Apps Management Service |
 | msmanaged-na.azure-apim.net |https |Runtime of Connectors/Apis |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com<br>*.odc.officeapps.live.com |https |Microsoft Authentication Library |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
-| gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |

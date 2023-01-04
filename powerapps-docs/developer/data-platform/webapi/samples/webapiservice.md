@@ -2,7 +2,7 @@
 title: "WebApiService class library (C#) (Microsoft Dataverse) | Microsoft Docs"
 description: "This sample .NET 6.0 class library project that demonstrates several important capabilities that you should include when you use the Dataverse Web API"
 ms.date: 08/29/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
@@ -119,7 +119,7 @@ The Config class contains properties that control the behavior of the applicatio
 |`TimeoutInSeconds`|`ushort`|How long to wait for a timeout. Default is 120 seconds.|
 |`MaxRetries`|`byte`|Maximum number of times to re-try when service protection limits occur. Default is 3.|
 |`Version`|`string`|The version of the service to use. Default is `v9.2`|
-|`DisableCookies`|`bool`|Whether to disable cookies to gain performance in bulk data load scenarios. More information: [Remove the affinity cookie](../../api-limits.md#remove-the-affinity-cookie)|
+|`DisableCookies`|`bool`|Whether to disable cookies to gain performance in bulk data load scenarios. More information: [Server affinity](../../send-parallel-requests.md#server-affinity)|
 
 ### EntityReference Class
 

@@ -5,7 +5,7 @@ author: caburk
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/21/2021
 ms.subservice: canvas-maker
 ms.author: caburk
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - caburk
 ---
 
