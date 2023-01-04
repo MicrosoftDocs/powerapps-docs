@@ -4,7 +4,7 @@ description: Learn about the limitations of controls in canvas apps.
 author: navjotm
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/01/2022
 ms.subservice: canvas-maker
 ms.author: namarwah
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - chmoncay
 ---

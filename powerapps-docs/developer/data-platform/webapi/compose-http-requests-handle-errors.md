@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API, and then learn how to identify and handle errors returned in the response"
 ms.date: 08/17/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 

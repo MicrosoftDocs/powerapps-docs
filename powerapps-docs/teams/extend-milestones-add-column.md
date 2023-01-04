@@ -8,11 +8,11 @@ ms.date: 06/24/2021
 author: joel-lindstrom
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - joel-lindstrom
-  - tapanm-msft
+  - mduelae
 ---
 
 # Add a new column to Milestones sample app to track work items

@@ -7,11 +7,11 @@ ms.custom:
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - joel-lindstrom
-  - tapanm-msft
+  - mduelae
 ---
 
 # When to build apps in Microsoft Teams
