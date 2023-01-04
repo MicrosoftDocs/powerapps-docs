@@ -25,7 +25,7 @@ When you run a canvas app on Power Apps mobile, it can be restarted for the foll
 - The app is using too much memory or processing at one time.
 - The app is moved to background – either when your specific app uses a native control (like **Add Picture** or **Barcode Scanner**) or the Power Apps mobile app is put in the background by the user.
 
-This memory and processing limitation, which is especially strict in the background, is imposed by the operating system (Android or iOS). If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, the web browser suspends the page if it is consuming too much power.
+This memory and processing limitations, which is especially strict when the Power Apps mobile app runs the background, is imposed by the operating system (Android or iOS). If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, the web browser suspends the page if it is consuming too much power.
 
 On Android devices, this app restart can look like a crash because the app is completely closed and the user is taken to the home screen of the device.
 
