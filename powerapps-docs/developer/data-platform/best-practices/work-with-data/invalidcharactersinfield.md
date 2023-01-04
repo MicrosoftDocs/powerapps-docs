@@ -4,7 +4,7 @@ description: Describes how to manage invalid characters.
 ms.date: 03/22/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78
+author: divkamath
 ms.subservice: dataverse-developer
 ms.author: dikamath
 search.audienceType: 
