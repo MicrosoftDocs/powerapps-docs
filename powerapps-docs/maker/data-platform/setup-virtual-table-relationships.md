@@ -5,7 +5,7 @@ author: NHelgren
 ms.author: nhelgren
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 10/28/2022
+ms.date: 01/04/2023
 ms.custom: template-concept
 ---
 # Setting up a virtual table relationship
