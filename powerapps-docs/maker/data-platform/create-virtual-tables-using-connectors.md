@@ -73,7 +73,7 @@ More information about application lifecycle management (ALM) and solutions:
 
 To create a virtual table, you must have a Microsoft Dataverse license through Power Apps or Microsoft Dynamics 365. Microsoft 365 or Teams licenses can't be used to create virtual tables.
 
-## Steps to create a virtual table in Power Apps
+## Steps to create a virtual table in Power Apps for SQL or SharePoint
 
 Creating a virtual table in Power Apps (make.powerapps.com) using the virtual connector provider includes the following steps:
 
@@ -81,8 +81,9 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 1. [Create the virtual table](#create-the-virtual-table)
 1. [Create and select the connection reference (optional)](#create-and-select-a-connection-reference-optional)
 1. Choose your connection details and select your data <a href="#SQL-or-SharePoint">SQL or SharePoint</a>.
-1. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
-1. [Complete the setup](#complete-the-setup)
+1. [Configure your data](#configure-your-data)
+2. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
+3. [Complete the setup](#complete-the-setup)
 
 ### Choose to create a table using an external data source
 
@@ -269,12 +270,8 @@ Now create the virtual table data source in Dataverse.
    :::image type="content" source="media/ve-name-data-source.png" alt-text="Name data source and select connection reference":::
 
    Add your Dataset Value
-   - SQL Server
-      - Leave the Dataset Value field empty
-   - Microsoft Excel Online (Business)
-      - Paste in the file name including extension into the Dataset Value. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
-   - Microsoft SharePoint
-      - Paste the URL to your SharePoint site in the Dataset Value field (ex: https://contosoenvname.sharepoint.com/sites/sitename)
+1. Paste in the file name including extension into the Dataset Value. Remember the file must be in the OneDrive that was used for the Connection setup. (for example: SampleData.xlsx)
+
 
 1. Select **Save**.
 
@@ -317,11 +314,7 @@ With the connection reference and the virtual table data source setup, an **Enti
 
    :::image type="content" source="media/completed-model-driven-app.jpg" alt-text="Completed model driven app":::
 
-   All eligible data sets from your data source will be provided in the app view.
-
-   - SQL: All tables in the database that are eligible are shown.
-   - SharePoint: All lists in the site are shown.
-   - Excel: All tables in the Excel file are shown.
+   All tables from your Excel file will be provided in the app view.
 
 1. Select the data set you wish to use from the entity catalog, and then select **Edit** in the navigation bar.
 
