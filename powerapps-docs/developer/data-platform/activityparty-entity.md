@@ -1,15 +1,12 @@
 ---
 title: "ActivityParty table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
-ms.custom: ""
-ms.date: 03/25/2018
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 01/04/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: dmartens # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author:  # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
