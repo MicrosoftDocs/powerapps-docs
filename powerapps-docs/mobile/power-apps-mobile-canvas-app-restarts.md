@@ -66,5 +66,5 @@ The greatest memory improvements to decrease app restarts can be made by app mak
 - [Build large and complex apps](../maker/canvas-apps/working-with-large-apps.md)
 - [Common canvas app performance issues and resolutions](../maker/canvas-apps/common-performance-issue-resolutions.md)
 - [Tips and best practices to improve performance of canvas apps](../maker/canvas-apps/performance-tips.md)
-- [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
-- [PowerApps canvas app coding standards and guidelines whitepaper](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**.)
+- [Power Apps canvas app coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
+- [Power Apps canvas app coding standards and guidelines whitepaper](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**.)
