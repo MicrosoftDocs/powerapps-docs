@@ -35,7 +35,7 @@ Use this article to learn how to prevent canvas app restarts on Power Apps mobil
 
 While the biggest improvements are usually made by app makers, here are some tips that end users can use to decrease the occurrence of app restarts:
 
-- In the Power Apps mobile menu, Clear Cache to remove saved data. Note that this should only be done when the end user has data as clearing the cache will remove any SaveData or app caches. 
+- In the Power Apps mobile app,on the uer profile page, select **Clear cache** to remove saved data. Note that this should only be done when the end user has data as clearing the cache will remove any **SaveData** or app caches. 
 - On Android devices, set the battery to unrestricted for the Power Apps mobile app.
 - Close any running apps, other than the Power Apps mobile app, and remove any unneeded data from the device such as unused apps or images.
 - While it is cumbersome, consider using the app slower – pause a little bit between screen navigations or after taking pictures or saving or loading data.
