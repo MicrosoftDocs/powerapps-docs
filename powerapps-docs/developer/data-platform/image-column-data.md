@@ -438,7 +438,7 @@ Content-Length: 5220
 
 ```http
 HTTP/1.1 204 NoContent
-Location: https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
+Location: [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
 OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
 ```
@@ -493,13 +493,93 @@ If the image column doesn't support full-sized images, or if the [ImageAttribute
 
 If you use other methods to download images using the Web API, the thumbnail-sized image will be downloaded by default. To downoad the full-sized image you must append this parameter to the URL: `?size=full`.
 
-If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) was false when the image was uploaded, an empty `byte[]` will be returned.
+If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) was false when the image was uploaded, the response will return `204 No Content`.
 
 More information: [Download Files](file-column-data.md#download-files)
 
 ## Delete images
 
-TODO
+How you delete images depends on whether you are using the SDK or Web API
+
+# [SDK for .NET](#tab/sdk)
+
+Simply set the value of the image attribute to null and update the the entity.
+
+# [Web API](#tab/webapi)
+
+There are three different ways to delete an image column value using Web API.
+
+### Use PATCH and set the image column value to null
+
+**Request**
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9) HTTP/1.1
+If-Match: *
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 90
+
+{
+  "accountid": "5f4d742e-d08b-ed11-81ad-000d3a9933c9",
+  "sample_imagecolumn": null
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+Location: [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9)
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9)
+```
+
+### Use PUT and set the image column value to null
+
+**Request**
+
+```http
+PUT [Organization Uri]/api/data/v9.2/accounts(14217634-d08b-ed11-81ad-000d3a9933c9)/sample_imagecolumn HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 15
+
+{"value": null}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+### Use DELETE with the resource URL referencing the image column
+
+**Request**
+
+```http
+DELETE [Organization Uri]/api/data/v9.2/accounts(19217634-d08b-ed11-81ad-000d3a9933c9)/sample_imagecolumn HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+---
 
 ### See also
 
