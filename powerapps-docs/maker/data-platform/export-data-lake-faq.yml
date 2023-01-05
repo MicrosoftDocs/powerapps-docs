@@ -61,7 +61,7 @@ sections:
    - question: How do I retrieve the most up-to-date row of each record and exclude deleted rows when I export data in append only mode?
      answer: |
         In append only mode, you should identify the latest version of record with the same ID using **VersionNumber** and **SinkModifiedOn** then apply **isDeleted=0** on the latest version.
-   - question: Why do I see duplicated version numbers when I export data using Append only mode?   
+   - question: Why do I see duplicated version numbers when I export data using append only mode?   
      answer: |
          For append only mode, if Azure Synapse Link for Dataverse does not get an acknowledgement from the Azure data lake that the data has been committed due to any reason such as network delays, Synapse Link will retry in those scenarios and commit the data again. The downstream consumption should be made resilient to this scenario by filtering data using SinkModifiedOn.     
    - question: Which Dataverse tables are not supported for export?
@@ -73,9 +73,9 @@ sections:
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
         Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.
-   - question: Which Dataverse tables use Append only by default?
+   - question: Which Dataverse tables use append only mode by default?
      answer: |
-        All tables that do not have a createdOn field will be synced using Append only mode by default. This includes relationship tables as well as the ActivityParty table.
+        All tables that do not have a createdOn field will be synced using append only mode by default. This includes relationship tables as well as the ActivityParty table.
    - question: Why does Azure Synapse Link for Dataverse require all resources to be in the same region and what can I do about it?
      answer: |
         To ensure high performance and low latency in addition to preventing egress charges, Synapse Link requires all resources to be located in the same region. If you have a cross-region scenario, you can:
