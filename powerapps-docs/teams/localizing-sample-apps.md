@@ -7,11 +7,11 @@ ms.custom:
 ms.date: 08/05/2021
 author: joel-lindstrom
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Localize sample apps

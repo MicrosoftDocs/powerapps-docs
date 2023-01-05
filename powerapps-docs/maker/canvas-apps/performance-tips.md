@@ -5,7 +5,7 @@ author: yingchin
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/21/2022
 ms.subservice: canvas-maker
 ms.author: yingchin
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - yingchin
-  - tapanm-msft
+  - mduelae
   - chmoncay
   - melzoghbi
 ---

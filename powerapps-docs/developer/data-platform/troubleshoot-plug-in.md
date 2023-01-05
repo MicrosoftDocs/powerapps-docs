@@ -4,7 +4,7 @@ description: "Learn what plug-in errors can occur and how to fix them." # 115-14
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart

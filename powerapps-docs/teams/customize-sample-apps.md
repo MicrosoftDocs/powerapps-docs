@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 12/14/2020
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ---
 
 # Customize sample apps installed from Teams store

@@ -8,9 +8,9 @@ ms.custom: intro-internal
 ms.date: 08/05/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 contributors:
-  - tapanm-msft
+  - mduelae
   - wimcoor
   - msftsamperl
 ---

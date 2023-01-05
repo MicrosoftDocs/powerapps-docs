@@ -2,7 +2,7 @@
 title: "Retrieve related table records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how you can retrieve related table records by expanding the navigation properties."
 ms.date: 09/29/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 manager: sunilg

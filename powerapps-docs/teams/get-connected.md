@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 09/28/2022
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Get connected sample app (preview)

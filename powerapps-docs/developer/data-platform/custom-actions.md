@@ -6,7 +6,7 @@ ms.date: 03/21/2022
 ms.reviewer: "jdaly"
 
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart

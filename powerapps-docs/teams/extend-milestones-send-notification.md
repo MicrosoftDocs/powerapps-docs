@@ -8,11 +8,11 @@ ms.date: 09/28/2021
 author: joel-lindstrom	
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-linkstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Send notification to the Team when work item status is updated in the Milestones sample app

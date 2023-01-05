@@ -5,19 +5,19 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/21/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add chatbot to a page
 
-
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 Power Apps portals allow you to add a [Power Virtual Agents chatbot](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) to answer questions posted by a visitor on your portals page. A chatbot (bot) configured with different topics and trigger phrases can automatically respond to questions posted by a visitor in a chat conversation.
 
