@@ -322,6 +322,8 @@
   items:
     - name: Browse table definitions in your environment
       href: browse-your-metadata.md
+    - name: Generate entity relationship diagrams
+      href: use-metadata-generate-entity-diagrams.md
     - name: Table definitions
       href: entity-metadata.md
       items:
