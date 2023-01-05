@@ -206,6 +206,30 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
     
     ![Add table permissions.](media/configure-notes/entity-permission.png "Add table permissions")
 
+### Enable rich-text editor
+
+The rich-text editor can be enabled when adding or editing notes on a form on a webpage.
+
+1. Open the [Portal Management app](configure/configure-portal.md).
+
+1. Go to the **Website** section and select **Site Settings**.
+
+1. Select **New** to create a new [site setting](configure/configure-site-settings.md).
+
+1. Specify the following values for the site setting;
+    1. **Name:** Timeline/RTEEnabled
+    1. **Website:** *The associated website record*
+    1. **Value:** True
+    1. **Description:** (Optional)
+
+1. Select **Save & Close**
+
+1. Sync your website from the studio and preview the site.
+
+1. You should be able to add and edit notes using the rich-text editor.
+
+:::image type="content" source="media/configure-notes/rich-text-editor.png" alt-text="Configure notes using the rich text editor.":::
+
 ### Notes created with rich-text editor
 
 You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
