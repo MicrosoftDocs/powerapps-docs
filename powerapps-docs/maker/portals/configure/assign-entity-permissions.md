@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: gisingh
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - GitanjaliSingh33msft

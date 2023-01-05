@@ -8,10 +8,10 @@ ms.custom:
 ms.date: 06/16/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
-  - tapanm-msft
+  - mduelae
   - Joel-lindstrom
 ---
 # Extend Profile+ app (preview) with additional org-specific data

@@ -29,7 +29,7 @@ The [Power Fx documentation](/power-platform/power-fx/overview) is the main sour
 
 ## Known limitations of using Power Fx in cards
 
-The following table lists the Power Fx formulas that don't work in cards, or have limitations. All other functions are fully supported.
+The following table lists the Power Fx formulas that don't work in cards or have limitations. All other functions are fully supported.
 
 | Power Fx formula | Supported in cards | 
 |---------|:---:|

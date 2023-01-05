@@ -8,11 +8,11 @@ ms.date: 08/24/2021
 author: msftsamperl
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Employee ideas sample app
