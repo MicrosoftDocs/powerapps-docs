@@ -93,9 +93,7 @@ See the [Developer tools](developer-tools.md) article for community developed to
 
 ### See also
 
-[Introduction to Entities in Dynamics 365 Customer Engagement (on-premises)](introduction-entities.md)  
- [Extend the Metadata Model for Dynamics 365 Customer Engagement (on-premises)](org-service/use-organization-service-metadata.md)  
- [Key to Entity Diagrams](key-entity-diagrams.md)  
- [Dynamics 365 Customer Engagement (on-premises) Entity Relationship Diagrams](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/GenerateEntityDiagram)
+[Work with Dataverse tables using code](entities.md)  
+[Work with table definitions using code](metadata-services.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
