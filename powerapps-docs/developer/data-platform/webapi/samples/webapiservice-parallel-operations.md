@@ -18,7 +18,6 @@ contributors:
 
 [!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
-
 This .NET 6.0 sample demonstrates how to perform parallel data operations using the Dataverse Web API.
 
 This sample uses the common helper code in the [WebAPIService class library (C#)](webapiservice.md).
@@ -62,7 +61,7 @@ To encounter service protection limits with this sample you should raise the `nu
 
 This example uses the [Parallel.ForEachAsync Method](/dotnet/api/system.threading.tasks.parallel.foreachasync) introduced with .NET 6.0.
 
-This sample processes a list of requests to create account records, sending the requests in parallel and then uses the data returned to add requests to delete the created accounts to a [ConcurrentBag](/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0). After the records are created, the number of seconds to create the records is displayed.
+This sample processes a list of requests to create account records, sending the requests in parallel and then uses the data returned to add requests to delete the created accounts to a [ConcurrentBag](/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0&preserve-view=true). After the records are created, the number of seconds to create the records is displayed.
 
 Then, the delete requests in the `ConcurrentBag` are processed and the time spent deleting the records is displayed.
 
