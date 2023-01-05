@@ -88,7 +88,7 @@ The name of the generated Visio file is account.vsd.
 See the [Developer tools](developer-tools.md) article for community developed tools, [jonasr.app/uml](https://jonasr.app/uml?utm_source=msdocs) for more information about UML Diagram Generator, [journeyintocrm.com](https://www.journeyintocrm.com/archives/1806.html) for more information about Entity Relation Diagram Creator and [LinkeD365.blog](https://linked365.blog/2020/07/06/erd-visio-builder-xrmtoolbox-addon/) for more information on the ERD Visio Builder.
 
 > [!NOTE]
-> The community tools are not a product of [!include[pn_microsoft_dynamics](../includes/pn-microsoft-dynamics.md)] and does not extend support to the community tools.
+> The community tools are not a product of Microsoft and we do not extend support to the community tools.
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also
@@ -96,4 +96,4 @@ See the [Developer tools](developer-tools.md) article for community developed to
 [Work with Dataverse tables using code](entities.md)  
 [Work with table definitions using code](metadata-services.md)
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
