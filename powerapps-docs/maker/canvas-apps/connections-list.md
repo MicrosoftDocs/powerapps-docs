@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: 
   - canvas
   - intro-internal
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/15/2022
 ms.subservice: canvas-maker
 ms.author: lanced
@@ -16,7 +16,7 @@ search.app:
   - PowerApps
 contributors:
   - lancedMicrosoft
-  - tapanm-msft
+  - mduelae
   - alaug
 ---
 # Overview of connectors for canvas apps

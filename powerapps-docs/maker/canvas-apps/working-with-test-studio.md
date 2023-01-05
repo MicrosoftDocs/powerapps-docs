@@ -5,7 +5,7 @@ author: aengusheaney
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/04/2020
 ms.subservice: canvas-maker
 ms.author: aheaney
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - aengusheaney
 ---
 

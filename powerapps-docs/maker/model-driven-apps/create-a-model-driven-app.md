@@ -1,8 +1,7 @@
 ---
 title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 05/19/2022
-
+ms.date: 12/15/2022
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -68,11 +67,10 @@ Next, you add a new page to the model-driven app.
 
    The contact form and view appear in the pages menu.
 
-1. Select **Contact view**, and then select **Add views**.
-
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
-
-1. Select the views that you want to add.
+1. Select **Contact views** to display the table views and charts right pane:
+   - To remove a view, under **In this app** next to the view your want to remove select **...** > **Remove**. 
+   - To add a view, under **Not in this app** next to the view you want to add select **...** > **+ Add**.
+   - To edit a view, next to the view select **...** > **Edit** or **Edit in new tab**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 

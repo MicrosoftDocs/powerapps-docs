@@ -2,7 +2,7 @@
 title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
 ms.date: 12/10/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType:
