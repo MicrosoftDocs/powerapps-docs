@@ -324,6 +324,9 @@ You can manually edit this for each security role following the steps here: [Edi
 
 :::image type="content" source="media/set-pluginpackage-read-access.png" alt-text="Setting plugin package read access.":::
 
+### Custom API cannot use dependent assembly plug-ins
+
+The custom API will not work after being imported as part of a solution.
 
 ### See also
 
