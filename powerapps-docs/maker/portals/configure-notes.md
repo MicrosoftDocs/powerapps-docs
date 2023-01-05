@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/27/2022
+ms.date: 01/05/2023
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,11 +13,10 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - nageshbhat-msft
-    - Professor Kendrick
+    - ProfessorKendrick
 ---
 
 # Configure notes as attachments for basic and multistep forms
-
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
