@@ -78,14 +78,13 @@ OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
 Content-Type: application/json; charset=utf-8
-Content-Length: 1393
 
 {
   "@odata.type": "Microsoft.Dynamics.CRM.FileAttributeMetadata",
-  "AttributeType": "Virtual",
   "AttributeTypeName": {
     "Value": "FileType"
   },
+  "SchemaName": "sample_FileColumn",
   "MaxSizeInKB": 30720,
   "Description": {
     "@odata.type": "Microsoft.Dynamics.CRM.Label",
@@ -96,13 +95,7 @@ Content-Length: 1393
         "LanguageCode": 1033,
         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample File Column for FileOperation samples",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
+    ]
   },
   "DisplayName": {
     "@odata.type": "Microsoft.Dynamics.CRM.Label",
@@ -113,20 +106,8 @@ Content-Length: 1393
         "LanguageCode": 1033,
         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample File Column",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_FileColumn"
+    ]
+  }
 }
 ```
 
@@ -157,7 +138,7 @@ You can also query and modify this data programmatically. It is stored in the [O
 
 #### [SDK for .NET](#tab/sdk)
 
-This function:
+This static `RetrieveBlockedAttachments` method:
 
 ```csharp
 protected static string RetrieveBlockedAttachments(IOrganizationService service) {

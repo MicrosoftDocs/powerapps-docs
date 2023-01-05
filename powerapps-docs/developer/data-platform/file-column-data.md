@@ -184,7 +184,7 @@ The request below below will return information about all the file columns that 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/accounts(352edda9-4c52-ed11-bba1-000d3a9933c9)?$filter=sample_filecolumn%20ne%20null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts(352edda9-4c52-ed11-bba1-000d3a9933c9)?$filter=sample_filecolumn ne null&$expand=account_FileAttachments($select=createdon,mimetype,filesizeinbytes,filename,regardingfieldname)&$select=accountid HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -636,6 +636,8 @@ You can use the following examples to check the maximum file size:
 
 #### [SDK for .NET](#tab/sdk)
 
+The static `GetFileColumnMaxSizeInKb` method returns the `MaxSizeInKB` value for a file column.
+
 ```csharp
 /// <summary>
 /// Retrieves the MaxSizeInKb property of a file column.
@@ -645,7 +647,11 @@ You can use the following examples to check the maximum file size:
 /// <param name="fileColumnLogicalName">The logical name of the file column.</param>
 /// <returns></returns>
 /// <exception cref="Exception"></exception>
-public static int GetFileColumnMaxSizeInKb(IOrganizationService service, string entityLogicalName, string fileColumnLogicalName) {
+public static int GetFileColumnMaxSizeInKb(
+    IOrganizationService service, 
+    string entityLogicalName, 
+    string fileColumnLogicalName) 
+{
 
    RetrieveAttributeRequest retrieveAttributeRequest = new() { 
          EntityLogicalName = entityLogicalName,
@@ -715,11 +721,14 @@ More information:
 
 ## Download Files
 
-There at three different ways to download files to a file column:
+There at three different methods to download files from a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Download a file in a single request using Web API
 - Download the file in chunks using Web API
+
+> [!NOTE]
+> These methods can also be used to download image columns, but there are some differences. More information: [Download images](image-column-data.md#download-images)
 
 ### Use Dataverse messages to download a file
 

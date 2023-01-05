@@ -395,7 +395,7 @@ static void RetrieveAndUpdateImageColumn(IOrganizationService service) {
 
 # [Web API](#tab/webapi)
 
-With Web API, the values set with records are base 64 encoded string values representing the `byte[]` data.
+With Web API, the property values are 64 encoded string values representing the `byte[]` data.
 
 This request returns an image column with an account record:
 
@@ -501,7 +501,7 @@ If the image column doesn't support full-sized images, or if the [ImageAttribute
 
 ### Using Web API
 
-If you use other methods to download images using the Web API, the thumbnail-sized image will be downloaded by default. To download the full-sized image you must append this parameter to the URL: `?size=full`.
+When you download images using the Web API without using the Dataverse messages, the thumbnail-sized image will be downloaded by default. To download the full-sized image you must append this parameter to the URL: `?size=full`.
 
 If the image column doesn't support full-sized images, or if the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) was false when the image was uploaded, the response will return `204 No Content`.
 
