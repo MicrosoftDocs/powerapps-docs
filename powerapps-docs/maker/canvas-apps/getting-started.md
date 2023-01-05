@@ -18,7 +18,7 @@ search.app:
 searchScope:
   - "Power Apps"
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # What are canvas apps?
 

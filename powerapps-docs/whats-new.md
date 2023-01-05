@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 contributors:
   - kumarvivek
-  - tapanm-msft
+  - mduelae
 ---
 
 # What's new in Power Apps?
