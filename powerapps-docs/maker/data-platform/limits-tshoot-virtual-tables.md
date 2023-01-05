@@ -107,8 +107,7 @@ The following are limitations for each data source.
 - I get one of the following errors when Power Apps (make.powerapps.com) is retrieving my table list or when I select **Finish** to create my table:
    - "Resource not found for the segment 'msdyn_get_required_fields"
    - “Error calling... please verify that connection... exists in environment”
-   - "Sequence matches no element for "msdyn_get_required_fields"" 
-   <br />
+   - "Sequence matches no element for "msdyn_get_required_fields""<br />
   **Solution**: In some cases you might not have the most up to date solution for the virtual connector provider. To determine whether your virtual connector provider solution needs an update:
   1. Select **Solutions** on the left navigation pane.
   1. Select the **History** tab.
@@ -143,7 +142,7 @@ The following are limitations for each data source.
 - A message is displayed "This table already exists, you're recreating the table. Primary field and Schema name cannot be changed."<br />
   **Solution**: This table has previously been created. Continuing with the creation will re-create the table, this results in any table changes made at the data source to be updated in the virtual table (this includes addition or removal of fields). The custom name and primary field values will not be editable.
 
-- Error message: “primary_key_name cannot be empty”
+- Error message: “primary_key_name cannot be empty”<br />
   **Solution**: You have chosen a table or list that doesn't include a GUID value for the primary key. You'll need to add an additional GUID column in your source table in order to create a virtual table.
 
 - I created an Excel virtual table but I can't see it in "Tables".<br />
