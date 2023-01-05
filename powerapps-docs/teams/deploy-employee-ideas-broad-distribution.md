@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 07/02/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - joel-lindstrom
-  - tapanm-msft
+  - mduelae
 ---
 
 # Deploy Employee Ideas app as broad distribution app

@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/05/2017
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Column control in Power Apps
