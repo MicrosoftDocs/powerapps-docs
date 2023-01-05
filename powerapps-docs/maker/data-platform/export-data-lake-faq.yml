@@ -64,9 +64,9 @@ sections:
         - Attachment
         - String Map
         - Calendar
-   - question: Does Azure Synapse Link support calculated fields?
+   - question: Does Azure Synapse Link support calculated columns?
      answer: |
-        Yes. In Dataverse, the calculated field keeps only the formula information and the real value depends on the base entity field so calculated field will be updated if and only if all data(base entities) related to calculated fields are exported via Azure Synapse Link.
+        Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.
    - question: Which Dataverse tables use Append only by default?
      answer: |
         All tables that do not have a createdOn field will be synced using Append only mode by default. This includes relationship tables as well as the ActivityParty table.
