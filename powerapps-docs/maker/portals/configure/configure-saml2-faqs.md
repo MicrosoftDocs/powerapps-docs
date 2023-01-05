@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 08/26/2022
 ms.subservice: portals
 ms.author: dileeps
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft

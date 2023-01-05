@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 contributors:
   - alaug
-  - tapanm-msft
+  - mduelae
 ---
 
 # How to check license designation for an app
