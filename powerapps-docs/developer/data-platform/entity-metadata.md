@@ -124,8 +124,10 @@ You can create custom activity tables that behave the same way.
 This table is used to add structure to activity table `PartyListType` columns that include references to other tables. You will use this table when setting values for activity table columns like `Email.to` or `PhoneCall.from`. Within the [ActivityParty table](reference/entities/activityparty.md), you set the [ParticipationTypeMask](reference/entities/activityparty.md#BKMK_ParticipationTypeMask) column to define the role that the reference is playing. Roles include `Sender`, `ToRecipient`, `Organizer` and more.
 
 You can query the `ActivityParty` table, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
-More information: 
-- [ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
+More information:
+
+- [ActivityParty table/entity reference](reference/entities/activityparty.md).
+- [activityparty EntityType](xref:Microsoft.Dynamics.CRM.activityparty)
 
 
 ### Child tables
@@ -139,8 +141,8 @@ For example, `PostComment`, `PostLike`, and `PostRole` are each children of the 
 Each alternate key definition describes one or more columns in combination that will uniquely identify a table. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn't support GUID unique identifier keys. You can define a single column value or combination of column values to uniquely identify a table. Adding an alternate key will enforce a uniqueness constraint on these columns. You will not be able to create or update another table record to have the same values.
 
 More information: 
- - [Dataverse Customization Guide: Define alternate keys to reference Dataverse records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
- - [Define alternate keys for a table and Developer Guide: Synchronize Dataverse data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
+ - [Define alternate keys to reference rows](../../maker/data-platform/define-alternate-keys-reference-records.md)
+ - [Alternate Keys](data-synchronization.md#alternate-keys)
 
 ## Table states
 
@@ -168,10 +170,12 @@ Some tables will have different sets of choices.
 
 The set of valid state codes for a table is not customizable, but the status codes are customizable. You can add additional `StatusCode` choices for a corresponding `StateCode`.
 
-For custom tables, you can define additional criteria for valid transitions between statuses. 
-More information: 
-- [Customize column definitions](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
-- [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
+For custom tables, you can define additional criteria for valid transitions between statuses.
+
+More information:
+
+- [Column definitions](entity-attribute-metadata.md)
+- [Define custom state model transitions](define-custom-state-model-transitions.md).
 
 ### See also
 

@@ -252,9 +252,11 @@ The following table shows two examples.
 
 ## Primary Images
 
-Each table can have multiple image columns, but only one image column can be defined as the primary image. The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table.
+Each table can have multiple image columns, but only one image column can be defined as the primary image. Only the primary image can be set with a create operation. More information: [Only primary images can be set for create](#only-primary-images-can-be-set-for-create)
 
-The [EntityMetadata.PrimaryImageAttribute property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryImageAttribute) returns the logical name of the image column that is the current primary image.
+The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table.
+
+The [EntityMetadata.PrimaryImageAttribute property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.PrimaryImageAttribute) returns the logical name of the image column that is the current primary image for the table.
 
 You can also query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to determine which image columns represent the current primary image using the `parententitylogicalname` and `primaryimageattribute` column values.
 

@@ -147,7 +147,9 @@ Use these queries to retrieve image column definitions.
 
 # [SDK for .NET](#tab/sdk)
 
-The static `GetImageColumns` method uses the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class to define a query to return details about all image columns in Dataverse or limited to a specific table.
+The static `GetImageColumns` method uses the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> class to define a query to return details about all image columns in Dataverse or limited to a specific table. 
+
+The condition evaluated is whether the [AttributeMetadata.AttributeTypeName property](xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.AttributeTypeName) value equals [AttributeTypeDisplayName.ImageType](xref:Microsoft.Xrm.Sdk.Metadata.AttributeTypeDisplayName.ImageType)
 
 ```csharp
 /// <summary> 
