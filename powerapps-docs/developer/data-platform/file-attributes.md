@@ -35,7 +35,11 @@ Use the [FileAttributeMetadata Class](xref:Microsoft.Xrm.Sdk.Metadata.FileAttrib
 
 
 ```csharp
-public static void CreateFileColumn(IOrganizationService service, string entityLogicalName, string fileColumnSchemaName) {
+public static void CreateFileColumn(
+   IOrganizationService service, 
+   string entityLogicalName, 
+   string fileColumnSchemaName) 
+{
 
     FileAttributeMetadata fileColumn = new()
     {
@@ -196,7 +200,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 
 ---
 
-When anyone tries to upload a file of this type the following error will be thrown:
+When anyone tries to upload a file using one of the blocked types the following error will be thrown:
 
 > Name: `AttachmentBlocked`<br />
 > Code: `0x80043e09`<br />
@@ -206,7 +210,7 @@ When anyone tries to upload a file of this type the following error will be thro
 ## Restrictions with Customer Managed Keys (CMK)
 
 > [!IMPORTANT]
-> Some restrictions apply when using the File and enhanced Image data-types in Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
+> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
 > All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
 > limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
 > Other limitations:

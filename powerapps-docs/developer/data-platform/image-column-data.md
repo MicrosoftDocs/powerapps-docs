@@ -284,6 +284,8 @@ static void PrintPrimaryImageColumns(IOrganizationService service)
 account.sample_sampleimage
 ```
 
+More information: [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+
 # [Web API](#tab/webapi)
 
 The request below will return the table and image column names of all primary image columns.
@@ -320,6 +322,8 @@ OData-Version: 4.0
 }
 ```
 
+More information: [Query data using the Web API](webapi/query-data-web-api.md)
+
 ---
 
 ## Download URL
@@ -352,7 +356,7 @@ If the column isn't configured to store full-sized images, no data will be retur
 
 ## Use image data with records
 
-When working with records, the way image data is available depends on whether you are using the SDK or Web API.
+When working with records, how you work with image data depends on whether you are using the SDK or Web API.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -391,6 +395,11 @@ static void RetrieveAndUpdateImageColumn(IOrganizationService service) {
 
 > [!NOTE]
 > Image columns are not included if you set the [ColumnSet.AllColumns property](xref:Microsoft.Xrm.Sdk.Query.ColumnSet.AllColumns) to true. For performance reasons you must explicitly specify that you want to retrieve image data.
+
+More information:
+
+- [Retrieve a table row using the SDK for .NET](org-service/entity-operations-retrieve.md)
+- [Update and delete table rows using the SDK for .NET](org-service/entity-operations-update-delete.md)
 
 
 # [Web API](#tab/webapi)
