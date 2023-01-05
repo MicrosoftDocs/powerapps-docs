@@ -1,8 +1,8 @@
 ---
 title: "getUrl (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the getUrl method.
-author: adrianorth
-ms.author: aorth
+author: jasongre
+ms.author: jasongre
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 10/26/2022
+ms.date: 01/03/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -153,6 +153,10 @@ For more information, see [Run business process flows offline](/power-automate/b
   
 
 ### Organization data filter 
+
+> [!IMPORTANT]
+> Organization data filters are no longer used. Changes to filters should be edited within the mobile profile itself.
+
 It is recommended that you have at least one rule defined for all mobile offline enabled table for org filters, if you are using the tables across profiles. By default, this value is set to last 10 days for most of the offline-enabled tables.
 
  > [!div class="mx-imgBorder"]

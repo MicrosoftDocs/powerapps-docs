@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 contributors:
   - Steven-Jia
-  - tapanm-msft
+  - mduelae
   - navjotm
   - emcoope-msft
 ---

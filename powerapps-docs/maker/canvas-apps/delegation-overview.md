@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: lanced
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
   - lanced-microsoft
 ---
