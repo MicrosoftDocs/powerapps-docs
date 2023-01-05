@@ -27,9 +27,9 @@ This library demonstrates:
 - Using configuration data to manage the behavior of the client.
 - Managing errors returned by Dataverse Web API.
 - A pattern of code re-use by:
-   - Creating classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0).
-   - Methods that leverage those classes.
-   - A modular pattern for adding new capabilities as needed.
+  - Creating classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true).
+  - Methods that leverage those classes.
+  - A modular pattern for adding new capabilities as needed.
 
 > [!NOTE]
 > This sample library is a helper that is used by all the Dataverse C# Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
@@ -68,18 +68,18 @@ This is the single method ultimately responsible for all operations.
 
 This method:
 
-- Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) parameter.
+- Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) parameter.
 - Returns `Task<HttpResponseMessage>`
-- Exposes the same signature as the [HttpClient.SendAsync(HttpRequestMessage) Method](/dotnet/api/system.net.http.httpclient.sendasync?view=net-6.0) and can be used in the same way.
+- Exposes the same signature as the [HttpClient.SendAsync(HttpRequestMessage) Method](/dotnet/api/system.net.http.httpclient.sendasync?view=net-6.0&preserve-view=true) and can be used in the same way.
 - Calls the function set in the `Config.GetAccessToken` method to set the `Authorization` header value for the request.
 - Uses the [IHttpClientFactory.CreateClient Method](/dotnet/api/system.net.http.ihttpclientfactory.createclient?view=dotnet-plat-ext-6.0) to get the named `HttpClient` to send the request.
-- Will throw a [ServiceException](#serviceexception) if the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0) is false, so you don't need to check this when using this method.
+- Will throw a [ServiceException](#serviceexception) if the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false, so you don't need to check this when using this method.
 
 ##### SendAsync&lt;T&gt; Method
 
 This method facilitates returning a class that includes properties found in the ComplexTypes returned by OData Actions and Functions in Dataverse Web API.
 
-- Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) parameter. When using this method it is expected, but not required, that the request parameter is one of the [*Response classes](#response-classes) that derive from `HttpResponseMessage`.
+- Has an [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) parameter. When using this method it is expected, but not required, that the request parameter is one of the [*Response classes](#response-classes) that derive from `HttpResponseMessage`.
 - Returns `Task<T>` where `T` is a class derived from `HttpResponseMessage`. See [*Response classes](#response-classes) for more information.
 - Calls the [SendAsync Method](#sendasync-method).
 - Uses the [HttpResponseMessage As&lt;T&gt;](#httpresponsemessage-ast) extension method to return the requested type.
@@ -97,7 +97,7 @@ static async Task WhoAmI(Service service)
 
 ##### ParseError Method
 
-This method will parse the content of an `HttpResponseMessage` for an unsuccessful `HttpRequestMessage` to return an [ServiceException](#serviceexception). It is used within the [SendAsync method](#sendasync-method) when the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0) is false. You can also use it to extract error information from `HttpResponseMessage` instances returned by `BatchResponse.HttpResponseMessages` when the `BatchRequest.ContinueOnError` property is set to true. More information: [Batch](#batch)
+This method will parse the content of an `HttpResponseMessage` for an unsuccessful `HttpRequestMessage` to return an [ServiceException](#serviceexception). It is used within the [SendAsync method](#sendasync-method) when the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false. You can also use it to extract error information from `HttpResponseMessage` instances returned by `BatchResponse.HttpResponseMessages` when the `BatchRequest.ContinueOnError` property is set to true. More information: [Batch](#batch)
 
 #### Service Properties
 
@@ -170,7 +170,7 @@ EntityReference has the following public methods. Neither of them require any pa
 
 #### ServiceException
 
-ServiceException is an [Exception class](/dotnet/api/system.exception?view=net-6.0) that contains properties of the error returned by the service. Use the [ParseError Method](#parseerror-method) to get an instance of this exception.
+ServiceException is an [Exception class](/dotnet/api/system.exception?view=net-6.0&preserve-view=true) that contains properties of the error returned by the service. Use the [ParseError Method](#parseerror-method) to get an instance of this exception.
 
 ## Extensions
 
@@ -178,11 +178,11 @@ WebAPIService has one extension method from a .NET type.
 
 ### HttpResponseMessage As&lt;T&gt;
 
-This extension instantiates an instance of `T` where `T` is derived from [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0) and copies the properties of the `HttpResponseMessage` to the derived class. It is used by the `Service` [SendAsync&lt;T&gt; Method](#sendasynct-method) but can also be used separately. For example, when using the [BatchRequest](#batchrequest) class, the items in the `BatchResponse.HttpResponseMessages` will be `HttpResponseMessage` types. You can use this extension to convert them to the appropriate derived class to facilitate accessing any properties.
+This extension instantiates an instance of `T` where `T` is derived from [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true) and copies the properties of the `HttpResponseMessage` to the derived class. It is used by the `Service` [SendAsync&lt;T&gt; Method](#sendasynct-method) but can also be used separately. For example, when using the [BatchRequest](#batchrequest) class, the items in the `BatchResponse.HttpResponseMessages` will be `HttpResponseMessage` types. You can use this extension to convert them to the appropriate derived class to facilitate accessing any properties.
 
 ## Messages
 
-The `Messages` folder includes classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) or [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0).
+The `Messages` folder includes classes that inherit from [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) or [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true).
 
 These classes provide re-usable definitions of requests and responses that correspond to OData operations you can use in any Dataverse environment.
 
@@ -192,12 +192,12 @@ Within an application, you may also create custom messages, for example represen
 
 For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for the corresponding classes to use this message are located in the sample application that uses it:
 
-- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs ](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
+- [FunctionsAndActions/Messages/IsSystemAdminRequest.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminRequest.cs)
 - [FunctionsAndActions/Messages/IsSystemAdminResponse.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Messages/IsSystemAdminResponse.cs)
 
 ### *Request classes
 
-These classes will generally have a constructor with parameters that will instantiate a [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0) with the data needed to perform the operation. They may have separate properties as appropriate.
+These classes will generally have a constructor with parameters that will instantiate a [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage?view=net-6.0&preserve-view=true) with the data needed to perform the operation. They may have separate properties as appropriate.
 
 The most simple example of this pattern is the `WhoAmIRequest` class.
 
@@ -227,7 +227,7 @@ The names of these classes may align with the classes in the Dataverse SDK <xref
 
 ### *Response classes
 
-When \*Request classes returns a value there will be a corresponding \*Response class to access the returned properties. If the \*Request returns `204 No Content`, the operation will return an [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0) but there will be no derived class. Use the [SendAsync method](#sendasync-method) to send these requests.
+When \*Request classes returns a value there will be a corresponding \*Response class to access the returned properties. If the \*Request returns `204 No Content`, the operation will return an [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage?view=net-6.0&preserve-view=true) but there will be no derived class. Use the [SendAsync method](#sendasync-method) to send these requests.
 
 \*Response classes provide typed properties that access the `HttpResponseMessage` `Headers` or `Content` properties and parse them to provide access to the Complex Type returned by the operation.
 
@@ -329,7 +329,6 @@ For operations that are frequently performed, the `Methods` folder contains exte
 
 The following methods are included:
 
-
 |Method |Return Type |Description |
 |---------|---------|---------|
 |`Create`|`Task<EntityReference>`|Creates a new record.|
@@ -343,9 +342,9 @@ The following methods are included:
 |`Update` |`Task`|Updates a record. |
 |`Upsert` |`Task<UpsertResponse>`|Performs an Upsert on a record.|
 
-Within an a sample application using WebAPIService when the operation doesn't represent an API found in Dataverse by default, the method will be defined in the application rather than in the WebAPIService. 
+Within an a sample application using WebAPIService when the operation doesn't represent an API found in Dataverse by default, the method will be defined in the application rather than in the WebAPIService.
 
-For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs ](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
+For example, the [Web API Functions and Actions Sample (C#)](webapiservice-functions-and-actions.md) uses a Custom API that isn't included in Dataverse until a solution containing the Custom API is installed. The definition for this method is located in the sample application that uses it: [FunctionsAndActions/Methods/IsSystemAdmin.cs](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/FunctionsAndActions/Methods/IsSystemAdmin.cs)
 
 ## Types
 
@@ -364,6 +363,5 @@ The `Metadata` folder contains `Messages` and `Types` specific to operations tha
 [Web API Metadata Operations Sample (C#)](webapiservice-metadata-operations.md)<br />
 [Web API WebApiService Parallel Operations Sample (C#)](webapiservice-parallel-operations.md)<br />
 [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapiservice-tpl-dataflow-parallel-operations.md)<br />
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

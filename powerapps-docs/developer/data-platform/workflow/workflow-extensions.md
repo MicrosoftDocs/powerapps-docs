@@ -75,7 +75,7 @@ More information:
 
 You can register an assembly built using the [.NET Framework Activity library](/dotnet/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library) that defines custom activities that will appear within the web application editor and will be invoked when the process runs.
 
-Custom workflow activities require creating a .NET Framework assembly that includes one or more classes that are derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) called by the Dataverse platform when the activity is executed. Each class in your assembly will define a specific activity.
+Custom workflow activities require creating a .NET Framework assembly that includes one or more classes that are derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2&preserve-view=true). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2&preserve-view=true) called by the Dataverse platform when the activity is executed. Each class in your assembly will define a specific activity.
 
 Workflow activities should define input and output parameters which are visible in the process designer and enable someone to pass data into the workflow activity and receive the processed output. When you write the class you will add properties for these parameters and annotate them with [.NET attributes](/dotnet/standard/attributes/index) to provide the metadata that Dataverse will use to expose your custom workflow activity with any parameters in the designer.
 
@@ -110,7 +110,7 @@ These are general steps used to create a custom workflow activity using Visual S
 
     More information: [Add parameters](#add-parameters)
 
-1. Make your class derive from the [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2) and implement the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) that contains the operations your activity will perform.
+1. Make your class derive from the [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2&preserve-view=true) and implement the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2&preserve-view=true) that contains the operations your activity will perform.
 
     More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
@@ -213,7 +213,7 @@ public InArgument<OptionSetValue> IndustryCode { get; set; }
 
 ## Add your code to the Execute method
 
-The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) method defines what your workflow activity does.
+The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2&preserve-view=true) method defines what your workflow activity does.
 
 > [!IMPORTANT]
 > The code in the `Execute` method should be written to be stateless. It is not recommended to use global or member variables to pass data from one invocation to the next.
@@ -221,7 +221,7 @@ The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](
 
 ### Reference parameters
 
-To reference parameters defined for your class you will use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.6.2) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.6.2) methods they provide which require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that is passed to the `Execute` method. The following example shows accessing the value of an input parameter and setting the value of an output parameter.
+To reference parameters defined for your class you will use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.6.2&preserve-view=true) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.6.2&preserve-view=true) methods they provide which require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that is passed to the `Execute` method. The following example shows accessing the value of an input parameter and setting the value of an output parameter.
 
 ```csharp
 using Microsoft.Xrm.Sdk.Workflow;
@@ -315,9 +315,10 @@ tracingService.Trace("{0} {1} {2}.", "Add", "your", "message");
 ```
 
 More information:
- - [Debug workflow activities](debug-workflow-activites.md)
- - [Use tracing](../debug-plug-in.md#use-tracing)
- - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
+
+- [Debug workflow activities](debug-workflow-activites.md)
+- [Use tracing](../debug-plug-in.md#use-tracing)
+- [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
 ## Add to Solution
 
@@ -352,16 +353,16 @@ This version information is important because it allows you to apply updates to 
 
 When you make changes to fix bugs or re-factor code that do not make significant changes to public classes or method signatures you can update the assembly so that all running processes will automatically start using the new version of the assembly.
 
-#### To update an assembly:
+#### To update an assembly
 
 1. Change only the **Build Number** and **Revision values** in your `AssemblyInfo.cs` `AssemblyVersion` attribute. For example, change from `1.0.0.0` to `1.0.10.5`.
 1. Use the Plug-in Registration tool to update the assembly. More information: [Update an assembly](../register-plug-in.md#update-an-assembly)
 
-#### Upgrade a custom workflow activity assembly:
+#### Upgrade a custom workflow activity assembly
 
 If you make changes that include significant changes to public classes or method signatures, such as changing the parameters you would break any currently running processes defined to use the original signatures. In this case you must upgrade the assembly. This will create a new custom workflow activity that exposes options define which version to apply in the process designer. This allows for each process using this activity to be re-configured to adapt to the changes included in the new assembly. After all processes using the original assembly are updated to use the upgraded assembly, you can de-register the older assembly.
 
-#### To upgrade an assembly:
+#### To upgrade an assembly
 
 1. Make sure the new assembly has the same `Name`, `PublicKeyToken`, and `Culture` as the existing assembly.
 1. Change the **Major Version** and/or **Minor Version** values in your `AssemblyInfo.cs` `AssemblyVersion` attribute. For example, change from `1.0.0.0` to `2.0.0.0`.

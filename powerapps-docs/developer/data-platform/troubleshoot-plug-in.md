@@ -38,9 +38,9 @@ This error simply means that the worker process running your plug-in code crashe
 
 As mentioned in [Handle exceptions in plug-ins](handle-exceptions.md), when you write a plug-in you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to gracefully terminate the operation with an error meaningful to the user.
 
-A common scenario for this is when using a the [HttpClient.SendAsync Method](/dotnet/api/system.net.http.httpclient.sendasync?view=netframework-4.6.2) or [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2) which are asynchronous operations that returns a [Task](/dotnet/api/system.threading.tasks.task-1?view=netframework-4.6.2). To make this work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](/dotnet/api/system.threading.tasks.task-1.result?view=netframework-4.6.2). When an error occurs, this returns an [AggregateException](/dotnet/api/system.aggregateexception?view=netframework-4.6.2) which consolidates multiple failures into a single exception which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](/dotnet/api/system.threading.tasks.task-1.getawaiter?view=netframework-4.6.2).[GetResult()](/dotnet/api/system.runtime.compilerservices.taskawaiter-1.getresult?view=netframework-4.6.2) because it propagates the results as the specific error that caused the failure.
+A common scenario for this is when using a the [HttpClient.SendAsync Method](/dotnet/api/system.net.http.httpclient.sendasync?view=netframework-4.6.2&preserve-view=true) or [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2&preserve-view=true) which are asynchronous operations that returns a [Task](/dotnet/api/system.threading.tasks.task-1?view=netframework-4.6.2&preserve-view=true). To make this work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](/dotnet/api/system.threading.tasks.task-1.result?view=netframework-4.6.2&preserve-view=true). When an error occurs, this returns an [AggregateException](/dotnet/api/system.aggregateexception?view=netframework-4.6.2&preserve-view=true) which consolidates multiple failures into a single exception which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](/dotnet/api/system.threading.tasks.task-1.getawaiter?view=netframework-4.6.2&preserve-view=true).[GetResult()](/dotnet/api/system.runtime.compilerservices.taskawaiter-1.getresult?view=netframework-4.6.2&preserve-view=true) because it propagates the results as the specific error that caused the failure.
 
-The following example shows the correct way to manage the exception and an outbound call using [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2). This plug-in will attempt to get the response text for a Url set in the unsecure config for a step registered for it.
+The following example shows the correct way to manage the exception and an outbound call using [HttpClient.GetAsync Method](/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.6.2&preserve-view=true). This plug-in will attempt to get the response text for a Url set in the unsecure config for a step registered for it.
 
 ```csharp
 using Microsoft.Xrm.Sdk;
@@ -132,7 +132,7 @@ namespace ErrorRepro
 
 This type of error occurs most frequently right after you make some change in your plug-in code. Some people use their own set of base classes to streamline their development experience. Sometimes these errors originate from changes to those base classes which a particular plug-in depends on.
 
-For example, a recursive call without a termination condition, or a termination condition which doesn’t cover all scenarios can cause this to happen. More information: [StackOverflowException Class > Remarks](/dotnet/api/system.stackoverflowexception?view=netframework-4.6.2#remarks)
+For example, a recursive call without a termination condition, or a termination condition which doesn’t cover all scenarios can cause this to happen. More information: [StackOverflowException Class > Remarks](/dotnet/api/system.stackoverflowexception?view=netframework-4.6.2&preserve-view=true#remarks)
 
 You should review any code changes that were applied recently for the plug-in and any other code that the plug-in code depends on.
 
@@ -252,14 +252,13 @@ Each worker process has a finite amount of memory. There are conditions where mu
 
 #### RetrieveMultiple with File data
 
-The common scenario in this case is when a plug-in executes for a `RetrieveMultiple` operation where the request includes file data. For example, when retrieving email which include any file attachments. The amount of data that may be returned in a query like this is unpredictable because any email my be related to any number of file attachments and the attachments themselves can vary in size. 
+The common scenario in this case is when a plug-in executes for a `RetrieveMultiple` operation where the request includes file data. For example, when retrieving email which include any file attachments. The amount of data that may be returned in a query like this is unpredictable because any email my be related to any number of file attachments and the attachments themselves can vary in size.
 
 When multiple requests of a similar nature are running concurrently, the amount of memory required becomes quite large. If it exceeds the limit the process will crash.  The key to preventing this is limiting `RetrieveMultiple` queries that include entities with related file attachments. Retrieve the records using `RetrieveMultiple`, but retrieve any related files as needed using individual `Retrieve` operations.
 
 #### Memory Leaks
 
 A less common scenario is where the code in the plug-in is leaking memory. This can occur when the plug-in isn’t written as stateless, which is another best practice: [Develop IPlugin implementations as stateless](best-practices/business-logic/develop-iplugin-implementations-stateless.md). When the plug-in isn’t stateless and there is an attempt to continually add data to a stateful property like an array. The amount of data grows to the point where it uses all the available memory.
-
 
 ## Transaction errors
 
@@ -314,8 +313,9 @@ If the plug-in is performing operations using a table or column that has been cr
 In a client application you can disable commands that users are not allowed to perform. Within a plug-in you don't have this. Your code may include some automation that the calling user doesn't have the privileges to perform.
 
 You can register the plug-in to run in the context of a user known to have the correct privileges by setting the **Run in User's Context** value to that user. Or you can execute the operation impersonating another user. More information:
- - [Register a plug-in](register-plug-in.md)
- - [Impersonate a user](impersonate-a-user.md)
+
+- [Register a plug-in](register-plug-in.md)
+- [Impersonate a user](impersonate-a-user.md)
 
 <!-- But if you prefer that the logic in your plug-in adapt to the privileges that the calling user has, you really need to verify the user's privileges in your code.-->
 
@@ -364,7 +364,7 @@ At run-time the error is frequently due to the developer assuming that the value
 
 ### Prevention
 
-To prevent this error you must check that the key exists before attempting to use it to access a value. 
+To prevent this error you must check that the key exists before attempting to use it to access a value.
 
 For example, when accessing a table column, you can use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether a column exists in a table as shown in the following code.
 
