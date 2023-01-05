@@ -63,6 +63,6 @@ After enabling the **Try the new look and feel (preview)** feature and using you
 Be aware of the following limitations for the modern, refreshed look for model-driven apps:
 
 - The mobile app, mail app, and Embedded Teams mode do not suppot the modern, refreshed look and are not part of the preview.
-- Dynamics 365 applications are not fully tested. Please do not enable this preview in any production applications.
+- The modern, refreshed look does not apply to Dynamics 365 applications. Do not enable this preview in any production, Dynamics 365 applications at this time.
 
 
