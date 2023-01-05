@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 06/03/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Understand Issue Reporting sample app architecture

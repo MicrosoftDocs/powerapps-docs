@@ -4,7 +4,7 @@ description: Learn about the wrap functionality in Power Apps.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Overview of wrap

@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 10/11/2022
 ms.author: marcelbf
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - marcelbf
-  - tapanm-msft
+  - mduelae
 ---
 
 # Sign up for the Power Apps Developer Plan

@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 07/08/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft

@@ -8,11 +8,11 @@ ms.custom:
 ms.date: 06/29/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
   - sbahl10
 ---
 # Replace notification with adaptive card to increase collaboration
