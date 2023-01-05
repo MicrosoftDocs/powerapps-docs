@@ -72,7 +72,7 @@ This method:
 - Returns `Task<HttpResponseMessage>`
 - Exposes the same signature as the [HttpClient.SendAsync(HttpRequestMessage) Method](/dotnet/api/system.net.http.httpclient.sendasync?view=net-6.0&preserve-view=true) and can be used in the same way.
 - Calls the function set in the `Config.GetAccessToken` method to set the `Authorization` header value for the request.
-- Uses the [IHttpClientFactory.CreateClient Method](/dotnet/api/system.net.http.ihttpclientfactory.createclient?view=dotnet-plat-ext-6.0) to get the named `HttpClient` to send the request.
+- Uses the [IHttpClientFactory.CreateClient Method](/dotnet/api/system.net.http.ihttpclientfactory.createclient?view=dotnet-plat-ext-6.0&preserve-view=true) to get the named `HttpClient` to send the request.
 - Will throw a [ServiceException](#serviceexception) if the [HttpResponseMessage.IsSuccessStatusCode Property](/dotnet/api/system.net.http.httpresponsemessage.issuccessstatuscode?view=net-6.0&preserve-view=true) is false, so you don't need to check this when using this method.
 
 ##### SendAsync&lt;T&gt; Method
