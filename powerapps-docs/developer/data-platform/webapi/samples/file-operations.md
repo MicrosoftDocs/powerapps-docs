@@ -80,11 +80,11 @@ At a high level, each project performs these operations:
 
 ### Create a file column
 
-The `Utility.CreateFileColumn` function creates a file column named `sample_FileColumn` in the account table with a `MaxSizeInKb` value of 10MB.
+The `Utility.CreateFileColumn` function creates a file column named `sample_FileColumn` in the account table with a `MaxSizeInKb` value of 10 MB.
 
 ### Update a file column
 
-The `Utility.UpdateFileColumnMaxSizeInKB` function updates the `MaxSizeInKb` value of the `sample_FileColumn` file column to 100MB.
+The `Utility.UpdateFileColumnMaxSizeInKB` function updates the `MaxSizeInKb` value of the `sample_FileColumn` file column to 100 MB.
 
 > **Tip**: If you want to create some error scenarios because the file column size is too small, comment out this line.
 

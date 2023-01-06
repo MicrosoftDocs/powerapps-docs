@@ -17,7 +17,7 @@ contributors:
 ---
 # File columns
 
-Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This topic is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
+Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
 
 ## Create file columns
 
@@ -135,9 +135,9 @@ More information:
 
 ## Block certain types of files
 
-You can control which types of files are not allowed to be saved in file Columns. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting. This setting also applies to files that can be set in the [Annotation (note)](annotation-note-entity.md) and [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) tables.
+You can control which types of files aren't allowed to be saved in file Columns. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting. This setting also applies to files that can be set in the [Annotation (note)](annotation-note-entity.md) and [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) tables.
 
-You can also query and modify this data programmatically. It is stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There is only one row in the organization table. You can use the SDK or Web API to query this data:
+You can also query and modify this data programmatically. It's stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There's only one row in the organization table. You can use the SDK or Web API to query this data:
 
 
 #### [SDK for .NET](#tab/sdk)

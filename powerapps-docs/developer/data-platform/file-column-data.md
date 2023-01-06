@@ -19,9 +19,9 @@ contributors:
 
 File columns store binary data. File columns may be in any custom or customizable Dataverse table.
 
-File columns are different from the other system columns that can store binary data because you cannot directly set the values in a create or update operation or retrieve the file data with the record. You must use the methods described in this topic to create, retrieve, update, or delete binary data for file columns.
+File columns are different from the other system columns that can store binary data because you can't directly set the values in a create or update operation, or retrieve the file data with the record. You must use the methods described in this article to create, retrieve, update, or delete binary data for file columns.
 
-There are several different ways to work with file column data using Web API. All methods are supported equally. Choose the method that works best for you. Because binary files may be large, it is frequently necessary to split the file into multiple chunks, (or blocks) that can be sent or received sequentially or in parallel to improve performance.
+There are several different ways to work with file column data using Web API. All methods are supported equally. Choose the method that works best for you. Because binary files may be large, it's frequently necessary to split the file into multiple chunks (or blocks) that can be sent or received sequentially or in parallel to improve performance.
 
 ## File name column
 
@@ -34,11 +34,11 @@ Each file column has a supporting read-only string column that contains the name
 
 When a file column is created for a table, a new one-to-many relationship is created between the table and the `FileAttachment` table. The name of the relationship is `{table logical name}_FileAttachments`. For example, if the file column is part of the account table, the relationship name will be `account_FileAttachments`.
 
-You can use this relationship to return additional data about the file column and any other file columns for the table. More information: [Retrieve additional information about files for a record](#retrieve-additional-information-about-files-for-a-record).
+You can use this relationship to return more data about the file column and any other file columns for the table. More information: [Retrieve additional information about files for a record](#retrieve-additional-information-about-files-for-a-record).
 
 ## Behavior when retrieving
 
-When you retrieve a record and include a file column, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There is no other use for this id other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
+When you retrieve a record and include a file column, the value returned will be a unique identifier for the file. You can use this value to delete the file using the `DeleteFile` message. There's no other use for this ID other than to check whether the column has a value. More information: [Use the DeleteFile message](#use-the-deletefile-message).
 
 The following examples show what you can expect when retrieving data from file columns as you would with other columns.
 
@@ -161,7 +161,7 @@ static void RetrieveAccountRecordWithFileData(IOrganizationService service, Guid
 
 **Output**:
 
-In this case, there is a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
+In this case, there's a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
 
 ```
 createdon: 10/22/2022 2:01 PM
@@ -179,7 +179,7 @@ More information:
 
 #### [Web API](#tab/webapi)
 
-The request below below will return information about all the file columns that contain data related to the `account` record with `accountid` equal to `352edda9-4c52-ed11-bba1-000d3a9933c9`.
+The request below will return information about all the file columns that contain data related to the `account` record with `accountid` equal to `352edda9-4c52-ed11-bba1-000d3a9933c9`.
 
 **Request**
 
@@ -193,7 +193,7 @@ Accept: application/json
 
 **Response**
 
-In this case, there is a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
+In this case, there's a single file column in the account table named `sample_filecolumn`, and this is the data about the file stored in that column.
 
 ```http
 HTTP/1.1 200 OK
@@ -358,7 +358,7 @@ More information:
 - [What is the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
-This function includes some logic to try and get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it is not provided. If not found it will set the mime type to `application/octet-stream`.
+This function includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
 
 #### [Web API](#tab/webapi)
 
@@ -401,13 +401,13 @@ OData-Version: 4.0
 }
 ```
 
-You must then break the file up into blocks of 4MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
+You must then break up the file into blocks of 4 MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
 
 
 |Property|Description:  |
 |---------|---------|
 |`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
-|`BlockData`|A Base64 encoded string containing the byte[] less than 4MB in size representing the portion of the file being sent.|
+|`BlockData`|A Base64 encoded string containing the byte[] less than 4 MB in size representing the portion of the file being sent.|
 |`FileContinuationToken`|The value of the `InitializeFileBlocksUploadResponse.FileContinuationToken`|
 
 
@@ -504,7 +504,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ### Upload a file in a single request using Web API
 
-If the size of the file is less than 128MB, you can upload the file in a single request using the Web API.
+If the size of the file is less than 128 MB, you can upload the file in a single request using the Web API.
 
 The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `cc4ed4a2-8c51-ed11-bba1-000d3a993550`.
 
@@ -586,7 +586,7 @@ Each request must contain that portion of the file in the body and the following
 |---------|---------|
 |`x-ms-file-name`|The name of the file.|
 |[Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type)| Set to `application/octet-stream`|
-|[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />The value of the first request: `bytes 0-4194303/25870370` indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25MB) in size.<br />Each subsequent request will see this value increase until the entire file has been sent:<br />`bytes 4194304-8388607/25870370`<br />`bytes 8388608-12582911/25870370`<br />`bytes 12582912-16777215/25870370`<br />`bytes 16777216-20971519/25870370`<br />`bytes 20971520-25165823/25870370`<br />`bytes 25165824-25870369/25870370`<br />|
+|[Content-Range](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Range)|Using this format: <br />`<unit> <range-start>-<range-end>/<size>`<br />The value of the first request: `bytes 0-4194303/25870370` indicates that the measurement is using bytes. This request includes the first `4194303` bytes of a file that is `25870370` bytes (almost 25 MB) in size.<br />Each subsequent request will see this value increase until the entire file has been sent:<br />`bytes 4194304-8388607/25870370`<br />`bytes 8388608-12582911/25870370`<br />`bytes 12582912-16777215/25870370`<br />`bytes 16777216-20971519/25870370`<br />`bytes 20971520-25165823/25870370`<br />`bytes 25165824-25870369/25870370`<br />|
 |[Content-Length](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Length)|Indicates the size of the message. In the example above, this value for the last request will be `704546` rather than `4194304`.|
 
 ```http
@@ -623,9 +623,9 @@ OData-Version: 4.0
 
 ### Check maximum file size
 
-Before you upload a file you can check whether the size of the file exceeds the configured **Maximum file size** stored in the `MaxSizeInKB` property.
+Before you upload a file, you can check whether the size of the file exceeds the configured **Maximum file size** stored in the `MaxSizeInKB` property.
 
-If you try to upload a file that is too large, you will get the following error:
+If you try to upload a file that is too large, you'll get the following error:
 
 > Name: `unManagedidsattachmentinvalidfilesize`<br />
 > Code: `0x80044a02`<br />
@@ -740,7 +740,7 @@ You can use Dataverse messages using the SDK for .NET or Web API. Downloading a 
 |`InitializeFileBlocksDownload`|Use this message to indicate the column that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
 |`DownloadBlock`|Request the size of the block, the offset value and the file continuation token.|
 
-Once you have downloaded all the blocks, you must join them to create the entire downloaded file.
+Once you've downloaded all the blocks, you must join them to create the entire downloaded file.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -862,7 +862,7 @@ The response is a [InitializeFileBlocksDownloadResponse ComplexType](xref:Micros
 - `FileName`: The name of the file
 - `FileContinuationToken`: The file continuation token to use in subsequent requests
 
-Based on the size of the file and the size of the block you will download, send additional requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
+Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
 
 **Request**
 
@@ -882,7 +882,7 @@ Content-Length: 921
 }
 ```
 
-With each request the `Offset` value will increment by the amount of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
+With each request, the `Offset` value will increment by the number of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
 
 |Request number|Offset|BlockLength|
 |---------|---------|---------|
@@ -1008,7 +1008,7 @@ There at two different ways to delete files to a file column:
 
 ### Use the DeleteFile message
 
-Using the unique identifier returned from the `CommitFileBlocksUploadResponse.FileId` or retrieved from from the column as described in [Behavior when retrieving](#behavior-when-retrieving), you can delete the file using the `DeleteFile` message.
+Using the unique identifier returned from the `CommitFileBlocksUploadResponse.FileId` or retrieved from the column as described in [Behavior when retrieving](#behavior-when-retrieving), you can delete the file using the `DeleteFile` message.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -1027,7 +1027,7 @@ static Guid DeleteFile(IOrganizationService service, Guid fileId)
 
 #### [Web API](#tab/webapi)
 
-Use the following request to delete a file with the Id using the Web API [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
+Use the following request to delete a file with the ID using the Web API [DeleteFile Action](xref:Microsoft.Dynamics.CRM.DeleteFile).
 
 ```http
 POST [Organization Uri]/api/data/v9.2/DeleteFile HTTP/1.1

@@ -17,7 +17,7 @@ contributors:
 ---
 # Image columns
 
-Use image columns to store image data. A custom or customizable table can have zero or more image columns. This topic is about working with column definitions in code. To use data stored in these columns, see [Use image column data](image-column-data.md).
+Use image columns to store image data. A custom or customizable table can have zero or more image columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use image column data](image-column-data.md).
 
 ## Create image columns
 
@@ -27,7 +27,7 @@ You can also create image columns using the Dataverse SDK for .NET or using the 
 
 #### [SDK for .NET](#tab/sdk)
 
-Use the [ImageAttributeMetadata Class](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata) with the [CreateAttributeRequest Class](xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest) to create a image column.
+Use the [ImageAttributeMetadata Class](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata) with the [CreateAttributeRequest Class](xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest) to create an image column.
 
 
 ```csharp
@@ -130,9 +130,9 @@ In addition to the properties inherited from the [AttributeMetadata class](xref:
 
 |Property|Label |Description  |
 |---------|---------|---------|
-|`MaxSizeInKB`|**Maximum image size**|Set this value to the smallest useable data size appropriate for your particular application. The default setting for this is `10240`, or 10 MB. The maximum value is `30720` KB (30 MB). This value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the image column, but you can change it using the API.|
+|`MaxSizeInKB`|**Maximum image size**|Set this value to the smallest useable data size appropriate for your particular application. The default setting is `10240`, or 10 MB. The maximum value is `30720` KB (30 MB). This value can't be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the image column, but you can change it using the API.|
 |`CanStoreFullImage`|**Can store full images**|When this is false, only thumbnail-sized images will be available. Full images are stored in file storage on the Azure blob to reduce data storage consumption.<br /><br />You can query the [Image Attribute Configuration (AttributeImageConfig)  table](reference/entities/attributeimageconfig.md) to find which image columns support full-sized images. More information: [Detect which image columns support full-sized images](image-column-data.md#detect-which-image-columns-support-full-sized-images)<br /><br />**Note**: While you can change the `CanStoreFullImage` value, we recommend you don't. When an image is uploaded the current value of this property determines whether a full-sized image will be saved. You can see inconsistent results for images that were saved when the value of this property was different.  |
-|`IsPrimaryImage`|**Primary image column**|Whether the column will be the one image column used to represent a table row in applications.<br /><br />If there is only one image column for a table, this will be set by default. When another image column already exists for a table, this value will be ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column.<br /><br />`IsPrimaryImage` cannot be set to false, an exception will be thrown if you try. You must choose another image column and set that `IsPrimaryImage` value to true.<br /><br />If you delete a column that is the current primary image column, another image column for the table will be selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
+|`IsPrimaryImage`|**Primary image column**|Whether the column will be the one image column used to represent a table row in applications.<br /><br />If there's only one image column for a table, this will be set by default. When another image column already exists for a table, this value will be ignored if set to true when creating a new image column. However, you can update the column after you create it to make the new column the primary image column.<br /><br />`IsPrimaryImage` can't be set to false, an exception will be thrown if you try. You must choose another image column and set that `IsPrimaryImage` value to true.<br /><br />If you delete a column that is the current primary image column, another image column for the table will be selected automatically to be the current primary image column.<br /><br />You can query the [Entity Image Configuration (EntityImageConfig)  table](reference/entities/entityimageconfig.md) to know which image columns are the primary images for any table. More information: [Primary Images](image-column-data.md#primary-images)|
 
 > [!NOTE]
 > The `MaxHeight` and `MaxWidth` values are always 144 and cannot be changed. These define the size of the thumbnail-sized images that are created for every image column value.
