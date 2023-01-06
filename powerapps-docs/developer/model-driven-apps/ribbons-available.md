@@ -138,6 +138,9 @@ Each table form can have a specific ribbon definition. In the exported customiza
 
 The form ribbon is a collection of tabs that have an ID value beginning with `Mscrm.Form.<entity logical name>`. For example, the tab with the label **Account** on account form is `Mscrm.Form.account.MainTab`. All the tabs displayed on the account form will have an ID value that begins with `Mscrm.Form.account`.
 
+> [!NOTE]
+> This feature is not supported on Unified Interface.
+
 <a name="BKMK_BasicHomeTab"></a>
 
 ## Basic home tab
