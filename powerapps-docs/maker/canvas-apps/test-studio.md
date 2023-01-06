@@ -102,7 +102,7 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 - Formula-level error management experimental feature needs to be turned on for the app.
 - Support for controls not listed in the [Select](./functions/function-select.md) and [SetProperty](./functions/function-setproperty.md) functions.
 - Person-type columns.
-- Test Studio is not compatible with the experimental [Git Version Control feature](git-version-control.md), and will not work properly if that feature is enabled.
+- Test Studio is not compatible with the experimental [Git version control feature](git-version-control.md), and will not work properly if that feature is enabled.
 
 ## Next steps
 
