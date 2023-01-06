@@ -132,14 +132,14 @@ When a list of records for a table is displayed within a sub grid on the form of
 
 ### Form ribbons
 
+> [!NOTE]
+> This feature is not supported on Unified Interface.
+
 Each table can have multiple forms. You can define changes to the form ribbon for all forms for that table by adding your definition at the table level (`//ImportExportXml/Entities/Entity/RibbonDiffXml`).
 
 Each table form can have a specific ribbon definition. In the exported customizations.xml file, you must add your modified `<RibbonDiffXml>` to this location:`//ImportExportXml/Entities/Entity/FormXml/forms/systemform/form/RibbonDiffXml`.
 
 The form ribbon is a collection of tabs that have an ID value beginning with `Mscrm.Form.<entity logical name>`. For example, the tab with the label **Account** on account form is `Mscrm.Form.account.MainTab`. All the tabs displayed on the account form will have an ID value that begins with `Mscrm.Form.account`.
-
-> [!NOTE]
-> This feature is not supported on Unified Interface.
 
 <a name="BKMK_BasicHomeTab"></a>
 
