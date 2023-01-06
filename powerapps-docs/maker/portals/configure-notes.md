@@ -20,7 +20,7 @@ contributors:
 
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
-To add the ability to view notes and attachments on basic and multistep forms, you will need to complete the following steps:
+To add the ability to view notes and attachments on basic and multistep forms, you'll need to complete the following steps:
 
 - [Enable attachments for the table in Microsoft Dataverse](../data-platform/data-platform-create-entity.md#create-a-table).
 
@@ -234,7 +234,7 @@ The rich text editor can be enabled when adding or editing notes on a form on a 
 
 You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. 
 
-However, if the [rich text editor](#enable-rich-text-editor) is not enabled for notes on forms, when you try to edit, you'll see the text in HTML markup format.
+However, if the [rich text editor](#enable-rich-text-editor) isn't enabled for notes on forms, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 
