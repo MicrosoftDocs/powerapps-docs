@@ -77,7 +77,8 @@ More information:
 
 - [Image columns](image-attributes.md)
 - [Use image column data](image-column-data.md)
-- [Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
+- [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)
+- [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)
 
 ## Types of tables
 

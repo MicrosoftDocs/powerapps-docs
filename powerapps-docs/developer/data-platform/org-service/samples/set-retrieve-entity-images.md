@@ -47,7 +47,8 @@ When the sample runs, you'll be prompted in the default browser to select an env
 }
 ```
 
->**Tip**: You can set a user environment variable named DATAVERSE_APPSETTINGS to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take effect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
+> [!TIP]
+> You can set a user environment variable named DATAVERSE_APPSETTINGS to the file path of the appsettings.json file stored anywhere on your computer. The samples will use that appsettings file if the environment variable exists and is not null. Be sure to log out and back in again after you define the variable for it to take effect. To set an environment variable, go to **Settings > System > About**, select **Advanced system settings**, and then choose **Environment variables**.
 
 ## Sample Output
 
@@ -109,40 +110,43 @@ This project performs these operations:
 
 This sample needs to create a new image column that is the primary image for the account table. It must also return the system to the original state when it's finished. So these steps are performed:
 
-1. Capture the original primary image name using `Utility.GetTablePrimaryImageName`.
-1. Use `Utility.CreateImageColumn` to create a new image column named `sample_ImageColumn` on the account table if it doesn't exist already.
+1. Capture the original primary image name using the `Utility.GetTablePrimaryImageName` method.
+1. Use the `Utility.CreateImageColumn` method to create a new image column named `sample_ImageColumn` on the account table if it doesn't exist already.
 
-   This image column `CanStoreFullImage` value is false.
+   > [!NOTE]
+   > This image column `CanStoreFullImage` value is false.
 
-1. Use `Utility.SetTablePrimaryImageName` to make `sample_ImageColumn` the primary image.
+1. Use the `Utility.SetTablePrimaryImageName` method to make `sample_ImageColumn` the primary image.
 
 
 ### Create account records with image data
 
-1. The code loops through a list of five filenames that match the names of files in the `Images` folder.
-1. For each image, it creates an account record with the `name` `CanStoreFullImage false {fileName}` and the file is set as the `sample_ImageColumn` value.
-1. Then `Utility.UpdateCanStoreFullImage` is used to set the `sample_ImageColumn` `CanStoreFullImage` value to true.
-1. Again, the code loops through the file names and creates five account records with the same image files set to the `sample_ImageColumn` value. This time the `name` is `CanStoreFullImage true {fileName}`
+1. The program loops through a list of five filenames that match the names of files in the `Images` folder.
+1. For each image, it creates an account record with the `name` set to `CanStoreFullImage false {fileName}` and the file `byte[]` set as the `sample_ImageColumn` value.
+1. The program then uses the `Utility.UpdateCanStoreFullImage` method to set the `sample_ImageColumn` definition `CanStoreFullImage` value to true.
+1. Again, the program loops through the file names and creates five account records with the same image files set to the `sample_ImageColumn` value. This time the `name` is set to: `CanStoreFullImage true {fileName}`.
 
-In the following code, we can see how the value of the `CanStoreFullImage` property changes what data is available.
+In the following program, we can see how the value of the `CanStoreFullImage` property changes what data is available.
 
 ### Retrieve the account records
 
-1. The code retrieves the 10 account records created in the previous step, including the image data.
+1. The program retrieves the 10 account records created in the previous step, including the image data.
 1. For each account record, the image data is downloaded to the `DownloadedImages` folder with the name `{recordName}_retrieved.png`.
 
-   All of these records are thumbnail-sized images.
+   > [!NOTE]
+   > All of these records are thumbnail-sized images.
 
 ### Download the account record images
 
-The code uses the static `DownloadFile` method, which encapsulates the use of the <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest> and <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest> classes to download the files.
+The program uses the static `DownloadFile` method, which encapsulates the use of the <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksDownloadRequest> and <xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest> classes to download the files.
 
-It's expected that 5 of the 10 operations will fail because no full-sized images were uploaded while `CanStoreFullImage` was false. Those records created while `CanStoreFullImage` was true succeed.
+> [!NOTE]
+> It's expected that 5 of the 10 operations will fail because no full-sized images were uploaded while `CanStoreFullImage` was false. Those records created while `CanStoreFullImage` was true succeed.
 
 ### Delete the image data
 
-1. The image data for each account record is deleted by setting the `sample_ImageColumn` value to null and updating the record.
-1. The deletion is verified by retrieving the records again using the same criteria as before. No value is returned for the `CanStoreFullImage` attribute because it's null.
+1. The program deletes the image data for each account record by setting the `sample_ImageColumn` value to null and updating the record.
+1. The program verifies the deletion by retrieving the records again using the same criteria as before. No value is returned for the `CanStoreFullImage` attribute because it's null.
 
 ### Clean up
 
@@ -156,7 +160,6 @@ To leave the system in the state before the sample ran, it does the following:
 
 [Use image column data](../../image-column-data.md)<br />
 [Image columns](../../image-attributes.md)<br />
-
 [Use file column data](../../file-column-data.md)<br />
 [Sample: Image Operations using Dataverse Web API](../../webapi/samples/image-operations.md)
 

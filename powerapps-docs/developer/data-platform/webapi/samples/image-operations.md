@@ -39,7 +39,6 @@ This sample uses the common helper code in the [WebAPIService class library (C#)
    |`Password`|Replace the placeholder `yourPassword` value with the password you use.|
 
 1. Save the `appsettings.json` file
-1. Select which of the projects you want to run in solution explorer. Right click the project and choose **Set as Startup Project**.
 1. Press F5 to run the sample.
 
 ## Sample Output
@@ -134,21 +133,22 @@ This project performs these operations:
 
 ### Create an image column
 
-This sample needs to create a new image column that is the primary image for the account table. It must also return the system to the original state when it's finished. So these steps are performed:
+This sample needs to create a new image column that is the primary image for the account table. It must also return the system to the original state when it's finished. So the program does these things at the beginning:
 
 1. Capture the original primary image name using the `Utility.GetTablePrimaryImageName` method.
 1. Use the `Utility.CreateImageColumn` method to create a new image column named `sample_ImageColumn` on the account table if it doesn't exist already.
 
-   **Note**: This image column `CanStoreFullImage` value is false.
+   > [!NOTE]
+   > This image column `CanStoreFullImage` value is false.
 
-1. Use `Utility.SetTablePrimaryImageName` method to make `sample_ImageColumn` the primary image.
+1. Use the `Utility.SetTablePrimaryImageName` method to make the new `sample_ImageColumn` the primary image column.
 
 
 ### Create account records with image data
 
 1. The program loops through a list of five filenames that match the names of files in the `Images` folder.
-1. For each image, it creates an account record with the `name` `CanStoreFullImage false {fileName}` and the file is set as the `sample_ImageColumn` value.
-1. The program then uses the`Utility.UpdateCanStoreFullImage` method to set the `sample_ImageColumn` `CanStoreFullImage` value to true.
+1. For each image, the program creates an account record with the `name` set to `CanStoreFullImage false {fileName}` and the file `byte[]` is set as the `sample_ImageColumn` value.
+1. The program then uses the `Utility.UpdateCanStoreFullImage` method to set the `sample_ImageColumn` column definition `CanStoreFullImage` value to true.
 1. Again, the program loops through the file names and creates five account records with the same image files set to the `sample_ImageColumn` value. This time the `name` is `CanStoreFullImage true {fileName}`
 
 In the following code, we can see how the value of the `CanStoreFullImage` property changes what data is available.
@@ -158,44 +158,48 @@ In the following code, we can see how the value of the `CanStoreFullImage` prope
 1. The code retrieves the 10 account records created in the previous step, including the image data.
 1. For each account record, the image data is downloaded to the `DownloadedImages` folder with the name `{recordName}_retrieved.png`.
 
-   **Note**: All of these records are thumbnail-sized images.
+   > [!NOTE]
+   > All of these records are thumbnail-sized images.
 
 ### Download the account record images
 
 This program uses three different methods to download image files.
 
-In each case, 5 of the 10 operations will fail because no full-sized images were uploaded while `CanStoreFullImage` was false. Those records created while `CanStoreFullImage` was true succeed.
+> [!NOTE]
+> In each case, 5 of the 10 operations will fail because no full-sized images were uploaded while `CanStoreFullImage` was false. Those records created while `CanStoreFullImage` was true succeed.
 
 #### Download with Actions
 
 The code uses the static `DownloadImageWithActions` method, which encapsulates the use of the [InitializeFileBlocksDownload](xref:Microsoft.Dynamics.CRM.InitializeFileBlocksDownload) and  [DownloadBlock](xref:Microsoft.Dynamics.CRM.DownloadBlock) actions to download the images as described in [Use Dataverse messages to download a file](../../file-column-data.md#use-dataverse-messages-to-download-a-file).
 
-**Note**: These operations fail when there's no full-sized image to download. The error message is: `No FileAttachment records found for imagedescriptorId: <guid> for image attribute: sample_imagecolumn of account record with id <guid>`.
+> [!NOTE]
+> These operations fail when there's no full-sized image to download. The error message is: `No FileAttachment records found for imagedescriptorId: <guid> for image attribute: sample_imagecolumn of account record with id <guid>`.
 
 #### Download with Chunks
 
 The code uses the static `DownloadImageWithChunks` method, which demonstrates how to download images as described in [Download the file in chunks using Web API](../../file-column-data.md#download-the-file-in-chunks-using-web-api).
 
-**Note**: These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.
+> [!NOTE]
+> These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.
 
 #### Download with Stream
 
 The code uses the static `DownloadImageWithStream` method, which demonstrates how to download images as described in [Download a file in a single request using Web API](../../file-column-data.md#download-a-file-in-a-single-request-using-web-api)
 
-**Note**: These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.
-
+> [!NOTE]
+> These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.
 
 ### Delete the image data
 
-1. Three different methods are used to demonstrate deleting image values, using `PATCH`, `PUT`, and `DELETE`.
-1. The deletion is verified by retrieving the records again using the same criteria as before. The value for the image column is null.
+1. The program uses three different methods to demonstrate deleting image values, using `PATCH`, `PUT`, and `DELETE`.
+1. The program verifies the records are deleted by retrieving the records again using the same criteria as before. The value for the image column is null.
 
 ### Clean up
 
 To leave the system in the state before the sample ran, the program does the following:
 
 - Delete the account records.
-- Set the primary image back to the original.
+- Set the account table primary image back to the original value.
 - Delete the image column.
 
 ### See Also
@@ -203,6 +207,6 @@ To leave the system in the state before the sample ran, the program does the fol
 [Use image column data](../../image-column-data.md)<br />
 [Image columns](../../image-attributes.md)<br />
 [Use file column data](../../file-column-data.md)<br />
-[Sample: Set and retrieve entity images](../../org-service/samples/set-retrieve-entity-images.md)
+[Sample: Image Operations using Dataverse SDK for .NET](../../org-service/samples/set-retrieve-entity-images.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

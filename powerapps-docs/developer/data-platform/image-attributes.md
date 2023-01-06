@@ -268,10 +268,10 @@ The same restrictions that apply to file columns also apply to image columns con
 
 ### See also
 
+[Use image column data](image-column-data.md)<br />
 [File columns](file-attributes.md)<br />
-[Table definitions in Microsoft Dataverse](entity-metadata.md)<br />
-[Column definitions](entity-attribute-metadata.md)<br />
-[Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
+[Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
+[Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
