@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Entity to store the information that is generated when a modern flow or UI flow runs.
+Entity to store the information that is generated when a UI flow runs.
 
 **Added by**: Power Automate Extensions core package Solution
 

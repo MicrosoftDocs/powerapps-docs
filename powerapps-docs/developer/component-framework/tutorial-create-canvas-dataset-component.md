@@ -142,19 +142,19 @@ After the component is built, you'll see that:
 When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `CanvasGrid` folder, add a new TypeScript file named `Grid.tsx`, and add the following content:
 
 ```react
-import { DetailsList } from '@fluentui/react/lib/components/DetailsList/DetailsList';
+import { DetailsList } from '@fluentui/react/lib/DetailsList';
 import {
     ConstrainMode,
     DetailsListLayoutMode,
     IColumn,
     IDetailsHeaderProps,
-} from '@fluentui/react/lib/components/DetailsList/DetailsList.types';
-import { Overlay } from '@fluentui/react/lib/components/Overlay/Overlay';
-import { ScrollablePane } from '@fluentui/react/lib/components/ScrollablePane/ScrollablePane';
-import { ScrollbarVisibility } from '@fluentui/react/lib/components/ScrollablePane/ScrollablePane.types';
-import { Stack } from '@fluentui/react/lib/components/Stack/Stack';
-import { Sticky } from '@fluentui/react/lib/components/Sticky/Sticky';
-import { StickyPositionType } from '@fluentui/react/lib/components/Sticky/Sticky.types';
+} from '@fluentui/react/lib/DetailsList';
+import { Overlay } from '@fluentui/react/lib/Overlay';
+import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane';
+import { ScrollbarVisibility } from '@fluentui/react/lib/ScrollablePane';
+import { Stack } from '@fluentui/react/lib/Stack';
+import { Sticky } from '@fluentui/react/lib/Sticky';
+import { StickyPositionType } from '@fluentui/react/lib/Sticky';
 import { IObjectWithKey } from '@fluentui/react/lib/Selection';
 import { IRenderFunction } from '@fluentui/react/lib/Utilities';
 import * as React from 'react';

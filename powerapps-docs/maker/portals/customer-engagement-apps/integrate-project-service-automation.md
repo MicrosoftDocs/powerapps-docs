@@ -7,6 +7,7 @@ ms.custom:
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
 ---
