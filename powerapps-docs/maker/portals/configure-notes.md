@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/05/2023
+ms.date: 01/06/2023
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -206,9 +206,9 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
     
     ![Add table permissions.](media/configure-notes/entity-permission.png "Add table permissions")
 
-### Enable rich-text editor
+### Enable rich text editor
 
-The rich-text editor can be enabled when adding or editing notes on a form on a webpage.
+The rich text editor can be enabled when adding or editing notes on a form on a webpage.
 
 1. Open the [Portal Management app](configure/configure-portal.md).
 
@@ -226,13 +226,15 @@ The rich-text editor can be enabled when adding or editing notes on a form on a 
 
 1. Sync your website from the studio and preview the site.
 
-1. You should be able to add and edit notes using the rich-text editor.
+1. You should be able to add and edit notes using the rich text editor.
 
-:::image type="content" source="media/configure-notes/rich-text-editor.png" alt-text="Configure notes using the rich text editor.":::
+    :::image type="content" source="media/configure-notes/rich-text-editor.png" alt-text="Configure notes using the rich text editor.":::
 
-### Notes created with rich-text editor
+### Notes created with rich text editor
 
-You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. 
+
+However, if the [rich text editor](#enable-rich-text-editor) is not enabled for notes on forms, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 
