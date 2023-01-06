@@ -15,7 +15,7 @@ contributors:
   - JimDaly
   - phecke
 ---
-# Sample: File Operations using Dataverse Web API 
+# Sample: File Operations using Dataverse Web API
 
 This .NET 6.0 sample demonstrates how to perform operations with file columns using the Dataverse Web API.
 
