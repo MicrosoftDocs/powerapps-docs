@@ -2,14 +2,13 @@
 title: Data types and sizes for Access data migration to Dataverse  | Microsoft Docs
 description: Data types and sizes supported for Microsoft Access data migration to Microsoft Dataverse 
 author: NHelgren
-
 ms.topic: conceptual
 ms.custom: 
   - model
 ms.reviewer: matp
-ms.date: 11/19/2021
+ms.date: 01/09/2023
 ms.subservice: dataverse-maker
-ms.author: NHelgren
+ms.author: nhelgren
 search.audienceType: 
   - maker
 search.app: 
