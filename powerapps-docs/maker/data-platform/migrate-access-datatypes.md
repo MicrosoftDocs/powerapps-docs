@@ -44,6 +44,7 @@ In the following table, the data type mappings supported can assist you in plann
 |Date/Time  | Date and Time   |  Yes    |
 |Currency  | Currency  | Yes  |
 |Number: Decimal  | Decimal Number  | Yes  |
+|Float |Number:Single, Number:Double | Yes<sup>3</sup>
 |Yes/No  | Yes/No  |  Yes   |
 |Int   | Whole Number   | Yes   |
 |Lookup Wizard  | Lookup   | Yes  |
@@ -55,15 +56,15 @@ In the following table, the data type mappings supported can assist you in plann
 
 <sup>2</sup> Attachments can be migrated for single attachments per column at this time. 
 
+<sup>3</sup>Dataverse includes a float data type; however, it has lower limits than Access a min/max of +/- 100,000,000,000 or +/- 99,999,999,999.99999 A maximum of 5 decimal places is supported. Users will be informed of this limitation during igration and can opt out if they require greater than 5 decimal places.
+
 ### Access data types not supported for migration to Dataverse
 
 - OLE Object
-- Number Single<sup>3</sup>
-- Number Double<sup>3</sup>
 - Calculated<sup>4</sup>
 - Rich Text
 
-<sup>3</sup>Dataverse includes a float data type; however, it has lower limits than Access. More information including a workaround: [Migrate Number:Single and Number:Double columns to Dataverse](#migrate-numbersingle-and-numberdouble-columns-to-dataverse). You can change these types to decimal in Access and then migrate without data loss.
+
 
 <sup>4</sup>When you migrate, the calculated field will migrate the last calculated value into a column. Users will need to configure new calculation columns in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
@@ -79,6 +80,8 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 |Date and Time   |  Standard date and time | Standard data and time   |
 |Currency<sup>5</sup>  |  Min/max -922,337,203,685,477/+922,337,203,685,477   |  Min/max -922,337,203,685,477/+922,337,203,685,477   |
 |Decimal Number  | Min/max -10^28-1/+10^28-1 up to 28 decimals   |  Min/max -100,000,000,000/+100,000,000,000 up to 10 decimal places    |
+|Float (Number:Single) | -3.402823E38 to -1.401298E-45 for negative values and 1.401298E-45 to 3.402823E38 for positive values. |Min/max -100,000,000,000/+100,000,000,000 up to 5 decimal places |
+|Float (Number:Double) |-1.79769313486231E308 to -4.94065645841247E-324 for negative values and 4.94065645841247E-324 to 1.79769313486231E308 for positive values.  |Min/max -100,000,000,000/+100,000,000,000 up to 5 decimal places |
 |Yes/No  |  Boolean   | Boolean   |
 |Int/Whole Number   |  Min/max -2^31/+2^31   | Min/max -2,147,483,647/+2,147,483,647   |
 |Lookup Wizard/ Lookup   | Multiple column return   |  Single column return   |
