@@ -341,6 +341,9 @@ The Sliverlight web resource has these additional methods:
  >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
  > ```
 
+## Form component control type
+
+A form component control type has the same set of methods available as the [`formContext`](../clientapi-form-context.md) on a main form. See [form component control](../../../../maker/model-driven-apps/form-component-control.md#client-api)
 
 ### Related topics
 
