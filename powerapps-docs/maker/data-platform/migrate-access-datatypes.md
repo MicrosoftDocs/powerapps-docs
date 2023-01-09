@@ -43,27 +43,25 @@ In the following table, the data type mappings supported can assist you in plann
 |Date/Time  | Date and Time   |  Yes    |
 |Currency  | Currency  | Yes  |
 |Number: Decimal  | Decimal Number  | Yes  |
-|Float |Number:Single, Number:Double | Yes<sup>3</sup>
+|Float |Number:Single, Number:Double | Yes<sup>1</sup>
 |Yes/No  | Yes/No  |  Yes   |
 |Int   | Whole Number   | Yes   |
 |Lookup Wizard  | Lookup   | Yes  |
-|Multi-Value Lookups   | Choice    | Yes<sup>1</sup>        |
+|Multi-Value Lookups   | Choice    | Yes<sup>2</sup>        |
 |Hyperlink  | URL   |  Yes       |
-|Attachment |File | Yes<sup>2</sup>|
+|Attachment |File | Yes<sup>3</sup>|
 
-<sup>1</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-lookup-access-fields-to-dataverse-choice-columns)
+<sup>1</sup>Dataverse includes a float data type. However, it has lower limits than Access a min/max of +/- 100,000,000,000 or +/- 99,999,999,999.99999. A maximum of five decimal places is supported. Users will be informed of this limitation during migration and can opt out if they require greater than five decimal places.
 
-<sup>2</sup> Attachments can be migrated for single attachments per column at this time. 
+<sup>2</sup>One column multi-value lookups only. Because of the difference in how Dataverse and Access identify these lookups, a manual process is needed in Access before migration. More information: [Export multi-value lookup Access Fields to Dataverse choice columns](#export-multi-value-lookup-access-fields-to-dataverse-choice-columns)
 
-<sup>3</sup>Dataverse includes a float data type; however, it has lower limits than Access a min/max of +/- 100,000,000,000 or +/- 99,999,999,999.99999 A maximum of 5 decimal places is supported. Users will be informed of this limitation during igration and can opt out if they require greater than 5 decimal places.
+<sup>3</sup> Attachments can be migrated for single attachments per column at this time. 
 
 ### Access data types not supported for migration to Dataverse
 
 - OLE Object
 - Calculated<sup>4</sup>
 - Rich Text
-
-
 
 <sup>4</sup>When you migrate, the calculated field will migrate the last calculated value into a column. Users will need to configure new calculation columns in Dataverse. More information: [Define calculated columns to automate calculations](define-calculated-fields.md)
 
