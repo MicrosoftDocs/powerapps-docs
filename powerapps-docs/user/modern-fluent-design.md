@@ -36,7 +36,7 @@ With the new look, Power Apps are moving away from the classic theme customizati
 ### Command bar
 The updated visuals make use of several new patterns across the app and page types. Drop shadows and brighter background colors are used to create elevation, which aids in the separation of sections and focuses attention on the primary content. The floating command bar style aligns with the Microsoft 365 commanding experience and has consistent spacing, rounded corners, and elevation. For example, notice the new look of the command bar in the following image.
 
-![Floating command bar](media/red-new-command-bar.png)
+![Floating command bar](media/red2-new-command-bar.png)
 
 As a comparison, the command bar wasn't in a separate section in previous versions of the user interface, as shown in the following image.
 
