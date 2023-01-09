@@ -2,7 +2,7 @@
 title: "Web API Navigation Properties (Microsoft Dataverse)| Microsoft Docs"
 description: "Describes OData Navigation Property elements defined for EntityTypes within the Dataverse Web API."
 ms.date: 04/06/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 manager: sunilg
