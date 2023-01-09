@@ -2,7 +2,7 @@
 title: Set up mobile offline (classic)
 ms.custom: Configure mobile offline synchronization
 description: Set up mobile offline for Power Apps mobile and Dynamics 365 phones and tablets app and
-ms.date: 10/13/2022
+ms.date: 01/09/2023
 ms.reviewer: 
 
 ms.suite: 
@@ -49,15 +49,10 @@ To enable a table for mobile offline synchronization, follow the steps below.
 
 4. On the command bar, select **Properties**. 
 
-   > [!div class="mx-imgBorder"]
-   >![Select Properties.](media/SelectProperties.png "Select Properties.")
- 
   
-5. On the **Edit table** pane, expand **Advanced options**. Under **Rows in this table**, make sure the **Can be taken offline** check box is selected, and then select **Save**.
+5. On the **Edit table** pane, expand **Advanced options**. 
 
-   > [!div class="mx-imgBorder"]
-   >![Select enable mobile offline check box.](media/enable_mobileoffline_checkbox.png "Select enable mobile offline check box")
-
+6. Under **Rows in this table**, make sure the **Can be taken offline** check box is selected, and then select **Save**.
 
    > [!NOTE]
    > Keep in mind that the amount of data you make available to users while they’re offline can affect data sync times, device performance, and can affect the data usage rates for devices on a cellular network. The amount of data that gets downloaded to the device depends on: 
@@ -73,30 +68,14 @@ To create a profile, follow the steps below.
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 2. In the navigation pane, select **Environments**.
-
-   > [!div class="mx-imgBorder"]
-   >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
 3. Choose an environment and then select **Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
  
 4. Expand **Users + permissions**,  and then select **Mobile configuration**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
   
 5. Select **New Profile** to create a new profile for mobile offline. If you already have a profile that you want to edit, select it from the list.
 
-   > [!div class="mx-imgBorder"]
-   >![Mobile Offline Profile screen.](media/mol_new_profile.png "Crearte new Mobile Offline Profile")
-
-  
 6. Enter a name and description for your mobile offline profile. Select **Create** to create the mobile offline profile.
-    
-   > [!div class="mx-imgBorder"]
-   >![Name your mobile offline profile.](media/mol_sample_profile.png "Name your mobile offline profile")
   
 7. After the profile is created, select it to open the profile so you can continue editing it.  
 
