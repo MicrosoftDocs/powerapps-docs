@@ -95,28 +95,27 @@ To create a profile, follow the steps below.
 10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [Types of tables](/powerapps/maker/common-data-service/types-of-entities).
 
 
-
-   |Table ownership type|Available Data Download Filter options |  
-  |---------------|-----------------|  
-  |**User or Team**| <ul><li>**Download Related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other data filter** - Make only the specified rows for this table available offline and then choose from the following: </li> <ul><li> **Download user rows** - Make only your rows available offline.</li>  <li> **Download team rows** - Make your team’s rows available offline.</li> <li>**Download my business unit’s rows** - Make your business unit’s rows available offline.</lu>|  
-  |**Organization**|<ul><li>**Download related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline. </li>|  
-  |**Business**|<ul><li>**Download related data only** -  Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available. </li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other rows** - Make only the specified rows for this table available offline and choose from the following:</li> <ul><li> **Download my business unit’s rows** - Make your business unit’s rows available offline.</li>   |  
-  |**None**|  <ul><li>**Download related rows only**. Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> |        
+    |Table ownership type|Available Data Download Filter options |  
+    |---------------|-----------------|  
+    |**User or Team**| <ul><li>**Download Related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other data filter** - Make only the specified rows for this table available offline and then choose from the following: </li> <ul><li> **Download user rows** - Make only your rows available offline.</li>  <li> **Download team rows** - Make your team’s rows available offline.</li> <li>**Download my business unit’s rows** - Make your business unit’s rows available offline.</lu>|  
+    |**Organization**|<ul><li>**Download related rows only** - Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> <li>**All rows** - Make all rows for this table available offline. </li>|  
+    |**Business**|<ul><li>**Download related data only** -  Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available. </li> <li>**All rows** - Make all rows for this table available offline.</li> <li>**Other rows** - Make only the specified rows for this table available offline and choose from the following:</li> <ul><li> **Download my business unit’s rows** - Make your business unit’s rows available offline.</li>   |  
+    |**None**|  <ul><li>**Download related rows only**. Make related data for this table available offline. If you don’t set any relationships, no rows for this table will be available.</li> |        
  
     
-   If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.  
+    If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.  
 
-   |&nbsp; |&nbsp; |&nbsp; |
-   |---------|---------|---------|
-   |equal     |     not equal     |   gt – greater than      |
-   |ge – greater than or equal to     |   le – less than or equal to      |   lt – less than      |
-   |like     |   not-like      |     in   |
-   |not-in     |    null     |    not-null     |
-   |eq-userid     |   ne-userid      |    eq-userteams     |
-   |eq-useroruserteams     |    eq-useroruserhierarchy     |    eq-useroruserhierarchyandteams     |
-   |eq-businessid     |    ne-businessid     |   eq-userlanguage      |
-   |begins-with     |     not-begin-with    |    ends-with     |
-   |not-end-with    |       |         |
+    |&nbsp; |&nbsp; |&nbsp; |
+    |---------|---------|---------|
+    |equal     |     not equal     |   gt – greater than      |
+    |ge – greater than or equal to     |   le – less than or equal to      |   lt – less than      |
+    |like     |   not-like      |     in   |
+    |not-in     |    null     |    not-null     |
+    |eq-userid     |   ne-userid      |    eq-userteams     |
+    |eq-useroruserteams     |    eq-useroruserhierarchy     |    eq-useroruserhierarchyandteams     |
+    |eq-businessid     |    ne-businessid     |   eq-userlanguage      |
+    |begins-with     |     not-begin-with    |    ends-with     |
+    |not-end-with    |       |         |
 
  
 11. In the **Include [table name] rows related to these tables** area, select the related table relationships. You need to have added the table you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile. 
