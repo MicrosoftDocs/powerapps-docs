@@ -1,13 +1,12 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/01/2022
+ms.date: 01/05/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -307,10 +306,6 @@ More information:
 
 The following are known issues that should be resolved before dependent assemblies for plug-ins becomes generally available.
 
-### Asynchronous plug-in steps do not work
-
-If you use dependent assemblies for a plug-in registered for an asynchronous step an error with the message `Expected non-empty Guid.` will occur.
-
 ### Plug-in profiler
 
 You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
@@ -329,6 +324,9 @@ You can manually edit this for each security role following the steps here: [Edi
 
 :::image type="content" source="media/set-pluginpackage-read-access.png" alt-text="Setting plugin package read access.":::
 
+### Custom API cannot use dependent assembly plug-ins
+
+The custom API will not work after being imported as part of a solution.
 
 ### See also
 
