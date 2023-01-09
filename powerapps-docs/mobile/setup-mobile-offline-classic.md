@@ -189,19 +189,10 @@ Following these steps to publish the profile:
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 2. In the navigation pane, select **Environments**.
-
-   > [!div class="mx-imgBorder"]
-   >![Select a environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
-3. Choose an environment and then select **Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
+3. Select an environment and then select **Settings**.
  
 4. Expand **Users + permissions**,  and then select **Mobile configuration**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
   
 5. Select **Go to legacy** on the command bar.
 
@@ -209,9 +200,6 @@ Following these steps to publish the profile:
    >![Go to legacy option.](media/go-to-legacy.png "Go to legacy option.")
   
 6. Select **Mobile Offline Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile offline settings](media/mobile-offline-settings.png "Mobile offline settings")
    
 7. When there is a mismatch of data between client and server, conflict errors occur. To resolve the issue, choose one of the following settings:
 
@@ -225,17 +213,16 @@ Enable mobile offline for a specific app.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. In the left navigation pane, select **Apps** and then select the app that you want open. On the command bar, select **Edit**. This will open the app in the **App Designer**.
-
-   > [!div class="mx-imgBorder"]
-   >![Open App Designer.](media/mol_edit_apps.png "Open App Designer")
+2. In the left navigation pane, select **Apps** and then select the app that you want open. 
   
-3. In the command bar, select the elipses (...) icon, and then select **Switch to classic**.
+3. On the command bar, select **Edit**. This will open the app in the **App Designer**.
+  
+4. In the command bar, select the elipses (...) icon, and then select **Switch to classic**.
   
    > [!div class="mx-imgBorder"]
    >![Switch to classic option.](media/switch-to-classic.png "Switch to classic option")
   
-4. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
+5. Select the **Properties** tab and scroll down to select the **Enable Mobile Offline** check box. Then select the drop-down menu and choose a mobile offline profile.
 
    > [!div class="mx-imgBorder"]
    >![Enable mobile offline for the app.](media/mol_edit_app_designer.png "Enable mobile offline for the app")
@@ -243,7 +230,7 @@ Enable mobile offline for a specific app.
    > [!NOTE] 
    > You can add more than one profile for an app module.
 
-5. When you're done, at the top choose **Save** and then **Publish**.
+6. When you're done, at the top choose **Save** and then **Publish**.
 
    > [!div class="mx-imgBorder"]
    > ![Publish the app.](media/mol_publish_app.png "Publish the app")
