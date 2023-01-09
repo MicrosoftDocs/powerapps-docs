@@ -105,6 +105,12 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 |Unique Index      |  Alternate Key        | Not supported for migration      |
 |Multi-Value Lookup      | Choice        | Supported for migration         |
 
+## Migrating Access datavases into Dataverse solutions
+
+To enable Application Lifecycle Management (ALM), Dataverse uses solutions to allow for the management, and distribution of content including apps, tables, and more. A solution is a package of components such as tables, relationships, or other items that can be distributed across multiple Dataverse environments through Export and Import. 
+
+The Access migration tool allows users to choose if they wish to export their Access databases directly into a solution. Users can only export solutions into unmanaged solutions. A solution must be exist or be created in Dataverse prior to the migration in order to be able to be used for the migration process. To learn more about solutions please reference the following:[Solution Concepts] (https://learn.microsoft.com/power-platform/alm/solution-concepts-alm)
+
 ### See also
 
 [Data types and sizes for Access data migration to Dataverse](migrate-access-datatypes.md)
