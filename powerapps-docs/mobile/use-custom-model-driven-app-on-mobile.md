@@ -205,7 +205,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
-- Some commands have been moved from the main set of commands to an overflow menu. This gives priority to other commands including custom commands. 
+- Some commands have been moved from the main set of commands to an overflow menu. This gives priority to other commands, including custom commands. 
   
 ### Tablet optimization for command bar
 
