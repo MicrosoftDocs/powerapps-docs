@@ -43,7 +43,7 @@ To enable a table for mobile offline synchronization, follow the steps below.
   
 3. Select the row for the table that you want to enable for mobile offline, such as **Account**.  
 
-   > [!div class="mx-imgBorder"]
+  
    > ![Select the row for the table that you want to enable for mobile offline.](media/SelectTable.png "Select the row for the table that you want to enable for mobile offline.")
  
 
