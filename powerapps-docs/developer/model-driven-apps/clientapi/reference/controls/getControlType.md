@@ -43,6 +43,7 @@ All
 |notes|A notes control|
 |choice|A choice control|
 |quickform | A [quick view](../formContext-ui-quickForms.md) control|
+|formcomponent | A [form component control](../../../../../maker/model-driven-apps/form-component-control.md#client-api)|
 |subgrid | A [subgrid](../grids.md) control|
 |timercontrol | A timer control|
 |timelinewall | A timeline control (for Unified Interface)|
