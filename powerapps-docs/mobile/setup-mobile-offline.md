@@ -107,9 +107,6 @@ A table needs to be enabled for offline to add it to a offline profile. Some tab
 
 2. On the left pane, select **Data** > **Tables**. 
 3. Select the table that you want to add to an offline profile, and then on the command bar, select **Settings**
-
-    > [!div class="mx-imgBorder"]
-    > ![Table settings.](media/offline-table-settings.png)
     
 4. In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
 
