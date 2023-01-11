@@ -406,7 +406,7 @@ More information:
 
 # [Web API](#tab/webapi)
 
-With Web API, the property values are 64 encoded string values representing the `byte[]` data.
+With Web API, the property values are base 64 encoded string values representing the `byte[]` data.
 
 This request returns an image column with an account record:
 
