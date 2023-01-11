@@ -22,7 +22,7 @@ The offline sync icon is now visible in the main navigation on iOS and Android d
 
 | Icon | Description|
 |------|--------------|
-| | App is connected to the internet.|
+| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet")| App is connected to the internet.|
 |  |App is not connected to the internet.|
 |  |App is syncing data.|
 |  |App has pending changes to upload.|
