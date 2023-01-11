@@ -2,7 +2,7 @@
 title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 06/20/2022
+ms.date: 01/11/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -38,7 +38,7 @@ When creating an Azure Synapse Link for Dataverse, you can enable the incrementa
 > 
 > This feature will apply to all selected tables within Azure Synapse Link for Dataverse and, by default, all the tables selected will be assigned append-only mode with incremental updates.
 > 
-> This feature cannot be enabled with the option: **Connect to your Azure Synapse workspace Azure Synapse workspace**. For customers who require Azure Synapse analytics access, please follow this instruction to setup the link:[Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md) 
+> This feature cannot be enabled with the option: **Connect to your Azure Synapse workspace Azure Synapse workspace**. For customers who require Azure Synapse analytics access, follow this instruction to setup the link: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md) 
 >  
 > This feature is designed to work with Azure Data Factory or Synapse Pipeline to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database. More information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md)
 
