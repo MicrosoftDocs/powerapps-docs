@@ -22,9 +22,9 @@ The offline sync icon is now visible in the main navigation on iOS and Android d
 
 | Icon | Description|
 |------|--------------|
-| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet")| App is connected to the internet.|
-|  |App is not connected to the internet.|
-|  |App is syncing data.|
-|  |App has pending changes to upload.|
-|  |There is an error in the synchronization process.|
-|  |There is a warning in the sychronization process.|
+| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet.")| App is connected to the internet.|
+| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet") |App is not connected to the internet.|
+| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet") |App is syncing data.|
+| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet") |App has pending changes to upload.|
+| ![Icon showing that there is an error in the synchronization process.](media/error.png "Icon showing that there is an error in the synchronization process.") |There is an error in the synchronization process.|
+| ![Icon showing that there is a warning in the synchronization process.](media/warning.png "Icon showing that there is a warning in the synchronization process.") |There is a warning in the sychronization process.|
