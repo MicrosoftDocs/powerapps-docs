@@ -1,9 +1,9 @@
 ---
 title: "Client API execution context in model-driven apps| MicrosoftDocs"
 description: "Explains the client api execution context"
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
+author: adrianorth
+ms.author: aorth
+
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: "conceptual"

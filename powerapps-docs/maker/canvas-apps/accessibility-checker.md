@@ -12,7 +12,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Review a canvas app for accessibility in Power Apps

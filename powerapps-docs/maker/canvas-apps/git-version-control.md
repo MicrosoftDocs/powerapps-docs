@@ -1,6 +1,6 @@
 ---
 title: Use Git version control to edit canvas apps (experimental)
-description: Learn ho to connect to a Git repository and allow multiple users to work on the app at the same time (experimental).
+description: Learn how to connect to a Git repository and allow multiple users to work on the app at the same time (experimental).
 author: gregli-msft
 ms.topic: conceptual
 ms.custom: canvas
@@ -13,7 +13,7 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
   - mkaur-msft
   - gesnaaggarwal

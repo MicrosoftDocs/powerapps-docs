@@ -1,12 +1,12 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -27,21 +27,21 @@ Organizational knowledge for internal and external use.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/knowledgearticles<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateKnowledgeArticleTranslation|<xref href="Microsoft.Dynamics.CRM.CreateKnowledgeArticleTranslation?text=CreateKnowledgeArticleTranslation Action" />|<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleTranslationRequest>|
 |CreateKnowledgeArticleVersion|<xref href="Microsoft.Dynamics.CRM.CreateKnowledgeArticleVersion?text=CreateKnowledgeArticleVersion Action" />|<xref:Microsoft.Crm.Sdk.Messages.CreateKnowledgeArticleVersionRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/knowledgearticles(*knowledgearticleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |FullTextSearchKnowledgeArticle|<xref href="Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle?text=FullTextSearchKnowledgeArticle Action" />|<xref:Microsoft.Crm.Sdk.Messages.FullTextSearchKnowledgeArticleRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/knowledgearticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/knowledgearticles(*knowledgearticleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/knowledgearticles<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/knowledgearticles(*knowledgearticleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/knowledgearticles(*knowledgearticleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/knowledgearticles(*knowledgearticleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -82,7 +82,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [LanguageLocaleId](#BKMK_LanguageLocaleId)
 - [MajorVersionNumber](#BKMK_MajorVersionNumber)
 - [MinorVersionNumber](#BKMK_MinorVersionNumber)
+- [msdyn_externalreferenceid](#BKMK_msdyn_externalreferenceid)
 - [msdyn_ingestedarticleurl](#BKMK_msdyn_ingestedarticleurl)
+- [msdyn_integratedsearchproviderid](#BKMK_msdyn_integratedsearchproviderid)
 - [msdyn_iscontentsyncedtostore](#BKMK_msdyn_iscontentsyncedtostore)
 - [msdyn_isingestedarticle](#BKMK_msdyn_isingestedarticle)
 - [msdyn_keywordsdescsuggestioncontrol](#BKMK_msdyn_keywordsdescsuggestioncontrol)
@@ -417,6 +419,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
+### <a name="BKMK_msdyn_externalreferenceid"></a> msdyn_externalreferenceid
+
+**Added by**: Knowledge Management Online Features Solution
+
+|Property|Value|
+|--------|-----|
+|Description|External Reference Id|
+|DisplayName|External Reference Id|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_externalreferenceid|
+|MaxLength|450|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_msdyn_ingestedarticleurl"></a> msdyn_ingestedarticleurl
 
 **Added by**: Knowledge Management Patch Solution
@@ -433,6 +453,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|2048|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_integratedsearchproviderid"></a> msdyn_integratedsearchproviderid
+
+**Added by**: Knowledge Management Online Features Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Integrated Search Dataprovider Id |
+|DisplayName|Integrated Search Dataprovider Id |
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_integratedsearchproviderid|
+|RequiredLevel|None|
+|Targets|msdyn_integratedsearchprovider|
+|Type|Lookup|
 
 
 ### <a name="BKMK_msdyn_iscontentsyncedtostore"></a> msdyn_iscontentsyncedtostore
@@ -970,6 +1006,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
 - [msdyn_contentstore](#BKMK_msdyn_contentstore)
 - [msdyn_contentstore_Name](#BKMK_msdyn_contentstore_Name)
+- [msdyn_integratedsearchprovideridName](#BKMK_msdyn_integratedsearchprovideridName)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -1329,6 +1366,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|msdyn_contentstore_name|
 |MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_integratedsearchprovideridName"></a> msdyn_integratedsearchprovideridName
+
+**Added by**: Knowledge Management Online Features Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_integratedsearchprovideridname|
+|MaxLength|255|
 |RequiredLevel|None|
 |Type|String|
 
@@ -2222,6 +2277,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [subject_knowledgearticles](#BKMK_subject_knowledgearticles)
 - [knowledgearticle_rootarticle_id](#BKMK_knowledgearticle_rootarticle_id)
 - [TransactionCurrency_knowledgearticle](#BKMK_TransactionCurrency_knowledgearticle)
+- [msdyn_knowledgearticle_integratedsearchprovider](#BKMK_msdyn_knowledgearticle_integratedsearchprovider)
 
 
 ### <a name="BKMK_lk_knowledgearticle_createdby"></a> lk_knowledgearticle_createdby
@@ -2283,6 +2339,12 @@ See the [knowledgearticle_rootarticle_id](knowledgearticle.md#BKMK_knowledgearti
 ### <a name="BKMK_TransactionCurrency_knowledgearticle"></a> TransactionCurrency_knowledgearticle
 
 See the [TransactionCurrency_knowledgearticle](transactioncurrency.md#BKMK_TransactionCurrency_knowledgearticle) one-to-many relationship for the [transactioncurrency](transactioncurrency.md) table/entity.
+
+### <a name="BKMK_msdyn_knowledgearticle_integratedsearchprovider"></a> msdyn_knowledgearticle_integratedsearchprovider
+
+**Added by**: Knowledge Management Online Features Solution
+
+See the [msdyn_knowledgearticle_integratedsearchprovider](msdyn_integratedsearchprovider.md#BKMK_msdyn_knowledgearticle_integratedsearchprovider) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
 <a name="manytomany"></a>
 
 ## Many-To-Many Relationships
