@@ -1687,6 +1687,9 @@
     href: ../mobile/scan-QR-code.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
+    items:
+    - name: Prevent canvas app restarts on Power Apps mobile
+      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Mobile offline for model-driven apps
     items:
     - name: Set up mobile offline (classic)
