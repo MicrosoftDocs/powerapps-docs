@@ -17,3 +17,14 @@ search.audienceType:
 # View offline sync status
 
 The offline sync icon is now always visible in the mobile navigation bar. The icon provides contextual information such as if the app is connected, if data is currently refreshing, whether there are pending user updates that have not synchronized yet, and whether the sync has an error or warning.
+
+The offline sync icon is now visible in the main navigation on iOS and Android devices.
+
+| Icon | Description|
+|------|--------------|
+| | App is connected to the internet.|
+|  |App is not connected to the internet.|
+|  |App is syncing data.|
+|  |App has pending changes to upload.|
+|  |There is an error in the synchronization process.|
+|  |There is a warning in the sychronization process.|
