@@ -37,6 +37,8 @@ Any activity in the system is retrievable using the specific activity schema nam
 
 This table contains the party information for each activity. Each activity party represents a person or group associated with an activity. Example: Assume you created an Appointment activity which has one organizer, one owner, two required attendees, one optional attendee, and one regarding object. There would be six corresponding rows stored in this table. Another example of activity parties are all the people on an email activity on the From, To, and Cc lines.
 
+If a row such as a contact is deleted, any activity party rows which reference that contact are not automatically deleted. This is by design to preserve the original participant data. If you delete an activity row such as an email, all activity party rows associated to that activity are deleted.
+
 More information: [ActivityParty table](activityparty-entity.md) and [activityparty EntityType](reference/entities/activityparty.md).
 
 ### ActivityMimeAttachment
