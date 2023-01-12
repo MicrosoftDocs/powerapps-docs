@@ -7,13 +7,13 @@ ms.topic: conceptual
 ms.date: 08/21/2020
 ms.subservice: canvas-maker
 ms.author: caburk
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - caburk
 ---
 

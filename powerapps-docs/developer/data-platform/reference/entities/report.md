@@ -1,12 +1,12 @@
 ---
 title: "Report table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Report table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -27,20 +27,20 @@ Data summary in an easy-to-read layout.
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/reports(*reportid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/reports<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/reports(*reportid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/reports<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/reports(*reportid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |DownloadReportDefinition|<xref href="Microsoft.Dynamics.CRM.DownloadReportDefinition?text=DownloadReportDefinition Function" />|<xref:Microsoft.Crm.Sdk.Messages.DownloadReportDefinitionRequest>|
 |GetReportHistoryLimit|<xref href="Microsoft.Dynamics.CRM.GetReportHistoryLimit?text=GetReportHistoryLimit Function" />|<xref:Microsoft.Crm.Sdk.Messages.GetReportHistoryLimitRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/reports<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/reports(*reportid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/reports<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetReportRelated|<xref href="Microsoft.Dynamics.CRM.SetReportRelated?text=SetReportRelated Action" />|<xref:Microsoft.Crm.Sdk.Messages.SetReportRelatedRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/reports(*reportid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/reports(*reportid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -81,7 +81,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [ParentReportId](#BKMK_ParentReportId)
 - [ReportId](#BKMK_ReportId)
+- [ReportStatus](#BKMK_ReportStatus)
 - [ReportTypeCode](#BKMK_ReportTypeCode)
+- [ReportVersion](#BKMK_ReportVersion)
 - [SignatureDate](#BKMK_SignatureDate)
 - [SignatureId](#BKMK_SignatureId)
 - [SignatureLcid](#BKMK_SignatureLcid)
@@ -360,6 +362,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_ReportStatus"></a> ReportStatus
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Represents the status of the Report.|
+|DisplayName|Report Status|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|reportstatus|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ReportTypeCode"></a> ReportTypeCode
 
 |Property|Value|
@@ -380,7 +400,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|Reporting Services Report||
 |2|Other Report||
 |3|Linked Report||
+|4|Power BI Paginated Report||
+|5|Power BI Analytic Report||
 
+
+
+### <a name="BKMK_ReportVersion"></a> ReportVersion
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Represents the version of a report.|
+|DisplayName|Report Version|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|reportversion|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_SignatureDate"></a> SignatureDate
@@ -530,6 +571,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [ParentReportIdName](#BKMK_ParentReportIdName)
+- [PowerBiReportName](#BKMK_PowerBiReportName)
 - [QueryInfo](#BKMK_QueryInfo)
 - [RdlHash](#BKMK_RdlHash)
 - [ReportIdUnique](#BKMK_ReportIdUnique)
@@ -1011,6 +1053,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|parentreportidname|
 |MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_PowerBiReportName"></a> PowerBiReportName
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the name of the Power Bi embedded report.|
+|DisplayName|Power Bi Report Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|powerbireportname|
+|MaxLength|500|
 |RequiredLevel|None|
 |Type|String|
 

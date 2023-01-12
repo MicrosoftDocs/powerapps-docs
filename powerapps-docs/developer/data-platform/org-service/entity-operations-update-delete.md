@@ -1,10 +1,10 @@
 ---
 title: "Update and delete table rows using the Organization Service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete table rows using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/12/2022
+ms.date: 01/12/2023
 ms.reviewer: pehecke
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer

@@ -4,7 +4,7 @@ description: "Read how you can use the QueryExpression class to programmatically
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" 
+author: "divkamath" 
 ms.author: "jdaly" 
 manager: "kvivek" 
 search.audienceType: 

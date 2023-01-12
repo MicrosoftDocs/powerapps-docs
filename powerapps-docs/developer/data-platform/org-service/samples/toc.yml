@@ -179,8 +179,6 @@ items:
     href: merge-two-records.md
   - name: Serialize and deserialize a table
     href: serialize-deserialize-entity.md
-  - name: Set and retrieve entity images
-    href: set-retrieve-entity-images.md
   - name: Share a record using an access team
     href: share-record-using-access-team.md
   - name: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
@@ -193,6 +191,8 @@ items:
     href: use-optimistic-concurrency-update-delete-operations.md
   - name: File Operations
     href: file-operations.md
+  - name: Image Operations
+    href: set-retrieve-entity-images.md
 - name: Field Level Security
   items:
   - name: Enable field security for a table
