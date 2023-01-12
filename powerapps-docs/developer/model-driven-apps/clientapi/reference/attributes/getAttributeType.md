@@ -37,6 +37,8 @@ This method will return one of the following **string** values:
 - datetime
 - decimal
 - double
+- file
+- image
 - integer
 - lookup
 - memo

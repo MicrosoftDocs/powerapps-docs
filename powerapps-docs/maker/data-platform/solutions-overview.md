@@ -1,7 +1,7 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.date: 08/30/2022
+ms.date: 01/09/2023
 ms.reviewer: ""
 ms.topic: overview
 author: "Mattp123"
@@ -90,6 +90,7 @@ From the **Solutions** area, select a solution to view all of its components.
  
 
  ## Contextual commands
+
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
@@ -124,6 +125,7 @@ The following limitations apply to the use of canvas apps, flows, and custom con
 - Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
 - Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked. 
    - Workaround for this limitation: Remove the trigger, replace with another trigger like recurrence, save the flow, add it into a solution, and then change the trigger as needed.
+- Instant flows (flows that use a manual trigger) can't be added to a solution after the flow has been created. To include an instant flow in a solution, it must be created from the solution. To do this, from the solution select **New** > **Automation** > **Cloud flow** > **Instant**.
 - The [Power Automate mobile app](/power-automate/mobile-manage-flows) does not currently support flows created in a solution. 
 - The Flow action menu in [Power Apps Mobile](/powerapps/mobile/run-powerapps-on-mobile) and [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) does not currently support flows created in a solution. 
 - Flows in solutions don't support delegated authorization. For example, access to a flow cannot be automatically granted based on having access to the SharePoint list the flow was created from. 
