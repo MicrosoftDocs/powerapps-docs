@@ -2,7 +2,7 @@
 title: "Use CreateMultiple and UpdateMultiple (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the CreateMultiple and UpdateMultiple messages to optimize bulk data operations." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 12/12/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 ms.topic: article
@@ -31,13 +31,13 @@ The .NET SDK classes to use these messages are just like the individual operatio
 |`Update`|[UpdateRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest)<br/>Properties:<br/>- [Target](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target)<br />- [ConcurrencyBehavior](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.ConcurrencyBehavior)|[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse)|
 |`UpdateMultiple`|[UpdateMultipleRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest)<br/>Properties:<br/>- [Targets](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.Targets)<br />- [ConcurrencyBehavior](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior)|[UpdateMultipleResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleResponse)|
 
-As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request and the response type will be returned.
+As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request and the response type will be returned. More information: [Use messages with the Organization service](use-messages.md)
 
 ## Performance improvements
 
 Consider this: If you create a *single* record using `Create` or `CreateMultiple`, the result is exactly the same. The same is true for `Update` and `UpdateMultiple`. Not only is the result the same, the performance is the same as well. `CreateMultiple` and `UpdateMultiple` provide greater efficiency and performance benefits as the number of records included in the `Targets` property increases.
 
-Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events.
+Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
 
 Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the operations with greater efficiency.
 
