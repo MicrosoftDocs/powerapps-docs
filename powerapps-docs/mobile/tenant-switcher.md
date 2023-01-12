@@ -24,8 +24,18 @@ Users can now easily switch to a different tenant, without having to log out of 
 - Users can now access shared apps from a list on the user profile page.
 
 > [!Important]
-> The ability to easily switch to a different tenant is available on Android devices at this time.
+> The ability to easily switch to a different tenant is available on only Android devices at this time.
 
-The following image shows how you can select a different tenant from the list on the user profile page.
+To switch to a different tenant on Power Apps mobile:
+
+1. Open Power Apps on your mobile device.
+2. From the **Home**, **All apps**, or **More** page, select your profile image. Your user profile page appears.
+3. Select the tenant you're signed in to. A list of tenants appears.
+    
+    > [!div class="mx-imgBorder"] 
+    > ![A list of tenants.](media/tenant-switcher.png)
+    
+4. Select the tenant you want to switch to.
+
 
 ![Switch to a different tenant.](media/tenant-switcher.png "Switch to a different tenant.")
