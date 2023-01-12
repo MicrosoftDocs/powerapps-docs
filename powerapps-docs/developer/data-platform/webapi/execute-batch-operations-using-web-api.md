@@ -5,7 +5,6 @@ ms.date: 10/17/2022
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -27,47 +26,209 @@ The format to send `$batch` requests is defined in this section of the OData spe
 
 ## When to use batch requests
 
-The value that batch requests provide is that they can include change sets, which provide a way to bundle a number of operations that either succeed or fail as a group. Compared to other operations that can be performed using the web API, they are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request body is essentially a text document that must match very specific requirements.  
-  
-Remember that associated entities can be created in a single operation more easily than using a batch request. Batch requests are best used when performing operations on entities that aren't associated with each other when all the operations must be performed in a single transactional operation.  
+Batch requests provide two capabilities that can be used together.
+
+- You can send requests for multiple operations with a single HTTP request.
+
+   - Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.   
+   - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> and <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse> classes.
+
+- You can group requests for operations together so that they are included as a single transaction.
+
+   - You may want to create or update a set of related records in a way that guarantees that all the operations succeed or fail as a group.
+   - Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
+   - This is equivalent to the `ExecuteTransaction` message available in the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> and <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionResponse> classes.
+
+Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the maximum allowed URL length. This is because the URL for the request is included in the body of the message and a longer URL is allowed there, up to 64 KB (65,536 characters). Sending complex queries using FetchXml can result in very long URLs. More information: [Use FetchXml with Web API](use-fetchxml-web-api.md)
+
+Compared to other operations that can be performed using the web API, they are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request body is essentially a text document that must match very specific requirements.  
   
 Also, the responses returned are essentially text documents rather than objects that can easily be parsed into JSON. You'll need to parse the text in the response or locate a helper library to access the data in the response.  
- 
->[!NOTE]
->  Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.
->
->  URLs for `GET` requests sent with a batch are limited to 64 KB (65,536 characters).
 
   
 <a name="bkmk_BatchRequests"></a> 
 
 ## Batch requests
-
-Use a `POST` request to submit a batch operation that contains multiple requests. A batch request can include `GET` requests and change sets. To use the transactional capabilities of batch requests, only operations that will change data can be included within a change set. `GET` requests must not be included in the change set.  
+Use a `POST` request to submit a batch operation that contains multiple requests.
   
 The `POST` request containing the batch must have a `Content-Type` header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch using this pattern:  
   
 ```
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: multipart/mixed; boundary="batch_<unique identifier>"
+```  
+  
+The unique identifier doesn't need to be a GUID, but should be unique.
+
+Each item within the batch must be preceded by the batch identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
+  
+```  
 --batch_<unique identifier>
-```  
-  
-The unique identifier doesn't need to be a GUID, but should be unique. Each item within the batch must be preceded by the batch identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
-  
-```  
---batch_WKQS9Yui9r
 Content-Type: application/http
-Content-Transfer-Encoding:binary
+Content-Transfer-Encoding: binary
 ```  
   
-The end of the batch must contain a termination indicator like the following:  
+The end of the batch request must contain a termination indicator like the following:  
   
 ```  
---batch_WKQS9Yui9r--
-```   
+--batch_<unique identifier>--
+```
+
+The following is an example of a batch request without change sets. This example:
+- Creates three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`.
+- Retrieves the task records associated with the account.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: multipart/mixed; boundary="batch_80dd1615-2a10-428a-bb6f-0e559792721f"
+
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 1 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 2 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 3 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+GET /api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1
+
+
+--batch_80dd1615-2a10-428a-bb6f-0e559792721f--
+
+```
+
+## Batch responses
+
+When successful, the batch response will return HTTP Status `200 OK`, and each item in the response will be separated by a Guid unique identifier value
+
+```http
+--batchresponse_<unique identifier>
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+```
+
+The end of the batch response will contain a termination indicator like the following:  
+  
+```http
+--batchresponse_<unique identifier>--
+```
+
+The following is the response to the batch request example above.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(d31ba648-c592-ed11-aad1-000d3a993550)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(d31ba648-c592-ed11-aad1-000d3a993550)
+
+
+--batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(d41ba648-c592-ed11-aad1-000d3a993550)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(d41ba648-c592-ed11-aad1-000d3a993550)
+
+
+--batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(d51ba648-c592-ed11-aad1-000d3a993550)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(d51ba648-c592-ed11-aad1-000d3a993550)
+
+
+--batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal; odata.streaming=true
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#tasks(subject)",
+  "value": [
+    {
+      "@odata.etag": "W/\"77180907\"",
+      "subject": "Task 1 in batch",
+      "activityid": "d31ba648-c592-ed11-aad1-000d3a993550"
+    },
+    {
+      "@odata.etag": "W/\"77180910\"",
+      "subject": "Task 2 in batch",
+      "activityid": "d41ba648-c592-ed11-aad1-000d3a993550"
+    },
+    {
+      "@odata.etag": "W/\"77180913\"",
+      "subject": "Task 3 in batch",
+      "activityid": "d51ba648-c592-ed11-aad1-000d3a993550"
+    }
+  ]
+}
+--batchresponse_01346794-f2e2-4d45-8cc2-f97e09fe8916--
+
+```
+
+
   
 <a name="bkmk_ChangeSets"></a>
 
 ## Change sets
+
+A batch request can include `GET` requests and change sets. To use the transactional capabilities of batch requests, only operations that will change data can be included within a change set. `GET` requests must not be included in the change set.  
 
 When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a boundary set to include the identifier of the change set using this pattern:  
   
