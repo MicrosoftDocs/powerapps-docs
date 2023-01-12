@@ -33,9 +33,8 @@ To switch to a different tenant on Power Apps mobile:
 3. Select the tenant you're signed in to. A list of tenants appears.
     
     > [!div class="mx-imgBorder"] 
-    > ![A list of tenants.](media/tenant-switcher.png)
-    
+    > ![A list of tenants.](media/tenant-switcher.png "A list of tenants.")
+   
 4. Select the tenant you want to switch to.
 
 
-![Switch to a different tenant.](media/tenant-switcher.png "Switch to a different tenant.")
