@@ -1,7 +1,7 @@
 ---
 title: "Use image column data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about uploading, downloading, and deleting data in image columns." 
-ms.date: 01/10/2023
+ms.date: 01/11/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -25,7 +25,7 @@ The following table introduces some of the differences between image and file co
 
 ||Image  |File  |
 |---------|---------|---------|
-|**File Size**|Limited to 30 MB.|Up to 10 GB.|
+|**File Size**|Limited to 30 MB.|Up to 10 GB. While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls will result in errors uploading or downloading files.|
 |**File Types**|Only [Image file types](#image-file-types)|All file types allowed by the [Organization.BlockedAttachments value](reference/entities/organization.md#BKMK_BlockedAttachments). More information: [Block certain types of files](file-attributes.md#block-certain-types-of-files) |
 |**Set with Update**|You can set image column data with other record data using update.|You can only upload files individually to file column properties.|
 |**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record. More information: [Delete images](#delete-images)|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|

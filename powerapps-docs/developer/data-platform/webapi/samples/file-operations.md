@@ -118,6 +118,8 @@ To leave the system in the state before the sample ran, it does the following:
 ### See Also
 
 [Use file column data](../../file-column-data.md)<br />
-[Sample: File Operations using Dataverse SDK for .NET](../../org-service/samples/file-operations.md)
+[Sample: File Operations using Dataverse SDK for .NET](../../org-service/samples/file-operations.md)<br />
+[Use image column data](../../image-column-data.md)<br />
+[Sample: Image Operations using Dataverse Web API](image-operations.md)
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

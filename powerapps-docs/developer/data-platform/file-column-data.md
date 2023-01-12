@@ -1,7 +1,7 @@
 ---
 title: "Use file column data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about uploading, downloading, and deleting data in file columns." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/08/2023
+ms.date: 01/11/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID

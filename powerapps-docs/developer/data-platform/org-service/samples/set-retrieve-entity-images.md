@@ -1,7 +1,7 @@
 ---
 title: "Sample: Image Operations using Dataverse SDK for .NET | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to work with image column data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/04/2023
+ms.date: 01/11/2023
 author: NHelgren
 ms.author: nhelgren
 ms.reviewer: jdaly

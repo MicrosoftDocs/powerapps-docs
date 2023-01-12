@@ -4,7 +4,7 @@ description: Learn how to programmatically work with table definitions in Micros
 author: NHelgren
 ms.author: nhelgren
 ms.topic: article
-ms.date: 01/04/2023
+ms.date: 01/11/2023
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType: 
