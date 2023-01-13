@@ -202,11 +202,11 @@ The following are frequently asked question related to the introduction of these
 
 ### Will there be an UpsertMultiple?
 
-We are still evaluating whether an `UpsertMultiple` message is necessary.
+Yes. `UpsertMultiple` is planned to be released later.
 
 ### Will there be a DeleteMultiple?
 
-There are no plans to have `DeleteMultiple`. Delete operations frequently include cascading operations which can result in unpredictable execution times. We already have a `BulkDelete` message that enables asynchronous deletion of records that match a query.
+Maybe. Delete operations frequently include cascading operations which can result in unpredictable execution times. We already have a `BulkDelete` message that enables asynchronous deletion of records that match a query.
 
 ### Will Retrieve and RetrieveMultiple logic be merged?
 
@@ -214,22 +214,20 @@ There are no plans to change `Retrieve` and `RetrieveMultiple` message behavior.
 
 ### How are API limits applied?
 
-There are two kinds of API limits: Service Protection limits and Entitlement limits.
+There are two kinds of API limits: Service Protection limits and Power Platform Request (API Entitlement) limits.
+
+[!INCLUDE [cc-api-limits-summary-table](../../../includes/cc-api-limits-summary-table.md)]
 
 #### Service Protection limits
 
-These limits protect the service from extraordinary requests that may impact shared resources. When these limits are exceeded an error will be returned. These limits have 3 facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
+These limits have 3 facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
 
 - **Number of requests**: Each `CreateMultiple` and `UpdateMultiple` request counts as single request that will accrue to the limit of 6000 requests per user, per server, during the 5-minute window. By grouping multiple requests with these messages, the likelihood of hitting this limit is reduced.
-- **Execution time**: Because each request may take longer, and if you are sending request in parallel, you are more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window.
+- **Execution time**: Because each request may take longer, and if you are sending requests in parallel, you are more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window. More information: [Send parallel requests](../send-parallel-requests.md)
 
-More information: [Service protection API limits](../api-limits.md)
+#### Power Platform Request (API Entitlement) limits
 
-#### Entitlement limits
-
-These limits are on the number of data operations a user is entitled to perform in a 24 hour period. These are based on data changes, so each item included in the `Targets` parameter of a `CreateMultiple` and `UpdateMultiple` request will accrue to this limit. These messages do not provide a means to bypass these limits.
-
-More information: [Entitlement limits](../../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+These are based on data changes, so each item included in the `Targets` parameter of a `CreateMultiple` and `UpdateMultiple` request will accrue to this limit. These messages do not provide a means to bypass these limits.
 
 ### See Also
 
