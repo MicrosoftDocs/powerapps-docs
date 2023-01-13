@@ -35,6 +35,8 @@ As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Micr
 
 ## Performance improvements
 
+With `CreateMultiple` and `UpdateMultiple` operations become more efficient and performant as the number of records passed with the `Targets` parameter increases.
+
 Consider this: If you create a *single* record using `Create` or `CreateMultiple`, the result is exactly the same. The same is true for `Update` and `UpdateMultiple`. Not only is the result the same, the performance is the same as well. `CreateMultiple` and `UpdateMultiple` provide greater efficiency and performance benefits as the number of records included in the `Targets` property increases.
 
 Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
