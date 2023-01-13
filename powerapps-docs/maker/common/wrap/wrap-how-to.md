@@ -80,27 +80,29 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
    > [!div class="mx-imgBorder"] 
    > ![Use the wrap wizard.](media/how-to-v2/wrap-get-started.png "Use the wrap wizard")
 
-4. On the **Select the app(s) to wrap** step, select the primary app and secondary apps.
+4. On the **Select the app(s) to wrap** step, select your primary app and secondary apps and then select **Next**.
 
-   - Primary app: Select the app your end users will see when they launch the mobile app.
-   - Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
+   - **Primary app**: Select the app your end users will see when they launch the mobile app.
+   - **Secondary app(s)**: Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
 
      > [!div class="mx-imgBorder"] 
      > ![Choose the apps to wrap.](media/how-to-v2/select-apps.png "Choose the apps to wrap")
   
-  
-  > [!NOTE]
-  > You can use the same Primary app in multiple wrap projects.
+     > [!NOTE]
+     > You can use the same Primary app in multiple wrap projects.
 
-### Choose mobile platform to target
+5. On the **Choose mobile platform to target** step, enter a **Bundle ID** of our choice. This is the name of the app that appears in the app store. A bundle ID must contain one period (.) and no spaces. 
 
-On the **Choose mobile platform to target** screen, select all platforms that your end users use on their mobile devices.
+6. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-- Set the **Sign my app** toggle to **ON** to code sign your app. More information: [Code sign for iOS](code-sign-ios.md), [Code sign for Android](code-sign-android.md).
+7. Set the **Sign my app (prview)** toggle to **ON** to code sign your app. More information: [Code sign for iOS](code-sign-ios.md), [Code sign for Android](code-sign-android.md) and then select **Next**.
+
+
+
 
 ### Configure branding
 
-On the **Configure branding** screen, configure the appearance of your app.
+On the **Configure branding** step, configure the appearance of your app.
 
 All five icons need to be selected for your wrapped mobile app.
 
