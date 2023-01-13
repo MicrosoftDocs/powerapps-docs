@@ -27,6 +27,7 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 > [!IMPORTANT]
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> 
 ## What’s included with the new look
 After the **Try the new look and feel (preview)** feature has been enabled for a model-driven app, you'll see the new, modern interface in the app. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the read-only grid. New Fluent-based field controls are also used in many forms.
 
@@ -61,6 +62,6 @@ After enabling the **Try the new look and feel (preview)** feature and using you
 ## Known limitations
 Be aware of the following limitations for the modern, refreshed look for model-driven apps:
 
-- The mobile app, mail app, and Embedded Teams mode do not support the modern, refreshed look and are not part of the preview.
+- The mobile app, mail app, and embedded Teams mode do not support the modern, refreshed look and are not part of the preview.
 - The modern, refreshed look does not apply to Dynamics 365 applications at this time. Do not enable this preview in any production, Dynamics 365 applications.
 
