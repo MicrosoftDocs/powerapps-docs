@@ -31,11 +31,7 @@ Follow the steps in this topic, for a mobile offline profile that has a table wi
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. On the left nav select **Data** to expand it and then select **Tables**.  
-
-   > [!div class="mx-imgBorder"]
-   >![Go to tables.](media/maker-data-tables.png "Go to tables")
-  
+2. On the left nav select **Data** to expand it and then select **Tables**.   
   
 3. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
@@ -52,19 +48,10 @@ It is required to add both the **Image Descriptor** and **FileAttachment** table
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 2. On the right, select **Environments**.
-
-   > [!div class="mx-imgBorder"]
-   >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
 3. Choose an environment and then select **Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
  
 4. Expand **Users + permissions**, and then select **Mobile configuration**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
 
 5. Select a mobile offline profile to edit it.
 
@@ -98,19 +85,10 @@ It is required to add the **FileAttachment** tables to your mobile offline profi
 1. Go to Power Platform Admin center, [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) and sign-in as an admin.
 
 2. On the right, select **Environments**.
-
-   > [!div class="mx-imgBorder"]
-   >![Select a Environment.](media/offline_admincenter_enviroments.png "Select a Environment")
  
 3. Choose an environment and then select **Settings**.
-
-   > [!div class="mx-imgBorder"]
-   >![Environment settings.](media/offline_open_an_enviroment.png "Environment settings")
  
 4. Expand **Users + permissions**,  and then select **Mobile configuration**.
-
-   > [!div class="mx-imgBorder"]
-   >![Mobile configuration setting.](media/offline_mobile_config_settings.png "Mobile configuration settings")
 
 5. Select a mobile offline profile to edit it.
 

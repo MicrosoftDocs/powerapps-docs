@@ -4,7 +4,7 @@ description: "Make data changes which bypass custom business logic"
 ms.date: 03/30/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" 
+author: "divkamath" 
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
 manager: "kvivek" 
