@@ -53,7 +53,7 @@ The response from requesting records is persisted to minimize the number of reco
 You can add or edit your custom connector for the timeline control by configuring it in the maker experience.
 
 1. On the timeline control, select the form for which you want to add or edit the custom connector.
-1. Do one of the following options:
+1. Complete one of the following options:
     - To add a new custom connector, in the **Properties** pane for the timeline table, in **Custom connectors**, select **Add connector**. The **New custom connector** pane is displayed.
 
       :::image type="content" source="media/add-custom-connector.png" alt-text="Add a custom connector.":::
