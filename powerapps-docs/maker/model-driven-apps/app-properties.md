@@ -70,6 +70,7 @@ The **Upcoming** tab displays preview features currently available:
 
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+
 - **Choose the offline mode to apply to your app**. When enabled, users can continue working in the model-driven app when offline. More information: [Mobile offline overview (preview)](../../mobile/mobile-offline-overview.md)
 - **Try the new look and feel**. This is a preview feature that enables the new look for existing and new model-driven apps. This setting is disabled by default and will not affect the model-driven app until enabled. More information: [Modern, refreshed look for model-driven apps (preview)](../../user/modern-fluent-design.md)
 
