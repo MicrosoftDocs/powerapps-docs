@@ -60,8 +60,7 @@ When you update your app and republish it, the app is automatically updated.
 You'll need access to:
 - [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
 - [App Center](https://appcenter.ms/) to add new organization and apps.
-
-You'll need one or more canvas or model-driven apps (saved in a solution) that you can package for distribution to mobile users.
+- This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution). 
 
 To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
@@ -69,16 +68,19 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
 
 1. Sign in to [Power Apps](https://make.powerapp.com/).
 
-2. On the **Home** screen, select **Existing app**.
+2. Select **Apps**, from the left navigation pane. 
+
+3. Select the app that you want to wrap, and then select **Wrap** on the command bar.
 
    > [!div class="mx-imgBorder"] 
-   > ![Choose existing app.](media/how-to-v2/wrap-0.png "Choose existing app")
+   > ![Select the app to wrap.](media/how-to-v2/select-app-to-wrap.png "Select the app to wrap")
 
-3. Select **Get started**.
+4. On the **Wrap** pane, select **Get started** to use the wizard.
 
-### Select the app(s) to wrap
+   > [!div class="mx-imgBorder"] 
+   > ![Use the wrap wizard.](media/how-to-v2/wrap-get-started.png "Use the wrap wizard")
 
-On the Select the app(s) to wrap step, select the solution, primary app, and any secondary apps.
+4. On the Select the app(s) to wrap step, select the solution, primary app, and any secondary apps.
 
 - Solution: This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)  
 
