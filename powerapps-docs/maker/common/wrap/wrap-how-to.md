@@ -80,19 +80,17 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
    > [!div class="mx-imgBorder"] 
    > ![Use the wrap wizard.](media/how-to-v2/wrap-get-started.png "Use the wrap wizard")
 
-4. On the Select the app(s) to wrap step, select the solution, primary app, and any secondary apps.
+4. On the **Select the app(s) to wrap** step, select the primary app and secondary apps.
 
-- Solution: This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)  
+   - Primary app: Select the app your end users will see when they launch the mobile app.
+   - Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
 
-- Primary app: Select the app your end users will see when they launch the mobile app.
-
+     > [!div class="mx-imgBorder"] 
+     > ![Choose the apps to wrap.](media/how-to-v2/select-apps.png "Choose the apps to wrap")
+  
+  
   > [!NOTE]
   > You can use the same Primary app in multiple wrap projects.
-
-- Secondary app(s): Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
-
-  > [!div class="mx-imgBorder"] 
-  > ![Choose app to app.](media/how-to-v2/wrap-1.png "Choose app to wrap")
 
 ### Choose mobile platform to target
 
