@@ -123,7 +123,7 @@ Log out of Teams and log back in as the Team owner. We'll now go to the table an
 
     ![View table records](media/granting-permissions-to-tables-in-dataverse-for-teams/seeing-them-in-practice-4.png "View table records")
 
-So how would this apply to one of the sample apps for Teams?
+So how would this apply to one of the sample app templates for Teams?
 
 For example, with Bulletins we might set the following permissions for the tables in the app:
 
@@ -157,7 +157,7 @@ Once we have the personas defined, relate these personas to the team role to whi
 - **Inspection reviewer** - Since inspection reviewers should be able to edit all inspections, but they won't create inspection forms, we'll make them team members. This will enable us to give them reference access to the Area **Inspection Checklist** table (where inspection form data is stored), but full access to **Area Inspection** table (where inspection records are stored).
 - **Inspection user** - Inspection users should only be able to submit new inspections, but not create new inspection forms or see other user’s inspections. So we won't make them members of the team in which the app is installed&mdash;we'll share the app with them as colleagues, and give them **Reference** permission to **Area Inspection Checklist** and **Private** permission to **Area Inspection**. This will allow users to view inspection forms and create their own inspection records.
 
-For more details about the recommended table permissions for the sample apps for Teams, see articles about deploying sample apps broadly, such as [Deploy Profile + as broad distribution app](deploy-profile-plus-broad-distribution.md).
+For more details about the recommended table permissions for the sample app templates for Teams, see articles about deploying sample app templates broadly, such as [Deploy Profile + as broad distribution app](deploy-profile-plus-broad-distribution.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

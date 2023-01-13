@@ -1,6 +1,6 @@
 ---
-title: Customize sample apps installed from teams store | Microsoft Docs
-description: Learn how to customize sample apps installed from teams store.
+title: Customize sample app templates installed from teams store | Microsoft Docs
+description: Learn how to customize sample app templates installed from teams store.
 author: msftsamperl
 
 ms.topic: conceptual
@@ -11,27 +11,21 @@ ms.author: saperlmu
 ms.reviewer: mkaur
 ---
 
-# Customize sample apps installed from Teams store
+# Customize sample app templates installed from Teams store
 
-In this article, you'll learn about customizing sample apps installed from the Teams store. For example, you may need to change the company logo, update the data inside the sample apps to fit your business requirement, add or remove controls on the screens to extend the app.
+In this article, you'll learn about customizing sample app templates installed from the Teams store. For example, you may need to change the company logo, update the data inside the sample app templates to fit your business requirement, add or remove controls on the screens to extend the app.
 
 ## Prerequisites
 
-Before using this app:
-
-1. Find the app in the Microsoft Teams store.
-1. Install the app.
-1. Set up the app for the first use.
-
-For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
+Install a sample app template. More details: [Use sample app templates from the Teams store](use-sample-apps-from-teams-store.md).
 
 > [!NOTE]
-> - Sections of this article uses one of the available sample apps from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
-> - Read [Sample app updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample apps to understand the impact of new releases to the sample app versions.
+> - Sections of this article uses one of the available sample app templates from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Read [Sample app updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample app templates to understand the impact of new releases to the sample app versions.
 
 ## Open the sample app in Power Apps Studio
 
-To start with customizing the sample apps, the first step is to open the app inside Power Apps Studio.
+To start with customizing the sample app templates, the first step is to open the app inside Power Apps Studio.
 
 1. Sign in to Teams.
 
@@ -55,9 +49,9 @@ More information: [Edit an app in Power Apps Studio](manage-your-apps.md#edit-an
 
 ## Remove sample data
 
-When you install sample apps, the tables might be pre-populated with sample data. The following table lists the sample apps and the list of tables with the sample data to be removed:
+When you install sample app templates, the tables might be pre-populated with sample data. The following table lists the sample app templates and the list of tables with the sample data to be removed:
 
-To remove data from the sample apps:
+To remove data from the sample app templates:
 
 1. Open the sample app (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
@@ -184,7 +178,7 @@ user experience. If you modify a screen fill, the modified screen will no longer
 If you want to quickly edit the data in the app, you can open the table and modify or delete data.
 
 > [!CAUTION]
-> Sample apps uses several related tables, such as Area Inspection Locations and Area Inspection Location Types for Inspection app. Use caution when deleting records from the tables without checking data relationship and dependencies.
+> Sample app templates uses several related tables, such as Area Inspection Locations and Area Inspection Location Types for Inspection app. Use caution when deleting records from the tables without checking data relationship and dependencies.
 
 1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 

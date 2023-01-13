@@ -51,7 +51,7 @@ Sign into Power Apps at [https://make.powerapps.com](https://make.powerapps.com?
 
     ![Select Add a tab.](media/open-app-embedded-in-teams/add-a-tab.png "Select Add a tab")
 
-4. Choose **Sample apps** > **Product Showcase** > **Save**.
+4. Choose **Sample app templates** > **Product Showcase** > **Save**.
 
     ![Select Product Showcase and Save.](media/open-app-embedded-in-teams/select-an-app.png "Select Product Showcase and Save")
 
@@ -60,7 +60,7 @@ Sign into Power Apps at [https://make.powerapps.com](https://make.powerapps.com?
     ![App shows up in channel.](media/open-app-embedded-in-teams/app-in-channel.png "App shows up in channel")
 
 > [!NOTE]
-> You must [share](../maker/canvas-apps/share-app.md) your own apps before you add them to Teams (sample apps are shared by default).
+> You must [share](../maker/canvas-apps/share-app.md) your own apps before you add them to Teams (sample app templates are shared by default).
 
 ## Open an app
 

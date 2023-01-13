@@ -1,6 +1,6 @@
 ---
-title: Frequently Asked Questions (FAQs) and answers when using sample apps from Teams store | Microsoft Docs
-description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample apps from Teams store
+title: Frequently Asked Questions (FAQs) and answers when using sample app templates from Teams store | Microsoft Docs
+description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample app templates from Teams store
 author: msftsamperl
 
 ms.topic: conceptual
@@ -14,12 +14,12 @@ contributors:
   - mduelae
 ---
 
-# Frequently Asked Questions (FAQs) for sample apps
+# Frequently Asked Questions (FAQs) for sample app templates
 
-In this article, learn about the frequently asked questions and the answers about using the sample apps available in the Teams store.
+In this article, learn about the frequently asked questions and the answers about using the sample app templates available in the Teams store.
 
 > [!IMPORTANT]
-> For any issues, feedback, support, or changes related to sample apps, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
+> For any issues, feedback, support, or changes related to sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
 
 ## When I try to install a sample app, I get an error that the app is already in the team.
 
@@ -34,9 +34,9 @@ When this happens, use the installed app, or install the app in a different team
 
 For the steps to move an app, go to [Move an app to another Teams channel in the same team](publish-and-share-apps.md#move-an-app-to-another-teams-channel-in-the-same-team).
 
-## How do I delete the sample data from the sample apps?
+## How do I delete the sample data from the sample app templates?
 
-For the steps to delete sample data from the sample apps, go to [Remove sample data](customize-sample-apps.md#remove-sample-data).
+For the steps to delete sample data from the sample app templates, go to [Remove sample data](customize-sample-apps.md#remove-sample-data).
 
 ## Planner tasks are created with “Former Member” instead of the name of the assigned user
 

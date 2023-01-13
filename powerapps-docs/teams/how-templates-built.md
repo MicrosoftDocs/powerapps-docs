@@ -16,7 +16,7 @@ contributors:
 
 # How to build apps for Microsoft Teams
 
-The [sample apps](use-sample-apps-from-teams-store.md) for Microsoft Teams are designed, and built with the following goals:
+The [sample app templates](use-sample-apps-from-teams-store.md) for Microsoft Teams are designed, and built with the following goals:
 
 - Provide fully functional apps for Teams that have relevance across multiple industries.
 - Provide examples of deeper integration of line-of-business data from Power Apps into collaborative elements of Teams to drive better more productive workloads.

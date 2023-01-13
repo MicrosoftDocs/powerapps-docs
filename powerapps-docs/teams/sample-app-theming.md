@@ -1,5 +1,5 @@
 ---
-title: Theming in sample apps (contains video)
+title: Theming in sample app templates (contains video)
 description: Learn how to theming formulas in the template Power Apps for Microsoft Teams.
 author: joel-lindstrom
 
@@ -14,13 +14,13 @@ contributors:
   - joel-lindstrom
 ---
 
-# Theming in sample apps
+# Theming in sample app templates
 
 The most attractive feature about canvas apps is the ability to customize the user interface per the user or organization’s branding and liking. Theming strategy provides us with the ability to create apps that match the organizational brand. A **theme** contains a collection of styles that define multiple design properties for controls and components such as colors, fonts, and borders.
 
 In this article, we'll learn how to use global variables to define themes, and how the colors and properties can be easily changed throughout the app by just updating the global variables.
 
-Watch this video to learn about theming in sample apps:
+Watch this video to learn about theming in sample app templates:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWL2Us]
 
 ## Prerequisites

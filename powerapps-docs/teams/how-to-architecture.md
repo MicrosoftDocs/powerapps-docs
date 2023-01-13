@@ -238,9 +238,9 @@ The following variables are used on the My checkout screen:
 ### See also
 
 - [Use How to sample app (preview)](how-to.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Use sample apps from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
+- [Customize sample app templates](customize-sample-apps.md)
+- [Sample app templates FAQs](sample-apps-faqs.md)
+- [Use sample app templates from the Microsoft Teams store](use-sample-apps-from-teams-store.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
 
