@@ -56,11 +56,11 @@ You can add or edit your custom connector for the timeline control by configurin
 1. Do one of the following options:
     - To add a new custom connector, in the **Properties** pane for the timeline table, in **Custom connectors**, select **Add connector**. The **New custom connector** pane is displayed.
 
-    :::image type="content" source="media/add-custom-connector.png" alt-text="Add a custom connector.":::
+      :::image type="content" source="media/add-custom-connector.png" alt-text="Add a custom connector.":::
     
     - To edit an existing custom connector you've already uploaded, in the **Properties** pane for the timeline entity, select the custom connector, and then select **Edit**. The **Edit custom connector pane** is displayed.
 
-    :::image type="content" source="media/edit-custom-connector.png" alt-text="Edit the custom connector properties.":::
+      :::image type="content" source="media/edit-custom-connector.png" alt-text="Edit the custom connector properties.":::
     
 1. Edit the page, and then select **Save**.
     
