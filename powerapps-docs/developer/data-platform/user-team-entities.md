@@ -31,8 +31,6 @@ User and team management is the area of Microsoft Dataverse where you can create
 
 ## Users
 
-To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
-
  The following table provides details about the significant attributes for the system user table.
  
  [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
@@ -54,6 +52,8 @@ To find the user who is currently logged on or who is impersonated, call the <xr
 > A user's set of privileges is a union of privileges from the user's roles and privileges from all teams’ roles in which the user is a member.  
 
  Non-interactive users are often used when writing service-to-service code because they do not use up a license. Dataverse allows for seven free non-interactive users. To disable a non-interactive user, update the user record changing the `accessmode` value to any other value. The user will be disabled automatically.
+
+To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
 
 ### Delete a user (preview)
 
