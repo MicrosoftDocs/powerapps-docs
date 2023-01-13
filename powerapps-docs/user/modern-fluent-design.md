@@ -54,3 +54,13 @@ Field sections, which are containers for the fields on a form, have been updated
 
 ## Enable the new look
 Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look and feel (preview)** feature for each model-driven app. Model-driven apps that are part of the preview, will automatically get incremental enhancements on a weekly basis. For more information about enabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md#upcoming).
+
+## Provide feedback on the new look
+After enabling the **Try the new look and feel (preview)** feature and using your model-driven apps, you can provide feedback on the new look on the [Power Apps Custom Page Feedback discussion thread](https://powerusers.microsoft.com/t5/Building-Power-Apps/Power-Apps-Custom-Page-Feedback-discussion-thread/m-p/1203993#M315697) web page.
+
+## Known limitations
+Be aware of the following limitations for the modern, refreshed look for model-driven apps:
+
+- The mobile app, mail app, and Embedded Teams mode do not support the modern, refreshed look and are not part of the preview.
+- The modern, refreshed look does not apply to Dynamics 365 applications at this time. Do not enable this preview in any production, Dynamics 365 applications.
+
