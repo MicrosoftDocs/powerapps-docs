@@ -30,28 +30,27 @@ Batch requests provide two capabilities that can be used together.
 
 - You can send requests for multiple operations with a single HTTP request.
 
-   - Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.   
-   - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> and <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleResponse> classes.
+   - Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.
+   - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the Organization service](../org-service/execute-multiple-requests.md)
 
 - You can group requests for operations together so that they are included as a single transaction.
 
    - You may want to create or update a set of related records in a way that guarantees that all the operations succeed or fail as a group.
    - Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
-   - This is equivalent to the `ExecuteTransaction` message available in the SDK for .NET <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> and <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionResponse> classes.
+   - This is equivalent to the `ExecuteTransaction` message available in the SDK for .NET. More information: [Execute messages in a single database transaction](../org-service/use-executetransaction.md)
+   - More information: [Change sets](#change-sets)
 
 Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the maximum allowed URL length. This is because the URL for the request is included in the body of the message and a longer URL is allowed there, up to 64 KB (65,536 characters). Sending complex queries using FetchXml can result in very long URLs. More information: [Use FetchXml with Web API](use-fetchxml-web-api.md)
 
-Compared to other operations that can be performed using the web API, they are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request body is essentially a text document that must match very specific requirements.  
-  
-Also, the responses returned are essentially text documents rather than objects that can easily be parsed into JSON. You'll need to parse the text in the response or locate a helper library to access the data in the response.  
+Compared to other operations that can be performed using the Web API, they are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request and response bodys are essentially a text document that must match very specific requirements. To access the data in a response, you'll need to parse the text in the response or locate a helper library to access the data in the response.  See [.NET Parse batch response example](#net-parse-batch-response-example) below.
 
   
-<a name="bkmk_BatchRequests"></a> 
+<a name="bkmk_BatchRequests"></a>
 
 ## Batch requests
 Use a `POST` request to submit a batch operation that contains multiple requests.
   
-The `POST` request containing the batch must have a `Content-Type` header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch using this pattern:  
+The `POST` request containing the batch must have a [Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type) header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch using this pattern:  
   
 ```
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -64,7 +63,7 @@ Content-Type: multipart/mixed; boundary="batch_<unique identifier>"
   
 The unique identifier doesn't need to be a GUID, but should be unique.
 
-Each item within the batch must be preceded by the batch identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
+Each item within the batch must be preceded by the batch identifier with a `Content-Type` and [Content-Transfer-Encoding](https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html) header like the following:  
   
 ```  
 --batch_<unique identifier>
@@ -223,34 +222,178 @@ OData-Version: 4.0
 ```
 
 
-  
 <a name="bkmk_ChangeSets"></a>
 
 ## Change sets
 
-A batch request can include `GET` requests and change sets. To use the transactional capabilities of batch requests, only operations that will change data can be included within a change set. `GET` requests must not be included in the change set.  
+In addition to individual requests, a batch reques can include change sets. When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. 
 
-When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a boundary set to include the identifier of the change set using this pattern:  
+> [!NOTE]
+> `GET` request are not allowed within change sets. A `GET` operation should not change data, therefore there should not be any data operation to include in the transaction.
+
+
+Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a `boundary` set to include the identifier of the change set using this pattern:  
   
 ```
---changeset_<unique identifier>
+Content-Type: multipart/mixed; boundary="changeset_<unique identifier>"
 ```  
   
 The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a `Content-Type` and `Content-Transfer-Encoding` header like the following:  
   
 ```  
---changeset_BBB456
+--changeset_<unique identifier>
 Content-Type: application/http
-Content-Transfer-Encoding:binary
+Content-Transfer-Encoding: binary
 ```  
   
-Change sets can also include a `Content-ID` header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of 1, you can refer to that entity using `$1` later in your change set.  
+Change sets can also include a `Content-ID` header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of `1`, you can refer to that entity using `$1` later in your change set.  
   
 The end of the change set must contain a termination indicator like the following:  
   
 ```  
---changeset_BBB456--
+--changeset_<unique identifier>--
 ```  
+
+The following example shows the use of a change set to:
+- Group the creation of three tasks associated with an account with `accountid` value `00000000-0000-0000-0000-000000000001`
+- Retrieve the accounts created using a GET request outside of the changeset
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: multipart/mixed; boundary="batch_22975cad-7f57-410d-be15-6363209367ea"
+
+--batch_22975cad-7f57-410d-be15-6363209367ea
+Content-Type: multipart/mixed; boundary="changeset_246e6bfe-89a4-4c77-b293-7a433f082e8a"
+
+--changeset_246e6bfe-89a4-4c77-b293-7a433f082e8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 1 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--changeset_246e6bfe-89a4-4c77-b293-7a433f082e8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 2 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--changeset_246e6bfe-89a4-4c77-b293-7a433f082e8a
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 3 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--changeset_246e6bfe-89a4-4c77-b293-7a433f082e8a--
+
+--batch_22975cad-7f57-410d-be15-6363209367ea
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+GET /api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1
+
+
+--batch_22975cad-7f57-410d-be15-6363209367ea--
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_f27ef42d-51b0-4685-bac9-f468f844de2f
+Content-Type: multipart/mixed; boundary=changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15
+
+--changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(e73ffc82-e292-ed11-aad1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(e73ffc82-e292-ed11-aad1-000d3a9933c9)
+
+
+--changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(e83ffc82-e292-ed11-aad1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(e83ffc82-e292-ed11-aad1-000d3a9933c9)
+
+
+--changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(e93ffc82-e292-ed11-aad1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(e93ffc82-e292-ed11-aad1-000d3a9933c9)
+
+
+--changesetresponse_64cc3fff-023a-45b0-b29d-df21583ffa15--
+--batchresponse_f27ef42d-51b0-4685-bac9-f468f844de2f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal; odata.streaming=true
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#tasks(subject)",
+  "value": [
+    {
+      "@odata.etag": "W/\"77181173\"",
+      "subject": "Task 1 in batch",
+      "activityid": "e73ffc82-e292-ed11-aad1-000d3a9933c9"
+    },
+    {
+      "@odata.etag": "W/\"77181176\"",
+      "subject": "Task 2 in batch",
+      "activityid": "e83ffc82-e292-ed11-aad1-000d3a9933c9"
+    },
+    {
+      "@odata.etag": "W/\"77181179\"",
+      "subject": "Task 3 in batch",
+      "activityid": "e93ffc82-e292-ed11-aad1-000d3a9933c9"
+    }
+  ]
+}
+--batchresponse_f27ef42d-51b0-4685-bac9-f468f844de2f--
+
+```
 
 <a name="bkmk_handling_errors"></a>
 
@@ -799,6 +942,55 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 > HTTP 400 Bad Request
 > Content-ID Reference: '$1' does not exist in the batch context.
 > ```
+
+## .NET Parse batch response example
+
+The following static `ParseMultipartContent` method is used by the [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) to parse the body of a batch responses into a List of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage)
+
+```csharp
+/// <summary>
+/// Processes the Multi-part content returned from the batch into a list of responses.
+/// </summary>
+/// <param name="content">The Content of the response.</param>
+/// <returns></returns>
+private static async Task<List<HttpResponseMessage>> ParseMultipartContent(HttpContent content)
+{
+   MultipartMemoryStreamProvider batchResponseContent = await content.ReadAsMultipartAsync();
+
+   List<HttpResponseMessage> responses = new();
+
+   if (batchResponseContent?.Contents != null)
+   {
+         batchResponseContent.Contents.ToList().ForEach(async httpContent =>
+         {
+
+            //This is true for changesets
+            if (httpContent.IsMimeMultipartContent())
+            {
+               //Recursive call
+               responses.AddRange(await ParseMultipartContent(httpContent));
+            }
+
+            //This is for individual responses outside of a change set.
+            else
+            {
+               //Must change Content-Type for ReadAsHttpResponseMessageAsync method to work.
+               httpContent.Headers.Remove("Content-Type");
+               httpContent.Headers.Add("Content-Type", "application/http;msgtype=response");
+
+               HttpResponseMessage httpResponseMessage = await httpContent.ReadAsHttpResponseMessageAsync();
+
+               if (httpResponseMessage != null)
+               {
+                     responses.Add(httpResponseMessage);
+               }
+            }
+         });
+   }
+
+   return responses;
+}
+```
 
 ### See also
 
