@@ -2,7 +2,7 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 11/18/2022
+ms.date: 12/12/2022
 ms.custom: 
 ms.topic: how-to
 applies_to:
