@@ -112,7 +112,7 @@ Two of the plug-ins, `FollowupPluginSingle.cs` and `UpdateSingle.cs`, represent 
 
 By contrasting these plug-ins, you can observe how logic applied for the single operation can be modified to work with the operation that includes multiple entities.
 
-The `ContextWriter.cs` plug-in captures data from the [IPluginExecutionContext4 Interface](/dotnet/api/microsoft.xrm.sdk.ipluginexecutioncontext4?view=dataverse-sdk-latest) and writes it to the [PluginTraceLog](../../reference/entities/plugintracelog.md) so that you can see the data passed to the plug-in.
+The `ContextWriter.cs` plug-in captures data from the [IPluginExecutionContext4 Interface](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4) and writes it to the [PluginTraceLog](../../reference/entities/plugintracelog.md) so that you can see the data passed to the plug-in.
 
 <!-- TODO: When the bugs are fixed, include examples of the plug-in trace log here -->
 
