@@ -4,7 +4,6 @@ description: "Learn how to use custom connectors to bring your own data, such as
 ms.custom: ""
 ms.date: 01/13/2023
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -18,9 +17,9 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - lalexms
 ---
-
-
 # Use custom connectors with the timeline control
 
 The custom connectors feature provides a way for developers to surface information such as Dataverse table rows, external data sources, and so forth, as records entries within the TimelineWallControl component. It allows for a broader set of scenarios in addition to the existing out-of-box notes, posts, and activities.
