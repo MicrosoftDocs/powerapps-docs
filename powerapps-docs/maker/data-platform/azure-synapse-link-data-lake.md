@@ -39,7 +39,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and we recommend that replication is set to **read-access geo-redundant storage (RA-GRS)** properties")
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. We recommend that replication is set to **read-access geo-redundant storage (RA-GRS)**.
 
 > [!NOTE]
 >
@@ -69,7 +69,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 You can follow the steps above to create a link from one environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple environments to the same Azure Data Lake, all within the same tenant.
 
 > [!NOTE]
-> The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
+> The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
 > Currently, you can't provide public IPs for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
@@ -124,6 +124,15 @@ The model.json file, along with its name and version, provides a list of tables 
 
 A folder that includes snapshot comma-delimited (CSV format) files is displayed for each table exported to the data lake.
    ![Table data in the data lake.](media/entity-data-in-lake.png "Table data in the data lake")
+   
+## Link a Synapse workspace to an existing Synapse Link profile with data lake only
+
+1. In web browsers address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**.
+
+2. Select an existing profile from the Synapse Link homepage and click extended option
+
+3. Select **Link to Azure Synapse Analytics Workspace** and allow a few minutes for everything to be linked.
+
 
 ### Continuous snapshot updates
 
