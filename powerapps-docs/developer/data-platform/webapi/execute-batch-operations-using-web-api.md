@@ -44,7 +44,7 @@ Batch requests provide two capabilities that can be used together:
 
 Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the maximum allowed URL length. This is because the URL for the request is included in the body of the message where a longer URL, up to 64 KB (65,536 characters), is allowed. Sending complex queries using FetchXml can result in very long URLs. More information: [Use FetchXML within a batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request)
 
-Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request and response bodies are essentially a text document that must match very specific requirements. To access the data in a response, you'll need to parse the text in the response or locate a helper library to access the data in the response.  See [.NET Parse batch response example](#net-parse-batch-response-example) below.
+Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request and response bodies are essentially a text document that must match very specific requirements. To access the data in a response, you'll need to parse the text in the response or locate a helper library to access the data in the response.  See [.NET helper methods](#net-helper-methods).
 
   
 <a name="bkmk_BatchRequests"></a>
@@ -1004,6 +1004,77 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(b181a991-3c94-ed11-aad1-0
 
 ## .NET helper methods
 
+The [WebAPIService class library (C#)](samples/webapiservice.md) is a sample helper class library project used for Web API samples written in .NET. It demonstrates one way that common patterns used with Web API can be re-used.
+
+> [!NOTE]
+> This sample library is a helper that is used by all the Dataverse C# Web API samples, but it is not an SDK. It is tested only to confirm that the samples that use it run successfully. This sample code is provided 'as-is' with no warranty for reuse.
+
+This library includes classes for creating batch requests and processing responses.  For example, variations on following code was used to generate many of the HTTP request and response examples in this article.
+
+```csharp
+using PowerApps.Samples;
+using PowerApps.Samples.Batch;
+
+static async Task Main()
+{
+    Config config = App.InitializeApp();
+
+    var service = new Service(config);
+
+    JObject account = new()
+    {
+        {"name","test account" }
+    };
+
+    EntityReference accountRef = await service.Create("accounts", account);
+
+    List<HttpRequestMessage> createRequests = new() {
+        new CreateRequest("tasks",new JObject(){
+            {"subject","Task 2 in batch" },
+            {"regardingobjectid_account_task@odata.bind", accountRef.Path }
+        }),
+        new CreateRequest("tasks",new JObject(){
+            {"subject","Task 2 in batch" },
+            {"regardingobjectid_account_task@odata.bind", accountRef.Path }
+        }),
+        new CreateRequest("tasks",new JObject(){
+            {"subject","Task 3 in batch" },
+            {"regardingobjectid_account_task@odata.bind", accountRef.Path }
+        })
+    };
+
+    BatchRequest batchRequest = new(service.BaseAddress)
+    {
+        Requests = createRequests,
+        ContinueOnError = true
+    };
+
+    var batchResponse = await service.SendAsync<BatchResponse>(batchRequest);
+
+    batchResponse.HttpResponseMessages.ForEach(response => {
+
+        string path = response.As<CreateResponse>().EntityReference.Path;
+        Console.WriteLine($"Task created at: {path}");
+        
+    });
+}
+```
+
+**output**
+
+```
+Task created at: tasks(6743adfa-4a94-ed11-aad1-000d3a9933c9)
+Task created at: tasks(6843adfa-4a94-ed11-aad1-000d3a9933c9)
+Task created at: tasks(6943adfa-4a94-ed11-aad1-000d3a9933c9)
+```
+
+Within this library there are some methods that you may find useful in your .NET code.
+
+More information:
+
+ - [WebAPIService Batch](samples/webapiservice.md#batch)
+ - [Web API Data operations Samples (C#)](web-api-samples-csharp.md)
+
 ### .NET HttpRequestMessage to HttpMessageContent example
 
 In .NET you must send batch requests as <xref:System.Net.Http.MultipartContent> which is a collection of <xref:System.Net.Http.HttpContent>. <xref:System.Net.Http.HttpMessageContent> inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
@@ -1047,7 +1118,7 @@ private HttpMessageContent ToMessageContent(HttpRequestMessage request)
 
 ### .NET Parse batch response example
 
-The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch responses into a List of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage). More information: [WebAPIService Batch](samples/webapiservice.md#batch)
+The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch responses into a `List` of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage) that can be processed like individual responses.
 
 ```csharp
 /// <summary>
