@@ -1,7 +1,7 @@
 ---
 title: "Execute batch operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
-ms.date: 10/17/2022
+ms.date: 01/14/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -26,28 +26,31 @@ The format to send `$batch` requests is defined in this section of the OData spe
 
 ## When to use batch requests
 
-Batch requests provide two capabilities that can be used together.
+Batch requests provide two capabilities that can be used together:
 
 - You can send requests for multiple operations with a single HTTP request.
 
    - Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.
    - This is equivalent to the `ExecuteMultiple` message available in the SDK for .NET. More information: [Execute multiple requests using the Organization service](../org-service/execute-multiple-requests.md)
 
-- You can group requests for operations together so that they are included as a single transaction.
+- You can group requests for operations together so that they are included as a single transaction using [Change sets](#change-sets).
 
-   - You may want to create or update a set of related records in a way that guarantees that all the operations succeed or fail as a group.
-   - Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
+   - You may want to create, update, or delete a set of related records in a way that guarantees that all the operations succeed or fail as a group.
    - This is equivalent to the `ExecuteTransaction` message available in the SDK for .NET. More information: [Execute messages in a single database transaction](../org-service/use-executetransaction.md)
-   - More information: [Change sets](#change-sets)
+   
+   > [!NOTE]
+   > Remember that associated entities can be created in a single operation more easily than using a batch request. More information:  [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation)
 
-Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the maximum allowed URL length. This is because the URL for the request is included in the body of the message and a longer URL is allowed there, up to 64 KB (65,536 characters). Sending complex queries using FetchXml can result in very long URLs. More information: [Use FetchXml with Web API](use-fetchxml-web-api.md)
 
-Compared to other operations that can be performed using the Web API, they are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request and response bodys are essentially a text document that must match very specific requirements. To access the data in a response, you'll need to parse the text in the response or locate a helper library to access the data in the response.  See [.NET Parse batch response example](#net-parse-batch-response-example) below.
+Batch requests are also sometimes used to sent `GET` requests where the length of the URL may exceed the maximum allowed URL length. This is because the URL for the request is included in the body of the message where a longer URL, up to 64 KB (65,536 characters), is allowed. Sending complex queries using FetchXml can result in very long URLs. More information: [Use FetchXML within a batch request](use-fetchxml-web-api.md#use-fetchxml-within-a-batch-request)
+
+Compared to other operations that can be performed using the Web API, batch requests are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request and response bodies are essentially a text document that must match very specific requirements. To access the data in a response, you'll need to parse the text in the response or locate a helper library to access the data in the response.  See [.NET Parse batch response example](#net-parse-batch-response-example) below.
 
   
 <a name="bkmk_BatchRequests"></a>
 
 ## Batch requests
+
 Use a `POST` request to submit a batch operation that contains multiple requests.
   
 The `POST` request containing the batch must have a [Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type) header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch using this pattern:  
@@ -137,7 +140,7 @@ GET /api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks?
 
 ## Batch responses
 
-When successful, the batch response will return HTTP Status `200 OK`, and each item in the response will be separated by a Guid unique identifier value
+When successful, the batch response will return HTTP Status `200 OK`, and each item in the response will be separated by a `Guid` unique identifier value
 
 ```http
 --batchresponse_<unique identifier>
@@ -226,10 +229,10 @@ OData-Version: 4.0
 
 ## Change sets
 
-In addition to individual requests, a batch reques can include change sets. When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. 
+In addition to individual requests, a batch request can include change sets. When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back.
 
 > [!NOTE]
-> `GET` request are not allowed within change sets. A `GET` operation should not change data, therefore there should not be any data operation to include in the transaction.
+> `GET` request are not allowed within change sets. A `GET` operation should not change data, therefore they don't belong within a change set.
 
 
 Like a batch request, change sets must have a `Content-Type` header with value set to `multipart/mixed` with a `boundary` set to include the identifier of the change set using this pattern:  
@@ -255,8 +258,8 @@ The end of the change set must contain a termination indicator like the followin
 ```  
 
 The following example shows the use of a change set to:
-- Group the creation of three tasks associated with an account with `accountid` value `00000000-0000-0000-0000-000000000001`
-- Retrieve the accounts created using a GET request outside of the changeset
+- Group the creation of three tasks associated with an account with `accountid` value `00000000-0000-0000-0000-000000000001`.
+- Retrieve the accounts created using a GET request outside of the changeset.
 
 **Request**
 
@@ -409,122 +412,174 @@ More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-err
 
 ## Example
 
-The following example includes a batch with a unique identifier of `AAA123` and a change set with a unique identifier of `BBB456`.  
-  
-Within the change set, two tasks are created using `POST` and associated with an existing account with `accountid` = `00000000-0000-0000-000000000001`.  
-  
-Finally, a `GET` request is included outside the change set to return all six tasks associated with the account, including the two that were created in the batch request.  
-  
- **Request**
+The following example attempts to create three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`, but the length of the `subject` property for the first task is too long.
 
-```http 
-POST[Organization URI]/api/data/v9.1/$batch HTTP/1.1
-Content-Type: multipart/mixed;boundary=batch_AAA123
-Accept: application/json
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-
---batch_AAA123
-Content-Type: multipart/mixed;boundary=changeset_BBB456
-
---changeset_BBB456
-Content-Type: application/http
-Content-Transfer-Encoding:binary
-Content-ID: 1
-
-POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1
-Content-Type: application/json;type=entry
-
-{"subject":"Task 1 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}
---changeset_BBB456
-Content-Type: application/http
-Content-Transfer-Encoding:binary
-Content-ID: 2
-
-POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1
-Content-Type: application/json;type=entry
-
-{"subject":"Task 2 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}
---changeset_BBB456--
-
---batch_AAA123
-Content-Type: application/http
-Content-Transfer-Encoding:binary
-
-GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1
-Accept: application/json
-
---batch_AAA123--
-```  
-  
- **Response**
+**Request**
 
 ```http
---batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f
-Content-Type: multipart/mixed; boundary=changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc
-
---changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-HTTP/1.1 204 No Content
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+OData-MaxVersion: 4.0
 OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)
-OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)
+If-None-Match: null
+Accept: application/json
+Content-Type: multipart/mixed; boundary="batch_431faf5a-f979-4ee6-a374-d242f8962d41"
+Content-Length: 1335
 
---changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc
+--batch_431faf5a-f979-4ee6-a374-d242f8962d41
 Content-Type: application/http
 Content-Transfer-Encoding: binary
-Content-ID: 2
+Content-Length: 436
 
-HTTP/1.1 204 No Content
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Subject is too long xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_431faf5a-f979-4ee6-a374-d242f8962d41
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 250
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 2 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_431faf5a-f979-4ee6-a374-d242f8962d41
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 250
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 3 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_431faf5a-f979-4ee6-a374-d242f8962d41--
+
+```
+
+Without setting the `Prefer: odata.continue-on-error` request header, the batch fails on the first request in the batch. The batch error represents the error of the first failing request.
+
+**Response**
+
+```http
+HTTP/1.1 400 BadRequest
 OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)
-OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)
 
---changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc--
---batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f
+--batchresponse_156da4b8-cd2c-4862-a911-4aaab97c001a
 Content-Type: application/http
 Content-Transfer-Encoding: binary
 
-HTTP/1.1 200 OK
+HTTP/1.1 400 Bad Request
+REQ_ID: 5ecd1cb3-1730-4ffc-909c-d44c22270026
 Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
-{
-  "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#tasks(subject)","value":[
-    {
-      "@odata.etag":"W/\"474122\"","subject":"Task Created with Test Account","activityid":"919c24f3-fafc-e411-80dd-00155d2a68cb"
-    },{
-      "@odata.etag":"W/\"474125\"","subject":"Task 1","activityid":"a29c24f3-fafc-e411-80dd-00155d2a68cb"
-    },{
-      "@odata.etag":"W/\"474128\"","subject":"Task 2","activityid":"a39c24f3-fafc-e411-80dd-00155d2a68cb"
-    },{
-      "@odata.etag":"W/\"474131\"","subject":"Task 3","activityid":"a49c24f3-fafc-e411-80dd-00155d2a68cb"
-    },{
-      "@odata.etag":"W/\"474134\"","subject":"Task 1 in batch","activityid":"a59c24f3-fafc-e411-80dd-00155d2a68cb"
-    },{
-      "@odata.etag":"W/\"474137\"","subject":"Task 2 in batch","activityid":"a69c24f3-fafc-e411-80dd-00155d2a68cb"
-    }
-  ]
-}
---batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f--
-```  
-Include `odata.include-annotations` preference header with the `GET` requests and set its value to `"*"` to specify that all annotations related to the properties be returned.
+{"error":{"code":"0x80044331","message":"A validation error occurred.  The length of the 'subject' attribute of the 'task' entity exceeded the maximum allowed length of '200'."}}
+--batchresponse_156da4b8-cd2c-4862-a911-4aaab97c001a--
 
-```HTTP
---batch_AAA123
-Content-Type: application/http
-Content-Transfer-Encoding:binary
-
-GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)?$select=name,telephone1,emailaddress1,shippingmethodcode,customersizecode,accountratingcode,followemail,donotemail,donotphone,statuscode HTTP/1.1
-Accept: application/json
-Prefer: odata.include-annotations="*"
-
---batch_AAA123--
 ```
-For more information about preference headers, see [Header Prefer](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
+
+When the `Prefer: odata.continue-on-error` request header is applied to the batch request, the batch request succeeds with an status of `200 OK` and the failure of the first request is returned as part of the body.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
+Prefer: odata.continue-on-error
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: multipart/mixed; boundary="batch_662d4610-7f12-4895-ac4a-3fdf77cc10a1"
+Content-Length: 1338
+
+--batch_662d4610-7f12-4895-ac4a-3fdf77cc10a1
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 439
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Subject is too long xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_662d4610-7f12-4895-ac4a-3fdf77cc10a1
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 250
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 2 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_662d4610-7f12-4895-ac4a-3fdf77cc10a1
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-Length: 250
+
+POST /api/data/v9.2/tasks HTTP/1.1
+Content-Type: application/json; type=entry
+
+{
+  "subject": "Task 3 in batch",
+  "regardingobjectid_account_task@odata.bind": "accounts(00000000-0000-0000-0000-000000000001)"
+}
+--batch_662d4610-7f12-4895-ac4a-3fdf77cc10a1--
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_f44bd09d-573f-4a30-bca0-2e500ee7e139
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 400 Bad Request
+REQ_ID: de4c5227-4a28-4ebd-8ced-3392ece1697b
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{"error":{"code":"0x80044331","message":"A validation error occurred.  The length of the 'subject' attribute of the 'task' entity exceeded the maximum allowed length of '200'."}}
+--batchresponse_f44bd09d-573f-4a30-bca0-2e500ee7e139
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(aed2ae8b-3c94-ed11-aad1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(aed2ae8b-3c94-ed11-aad1-000d3a9933c9)
+
+
+--batchresponse_f44bd09d-573f-4a30-bca0-2e500ee7e139
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization Uri]/api/data/v9.2/tasks(b181a991-3c94-ed11-aad1-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(b181a991-3c94-ed11-aad1-000d3a9933c9)
+
+
+--batchresponse_f44bd09d-573f-4a30-bca0-2e500ee7e139--
+
+```
 
 ## Reference URIs in an operation
 
@@ -943,9 +998,50 @@ OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97
 > Content-ID Reference: '$1' does not exist in the batch context.
 > ```
 
+## .NET HttpRequestMessage to HttpMessageContent example
+
+In .NET you must send batch requests as <xref:System.Net.Http.MultipartContent> which is a collection of <xref:System.Net.Http.HttpContent>. <xref:System.Net.Http.HttpMessageContent> inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
+
+```csharp
+/// <summary>
+/// Converts a HttpRequestMessage to HttpMessageContent
+/// </summary>
+/// <param name="request">The HttpRequestMessage to convert.</param>
+/// <returns>HttpMessageContent with the correct headers.</returns>
+private HttpMessageContent ToMessageContent(HttpRequestMessage request)
+{
+
+    //Relative URI is not allowed with MultipartContent
+    request.RequestUri = new Uri(
+        baseUri: ServiceBaseAddress,
+        relativeUri: request.RequestUri.ToString());
+
+    if (request.Content != null)
+    {
+        if (request.Content.Headers.Contains("Content-Type"))
+        {
+            request.Content.Headers.Remove("Content-Type");
+        }
+        request.Content.Headers.Add("Content-Type", "application/json;type=entry");
+    }
+
+    HttpMessageContent messageContent = new(request);
+
+    if (messageContent.Headers.Contains("Content-Type"))
+    {
+        messageContent.Headers.Remove("Content-Type");
+    }
+    messageContent.Headers.Add("Content-Type", "application/http");
+    messageContent.Headers.Add("Content-Transfer-Encoding", "binary");
+
+    return messageContent;
+
+}
+```
+
 ## .NET Parse batch response example
 
-The following static `ParseMultipartContent` method is used by the [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) to parse the body of a batch responses into a List of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage)
+The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch responses into a List of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage). More information: [WebAPIService Batch](samples/webapiservice.md#batch)
 
 ```csharp
 /// <summary>
