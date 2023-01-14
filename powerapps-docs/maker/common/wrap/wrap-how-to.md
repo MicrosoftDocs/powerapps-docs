@@ -140,6 +140,9 @@ Your app must be registered in Azure ADD so that your app users can sign in. You
 
 **For new app registration**: Select **New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
+   > [!div class="mx-imgBorder"] 
+   > ![New app registration.](media/how-to-v2/new-app-reg.png "New app registration")
+
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
 Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas and model-driven apps.
