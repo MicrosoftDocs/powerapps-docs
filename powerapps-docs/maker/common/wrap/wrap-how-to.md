@@ -138,7 +138,9 @@ Your app must be registered in Azure ADD so that your app users can sign in. You
     - **Package name**: com.contoso.myapp
     - **Redirect URI**: msauth://com.contoso.myapp/&lt;generated signature hash&gt;
 
-**For new app registration**: Select **New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+#### New app registration
+
+For new app registration, select **New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
    > [!div class="mx-imgBorder"] 
    > ![New app registration.](media/how-to-v2/new-app-reg.png "New app registration")
