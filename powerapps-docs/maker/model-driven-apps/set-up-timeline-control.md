@@ -205,9 +205,10 @@ You can configure the default filters that are applied when a form loads or is r
 You can configure email options for the timeline so that users can reply, reply-all, and forward messages. You can select the order in which the options are displayed for users, as well as exclude them if they're not needed. Reply-all is the default order setting.
   
 1. Select the form for which you want to apply the email settings, and then in **Properties** in **Conversation Tabs**, select the **Email** activity type. The **Email** properties pane is displayed.
+
 1. In **Select and order commands**, check the boxes for the email commands you want to configure for users. You can drag and drop the options to choose the order in which you want each option to display.
   
-  :::image type="content" source="media/timeline-configure-email-settings.png" alt-text="Configure the form for email":::
+   :::image type="content" source="media/timeline-configure-email-settings.png" alt-text="Configure the form for email":::
   
 1. Select **Done**, and then save and publish your changes.
   
