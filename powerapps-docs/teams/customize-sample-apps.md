@@ -53,7 +53,7 @@ When you install sample app templates, the tables might be pre-populated with sa
 
 To remove data from the sample app templates:
 
-1. Open the sample app template (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
@@ -71,7 +71,7 @@ To remove data from the sample app templates:
 
 ## Add your logo to the loading screen
 
-1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select [Tree view](understand-power-apps-studio.md#tree-view) from the left pane.
 
@@ -99,7 +99,7 @@ To remove data from the sample app templates:
 > The Inspection app welcome screen greeting text uses a formula containing global
 variables to correctly display the desired terminology for inspections and items being inspected. Use caution when changing this formula.
 
-1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select the text label control with the greeting text **Glad to have you here**.
 
@@ -159,7 +159,7 @@ variables to correctly display the desired terminology for inspections and items
 > The Inspection app leverages global theme variables to ensure consistent
 user experience. If you modify a screen fill, the modified screen will no longer use the standard app theme.
 
-1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select [Tree view](understand-power-apps-studio.md#tree-view) from the left pane.
 
@@ -180,7 +180,7 @@ If you want to quickly edit the data in the app, you can open the table and modi
 > [!CAUTION]
 > Sample app templates uses several related tables, such as Area Inspection Locations and Area Inspection Location Types for Inspection app. Use caution when deleting records from the tables without checking data relationship and dependencies.
 
-1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
@@ -205,7 +205,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 ### Add Store Name text column to the Location table
 
-1. Open the **Manage inspections** app in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the **Manage inspections** app in [Power Apps Studio](#open-the-sample-app-templates-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
