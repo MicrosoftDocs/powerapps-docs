@@ -5,7 +5,7 @@ author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 11/11/2022
+ms.date: 1/13/2023
 ms.subservice: canvas-maker
 ms.author: makolomi
 search.audienceType: 
@@ -80,7 +80,10 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
    > [!div class="mx-imgBorder"] 
    > ![Use the wrap wizard.](media/how-to-v2/wrap-get-started.png "Use the wrap wizard")
 
-4. On the **Select the app(s) to wrap** step, select your primary app and secondary apps and then select **Next**.
+
+### Step 1: Select Apps 
+
+1. On the **Select the app(s) to wrap** screen, select your primary and secondary app.
 
    - **Primary app**: Select the app your end users will see when they launch the mobile app.
    - **Secondary app(s)**: Optional additional apps that you can bundle the same build for mobile app package along with the Primary app.
@@ -91,52 +94,51 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
      > [!NOTE]
      > You can use the same Primary app in multiple wrap projects.
 
-5. On the **Choose mobile platform to target** step, enter a **Bundle ID** of our choice. This is the name of the app that appears in the app store. A bundle ID must contain one period (.) and no spaces. 
+2.  Select **Next**.
 
-6. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
+### Step 2: Target Platform 
 
-7. Set the **Sign my app (prview)** toggle to **ON** to code sign your app. More information: [Code sign for iOS](code-sign-ios.md), [Code sign for Android](code-sign-android.md) and then select **Next**.
+1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. This is the name of the app that appears in the app store. A bundle ID must contain one period (.) and no spaces. 
 
+2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
+3. Set the **Sign my app (prview)** toggle to **ON** to code sign your ap pand then select **Next**. For more information on code sign, see:
+  
+   - [Code sign for iOS](code-sign-ios.md)
+   - [Code sign for Android](code-sign-android.md) 
 
+4.  Select **Next**.
 
-### Configure branding
+### Step 3: Configure Branding
 
-On the **Configure branding** step, configure the appearance of your app.
+1. On the **Configure Branding Step**, set the following look and feel options for your app:
+   
+   - **App icons**: Upload icons to use for your app. All five icons need to be selected for your wrapped mobile app
+   - **Splash screen image**: Image that will be used on the splash screen of your mobile app, while it loads. Default image used when not provided.
+   - **Welcome screen image**: Image that will be used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
+   - **Background fill color**: Hexadecimal color code used for the background of the welcome screen
+   - **Button fill color**: Hexadecimal color code used to fill the button color
+   - **Status bar text theme**: Color for the status bar text at the top of the app.
 
-All five icons need to be selected for your wrapped mobile app.
+2.  Select **Next**.
 
-- **App preview**: Select the phone or tablet to see a preview of your customized app. Make sure you're using a supported device. More information: [System requirements, limits, and configuration values for Power Apps](../../../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)
-
-- **Color palette**: Choose the app colors.
-
-- **Look and feel**: Select the look and feel of your app.
-
-### Register your app
+### Step 4: Register app
 
 On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform.
 
 Your app must be registered in Azure ADD so that your app users can sign in. You need to go to [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
 
-- **Application bundle ID**: Select an app bundle ID from the list.
+- **For iOS**: The **Redirect URI** only requires the **Bundle ID**.  Examples for iOS:
 
-For iOS, the **Redirect URI** only requires the **Bundle ID**.
+    - **Bundle ID**: com.contoso.myapp
+    - **Redirect URI**: msauth.com.contoso.myapp://auth
 
-Examples for iOS:
+- **For Android**: The **Redirect URI** requires the **Package name**, and the **Signature hash**. To create the signature hash, [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash). Examples for Android:
 
-- **Bundle ID**: com.contoso.myapp
+    - **Package name**: com.contoso.myapp
+    - **Redirect URI**: msauth://com.contoso.myapp/&lt;generated signature hash&gt;
 
-- **Redirect URI**: msauth.com.contoso.myapp://auth
-
-For Android, the **Redirect URI** requires the **Package name**, and the **Signature hash**. To create the signature hash, [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash).
-
-Examples for Android:
-
-- **Package name**: com.contoso.myapp
-
-- **Redirect URI**: msauth://com.contoso.myapp/&lt;generated signature hash&gt;
-
-- **New app registration**: Select **+ New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+**For new app registration**: Select **New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
@@ -156,14 +158,14 @@ The sign-in experience for users on the mobile wrapped up will still be scoped t
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
-### Manage output
+### Step 5: Manage output
 
-On the **Manage output** screen, to set up automated app set up with the app center. To create a new app center container, you'll need your org and app name.
+On the **Manage output** screen, set up automated app setup with your app center account. To create a new app center container, you'll need your org and app name.
 
 - **Android**: Choose an existing location or select Configure manually.
 
 - **iOS**: Choose an existing location or select Configure manually.
 
-### Wrap up
+### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
