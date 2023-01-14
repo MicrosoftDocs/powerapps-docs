@@ -7506,6 +7506,16 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/teams/how-to.md",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/teams/how-to-architecture.md",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/teams/when-create-teams-apps.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
       "redirect_document_id": "false"

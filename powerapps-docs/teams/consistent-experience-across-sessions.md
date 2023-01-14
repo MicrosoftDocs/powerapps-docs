@@ -291,7 +291,7 @@ To resolve the above issue, we'll use the [LoadData() and SaveData() functions](
 
 ## How we use SaveData and LoadData in the Inspection app
 
-In the Inspection sample app, we use load data and save data on the inspection form&mdash;if a user is in the middle of an inspection, and they switch away from the apps in Teams (like to send someone a message), we don’t want them to lose their place in the inspection. When they return to the app tab in Teams, the app gives them the option to resume the in-progress inspection.
+In the Inspection sample app template, we use load data and save data on the inspection form&mdash;if a user is in the middle of an inspection, and they switch away from the apps in Teams (like to send someone a message), we don’t want them to lose their place in the inspection. When they return to the app tab in Teams, the app gives them the option to resume the in-progress inspection.
 
 ## Considerations
 

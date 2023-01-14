@@ -145,7 +145,7 @@ For example, with Bulletins we might set the following permissions for the table
 
 Before assigning permissions, you should plan your security based on the personas of users of your app. Who will administer the app? Who will use the app? How will they use it?
 
-For example, the Inspection sample app for Teams is designed to address the following personas:
+For example, the Inspection sample app template for Teams is designed to address the following personas:
 
 - **Inspection manager** - Creates Inspection forms and manages the list of locations or assets.
 - **Inspection reviewer** - Reviews inspection data and approves inspections.

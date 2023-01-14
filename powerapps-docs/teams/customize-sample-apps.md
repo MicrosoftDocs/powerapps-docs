@@ -21,9 +21,9 @@ Install a sample app template. More details: [Use sample app templates from the 
 
 > [!NOTE]
 > - Sections of this article uses one of the available sample app templates from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
-> - Read [Sample app updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample app templates to understand the impact of new releases to the sample app versions.
+> - Read [Sample app template updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample app templates to understand the impact of new releases to the sample app template versions.
 
-## Open the sample app in Power Apps Studio
+## Open the sample app templates in Power Apps Studio
 
 To start with customizing the sample app templates, the first step is to open the app inside Power Apps Studio.
 
@@ -37,11 +37,11 @@ To start with customizing the sample app templates, the first step is to open th
 
 1. Select [Build](overview-of-the-power-apps-app.md#build-hub) tab.
 
-1. Select the team environment where you installed the sample app.
+1. Select the team environment where you installed the sample app template.
 
 1. Select **Installed apps**.
 
-1. Select the sample app that you installed.
+1. Select the sample app template that you installed.
 
 1. If prompted, select the location.
 
@@ -53,7 +53,7 @@ When you install sample app templates, the tables might be pre-populated with sa
 
 To remove data from the sample app templates:
 
-1. Open the sample app (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
@@ -71,7 +71,7 @@ To remove data from the sample app templates:
 
 ## Add your logo to the loading screen
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select [Tree view](understand-power-apps-studio.md#tree-view) from the left pane.
 
@@ -99,7 +99,7 @@ To remove data from the sample app templates:
 > The Inspection app welcome screen greeting text uses a formula containing global
 variables to correctly display the desired terminology for inspections and items being inspected. Use caution when changing this formula.
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select the text label control with the greeting text **Glad to have you here**.
 
@@ -159,7 +159,7 @@ variables to correctly display the desired terminology for inspections and items
 > The Inspection app leverages global theme variables to ensure consistent
 user experience. If you modify a screen fill, the modified screen will no longer use the standard app theme.
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select [Tree view](understand-power-apps-studio.md#tree-view) from the left pane.
 
@@ -180,7 +180,7 @@ If you want to quickly edit the data in the app, you can open the table and modi
 > [!CAUTION]
 > Sample app templates uses several related tables, such as Area Inspection Locations and Area Inspection Location Types for Inspection app. Use caution when deleting records from the tables without checking data relationship and dependencies.
 
-1. Open the sample app (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app template (for example, **Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 

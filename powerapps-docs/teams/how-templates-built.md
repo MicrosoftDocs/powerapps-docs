@@ -43,7 +43,7 @@ Many teams tend to dive into solutioning before they've fully understood the use
 
 ![Jobs to be done framework](media/how-templates-are-built/personas.png "Jobs To Be Done framework")
 
-The above example shows personas and jobs to be done for Inspection sample app for store walk scenario.
+The above example shows personas and jobs to be done for Inspection sample app template for store walk scenario.
 
 ## Design
 

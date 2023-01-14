@@ -43,7 +43,7 @@ Here are some questions to ask when defining the appropriate type of notificatio
 
 1. **Is the notification informational or actionable? If you're creating a notification, what do you want to have the notification recipient do with the notification?**
 
-    Informational notifications are to notify users, but they're for information purposes only. For example, in the Employee Ideas sample app for Teams, when a new idea is created, a message is posted in a Teams channel notifying people that a new idea has been created.
+    Informational notifications are to notify users, but they're for information purposes only. For example, in the Employee Ideas sample app template for Teams, when a new idea is created, a message is posted in a Teams channel notifying people that a new idea has been created.
 
     Actionable notification enable one or more follow-up activities by the recipient. In the extending Employee Ideas article, we show how to change the notification to an adaptive card so users can open the submitted idea and vote for it.
 
@@ -57,7 +57,7 @@ Here are some questions to ask when defining the appropriate type of notificatio
 
 1. **What is the frequency of notification?**
 
-    In the Inspection sample app for Teams, by default, a message is posted to a Teams channel when an inspection is completed. However, if you've a high frequency of inspections, many messages will be posted to the channel. And when many notifications are posted to a channel, individual notifications can get lost. Think of your phone notification center&mdash;when you've a few apps giving you notifications, they're helpful, but if you've many apps posting updates, notifications become noise. In this case, you'd want to reevaluate your notifications, and either change the notification to only notify on urgent inspections, or issues.
+    In the Inspection sample app template for Teams, by default, a message is posted to a Teams channel when an inspection is completed. However, if you've a high frequency of inspections, many messages will be posted to the channel. And when many notifications are posted to a channel, individual notifications can get lost. Think of your phone notification center&mdash;when you've a few apps giving you notifications, they're helpful, but if you've many apps posting updates, notifications become noise. In this case, you'd want to reevaluate your notifications, and either change the notification to only notify on urgent inspections, or issues.
 
 1. **What is the impact on the users?**
 
