@@ -398,6 +398,427 @@ OData-Version: 4.0
 
 ```
 
+### Reference URIs in an operation
+
+Within changesets you can use `$parameter` such as `$1`, `$2`, etc to reference URIs returned for new entities created earlier in the same changeset. For more information see the OData v4.0 specification: [11.7.3.1 Referencing Requests in a Change Set](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793752).
+
+This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
+
+#### Reference URIs in request body
+
+The below example shows how two URI references can be used in a single operation.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
+Content-Type:  multipart/mixed;boundary=batch_AAA123
+Accept:  application/json
+OData-MaxVersion:  4.0
+OData-Version:  4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST [Organization URI]/api/data/v9.2/leads HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname":"first name",
+    "lastname":"last name"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+POST [Organization URI]/api/data/v9.2/contacts HTTP/1.1
+Content-Type: application/json
+
+{"firstname":"first name"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"IcM Account",
+    "originatingleadid@odata.bind":"$1",
+    "primarycontactid@odata.bind":"$2"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a
+Content-Type: multipart/mixed; boundary=changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.2/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.2/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.2/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.2/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.2/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc--
+--batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a--
+```
+
+#### Reference URI in request URL
+
+The example given below shows how you can reference a URI using `$1` in the URL of a subsequent request.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
+Content-Type:  multipart/mixed;boundary=batch_AAA123
+Accept:  application/json
+OData-MaxVersion:  4.0
+OData-Version:  4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST [Organization URI]/api/data/v9.2/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "@odata.type":"Microsoft.Dynamics.CRM.contact",
+  "firstname":"Contact",
+  "lastname":"AAAAAA"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Transfer-Encoding: binary
+Content-Type: application/http
+Content-ID: 2
+
+PUT $1/lastname HTTP/1.1
+Content-Type: application/json
+
+{
+  "value":"BBBBB"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d
+Content-Type: multipart/mixed; boundary=changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
+
+--changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.2/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
+OData-EntityId:[Organization URI]/api/data/v9.2/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
+
+
+--changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+
+--changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4--
+--batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d--
+```
+
+#### Reference URIs in URL and request body using @odata.id
+
+The example given below shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
+Content-Type:multipart/mixed;boundary=batch_AAA123
+Accept:application/json
+OData-MaxVersion:4.0
+OData-Version:4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+Content-ID:1
+
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+Content-Type: application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.account","name":"IcM Account"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+Content-ID:2
+
+POST [Organization URI]/api/data/v9.2/contacts HTTP/1.1
+Content-Type:application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type:application/http
+Content-Transfer-Encoding:binary
+Content-ID:3
+
+PUT $1/primarycontactid/$ref HTTP/1.1
+Content-Type:application/json
+
+{"@odata.id":"$2"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_0740a25c-d8e1-41a5-9202-1b50a297864c
+Content-Type: multipart/mixed; boundary=changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.2/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
+OData-EntityId:[Organization URI]/api/data/v9.2/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.2/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
+OData-EntityId:[Organization URI]/api/data/v9.2/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+
+--changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f--
+--batchresponse_0740a25c-d8e1-41a5-9202-1b50a297864c--
+```
+
+#### Reference URIs in URL and navigation properties
+
+The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/$batch HTTP/1.1
+Content-Type:multipart/mixed;boundary=batch_AAA123
+Accept:application/json
+OData-MaxVersion:4.0
+OData-Version:4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+Content-Type: application/json
+
+{"@odata.type":"Microsoft.Dynamics.CRM.account","name":"IcM Account"}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+POST [Organization URI]/api/data/v9.2/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "@odata.type":"Microsoft.Dynamics.CRM.contact",
+  "firstname":"Oncall Contact"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+PATCH $1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "primarycontactid@odata.bind":"$2"
+}
+
+--changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
+--batch_AAA123--
+```
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+--batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e
+Content-Type: multipart/mixed; boundary=changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.2/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.2/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 3
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
+
+--changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c--
+--batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e--
+```
+
+> [!NOTE]
+> Referencing a `Content-ID` before it has been declared in the request body will return the error **HTTP 400** Bad request.
+>
+> The example given below shows a request body that can cause this error.
+> 
+> **Request body**
+> 
+> ```http
+> --batch_AAA123
+> Content-Type: multipart/mixed; boundary=changeset_BBB456
+> 
+> --changeset_BBB456
+> Content-Type: application/http
+> Content-Transfer-Encoding:binary
+> Content-ID: 2
+> 
+> POST [Organization URI]/api/data/v9.2/phonecalls HTTP/1.1
+> Content-Type: application/json;type=entry
+> 
+> {
+>     "phonenumber":"911",
+>     "regardingobjectid_account_phonecall@odata.bind" : "$1"
+> }
+> 
+> --changeset_BBB456
+> Content-Type: application/http
+> Content-Transfer-Encoding:binary
+> Content-ID: 1
+> 
+> POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+> Content-Type: application/json;type=entry
+> 
+> {
+>     "name":"QQQQ",
+>     "revenue": 1.50
+> }
+> 
+> --changeset_BBB456--
+> --batch_AAA123--
+> ```
+>
+> **Response**
+> 
+> ```http
+> HTTP 400 Bad Request
+> Content-ID Reference: '$1' does not exist in the batch context.
+> ```
+
 <a name="bkmk_handling_errors"></a>
 
 ## Handling errors
@@ -410,7 +831,7 @@ More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-err
 
 <a name="bkmk_Example"></a>
 
-## Example
+### Example
 
 The following example attempts to create three task records associated with an account with `accountid` equal to `00000000-0000-0000-0000-000000000001`, but the length of the `subject` property for the first task is too long.
 
@@ -581,424 +1002,9 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(b181a991-3c94-ed11-aad1-0
 
 ```
 
-## Reference URIs in an operation
+## .NET helper methods
 
-You can use `$parameter` such as `$1`, `$2`, etc to reference URIs returned for new entities created earlier in the same changeset in a batch request. For more information see the OData v4.0 specification: [11.7.3.1 Referencing Requests in a Change Set](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793752).
-
-This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
-
-### Reference URIs in request body
-
-The below example shows how two URI references can be used in a single operation.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
-Content-Type:  multipart/mixed;boundary=batch_AAA123
-Accept:  application/json
-OData-MaxVersion:  4.0
-OData-Version:  4.0
-
---batch_AAA123
-Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-POST [Organization URI]/api/data/v9.1/leads HTTP/1.1
-Content-Type: application/json
-
-{
-    "firstname":"aaa",
-    "lastname":"bbb"
-}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 2
-
-POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
-Content-Type: application/json
-
-{"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact-1111"}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 3
-
-POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
-Content-Type: application/json
-
-{
-    "name":"IcM Account",
-    "originatingleadid@odata.bind":"$1",
-    "primarycontactid@odata.bind":"$2"
-}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
---batch_AAA123--
-```
-
-**Response**
-
-```http
-200 OK
-
---batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a
-Content-Type: multipart/mixed; boundary=changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
-
---changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.1/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.1/leads(425195a4-7a75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 2
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.1/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.1/contacts(495195a4-7a75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 3
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.1/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.1/accounts(4f5195a4-7a75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_1a5db8a1-ec98-42c4-81f6-6bc6adcfa4bc--
---batchresponse_3cace264-86ea-40fe-83d3-954b336c0f4a--
-```
-
-### Reference URI in request URL
-
-The example given below shows how you can reference a URI using `$1` in the URL of a subsequent request.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
-Content-Type:  multipart/mixed;boundary=batch_AAA123
-Accept:  application/json
-OData-MaxVersion:  4.0
-OData-Version:  4.0
-
---batch_AAA123
-Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
-Content-Type: application/json
-
-{
-  "@odata.type":"Microsoft.Dynamics.CRM.contact",
-  "firstname":"Contact",
-  "lastname":"AAAAAA"
-}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Transfer-Encoding: binary
-Content-Type: application/http
-Content-ID: 2
-
-PUT $1/lastname HTTP/1.1
-Content-Type: application/json
-
-{
-  "value":"BBBBB"
-}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
---batch_AAA123--
-```
-
-**Response**
-
-```http
-200 OK
-
---batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d
-Content-Type: multipart/mixed; boundary=changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
-
---changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.1/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
-OData-EntityId:[Organization URI]/api/data/v9.1/contacts(f8ea5d2c-8c75-e911-a97a-000d3a34a1bd)
-
-
---changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 2
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-
-
---changesetresponse_d7528170-3ef3-41bd-be8e-eac971a8d9d4--
---batchresponse_2cb48f48-39a8-41ea-aa52-132fa8ab3c2d--
-```
-
-### Reference URIs in URL and request body using @odata.id
-
-The example given below shows how to link a Contact entity record to an Account entity record. The URI of Account entity record is referenced as `$1` and URI of Contact entity record is referenced as `$2`.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
-Content-Type:multipart/mixed;boundary=batch_AAA123
-Accept:application/json
-OData-MaxVersion:4.0
-OData-Version:4.0
-
---batch_AAA123
-Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type:application/http
-Content-Transfer-Encoding:binary
-Content-ID:1
-
-POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
-Content-Type: application/json
-
-{"@odata.type":"Microsoft.Dynamics.CRM.account","name":"IcM Account"}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type:application/http
-Content-Transfer-Encoding:binary
-Content-ID:2
-
-POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
-Content-Type:application/json
-
-{"@odata.type":"Microsoft.Dynamics.CRM.contact","firstname":"Oncall Contact"}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type:application/http
-Content-Transfer-Encoding:binary
-Content-ID:3
-
-PUT $1/primarycontactid/$ref HTTP/1.1
-Content-Type:application/json
-
-{"@odata.id":"$2"}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
---batch_AAA123--
-```
-
-**Response**
-
-```http
-200 OK
-
---batchresponse_0740a25c-d8e1-41a5-9202-1b50a297864c
-Content-Type: multipart/mixed; boundary=changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
-
---changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.1/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
-OData-EntityId:[Organization URI]/api/data/v9.1/accounts(3dcf8c02-8c75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 2
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location:[Organization URI]/api/data/v9.1/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
-OData-EntityId:[Organization URI]/api/data/v9.1/contacts(43cf8c02-8c75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 3
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-
---changesetresponse_19ca0da8-d8bb-4273-a3f7-fe0d0fadfe5f--
---batchresponse_0740a25c-d8e1-41a5-9202-1b50a297864c--
-```
-
-### Reference URIs in URL and navigation properties
-
-The example given below shows how to use the Organization URI of a Contact record and link it to an Account record using the `primarycontactid` single-valued navigation property. The URI of the Account entity record is referenced as `$1` and the URI of Contact entity record is referenced as `$2` in the `PATCH` request.
-
-**Request**
-
-```http
-POST [Organization URI]/api/data/v9.1/$batch HTTP/1.1
-Content-Type:multipart/mixed;boundary=batch_AAA123
-Accept:application/json
-OData-MaxVersion:4.0
-OData-Version:4.0
-
---batch_AAA123
-Content-Type: multipart/mixed; boundary=changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
-Content-Type: application/json
-
-{"@odata.type":"Microsoft.Dynamics.CRM.account","name":"IcM Account"}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 2
-
-POST [Organization URI]/api/data/v9.1/contacts HTTP/1.1
-Content-Type: application/json
-
-{
-  "@odata.type":"Microsoft.Dynamics.CRM.contact",
-  "firstname":"Oncall Contact"
-}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 3
-
-PATCH $1 HTTP/1.1
-Content-Type: application/json
-
-{
-  "primarycontactid@odata.bind":"$2"
-}
-
---changeset_dd81ccab-11ce-4d57-b91d-12c4e25c3cab--
---batch_AAA123--
-```
-**Response**
-
-```http
-200 OK
-
---batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e
-Content-Type: multipart/mixed; boundary=changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
-
---changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 1
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 2
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.1/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.1/contacts(6ed81853-7b75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c
-Content-Type: application/http
-Content-Transfer-Encoding: binary
-Content-ID: 3
-
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-Location: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
-OData-EntityId: [Organization URI]/api/data/v9.1/accounts(6cd81853-7b75-e911-a97a-000d3a34a1bd)
-
---changesetresponse_0c1567a5-ad0d-48fa-b81d-e6db05cad01c--
---batchresponse_9595d3ae-48f6-414f-a3aa-a3a33559859e--
-```
-
-> [!NOTE]
-> Referencing a `Content-ID` before it has been declared in the request body will return the error **HTTP 400** Bad request.
->
-> The example given below shows a request body that can cause this error.
-> 
-> **Request body**
-> 
-> ```http
-> --batch_AAA123
-> Content-Type: multipart/mixed; boundary=changeset_BBB456
-> 
-> --changeset_BBB456
-> Content-Type: application/http
-> Content-Transfer-Encoding:binary
-> Content-ID: 2
-> 
-> POST [Organization URI]/api/data/v9.1/phonecalls HTTP/1.1
-> Content-Type: application/json;type=entry
-> 
-> {
->     "phonenumber":"911",
->     "regardingobjectid_account_phonecall@odata.bind" : "$1"
-> }
-> 
-> --changeset_BBB456
-> Content-Type: application/http
-> Content-Transfer-Encoding:binary
-> Content-ID: 1
-> 
-> POST [Organization URI]/api/data/v9.1/accounts HTTP/1.1
-> Content-Type: application/json;type=entry
-> 
-> {
->     "name":"QQQQ",
->     "revenue": 1.50
-> }
-> 
-> --changeset_BBB456--
-> --batch_AAA123--
-> ```
->
-> **Response**
-> 
-> ```http
-> HTTP 400 Bad Request
-> Content-ID Reference: '$1' does not exist in the batch context.
-> ```
-
-## .NET HttpRequestMessage to HttpMessageContent example
+### .NET HttpRequestMessage to HttpMessageContent example
 
 In .NET you must send batch requests as <xref:System.Net.Http.MultipartContent> which is a collection of <xref:System.Net.Http.HttpContent>. <xref:System.Net.Http.HttpMessageContent> inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
 
@@ -1039,7 +1045,7 @@ private HttpMessageContent ToMessageContent(HttpRequestMessage request)
 }
 ```
 
-## .NET Parse batch response example
+### .NET Parse batch response example
 
 The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchResponse class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchResponse.cs) uses the following private static `ParseMultipartContent` method to parse the body of a batch responses into a List of [HttpResponseMessage](xref:System.Net.Http.HttpResponseMessage). More information: [WebAPIService Batch](samples/webapiservice.md#batch)
 
