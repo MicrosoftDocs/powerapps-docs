@@ -11,7 +11,7 @@ search.app:
   - D365CE
 ---
 
-# Enable the enhanced email template editor page
+# Configure the enhanced email template editor page
 
 
 You can configure the enhanced email template editing experience for apps across your organization. If you need to, you can turn off the enhanced email template page for a specific app. And then, the users of the app see the default email template editor page.
@@ -31,13 +31,10 @@ For information about how to enable these features, see [Opt in to early access 
    > ![Add a setting to a solution](media/usr-soln-setting.png)
 1. On the **Add existing Setting Definition** pane, select the **Enable the New Email Template Editor** option and then select **Next**.
 1. Select **Add** on the **Selected Setting Definition** to add the **Enable the New Email Template Editor** option to your solution. 
-1.  Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the Customer Service workspace and Customer Service Hub apps.
+1.  Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane.
 1. Select the **Enable the New Email Template Editor** option. The **Edit Enable the New Email Template Editor** pane appears.
-1. Set the **Setting environment value** option to **No** on the **Edit Enable the New Email Template Editor** pane.
+1. Set the **Setting environment value** option to **Yes** on the **Edit Enable the New Email Template Editor** pane.
    > ![Set the variable to no](media/cs-tmp-editor.png)
-1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the Customer Service Hub and workspace apps are displayed. 
-1. Select **New app value** for the app, and select **Yes** for the specified app.
-   > ![Disable the variable](media/cs-tmp-editor-on.png)
 1. Select **Publish All Customizations**.
 
 ## Disable the enhanced email template editor for an app

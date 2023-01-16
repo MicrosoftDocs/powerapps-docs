@@ -11,7 +11,7 @@ search.app:
   - D365CE
 ---
 
-# Enable the enhanced insert email template selection dialog
+# Configure the enhanced insert email template selection dialog
 
 
 Turn on the enhanced email template selection experience for apps across your organization. If you need to, you can turn off the enhanced email template selection dialog for a specific app. And then, the users of the app see the default email template editor page.
