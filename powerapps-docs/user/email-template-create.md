@@ -52,7 +52,7 @@ When you start with a blank template, nothing is provided for you. You must add 
 The editor page you see depends on whether your administrator has turned on the enhanced email template editor option:
 
 - If yes, you'll use the enhanced email template editor page.
-- If not, you'll use the default email template editor page. 
+- If not, you'll use the email template editor page. 
 
 ## Start with existing templates
 
@@ -100,7 +100,7 @@ The enhanced email template editor is displayed if the enhanced email template e
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
 
-### Default email template editor
+### Email template editor
 
 The default email template editor is displayed if the enhanced email template editor option is disabled. 
 
