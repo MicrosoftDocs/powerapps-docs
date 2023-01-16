@@ -16,9 +16,6 @@ search.app:
 
 Turn on the enhanced email template selection experience for apps across your organization. If you need to, you can turn off the enhanced email template selection dialog for a specific app. And then, the users of the app see the default email template editor page.
 
-> [!NOTE]
->  In Customer Service workspace and Customer Service Hub, the enhanced email template selection dialog is enabled by default as an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
-For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
 
 ### Enable the enhanced email template editor
 
