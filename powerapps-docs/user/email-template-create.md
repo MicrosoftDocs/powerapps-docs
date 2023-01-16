@@ -24,7 +24,7 @@ search.app:
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
 
 > [!NOTE]
-> The enhanced email template editor is available only in Dynamics 365 Customer Service.
+> The enhanced email template editor option is enabled out-of-the box in Dynamics 365 Customer Service. The enhanced email template editor is the default editor only in the Customer Service workspace and Customer Service Hub apps.
 
 You can create email templates by using one of the following options:  
 - **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
@@ -92,7 +92,7 @@ You can use either the enhanced email template editor or the default email templ
 > [!NOTE]
 > An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
-The enhanced email template editor is displayed the enhanced email template editor option is enabled. 
+The enhanced email template editor is displayed if the enhanced email template editor option is enabled. For Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default.
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
@@ -102,7 +102,7 @@ The enhanced email template editor is displayed the enhanced email template edit
 
 ### Default email template editor
 
-The default email template editor is displayed the enhanced email template editor option is disabled. 
+The default email template editor is displayed if the enhanced email template editor option is disabled. 
 
 :::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
 
