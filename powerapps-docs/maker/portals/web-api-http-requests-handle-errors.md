@@ -33,7 +33,7 @@ Construct the Web API URL by using the format in the following table.
 | Protocol | https://                                 |
 | Base URL | \<portal URL\>                          |
 | Web API Path | \_api                                    |
-| Resource     | Name of the table you want to use |
+| Resource     | Logical name of the table you want to use |
 
 For example, use this format when referring a case:
 
