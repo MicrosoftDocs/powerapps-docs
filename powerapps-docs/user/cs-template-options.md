@@ -74,7 +74,7 @@ Use the **General Styles** tab to change the layout's width, font, font size, ba
 
 ### See also
 
-[Personalize content with Insert dynamic text](email-dynamic-text.md) 
+[Personalize content with Insert dynamic text](email-dynamic-text.md)<br>
 [How to create an email template  in model-driven apps](email-template-create.md)  
 [Enable the enhanced email template editor page](cs-email-template-builder.md)
 
