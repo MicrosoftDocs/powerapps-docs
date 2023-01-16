@@ -112,6 +112,6 @@ The default email template editor is displayed if the enhanced email template ed
 
 ### See also
 
-[Personalize content with Insert dynamic text](email-dynamic-text.md)
+[Personalize content with Insert dynamic text](email-dynamic-text.md)<br>
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)   
