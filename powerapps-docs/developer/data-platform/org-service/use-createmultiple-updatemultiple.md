@@ -196,6 +196,15 @@ Currently the `CreateMultiple` and `UpdateMultiple` messages are only available 
 
 At this time we don't support using `CreateMultiple` or `UpdateMultiple` within plug-ins, but we plan to support this soon.
 
+## Known issues
+
+The following are known issues that will be addressed before this feature becomes generally available.
+
+### UpdateMultipleRequest.ConcurrencyBehavior not working
+
+<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior> is not working correctly.
+
+
 ## Frequently Asked Questions
 
 The following are frequently asked question related to the introduction of these messages.
@@ -206,7 +215,7 @@ Yes. `UpsertMultiple` is planned to be released later.
 
 ### Will there be a DeleteMultiple?
 
-Maybe. Delete operations frequently include cascading operations which can result in unpredictable execution times. We already have a `BulkDelete` message that enables asynchronous deletion of records that match a query.
+This is currently not in consideration because delete operations frequently include cascading operations which can result in unpredictable execution times. We already have a `BulkDelete` message that enables asynchronous deletion of records that match a query.
 
 ### Will Retrieve and RetrieveMultiple logic be merged?
 

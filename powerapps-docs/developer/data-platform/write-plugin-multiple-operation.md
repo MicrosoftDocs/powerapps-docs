@@ -44,6 +44,12 @@ Entity images configured in the step registration for your plug-ins are an array
 
 If you are using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, in the `PluginBase.cs` file you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collections of entity images are available to your plug-in.
 
+> [!IMPORTANT]
+> When configuring entity images for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it is very important that you carefully select with column data to include in the entity image. Do not select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total message size that will be sent to the sandbox.
+> More information:
+> - [Define entity images](register-plug-in.md#define-entity-images)
+> - [Message size limits](org-service/use-createmultiple-updatemultiple.md#message-size-limits)
+
 ## Example
 
 The following are two examples, one with some basic logic for `Update`, and another with logic for `UpdateMultiple`. Both of these access entity images registered with the step.
@@ -203,6 +209,24 @@ else
 ```
 
 ---
+
+## Replace Single operation plug-ins in solution
+
+When you deploy plug-in step registrations via solutions there is currently no way to force an existing step registration to be disabled or deleted. This creates a challenge when replacing logic from a single operation to a multiple operation plug-in.
+
+When you deploy a new plug-in step via a solution for `CreateMultiple` or `UpdateMultiple` that replaces a plug-in step for `Create` or `Update`, you want to mitigate the amount of time where no logic or duplicate logic is applied. You can manually disable the steps for `Create` or `Update` before or after installing the solution.
+
+- If you disable before, there will be a period where no logic will be applied.
+- If you disable after, there will be a period where duplicate logic will be applied.
+
+In either case, the organization may require scheduled downtime to ensure logic is applied consistently.
+
+To minimize the duration where either of the conditions above apply, we recommend you include the logic to disable any steps being replaced by deploying the new plug-ins with Package Deployer. Package Deployer provides the capability to execute custom code before, during, and after the package is imported into an environment. Use this code to disable the existing step registrations.
+
+More information:
+
+- [Create packages for the Package Deployer tool](/power-platform/alm/package-deployer-tool)
+- [Add custom code](/power-platform/alm/package-deployer-tool#add-custom-code)
 
 ### See also
 
