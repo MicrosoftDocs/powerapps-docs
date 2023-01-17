@@ -29,7 +29,7 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 > 
 ## What’s included with the new look
-After the **Try the new look and feel (preview)** feature has been enabled for a model-driven app, you'll see the new, modern interface in the app. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the read-only grid. New Fluent-based field controls are also used in many forms.
+After the **Try the new look and feel (preview)** feature has been enabled for a model-driven app, you'll see the new, modern interface in the app. Forms and view pages have updated styling for colors, fonts, elevation, rounded corners, and more. The Power Apps grid replaces the read-only grid. New Fluent-based field controls are also used in many places, including different form types, business process flows, and dialogs.
 
 With the new look, Power Apps are moving away from the classic theme customizations and will introduce a new theming capability in the future that builds on the Fluent design system.  
 
