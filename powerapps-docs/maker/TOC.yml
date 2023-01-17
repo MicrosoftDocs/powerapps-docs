@@ -1687,6 +1687,8 @@
     href: ../mobile/mobile-deep-links.md
   - name: Open an app in Power Apps mobile by scanning a QR code
     href: ../mobile/scan-QR-code.md
+  - name: Switch to a different tenant on Power Apps mobile
+    href: ../mobile/tenant-switcher.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
     items:
