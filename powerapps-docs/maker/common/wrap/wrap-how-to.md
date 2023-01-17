@@ -21,11 +21,11 @@ contributors:
 
 [This article is pre-release documentation and is subject to change.]
 
-Use the wrap feature to package one or more canvas or model-driven app(s) as a single native mobile app package using the step-by-step wizard.
+Use the wrap feature to package one or more canvas app(s) as a single native mobile app package using the step-by-step wizard.
 
-The wrap feature in Power Apps lets you create native mobile versions of your[canvas apps](../../canvas-apps/getting-started.md) and [model-driven apps](../../model-driven-apps/model-driven-app-overview.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
+The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
 
-You can wrap multiple canvas and model-driven apps in a single mobile app package. The mobile app package needs one primary app, which serves as the entry point for all other apps. This includes the mobile app package, which will be invoked as secondary apps.
+You can wrap multiple canvas apps in a single mobile app package. The mobile app package needs one primary app, which serves as the entry point for all other apps. This includes the mobile app package, which will be invoked as secondary apps.
 
 Adding secondary apps to a single mobile app package is optional. When you wrap only one app, the included app is automatically designated as a Primary app.
 
@@ -41,7 +41,7 @@ Wrap feature allows you to create mobile apps for iOS, Android or Google Play St
 - Android (APK package)
 - Google Play Store (AAB package)
 
-The wrap feature will wrap your canvas and model-driven apps in a native mobile app shell that you can digitally sign and distribute. More information:
+The wrap feature will wrap your canvas apps in a native mobile app shell that you can digitally sign and distribute. More information:
 
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
@@ -147,7 +147,7 @@ For new app registration, select **New app registration** to create a new regist
 
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
-Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas and model-driven apps.
+Both single tenant and multitenant customers can use wrap to create native mobile apps based on their canvas app.
 
 However, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap:
 
