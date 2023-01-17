@@ -48,6 +48,8 @@ View pages have a refreshed appearance in model-driven apps. The command bar and
 ### Form pages
 Form pages are aligned to the modern, refreshed look. They utilize the new command bar and refreshed elements like the form header, tabs, sections, flyouts, and business process flows. Their fonts, elevations, rounded corners, color, and other style properties are based on the latest Fluent properties and have been extended to quick views and card forms. Header, sitemap, and timeline controls are refreshed and align to styles derived from Fluent theme tokens. 
 
+The following image shows a form page with the modern, refreshed look.
+
 [!div class="mx-imgBorder"] 
 ![A formm page with the modern, refreshed look.](media/FormPage.png)
 
