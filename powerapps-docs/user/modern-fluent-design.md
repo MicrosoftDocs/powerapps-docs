@@ -36,7 +36,7 @@ With the new look, Power Apps are moving away from the classic theme customizati
 ### Command bar
 The updated visuals make use of several new patterns across the app and page types. Drop shadows and brighter background colors are used to create elevation, which aids in the separation of sections and focuses attention on the primary content. The floating command bar style aligns with the Microsoft 365 commanding experience and has consistent spacing, rounded corners, and elevation. For example, notice how the command bar is in a separate section at the top of the page in the following image.
 
-[!div class="mx-imgBorder"] 
+!div class="mx-imgBorder" 
 ![Floating command bar](media/new-command-bar.png)
 
 ### View pages
@@ -44,7 +44,7 @@ View pages have a refreshed appearance in model-driven apps. The command bar and
 
 The following image shows a view page with the modern, refreshed look.
 
-[!div class="mx-imgBorder"] 
+!div class="mx-imgBorder"
 ![A view page with the modern, refreshed look.](media/ViewPage.png)
 
 ### Form pages
@@ -52,7 +52,7 @@ Form pages are aligned to the modern, refreshed look. They utilize the new comma
 
 The following image shows a form page with the modern, refreshed look.
 
-[!div class="mx-imgBorder"] 
+!div class="mx-imgBorder"
 ![A formm page with the modern, refreshed look.](media/FormPage.png)
 
 ### Field controls
