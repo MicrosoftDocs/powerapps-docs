@@ -21,9 +21,9 @@ In this article, learn about the frequently asked questions and the answers abou
 > [!IMPORTANT]
 > For any issues, feedback, support, or changes related to sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
 
-## When I try to install a sample app, I get an error that the app is already in the team.
+## When I try to install a sample app template, I get an error that the app is already in the team.
 
-You may see the following error when you try to install a sample app in a team that already has the app installed, but you’re not the app owner, or the team owner.
+You may see the following error when you try to install a sample app template in a team that already has the app installed, but you’re not the app owner, or the team owner.
 
 `This app is already in this team` <br>
 `To update it, you must be its owner or a team owner.`

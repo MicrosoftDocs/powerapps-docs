@@ -22,7 +22,7 @@ Several sample app templates are available for use in Microsoft Teams that you c
 
 ## Available sample app templates
 
-Several sample app templates are available from the Teams store that you can add to your Teams channels and use for different purposes.
+The following table lists sample app templates available for [download](https://github.com/microsoft/teams-powerapps-app-templates).
 
 :::row:::
    :::column span="":::

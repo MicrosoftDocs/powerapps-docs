@@ -2763,19 +2763,19 @@
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
       href: ../teams/uninstall-personal-apps.md 
-    - name: Sample apps
+    - name: Sample app templates
       items:
-        - name: Use sample apps in Teams
+        - name: Use sample app templates in Teams
           href: ../teams/use-sample-apps.md
-        - name: Customize sample apps
+        - name: Customize sample app templates
           href: ../teams/customize-sample-apps.md
-        - name: Localize sample apps 
+        - name: Localize sample app templates
           href: ../teams/localizing-sample-apps.md
-        - name: Theming in sample apps 
+        - name: Theming in sample app templates
           href: ../teams/sample-app-theming.md
-        - name: Working with table permission in sample apps
+        - name: Working with table permission in sample app templates
           href: ../teams/dataverse-for-teams-table-permissions.md
-        - name: FAQs for sample apps
+        - name: FAQs for sample app templates
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
