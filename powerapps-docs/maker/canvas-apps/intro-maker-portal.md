@@ -74,7 +74,7 @@ To see all your your Power Apps, from the left navigation pane, selct **More** >
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
 
-When you select **Discover all** you'll see the **Discover** page on the left navigation pane. Select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button to pin it in left navigation pane.
+When you select **Discover all** you'll see the **Discover** page on the left navigation pane. Select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button to pin it to left navigation pane.
 
 ### Move up or move down
 
