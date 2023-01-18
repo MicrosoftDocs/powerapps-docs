@@ -20,8 +20,8 @@ The offline sync icon is now always visible in the mobile navigation bar. The ic
 
 The offline sync icon is now visible in the main navigation on iOS and Android devices.
 
-> [!div class="mx-imgBorder"] 
-> ![The offline sync icon is visible in the main navigation bar.](media/offline-sync-icon-small.png)
+[!div class="mx-imgBorder"] 
+![The offline sync icon is visible in the main navigation bar.](media/offline-sync-icon-small.png)
 
 The offline sync icon changes based on sync status.  The following table provides more detail.
 
