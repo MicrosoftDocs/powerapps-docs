@@ -1685,6 +1685,8 @@
     href: ../mobile/mobile-deep-links.md
   - name: Open an app in Power Apps mobile by scanning a QR code
     href: ../mobile/scan-QR-code.md
+  - name: View offline sync status
+    href: ../mobile/offline-sync-icon.md
   - name: Troubleshoot issues for Power Apps mobile
     href: ../mobile/powerapps-mobile-troubleshoot.md
     items:
