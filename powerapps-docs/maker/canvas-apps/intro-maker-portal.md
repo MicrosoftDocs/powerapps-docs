@@ -62,7 +62,7 @@ When you sign in to the new navigation experience, the system will automatically
 > [!div class="mx-imgBorder"]
 > ![First time sign in dialog box.](media/intro-maker-portal/left-nav-dialog-2.png "First time signing in")
 
-To pin or unpin a page, from the left navigation pane select **More** and then select the pin or unpin button. 
+To pin or unpin a page from the left navigation pane, select **More** and then select the pin ![Pin button.](media/intro-maker-portal/pin-button.png) or unpin button.
 
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
