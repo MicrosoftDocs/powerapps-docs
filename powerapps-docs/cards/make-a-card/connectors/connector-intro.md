@@ -34,7 +34,7 @@ Connectors allow your card to connect to other apps, data sources, and devices i
 When the schema provided by your connector changes, you can refresh the connector in your card to ensure you have access to the updated properties in your PowerFx expressions. An example of a schema change would be adding a column to the Dataverse table you are using in your card. After refreshing your connector, you would be able to use the new column in your PowerFx expressions.
 
 > [!IMPORTANT]
-> - You should be careful not to remove properties from your data sources that existing cards depend on. Doing so could prevent your existing cards from functioning properly.
+> You should be careful not to remove properties from your data sources that existing cards depend on. Doing so could prevent your existing cards from functioning properly.
 
 1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
 1. In the left pane of the card designer, select **Data**.
