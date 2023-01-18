@@ -2,7 +2,7 @@
 title: Apply business logic using code (Microsoft Dataverse)| Microsoft Docs
 description: Learn how to write code to customize business data processing in Microsoft Dataverse.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke

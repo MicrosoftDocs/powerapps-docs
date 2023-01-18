@@ -4,7 +4,7 @@ description: Learn how to connect to Microsoft Dataverse and use it for building
 author: tapanm-msft
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 09/20/2022
 ms.subservice: canvas-maker
 ms.author: lanced
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 

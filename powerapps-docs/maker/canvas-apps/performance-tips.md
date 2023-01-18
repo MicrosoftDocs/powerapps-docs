@@ -5,7 +5,7 @@ author: yingchin
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/21/2022
 ms.subservice: canvas-maker
 ms.author: yingchin
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
   - yingchin
-  - tapanm-msft
+  - mduelae
   - chmoncay
   - melzoghbi
 ---
@@ -165,7 +165,7 @@ You can optionally preload your app to increase performance.
     > [!NOTE]
     > This makes the compiled app assets accessible via unauthenticated endpoints to enable loading them before authentication. However, users can still only use your app to access data via connectors only after authentication and authorization completes. This behavior ensures that the data an app retrieves from data sources won’t be available to unauthorized users. Compiled app assets include a collection of JavaScript files containing text authored in app controls (such as PCF controls), media assets (such as images), the app name, and the environment URL the app resides in.
     > 
-    > In general, apps should retrieve media and information from data sources, through connections. If media and information must be added to the app, without coming from a connection, and it is considered sensitive you may want to disable this setting. Note, disabling this setting will result in users waiting a bit longer to access an app.![image](https://user-images.githubusercontent.com/11514622/201409835-678ea619-c1e9-4fe9-81d5-034f74c6b1c1.png)
+    > In general, apps should retrieve media and information from data sources, through connections. If media and information must be added to the app, without coming from a connection, and it is considered sensitive you may want to disable this setting. Note, disabling this setting will result in users waiting a bit longer to access an app.
 
 
 ## Next steps

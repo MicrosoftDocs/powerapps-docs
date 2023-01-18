@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 07/07/2022
 ms.subservice: portals
 ms.author: nabha
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
