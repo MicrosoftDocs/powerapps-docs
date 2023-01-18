@@ -40,7 +40,7 @@ You will still be able to register plug-in assemblies individually, but using `P
 
 ## Send feedback
 
-If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas) site.
+If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas Forum](https://ideas.powerapps.com/) site.
 
 ## Limitations
 

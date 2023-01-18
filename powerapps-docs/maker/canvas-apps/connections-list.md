@@ -84,7 +84,7 @@ Power Apps provides *standard* connectors for many commonly used data sources. I
 
 Standard connectors don't require special licensing. For more information, see [Power Apps Plans](https://powerapps.microsoft.com/pricing/).
 
-You can ask questions about a specific connector in the [Power Apps forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), and you can suggest connectors that you want to add or other improvements to make in [Power Apps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
+You can ask questions about a specific connector in the [Power Apps forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), and you can suggest connectors that you want to add or other improvements to make in [Power Apps Ideas](https://ideas.powerapps.com/).
 
 ## Security and types of authentication
 
