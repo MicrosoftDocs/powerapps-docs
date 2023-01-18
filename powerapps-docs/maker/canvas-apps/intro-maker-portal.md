@@ -67,7 +67,14 @@ To pin or unpin a page from the left navigation pane, select **More** and then s
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
+### Discover all 
 
+To see all your your Power Apps, from the left navigation pane, selct **More** > **Disvoer all**. 
+
+> [!div class="mx-imgBorder"]
+> ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
+
+When you select **Discover all** you'll see the **Discover** page on the left navigation pane. Select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button to pin it in left navigation pane.
 
 ### Move up or move down
 
