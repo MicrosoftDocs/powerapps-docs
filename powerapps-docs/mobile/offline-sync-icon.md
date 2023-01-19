@@ -42,7 +42,7 @@ When you select the offline sync icon, the **Offline Status** page is displayed.
 > ![When you select the offline sync icon, the **Offline Status** page is displayed.](media/OfflineStatusPage-NotConnected.png)
 
 ## Notifications
-On iOS and Android devices, notifications about the offline sync have been redesigned and correspond to different sync steps.  
+On iOS and Android devices, notifications about the offline sync have been redesigned to be consistent across the different sync steps.    
 
 ## Known issues
 
