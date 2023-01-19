@@ -70,7 +70,7 @@ Start with an existing template to create an email template faster and with less
 
 When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the the following template editors:
   - Enhanced email template: If the selected email template was created with the enhanced email template.
-  - Default email template: If the selected template was created with the default email template.
+  - Email template: If the selected template was created with the legacy email template.
 
 > [!Important]
 > If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
@@ -86,7 +86,7 @@ When you create a template from an existing template, irrespective of the enhanc
 
 ## Email template editor
 
-You can use either the enhanced email template editor or the default email template editor to create email templates.
+You can use either the enhanced email template editor or the legacy email template editor to create email templates.
 
 ### Enhanced email template editor
 > [!NOTE]
@@ -102,7 +102,7 @@ The enhanced email template editor is displayed if the enhanced email template e
 
 ### Email template editor
 
-The default email template editor is displayed if the enhanced email template editor option is disabled. 
+The email template editor is displayed if the enhanced email template editor option is disabled. 
 
 :::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
 
