@@ -1,12 +1,12 @@
 ---
 title: Add connectors to a card (preview)
 description: Learn how to add connectors to your cards for Microsoft Power Apps.
-ms.date: 09/20/2022
+ms.date: 01/19/2023
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
-ms.reviewer: 
+manager: tapanm-msft
+ms.reviewer: sericks
 ms.custom: 
 ms.collection: 
 ---
@@ -24,7 +24,7 @@ Connectors allow your card to connect to other apps, data sources, and devices i
 
 ## Insert a connector
 
-1. [Open the card designer](../designer-overview.md)
+1. [Open the card designer](../designer-overview.md).
 1. In the left pane of the card designer, select **Data**.
 1. Select **+ Add data**, and then select a data source from the list.
 
@@ -36,7 +36,7 @@ When the schema provided by your connector changes, you can refresh the connecto
 > [!IMPORTANT]
 > You should be careful not to remove properties from your data sources that existing cards depend on. Doing so could prevent your existing cards from functioning properly.
 
-1. [Open the card designer](../designer-overview.md)
+1. [Open the card designer](../designer-overview.md).
 1. In the left pane of the card designer, select **Data**.
 1. Select **...** next to the connector you want to refresh.
 1. Click **Refresh**
