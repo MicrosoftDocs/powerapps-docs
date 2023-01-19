@@ -69,7 +69,7 @@ To pin or unpin a page from the left navigation pane, select **More** and then s
 
 ### Discover all 
 
-To see all your your Power Apps, from the left navigation pane, selct **More** > **Disvoer all**. 
+To see all your your Power Apps, from the left navigation pane, selct **More** > **Discover all**. 
 
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
