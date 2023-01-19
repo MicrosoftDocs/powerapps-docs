@@ -73,6 +73,12 @@ To pin or unpin a page from the left navigation pane, select **More** and then s
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
+If you already pinned a page, to unpin it, select the more button next to the page and they select **Unpin**.
+
+
+> [!div class="mx-imgBorder"]
+> ![Unpin a page.](media/intro-maker-portal/unpin-page.png "Unpin a page")
+
 ### Discover all 
 
 To see all your your Power Apps, from the left navigation pane, selct **More** > **Discover all**. 
@@ -89,6 +95,7 @@ To move a page up or down, select the more button next to the page that you want
 
 > [!div class="mx-imgBorder"] 
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
+
 
 ### Power Platform
 
