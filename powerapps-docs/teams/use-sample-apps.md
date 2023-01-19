@@ -15,7 +15,7 @@ contributors:
 
 # Use sample app templates in Microsoft Teams
 
-Several sample app templates are available for use in Microsoft Teams that you can download from [here](https://github.com/microsoft/teams-powerapps-app-templates). You can choose the sample app that best fits your business requirement and quickly install it to get started. Sample app templates created with Power Apps typically consist of multiple components such as apps, flows, and tables.
+Several sample app templates are available for use in Microsoft Teams that you can download from [here](https://github.com/microsoft/teams-powerapps-app-templates). You can choose the sample app template that best fits your business requirement and quickly install it to get started. Sample app templates created with Power Apps typically consist of multiple components such as apps, flows, and tables.
 
 > [!IMPORTANT]
 > Sample app templates available for [download](https://github.com/microsoft/teams-powerapps-app-templates) are provided as-is. For any issues, feedback, support, or changes related to sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
@@ -69,7 +69,7 @@ The following table lists sample app templates available for [download](https://
 
 The following tutorial shows how to install the Employee ideas app. You can use similar steps to install other sample app templates.
 
-## Install the sample app
+## Install the sample app template
 
 To learn about installing sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates.
 
@@ -77,7 +77,7 @@ To learn about installing sample app templates, go to https://github.com/microso
 > - Installing sample app templates automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-microsoft-365-groups)
 > - If you can't upload or install uploaded sample app templates, check your [app permission policies in Microsoft Teams](/microsoftteams/teams-app-permission-policies).
 
-## Run the sample app
+## Run the sample app template
 
 To run the installed app, select the app's tab from the team channel. In this example, we'll use **Employee ideas**.
 
@@ -106,7 +106,7 @@ The **Employee ideas** app is now open and ready for your use.
 
 For more details about using the **Employee ideas** app, go to [Employee ideas](employee-ideas.md).
 
-## Edit the sample app
+## Edit the sample app template
 
 You can further customize and edit the components of an installed Power Apps app in Teams. More information: [Manage your apps](manage-your-apps.md)
 
@@ -116,9 +116,9 @@ If you get any errors during the installation process, you can help us troublesh
 
 For issues related to the sample app templates, report an issue at https://github.com/microsoft/teams-powerapps-app-templates.
 
-## Sample app updates
+## Sample app template updates
 
-Updates to the sample app templates are published immediately. If you already have a sample app in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps.md#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
+Updates to the sample app templates are published immediately. If you already have a sample app template in use when this happens, a new version of the app is created with these updates and published as the live version. If you [customized a sample app](customize-sample-apps.md), you can [restore the app to a previous version](manage-your-apps.md#restore-an-app) with your customizations, or recreate the customizations on top of the updated live version. When restoring the app to preserve your customizations, ensure to check the app functionality for compatibility with the updates.
 
 ## Sample app templates FAQs
 

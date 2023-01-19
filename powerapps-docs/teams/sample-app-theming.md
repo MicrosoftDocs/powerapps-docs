@@ -25,7 +25,7 @@ Watch this video to learn about theming in sample app templates:
 
 ## Prerequisites
 
-To complete this lesson, we'd need the ability to create apps within Microsoft Teams that will be available as part of select Microsoft 365 subscriptions. You'll also need the Milestones sample app for Microsoft Teams installed in your Team. You can install it in your team at <https://aka.ms/TeamsMilestones>.
+To complete this lesson, we'd need the ability to create apps within Microsoft Teams that will be available as part of select Microsoft 365 subscriptions. You'll also need the Milestones sample app template for Microsoft Teams installed in your Team. You can install it in your team at <https://aka.ms/TeamsMilestones>.
 
 ## Defining the theming strategy
 
@@ -52,7 +52,7 @@ Two hidden screens have been defined for testing the theming strategy:
     
       ![The hidden control screen](media/sample-app-theming/hidden-control-screen.png "The hidden control screen")
 
-## Using the theming variables for a sample app
+## Using the theming variables for a sample app templates
 
 1. To understand the usage of theming in the Milestones app, select  **Projects Screen** in the Tree view to open the screen and then select **+New Project**.
 
@@ -87,7 +87,7 @@ Two hidden screens have been defined for testing the theming strategy:
     > [!NOTE]
     > Another possible extension to the app would be to add Font as a Property, either as one variable to be used across all controls, or once per control (like how the other styling properties are defined separately for primary buttons, or secondary buttons). The font throughout the Milestones app is Segoe UI and there was no need identified for theming of the font.
 
-## Updating the theme in the sample app
+## Updating the theme in the sample app template
 
 In this section, we'll see how we can change a property of a particular control and how the control gets updated across various screens. In our example, we'll update the Fill property of the Primary button and see how the button color changes in the Dark mode, and the Default mode.
 

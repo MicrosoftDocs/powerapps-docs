@@ -258,7 +258,7 @@ We'll create an app with five fields capturing details that will be used to crea
 
 ## See Planner integration in action
 
-To see an example of Planner integration, check out the [Issue Reporting](issue-reporting.md) sample app for Teams. Issue Reporting makes it easy for users to report issues. These issues are created in Planner and assigned for follow-up.
+To see an example of Planner integration, check out the [Issue Reporting](issue-reporting.md) sample app template for Teams. Issue Reporting makes it easy for users to report issues. These issues are created in Planner and assigned for follow-up.
 
 This integration can be easily extended to add logic to automatically assign the Planner Tasks or [provide notifications for issue tasks](extend-issue-sign-up-notification.md).
 

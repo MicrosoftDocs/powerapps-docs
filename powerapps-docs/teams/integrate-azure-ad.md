@@ -164,7 +164,7 @@ The admin access button is now visible on Screen 2, and the label shows admin le
 
 ## See Azure AD integration in action
 
-You can see an example of Azure AD integration in the **Profile+** sample app for Teams.
+You can see an example of Azure AD integration in the **Profile+** sample app template for Teams.
 
 ![See Active Directory integration in action](media/integrate-with-azure-active-directory/see-active-directory-integration-in-action-1.png "See Active Directory integration in action")
 
