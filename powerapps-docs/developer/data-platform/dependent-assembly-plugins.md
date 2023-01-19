@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/05/2023
+ms.date: 01/18/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
@@ -315,14 +315,6 @@ You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in pac
 When you prepare a solution that contains a plugin package, do not include any plug-in step registrations that use an assembly included in the plug-in package.
 
 The export of the solution will succeed, but you will not be able to import the solution. To test plug-ins that use a dependent assembly in a different environment, you must manually register the steps.
-
-### Users must be granted read access to plug-in package
-
-Any users without the System Administrator security role must be granted read access to the [PluginPackage table](reference/entities/pluginpackage.md).
-
-You can manually edit this for each security role following the steps here: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role). **Plugin Package** is located in the **Custom Entities** tab.
-
-:::image type="content" source="media/set-pluginpackage-read-access.png" alt-text="Setting plugin package read access.":::
 
 ### Custom API cannot use dependent assembly plug-ins
 
