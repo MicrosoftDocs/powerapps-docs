@@ -19,6 +19,8 @@ search.app:
 
 > [!NOTE]
 > The enhanced email template editor is available out of the box as an early access feature only in the Customer Service workspace and Customer Service Hub apps.
+
+
 Use the **Editor** tab in the **Email Template** form to create customized email templates. The **Editor** tab has three sections:
 
 - Design canvas
