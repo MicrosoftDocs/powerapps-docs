@@ -36,7 +36,7 @@ The offline sync icon changes based on sync status.  The following table provide
 | ![Icon showing that there is a warning in the synchronization process.](media/warning.png "Icon showing that there is a warning in the synchronization process.") |There is a warning in the sychronization process.|
 
 ## Offline status page
-When you select the offline sync icon, the **Offline Status** page is displayed. The **Offline Status** page provides detailed information about the sync status, such what data was downloaded and if there is data to upload, as shown in the following image.
+When you select the offline sync icon, the **Offline Status** page is displayed. The **Offline Status** page provides detailed information about the sync status, such as what data was downloaded and if there is data yet to upload to the app, as shown in the following image.
 
 > [!div class="mx-imgBorder"]
 > ![When you select the offline sync icon, the **Offline Status** page is displayed.](media/OfflineStatusPage-NotConnected.png)
