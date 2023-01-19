@@ -38,8 +38,7 @@ The offline sync icon changes based on sync status.  The following table provide
 ## Offline Status page
 When you select the offline sync icon, the **Offline Status** page is displayed. The **Offline Status** page provides detailed information about the sync status, such as what data was downloaded and if there is data yet to upload to the app, as shown in the following image.
 
-> [!div class="mx-imgBorder"]
-> ![When you select the offline sync icon, the **Offline Status** page is displayed.](media/OfflineStatusPage-NotConnected.png)
+:::image type="content" source="media/OfflineStatusPage-NotConnected.png" alt-text="When you select the offline sync icon, the **Offline Status** page is displayed.":::
 
 ## Notifications
 On iOS and Android devices, notifications about the offline sync have been redesigned to be consistent across the different sync steps.    
