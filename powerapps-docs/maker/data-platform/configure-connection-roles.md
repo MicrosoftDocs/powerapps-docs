@@ -1,5 +1,6 @@
 ---
-title: "Configure connection roles | MicrosoftDocs"
+title: "Configure connection roles in Power Apps | MicrosoftDocs"
+description: Learn how to create, configure, and add connection roles to a solution.
 ms.custom: ""
 ms.date: 01/19/2023
 ms.reviewer: ""
