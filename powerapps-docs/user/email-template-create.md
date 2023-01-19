@@ -89,10 +89,8 @@ When you create a template from an existing template, irrespective of the enhanc
 You can use either the enhanced email template editor or the legacy email template editor to create email templates.
 
 ### Enhanced email template editor
-> [!NOTE]
-> An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
-
-The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default as an early access feature.
+ 
+The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default as an early access feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
