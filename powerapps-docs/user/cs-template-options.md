@@ -18,9 +18,7 @@ search.app:
 # Customize an email template using the template editor 
 
 > [!NOTE]
-> The enhanced email template editor is available out of the box as an early access feature only in the Customer Service workspace and Customer Service Hub apps. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. 
-For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
-
+> The enhanced email template editor is available out of the box as an early access feature only in the Customer Service workspace and Customer Service Hub apps.
 Use the **Editor** tab in the **Email Template** form to create customized email templates. The **Editor** tab has three sections:
 
 - Design canvas
