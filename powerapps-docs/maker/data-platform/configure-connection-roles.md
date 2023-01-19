@@ -36,8 +36,7 @@ Anyone with write access to the **Connection Role** table can establish which co
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 1. Open the table you want or create a new one. More information: [Edit a table](edit-entities.md)
 1. Select **Properties**, and then in the right properties pane, select **Can have connections**.
-    > [!div class="mx-imgBorder"] 
-    > ![Enable connections setting.](media/enable-connections.png "Enable connections setting")
+    :::image type="content" source="media/enable-connections.png" alt-text="Enable connections setting" lightbox="media/enable-connections.png":::
 
 1. Select **Save**.
 
