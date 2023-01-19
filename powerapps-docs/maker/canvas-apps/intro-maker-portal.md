@@ -46,18 +46,19 @@ Find what you need with the new left navigation pane. If this is the first time 
 >This is a preview feature.
 >[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-
-- **Home**: Takes you to the Power Apps home page.
-- **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
-- **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
-- **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
-- **Your most used pages such as Tables, Connections, Flows**: When you first sign in to the new navigation experience the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
-- **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
-- **Power Platform**: Explore other Power Platform products or service.
-
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
 
+
+Legend:
+
+1. **Home**: Takes you to the Power Apps home page.
+2. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
+3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
+4. **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
+5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in to the new navigation experience the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
+6. **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
+7. **Power Platform**: Explore other Power Platform products or service.
 
 ### Pin and unpin
 
