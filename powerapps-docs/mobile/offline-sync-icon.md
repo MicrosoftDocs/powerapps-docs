@@ -23,6 +23,7 @@ The offline sync icon is now visible in the main navigation on iOS and Android d
 > [!div class="mx-imgBorder"]
 > ![The offline sync icon is visible in the main navigation bar.](media/offline-sync-icon-small.png)
 
+## offline sync icon changes based on sync status
 The offline sync icon changes based on sync status.  The following table provides more detail.
 
 | Icon | Description|
@@ -33,3 +34,12 @@ The offline sync icon changes based on sync status.  The following table provide
 | ![Icon showing that the app has pending changes to upload.](media/upload-pending-changes.png "Icon showing that the app has pending changes to upload.") |App has pending changes to upload.|
 | ![Icon showing that there is an error in the synchronization process.](media/error.png "Icon showing that there is an error in the synchronization process.") |There is an error in the synchronization process.|
 | ![Icon showing that there is a warning in the synchronization process.](media/warning.png "Icon showing that there is a warning in the synchronization process.") |There is a warning in the sychronization process.|
+
+## Offline status page
+When you select the offline sync icon, the **Offline Status** page is displayed.
+
+> [!div class="mx-imgBorder"]
+> ![When you select the offline sync icon, the **Offline Status** page is displayed.](media/OfflineStatusPage-NotConnected.png)
+
+The **Offline Status** page provides detailed information about the sync status.
+
