@@ -74,8 +74,7 @@ To pin or unpin a page from the left navigation pane, select **More** and then s
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
-If you've already pinned a page, to unpin it, select the more button next to the page and they select **Unpin**.
-
+If you've already pinned a page, to unpin it, select the more button next to the page and then select **Unpin**.
 
 > [!div class="mx-imgBorder"]
 > ![Unpin a page.](media/intro-maker-portal/unpin-page.png "Unpin a page")
