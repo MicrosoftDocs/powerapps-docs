@@ -44,4 +44,7 @@ When you select the offline sync icon, the **Offline Status** page is displayed.
 ## Notifications
 On iOS and Android devices, notifications about the offline sync have been redesigned and correspond to different sync steps.  
 
-> ![Notfication about the offline sync](media/notification.png)
+## Known issues
+
+- During the first sync, the offline sync icon continues to spin until the user navigates and switches from online mode to offline mode. 
+- The the app has pending changes to upload, the number is the sum of updated rows, added and removed files, and images.   
