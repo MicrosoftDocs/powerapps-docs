@@ -40,7 +40,7 @@ Legend:
 
 ## 1 – Left navigation pane 
 
-Find what you need with the new left navigation pane. If this is the first time you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
+Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
 
 >[!IMPORTANT]
 >This is a preview feature.
@@ -55,14 +55,14 @@ Legend:
 1. **Home**: Takes you to the Power Apps home page.
 2. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
 3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
-4. **Apps**: If you've created an app (or someone else has created one and shared it with you), you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
+4. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in to the new navigation experience the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
 6. **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
 7. **Power Platform**: Explore other Power Platform products or service.
 
 ### Pin and unpin
 
-Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above the **More** menu. 
+Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above **More**. 
 
 When you sign in to the new navigation experience, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference. 
 
@@ -74,7 +74,7 @@ To pin or unpin a page from the left navigation pane, select **More** and then s
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
 
-If you've already pinned a page, to unpin it, select the more button next to the page and then select **Unpin**.
+You can also unpin and item by selecting the more button and then select **Unpin**.
 
 > [!div class="mx-imgBorder"]
 > ![Unpin a page.](media/intro-maker-portal/unpin-page.png "Unpin a page")
