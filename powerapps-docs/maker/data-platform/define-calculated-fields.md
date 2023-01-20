@@ -69,13 +69,13 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 1. Provide the information for the column, including the **Display name**, **Name**, and **Data type**.
 1. If the data type is one of the [column types that support calculations](#column-types-that-support-calculations), you can make the column a calculated column by selecting **Calculated** from the **Behavior** dropdown list.
 
-    ![Make column calculated.](media/make-field-calculated-maker.png)
+    :::image type="content" source="media/make-field-calculated-maker.png" alt-text="Make a column a calculated column":::
 
 1. The **Save and edit** link appears under the dropdown list. Select it.
 1. The new column is saved. In the **Columns** list, open the column that you saved in the previous step.
 1. On the **Edit column** pane, under the **Behavior** dropdown list, select **Edit**.
 
-   <img src = "media/open-calculation-link.png" alt = "Link to open calculated column definition editor" width = "320" height = "620">
+    :::image type="content" source="media/open-calculation-link.png" alt-text="Link to open calculated column definition editor":::
 
 1. In the calculated column definition editor, notice that the new calculated column has been created, but no formula has been set. The calculated column definition consists of two sections: **CONDITION** and **ACTION**.  
   ![New Column Calculation form.](media/empty-field-calculation.png)
