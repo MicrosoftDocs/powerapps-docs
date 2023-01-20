@@ -26,7 +26,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 ## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user. 
  > [!NOTE]
- > You can only have one default selected item.  If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
+ > You can only have one default selected item. If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
