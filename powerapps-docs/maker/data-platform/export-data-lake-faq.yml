@@ -16,7 +16,10 @@ sections:
   questions:
    - question: Can I create, update or delete the data file in the Azure storage manually?
      answer: |
-        Data files should not be modified by a customer and no customer files should be placed in the data folders. 
+        Data files should not be modified by a customer and no customer files should be placed in the data folders.
+   - question: Can I link a Synapse workspace to an existing Synapse Link profile with data lake only?
+     answer: |
+        Yes. In your web browser's address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**. When you select an existing profile from the Synapse Link homepage, you'll see a new action in the extended option **Link to Azure Synapse Analytics Workspace**.  
    - question: How can I access my table relationships?
      answer: |
         To access many-to-many relationships, the relationship will be available as a table to select from the **Add tables** page for a new link and from the **Manage tables** for a preexisting link.
@@ -70,7 +73,6 @@ sections:
         - Attachment
         - String Map
         - Calendar
-        - Calendar rule
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
         Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.
