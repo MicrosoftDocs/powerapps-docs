@@ -23,7 +23,6 @@ Earlier, you learned about the capabilities of wrap feature, how it works, and i
 
 ## Prerequisites
 
-- You must enable your environment for the wrap capability. Refer to [Install an app in an environment](/power-platform/admin/manage-apps#install-an-app), and install the **Wrap for Power Apps** solution using Power Platform admin center.
 - You'll need access to [Azure portal](https://portal.azure.com) to register your app, and configure the API permissions on the Microsoft Identity platform.
 - You'll need access to [Visual Studio App Center](https://appcenter.ms/) to add new organization and apps.
 - You'll need one or more canvas apps (saved in a solution) that you can package for mobile user distribution.
