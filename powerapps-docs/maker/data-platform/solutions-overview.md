@@ -117,6 +117,10 @@ To use or run a flow from a canvas app that is included in a solution, you must 
 
 More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)
 
+## Use pipelines in Power Platform to deploy solutions
+
+Easily deploy solutions to test and production environments using pipelines in Power Platform. Once pipelines are in place, makers can initiate in-product deployments with a few clicks. Makers do so directly within their development environments. More information: ![Overview of pipelines in Power Platform](/power-platform/alm/pipelines)
+
 ## Known limitations
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
@@ -146,7 +150,8 @@ For details about customizing the individual components in a solution, see the f
 -   For business rules, see [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
  
  
-### Next steps  
+### Next steps
+
 [Create a solution](create-solution.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
