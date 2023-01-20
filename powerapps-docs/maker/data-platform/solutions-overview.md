@@ -119,7 +119,7 @@ More information: [Security roles and privileges](/power-platform/admin/security
 
 ## Use pipelines in Power Platform to deploy solutions
 
-Easily deploy solutions to test and production environments using pipelines in Power Platform. Once pipelines are in place, makers can initiate in-product deployments with a few clicks. Makers do so directly within their development environments. More information: ![Overview of pipelines in Power Platform](/power-platform/alm/pipelines)
+Easily deploy solutions to test and production environments using pipelines in Power Platform. Once pipelines are in place, makers can initiate in-product deployments with a few clicks. Makers do so directly within their development environments. More information: [Overview of pipelines in Power Platform](/power-platform/alm/pipelines)
 
 ## Known limitations
 
