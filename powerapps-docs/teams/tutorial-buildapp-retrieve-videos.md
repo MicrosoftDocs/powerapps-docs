@@ -975,7 +975,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 ### See also
 
-[Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
+[Use sample app templates from the Teams store](use-sample-apps-from-teams-store.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
