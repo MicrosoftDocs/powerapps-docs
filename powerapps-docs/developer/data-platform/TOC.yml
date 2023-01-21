@@ -84,6 +84,8 @@
       href: query-throttling.md
     - name: Query Hierarchical data
       href: query-hierarchical-data.md
+    - name: Use image column data
+      href: image-column-data.md
     - name: Use file column data
       href: file-column-data.md
     - name: Audit data changes
@@ -322,6 +324,8 @@
   items:
     - name: Browse table definitions in your environment
       href: browse-your-metadata.md
+    - name: Generate entity relationship diagrams
+      href: use-metadata-generate-entity-diagrams.md
     - name: Table definitions
       href: entity-metadata.md
       items:
@@ -446,6 +450,8 @@
           href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
     - name: Build Windows client apps using XRM tools
       href: xrm-tooling/
+    - name: Send parallel requests
+      href: send-parallel-requests.md
     - name: Discover user organizations
       href: discovery-service.md
     - name: "Sample: Global Discovery Service"

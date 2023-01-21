@@ -33,10 +33,6 @@ The following components aren't supported:
 > - The app or flow is running in the context of Microsoft Teams.
 > - And, the custom connector points at an APIM endpoint in Azure. 
 
-## Component library
-
-[Component library](../maker/canvas-apps/component-library.md) isn't supported.
-
 ## Controls
 
 To learn about the limitations of controls in Dataverse for Teams environments, go to [Limitations of controls in Power Apps](../maker/canvas-apps/control-limitations.md).

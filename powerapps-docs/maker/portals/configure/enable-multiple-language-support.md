@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2022
+ms.date: 01/16/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -45,7 +45,7 @@ To enable multiple languages for a portal, follow these steps:
 
 You can set the default language of your portal by changing the *Default Language* lookup to one of the enabled portal languages.
 
-:::image type="content" source="../media/set-default-language-portal.png" alt-text="Set default language for your portal":::
+:::image type="content" source="media/multi-language/set-default-language-portal.png" alt-text="Set default language for your portal":::
 
 > [!Note]
 > - If you activate new languages after the portal has been provisioned, you can [import the metadata translations](../admin/import-metadata-translation.md) to get the metadata translated for the newly activated languages.
@@ -57,7 +57,7 @@ The table below shows all the languages currently available out of the box. This
 
 > [!NOTE]
 > - Upgrade your portals website version to [9.4.4.xx](/power-platform/released-versions/portals/portalupdate944x) and package version [9.3.2204](../admin/update-portal-solution.md) to configure Arabic and Hebrew language for your website.
-> - Arabic and Hebrew languages are not supported on the [Power Pages](/power-pages/introduction) preview.
+> - Arabic and Hebrew languages are not supported when creating a site using [Power Pages](/power-pages/getting-started/create-manage) or using the Power Pages [design studio](/power-pages/getting-started/use-design-studio). You will need to create and edit Arabic and Hebrew language sites using [Power Apps](../create-portal.md) and the legacy [portals Studio](../portal-designer-anatomy.md).
 
 | **Name**                           | **Language Code** | **LCID** | **Portal Display Name** |
 |------------------------------------|-------------------|----------|-------------------------|

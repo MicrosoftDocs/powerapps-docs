@@ -77,7 +77,7 @@ Read-only, static, and constant members are inherently thread-safe and can also 
 
         public Valid_ClassFieldConfigMember(string unsecure, string secure)
         {
-            this.validConfigField = !String.IsNullOrEmpty(secure)
+            this.validConfigField = String.IsNullOrEmpty(secure)
                 ? unsecure
                 : secure;
         }
