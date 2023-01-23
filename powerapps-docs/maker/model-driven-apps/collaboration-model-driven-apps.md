@@ -1,9 +1,11 @@
----01
+---
 title: Collaboration in model-driven apps
 description: App makers use collaboration features to assist teams in building model-driven app with Power Apps.
 author: Mattp123
 ms.author: matp
 ms.topic: overview 
+ms.service: powerapps
+ms.subservice: mda-maker
 ms.date:  01/21/2023
 ms.custom: template-overview
 ---

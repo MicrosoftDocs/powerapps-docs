@@ -4,6 +4,7 @@ description: The copresence feature in model-driven app lets you know who's work
 author: Mattp123
 ms.author: matp
 ms.service: "powerapps"
+ms.subservice: mda-maker
 ms.topic: how-to
 ms.date: 01/23/2023
 ms.custom: template-how-to

@@ -4,6 +4,7 @@ description: The model-driven app designer lets multiple makers make changes to 
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: how-to 
 ms.date: 01/23/2023
 ms.custom: template-how-to
