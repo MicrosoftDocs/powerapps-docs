@@ -16,7 +16,7 @@ Collaboration features help fusion teams work together to build model-driven app
 > [!IMPORTANT]
 > Commenting is available for all model-driven app makers. For real-time collaboration, you will have either the copresence or coauthoring experience as the copresence and coauthoring features are being deployed separately:
 > - Most preview environments will have coauthoring available. More information: [Coauthoring in model-driven apps (preview)](coauthoring.md) 
-> - For preview environments that don’t have coauthoring available, or choose to disable coauthoring, the environment will use copresence. Administrators can disable coauthoring from the Power Platform admin center. More information: [Discover who's working on an app (preview)](copresence.md)
+> - For preview environments that don’t have coauthoring available, or choose to disable coauthoring, the environment will use copresence. Administrators can disable coauthoring from the Power Platform admin center. More information: [Disable coauthoring](coauthoring.md#disable-coauthoring)
 
 ## Next steps
 
