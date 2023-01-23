@@ -1,7 +1,7 @@
 ---
 title: View offline sync status
 description: The offline sync icon is now always visible in the mobile navigation bar. The icon provides contextual information such as if the app is connected, if data is currently refreshing, whether there are pending user updates that have not synchronized yet, and whether the sync has an error or warning.
-ms.date: 01/19/2023
+ms.date: 01/23/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -16,12 +16,18 @@ search.audienceType:
 
 # View offline sync status
 
+[This topic is pre-release documentation and is subject to change.]
+
 The offline sync icon is now always visible in the mobile navigation bar. The icon provides contextual information such as if the app is connected, if data is currently refreshing, whether there are pending user updates that have not synchronized yet, and whether the sync has an error or warning.
 
 The offline sync icon is now visible in the main navigation on iOS and Android devices.
 
 > [!div class="mx-imgBorder"]
 > ![The offline sync icon is visible in the main navigation bar.](media/offline-sync-icon-small.png)
+
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Offline sync icon changes based on sync status
 The offline sync icon changes based on sync status.  The following table provides more detail.
