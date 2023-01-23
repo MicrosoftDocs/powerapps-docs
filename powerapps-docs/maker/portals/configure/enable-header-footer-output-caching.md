@@ -16,6 +16,9 @@ contributors:
 
 # Enable header and footer output caching on a portal
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 To improve processing performance for Header and Footer web templates in a portal, enable header and footer output caching. Header and Footer web templates are parsed and rendered every time a page is loaded. Caching header and footer output significantly reduces page processing time.
 
 For a new user, output caching is enabled by default. The following site settings are available and set to true by default to support this functionality:

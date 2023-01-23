@@ -2,7 +2,7 @@
 title: "Use FetchXml with Web API (Microsoft Dataverse)| Microsoft Learn"
 description: "FetchXml provides another way to define a query you can use with Web API to retrieve table data."
 ms.date: 09/27/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
@@ -113,7 +113,7 @@ With FetchXML you can apply simple paging by setting the `page` and `count` attr
 
 ### Paging large result sets
 
-When you are working with large result sets where the paging limits of 5000 are being hit, useing paging cookies with the query helps improve performance.
+When you are working with large result sets where the paging limits of 5000 are being hit, using paging cookies with the query helps improve performance.
 
 A paging cookie must be requested as an annotation. Use the `prefer: odata.include-annotations` request header to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` annotation will be returned with the result.
 

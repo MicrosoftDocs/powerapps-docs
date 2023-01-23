@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 02/02/2022
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - matthewbolanos
   - msftman
   - amchern
@@ -32,10 +32,6 @@ The following components aren't supported:
 > Custom connectors are supported only if both of these conditions are met:
 > - The app or flow is running in the context of Microsoft Teams.
 > - And, the custom connector points at an APIM endpoint in Azure. 
-
-## Component library
-
-[Component library](../maker/canvas-apps/component-library.md) isn't supported.
 
 ## Controls
 

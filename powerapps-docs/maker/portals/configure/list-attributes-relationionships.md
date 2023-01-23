@@ -17,6 +17,9 @@ contributors:
 
 # List attributes and relationships
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The following are attributes when configuring a **list** component.
 
 |              Name              |                                                                                                                                                                                        Description                                                                                                                                                                                         |

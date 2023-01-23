@@ -11,7 +11,7 @@ ms.date: 07/14/2022
 ms.author: alaug
 ms.reviewer: kvivek
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
 ---
 # Explore Power Apps for free for 30 days
@@ -104,3 +104,4 @@ Try the Power Apps [community](https://community.powerapps.com).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
+

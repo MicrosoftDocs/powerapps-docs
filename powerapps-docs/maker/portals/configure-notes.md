@@ -1,11 +1,11 @@
 ---
-title: Set up notes as attachments for basic and advanced forms
-description: Adding notes to forms on your Power Apps portal is easy. This page explains how to add and configure notes as attachments on both basic and advanced forms.
+title: Set up notes as attachments for basic and multistep forms
+description: Adding notes to forms on your Power Apps portal is easy. This page explains how to add and configure notes as attachments on both basic and multistep forms.
 author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/05/2022
+ms.date: 01/06/2023
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,11 +13,14 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
-# Configure notes as attachments for basic and advanced forms
+# Configure notes as attachments for basic and multistep forms
 
-To add the ability to view notes and attachments on basic and advanced forms, you will need to complete the following steps:
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
+To add the ability to view notes and attachments on basic and multistep forms, you'll need to complete the following steps:
 
 - [Enable attachments for the table in Microsoft Dataverse](../data-platform/data-platform-create-entity.md#create-a-table).
 
@@ -26,7 +29,8 @@ To add the ability to view notes and attachments on basic and advanced forms, yo
 - Configure [table permissions](configure/assign-entity-permissions.md) for the notes (annotations) table.
 
 > [!NOTE]
-> In order for a note to appear on the web page, the description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*). Notes added through a form on a webpage will have the prefix automatically added.
+> - In order for a note to appear on the web page, the description of each note must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*). Notes added through a form on a webpage will have the prefix automatically added.
+> - The ability to show both notes and [activities](./configure/view-all-activities-in-portal-timeline.md) on the same form for a custom table is currently not supported with configuration.
 
 ## Notes configuration for basic forms
 
@@ -168,7 +172,7 @@ After adding the configuration, the note control will be rendered by using the a
 
 ### Assign table permissions
 
-Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the basic or advanced form unless you create and assign the appropriate table permissions to the records as follows:
+Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control will be hidden on the basic or multistep form unless you create and assign the appropriate table permissions to the records as follows:
 
 > [!IMPORTANT]
 > A user must sign-in and be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them table permissions.
@@ -202,9 +206,35 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
     
     ![Add table permissions.](media/configure-notes/entity-permission.png "Add table permissions")
 
-### Notes created with rich-text editor
+### Enable rich text editor
 
-You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+The rich text editor can be enabled when adding or editing notes on a form on a webpage.
+
+1. Open the [Portal Management app](configure/configure-portal.md).
+
+1. Go to the **Website** section and select **Site Settings**.
+
+1. Select **New** to create a new [site setting](configure/configure-site-settings.md).
+
+1. Specify the following values for the site setting;
+    1. **Name:** Timeline/RTEEnabled
+    1. **Website:** *The associated website record*
+    1. **Value:** True
+    1. **Description:** (Optional)
+
+1. Select **Save & Close**
+
+1. Sync your website from the studio and preview the site.
+
+1. You should be able to add and edit notes using the rich text editor.
+
+    :::image type="content" source="media/configure-notes/rich-text-editor.png" alt-text="Configure notes using the rich text editor.":::
+
+### Notes created with rich text editor
+
+You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. 
+
+However, if the [rich text editor](#enable-rich-text-editor) isn't enabled for notes on forms, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 
@@ -221,9 +251,9 @@ However, when editing the note from the portal webpage, you see the note in HTML
 > [!IMPORTANT]
 > If you try to save a note with HTML markup using the portal, you'll receive this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire website. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
 
-## Notes configuration for advanced forms
+## Notes configuration for multistep forms
 
-Advanced form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). Create a metadata record for the Advanced Form Step that has notes first, and then add the notes configuration metadata.
+Multistep form notes are configured in the same way as [basic form notes](#notes-configuration-for-basic-forms). Create a metadata record for the multistep form Step that has notes first, and then add the notes configuration metadata.
 
 ## Enable file attachment on form
 

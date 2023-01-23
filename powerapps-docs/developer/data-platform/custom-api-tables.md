@@ -4,7 +4,7 @@ description: "Describes the tables and column values to use when creating Custom
 ms.date: 09/27/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
@@ -97,6 +97,7 @@ string conn = $@"
     LoginPrompt=Auto;
     RequireNewInstance = True";
 
+// using (var svc = new ServiceClient(conn))
 using (var svc = new CrmServiceClient(conn))
 {
 

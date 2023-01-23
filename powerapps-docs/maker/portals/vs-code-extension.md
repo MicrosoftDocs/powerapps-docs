@@ -16,6 +16,9 @@ contributors:
 
 # Use the Visual Studio Code extension
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 ## Overview
 
 Visual Studio Code (VS Code) is a lightweight but powerful source code editor that runs on your desktop and is available for Windows, macOS, and Linux. It

@@ -6,7 +6,7 @@ manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/30/2021
+ms.date: 10/03/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -27,8 +27,6 @@ Email signatures are an important and valuable tool for users. Email signatures 
 ## Add text to an email signature
 Adding an email signature is easy and can be done at any point while you are composing an email. You can either add an email signature with static or dynamic text. Dynamic placeholders are used to define dynamic text. The placeholders are replaced  with the corresponding values of the email's sender, specified in the **From** field. 
 
-> [!Note] 
-> **Insert dynamic text in email signature templates** is an early access feature and is available in environments with Microsoft Dynamics 365 for Service package installed. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates). 
 
 ### Add an email signature
 - On the command bar, select **Insert Signature**.  
@@ -79,3 +77,4 @@ While you can create multiple email signatures depending on your needs, only one
    To change your default email signature setting:
    1. Select the email signature you want to set as default. This will change the command bar to display **Edit**.
    2. Select **Edit**. A new page opens, where you can update the email default setting. While you are on this page, you can also delete one or multiple email signatures just by selecting them.
+

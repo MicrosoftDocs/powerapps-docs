@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 contributors:
   - MSYuey
-  - tapanm-msft
+  - mduelae
   - hemantgaur
 ---
 

@@ -11,11 +11,14 @@ ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - mduelae
     - nickdoelman
 ---
 
 # Use portals Web API write, update, and delete operations
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample write, update, and delete operations, methods, URI, and sample JSON you can use in the HTTP requests.
 

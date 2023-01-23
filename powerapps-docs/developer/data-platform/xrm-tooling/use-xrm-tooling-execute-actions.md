@@ -1,6 +1,6 @@
 ---
 title: "Use XRM tooling to execute actions in Microsoft Dataverse (Dataverse) | Microsoft Docs"
-description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Microsoft Dataverse data"
+description: "A CrmServiceClient class instance can be used to perform create, retrieve, update and delete operations on Microsoft Dataverse data"
 ms.date: 04/01/2022
 author: MattB-msft
 ms.author: mbarbour
@@ -20,7 +20,7 @@ contributors:
 ---
 # Use XRM tooling to execute actions in Microsoft Dataverse
 
-After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class object to perform actions on your Dataverse data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Dataverse using XRM tooling.  
+After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class object to perform actions on your Dataverse data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Dataverse using XRM tooling.  
   
 ## In This Section
 
@@ -32,7 +32,7 @@ After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Toolin
   
 ### See also
 
-[Use XRM Tooling API to connect to Dataverse](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to connect to Dataverse](use-crmserviceclient-constructors-connect.md)  
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
 
 

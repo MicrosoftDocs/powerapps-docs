@@ -70,6 +70,7 @@ Following are the limitations in virtual tables that must be considered.
 - Offline caching of values is not supported for virtual tables.
 - A virtual table cannot represent an activity and do not support business process flows.
 - Once created, a virtual table cannot be changed to be a standard (non-virtual) table.  The reverse is also true: a standard table cannot be converted into a virtual table.
+- Selecting attributes in Retrieve and RetrieveMultiple queries will not be applied since all attributes will be returned
 
 For more information about how these limitations are reflected in the Dataverse API, see [API considerations of virtual tables](api-considerations-ve.md).
 

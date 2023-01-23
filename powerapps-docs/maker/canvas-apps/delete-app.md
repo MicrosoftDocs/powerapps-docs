@@ -5,7 +5,7 @@ author: tapanm-msft
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/06/2020
 ms.subservice: canvas-maker
 ms.author: alaug
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # Delete a canvas app
 

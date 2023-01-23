@@ -17,6 +17,9 @@ contributors:
 
 # Securing lists
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 To secure a list, you must configure [table permissions](entity-permissions-studio.md) for the table for which records are being displayed.
 
 Starting with release [9.3.7.x](/power-platform/released-versions/portals/portalupdate1), newly created portals will have table permissions enforced for all lists irrespective of the **Enable Table Permissions** setting.

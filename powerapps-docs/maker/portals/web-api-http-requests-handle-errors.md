@@ -16,6 +16,9 @@ contributors:
 
 # Compose HTTP requests and handle errors for the portals Web API
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
 > [!IMPORTANT]
@@ -30,7 +33,7 @@ Construct the Web API URL by using the format in the following table.
 | Protocol | https://                                 |
 | Base URL | \<portal URL\>                          |
 | Web API Path | \_api                                    |
-| Resource     | Name of the table you want to use |
+| Resource     | Logical name of the table you want to use |
 
 For example, use this format when referring a case:
 

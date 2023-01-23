@@ -16,6 +16,9 @@ contributors:
 
 # Create and manage page templates
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 While web pages are nodes in your portal's sitemap which represent content accessible to portal users, page templates represent the actual .aspx pages which provide a means to maintain a consistent look and feel throughout your entire website. Page templates are built using ASP.NET pages, master pages, cascading style sheets (CSS), user controls, and server controls.
 
 When creating a new web page for the site, whether through front-side publishing or through the portal interface, you must select a page template which will present the page's content to users of the portal.

@@ -4,7 +4,7 @@ description: "Learn how to write custom code to be executed on specific events o
 ms.date: 03/22/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
@@ -185,7 +185,7 @@ If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown.
 
 ### Monitor Performance
 
-Run-time information about plug-ins and custom workflow extensions is captured and store in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
+Run-time information about plug-ins and custom workflow extensions is captured and stored in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
 
 |**Column**|**Description**|
 |--|--|

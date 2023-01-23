@@ -16,6 +16,9 @@ contributors:
 
 # Customize the behavior and format of the fields in portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 In this article, you'll learn about working with Microsoft Dataverse fields, and the field data types that can be customized in Power Apps portals.
 
 ## Date and time

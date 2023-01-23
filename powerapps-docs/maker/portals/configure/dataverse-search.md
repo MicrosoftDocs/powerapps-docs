@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dataverse search in portals
 description: "Learn how Dataverse search works in a portal."
 author: nageshbhat-msft
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Configure Dataverse search in portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 ## Overview
 

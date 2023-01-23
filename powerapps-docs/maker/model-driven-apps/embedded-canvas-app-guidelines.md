@@ -33,7 +33,7 @@ This article provides guidance on working with embedded canvas apps as well as h
 -	We recommend that you have a single embedded canvas app for each form tab.
 -	When adding an embedded canvas app to a model-driven form always use a required column that is guaranteed to have a value. If your column does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 -	Publishing a model-driven form does not also publish the embedded canvas app.
-     - Embedded canvas apps must be published independent of the host model-driven form. More information: [Publish an app](../canvas-apps/save-publish-app.md#publish-an-app).
+     - Embedded canvas apps must be published independent of the host model-driven form. More information: [Publish an app](../canvas-apps/save-publish-app.md).
 -	If opening Power Apps Studio to create or edit an embedded canvas app via the **Customize** button in the canvas app control properties is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
 -	Embedded canvas apps are not displayed when creating a new row since they need a row context to be passed to them.
 -	The ModelDrivenFormIntegration.Item object is read-only.

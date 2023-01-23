@@ -17,6 +17,9 @@ contributors:
 
 # Store source content by using web templates
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Web Template is a Power Apps table (adx\_webtemplate), included with Power Apps portals, that is used to store template source content. A web template will generally contain Liquid for dynamic content rendering and is the central table used to integrate Liquid templates with the rest of the Power Apps portals system.
 
 Web Templates can be included in other content or combined with other templates by using template tags, and are referenced in these tags by their **Name** attribute. They can also be used to create entire custom Page Templates, or create custom headers and footers for your portal website.
