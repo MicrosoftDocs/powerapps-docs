@@ -28,7 +28,7 @@ Users can easily open a Power Apps canvas or model-driven app on their mobile de
 1. Sign in to [Power Apps](https://make.powerapps.com).
 2. In the left pane, select **Apps**.
 3. Select the check mark icon next to the app that you want to open on your mobile device.
-4. Select **More Commands** (**...**) for the app, and then select **Details**.
+4. Select the **More Commands** (**...**) icon for the app you want to open, and then select **Details**.
 5. A page showing the details of your app is shown. With your mobile device, scan the QR code.
 
    ![With your mobile device, scan the QR code.](media/QR-code.png "With your mobile device, scan the QR code.")
