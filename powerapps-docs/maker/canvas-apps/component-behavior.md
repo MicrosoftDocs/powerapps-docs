@@ -1,11 +1,11 @@
 ---
 title: Behavior formulas for components (experimental)
 description: Do one or more tasks in canvas app when a component-based action occurs.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 06/01/2022
-ms.author: jorisdg
+ms.author: jorisdge
 ms.reviewer: mkaur
 search.audienceType:
   - maker
