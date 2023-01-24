@@ -113,8 +113,8 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
    - **Button fill color**: Hexadecimal color code used to fill the button color.
    - **Status bar text theme**: Color for the status bar text at the top of the app.
    
-   > [!NOTE]
-   > All the images must be in .png format. 
+     > [!NOTE]
+     > All the images must be in .png format. 
 
 2.  Select **Next**.
 
