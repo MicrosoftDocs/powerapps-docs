@@ -27,6 +27,7 @@ The wrap feature in Power Apps lets you create native mobile versions of your [c
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
+- iOS (IPA package)
 - Android (APK package)
 - Google Play Store (AAB package)
 
