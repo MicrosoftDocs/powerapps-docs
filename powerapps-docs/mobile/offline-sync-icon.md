@@ -1,22 +1,22 @@
 ---
 title: View offline sync status
-description: The offline sync icon is now always visible in the mobile navigation bar. The icon provides contextual information such as if the app is connected, if data is currently refreshing, whether there are pending user updates that have not synchronized yet, and whether the sync has an error or warning.
-ms.date: 01/23/2023
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: Dynamics 365 apps
+description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
+ms.date: 01/24/2023
 ms.author: sericks
 author: sericks007
 manager: tapanm-MSFT
+ms.reviewer: 
+ms.topic: conceptual
+ms.service: powerapps
+ms.custom: bap-template
+applies_to: Dynamics 365 apps
 search.audienceType: 
   - enduser
 ---
 
 # View offline sync status
 
-[This topic is pre-release documentation and is subject to change.]
+[This article is pre-release documentation and is subject to change.]
 
 The offline sync icon is now always visible in the mobile navigation bar. The icon provides contextual information such as if the app is connected, if data is currently refreshing, whether there are pending user updates that have not synchronized yet, and whether the sync has an error or warning.
 
