@@ -30,7 +30,7 @@ You can update the wrapped mobile apps by publishing changes to the canvas app(s
 
 **Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
 
-- **No-code mobile app development**&mdash;make mobile apps with no previous experienc
+- **No-code mobile app development**&mdash;make mobile apps with no previous experience
 - **Managed mobile app builds**&mdash;we generate the app for you
 - **Seamless end-to-end branding**&mdash;use your own logo and color palette
 - **Multiple canvas apps support**&mdash;bundle multiple apps in a single mobile app
