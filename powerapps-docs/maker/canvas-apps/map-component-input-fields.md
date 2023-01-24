@@ -5,7 +5,7 @@ author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 06/01/2022
-ms.author: jorisdge
+ms.author: jorisde
 ms.reviewer: mkaur
 search.audienceType:
   - maker
