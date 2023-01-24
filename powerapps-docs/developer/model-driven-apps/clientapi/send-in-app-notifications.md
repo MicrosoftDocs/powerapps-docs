@@ -125,7 +125,7 @@ Guid appNotificationId = svc.Create(appNotification);
 
 ## Notification polling
 
-In-app notifications uses polling to retrieve notifications periodically when the app is running.  New notification are retreived at start of the model-driven app and when a page navigation occurs as long as the last retreival is more than one minute ago.  If a user stays on a page for a long duration, new notifications will be retrieved.
+In-app notifications uses polling to retrieve notifications periodically when the app is running.  New notification are retreived at start of the model-driven app and when a page navigation occurs as long as the last retreival is more than one minute ago.  If a user stays on a page for a long duration, new notifications will be not be retrieved until the user navigates to another page.
 
 ## Notification table
 
