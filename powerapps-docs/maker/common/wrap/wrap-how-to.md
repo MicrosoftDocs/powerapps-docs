@@ -25,17 +25,6 @@ Use the wrap feature to package one or more canvas app(s) as a single native mob
 
 The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
 
-You can wrap multiple canvas apps in a single mobile app package. The mobile app package needs one primary app, which serves as the entry point for all other apps. This includes the mobile app package, which will be invoked as secondary apps.
-
-Adding secondary apps to a single mobile app package is optional. When you wrap only one app, the included app is automatically designated as a Primary app.
-
-However, including secondary apps in the bundle provides a better launch time performance when opening them for the first time.
-
-> [!NOTE]
-> If you have many secondary apps, you may choose to not bundle them to reduce the total size of the mobile app package.
-
-You can use wrap feature to customize mobile app startup experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use throughout the native experiences of the wrapped mobile app.
-
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
 - Android (APK package)
