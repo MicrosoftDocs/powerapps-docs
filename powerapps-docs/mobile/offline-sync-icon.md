@@ -30,7 +30,7 @@ The offline sync icon is always visible in the main app navigation on iOS and An
 :::image type="content" source="media/offline-sync-icon-small.png" alt-text="Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.":::
 
 > [!IMPORTANT]
-> - This is a preview feature. [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> This is a preview feature. [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Sync status icons
 
