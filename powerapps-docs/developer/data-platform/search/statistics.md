@@ -22,7 +22,7 @@ Search statistics provides information about:
 - Storage size in megabytes
 - Number of documents
 
-**TODO**: Provide some information about why people might care about this data.
+In many cases you may need to know the size of the data structure being returned to help you better optimize your query or query results and help you manage the size of your Database to manage cost.
 
 #### [SDK for .NET](#tab/sdk)
 
