@@ -1,6 +1,6 @@
 ---
-title: Customize and build your mobile app (preview)
-description: Learn about how to use the wrap functionality to package a canvas or model-driven app into a native mobile app package.
+title: Customize and build your mobile app using the wrap wizard (preview)
+description: Learn about how to use the wrap wizard to package canvas apps into a native mobile app package.
 author: makolomi
 ms.topic: article
 ms.custom: canvas
@@ -17,7 +17,7 @@ contributors:
   - makolomi
 ---
 
-# Customize and build your mobile app using wrap (preview)
+# Customize and build your mobile app using the wrap wizard (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -54,7 +54,7 @@ You'll need access to:
 
 To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
-## Create native mobile apps for iOS and Android
+## Create native mobile apps for iOS and Android using the wizard
 
 1. Sign in to [Power Apps](https://make.powerapp.com/).
 
@@ -88,7 +88,10 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
 
 ### Step 2: Target Platform 
 
-1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. This is the name of the app that appears in the app store. A bundle ID must contain one period (.) and no spaces. 
+1.  On the **Choose mobile platform to target** screen, enter a **Bundle ID** of our choice. 
+
+    > [!NOTE]
+    > The **Bundle ID** is a unique identifier that you create for your app. A bundle ID must contain one period (.) and no spaces. 
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
@@ -106,9 +109,12 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
    - **App icons**: Upload icons to use for your app. All five icons need to be selected for your wrapped mobile app
    - **Splash screen image**: Image that will be used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that will be used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
-   - **Background fill color**: Hexadecimal color code used for the background of the welcome screen
-   - **Button fill color**: Hexadecimal color code used to fill the button color
+   - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
+   - **Button fill color**: Hexadecimal color code used to fill the button color.
    - **Status bar text theme**: Color for the status bar text at the top of the app.
+
+    > [!NOTE]
+    > All the images must be in .png format. 
 
 2.  Select **Next**.
 
