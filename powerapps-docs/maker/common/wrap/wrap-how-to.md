@@ -112,9 +112,9 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
    - **Button fill color**: Hexadecimal color code used to fill the button color.
    - **Status bar text theme**: Color for the status bar text at the top of the app.
-
-    > [!NOTE]
-    > All the images must be in .png format. 
+   
+   > [!NOTE]
+   > All the images must be in .png format. 
 
 2.  Select **Next**.
 
@@ -161,11 +161,11 @@ After the app is registered, copy the **Application (client) ID** and the **R
 
 ### Step 5: Manage output
 
-On the **Manage output** screen, set up automated app setup with your app center account. To create a new app center container, you'll need your org and app name.
+On the **Manage output** screen, create or select an existing App Center location to send your mobile app once the build is complete. 
 
-- **Android**: Choose an existing location or select Configure manually.
+- **Android**: Choose an existing location or create a new location.
 
-- **iOS**: Choose an existing location or select Configure manually.
+- **iOS**: Choose an existing location or create a new location.
 
 ### Step 6: Wrap up
 
