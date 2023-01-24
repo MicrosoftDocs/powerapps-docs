@@ -18,38 +18,44 @@ search.audienceType:
 
 [This article is pre-release documentation and is subject to change.]
 
-The offline sync icon is now always visible in the mobile navigation bar. The icon provides contextual information such as if the app is connected, if data is currently refreshing, whether there are pending user updates that have not synchronized yet, and whether the sync has an error or warning.
+The offline sync icon indicates the synchronization status of a mobile app. At a glance, you can tell:
 
-The offline sync icon is now visible in the main navigation on iOS and Android devices.
+- Whether the app is connected to the network
+- Whether a data refresh is in progress
+- Whether updated data is waiting to sync
+- Whether the app has experienced an error or warning while syncing
 
-> [!div class="mx-imgBorder"]
-> ![The offline sync icon is visible in the main navigation bar.](media/offline-sync-icon-small.png)
+The offline sync icon is always visible in the main app navigation on iOS and Android devices.
+
+:::image type="content" source="media/offline-sync-icon-small.png" alt-text="Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.":::
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
+> - This is a preview feature. [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-## Offline sync icon changes based on sync status
-The offline sync icon changes based on sync status.  The following table provides more detail.
+## Sync status icons
 
-| Icon | Description|
+The offline sync icon changes based on the app's sync status. The following table describes the possible sync states and the icons associated with them.
+
+| Icon | Description |
 |------|--------------|
-| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet.")| App is connected to the internet.|
-| ![Icon showing that the app is not connected to the internet.](media/not-connected.png "Icon showing that the app is not connected to the internet.") |App is not connected to the internet.|
-| ![Icon showing that the app is syncing data.](media/synching.png "Icon showing that the app is syncing data.") |App is syncing data.|
-| ![Icon showing that the app has pending changes to upload.](media/upload-pending-changes.png "Icon showing that the app has pending changes to upload.") |App has pending changes to upload.|
-| ![Icon showing that there is an error in the synchronization process.](media/error.png "Icon showing that there is an error in the synchronization process.") |There is an error in the synchronization process.|
-| ![Icon showing that there is a warning in the synchronization process.](media/warning.png "Icon showing that there is a warning in the synchronization process.") |There is a warning in the sychronization process.|
+| ![Icon showing that the app is connected to the internet.](media/connected.png "Icon showing that the app is connected to the internet.")| The app is connected to the internet. |
+| ![Icon showing that the app isn't connected to the internet.](media/not-connected.png "Icon showing that the app isn't connected to the internet.") | The app is not connected to the internet. |
+| ![Icon showing that the app is syncing data.](media/synching.png "Icon showing that the app is syncing data.") | The app is syncing data. |
+| ![Icon showing that the app has pending changes to upload.](media/upload-pending-changes.png "Icon showing that the app has pending changes to upload.") | The app has pending changes to upload. |
+| ![Icon showing that the synchronization process encountered an error.](media/error.png "Icon showing that the synchronization process encountered an error.") | The synchronization process encountered an error. |
+| ![Icon showing that the synchronization process encountered a warning.](media/warning.png "Icon showing that the synchronization process encountered a warning.") | The synchronization process encountered a warning. |
 
 ## Offline Status page
-When you select the offline sync icon, the **Offline Status** page is displayed. The **Offline Status** page provides detailed information about the sync status, such as what data was downloaded and if there is data yet to upload to the app, as shown in the following image.
 
-:::image type="content" source="media/OfflineStatusPage-NotConnected.png" alt-text="When you select the offline sync icon, the **Offline Status** page is displayed.":::
+When you select the offline sync icon, the **Offline Status** page opens. The **Offline Status** page provides details such as what data was downloaded, whether there is data waiting to upload, and the amount of storage the app is using.
+
+:::image type="content" source="media/OfflineStatusPage-NotConnected.png" alt-text="The Offline Status page of a mobile app.":::
 
 ## Notifications
-On iOS and Android devices, notifications about the offline sync have been redesigned to be consistent across the different sync steps.    
+
+On iOS and Android devices, app sync notifications are consistent across the different sync states.
 
 ## Known issues
 
-- During the first sync, the offline sync icon continues to spin until the user navigates and switches from online mode to offline mode. 
-- The the app has pending changes to upload, the number is the sum of updated rows, added and removed files, and images.   
+- The first time the app syncs, the offline sync icon continues to spin until the user switches from online mode to offline mode.
+- If the app has pending changes to upload, the number that's shown is the total of updated rows, added and removed files, and images.
