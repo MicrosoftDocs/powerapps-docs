@@ -17,7 +17,7 @@ contributors:
   - makolomi
 ---
 
-# Customize and build your mobile app using the wrap wizard (preview)
+# Use the wrap wizard to build your mobile app (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
