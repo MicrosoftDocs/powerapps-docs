@@ -165,6 +165,7 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 ## Next steps
 
+[Use the wrap wizard to build your mobile app (preview)](wrap-how-to.md)
 [Wrap canvas apps as a native mobile app](how-to.md)
 
 ### See also
