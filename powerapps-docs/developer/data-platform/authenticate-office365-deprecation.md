@@ -86,7 +86,7 @@ the recommended connection interface for authentication with Dataverse.
 
 - If you are accessing the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).`OrganizationServiceProxy` property:
 
-  Remove all use of that property in your code. `CrmServiceClient` implements `IOrganizationService` and exposes everything that is settable for the organization service proxy.
+  Remove all use of that property in your code. `CrmServiceClient` and `ServiceClient` classes implement `IOrganizationService` and exposes everything that is settable for the organization service proxy.
 
 > [!IMPORTANT]
 > Regarding not being able to login using User ID/Password even if using OAuth: if your tenant and user is configured in Azure Active Directory for conditional access and/or Multi-Factor Authentication is required, you will not be able to use user ID/password flows in a non-interactive form at all. For those situations, you must use a Service Principal user to authenticate with Dataverse.<p/>
