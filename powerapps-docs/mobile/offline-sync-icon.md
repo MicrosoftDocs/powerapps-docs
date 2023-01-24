@@ -18,7 +18,7 @@ search.audienceType:
 
 [This article is pre-release documentation and is subject to change.]
 
-The offline sync icon indicates the synchronization status of a mobile app. At a glance, you can tell:
+The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
 
 - Whether the app is connected to the network
 - Whether a data refresh is in progress
