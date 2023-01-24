@@ -29,11 +29,6 @@ The Fluent design system provides consistency, quality, and Microsoft-wide platf
 > - This is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
-## Turn on the new look
-The modern look is disabled by default. Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look and feel (preview)** feature for each model-driven app. 
-
-Model-driven apps that are part of the preview will automatically get incremental enhancements weekly. For more information about enabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md#upcoming).
-
 ## What’s included with the new look
 Here's what you can expect in the modern, refreshed experience:
 
@@ -72,6 +67,11 @@ Field sections, which are containers for the fields on a form, have a more strea
 The following example shows a set of fields with the modern, refreshed look.
 
 ![Fields in a model-driven app that has the modern, refreshed look.](media/modern-fields.png)
+
+## Turn on the new look
+The modern look is disabled by default. Makers can enable the new look for existing and new model-driven apps in the app designer by turning on the **Try the new look and feel (preview)** feature for each model-driven app. 
+
+Model-driven apps that are part of the preview will automatically get incremental enhancements weekly. For more information about enabling the modern, refreshed look, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md#upcoming).
 
 ## Provide feedback on the new look
 After using the modern, refreshed look in your model-driven apps, tell us what you think about it in the [Power Apps New Look Feedback discussion thread](https://go.microsoft.com/fwlink/?linkid=2221574).
