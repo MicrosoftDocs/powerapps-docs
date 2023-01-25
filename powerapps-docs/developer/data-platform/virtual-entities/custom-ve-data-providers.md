@@ -60,7 +60,7 @@ There are several steps that are required to create a virtual table data provide
 4. Customize the data source table to reflect your data type or specific instance.
 5. Export the custom data provider solution.
 
-More information: [Sample: Custom virtual table provider with CRUD operations](sample-ve-provider-crud-operation.md)
+More information: [Sample: Custom virtual table provider with CRUD operations](sample-ve-provider-crud-operations.md)
 
 ### Plug-in development
 
