@@ -48,7 +48,7 @@ HTTP requests can use different kinds of methods. However, the portals Web API o
 | Method | Usage |
 | - | - |
 | Get    | Use when retrieving data from tables. |
-| Post   | Use when creating tables and calling actions. |
+| Post   | Use when creating tables. |
 | Patch  | Use when updating tables or doing upsert operations. |
 | Delete | Use when deleting tables or individual properties of tables. |
 | Put    | Use in limited situations to update individual properties of tables. |
