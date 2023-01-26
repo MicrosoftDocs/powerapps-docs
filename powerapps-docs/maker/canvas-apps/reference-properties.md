@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 ms.date: 01/06/2021
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -14,7 +14,7 @@ search.audienceType:
 search.app:
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 
@@ -50,7 +50,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness. 
 
-**[Data table](controls/control-data-table.md)** - Show data in a tabular format.
+**[Data table (preview)](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
 
@@ -106,7 +106,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Stream Video](controls/control-stream-video.md)** – Play videos and browse through channels from the Microsoft Stream service.
 
-**[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
+**[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency.
 
 **[Text input](controls/control-text-input.md)** – Type text, numbers, and other data.
 
@@ -139,6 +139,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 ## All properties
 
 ### A
+
+**[AccesibleLabel](controls/properties-accessibility.md)** – Reference information about properties related to accessibility in Power Apps.
 
 **[ActualZoom](controls/control-pdf-viewer.md)** – The actual zoom of the control, which may differ from the zoom requested with the **Zoom** property.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
@@ -188,6 +190,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Color](controls/properties-color-border.md)** – The color of text in a control.  Applies to many controls.
 
+**ContentLanguage** – The language of the control's content, if different from the control's container.
+
 **[Contrast](controls/control-camera.md)** – How easily the user can distinguish between similar colors in an image.  Applies to the **[Camera](controls/control-camera.md)** control.
 
 **[CurrentFindText](controls/control-pdf-viewer.md)** – The current search term that is in use.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
@@ -208,6 +212,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[DefaultMode](controls/control-form-detail.md)** – The initial mode of a form control, either **Edit**, **New**, or **View**.  Applies to the **[Edit form](controls/control-form-detail.md)** control.
 
+**DelayOutput** – When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting text (i.e. for filtering when input is used in other formulas). Applies to the **[Text input](controls/control-text-input.md)** control.
+
 **[Direction](controls/control-gallery.md)** – Whether the first item in a gallery in landscape orientation appears near the left or right edge.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
 **[Disabled](controls/properties-core.md)** – Whether the user can interact with the control.  Applies to many controls.
@@ -227,6 +233,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Duration](controls/control-timer.md)** – How long a timer runs.  Applies to the **[Timer](controls/control-timer.md)** control.
 
 ### E
+
+**EnableSpellCheck** – Whether a **[Text input](controls/control-text-input.md)** control should use the browser spell check function. Power Apps for Windows doesn't support this property.
 
 **[EndYear](controls/control-date-picker.md)** – The latest year to which the user can set value of a date-picker control.  Applies to the **[Date Picker](controls/control-date-picker.md)** control.
 

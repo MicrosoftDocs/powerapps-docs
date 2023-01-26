@@ -5,7 +5,7 @@ author: mustlaz
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/02/2022
 ms.author: mustlaz
 search.audienceType: 
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mustlaz
 ---
 

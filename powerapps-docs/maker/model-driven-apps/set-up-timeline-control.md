@@ -2,9 +2,8 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 09/16/2022
+ms.date: 12/15/2022
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -201,6 +200,19 @@ You can configure the default filters that are applied when a form loads or is r
 
 ![Edit filter pane.](media\edit-filter-pane.png "Edit filter pane setting")
 
+#### Configure email commands for timeline
+ 
+You can configure email options for the timeline so that users can reply, reply-all, and forward messages. You can select the order in which the options are displayed for users, as well as exclude them if they're not needed. Reply-all is the default order setting.
+  
+1. Select the form for which you want to apply the email settings, and then in **Properties** in **Conversation Tabs**, select the **Email** activity type. The **Email** properties pane is displayed.
+
+1. In **Select and order commands**, check the boxes for the email commands you want to configure for users. You can drag and drop the options to choose the order in which you want each option to display.
+  
+   :::image type="content" source="media/timeline-configure-email-settings.png" alt-text="Configure the form for email":::
+  
+1. Select **Done**, and then save and publish your changes.
+  
+  
 #### Expand records with images in timeline
 
 You can send and receive records with images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed.
@@ -244,7 +256,7 @@ To enable or disable a record type, simply select or clear the checkbox. Then, t
 
 #### Configure activity record types
 
-When you expand the **Activities record settings** on the timeline component section a list is displayed of all the activity types that can be either enabled or disabled on the table form.
+When you expand the **Activities record settings** on the timeline component section, a list is displayed that shows all the activity types that can be either enabled or disabled on the table form.
 
 |Form designer configuration view |Form designer display view|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -402,8 +414,6 @@ The activity rollup type can be configured for timelines on forms for the accoun
 More information on rollup types is available from [RollupType EnumType](/dynamics365/customer-engagement/web-api/rolluptype).
 
 ![Activity rollup type.](media\activity-rollup-type.png "Activity rollup type")
-
-
   
 ### Timeline performance
 
@@ -591,6 +601,10 @@ Power platform administrators can restrict the file size of attachments users ca
 1.	On the **System Settings** dialog, select the **Email** tab, and then scroll down to find the **Set file size limit for attachments** value.
 1.	Enter the desired size limit for attachments, and then select **Save**.
 
+## Known issues
+  
+- When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+> This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
 
 ### See also
 

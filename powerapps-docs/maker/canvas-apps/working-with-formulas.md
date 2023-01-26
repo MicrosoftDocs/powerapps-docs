@@ -7,7 +7,7 @@ ms.custom:
 - "intro-internal"
 - "canvas"
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Get started with formulas in canvas apps

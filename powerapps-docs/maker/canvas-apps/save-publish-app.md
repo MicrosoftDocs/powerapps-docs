@@ -5,7 +5,7 @@ author: amchern
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 02/09/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
   - amchern
 ---
@@ -57,7 +57,7 @@ The **Live** version is published for everyone with whom the app is shared. The 
 To publish the most recent version, highlight the version and select ellipsis (...). Then select **Publish this version** from the drop-down menu.
 
 > [!NOTE]
-> - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Occasionally, it may take a few minutes.
+> - Changes from a newly published version of an app may take a few seconds to reflect when launching the app. Publish time depends on the complexity of apps, so expect more complex apps to take a few more minutes to publish.
 > - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
 > - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here](performance-tips.md#enable-preload-app-for-enhanced-performance).
 
