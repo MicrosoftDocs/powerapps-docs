@@ -1,10 +1,9 @@
 ---
-title: "Specify a model-driven app default view in Power Apps | MicrosoftDocs"
+title: "Specify a default view for a table in Power Apps | MicrosoftDocs"
 description: "Learn how to specify a default view"
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -24,9 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Specify a model-driven app default view
-
-
+# Specify a default view for a table
 
 <a name="BKMK_SetDefaultView"></a>   
 
@@ -35,12 +32,15 @@ Unless someone has 'pinned' a different view in your app as their personal defau
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2. Select **Solutions** on the left navigation pane where the table is located.
-3. Open the table, and then select the **Views** tab.
+3. Open the table, and then select the **Views** area.
 
 4. Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for forms") next to the view, and then select **Set as default view**. This can also be set on the command bar.
 
     > [!div class="mx-imgBorder"] 
     > ![Set as default view.](media/set-as-default-menu-maker.png)
+
+> [!NOTE]
+> You can also specify the views that can be displayed in a model-driven app using the model-driven app designer. More information: [Manage views and charts](create-add-remove-forms-views-dashboards.md#manage-views-and-charts)
 
 ## Set the default view for a table in solution explorer
   

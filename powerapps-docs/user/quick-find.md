@@ -1,14 +1,14 @@
 ---
 title: "Quick Find| MicrosoftDocs"
 description: Learn how to use quick find to search for records
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/11/2021
+ms.date: 10/27/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -40,10 +40,7 @@ With categorized search, you can search for rows that begin with a specific word
 
 ## Single table quick find 
 
-Use single-table quick find to only search for rows in a view. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Single-table Quick Find.](media/quick-find-view-only.gif "Single-table quick find search box") 
+*Single table quick find* is aslo called *grid search*. For more information, see [Grid search](grid-filters.md#grid-search).
 
 ## Multiple-table quick find (categorized search)
 

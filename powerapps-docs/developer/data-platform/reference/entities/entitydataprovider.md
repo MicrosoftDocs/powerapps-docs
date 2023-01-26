@@ -1,12 +1,12 @@
 ---
-title: "Virtual Entity Data Provider (EntityDataProvider) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Virtual Entity Data Provider (EntityDataProvider) table/entity."
-ms.date: 10/05/2021
-
+title: "Virtual Entity Data Provider (EntityDataProvider)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Virtual Entity Data Provider (EntityDataProvider)  table/entity."
+ms.date: 12/07/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Virtual Entity Data Provider (EntityDataProvider) table/entity reference
+# Virtual Entity Data Provider (EntityDataProvider)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,13 +25,13 @@ Developers can register plug-ins on a data provider to enable data access for vi
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/entitydataproviders<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/entitydataproviders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/entitydataproviders(*entitydataproviderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Create|POST [*org URI*]/api/data/v9.2/entitydataproviders<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/entitydataproviders(*entitydataproviderid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/entitydataproviders(*entitydataproviderid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/entitydataproviders<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/entitydataproviders(*entitydataproviderid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -55,6 +55,8 @@ Developers can register plug-ins on a data provider to enable data access for vi
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ArchivePlugin](#BKMK_ArchivePlugin)
+- [BulkArchivePlugin](#BKMK_BulkArchivePlugin)
 - [CreateMultiplePlugin](#BKMK_CreateMultiplePlugin)
 - [CreatePlugin](#BKMK_CreatePlugin)
 - [DataSourceLogicalName](#BKMK_DataSourceLogicalName)
@@ -65,6 +67,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IntroducedVersion](#BKMK_IntroducedVersion)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
+- [PurgeArchivedContentPlugin](#BKMK_PurgeArchivedContentPlugin)
 - [RetrieveEntityChangesPlugin](#BKMK_RetrieveEntityChangesPlugin)
 - [RetrieveMultiplePlugin](#BKMK_RetrieveMultiplePlugin)
 - [RetrievePlugin](#BKMK_RetrievePlugin)
@@ -72,6 +75,37 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [UpdatePlugin](#BKMK_UpdatePlugin)
 - [UpsertMultiplePlugin](#BKMK_UpsertMultiplePlugin)
 - [UpsertPlugin](#BKMK_UpsertPlugin)
+- [ValidateArchiveConfigPlugin](#BKMK_ValidateArchiveConfigPlugin)
+
+
+### <a name="BKMK_ArchivePlugin"></a> ArchivePlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the archiveplugin id that should be run when Archive is invoked|
+|DisplayName|Contains the archiveplugin id that should be run when Archive is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|archiveplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_BulkArchivePlugin"></a> BulkArchivePlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the bulkarchiveplugin id that should be run when BulkArchive is invoked|
+|DisplayName|Contains the bulkarchiveplugin id that should be run when BulkArchive is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|bulkarchiveplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_CreateMultiplePlugin"></a> CreateMultiplePlugin
@@ -222,6 +256,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_PurgeArchivedContentPlugin"></a> PurgeArchivedContentPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the purgearchivedcontentplugin id that should be run when PurgeArchivedContent is invoked|
+|DisplayName|Contains the purgearchivedcontentplugin id that should be run when PurgeArchivedContent is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|purgearchivedcontentplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_RetrieveEntityChangesPlugin"></a> RetrieveEntityChangesPlugin
 
 **Added by**: EntityDataProviderExtensions Solution
@@ -320,6 +369,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
+
+### <a name="BKMK_ValidateArchiveConfigPlugin"></a> ValidateArchiveConfigPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the validatearchiveconfigplugin id that should be run when ValidateArchiveConfig is invoked|
+|DisplayName|Contains the validatearchiveconfigplugin id that should be run when ValidateArchiveConfig is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|validatearchiveconfigplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
 <a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
@@ -387,10 +451,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -456,10 +520,10 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_organization_entitydataprovider"></a> organization_entitydataprovider
 
-See organization Table [organization_entitydataprovider](organization.md#BKMK_organization_entitydataprovider) One-To-Many relationship.
+See the [organization_entitydataprovider](organization.md#BKMK_organization_entitydataprovider) one-to-many relationship for the [organization](organization.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.entitydataprovider?text=entitydataprovider EntityType" />

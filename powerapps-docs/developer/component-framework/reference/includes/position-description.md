@@ -1,0 +1,1 @@
+Provides access to get geographical information from `context.device.getCurrentPosition` method.

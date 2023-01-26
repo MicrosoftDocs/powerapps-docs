@@ -1,18 +1,18 @@
 ---
 title: "lookupObjects (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the lookupObjects method.
-ms.date: 04/21/2021
-
-ms.topic: "reference"
-ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: chmoncay
+ms.author: chmoncay
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
 ---
 # lookupObjects (Client API reference)
 
@@ -52,12 +52,12 @@ search.app:
 var lookupOptions = 
 {
   defaultEntityType: "account",
-	entityTypes: ["account"],
+   entityTypes: ["account"],
   allowMultiSelect: false,
-	defaultViewId:"0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10",
-	viewIds:["0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10","00000000-0000-0000-00AA-000010001003"],
-	searchText:"Allison",
-	filters: [{filterXml: "<filter type='or'><condition attribute='name' operator='like' value='A%' /></filter>",entityLogicalName: "account"}]
+   defaultViewId:"0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10",
+   viewIds:["0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10","00000000-0000-0000-00AA-000010001003"],
+   searchText:"Allison",
+   filters: [{filterXml: "<filter type='or'><condition attribute='name' operator='like' value='A%' /></filter>",entityLogicalName: "account"}]
 };
 
 // Get account records based on the lookup Options

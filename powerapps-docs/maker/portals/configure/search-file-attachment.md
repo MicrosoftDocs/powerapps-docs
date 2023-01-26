@@ -5,10 +5,10 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/04/2020
+ms.date: 12/12/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,18 +16,20 @@ contributors:
 
 # Search within file attachment content
 
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You can use the notes attachment to include downloadable files in knowledge base articles. You can also use web files to create an FAQ page with downloadable content.
 
 You can configure your portal to allow portal users to search within the attachment content of  knowledge base articles. This helps users to find the information that they're looking for.
 
-In knowledge base articles, any notes attachment with the defined prefix are indexed. In web files, the latest notes attachment are indexed.
+In knowledge base articles, any notes attachment with the defined prefix is indexed. In web files, the latest notes attachment is indexed.
 
 To index the attachments, you must create the following site settings and set their value to **True**:
 
 |Site setting|Description|
 |------------|-----------|
-|Search/IndexNotesAttachments|Indicates whether the content of notes attachments in  knowledge base articles and web files should be indexed. By default, it is set to **False**.|
-|KnowledgeManagement/DisplayNotes|Indicates whether to index attachments of knowledge base articles. By default, it is set to **False**.|
+|Search/IndexNotesAttachments|Indicates whether the content of notes attachments in  knowledge base articles and web files should be indexed. By default, it's set to **False**.|
+|KnowledgeManagement/DisplayNotes|Indicates whether to index attachments of knowledge base articles. By default, it's set to **False**.|
 |||
 
 > [!NOTE]
@@ -39,10 +41,16 @@ When you search for a term, the search results also include attachments. If the 
 
 > [!NOTE]
 > [Dataverse search](/power-platform/admin/configure-relevance-search-organization) must be enabled in your environment to use this functionality.
- 
+
+### Search through knowledge article attachments on the portal
+
+If your site uses Lucene .NET [search](search.md), you can enable the portal to search through knowledge article attachments by setting the **Sync knowledge article attachments to portal** option to **Yes** in the Dynamics 365 Customer Service admin center or Customer Service Hub app. You don't need to configure this option if your site is using Dataverse search, you'll be able to search through knowledge article attachments by default.
+
+This allows search to look through knowledge article attachments and make information easily accessible to knowledge consumers. With this attachment capability, you won’t need to use the notes attachments for the portal. Knowledge article attachments will automatically be synced to the notes attachment. More information: [Update knowledge article attachments for portal](/dynamics365/customer-service/customer-service-hub-user-guide-knowledge-article?tabs=customerserviceadmincenter#update-knowledge-article-attachments-for-portal)
+
 ## Update portal configurations
 
-If you already have a portal before April 2018 and you have upgraded your portal to the latest version, you must use the following configurations to have the same user experience as a new portal installation.
+If you already have a portal before April 2018 and you've upgraded your portal to the latest version, you must use the following configurations to have the same user experience as a new portal installation.
 
 **Content Snippets**
 
@@ -63,35 +71,35 @@ The Faceted Search - Results Template web template is revised to display files a
 ```
 {% assign openTag = '{{' %}
 {% assign closingTag = '}}' %}
-{%raw%}
-  <script id=search-view-results type=text/x-handlebars-template>
+ {%raw%}
+  <script id="search-view-results" type="text/x-handlebars-template">
    {{#if items}}
-    <div class=page-header>
-     <h3>{%endraw%}{{openTag}} stringFormat {{ resx.Search_Results_Format_String }} firstResultNumber lastResultNumber itemCount {{closingTag}}{%raw%}
-      <em class=querytext>{{{query}}}</em>
+    <div class="page-header">
+     <h2>{%endraw%}{{openTag}} stringFormat "{{ resx.Search_Results_Format_String }}" firstResultNumber lastResultNumber itemCount {{closingTag}}{%raw%}
+      <em class="querytext">{{{query}}}</em>
       {{#if isResetVisible}}
        <a class="btn btn-default btn-sm facet-clear-all" role="button" title="{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}" tabIndex="0">{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}</a>
       {{/if}}
-     </h3>
+     </h2>
     </div>
    <ul>
     {{#each items}}
      <li>
-      <h3><a title={{title}} href={{url}}>{{#if parent}}<span class=glyphicon glyphicon-file pull-left text-muted aria-hidden=true></span>{{/if}}{{title}}</a></h3>
-      <p class=fragment>{{{fragment}}}</p>
+      <h3><a title="{{title}}" href="{{url}}">{{#if parent}}<span class="glyphicon glyphicon-file pull-left text-muted" aria-hidden="true"></span>{{/if}}{{title}}</a></h3>
+      <p class="fragment">{{{fragment}}}</p>
       {{#if parent}}
-       <p class=small related-article>{%endraw%}{{ resx.Related_Article }}{%raw%}: <a title={{parent.title}} href={{parent.absoluteUrl}}>{{parent.title}}</a></p>
+       <p class="small related-article">{%endraw%}{{ resx.Related_Article }}{%raw%}: <a title="{{parent.title}}" href="{{parent.absoluteUrl}}">{{parent.title}}</a></p>
       {{/if}}
-      <ul class=note-group small list-unstyled>
+      <ul class="note-group small list-unstyled">
        {{#if relatedNotes}}
         {{#each relatedNotes}}
-         <li class=note-item>
+         <li class="note-item">
          {{#if isImage}}
-          <a target=_blank title={{title}} href={{absoluteUrl}}><span class=glyphicon glyphicon-file aria-hidden=true></span>&nbsp;{{title}}</a>
+          <a target="_blank" title="{{title}}" href="{{absoluteUrl}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;{{title}}</a>
          {{else}}
-          <a title={{title}} href={{absoluteUrl}}><span class=glyphicon glyphicon-file aria-hidden=true></span>&nbsp;{{title}}</a>
+          <a title="{{title}}" href="{{absoluteUrl}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;{{title}}</a>
          {{/if}}
-         <p class=fragment text-muted>{{{fragment}}}</p>
+         <p class="fragment text-muted">{{{fragment}}}</p>
          </li>
         {{/each}}
         {{/if}}
@@ -100,14 +108,14 @@ The Faceted Search - Results Template web template is revised to display files a
     {{/each}}
    </ul>
    {{else}}
-    <h2>{%endraw%}{{ resx.Search_No_Results_Found }}{%raw%}<em class=querytext>{{{query}}}</em>
+    <h2>{%endraw%}{{ resx.Search_No_Results_Found }}{%raw%}<em class="querytext">{{{query}}}</em>
      {{#if isResetVisible}}
       <a class="btn btn-default btn-sm facet-clear-all" role="button" title="{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}" tabIndex="0">{%endraw%}{{ snippets['Search/Facet/ClearConstraints'] | default: res['Search_Filter_Clear_All'] }}{%raw%}</a>
      {{/if}}
     </h2>
    {{/if}}
   </script>
-{%endraw%}
+ {%endraw%}
 ```
 
 **Site Settings**

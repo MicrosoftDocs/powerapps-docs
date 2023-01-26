@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # Create a canvas app from scratch based on Excel data
 
@@ -212,7 +212,7 @@ For more information about these and other functions, see the [formula reference
 
     `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
-    When the user selects this icon, any changes that the user made is this screen are saved, and the view screen opens.
+    When the user selects this icon, any changes that the user made in this screen are saved, and the view screen opens.
 
 1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 

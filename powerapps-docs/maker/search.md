@@ -2,9 +2,7 @@
 title: Find the apps, templates, and information you need using Power Apps unified search | Microsoft Docs
 description: Use unified search to find what you need.
 author: Mattp123
-manager: kvivek
-
-ms.component: cds
+ms.subservice: common
 ms.topic: conceptual
 ms.date: 02/24/2021
 ms.author: matp

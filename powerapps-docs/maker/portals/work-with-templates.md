@@ -1,20 +1,23 @@
 ---
 title: Work with templates
-description: Learn how to work with templates in portal.
+description: Learn how to work with templates in portals.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Work with templates
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 The built-in templates are available according to the portal you provision. You can edit the templates by using the code editor. For example, the following built-in templates are available when you provision a Dataverse starter portal:
 
@@ -22,22 +25,21 @@ The built-in templates are available according to the portal you provision. You 
 - Page with title
 - Page with child links
 
-
-> [!NOTE]
+> [!IMPORTANT]
 > It is recommended not to edit **Default studio template**, **Profile**, and **Search** templates.
 
 To open a template in code editor:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select **Templates** ![templates icon.](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
+1. Select **Templates** ![templates icon.](media/templates-icon.png "Templates icon") from the tool belt on the left side of the screen. The available templates are displayed.  
 
     > [!div class=mx-imgBorder]
     > ![templates pane.](media/templates-pane.png "Templates pane")  
 
-3.  Select the required template to open it in the code editor.
+1. Select the required template to open it in the code editor.
 
-4.  Edit the code and save the changes.
+1. Edit the code and save the changes.
 
 > [!NOTE]
 > - You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)

@@ -1,16 +1,15 @@
 ---
 title: getBarcodeValue | Microsoft Docs
 description: Invokes the device camera to scan the barcode information, such as product number.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 09/08/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b7cbb29f-4663-46c4-9aa8-1209a68e73b3
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getBarcodeValue
@@ -33,7 +32,7 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 ## Exceptions
 
-See [Web service error codes](../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

@@ -1,26 +1,21 @@
 ---
 title: Introductions to the Power Platform ISV Studio app install failure analytics| Microsoft Docs
 description: Measure app's performance and get insights.
-services: ''
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
+ms.reviewer: jdaly
+manager: jstrauss
 suite: powerapps
-documentationcenter: na
-author: "nkrb" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-
-ms.devlang: na
 ms.topic: article
-ms.reviewer: nabuthuk
-ms.workload: na
-ms.date: 10/28/2020
 ms.subservice: dataverse-developer
-ms.author: nabuthuk
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # Install failures

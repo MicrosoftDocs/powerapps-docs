@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/03/2022
+ms.date: 07/13/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -16,6 +16,9 @@ contributors:
 
 # Migrate portal configuration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
 After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. 
@@ -25,7 +28,9 @@ Migration involves exporting the existing configuration from the source Microsof
 ## Prepare the target environment
 
 > [!NOTE]
-> Preparing the target environment is a one-time process. You will need to provision a new portal in order to install the managed portal solutions on Dataverse as well as configure the portal web application. The process also installs default portal metadata which will be replaced with portal metadata from your source environment.
+> - Preparing the target environment is a one-time process. You will need to provision a new portal in order to install the managed portal solutions on Dataverse as well as configure the portal web application. The process also installs default portal metadata which will be replaced with portal metadata from your source environment.
+> - Ensure that the target environment's maximum attachment size is set to the same or greater size as your source environment.
+> - The maximum size of files is determined by the **Maximum file size** setting in the [system settings email tab](/power-platform/admin/system-settings-dialog-box-email-tab) in the environment system settings dialog box.
 
 1. [Provision a new portal](../create-portal.md) in your target environment. Use the same [portal template](../create-dynamics-portal.md) as you provisioned on your source environment. For example, if you provisioned the **Dynamics 365 Customer Self-Service** portal on your source environment, provision the **Dynamics 365 Customer Self-Service** portal on your target environment.
 
@@ -51,6 +56,9 @@ Migration involves exporting the existing configuration from the source Microsof
 ## Transfer portal metadata
 
 # [Power Platform CLI](#tab/CLI)
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 ### Transfer portal configuration using Power Platform CLI
 
@@ -137,6 +145,9 @@ The Microsoft Power Platform CLI provides many features specifically for [portal
 > During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as tables, fields, forms or views imported separately as solutions.
 
 # [Configuration Migration Tool](#tab/CMT)
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 ### Transfer portal configuration using the Configuration Migration Tool
 

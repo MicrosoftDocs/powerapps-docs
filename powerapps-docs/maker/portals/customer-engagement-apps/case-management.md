@@ -1,20 +1,21 @@
 ---
 title: Manage cases in portals
 description: Learn how to manage cases in a portal.
-author: sbmjais
-
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Manage cases in portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 The use of cases will vary depending on your type of organization. Typically, cases are used to track and resolve different types of customer issues. When cases are surfaced via a portal, users can create or even comment on cases themselves, bypassing the need to speak directly with people in your organization. Users can also review and update any of the information originally provided in the case record, whether the case is open or closed. 
 

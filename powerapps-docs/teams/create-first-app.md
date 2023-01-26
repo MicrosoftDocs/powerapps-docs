@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 08/05/2021
 ms.subservice: teams
-ms.author: jshum
-ms.reviewer: tapanm-msft
+ms.author: saperlmu
+ms.reviewer: mkaur-msft
 contributors:
-  - tapanm-msft
+  - mduelae
   - wimcoor
-  - josephshum
+  - msftsamperl
 ---
 
 # Create your first app in Microsoft Teams

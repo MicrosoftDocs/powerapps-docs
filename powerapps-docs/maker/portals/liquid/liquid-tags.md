@@ -16,6 +16,9 @@ contributors:
 
 # Available Liquid tags
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Tags make up the programming logic that tells templates what to do. Tags are wrapped in {% %}.
 
 ```

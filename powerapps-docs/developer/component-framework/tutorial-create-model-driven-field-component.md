@@ -1,17 +1,16 @@
 ---
 title: "Create a model-driven app field component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a model-driven app field component, and deploy, configure, and test the component on a form using Visual Studio Code."
-manager: kvivek
-ms.date: 06/30/2021
-
-ms.custom: "intro-internal"
-ms.topic: "index-page"
-ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
+ms.author: noazarur
+author: noazarur-microsoft
+ms.date: 12/21/2022
+ms.reviewer: jdaly
+ms.topic: tutorial
 ms.subservice: pcf
-ms.author: "nabuthuk"
-author: Nkrb
 contributors:
-    - v-scottdurow
+ - JimDaly
+ - v-scottdurow
+ - kaushikkaul
 ---
 
 
@@ -31,7 +30,7 @@ In addition to these, you'll also ensure the code component follows best practic
 
 Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
 
-## Code 
+## Code
 
 You can download the complete sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl).
 
@@ -43,16 +42,16 @@ To create a new `pcfproj`:
 
 1. Open Visual Studio Code and navigate to **File** > **Open Folder**  and then select the `ChoicesPicker` folder created in the previous step. If you've added the Windows Explorer extensions during the installation of Visual Studio Code, you can also use the **Open with Code** context menu option inside the folder. You can also add any folder into Visual Studio Code using `code .` in the command prompt when the current directory is set to that location.
 
-1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the following command to create a new code component project:
+1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command to create a new code component project:
 
    ```CLI
-   pac pcf init --namespace SampleNamespace --name ChoicesPicker --template field
+   pac pcf init --namespace SampleNamespace --name ChoicesPicker --template field --run-npm-install
    ```
 
    or using the short form:
 
    ```CLI
-   pac pcf init -ns SampleNamespace -n ChoicesPicker -t field
+   pac pcf init -ns SampleNamespace -n ChoicesPicker -t field -npm
    ```
 
 This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules. The above command will also run `npm install` command for you to install the necessary modules.
@@ -67,7 +66,7 @@ Running 'npm install' for you...
 >[!div class="mx-imgBorder"]
 > ![Creating code component using pac pcf init.](media/field-component-1.gif "Creating code component using pac pcf init")
 
-You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [component implementation](control-implementation-library.md).
+You can see that the template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
 
 
 ### Install Microsoft Fluent UI
@@ -84,7 +83,7 @@ One of the advantages of Microsoft Fluent UI is that it provides a consistent an
 
 ### Configuring `eslint`
 
-The template used by `pac pcf init` installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
+The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
 
 ### Defining the inputs and bound properties of the code component
 
@@ -96,8 +95,18 @@ The `ChoicesPicker\ControlManifest.Input.xml` file defines the metadata that des
 Open the `ChoicesPicker\ControlManifest.Input.xml` and paste the following inside the control element (replacing the existing **`sampleProperty`**):
 
 ```xml
-<property name="value" display-name-key="Value" description-key="Value of the Choices Control" of-type="OptionSet" usage="bound" required="true"/>
-<property name="configuration" display-name-key="Icon Mapping" description-key="Configuration that maps the choice value to a fluent ui icon." of-type="Multiple" usage="input" required="true"/>
+<property name="value"
+   display-name-key="Value"
+   description-key="Value of the Choices Control"
+   of-type="OptionSet"
+   usage="bound"
+   required="true"/>
+<property name="configuration"
+   display-name-key="Icon Mapping"
+   description-key="Configuration that maps the choice value to a fluent ui icon."
+   of-type="Multiple"
+   usage="input"
+   required="true"/>
 ```
 
 Save the changes and then use the following command to build the component:
@@ -672,14 +681,31 @@ If you want to support multiple languages, your code component can hold a resour
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
    <manifest>
-     <control namespace="SampleNamespace" constructor="ChoicesPicker" version="0.0.1" display-name-key="ChoicesPicker_Name" description-key="ChoicesPicker_Desc" control-type="standard" >
-       <property name="value" display-name-key="Value_Name" description-key="Value_Desc" of-type="OptionSet" usage="bound" required="true"/>
-       <property name="configuration" display-name-key="Configuration_Name" description-key="Configuration_Desc" of-type="Multiple" usage="input" required="true"/> 
-       <resources>
-         <code path="index.ts" order="1"/>
-         <resx path="strings/ChoicesPicker.1033.resx" version="1.0.0" />
-       </resources>
-     </control>
+    <control namespace="SampleNamespace"
+        constructor="ChoicesPicker"
+        version="0.0.1"
+        display-name-key="ChoicesPicker_Name"
+        description-key="ChoicesPicker_Desc"
+        control-type="standard">
+        <property name="value"
+          display-name-key="Value_Name"
+          description-key="Value_Desc"
+          of-type="OptionSet"
+          usage="bound"
+          required="true"/>
+        <property name="configuration"
+          display-name-key="Configuration_Name"
+          description-key="Configuration_Desc"
+          of-type="Multiple"
+          usage="input"
+          required="true"/>
+        <resources>
+          <code path="index.ts"
+              order="1"/>
+          <resx path="strings/ChoicesPicker.1033.resx"
+              version="1.0.0" />
+     </resources>
+    </control>
    </manifest>
    ```
 
@@ -701,7 +727,7 @@ Once you've tested basic functionality with the test harness, you must deploy th
    >[!div class="mx-imgBorder"]
    > ![Add new publisher.](media/field-component-4.png "Add new publisher")
 
-   Equally, this could be your publisher, provided you update the publisher prefix parameter in the call to `pac pcf push` below.
+   Equally, this could be your publisher, provided you update the publisher prefix parameter in the call to [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
 
 2. Once you've saved the publisher, you are ready to authorize the Microsoft Power Platform CLI against your environment so that you can push the compiled code component. At the command-line, use:
@@ -784,9 +810,9 @@ C:\repos\ChoicesPicker\out\controls\ChoicesPicker\${folder}\${fname}
 
 You need to **Empty cache and hard refresh** on your browser session for the **AutoResponder** file to be picked up. Once loaded, you can refresh the browser since Fiddler will add a cache-control header to the file to prevent it from being cached.
 
-Once you're done with your changes, you can increment the patch version in the manifest and then redeploy using `pac pcf push`.
+Once you're done with your changes, you can increment the patch version in the manifest and then redeploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push).
 
-So far, you've deployed a development build that's not optimized and will run slower at runtime. You can choose to deploy an optimized build using `pac pcf push` by editing the `ChoicesPicker.pcfproj`. Underneath the `OutputPath`, add the following:
+So far, you've deployed a development build that's not optimized and will run slower at runtime. You can choose to deploy an optimized build using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) by editing the `ChoicesPicker.pcfproj`. Underneath the `OutputPath`, add the following:
 
 ```xml
 <PcfBuildMode>production</PcfBuildMode>

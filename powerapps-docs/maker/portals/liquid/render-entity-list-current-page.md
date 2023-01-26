@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/29/2021
+ms.date: 11/18/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -16,7 +16,9 @@ contributors:
 
 # Render the list associated with the current page
 
-Render the List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Dataverse entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selection.  
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
+Render the List associated with the current page as a paginated sortable table. Uses [entitylist](liquid-objects.md#entitylist), [entityview](liquid-objects.md#entityview), [Dataverse entity tags](portals-entity-tags.md), [page](liquid-objects.md#page), and [request](liquid-objects.md#request) parameters, and includes search and multiple view selections.  
 
 ```xml
 {% entitylist id:page.adx_entitylist.id %}
@@ -61,6 +63,10 @@ Render the List associated with the current page as a paginated sortable table. 
                     href="{{ request.path_and_query | remove_query:'search' | h }}">&times;</a>
                 </div>
               {% endif %}
+              {% assign viewid = request.params.view %}
+              <input name="view" class="form-control" 
+                value="{{ viewid | h}}" 
+                type="hidden"/>
               <input name="search" class="form-control"
                 value="{{ params.search  | h }}"
                 placeholder="{{ entitylist.search_placeholder | default: 'Search'  | h }}"
@@ -140,6 +146,8 @@ Render the List associated with the current page as a paginated sortable table. 
                   {% endif %}
                 {% elsif attr_type == 'picklist' %}
                   {{ attr.label  | h }}
+                {% elsif attr_type == 'status' %}
+                  {{ attr.label  | h }} 
                 {% else %}
                   {{ attr  | h }}
                 {% endif -%}
@@ -199,7 +207,7 @@ Render the List associated with the current page as a paginated sortable table. 
         {% for page in entityview.pages offset:page_offset limit:10 -%}
           <li{% if page == entityview.page %} class="active"{% endif %}>
             <a href="{{ request.url | add_query:'page', page | path_and_query  | h }}">
-              {{ page  | h }}
+              {{ page }}
             </a>
           </li>
         {% endfor -%}
@@ -246,4 +254,3 @@ Render the List associated with the current page as a paginated sortable table. 
 [Render up to three levels of page hierarchy by using hybrid navigation](hybrid-navigation-render-page-hierachy.md)
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

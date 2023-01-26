@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Integrate canvas apps into websites and other services
@@ -38,7 +38,7 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 For GCC users
 
 ```
-https://apps.gov.powerapps.us/play[AppID]?source=iframe
+https://apps.gov.powerapps.us/play/[AppID]?source=iframe
 ```
 
 > [!IMPORTANT]

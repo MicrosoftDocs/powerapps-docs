@@ -1,0 +1,1 @@
+Removes an event handler from the [PostSave Event](../../events/postsave.md) event.

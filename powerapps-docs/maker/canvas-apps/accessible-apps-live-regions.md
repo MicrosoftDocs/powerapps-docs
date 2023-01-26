@@ -15,7 +15,7 @@ search.app:
 contributors:
   - tahoon-ms
   - chmoncay
-  - tapanm-msft
+  - mduelae
 ---
 
 # Announce dynamic changes with live regions for canvas apps

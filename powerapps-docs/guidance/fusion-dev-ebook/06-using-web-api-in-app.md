@@ -262,7 +262,7 @@ Maria continues with the **BrowseAppointments**, **AppointmentDetails**, and **E
 
 3.  Select the label control that displays the date for the next appointment. Set the **Text** property to **Text(First(appointmentsCollection).startDateTime, LongDate)**.
 
-4.  Select the label control that displays the date for the next appointment. Set the **Text** property to **First(appointmentsCollection).customer.name**.
+4.  Select the label control that displays the customer name for the next appointment. Set the **Text** property to **First(appointmentsCollection).customer.name**.
 
 5.  Select **F5** to preview the app. On the **Home** screen, select **Appointments**. This action will create the **appointmentsCollection** collection. Close the preview window and return to Power Apps Studio.
 

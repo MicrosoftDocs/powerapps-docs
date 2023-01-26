@@ -6,10 +6,9 @@ author: Mattp123
 manager: kvivek
 editor: ''
 tags: ''
-
 ms.topic: conceptual
 ms.component: model
-ms.date: 07/19/2021
+ms.date: 05/19/2022
 ms.author: matp
 search.audienceType: 
   - maker
@@ -19,8 +18,6 @@ search.app:
 ---
 
 # App navigation in model-driven apps
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 In a model-driven app, there are the three main app runtime navigation components.
 
@@ -88,6 +85,26 @@ To create a new subarea, complete the following steps:
 
 1. To save your app navigation changes select **Save**.
 1. To publish the changes and make them available to other users, select **Publish**.
+
+### Add a URL to an app
+
+A URL is a type of subarea in the app navigation. When the user selects the subarea, the URL opens in a new tab in the web browser.
+
+:::image type="content" source="media/url-in-app.png" alt-text="URL component in a model-driven app":::
+
+> [!NOTE]
+> By default, URL subareas are disabled. To enable, go to [Navigation pane options](app-designer-overview.md#navigation-pane-options).
+
+1. In the model-driven app designer, select **Navigation** > **Add** > **Subarea**.
+1. In the subarea properties, enter the following information:
+   - **Content type**: **URL**.
+   - **URL**: Enter the full URL, such as *https://www.microsoft.com*.
+   - **Title**: Enter a title for the URL component.
+   - **Icon**: Use the default icon, select a different one from an existing web resource, or create a new web resource.
+
+   :::image type="content" source="media/create-url-subarea.png" alt-text="Add a URL subarea":::
+
+1. Select **Save**, and then select **Publish**.
 
 ## Remove a group, subarea, or area
 

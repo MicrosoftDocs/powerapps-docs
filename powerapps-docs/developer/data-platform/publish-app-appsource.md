@@ -19,8 +19,6 @@ search.app:
 
 Publish your app on [Microsoft AppSource](https://appsource.microsoft.com) so that app subscribers can find it, try it, and buy it. The apps you build and publish with Power Apps are discovered and used in Dynamics 365 on the web. More information: [Discover apps via AppSource](../../user/app-source.md). 
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 ## Prepare for submitting your app on AppSource
 
 Use the following steps to prepare for submitting your app to be listed on Microsoft AppSource:

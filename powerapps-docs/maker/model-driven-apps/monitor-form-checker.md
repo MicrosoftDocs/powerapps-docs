@@ -75,7 +75,7 @@ There are two ways to open a Monitor session.
 
 ## Use Monitor to understand form behavior
 
-For each row with Monitor, detailed information about the form event can be reviewed. For example, imagine you have a question about an error taking place within the form. You go to that form in the app and select the appropriate form component. Then return to the browser with Monitor enabled and review the results either with or without filtering.  In this case, there is an error on the composite control.  By expanding the Properties,** you can learn more about the event itself.
+For each row with Monitor, detailed information about the form event can be reviewed. For example, imagine you have a question about an error taking place within the form. You go to that form in the app and select the appropriate form component. Then return to the browser with Monitor enabled and review the results either with or without filtering.  In this case, there is an error on the composite control.  By expanding areas of the **Details**, you can learn more about the event itself.
 
 > [!div class="mx-imgBorder"] 
 > ![Monitoring a related menu.](media/monitor-formchecker-related-menu.png)

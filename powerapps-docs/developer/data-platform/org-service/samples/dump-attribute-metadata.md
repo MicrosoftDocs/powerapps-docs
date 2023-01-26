@@ -1,28 +1,27 @@
 ---
-title: " Dump column definitions to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Dump column definitions to a file (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample showcases how to dump column definitions to a file." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 12/20/2019
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: NHelgren
+ms.author: nhelgren
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
 
-# Dump column definitions information to a file
+# Sample: Dump column definitions information to a file
 
+This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/DumpAttributeInfo).
 
-
-This sample shows how to write out all the column definitions to an `XML` file. It uses the [RetrieveAllEntitiesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveallentitiesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DumpAttributeInfo).
-
-The following sample creates a new file at `\DumpAttributeInfo\bin\Debug\AllAttributeDesc.xml`. You can open this file in **Office Excel** to see a tabular report. 
+The following sample creates a new file at `\DumpAttributeInfo\bin\Debug\AllAttributeDesc.xml`. You can open this file in **Office Excel** to see a tabular report.
 
 ## How to run this sample
 
@@ -42,12 +41,11 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `RetrieveAllEntitiesRequest` method retrieves the metadata. 
+1. The `RetrieveAllEntitiesRequest` method retrieves the metadata.
 1. The `StreamWriter` creates an instance of StreamWriter to write text to a file.
 
 ### Clean up
 
 This sample creates no records. No cleanup is required.
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

@@ -1,36 +1,39 @@
 ---
 title: Add image
-description: Learn about how to add image component to a Power Apps portals page using portals Studio.
+description: Learn how to add image component to a Power Apps portals page using portals Studio.
 author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add image
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 Image component allows you to add images to your portal page.
 
 To add image component:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
-2.  Select the page on which you want to add the component.
+1. Select the page on which you want to add the component.
 
-3.  Select an editable element on the canvas.
+1. Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
+1. Select **Components** ![components icon.](media/components-icon.png "Components icon") from the left side of the screen.  
 
-5.  Under **Portal components**, select **Image**. The image placeholder is added to the canvas.
+1. Under **Portal components**, select **Image**. The image placeholder is added to the canvas.
 
-6.  In the properties pane on the right side of the screen, enter the following information:
+1. In the properties pane on the right side of the screen, enter the following information:
 
     - **Image**: Select this option if you would like to select an existing image or upload a new one. If you want to select a previously uploaded image, choose an image from the **Select image** list. To upload a new image, select **Upload image**. All the uploaded images are included in the image library, which can be selected again through the **Select image** list.
 

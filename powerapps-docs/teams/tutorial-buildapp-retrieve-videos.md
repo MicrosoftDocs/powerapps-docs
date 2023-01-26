@@ -1,16 +1,16 @@
 ---
 title: Build an app in Teams using Power Apps and Dataverse for Teams to retrieve Power Platform videos for readiness | Microsoft Docs
 description: Tutorial on how to build an app in Teams using Power Apps and Dataverse for Teams that retrieves, lists, and displays content to used for readiness.
-author: mmercuri
+author: msftsamperl
 
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/16/2020
 ms.subservice: teams
 ms.author: tapanm
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Build an app to retrieve Power Platform videos for readiness
@@ -975,7 +975,7 @@ Before publishing the application to teams, it’s important to test core functi
 
 ### See also
 
-[Use sample apps from the Teams store](use-sample-apps-from-teams-store.md)
+[Use sample app templates from the Teams store](use-sample-apps-from-teams-store.md)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

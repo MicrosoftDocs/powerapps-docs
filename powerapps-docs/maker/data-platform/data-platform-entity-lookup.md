@@ -32,13 +32,13 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 ## Add a lookup column (Many-to-one relationship)
 
-To add a lookup relation to a table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
+To add a lookup relation to a table, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section, and then select **Tables** on the left navigation pane.
 
 1. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-1. Select the **Relationships** tab.
+1. Select the **Relationships** area.
 
 1. Select **Add relationship**, and then select a relationship type, such as **Many-to-one**.
 
@@ -54,13 +54,13 @@ To add a lookup relation to a table, create a relation under the **Relationships
 
 ## Add a One-to-many relationship
 
-To add a One-to-many relationship, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
+To add a One-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Tables** in the left navigation pane.
 
 2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Select the **Relationships** tab.
+3. Select the **Relationships** area.
 
 4. Select the down arrow to the right of **Add relationship**, and then select **One-to-many**.
     > [!div class="mx-imgBorder"] 
@@ -75,13 +75,13 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 6. Select **Save table**.
 
 ## Add a Many-to-many relationship
-To add a Many-to-many relationship, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
+To add a Many-to-many relationship, create a relation under the **Relationships** area and specify the table with which you want to create a relationship.
 
 1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Tables** in the left navigation pane.
 
 2. Select an existing table, or [Create a new table](data-platform-create-entity.md)
 
-3. Select the **Relationships** tab.
+3. Select the **Relationships** area.
 
 4. Select  **Add relationship** and then select **Many-to-many**. This opens a panel for you to choose the table you want to create a relationship to. Select the table from the **Related table** drop down.
 

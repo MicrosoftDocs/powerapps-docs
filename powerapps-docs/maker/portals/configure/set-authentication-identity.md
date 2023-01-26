@@ -5,18 +5,22 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/02/2022
+ms.date: 03/07/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
     - dileepsinghmicrosoft
     - nageshbhat-msft
+    - ProfessorKendrick
 ---
 
 # Local authentication, registration, and other settings
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 > [!IMPORTANT]
 > - We recommend that you use the [Azure Active Directory B2C (Azure AD B2C)](configure-azure-ad-b2c-provider.md) identity provider for authentication and deprecate the local identity provider for your portal. More information: [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
@@ -232,7 +236,7 @@ The following describes the settings for enabling and disabling user registratio
 | Site setting name        | Description       |
 |--------------------------|--------------------|
 | Authentication/Registration/Enabled                 | Enables or disables all forms of user registration. Registration must be enabled for the other settings in this section to take effect. Default: true                                   |
-| Authentication/Registration/OpenRegistrationEnabled | Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous visitor to the portal to create a new user account. Default: true |
+| Authentication/Registration/OpenRegistrationEnabled | Enables or disables the sign-up registration form for creating all forms of users. The sign-up form allows any anonymous visitor to the portal to create a new user account. Default: true |
 | Authentication/Registration/InvitationEnabled       | Enables or disables the invitation code redemption form for registering users who have invitation codes. Default: true                                                               |
 |Authentication/Registration/CaptchaEnabled|Enables or disables captcha on the user registration page. Default: false <br> **NOTE**: <br> - This site setting might not be available by default. To enable captcha, you must create the site setting and set its value to true. |
 
@@ -297,7 +301,7 @@ The following describes settings for modifying default authentication cookie beh
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Microsoft Learn: Power Apps portals authentication settings](/learn/modules/authentication-user-management/2-authentication-settings)  
+[Power Apps portals authentication settings](/training/modules/authentication-user-management/2-authentication-settings)  
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

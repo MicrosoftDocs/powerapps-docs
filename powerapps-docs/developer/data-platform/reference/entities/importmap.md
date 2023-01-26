@@ -1,12 +1,12 @@
 ---
-title: "Data Map (ImportMap) table/entity reference (Microsoft Dataverse)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Data Map (ImportMap) table/entity."
-ms.date: 10/05/2021
-
+title: "Data Map (ImportMap)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the Data Map (ImportMap)  table/entity."
+ms.date: 12/07/2022
+ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -15,7 +15,7 @@ search.app:
   - D365CE
 ---
 
-# Data Map (ImportMap) table/entity reference
+# Data Map (ImportMap)  table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
@@ -25,22 +25,22 @@ Data map used in import.
 
 ## Messages
 
-|Message|Web API Operation|SDK Assembly|
+|Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/importmaps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/importmaps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/importmaps(*importmapid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |ExportMappingsImportMap|<xref href="Microsoft.Dynamics.CRM.ExportMappingsImportMap?text=ExportMappingsImportMap Action" />|<xref:Microsoft.Crm.Sdk.Messages.ExportMappingsImportMapRequest>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ImportMappingsImportMap|<xref href="Microsoft.Dynamics.CRM.ImportMappingsImportMap?text=ImportMappingsImportMap Action" />|<xref:Microsoft.Crm.Sdk.Messages.ImportMappingsImportMapRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importmaps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/importmaps(*importmapid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/importmaps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/importmaps(*importmapid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -189,10 +189,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|True|
-|0|False|
+|1|True||
+|0|False||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -414,6 +414,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [SolutionId](#BKMK_SolutionId)
@@ -580,10 +581,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Managed|
-|0|Unmanaged|
+|1|Managed||
+|0|Unmanaged||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -603,10 +604,10 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Value|Label|Description|
 |-----|-----|--------|
-|1|Yes|
-|0|No|
+|1|Yes||
+|0|No||
 
-**DefaultValue**: False
+**DefaultValue**: 0
 
 
 
@@ -770,12 +771,28 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |--------|-----|
 |Description|Business unit that owns the data map.|
 |DisplayName|Owning Business Unit|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|owningbusinessunit|
 |RequiredLevel|None|
 |Targets|businessunit|
 |Type|Lookup|
+
+
+### <a name="BKMK_OwningBusinessUnitName"></a> OwningBusinessUnitName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunitname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
@@ -882,6 +899,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |92|Team template|Team template for an entity enabled for automatically created access teams.|
 |99|Social Profile|This entity is used to store social profile information of its associated account and contacts on different social channels.|
 |101|Service Plan|Service Plan|
+|103|Privileges Removal Setting|Privileges Removal Setting|
 |126|Indexed Article|Article indexed for search purposes.|
 |127|Article|Structured content that is part of the knowledge base.|
 |129|Subject|Information regarding subjects available in the system.|
@@ -1189,92 +1207,141 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10014|Solution Component Count Summary||
 |10015|Solution Component Data Source||
 |10016|Solution Component Count Data Source||
-|10017|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
-|10018|Catalog Assignment|Entity for assigning records to a specific catalog |
-|10019|Internal Catalog Assignment||
-|10020|Custom API|Entity that defines a custom API|
-|10021|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
-|10022|Custom API Response Property|Entity that defines a response property for a custom API |
-|10023|ProvisionLanguageForUser||
-|10024|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
-|10025|Data Lake Folder Permission||
-|10026|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
-|10027|Data Lake Workspace Permission||
-|10028|CascadeGrantRevokeAccessRecordsTracker||
-|10029|CascadeGrantRevokeAccessVersionTracker||
-|10030|RevokeInheritedAccessRecordsTracker||
-|10031|Model-Driven App Element|Associates a model-driven app with its components.|
-|10032|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10033|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10034|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10035|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10036|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10037|Setting Definition|Contains Setting Definitions|
-|10038|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10039|Service Plan Mapping|Service Plan Mapping|
-|10041|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10044|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10045|Flow Machine||
-|10046|Flow Machine Group||
-|10047|ProcessStageParameter||
-|10048|Workflow Binary||
-|10049|Connection Reference||
-|10050|AI Form Processing Document||
-|10051|AI Object Detection Image||
-|10052|AI Object Detection Label||
-|10053|AI Object Detection Bounding Box||
-|10054|AI Object Detection Image Mapping||
-|10056|AI Builder Dataset||
-|10057|AI Builder Dataset File||
-|10058|AI Builder Dataset Record||
-|10059|AI Builder Datasets Container||
-|10060|AI Builder File||
-|10061|AI Builder File Attached Data||
-|10062|Help Page||
-|10063|Tour||
-|10064|BotContent||
-|10065|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10066|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10067|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10073|PDF Setting|PDF Settings to save enabled pdf entities|
-|10074|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10075|Service Configuration||
-|10076|SLA KPI||
-|10077|Knowledge Federated Article||
-|10078|Knowledge Federated Article Incident||
-|10079|Search provider||
-|10080|Knowledge Article Image||
-|10081|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10082|Knowledge Search Insight|Knowledge Search Insight|
-|10083|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10084|Knowledge Article Attachment||
-|10085|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10086|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10087|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10088|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10090|Plugin Package||
-|10091|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10092|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10093|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10094|TeamMobileOfflineProfileMembership||
-|10095|UserMobileOfflineProfileMembership||
-|10096|OrganizationDataSyncSubscription||
-|10097|OrganizationDataSyncSubscriptionEntity||
-|10098|NonRelational Data Source||
-|10099|Notification|Notification to be provided to a user.|
-|10100|App Action||
-|10101|Rich Text Attachment|Image or file attached to a rich text field|
-|10102|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10103|PM Inferred Task||
-|10104|PM Recording||
-|10105|Analysis Component||
-|10106|Analysis Job||
-|10107|Analysis Result||
-|10108|Analysis Result Detail||
-|10109|Solution Health Rule||
-|10110|Solution Health Rule Argument||
-|10111|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10112|Comment|A collaborative comment on a maker artifact|
+|10017|AAD User|Virtual entity that represents AAD user|
+|10018|Catalog|Entity for cataloging records to make it easier for your customers to find them on portals and through search.|
+|10019|Catalog Assignment|Entity for assigning records to a specific catalog |
+|10020|Internal Catalog Assignment||
+|10021|Custom API|Entity that defines a custom API|
+|10022|Custom API Request Parameter|Entity that defines a request parameter for a custom API|
+|10023|Custom API Response Property|Entity that defines a response property for a custom API |
+|10024|ProvisionLanguageForUser||
+|10025|Shared Object|A record that is being shared in a real time collaboration session.|
+|10026|Shared Workspace|References a container that stores real-time collaboration data.|
+|10027|Data Lake Folder|A folder is a place to store data in Azure Data Lake.|
+|10028|Data Lake Folder Permission||
+|10029|Data Lake Workspace|A workspace is a place to store data in Azure Data Lake.|
+|10030|Data Lake Workspace Permission||
+|10031|Data Processing configuration||
+|10032|Synapse Database|This entity represents an external Synapse database and its associated datalake folder link.|
+|10033|Synapse Link External Table State|Synapse Link external table states|
+|10034|Synapse Link Profile|Synapse Link Profile|
+|10035|Synapse Link Profile Entity|Entities associated with the Synapse Link profile|
+|10036|Synapse Link Profile Entity State|Runtime state of the Synapse Link entity|
+|10037|Synapse Link Schedule|Synapse link schedules|
+|10038|DataflowRefreshHistory||
+|10039|EntityRefreshHistory||
+|10040|Shared Link Setting|Shared Link Setting|
+|10041|CascadeGrantRevokeAccessRecordsTracker||
+|10042|CascadeGrantRevokeAccessVersionTracker||
+|10043|RevokeInheritedAccessRecordsTracker||
+|10044|Model-Driven App Element|Associates a model-driven app with its components.|
+|10045|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10046|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10047|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10048|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10049|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10050|Setting Definition|Contains Setting Definitions|
+|10051|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10052|Service Plan Mapping|Service Plan Mapping|
+|10054|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10057|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10058|Workflow Binary||
+|10059|Flow Machine||
+|10060|Flow Machine Group||
+|10061|Flow Machine Image||
+|10062|Flow Machine Image Version||
+|10063|Flow Machine Network||
+|10064|ProcessStageParameter||
+|10065|Desktop Flow Binary||
+|10066|Connection Reference||
+|10067|Connection Instance||
+|10068|AI Builder Feedback Loop||
+|10069|AI Form Processing Document||
+|10070|AI Object Detection Image||
+|10071|AI Object Detection Label||
+|10072|AI Object Detection Bounding Box||
+|10073|AI Object Detection Image Mapping||
+|10075|AI Builder Dataset||
+|10076|AI Builder Dataset File||
+|10077|AI Builder Dataset Record||
+|10078|AI Builder Datasets Container||
+|10079|AI Builder File||
+|10080|AI Builder File Attached Data||
+|10081|Help Page||
+|10082|Tour||
+|10083|BotContent||
+|10084|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10085|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10086|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10092|Comment|A collaborative comment on a maker artifact|
+|10093|PDF Setting|PDF Settings to save enabled pdf entities|
+|10094|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10095|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10096|Service Configuration||
+|10097|SLA KPI||
+|10098|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10099|Knowledge Federated Article||
+|10100|Knowledge Federated Article Incident||
+|10101|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
+|10102|Search provider||
+|10103|Knowledge Article Image||
+|10104|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10105|Knowledge Search Insight|Knowledge Search Insight|
+|10106|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10107|Knowledge Article Attachment||
+|10108|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10109|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10110|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10111|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10113|Plugin Package||
+|10114|PowerfxRule||
+|10115|SupportUserTable||
+|10116|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10117|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10118|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
+|10119|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10120|MobileOfflineProfileItemFilter||
+|10121|TeamMobileOfflineProfileMembership||
+|10122|UserMobileOfflineProfileMembership||
+|10123|OrganizationDataSyncSubscription||
+|10124|OrganizationDataSyncSubscriptionEntity||
+|10125|OrganizationDataSyncState|Information regarding data synchronization state|
+|10126|App Insights Metadata|Metadata for App Insights Platform components|
+|10127|Workflow Action Status|PA Workflows action processing status|
+|10128|NonRelational Data Source||
+|10129|Notification|Notification to be provided to a user.|
+|10130|User Rating||
+|10131|Insights Store Data Source||
+|10132|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10133|App Action|Contains Modern Command Information|
+|10134|App Action Migration||
+|10135|App Action Rule||
+|10138|Card|Card|
+|10139|Entity link chat configuration||
+|10140|Rich Text Attachment|Image or file attached to a rich text field|
+|10141|Custom Control Extended Setting||
+|10142|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10143|Virtual Connector Data Source||
+|10144|PM Analysis History||
+|10145|PM Calendar||
+|10146|PM Calendar Version||
+|10147|PM Inferred Task||
+|10148|PM Process Extended Metadata Version||
+|10149|PM Process User Settings||
+|10150|PM Process Version||
+|10151|PM Recording||
+|10152|PM Template||
+|10153|PM View||
+|10154|Analysis Component||
+|10155|Analysis Job||
+|10156|Analysis Result||
+|10157|Analysis Result Detail||
+|10158|Solution Health Rule||
+|10159|Solution Health Rule Argument||
+|10160|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10161|Power BI Dataset||
+|10162|Power BI Mashup Parameter||
+|10163|Power BI Report||
 
 
 <a name="onetomany"></a>
@@ -1295,7 +1362,7 @@ Listed by **SchemaName**.
 
 ### <a name="BKMK_TransformationMapping_ImportMap"></a> TransformationMapping_ImportMap
 
-Same as transformationmapping table [TransformationMapping_ImportMap](transformationmapping.md#BKMK_TransformationMapping_ImportMap) Many-To-One relationship.
+Same as the [TransformationMapping_ImportMap](transformationmapping.md#BKMK_TransformationMapping_ImportMap) many-to-one relationship for the [transformationmapping](transformationmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1310,7 +1377,7 @@ Same as transformationmapping table [TransformationMapping_ImportMap](transforma
 
 ### <a name="BKMK_OwnerMapping_ImportMap"></a> OwnerMapping_ImportMap
 
-Same as ownermapping table [OwnerMapping_ImportMap](ownermapping.md#BKMK_OwnerMapping_ImportMap) Many-To-One relationship.
+Same as the [OwnerMapping_ImportMap](ownermapping.md#BKMK_OwnerMapping_ImportMap) many-to-one relationship for the [ownermapping](ownermapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1325,7 +1392,7 @@ Same as ownermapping table [OwnerMapping_ImportMap](ownermapping.md#BKMK_OwnerMa
 
 ### <a name="BKMK_ImportMap_AsyncOperations"></a> ImportMap_AsyncOperations
 
-Same as asyncoperation table [ImportMap_AsyncOperations](asyncoperation.md#BKMK_ImportMap_AsyncOperations) Many-To-One relationship.
+Same as the [ImportMap_AsyncOperations](asyncoperation.md#BKMK_ImportMap_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1340,7 +1407,7 @@ Same as asyncoperation table [ImportMap_AsyncOperations](asyncoperation.md#BKMK_
 
 ### <a name="BKMK_ImportMap_ImportFile"></a> ImportMap_ImportFile
 
-Same as importfile table [ImportMap_ImportFile](importfile.md#BKMK_ImportMap_ImportFile) Many-To-One relationship.
+Same as the [ImportMap_ImportFile](importfile.md#BKMK_ImportMap_ImportFile) many-to-one relationship for the [importfile](importfile.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1355,7 +1422,7 @@ Same as importfile table [ImportMap_ImportFile](importfile.md#BKMK_ImportMap_Imp
 
 ### <a name="BKMK_ImportMap_BulkDeleteFailures"></a> ImportMap_BulkDeleteFailures
 
-Same as bulkdeletefailure table [ImportMap_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportMap_BulkDeleteFailures) Many-To-One relationship.
+Same as the [ImportMap_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportMap_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1370,7 +1437,7 @@ Same as bulkdeletefailure table [ImportMap_BulkDeleteFailures](bulkdeletefailure
 
 ### <a name="BKMK_ImportEntityMapping_ImportMap"></a> ImportEntityMapping_ImportMap
 
-Same as importentitymapping table [ImportEntityMapping_ImportMap](importentitymapping.md#BKMK_ImportEntityMapping_ImportMap) Many-To-One relationship.
+Same as the [ImportEntityMapping_ImportMap](importentitymapping.md#BKMK_ImportEntityMapping_ImportMap) many-to-one relationship for the [importentitymapping](importentitymapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1385,7 +1452,7 @@ Same as importentitymapping table [ImportEntityMapping_ImportMap](importentityma
 
 ### <a name="BKMK_ImportMap_SyncErrors"></a> ImportMap_SyncErrors
 
-Same as syncerror table [ImportMap_SyncErrors](syncerror.md#BKMK_ImportMap_SyncErrors) Many-To-One relationship.
+Same as the [ImportMap_SyncErrors](syncerror.md#BKMK_ImportMap_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1400,7 +1467,7 @@ Same as syncerror table [ImportMap_SyncErrors](syncerror.md#BKMK_ImportMap_SyncE
 
 ### <a name="BKMK_ColumnMapping_ImportMap"></a> ColumnMapping_ImportMap
 
-Same as columnmapping table [ColumnMapping_ImportMap](columnmapping.md#BKMK_ColumnMapping_ImportMap) Many-To-One relationship.
+Same as the [ColumnMapping_ImportMap](columnmapping.md#BKMK_ColumnMapping_ImportMap) many-to-one relationship for the [columnmapping](columnmapping.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -1429,34 +1496,34 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_lk_importmapbase_createdby"></a> lk_importmapbase_createdby
 
-See systemuser Table [lk_importmapbase_createdby](systemuser.md#BKMK_lk_importmapbase_createdby) One-To-Many relationship.
+See the [lk_importmapbase_createdby](systemuser.md#BKMK_lk_importmapbase_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importmap_createdonbehalfby"></a> lk_importmap_createdonbehalfby
 
-See systemuser Table [lk_importmap_createdonbehalfby](systemuser.md#BKMK_lk_importmap_createdonbehalfby) One-To-Many relationship.
+See the [lk_importmap_createdonbehalfby](systemuser.md#BKMK_lk_importmap_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_BusinessUnit_ImportMaps"></a> BusinessUnit_ImportMaps
 
-See businessunit Table [BusinessUnit_ImportMaps](businessunit.md#BKMK_BusinessUnit_ImportMaps) One-To-Many relationship.
+See the [BusinessUnit_ImportMaps](businessunit.md#BKMK_BusinessUnit_ImportMaps) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
 
 ### <a name="BKMK_team_ImportMaps"></a> team_ImportMaps
 
-See team Table [team_ImportMaps](team.md#BKMK_team_ImportMaps) One-To-Many relationship.
+See the [team_ImportMaps](team.md#BKMK_team_ImportMaps) one-to-many relationship for the [team](team.md) table/entity.
 
 ### <a name="BKMK_lk_importmap_modifiedonbehalfby"></a> lk_importmap_modifiedonbehalfby
 
-See systemuser Table [lk_importmap_modifiedonbehalfby](systemuser.md#BKMK_lk_importmap_modifiedonbehalfby) One-To-Many relationship.
+See the [lk_importmap_modifiedonbehalfby](systemuser.md#BKMK_lk_importmap_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_SystemUser_ImportMaps"></a> SystemUser_ImportMaps
 
-See systemuser Table [SystemUser_ImportMaps](systemuser.md#BKMK_SystemUser_ImportMaps) One-To-Many relationship.
+See the [SystemUser_ImportMaps](systemuser.md#BKMK_SystemUser_ImportMaps) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### <a name="BKMK_lk_importmapbase_modifiedby"></a> lk_importmapbase_modifiedby
 
-See systemuser Table [lk_importmapbase_modifiedby](systemuser.md#BKMK_lk_importmapbase_modifiedby) One-To-Many relationship.
+See the [lk_importmapbase_modifiedby](systemuser.md#BKMK_lk_importmapbase_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
 ### See also
 
-[About the table reference](../about-entity-reference.md)<br />
-[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+[Dataverse table/entity reference](../about-entity-reference.md)  
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)  
 <xref href="Microsoft.Dynamics.CRM.importmap?text=importmap EntityType" />

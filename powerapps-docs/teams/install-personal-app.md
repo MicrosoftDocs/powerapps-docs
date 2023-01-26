@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.custom: intro-internal
 ms.date: 03/26/2021
 ms.subservice: teams
-ms.author: jshum
+ms.author: saperlmu
 ms.reviewer: 
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Install the Power Apps personal app in Microsoft Teams

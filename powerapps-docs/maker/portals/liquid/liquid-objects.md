@@ -5,16 +5,20 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/27/2021
+ms.date: 12/13/2022
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
 contributors:
     - nickdoelman
     - GitanjaliSingh33msft
+    - ProfessorKendrick
 ---
 
 # Available Liquid objects
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Liquid objects contain attributes to output dynamic content to the page. For example, the page object has an attribute called title that can be used to output the title of the current page.
 
@@ -212,9 +216,9 @@ The following table explains the attributes associated with the blogs object.
 | \[blog name or id\] | You can access any blog by its Name or Id properties.                   
 
 ```
-{% assign blog = blogs[Blog Name] %}                             
+{% assign blog = blogs["Blog Name"] %}                             
 
-{% assign blog = blogs[da8b8a92-2ee6-476f-8a21-782b047ff460] %}  |
+{% assign blog = blogs["da8b8a92-2ee6-476f-8a21-782b047ff460"] %}  |
 ```
 
 ### blog Object
@@ -267,26 +271,29 @@ The following table explains various attributes associated with blogpost Object.
 ## entities
 
 > [!CAUTION]
-> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
+> To avoid potential cross-site scripting (XSS) issues, always use [escape filter](liquid-filters.md#escape) to HTML encode string data whenever using **entities** Liquid object to read data provided by the user that can't be trusted.
+
+> [!NOTE]
+> Some of the naming conventions of Dataverse have changed, for example, Dataverse entities are now called [tables](../../data-platform/data-platform-intro.md#terminology-updates). The name changes do not apply to Liquid objects. The Liquid entities object will continue to be referred to as **entities**.
 
 Allows you to load any Power Apps table by ID. If the table exists, a table object will be returned. If a table with the given ID isn't found, [null](liquid-types.md#null) will be returned.  
 
 ```
-{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] | escape %}
+{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
 
 {% if account %}
 
-{{ account.name }} ({{ account.statecode.label }})
+{{ account.name | escape }} ({{ account.statecode.label | escape }})
 
 {% endif %}
 
 {% assign entity_logical_name = 'contact' %}
 
-{% assign contact = entities[entity_logical_name][request.params.contactid] | escape %}
+{% assign contact = entities[entity_logical_name][request.params.contactid] %}
 
 {% if contact %}
 
-{{ contact.fullname }} ({{ contact.parentcustomerid.name }})
+{{ contact.fullname | escape }} ({{ contact.parentcustomerid.name | escape }})
 
 {% endif %}
 ```
@@ -563,7 +570,7 @@ This is child page number 3.
 
 ## forums
 
-Provides the ability to access and render Forums and Forum Threads. The ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET advanced forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
+Provides the ability to access and render Forums and Forum Threads. The ability to use liquid to render forum data extends to posts, but to create a new post or thread, you must use an ASP.NET multistep  forms Page Template with said functionality built in (such as the default Forum Thread and Forum Post Page Templates).
 
 The forums object allows you to select a Forum or Forum Threads:
 

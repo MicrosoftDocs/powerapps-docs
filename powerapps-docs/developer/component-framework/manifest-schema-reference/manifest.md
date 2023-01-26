@@ -1,17 +1,15 @@
 ---
 title: Manifest Element | Microsoft Docs
 description: Manifest is the metadata file that defines a component.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a48831c6-133a-4747-99fa-7cc1df4558d0
+contributors:
+ - JimDaly
 ---
 
 # Manifest element
@@ -38,13 +36,13 @@ Model-driven and canvas apps
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MyNameSpace" constructor="JSHelloWorldControl" version="1.0.0" display-name-key="JS_HelloWorldControl_Display_Key" description-key="JS_HelloWorldControl_Desc_Key" control-type="standard">
-		<property name="myFirstProperty" display-name-key="myFirstProperty_Display_Key" description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
-		<resources>
-			<code path="JS_HelloWorldControl.js" order="1" />
-			<css path="css/JS_HelloWorldControl.css" order="1" />
-		</resources>
-	</control>
+   <control namespace="MyNameSpace" constructor="JSHelloWorldControl" version="1.0.0" display-name-key="JS_HelloWorldControl_Display_Key" description-key="JS_HelloWorldControl_Desc_Key" control-type="standard">
+      <property name="myFirstProperty" display-name-key="myFirstProperty_Display_Key" description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+      <resources>
+         <code path="JS_HelloWorldControl.js" order="1" />
+         <css path="css/JS_HelloWorldControl.css" order="1" />
+      </resources>
+   </control>
 </manifest>
 ```
 

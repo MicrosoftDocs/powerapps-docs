@@ -162,11 +162,7 @@ The reference panel is a great way to get work done without moving away from the
 
 ## App message bar 
 
-The app message bar shows three types of notifications: informational, warning, and error. 
-
-> [!NOTE]
-> If you're on [early access](/power-platform/admin/opt-in-early-access-updates) there's a new in-app notifications feature. For more information, see [In-app notifications in model-driven apps](notifications.md).
- 
+The app message bar shows three types of notifications: informational, warning, and error.  
 
 When you select the error notification, it will take you to the column on the form where the error occurred.
 

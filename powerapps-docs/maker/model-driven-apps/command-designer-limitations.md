@@ -6,8 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 07/26/2021
-
+ms.date: 08/30/2022
 ms.subservice: mda-maker
 ms.topic: conceptual
 search.audienceType: 
@@ -16,34 +15,34 @@ search.app:
   - PowerApps
   - D365CE
 ---
+# Modern commanding known limitations
 
-# Modern commanding known limitations (preview)
+## Power Fx and Command component libraries limitations
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+Power Fx shares certain infrastructure with custom pages and canvas apps. Relevant [limitations of custom pages](model-app-page-issues.md) are also applicable to commands.
 
-<!-- While this feature is in preview, our intent is to collect feedback that helps prioritize what’s next. This new infrastructure does not yet support many things you may want to do – nor does it have full parity with classic commanding capabilities. We invite you to join us in this journey that is only just beginning.
+- Not all Power Fx functions are currently supported for commands.
+- Microsoft Dataverse is currently the only supported data source when using Power Fx with commands. However, custom pages can be used for connecting to external data.
+-	To add additional tables, open the command component library from command designer. Or you may reopen command designer by selecting a different table in app designer.
+-	When you write Power Fx formulas in the command designer, intellisense may sometimes provide recommendations for unsupported functions. It may not show an error for unsupported functions within command designer or the associated command component library.
+-	Commands and the command component library created from one app can't be added to different apps. However, you can copy the command and paste it within another app or command bar location.
+-	Not all out-of-the-box or custom visibility rules from classic commands are currently supported in Power Fx. Classic visibility is supported without using Power Fx. This is needed to migrate classic commands to modern and classic rule formats but won't be exposed in command designer. However, classic visibility is exposed within solution files and Dataverse.
+-	To delete command component libraries, you must delete the app. Alternatively, you can delete the associated record within the model-driven app element table, then delete the component library. The model-driven app element record exists in Dataverse but isn't exposed in solutions. More information: [Delete a Model-Driven App Element record](#delete-a-model-driven-app-element-record)
+- PowerFx based commands aren't supported and won't run within the Dynamics 365 app for Outlook or a model-driven app that's hosted within a Portal.
 
-We look forward to your feedback on what you like or dislike as well as what features are missing for your use cases. -->
+## Command designer limitations
 
-- Pre-existing classic commands can't be customized within the command designer during this preview. This includes the out-of-the-box commands. However, you may continue to use other mechanisms and third-party tools for customizing classic commands.
-- Not all Power Fx functions are currently supported for commands. Certain functions won't work during this preview.
--	Sharing is currently handled differently in the command designer than with canvas apps.
-   - Canvas-based resources such as component libraries must be shared with any user running or customizing the commands. Notice that administrators can share with themselves in the Power Platform admin center or by using PowerShell. For example, system administrators don't automatically have access to all command component libraries in the environment.
-- Microsoft Dataverse is currently the only supported data source when using Power Fx.
--	You can't currently add additional tables as data sources directly from the command designer. It will only add the table the command belongs to but not related tables.
-   - However, you may open the command component library in canvas studio and add other tables as data sources and then use them within the command designer. 
--	When you write Power Fx formulas in the command designer, intellisense may sometimes provide recommendations for unsupported functions. It may not show an error for unsupported functions in commanding.
-   - For example, functions that canvas apps support, but commands do not. You may not get an error when using the formula bar in command designer or when editing the command component library. 
--	Commands and the command component library created from one app can't be added to different apps.
-   - However, you can copy the command and paste it within another app or command bar location.
--	Not all out-of-the-box visibility rules from classic commands are currently supported. Custom visibility rules are not currently supported either. During the preview, these are not exposed in the command designer.
--	Split buttons and flyout menus aren't currently supported.
--	Dynamically populated buttons aren't supported. We don't plan to support these and recommend creating them declaratively.
--	Other types of command bars are not supported in the command designer. For example, the global application header or dashboard command bars. Share feedback if you find this valuable to prioritize.
--	Command checker may not show all relevant information in some scenarios.
+- Pre-existing classic commands can't be customized within the command designer until they're migrated to the modern infrastructure. This includes the out-of-the-box commands, which will be migrated incrementally over time. You may continue to use other mechanisms and third-party tools for customizing classic commands.
+- Dynamically populated buttons aren't supported. We recommend creating them declaratively.
+- Global application header and dashboard command bars aren't currently supported in command designer. These are customized infrequently. Share feedback if you find this valuable to prioritize.
+
+## Delete a Model-Driven App Element record
+
+1. Create a canvas app and add the **Model-Driven App Element** (appelement) table to the app. More information: [Create an app to edit tables in canvas apps](../canvas-apps/add-editable-tables.md)
+1. Within the canvas app, create a PowerFx command to delete the command component record from the Model-Driven App Element table. More information: [Remove and RemoveIf functions in Power Apps](/power-platform/power-fx/reference/function-remove-removeif)
 
 ### See also
 
-[Modern commanding overview (preview)](command-designer-overview.md)
+[Modern commanding overview](command-designer-overview.md)
 
 [Introducing Command Checker for model-app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

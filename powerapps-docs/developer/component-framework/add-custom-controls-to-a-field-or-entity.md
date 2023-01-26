@@ -1,16 +1,15 @@
 ---
 title: Add code components to a column or table in Microsoft Dataverse | Microsoft Docs
 description: Learn how to add code components to a column or table.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: article
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 04/01/2021
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+contributors:
+ - JimDaly
 ---
 
 # Add code components to a column or table in model-driven apps
@@ -32,7 +31,7 @@ Following the steps below will change the default label and text box column of t
 
 3. In the form editor, double-click the column where you want to add a code component, such as the **Budget Amount** column on the opportunity main form. You can also create a custom column.
 
-4. On the **Field Properties** page, select the **Controls** tab, and then select **Add Control**.
+4. Select the Controls tab on the **Field Properties** page, and then select **Add Control**.
 
 5. On the Add Control page, select the component that you want, such as the **Linear Slider** component, and then select **Add**.
 

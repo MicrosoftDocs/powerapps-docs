@@ -583,9 +583,9 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
     > [!NOTE]
     > Currently, this formula just acts as a placeholder. You'll modify the label later to retrieve the next appointment for the engineer, rather than always display the first one.
 
-9.  Select the third **Text label** control, and set the **Text** property to **First(Appointments).\'Appointment Date**.
+9.  Select the third **Text label** control, and set the **Text** property to **First(Appointments).\'Appointment Date\'**.
 
-10. Set the **Text** property of the fourth label control to **First(Appointments).\'Appointment Time**. Set the **Font size** property to 30.
+10. Set the **Text** property of the fourth label control to **First(Appointments).\'Appointment Time\'**. Set the **Font size** property to 30.
 
 11. From the list of controls, add a **Rectangle** control. Set the following properties for this control:
 

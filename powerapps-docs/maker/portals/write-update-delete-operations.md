@@ -11,11 +11,14 @@ ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - mduelae
     - nickdoelman
 ---
 
 # Use portals Web API write, update, and delete operations
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 You can perform [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article provides sample write, update, and delete operations, methods, URI, and sample JSON you can use in the HTTP requests.
 
@@ -29,6 +32,9 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 - The portals Web API accesses table records and follows the table permissions given to users through the associated web roles. Ensure you configure the correct table permissions. More information: [Create web roles](configure/create-web-roles.md)
 
 ## Create a record in a table
+
+> [!NOTE]
+> When referring to Dataverse tables using the portals Web API, you need to use the [EntitySetName](./web-api-overview.md#using-entitysetname), for example, to access the **account** table, the code syntax will use the EntitySetName of **accounts**.
 
 ### Basic create
 
@@ -152,7 +158,7 @@ As an example, the following request body posted to the **Account** table set wi
   </tr>
 </table>
 
-### Delete a single property value
+### Delete or clear a field value
 
 <table>
   <tr>
@@ -161,7 +167,7 @@ As an example, the following request body posted to the **Account** table set wi
     <th>URI</th>
   </tr>
   <tr>
-    <td>Delete a single property value</td>
+    <td>Delete or clear a field value</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000001)/description</i></td>
   </tr>
