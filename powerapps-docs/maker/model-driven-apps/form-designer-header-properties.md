@@ -26,7 +26,9 @@ Makers can control the density of model-driven app form headers to match the nee
 
 ## Form header
 
-The form header is used to display common columns that are important for the table. Form headers can't display some columns, such as columns configured for a control, such as the checkbox or star rating controls. These controls can be displayed in the [form header flyout](#form-header-flyout).
+The form header is used to display common columns that are important for the table. Form headers can't display some columns, such as columns configured for a control, such as the checkbox or star rating controls. More information: [Controls that can be displayed on the form header](#controls-that-can-be-displayed-on-the-form-header)
+
+Most controls that can't be displayed in form header can be displayed in the [form header flyout](#form-header-flyout).
 
 :::image type="content" source="media/form-header.png" alt-text="Form header for the account main form.":::
 
@@ -59,8 +61,8 @@ To configure the header density of a model-driven form, follow these steps:
     > ![Configure header density.](media/configure-header-density.png "Configure header density")
 4.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
 
-
 ## Header flyout
+
 The header flyout is displayed when users select the chevron in the form header. It enables users to edit column values and also displays visualizations such as custom components or web resources that are a part of the form header.
 
 The behavior of the header flyout changes depending on the header density configuration.
@@ -85,7 +87,10 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 > - The visibility of header flyout can only be controlled by choosing the option in the form header configuration.
 > - An image for a table will be displayed in the header only if the **Primary Image** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns). <br />
     Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute) attribute.
-> - High-density headers limit what controls will render in the header body and are limited to a checkbox, datetime, decimal, duration, emailaddress, float, integer, languagepicker, lookup, money, phonenumber, picklist, radio, regarding, textbox, ticker and timezonepicklist.  Any other type of control, including custom Power Apps control framework controls or web resources will not be displayed.  You'll need to switch to the high-density header with flyout to ensure your users can access controls in the header that aren't in the supported list.
+
+## Controls that can be displayed on the form header
+
+High-density headers limit what controls will render in the header body and are limited to a checkbox, datetime, decimal, duration, emailaddress, float, integer, languagepicker, lookup, money, phonenumber, picklist, radio, regarding, textbox, ticker and timezonepicklist.  Any other type of control, including custom Power Apps control framework controls or web resources will not be displayed.  These controls can be displayed in the form header flyout, if enabled in the form header properties.
 
 ## Form designer messages related to form headers
 When you edit forms using the new or classic form designer, you might see messages related to form headers. Below, you can find details on each message and why you are seeing it.
