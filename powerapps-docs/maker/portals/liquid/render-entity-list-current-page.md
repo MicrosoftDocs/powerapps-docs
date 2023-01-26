@@ -146,6 +146,8 @@ Render the List associated with the current page as a paginated sortable table. 
                   {% endif %}
                 {% elsif attr_type == 'picklist' %}
                   {{ attr.label  | h }}
+                {% elsif attr_type == 'status' %}
+                  {{ attr.label  | h }} 
                 {% else %}
                   {{ attr  | h }}
                 {% endif -%}
