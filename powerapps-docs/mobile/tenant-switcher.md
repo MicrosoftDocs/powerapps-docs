@@ -39,6 +39,5 @@ To switch to a different directory on Power Apps mobile:
    
 4. Select the directory you want to switch to.
 
-For information on how to share a canvas app with guest users, see [Share a canvas app with guest users](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app-guests).
 
 
