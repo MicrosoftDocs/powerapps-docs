@@ -17,7 +17,7 @@ contributors:
     - ProfessorKendrick
 ---
 
-# What are Power Pages
+# What is Power Pages?
 
 Power Apps portals and Dynamics 365 portals are now referred to as [Power Pages](/power-pages/introduction). 
 
