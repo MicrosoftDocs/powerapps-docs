@@ -4,7 +4,7 @@ description: Learn about how to share canvas apps by giving other users in your 
 author: alaug
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 10/11/2022
 ms.subservice: canvas-maker
 ms.author: alaug
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
   - msftsamperl
 ---
@@ -26,7 +26,7 @@ After you build a canvas app that addresses a business need, specify which users
 
 ## Prerequisites
 
-Before you share an app, you must [save it to the cloud](save-publish-app.md#save-changes-to-an-app) (not locally) and then [publish](save-publish-app.md#publish-an-app) it.
+Before you share an app, you must [save it](save-publish-app.md) (not locally) and then [publish](save-publish-app.md) it.
 
 - Give your app a meaningful name and a clear description, so that people know what your app does and they can easily find it in a list. Select **Settings** > specify a name, and then enter a description.
 

@@ -1,7 +1,7 @@
 ---
-title: "Create File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about how to create file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 10/23/2022
+title: "File columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about how to create, retrieve, update and delete file columns using code." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 01/11/2022
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -17,14 +17,16 @@ contributors:
 ---
 # File columns
 
-Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This topic is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
+Use file columns to store file data up to a specified maximum size. A custom or customizable table can have zero or more file columns. This article is about working with column definitions in code. To use data stored in these columns, see [Use file column data](file-column-data.md).
 
 ## Create file columns
 
 The recommended way to create file columns is to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and define your columns using the designer. More information: [File columns](../../maker/data-platform/types-of-fields.md#file-columns).
 
 > [!NOTE]
-> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). This value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
+> A key consideration when creating file columns is the **Maximum file size** stored in the `MaxSizeInKB` property. The default setting for this is `32768`, or 32 MB. The maximum value is `10485760` KB (10 GB). While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls will result in errors uploading or downloading files.
+>
+> The `MaxSizeInKB` value cannot be changed in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the designer after you create the file column.
 > You can use the API to update the `MaxSizeInKB` property. More information: [Update a column using Web API](webapi/create-update-entity-definitions-using-web-api.md#update-a-column) and [Update a column using SDK](org-service/metadata-attributemetadata.md#update-a-column)
 
 You can also create file columns using the Dataverse SDK for .NET or using the Web API. The following examples show how:
@@ -35,7 +37,11 @@ Use the [FileAttributeMetadata Class](xref:Microsoft.Xrm.Sdk.Metadata.FileAttrib
 
 
 ```csharp
-public static void CreateFileColumn(IOrganizationService service, string entityLogicalName, string fileColumnSchemaName) {
+public static void CreateFileColumn(
+   IOrganizationService service, 
+   string entityLogicalName, 
+   string fileColumnSchemaName) 
+{
 
     FileAttributeMetadata fileColumn = new()
     {
@@ -78,14 +84,13 @@ OData-Version: 4.0
 If-None-Match: null
 Accept: application/json
 Content-Type: application/json; charset=utf-8
-Content-Length: 1393
 
 {
   "@odata.type": "Microsoft.Dynamics.CRM.FileAttributeMetadata",
-  "AttributeType": "Virtual",
   "AttributeTypeName": {
     "Value": "FileType"
   },
+  "SchemaName": "sample_FileColumn",
   "MaxSizeInKB": 30720,
   "Description": {
     "@odata.type": "Microsoft.Dynamics.CRM.Label",
@@ -96,13 +101,7 @@ Content-Length: 1393
         "LanguageCode": 1033,
         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample File Column for FileOperation samples",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
+    ]
   },
   "DisplayName": {
     "@odata.type": "Microsoft.Dynamics.CRM.Label",
@@ -113,20 +112,8 @@ Content-Length: 1393
         "LanguageCode": 1033,
         "IsManaged": false
       }
-    ],
-    "UserLocalizedLabel": {
-      "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-      "Label": "Sample File Column",
-      "LanguageCode": 1033,
-      "IsManaged": false
-    }
-  },
-  "RequiredLevel": {
-    "Value": "None",
-    "CanBeChanged": false,
-    "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
-  },
-  "SchemaName": "sample_FileColumn"
+    ]
+  }
 }
 ```
 
@@ -150,14 +137,14 @@ More information:
 
 ## Block certain types of files
 
-You can control which types of files are not allowed to be saved in file Columns. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting. This setting also applies to files that can be set in the [Annotation (note)](annotation-note-entity.md) and [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) tables.
+You can control which types of files aren't allowed to be saved in file Columns. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting. This setting also applies to files that can be set in the [Annotation (note)](annotation-note-entity.md) and [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) tables.
 
-You can also query and modify this data programmatically. It is stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There is only one row in the organization table. You can use the SDK or Web API to query this data:
+You can also query and modify this data programmatically. It's stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There's only one row in the organization table. You can use the SDK or Web API to query this data:
 
 
 #### [SDK for .NET](#tab/sdk)
 
-This function:
+This static `RetrieveBlockedAttachments` method:
 
 ```csharp
 protected static string RetrieveBlockedAttachments(IOrganizationService service) {
@@ -215,7 +202,7 @@ More information: [Query data using the Web API](webapi/query-data-web-api.md)
 
 ---
 
-When anyone tries to upload a file of this type the following error will be thrown:
+When anyone tries to upload a file using one of the blocked types the following error will be thrown:
 
 > Name: `AttachmentBlocked`<br />
 > Code: `0x80043e09`<br />
@@ -225,7 +212,7 @@ When anyone tries to upload a file of this type the following error will be thro
 ## Restrictions with Customer Managed Keys (CMK)
 
 > [!IMPORTANT]
-> Some restrictions apply when using the File and enhanced Image data-types in Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
+> Some restrictions apply when using the File and full-sized Image data-types in Dataverse. If Customer Managed Keys (CMK) is enabled on the tenant, IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
 > All CMK organizations as of version: 9.2.21052.00103 can support the use of the Dataverse File and Image data-types. Files within CMK organizations are
 > limited to a maximum size of 128MB per file. All files and images within CMK organizations will be stored in the Dataverse relational storage, instead of Dataverse File Blob storage.
 > Other limitations:

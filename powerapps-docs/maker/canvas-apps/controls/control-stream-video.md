@@ -8,13 +8,13 @@ ms.custom: canvas
 ms.date: 04/20/2021
 ms.subservice: canvas-maker
 ms.author: fikaradz
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Microsoft Stream video control in Power Apps

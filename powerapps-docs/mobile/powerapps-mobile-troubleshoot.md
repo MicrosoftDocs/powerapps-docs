@@ -1,14 +1,14 @@
 ---
 title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
 description: Troubleshooting and known issues for the Power Apps mobile app 
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/12/2021
+ms.date: 01/03/2023
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -53,7 +53,7 @@ Microsoft authentication apps are Authenticator and Company Portal. Your company
  > [!NOTE]
  > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](/power-platform/admin/pricing-billing-skus).
 
-Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device manufacturer and authentication app. 
+Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device manufacturer and authentication app.
 
 ### Huawei or Honor device
 
@@ -82,7 +82,7 @@ If the issue is still not fixed, then try these steps:
 5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and sign in.
 
-If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get. 
+If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## App list is empty
 
@@ -102,17 +102,11 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 ## App resets when running it on Power Apps mobile
 
-When you run a canvas or model-driven app on Power Apps mobile it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, and the web browser suspends the page because it is consuming too much power.
+When you run a canvas or model-driven app on Power Apps mobile, it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large, complex webpage and the web browser suspends the page because it is consuming too much power.
 
-Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest-specification device that your end-users will use.
+On Android devices, this app restart can look like a crash because the app is completely closed and the user is taken to the home screen of the device.
 
-If you experience a reset, contact your app developer, and point them to this topic.
-
-For more information for developers, see:
-
-- Blog post: [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
-- Whitepaper: [PowerApps canvas app coding
-standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
+If you experience a reset while using a canvas app, contact your app developer, and see [Prevent canvas app restarts](../mobile/power-apps-mobile-canvas-app-restarts.md).
 
 ## Unable to download SharePoint attachment in the mobile app
 
