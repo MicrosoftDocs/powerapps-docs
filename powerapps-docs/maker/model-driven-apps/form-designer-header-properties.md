@@ -2,9 +2,8 @@
 title: "Configure header properties in the form designer | MicrosoftDocs"
 description: Learn how to configure form header properties for a model-driven app
 ms.custom: ""
-ms.date: 01/25/2021
+ms.date: 01/24/2023
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -23,7 +22,19 @@ search.app:
 
 # Configure header properties in the form designer
 
-Makers can control the density of model-driven app form headers to match the needs of anyone using the form.
+Makers can control the density of model-driven app form headers to match the needs of anyone using the form. Form headers have to main visual components, the form header and the flyout for the form header.
+
+## Form header
+
+The form header is used to display common columns that are important for the table. Form headers can't display some columns, such as columns configured for a control, such as the checkbox or star rating controls. These controls can be displayed in the [form header flyout](#form-header-flyout).
+
+:::image type="content" source="media/form-header.png" alt-text="Form header for the account main form.":::
+
+## Form header flyout
+
+The form header flyout displays when a user selects the down arrow located to the right of the form header, which can display more information otherwise hidden in the form header.
+
+:::image type="content" source="media/form-header-flyout.png" alt-text="Form header flyout for the account main form that is displaying a control not viewable from the form header.":::
 
 ## High-density header
 
