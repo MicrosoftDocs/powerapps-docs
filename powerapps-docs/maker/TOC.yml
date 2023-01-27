@@ -1667,17 +1667,17 @@
     href: ./model-driven-apps/model-driven-app-glossary.md    
 - name: Power Apps mobile  
   items:
-  - name: Install Power Apps mobile
+  - name: Install the Power Apps mobile app
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
-  - name: Use model-driven apps on Power Apps mobile
+  - name: Use model-driven apps on the Power Apps mobile app
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use Dataverse search on Power Apps mobile  
+  - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
     href: ../mobile/relevance-search-mobile.md  
   - name: Set app display to dark or light mode  
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile
+  - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for Power Apps mobile
     href: ../mobile/power-apps-mobile-notification.md
