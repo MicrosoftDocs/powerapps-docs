@@ -1671,12 +1671,12 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
+  - name: Set the appearance of your app to dark or light mode
+    href: ../mobile/display-mode.md
   - name: Use model-driven apps in the Power Apps mobile app
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
     href: ../mobile/relevance-search-mobile.md  
-  - name: Set app display to dark or light mode  
-    href: ../mobile/display-mode.md
   - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
   - name: Create push notifications for the Power Apps mobile app
