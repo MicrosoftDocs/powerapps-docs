@@ -136,7 +136,7 @@ For more information about pricing and the capabilities of various plans, go to 
 
 ### In Power Apps Mobile, how does a guest see apps for their home tenant?
 
-Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, must sign out of Power Apps and sign back in to Power Apps Mobile. 
+Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 
