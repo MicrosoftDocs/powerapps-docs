@@ -32,7 +32,7 @@ To switch to a different directory on Power Apps mobile:
 2. From the **Home**, **All apps**, or **More** page, select your profile image. Your user profile page appears.
 
   > [!Note]
-  > Users signing in to Power Apps with a Microsoft account cannot switch directories from thier user profile page. They must use a [deeplink](mobile-deep-links.md).
+  > Users signing in to Power Apps with a Microsoft account cannot switch directories from their user profile page. They must use a [deeplink](mobile-deep-links.md).
 
 3. Select the directory you're signed in to. A list of directories appears.
     
