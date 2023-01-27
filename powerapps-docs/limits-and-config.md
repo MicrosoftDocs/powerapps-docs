@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/04/2023
+ms.date: 01/17/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -37,23 +37,23 @@ This article contains information on supported device platforms, web browser req
 
 | **Browser** | **Supported versions** |  **App type** |
 | --- | --- | --- |
-| Google Chrome|Latest three major releases| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.  |
-| Microsoft Edge|Latest three major releases| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.  |
-| Mozilla Firefox |Latest three major releases| Model-driven apps, canvas apps, Power Apps portals.  |
-| Apple Safari|13 and later| Model-driven apps, canvas apps, Power Apps portals.  |
+| Google Chrome|Latest three major releases| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.  |
+| Microsoft Edge|Latest three major releases| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.  |
+| Mozilla Firefox |Latest three major releases| Model-driven apps and canvas apps. |
+| Apple Safari|13 and later| Model-driven apps and canvas apps.  |
 
-<sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
+<sup>1</sup>App and component designers include Power Apps studio, model-driven app designer, and model-driven custom page designer.
 
 ## Supported operating systems for browsers running Power Apps
 
 | **Operating system** | **Supported versions** |  **App type**  |
 | --- | --- | ---|
-| Windows |Windows 10 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
-| macOS|10.13 or later| Model-driven apps, canvas apps, Power Apps portals, app and component designers<sup>1</sup>.   |
-| iOS |iOS 13 or later| Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
-| Android |10 or later | Model-driven apps<sup>2</sup>, canvas apps, Power Apps portals.  |
+| Windows |Windows 10 or later| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.   |
+| macOS|10.13 or later| Model-driven apps, canvas apps, app and component designers<sup>1</sup>.   |
+| iOS |iOS 13 or later| Model-driven apps<sup>2</sup> and canvas apps. |
+| Android |10 or later | Model-driven apps<sup>2</sup> and canvas apps.  |
 
-<sup>1</sup>App and component designers include Power Apps studio, Power Apps portals Studio, model-driven app designer, and model-driven custom page designer.
+<sup>1</sup>App and component designers include Power Apps studio, model-driven app designer, and model-driven custom page designer.
 
 <sup>2</sup>Using the web browser on a phone to run a model-driven app isn't supported; use the [Power Apps mobile app](mobile/run-powerapps-on-mobile.md).
 
@@ -97,16 +97,14 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
-| https://*.crm#.dynamics.com and http://*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://*.crm#.dynamics.com and https://*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
+| http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
 | 127.0.0.1 | http | Power Apps Mobile|
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
-| *.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC).<sup>1</sup>  |
-| *.powerapps.us | https | Required for Power Apps portals for Government Community Cloud (GCC High).<sup>2</sup> |
-| *.appsplatform.us | https | Required for Power Apps portals for Power Apps Department of Defense (DoD).<sup>3</sup> |
+
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
@@ -152,3 +150,8 @@ For Microsoft Dataverse data type size limits, you can find information on colum
 ## Power Apps per app plan
 
 Information is now available in the [Power Apps per app plan](/power-platform/admin/signup-for-powerapps-admin#power-apps-per-app-plan) section in the Power Platform admin guide.
+
+  
+## See also
+
+[System requirements, limits, and configuration values for Power Pages](/power-pages/system-requirements)
