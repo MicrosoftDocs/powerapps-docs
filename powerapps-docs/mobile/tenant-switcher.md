@@ -32,10 +32,10 @@ To switch to a different directory in the Power Apps mobile app:
 1. Open the Power Apps mobile app.
 2. From the **Home**, **All apps**, or **More** page, select your profile image. Your user profile page appears.
 
-  > [!Note]
-  > Users signing into the Power Apps mobile app with a Microsoft account cannot switch directories from their user profile page. They must use a [deeplink](mobile-deep-links.md), instead.
-  > 
-  > For more information about how to share canvas apps with guest users, see [Share a canvas app with guest users](../maker/canvas-apps/share-app-guests.md#in-power-apps-mobile-how-does-a-guest-see-apps-in-the-guest-tenant).
+    > [!Note]
+    > Users signing into the Power Apps mobile app with a Microsoft account cannot switch directories from their user profile page. They must use a [deeplink](mobile-deep-links.md), instead.
+    > 
+    > For more information about how to share canvas apps with guest users, see [Share a canvas app with guest users](../maker/canvas-apps/share-app-guests.md#in-power-apps-mobile-how-does-a-guest-see-apps-in-the-guest-tenant).
 
 3. Select the directory you're signed in to. A list of directories appears.
     
