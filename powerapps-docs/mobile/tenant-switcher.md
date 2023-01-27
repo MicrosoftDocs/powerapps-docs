@@ -22,7 +22,7 @@ This means that:
 
 - Users no longer need to log out of the Power Apps mobile app to switch directories.
 - Users can specify the directory they want to work in from a list of directories on the user profile page.
-- Users can access shared apps from a list of directories on the user profile page.
+- Users (including guest users) can access shared apps from a list of directories on the user profile page.
 
 > [!Important]
 > The ability to easily switch to a different directory is available on only Android devices at this time.
