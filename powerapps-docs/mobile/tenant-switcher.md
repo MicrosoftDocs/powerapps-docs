@@ -1,5 +1,5 @@
 ---
-title: Switch to a different directory on Power Apps mobile
+title: Switch to a different directory in the Power Apps mobile app
 description: Users can easily switch to a different directory in Power Apps mobile.
 author: sericks007
 ms.author: sericks
@@ -14,9 +14,9 @@ search.audienceType:
   - enduser
 ---
 
-# Switch to a different directory on Power Apps mobile
+# Switch to a different directory in the Power Apps mobile app
 
-When a user signs into Power Apps, they sign into their *home tenant*, which is the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can change the *directory*, or organization with which they intend to use the app. 
+When a user signs into the Power Apps mobile app, they sign into their *home tenant*, which is the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can change the *directory*, or organization with which they intend to use the app. 
 
 Users can now easily switch to a different directory, without having to log out of Power Apps, when using Power Apps on mobile devices. Users can specify the directory they want to work in on the user profile page.  This means that:
 
@@ -26,7 +26,7 @@ Users can now easily switch to a different directory, without having to log out 
 > [!Important]
 > The ability to easily switch to a different directory is available on only Android devices at this time.
 
-To switch to a different directory on Power Apps mobile:
+To switch to a different directory in the Power Apps mobile app:
 
 1. Open Power Apps on your mobile device.
 2. From the **Home**, **All apps**, or **More** page, select your profile image. Your user profile page appears.
