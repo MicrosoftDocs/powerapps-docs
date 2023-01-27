@@ -1,5 +1,5 @@
 ---
-title: Run canvas apps or model-driven apps on Power Apps mobile | Microsoft Docs
+title: Install the Power Apps mobile app
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
 author: sericks007
 
@@ -20,7 +20,7 @@ searchScope:
 ms.custom: intro-internal
 ---
 
-#  Install Power Apps mobile 
+#  Install the Power Apps mobile app
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=). Then choose the download link or scan a QR code to download Power Apps mobile.
 

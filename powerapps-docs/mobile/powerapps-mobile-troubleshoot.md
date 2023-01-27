@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
+title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
 author: sericks007
 manager: tapanm-MSFT
@@ -18,7 +18,7 @@ search.app:
   - PowerApps
 ---
 
-# Troubleshoot issues for Power Apps mobile app
+# Troubleshoot issues in the Power Apps mobile app
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
