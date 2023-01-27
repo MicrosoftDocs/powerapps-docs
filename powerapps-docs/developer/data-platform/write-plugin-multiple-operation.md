@@ -3,7 +3,7 @@ title: Write plug-ins for CreateMultiple and UpdateMultiple | Microsoft Docs
 description: How to write plug-ins for CreateMultiple and UpdateMultiple messages.
 author: divkamath
 ms.topic: article
-ms.date: 12/12/2022
+ms.date: 01/27/2023
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -49,6 +49,19 @@ If you are using the `PluginBase` class that is the standard when initializing p
 > More information:
 > - [Define entity images](register-plug-in.md#define-entity-images)
 > - [Message size limits](org-service/use-createmultiple-updatemultiple.md#message-size-limits)
+
+### Attribute Filters
+
+For a plug-in registered on `Update` or `UpdateMultiple`, you can specify **Filtering Attributes** in the step registration.
+
+- With `Update`, the plug-in will only run when any of the selected attributes are included with the `Target` entity being updated.
+- With `UpdateMultiple` the plug-in will run when any of the selected attributes are included *in any* of the entities in the `Targets` parameter.
+
+> [!IMPORTANT]
+> For `UpdateMultiple` you can't assume that every entity in the `Targets` parameter contains attributes used in a filter.
+
+More information: [Include filtering attributes with plug-in registration](best-practices/business-logic/include-filtering-attributes-plugin-registration.md)
+
 
 ## Example
 
