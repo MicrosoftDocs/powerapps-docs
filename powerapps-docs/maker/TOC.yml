@@ -1671,7 +1671,7 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
-  - name: Use model-driven apps on the Power Apps mobile app
+  - name: Use model-driven apps in the Power Apps mobile app
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
   - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
     href: ../mobile/relevance-search-mobile.md  
