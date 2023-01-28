@@ -1,7 +1,7 @@
 ---
 title: "Sample: CreateMultiple and UpdateMultiple plug-ins (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to write plug-ins for the CreateMultiple and UpdateMultiple messages" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/12/2022
+ms.date: 01/28/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -101,8 +101,8 @@ This sample contains the following plug-in types designed to interact with the o
 |`CreateMultiplePreOp.cs`|CreateMultiple|PreOperation (20)|Sets the `sample_description` attribute value to `$"'tag' value for Create = '{tagValue}'."` where `tagValue` is the value set using the optional `tag` parameter. |
 |`FollowupPluginMultiple.cs`|CreateMultiple|PostOperation (40)|This is the replacement for `FollowupPluginSingle.cs`.<br /><br />Applies the same action as `FollowupPluginSingle.cs`.|
 |`FollowupPluginSingle.cs`|Create|PostOperation (40)|Creates a `task` record associated with the `sample_example` record created.|
-|`UpdateMultiple.cs`|UpdateMultiple|PostOperation (40)|This is the replacement for `UpdateSingle.cs`.<br /><br />Applies the same action as `UpdateSingle.cs` except it uses an Entity image named `example_preimages` from the matching item in the `PreEntityImagesCollection` to compare the original `sample_name` value with the value in the update operation.|
-|`UpdateSingle.cs`|Update|PostOperation (40)|Uses a `PreEntityImage` named `example_preimage` to compare the original `sample_name` value with the value in the update operation.<br /><br />When the values are different, append a message to the `sample_description` attribute value: `$"\\r\\n - 'sample_name' changed from '{oldName}' to '{newName}'."`, where `oldName` is the original value and `newName` is the new value.|
+|`UpdateMultiple.cs`|UpdateMultiple|PreOperation (20)|This is the replacement for `UpdateSingle.cs`.<br /><br />Applies the same action as `UpdateSingle.cs` except it uses an Entity image named `example_preimages` from the matching item in the `PreEntityImagesCollection` to compare the original `sample_name` value with the value in the update operation.|
+|`UpdateSingle.cs`|Update|PreOperation (20)|Uses a `PreEntityImage` named `example_preimage` to compare the original `sample_name` value with the value in the update operation.<br /><br />When the values are different, append a message to the `sample_description` attribute value: `$"\\r\\n - 'sample_name' changed from '{oldName}' to '{newName}'."`, where `oldName` is the original value and `newName` is the new value.|
 
 ## How this sample works
 
