@@ -166,7 +166,11 @@ The owner of the developer environment, or users with the [permission to delete 
 
 However, even after deleting a user's developer environment, a new developer environment will be created when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have the **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new developer environment.
 
-To remove the Developer Plan capability from a user permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform the following actions:
+### Can I prevent users to create developer environments?
+
+You can remove the capability from users to create a Developer Environment from Power Platform Admin Center in the [settings](https://learn.microsoft.com/power-platform/admin/create-environment), but one environment will always be auto-created if the user has a developer license assigned.
+
+To remove the auto-creation of developer environment permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform the following actions:
 
 - Remove the **Microsoft Power Apps for Developer** license. For more information, see  [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
 - Disable [self-service sign-up](/azure/active-directory/enterprise-users/directory-self-service-signup).
