@@ -47,8 +47,6 @@ The server-side cache is deleted, and data is reloaded from Dataverse.
 
 ![Clear portal cache with capacity-based license.](media/clear-server-side-cache/clear-config-capacity-license.png)
 
-To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portals, Dynamics 365 portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals).
-
 Portal metadata is stored in tables called *configuration tables*. If you change configuration tables using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
 ### List of configuration tables refreshed when you clear config
@@ -220,7 +218,7 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
-- [Capacity-based portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
+- Capacity-based portals and add-on portals will use the same caching functionality.
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]

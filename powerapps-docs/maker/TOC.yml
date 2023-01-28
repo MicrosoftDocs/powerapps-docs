@@ -1665,32 +1665,32 @@
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md    
-- name: Power Apps mobile  
+- name: Power Apps mobile app  
   items:
-  - name: Install Power Apps mobile
+  - name: Install the Power Apps mobile app
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
-  - name: Use model-driven apps on Power Apps mobile
-    href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use Dataverse search on Power Apps mobile  
-    href: ../mobile/relevance-search-mobile.md  
-  - name: Set app display to dark or light mode  
+  - name: Set the appearance of your app to dark or light mode
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile
+  - name: Use model-driven apps in the Power Apps mobile app
+    href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
+    href: ../mobile/relevance-search-mobile.md  
+  - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
-  - name: Create push notifications for Power Apps mobile
+  - name: Create push notifications for the Power Apps mobile app
     href: ../mobile/power-apps-mobile-notification.md
-  - name: Use deep links with Power Apps mobile
+  - name: Use deep links with the Power Apps mobile app
     href: ../mobile/mobile-deep-links.md
-  - name: Open an app in Power Apps mobile by scanning a QR code
+  - name: Open an app in the Power Apps mobile app by scanning a QR code
     href: ../mobile/scan-QR-code.md
-  - name: Switch to a different tenant on Power Apps mobile
+  - name: Switch to a different tenant in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
-  - name: Troubleshoot issues for Power Apps mobile
+  - name: Troubleshoot issues in the Power Apps mobile app
     href: ../mobile/powerapps-mobile-troubleshoot.md
     items:
-    - name: Prevent canvas app restarts on Power Apps mobile
+    - name: Prevent canvas app restarts in the Power Apps mobile app
       href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Mobile offline for model-driven apps
     items:
@@ -2118,9 +2118,9 @@
     - name: How-to guides for extending portals
       items:
         - name: Embed portal in another website
-          href: ./portals/embed-portal-website.md
+          href: /power-pages/configure/embed-website
         - name: Set up Azure Front Door with portals
-          href: ./portals/azure-front-door.md
+          href: /power-pages/configure/azure-front-door
     - name: For developers
       items:
         - name: Work with Liquid templates
