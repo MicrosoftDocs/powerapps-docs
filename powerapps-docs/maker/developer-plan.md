@@ -35,6 +35,7 @@ Key changes include:
 
 - The ability to share apps with team members for development and testing purposes
 - Increased capacity allocations
+- The ability to create up to three environments
 
 > [!NOTE]
 > Existing Power Apps Community Plan users will also get all of these updates.
@@ -142,7 +143,7 @@ You can continue using your Power Apps Developer Plan for free as long as there'
 
 ### Can I get or create multiple developer environments?
 
-Currently, no. You can only have one developer environment, which is created for you by Power Apps when you sign up for the Developer Plan.
+Yes. You have one developer environment, which is created for you by Power Apps when you sign up for the Developer Plan. You can create up to three environments in the Power Platform Admin Center.
 
 ### What's the difference between the Power Apps Plan Trial and Power Apps Developer Plan? Which one should I sign up for?
 
@@ -160,7 +161,8 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I reset or delete my developer environment?
 
-Resetting a developer environment isn't currently supported; however, it can be deleted. The owner of the developer environment, or users with the [permission to delete an environment](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) can delete a developer environment.
+Resetting and deleting developer environment is supported.
+The owner of the developer environment, or users with the [permission to delete an environment](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) can delete a developer environment.
 
 However, even after deleting a user's developer environment, a new developer environment will be created when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have the **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new developer environment.
 
