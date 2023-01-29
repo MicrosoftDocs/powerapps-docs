@@ -18,7 +18,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Use a `GET` request to retrieve data for a record specified as the resource with a unique identifier. When retrieving a table row (entity record) you can also request specific properties and expand navigation properties to return properties from related records in different tables.  
+Use a `GET` request to retrieve data for a record specified as the resource with a unique identifier. When retrieving a table row (entity record), you can also request specific properties and expand navigation properties to return properties from related records in different tables.  
 
 > [!NOTE]
 > For information about retrieving table definitions, see [Query table definitions using the Web API](query-metadata-web-api.md).
@@ -33,18 +33,18 @@ This example returns data for an account entity record with the primary key valu
 GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)
 ```
 
-To retrieve more than one entity record at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
+To retrieve more than one entity record at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) article.
 
 > [!CAUTION]
-> The above example will return all the properties for account record, which is not a performance best practice for retrieving data. This example was just to illustrate how you can do a basic retrieve of an entity record in Microsoft Dataverse. Because all the properties were returned, we haven't included the response information for the request in this example.
+> The above example will return all the properties for account record, which is not a performance best practice for retrieving data.
 >
-> As a performance best practice, you must always use the `$select` system query option to limit the properties returned while retrieving data. See the following section, **Retrieve specific properties**, for information about this.
+> As a performance best practice, you must always use the `$select` system query option to limit the properties returned while retrieving data.
   
 <a name="bkmk_requestProperties"></a>
 
 ## Retrieve specific properties
 
-Use the `$select` system query option to limit the properties returned by including a comma-separated list of property names. This is an important performance best practice. If properties aren't specified using `$select`, all properties will be returned.  
+Use the `$select` system query option to limit the properties returned by including a comma-separated list of property names. Requesting only the properties you need is an important performance best practice. If properties aren't specified using `$select`, all properties will be returned.  
 
 The following example retrieves `name` and `revenue` properties  for the account entity with the primary key value equal to 00000000-0000-0000-0000-000000000001
 
@@ -74,11 +74,11 @@ OData-Version: 4.0
 
 ```
 
-When you request certain types of properties you can expect additional read-only properties to be returned automatically.
+When you request certain types of properties, you can expect more read-only properties to be returned automatically.
 
-If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the <xref:Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType />. Alternatively, by requesting annotations you can also get additional data in the same request. More information:[Retrieve data about lookup properties](query-data-web-api.md#bkmk_lookupProperty)  
+If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the <xref:Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType />. Alternatively, by requesting annotations you can also get more data in the same request. More information:[Retrieve data about lookup properties](query-data-web-api.md#bkmk_lookupProperty)  
 
-If you request a property that is part of a composite attribute for an address, you will get the composite property as well. For example, if your query requests the `address1_line1` property for a contact, the `address1_composite` property will be returned as well.
+If you request a property that is part of a composite attribute for an address, you'll get the composite property as well. For example, if your query requests the `address1_line1` property for a contact, the `address1_composite` property will be returned as well.
 
 <a name="BKMK_UsingAltKeys"></a>
 
@@ -96,19 +96,19 @@ If the alternate key definition contains lookup type field (for example, the `pr
 GET [Organization URI]/api/data/v9.2/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001)
 ```
 
-Any time you need to uniquely identify an entity to retrieve, update, or delete, you can use alternate keys configured for the entity. By default, there are no alternate keys configured for entities. Alternate keys will only be available if the organization or a solution adds them.
+Anytime you need to uniquely identify an entity to retrieve, update, or delete, you can use alternate keys configured for the entity. By default, there are no alternate keys configured for entities. Alternate keys will only be available if the organization or a solution adds them.
 
 <a name="bkmk_retrieveSingleValue"></a>
 
 ## Retrieve documents in storage partitions
 
-If you are retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
+When retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
 
 More information: [Access table data faster using storage partitions](azure-storage-partitioning.md)
 
 ## Retrieve a single property value
 
-When you only need to retrieve the value of a single property for an entity, you can append the name of the property to the URI for an entity to return only the value for that property. This is a performance best practice because less data needs to be returned in the response.
+When you only need to retrieve the value of a single property for an entity, you can append the name of the property to the URI for an entity to return only the value for that property. Reducing the amount of data returned is a performance best practice.
 
 This example returns only the value of the `name` property for an `account` entity.
 
@@ -162,7 +162,7 @@ Adventure Works (sample)
 
 ## Retrieve navigation property values
 
-In the same way that you can retrieve individual property values, you can also access the values of navigation properties (lookup fields) by appending the name of the navigation property to the URI referencing an individual entity.
+You can access the values of navigation properties (lookup fields) by appending the name of the navigation property to the URI referencing an individual entity.
 
 The following example returns the `fullname` of the primary `contact` of an `account` using the `primarycontactid` single-valued navigation property.  
 
@@ -189,7 +189,7 @@ OData-Version: 4.0
 }
 ```
 
-For collection-valued navigation properties you have the option to request to return only references to the related entities or just a count of the related entities.
+For collection-valued navigation properties, you can request to return only references to the related entities or just a count of the related entities.
 
 The following example will just return references to tasks related to a specific account by adding `/$ref` to the request.
 
@@ -246,17 +246,17 @@ OData-Version: 4.0
 
 Use the `$expand` system query option to control what data from related entities is returned. There are two types of navigation properties:  
 
-- *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity.
+- *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another entity.
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.  
 
-If you simply include the name of the navigation property, you'll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.
+If you simply include the name of the navigation property, you'll receive all the properties for related records. You should limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Limit the properties returned for both single-valued and collection-valued navigation properties.
 
 > [!NOTE]
 > To retrieve related entities for entity sets, see [Retrieve related table records with a query](retrieve-related-entities-query.md).  
 
 ### Retrieve related records by expanding single-valued navigation properties
  
-The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we are only retrieving the contactid and fullname.
+The following example demonstrates how to retrieve the contact for an account entity. For the related contact record, we're only retrieving the `contactid` and `fullname`.
 
 **Request**
 
@@ -462,7 +462,7 @@ OData-Version: 4.0
 
 You can apply certain system query options on the entities returned for a collection-valued navigation property. Use a semicolon-separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. You can use `$select`, `$filter`, `$orderby`, `$top`, and `$expand`.
 
-The following example filters the results of task entities related to an `account` to those with a subject that ends with "1."
+The following example filters the results of task entities related to an `account` to the tasks with a `subject` that ends with "1".
 
 ```http
 ?$expand=Account_Tasks($filter=endswith(subject,'1');$select=subject)  
@@ -499,7 +499,7 @@ More information about nested $expand option use: [Multi-level expand of single-
 
 ## Detect if a record has changed since it was retrieved
 
-As a performance best practice you should only request data that you need. If you have previously retrieved an entity record, you can use the *ETag* associated with a previously retrieved record to perform conditional retrievals on that record. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged).
+As a performance best practice you should only request data that you need. If you've previously retrieved an entity record, you can use the *ETag* associated with a previously retrieved record to perform conditional retrievals on that record. More information: [Conditional retrievals](perform-conditional-operations-using-web-api.md#bkmk_DetectIfChanged).
 
 <a name="bkmk_formattedValues"></a>
 
