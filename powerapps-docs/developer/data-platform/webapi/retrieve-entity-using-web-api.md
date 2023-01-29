@@ -1,11 +1,10 @@
 ---
 title: "Retrieve a table row using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Read how to form a GET request using the Microsoft Dataverse Web API to retrieve table data specified as the resource with a unique identifier"
-ms.date: 09/29/2022
+ms.date: 01/29/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -31,7 +30,7 @@ Use a `GET` request to retrieve data for a record specified as the resource with
 This example returns data for an account entity record with the primary key value equal to 00000000-0000-0000-0000-000000000001.
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)
 ```
 
 To retrieve more than one entity record at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
@@ -51,7 +50,7 @@ The following example retrieves `name` and `revenue` properties  for the account
 
 **Request**
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name,revenue HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)?$select=name,revenue HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -65,7 +64,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-"@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,revenue)/$entity",  
+"@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,revenue)/$entity",  
 "@odata.etag": "W/\"502186\"",  
 "name": "A. Datum Corporation (sample)",  
 "revenue": 10000,  
@@ -88,13 +87,13 @@ If you request a property that is part of a composite attribute for an address, 
 If an entity has an alternate key defined, you can also use the alternate key to retrieve the entity instead of the unique identifier for the entity. For example, if the `Contact` entity has an alternate key definition that includes both the `firstname` and `emailaddress1` properties, you can retrieve the contact using a query with data provided for those keys as shown here.
 
 ```http
-GET [Organization URI]/api/data/v9.0/contacts(firstname='Joe',emailaddress1='abc@example.com')
+GET [Organization URI]/api/data/v9.2/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
 
 If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties) as shown here.
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001)
+GET [Organization URI]/api/data/v9.2/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001)
 ```
 
 Any time you need to uniquely identify an entity to retrieve, update, or delete, you can use alternate keys configured for the entity. By default, there are no alternate keys configured for entities. Alternate keys will only be available if the organization or a solution adds them.
@@ -116,7 +115,7 @@ This example returns only the value of the `name` property for an `account` enti
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/name HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/name HTTP/1.1
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -129,10 +128,35 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(00000000-0000-0000-0000-000000000001)/name",
+"@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(00000000-0000-0000-0000-000000000001)/name",
 "value":"Adventure Works (sample)"
 }
 ```
+
+### Retrieve the raw value of a property
+
+To retrieve the raw value of a primitive property rather than JSON, append `/$value` to the url.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/name/$value HTTP/1.1
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+**Response**
+
+ ```http
+HTTP/1.1 200 OK
+Content-Type: text/plain
+OData-Version: 4.0
+
+Adventure Works (sample)
+```
+
+> [!NOTE]
+> Using the raw value is not common unless you are working with file or image data. More information: [Download a file in a single request using Web API](../file-column-data.md#download-a-file-in-a-single-request-using-web-api).
 
 <a name="bkmk_retrieveNavigationPropertyValues"></a>
 
@@ -145,7 +169,7 @@ The following example returns the `fullname` of the primary `contact` of an `acc
 **Request**
 
  ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/primarycontactid?$select=fullname HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/primarycontactid?$select=fullname HTTP/1.1
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -158,7 +182,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {  
-"@odata.context": "[Organization URI]/api/data/v9.0/$metadata#contacts(fullname)/$entity",  
+"@odata.context": "[Organization URI]/api/data/v9.2/$metadata#contacts(fullname)/$entity",  
 "@odata.etag": "W/\"500128\"",  
 "fullname": "Rene Valdes (sample)",  
 "contactid": "ff390c24-9c72-e511-80d4-00155d2a68d1"  
@@ -172,7 +196,7 @@ The following example will just return references to tasks related to a specific
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/AccountTasks/$ref HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/AccountTasks/$ref HTTP/1.1
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -186,11 +210,11 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
   
 {
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Collection($ref)",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#Collection($ref)",
     "value":
   [
-    { "@odata.id": "[Organization URI]/api/data/v9.0/tasks(6b5941dd-d175-e511-80d4-00155d2a68d1)" },
-    { "@odata.id": "[Organization URI]/api/data/v9.0/tasks(fcbb60ed-d175-e511-80d4-00155d2a68d1)" }
+    { "@odata.id": "[Organization URI]/api/data/v9.2/tasks(6b5941dd-d175-e511-80d4-00155d2a68d1)" },
+    { "@odata.id": "[Organization URI]/api/data/v9.2/tasks(fcbb60ed-d175-e511-80d4-00155d2a68d1)" }
   ]
 }
 ```
@@ -200,7 +224,7 @@ The following example returns the number of tasks related to a specific account 
  **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks/$count HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)/Account_Tasks/$count HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -237,7 +261,7 @@ The following example demonstrates how to retrieve the contact for an account en
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -251,7 +275,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 
 {  
-  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))/$entity",  
+  "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))/$entity",  
   "@odata.etag":"W/\"550616\"",  
   "name":"Adventure Works (sample)",  
   "accountid":"00000000-0000-0000-0000-000000000001",  
@@ -269,7 +293,7 @@ Instead of returning the related entities for entity records, you can also retur
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
@@ -283,12 +307,12 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 
 {  
-  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid)/$entity",  
+  "@odata.context":"[Organization URI]/api/data/v9.2/$metadata#accounts(name,primarycontactid)/$entity",  
   "@odata.etag":"W/\"550616\"",  
   "name":"Adventure Works (sample)",  
   "accountid":"00000000-0000-0000-0000-000000000001",  
   "_primarycontactid_value":"c59648c3-68f7-e511-80d3-00155db53318",  
-  "primarycontactid": { "@odata.id":"[Organization URI]/api/data/v9.0/contacts(c59648c3-68f7-e511-80d3-00155db53318)" }
+  "primarycontactid": { "@odata.id":"[Organization URI]/api/data/v9.2/contacts(c59648c3-68f7-e511-80d3-00155db53318)" }
 }
 ```
 
@@ -299,7 +323,7 @@ The following example demonstrates how you can retrieve all the tasks assigned t
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)?$select=name
+GET [Organization URI]/api/data/v9.2/accounts(915e89f5-29fc-e511-80d2-00155db07c77)?$select=name
 &$expand=Account_Tasks($select=subject,scheduledstart)
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -314,7 +338,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))/$entity",
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))/$entity",
   "@odata.etag": "W/\"514069\"",
   "name": "Sample Child Account 1",
   "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
@@ -340,7 +364,7 @@ OData-Version: 4.0
 > Paging is not available for rows returned using `$expand` on collection-valued navigation properties. The maximum number of records returned is 5000. If you need paging, alter your query to return the collection you are expanding. For example, with the example above you could use the following URL with paging:
 >
 > ```http
-> GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart
+> GET [Organization URI]/api/data/v9.2/accounts(915e89f5-29fc-e511-80d2-00155db07c77)/Account_Tasks?$select=subject,scheduledstart
 > ```
 >
 > If you use nested `$expand` on collection-valued navigation properties, only the first level of data will be returned. Data for the second level will return an empty array. For example the following query:
@@ -386,7 +410,7 @@ The following example demonstrates how you can expand related entities for an en
 **Request**
 
 ```http 
-GET [Organization URI]/api/data/v9.0/accounts(99390c24-9c72-e511-80d4-00155d2a68d1)?$select=accountid
+GET [Organization URI]/api/data/v9.2/accounts(99390c24-9c72-e511-80d4-00155d2a68d1)?$select=accountid
 &$expand=parentaccountid($select%20=%20createdon,%20name),Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -401,7 +425,7 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0  
 
 {
-  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,parentaccountid,Account_Tasks,parentaccountid(createdon,name),Account_Tasks(subject,scheduledstart))/$entity",
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(accountid,parentaccountid,Account_Tasks,parentaccountid(createdon,name),Account_Tasks(subject,scheduledstart))/$entity",
   "@odata.etag": "W/\"514069\"",
   "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
   "parentaccountid": 
