@@ -1,5 +1,5 @@
 ---
-title: Switch to a different tenant on Power Apps mobile
+title: Switch to a different tenant in the Power Apps mobile app
 description: Users can easily switch tenants in Power Apps mobile.
 author: sericks007
 ms.author: sericks
@@ -16,7 +16,7 @@ search.audienceType:
   - enduser
 ---
 
-# Switch to a different tenant on Power Apps mobile
+# Switch to a different tenant in the Power Apps mobile app
 
 Users can now easily switch to a different tenant, without having to log out of Power Apps, when using Power Apps on mobile devices. Users can specify the tenant they want to work in on the user profile page.  This means that:
 
