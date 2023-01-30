@@ -377,11 +377,11 @@ The component is compiled into the `out/controls/LinearInputControl` folder. The
 >   10:26  error  'EventListenerOrEventListenerObject' is not defined  no-undef
 > ```
 >
-> Check your eslint rules in .eslintrc.json and set linting rules to "warn". For example, if you receive the error:
+> Check your eslint rules in `.eslintrc.json` and set linting rules to `["warn"]`. For example, if you receive the error:
 > 
 > ```error  'EventListenerOrEventListenerObject' is not defined  no-undef```
 > 
-> Then you would open .eslintrc.json and edit the rules to add a "warn" value for the rule "no-undef":
+> Then you would open `.eslintrc.json` and edit the rules to add a `["warn"]` value for the rule `no-undef`:
 >
 > ```json
 >     "rules": {
