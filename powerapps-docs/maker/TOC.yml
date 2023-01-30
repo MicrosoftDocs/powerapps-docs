@@ -125,7 +125,7 @@
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md 
-      - name: Enable the enhanced insert email template
+      - name: Configure the enhanced insert email template
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
@@ -1651,7 +1651,7 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Enable the enhanced email template editor page
+    - name: Configure the enhanced email template editor page
       href: ../user/cs-email-template-builder.md
   - name: App performance insights
     items:
@@ -1665,34 +1665,35 @@
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md    
-- name: Power Apps mobile  
+- name: Power Apps mobile app  
   items:
-  - name: Install Power Apps mobile
+  - name: Install the Power Apps mobile app
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
-  - name: Use model-driven apps on Power Apps mobile
-    href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use Dataverse search on Power Apps mobile  
-    href: ../mobile/relevance-search-mobile.md  
-  - name: Set app display to dark or light mode  
+  - name: Set the appearance of your app to dark or light mode
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile
+  - name: Use model-driven apps in the Power Apps mobile app
+    href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
+    href: ../mobile/relevance-search-mobile.md  
+  - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
-  - name: Create push notifications for Power Apps mobile
+  - name: Create push notifications for the Power Apps mobile app
     href: ../mobile/power-apps-mobile-notification.md
-  - name: Use deep links with Power Apps mobile
+  - name: Use deep links with the Power Apps mobile app
     href: ../mobile/mobile-deep-links.md
-  - name: Open an app in Power Apps mobile by scanning a QR code
+  - name: Open an app in the Power Apps mobile app by scanning a QR code
     href: ../mobile/scan-QR-code.md
-  - name: Switch to a different tenant on Power Apps mobile
+  - name: Switch to a different tenant in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
   - name: View offline sync status
     href: ../mobile/offline-sync-icon.md
-  - name: Troubleshoot issues for Power Apps mobile
-    href: ../mobile/powerapps-mobile-troubleshoot.md
+  - name: Troubleshoot issues in the mobile app
     items:
-    - name: Prevent canvas app restarts on Power Apps mobile
+    - name: Troubleshoot issues in the Power Apps mobile app
+      href: ../mobile/powerapps-mobile-troubleshoot.md
+    - name: Prevent canvas app restarts in the Power Apps mobile app
       href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Mobile offline for model-driven apps
     items:
@@ -2120,9 +2121,9 @@
     - name: How-to guides for extending portals
       items:
         - name: Embed portal in another website
-          href: ./portals/embed-portal-website.md
+          href: /power-pages/configure/embed-website
         - name: Set up Azure Front Door with portals
-          href: ./portals/azure-front-door.md
+          href: /power-pages/configure/azure-front-door
     - name: For developers
       items:
         - name: Work with Liquid templates
@@ -2670,14 +2671,16 @@
   items:
   - name: Overview
     href: ../teams/overview.md
-  - name: Embed a canvas app as tab app
-    href: ../teams/embed-teams-tab.md
-  - name: Embed a canvas app as personal app
-    href: ../teams/embed-teams-app.md
-  - name: Embed a model-driven app as tab app
-    href: ../teams/embed-model-driven-teams-tab.md
-  - name: Embed a model-driven app as personal app
-    href: ../teams/embed-model-driven-teams-personal.md
+  - name: Embed apps in Teams
+    items:
+    - name: Embed a canvas app as tab app
+      href: ../teams/embed-teams-tab.md
+    - name: Embed a canvas app as personal app
+      href: ../teams/embed-teams-app.md
+    - name: Embed a model-driven app as tab app
+      href: ../teams/embed-model-driven-teams-tab.md
+    - name: Embed a model-driven app as personal app
+      href: ../teams/embed-model-driven-teams-personal.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
@@ -2739,8 +2742,6 @@
           href: ../teams/use-teams-integration-object.md
         - name: How to build apps for Teams
           href: ../teams/how-templates-built.md
-        - name: When to build apps in Teams
-          href: ../teams/when-create-teams-apps.md
         - name: Add notifications to make your apps collaborative
           href: ../teams/add-app-notifications.md
         - name: Integrate with Planner
@@ -2753,10 +2754,6 @@
           href: ../teams/consistent-experience-across-sessions.md
         - name: Have a conversation about your business data in a Teams app
           href: ../teams/business-data.md
-    - name: How-to guides
-      items:
-        - name: Enable Power Apps and Dataverse for Teams in Microsoft Teams
-          href: ../teams/how-to/enable-dataverse-sample-app.md
         - name: Build an app to retrieve videos
           href: ../teams/tutorial-buildapp-retrieve-videos.md
     - name: Manage your apps
@@ -2769,163 +2766,19 @@
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
       href: ../teams/uninstall-personal-apps.md 
-    - name: Sample apps
+    - name: Sample app templates
       items:
-        - name: Use sample apps from Teams store
-          href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards (preview)
-          items:
-             - name: Use Boards sample app
-               href: ../teams/boards.md
-             - name: Understand Boards sample app architecture
-               href: ../teams/boards-architecture.md
-        - name: Bulletins
-          items:
-            - name: Use Bulletins sample app
-              href: ../teams/bulletins.md
-            - name: Deploy Bulletins app broadly in your organization
-              href: ../teams/bulletins-deploy-broadly.md
-            - name: Customize Bulletins app
-              items:
-                - name: Understand Bulletins sample app architecture
-                  href: ../teams/bulletins-architecture.md
-                - name: Customize Bulletins app
-                  href: ../teams/customize-bulletins.md
-                - name: Send an alert when a new bulletin is posted
-                  href: ../teams/new-bulletin-alert.md
-                - name: Add "Notify me" settings to category in Bulletins app
-                  href: ../teams/bulletins-notify-me.md
-                - name: Customize apps for end user to add notification preferences
-                  href: ../teams/bulletins-notification-preference.md
-                - name: Add contact phone in links and contacts section
-                  href: ../teams/bulletins-contact-phone.md
-        - name: Employee ideas
-          items:
-            - name: Use Employee ideas sample app
-              href: ../teams/employee-ideas.md
-            - name: Deploy Employee ideas app broadly in your organization
-              href: ../teams/deploy-employee-ideas-broad-distribution.md
-            - name: Customize Employee ideas app
-              items:
-                - name: Understand Employee ideas sample app architecture
-                  href: ../teams/employee-ideas-architecture.md
-                - name: Customize Employee ideas app
-                  href: ../teams/customize-employee-ideas.md
-                - name: Export Employee ideas for reporting
-                  href: ../teams/export-employee-ideas-for-reporting.md
-                - name: Replace notification with adaptive card to increase collaboration
-                  href: ../teams/replace-notification-with-adaptive-card.md
-                - name: Make ideas editable by original creator
-                  href: ../teams/make-ideas-editable-by-original-creator.md
-                - name: Add tag to mark prioritized ideas
-                  href: ../teams/add-tag-to-mark-prioritized-ideas.md
-                - name: Enable users to discuss ideas
-                  href: ../teams/extend-ideas-discussions.md
-        - name: Get connected (preview)
-          items:
-            - name: Use Get connected sample app
-              href: ../teams/get-connected.md
-            - name: Understand Get connected sample app architecture
-              href: ../teams/get-connected-architecture.md
-        - name: How to (preview)
-          items:
-             - name: Use How to sample app
-               href: ../teams/how-to.md
-             - name: Customize How to app
-               items:
-                - name: Understand How to sample app architecture
-                  href: ../teams/how-to-architecture.md
-        - name: Inspection
-          items:
-            - name: Use Inspection sample app
-              href: ../teams/inspection.md
-            - name: Deploy Inspection app broadly in your organization
-              href: ../teams/inspection-deploy-broad.md
-            - name: Customize Inspection app
-              items:
-                - name: Understand Inspection sample app architecture
-                  href: ../teams/inspection-architecture.md
-                - name: Customize Inspection sample app
-                  href: ../teams/customize-inspections.md
-                - name: Add hierarchy inspection location
-                  href: ../teams/inspections-hierarchy-locations.md
-                - name: Customize inspection steps
-                  href: ../teams/customize-inspection-steps.md
-                - name: Notify manager on completion of inspection
-                  href: ../teams/notify-manager-inspections.md
-                - name: Update inspection notification to use an adaptive card
-                  href: ../teams/inspection-adaptive-card.md
-        - name: Issue reporting
-          items:
-            - name: Use Issue reporting sample app
-              href: ../teams/issue-reporting.md
-            - name: Deploy Issue reporting app broadly in your organization
-              href: ../teams/issue-reporting-broad-distribution.md
-            - name: Customize Inspection app
-              items:
-                - name: Issue reporting sample app architecture
-                  href: ../teams/issue-reporting-architecture.md
-                - name: Customize Issue reporting app
-                  href: ../teams/customize-issue-reporting.md
-                - name: Add urgency flag to reported issues
-                  href: ../teams/extend-issue-urgency.md
-                - name: Add business logic for automated task assignment
-                  href: ../teams/extend-issue-auto-assignment.md
-                - name: Convert Issue reporting sample app to Work order management app
-                  href: ../teams/extend-issue-rename-work-order.md
-                - name: Remove the Planner dependency for task creation
-                  href: ../teams/extend-issue-remove-planner.md
-                - name: Add the ability to be notified when an issue is resolved
-                  href: ../teams/extend-issue-sign-up-notification.md
-        - name: Milestones
-          items:
-             - name: Use Milestones sample app
-               href: ../teams/milestones.md
-             - name: Deploy the Milestones app broadly in your organization
-               href: ../teams/milestones-broad-distribution.md
-             - name: Customize Milestones app
-               items:
-                 - name: Understand Milestones sample app architecture
-                   href: ../teams/milestones-architecture.md
-                 - name: Customize Milestones sample app
-                   href: ../teams/customize-milestones.md
-                 - name: Add a new column to Milestones sample app to track work items
-                   href: ../teams/extend-milestones-add-column.md
-                 - name: Send a weekly report on project status from the Milestones sample app
-                   href: ../teams/extend-milestones-weekly-report.md
-                 - name: Send notification to the Team when work item status is updated in the Milestones sample app
-                   href: ../teams/extend-milestones-send-notification.md
-        - name: Perspectives (preview)
-          items:
-            - name: Use Perspectives sample app
-              href: ../teams/perspectives.md
-            - name: Understand Perspectives sample app architecture
-              href: ../teams/perspectives-architecture.md
-        - name: Profile+ (preview)
-          items:
-            - name: Use the Profile+ sample app 
-              href: ../teams/profile-app.md
-            - name: Deploy the Profile+ app broadly in your organization
-              href: ../teams/deploy-profile-plus-broad-distribution.md
-            - name: Customize Profile+ app
-              items:
-                - name: Understand Profile+ sample app architecture
-                  href: ../teams/profile-plus-architecture.md
-                - name: Extend Profile+ sample app with additional org-specific data
-                  href: ../teams/profile-plus-org-specific.md
-                - name: Customize Profile+ sample app
-                  href: ../teams/customize-profile-plus.md
-        - name: Do more with sample apps
-          items:
-            - name: Customize sample apps
-              href: ../teams/customize-sample-apps.md
-            - name: Localize sample apps 
-              href: ../teams/localizing-sample-apps.md
-            - name: Theming in sample apps 
-              href: ../teams/sample-app-theming.md
-            - name: Working with table permission in sample apps
-              href: ../teams/dataverse-for-teams-table-permissions.md
-        - name: FAQs for sample apps
+        - name: Use sample app templates in Teams
+          href: ../teams/use-sample-apps.md
+        - name: Customize sample app templates
+          href: ../teams/customize-sample-apps.md
+        - name: Localize sample app templates
+          href: ../teams/localizing-sample-apps.md
+        - name: Theming in sample app templates
+          href: ../teams/sample-app-theming.md
+        - name: Working with table permission in sample app templates
+          href: ../teams/dataverse-for-teams-table-permissions.md
+        - name: FAQs for sample app templates
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
