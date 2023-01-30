@@ -16,6 +16,9 @@ contributors:
 
 # Portal details
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 After you create a portal, it will begin provisioning and you are notified about the status through notifications. Once the portal is provisioned, you are redirected to Power Apps portals Studio. You can use Power Apps portals Studio to create and customize your website.
 
 If you need to see more details about the provisioned portal such as, portal type, application ID, owner of the portal, and so on, you can open [Power Apps portals admin center](admin-overview.md) and navigate to the **Portal Details** tab. The user who has created the portal is the owner of the portal.

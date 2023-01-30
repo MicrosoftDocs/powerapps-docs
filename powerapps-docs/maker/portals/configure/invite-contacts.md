@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 08/24/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Invite contacts to your portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Use the invitation feature of portals to invite contacts to your portal through automated email(s) created in your Microsoft Dataverse. The people you invite receive an email, fully customizable by you, with a link to your portal and an invitation code. This code can be used to gain special access configured by you. With this feature, you have the ability to:
 

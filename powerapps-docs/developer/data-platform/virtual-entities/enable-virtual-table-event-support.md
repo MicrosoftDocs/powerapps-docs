@@ -166,10 +166,11 @@ HTTP/1.1 204 No Content
 
 #### Using Organization Service
 
-Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient).
+Regardless of whether you use early or late bound types, the first task is to retrieve the `MetadataId` of the table, which is retrieved in the same way for both cases. In this case for a virtual table named `new_people` using [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient). Alternately, the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class can be used.
 
 ```csharp
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var retrieveEntityRequest = new RetrieveEntityRequest
 {
@@ -359,10 +360,11 @@ When using the Organization Service, you can use either early or late binding ty
 
 #### Early-bound types
 
-This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types.
+This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with early-bound types, though <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> could also be used.
 
 ```csharp
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 //OnExternalCreated
 var createPerson = new new_people
@@ -411,10 +413,11 @@ var deleteRequest = new OnExternalDeletedRequest
 
 #### Late-bound types
 
-This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types.
+This example uses the [CrmServiceClient](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) with late-bound types, though <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> could also be used.
 
 ```csharp
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
   //OnExternalCreated
   Entity createPerson = new Entity("new_people");

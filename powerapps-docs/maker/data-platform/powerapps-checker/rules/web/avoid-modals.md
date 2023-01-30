@@ -1,5 +1,5 @@
 ---
-title: avoid-modalsPower Apps checker reference | Microsoft Docs
+title: avoid-modals Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for avoid-modals.
 author: ecarrleemsft
 manager: tapanm-msft

@@ -16,6 +16,9 @@ contributors:
 
 # Tutorial: Use Microsoft Power Platform CLI with portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this tutorial example, you'll see how to get started with Microsoft Power Platform CLI to update sample portals configuration.
 
 > [!NOTE] 

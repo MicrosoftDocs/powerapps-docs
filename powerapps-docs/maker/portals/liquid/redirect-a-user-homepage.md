@@ -16,6 +16,9 @@ contributors:
 
 # Redirect a user to a default page on sign-in
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You can configure a portal to redirect a user to a default page after the user signs in. 
 
 To achieve this, you replace the default studio template that's used as the page layout for the home page. You replace this default template with a custom template that includes JavaScript code to redirect the user to the page of your choosing. The steps are:

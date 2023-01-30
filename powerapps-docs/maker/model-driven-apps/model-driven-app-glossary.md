@@ -82,7 +82,7 @@ Business rules are server-side logic that is used with canvas or model-driven ap
 
 [Learn more about business rules](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-[Define business rules](/learn/modules/define-create-business-rules/1-rules)
+[Define business rules](/training/modules/define-create-business-rules/1-rules)
 
 ## Canvas app
 
@@ -350,7 +350,7 @@ You grant access to model-driven apps through security roles.
 
 - [Find out more about security roles](/power-platform/admin/security-roles-privileges#security-roles)
 - [General overview of security in Microsoft Dataverse](/power-platform/admin/wp-security)
-- [Get started with security roles in Dataverse](/learn/modules/get-started-security-roles/)
+- [Get started with security roles in Dataverse](/training/modules/get-started-security-roles/)
 
 ## Site map
 

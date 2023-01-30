@@ -19,6 +19,9 @@ contributors:
 
 # Known issues
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 ## General issues
 
 - You receive the following error message when configuring or using table fields:
@@ -130,6 +133,6 @@ contributors:
 
 ### See also
 
-[Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
+[Power App portal maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

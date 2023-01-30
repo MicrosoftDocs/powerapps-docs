@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
 ---
 # Tutorial: Customize a gallery in Power Apps

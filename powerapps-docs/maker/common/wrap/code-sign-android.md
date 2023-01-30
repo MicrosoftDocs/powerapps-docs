@@ -4,7 +4,7 @@ description: Learn about how to code sign for Android for Power Apps wrap.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/06/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - larryk78
 ---
 
@@ -58,12 +58,11 @@ Example:
 
 - If preparing Keyvault, PATH_TO_KEYSTORE should have .pfx extension.
 
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
-
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
 
 - If preparing for manual signing, PATH_TO_KEYSTORE should have .jks extension.
 
-  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.pfx -keysize 2048 -validity 10000`
+  `keytool -genkey -alias powerappswrap -keyalg RSA -keystore powerappswrap.jks -keysize 2048 -validity 10000`
 
 
 :::image type="content" source="media/code-sign-android/keytool.png" alt-text="A screenshot with keytool command using the parameters in the above example.":::
@@ -84,7 +83,7 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **openssl** - generates SHA1 key for Android.
 
-Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
+Add the generated signature hash in the **Redirect URI** while [registering the app](how-to.md#app-registration).
 
 ### Convert SHA1 hex to Base64-encoded signature hash manually
 

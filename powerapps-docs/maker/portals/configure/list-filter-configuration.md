@@ -16,6 +16,9 @@ contributors:
 ---
 # List filter configuration
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 Adding the ability to filter records on a list is easy: enable the filtering option and then choose one or more filter types to display to users. It's possible to filter by an attribute that matches text provided by the user, or to select from a series of options. You can even design virtually any type of filter you can imagine by using Advanced Find.
 
 **Enable the list filter**
@@ -178,6 +181,6 @@ The FetchXML filter uses only one attribute:
 ### See also
 
 - [Work with lists](entity-lists.md)
-- [Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Display multiple Dataverse records using lists](/training/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)

@@ -8,13 +8,16 @@ ms.custom:
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
 ---
 
 # Walk-through: Configuring additional tables for global search  
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 ## Overview
 

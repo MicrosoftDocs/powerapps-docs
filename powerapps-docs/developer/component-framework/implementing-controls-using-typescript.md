@@ -3,7 +3,7 @@ title: "Create your first component using Power Apps Component Framework in Micr
 description: "Learn how to implement code components using Power Apps component framework"
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 05/27/2022
+ms.date: 12/15/2022
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -65,7 +65,7 @@ To create a new project:
 1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
 
    ```CLI
-    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
+    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field --run-npm-install
    ```
 
 1. The above command also runs the `npm install` command for you to setup the project build tools.
@@ -76,10 +76,6 @@ To create a new project:
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
 
-1. After npm install, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
-   ```
-   npm run refreshTypes
-   ```
  
    
 ## Implementing manifest
@@ -98,56 +94,100 @@ Make changes to the predefined manifest file, as shown here:
    - **control-type**: The code component type. Only *standard* types of code components are supported.
 
      ```XML
-      <?xml version="1.0" encoding="utf-8" ?>
-      <manifest>
-      <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
+     <?xml version="1.0" encoding="utf-8" ?>
+     <manifest>
+      <control namespace="SampleNamespace"
+         constructor="LinearInputControl"
+         version="1.1.0"
+         display-name-key="LinearInputControl_Display_Key"
+         description-key="LinearInputControl_Desc_Key"
+         control-type="standard">
+         <!-- TODO: Add type-group, property, and resources elements here -->
+      </control>
+     </manifest>
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of the column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` in the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
+
+     ```XML
+     <type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Currency</type>
+      <type>FP</type>
+      <type>Decimal</type>
+     </type-group>
+     ```
+
+1. Add the [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.  Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
-   - **description-name-key**: Description of the property that is displayed on the UI. 
-   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type columns. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+   - **description-name-key**: Description of the property that is displayed on the UI.
+   - **of-type-group**: Use the `of-type-group` attribute when you want refer to the name of a specific type group. Here, we are referring to the `type-group` named `numbers` created in the previous step.
    - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
    - **required**: Defines whether the property is required.
 
      ```XML
-     <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+     <property name="controlValue"
+      display-name-key="controlValue_Display_Key"
+      description-key="controlValue_Desc_Key"
+      of-type-group="numbers"
+      usage="bound"
+      required="true" />
      ```
 
-3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
+1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
 
    - **code**: Refers to the path where all the resource files are located.
 
       ```XML
       <resources>
-        <code path="index.ts" order="1" />
-        <css path="css/LinearInputControl.css" order="1" />
+       <code path="index.ts"
+            order="1" />
+       <css path="css/LinearInputControl.css"
+            order="1" />
       </resources>
       ```
-      The overall manifest file should look something like this: 
+
+      The completed manifest file should look like this: 
 
      ```XML
-     <?xml version="1.0" encoding="utf-8" ?>
-     <manifest>
-       <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
-           <type-group name="numbers">
-              <type>Whole.None</type>
-              <type>Currency</type>
-              <type>FP</type>
-              <type>Decimal</type>
-           </type-group>
-           <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-         <resources>
-           <code path="index.ts" order="1" />
-           <css path="css/LinearInputControl.css" order="1" />
-         </resources>
-       </control>
-     </manifest>
+      <?xml version="1.0" encoding="utf-8" ?>
+      <manifest>
+         <control namespace="SampleNamespace"
+            constructor="LinearInputControl"
+            version="1.1.0"
+            display-name-key="LinearInputControl_Display_Key"
+            description-key="LinearInputControl_Desc_Key"
+            control-type="standard">
+            <type-group name="numbers">
+               <type>Whole.None</type>
+               <type>Currency</type>
+               <type>FP</type>
+               <type>Decimal</type>
+            </type-group>
+            <property name="controlValue"
+               display-name-key="controlValue_Display_Key"
+               description-key="controlValue_Desc_Key"
+               of-type-group="numbers"
+               usage="bound"
+               required="true" />
+            <resources>
+               <code path="index.ts"
+                  order="1" />
+               <css path="css/LinearInputControl.css"
+                  order="1" />
+            </resources>
+         </control>
+      </manifest>
      ```
 
-4. Save the changes to the `ControlManifest.Input.xml` file.
+1. Save the changes to the `ControlManifest.Input.xml` file.
+1. After making changes to the manifest, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+
+   ```
+   npm run refreshTypes
+   ```
 
 ## Implementing component logic
 
@@ -341,7 +381,12 @@ npm start watch
 
 Follow these steps to create and import a [solution](../../maker/data-platform/solutions-overview.md) file:
 
-1. Create a new folder **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
+1. Create a new folder named **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
+
+   ```CLI
+     mkdir Solutions
+     cd Solutions
+   ```
 
 2. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
 
@@ -409,7 +454,7 @@ To add the code component to a portal, follow the steps in the article [Use code
 ### See also
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)<br/>
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
 [Overview of tools and apps used with ALM](/power-platform/alm/tools-apps-used-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>

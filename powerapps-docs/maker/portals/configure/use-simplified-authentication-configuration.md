@@ -8,7 +8,7 @@ ms.custom: intro-internal
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -17,6 +17,9 @@ contributors:
 
 
 # Get started with configuring your portal authentication
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
@@ -185,6 +188,6 @@ If you delete and re-create your portal, users might receive the following error
 [Configure an OpenID Connect provider for portals](configure-openid-provider.md)  
 [Configure a SAML 2.0 provider for portals](configure-saml2-provider.md)  
 [Configure a WS-Federation provider for portals](configure-ws-federation-provider.md)  
-[Authentication and user management in Power Apps portals](/learn/modules/authentication-user-management/)
+[Authentication and user management in Power Apps portals](/training/modules/authentication-user-management/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

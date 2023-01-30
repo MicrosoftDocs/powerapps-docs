@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 contributors:
     - joel-lindstrom
-    - tapanm-msft
+    - mduelae
     - anuitz
 ---
 

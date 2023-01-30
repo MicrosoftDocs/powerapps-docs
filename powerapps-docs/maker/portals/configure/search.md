@@ -5,10 +5,10 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 06/07/2022
+ms.date: 12/02/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,6 +16,8 @@ contributors:
 ---
 
 # Search
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 In Power Apps portals, you can search for records across multiple tables by using portal's global search functionality. You can also search within records of lists using list search functionality.
 
@@ -62,6 +64,9 @@ Benefits of global search include its ability to:
 - Global search of portals allows you to search for records across multiple tables. It also allows you to search across multiple columns and configure what columns of a table would be searchable.
 - Provides intelligent search by applying AI technology to interpret natural language such as misspellings, common abbreviations, and synonyms to deliver quality results.
 
+> [!NOTE]
+> Intelligent search doesn't work when Lucene syntax is used.  Clear the value in *Search/Query* [site settings](configure-site-settings.md) to make intelligent query work.
+
 In global search, the better the match, the higher it appears in the results. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than the same words found in a large article, far apart from each other. Because the results are returned in a single list, you can see a mix of records displayed one after another, with matched works highlighted. 
 
 The following sections detail how global search works in Power Apps portals and describe the various configuration options available.
@@ -100,7 +105,7 @@ Default value for Search/IndexQueryName is "Portal Search".
 
 The first column in the "Portal Search" view will show as the title of search result. Modify the column order in the “Portal Search” view to get a desired search result title.
 
-If the view isn't available for any table, it's not indexed and the results aren't displayed in global search.
+If the view isn't available for any table, it's not indexed, and the results aren't displayed in global search.
 
 > [!NOTE]
 > If you change the value of the Search/IndexQueryName site setting, you need to trigger a manual re-index of the build using steps defined in the [Rebuild full search index](#rebuild-full-search-index) section.
@@ -112,8 +117,8 @@ The following site settings are related to global search:
 | Name    | Default value     | Description       |
 |-----------------------|--------------------|-------------|
 | Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br />If you're using out-of-the-box web templates and you turn off this setting, the search box won't be displayed in the header and on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
-| Search/EnableDataverseSearch | True | A Boolean value that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .NET based search.  <br /><br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. |
-| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on other tables on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
+| Search/EnableDataverseSearch | True | A Boolean value that indicates whether Dataverse search is enabled, or Lucene search is enabled. If you set the value to false, global search will be provided by Lucene .NET based search.  <br />If the setting doesn't exist, the value defaults to true.<br /> Any portals provisioned after website version 9.4.4.xx, the default value is True.  Portals provisioned before this version value will be False. |
+| Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on other tables on your portal. <br /> Requires *Search/Enabled* set to *True* when used.  |
 | Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;<br />Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,<br />adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;<br />Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment". <br /> **Note**: <ul> <li> Values in the filter dropdown will have the table's plural name instead of the key value defined here. </li> <li> When using multiple tables, the filter dropdown will have the name of the first table in the comma separated list. </li> </ul>  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of a table enabled that are indexed and searched.   |
 | Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2<br /> -_logicalname:adx_webfile\~0.9 adx_partialurl:<br />(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:<br />adx_communityforumthread\~0.9   | This setting adds other weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br />For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
@@ -122,7 +127,6 @@ The following site settings are related to global search:
 | Search/IndexNotesAttachments   | False    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
 | Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,<br>adx_communityforumthread,adx_communityforumpost;<br />Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | Determines how the tables are grouped in Record Type facet on the Search page. This setting is in the format <br />"DisplayNameinRecordTypeFacet1:logicalnameoftable1,logicalnameoftable2; DisplayNameinRecordTypeFacet2:logicalnameoftable3,logicalnameoftable4" <br />Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the tables defined in the configuration.   |
 | KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
-
 
 ## Related content snippets
 
@@ -212,7 +216,7 @@ As part of portal global search, various special characters and syntaxes are sup
 
     - **Minus (–) symbol**: The minus (-) symbol, also known as the prohibit operator, excludes documents that contain the term after the "-" symbol. For example, the search query "Smart - TV" will search for all records where the word Smart is present, and the word TV must not be present.
 
-- **Grouping**: Portal global search supports using parentheses to group clauses to form sub queries. This can be useful if you want to control the Boolean logic for a query. For example, if you want to search for all records where either one of the terms "HD" or "Smart" is present but the word TV is always present, the query can be written as "(HD or Smart) AND TV" (excluding quotation marks).
+- **Grouping**: Portal global search supports using parentheses to group clauses to form sub queries. This feature can be useful if you want to control the Boolean logic for a query. For example, if you want to search for all records where either one of the terms "HD" or "Smart" is present but the word TV is always present, the query can be written as "(HD or Smart) AND TV" (excluding quotation marks).
 
 ## Liquid search tag
 
@@ -285,7 +289,7 @@ To block the Case table from getting indexed, you must rename the view of the Ca
 
 After performing the actions described in Step 1, the Case table would be stopped from getting indexed. To remove the case table from UI surface areas, you must modify the site setting associated with portal global search. The following site setting must be modified:
 
-search/filters: This will remove case table from filters on the Search page and the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
+search/filters: Removes case table from filters on the Search page and the search box in the header of the site. By default, the value is: `Content:adx_webpage,adx_webfile;Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Help Desk:incident;Knowledge:knowledgearticle`
 
 
 You must delete `Help Desk:incident;` from the value of this site setting so that the Incident table is removed from filters that come next to the search box in the UI.

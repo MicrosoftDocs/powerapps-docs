@@ -142,7 +142,7 @@
     href: dump-global-option-set.md
   - name: Export ribbon definitions
     href: export-ribbon-definitions.md
-  - name: Query and detect metadata changes
+  - name: Query schema definitions and detect changes
     href: query-metadata-changes.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
@@ -178,8 +178,6 @@
     href: merge-two-records.md
   - name: Serialize and deserialize a table
     href: serialize-deserialize-entity.md
-  - name: Set and retrieve entity images
-    href: set-retrieve-entity-images.md
   - name: Share a record using an access team
     href: share-record-using-access-team.md
   - name: Share records using GrantAccess, ModifyAccess and RevokeAccess messages
@@ -189,7 +187,11 @@
   - name: Upload, retrieve, and download an attachment
     href: upload-retrieve-download-attachment.md
   - name: Use optimistic concurrency with update and delete operations
-    href: use-optimistic-concurrency-update-delete-operations.md 
+    href: use-optimistic-concurrency-update-delete-operations.md
+  - name: File Operations
+    href: file-operations.md
+  - name: Image Operations
+    href: set-retrieve-entity-images.md
 - name: Field Level Security
   items:
   - name: Enable field security for a table

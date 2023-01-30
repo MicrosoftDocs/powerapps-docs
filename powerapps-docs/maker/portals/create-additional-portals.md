@@ -17,6 +17,9 @@ contributors:
 
 # Create additional portals in an environment
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The ability to create additional environments is determined by the template chosen for the new portal. The following table explains the limits for creating additional portals in an environment.
 
 | Environment type | Template | Limit | Additional information |
@@ -76,7 +79,7 @@ After you enter the portal name, address, and choose the language, the portal cr
 ### See also
 
 [Available portal templates](portal-templates.md) <br>
-[Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
+[Administer Power Apps portals](/training/paths/administer-portals/) <br>
+[Access Dataverse in Power Apps portals](/training/modules/portals-access-data-platform/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

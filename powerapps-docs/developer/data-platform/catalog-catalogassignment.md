@@ -399,6 +399,7 @@ LoginPrompt=Auto;
 RequireNewInstance = True";
 
 var service = new CrmServiceClient(conn);
+// var service = new ServiceClient(conn);
 
 var solutionUniqueName = " ContosoCustomerManagement ";
 

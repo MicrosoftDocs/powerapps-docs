@@ -5,7 +5,7 @@ author: chmoncay
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/24/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Add a list box, a drop-down list, a combo box, or radio buttons to a canvas app

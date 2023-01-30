@@ -3,7 +3,7 @@ title: "addOnOutputChange (Client API reference) in model-driven apps| Microsoft
 description: Includes description and supported parameters for the control.addOnOutputChange method.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
+
 ms.date: 08/17/2022
 ms.reviewer: jdaly
 ms.topic: reference
@@ -18,7 +18,7 @@ contributors:
 ---
 # addOnOutputChange (Client API reference)
 
-Adds an event handler to the [OnOutputChange](../events/onselection.md) event. 
+Adds an event handler to the [OnOutputChange](../events/onoutputchange.md) event. 
 
 ## Control types supported
 

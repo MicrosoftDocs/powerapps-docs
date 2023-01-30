@@ -5,7 +5,7 @@ author: NickWaggoner
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/02/2022
 ms.subservice: canvas-maker
 ms.author: niwaggon
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - amchern
   - lancedMicrosoft
 ---

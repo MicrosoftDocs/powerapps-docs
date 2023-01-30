@@ -2,10 +2,9 @@
 title: Important upcoming changes and deprecations in Power Apps portals
 description: Learn about the important changes, including deprecations, coming soon to Power Apps portals.
 author: sandhangitmsft
-
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/09/2022
+ms.date: 09/21/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -19,12 +18,19 @@ contributors:
 
 # Important upcoming changes and deprecations in Power Apps portals
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The announcements for changes and deprecations described in this article apply to Power Apps portals.
 
 Makers, developers, and IT pros can use this information to prepare for future releases.
 
 > [!IMPORTANT]
 > *Deprecated* means that we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it's officially removed. This deprecation notification can span a few months or years. After it's removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
+
+## Power Apps portal admin center
+
+The Power Apps portal admin center is now deprecated and no longer available as of June 2023. Use the new [Power Pages admin hub](/power-pages/admin/admin-overview) in the Power Platform admin center. 
 
 ## Controlling site visibility changes in Power Pages
 
@@ -33,14 +39,16 @@ Starting October 2022 with website version 9.4.9.xx, any new site created in Pow
 At launch, users with the system administrator role along with [service admins](/power-platform/admin/use-service-admin-role-manage-tenant) will by default have privilege to change site visibility status (private to public or vice versa). 
 
 > [!Note] 
-> All system administrators being able to change the site visibility will only be for a certain duration after which service admins will need to explicitly specify whether all system administrators are allowed to change site visibility. However, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
+> Beginning February 1st, 2023, service admins need to explicitly specify which system administrators are allowed to change site visibility; however, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
-Starting June 2022, [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request, and using the default certificate for OAuth 2.0 implicit grant flow will be deprecated. No action is needed for newly created portals or for existing portals that don't use this feature. If you're already using this feature, you need to use the token endpoint POST request to get a secure access token to authorize the external APIs. 
+The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details), [token endpoint](oauth-implicit-grant-flow.md#token-endpoint-details) using GET request, and using the default certificate for OAuth 2.0 implicit grant flow is deprecated. No action is needed for newly created portals or for existing portals that don't use this feature. If you're already using this feature, you need to use the token endpoint POST request to get a secure access token to authorize the external APIs.
 
 > [!NOTE]
-> All existing customers who are using this deprecated feature need to migrate to the supported method by October 2022.
+> - All existing customers who are using this deprecated feature need to migrate to the supported method by October 2022.
+> - For more information on using a custom certificate, go to [Using a custom certificate](oauth-implicit-grant-flow.md#custom-certificates).
+> - For sample code on using POST calls on the Token endpoint, go to [Token endpoint sample](oauth-implicit-grant-flow.md#token-endpoint-sample).
 
 ## List OData feed 
 

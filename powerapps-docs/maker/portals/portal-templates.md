@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/08/2021
+ms.date: 12/14/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Portal templates
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 Based on the selected environment in Power Apps, you can create a Dataverse starter portal or a portal in an environment containing customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation).
 
@@ -35,7 +38,7 @@ To create a portal in an environment with Dataverse, go to [Create a Dataverse s
 If you select an environment that contains customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, or Dynamics 365 Project Service Automation), you can create the following portals:
 
 - **Customer self-service portal**: A customer self-service portal enables customers to access self-service knowledge, support resources, view the progress of their cases, and provide feedback.
-- **Partner portal**: A partner portal allows every organization with resellers, distributors, suppliers, or partners to have real-time access to every stage of shared activities.
+- **Partner portal**: A partner portal allows every organization with resellers, distributors, suppliers, or partners to have real-time access to every stage of shared activities. The partner portal can also extend Dynamics 365 Field Service and Dynamics 365 Project Service to provide additional functionality to the above audiences as well as customers.
 
     > [!NOTE]
     > Field Service and Project Service packages must be installed in your Dynamics 365 organization to enable respective options. For more information, see [Integrate Project Service Automation](/dynamics365/portals/integrate-project-service-automation) and [Integrate Field Service](/dynamics365/portals/integrate-field-service).
@@ -77,7 +80,7 @@ The table below summarizes the features associated with each portal template:
 | Web Notifications|  *| *|  *| *| *|* |*
 | [!INCLUDE[cc-microsoft](../../includes/cc-microsoft.md)] Identity|   *|  *|  *|   *| *|* |*
 | Identity Workflows| *|  *| *|   *| *|* |*
-| Advanced Forms|  *| *|    *| *| *|* |*
+| Multistep Forms|  *| *|    *| *| *|* |*
 | Feedback|   *|  *|  *| *| *|* |*
 ||
 
@@ -87,7 +90,7 @@ The table below summarizes the features associated with each portal template:
 
 ### See also
 
-[Explore Power Apps portals](/learn/modules/explore-portals) <br>
+[Explore Power Apps portals](/training/modules/explore-portals) <br>
 [Create a portal with an environment containing customer engagement apps](create-portal.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

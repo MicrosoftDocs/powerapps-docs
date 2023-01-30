@@ -31,7 +31,7 @@ landingContent:
        - linkListType: learn
          links:
           - text: Introduction to Dataverse
-            url: /learn/modules/introduction-common-data-service
+            url: /training/modules/introduction-common-data-service
 
   # Card
   - title: Define data

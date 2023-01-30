@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/16/2022
+ms.date: 11/15/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -16,7 +16,12 @@ contributors:
 
 # Manage SSL certificates
 
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 You'll need an SSL certificate to set up a [custom host name](add-custom-domain.md). You can upload and update your own custom certificates by using the Power Apps portals admin center.
+
+> [!IMPORTANT]
+> You cannot re-use the same SSL certificate for extending portals functionality using a client-side API calls with [OAuth 2.0 implicit grant flow](../oauth-implicit-grant-flow.md). See [Manage Custom Certificates](manage-custom-certificates.md).
 
 ## SSL certificate requirements
 
@@ -53,4 +58,4 @@ An SSL certificate is a PFX file that must:
 ### See also
 
 [Add a custom domain name](add-custom-domain.md)<br>
-[Configure SSL certificates and custom domain names](/learn/modules/portals-administration/2-custom-domain)
+[Configure SSL certificates and custom domain names](/training/modules/portals-administration/2-custom-domain)

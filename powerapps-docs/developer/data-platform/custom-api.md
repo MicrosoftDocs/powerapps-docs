@@ -1,12 +1,12 @@
 ---
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
+author: divkamath
+ms.author: dikamath
 ms.date: 07/29/2022
 ms.reviewer: jdaly
 ms.topic: article
-author: dikamath # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -41,11 +41,12 @@ There are several different ways to create a custom API:
 > [!NOTE]
 > Although Custom API data is stored in tables, we do not support creating a model-driven app for these tables.
 >
-> There are several tools created and supported by the community to work with Custom API:
->
+> These are some of the tools created and supported by the community to work with Custom API:
 > - [Dataverse Custom API Manager](https://www.xrmtoolbox.com/plugins/XTB.CustomApiManager/)
 > - [Custom API Tester](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.CustomAPITester/)
 > - [Custom Action to Custom API Converter](https://www.xrmtoolbox.com/plugins/MarkMpn.CustomActionToApiConverter/)
+>
+> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
 ## Custom API Customization
 
