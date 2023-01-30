@@ -74,7 +74,8 @@ Go to the **Support** tab to get help with common issues, report a problem, subm
 
 Provide makers with your own customized content to help them get started with Power Apps.
 
-![Graphical user interface  application Description automatically generated](media/image1.png)
+> [!div class="mx-imgBorder"] 
+> ![Welcome content for makers.](media/learn/maker-welcome-1.png "Welcome content for makers") 
 
 If you're a Power Platform administrator you enable your own welcome content, it will replace the default Power Apps first-time help experience.
 
