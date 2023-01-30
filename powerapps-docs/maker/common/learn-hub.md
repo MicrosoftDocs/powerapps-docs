@@ -88,16 +88,16 @@ If you're a Power Platform administrator you enable your own welcome content, it
 
 ### Enable welcome content
 
-1.  Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
-2.  Select **Environments** in the left navigation pane, select a managed environment, and then select **Edit Managed Environment** on the top menu bar.
+2. Select **Environments** in the left navigation pane, select a managed environment, and then select **Edit Managed Environment** on the top menu bar.
 
-3.  On the **Edit Management Environments** pane, enter your organization specific information under **Maker Welcome content**. For help with Markdown, see [Getting Started](https://www.markdownguide.org/getting-started/).
+3. On the **Edit Management Environments** pane, enter your organization specific information under **Maker Welcome content**. For help with Markdown, see [Getting Started](https://www.markdownguide.org/getting-started/).
 
-4.  Enter your own link to a wiki, internal site, or other reference material in the **Learn more URL** box.
+4. Enter your own link to a wiki, internal site, or other reference material in the **Learn more URL** box.
 
-![Graphical user interface  application Description automatically generated](media/image2.png)
-
+> [!div class="mx-imgBorder"] 
+> ![Enter your welcome content.](media/learn/maker-welcome-2.png "Enter your welcome content") 
  
 
 5.  Select **Preview in a new tab** to see how the text you entered, or markdown will render.
