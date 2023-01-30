@@ -1,7 +1,7 @@
 ---
 title: "ActivityParty table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An activity party represents a person or group associated with an activity. An activity can have multiple activity parties"
-ms.date: 01/04/2023
+ms.date: 01/30/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: DanaMartens # GitHub ID
@@ -63,10 +63,10 @@ Not all activity party types are available for each activity in Dataverse, excep
 |RecurringAppointmentMaster|OptionalAttendee<br />Organizer<br />RequiredAttendee|RecurringAppointmentMaster.OptionalAttendees<br />RecurringAppointmentMaster.Organizer<br />RecurringAppointmentMaster.RequiredAttendees|  
 |ServiceAppointment|Customer<br />Resource|ServiceAppointment.Customers<br />ServiceAppointment.Resources|  
   
-### See also  
- [Activity tables](activity-entities.md)   
+### See also
 
- [ActivityParty table](reference/entities/activityparty.md)   
+[Activity tables](activity-entities.md)<br />
+[ActivityParty table](reference/entities/activityparty.md)
  
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
