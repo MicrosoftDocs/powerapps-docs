@@ -31,7 +31,7 @@ Follow the steps in this topic, for a mobile offline profile that has a table wi
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. On the left nav select **Data** to expand it and then select **Tables**.   
+2. In the left navigation, select **Tables**.   
   
 3. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 
