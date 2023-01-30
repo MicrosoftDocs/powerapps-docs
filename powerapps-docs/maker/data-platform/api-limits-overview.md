@@ -1,11 +1,10 @@
 ---
 title: "API limits overview (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand the limits for Microsoft Dataverse API requests." 
-ms.date: 04/06/2022
+ms.date: 01/30/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -17,12 +16,13 @@ contributors:
 # Microsoft Dataverse API limits overview
 
 
-
 Dataverse API limits help ensure service levels, availability, and quality. Dataverse API limits are part of the Power Platform Request limits and allocations. This article will introduce limits specifically for Dataverse applicable for Power Apps, Power Automate, and customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation) connecting to Dataverse. 
 
 For information about limits for all areas within Power Platform, see [Power Platform Request limits and allocations](/power-platform/admin/api-request-limits-allocations).
 
-There are two categories of limits that apply for Dataverse: *Entitlement* and *Service protection* limits.
+There are two categories of limits that apply for Dataverse: *Entitlement* and *Service protection* limits as summarized below.
+
+[!INCLUDE [cc-api-limits-summary-table](../../includes/cc-api-limits-summary-table.md)]
 
 ## Entitlement limits
 
