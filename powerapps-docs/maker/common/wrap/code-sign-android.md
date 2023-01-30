@@ -83,7 +83,7 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **openssl** - generates SHA1 key for Android.
 
-Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
+Add the generated signature hash in the **Redirect URI** while [registering the app](how-to.md#app-registration).
 
 ### Convert SHA1 hex to Base64-encoded signature hash manually
 
