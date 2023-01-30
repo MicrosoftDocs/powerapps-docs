@@ -132,6 +132,9 @@ When a list of records for a table is displayed within a sub grid on the form of
 
 ### Form ribbons
 
+> [!NOTE]
+> This feature is not supported on Unified Interface.
+
 Each table can have multiple forms. You can define changes to the form ribbon for all forms for that table by adding your definition at the table level (`//ImportExportXml/Entities/Entity/RibbonDiffXml`).
 
 Each table form can have a specific ribbon definition. In the exported customizations.xml file, you must add your modified `<RibbonDiffXml>` to this location:`//ImportExportXml/Entities/Entity/FormXml/forms/systemform/form/RibbonDiffXml`.

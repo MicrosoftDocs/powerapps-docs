@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/27/2022
+ms.date: 01/06/2023
 ms.subservice: portals
 ms.author: gisingh
 ms.reviewer: ndoelman
@@ -13,15 +13,14 @@ contributors:
     - nickdoelman
     - GitanjaliSingh33msft
     - nageshbhat-msft
-    - Professor Kendrick
+    - ProfessorKendrick
 ---
 
 # Configure notes as attachments for basic and multistep forms
 
-
 [!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
-To add the ability to view notes and attachments on basic and multistep forms, you will need to complete the following steps:
+To add the ability to view notes and attachments on basic and multistep forms, you'll need to complete the following steps:
 
 - [Enable attachments for the table in Microsoft Dataverse](../data-platform/data-platform-create-entity.md#create-a-table).
 
@@ -207,9 +206,35 @@ Notes, and the **Add**, **Edit**, and **Delete** buttons for the note control wi
     
     ![Add table permissions.](media/configure-notes/entity-permission.png "Add table permissions")
 
-### Notes created with rich-text editor
+### Enable rich text editor
 
-You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. However, when you try to edit, you'll see the text in HTML markup format.
+The rich text editor can be enabled when adding or editing notes on a form on a webpage.
+
+1. Open the [Portal Management app](configure/configure-portal.md).
+
+1. Go to the **Website** section and select **Site Settings**.
+
+1. Select **New** to create a new [site setting](configure/configure-site-settings.md).
+
+1. Specify the following values for the site setting;
+    1. **Name:** Timeline/RTEEnabled
+    1. **Website:** *The associated website record*
+    1. **Value:** True
+    1. **Description:** (Optional)
+
+1. Select **Save & Close**
+
+1. Sync your website from the studio and preview the site.
+
+1. You should be able to add and edit notes using the rich text editor.
+
+    :::image type="content" source="media/configure-notes/rich-text-editor.png" alt-text="Configure notes using the rich text editor.":::
+
+### Notes created with rich text editor
+
+You can view the notes created using the [Rich text editor control configurations](../model-driven-apps/rich-text-editor-control.md) on your portal webpage. 
+
+However, if the [rich text editor](#enable-rich-text-editor) isn't enabled for notes on forms, when you try to edit, you'll see the text in HTML markup format.
 
 For example, this note shows rich-text format in the model-driven app.
 
