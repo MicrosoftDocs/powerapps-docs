@@ -161,16 +161,15 @@ account](signup-for-powerapps.md#faq).
 
 ### Can I reset or delete my developer environment?
 
-Resetting and deleting developer environment is supported.
-The owner of the developer environment, or users with the [permission to delete an environment](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) can delete a developer environment.
+Yes. The owner of the developer environment, or users with the [permission to delete an environment](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) can delete a developer environment.
 
 However, even after deleting a user's developer environment, a new developer environment will be created when the user signs into Power Apps maker portal again&mdash;as long as the user continues to have the **Microsoft Power Apps for Developer** license. The user can then provision a Dataverse database in the new developer environment.
 
-### Can I prevent users to create developer environments?
+### Can I prevent users from creating developer environments?
 
-You can remove the capability from users to create a Developer Environment from Power Platform Admin Center in the [settings](https://learn.microsoft.com/power-platform/admin/create-environment), but one environment will always be auto-created if the user has a developer license assigned.
+You can remove the capability from users to create additional developer environment from Power Platform admin center in the [settings](/power-platform/admin/create-environment). However, users with a developer license assigned will always be able to create one developer environment.
 
-To remove the auto-creation of developer environment permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform the following actions:
+To remove the auto-creation of developer environment permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform all of the following actions:
 
 - Remove the **Microsoft Power Apps for Developer** license. For more information, see  [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
 - Disable [self-service sign-up](/azure/active-directory/enterprise-users/directory-self-service-signup).
