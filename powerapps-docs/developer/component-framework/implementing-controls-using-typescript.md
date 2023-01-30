@@ -367,6 +367,31 @@ The component is compiled into the `out/controls/LinearInputControl` folder. The
 - bundle.js – Bundled component source code. 
 - ControlManifest.xml – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
 
+> [!NOTE]
+> eslint rules may impact your build, depending on how they have been configured. If you receive an error during build:
+> 
+> ```
+> [12:58:30 PM] [build]  Failed:
+> [pcf-1065] [Error] ESLint validation error:
+> C:\project\LinearInput\LinearInputControl\index.ts
+>   10:26  error  'EventListenerOrEventListenerObject' is not defined  no-undef
+> ```
+>
+> Check your eslint rules in .eslintrc.json and set linting rules to "warn". For example, if you receive the error:
+> 
+> ```error  'EventListenerOrEventListenerObject' is not defined  no-undef```
+> 
+> Then you would open .eslintrc.json and edit the rules to add a "warn" value for the rule "no-undef":
+>
+> ```json
+>     "rules": {
+>       "no-unused-vars": "off",
+>       "no-undef": ["warn"]
+>     }
+> ```
+> 
+> With the eslint rules updated, your control should build cleanly.
+
 ## Debugging your code component
 
 Once you're done implementing the code component logic, run the following command to start the debugging process. More information: [Debug code components](debugging-custom-controls.md)
