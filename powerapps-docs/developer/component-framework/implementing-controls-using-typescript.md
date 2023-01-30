@@ -355,6 +355,16 @@ Developers and app makers can define their styling to represent their code compo
 > Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) web resources](/dynamics365/customerengagement/on-premises/developer/resx-web-resources).
 > See [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources. 
 
+## Add TypeScript plugin
+
+The eslintrc.josn file is configured to use JavasScript rules rather than TypeScript ones. To fix this, add the plugin line to the extends property.
+
+```
+"extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ]
+```
 
 ## Build your code components
 
