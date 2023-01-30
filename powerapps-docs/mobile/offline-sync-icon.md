@@ -27,7 +27,7 @@ The offline sync icon indicates the synchronization status of the Power Apps mob
 
 The offline sync icon is always visible in the main app navigation on iOS and Android devices.
 
-![Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.](media/offline-sync-icon-small.png "Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.")
+:::image type="content" source="media/offline-sync-icon-small.png" alt-text="Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.":::
 
 > [!IMPORTANT]
 > This is a preview feature. [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
