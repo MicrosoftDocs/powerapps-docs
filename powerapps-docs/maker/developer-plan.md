@@ -167,13 +167,7 @@ However, even after deleting a user's developer environment, a new developer env
 
 ### Can I prevent users from creating developer environments?
 
-You can remove the capability from users to create additional developer environment from Power Platform admin center in the [settings](/power-platform/admin/create-environment). However, users with a developer license assigned will always be able to create one developer environment.
-
-To remove the auto-creation of developer environment permanently, a member of the Power Platform related [service admin roles](/power-platform/admin/use-service-admin-role-manage-tenant) must perform all of the following actions:
-
-- Remove the **Microsoft Power Apps for Developer** license. For more information, see  [Service plan IDs for licensing](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
-- Disable [self-service sign-up](/azure/active-directory/enterprise-users/directory-self-service-signup).
-- Explicitly block all "internal" consent plans in the tenant using PowerShell. For more information, see [Block trial licenses commands](/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).
+Yes. To prevent users from creating developer environments, see [Control environment creation](/power-platform/admin/control-environment-creation?branch=pr-en-us-6000#developer-environments).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
 No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps.
