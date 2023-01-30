@@ -5,7 +5,7 @@ author: marcelbf
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 10/11/2022
+ms.date: 01/30/2023
 ms.author: marcelbf
 ms.reviewer: matp
 contributors:
@@ -143,7 +143,7 @@ You can continue using your Power Apps Developer Plan for free as long as there'
 
 ### Can I get or create multiple developer environments?
 
-Yes. You have one developer environment, which is created for you by Power Apps when you sign up for the Developer Plan. You can create up to three environments in the Power Platform Admin Center.
+Yes. You have one developer environment, which is created for you by Power Platform when you sign up for the Developer Plan. You can create up to three environments in the Power Platform admin center.
 
 ### What's the difference between the Power Apps Plan Trial and Power Apps Developer Plan? Which one should I sign up for?
 
@@ -167,20 +167,24 @@ However, even after deleting a user's developer environment, a new developer env
 
 ### Can I prevent users from creating developer environments?
 
-Yes. To prevent users from creating developer environments, see [Control environment creation](/power-platform/admin/control-environment-creation?branch=pr-en-us-6000#developer-environments).
+Yes. To prevent users from creating developer environments, go to [Control environment creation](/power-platform/admin/control-environment-creation?branch=pr-en-us-6000#developer-environments).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
+
 No. However, users may start a Power Automate trial including RPA use rights to try out RPA capabilities. Power Apps Developer plan includes cloud flow use rights since these can be connected to an act as an extension of Power Apps apps.
 
-### Does the Power Apps Developer plan include AI Builder use rights? 
+### Does the Power Apps Developer plan include AI Builder use rights?
+
 No. However, users may start an AI Builder trial to try out the AI Builder capabilities.
 
 ### Why does a banner appear with apps running in the developer environment?
+
 Since developer environments aren't intended to support production scenarios, apps display a temporary banner to remind makers about them running in a developer environment. This banner will no longer appear if you move the app from a developer environment to a non-developer environment.
 
 :::image type="content" source="media/developer-plan/power_apps_dev_env_app_banner.png" alt-text="Power Apps Developer Environment app banner.":::
 
 ### Are Dynamics 365 apps available in a developer environment?
+
 No. Dynamics 365 apps can't be installed in a developer environment. You'll see the following message when you try to install them:
 
 "Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to “Yes”. Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
