@@ -29,7 +29,7 @@ Add a Power BI report to a model-driven app form using the Power BI report contr
 
 1. In the form designer, select **Components** on the left navigation pane, expand **Power BI**, and then select **Power BI Report**.
 1. Choose from the following properties: 
-   - **Report**. Select the Power BI report that you want displayed on the form.
+   - **Report**. Select the Power BI report that you want displayed on the form. More information: [Create Power BI report and dataset components](create-edit-powerbi-report-dataset-components.md).
    - **Show filter pane**. When **True**, displays the filter pane in the Power BI report.
    - **Expand filter pane by default**. When **True**, expands the filter pane by default.
    - **Save filter updates**. When **True** and someone leaves the report, the filter will be saved and reapplied when the person returns.
