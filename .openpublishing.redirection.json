@@ -7251,16 +7251,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/user/cs-email-template-builder.md",
-      "redirect_url": "/dynamics365/customer-service/cs-email-template-builder",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/user/customize-insert-email-template.md",
-      "redirect_url": "/dynamics365/customer-service/customize-insert-email-template",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "powerapps-docs/teams/boards-architecture.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
       "redirect_document_id": "false"
