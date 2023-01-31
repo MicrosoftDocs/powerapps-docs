@@ -1,7 +1,7 @@
 ---
 title: "Use the XRM tooling common login control in your client applications (Microsoft Dataverse)| Microsoft Docs"
 description: "The Microsoft Dataverse SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse"
-ms.date: 04/01/2022
+ms.date: 01/30/2023
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
@@ -28,9 +28,9 @@ There is a template for Visual Studio that enables you to use the common login c
 
 ## Prerequisites
   
-- .NET Framework 4.6.2 or higher.
-- Visual Studio 2017 (recommended)
-- Connected to Internet so that you can download/restore the required Nuget packages while using the project template.  
+- .NET Framework 4.6.2 or higher (4.8.x is recommended)
+- Visual Studio 2022
+- Connected to Internet so that you can download/restore the required Nuget packages while using the project template
   
 <a name="NewProjectUsingTemplate"></a>
    
@@ -41,21 +41,12 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
 1.  Start Visual Studio, and create a new project.  
 2.  In the **New Project** dialog box:  
     1.  From the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**.  
-    2.  Ensure that **.NET Framework 4.6.2** is selected.  
+    2.  Ensure that **.NET Framework 4.6.2** or a later version is selected.  
     3.  Select **WPF Application for Dynamics 365**.  
     4.  Specify the name and location of the project, and click **OK**.  
   
      > [!div class="mx-imgBorder"]
-     > ![WPF Application for Dataverse template.](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Dataverse template")   
-
-> [!NOTE]
-> **Known Issue with Visual Studio 2015**
-> 
-> When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
->
-> Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
->
-> This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
+     > ![WPF Application for Dataverse template.](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for Dataverse template")
   
 3. To test the project:
   
@@ -81,8 +72,11 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
 
     2.  In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **Dataverse SDK Templates**. Click **Dataverse Login Form for WPF Applications**, and click **OK**.  
 
-          > [!div class="mx-imgBorder"]
-          > ![Add the common login control template.](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
+        > [!div class="mx-imgBorder"]
+        > ![Add the common login control template.](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
+
+        > [!NOTE]
+        > You can also obtain the [login control code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/Quick%20start%20for%20XRM%20Tooling%20API/C%23/QuickStartXRMToolingWPFClient/LoginWindow) from a published code sample.
   
 3. The newly added `CrmLoginForm1.xaml` login control is displayed in the XAML designer area. If it isn’t displayed, double-click the `CrmLoginForm1.xaml` file in the **Solution Explorer** pane.  
   
