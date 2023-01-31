@@ -1,5 +1,5 @@
 ---
-title: View offline sync status
+title: View offline sync status (preview)
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
 ms.date: 01/31/2023
 ms.author: sericks
@@ -14,7 +14,7 @@ search.audienceType:
   - enduser
 ---
 
-# View offline sync status
+# View offline sync status (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
