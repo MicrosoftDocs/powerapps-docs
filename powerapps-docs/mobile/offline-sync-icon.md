@@ -1,7 +1,7 @@
 ---
 title: View offline sync status
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
-ms.date: 01/30/2023
+ms.date: 01/31/2023
 ms.author: sericks
 author: sericks007
 manager: tapanm-MSFT
@@ -58,4 +58,4 @@ On iOS and Android devices, app sync notifications are consistent across the dif
 ## Known issues
 
 - The first time the app syncs, the offline sync icon continues to spin until the user switches from online mode to offline mode.
-- If the app has pending changes to upload, the number that's shown is the total of updated rows, added and removed files, and images.
+- If the app has pending changes to upload, the number that's shown is the total of updated, added, and removed rows, files, and images.
