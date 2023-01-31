@@ -20,9 +20,12 @@ contributors:
 ---
 # Use the XRM tooling common login control in your client applications
 
-There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
+The common login control UI is provided by a XAML and C# code file. The logic for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the control so that you can quickly leverage these capabilities in your Windows client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
   
 ![XRM Tooling common login control.](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
+
+> [!NOTE]
+> You can obtain the [login control code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/Quick%20start%20for%20XRM%20Tooling%20API/C%23/QuickStartXRMToolingWPFClient/LoginWindow) from a published code sample.
   
 <a name="Prereq"></a>
 
@@ -74,10 +77,7 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
 
         > [!div class="mx-imgBorder"]
         > ![Add the common login control template.](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
-
-        > [!NOTE]
-        > You can also obtain the [login control code](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/Quick%20start%20for%20XRM%20Tooling%20API/C%23/QuickStartXRMToolingWPFClient/LoginWindow) from a published code sample.
-  
+ 
 3. The newly added `CrmLoginForm1.xaml` login control is displayed in the XAML designer area. If it isn’t displayed, double-click the `CrmLoginForm1.xaml` file in the **Solution Explorer** pane.  
   
     > [!div class="mx-imgBorder"]

@@ -23,7 +23,7 @@ contributors:
 After you are connected to Dataverse, you can use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class object to perform actions on your Dataverse data such as create, update, retrieve or delete data. This section provides some examples on how you can perform actions in Dataverse using XRM tooling. 
 
 > [!IMPORTANT]
-> While Xrm Tooling APIs including the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class continue to be supported, it is recommended that all new app development use the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class for web service connections and operations. If you need to use the WPF Login Control or the PowerShell module, continue using Xrm Tooling for those.
+> While XRM tooling APIs including the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class continue to be supported, it is recommended that all new app development use the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class for web service connections and operations. If you need to use the WPF Login Control or the PowerShell module, continue using XRM tooling for those.
   
 ## In This Section
 
