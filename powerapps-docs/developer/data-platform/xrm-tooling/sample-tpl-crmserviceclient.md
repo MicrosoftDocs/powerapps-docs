@@ -25,6 +25,9 @@ contributors:
 
 This C# .NET sample shows how to use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class with the Task Parallel Library (TPL).
 
+> [!NOTE]
+> You could also use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> instead of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class in this sample.
+
 The Task Parallel Library enables developers to be more productive by simplifying the process of adding parallelism and concurrency to applications. Adding parallelism and concurrency can significantly improve the total throughput for applications that need to perform a large number of Dataverse operations in a short period of time.
 
 ## Requirements

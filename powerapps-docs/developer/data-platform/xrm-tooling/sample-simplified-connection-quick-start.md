@@ -23,10 +23,10 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This C# .NET sample shows how to connect to the Microsoft Dataverse web service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class and a connection string. The sample then perform basic create, update, retrieve, and delete operations on a Dataverse table. For more information about the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> see [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md).
+This C# .NET sample shows how to connect to the Microsoft Dataverse web service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class and a connection string. The sample then perform create, update, retrieve, and delete operations on a Dataverse table. For more information about the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> see [Use CrmServiceClient constructors to connect to Dataverse](use-crmserviceclient-constructors-connect.md).
 
 > [!NOTE]
-> You could also use <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> instead of <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> in this sample.
+> You could also use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> instead of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class in this sample.
 
 ## Requirements
 

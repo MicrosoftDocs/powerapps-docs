@@ -27,7 +27,7 @@ XRM tooling is a set of APIs built on top of the Microsoft Dataverse assembly AP
 - Provides built-in diagnostic tracing and performance reporting of the actions performed in Dataverse, which you can configure based on your organization’s requirements. 
 
 > [!IMPORTANT]
-> While XRM yooling APIs including the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class continue to be supported, it is recommended that all new app development use the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class for web service connections and operations. If you need to use the WPF Login Control or the PowerShell module, continue using Xrm Tooling for those.
+> While XRM Tooling APIs including the [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) class continue to be supported, it is recommended that all new app development use the [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient) class for web service connections and operations. If you need to use the WPF Login Control or the PowerShell module, continue using Xrm Tooling for those.
 
 ## Components of XRM tooling  
 

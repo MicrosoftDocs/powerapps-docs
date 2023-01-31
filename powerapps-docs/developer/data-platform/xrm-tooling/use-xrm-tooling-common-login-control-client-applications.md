@@ -20,7 +20,7 @@ contributors:
 ---
 # Use the XRM tooling common login control in your client applications
 
-The common login control UI is provided by a XAML and C# code file. The logic for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the control so that you can quickly leverage these capabilities in your Windows client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
+The common login control UI is provided by XAML and C# code files. The logic for Microsoft Dataverse authentication, credential storage and retrieval, and diagnostic logging is built into the control so that you can quickly leverage these capabilities in your Windows (WPF) client applications for Dataverse. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
   
 ![XRM Tooling common login control.](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
 
@@ -32,7 +32,7 @@ The common login control UI is provided by a XAML and C# code file. The logic fo
 ## Prerequisites
   
 - .NET Framework 4.6.2 or higher (4.8.x is recommended)
-- Visual Studio 2022
+- Visual Studio 2019 or later
 - Connected to Internet so that you can download/restore the required Nuget packages while using the project template
   
 <a name="NewProjectUsingTemplate"></a>

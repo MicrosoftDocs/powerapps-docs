@@ -23,7 +23,7 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-This C# .NET code sample shows how to connect to a Microsoft Dataverse environment using the WPF based XRM Tooling logon control. The sample then performs create, update, retrieve, and delete operations on a Dataverse table. For more information about XRM Tooling, see [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md).
+This C# .NET code sample shows how to connect to a Microsoft Dataverse environment using the WPF based XRM Tooling login control. Next, the sample performs create, update, retrieve, and delete operations on a Dataverse table. For more information about XRM Tooling, see [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md).
 
 ## Requirements
 
