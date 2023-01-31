@@ -71,7 +71,6 @@ sections:
      answer: |
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
         - Attachment
-        - String Map
         - Calendar
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
