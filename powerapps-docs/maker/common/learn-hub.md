@@ -83,8 +83,8 @@ To access the getting started information from the **Learn** hub:
 1. Select **Learn** on the left pane.
 2. Select **From your org**.
   
-  > [!div class="mx-imgBorder"] 
-  > ![Maker welcome screen.](media/learn/maker-welcome-4.png "Maker welcome screen") 
+   > [!div class="mx-imgBorder"] 
+   > ![Maker welcome screen.](media/learn/maker-welcome-4.png "Maker welcome screen") 
  
 
  
