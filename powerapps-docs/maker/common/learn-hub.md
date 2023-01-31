@@ -74,7 +74,7 @@ Go to the **Support** tab to get help with common issues, report a problem, subm
 
 In Managed Environments, admins can provide customized welcome content to help makers get started with Power Apps. More information: [Enable maker welcome content (Preview)](/power-platform/admin/welcome-content)
 
-When the welcome content is enabled, upon signing in to Power Apps as a maker, you will be greeted with the customized getting started information.
+When welcome content is enabled, upon signing in to Power Apps as a maker, you will be greeted with the customized getting started information.
   
 > [!div class="mx-imgBorder"] 
 > ![Maker welcome screen.](media/learn/maker-welcome-4.png "Maker welcome screen") 
