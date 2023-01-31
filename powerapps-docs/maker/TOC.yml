@@ -1687,7 +1687,7 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different tenant in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
-  - name: View offline sync status
+  - name: View offline sync status (preview)
     href: ../mobile/offline-sync-icon.md
   - name: Troubleshoot issues in the mobile app
     items:
