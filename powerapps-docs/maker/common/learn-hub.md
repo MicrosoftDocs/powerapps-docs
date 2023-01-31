@@ -72,52 +72,19 @@ Go to the **Support** tab to get help with common issues, report a problem, subm
 
 ## From your org (preview)
 
-Provide makers with your own customized content to help them get started with Power Apps.
+In Managed Environments, admins can provide customized welcome content to help makers get started with Power Apps. More information: [Enable maker welcome content (Preview)](/power-platform/admin/welcome-content)
 
+When the welcome content is enabled, upon signing in to Power Apps as a maker, you will be greeted with the customized getting started information.
+  
 > [!div class="mx-imgBorder"] 
-> ![Welcome content for makers.](media/learn/maker-welcome-1.png "Welcome content for makers") 
-
-If you're a Power Platform administrator you enable your own welcome content, it will replace the default Power Apps first-time help experience.
-
->[!IMPORTANT]
->This is a preview feature.
->[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-
-> [!NOTE]
-> This feature only works with Managed Environments. More information: [Managed Environments overview](/power-platform/admin/managed-environment-overview)
-
-### Enable welcome content
-
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
-
-2. Select **Environments** in the left navigation pane, select a managed environment, and then select **Edit Managed Environment** on the top menu bar.
-
-3. On the **Edit Management Environments** pane, enter your organization specific information under **Maker Welcome content**. For help with Markdown, see [Getting Started](https://www.markdownguide.org/getting-started/).
-
-4. Enter your own link to a wiki, internal site, or other reference material in the **Learn more URL** box.
-
-> [!div class="mx-imgBorder"] 
-> ![Enter your welcome content.](media/learn/maker-welcome-2.png "Enter your welcome content") 
- 
-
-5.  Select **Preview in a new tab** to see how the text you entered, or markdown will render.
-
-![Graphical user interface  application Description automatically generated](media/image3.png)
-
- 
-
-### First-time experience for makers
-
-Once the maker welcome content is enabled, when a maker signs in Power Apps with a managed environment, they will see the customized getting started information.
-
-![Graphical user interface  application Description automatically generated](media/image1.png) 
-
+> ![Maker welcome screen.](media/learn/maker-welcome-4.png "Maker welcome screen") 
 
 If you select **Don't show this again here,** you can still access the getting starting information from the **Learn** hub.
 
--   Select **Learn** on the left pane and then select, **From your org**.
+To access the getting started information from the **Learn** hub:
 
-![Graphical user interface  website Description automatically generated](media/image4.png)
+1. Select **Learn** on the left pane.
+2. Select **From your org**.
 
  
 
