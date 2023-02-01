@@ -1689,9 +1689,12 @@
     href: ../mobile/scan-QR-code.md
   - name: Switch to a different tenant in the Power Apps mobile app
     href: ../mobile/tenant-switcher.md
-  - name: Troubleshoot issues in the Power Apps mobile app
-    href: ../mobile/powerapps-mobile-troubleshoot.md
+  - name: View offline sync status (preview)
+    href: ../mobile/offline-sync-icon.md
+  - name: Troubleshoot issues in the mobile app
     items:
+    - name: Troubleshoot issues in the Power Apps mobile app
+      href: ../mobile/powerapps-mobile-troubleshoot.md
     - name: Prevent canvas app restarts in the Power Apps mobile app
       href: ../mobile/power-apps-mobile-canvas-app-restarts.md
   - name: Mobile offline for model-driven apps
