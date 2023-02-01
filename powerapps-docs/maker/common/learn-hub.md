@@ -45,30 +45,17 @@ The **Overview** tab lists featured training paths and modules, posts from the c
 
 The **Courses** tab provides guided training such as training paths, modules, and training events.
 
-> [!div class="mx-imgBorder"] 
-> ![Courses tab.](media/learn/learn-courses.png "Courses tab") 
-
 ## Articles
 
 The **Articles** tab has information from public blogs articles.
-
-> [!div class="mx-imgBorder"] 
-> ![Articles tab.](media/learn/learn-articles.png "Articles tab") 
-
 
 ## Community
 
 The **Community** tab provides access to content from the Power Apps community including user groups, networking events, LinkedIn Power Apps community, and more. 
 
-> [!div class="mx-imgBorder"] 
-> ![Community tab.](media/learn/learn-community.png "Community tab") 
-
 ## Support
 
 Go to the **Support** tab to get help with common issues, report a problem, submit an idea, and get access to help topics.
-
-> [!div class="mx-imgBorder"] 
-> ![Support tab.](media/learn/learn-support.png "Support tab") 
 
 ## From your org (preview)
 
