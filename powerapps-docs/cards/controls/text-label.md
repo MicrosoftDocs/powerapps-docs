@@ -191,4 +191,4 @@ There must be adequate color contrast between:
 * Focus indicators must be clearly visible, if the text is used as a button or link. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

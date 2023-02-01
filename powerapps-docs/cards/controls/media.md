@@ -158,4 +158,4 @@ For example, you might place an **Image** of a padlock next to a **[Label](contr
 
 * Focus indicators must be clearly visible, if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this result.
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

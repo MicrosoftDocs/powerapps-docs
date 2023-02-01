@@ -171,4 +171,4 @@ Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger 
 > When the calendar is open, press **Page up** and **Page down** to navigate between months and **Shift+Page up** and **Shift+Page down** to navigate between years.
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

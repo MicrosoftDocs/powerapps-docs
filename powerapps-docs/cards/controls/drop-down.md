@@ -171,4 +171,4 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
+

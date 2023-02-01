@@ -66,4 +66,3 @@ In contrast, containers are actual controls with their own properties like **Wid
 While you can add any controls in a group, you should only add logically-related controls in a container. For example, [controls in a tile should be placed in containers](../accessible-apps-structure.md#logical-control-order).
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

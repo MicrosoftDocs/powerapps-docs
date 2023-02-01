@@ -153,4 +153,3 @@ This is in addition to the [standard color contrast requirements](../accessible-
  
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

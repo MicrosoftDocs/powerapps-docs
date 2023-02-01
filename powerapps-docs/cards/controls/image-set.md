@@ -196,4 +196,3 @@ You can also specify the color of a **Button** control by setting its **[HoverFi
  
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

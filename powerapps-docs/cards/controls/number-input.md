@@ -183,4 +183,3 @@ The user can specify data by typing into a text-input control. Depending on how 
  
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

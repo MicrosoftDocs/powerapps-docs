@@ -171,4 +171,3 @@ Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 g
     * Consider adding a **[Label](control-text-box.md)** control to show the elapsed time. Use the timer's **[Text](properties-core.md)** property to instruct the user to start or stop the timer.
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]
