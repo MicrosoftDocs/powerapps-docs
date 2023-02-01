@@ -72,13 +72,13 @@ Now we are going to wire up the login control to the application.
 
     :::image type="content" source="../media/xrm-designer-control.png" alt-text="Login control in UI designer":::
 
-1. Switch to the MainWindow.xaml designer tab. Add a Button control in the designer and set the Name and Common Content property values to _btnSignIn_ and _Sign in to Dataverse_ respectively.
+2. Switch to the MainWindow.xaml designer tab. Add a Button control in the designer and set the Name and Common Content property values to _btnSignIn_ and _Sign in to Dataverse_ respectively.
 
-    :::image type="content" source="../media/xrm-add button.png" alt-text="Add a button":::
+    :::image type="content" source="../media/xrm-add-button.png" alt-text="Add a button":::
 
-1. Double-click the button to add code for the click event of the button. A code editing window for the MainWindow class file is shown.
+3. Double-click the button to add code for the click event of the button. A code editing window for the MainWindow class file is shown.
 
-1. Replace the empty Button_Click event handler method with this code (below) to call the login control, and create an instance of the Dataverse connection object.
+4. Replace the empty Button_Click event handler method with this code (below) to call the login control, and create an instance of the Dataverse connection object.
 
 ```csharp
 private void Button_Click(object sender, RoutedEventArgs e)
@@ -107,7 +107,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-1. Add the definition of the ctrl_ConnectionToCrmCompleted event handler method into the MainWindow class below the Button_Click event handler method and at the same indent level.
+5. Add the definition of the ctrl_ConnectionToCrmCompleted event handler method into the MainWindow class below the Button_Click event handler method and at the same indent level.
 
 ```csharp
 private void ctrl_ConnectionToCrmCompleted(object sender, EventArgs e)
@@ -122,13 +122,13 @@ private void ctrl_ConnectionToCrmCompleted(object sender, EventArgs e)
 }
 ```
 
-1. Add a using statement at the beginning of the C# file so that the ExampleLoginForm class is resolved.
+6. Add a using statement at the beginning of the C# file so that the ExampleLoginForm class is resolved.
 
 ```csharp
 using PowerApps.Samples.LoginUX;
 ```
 
-1. Build the program (F6). It should build with no errors or warnings.
+7. Build the program (F6). It should build with no errors or warnings.
 
 ### Test the program
 
