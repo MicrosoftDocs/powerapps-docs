@@ -31,10 +31,11 @@ In a model-driven app viewed within a web browser, you can use developer tools t
 More information:
 
 - [mdn web docs: What are browser developer tools?](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools).
-- [Microsoft Edge Sources](/microsoft-edge/devtools-guide-chromium/sources/)
-- [Google Chrome Sources](https://developer.chrome.com/docs/devtools/sources/)
-- [Mozilla Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
-- [Apple Safari Debugger tab](https://support.apple.com/guide/safari-developer/debugger-tab-devfce7d9aed/mac)
+
+   - [Microsoft Edge Sources](/microsoft-edge/devtools-guide-chromium/sources/)
+   - [Google Chrome Sources](https://developer.chrome.com/docs/devtools/sources/)
+   - [Mozilla Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+   - [Apple Safari Debugger tab](https://support.apple.com/guide/safari-developer/debugger-tab-devfce7d9aed/mac)
 
 ## Identify JavaScript web resource causing error
 
