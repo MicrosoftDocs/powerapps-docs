@@ -2808,6 +2808,42 @@
           href: ../cards/make-a-card/ui-elements/use-buttons.md
         - name: Add and configure screens
           href: ../cards/make-a-card/screens/use-screens.md
+        - name: Control reference
+          items: 
+            - name: List of controls properties
+              href: ../cards/control-reference.md
+            - name: Limitations of controls
+              href: ../cards/control-limitations.md
+            - name: Button
+              href: ../cards/controls/button.md
+            - name: Button set
+              href: ../cards/controls/button-set.md
+            - name: Check box
+              href: ../cards/controls/check-box.md
+            - name: Column
+              href: ../cards/controls/column-set.md
+            - name: Container
+              href: ../cards/controls/container.md
+            - name: Date picker
+              href: ../cards/controls/date-picker.md
+            - name: Drop down
+              href: ../cards/controls/drop-down.md
+            - name: Fact set
+              href: ../cards/controls/fact-set.md
+            - name: Image
+              href: ../cards/controls/Image.md
+            - name: Image set
+              href: ../cards/controls/image-set.md
+            - name: Media
+              href: ../cards/controls/media.md
+            - name: Number input
+              href: ../cards/controls/number-input.md
+            - name: Text input
+              href: ../cards/controls/text-input.md
+            - name: Text label
+              href: ../cards/controls/text-label.md
+            - name: Time picker
+              href: ../cards/controls/time-picker.md
     - name: Connect to data and services
       items:
         - name: Add variables
