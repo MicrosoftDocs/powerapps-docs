@@ -102,6 +102,7 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
 1. Click on **inspect**.
 
+More information: [Microsoft Edge: Remotely debug Android devices](/microsoft-edge/devtools-guide-chromium/remote-debugging/)
 
 ### See also
 
