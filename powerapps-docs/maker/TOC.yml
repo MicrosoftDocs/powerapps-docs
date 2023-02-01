@@ -2821,6 +2821,8 @@
             - name: Check box
               href: ../cards/controls/check-box.md
             - name: Column
+              href: ../cards/controls/column.md
+            - name: Column set
               href: ../cards/controls/column-set.md
             - name: Container
               href: ../cards/controls/container.md
