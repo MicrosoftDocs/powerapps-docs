@@ -1,13 +1,12 @@
 ---
-title: "Debug your JavaScript code for model-driven apps| MicrosoftDocs"
+title: "Debug JavaScript code for model-driven apps| MicrosoftDocs"
 description: "Explains how to debug JavaScript code for model-driven apps"
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"
 author: adrianorth
 ms.author: aorth
-
-ms.date: 04/01/2022
+ms.date: 01/31/2023
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
@@ -18,42 +17,93 @@ contributors:
   - JimDaly
   - caburk
 ---
-# Debug your JavaScript code for model-driven apps
+# Debug JavaScript code for model-driven apps
 
-Each browser provides some kind of debugging extension. Microsoft Edge provides F12 Developer Tools you can use to debug scripts in model-driven apps. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge. For more information, see Using the [F12 developer tools guide](/microsoft-edge/f12-devtools-guide).
+Custom logic using JavaScript in model-driven apps are contained within JavaScript web resources. The JavaScript web resources provide the libraries that define functions that developers register to handle events.
 
-For Google Chrome, press F12 to open developer tools. Firebug is a popular browser extension for web development using Mozilla Firefox. For Apple Safari, you must first select the **Show Develop** menu in menu bar in **Advanced Preferences**. Then you can select **Show Web Inspector** from the **Develop** menu.
+In a model-driven app viewed within a web browser, you can use developer tools that all modern browsers provide. With these tools you can locate the JavaScript libraries loaded in the model-driven application, set break points and debug your code using common methods.
 
-When you use JavaScript libraries in model-driven apps, your libraries are loaded with the web page. It can sometimes be difficult to isolate your specific library in the debugging environment. When using debugging tools in Microsoft Edge, on the **Debugger** tab, click on the folder icon at the top-left corner, and expand the available scripts and find the one with the name that corresponds to the name of your JavaScript web resource, such as the **new_myCustomJavaScript.js** web resource shown below. You can also search for your JavaScript library by typing the file name in the search box.
+> [!NOTE]
+> With model-driven apps, because of the way that the libraries are added to the page, you may not easily find the library representing the JavaScript Web resource. These libraries may not be listed in the file list or in the hierarchy of source files.
+> 
+> If you know the name of the JavaScript web resource you want to debug, for Microsoft Edge or Google Chrome sources you can use the `Ctrl+P` **Open file** command to locate the file by name and start debugging. If you have a function that is causing an error, but you don't know the name of the file, see [Identify JavaScript web resource causing error](#identify-javascript-web-resource-causing-error).
 
-![Debugging JavaScript.](../media/form-script-debugging.png)
+More information:
 
-Debugging tools for different browsers have similar capabilities. Once you have found your library, you can set a break point and recreate the event that should cause your code to run.
+- [mdn web docs: What are browser developer tools?](https://developer.mozilla.org/docs/Learn/Common_questions/What_are_browser_developer_tools).
+- [Microsoft Edge Sources](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/sources/)
+- [Google Chrome Sources](https://developer.chrome.com/docs/devtools/sources/)
+- [Mozilla Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- [Apple Safari Debugger tab](https://support.apple.com/guide/safari-developer/debugger-tab-devfce7d9aed/mac)
 
-Also look at the following blog post on our team blog site for more ideas on debugging your JavaScript code: [Blog: Debugging custom JavaScript code in CRM using browser developer tools](https://blogs.msdn.microsoft.com/crm/2015/11/29/debugging-custom-javascript-code-in-crm-using-browser-developer-tools/).
+## Identify JavaScript web resource causing error
 
-## Select appropriate frame to debug your code
+When a JavaScript library causes a script error in a model-driven app, the following dialog appears:
 
-model-driven apps forms are composed of several frames. For the code to work in the **Console** of the browser developer tools, you must select the appropriate frame. 
-- For the web client forms, select the frame named **ClientApiWrapper**. 
-- For the new Unified Interface forms, select the frame named **ClientApiFrame_[n]** where n is the internal page ID. You should select the frame with the highest value for [n].
+:::image type="content" source="media/script-error-dialog.png" alt-text="Script error dialog":::
 
-## Write messages to the console
+If you click the **Show Details** link, more details will be displayed similar to the following:
 
-Using the [window.alert](https://msdn.microsoft.com/library/ms535933(v=vs.85).aspx) method when debugging JavaScript is still a common way to troubleshoot code in the application. But now that all modern browsers provide easy access to debugging tools, it is not a best practice, especially when others might be using the application you are debugging.
-
-Consider writing your messages to the console instead. The following is a small function you can add to your libraries that you can use to send any messages you want to view to the console when it is open.
-
-```JavaScript
-function writeToConsole(message)
-{
- if (typeof console != 'undefined') {
-  console.log(message);
- }
-}
+```
+Xrm.Navigation.openalertDialog is not a function
+Session Id: 53febd7c-3388-4ea5-a195-d84cf5883c30
+Correlation Id: d154420e-5999-4250-b140-081f04a8e264
+Event Name: onsave
+Function Name: Example.formOnSave
+Web Resource Name: example_example-form-script
+Solution Name: Active
+Publisher Name: DefaultPublisherYourOrg
+Time: Tue Jan 31 2023 13:36:34 GMT-0800 (Pacific Standard Time)
 ```
 
-Unlike using the alert method, if you forget to remove any code that uses this function, people using the application will not see your messages.
+In this case, the name of the function was incorrect, `openalertDialog` should be `openAlertDialog`
 
+> [!NOTE]
+> You can also get the same details on errors using Monitor. See [Custom script errors](../../../maker/monitor-modelapps.md#custom-script-errors)
+
+## Debug JavaScript in Mobile apps
+
+While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected.
+
+> [!NOTE]
+> It is not currently possible to debug devices using iOS.
+
+### Configure your device
+
+- Refer to the Android documentation to enable Developer options and USB debugging on your device. More information: [Android Developers: Configure on-device developer options](https://developer.android.com/studio/debug/dev-options)
+- In the Microsoft Edge or Chrome browser, discover your Android device. More information: [Chrome Developers: Remote debug Android devices](https://developer.chrome.com/docs/devtools/remote-debugging/)
+
+   - On Microsoft Edge: `edge://inspect/#devices`
+   - On Chrome: `chrome://inspect/#devices`
+
+> [!NOTE]
+> Make sure that **Discover USB devices** is enabled.
+
+### Configure the mobile application
+
+1. In the mobile app, go to the list of Power Apps and select on the menu button.
+1. Make sure that the toggle **Enable remote debugging for model-driven apps** is on.
+
+   :::image type="content" source="media/field-service-mobile-app-settings.png" alt-text="Field service mobile app settings":::
+
+1. When enabling this option, you'll have a confirmation dialog. Select **Confirm**.
+
+   :::image type="content" source="media/field-service-mobile-app-settings-confirm-remote-debugging.png" alt-text="Confirm remote debugging dialog":::
+
+### Debug from your development machine
+
+1. Plug your computer to your Android device.
+1. Open any model-driven app from Power Apps or the Field Service Mobile application
+1. In the `edge://inspect/#devices` page in your browser, you'll be able to see the page available from the **Remote Target** section.
+
+   :::image type="content" source="media/edge-inspect-devices.png" alt-text="Edge DevTools Devices screen":::
+
+1. Click on **inspect**.
+
+
+### See also
+
+[JavaScript web resources](../script-jscript-web-resources.md)<br />
+[Debug a model-driven app with Monitor](../../../maker/monitor-modelapps.md)<br />
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

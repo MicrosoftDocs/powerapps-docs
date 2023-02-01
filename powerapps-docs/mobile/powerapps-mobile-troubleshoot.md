@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 01/03/2023
+ms.date: 01/31/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -23,17 +23,21 @@ search.app:
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
 > [!NOTE]
-> If you are having an issue with Power Apps for iOS or Android and you don’t find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.”
+> If you are having an issue with Power Apps for iOS or Android and you don't find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team."
 
 ## Debug mobile apps with Monitor
 
 Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](../maker/monitor-canvasapps.md#for-apps-running-on-power-apps-mobile-preview) to better diagnose and troubleshoot issues faster.
 
+## Debug JavaScript web resources in mobile apps
+
+While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in Mobile apps](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps)
+
 ## Error: There was a problem signing you in
 
 You are unable to sign in due to issues with the Microsoft Authenticator app.
 
-If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
+If you don't have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
 If you already have the Microsoft Authenticator app installed and you're having sign in issues, then try these steps:
 
@@ -60,7 +64,7 @@ Sometimes, updating and manually opening the authentication app on your device b
 1. Go to **Settings** > **Battery** > **App launch**.
 
     > [!NOTE]
-    > The **App launch** menu can have different names depending on the model and the operating version of your mobile device. If you   don’t see the **App launch** menu option, then look for one of the following menu options:
+    > The **App launch** menu can have different names depending on the model and the operating version of your mobile device. If you   don't see the **App launch** menu option, then look for one of the following menu options:
     > - **Close apps after screen lock** 
     > - **Applications**
     > - **Background applications**
