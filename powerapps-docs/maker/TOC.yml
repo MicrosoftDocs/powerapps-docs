@@ -2810,7 +2810,7 @@
           href: ../cards/make-a-card/screens/use-screens.md
         - name: Control reference
           items: 
-            - name: List of controls properties
+            - name: List of controls and properties
               href: ../cards/control-reference.md
             - name: Limitations of controls
               href: ../cards/control-limitations.md
