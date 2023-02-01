@@ -31,7 +31,7 @@ Monitor is a tool that offers makers a deep view of what an app does and how it 
 
 ## Debug JavaScript web resources in mobile apps
 
-While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in Mobile apps](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps)
+While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in mobile apps](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps)
 
 ## Error: There was a problem signing you in
 

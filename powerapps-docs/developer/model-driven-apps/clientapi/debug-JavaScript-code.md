@@ -61,7 +61,7 @@ In this case, the name of the function was incorrect, `openalertDialog` should b
 > [!NOTE]
 > You can get the same details on errors using Monitor. More information: [Custom script errors](../../../maker/monitor-modelapps.md#custom-script-errors).
 
-## Debug JavaScript in Mobile apps
+## Debug JavaScript in mobile apps
 
 While using JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected.
 
