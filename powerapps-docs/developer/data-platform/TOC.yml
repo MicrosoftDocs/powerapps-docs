@@ -84,10 +84,15 @@
       href: query-throttling.md
     - name: Query Hierarchical data
       href: query-hierarchical-data.md
-    - name: Use image column data
-      href: image-column-data.md
-    - name: Use file column data
-      href: file-column-data.md
+    - name: Files and images overview
+      href: files-images-overview.md
+      items:
+      - name: Use file column data
+        href: file-column-data.md
+      - name: Use image column data
+        href: image-column-data.md
+      - name: Use Attachments and Annotations
+        href: attachment-annotation-files.md
     - name: Audit data changes
       items:
         - name: Overview
