@@ -1,7 +1,7 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 12/18/2022
+ms.date: 01/31/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -289,6 +289,10 @@ More information: [Search across table data using Dataverse search](webapi/relev
 ### How do these limits apply to how many requests a user is entitled to each day?
 
 These limits are not related to entitlement limits. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+
+### Are limits applied differently for application users?
+
+No. The limits are applied to all users in the same way.
 
 ### See also
 

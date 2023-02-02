@@ -71,7 +71,7 @@
       href: clientapi/clientapi-xrm.md
   - name: 'Walkthrough: Write your first client script'
     href: clientapi/walkthrough-write-your-first-client-script.md
-  - name: Debug your JavaScript code for model-driven apps
+  - name: Debug JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
   - name: Troubleshoot form issues in Unified Interface
     href: troubleshoot-forms.md
