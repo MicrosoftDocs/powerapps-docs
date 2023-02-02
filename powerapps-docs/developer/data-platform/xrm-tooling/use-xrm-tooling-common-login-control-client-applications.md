@@ -35,7 +35,7 @@ contributors:
   
 Let's walk through the process of creating a **Windows Presentation Foundation (WPF)** application that leverages the common login control including the underlying code for authentication, credential storage and reuse, and default tracing or logging.
 
-The completed application can be found here: [Desktop-app-using-login-control](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/Desktop-app-using-login-control).
+The completed application can be found here: [AppWithLoginControl](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/Xrm%20Tooling/App-with-login-control).
 
 ### Create a project with the login control
 
@@ -158,8 +158,7 @@ Now we will run the program and test its operation.
 1. When you are done testing, close the program window.
   
 ### See also  
-
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)  
+  
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

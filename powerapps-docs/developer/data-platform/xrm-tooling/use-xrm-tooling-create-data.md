@@ -104,7 +104,6 @@ else
   
 ### See also  
 
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling API to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)
 
 

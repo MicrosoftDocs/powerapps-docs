@@ -74,7 +74,6 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 
 ### See also
 
-[Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)  
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)
+[Use connection strings in XRM tooling to connect to Dataverse](use-connection-strings-xrm-tooling-connect.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

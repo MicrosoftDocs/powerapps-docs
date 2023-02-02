@@ -37,23 +37,12 @@ XRM tooling has the following three components:
   
 - **Common login control**: This is a WPF user control that provides a common user interface for the sign in experience to Dataverse. The login control provides support for all the authentication modes that are supported by Dataverse. The common login control has built-in encryption for securely storing your credentials/profile, and then reusing it at runtime to automatically sign in to Dataverse. The namespace for this component is <xref:Microsoft.Xrm.Tooling.CrmConnectControl>.  
   
-- **Web resource utility**: This provides support for accessing information from the following two types of web resources in Dataverse: Image and XML. You can access an image from a Dataverse web resource and return it as WPF BitmapImage objects. Similarly, you can return an XML web resource as a string. The namespace for this component is <xref:Microsoft.Xrm.Tooling.WebResourceUtility>.  
+- **Web resource utility**: This provides support for accessing information from the following two types of web resources in Dataverse: Image and XML. You can access an image from a Dataverse web resource and return it as WPF BitmapImage objects. Similarly, you can return an XML web resource as a string. The namespace for this component is <xref:Microsoft.Xrm.Tooling.WebResourceUtility>.
   
 ## Client applications that use XRM tooling
 
 The following applications in the current version of Dataverse use the common WPF login control for authenticating users while signing in to Dataverse from the client application:  
   
 - Unified Service Desk. More information: [Extend Unified Service Desk](/dynamics365/customer-engagement/unified-service-desk/extend-unified-service-desk)
-
-<!--Package Deployer tool. More information: [Deploy packages using Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)-->   
-
-<!--Configuration Migration tool. More information [Manage your configuration data](../../administrator/manage-configuration-data.md)-->  
-  
-### See also
-
-[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-<!--[Blog: PowerShell module for performing data operations and manipulating user and system settings in Dataverse](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)-->
-
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
