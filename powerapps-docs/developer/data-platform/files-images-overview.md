@@ -16,3 +16,5 @@ contributors:
  - JimDaly
 ---
 # Files and images overview
+
+[Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) should not be confused with [activityfileattachment](reference/entities/activityfileattachment.md), which supports files associated with the [Post](reference/entities/post.md) table.

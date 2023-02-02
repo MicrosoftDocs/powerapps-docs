@@ -613,4 +613,6 @@ More information: [Delete a single property value](webapi/update-delete-entities
 ### See also
 
 [Image columns](image-attributes.md)<br />
+[Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
+[Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)<br />
 [Use file column data](file-column-data.md)
