@@ -15,6 +15,9 @@ search.audienceType:
   - enduser
 search.app: 
   - PowerApps
+contributors:
+  - HemantGaur
+
 ---
 
 # Modern, refreshed look for model-driven apps (preview)
