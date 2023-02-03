@@ -2,9 +2,8 @@
 title: "Use Power Fx in custom page for your model-driven app" 
 description: "This article outlines how the common Microsoft Power FX functions work within a custom page."
 ms.custom: ""
-ms.date: 05/26/2022
+ms.date: 02/03/2023
 ms.reviewer: ""
-
 ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
@@ -66,7 +65,7 @@ Navigate( Accounts )
 ```
 
 > [!IMPORTANT]
-> Kindly Note that you need to add Accounts dataverse table to the custom page before publishing and testing.
+> Make sure you add the accounts Dataverse table to the custom page before publishing and testing.
 
 ### Navigate to specific system view of the table
 
