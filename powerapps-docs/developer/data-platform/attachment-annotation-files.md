@@ -1,6 +1,6 @@
 ---
-title: "Use file data with Attachment and Annotation records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about using file data with Attachment and Annotation records." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use file data with Attachment and Note records (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about using file data with Attachment and Note records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 02/02/2023
 ms.reviewer: jdaly
 ms.topic: article
@@ -15,152 +15,26 @@ search.app:
 contributors:
  - JimDaly
 ---
-# Use file data with Attachment and Annotation records
+# Use file data with Attachment and Note records
 
 [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) and [Note (Annotation)](reference/entities/annotation.md) tables contain special string columns that store file data.
 
-- An Attachment is a file that is associated with an activity, usually an email activity.
-- A Note is a record associated with a table row that contains text and may have a single file attached.
+- An attachment is a file that is associated with an [email](reference/entities/email.md) activity, either directly or though an [Email Template (Template)](reference/entities/template.md). Multiple attachments can be associated with the activity or template.
+- A note is a record associated with a table row that contains text and may have a single file attached. Only those tables which have [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) may have notes associated with them.
 
 These tables existed before file or image columns, so they work differently.
 
-- The binary file data is stored in string columns: [ActivityMimeAttachment.Body](reference/entities/activitymimeattachment.md#BKMK_Body) and [Annotation.DocumentBody](reference/entities/annotation.md#BKMK_DocumentBody) as Base64 encoded string values.
+- The binary file data is stored as Base64 encoded string values in string columns: [ActivityMimeAttachment.Body](reference/entities/activitymimeattachment.md#BKMK_Body) and [Annotation.DocumentBody](reference/entities/annotation.md#BKMK_DocumentBody) .
 - File name data is stored in the `FileName` column.
 - Mime type data is stored in the `MimeType` column.
 
-Because these columns are part of the data for the record, you should update these three columns together.
+Because these columns are part of the data for the record, you should update these three columns together with any other values for the attachment or note.
 
-`FileSize` is a calculated field you can use to retrieve the size of the current file.
+## Using file data
 
-## File size limits
+You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB.
 
-The [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) column specifies the maximum allowed size of an a file in bytes for an attachment and annotation, as well as other kinds of data, such as web resource files used for model-driven apps.
-
-The default size is 5 MB (5242880 bytes) and the maximum value is 125 MB (131072000 bytes) and can be set in the email settings for the environment. More information: [Manage email settings](/power-platform/admin/settings-email)
-
-If you try to upload a file that is too large, you'll get the following error:
-
-> Name: `unManagedidsattachmentinvalidfilesize`<br />
-> Code: `0x80044a02`<br />
-> Number: `-2147202558`<br />
-> Message: `Attachment file size is too big.`
-
-### Retrieve max upload file size
-
-Use the following to retrieve the maximum upload file size.
-
-# [SDK for .NET](#tab/sdk)
-
-```csharp
-public static int GetMaxUploadFileSize(IOrganizationService service) {
-   QueryExpression query = new("organization") { 
-         ColumnSet = new ColumnSet("maxuploadfilesize")
-   };
-
-   EntityCollection organizations = service.RetrieveMultiple(query);
-
-   // There is only one row in organization table
-   return (int)organizations.Entities.FirstOrDefault()["maxuploadfilesize"];
-}
-```
-
-# [Web API](#tab/webapi)
-
-**Request**
-
-```http
-GET [Organization Uri]/api/data/v9.2/organizations?$select=maxuploadfilesize HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#organizations(maxuploadfilesize)",
-  "value": [
-    {
-      "@odata.etag": "W/\"77676290\"",
-      "maxuploadfilesize": 5242880,
-      "organizationid": "<organizationid>"
-    }
-  ]
-}
-```
-
----
-
-### Update max upload file size
-
-Use the following to set the maximum upload file size.
-
-# [SDK for .NET](#tab/sdk)
-
-```csharp
-public static void SetMaxUploadFileSize(
-    IOrganizationService service, 
-    int maxUploadFileSizeInBytes)
-{
-   if (maxUploadFileSizeInBytes > 131072000 || maxUploadFileSizeInBytes < 1) {
-         throw new ArgumentOutOfRangeException(nameof(maxUploadFileSizeInBytes), 
-         "The maxUploadFileSizeInBytes parameter must be less than 131072000 bytes and greater than 0 bytes.");
-   }
-
-   QueryExpression query = new("organization")
-   {
-         ColumnSet = new ColumnSet("organizationid")
-   };
-
-   EntityCollection organizations = service.RetrieveMultiple(query);
-
-   // There is only one row in organization table
-   Entity organization = organizations.Entities.FirstOrDefault();
-   organization["maxuploadfilesize"] = maxUploadFileSizeInBytes;
-
-   service.Update(organization);
-}
-```
-
-# [Web API](#tab/webapi)
-
-**Request**
-
-```http
-PATCH [Organization Uri]/api/data/v9.2/organizations(<organizationid>) HTTP/1.1
-If-Match: *
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 38
-
-{
-  "maxuploadfilesize": 131072000
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 204 NoContent
-OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(883278f5-07af-45eb-a0bc-3fea67caa544)
-```
-
----
-
-## Using file columns
-
-You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large.
-
-However, when you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.
+However, when you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files. More information: [File size limits](#file-size-limits)
 
 ## Upload Attachment files
 
@@ -358,6 +232,133 @@ Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotation
 
 ## Download Attachment files
 ## Download Annotation files
+
+## File size limits
+
+The [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) column specifies the maximum allowed size of an a file (in bytes) for an attachment and note, as well as other kinds of data, such as web resource files used for model-driven apps.
+
+The default size is 5 MB (5242880 bytes) and the maximum value is 125 MB (131072000 bytes) and can be set in the email settings for the environment. More information: [Manage email settings](/power-platform/admin/settings-email)
+
+If you try to upload a file that is too large, you'll get the following error:
+
+> Name: `unManagedidsattachmentinvalidfilesize`<br />
+> Code: `0x80044a02`<br />
+> Number: `-2147202558`<br />
+> Message: `Attachment file size is too big.`
+
+> [!NOTE]
+> The maximum upload file size limit applies to the size of the file in Base64 encoding. A Base64 encoding produces a string that is larger than the original `byte[]` file data..
+
+### Retrieve max upload file size
+
+Use the following to retrieve the maximum upload file size.
+
+# [SDK for .NET](#tab/sdk)
+
+```csharp
+public static int GetMaxUploadFileSize(IOrganizationService service) {
+   QueryExpression query = new("organization") { 
+         ColumnSet = new ColumnSet("maxuploadfilesize")
+   };
+
+   EntityCollection organizations = service.RetrieveMultiple(query);
+
+   // There is only one row in organization table
+   return (int)organizations.Entities.FirstOrDefault()["maxuploadfilesize"];
+}
+```
+
+# [Web API](#tab/webapi)
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/organizations?$select=maxuploadfilesize HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#organizations(maxuploadfilesize)",
+  "value": [
+    {
+      "@odata.etag": "W/\"77676290\"",
+      "maxuploadfilesize": 5242880,
+      "organizationid": "<organizationid>"
+    }
+  ]
+}
+```
+
+---
+
+### Update max upload file size
+
+Use the following to set the maximum upload file size.
+
+# [SDK for .NET](#tab/sdk)
+
+```csharp
+public static void SetMaxUploadFileSize(
+    IOrganizationService service, 
+    int maxUploadFileSizeInBytes)
+{
+   if (maxUploadFileSizeInBytes > 131072000 || maxUploadFileSizeInBytes < 1) {
+         throw new ArgumentOutOfRangeException(nameof(maxUploadFileSizeInBytes), 
+         "The maxUploadFileSizeInBytes parameter must be less than 131072000 bytes and greater than 0 bytes.");
+   }
+
+   QueryExpression query = new("organization")
+   {
+         ColumnSet = new ColumnSet("organizationid")
+   };
+
+   EntityCollection organizations = service.RetrieveMultiple(query);
+
+   // There is only one row in organization table
+   Entity organization = organizations.Entities.FirstOrDefault();
+   organization["maxuploadfilesize"] = maxUploadFileSizeInBytes;
+
+   service.Update(organization);
+}
+```
+
+# [Web API](#tab/webapi)
+
+**Request**
+
+```http
+PATCH [Organization Uri]/api/data/v9.2/organizations(<organizationid>) HTTP/1.1
+If-Match: *
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 38
+
+{
+  "maxuploadfilesize": 131072000
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(883278f5-07af-45eb-a0bc-3fea67caa544)
+```
+
+---
 
 
 ## Template
