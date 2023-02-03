@@ -6,7 +6,7 @@ author: mattgon
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/14/2022
 ms.author: austinj
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - maustinjones
 ---

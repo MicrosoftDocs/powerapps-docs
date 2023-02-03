@@ -2,7 +2,7 @@
 title: "Use FetchXml with Web API (Microsoft Dataverse)| Microsoft Learn"
 description: "FetchXml provides another way to define a query you can use with Web API to retrieve table data."
 ms.date: 09/27/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 

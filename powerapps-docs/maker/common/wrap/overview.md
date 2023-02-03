@@ -4,7 +4,7 @@ description: Learn about the wrap functionality in Power Apps.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Overview of wrap
@@ -23,14 +23,14 @@ The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as cus
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
-You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
+You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize your mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
 
-You can update the wrapped mobile apps by publishing your changes to the canvas app(s) that included in the mobile package on the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
+You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package using the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
 
 
 **Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
 
-- **No-code mobile app development**&mdash;make mobile apps with no previous experienc
+- **No-code mobile app development**&mdash;make mobile apps with no previous experience
 - **Managed mobile app builds**&mdash;we generate the app for you
 - **Seamless end-to-end branding**&mdash;use your own logo and color palette
 - **Multiple canvas apps support**&mdash;bundle multiple apps in a single mobile app

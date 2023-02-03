@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 08/24/2021
 ms.author: saperlmu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
   - msftsamperl
-  - tapanm-msft
+  - mduelae
 ---
 
 # Integrate with Azure Active Directory
@@ -164,25 +164,12 @@ The admin access button is now visible on Screen 2, and the label shows admin le
 
 ## See Azure AD integration in action
 
-You can see an example of Azure AD integration in the **Profile+** sample app for Teams.
+You can see an example of Azure AD integration in the **Profile+** sample app template for Teams.
 
 ![See Active Directory integration in action](media/integrate-with-azure-active-directory/see-active-directory-integration-in-action-1.png "See Active Directory integration in action")
 
 - **Office 365 Users** connector is used to retrieve the user profile, including name, photo, manager, and other details.
 - **Office 365 Groups** connector is used to retrieve the people who report to a selected user.
 
-### See also
-
-- [Boards (preview) sample app](boards.md)
-- [Bulletins sample app](bulletins.md)
-- [Employee ideas sample app](employee-ideas.md)
-- [Get connected (preview)](get-connected.md)  
-- [Inspection sample apps](inspection.md)  
-- [Issue reporting sample apps](issue-reporting.md)
-- [Milestones sample app](milestones.md)
-- [Perspectives (preview) sample app](perspectives.md)
-- [Profile+ (preview) sample app](profile-app.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

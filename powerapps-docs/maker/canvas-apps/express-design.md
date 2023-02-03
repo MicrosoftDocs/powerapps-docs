@@ -1,5 +1,5 @@
 ﻿---
-title: Express design (preview)
+title: Express design
 description: Learn about using the express design features such as creating apps from an image or a Figma design.
 author: norliu
 ms.topic: article
@@ -7,19 +7,17 @@ ms.custom: canvas
 ms.date: 05/24/2022
 ms.subservice: canvas-maker
 ms.author: norliu
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - norliu
-  - tapanm-msft
+  - mduelae
 ---
 
-# Express design (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Express design
 
 Express design is a new way to quickly get started with Power Apps by instantly transforming your visual design into an app. With **Express design**, makers can quickly turn existing design artifacts—including paper forms, whiteboard sketches, or Figma files—directly into a working app.
 
@@ -49,5 +47,5 @@ If you’re looking to generate a pixel-perfect app with exact styles that match
 
 ### See also
 
-- [Create an app from an image (preview)](app-from-image.md)
+- [Create an app from an image](app-from-image.md)
 - [Create an app from Figma (preview)](figma/overview.md)

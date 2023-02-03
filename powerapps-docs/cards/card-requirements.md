@@ -16,11 +16,11 @@ ms.collection:
 
 [!INCLUDE[cards_preview_notice](includes/preview-include.md)]
 
-This article contains information on requirements for cards to show up and work as expected.
+This article contains information about requirements for cards to show up and work as expected.
 
 ## Environment requirements
 
-Cards are available in environments with Dataverse.
+Cards are available in environments with Microsoft Dataverse.
 
 The table below shows the environment regions cards are supported in.
 

@@ -1,12 +1,12 @@
 ---
-title: How to use a model-driven app on a mobile device | Microsoft Docs
+title: Use model-driven apps in the Power Apps mobile app
 description: Learn how to use a custom model-driven app on a mobile device.
 author: sericks007
 manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/14/2022
+ms.date: 11/18/2022
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -19,12 +19,15 @@ search.app:
   - D365CE
 ---
 
-# Use model-driven apps on Power Apps mobile
+# Use model-driven apps in the Power Apps mobile app
 
 Use Power Apps mobile to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Install Power Apps mobile](run-powerapps-on-mobile.md).
 
 > [!IMPORTANT]
 > Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in Power Apps mobile. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](/dynamics365/mobile-app/user-guide-mobile-app).
+
+> [!IMPORTANT]
+> In order to use your model-driven app in the Power Apps mobile app, your app maker must have set the **Primary mobile player** setting to **Power Apps mobile.** For more information, see [Manage model-driven app settings in the app designer](../maker/model-driven-apps/app-properties.md).
 
 ## Home screen 
 
@@ -202,11 +205,7 @@ Your app maker can enable [Mobile commanding improvements](../maker/model-driven
   | :---:         |     :---:      |
   | ![Old process command.](media/process.png "Process command shown.")| ![Process command.](media/process-2.png "Process command hidden.")| 
  
-- Commands such as **Edit columns**, **Edit filters**, and **Show Chart** have been moved from the main set of commands to overflow menu. This gives priority to other commands including custom commands. 
-
-  | Before | After |
-  | :---:         |     :---:      |
-  | ![Old commands shows at the bottom.](media/command-bar-old.png "Old command.")| ![Commands moved to overflow menu.](media/over-flow-menu.gif "New command in overflow menu.")| 
+- Some commands have been moved from the main set of commands to an overflow menu. This gives priority to other commands, including custom commands. 
   
 ### Tablet optimization for command bar
 

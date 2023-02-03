@@ -3,7 +3,7 @@ title: "Ribbons available in model-driven apps | Microsoft Docs" # Intent and pr
 description: "The article describes where ribbons are defined and modified" # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
+
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: "article"
@@ -131,6 +131,9 @@ When a list of records for a table is displayed within a sub grid on the form of
   You can hide these commands by using `<HideCustomAction>`.
 
 ### Form ribbons
+
+> [!NOTE]
+> This feature is not supported on Unified Interface.
 
 Each table can have multiple forms. You can define changes to the form ribbon for all forms for that table by adding your definition at the table level (`//ImportExportXml/Entities/Entity/RibbonDiffXml`).
 

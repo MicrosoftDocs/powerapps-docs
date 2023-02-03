@@ -1,14 +1,13 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 05/23/2022
+ms.date: 01/30/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
 ms.topic: article
 author: adrianorth
 ms.author: aorth 
-manager: lwelicki
 search.audienceType: 
   - maker
   - developer
@@ -26,7 +25,7 @@ The notification table stores notifications for each user. Your model-driven app
 
 Each notification row is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
 
-This topic outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md).
+This article outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md).
 
 ## Enable the in-app notification feature
 
@@ -125,7 +124,7 @@ Guid appNotificationId = svc.Create(appNotification);
 
 ## Notification polling
 
-In-app notifications uses polling to retrieve notifications periodically when the app is running.  New notification are retreived at start of the model-driven app and when a page navigation occurs as long as the last retreival is more than one minute ago.  If a user stays on a page for a long duration, new notifications will be retrieved.
+In-app notifications use polling to retrieve notifications periodically when the app is running.  New notifications are retrieved at start of the model-driven app and when a page navigation occurs as long as the last retrieval is more than one minute ago.  If a user stays on a page for a long duration, new notifications won't be retrieved until the user navigates to another page.
 
 ## Notification table
 
@@ -136,8 +135,8 @@ The following are the columns for the **Notification** (`appnotification`) table
 |Title|`title`|The title of the notification.|
 |Owner|`ownerid`|The user who receives the notification.|
 |Body|`body`|Details about the notification.|
-|IconType|`icontype`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this topic.|
-|Toast Type|`toasttype`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this topic.|
+|IconType|`icontype`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this article.|
+|Toast Type|`toasttype`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
 |Expiry (seconds)|`ttlinseconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
 |Data|`data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
 
@@ -172,7 +171,7 @@ You can change the in-app notification icon by setting **Icon Type** to one of t
 
 The **data** field supports overriding the Title and Body simple strings with a limited subset of markdown based.
 
-Below is the supported markdown.
+The following is the supported markdown.
 
 |Text Style|Markdown|
 |---|---|
@@ -208,7 +207,7 @@ The in-app notification feature uses three tables. A user needs to have the corr
 
 ### Notification storage
 
-The app notification table uses the organization's database storage capacity. Because of this, it's important to consider the volume of notifications sent and the expiration setting. More information: [Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage)
+Because the app notification table uses the organization's database storage capacity, it's important to consider the volume of notifications sent and the expiration setting. More information: [Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage)
 
 ## Examples
 

@@ -3,7 +3,7 @@ title: "Create your first component using Power Apps Component Framework in Micr
 description: "Learn how to implement code components using Power Apps component framework"
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 05/27/2022
+ms.date: 01/30/2023
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -11,9 +11,9 @@ contributors:
  - JimDaly
 ---
 
-# Create your first component 
+# Create your first component
 
- In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column. 
+In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column.
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
@@ -53,34 +53,28 @@ For this tutorial you need install the following components:
 
 To create a new project:
 
-1. Open a command prompt window. Create a new folder for the project using the following command: 
+1. Open a command prompt window. Create a new folder for the project using the following command:
+   
     ```CLI
      mkdir LinearInput
     ```
     
 1. Open your `LinearInput` folder inside Visual Studio Code. The quickest way to start is by using `cd LinearInput` and then running `code .` from the command prompt once you are in the project directory. This command opens your component project in Visual Studio Code.
-   
 1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
-   
 1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
-
+   
    ```CLI
-    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field
+    pac pcf init --namespace SampleNamespace --name LinearInputControl --template field --run-npm-install
    ```
-
+   
 1. The above command also runs the `npm install` command for you to setup the project build tools.
+   
    ```
    Running 'npm install' for you...
    ```
 
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you have installed [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
-
-1. After npm install, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
-   ```
-   npm run refreshTypes
-   ```
- 
    
 ## Implementing manifest
 
@@ -98,136 +92,180 @@ Make changes to the predefined manifest file, as shown here:
    - **control-type**: The code component type. Only *standard* types of code components are supported.
 
      ```XML
-      <?xml version="1.0" encoding="utf-8" ?>
-      <manifest>
-      <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
+     <?xml version="1.0" encoding="utf-8" ?>
+     <manifest>
+      <control namespace="SampleNamespace"
+         constructor="LinearInputControl"
+         version="1.1.0"
+         display-name-key="LinearInputControl_Display_Key"
+         description-key="LinearInputControl_Desc_Key"
+         control-type="standard">
+         <!-- TODO: Add type-group, property, and resources elements here -->
+      </control>
+     </manifest>
      ```
 
-2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of the column. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
+1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` in the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
+
+     ```XML
+     <type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Currency</type>
+      <type>FP</type>
+      <type>Decimal</type>
+     </type-group>
+     ```
+
+1. Add the [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.  Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
-   - **description-name-key**: Description of the property that is displayed on the UI. 
-   - **of-type-group**: The [of-type-group](manifest-schema-reference/type-group.md) is used when you want to have more than two data type columns. Add the [of-type-group](manifest-schema-reference/type-group.md) element as a sibling to the `property` element in the manifest. The `of-type-group` specifies the component value and can contain whole, currency, floating point, or decimal values.
+   - **description-name-key**: Description of the property that is displayed on the UI.
+   - **of-type-group**: Use the `of-type-group` attribute when you want refer to the name of a specific type group. Here, we are referring to the `type-group` named `numbers` created in the previous step.
    - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
    - **required**: Defines whether the property is required.
 
      ```XML
-     <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+     <property name="controlValue"
+      display-name-key="controlValue_Display_Key"
+      description-key="controlValue_Desc_Key"
+      of-type-group="numbers"
+      usage="bound"
+      required="true" />
      ```
 
-3. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
-
+1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
+   
    - **code**: Refers to the path where all the resource files are located.
-
+   
       ```XML
       <resources>
-        <code path="index.ts" order="1" />
-        <css path="css/LinearInputControl.css" order="1" />
+       <code path="index.ts"
+            order="1" />
+       <css path="css/LinearInputControl.css"
+            order="1" />
       </resources>
       ```
-      The overall manifest file should look something like this: 
+   
+      The completed manifest file should look like this: 
 
      ```XML
-     <?xml version="1.0" encoding="utf-8" ?>
-     <manifest>
-       <control namespace="SampleNamespace" constructor="LinearInputControl" version="1.1.0" display-name-key="LinearInputControl_Display_Key" description-key="LinearInputControl_Desc_Key" control-type="standard">
-           <type-group name="numbers">
-              <type>Whole.None</type>
-              <type>Currency</type>
-              <type>FP</type>
-              <type>Decimal</type>
-           </type-group>
-           <property name="controlValue" display-name-key="controlValue_Display_Key" description-key="controlValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-         <resources>
-           <code path="index.ts" order="1" />
-           <css path="css/LinearInputControl.css" order="1" />
-         </resources>
-       </control>
-     </manifest>
+      <?xml version="1.0" encoding="utf-8" ?>
+      <manifest>
+         <control namespace="SampleNamespace"
+            constructor="LinearInputControl"
+            version="1.1.0"
+            display-name-key="LinearInputControl_Display_Key"
+            description-key="LinearInputControl_Desc_Key"
+            control-type="standard">
+            <type-group name="numbers">
+               <type>Whole.None</type>
+               <type>Currency</type>
+               <type>FP</type>
+               <type>Decimal</type>
+            </type-group>
+            <property name="controlValue"
+               display-name-key="controlValue_Display_Key"
+               description-key="controlValue_Desc_Key"
+               of-type-group="numbers"
+               usage="bound"
+               required="true" />
+            <resources>
+               <code path="index.ts"
+                  order="1" />
+               <css path="css/LinearInputControl.css"
+                  order="1" />
+            </resources>
+         </control>
+      </manifest>
      ```
 
-4. Save the changes to the `ControlManifest.Input.xml` file.
-
+1. Save the changes to the `ControlManifest.Input.xml` file.
+1. After making changes to the manifest, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+   
+   ```
+   npm run refreshTypes
+   ```
+   
 ## Implementing component logic
 
 The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions are predefined. Now, let's implement the logic for the code component. 
 
 1. Open the `index.ts` file in the code editor of your choice.
-2. Update the `LinearInputControl` class with the following code:
-
-```TypeScript
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
-
-export class LinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-   private _value: number;
-   private _notifyOutputChanged: () => void;
-   private labelElement: HTMLLabelElement;
-   private inputElement: HTMLInputElement;
-   private _container: HTMLDivElement;
-   private _context: ComponentFramework.Context<IInputs>;
-   private _refreshData: EventListenerOrEventListenerObject;
-
+1. Update the `LinearInputControl` class with the following code:
+   
+   ```TypeScript
+   import { IInputs, IOutputs } from "./generated/ManifestTypes";
+   
+   export class LinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+      private _value: number;
+      private _notifyOutputChanged: () => void;
+      private labelElement: HTMLLabelElement;
+      private inputElement: HTMLInputElement;
+      private _container: HTMLDivElement;
+      private _context: ComponentFramework.Context<IInputs>;
+      private _refreshData: EventListenerOrEventListenerObject;
+   
    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement): void {
-      this._context = context;
-      this._container = document.createElement("div");
-      this._notifyOutputChanged = notifyOutputChanged;
-      this._refreshData = this.refreshData.bind(this);
-
-      // creating HTML elements for the input type range and binding it to the function which refreshes the control data
-      this.inputElement = document.createElement("input");
-      this.inputElement.setAttribute("type", "range");
-      this.inputElement.addEventListener("input", this._refreshData);
-
-      //setting the max and min values for the control.
-      this.inputElement.setAttribute("min", "1");
-      this.inputElement.setAttribute("max", "1000");
-      this.inputElement.setAttribute("class", "linearslider");
-      this.inputElement.setAttribute("id", "linearrangeinput");
-
-      // creating a HTML label element that shows the value that is set on the linear range control
-      this.labelElement = document.createElement("label");
-      this.labelElement.setAttribute("class", "LinearRangeLabel");
-      this.labelElement.setAttribute("id", "lrclabel");
-
-      // retrieving the latest value from the control and setting it to the HTMl elements.
-      this._value = context.parameters.controlValue.raw!;
-      this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
-      this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
-
-      // appending the HTML elements to the control's HTML container element.
-      this._container.appendChild(this.inputElement);
-      this._container.appendChild(this.labelElement);
-      container.appendChild(this._container);
+         this._context = context;
+         this._container = document.createElement("div");
+         this._notifyOutputChanged = notifyOutputChanged;
+         this._refreshData = this.refreshData.bind(this);
+   
+         // creating HTML elements for the input type range and binding it to the function which refreshes the control data
+         this.inputElement = document.createElement("input");
+         this.inputElement.setAttribute("type", "range");
+         this.inputElement.addEventListener("input", this._refreshData);
+   
+         //setting the max and min values for the control.
+         this.inputElement.setAttribute("min", "1");
+         this.inputElement.setAttribute("max", "1000");
+         this.inputElement.setAttribute("class", "linearslider");
+         this.inputElement.setAttribute("id", "linearrangeinput");
+   
+         // creating a HTML label element that shows the value that is set on the linear range control
+         this.labelElement = document.createElement("label");
+         this.labelElement.setAttribute("class", "LinearRangeLabel");
+         this.labelElement.setAttribute("id", "lrclabel");
+   
+         // retrieving the latest value from the control and setting it to the HTMl elements.
+         this._value = context.parameters.controlValue.raw!;
+         this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
+         this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
+   
+         // appending the HTML elements to the control's HTML container element.
+         this._container.appendChild(this.inputElement);
+         this._container.appendChild(this.labelElement);
+         container.appendChild(this._container);
+      }
+   
+      public refreshData(evt: Event): void {
+         this._value = (this.inputElement.value as any) as number;
+         this.labelElement.innerHTML = this.inputElement.value;
+         this._notifyOutputChanged();
+      }
+   
+      public updateView(context: ComponentFramework.Context<IInputs>): void {
+         // storing the latest context from the control.
+         this._value = context.parameters.controlValue.raw!;
+         this._context = context;
+         this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
+         this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
+      }
+   
+      public getOutputs(): IOutputs {
+         return {
+            controlValue: this._value
+         };
+      }
+   
+      public destroy(): void {
+         this.inputElement.removeEventListener("input", this._refreshData);
+      }
    }
+   ```
 
-   public refreshData(evt: Event): void {
-      this._value = (this.inputElement.value as any) as number;
-      this.labelElement.innerHTML = this.inputElement.value;
-      this._notifyOutputChanged();
-   }
-
-   public updateView(context: ComponentFramework.Context<IInputs>): void {
-      // storing the latest context from the control.
-      this._value = context.parameters.controlValue.raw!;
-      this._context = context;
-      this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
-      this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
-   }
-
-   public getOutputs(): IOutputs {
-      return {
-         controlValue: this._value
-      };
-   }
-
-   public destroy(): void {
-      this.inputElement.removeEventListener("input", this._refreshData);
-   }
-}
-```
-
-3. Save the change to the `index.ts` file.
+1. Save the change to the `index.ts` file.
 
 ## Adding style to the code component
 
@@ -237,9 +275,9 @@ Developers and app makers can define their styling to represent their code compo
 > When you implement styling to your code components using CSS, ensure that the CSS is scoped to your control using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered. If using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
 
 1. Create a new `css` subfolder under the `LinearInputControl` folder. 
-2. Create a new `LinearInputControl.css` file inside the `css` subfolder. 
-3. Add the following style content to the `LinearInputControl.css` file:
-
+1. Create a new `LinearInputControl.css` file inside the `css` subfolder. 
+1. Add the following style content to the `LinearInputControl.css` file:
+   
     ```CSS
     .SampleNamespace\.LinearInputControl input[type=range].linearslider {   
        margin: 1px 0;   
@@ -301,9 +339,9 @@ Developers and app makers can define their styling to represent their code compo
     }
     ```
     
-5. Save the `LinearInputControl.css` file.
-6. Note that the `ControlManifest.Input.xml` file include the `CSS` resource file inside the resources element.
-
+1. Save the `LinearInputControl.css` file.
+1. Note that the `ControlManifest.Input.xml` file include the `CSS` resource file inside the resources element.
+   
     ```XML
     <resources> 
       <code path="index.ts" order="1"/> 
@@ -313,12 +351,12 @@ Developers and app makers can define their styling to represent their code compo
 
 > [!NOTE]
 > Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) web resources](/dynamics365/customerengagement/on-premises/developer/resx-web-resources).
-> See [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources. 
-
+> See [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources.
 
 ## Build your code components
 
 After you finish adding manifest, component logic, and styling, build the code components using the command:
+
 ```
 npm run build
 ```
@@ -326,8 +364,33 @@ npm run build
 The build generates an updated TypeScript type declaration file under the `LinearInputControl/generated` folder.
 The component is compiled into the `out/controls/LinearInputControl` folder. The build artifacts include:
 
-   - bundle.js – Bundled component source code. 
-   - ControlManifest.xml – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
+- bundle.js – Bundled component source code. 
+- ControlManifest.xml – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
+
+> [!NOTE]
+> eslint rules may impact your build, depending on how they have been configured. If you receive an error during build:
+> 
+> ```
+> [12:58:30 PM] [build]  Failed:
+> [pcf-1065] [Error] ESLint validation error:
+> C:\project\LinearInput\LinearInputControl\index.ts
+>   10:26  error  'EventListenerOrEventListenerObject' is not defined  no-undef
+> ```
+>
+> Check your eslint rules in `.eslintrc.json` and set linting rules to `["warn"]`. For example, if you receive the error:
+> 
+> ```error  'EventListenerOrEventListenerObject' is not defined  no-undef```
+> 
+> Then you would open `.eslintrc.json` and edit the rules to add a `["warn"]` value for the rule `no-undef`:
+>
+> ```json
+>     "rules": {
+>       "no-unused-vars": "off",
+>       "no-undef": ["warn"]
+>     }
+> ```
+> 
+> With the eslint rules updated, your control should build cleanly.
 
 ## Debugging your code component
 
@@ -341,9 +404,14 @@ npm start watch
 
 Follow these steps to create and import a [solution](../../maker/data-platform/solutions-overview.md) file:
 
-1. Create a new folder **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
+1. Create a new folder named **Solutions** inside the **LinearInputControl** folder and navigate into the folder. 
 
-2. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
+   ```CLI
+     mkdir Solutions
+     cd Solutions
+   ```
+
+1. Create a new solution project in the **LinearInputControl** folder using the [pac solution init](/power-platform/developer/cli/reference/solution#pac-solution-init) command:
 
    ```CLI
      pac solution init --publisher-name Samples --publisher-prefix samples 
@@ -353,7 +421,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > The [publisher-name](../data-platform/reference/entities/publisher.md) and [publisher-prefix](/powerapps/maker/data-platform/change-solution-publisher-prefix) values must be the same as either an existing solution publisher, or a new one that you want to create in your target environment.
 
 
-3. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the following command:
+1. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the following command:
 
     ```CLI
      pac solution add-reference --path ..\
@@ -363,7 +431,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
     >
     > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
 
-4. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
+1. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
 
    ```CLI
    msbuild /t:restore
@@ -374,7 +442,8 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    ```CLI
    dotnet build
    ```
-5. Again run the following command:
+
+1. Run the following command again:
 
    ```CLI
    msbuild
@@ -386,9 +455,8 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > You will see the message *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Dataverse and run the solution checker.
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
 
-6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-
-7. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+1. The generated solution zip file is located in the `Solution\bin\debug` folder.
+1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 > [!NOTE]
 > Manually publish the customizations if you are importing unmanaged solution.
