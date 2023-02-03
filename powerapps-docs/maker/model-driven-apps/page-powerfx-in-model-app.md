@@ -65,7 +65,7 @@ Navigate( Accounts )
 ```
 
 > [!IMPORTANT]
-> Make sure you add the accounts Dataverse table to the custom page before publishing and testing.
+> Make sure you add the accounts Microsoft Dataverse table to the custom page before publishing and testing.
 
 ### Navigate to specific system view of the table
 
