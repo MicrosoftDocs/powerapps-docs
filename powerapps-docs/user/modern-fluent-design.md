@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps (preview)
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: sericks007
 ms.topic: overview
-ms.date: 01/24/2023
+ms.date: 02/03/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
@@ -82,3 +82,31 @@ The modern, refreshed look for model-driven apps has some limitations:
 - The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview.
 - The modern, refreshed look isn't validated for Dynamics 365 applications at this time. Don't try out the preview in any production, Dynamics 365 applications.
 
+## Frequently asked questions (FAQs)
+
+### Can I enable new look for all model-driven applications?
+The new look app setting is available for any model-driven applications running in the cloud. It is recommended to evaluate in a test environment before broader live use. Updates to some page types, like dashboard, will be coming further into the preview.
+
+### Can I revert the app to an earlier state after I have enabled modernization?
+Yes, this can be done in the same manner as enabling using app settings. You can toggle between the old and new UI through a simple switch.
+
+### Will any of the existing applications by default get the new look?
+During the preview, the changes will only be seen if the new look app setting is enabled by app makers.
+
+### Are the new changes enabled on additional surfaces like Mobile apps and Outlook web app?
+The new look is not yet supported on these surfaces, and they will continue to display current app experience.
+
+### Does the app designer preview display the new look.
+Live preview does not display the new look yet. To see the updated app, you’ll need to publish app and click on play button.
+
+### Can I switch to a different theme or enable dark mode?
+Switching themes or enabling dark mode is not yet supported (but we’re working hard on it!)
+
+### Is the new look available for custom pages or code components?
+Not yet, but we are actively working on bringing the new design system support for these areas.
+
+### How can I validate and test the new look?
+Changes are designed to replace the current UX controls in place. This ensures that the new look has a smaller learning curve and provides us opportunity to incrementally refresh and ship additional controls on a weekly basis. Please review the documentation for the details on the new controls being enabled with opt-in toggle and focus on those for validation. Execute your end user scenarios as you would otherwise with new look. Note that some field controls and grid capabilities are updated, and experience might be little different from earlier one.
+
+### Will Dynamics 365 applications support the new look?
+Yes, we are working on extending the design across applications based on model driven Power Apps.
