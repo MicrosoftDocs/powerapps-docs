@@ -36,14 +36,17 @@ You can directly get and set the values of the `activitymimeattachment.body` and
 
 However, when you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files. You can configure these columns to accept files as large as 125 MB. More information: [File size limits](#file-size-limits)
 
-## Upload Attachment files
+
+## Attachment files
+
+### Upload Attachment files
 
 Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachmentBlocksUpload` messages to upload files for attachments.
 
 > [!NOTE]
 > These messages can only be used to create a new attachment. It you try to update an existing attachment with these messages you will get an error that the record already exists.
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 You can use a static method like the following `UploadAttachment` to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
 
@@ -161,7 +164,7 @@ More information:
 
 This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 The following series of requests and responses show the interaction when using the Web API to create a new attachment record that setting the body to a PDF file named `25mb.pdf`. The attachment is associated to an email.
 
@@ -304,14 +307,192 @@ OData-Version: 4.0
 
 ---
 
-## Upload Annotation files
+
+### Download Attachment files
+
+Downloading a note file this way requires using a pair of messages:
+
+|Message|Description|
+|---------|---------|
+|`InitializeAttachmentBlocksDownload`|Use this message to indicate the note record that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
+|`DownloadBlock`|Request the size of the block, the offset value and the file continuation token.|
+
+Once you've downloaded all the blocks, you must join them to create the entire downloaded file.
+
+#### [SDK for .NET](#tab/sdk)
+
+You can use a static method like the following `DownloadAttachment` to download an attachment using the SDK using the [InitializeAttachmentBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
+
+```csharp
+static (byte[] bytes, string fileName) DownloadAttachment(
+   IOrganizationService service,
+   EntityReference target)
+{
+   if (target.LogicalName != "activitymimeattachment")
+   {
+         throw new ArgumentException(
+            "The target parameter must refer to an activitymimeattachment record.",
+            nameof(target));
+   }
+
+   InitializeAttachmentBlocksDownloadRequest initializeRequest = new()
+   {
+         Target = target
+   };
+
+   var response =
+         (InitializeAttachmentBlocksDownloadResponse)service.Execute(initializeRequest);
+
+   string fileContinuationToken = response.FileContinuationToken;
+   int fileSizeInBytes = response.FileSizeInBytes;
+   string fileName = response.FileName;
+
+   List<byte> fileBytes = new();
+
+   long offset = 0;
+   long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
+
+   // File size may be smaller than defined block size
+   if (fileSizeInBytes < blockSizeDownload)
+   {
+         blockSizeDownload = fileSizeInBytes;
+   }
+
+   while (fileSizeInBytes > 0)
+   {
+         // Prepare the request
+         DownloadBlockRequest downLoadBlockRequest = new()
+         {
+            BlockLength = blockSizeDownload,
+            FileContinuationToken = fileContinuationToken,
+            Offset = offset
+         };
+
+         // Send the request
+         var downloadBlockResponse =
+                  (DownloadBlockResponse)service.Execute(downLoadBlockRequest);
+
+         // Add the block returned to the list
+         fileBytes.AddRange(downloadBlockResponse.Data);
+
+         // Subtract the amount downloaded,
+         // which may make fileSizeInBytes < 0 and indicate
+         // no further blocks to download
+         fileSizeInBytes -= (int)blockSizeDownload;
+         // Increment the offset to start at the beginning of the next block.
+         offset += blockSizeDownload;
+   }
+
+   return (fileBytes.ToArray(), fileName);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the an attachement with `activitymimeattachmentid` value of `3129ffa5-58a3-ed11-aad1-000d3a9933c9`.
+
+**Request**
+
+This request uses the [InitializeAttachmentBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownload).
+
+```http
+POST [Organization Uri]/api/data/v9.2/InitializeAttachmentBlocksDownload HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 165
+
+{
+  "Target": {
+    "activitymimeattachmentid": "3129ffa5-58a3-ed11-aad1-000d3a9933c9",
+    "@odata.type": "Microsoft.Dynamics.CRM.activitymimeattachment"
+  }
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownloadResponse",
+  "FileName": "25mb.pdf",
+  "FileSizeInBytes": 25870370,
+  "FileContinuationToken": "<Removed for brevity>"
+}
+```
+
+The response is a [InitializeAttachmentBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownloadResponse) which provides:
+
+- `FileSizeInBytes`: The size of the file
+- `FileName`: The name of the file
+- `FileContinuationToken`: The file continuation token to use in subsequent requests
+
+Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 901
+
+{
+  "Offset": 0,
+  "BlockLength": 4194304,
+  "FileContinuationToken": "<Removed for brevity>"
+}
+```
+
+With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
+
+|Request number|Offset|BlockLength|Remaining|
+|---------|---------|---------|---------|
+|1|`0`|`4194304`|`25870370`|
+|2|`4194304`|`4194304`|`21676066`|
+|3|`8388608`|`4194304`|`17481762`|
+|4|`12582912`|`4194304`|`13287458`|
+|5|`16777216`|`4194304`|`9093154`|
+|6|`20971520`|`4194304`|`4898850`|
+|7|`25165824`|`4194304`|`704546`|
+
+> [!NOTE]
+> The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size of the last block downloaded was `704546`bytes.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.DownloadBlockResponse",
+  "Data": "<Removed for brevity>"
+}
+```
+
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
+---
+
+## Annotation files
+
+### Upload Annotation files
 
 Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotationBlocksUpload` messages to upload files for notes.
 
 > [!NOTE]
 > The annotation you pass as the `Target` parameter for these messages must have an `annotationid` value. Typically, you should allow the system to specify the value of a unique identifier for a record. If you follow this pattern, you can only use this message to update existing annotations. To work around this, you can create a new `Guid` value to set as the `annotationid` value when you want to create a new note. <!-- Need to test this -->
 
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 You can use a static method like the following `UploadNote` to update a note with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse> with `AnnotationId` and `FileSizeInBytes` properties.
 
@@ -434,7 +615,7 @@ More information:
 
 This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the `mimetype` to `application/octet-stream`.
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 The following series of requests and responses show the interaction when using the Web API to create a new annotation record that setting the `documentbody` to a PDF file named `25mb.pdf`. The annotation is associated to an account record.
 
@@ -508,189 +689,14 @@ TODO
 
 ---
 
-## Download Attachment files
 
-Downloading a note file this way requires using a pair of messages:
+### Download Annotation files
 
-|Message|Description|
-|---------|---------|
-|`InitializeAttachmentBlocksDownload`|Use this message to indicate the note record that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
-|`DownloadBlock`|Request the size of the block, the offset value and the file continuation token.|
-
-Once you've downloaded all the blocks, you must join them to create the entire downloaded file.
-
-# [SDK for .NET](#tab/sdk)
-
-You can use a static method like the following `DownloadAttachment` to download an attachment using the SDK using the [InitializeAttachmentBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
-
-```csharp
-static (byte[] bytes, string fileName) DownloadAttachment(
-   IOrganizationService service,
-   EntityReference target)
-{
-   if (target.LogicalName != "activitymimeattachment")
-   {
-         throw new ArgumentException(
-            "The target parameter must refer to an activitymimeattachment record.",
-            nameof(target));
-   }
-
-   InitializeAttachmentBlocksDownloadRequest initializeRequest = new()
-   {
-         Target = target
-   };
-
-   var response =
-         (InitializeAttachmentBlocksDownloadResponse)service.Execute(initializeRequest);
-
-   string fileContinuationToken = response.FileContinuationToken;
-   int fileSizeInBytes = response.FileSizeInBytes;
-   string fileName = response.FileName;
-
-   List<byte> fileBytes = new();
-
-   long offset = 0;
-   long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
-
-   // File size may be smaller than defined block size
-   if (fileSizeInBytes < blockSizeDownload)
-   {
-         blockSizeDownload = fileSizeInBytes;
-   }
-
-   while (fileSizeInBytes > 0)
-   {
-         // Prepare the request
-         DownloadBlockRequest downLoadBlockRequest = new()
-         {
-            BlockLength = blockSizeDownload,
-            FileContinuationToken = fileContinuationToken,
-            Offset = offset
-         };
-
-         // Send the request
-         var downloadBlockResponse =
-                  (DownloadBlockResponse)service.Execute(downLoadBlockRequest);
-
-         // Add the block returned to the list
-         fileBytes.AddRange(downloadBlockResponse.Data);
-
-         // Subtract the amount downloaded,
-         // which may make fileSizeInBytes < 0 and indicate
-         // no further blocks to download
-         fileSizeInBytes -= (int)blockSizeDownload;
-         // Increment the offset to start at the beginning of the next block.
-         offset += blockSizeDownload;
-   }
-
-   return (fileBytes.ToArray(), fileName);
-}
-```
-
-# [Web API](#tab/webapi)
-
-The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the an attachement with `activitymimeattachmentid` value of `3129ffa5-58a3-ed11-aad1-000d3a9933c9`.
-
-**Request**
-
-This request uses the [InitializeAttachmentBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownload).
-
-```http
-POST [Organization Uri]/api/data/v9.2/InitializeAttachmentBlocksDownload HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 165
-
-{
-  "Target": {
-    "activitymimeattachmentid": "3129ffa5-58a3-ed11-aad1-000d3a9933c9",
-    "@odata.type": "Microsoft.Dynamics.CRM.activitymimeattachment"
-  }
-}
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownloadResponse",
-  "FileName": "25mb.pdf",
-  "FileSizeInBytes": 25870370,
-  "FileContinuationToken": "<Removed for brevity>"
-}
-```
-
-The response is a [InitializeAttachmentBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownloadResponse) which provides:
-
-- `FileSizeInBytes`: The size of the file
-- `FileName`: The name of the file
-- `FileContinuationToken`: The file continuation token to use in subsequent requests
-
-Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
-
-**Request**
-
-```http
-POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Content-Length: 901
-
-{
-  "Offset": 0,
-  "BlockLength": 4194304,
-  "FileContinuationToken": "<Removed for brevity>"
-}
-```
-
-With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
-
-|Request number|Offset|BlockLength|Remaining|
-|---------|---------|---------|---------|
-|1|`0`|`4194304`|`25870370`|
-|2|`4194304`|`4194304`|`21676066`|
-|3|`8388608`|`4194304`|`17481762`|
-|4|`12582912`|`4194304`|`13287458`|
-|5|`16777216`|`4194304`|`9093154`|
-|6|`20971520`|`4194304`|`4898850`|
-|7|`25165824`|`4194304`|`704546`|
-
-> [!NOTE]
-> The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size of the last block downloaded was `704546`bytes.
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-OData-Version: 4.0
-
-{
-  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.DownloadBlockResponse",
-  "Data": "<Removed for brevity>"
-}
-```
-
-More information: [Use Web API actions](webapi/use-web-api-actions.md)
-
----
-
-## Download Annotation files
-
-
-# [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 Content for SDK...
 
-# [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 Content for Web API...
 

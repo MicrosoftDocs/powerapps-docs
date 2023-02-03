@@ -881,18 +881,18 @@ Content-Length: 921
   "FileContinuationToken": "<file continuation token value removed for brevity>"
 }
 ```
-
+<!-- TODO Create include -->
 With each request, the `Offset` value will increment by the number of bytes sent in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
 
-|Request number|Offset|BlockLength|
-|---------|---------|---------|
-|1|`0`|`4194304`|
-|2|`4194304`|`4194304`|
-|3|`8388608`|`4194304`|
-|4|`12582912`|`4194304`|
-|5|`16777216`|`4194304`|
-|6|`20971520`|`4194304`|
-|7|`25165824`|`4194304`|
+|Request number|Offset|BlockLength|Remaining|
+|---------|---------|---------|---------|
+|1|`0`|`4194304`|`25870370`|
+|2|`4194304`|`4194304`|`21676066`|
+|3|`8388608`|`4194304`|`17481762`|
+|4|`12582912`|`4194304`|`13287458`|
+|5|`16777216`|`4194304`|`9093154`|
+|6|`20971520`|`4194304`|`4898850`|
+|7|`25165824`|`4194304`|`704546`|
 
 > [!NOTE]
 > The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size of the last block downloaded was `704546`bytes.
