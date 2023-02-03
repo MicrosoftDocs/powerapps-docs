@@ -108,7 +108,9 @@ Switching themes or enabling dark mode is not yet supported.
 No, but we are actively working on bringing the new look to these areas.
 
 ### How can I validate and test the new look?
-Changes are designed to replace the current UX controls in place. This ensures that the new look has a smaller learning curve and provides us opportunity to incrementally refresh and ship additional controls on a weekly basis. Please review the documentation for the details on the new controls being enabled with opt-in toggle and focus on those for validation. Execute your end user scenarios as you would otherwise with new look. Note that some field controls and grid capabilities are updated, and experience might be little different from earlier one.
+Model-driven apps that are part of the preview will automatically get incremental enhancements weekly. These enhancements are designed to replace the current user interface controls. This ensures that the new look has a smaller learning curve and provides us opportunity to incrementally refresh and ship additional controls on a weekly basis. 
+
+Please review the documentation for the details on the new controls being enabled in the preview, and focus on those for validation. Execute your end user scenarios as normal. Note that some field controls and grid capabilities are updated, and the experience might be little different from earlier one.
 
 ### Will Dynamics 365 applications support the new look?
 We are working on extending the new look across applications based on model-driven Power Apps.
