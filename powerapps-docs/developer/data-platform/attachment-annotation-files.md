@@ -20,7 +20,7 @@ contributors:
 [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) and [Note (Annotation)](reference/entities/annotation.md) tables contain special string columns that store file data.
 
 - An attachment is a file that is associated with an [email](reference/entities/email.md) activity, either directly or though an [Email Template (Template)](reference/entities/template.md). Multiple attachments can be associated with the activity or template.
-- A note is a record associated with a table row that contains text and may have a single file attached. Only those tables which have [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) may have notes associated with them.
+- A note is a record associated with a table row that contains text and may have a single file attached. Only those tables with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true may have notes associated with them.
 
 These tables existed before file or image columns, so they work differently.
 
@@ -34,7 +34,7 @@ Because these columns are part of the data for the record, you should update the
 
 You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB.
 
-However, when you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files. More information: [File size limits](#file-size-limits)
+However, when you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files. You can configure these columns to accept files as large as 125 MB. More information: [File size limits](#file-size-limits)
 
 ## Upload Attachment files
 
@@ -46,8 +46,6 @@ Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachment
 # [SDK for .NET](#tab/sdk)
 
 You can use a static method like the following `UploadAttachment` to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse>
-
-This method uses the <xref:Microsoft.AspNetCore.StaticFiles.IContentTypeProvider.TryGetContentType%2A?displayProperty=nameWithType> to attempt to set the `activitymimeattachment.mimetype` column if it isn't already set. This is optional. By default the value will be set to `application/octet-stream`.
 
 ```csharp
 static CommitAttachmentBlocksUploadResponse UploadAttachment(
@@ -156,9 +154,20 @@ static CommitAttachmentBlocksUploadResponse UploadAttachment(
 }
 ```
 
+More information:
+
+- [Use the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+
+This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
+
 # [Web API](#tab/webapi)
 
+The following series of requests and responses show the interaction when using the Web API to create a new attachment record that setting the body to a PDF file named `25mb.pdf`. The attachment is associated to an email.
+
 **Request**
+
+The first request uses the [InitializeAttachmentBlocksUpload Action](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksUpload).
 
 ```http
 POST [Organization Uri]/api/data/v9.2/InitializeAttachmentBlocksUpload HTTP/1.1
@@ -183,6 +192,8 @@ Content-Length: 315
 
 **Response**
 
+The response is a [InitializeAttachmentBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
+
 ```http
 HTTP/1.1 200 OK
 OData-Version: 4.0
@@ -193,7 +204,24 @@ OData-Version: 4.0
 }
 ```
 
-Use the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) to upload each of the file chunks.
+You must then break up the file into blocks of 4 MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
+
+
+|Property|Description:  |
+|---------|---------|
+|`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
+|`BlockData`|A Base64 encoded string containing the byte[] less than 4 MB in size representing the portion of the file being sent.|
+|`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
+
+
+> [!TIP]
+> With .NET, you can generate a `BlockId` using this code:
+> 
+> ```csharp
+> string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
+> ```
+>
+> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
 
 **Request**
 
@@ -220,6 +248,60 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
+After all the parts of the file have been sent using multiple requests using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock), use the [CommitAttachmentBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUpload) to complete the upload using these properties:
+
+|Property|Description:  |
+|---------|---------|
+|`Target`|The attachment record with values set for `filename` and `mimetype`.|
+|`BlockList`|An array of strings representing the `BlockId` values in the previous `UploadBlock` operations. The order of these strings represents the order the server will use to combine the blocks into the original file.|
+|`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/CommitAttachmentBlocksUpload HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 1612
+
+{
+  "Target": {
+    "objectid_email@odata.bind": "emails(b1b7e09f-58a3-ed11-aad1-000d3a9933c9)",
+    "objecttypecode": "email",
+    "subject": "Sample attached 25mb.pdf",
+    "filename": "25mb.pdf",
+    "mimetype": "application/pdf",
+    "@odata.type": "Microsoft.Dynamics.CRM.activitymimeattachment"
+  },
+  "BlockList": [
+    "YTIyNzMzNGUtYThmYy00ZGEwLWExMjctYjMwMDY4ZThhMmMz",
+    "NzFkYTcwZWMtYjBmMC00YWI1LTkyODYtZjc5NmJkMGUyZjBm",
+    "ODRmZTU0NDktNWU5Ni00MWM3LWIyOTYtNDRmMjhhNzRkMzIz",
+    "NmRiZDcxZTktZGIxNi00ZTM0LWJjNzEtOTM3Y2YwMjQwMTY2",
+    "NWRhYTFkYzEtM2Y0MC00OGI5LTlkYzQtNDBiNTVjZjY4ZDQ1",
+    "NThjMTk1M2ItMjFiZS00YTQ1LWFkMDMtMDFjNjFmOTM5OTdm",
+    "NWFmYzJlYWMtODgwMi00YmY4LTkxNGMtNDgzY2UxN2ZmMGE0"
+  ],
+  "FileContinuationToken": "<Removed for brevity>"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse",
+  "FileSizeInBytes": 25870370,
+  "ActivityMimeAttachmentId": "3129ffa5-58a3-ed11-aad1-000d3a9933c9"
+}
+```
+
 ---
 
 ## Upload Annotation files
@@ -228,10 +310,228 @@ Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotation
 
 > [!NOTE]
 > The annotation you pass as the `Target` parameter for these messages must have an `annotationid` value. Typically, you should allow the system to specify the value of a unique identifier for a record. If you follow this pattern, you can only use this message to update existing annotations. To work around this, you can create a `Guid` value to set as the `annotationid` value when you want to create a new note.
+
 <!-- Need to test this -->
 
+# [SDK for .NET](#tab/sdk)
+
+You can use a static method like the following `UploadNote` to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse>.
+
+```csharp
+static CommitAnnotationBlocksUploadResponse UploadNote(
+                IOrganizationService service,
+                Entity annotation,
+                FileInfo fileInfo,
+                string? fileMimeType = null)
+{
+
+   if (annotation.LogicalName != "annotation")
+   {
+         throw new ArgumentException(
+            message: "The annotation parameter must be an annotation entity",
+            paramName: nameof(annotation));
+   }
+   if (!annotation.Attributes.Contains("annotationid") || annotation.Id != Guid.Empty)
+   {
+         throw new ArgumentException(
+            message: "The annotation parameter must include a valid annotationid value.",
+            paramName: nameof(annotation));
+   }
+
+   // documentbody value in annotation not needed. Remove if found.
+   if (annotation.Contains("documentbody"))
+   {
+         annotation.Attributes.Remove("documentbody");
+   }
+
+   // Try to get the mimetype if not provided.
+   if (string.IsNullOrEmpty(fileMimeType))
+   {
+         var provider = new FileExtensionContentTypeProvider();
+
+         if (!provider.TryGetContentType(fileInfo.Name, out fileMimeType))
+         {
+            fileMimeType = "application/octet-stream";
+         }
+   }
+   // Don't override what might be included in the annotation.
+   if (!annotation.Contains("mimetype")) {
+         annotation["mimetype"] = fileMimeType;
+   }
+   
+   // Initialize the upload
+   InitializeAnnotationBlocksUploadRequest initializeRequest = new()
+   {
+         Target = annotation
+   };
+
+   var initializeResponse =
+         (InitializeAnnotationBlocksUploadResponse)service.Execute(initializeRequest);
+
+   string fileContinuationToken = initializeResponse.FileContinuationToken;
+
+   // Capture blockids while uploading
+   List<string> blockIds = new();
+
+   using Stream uploadFileStream = fileInfo.OpenRead();
+
+   int blockSize = 4 * 1024 * 1024; // 4 MB
+
+   byte[] buffer = new byte[blockSize];
+   int bytesRead = 0;
+
+   long fileSize = fileInfo.Length;
+
+   // The number of iterations that will be required:
+   // int blocksCount = (int)Math.Ceiling(fileSize / (float)blockSize);
+   int blockNumber = 0;
+
+   // While there is unread data from the file
+   while ((bytesRead = uploadFileStream.Read(buffer, 0, buffer.Length)) > 0)
+   {
+         // The file or final block may be smaller than 4MB
+         if (bytesRead < buffer.Length)
+         {
+            Array.Resize(ref buffer, bytesRead);
+         }
+
+         blockNumber++;
+         // Generates base64 string blockId values based on a Guid value so they are always the same length.
+         string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
+
+         blockIds.Add(blockId);
+
+         // Copy the next block of data to send.
+         var blockData = new byte[buffer.Length];
+         buffer.CopyTo(blockData, 0);
+
+         // Prepare the request
+         UploadBlockRequest uploadBlockRequest = new()
+         {
+            BlockData = blockData,
+            BlockId = blockId,
+            FileContinuationToken = fileContinuationToken,
+         };
+
+         // Send the request
+         service.Execute(uploadBlockRequest);
+   }
+
+   // Commit the upload
+   CommitAnnotationBlocksUploadRequest commitRequest = new()
+   {
+         BlockList = blockIds.ToArray(),
+         FileContinuationToken = fileContinuationToken,
+         Target = annotation
+   };
+
+      return  (CommitAnnotationBlocksUploadResponse)service.Execute(commitRequest);
+}
+```
+
+More information:
+
+- [Use the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+
+This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
+
+# [Web API](#tab/webapi)
+
+The following series of requests and responses show the interaction when using the Web API to create a new annotation record that setting the `documentbody` to a PDF file named `25mb.pdf`. The annotation is associated to an account record.
+
+**Request**
+
+The first request uses the [InitializeAnnotationBlocksUpload Action](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUpload).
+
+```http
+TODO
+```
+
+**Response**
+
+The response is a [InitializeAnnotationBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
+
+```http
+TODO
+```
+
+You must then break up the file into blocks of 4 MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
+
+
+|Property|Description:  |
+|---------|---------|
+|`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
+|`BlockData`|A Base64 encoded string containing the byte[] less than 4 MB in size representing the portion of the file being sent.|
+|`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
+
+
+> [!TIP]
+> With .NET, you can generate a `BlockId` using this code:
+> 
+> ```csharp
+> string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
+> ```
+>
+> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
+
+**Request**
+
+```http
+TODO
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 NoContent
+OData-Version: 4.0
+```
+
+After all the parts of the file have been sent using multiple requests using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock), use the [CommitAnnotationBlocksUpload Action](xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUpload) to complete the upload using these properties:
+
+|Property|Description:  |
+|---------|---------|
+|`Target`|The note record with values set for `filename` and `mimetype`.|
+|`BlockList`|An array of strings representing the `BlockId` values in the previous `UploadBlock` operations. The order of these strings represents the order the server will use to combine the blocks into the original file.|
+|`FileContinuationToken`|The value of the `InitializeAnnotationBlocksUploadResponse.FileContinuationToken`|
+
+**Request**
+
+```http
+TODO
+```
+
+**Response**
+
+```http
+TODO
+```
+
+---
+
 ## Download Attachment files
+
+# [SDK for .NET](#tab/sdk)
+
+Content for SDK...
+
+# [Web API](#tab/webapi)
+
+Content for Web API...
+
+---
 ## Download Annotation files
+
+# [SDK for .NET](#tab/sdk)
+
+Content for SDK...
+
+# [Web API](#tab/webapi)
+
+Content for Web API...
+
+---
 
 ## File size limits
 

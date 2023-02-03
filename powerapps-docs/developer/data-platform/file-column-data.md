@@ -355,7 +355,7 @@ static Guid UploadFile(
 
 More information: 
 
-- [What is the Organization service](org-service/overview.md)
+- [Use the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 This function includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
