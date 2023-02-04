@@ -30,7 +30,7 @@ Because these columns are part of the data for the attachment or note record, yo
 
 ## Using file data
 
-You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB. 
+You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB.
 
 By default the maximum size is 5 MB. You can configure these columns to accept files as large as 125 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.  For information about retrieving or changing the file size limits, see [File size limits](#file-size-limits).
 
@@ -45,12 +45,12 @@ An attachment is a file that is associated with an [email](reference/entities/em
 
 Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachmentBlocksUpload` messages to upload large files for attachments.
 
-> [!NOTE]
+> [!IMPORTANT]
 > These messages can only be used to create a new attachment. It you try to update an existing attachment with these messages you will get an error that the record already exists.
 
 #### [SDK for .NET](#tab/sdk)
 
-The following static `UploadAttachment` method creates a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
+The following static `UploadAttachment` method shows how to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
 
 ```csharp
 static CommitAttachmentBlocksUploadResponse UploadAttachment(
@@ -323,7 +323,7 @@ Using the Web API, you can download an attachment file in a single operation:
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/activitymimeattachments(3129ffa5-58a3-ed11-aad1-000d3a9933c9)/body/$value HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/activitymimeattachments(<activitymimeattachmentid>)/body/$value HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -340,7 +340,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> Unlike retrieving file columns, this method does not provide information about file size, file name, or mime type. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
+> Unlike retrieving file columns, this method does not provide information about file size, file name, or mime type. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api) and [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
 
 #### Download Attachment files in chunks
 
@@ -538,7 +538,7 @@ Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotation
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use a static method like the following `UploadNote` to update a note with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse> with `AnnotationId` and `FileSizeInBytes` properties.
+The following static `UploadNote` method shows how to create or update a note with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse> with `AnnotationId` and `FileSizeInBytes` properties.
 
 ```csharp
 static CommitAnnotationBlocksUploadResponse UploadNote(
@@ -668,7 +668,24 @@ The following series of requests and responses show the interaction when using t
 The first request uses the [InitializeAnnotationBlocksUpload Action](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUpload).
 
 ```http
-TODO
+POST [Organization Uri]/api/data/v9.2/InitializeAnnotationBlocksUpload HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 294
+
+{
+  "Target": {
+    "annotationid": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+    "subject": "large PDF file",
+    "filename": "25mb.pdf",
+    "notetext": "Please see new attached pdf file.",
+    "mimetype": "application/pdf",
+    "@odata.type": "Microsoft.Dynamics.CRM.annotation"
+  }
+}
 ```
 
 **Response**
@@ -676,7 +693,13 @@ TODO
 The response is a [InitializeAnnotationBlocksUploadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUploadResponse) providing the `FileContinuationToken` value to use with subsequent requests.
 
 ```http
-TODO
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUploadResponse",
+  "FileContinuationToken": "<Removed for brevity>"
+}
 ```
 
 You must then break up the file into blocks of 4 MB or less and send each block using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock) with the following properties:
@@ -701,7 +724,19 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 **Request**
 
 ```http
-TODO
+POST [Organization Uri]/api/data/v9.2/UploadBlock HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 5593352
+
+{
+  "BlockId": "Yjc3ZmU5MjgtZjBlNi00NTY5LThkYjMtYmFlZDkzOGE1ODFm",
+  "BlockData": "<Removed for brevity>",
+  "FileContinuationToken": "<Removed for brevity>"
+}
 ```
 
 **Response**
@@ -722,13 +757,47 @@ After all the parts of the file have been sent using multiple requests using the
 **Request**
 
 ```http
-TODO
+POST [Organization Uri]/api/data/v9.2/CommitAnnotationBlocksUpload HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 1571
+
+{
+  "Target": {
+    "annotationid": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+    "subject": "large PDF file",
+    "filename": "25mb.pdf",
+    "notetext": "Please see new attached pdf file.",
+    "mimetype": "application/pdf",
+    "@odata.type": "Microsoft.Dynamics.CRM.annotation"
+  },
+  "BlockList": [
+    "Yjc3ZmU5MjgtZjBlNi00NTY5LThkYjMtYmFlZDkzOGE1ODFm",
+    "ODg0NDM3NDgtMzkzZi00NjE5LTkzODUtNDA5YmNhOTQzYWNh",
+    "Zjk2ZDg2ZjYtZjczNS00MWU1LTkzZjUtOGQ3MzhlODYzZjA0",
+    "YzJhZGY3YjctODkyYy00YmEzLWJiM2UtNjI1ODZiY2EwZmM4",
+    "NTg5MjY1NWUtN2U1Ni00MTFlLWI0MzktZWIxNTVhNzViZTBl",
+    "NTQwYjZjZjctYjkyMy00MzBlLWIzNzAtYjYyYmFlOGE3NTY2",
+    "YzhlNTFiNDQtNDA4ZC00NDdlLThjYTgtMGMyNmY5YjRlMTA5"
+  ],
+  "FileContinuationToken": "<Removed for brevity>"
+}
 ```
 
 **Response**
 
 ```http
-TODO
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse",
+  "AnnotationId": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+  "FileSizeInBytes": 25870370
+}
 ```
 
 ---
@@ -736,13 +805,209 @@ TODO
 
 ### Download Annotation files
 
+You can download a note file in a single operation using the Web API, or you can download the note file in chunks using the SDK or Web API.
+
+#### Download Annotation files in a single operation using Web API
+
+Using the Web API, you can download an note file in a single operation:
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/annotations(<annotationid>)/documentbody/$value HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+< byte[] content removed for brevity. >
+```
+
+> [!NOTE]
+> Unlike retrieving file columns, this method does not provide information about file size, file name, or mime type. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api) and [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
+
+#### Download Annotation files in chunks
+
+To retrieve the file in in chunks, you must use the following, with either the SDK or Web API:
+
+|Message|Description|
+|---------|---------|
+|`InitializeAnnotationBlocksDownload`|Use this message to indicate the note record that you want to download a file from. It returns the file size in bytes and a *file continuation token* that you can use to download the file in blocks using the `DownloadBlock` message.|
+|`DownloadBlock`|Request the size of the block, the offset value and the file continuation token.|
+
+Once you've downloaded all the blocks, you must join them to create the entire downloaded file.
+
 #### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+The following static `DownloadNote` method shows how to download an note using the SDK with the [InitializeAnnotationBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAnnotationBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
+
+```csharp
+static (byte[] bytes, string fileName) DownloadNote(
+    IOrganizationService service,
+    EntityReference target)
+{
+if (target.LogicalName != "annotation")
+{
+      throw new ArgumentException("The target parameter must refer to an note record.", nameof(target));
+}
+
+InitializeAnnotationBlocksDownloadRequest initializeRequest = new()
+{
+      Target = target
+};
+
+var response =
+      (InitializeAnnotationBlocksDownloadResponse)service.Execute(initializeRequest);
+
+string fileContinuationToken = response.FileContinuationToken;
+int fileSizeInBytes = response.FileSizeInBytes;
+string fileName = response.FileName;
+
+List<byte> fileBytes = new();
+
+long offset = 0;
+long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
+
+// File size may be smaller than defined block size
+if (fileSizeInBytes < blockSizeDownload)
+{
+      blockSizeDownload = fileSizeInBytes;
+}
+
+while (fileSizeInBytes > 0)
+{
+      // Prepare the request
+      DownloadBlockRequest downLoadBlockRequest = new()
+      {
+            BlockLength = blockSizeDownload,
+            FileContinuationToken = fileContinuationToken,
+            Offset = offset
+      };
+
+      // Send the request
+      var downloadBlockResponse =
+                  (DownloadBlockResponse)service.Execute(downLoadBlockRequest);
+
+      // Add the block returned to the list
+      fileBytes.AddRange(downloadBlockResponse.Data);
+
+      // Subtract the amount downloaded,
+      // which may make fileSizeInBytes < 0 and indicate
+      // no further blocks to download
+      fileSizeInBytes -= (int)blockSizeDownload;
+      // Increment the offset to start at the beginning of the next block.
+      offset += blockSizeDownload;
+}
+
+return (fileBytes.ToArray(), fileName);
+}
+```
+
+More information:
+
+- [Use the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 #### [Web API](#tab/webapi)
 
-Content for Web API...
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the a note with `annotationid` value of `48ef5c74-c5a4-ed11-aad1-000d3a993550`.
+
+**Request**
+
+This request uses the [InitializeAnnotationBlocksDownload Action](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksDownload).
+
+```http
+POST [Organization Uri]/api/data/v9.2/InitializeAnnotationBlocksDownload HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 141
+
+{
+  "Target": {
+    "annotationid": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+    "@odata.type": "Microsoft.Dynamics.CRM.annotation"
+  }
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.InitializeAnnotationBlocksDownloadResponse",
+  "FileContinuationToken": "<removed for brevity>",
+  "FileSizeInBytes": 25870370,
+  "FileName": "25mb.pdf"
+}
+```
+
+The response is a [InitializeAnnotationBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAnnotationBlocksDownloadResponse) which provides:
+
+- `FileName`: The name of the file
+- `FileSizeInBytes`: The size of the file
+- `FileContinuationToken`: The file continuation token to use in subsequent requests
+
+Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/DownloadBlock HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Content-Length: 901
+
+{
+  "Offset": 0,
+  "BlockLength": 4194304,
+  "FileContinuationToken": "<Removed for brevity>"
+}
+```
+
+With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes in 7 requests:
+
+|Request number|Offset|BlockLength|Remaining|
+|---------|---------|---------|---------|
+|1|`0`|`4194304`|`25870370`|
+|2|`4194304`|`4194304`|`21676066`|
+|3|`8388608`|`4194304`|`17481762`|
+|4|`12582912`|`4194304`|`13287458`|
+|5|`16777216`|`4194304`|`9093154`|
+|6|`20971520`|`4194304`|`4898850`|
+|7|`25165824`|`4194304`|`704546`|
+
+> [!NOTE]
+> The requested `BlockLength` value can be constant. It isn't required to be adjusted for the last request in the example above where only `704546` bytes remained.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+  "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.DownloadBlockResponse",
+  "Data": "<Removed for brevity>"
+}
+```
+
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ---
 
