@@ -48,6 +48,7 @@ The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
+- Unmanaged code is not supported. You can't include references to unmanaged resources.
 
 ## Signing Assemblies
 
