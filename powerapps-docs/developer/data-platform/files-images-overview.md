@@ -17,9 +17,28 @@ contributors:
 ---
 # Files and images overview
 
+Dataverse provides several different ways to save binary data representing files in different types of columns. The following table summarizes some of the differences.
+
+
+||File|Image|Attachment & Note|
+|---------|---------|---------|---------|
+|**Attribute Type**|File|Image|String|
+|**Create new columns?**|Yes|Yes|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
+|**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by Organization.MaxUploadFileSize setting up to 125 MB|
+|**Upload Messages**|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeAttachmentBlocksUpload`<br >`UploadBlock`<br />`CommitAttachmentBlocksUpload`<br />OR<br />`InitializeAnnotationBlocksUpload`<br >`UploadBlock`<br />`CommitAnnotationBlocksUpload`|
+|**Download Messages**|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeAttachmentBlocksDownload`<br >`DownloadBlock`<br />OR<br />`InitializeAnnotationBlocksDownload`<br >`DownloadBlock`|
+|**Retrieve Behavior**|Can't retrieve with record.|Can retrieve thumbnail-sized images with records.|Can retrieve with records.|
+|**Set with Create**|No|Only Primary image column|Yes|
+|**Set with Update**|No, you must set the column value.|Yes|Yes|
+|**Delete File data**|Set column value to null or use `DeleteFile` message.|Set column value to null.|Set column value to null.|
+
+
+
+
+
 [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) should not be confused with [activityfileattachment](reference/entities/activityfileattachment.md), which supports files associated with the [Post](reference/entities/post.md) table.
 
-<!-- Removed the following from file-attributes.md -->
+
 ## Block certain types of files
 
 You can control which types of files aren't allowed to be saved in file columns, attachments and notes. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
