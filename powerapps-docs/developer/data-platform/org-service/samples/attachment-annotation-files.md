@@ -77,7 +77,7 @@ Using the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) `s
 
 ### SetMaxUploadFileSize
 
-Using the [IOrganizationService](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dataverse-sdk-latest) `service` parameter, this function sets the integer `maxuploadfilesize` value from the `organization` table to the value of the integer `maxUploadFileSizeInBytes` parameter.
+Using the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) `service` parameter, this function sets the integer `maxuploadfilesize` value from the `organization` table to the value of the integer `maxUploadFileSizeInBytes` parameter.
 
 ### See also
 
