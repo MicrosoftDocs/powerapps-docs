@@ -1148,13 +1148,11 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(<organizationid>)
 ---
 
 
-## Template
-# [SDK for .NET](#tab/sdk)
+### See also
 
-Content for SDK...
+[Files and images overview](files-images-overview.md)<br />
+[Sample: File operations with Attachments and Notes using the Dataverse SDK for .NET](org-service/samples/attachment-annotation-files.md)<br />
+[Sample: Attachment and Annotation file operations using Dataverse Web API](webapi/samples/attachment-annotation-file-operations.md)
 
-# [Web API](#tab/webapi)
 
-Content for Web API...
-
----
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

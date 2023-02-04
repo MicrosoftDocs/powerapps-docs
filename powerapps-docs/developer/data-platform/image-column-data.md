@@ -1,7 +1,7 @@
 ---
 title: "Use image column data (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn about uploading, downloading, and deleting data in image columns." 
-ms.date: 01/11/2023
+ms.date: 02/04/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: NHelgren # GitHub ID
@@ -612,6 +612,7 @@ More information: [Delete a single property value](webapi/update-delete-entities
 
 ### See also
 
+[Files and images overview](files-images-overview.md)<br />
 [Image columns](image-attributes.md)<br />
 [Sample: Image Operations using Dataverse SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />
 [Sample: Image Operations using Dataverse Web API](webapi/samples/image-operations.md)<br />
