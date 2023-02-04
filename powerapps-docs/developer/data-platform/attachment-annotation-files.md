@@ -26,13 +26,13 @@ These tables existed before file or image columns, so they work differently.
 - File name data is stored in the `FileName` column.
 - Mime type data is stored in the `MimeType` column.
 
-Because these columns are part of the data for the record, you should update these three columns together with any other values for the attachment or note.
+Because these columns are part of the data for the attachment or note record, you should update these three columns together with any other values.
 
 ## Using file data
 
 You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB. 
 
-By default the maximum value is 5 MB. You can configure these columns to accept files as large as 125 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.  More information: [File size limits](#file-size-limits)
+By default the maximum size is 5 MB. You can configure these columns to accept files as large as 125 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.  For information about retrieving or changing the file size limits, see [File size limits](#file-size-limits).
 
 ## Attachment files
 
@@ -50,7 +50,7 @@ Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachment
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use a static method like the following `UploadAttachment` to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
+The following static `UploadAttachment` method creates a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
 
 ```csharp
 static CommitAttachmentBlocksUploadResponse UploadAttachment(
@@ -164,11 +164,11 @@ More information:
 - [Use the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
-This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`. 
+This example method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
 
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to create a new attachment record that setting the body to a PDF file named `25mb.pdf`. The attachment is associated to an email.
+The following series of requests and responses show the interaction when using the Web API to create a new attachment record that sets the `body`, `filename`, and `mimetype` columns for a PDF file named `25mb.pdf`. The attachment is associated to an email.
 
 **Request**
 
@@ -214,8 +214,8 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 
 |Property|Description:  |
 |---------|---------|
-|`BlockId`|A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
-|`BlockData`|A Base64 encoded string containing the byte[] less than 4 MB in size representing the portion of the file being sent.|
+|`BlockId`|A unique Base64 encoded string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes in size.<br />For a given file, the length of the `BlockId` value must be the same size for each block.|
+|`BlockData`|A Base64 encoded string containing the `byte[]` less than 4 MB in size representing the portion of the file being sent.|
 |`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
 
 
@@ -226,7 +226,7 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 > string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
 > ```
 >
-> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
+> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded automatically when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
 
 **Request**
 
@@ -262,6 +262,8 @@ After all the parts of the file have been sent using multiple requests using the
 |`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
 
 **Request**
+
+In this example the `BlockList` values represent seven previous requests using the [UploadBlock Action](xref:Microsoft.Dynamics.CRM.UploadBlock).
 
 ```http
 POST [Organization Uri]/api/data/v9.2/CommitAttachmentBlocksUpload HTTP/1.1
@@ -312,6 +314,10 @@ OData-Version: 4.0
 
 ### Download Attachment files
 
+You can download an attachment file in a single operation using the Web API, or you can download the attachment file in chunks using the SDK or Web API.
+
+#### Download Attachment files in a single operation using Web API
+
 Using the Web API, you can download an attachment file in a single operation:
 
 **Request**
@@ -336,8 +342,9 @@ OData-Version: 4.0
 > [!NOTE]
 > Unlike retrieving file columns, this method does not provide information about file size, file name, or mime type. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
 
+#### Download Attachment files in chunks
 
-However, to retrieve the file in in chunks, you must use the following, with either the SDK or Web API:
+To retrieve the file in in chunks, you must use the following, with either the SDK or Web API:
 
 |Message|Description|
 |---------|---------|
@@ -348,7 +355,7 @@ Once you've downloaded all the blocks, you must join them to create the entire d
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use a static method like the following `DownloadAttachment` to download an attachment using the SDK using the [InitializeAttachmentBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
+The following static `DownloadAttachment` method shows how to download an attachment using the SDK with the [InitializeAttachmentBlocksDownloadRequest](xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksDownloadRequest) and [DownloadBlockRequest](xref:Microsoft.Crm.Sdk.Messages.DownloadBlockRequest) classes. This function returns the `byte[]` data and the name of the file.
 
 ```csharp
 static (byte[] bytes, string fileName) DownloadAttachment(
@@ -414,9 +421,14 @@ static (byte[] bytes, string fileName) DownloadAttachment(
 }
 ```
 
+More information:
+
+- [Use the Organization service](org-service/overview.md)
+- [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
+
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the an attachement with `activitymimeattachmentid` value of `3129ffa5-58a3-ed11-aad1-000d3a9933c9`.
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the an attachment with `activitymimeattachmentid` value of `3129ffa5-58a3-ed11-aad1-000d3a9933c9`.
 
 **Request**
 
@@ -492,7 +504,7 @@ With each request, increment the `Offset` value by the number of bytes requested
 |7|`25165824`|`4194304`|`704546`|
 
 > [!NOTE]
-> The requested `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where only `704546` bytes remained.
+> The requested `BlockLength` value can be constant. It isn't required to be adjusted for the last request in the example above where only `704546` bytes remained.
 
 **Response**
 
@@ -506,21 +518,23 @@ OData-Version: 4.0
 }
 ```
 
-After you have downloaded each of the blocks, you must re-assemble them to access the file data.
-
 More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ---
 
 ## Annotation files
 
-A note is a record associated with a table row that contains text and may have a single file attached. Only those tables with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true may have notes associated with them.
+A note is a record associated with a table row that contains text and may have a single file attached. Only those tables defined with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true may have notes associated with them.
+
+
 ### Upload Annotation files
 
 Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotationBlocksUpload` messages to upload files for notes.
 
 > [!NOTE]
-> The annotation you pass as the `Target` parameter for these messages must have an `annotationid` value. Typically, you should allow the system to specify the value of a unique identifier for a record. If you follow this pattern, you can only use this message to update existing annotations. To work around this, you can create a new `Guid` value to set as the `annotationid` value when you want to create a new note. <!-- Need to test this -->
+> The annotation you pass as the `Target` parameter for these messages must have an `annotationid` value. This is how you can update existing annotation records.
+>
+> To create a new annotation with these messages you must generate a new `Guid` value to set as the `annotationid` value rather than let Dataverse generate the value. Normally, it is best to let Dataverse generate the unique identifier values when creating new records, but that is not possible with these messages.
 
 #### [SDK for .NET](#tab/sdk)
 
