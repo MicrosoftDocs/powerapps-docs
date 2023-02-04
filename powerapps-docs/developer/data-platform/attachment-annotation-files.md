@@ -40,6 +40,10 @@ An attachment is a file that is associated with an [email](reference/entities/em
 
 > [!NOTE]
 > You can re-use attachment files by setting the `activitymimeattachment.attachmentid` value to refer to another existing attachment rather than by setting the `body`, `filename`, and `mimetype` properties.
+> 
+> [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) should not be confused with [activityfileattachment](reference/entities/activityfileattachment.md), which supports files associated with the [Post](reference/entities/post.md) table.
+>
+> Within the Dataverse schema there is also a public table with the name `Attachment` which is exposed in the Web API as [attachment EntityType](xref:Microsoft.Dynamics.CRM.attachment). This table can be queried and it reflects data in the `ActivityMimeAttachment` table. But it doesn't support create, retrieve, update, or delete operations. This table doesn't appear within the [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) designer.
 
 ### Upload Attachment files
 

@@ -17,27 +17,23 @@ contributors:
 ---
 # Files and images overview
 
-Dataverse provides several different ways to save binary data representing files in different types of columns. The following table summarizes some of the differences.
+Dataverse provides several different ways to save binary data representing files in different types of columns. The following table summarizes some of the similarities and differences.
 
 
 ||File|Image|Attachment & Note|
 |---------|---------|---------|---------|
 |**Attribute Type**|File|Image|String|
-|**Create new columns?**|Yes|Yes|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
-|**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by Organization.MaxUploadFileSize setting up to 125 MB|
+|**Create new columns?**|Yes. See [File columns](file-attributes.md)|Yes, See [Image columns](image-attributes.md)|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
+|**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) setting up to 125 MB|
 |**Upload Messages**|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeAttachmentBlocksUpload`<br >`UploadBlock`<br />`CommitAttachmentBlocksUpload`<br />OR<br />`InitializeAnnotationBlocksUpload`<br >`UploadBlock`<br />`CommitAnnotationBlocksUpload`|
 |**Download Messages**|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeAttachmentBlocksDownload`<br >`DownloadBlock`<br />OR<br />`InitializeAnnotationBlocksDownload`<br >`DownloadBlock`|
-|**Retrieve Behavior**|Can't retrieve with record.|Can retrieve thumbnail-sized images with records.|Can retrieve with records.|
+|**Retrieve Behavior**|Can't retrieve with record. Will return `fileid` value instead.|Can retrieve thumbnail-sized images with records.|Can retrieve with records.|
 |**Set with Create**|No|Only Primary image column|Yes|
 |**Set with Update**|No, you must set the column value.|Yes|Yes|
 |**Delete File data**|Set column value to null or use `DeleteFile` message.|Set column value to null.|Set column value to null.|
-
-
-
-
-
-[Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) should not be confused with [activityfileattachment](reference/entities/activityfileattachment.md), which supports files associated with the [Post](reference/entities/post.md) table.
-
+|**File types supported**|Any file not blocked by [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments). See [Block certain types of files](#block-certain-types-of-files)|Only `gif`, `jpeg`, `tiff`, `bmp`, & `png` files.|Any file not blocked by [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments). See [Block certain types of files](#block-certain-types-of-files)|
+|**Special Behaviors**||Column will always create and save thumbnail-sized images. Full-sized images will be saved only when the column is configured to do so. Special syntax required to download full-sized image files.||
+|**More information**|[Use file column data](file-column-data.md)|[Use image column data](image-column-data.md)|[Use file data with Attachment and Note records](attachment-annotation-files.md)|
 
 ## Block certain types of files
 
