@@ -19,8 +19,6 @@ contributors:
 
 [Attachment (ActivityMimeAttachment)](reference/entities/activitymimeattachment.md) and [Note (Annotation)](reference/entities/annotation.md) tables contain special string columns that store file data.
 
-- An attachment is a file that is associated with an [email](reference/entities/email.md) activity, either directly or though an [Email Template (Template)](reference/entities/template.md). Multiple attachments can be associated with the activity or template.
-- A note is a record associated with a table row that contains text and may have a single file attached. Only those tables with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true may have notes associated with them.
 
 These tables existed before file or image columns, so they work differently.
 
@@ -32,23 +30,27 @@ Because these columns are part of the data for the record, you should update the
 
 ## Using file data
 
-You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB.
+You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB. 
 
-However, when you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files. You can configure these columns to accept files as large as 125 MB. More information: [File size limits](#file-size-limits)
-
+By default the maximum value is 5 MB. You can configure these columns to accept files as large as 125 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.  More information: [File size limits](#file-size-limits)
 
 ## Attachment files
 
+An attachment is a file that is associated with an [email](reference/entities/email.md) activity, either directly or though an [Email Template (Template)](reference/entities/template.md). Multiple attachments can be associated with the activity or template.
+
+> [!NOTE]
+> You can re-use attachment files by setting the `activitymimeattachment.attachmentid` value to refer to another existing attachment rather than by setting the `body`, `filename`, and `mimetype` properties.
+
 ### Upload Attachment files
 
-Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachmentBlocksUpload` messages to upload files for attachments.
+Use the `InitializeAttachmentBlocksUpload`, `UploadBlock`, and `CommitAttachmentBlocksUpload` messages to upload large files for attachments.
 
 > [!NOTE]
 > These messages can only be used to create a new attachment. It you try to update an existing attachment with these messages you will get an error that the record already exists.
 
 #### [SDK for .NET](#tab/sdk)
 
-You can use a static method like the following `UploadAttachment` to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes and it will return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
+You can use a static method like the following `UploadAttachment` to create a new attachment with a file using the <xref:Microsoft.Crm.Sdk.Messages.InitializeAttachmentBlocksUploadRequest>, <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>, and <xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest> classes to return a <xref:Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse> with `ActivityMimeAttachmentId` and `FileSizeInBytes` properties.
 
 ```csharp
 static CommitAttachmentBlocksUploadResponse UploadAttachment(
@@ -465,7 +467,7 @@ With each request, increment the `Offset` value by the number of bytes requested
 |7|`25165824`|`4194304`|`704546`|
 
 > [!NOTE]
-> The `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where the actual size of the last block downloaded was `704546`bytes.
+> The requested `BlockLength` value can be constant. For example, it isn't required to be adjusted for the last request in the example above where only `704546` bytes remained.
 
 **Response**
 
@@ -485,6 +487,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 ## Annotation files
 
+A note is a record associated with a table row that contains text and may have a single file attached. Only those tables with [EntityMetadata.HasNotes](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.HasNotes) set to true may have notes associated with them.
 ### Upload Annotation files
 
 Use the `InitializeAnnotationBlocksUpload`, `UploadBlock`, and `CommitAnnotationBlocksUpload` messages to upload files for notes.
