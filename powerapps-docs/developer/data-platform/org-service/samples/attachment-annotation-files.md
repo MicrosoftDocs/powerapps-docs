@@ -81,6 +81,7 @@ Using the [IOrganizationService](https://learn.microsoft.com/dotnet/api/microsof
 
 ### See also
 
-[Use file data with Attachment and Note records](../../attachment-annotation-files.md)
+[Use file data with Attachment and Note records](../../attachment-annotation-files.md)<br />
+[Sample: Attachment and Annotation file operations using Dataverse Web API](../../webapi/samples/attachment-annotation-file-operations.md)
 
 [!INCLUDE [footer-banner](../../../../includes/footer-banner.md)]
