@@ -164,7 +164,7 @@ More information:
 - [Use the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
-This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
+This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`. 
 
 #### [Web API](#tab/webapi)
 
@@ -312,7 +312,32 @@ OData-Version: 4.0
 
 ### Download Attachment files
 
-Downloading a note file this way requires using a pair of messages:
+Using the Web API, you can download an attachment file in a single operation:
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/activitymimeattachments(3129ffa5-58a3-ed11-aad1-000d3a9933c9)/body/$value HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+< byte[] content removed for brevity. >
+```
+
+> [!NOTE]
+> Unlike retrieving file columns, this method does not provide information about file size, file name, or mime type. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
+
+
+However, to retrieve the file in in chunks, you must use the following, with either the SDK or Web API:
 
 |Message|Description|
 |---------|---------|
@@ -430,8 +455,8 @@ OData-Version: 4.0
 
 The response is a [InitializeAttachmentBlocksDownloadResponse ComplexType](xref:Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownloadResponse) which provides:
 
-- `FileSizeInBytes`: The size of the file
 - `FileName`: The name of the file
+- `FileSizeInBytes`: The size of the file
 - `FileContinuationToken`: The file continuation token to use in subsequent requests
 
 Based on the size of the file and the size of the block you'll download, send more requests using the [DownloadBlock Action](xref:Microsoft.Dynamics.CRM.DownloadBlock) as shown below.
@@ -454,7 +479,7 @@ Content-Length: 901
 }
 ```
 
-With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes:
+With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes in 7 requests:
 
 |Request number|Offset|BlockLength|Remaining|
 |---------|---------|---------|---------|
@@ -480,6 +505,8 @@ OData-Version: 4.0
   "Data": "<Removed for brevity>"
 }
 ```
+
+After you have downloaded each of the blocks, you must re-assemble them to access the file data.
 
 More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
@@ -723,12 +750,15 @@ If you try to upload a file that is too large, you'll get the following error:
 
 ### Retrieve max upload file size
 
-Use the following to retrieve the maximum upload file size.
+Use the following ways to retrieve the maximum upload file size.
 
 # [SDK for .NET](#tab/sdk)
 
+Use a static method like the following `GetMaxUploadFileSize` to get the value.
+
 ```csharp
 public static int GetMaxUploadFileSize(IOrganizationService service) {
+
    QueryExpression query = new("organization") { 
          ColumnSet = new ColumnSet("maxuploadfilesize")
    };
@@ -741,6 +771,8 @@ public static int GetMaxUploadFileSize(IOrganizationService service) {
 ```
 
 # [Web API](#tab/webapi)
+
+Return the single row from the organization table with the `maxuploadfilesize` property.
 
 **Request**
 
@@ -774,9 +806,11 @@ OData-Version: 4.0
 
 ### Update max upload file size
 
-Use the following to set the maximum upload file size.
+Use the following to set the `organization.maxuploadfilesize` value.
 
 # [SDK for .NET](#tab/sdk)
+
+Use a static method like the following `SetMaxUploadFileSize` to set the maximum upload file size.
 
 ```csharp
 public static void SetMaxUploadFileSize(
@@ -805,6 +839,8 @@ public static void SetMaxUploadFileSize(
 
 # [Web API](#tab/webapi)
 
+There is only a single row in the organization table. After you retrieve that value, use the `organizationid` returned to update the row. The <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> also includes this value.
+
 **Request**
 
 ```http
@@ -827,7 +863,7 @@ Content-Length: 38
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(883278f5-07af-45eb-a0bc-3fea67caa544)
+OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(<organizationid>)
 ```
 
 ---
