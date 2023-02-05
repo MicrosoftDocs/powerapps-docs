@@ -24,7 +24,7 @@ Dataverse provides several different ways to save binary data representing files
 |---------|---------|---------|---------|
 |**Attribute Type**|File|Image|String|
 |**Create new columns?**|Yes. See [File columns](file-attributes.md)|Yes, See [Image columns](image-attributes.md)|No, only `activitymimeattachment.body` and `annotation.documentbody` columns.|
-|**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) setting up to 125 MB|
+|**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) setting up to 125 MB. See [File size limits](attachment-annotation-files.md#file-size-limits)|
 |**Upload Messages**|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeAttachmentBlocksUpload`<br >`UploadBlock`<br />`CommitAttachmentBlocksUpload`<br />OR<br />`InitializeAnnotationBlocksUpload`<br >`UploadBlock`<br />`CommitAnnotationBlocksUpload`|
 |**Download Messages**|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeAttachmentBlocksDownload`<br >`DownloadBlock`<br />OR<br />`InitializeAnnotationBlocksDownload`<br >`DownloadBlock`|
 |**Retrieve Behavior**|Can't retrieve with record. Will return `fileid` value instead.|Can retrieve thumbnail-sized images with records.|Can retrieve with records.|
@@ -32,9 +32,9 @@ Dataverse provides several different ways to save binary data representing files
 |**Set with Update**|No, you must set the column value.|Yes|Yes|
 |**Delete File data**|Set column value to null or use `DeleteFile` message.|Set column value to null.|Set column value to null.|
 |**File types supported**|Any file not blocked by [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments). See [Block certain types of files](#block-certain-types-of-files)|Only `gif`, `jpeg`, `tiff`, `bmp`, & `png` files.|Any file not blocked by [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments). See [Block certain types of files](#block-certain-types-of-files)|
-|**Special Behaviors**||Column will always create and save thumbnail-sized images. Full-sized images will be saved only when the column is configured to do so. Special syntax required to download full-sized image files.||
+|**Special Behaviors**||Column will always create and save thumbnail-sized images. Full-sized images will be saved only when the column is configured to do so. Special syntax required to download full-sized image files.<br /><br />Each column has a companion string column that contains a relative URL to download the image.||
 |**More information**|[Use file column data](file-column-data.md)|[Use image column data](image-column-data.md)|[Use file data with Attachment and Note records](attachment-annotation-files.md)|
-|**Sample Code**|[SDK](org-service/samples/file-operations.md)<br />[Web API](webapi/samples/file-operations.md)|[SDK](org-service/samples/set-retrieve-entity-images.md)<br />[Web API](webapi/samples/image-operations.md)|[SDK](org-service/samples/attachment-annotation-files.md)<br />[Web API](webapi/samples/attachment-annotation-file-operations.md)|
+|**Sample Code**|[SDK for .NET](org-service/samples/file-operations.md)<br />[Web API](webapi/samples/file-operations.md)|[SDK for .NET](org-service/samples/set-retrieve-entity-images.md)<br />[Web API](webapi/samples/image-operations.md)|[SDK for .NET](org-service/samples/attachment-annotation-files.md)<br />[Web API](webapi/samples/attachment-annotation-file-operations.md)|
 
 ## Block certain types of files
 
