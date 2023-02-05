@@ -4,9 +4,9 @@ description: "Learn about using file data with Attachment and Note records." # 1
 ms.date: 02/02/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: DanaMartens # GitHub ID
+author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: dmartens # MSFT alias of Microsoft employees only
+ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 

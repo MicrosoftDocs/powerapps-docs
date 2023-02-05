@@ -286,8 +286,6 @@
               href: update-recurring-appointment.md
             - name: Link custom columns of the recurring appointment master and appointment tables
               href: link-custom-attributes-recurring-master-appointment-entities.md
-    - name: Annotation (note) table
-      href: annotation-note-entity.md
     - name: Calendar tables
       href: calendar-entities.md
       items:
