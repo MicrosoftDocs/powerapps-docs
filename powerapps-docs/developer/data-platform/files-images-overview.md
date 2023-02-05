@@ -34,6 +34,7 @@ Dataverse provides several different ways to save binary data representing files
 |**File types supported**|Any file not blocked by [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments). See [Block certain types of files](#block-certain-types-of-files)|Only `gif`, `jpeg`, `tiff`, `bmp`, & `png` files.|Any file not blocked by [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments). See [Block certain types of files](#block-certain-types-of-files)|
 |**Special Behaviors**||Column will always create and save thumbnail-sized images. Full-sized images will be saved only when the column is configured to do so. Special syntax required to download full-sized image files.||
 |**More information**|[Use file column data](file-column-data.md)|[Use image column data](image-column-data.md)|[Use file data with Attachment and Note records](attachment-annotation-files.md)|
+|**Sample Code**|[SDK](org-service/samples/file-operations.md)<br />[Web API](webapi/samples/file-operations.md)|[SDK](org-service/samples/set-retrieve-entity-images.md)<br />[Web API](webapi/samples/image-operations.md)|[SDK](org-service/samples/attachment-annotation-files.md)<br />[Web API](webapi/samples/attachment-annotation-file-operations.md)|
 
 ## Block certain types of files
 
@@ -108,3 +109,11 @@ When anyone tries to upload a file using one of the blocked types the following 
 > Code: `0x80043e09`<br />
 > Number: `-2147205623`<br />
 > Message: `The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.`
+
+### See also
+
+[Use file column data](file-column-data.md)<br />
+[Use image column data](image-column-data.md)<br />
+[Use file data with Attachment and Note records](attachment-annotation-files.md)
+
+[!INCLUDE [footer-banner](../../includes/footer-banner.md)]
