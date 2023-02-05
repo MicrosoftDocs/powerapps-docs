@@ -27,7 +27,7 @@ Dataverse provides several different ways to save binary data representing files
 |**File Size limits**|Configurable by column `MaxSizeInKB` setting<br />Up to 10 GB, but client controls limited to 128 MB|Configurable by column `MaxSizeInKB` setting<br />Up to 30 MB.|Configurable by [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) setting up to 125 MB. See [File size limits](attachment-annotation-files.md#file-size-limits)|
 |**Upload Messages**|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeFileBlocksUpload`<br >`UploadBlock`<br />`CommitFileBlocksUpload`|`InitializeAttachmentBlocksUpload`<br >`UploadBlock`<br />`CommitAttachmentBlocksUpload`<br />OR<br />`InitializeAnnotationBlocksUpload`<br >`UploadBlock`<br />`CommitAnnotationBlocksUpload`|
 |**Download Messages**|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeFileBlocksDownload`<br >`DownloadBlock`|`InitializeAttachmentBlocksDownload`<br >`DownloadBlock`<br />OR<br />`InitializeAnnotationBlocksDownload`<br >`DownloadBlock`|
-|**Retrieve Behavior**|Can't retrieve with record. Will return `fileid` value instead.|Can retrieve thumbnail-sized images with records.|Can retrieve with records.|
+|**Retrieve Behavior**|Can't retrieve file with record. Will return `fileid` value instead.|Can retrieve thumbnail-sized images with records.|Can retrieve file with records.|
 |**Set with Create**|No|Only Primary image column|Yes|
 |**Set with Update**|No, you must set the column value.|Yes|Yes|
 |**Delete File data**|Set column value to null or use `DeleteFile` message.|Set column value to null.|Set column value to null.|
@@ -38,7 +38,7 @@ Dataverse provides several different ways to save binary data representing files
 
 ## Block certain types of files
 
-You can control which types of files aren't allowed to be saved in file columns, attachments and notes. You can set and change this in the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
+You can specify which types of files can't be saved in file columns, attachments and notes. Use the [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting to control the file types to be blocked.
 
 You can also query and modify this data programmatically. It's stored in the [Organization.BlockedAttachments](reference/entities/organization.md#BKMK_BlockedAttachments) column. There's only one row in the organization table. You can use the SDK or Web API to query this data:
 

@@ -252,7 +252,7 @@ The following table shows two examples.
 
 ## Primary Images
 
-Each table can have multiple image columns, but only one image column can be defined as the primary image. Only the primary image can be set with a create operation. More information: [Only primary images can be set for create](#only-primary-images-can-be-set-for-create)
+Each table can have multiple image columns, but only one image column can be defined as the *primary image*. Only the primary image can be set with a create operation. More information: [Only primary images can be set for create](#only-primary-images-can-be-set-for-create)
 
 The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table.
 
@@ -365,10 +365,11 @@ When you're working with records, how you work with image data depends on whethe
 The following static `RetrieveAndUpdateImageColumn` method retrieves a `byte[]` image value from a column, saves it locally and uploads a new image.
 
 ```csharp
-static void RetrieveAndUpdateImageColumn(IOrganizationService service) {
-
-    Guid accountid = new("2d785974-b28b-ed11-81ad-000d3a993550");
-    string imageColumnLogicalName = "sample_imagecolumn";
+static void RetrieveAndUpdateImageColumn(
+    IOrganizationService service,
+    Guid accountid,
+    string imageColumnLogicalName) 
+{
 
     // Retrieve account with image
     Entity account = service.Retrieve(
@@ -408,12 +409,12 @@ More information:
 
 With Web API, the property values are base 64 encoded string values representing the `byte[]` data.
 
-This request returns an image column with an account record:
+This request returns an image column named `sample_imagecolumn` with an account record:
 
 **Request**
 
 ```http
-GET [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)?$select=sample_imagecolumn HTTP/1.1
+GET [Organization Uri]/api/data/v9.2/accounts(<accountid>)?$select=sample_imagecolumn HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -431,16 +432,16 @@ OData-Version: 4.0
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#accounts(sample_imagecolumn)/$entity",
   "@odata.etag": "W/\"76796548\"",
   "sample_imagecolumn": "<base 64 encoded string truncated for brevity>",
-  "accountid": "2d785974-b28b-ed11-81ad-000d3a993550"
+  "accountid": "<accountid>"
 }
 ```
 
-This request updates the image column with an updated image:
+This request updates the `sample_imagecolumn` image column with an updated image:
 
 **Request**
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550) HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>) HTTP/1.1
 If-Match: *
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -459,7 +460,7 @@ Content-Length: 5220
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(2d785974-b28b-ed11-81ad-000d3a993550)
+OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(<accountid>)
 ```
 
 Some libraries you may use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), will automatically convert these encoded string values to `byte[]` so you might not even notice that the transport protocol is using base 64 strings.
@@ -508,7 +509,7 @@ If the image column doesn't support full-sized images, or if the [ImageAttribute
 > Name: `ObjectDoesNotExist`<br />
 > Code: `0x80040217`<br />
 > Number: `-2147220969`<br />
-> Message: `No FileAttachment records found for imagedescriptorId: <guid> for image attribute: sample_imagecolumn of account record with id <guid>.`
+> Message: `No FileAttachment records found for imagedescriptorId: <guid> for image attribute: <image column logical name> of <entity logical name> record with id <guid>.`
 
 ### Using Web API
 
@@ -535,7 +536,7 @@ There are three different ways to delete an image column value using Web API.
 **Request**
 
 ```http
-PATCH [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9) HTTP/1.1
+PATCH [Organization Uri]/api/data/v9.2/accounts(<accountid>) HTTP/1.1
 If-Match: *
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -545,7 +546,7 @@ Content-Type: application/json; charset=utf-8
 Content-Length: 90
 
 {
-  "accountid": "5f4d742e-d08b-ed11-81ad-000d3a9933c9",
+  "accountid": "<accountid>",
   "sample_imagecolumn": null
 }
 ```
@@ -554,9 +555,8 @@ Content-Length: 90
 
 ```http
 HTTP/1.1 204 NoContent
-Location: [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9)
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(5f4d742e-d08b-ed11-81ad-000d3a9933c9)
+OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(<accountid>)
 ```
 
 More information: [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update)
@@ -566,7 +566,7 @@ More information: [Basic update](webapi/update-delete-entities-using-web-api.md#
 **Request**
 
 ```http
-PUT [Organization Uri]/api/data/v9.2/accounts(14217634-d08b-ed11-81ad-000d3a9933c9)/sample_imagecolumn HTTP/1.1
+PUT [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_imagecolumn HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null
@@ -592,7 +592,7 @@ More information: [Update a single property value](webapi/update-delete-entities
 **Request**
 
 ```http
-DELETE [Organization Uri]/api/data/v9.2/accounts(19217634-d08b-ed11-81ad-000d3a9933c9)/sample_imagecolumn HTTP/1.1
+DELETE [Organization Uri]/api/data/v9.2/accounts(<accountid>)/sample_imagecolumn HTTP/1.1
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 If-None-Match: null

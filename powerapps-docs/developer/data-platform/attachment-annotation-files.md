@@ -168,7 +168,7 @@ More information:
 - [Use the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
-This example method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the mime type to `application/octet-stream`.
+[!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
 
 #### [Web API](#tab/webapi)
 
@@ -189,7 +189,7 @@ Content-Length: 315
 
 {
   "Target": {
-    "objectid_email@odata.bind": "emails(b1b7e09f-58a3-ed11-aad1-000d3a9933c9)",
+    "objectid_email@odata.bind": "emails(<activityid>)",
     "objecttypecode": "email",
     "subject": "Sample attached 25mb.pdf",
     "filename": "25mb.pdf",
@@ -223,14 +223,7 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 |`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
 
 
-> [!TIP]
-> With .NET, you can generate a `BlockId` using this code:
-> 
-> ```csharp
-> string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
-> ```
->
-> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded automatically when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
+[!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
 **Request**
 
@@ -309,7 +302,7 @@ OData-Version: 4.0
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse",
   "FileSizeInBytes": 25870370,
-  "ActivityMimeAttachmentId": "3129ffa5-58a3-ed11-aad1-000d3a9933c9"
+  "ActivityMimeAttachmentId": "<ID of attachment created>"
 }
 ```
 
@@ -339,8 +332,9 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 OData-Version: 4.0
+Content-Type: text/plain
 
-< byte[] content removed for brevity. >
+<Base64 string content removed for brevity>
 ```
 
 > [!NOTE]
@@ -432,7 +426,7 @@ More information:
 
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the an attachment with `activitymimeattachmentid` value of `3129ffa5-58a3-ed11-aad1-000d3a9933c9`.
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the an attachment with the specified `activitymimeattachmentid` value.
 
 **Request**
 
@@ -449,7 +443,7 @@ Content-Length: 165
 
 {
   "Target": {
-    "activitymimeattachmentid": "3129ffa5-58a3-ed11-aad1-000d3a9933c9",
+    "activitymimeattachmentid": "<activitymimeattachmentid>",
     "@odata.type": "Microsoft.Dynamics.CRM.activitymimeattachment"
   }
 }
@@ -495,20 +489,7 @@ Content-Length: 901
 }
 ```
 
-With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes in 7 requests:
-
-|Request number|Offset|BlockLength|Remaining|
-|---------|---------|---------|---------|
-|1|`0`|`4194304`|`25870370`|
-|2|`4194304`|`4194304`|`21676066`|
-|3|`8388608`|`4194304`|`17481762`|
-|4|`12582912`|`4194304`|`13287458`|
-|5|`16777216`|`4194304`|`9093154`|
-|6|`20971520`|`4194304`|`4898850`|
-|7|`25165824`|`4194304`|`704546`|
-
-> [!NOTE]
-> The requested `BlockLength` value can be constant. It isn't required to be adjusted for the last request in the example above where only `704546` bytes remained.
+[!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
 **Response**
 
@@ -661,7 +642,7 @@ More information:
 - [Use the Organization service](org-service/overview.md)
 - [IOrganizationService.Execute Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
-This method includes some logic to try to get the [MIME type](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the file using the [FileExtensionContentTypeProvider.TryGetContentType(String, String) Method](xref:Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider.TryGetContentType%2A) if it isn't provided. If not found it will set the `mimetype` to `application/octet-stream`.
+[!INCLUDE [cc-trygetcontenttype-note](includes/cc-trygetcontenttype-note.md)]
 
 #### [Web API](#tab/webapi)
 
@@ -682,7 +663,7 @@ Content-Length: 294
 
 {
   "Target": {
-    "annotationid": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+    "annotationid": "<annotationid>",
     "subject": "large PDF file",
     "filename": "25mb.pdf",
     "notetext": "Please see new attached pdf file.",
@@ -716,14 +697,7 @@ You must then break up the file into blocks of 4 MB or less and send each block 
 |`FileContinuationToken`|The value of the `InitializeAttachmentBlocksUploadResponse.FileContinuationToken`|
 
 
-> [!TIP]
-> With .NET, you can generate a `BlockId` using this code:
-> 
-> ```csharp
-> string blockId = Convert.ToBase64String(Encoding.UTF8.GetBytes(Guid.NewGuid().ToString()));
-> ```
->
-> Also with .NET, if you set the `byte[]` data to a `JObject` `BlockData` property, the `byte[]` will be Base64 encoded when you set the [HttpRequestMessage.Content](xref:System.Net.Http.HttpRequestMessage.Content) using `JObject.ToString()`.
+[!INCLUDE [cc-generate-blockid-tip](includes/cc-generate-blockid-tip.md)]
 
 **Request**
 
@@ -771,7 +745,7 @@ Content-Length: 1571
 
 {
   "Target": {
-    "annotationid": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+    "annotationid": "<annotationid>",
     "subject": "large PDF file",
     "filename": "25mb.pdf",
     "notetext": "Please see new attached pdf file.",
@@ -799,7 +773,7 @@ OData-Version: 4.0
 
 {
   "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse",
-  "AnnotationId": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+  "AnnotationId": "<annotationid>",
   "FileSizeInBytes": 25870370
 }
 ```
@@ -830,8 +804,9 @@ Accept: application/json
 ```http
 HTTP/1.1 200 OK
 OData-Version: 4.0
+Content-Type: text/plain
 
-< byte[] content removed for brevity. >
+<Base64 string content removed for brevity>
 ```
 
 > [!NOTE]
@@ -921,7 +896,7 @@ More information:
 
 #### [Web API](#tab/webapi)
 
-The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the a note with `annotationid` value of `48ef5c74-c5a4-ed11-aad1-000d3a993550`.
+The following series of requests and responses show the interaction when using the Web API to download a PDF file named 25mb.pdf from the a note with the specified `annotationid` value.
 
 **Request**
 
@@ -938,7 +913,7 @@ Content-Length: 141
 
 {
   "Target": {
-    "annotationid": "48ef5c74-c5a4-ed11-aad1-000d3a993550",
+    "annotationid": "<annotationid>",
     "@odata.type": "Microsoft.Dynamics.CRM.annotation"
   }
 }
@@ -984,20 +959,7 @@ Content-Length: 901
 }
 ```
 
-With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes in 7 requests:
-
-|Request number|Offset|BlockLength|Remaining|
-|---------|---------|---------|---------|
-|1|`0`|`4194304`|`25870370`|
-|2|`4194304`|`4194304`|`21676066`|
-|3|`8388608`|`4194304`|`17481762`|
-|4|`12582912`|`4194304`|`13287458`|
-|5|`16777216`|`4194304`|`9093154`|
-|6|`20971520`|`4194304`|`4898850`|
-|7|`25165824`|`4194304`|`704546`|
-
-> [!NOTE]
-> The requested `BlockLength` value can be constant. It isn't required to be adjusted for the last request in the example above where only `704546` bytes remained.
+[!INCLUDE [cc-offset-blocklength-example](includes/cc-offset-blocklength-example.md)]
 
 **Response**
 
@@ -1053,6 +1015,13 @@ public static int GetMaxUploadFileSize(IOrganizationService service) {
 }
 ```
 
+More information:
+
+- [Use the Organization service](org-service/overview.md)
+- [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
+- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+
+
 # [Web API](#tab/webapi)
 
 Return the single row from the organization table with the `maxuploadfilesize` property.
@@ -1084,6 +1053,10 @@ OData-Version: 4.0
   ]
 }
 ```
+
+More information:
+
+[Basic query example](webapi/query-data-web-api.md#basic-query-example)
 
 ---
 
@@ -1120,6 +1093,13 @@ public static void SetMaxUploadFileSize(
 }
 ```
 
+More information:
+
+- [Use the Organization service](org-service/overview.md)
+- [IOrganizationService.RetrieveMultiple Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A)
+- [Build queries with QueryExpression](org-service/build-queries-with-queryexpression.md)
+- [IOrganizationService.Update Method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A)
+
 # [Web API](#tab/webapi)
 
 There is only a single row in the organization table. After you retrieve that value, use the `organizationid` returned to update the row. The <xref:Microsoft.Dynamics.CRM.WhoAmIResponse> also includes this value.
@@ -1148,6 +1128,8 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(<organizationid>)
 ```
+
+More information: [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update)
 
 ---
 
