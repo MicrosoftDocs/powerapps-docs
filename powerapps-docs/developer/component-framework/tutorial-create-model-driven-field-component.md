@@ -129,8 +129,7 @@ After the component is built, you'll see that:
 When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
 
 ```react
-import { ChoiceGroup } from '@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup';
-import { IChoiceGroupOption } from '@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup.types';
+import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
 import * as React from 'react';
 
 export interface ChoicesPickerComponentProps {
@@ -223,8 +222,7 @@ From the above code, you'll see that:
    we use:
 
    ```typescript
-   import { ChoiceGroup } from "@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup";
-   import { IChoiceGroupOption } from "@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup.types";
+   import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
    ```
 
    An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size) 
