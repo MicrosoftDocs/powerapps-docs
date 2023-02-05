@@ -1,4 +1,4 @@
-With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, these are the values used to download a file that is `25870370` bytes in 7 requests:
+With each request, increment the `Offset` value by the number of bytes requested in the previous request.  For example, the following values were used to download a file that is `25870370` bytes in seven requests:
 
 |Request number|Offset|BlockLength|Remaining|
 |---------|---------|---------|---------|
