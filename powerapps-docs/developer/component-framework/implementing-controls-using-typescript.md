@@ -1,9 +1,9 @@
 ---
 title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
 description: "Learn how to implement code components using Power Apps component framework"
-ms.author: noazarur
-author: noazarur-microsoft
-ms.date: 01/30/2023
+ms.author: hemantg
+author: HemantGaur
+ms.date: 02/06/2023
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -15,7 +15,9 @@ contributors:
 
 In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column.
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+<!-- TODO Add screenshot showing what a linear slider code component looks like -->
+
+The sample code for the completed linear slider code component is available here: [PowerApps-Samples/component-framework/LinearInputControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LinearInputControl)
 
 The following steps are required to build a linear slider code component:
 
@@ -43,6 +45,8 @@ For this tutorial you need install the following components:
    - Visual Studio 2019
       - [Visual Studio 2019 downloads](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2019-and-other-products).
 
+
+<!-- TODO Can we remove this? -->
 > [!NOTE]
 > You may prefer to use the [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild` you would use `dotnet build`.
 
@@ -51,15 +55,20 @@ For this tutorial you need install the following components:
 
 ## Creating a new component project
 
-To create a new project:
+For the purpose of this tutorial we will start in a folder located at `C:\repos`, but you can use any folder you like. The folder should represent a place you want to check in your code.
 
-1. Open a command prompt window. Create a new folder for the project using the following command:
-   
-    ```CLI
-     mkdir LinearInput
-    ```
-    
-1. Open your `LinearInput` folder inside Visual Studio Code. The quickest way to start is by using `cd LinearInput` and then running `code .` from the command prompt once you are in the project directory. This command opens your component project in Visual Studio Code.
+
+1. Create a new folder named `LinearInput`.
+1. Open the `LinearInput` folder using Visual Studio Code.
+
+   The quickest way to start is by using a command prompt window and navigate to your `LinearInput` folder and type `code .`.
+
+   ```CLI
+   c:\repos\LinearInput>code .
+   ```
+
+   This command opens your component project in Visual Studio Code.
+
 1. Open a new terminal inside Visual Studio Code using **Terminal** -> **New Terminal**.
 1. At the terminal prompt, create a new component project by passing basic parameters using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command.
    
@@ -82,41 +91,109 @@ The control manifest is an XML file that contains the metadata of the code compo
 
 Make changes to the predefined manifest file, as shown here:
 
-1. The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component. Now, define each property of the [control](manifest-schema-reference/control.md) node as shown here:
+1. The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component.
+   
+   The tooling has generated the [control](manifest-schema-reference/control.md) element that is a good starting point for your control.
 
-   - **namespace**: Namespace of the code component. 
-   - **Constructor**: Constructor of the code component.
-   - **Version**: Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.
-   - **display-name-key**: Name of the code component that is displayed on the UI.
-   - **description-name-key**: Description of the code component that is displayed on the UI.
-   - **control-type**: The code component type. Only *standard* types of code components are supported.
+   > [!TIP]
+   > You may find the XML easier to read by formatting it so that attributes appear on separate lines. Try right-clicking on the XML document in Visual Studio Code and selecting Format Document, or using the `Shift+Alt+F` shortcut.
+   >
+   > The examples below have been formatted to make them easier to read.
 
-     ```XML
-     <?xml version="1.0" encoding="utf-8" ?>
-     <manifest>
-      <control namespace="SampleNamespace"
-         constructor="LinearInputControl"
-         version="1.1.0"
-         display-name-key="LinearInputControl_Display_Key"
-         description-key="LinearInputControl_Desc_Key"
-         control-type="standard">
-         <!-- TODO: Add type-group, property, and resources elements here -->
-      </control>
-     </manifest>
-     ```
+   |Attribute|Description|
+   |---------|---------|
+   |`namespace`|Namespace of the code component.|
+   |`constructor`|Constructor of the code component.|
+   |`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
+   |`display-name-key`|Name of the code component that is displayed on the UI.|
+   |`description-key`|Description of the code component that is displayed on the UI.|
+   |`control-type`|The code component type. Only *standard* types of code components are supported.|
 
-1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` in the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
+   If you ignore the commented areas, this is the manifest that was generated for you:
 
-     ```XML
-     <type-group name="numbers">
-      <type>Whole.None</type>
-      <type>Currency</type>
-      <type>FP</type>
-      <type>Decimal</type>
-     </type-group>
-     ```
+   ```XML
+   <?xml version="1.0" encoding="utf-8" ?>
+   <manifest>
+   <control namespace="SampleNamespace"
+      constructor="LinearInputControl"
+      version="0.0.1"
+      display-name-key="LinearInputControl"
+      description-key="LinearInputControl description"
+      control-type="standard">
+      <external-service-usage enabled="false">
+      </external-service-usage>
+      <property name="sampleProperty"
+         display-name-key="Property_Display_Key"
+         description-key="Property_Desc_Key"
+         of-type="SingleLine.Text"
+         usage="bound"
+         required="true" />
+      <resources>
+         <code path="index.ts"
+            order="1" />
+      </resources>
+    </control>
+   </manifest>
+   ```
 
-1. Add the [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.  Define the [property](manifest-schema-reference/property.md) node as shown here:
+1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` within the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
+
+   You can replace the `external-service-usage` element since it isn't used by this control.
+
+   # [Before](#tab/before)
+
+   ```xml
+   <control namespace="SampleNamespace"
+      constructor="LinearInputControl"
+      version="0.0.1"
+      display-name-key="LinearInputControl"
+      description-key="LinearInputControl description"
+      control-type="standard">
+      <external-service-usage enabled="false">
+      </external-service-usage>
+      <property name="sampleProperty"
+         display-name-key="Property_Display_Key"
+         description-key="Property_Desc_Key"
+         of-type="SingleLine.Text"
+         usage="bound"
+         required="true" />
+      <resources>
+         <code path="index.ts"
+            order="1" />
+      </resources>
+    </control>
+   ```
+
+   # [After](#tab/after)
+
+   ```xml
+   <control namespace="SampleNamespace"
+      constructor="LinearInputControl"
+      version="0.0.1"
+      display-name-key="LinearInputControl"
+      description-key="LinearInputControl description"
+      control-type="standard">
+      <type-group name="numbers">
+       <type>Whole.None</type>
+       <type>Currency</type>
+       <type>FP</type>
+       <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty"
+         display-name-key="Property_Display_Key"
+         description-key="Property_Desc_Key"
+         of-type="SingleLine.Text"
+         usage="bound"
+         required="true" />
+      <resources>
+         <code path="index.ts"
+            order="1" />
+      </resources>
+    </control>
+   ```
+   ---
+
+1. Edit the generated `sampleProperty` [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.  Define the [property](manifest-schema-reference/property.md) node as shown here:
 
    - **name**: Name of the property.
    - **display-name-key**: Display name of the property that is displayed on the UI.
