@@ -1,9 +1,9 @@
 ---
 title: "Create a model-driven app field component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a model-driven app field component, and deploy, configure, and test the component on a form using Visual Studio Code."
-ms.author: noazarur
-author: noazarur-microsoft
-ms.date: 12/21/2022
+ms.author: hemantg
+author: HemantGaur
+ms.date: 02/05/2023
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -126,7 +126,7 @@ After the component is built, you'll see that:
 
 ## Choices picker Fluent UI React component
 
-When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and sdd the following content:
+When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
 
 ```react
 import { ChoiceGroup } from '@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup';
