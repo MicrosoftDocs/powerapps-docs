@@ -94,9 +94,9 @@ The [control](manifest-schema-reference/control.md) node defines the namespace, 
 The tooling has generated the [control](manifest-schema-reference/control.md) element that is a good starting point for your control.
 
 > [!TIP]
-> You may find the XML easier to read by formatting it so that attributes appear on separate lines. Try right-clicking on the XML document in Visual Studio Code and selecting Format Document, or using the `Shift+Alt+F` shortcut.
+> You may find the XML easier to read by formatting it so that attributes appear on separate lines. Find and install an XML formatting tool of your choice in the Visual Studio Code Marketplace: [Search for xml formatting](https://marketplace.visualstudio.com/search?term=xml%20formatting&target=VSCode&category=Programming%20Languages&sortBy=Relevance).
 >
-> The examples below have been formatted to make them easier to read.
+> The examples below have been formatted with attributes on separate lines to make them easier to read.
 
 |Attribute|Description|
 |---------|---------|
@@ -137,11 +137,11 @@ If you ignore the commented areas and format the document, this is the manifest 
 From this starting point, make the following changes:
 
 1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` within the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
-
-   Replace the `external-service-usage` element since it isn't used by this control.
-
+   
+   Replace the `external-service-usage` element with the `type-group` since `external-service-usage` functionality isn't used by this control.
+   
    # [Before](#tab/before)
-
+   
    ```xml
    <control namespace="SampleNamespace"
       constructor="LinearInputControl"
@@ -163,9 +163,9 @@ From this starting point, make the following changes:
       </resources>
     </control>
    ```
-
+   
    # [After](#tab/after)
-
+   
    ```xml
    <control namespace="SampleNamespace"
       constructor="LinearInputControl"
@@ -193,9 +193,9 @@ From this starting point, make the following changes:
    ```
    
    ---
-
+   
 1. Edit the generated `sampleProperty` [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.
-
+   
    |Attribute|Description|
    |---------|---------|
    |`name`|Name of the property.|
@@ -204,12 +204,12 @@ From this starting point, make the following changes:
    |`of-type-group`|Use the `of-type-group` attribute when you want refer to the name of a specific type group.<br /> Here, we are referring to the `type-group` named `numbers` created in the previous step.|
    |`usage`|Has two properties, `bound` and `input`.<br /><br />- Bound properties are bound only to the value of the column.<br /><br />- Input properties are either bound to a column or allow a static value.|
    |`required`|Defines whether the property is required.|
-
-
+   
+   
    Edit the [property](manifest-schema-reference/property.md) node as shown here:
-
+   
    # [Before](#tab/before)
-
+   
    ```xml
    <property name="sampleProperty"
       display-name-key="Property_Display_Key"
@@ -218,9 +218,9 @@ From this starting point, make the following changes:
       usage="bound"
       required="true" />
    ```
-
+   
    # [After](#tab/after)
-
+   
    ```xml
    <property name="controlValue"
       display-name-key="Control Value"
@@ -229,26 +229,26 @@ From this starting point, make the following changes:
       usage="bound"
       required="true" />
    ```
-
+   
    ---
-
+   
 1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element.
-
+   
    The generated manifest already includes a definition of the [code element](manifest-schema-reference/code.md) with `path` and `order` attribute values set. We will use these. In the following [Adding style to the code component](#adding-style-to-the-code-component) section, we will add CSS styles for the control. To support that, let's edit the manifest to add them while we have it open.
-
+   
    Edit the [resources](manifest-schema-reference/resources.md) node to add the following [css element](manifest-schema-reference/css.md):
-
+   
    # [Before](#tab/before)
-
+   
    ```xml
    <resources>
     <code path="index.ts"
       order="1" />
    </resources>
    ```
-
+   
    # [After](#tab/after)
-
+   
    ```xml
    <resources>
     <code path="index.ts"
@@ -257,9 +257,9 @@ From this starting point, make the following changes:
       order="1" />
    </resources>
    ```
-
+   
    ---
-
+   
 ### Completed manifest
    
 The completed manifest file should look like this:
@@ -312,7 +312,6 @@ The completed manifest file should look like this:
 
    [12:38:06 PM] [refreshTypes]  Initializing...
    [12:38:06 PM] [refreshTypes]  Generating manifest types...
-   DeprecationWarning: 'createInterfaceDeclaration' has been deprecated since v4.8.0. Decorators are no longer supported for this function. Callers should switch to an overload that does not accept a 'decorators' parameter.
    [12:38:06 PM] [refreshTypes]  Generating design types...
    [12:38:06 PM] [refreshTypes]  Succeeded
    ```
@@ -335,7 +334,7 @@ The completed manifest file should look like this:
 
 ## Implementing component logic
 
-The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions (init, updateView , getOutputs, and destroy) are predefined. Now, let's implement the logic for the code component. 
+The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md) , [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/getoutputs.md)) are predefined. Now, let's implement the logic for the code component. 
 
 1. Open the `index.ts` file in the code editor of your choice.
 1. Update the `LinearInputControl` class with the following code:
@@ -350,17 +349,24 @@ The next step after implementing the manifest file is to implement the component
    {
    /**
       * Empty constructor.
-      */
+   */
    constructor() {}
 
    /**
-      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+      * Used to initialize the control instance. Controls can kick off remote server calls 
+        and other initialization actions here.
       * Data-set values are not initialized here, use updateView.
-      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-      * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
-      */
+      * @param context The entire property bag available to control via Context Object; 
+        It contains values as set up by the customizer mapped to property names defined 
+        in the manifest, as well as utility functions.
+      * @param notifyOutputChanged A callback method to alert the framework that the 
+        control has new outputs ready to be retrieved asynchronously.
+      * @param state A piece of data that persists in one session for a single user. 
+        Can be set at any point in a controls life cycle by calling 'setControlState' 
+        in the Mode interface.
+      * @param container If a control is marked control-type='standard', it will receive 
+        an empty div element within which it can render its content.
+   */
    public init(
       context: ComponentFramework.Context<IInputs>,
       notifyOutputChanged: () => void,
@@ -371,25 +377,31 @@ The next step after implementing the manifest file is to implement the component
    }
 
    /**
-      * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-      */
+      * Called when any value in the property bag has changed. This includes field values, 
+        data-sets, global values such as container height and width, offline status, control 
+        metadata values such as label, visible, etc.
+      * @param context The entire property bag available to control via Context Object; 
+        It contains values as set up by the customizer mapped to names defined in the manifest, 
+        as well as utility functions
+   */
    public updateView(context: ComponentFramework.Context<IInputs>): void {
       // Add code to update control view
    }
 
    /**
       * It is called by the framework prior to a control receiving new data.
-      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
-      */
+      * @returns an object based on nomenclature defined in manifest, 
+        expecting object[s] for property marked as "bound" or "output"
+   */
    public getOutputs(): IOutputs {
       return {};
    }
 
    /**
-      * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+      * Called when the control is to be removed from the DOM tree. 
+        Controls should use this call for cleanup.
       * i.e. cancelling any pending remote calls, removing listeners, etc.
-      */
+   */
    public destroy(): void {
       // Add code to cleanup control if necessary
        }
@@ -413,17 +425,24 @@ The next step after implementing the manifest file is to implement the component
    private _refreshData: EventListenerOrEventListenerObject;
    /**
       * Empty constructor.
-      */
+   */
    constructor() {}
 
    /**
-      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+      * Used to initialize the control instance. Controls can kick off remote server calls 
+        and other initialization actions here.
       * Data-set values are not initialized here, use updateView.
-      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-      * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
-      */
+      * @param context The entire property bag available to control via Context Object; 
+        It contains values as set up by the customizer mapped to property names defined 
+        in the manifest, as well as utility functions.
+      * @param notifyOutputChanged A callback method to alert the framework that the 
+        control has new outputs ready to be retrieved asynchronously.
+      * @param state A piece of data that persists in one session for a single user. 
+        Can be set at any point in a controls life cycle by calling 'setControlState' 
+        in the Mode interface.
+      * @param container If a control is marked control-type='standard', it will receive 
+        an empty div element within which it can render its content.
+   */
    public init(
       context: ComponentFramework.Context<IInputs>,
       notifyOutputChanged: () => void,
@@ -436,7 +455,8 @@ The next step after implementing the manifest file is to implement the component
       this._notifyOutputChanged = notifyOutputChanged;
       this._refreshData = this.refreshData.bind(this);
 
-      // creating HTML elements for the input type range and binding it to the function which refreshes the control data
+      // creating HTML elements for the input type range and binding it to the function which 
+      // refreshes the control data
       this.inputElement = document.createElement("input");
       this.inputElement.setAttribute("type", "range");
       this.inputElement.addEventListener("input", this._refreshData);
@@ -477,9 +497,13 @@ The next step after implementing the manifest file is to implement the component
    }
 
    /**
-      * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-      */
+      * Called when any value in the property bag has changed. This includes field values, 
+        data-sets, global values such as container height and width, offline status, control 
+        metadata values such as label, visible, etc.
+      * @param context The entire property bag available to control via Context Object; 
+        It contains values as set up by the customizer mapped to names defined in the manifest, 
+        as well as utility functions
+   */
    public updateView(context: ComponentFramework.Context<IInputs>): void {
       // Add code to update control view
       // storing the latest context from the control.
@@ -498,8 +522,9 @@ The next step after implementing the manifest file is to implement the component
 
    /**
       * It is called by the framework prior to a control receiving new data.
-      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
-      */
+      * @returns an object based on nomenclature defined in manifest, 
+        expecting object[s] for property marked as "bound" or "output"
+   */
    public getOutputs(): IOutputs {
       return {
          controlValue: this._value,
@@ -507,9 +532,10 @@ The next step after implementing the manifest file is to implement the component
    }
 
    /**
-      * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+      * Called when the control is to be removed from the DOM tree. 
+        Controls should use this call for cleanup.
       * i.e. cancelling any pending remote calls, removing listeners, etc.
-      */
+   */
    public destroy(): void {
       // Add code to cleanup control if necessary
       this.inputElement.removeEventListener("input", this._refreshData);
@@ -520,14 +546,18 @@ The next step after implementing the manifest file is to implement the component
 
    ---
 
-1. Save the change to the `index.ts` file.
+1. Save the changes to the `index.ts` file.
 
 ## Adding style to the code component
 
 Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
 > [!IMPORTANT]
-> When you implement styling to your code components using CSS, ensure that the CSS is scoped to your control using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered. If using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
+> When you implement styling to your code components using CSS, ensure that the CSS is scoped to your control using the automatically generated CSS classes applied to the container `DIV` element for your component.
+>
+> If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered.
+>
+> If using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
 
 1. Create a new `css` subfolder under the `LinearInputControl` folder. 
 1. Create a new `LinearInputControl.css` file inside the `css` subfolder. 
@@ -595,25 +625,52 @@ Developers and app makers can define their styling to represent their code compo
     ```
     
 1. Save the `LinearInputControl.css` file.
-1. Note that the `ControlManifest.Input.xml` file include the `CSS` resource file inside the resources element.
+1. Note that the `ControlManifest.Input.xml` file already includes the `CSS` resource file inside the resources element because that was completed in the [Implementing manifest](#implementing-manifest) section earlier.
    
     ```XML
-    <resources> 
-      <code path="index.ts" order="1"/> 
-      <css path="css/LinearInputControl.css" order="1"/> 
-    </resources> 
+   <resources>
+   <code path="index.ts"
+      order="1" />
+   <css path="css/LinearInputControl.css"
+      order="1" />
+   </resources>
     ```
 
 > [!NOTE]
-> Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) web resources](/dynamics365/customerengagement/on-premises/developer/resx-web-resources).
-> See [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources.
+> Power Apps component framework uses [RESX web resources](../model-driven-apps/resx-web-resources.md) to manage the localized strings shown on any user interface. The resources to support localization are also registered in the `resources` node.
+>
+> This first tutorial does not include localization capability. Localization is included in other tutorials.
+> 
+> See the [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources.
 
 ## Build your code components
 
 After you finish adding manifest, component logic, and styling, build the code components using the command:
 
-```
+```CLI
 npm run build
+```
+
+The output should look something like this:
+
+```CLI
+> pcf-project@1.0.0 build
+> pcf-scripts build
+
+[2:05:41 PM] [build]  Initializing...
+[2:05:41 PM] [build]  Validating manifest...
+[2:05:41 PM] [build]  Validating control...
+[2:05:42 PM] [build]  Running ESLint...
+[2:05:43 PM] [build]  Generating manifest types...
+[2:05:43 PM] [build]  Generating design types...
+[2:05:43 PM] [build]  Compiling and bundling control...
+[Webpack stats]:
+asset bundle.js 6.56 KiB [emitted] (name: main)
+./LinearInputControl/index.ts 4.9 KiB [built] [code generated]
+webpack 5.75.0 compiled successfully in 2049 ms
+[2:05:45 PM] [build]  Generating build outputs...
+[2:05:45 PM] [build]  Succeeded
+PS C:\repos\LinearInput\LinearInputcontrol> 
 ```
 
 The build generates an updated TypeScript type declaration file under the `LinearInputControl/generated` folder.
@@ -654,6 +711,43 @@ Once you're done implementing the code component logic, run the following comman
 ```CLI
 npm start watch
 ```
+
+The output should look something like this:
+
+```CLI
+> pcf-project@1.0.0 start
+> pcf-scripts start "watch"
+
+[2:09:10 PM] [start] [watch] Initializing...
+[2:09:10 PM] [start] [watch] Validating manifest...
+[2:09:10 PM] [start] [watch] Validating control...
+[2:09:11 PM] [start] [watch] Generating manifest types...
+[2:09:11 PM] [start] [watch] Generating design types...
+[2:09:11 PM] [start] [watch] Compiling and bundling control...
+[Webpack stats]:
+asset bundle.js 6.56 KiB [emitted] (name: main)
+./LinearInputControl/index.ts 4.9 KiB [built] [code generated]
+webpack 5.75.0 compiled successfully in 2060 ms
+[2:09:13 PM] [start] [watch] Generating build outputs...
+[2:09:13 PM] [start] [watch] Starting control harness...
+
+Starting control harness...
+
+[Browsersync] Access URLs:
+
+ ----------------------------
+ Local: http://localhost:8181
+ ----------------------------
+
+[Browsersync] Serving files from: C:\repos\LinearInput\out\controls\LinearInputControl
+
+[Browsersync] Watching files...
+
+```
+
+And a browser should open to the PCF Control Sandbox so that you can see the control.
+
+:::image type="content" source="../model-driven-apps/clientapi/media/linear-input-control-pcf-control-sandbox.png" alt-text="Linear input control in PCF Control Sandbox":::
 
 ## Packaging your code components
 
