@@ -1,12 +1,12 @@
 ---
 title: "msdyn_solutioncomponentsummary table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_solutioncomponentsummary table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -29,12 +29,12 @@ search.app:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|Create|POST [*org URI*]/api/data/v9.2/msdyn_solutioncomponentsummaries<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveEntityChanges||<xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityChangesRequest>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_solutioncomponentsummaries<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.2/msdyn_solutioncomponentsummaries(*msdyn_solutioncomponentsummaryid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -87,6 +87,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_ismanagedname](#BKMK_msdyn_ismanagedname)
 - [msdyn_isolationmode](#BKMK_msdyn_isolationmode)
 - [msdyn_istableenabled](#BKMK_msdyn_istableenabled)
+- [msdyn_lcid](#BKMK_msdyn_lcid)
 - [msdyn_logicalcollectionname](#BKMK_msdyn_logicalcollectionname)
 - [msdyn_modifiedon](#BKMK_msdyn_modifiedon)
 - [msdyn_name](#BKMK_msdyn_name)
@@ -579,6 +580,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_lcid"></a> msdyn_lcid
+
+|Property|Value|
+|--------|-----|
+|Description|Language code for component|
+|DisplayName|msdyn_lcid|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_lcid|
+|MaxValue|100000000000|
+|MinValue|-100000000000|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Decimal|
 
 
 ### <a name="BKMK_msdyn_logicalcollectionname"></a> msdyn_logicalcollectionname

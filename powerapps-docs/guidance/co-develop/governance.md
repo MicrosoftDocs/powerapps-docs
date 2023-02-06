@@ -4,7 +4,7 @@ description: "Learn how to establish an effective co-development governance fram
 author: luis-camino-ms
 ms.topic: article
 ms.custom: Focus-center
-ms.date: 07/26/2022
+ms.date: 09/06/2022
 ms.subservice: guidance
 ms.author: lucamino
 ms.reviewer: kvivek
@@ -68,17 +68,36 @@ After adding tasks and test cases, you can then go on to set sprint capacity.
 
 For more information on adding tasks, see [Add tasks to backlog](/azure/devops/boards/sprints/add-tasks) items to support sprint planning.
 
-### Pull requests and deployment review
-You should only create pull requests (PRs) for stories that are active and have had features reviewed and approved. PR governance sets PRs to draft if the story or feature isn't in either the Dev or Test stage.'
- 
+### Prepare solutions
+
+An important aspect to successful co-development is a structured release management process. Solutions are the mechanism for implementing [application lifecycle management](/power-platform/alm/overview-alm) (ALM); you use solutions to distribute components across environments through export and import activities. A component represents an artifact used in your application and something that you can potentially customize. Anything that can be included in a solution is a component, such as tables, columns, canvas and model-driven apps, Power Automate flows, chatbots, charts, and plug-ins.  
+
+> [!IMPORTANT]
+> During release planning, determine the strategy for managing [solutions](/power-platform/alm/solution-concepts-alm) in your project. Use solutions to manage your project and easily find components you've created to then distribute to other environments.  
+
+#### Deployments
+
+Components can take multiple sprints to complete depending on the complexity and team velocity.  Components should be [added](/power-platform/alm/update-solutions-alm) to a solution in a development environment as tasks get completed. Solutions are then imported to a production environment after they are tested. We recommend that you also maintain one test environment to perform end-to-end testing and try out solution deployment before going to production.
+
+#### Power Platform environments
+
+[Environments](/power-platform/alm/basics-alm#types-of-environments-used-in-alm) are a space to store, manage, and share your organization's business data, apps, and business processes. They also serve as containers to separate apps that might have different roles, security requirements, or target audiences. 
+
+If your organization has a multi-team fusion setup where each team is developing their own solutions, it is important to coordinate the duration of sprints and releases. Sprints do not have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group's preferences. However, the release cadence cannot be less than the shortest sprint duration across all teams.   
+
+#### Source control
+Consider adopting a source code control system like Azure DevOps. [Azure DevOps](/azure/devops) provides developer services for support teams to plan work, collaborate on code development, and build and deploy applications.
+
+Export a solution from your development environment containing your apps and customizations, unpack your solution, and store the components in your source control system. 
+
+#### Advanced topic: Pull request (PR) reviews
+
+You should only create PRs for stories that are active and have had features reviewed and approved. You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
+
 Automating the PR governance process helps ensure code quality without requiring a manual review of basic checks such as solution versions. 
 
 > [!NOTE]
-> Use the [PR checker tool](community-solutions-tools.md) to automate the pull request checking process.
-
-You should ensure that solution versioning is accurate, following the sprint and dev guidelines set out in [Implement Scrum practices for your team in Azure Boards](/azure/devops/boards/sprints/scrum-overview). Test results from the PR can be screenshots or videos that depict the functionality being built.
-
-In multi-team environments, it is important to coordinate the duration of sprints and releases. Sprints don't have to be of a consistent length along a project timeline and can vary in duration between teams, according to each group’s preferences. However, the release cadence can't be less than the shortest sprint duration across all teams. 
+> Use the [PR checker tool](community-solutions-tools.md#pull-request-checker) to automate the pull request checking process.
 
 ## Templates and standardization
 

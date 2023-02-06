@@ -1,19 +1,19 @@
 ---
 title: Canvas component overview (contains video)
 description: Learn about how to create reusable components for canvas apps.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 07/22/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
 search.app:
   - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
+  - jorisdg
+  - mduelae
   - gregli-msft
 ms.custom: intro-internal
 ---

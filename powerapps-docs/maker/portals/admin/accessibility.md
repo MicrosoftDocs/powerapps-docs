@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
@@ -17,6 +17,9 @@ contributors:
 ---
  
 # Accessibility in Power Apps portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Microsoft is committed to make products and services accessible to everyone. For more information about accessibility in general, go to the [Microsoft Accessibility](https://www.microsoft.com/accessibility) website.
 

@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2022
+ms.date: 12/13/2022
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # List configuration
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 You can easily enable and configure actions (create, edit, delete, and so on) for records in a list. It's also possible to override default labels, sizes, and other attributes so that the list will be displayed exactly the way you want.
 
@@ -121,7 +124,7 @@ Enabling a **Details Action** allows a user to view a read-only basic form of a 
 |                 Name                  |                                                                                                                                                                                                                      Description                                                                                                                                                                                                                      |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |          **Basic Settings**           |                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|              Basic Form              | Specifies the basic form that will be used to view the details of the selected table. The drop-down list will include all basic forms that are configured for the table type of the list. <br> **Note**: If the table type of the list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Details action, it will be ignored and the button won't be rendered in the list. |
+|              Basic Form              | Specifies the basic form that will be used to view the details of the selected table. The drop-down list will include all basic forms that are configured for the table type of the list. <br><br> **Note**: If the table type of the list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Details action, it will be ignored and the button won't be rendered in the list.<br><br>The behavior of the target form (read-only or edit) will be determined by the configuration of the [form mode](entity-forms.md#basic-form-attributes-and-relationships) and the [table permissions](assign-entity-permissions.md) assigned to the web roles associated with the user. |
 |         **Advanced Settings**         |                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Record ID Parameter Name |                                                                    Specifies the name of the Query String parameter that will be used to select the table to view in the selected basic form. This should match the value in that basic form's Record ID Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                                     |
 |             Button Label              |                                                                                                                                                                                      Overrides the HTML label for this action displayed in the list row.                                                                                                                                                                                       |
@@ -146,7 +149,7 @@ Enabling an **Edit Action** allows a user to view an editable basic form that is
 |                 Name                  |                                                                                                                                                                                                             Description                                                                                                                                                                                                             |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |          **Basic Settings**           |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|              Basic Form              | Specifies the basic form that will be used to edit the selected table. The drop-down list will include all basic forms that are configured for the table type of the list. <br> **Note**: If the table type of the list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Edit action, it will be ignored and the button won't be rendered in the list. |
+|              Basic Form              | Specifies the basic form that will be used to edit the selected table. The drop-down list will include all basic forms that are configured for the table type of the list. <br><br> **Note**: If the table type of the list has no basic forms, the drop-down list will appear empty. If no basic form is supplied for the Edit action, it will be ignored and the button won't be rendered in the list.<br><br>The behavior of the target form (read-only or edit) will be determined by the configuration of the [form mode](entity-forms.md#basic-form-attributes-and-relationships) and the [table permissions](assign-entity-permissions.md) assigned to the web roles associated with the user. |
 |         **Advanced Settings**         |                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Record ID Parameter Name |                                                           Specifies the name of the Query String parameter that will be used to select the table to edit in the selected basic form. This should match the value in that basic form's Record ID Parameter Name. The default value for this field, both here and in basic form configuration, is **id**.                                                            |
 |             Button Label              |                                                                                                                                                                             Overrides the HTML label for this action displayed in the list row.                                                                                                                                                                              |
@@ -206,9 +209,6 @@ Enabling a **Workflow action** allows a user to run an on-demand workflow agains
 ### See also
 
 - [Work with lists](entity-lists.md)
-- [Microsoft Learn: Display multiple Dataverse records using lists](/learn/modules/portals-access-data-platform/2-entity-lists)
+- [Display multiple Dataverse records using lists](/training/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
-
-
-

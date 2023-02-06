@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the HTML text 
 author: chmoncay
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.subservice: canvas-maker
 ms.date: 07/19/2022
 ms.author: chmoncay
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # HTML text control in Power Apps
@@ -101,11 +101,9 @@ There must be adequate color contrast between:
 * **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
 * Text with custom colors and its background
 
-### Screen reader support
-* **HtmlText** must be present.
-
 ### Keyboard support
-* **HtmlText** shouldn't contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in Power Apps doesn't consider elements inside **HtmlText**.
+* The control can't act as a button. It doesn't have **TabIndex** and keyboard users won't be able to focus on it.
+* The control can contain interactive parts in **HtmlText** like `<a>` elements, but the app setting **Simplified tab indexes" must be enabled. Otherwise, the tab navigation order will be wrong.
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

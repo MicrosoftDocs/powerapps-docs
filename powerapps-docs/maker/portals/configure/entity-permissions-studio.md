@@ -8,13 +8,16 @@ ms.custom:
 ms.date: 05/27/2021
 ms.subservice: portals
 ms.author: ckwan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - ckwan-ms
 ---
 
 # Table permissions using portals Studio
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 In the previous article, you learned how to configure security in portals by setting up table permissions from the Portal Management app. In this article, you'll learn how to configure table permissions using Power Apps portals Studio.
 

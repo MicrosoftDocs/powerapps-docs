@@ -1,8 +1,8 @@
 ---
 title: "Web API Query Data Sample (Microsoft Dataverse)| Microsoft Docs"
 description: "These code samples shows how to query data using the Web API. These samples are implemented using C# and client-side JavaScript."
-ms.date: 09/02/2022
-author: divka78
+ms.date: 12/12/2022
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
@@ -38,7 +38,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 5: Pagination](#section-5-pagination)|[Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)|
 |[Section 6: Expanding results](#section-6-expanding-results)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
 |[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate and grouping results](query-data-web-api.md#aggregate-and-grouping-results)|
-|[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)|
+|[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use FetchXml with Web API](use-fetchxml-web-api.md)|
 |[Section 9: Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
 |[Section 10: Delete sample records](#section-10-delete-sample-records)|[Basic delete](update-delete-entities-using-web-api.md#basic-delete)<br />[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)|
 
@@ -747,7 +747,7 @@ Contacts with '(sample)' in name and income above $55,000:
  
 You will use parentheses to establish the order in which your conditions are evaluated.  
   
-In this example, we are requesting a list of all contacts with `fullname` containing `(sample)`, `jobtitle` containing either `senior` or `specialist`, and `annualincome` greater than `55000`. To get the results we want, parentheses are used to group the `jobtitle` filters together. Since all operators have the same precedence, omitting the parentheses will give the `or` operator the same precedence as the `and` operators.  Filters are applied from left to right. The order in which these statements appear in the filter can affect the results. This is what the query in this example looks like: `$filter=contains(fullname,'(sample)') and (contains(jobtitle,'senior') or contains(jobtitle,'specialist')) and annualincome gt 55000`.  
+In this example, we are requesting a list of all contacts with `fullname` containing `(sample)`, `jobtitle` containing either `senior` or `manager`, and `annualincome` greater than `55000`. To get the results we want, parentheses are used to group the `jobtitle` filters together. Since all operators have the same precedence, omitting the parentheses will give the `or` operator the same precedence as the `and` operators.  Filters are applied from left to right. The order in which these statements appear in the filter can affect the results. This is what the query in this example looks like: `$filter=contains(fullname,'(sample)') and (contains(jobtitle,'senior') or contains(jobtitle,'manager')) and annualincome gt 55000`.  
   
 **Request**
 

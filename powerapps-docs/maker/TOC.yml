@@ -10,6 +10,10 @@
     href: developer-plan.md
   - name: Power Apps preview program
     href: powerapps-preview-program.md
+  - name: Sign in to Power Apps
+    href:  ./canvas-apps/sign-in-to-power-apps.md
+  - name: Get started with Power Apps
+    href: ./canvas-apps/intro-maker-portal.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: System requirements, limits, and configuration
@@ -41,12 +45,12 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: Use the Measure in MR control to take measurements 
-    href: ./canvas-apps/measure-your-space-in-mixed-reality.md
   - name: 'Use model-driven apps'
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
+    - name: Modern, refreshed look (preview)
+      href: ../user/modern-fluent-design.md
     - name: Unified Interface
       href: ../user/unified-interface.md
     - name: Navigation and basics
@@ -59,7 +63,7 @@
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
         href: ../user/find-admin.md
-      - name: Set personal option
+      - name: Set personal options
         href: ../user/set-personal-options.md
       - name: Use a screen reader
         href: ../user/screen-reader.md
@@ -127,7 +131,7 @@
           href: ../user/email-template-convert.md
         - name: Create a signature for emails
           href: ../user/email-signature.md 
-      - name: Enable the enhanced insert email template
+      - name: Configure the enhanced insert email template
         href: ../user/customize-insert-email-template.md
     - name: Work with grid and views
       items:
@@ -217,10 +221,14 @@
   items:
   - name: Overview
     href: index.md
-  - name: Sign in to Power Apps
-    href: ./canvas-apps/intro-maker-portal.md
+  - name: Use the learn hub
+    href: ./common/learn-hub.md 
   - name: Find it with unified search
     href: search.md
+  - name: Get help from a virtual agent
+    href: ./common/virtual-agent.md   
+  - name: Maker matching using an integrated virtual agent (preview)
+    href: ./common/maker-matching.md
 - name: Canvas apps
   items:
   - name: Canvas apps
@@ -243,7 +251,7 @@
       items:
       - name: Create an app from a template
         href: ./canvas-apps/get-started-test-drive.md
-      - name: Create an app from a design (preview)
+      - name: Create an app from a design 
         items:
         - name: Express design overview
           href: ./canvas-apps/express-design.md
@@ -360,6 +368,8 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
+          - name: Add comments (preview)
+            href: ./canvas-apps/comments.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
           - name: Add and configure a screen
@@ -438,6 +448,8 @@
                 href: ./canvas-apps/mixed-reality-component-measure-distance.md
               - name: Validate measurements in mixed reality using a spatial test filter
                 href: ./canvas-apps/mixed-reality-spatial-test.md
+              - name: Use the measure in MR control to take measurements 
+                href: ./canvas-apps/measure-your-space-in-mixed-reality.md
               - name: Upload photos from mixed reality
                 href: ./canvas-apps/mixed-reality-take-upload-photos.md
               - name: Load models from CGTrader into mixed reality controls (preview)
@@ -484,6 +496,8 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: Barcode reader (experimental)
+              href: ./canvas-apps/controls/control-barcodereader.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -608,7 +622,7 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Understand behavior formulas
           href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Use the Search pane (preview)
+        - name: Use the Search pane
           href: ./canvas-apps/search.md
         - name: Use Find and Replace in the formula bar
           href: ./canvas-apps/formula-bar-find-replace.md
@@ -620,6 +634,8 @@
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups
           href: ./canvas-apps/sharepoint-lookup-fields.md
+        - name: Formula repair in canvas apps (preview)
+          href: common/formula-repair.md
         - name: Working with flows
           items:
           - name: Use Power Automate pane 
@@ -630,7 +646,7 @@
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
-        - name: Power Apps Ideas (preview)
+        - name: Power Apps Ideas 
           items:
           - name: Power Apps Ideas
             href: ./canvas-apps/power-apps-ideas.md
@@ -1068,7 +1084,7 @@
             href: ./canvas-apps/accessible-apps-limitations.md
       - name: Send notifications from an app
         href: ./canvas-apps/add-notifications.md
-      - name: Use co-authoring in canvas apps (experimental)
+      - name: Use Git version control to edit canvas apps (experimental)
         href: ./canvas-apps/git-version-control.md
       - name: Experimental, preview, and retired features
         href: ./canvas-apps/working-with-experimental-preview.md
@@ -1094,6 +1110,8 @@
       href: ./canvas-apps/how-to/build-apps-measure-in-mr.md
     - name: Create a canvas app with deep link to a specific screen
       href: ./canvas-apps/how-to/deep-linking.md
+    - name: Work with the PDF function (experimental)
+      href: ./canvas-apps/how-to/pdf-function.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
@@ -1192,6 +1210,8 @@
         href: ./common/wrap/code-sign-ios.md
       - name: Code sign for Android
         href: ./common/wrap/code-sign-android.md
+      - name: Use deep links with wrapped mobile apps
+        href: ./common/wrap/wrap-deep-links.md
       - name: Frequently asked questions
         href: ./common/wrap/faq.yml
   - name: For developers
@@ -1230,6 +1250,8 @@
       href: ./canvas-apps/performance-tips.md
     - name: Canvas apps coding standards and guidelines
       href: https://aka.ms/powerappscanvasguidelines
+    - name: Build large and complex apps
+      href: ./canvas-apps/working-with-large-apps.md      
   - name: Important changes and deprecations
     href: ./canvas-apps/important-changes-deprecations.md
 - name: Model-driven apps
@@ -1303,13 +1325,15 @@
           - name: Add code components to a custom page
             href: ./model-driven-apps/page-code-components.md     
           - name: Add connectors to a custom page
-            href: /powerapps-docs/maker/../canvas-apps/connections-list
+            href: ./canvas-apps/connections-list.md
           - name: Localize text for a custom page
             href: ./model-driven-apps/custom-page-localize.md
           - name: Known issues with custom pages
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
+          - name: Formula repair in custom pages (preview)
+            href: common/formula-repair.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md 
       - name: Work with views
@@ -1395,7 +1419,11 @@
           - name: Configure lookup component
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
           - name: Add a chart to a form
-            href: ./model-driven-apps/add-chart-to-form.md                 
+            href: ./model-driven-apps/add-chart-to-form.md
+          - name: Add a map on a form
+            href: ./model-driven-apps/configure-bing-maps-legacy.md
+          - name: Edit the related tab on a form
+            href: ./model-driven-apps/use-the-form-editor-legacy.md           
         - name: Design effective forms
           href: 
           items:
@@ -1450,6 +1478,8 @@
             href: ./model-driven-apps/stay-current-with-news-control.md
           - name: Add the form component control
             href: ./model-driven-apps/form-component-control.md
+          - name: Add the Power BI report control (preview)
+            href: ./model-driven-apps/powerbi-control.md
         - name: Troubleshoot forms
           items:
           - name: Use Monitor to troubleshoot forms
@@ -1520,8 +1550,6 @@
           href: ./model-driven-apps/control-access-forms.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
-        - name: Change navigation within a form
-          href: ./model-driven-apps/use-the-form-editor-legacy.md
           items:
           - name: Add form navigation for related tables
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
@@ -1533,14 +1561,23 @@
             href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
-          - name: How to configure Bing maps in a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to configure event handlers in a form
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+    - name: Collaboration in model-driven apps
+      href:
+      items:
+      - name: Collaboration overview
+        href: ./model-driven-apps/collaboration-model-driven-apps.md
+      - name: Add comments 
+        href: ./model-driven-apps/comments.md 
+      - name: Copresence (preview)
+        href: ./model-driven-apps/copresence.md 
+      - name: Coauthoring (preview)
+        href: ./model-driven-apps/coauthoring.md
     - name: Apply business logic in an app
       href: 
       items:
@@ -1571,6 +1608,12 @@
         href: ./model-driven-apps/add-reporting-to-app.md      
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md
+      - name: Power BI content management in Power Apps solutions (preview)
+        href: ./model-driven-apps/power-bi-content-management-power-apps-solutions.md
+      - name: Create Power BI report and dataset components (preview)
+        href: ./model-driven-apps/create-edit-powerbi-report-dataset-components.md
+      - name: Customize and manage Power BI components (preview)
+        href: ./model-driven-apps/customize-manage-powerbi-components.md
       - name: Create a Power BI embedded dashboard
         href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
     - name: Use Excel and Word templates
@@ -1612,7 +1655,7 @@
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
       href: ./model-driven-apps/use-customizable-help.md
-    - name: Enable the enhanced email template editor page
+    - name: Configure the enhanced email template editor page
       href: ../user/cs-email-template-builder.md
   - name: App performance insights
     items:
@@ -1626,38 +1669,62 @@
     href: ../developer/model-driven-apps/overview.md
   - name: Glossary of terms
     href: ./model-driven-apps/model-driven-app-glossary.md    
-- name: Power Apps mobile  
+- name: Power Apps mobile app  
   items:
-  - name: Install Power Apps mobile
+  - name: Install the Power Apps mobile app
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Manage your mobile app with Microsoft Intune
     href: ../mobile/intune.md
-  - name: Use model-driven apps on Power Apps mobile
-    href: ../mobile/use-custom-model-driven-app-on-mobile.md
-  - name: Use Dataverse search on Power Apps mobile  
-    href: ../mobile/relevance-search-mobile.md  
-  - name: Set app display to dark or light mode  
+  - name: Set the appearance of your app to dark or light mode
     href: ../mobile/display-mode.md
-  - name: In-app notifications in Power Apps mobile
+  - name: Use model-driven apps in the Power Apps mobile app
+    href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Use Dataverse search for model-driven apps in the Power Apps mobile app
+    href: ../mobile/relevance-search-mobile.md  
+  - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
-  - name: Create push notifications for Power Apps mobile
+  - name: Create push notifications for the Power Apps mobile app
     href: ../mobile/power-apps-mobile-notification.md
-  - name: Use deep links with Power Apps mobile
+  - name: Use deep links with the Power Apps mobile app
     href: ../mobile/mobile-deep-links.md
-  - name: Troubleshoot issues for Power Apps mobile
-    href: ../mobile/powerapps-mobile-troubleshoot.md
-  - name: Mobile offline
+  - name: Open an app in the Power Apps mobile app by scanning a QR code
+    href: ../mobile/scan-QR-code.md
+  - name: Switch to a different directory in the Power Apps mobile app
+    href: ../mobile/tenant-switcher.md
+  - name: Troubleshoot issues in the mobile app
     items:
-    - name: Mobile offline overview (preview)
-      href: ../mobile/mobile-offline-overview.md
+    - name: Troubleshoot issues in the Power Apps mobile app
+      href: ../mobile/powerapps-mobile-troubleshoot.md
+    - name: Prevent canvas app restarts in the Power Apps mobile app
+      href: ../mobile/power-apps-mobile-canvas-app-restarts.md
+  - name: Mobile offline for model-driven apps
+    items:
+    - name: Set up mobile offline (classic)
+      items:
+      - name: Mobile offline overview (classic)
+        href: ../mobile/mobile-offline-overview-classic.md
+      - name: Set up mobile offline (classic)
+        href: ../mobile/setup-mobile-offline-classic.md
+      - name: Work offline on your mobile device (classic)
+        href: ../mobile/work-offline-mode-classic.md
     - name: Set up mobile offline (preview)
-      href: ../mobile/setup-mobile-offline.md 
+      items:
+      - name: Mobile offline overview (preview)
+        href: ../mobile/mobile-offline-overview.md
+      - name: Set up mobile offline (preview)
+        href: ../mobile/setup-mobile-offline.md 
+      - name: Enable and use offline-first (preview)
+        href: ../mobile/work-in-offline-mode.md 
+    - name: View offline sync status (preview)
+      href: ../mobile/offline-sync-icon.md
+    - name: Sync data in the background
+      href: ../mobile/sync-data-offline-background.md
     - name: Configure mobile offline profiles for images and files
       href: ../mobile/offline-file-images.md
-    - name: Enable and use offline-first (preview)
-      href: ../mobile/work-in-offline-mode.md   
     - name: Offline profile guidelines
-      href: ../mobile/mobile-offline-guidelines.md   
+      href: ../mobile/mobile-offline-guidelines.md  
+    - name: Mobile offline capabilities and limitations
+      href: ../mobile/offline-capabilities.md
   - name: Power Apps for Windows 
     items:
     - name: Install Power Apps for Windows 
@@ -1793,13 +1860,13 @@
                   href: ./portals/configure/configure-basic-form-metadata.md
                 - name: Configure basic form subgrid
                   href: ./portals/configure/configure-basic-form-subgrid.md
-            - name: Work with advanced forms
+            - name: Work with multistep forms
               items:
-                - name: Define advanced form properties
+                - name: Define multistep form properties
                   href: ./portals/configure/web-form-properties.md
-                - name: Advanced form steps
+                - name: Multistep form steps
                   items:
-                    - name: Define advanced form steps
+                    - name: Define multistep form steps
                       href: ./portals/configure/web-form-steps.md
                     - name: Define a load form and load tab step type
                       href: ./portals/configure/load-form-step.md
@@ -1809,9 +1876,9 @@
                       href: ./portals/configure/add-conditional-step.md
                     - name: Add custom JavaScript
                       href: ./portals/configure/add-custom-javascript.md
-                - name: Configure advanced form metadata
+                - name: Configure multistep form metadata
                   href: ./portals/configure/configure-web-form-metadata.md
-                - name: Configure an advanced form subgrid
+                - name: Configure a multistep form subgrid
                   href: ./portals/configure/configure-web-form-subgrid.md
                 - name: Add geolocation
                   href: ./portals/configure/add-geolocation.md
@@ -1837,7 +1904,7 @@
           href: ./portals/configure/choices-column.md          
         - name: Configure content snippets
           href: ./portals/configure/customize-content-snippets.md
-        - name: Configure file column (preview)
+        - name: Configure file column
           href: ./portals/configure/file-column.md
         - name: Configure header and footer output caching
           href: ./portals/configure/enable-header-footer-output-caching.md
@@ -1907,14 +1974,24 @@
           href: ./portals/admin/manage-ssl-certificates.md              
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md  
-        - name: Content Delivery Network (preview)
+        - name: Content Delivery Network
           href: ./portals/configure/configure-cdn.md            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
-              href: ./portals/admin/portal-checker.md
+              href: ./portals/admin/portal-checker.md             
             - name: Analyze and resolve results
-              href: ./portals/admin/portal-checker-analysis.md
+              items:
+                - name: Cache invalidation issues
+                  href: ./portals/admin/portal-checker-cache-invalidation.md
+                - name: Configuration issues
+                  href: ./portals/admin/portal-checker-configuration-issues.md
+                - name: Performance issues
+                  href: ./portals/admin/portal-checker-performance.md
+                - name: Portal start-up issues
+                  href: ./portals/admin/portal-checker-startup-issue.md
+                - name: Provisioning issues
+                  href: ./portals/admin/portal-checker-provisioning-issues.md
         - name: Manage portal authentication key
           href: ./portals/admin/manage-auth-key.md
         - name: Restrict IP addresses
@@ -2048,9 +2125,9 @@
     - name: How-to guides for extending portals
       items:
         - name: Embed portal in another website
-          href: ./portals/embed-portal-website.md
+          href: /power-pages/configure/embed-website
         - name: Set up Azure Front Door with portals
-          href: ./portals/azure-front-door.md
+          href: /power-pages/configure/azure-front-door
     - name: For developers
       items:
         - name: Work with Liquid templates
@@ -2118,7 +2195,9 @@
           - name: Overview of code components in portals
             href: ./portals/component-framework.md          
           - name: "Tutorial: Use code components in portals"
-            href: ./portals/component-framework-tutorial.md 
+            href: ./portals/component-framework-tutorial.md
+          - name: "Tutorial: Use dataset for code components in portals"
+            href: ./portals/tutorial-pcf-code.md 
           - name: "Tutorial: Configure rich text editor control on portals"
             href: ./portals/component-rte-tutorial.md                       
           - name: Use code components Liquid template tag
@@ -2225,6 +2304,8 @@
                 href: ./portals/versions/versions-before-9.3.3.x.md
          - name: Starter portal package updates
            items:
+              - name: Package 9.3.2209.x
+                href: ./portals/versions/package-version-9.3.2209.md   
               - name: Package 9.3.2204.x
                 href: ./portals/versions/package-version-9.3.2204.md             
               - name: Package 9.3.2201.x
@@ -2267,8 +2348,15 @@
       href: ./data-platform/data-platform-import-export.md
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
-    - name: Virtual table OData v4 data provider
-      href: ./data-platform/virtual-entity-odata-provider-requirements.md
+      items:
+      - name: Virtual table OData v4 data provider
+        href: ./data-platform/virtual-entity-odata-provider-requirements.md
+      - name: Create a virtual table using a virtual connector provider (preview)
+        href: ./data-platform/create-virtual-tables-using-connectors.md
+      - name: Set up virtual table relationships
+        href: ./data-platform/setup-virtual-table-relationships.md
+      - name: Virtual tables known issues and troubleshooting 
+        href: ./data-platform/limits-tshoot-virtual-tables.md
     - name: View and edit tables representing solution objects
       href: ./data-platform/table-solution-objects.md
     - name: Define alternate keys using Power Apps
@@ -2289,16 +2377,14 @@
         href: ./data-platform/data-platform-delete-entity.md
       - name: How to display custom icons
         href: ./data-platform/display-custom-icons-instead.md
-      - name: How to edit system table messages
+      - name: How to edit system table messages (preview)
         href: ./data-platform/edit-system-entity-messages.md
       - name: How to configure a table for feedback/ratings
         href: ./data-platform/configure-entity-feedback.md
-      - name: Azure Cosmos DB SQL API Data Provider
+      - name: Azure Cosmos DB for NoSQL Data Provider
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
-      - name: Create virtual tables using virtual connectors (preview)
-        href: ./data-platform/create-virtual-tables-using-connectors.md
   - name: Work with table relationships
     href: ./data-platform/relationships-overview.md
     items:
@@ -2548,7 +2634,7 @@
         href: ./data-platform/azure-synapse-link-create-view.md
       - name: Transform data with Apache Spark
         href: ./data-platform/azure-synapse-link-spark.md
-      - name: Run Azure Synapse pipelines
+      - name: Copy Dataverse into Azure SQL
         href: ./data-platform/azure-synapse-link-pipelines.md
       - name: Visualize data with Power BI
         href: ./data-platform/azure-synapse-link-powerbi.md
@@ -2562,8 +2648,6 @@
       items:
       - name: Ingest exported data with Azure Data Factory
         href: ./data-platform/export-to-data-lake-data-adf.md
-      - name: Copy data to Azure SQL with Azure Data Factory
-        href: ./data-platform/azure-synapse-link-copy-sql.md
       - name: Copy data from multiple data lakes to single data lake
         href: ./data-platform/azure-synapse-link-copy-mult-data-lakes.md
       - name: Transform data from CSV to Parquet
@@ -2591,14 +2675,16 @@
   items:
   - name: Overview
     href: ../teams/overview.md
-  - name: Embed a canvas app as tab app
-    href: ../teams/embed-teams-tab.md
-  - name: Embed a canvas app as personal app
-    href: ../teams/embed-teams-app.md
-  - name: Embed a model-driven app as tab app
-    href: ../teams/embed-model-driven-teams-tab.md
-  - name: Embed a model-driven app as personal app
-    href: ../teams/embed-model-driven-teams-personal.md
+  - name: Embed apps in Teams
+    items:
+    - name: Embed a canvas app as tab app
+      href: ../teams/embed-teams-tab.md
+    - name: Embed a canvas app as personal app
+      href: ../teams/embed-teams-app.md
+    - name: Embed a model-driven app as tab app
+      href: ../teams/embed-model-driven-teams-tab.md
+    - name: Embed a model-driven app as personal app
+      href: ../teams/embed-model-driven-teams-personal.md
   - name: Create apps in Teams
     items:
     - name: Create apps in Teams
@@ -2660,8 +2746,6 @@
           href: ../teams/use-teams-integration-object.md
         - name: How to build apps for Teams
           href: ../teams/how-templates-built.md
-        - name: When to build apps in Teams
-          href: ../teams/when-create-teams-apps.md
         - name: Add notifications to make your apps collaborative
           href: ../teams/add-app-notifications.md
         - name: Integrate with Planner
@@ -2674,10 +2758,6 @@
           href: ../teams/consistent-experience-across-sessions.md
         - name: Have a conversation about your business data in a Teams app
           href: ../teams/business-data.md
-    - name: How-to guides
-      items:
-        - name: Enable Power Apps and Dataverse for Teams in Microsoft Teams
-          href: ../teams/how-to/enable-dataverse-sample-app.md
         - name: Build an app to retrieve videos
           href: ../teams/tutorial-buildapp-retrieve-videos.md
     - name: Manage your apps
@@ -2690,163 +2770,19 @@
       href: ../teams/remove-your-apps.md
     - name: Uninstall Power Apps personal app
       href: ../teams/uninstall-personal-apps.md 
-    - name: Sample apps
+    - name: Sample app templates
       items:
-        - name: Use sample apps from Teams store
-          href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Boards (preview)
-          items:
-             - name: Use Boards sample app
-               href: ../teams/boards.md
-             - name: Understand Boards sample app architecture
-               href: ../teams/boards-architecture.md
-        - name: Bulletins
-          items:
-            - name: Use Bulletins sample app
-              href: ../teams/bulletins.md
-            - name: Deploy Bulletins app broadly in your organization
-              href: ../teams/bulletins-deploy-broadly.md
-            - name: Customize Bulletins app
-              items:
-                - name: Understand Bulletins sample app architecture
-                  href: ../teams/bulletins-architecture.md
-                - name: Customize Bulletins app
-                  href: ../teams/customize-bulletins.md
-                - name: Send an alert when a new bulletin is posted
-                  href: ../teams/new-bulletin-alert.md
-                - name: Add "Notify me" settings to category in Bulletins app
-                  href: ../teams/bulletins-notify-me.md
-                - name: Customize apps for end user to add notification preferences
-                  href: ../teams/bulletins-notification-preference.md
-                - name: Add contact phone in links and contacts section
-                  href: ../teams/bulletins-contact-phone.md
-        - name: Employee ideas
-          items:
-            - name: Use Employee ideas sample app
-              href: ../teams/employee-ideas.md
-            - name: Deploy Employee ideas app broadly in your organization
-              href: ../teams/deploy-employee-ideas-broad-distribution.md
-            - name: Customize Employee ideas app
-              items:
-                - name: Understand Employee ideas sample app architecture
-                  href: ../teams/employee-ideas-architecture.md
-                - name: Customize Employee ideas app
-                  href: ../teams/customize-employee-ideas.md
-                - name: Export Employee ideas for reporting
-                  href: ../teams/export-employee-ideas-for-reporting.md
-                - name: Replace notification with adaptive card to increase collaboration
-                  href: ../teams/replace-notification-with-adaptive-card.md
-                - name: Make ideas editable by original creator
-                  href: ../teams/make-ideas-editable-by-original-creator.md
-                - name: Add tag to mark prioritized ideas
-                  href: ../teams/add-tag-to-mark-prioritized-ideas.md
-                - name: Enable users to discuss ideas
-                  href: ../teams/extend-ideas-discussions.md
-        - name: Get connected (preview)
-          items:
-            - name: Use Get connected sample app
-              href: ../teams/get-connected.md
-            - name: Understand Get connected sample app architecture
-              href: ../teams/get-connected-architecture.md
-        - name: How to (preview)
-          items:
-             - name: Use How to sample app
-               href: ../teams/how-to.md
-             - name: Customize How to app
-               items:
-                - name: Understand How to sample app architecture
-                  href: ../teams/how-to-architecture.md
-        - name: Inspection
-          items:
-            - name: Use Inspection sample app
-              href: ../teams/inspection.md
-            - name: Deploy Inspection app broadly in your organization
-              href: ../teams/inspection-deploy-broad.md
-            - name: Customize Inspection app
-              items:
-                - name: Understand Inspection sample app architecture
-                  href: ../teams/inspection-architecture.md
-                - name: Customize Inspection sample app
-                  href: ../teams/customize-inspections.md
-                - name: Add hierarchy inspection location
-                  href: ../teams/inspections-hierarchy-locations.md
-                - name: Customize inspection steps
-                  href: ../teams/customize-inspection-steps.md
-                - name: Notify manager on completion of inspection
-                  href: ../teams/notify-manager-inspections.md
-                - name: Update inspection notification to use an adaptive card
-                  href: ../teams/inspection-adaptive-card.md
-        - name: Issue reporting
-          items:
-            - name: Use Issue reporting sample app
-              href: ../teams/issue-reporting.md
-            - name: Deploy Issue reporting app broadly in your organization
-              href: ../teams/issue-reporting-broad-distribution.md
-            - name: Customize Inspection app
-              items:
-                - name: Issue reporting sample app architecture
-                  href: ../teams/issue-reporting-architecture.md
-                - name: Customize Issue reporting app
-                  href: ../teams/customize-issue-reporting.md
-                - name: Add urgency flag to reported issues
-                  href: ../teams/extend-issue-urgency.md
-                - name: Add business logic for automated task assignment
-                  href: ../teams/extend-issue-auto-assignment.md
-                - name: Convert Issue reporting sample app to Work order management app
-                  href: ../teams/extend-issue-rename-work-order.md
-                - name: Remove the Planner dependency for task creation
-                  href: ../teams/extend-issue-remove-planner.md
-                - name: Add the ability to be notified when an issue is resolved
-                  href: ../teams/extend-issue-sign-up-notification.md
-        - name: Milestones
-          items:
-             - name: Use Milestones sample app
-               href: ../teams/milestones.md
-             - name: Deploy the Milestones app broadly in your organization
-               href: ../teams/milestones-broad-distribution.md
-             - name: Customize Milestones app
-               items:
-                 - name: Understand Milestones sample app architecture
-                   href: ../teams/milestones-architecture.md
-                 - name: Customize Milestones sample app
-                   href: ../teams/customize-milestones.md
-                 - name: Add a new column to Milestones sample app to track work items
-                   href: ../teams/extend-milestones-add-column.md
-                 - name: Send a weekly report on project status from the Milestones sample app
-                   href: ../teams/extend-milestones-weekly-report.md
-                 - name: Send notification to the Team when work item status is updated in the Milestones sample app
-                   href: ../teams/extend-milestones-send-notification.md
-        - name: Perspectives (preview)
-          items:
-            - name: Use Perspectives sample app
-              href: ../teams/perspectives.md
-            - name: Understand Perspectives sample app architecture
-              href: ../teams/perspectives-architecture.md
-        - name: Profile+ (preview)
-          items:
-            - name: Use the Profile+ sample app 
-              href: ../teams/profile-app.md
-            - name: Deploy the Profile+ app broadly in your organization
-              href: ../teams/deploy-profile-plus-broad-distribution.md
-            - name: Customize Profile+ app
-              items:
-                - name: Understand Profile+ sample app architecture
-                  href: ../teams/profile-plus-architecture.md
-                - name: Extend Profile+ sample app with additional org-specific data
-                  href: ../teams/profile-plus-org-specific.md
-                - name: Customize Profile+ sample app
-                  href: ../teams/customize-profile-plus.md
-        - name: Do more with sample apps
-          items:
-            - name: Customize sample apps
-              href: ../teams/customize-sample-apps.md
-            - name: Localize sample apps 
-              href: ../teams/localizing-sample-apps.md
-            - name: Theming in sample apps 
-              href: ../teams/sample-app-theming.md
-            - name: Working with table permission in sample apps
-              href: ../teams/dataverse-for-teams-table-permissions.md
-        - name: FAQs for sample apps
+        - name: Use sample app templates in Teams
+          href: ../teams/use-sample-apps.md
+        - name: Customize sample app templates
+          href: ../teams/customize-sample-apps.md
+        - name: Localize sample app templates
+          href: ../teams/localizing-sample-apps.md
+        - name: Theming in sample app templates
+          href: ../teams/sample-app-theming.md
+        - name: Working with table permission in sample app templates
+          href: ../teams/dataverse-for-teams-table-permissions.md
+        - name: FAQs for sample app templates
           href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
@@ -2861,7 +2797,44 @@
     href: ./data-platform/access-migrate-linked-tables.md
 - name: Chatbots
   href: ../chatbots.md
-
+- name: Cards (preview)
+  items:
+    - name: What are cards?
+      href: ../cards/overview.md
+    - name: Requirements for cards
+      href: ../cards/card-requirements.md
+    - name: Design cards
+      items: 
+        - name: Card Designer overview
+          href: ../cards/make-a-card/designer-overview.md
+        - name: Add controls
+          href: ../cards/make-a-card/ui-elements/controls.md
+        - name: Add buttons
+          href: ../cards/make-a-card/ui-elements/use-buttons.md
+        - name: Add and configure screens
+          href: ../cards/make-a-card/screens/use-screens.md
+    - name: Connect to data and services
+      items:
+        - name: Add variables
+          href: ../cards/make-a-card/variables/variables.md
+        - name: Access connectors
+          href: ../cards/make-a-card/connectors/connector-intro.md
+    - name: Add business logic with Power Fx
+      href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
+    - name: Test and debug cards
+      href: ../cards/make-a-card/testing/debugging-cards.md
+    - name: Send a card in Teams
+      href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Manage cards
+      href: ../cards/manage-cards/manage-cards.md
+    - name: Tutorials
+      items:
+        - name: Create a simple card
+          href: ../cards/tutorials/hello-world-card.md
+        - name: Create a shopping list card
+          href: ../cards/tutorials/simple-shopping-list.md
+        - name: Create a card with data from Dataverse
+          href: ../cards/tutorials/dataverse-card.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions

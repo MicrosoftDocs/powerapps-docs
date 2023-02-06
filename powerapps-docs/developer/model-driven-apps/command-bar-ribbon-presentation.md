@@ -3,7 +3,6 @@ title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs"
 description: "Data defining commands in Microsoft Dataverse can be presented in several different ways depending on the client and differences in how some tables are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
 author: HemantGaur
 ms.author: hemantg
-manager: lwelicki
 ms.date: 05/24/2022
 ms.reviewer: jdaly
 ms.topic: article

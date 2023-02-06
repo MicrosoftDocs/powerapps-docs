@@ -5,17 +5,19 @@ author: ankitavish
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/14/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
 contributors:
     - ankitavish
-    - tapanm-msft
+    - mduelae
     - nickdoelman
 ---
 
 # Build a portal as a progressive web app
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 ## Prerequisites
 
@@ -47,7 +49,7 @@ Use Power Apps portals Studio to configure your progressive web app (PWA). You c
 
 You can create your own branded PWA by using the customization options to change the app name, starting page, color, and more.
 
-> [!Note]
+> [!NOTE]
 > On iOS devices, icons for the PWA will be shown as thumbnails and the customized splash screen won't be displayed.
 
 1. In portals Studio, select **Progressive web app**.
@@ -62,7 +64,7 @@ You can create your own branded PWA by using the customization options to change
     | Description | The description of the portal PWA that will appear on the mobile device and in the app store. |
     | Starting page of the app | The start page for the portal when it's opened through the PWA. |
     | Splash screen background | The background color for the splash screen when the PWA is loaded. |
-    | App icon | The icon for the app that will appear on the mobile device and in the app store.<br>**Note:** Supports .jpg, .jpeg, .png formats with a maximum upload size of 5mb. Size of icon must be 512 &times; 512 pixels. |
+    | App icon | The icon for the app that will appear on the mobile device and in the app store.<br>**Note:** Supports .jpg, .jpeg, .png formats with a maximum upload size of 5 mb. Size of icon must be 512 &times; 512 pixels. |
     
     :::image type="content" source="media/progressive-web-apps/customize-pwa.png" alt-text="Customizing PWA settings such as title, description, and color." :::
     

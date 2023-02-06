@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Add a screen to a canvas app and navigate between screens

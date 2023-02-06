@@ -6,12 +6,15 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 10/01/2021
 ms.subservice: portals
-ms.author: ndoelman
+ms.author: kkendrick
 contributors:
     - nickdoelman
 ---
 
 # Display file attachments with knowledge articles
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Knowledge articles help you achieve self-service. As a Knowledge Manager, you might want to share some downloadable files along with your articles to provide detailed information or a case study. You can author knowledge articles and add them as notes attachments that can be used by users. These attachments aren't displayed automatically on portals, thereby limiting the effectiveness of self-service.
 

@@ -46,12 +46,12 @@ To add code components to an app, you need to enable the Power Apps component fr
 
 3. On the left pane, select **Environments**, select the environment where you want to enable this feature, and then select **Settings**.
 
-4. On the **Products** tab, select **Features**.
+4. Expand **Product**, and select **Features**.   
+
+5. From the list of available features, turn on **Power Apps component framework for canvas apps**, and then select **Save**.
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power Apps component framework.](media/enable-pcf-feature.png "Enable Power Apps component framework")
-
-5. From the list of available features, turn on **Power Apps component framework for canvas apps**, and then select **Save**.
 
 ## Implementing code components
 
@@ -115,7 +115,7 @@ Whenever you update the code components and want to see the runtime changes, you
 
 [Power Apps component framework overview](overview.md)<br/>
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
-[Learn Power Apps component framework](/learn/paths/use-power-apps-component-framework)
+[Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

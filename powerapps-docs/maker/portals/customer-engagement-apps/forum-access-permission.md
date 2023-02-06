@@ -6,12 +6,15 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: ndoelman
+ms.author: kkendrick
 contributors:
     - nickdoelman
 ---
 
 # Manage forum access permissions
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Forum Access Permission is a security rule that can be assigned to a particular forum and web role that can restrict particular users from viewing the forum or granting particular users the ability to moderate a forum within the webpages. To create, edit, or delete forum access permissions:
 

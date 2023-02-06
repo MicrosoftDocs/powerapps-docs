@@ -1,12 +1,12 @@
 ---
 title: "ProcessSession table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProcessSession table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -27,18 +27,18 @@ Information that is generated when a dialog is run. Every time that you run a di
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.0/processsessions(*processsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.0/processsessions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/processsessions(*processsessionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/processsessions(*processsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/processsessions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/processsessions(*processsessionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/processsessions(*processsessionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/processsessions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/processsessions(*processsessionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/processsessions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/processsessions(*processsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/processsessions(*processsessionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/processsessions(*processsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/processsessions(*processsessionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 
 ## Properties
 
@@ -359,7 +359,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activityfileattachment,annotation,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,bot,botcomponent,businessunit,businessunitnewsarticle,canvasappextendedmetadata,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,chat,comment,connection,connectioninstance,connectionreference,connectionrole,connector,contact,conversationtranscript,convertrule,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,email,environmentvariabledefinition,environmentvariablevalue,expiredprocess,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,goal,goalrollupquery,holidaywrapper,internalcatalogassignment,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,managedidentity,metric,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pmanalysishistory,msdyn_pminferredtask,msdyn_pmprocessusersettings,msdyn_pmrecording,msdyn_pmtemplate,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msgraphresourcetosubscription,newprocess,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,position,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,queue,queueitem,recurringappointmentmaster,relationshiprole,report,revokeinheritedaccessrecordstracker,rollupfield,routingrule,routingruleitem,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharepointdocumentlocation,sharepointsite,sla,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,subject,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,template,territory,theme,transactioncurrency,translationprocess,usermapping,usermobileofflineprofilemembership,userrating,virtualentitymetadata,workflowbinary|
+|Targets|account,activityfileattachment,annotation,appaction,appactionmigration,appactionrule,appelement,applicationuser,appmodulecomponentedge,appmodulecomponentnode,appointment,appsetting,appusersetting,bot,botcomponent,businessunit,businessunitnewsarticle,canvasappextendedmetadata,card,cascadegrantrevokeaccessrecordstracker,cascadegrantrevokeaccessversiontracker,catalog,catalogassignment,channelaccessprofile,channelaccessprofilerule,chat,comment,connection,connectioninstance,connectionreference,connectionrole,connector,contact,conversationtranscript,convertrule,customapi,customapirequestparameter,customapiresponseproperty,customeraddress,customerrelationship,datalakefolder,datalakefolderpermission,datalakeworkspace,datalakeworkspacepermission,dataprocessingconfiguration,desktopflowbinary,email,environmentvariabledefinition,environmentvariablevalue,expiredprocess,exportsolutionupload,externalparty,externalpartyitem,fax,featurecontrolsetting,flowmachine,flowmachinegroup,flowmachineimage,flowmachineimageversion,flowmachinenetwork,goal,goalrollupquery,holidaywrapper,internalcatalogassignment,kbarticle,kbarticlecomment,kbarticletemplate,keyvaultreference,knowledgearticle,knowledgebaserecord,letter,mailbox,mailmergetemplate,managedidentity,metric,msdynce_botcontent,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfeedbackloop,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_appinsightsmetadata,msdyn_customcontrolextendedsettings,msdyn_dataflow,msdyn_dataflowrefreshhistory,msdyn_entitylinkchatconfiguration,msdyn_entityrefreshhistory,msdyn_federatedarticle,msdyn_federatedarticleincident,msdyn_helppage,msdyn_insightsstorevirtualentity,msdyn_integratedsearchprovider,msdyn_kalanguagesetting,msdyn_kbattachment,msdyn_kmfederatedsearchconfig,msdyn_kmpersonalizationsetting,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_knowledgeinteractioninsight,msdyn_knowledgemanagementsetting,msdyn_knowledgepersonalfilter,msdyn_knowledgesearchfilter,msdyn_knowledgesearchinsight,msdyn_pmanalysishistory,msdyn_pmcalendar,msdyn_pmcalendarversion,msdyn_pminferredtask,msdyn_pmprocessextendedmetadataversion,msdyn_pmprocessusersettings,msdyn_pmprocessversion,msdyn_pmrecording,msdyn_pmtemplate,msdyn_pmview,msdyn_richtextfile,msdyn_serviceconfiguration,msdyn_slakpi,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,msdyn_tour,msdyn_workflowactionstatus,msgraphresourcetosubscription,newprocess,organizationdatasyncstate,organizationdatasyncsubscription,organizationdatasyncsubscriptionentity,organizationsetting,package,pdfsetting,phonecall,position,powerbidataset,powerbimashupparameter,powerbireport,powerfxrule,privilegesremovalsetting,processstageparameter,provisionlanguageforuser,queue,queueitem,recurringappointmentmaster,relationshiprole,report,revokeinheritedaccessrecordstracker,rollupfield,routingrule,routingruleitem,serviceplan,serviceplanmapping,settingdefinition,sharedlinksetting,sharedobject,sharedworkspace,sharepointdocumentlocation,sharepointsite,sla,socialactivity,socialprofile,solutioncomponentattributeconfiguration,solutioncomponentbatchconfiguration,solutioncomponentconfiguration,solutioncomponentrelationshipconfiguration,stagesolutionupload,subject,supportusertable,synapsedatabase,synapselinkexternaltablestate,synapselinkprofile,synapselinkprofileentity,synapselinkprofileentitystate,synapselinkschedule,systemuser,systemuserauthorizationchangetracker,task,team,teammobileofflineprofilemembership,template,territory,theme,transactioncurrency,translationprocess,usermapping,usermobileofflineprofilemembership,userrating,virtualentitymetadata,workflowbinary|
 |Type|Lookup|
 
 
@@ -1355,12 +1355,14 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [connector_ProcessSession](#BKMK_connector_ProcessSession)
 - [environmentvariabledefinition_ProcessSession](#BKMK_environmentvariabledefinition_ProcessSession)
 - [environmentvariablevalue_ProcessSession](#BKMK_environmentvariablevalue_ProcessSession)
+- [workflowbinary_ProcessSession](#BKMK_workflowbinary_ProcessSession)
 - [flowmachine_ProcessSession](#BKMK_flowmachine_ProcessSession)
 - [flowmachinegroup_ProcessSession](#BKMK_flowmachinegroup_ProcessSession)
 - [flowmachineimage_ProcessSession](#BKMK_flowmachineimage_ProcessSession)
 - [flowmachineimageversion_ProcessSession](#BKMK_flowmachineimageversion_ProcessSession)
+- [flowmachinenetwork_ProcessSession](#BKMK_flowmachinenetwork_ProcessSession)
 - [processstageparameter_ProcessSession](#BKMK_processstageparameter_ProcessSession)
-- [workflowbinary_ProcessSession](#BKMK_workflowbinary_ProcessSession)
+- [desktopflowbinary_ProcessSession](#BKMK_desktopflowbinary_ProcessSession)
 - [connectionreference_ProcessSession](#BKMK_connectionreference_ProcessSession)
 - [connectioninstance_ProcessSession](#BKMK_connectioninstance_ProcessSession)
 - [msdyn_aiconfiguration_ProcessSession](#BKMK_msdyn_aiconfiguration_ProcessSession)
@@ -1392,6 +1394,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgemanagementsetting_ProcessSession](#BKMK_msdyn_knowledgemanagementsetting_ProcessSession)
 - [msdyn_federatedarticle_ProcessSession](#BKMK_msdyn_federatedarticle_ProcessSession)
 - [msdyn_federatedarticleincident_ProcessSession](#BKMK_msdyn_federatedarticleincident_ProcessSession)
+- [msdyn_integratedsearchprovider_ProcessSession](#BKMK_msdyn_integratedsearchprovider_ProcessSession)
 - [msdyn_kmfederatedsearchconfig_ProcessSession](#BKMK_msdyn_kmfederatedsearchconfig_ProcessSession)
 - [msdyn_knowledgearticleimage_ProcessSession](#BKMK_msdyn_knowledgearticleimage_ProcessSession)
 - [msdyn_knowledgeinteractioninsight_ProcessSession](#BKMK_msdyn_knowledgeinteractioninsight_ProcessSession)
@@ -1402,6 +1405,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_knowledgearticletemplate_ProcessSession](#BKMK_msdyn_knowledgearticletemplate_ProcessSession)
 - [msdyn_knowledgepersonalfilter_ProcessSession](#BKMK_msdyn_knowledgepersonalfilter_ProcessSession)
 - [msdyn_knowledgesearchfilter_ProcessSession](#BKMK_msdyn_knowledgesearchfilter_ProcessSession)
+- [powerfxrule_ProcessSession](#BKMK_powerfxrule_ProcessSession)
 - [keyvaultreference_ProcessSession](#BKMK_keyvaultreference_ProcessSession)
 - [managedidentity_ProcessSession](#BKMK_managedidentity_ProcessSession)
 - [msgraphresourcetosubscription_ProcessSession](#BKMK_msgraphresourcetosubscription_ProcessSession)
@@ -1410,19 +1414,26 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [organizationdatasyncsubscriptionentity_ProcessSession](#BKMK_organizationdatasyncsubscriptionentity_ProcessSession)
 - [organizationdatasyncstate_ProcessSession](#BKMK_organizationdatasyncstate_ProcessSession)
 - [msdyn_appinsightsmetadata_ProcessSession](#BKMK_msdyn_appinsightsmetadata_ProcessSession)
+- [msdyn_workflowactionstatus_ProcessSession](#BKMK_msdyn_workflowactionstatus_ProcessSession)
 - [userrating_ProcessSession](#BKMK_userrating_ProcessSession)
 - [msdyn_insightsstorevirtualentity_ProcessSession](#BKMK_msdyn_insightsstorevirtualentity_ProcessSession)
 - [appaction_ProcessSession](#BKMK_appaction_ProcessSession)
 - [appactionmigration_ProcessSession](#BKMK_appactionmigration_ProcessSession)
 - [appactionrule_ProcessSession](#BKMK_appactionrule_ProcessSession)
+- [card_ProcessSession](#BKMK_card_ProcessSession)
 - [msdyn_entitylinkchatconfiguration_ProcessSession](#BKMK_msdyn_entitylinkchatconfiguration_ProcessSession)
 - [msdyn_richtextfile_ProcessSession](#BKMK_msdyn_richtextfile_ProcessSession)
 - [msdyn_customcontrolextendedsettings_ProcessSession](#BKMK_msdyn_customcontrolextendedsettings_ProcessSession)
 - [msdyn_pmanalysishistory_ProcessSession](#BKMK_msdyn_pmanalysishistory_ProcessSession)
+- [msdyn_pmcalendar_ProcessSession](#BKMK_msdyn_pmcalendar_ProcessSession)
+- [msdyn_pmcalendarversion_ProcessSession](#BKMK_msdyn_pmcalendarversion_ProcessSession)
 - [msdyn_pminferredtask_ProcessSession](#BKMK_msdyn_pminferredtask_ProcessSession)
+- [msdyn_pmprocessextendedmetadataversion_ProcessSession](#BKMK_msdyn_pmprocessextendedmetadataversion_ProcessSession)
 - [msdyn_pmprocessusersettings_ProcessSession](#BKMK_msdyn_pmprocessusersettings_ProcessSession)
+- [msdyn_pmprocessversion_ProcessSession](#BKMK_msdyn_pmprocessversion_ProcessSession)
 - [msdyn_pmrecording_ProcessSession](#BKMK_msdyn_pmrecording_ProcessSession)
 - [msdyn_pmtemplate_ProcessSession](#BKMK_msdyn_pmtemplate_ProcessSession)
+- [msdyn_pmview_ProcessSession](#BKMK_msdyn_pmview_ProcessSession)
 - [msdyn_analysiscomponent_ProcessSession](#BKMK_msdyn_analysiscomponent_ProcessSession)
 - [msdyn_analysisjob_ProcessSession](#BKMK_msdyn_analysisjob_ProcessSession)
 - [msdyn_analysisresult_ProcessSession](#BKMK_msdyn_analysisresult_ProcessSession)
@@ -1430,6 +1441,9 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [msdyn_solutionhealthrule_ProcessSession](#BKMK_msdyn_solutionhealthrule_ProcessSession)
 - [msdyn_solutionhealthruleargument_ProcessSession](#BKMK_msdyn_solutionhealthruleargument_ProcessSession)
 - [msdyn_solutionhealthruleset_ProcessSession](#BKMK_msdyn_solutionhealthruleset_ProcessSession)
+- [powerbidataset_ProcessSession](#BKMK_powerbidataset_ProcessSession)
+- [powerbimashupparameter_ProcessSession](#BKMK_powerbimashupparameter_ProcessSession)
+- [powerbireport_ProcessSession](#BKMK_powerbireport_ProcessSession)
 
 
 ### <a name="BKMK_theme_ProcessSession"></a> theme_ProcessSession
@@ -1890,6 +1904,12 @@ See the [environmentvariabledefinition_ProcessSession](environmentvariabledefini
 
 See the [environmentvariablevalue_ProcessSession](environmentvariablevalue.md#BKMK_environmentvariablevalue_ProcessSession) one-to-many relationship for the [environmentvariablevalue](environmentvariablevalue.md) table/entity.
 
+### <a name="BKMK_workflowbinary_ProcessSession"></a> workflowbinary_ProcessSession
+
+**Added by**: Power Automate Extensions Workflow Binary package Solution
+
+See the [workflowbinary_ProcessSession](workflowbinary.md#BKMK_workflowbinary_ProcessSession) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
+
 ### <a name="BKMK_flowmachine_ProcessSession"></a> flowmachine_ProcessSession
 
 **Added by**: Power Automate Extensions core package Solution
@@ -1914,17 +1934,23 @@ See the [flowmachineimage_ProcessSession](flowmachineimage.md#BKMK_flowmachineim
 
 See the [flowmachineimageversion_ProcessSession](flowmachineimageversion.md#BKMK_flowmachineimageversion_ProcessSession) one-to-many relationship for the [flowmachineimageversion](flowmachineimageversion.md) table/entity.
 
+### <a name="BKMK_flowmachinenetwork_ProcessSession"></a> flowmachinenetwork_ProcessSession
+
+**Added by**: Power Automate Extensions core package Solution
+
+See the [flowmachinenetwork_ProcessSession](flowmachinenetwork.md#BKMK_flowmachinenetwork_ProcessSession) one-to-many relationship for the [flowmachinenetwork](flowmachinenetwork.md) table/entity.
+
 ### <a name="BKMK_processstageparameter_ProcessSession"></a> processstageparameter_ProcessSession
 
 **Added by**: Power Automate Extensions core package Solution
 
 See the [processstageparameter_ProcessSession](processstageparameter.md#BKMK_processstageparameter_ProcessSession) one-to-many relationship for the [processstageparameter](processstageparameter.md) table/entity.
 
-### <a name="BKMK_workflowbinary_ProcessSession"></a> workflowbinary_ProcessSession
+### <a name="BKMK_desktopflowbinary_ProcessSession"></a> desktopflowbinary_ProcessSession
 
 **Added by**: Power Automate Extensions core package Solution
 
-See the [workflowbinary_ProcessSession](workflowbinary.md#BKMK_workflowbinary_ProcessSession) one-to-many relationship for the [workflowbinary](workflowbinary.md) table/entity.
+See the [desktopflowbinary_ProcessSession](desktopflowbinary.md#BKMK_desktopflowbinary_ProcessSession) one-to-many relationship for the [desktopflowbinary](desktopflowbinary.md) table/entity.
 
 ### <a name="BKMK_connectionreference_ProcessSession"></a> connectionreference_ProcessSession
 
@@ -2112,6 +2138,12 @@ See the [msdyn_federatedarticle_ProcessSession](msdyn_federatedarticle.md#BKMK_m
 
 See the [msdyn_federatedarticleincident_ProcessSession](msdyn_federatedarticleincident.md#BKMK_msdyn_federatedarticleincident_ProcessSession) one-to-many relationship for the [msdyn_federatedarticleincident](msdyn_federatedarticleincident.md) table/entity.
 
+### <a name="BKMK_msdyn_integratedsearchprovider_ProcessSession"></a> msdyn_integratedsearchprovider_ProcessSession
+
+**Added by**: Knowledge Management Online Features Solution
+
+See the [msdyn_integratedsearchprovider_ProcessSession](msdyn_integratedsearchprovider.md#BKMK_msdyn_integratedsearchprovider_ProcessSession) one-to-many relationship for the [msdyn_integratedsearchprovider](msdyn_integratedsearchprovider.md) table/entity.
+
 ### <a name="BKMK_msdyn_kmfederatedsearchconfig_ProcessSession"></a> msdyn_kmfederatedsearchconfig_ProcessSession
 
 **Added by**: Knowledge Management Online Features Solution
@@ -2172,6 +2204,12 @@ See the [msdyn_knowledgepersonalfilter_ProcessSession](msdyn_knowledgepersonalfi
 
 See the [msdyn_knowledgesearchfilter_ProcessSession](msdyn_knowledgesearchfilter.md#BKMK_msdyn_knowledgesearchfilter_ProcessSession) one-to-many relationship for the [msdyn_knowledgesearchfilter](msdyn_knowledgesearchfilter.md) table/entity.
 
+### <a name="BKMK_powerfxrule_ProcessSession"></a> powerfxrule_ProcessSession
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_ProcessSession](powerfxrule.md#BKMK_powerfxrule_ProcessSession) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
+
 ### <a name="BKMK_keyvaultreference_ProcessSession"></a> keyvaultreference_ProcessSession
 
 **Added by**: ManagedIdentityExtensions Solution
@@ -2220,6 +2258,12 @@ See the [organizationdatasyncstate_ProcessSession](organizationdatasyncstate.md#
 
 See the [msdyn_appinsightsmetadata_ProcessSession](msdyn_appinsightsmetadata.md#BKMK_msdyn_appinsightsmetadata_ProcessSession) one-to-many relationship for the [msdyn_appinsightsmetadata](msdyn_appinsightsmetadata.md) table/entity.
 
+### <a name="BKMK_msdyn_workflowactionstatus_ProcessSession"></a> msdyn_workflowactionstatus_ProcessSession
+
+**Added by**: Insights App Platform Solution
+
+See the [msdyn_workflowactionstatus_ProcessSession](msdyn_workflowactionstatus.md#BKMK_msdyn_workflowactionstatus_ProcessSession) one-to-many relationship for the [msdyn_workflowactionstatus](msdyn_workflowactionstatus.md) table/entity.
+
 ### <a name="BKMK_userrating_ProcessSession"></a> userrating_ProcessSession
 
 **Added by**: User Rating Solution
@@ -2250,6 +2294,12 @@ See the [appactionmigration_ProcessSession](appactionmigration.md#BKMK_appaction
 
 See the [appactionrule_ProcessSession](appactionrule.md#BKMK_appactionrule_ProcessSession) one-to-many relationship for the [appactionrule](appactionrule.md) table/entity.
 
+### <a name="BKMK_card_ProcessSession"></a> card_ProcessSession
+
+**Added by**: Power Apps cards Solution
+
+See the [card_ProcessSession](card.md#BKMK_card_ProcessSession) one-to-many relationship for the [card](card.md) table/entity.
+
 ### <a name="BKMK_msdyn_entitylinkchatconfiguration_ProcessSession"></a> msdyn_entitylinkchatconfiguration_ProcessSession
 
 **Added by**: Teams Chat Settings Solution Solution
@@ -2274,17 +2324,41 @@ See the [msdyn_customcontrolextendedsettings_ProcessSession](msdyn_customcontrol
 
 See the [msdyn_pmanalysishistory_ProcessSession](msdyn_pmanalysishistory.md#BKMK_msdyn_pmanalysishistory_ProcessSession) one-to-many relationship for the [msdyn_pmanalysishistory](msdyn_pmanalysishistory.md) table/entity.
 
+### <a name="BKMK_msdyn_pmcalendar_ProcessSession"></a> msdyn_pmcalendar_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmcalendar_ProcessSession](msdyn_pmcalendar.md#BKMK_msdyn_pmcalendar_ProcessSession) one-to-many relationship for the [msdyn_pmcalendar](msdyn_pmcalendar.md) table/entity.
+
+### <a name="BKMK_msdyn_pmcalendarversion_ProcessSession"></a> msdyn_pmcalendarversion_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmcalendarversion_ProcessSession](msdyn_pmcalendarversion.md#BKMK_msdyn_pmcalendarversion_ProcessSession) one-to-many relationship for the [msdyn_pmcalendarversion](msdyn_pmcalendarversion.md) table/entity.
+
 ### <a name="BKMK_msdyn_pminferredtask_ProcessSession"></a> msdyn_pminferredtask_ProcessSession
 
 **Added by**: Process Mining Solution
 
 See the [msdyn_pminferredtask_ProcessSession](msdyn_pminferredtask.md#BKMK_msdyn_pminferredtask_ProcessSession) one-to-many relationship for the [msdyn_pminferredtask](msdyn_pminferredtask.md) table/entity.
 
+### <a name="BKMK_msdyn_pmprocessextendedmetadataversion_ProcessSession"></a> msdyn_pmprocessextendedmetadataversion_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmprocessextendedmetadataversion_ProcessSession](msdyn_pmprocessextendedmetadataversion.md#BKMK_msdyn_pmprocessextendedmetadataversion_ProcessSession) one-to-many relationship for the [msdyn_pmprocessextendedmetadataversion](msdyn_pmprocessextendedmetadataversion.md) table/entity.
+
 ### <a name="BKMK_msdyn_pmprocessusersettings_ProcessSession"></a> msdyn_pmprocessusersettings_ProcessSession
 
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmprocessusersettings_ProcessSession](msdyn_pmprocessusersettings.md#BKMK_msdyn_pmprocessusersettings_ProcessSession) one-to-many relationship for the [msdyn_pmprocessusersettings](msdyn_pmprocessusersettings.md) table/entity.
+
+### <a name="BKMK_msdyn_pmprocessversion_ProcessSession"></a> msdyn_pmprocessversion_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmprocessversion_ProcessSession](msdyn_pmprocessversion.md#BKMK_msdyn_pmprocessversion_ProcessSession) one-to-many relationship for the [msdyn_pmprocessversion](msdyn_pmprocessversion.md) table/entity.
 
 ### <a name="BKMK_msdyn_pmrecording_ProcessSession"></a> msdyn_pmrecording_ProcessSession
 
@@ -2297,6 +2371,12 @@ See the [msdyn_pmrecording_ProcessSession](msdyn_pmrecording.md#BKMK_msdyn_pmrec
 **Added by**: Process Mining Solution
 
 See the [msdyn_pmtemplate_ProcessSession](msdyn_pmtemplate.md#BKMK_msdyn_pmtemplate_ProcessSession) one-to-many relationship for the [msdyn_pmtemplate](msdyn_pmtemplate.md) table/entity.
+
+### <a name="BKMK_msdyn_pmview_ProcessSession"></a> msdyn_pmview_ProcessSession
+
+**Added by**: Process Mining Solution
+
+See the [msdyn_pmview_ProcessSession](msdyn_pmview.md#BKMK_msdyn_pmview_ProcessSession) one-to-many relationship for the [msdyn_pmview](msdyn_pmview.md) table/entity.
 
 ### <a name="BKMK_msdyn_analysiscomponent_ProcessSession"></a> msdyn_analysiscomponent_ProcessSession
 
@@ -2339,6 +2419,24 @@ See the [msdyn_solutionhealthruleargument_ProcessSession](msdyn_solutionhealthru
 **Added by**: Power Apps Checker Solution
 
 See the [msdyn_solutionhealthruleset_ProcessSession](msdyn_solutionhealthruleset.md#BKMK_msdyn_solutionhealthruleset_ProcessSession) one-to-many relationship for the [msdyn_solutionhealthruleset](msdyn_solutionhealthruleset.md) table/entity.
+
+### <a name="BKMK_powerbidataset_ProcessSession"></a> powerbidataset_ProcessSession
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbidataset_ProcessSession](powerbidataset.md#BKMK_powerbidataset_ProcessSession) one-to-many relationship for the [powerbidataset](powerbidataset.md) table/entity.
+
+### <a name="BKMK_powerbimashupparameter_ProcessSession"></a> powerbimashupparameter_ProcessSession
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbimashupparameter_ProcessSession](powerbimashupparameter.md#BKMK_powerbimashupparameter_ProcessSession) one-to-many relationship for the [powerbimashupparameter](powerbimashupparameter.md) table/entity.
+
+### <a name="BKMK_powerbireport_ProcessSession"></a> powerbireport_ProcessSession
+
+**Added by**: Power BI Entities Solution
+
+See the [powerbireport_ProcessSession](powerbireport.md#BKMK_powerbireport_ProcessSession) one-to-many relationship for the [powerbireport](powerbireport.md) table/entity.
 
 ### See also
 

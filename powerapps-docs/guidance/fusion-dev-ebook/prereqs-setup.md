@@ -21,7 +21,7 @@ To perform the steps described in this guide, you must have the following licens
 
 -   An Azure subscription. The apps built by the steps in this guide create and use resources in Azure. If you don't have a subscription, you can sign up on the Azure page at <https://azure.microsoft.com>.
 
--   The **Azure CLI**, available at [https://docs.microsoft.com/cli/azure/install-azure-cli](/cli/azure/install-azure-cli).
+-   The **Azure CLI**, available at [https://learn.microsoft.com/cli/azure/install-azure-cli](/cli/azure/install-azure-cli).
 
 -   **.NET 5.0**, available on at <https://dotnet.microsoft.com/download>.
 

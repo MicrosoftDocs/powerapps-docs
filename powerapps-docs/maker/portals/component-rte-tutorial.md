@@ -17,6 +17,9 @@ contributors:
 
 # Tutorial: Configure the rich text editor control on portals 
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 In this tutorial, you'll configure Power Apps portals to add the [rich text editor control](../model-driven-apps/rich-text-editor-control.md) to a basic form and then add the basic form to a webpage. Portal users will be able interact with the rich text editor control to format text on the form.
 
 ## Prerequisites
@@ -42,7 +45,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 ### Step 3.1. Create a new basic form
 
-1. Open the [Portal Management app](/configure/configure-portal.md).
+1. Open the [Portal Management app](configure/configure-portal.md).
 
 1. On the left pane under **Content**, select **Basic Forms**.
 
@@ -62,7 +65,7 @@ In this step, you'll create a new basic form in portals and then add the control
 
 ### Step 3.2. Add the rich text editor control to the basic form
 
-1. Open the [Portal Management app](/configure/configure-portal.md).
+1. Open the [Portal Management app](configure/configure-portal.md).
 
 1. On the left pane under **Content**, select **Basic Forms**.
 
@@ -150,7 +153,7 @@ For using and storing images in the rich text editor on the portal, you'll need 
     > [!TIP]
     > If you don't see the form, select **Sync Configuration** to synchronize changes from Dataverse.
 
-1. Under **Permissions**, select **Manage table permissions** and make sure that you have the appropriate [table permissions](/configure/assign-entity-permissions.md) and [web roles](/configure/create-web-roles.md) configured for the Dataverse table associated to the form.
+1. Under **Permissions**, select **Manage table permissions** and make sure that you have the appropriate [table permissions](configure/assign-entity-permissions.md) and [web roles](configure/create-web-roles.md) configured for the Dataverse table associated to the form.
     
     > [!NOTE]
     > By default, the **feedback** table has **create** permissions configured for the default web roles. For more information, go to [Contact us sample](contact-us-sample.md).

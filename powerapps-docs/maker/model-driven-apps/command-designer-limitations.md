@@ -6,7 +6,7 @@ author: caburk
 ms.author: caburk
 ms.reviewer: matp
 manager: kvivek
-ms.date: 05/26/2022
+ms.date: 08/30/2022
 ms.subservice: mda-maker
 ms.topic: conceptual
 search.audienceType: 
@@ -27,13 +27,19 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 -	When you write Power Fx formulas in the command designer, intellisense may sometimes provide recommendations for unsupported functions. It may not show an error for unsupported functions within command designer or the associated command component library.
 -	Commands and the command component library created from one app can't be added to different apps. However, you can copy the command and paste it within another app or command bar location.
 -	Not all out-of-the-box or custom visibility rules from classic commands are currently supported in Power Fx. Classic visibility is supported without using Power Fx. This is needed to migrate classic commands to modern and classic rule formats but won't be exposed in command designer. However, classic visibility is exposed within solution files and Dataverse.
--	To delete command component libraries, you must first delete the associated record within the model-driven app element table. This record exists in Dataverse but isn't exposed in solutions. However, these records can be deleted. From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) go to **Data** > **Tables**, select the **Model-driven app element** table, select the **Data** tab, select the record, and then select **Delete record** on the command bar. Wait a few minutes for the deletion to propagate.
+-	To delete command component libraries, you must delete the app. Alternatively, you can delete the associated record within the model-driven app element table, then delete the component library. The model-driven app element record exists in Dataverse but isn't exposed in solutions. More information: [Delete a Model-Driven App Element record](#delete-a-model-driven-app-element-record)
+- PowerFx based commands aren't supported and won't run within the Dynamics 365 app for Outlook or a model-driven app that's hosted within a Portal.
 
 ## Command designer limitations
 
 - Pre-existing classic commands can't be customized within the command designer until they're migrated to the modern infrastructure. This includes the out-of-the-box commands, which will be migrated incrementally over time. You may continue to use other mechanisms and third-party tools for customizing classic commands.
 - Dynamically populated buttons aren't supported. We recommend creating them declaratively.
 - Global application header and dashboard command bars aren't currently supported in command designer. These are customized infrequently. Share feedback if you find this valuable to prioritize.
+
+## Delete a Model-Driven App Element record
+
+1. Create a canvas app and add the **Model-Driven App Element** (appelement) table to the app. More information: [Create an app to edit tables in canvas apps](../canvas-apps/add-editable-tables.md)
+1. Within the canvas app, create a PowerFx command to delete the command component record from the Model-Driven App Element table. More information: [Remove and RemoveIf functions in Power Apps](/power-platform/power-fx/reference/function-remove-removeif)
 
 ### See also
 

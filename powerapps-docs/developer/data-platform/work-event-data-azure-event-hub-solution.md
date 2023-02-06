@@ -30,7 +30,7 @@ Azure Event Hubs is a highly scalable publish-subscribe service that can ingest 
 
 You can create an event hub in Azure either through API programming  or interactively by using the [Azure portal](https://portal.azure.com/). Either way, after creating your event hub you must obtain a copy of the event hub connection string and provide that string when registering the Azure service endpoint detailed in the next section.  
 
-For more information about creating event hubs see the [Event Hubs documentation](https://azure.microsoft.com/documentation/services/event-hubs/).  
+For more information about creating event hubs see the [Event Hubs documentation](/azure/event-hubs/).
   
 ## 2. Register an endpoint
 
@@ -57,6 +57,5 @@ You can check the related system job in the Dataverse web application and look f
 ### See also
 
 [Azure integration with Dataverse](azure-integration.md)
-
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

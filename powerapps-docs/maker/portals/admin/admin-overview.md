@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 
 ms.topic: overview
 
-ms.date: 06/07/2022
+ms.date: 12/20/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -16,10 +16,13 @@ contributors:
 
 # Power Apps portals admin center
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 The Power Apps portals admin center allows you to perform advanced administrative actions on portals. The admin center is available when a portal is provisioned successfully.
 
-> [!NOTE]
-> The Power Apps portals admin center is also used to configure admin options for Power Pages. More information: [What is Power Pages](/power-pages/introduction)
+> [!IMPORTANT]
+> The Power Apps portals admin center is now deprecated and no longer available as of June 2023. Use the new [Power Pages admin hub](/power-pages/admin/admin-overview) in the Power Platform admin center. 
 
 ## Open Power Apps portals admin center
 
@@ -69,8 +72,7 @@ If you aren't a global administrator and you try to manage a portal that has alr
 
 ### See also
 
-- [Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/)
-- [Microsoft Learn: Power Apps portals architecture](/learn/modules/portals-architecture)
-
+- [Administer Power Apps portals](/training/paths/administer-portals/)
+- [Power Apps portals architecture](/training/modules/portals-architecture)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 06/07/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
@@ -16,6 +16,9 @@ contributors:
 ---
  
 # Cookies in Power Apps portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 A cookie is a small file sent from the web site to visitor's device by the browser. A single web session may use multiple cookies.
 

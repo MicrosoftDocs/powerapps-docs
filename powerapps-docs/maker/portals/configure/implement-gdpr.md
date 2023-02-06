@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 06/06/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Implementing General Data Protection Regulations in your Power Apps portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 The General Data Protection Regulation (GDPR) is a legal act of the European Union (EU), which protects data for all individuals within the EU. With GDPR, people can control the use of their personal data in the Microsoft Dataverse.
 

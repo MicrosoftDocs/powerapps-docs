@@ -4,7 +4,7 @@ description: Personalize your customer engagement emails with dynamic text in Po
 ms.custom: ""
 author: gandhamm
 manager: shujoshi
-ms.topic: task
+ms.topic: conceptual
 ms.date: 06/16/2022
 ms.subservice: end-user
 ms.author: mgandham

@@ -16,7 +16,7 @@ search.app:
 
 # Sample: Rollup goal data for a fiscal period against the stretch target count
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-fiscal-period-stretch-target-count -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-rollup-goal-data-fiscal-period-stretch-target-count -->
 
 This sample shows how to roll up goal data for a fiscal period against stretch target count, representing a number of completed phone calls. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/GoalDataForFiscalYear).
 

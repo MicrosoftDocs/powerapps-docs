@@ -1,10 +1,9 @@
 ---
 title: "Creating side panes by using a client API in model-driven apps" 
 description: Learn how to create side panes in model-driven apps by using a client API.
-author: HemantGaur
-ms.author: hemantg
-manager: lwelicki
-ms.date: 04/17/2022
+author: adrianorth
+ms.author: aorth
+ms.date: 01/27/2023
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: "article"
@@ -127,6 +126,6 @@ By switching to use `createPane`, both limitations can be avoid by providing an 
 
 ### Related topics
 
-[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)
-
-[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)
+[sidePanes (Client API reference)](reference/xrm-app-sidepanes.md)<br />
+[loadPanel (Client API Reference)](reference/xrm-panel/loadpanel.md)<br />
+[Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md)

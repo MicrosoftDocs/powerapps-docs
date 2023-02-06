@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 03/21/2022
+ms.date: 02/03/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -120,7 +120,7 @@ You can insert videos and static images into your help pane. Videos and images a
 > Remember to copy the link URL for the video or image you want so you can paste it into your help pane. 
 
 Custom help panes support the following video sources:
-- Microsoft Stream (use for private content) 
+- Microsoft Stream (Classic) (use for private content) 
 - YouTube
 - Facebook
 - Vimeo
@@ -351,7 +351,7 @@ Link to another help page:
 ```
 
 #### Definition and usage
-The `<a>` tag defines a link, which allows the user to navigate from a help page to a website, or to another help page.
+The [`<a>` tag](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) defines a link, which allows the user to navigate from a help page to a website, or to another help page.
 
 #### Attributes
 

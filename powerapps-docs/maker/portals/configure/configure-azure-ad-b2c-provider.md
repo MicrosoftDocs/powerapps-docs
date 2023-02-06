@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Configure the Azure Active Directory B2C provider (using interface in preview)
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 [This article is pre-release documentation and is subject to change.]
 

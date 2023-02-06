@@ -1,16 +1,16 @@
 ---
 title: "Create a model-driven app field component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a model-driven app field component, and deploy, configure, and test the component on a form using Visual Studio Code."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+ms.author: hemantg
+author: HemantGaur
+ms.date: 02/05/2023
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
 contributors:
  - JimDaly
  - v-scottdurow
+ - kaushikkaul
 ---
 
 
@@ -30,7 +30,7 @@ In addition to these, you'll also ensure the code component follows best practic
 
 Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
 
-## Code 
+## Code
 
 You can download the complete sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl).
 
@@ -42,16 +42,16 @@ To create a new `pcfproj`:
 
 1. Open Visual Studio Code and navigate to **File** > **Open Folder**  and then select the `ChoicesPicker` folder created in the previous step. If you've added the Windows Explorer extensions during the installation of Visual Studio Code, you can also use the **Open with Code** context menu option inside the folder. You can also add any folder into Visual Studio Code using `code .` in the command prompt when the current directory is set to that location.
 
-1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the following command to create a new code component project:
+1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command to create a new code component project:
 
    ```CLI
-   pac pcf init --namespace SampleNamespace --name ChoicesPicker --template field
+   pac pcf init --namespace SampleNamespace --name ChoicesPicker --template field --run-npm-install
    ```
 
    or using the short form:
 
    ```CLI
-   pac pcf init -ns SampleNamespace -n ChoicesPicker -t field
+   pac pcf init -ns SampleNamespace -n ChoicesPicker -t field -npm
    ```
 
 This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules. The above command will also run `npm install` command for you to install the necessary modules.
@@ -95,8 +95,18 @@ The `ChoicesPicker\ControlManifest.Input.xml` file defines the metadata that des
 Open the `ChoicesPicker\ControlManifest.Input.xml` and paste the following inside the control element (replacing the existing **`sampleProperty`**):
 
 ```xml
-<property name="value" display-name-key="Value" description-key="Value of the Choices Control" of-type="OptionSet" usage="bound" required="true"/>
-<property name="configuration" display-name-key="Icon Mapping" description-key="Configuration that maps the choice value to a fluent ui icon." of-type="Multiple" usage="input" required="true"/>
+<property name="value"
+   display-name-key="Value"
+   description-key="Value of the Choices Control"
+   of-type="OptionSet"
+   usage="bound"
+   required="true"/>
+<property name="configuration"
+   display-name-key="Icon Mapping"
+   description-key="Configuration that maps the choice value to a fluent ui icon."
+   of-type="Multiple"
+   usage="input"
+   required="true"/>
 ```
 
 Save the changes and then use the following command to build the component:
@@ -116,7 +126,7 @@ After the component is built, you'll see that:
 
 ## Choices picker Fluent UI React component
 
-When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and sdd the following content:
+When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
 
 ```react
 import { ChoiceGroup } from '@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup';
@@ -671,14 +681,31 @@ If you want to support multiple languages, your code component can hold a resour
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
    <manifest>
-     <control namespace="SampleNamespace" constructor="ChoicesPicker" version="0.0.1" display-name-key="ChoicesPicker_Name" description-key="ChoicesPicker_Desc" control-type="standard" >
-       <property name="value" display-name-key="Value_Name" description-key="Value_Desc" of-type="OptionSet" usage="bound" required="true"/>
-       <property name="configuration" display-name-key="Configuration_Name" description-key="Configuration_Desc" of-type="Multiple" usage="input" required="true"/> 
-       <resources>
-         <code path="index.ts" order="1"/>
-         <resx path="strings/ChoicesPicker.1033.resx" version="1.0.0" />
-       </resources>
-     </control>
+    <control namespace="SampleNamespace"
+        constructor="ChoicesPicker"
+        version="0.0.1"
+        display-name-key="ChoicesPicker_Name"
+        description-key="ChoicesPicker_Desc"
+        control-type="standard">
+        <property name="value"
+          display-name-key="Value_Name"
+          description-key="Value_Desc"
+          of-type="OptionSet"
+          usage="bound"
+          required="true"/>
+        <property name="configuration"
+          display-name-key="Configuration_Name"
+          description-key="Configuration_Desc"
+          of-type="Multiple"
+          usage="input"
+          required="true"/>
+        <resources>
+          <code path="index.ts"
+              order="1"/>
+          <resx path="strings/ChoicesPicker.1033.resx"
+              version="1.0.0" />
+     </resources>
+    </control>
    </manifest>
    ```
 

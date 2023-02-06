@@ -1,13 +1,12 @@
 ---
 title: "Calculated and rollup columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about common elements and characteristics, calculated columns, rollup columns, retrieve a calculated rollup column value immediately, and SourceTypeMasks enumeration." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+ms.date: 10/15/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -79,8 +78,8 @@ You can't use values in calculated columns on a *logical value* in the same tabl
 
 Because rollup columns persist in the database, they can be used for filtering or sorting just like regular columns. Any kind of process or plug-in will use the most recently calculated value of the column. Rollup column values are calculated asynchronously by scheduled system jobs. Administrators set when a job is run or pause the job. By default, each column is updated hourly. More information: [Define rollup columns](../../maker/data-platform/define-rollup-fields.md).  
   
-When a rollup column is created or updated a **Mass Calculated Rollup Fields** job is scheduled to run in 12 hours. The 12-hour delay is intended to perform this resource intensive operation during a time that will affect users the least. After the job completes, the next time it is scheduled to run will be 10 years in the future. If there is a problem with the calculation, this will be reported with the system job. Locate the system job in **Settings** > **System Jobs** to find any errors with rollup fields.  
-  
+When a rollup column is created or updated a **Mass Calculated Rollup Fields** job is scheduled to run in 12 hours. The 12-hour delay is intended to perform this resource intensive operation during a time that will affect users the least. After the job completes, the next time it is scheduled to run will be 10 years in the future. If there is a problem with the calculation, this will be reported with the system job. Locate the system job to find any errors with rollup fields. To find the system job, see [View Rollup jobs](../../maker/data-platform/define-rollup-fields.md#view-rollup-jobs).
+
 > [!TIP]
 >  As a developer testing a solution in a development environment you may not want to wait for 12 hours. You can make it happen faster. In the **System Jobs** list, use the **Recurring System Jobs** view to filter the list and locate the **Mass Calculate Rollup Fields** job. With the job selected, use **More Actions** > **Postpone** and set the time to something that occurs sooner.  
 >   

@@ -16,12 +16,8 @@
       href: enhanced-quick-start.md
     - name: Start Web API project in Visual Studio
       href: start-web-api-project-visual-studio-csharp.md
-- name: Security and web service access
-  items:
-  - name: Web service authentication
-    href: authenticate-web-api.md
-  - name: Active Directory group teams
-    href: aad-group-team.md
+- name: Web service authentication
+  href: authenticate-web-api.md
 - name: Types and operations
   href: web-api-types-operations.md
   items:
@@ -51,8 +47,10 @@
       href: query-data-web-api.md
     - name: Retrieve related rows with query
       href: retrieve-related-entities-query.md
-  - name: Retrieve and execute predefined queries
-    href: retrieve-and-execute-predefined-queries.md
+    - name: Use FetchXml with Web API
+      href: use-fetchxml-web-api.md
+    - name: Retrieve and execute predefined queries
+      href: retrieve-and-execute-predefined-queries.md
   - name: Create a table row
     href: create-entity-web-api.md
   - name: Retrieve a table row

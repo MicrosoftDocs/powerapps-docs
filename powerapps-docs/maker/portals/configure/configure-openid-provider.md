@@ -8,7 +8,7 @@ ms.custom:
 ms.date: 03/23/2022
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -17,6 +17,9 @@ contributors:
 ---
 
 # Configure an OpenID Connect provider for portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 [OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the [Open ID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html). OpenID Connect introduces the concept of an *ID token*, which is a security token that allows the client to verify the identity of the user. The ID token also gets basic profile information about users&mdash;also known as *claims*.
 

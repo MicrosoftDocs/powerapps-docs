@@ -4,8 +4,8 @@ description: Learn about how to share canvas app with guest users.
 author: alaug
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/11/2022
+ms.reviewer: mkaur
+ms.date: 01/27/2023
 ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - alaug
 ---
 # Share a canvas app with guest users
@@ -85,17 +85,17 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ## Frequently asked questions
 
-### What's the difference between canvas app guest access and Power Apps portals?
+### What's the difference between canvas app guest access and Power Pages?
 
 With canvas apps, you can build an app that's tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that might be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](./connections-list.md)
 
-[Power Apps portals](../portals/overview.md) provide you the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. With Power Apps portals, organizations can create websites that can be shared with users external to their organization either anonymously or through the sign-in provider of their choice, such as LinkedIn, Microsoft account, or other commercial sign-in provider.
+[Power Pages](/power-pages/introduction) provide you the ability to build low-code, responsive websites that allow external users to interact with the data stored in Dataverse. With Power Pages, organizations can create websites that can be shared with users external to their organization either anonymously or through the sign-in provider of their choice, such as LinkedIn, Microsoft account, or other commercial sign-in provider.
 
-The following table outlines a few core capability differences between Power Apps portals and canvas apps. 
+The following table outlines a few core capability differences between Power Pages and canvas apps. 
 
 | Guest access in | Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
-| Power Apps portals | Browser-only experience | Allows anonymous and authenticated access | Dataverse |
+| Power Pages | Browser-only experience | Allows anonymous and authenticated access | Dataverse |
 | Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any of approximately 150 out-of-the-box connectors and any custom connector  |
 
 ### Can guests access customized forms in SharePoint?
@@ -136,7 +136,7 @@ For more information about pricing and the capabilities of various plans, go to 
 
 ### In Power Apps Mobile, how does a guest see apps for their home tenant?
 
-Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, must sign out of Power Apps and sign back in to Power Apps Mobile. 
+Any user who has used their mobile device to access a canvas app that was published in an Azure AD tenant that isn't their home tenant, can [switch to a different directory](../../mobile/tenant-switcher.md).
 
 ### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 

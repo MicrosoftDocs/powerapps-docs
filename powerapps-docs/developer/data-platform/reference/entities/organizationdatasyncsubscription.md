@@ -1,12 +1,12 @@
 ---
 title: "organizationdatasyncsubscription table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncsubscription table/entity."
-ms.date: 08/31/2022
+ms.date: 12/07/2022
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
-author: "KumarVivek"
-ms.author: "kvivek"
+author: "phecke"
+ms.author: "pehecke"
 manager: "margoc"
 search.audienceType: 
   - developer
@@ -29,13 +29,15 @@ search.app:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Create|POST [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
-|Delete|DELETE [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Create|POST [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
-|SetState|PATCH [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.0/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/organizationdatasyncsubscriptions(*organizationdatasyncsubscriptionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -99,7 +101,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|aadapplicationid|
-|MaxLength|150|
+|MaxLength|300|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -208,7 +210,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|endpointsettings|
-|MaxLength|5000|
+|MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -224,7 +226,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|entityfilters|
-|MaxLength|10000|
+|MaxLength|300000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -340,7 +342,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|name|
-|MaxLength|100|
+|MaxLength|200|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -402,7 +404,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|newentities|
-|MaxLength|5000|
+|MaxLength|50000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -448,7 +450,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|partnerprefix|
-|MaxLength|50|
+|MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -546,7 +548,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|subscriptionentities|
-|MaxLength|5000|
+|MaxLength|50000|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -578,7 +580,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|unsubscribedentities|
-|MaxLength|5000|
+|MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
 

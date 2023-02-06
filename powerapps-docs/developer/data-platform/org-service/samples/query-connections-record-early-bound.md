@@ -19,7 +19,7 @@ contributors:
 
 # Sample: Query connections by a record (early bound)
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-record-early-bound -->
+<!-- https://learn.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-record-early-bound -->
 
 This sample shows how to query connections for a particular record. It creates connections between a contact and two accounts, and then searches for the contact’s connections. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/QueryByRecord).
 

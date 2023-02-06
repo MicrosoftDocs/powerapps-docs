@@ -5,16 +5,20 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/24/2022
+ms.date: 09/21/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Roles required for portal administration
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Different administrative tasks in Power Apps portals can be performed by members of different roles. The admin and security roles required to do these tasks vary depending on the impact area.
 
@@ -53,6 +57,7 @@ The following table lists different administrative tasks for portals, and the ro
 | [Set up Power BI integration](set-up-power-bi-integration.md) | <ul><li> [Global administrator](#global-administrator)</li></ul> |
 | [Run portal checker](portal-checker.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
 | [Set up IP address restriction](ip-address-restrict.md) | Any one of the following roles: <ul> <li> [Portal owner](#portal-owner) </li> <li> [System customizer](#system-customizer) </li> <li> [System administrator](#system-administrator) </li> <li> [Dynamics 365 administrator](#dynamics-365-administrator) </li> <li> [Power Platform administrator](#power-platform-administrator) </li> <li> [Global administrator](#global-administrator) </li> </ul> |
+| [Configure content delivery network](../configure/configure-cdn.md) |Any one of the following roles: <ul><li>[System administrator](#system-administrator)</li><li>[Dynamics 365 administrator](#dynamics-365-administrator)</li><li>[Power Platform administrator](#power-platform-administrator)</li><li>[Global administrator](#global-administrator)</li></ul> |
 
 ## Manage membership of the required roles
 

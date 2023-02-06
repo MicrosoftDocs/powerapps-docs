@@ -17,6 +17,9 @@ contributors:
 
 # Create additional portals in an environment
 
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+
 The ability to create additional environments is determined by the template chosen for the new portal. The following table explains the limits for creating additional portals in an environment.
 
 | Environment type | Template | Limit | Additional information |
@@ -30,7 +33,7 @@ The ability to create additional environments is determined by the template chos
 
 \*\* Requires Starter portal package version [9.3.2201.0 or later](release-updates.md#starter-portal-package-updates)
 
-\*\*\* Additional languages can be enabled for individual portals, even if only one portal type per environment is allowed. For more information about enabling additional languages for portals, go to [Enable multiple language support](/configure/enable-multiple-language-support.md).
+\*\*\* Additional languages can be enabled for individual portals, even if only one portal type per environment is allowed. For more information about enabling additional languages for portals, go to [Enable multiple language support](./configure/enable-multiple-language-support.md).
 
 To enable multiple [Modern Community](/dynamics365/customer-service/community-get-started) portals, see [Create new websites in Community](/dynamics365/customer-service/community-create-websites).
 
@@ -76,8 +79,7 @@ After you enter the portal name, address, and choose the language, the portal cr
 ### See also
 
 [Available portal templates](portal-templates.md) <br>
-[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
-
+[Administer Power Apps portals](/training/paths/administer-portals/) <br>
+[Access Dataverse in Power Apps portals](/training/modules/portals-access-data-platform/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

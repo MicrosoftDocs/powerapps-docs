@@ -1,13 +1,13 @@
 ---
-title: Run canvas apps or model-driven apps on Power Apps mobile | Microsoft Docs
+title: Install the Power Apps mobile app
 description: Learn how to install and run a canvas or model-driven app on a mobile device.
-author: mduelae
+author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 04/6/2022
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -20,7 +20,7 @@ searchScope:
 ms.custom: intro-internal
 ---
 
-#  Install Power Apps mobile 
+#  Install the Power Apps mobile app
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=). Then choose the download link or scan a QR code to download Power Apps mobile.
 
@@ -70,6 +70,10 @@ If you have the Microsoft Authenticator app installed on your mobile device, ent
 ## Find the app
   
 When you create an app, or someone shares an app with you&mdash;either a [canvas app](../maker/index.md#canvas-apps) or [model-driven](../maker/index.md#model-driven-apps) app&mdash;you can run that app on Power Apps mobile. 
+   
+> [!NOTE]
+> To see a model-driven app in the list of apps on Power Apps mobile, you need to have a [predefined security role](/power-platform/admin/database-security#predefined-security-roles) in the environment that the app is in. If a predefined security role is assigned to a user using a Dataverse team, you need to use an Azure Active Directory (AAD) group team. Users will not see model-driven apps if a predefined security role is assigned using a Dataverse owner team.
+  
 
 ![Power Apps mobile user interface with model-driven and canvas apps.](media/powerappsmobile-1.png "Power Apps mobile user interface with model-driven and canvas apps")
 
@@ -119,8 +123,8 @@ You can only add canvas apps to your list of favorite apps.
 
 ## Sort apps
 
-You can sort both canvas apps and model-driven apps.
-You can short apps alphabetically by name or by modified date. The short option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
+You can sort both canvas apps and model-driven apps. 
+You can sort apps alphabetically by name or by modified date. The sort option is available on **Home**, **All apps**, **Featured apps**, and **Sample apps** screen.
 
 ![Sort menu.](media/sort-apps-iphone.png "Sort menu")
 

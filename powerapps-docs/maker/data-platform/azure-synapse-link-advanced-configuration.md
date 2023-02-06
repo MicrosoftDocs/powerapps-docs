@@ -2,7 +2,7 @@
 title: "Azure Synapse Link Advance Configuration | MicrosoftDocs"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 06/29/2022
+ms.date: 01/18/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -53,7 +53,8 @@ The table below describes how rows are handled in the lake against CUD events fo
 |Delete     |  If the row exists in the partition file, it's removed from the file.    | The row is added to the end of the partition file with `isDeleted column = True`.    |
 
 > [!NOTE]
-> For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a as a new row in the lake and the `isDeleted` column is set to True.
+> For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a as a new row in the lake and the `isDeleted` column is set to **True**.
+> Dirty read (**ALLOW_INCONSISTENT_READS**) for serverless is enabled for append only mode. **ALLOW_INCONSISTENT_READS** means that user is able to read the files that can be constantly modified while the `SELECT` query is running. Results will be consistent and equivalent to reading a snapshot of the file. (It isn't equivalent to database snapshot isolation because of the different snapshot generation time.)
 
 Here are some more details on when to use either of the options.
 
@@ -68,7 +69,7 @@ You can toggle the **Show advanced configuration settings** under **Advanced** i
 
 When you write Dataverse table data to Azure data lake storage using Azure Synapse Link, the tables are partitioned (instead of a single file) in the lake based on the `createdOn` value on each row in the source. The default partition strategy is by month and data is partitioned in Azure data lake on a monthly basis.
 
-Based on the Dataverse table volume and data distribution, you can choose to partition your data by year. With this option, when Dataverse table data is written to the Azure data lake, it will be partitioned on a yearly basis based on the `createdOn` value on each row in the source. For tables without the `createdOn` column, the rows of data are partitioned into a new file every five million records. This is a per table setting and is available as a checkbox under **Advanced** > **Show advanced configuration settings**.
+Based on the Dataverse table volume and data distribution, you can choose to partition your data by year. With this option, when Dataverse table data is written to the Azure data lake, it will be partitioned on a yearly basis based on the `createdOn` value on each row in the source. For tables without the `createdOn` column, the rows of data are partitioned into a new file every 5,000,000 records. This is a per table setting and is available as a checkbox under **Advanced** > **Show advanced configuration settings**.
 
 More details with examples of how data is handled in the lake with yearly or monthly partition strategy:
 

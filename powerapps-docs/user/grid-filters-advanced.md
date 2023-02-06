@@ -1,13 +1,13 @@
 ---
 title: Create and manage personal views on a grid page
 description: Create and manage personal views on a grid page in model-driven Power Apps.
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/08/2022
+ms.date: 11/01/2022
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -89,7 +89,13 @@ The following options are available when you add conditions in the filter editor
 - To add a condition, select **Add row**, and then select a column, an operator, and a value.
 
     :::image type="content" source="./media/filter-editor-add-condition-row.png" alt-text="A screenshot of the view filter editor, showing an added row.":::
-
+    
+    If you're adding a condition to a column with lookups, you can look up the record in the **Value** field. If your administrator has enabled [Show advanced lookup in lookup fields within Edit filters](/power-platform/admin/settings-features), you can choose **Advanced lookup** to see more fields and search for records within a specific view.
+    
+    ![Advanced lookup option.](media/AdvLookupInEditFilters.png)
+    
+    ![You can search for records withina specific view.](media/AdvLookupInEditFilters2.png)
+    
 - To add a group of conditions, select **Add group**. You can create multiple subconditions and group them using AND and OR operators to create an expression.
 
     :::image type="content" source="./media/filter-editor-add-condition-group.png" alt-text="A screenshot of the view filter editor, showing an added group of conditions.":::
@@ -114,6 +120,13 @@ To undo changes to the view filter at any time, select **Reset to default**.
 Select a column heading, and then select how the view should sort data in the column. You can sort on one column at a time.
 
 Sorting options depend on the type of data. Alphanumeric columns can be sorted in A to Z (ascending) or Z to A (descending) order. Date columns can be sorted in older to newer (ascending) or newer to older (descending) order. An arrow to the right of the column name indicates the view is sorted on that column. The direction the arrow is pointing indicates whether the column is sorted in ascending or descending order.
+
+## Edit column width
+
+If your administrator has turned on [modern advanced find](/power-platform/admin/settings-features), you can drag the vertical column separator bar to change the **minimum** width of a column. When you change the width of a column, as asterisk appears besige the view name to indicate that you edited the view and haven't saved it. See [Save your edits to as a new view](/power-apps/user/grid-filters-advanced#save-your-edits-as-a-new-view) to learn more about different options to save a view.
+
+> [!TIP]
+> Since the column width edits change the **minimum** width of the column, you may see column widths getting adjusted after the view is saved, to fill the available horizontal screen space.
 
 ## Save your view
 

@@ -4,7 +4,7 @@ description: Learn how to deep link to a specific screen within canvas apps.
 author: vasavib
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 07/27/2022
 ms.subservice: canvas-maker
 ms.author: vabhavir
@@ -15,7 +15,7 @@ search.app:
 contributors:
     - TashasEv
     - slaouist
-    - tapanm-msft
+    - mduelae
     - vasavib
 ---
 
@@ -77,7 +77,7 @@ Now you'll set the navigation to use a context that we'll use to take the user t
 
     :::image type="content" source="media/deep-linking/set-account-detail.png" alt-text="AccountVal.":::
 
-1. [Save](../save-publish-app.md#save-changes-to-an-app) with the name "Account deep linking".
+1. [Save](../save-publish-app.md) with the name "Account deep linking".
 
 ## Get the App ID
 

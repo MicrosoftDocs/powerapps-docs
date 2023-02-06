@@ -92,7 +92,7 @@ These actions cover Create, Read, Write, Delete, Append, Append To, Assign and S
 For more information on understanding, creating and configuring security roles go to:
 
 - [Power Platform documentation](/power-platform/admin/security-roles-privileges)
-- [Microsoft Learn module](/learn/modules/get-started-security-roles/)
+- [Get started with security roles in Dataverse](/training/modules/get-started-security-roles/)
 
 ## Sharing the app
 

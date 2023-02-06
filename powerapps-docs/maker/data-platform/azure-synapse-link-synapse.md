@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps"
 ms.custom: ""
-ms.date: 08/25/2022
+ms.date: 01/05/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,6 +21,7 @@ search.app:
   - D365CE
 contributors:
   - JasonHQX
+  - jovanpop
 ---
 # Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace
 
@@ -38,9 +39,9 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 ## Prerequisites
 
-- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and it is recommended that replication is set to **read-access geo-redundant storage (RA-GRS)**. 
+- Azure Data Lake Storage Gen2: You must have an Azure Data Lake Storage Gen2 account and **Owner** and **Storage Blob Data Contributor** role access. Your storage account must enable **Hierarchical namespace** and **public network access** for both initial setup and delta sync. **Allow storage account key access** is required only for the initial setup. We recommend that replication is set to **read-access geo-redundant storage (RA-GRS)**.  
 
-- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
+- Synapse workspace: You must have a Synapse workspace and the **Synapse Administrator** role access within the Synapse Studio. The Synapse workspace must be in the same region as your Azure Data Lake Storage Gen2 account with **public network access** enabled. The storage account must be added as a linked service within the Synapse Studio. To create a Synapse workspace, go to [Creating a Synapse workspace](/azure/synapse-analytics/get-started-create-workspace).
 
 > [!NOTE]
 >
@@ -56,11 +57,11 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
 
-2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
+2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link**.
 
     ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
-3. Select the the **Connect to your Azure Synapse workspace (Preview)** option.
+3. Select the **Connect to your Azure Synapse workspace** option.
 
 4. Select the **Subscription**, **Resource group**, **Workspace name**, and **Storage account**. Ensure that the Synapse workspace and storage account meet the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
@@ -76,7 +77,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 You can follow the steps above to create a link from one environment to multiple Azure Synapse Analytics workspaces and Azure data lakes in your Azure subscription by adding an Azure data lake as a linked service on a Synapse workspace. Similarly, you could create a link from multiple environments to the same Azure Synapse Analytics workspace and Azure data lake, all within the same tenant.
 
 > [!NOTE]
-> The data exported by Azure Synapse Link service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
+> The data exported by Azure Synapse Link service is encrypted at transit using Transport Layer Security(TLS) 1.2 or higher and encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 >
 > Currently, you can't provide public IPs for the Azure Synapse Link for Dataverse service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range.
 More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
@@ -124,7 +125,7 @@ If you deleted the file system when unlinking, follow the steps above to relink 
 4. Enter the following script, replace **\<DATABASE_NAME\>** with the name of the database to unlink, and run the notebook.
 
 ```SQL
-    %%sqls
+    %%sql
     DROP DATABASE <DATABASE_NAME> CASCADE
 ```
 
@@ -148,6 +149,9 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 All **Near Real-Time Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*. All **Snapshot Data Tables** are listed and available for analysis with the naming convention *DataverseTableName*_partitioned.
 
 :::image type="content" source="media/near-realtime-snapshot-data.png" alt-text="Near real-time and snapshot tables":::
+
+> [!IMPORTANT]
+> Make sure that your serverless SQL pool in Azure Synapse Analytics workspace can access the Azure Data Lake storage account if you want to use snapshot data. Without managed identity access, the snapshot data table won't be accessible using the serverless SQL pool.
 
 ### What's next?
 
