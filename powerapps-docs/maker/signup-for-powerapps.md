@@ -30,6 +30,16 @@ If you have a Power Apps license or a license through Office 365, you already ha
 > - If you're an administrator, see [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin) or [Power Apps in your organization Q&A](/power-platform/admin/signup-question-and-answer).
 > - Beginning January 2020, self-service purchase, subscription, and license management capabilities for Power Platform products (Power BI, Power Apps, and Power Automate) are available for commercial cloud customers in the United States. For more information, including steps to enable or disable self-service purchasing in your organization, see [Self-service purchase FAQ](/microsoft-365/commerce/subscriptions/self-service-purchase-faq).
 
+## Need an account?  
+If you don't have a work or school account, you can create a free account with Azure AD and you can be a low code developer with Power Apps. To continue building apps beyond the trial period, just opt-in to the free [Power Apps Developer Plan](https://powerapps.microsoft.com/developerplan/). 
+
+### Steps
+- Visit [PowerApps.com](https://powerapps.microsoft.com/) and click "Start free". 
+- Enter your email. 
+- If your email is not a work/school account, you'll be prompted to create a free Azure AD account using [this sign up experience](https://signup.microsoft.com/get-started/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). 
+- Optionally, if you want to evaluate Power Apps integrations with Microsoft 365 you may consider signing up for the [Office 365 trial](https://signup.microsoft.com/get-started/signup?products=ec920d3e-7e24-492d-ba28-79763d637b79) as well. 
+
+
 ## Identify your current license
 
 To find out which license or licenses you already have:
