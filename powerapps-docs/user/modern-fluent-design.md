@@ -3,7 +3,7 @@ title: Modern, refreshed look for model-driven apps (preview)
 description: Learn about the updated, user interface that makes model-driven apps easier to use.
 author: sericks007
 ms.topic: overview
-ms.date: 01/24/2023
+ms.date: 02/03/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
@@ -15,6 +15,9 @@ search.audienceType:
   - enduser
 search.app: 
   - PowerApps
+contributors:
+  - HemantGaur
+
 ---
 
 # Modern, refreshed look for model-driven apps (preview)
@@ -35,8 +38,6 @@ Here's what you can expect in the modern, refreshed experience:
 - Updated styling in forms and view pages, including the use of drop shadows and brighter background colors to create an elevated or "floating" appearance, which helps to visually seperate sections and focuses attention on primary content
 - New Fluent-based controls in forms, business process flows, and dialogs
 - A new Power Apps grid in place of the read-only grid in view pages
-
-With the new look, Power Apps are moving away from the classic theme customizations and will introduce a new theming capability in the future that builds on the Fluent design system.  
 
 ### Command bar
 The "floating" command bar aligns with the Microsoft 365 experience, with consistent spacing, rounded corners, and elevation. Notice how the command bar is in a separate section at the top of the page in the following example.
@@ -81,4 +82,33 @@ The modern, refreshed look for model-driven apps has some limitations:
 
 - The mobile app, mail app, and embedded Teams mode don't support the modern, refreshed look and aren't part of the preview.
 - The modern, refreshed look isn't validated for Dynamics 365 applications at this time. Don't try out the preview in any production, Dynamics 365 applications.
+- With the new look, Power Apps are moving away from the classic theme customizations. This means that the app header and colors for business process flows can't be customized yet. 
 
+## Frequently asked questions (FAQs)
+
+### Can I enable the new look for all model-driven apps?
+The **Try the new look and feel (preview)** feature is available for any model-driven apps that run in the cloud. We recommended that you evaluate the feature in a test environment before using it in a production environment. 
+
+### Can I revert to the old UI?
+Yes, you can go back to the old UI by turning off the **Try the new look and feel (preview)** setting.
+
+### Will any of my existing applications get the new look by default?
+During the preview period, the new look will only be seen if the **Try the new look and feel (preview)** setting is turned on by app makers.
+
+### Is the new look enabled on additional surfaces, like the Power Apps mobile app and the Outlook web app?
+The new look is not yet supported on these surfaces.
+
+### Does the app designer preview display the new look?
+Live preview does not display the new look yet. To see the new look, you’ll need to publish the app and select the **Play** button.
+
+### Can I switch to a different theme or enable dark mode?
+Switching themes or enabling dark mode is not yet supported.
+
+### Is the new look available for custom pages or code components?
+No, but we are actively working on bringing the new look to these areas.
+
+### How can I validate and test the new look?
+Please review the documentation for the details on the new controls being enabled in the preview, and focus on those for validation. Execute your end user scenarios as normal. Note that some field controls and grid capabilities are updated, and the experience might be little different.
+
+### Will Dynamics 365 applications support the new look?
+We are working on extending the new look across applications based on model-driven Power Apps.
