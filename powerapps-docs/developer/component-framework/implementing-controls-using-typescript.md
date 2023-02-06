@@ -37,7 +37,7 @@ For this tutorial you need install the following components:
 
 1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the Add to PATH option is select)
 1. [node.js](https://nodejs.org/en/download/) (LTS version is recommended)
-1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either the Visual Studio Code extension or the MSI installer)
+1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either Power Platform Tools for Visual Studio Code or Power Platform CLI for Windows)
 1. .NET Build tools by installing one of the following: (At minimum select the workload `.NET build tools`.)
    - Visual Studio 2022
       - [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). 
@@ -45,10 +45,8 @@ For this tutorial you need install the following components:
    - Visual Studio 2019
       - [Visual Studio 2019 downloads](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2019-and-other-products).
 
-
-<!-- TODO Can we remove this? -->
 > [!NOTE]
-> You may prefer to use the [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild` you would use `dotnet build`.
+> You may prefer to use the [.NET 6.x SDK](https://dotnet.microsoft.com/download/dotnet/6.0) instead of the Build Tools for Visual Studio. In this case, instead of using `msbuild` you would use `dotnet build`.
 
 > [!TIP]
 > It is also recommended to install [git for source control](https://git-scm.com/downloads).
@@ -334,16 +332,15 @@ The completed manifest file should look like this:
 
 ## Implementing component logic
 
-The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md) , [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/getoutputs.md)) are predefined. Now, let's implement the logic for the code component. 
+The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md) , [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/getoutputs.md)) are predefined. Now, let's implement the logic for the code component.
 
-1. Open the `index.ts` file in the code editor of your choice.
-1. Update the `LinearInputControl` class with the following code:
+Open the `index.ts` file in the code editor of your choice and make the following changes:
 
+1. Add properties for the control.
+   
    # [Before](#tab/before)
-
+   
    ```typescript
-   import { IInputs, IOutputs } from "./generated/ManifestTypes";
-
    export class LinearInputControl
    implements ComponentFramework.StandardControl<IInputs, IOutputs>
    {
@@ -351,65 +348,188 @@ The next step after implementing the manifest file is to implement the component
       * Empty constructor.
    */
    constructor() {}
-
+   ```
+   # [After](#tab/after)
+   
+   ```typescript
+   export class LinearInputControl
+   implements ComponentFramework.StandardControl<IInputs, IOutputs>
+   {
+   private _value: number;
+   private _notifyOutputChanged: () => void;
+   private labelElement: HTMLLabelElement;
+   private inputElement: HTMLInputElement;
+   private _container: HTMLDivElement;
+   private _context: ComponentFramework.Context<IInputs>;
+   private _refreshData: EventListenerOrEventListenerObject;
    /**
-      * Used to initialize the control instance. Controls can kick off remote server calls 
-        and other initialization actions here.
-      * Data-set values are not initialized here, use updateView.
-      * @param context The entire property bag available to control via Context Object; 
-        It contains values as set up by the customizer mapped to property names defined 
-        in the manifest, as well as utility functions.
-      * @param notifyOutputChanged A callback method to alert the framework that the 
-        control has new outputs ready to be retrieved asynchronously.
-      * @param state A piece of data that persists in one session for a single user. 
-        Can be set at any point in a controls life cycle by calling 'setControlState' 
-        in the Mode interface.
-      * @param container If a control is marked control-type='standard', it will receive 
-        an empty div element within which it can render its content.
+      * Empty constructor.
    */
+   constructor() {}
+   ```
+   
+   ---
+   
+1. Add the `refreshData` function as the event handler.
+   
+   ```typescript
+   public refreshData(evt: Event): void {
+      this._value = this.inputElement.value as any as number;
+      this.labelElement.innerHTML = this.inputElement.value;
+      this._notifyOutputChanged();
+   }
+   ```
+   
+1. Update the `init` function
+   
+   # [Before](#tab/before)
+   
+   ```typescript
    public init(
       context: ComponentFramework.Context<IInputs>,
       notifyOutputChanged: () => void,
       state: ComponentFramework.Dictionary,
       container: HTMLDivElement
-   ): void {
-      // Add control initialization code
+      ): void {
+         // Add control initialization code
+      }
+   ```
+   
+   
+   # [After](#tab/after)
+   
+   ```typescript
+   public init(
+      context: ComponentFramework.Context<IInputs>,
+      notifyOutputChanged: () => void,
+      state: ComponentFramework.Dictionary,
+      container: HTMLDivElement
+      ): void {
+         // Add control initialization code
+      this._context = context;
+      this._container = document.createElement("div");
+      this._notifyOutputChanged = notifyOutputChanged;
+      this._refreshData = this.refreshData.bind(this);
+   
+      // creating HTML elements for the input type range and binding it to the function which 
+      // refreshes the control data
+      this.inputElement = document.createElement("input");
+      this.inputElement.setAttribute("type", "range");
+      this.inputElement.addEventListener("input", this._refreshData);
+   
+      //setting the max and min values for the control.
+      this.inputElement.setAttribute("min", "1");
+      this.inputElement.setAttribute("max", "1000");
+      this.inputElement.setAttribute("class", "linearslider");
+      this.inputElement.setAttribute("id", "linearrangeinput");
+   
+      // creating a HTML label element that shows the value that is set on the linear range control
+      this.labelElement = document.createElement("label");
+      this.labelElement.setAttribute("class", "LinearRangeLabel");
+      this.labelElement.setAttribute("id", "lrclabel");
+   
+      // retrieving the latest value from the control and setting it to the HTMl elements.
+      this._value = context.parameters.controlValue.raw!;
+      this.inputElement.setAttribute(
+         "value",
+         context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : "0"
+      );
+      this.labelElement.innerHTML = context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : "0";
+   
+      // appending the HTML elements to the control's HTML container element.
+      this._container.appendChild(this.inputElement);
+      this._container.appendChild(this.labelElement);
+      container.appendChild(this._container);
    }
-
-   /**
-      * Called when any value in the property bag has changed. This includes field values, 
-        data-sets, global values such as container height and width, offline status, control 
-        metadata values such as label, visible, etc.
-      * @param context The entire property bag available to control via Context Object; 
-        It contains values as set up by the customizer mapped to names defined in the manifest, 
-        as well as utility functions
-   */
+   ```
+   
+   ---
+   
+1. Edit the `updateView` function.
+   
+   # [Before](#tab/before)
+   
+   ```typescript
    public updateView(context: ComponentFramework.Context<IInputs>): void {
       // Add code to update control view
    }
-
-   /**
-      * It is called by the framework prior to a control receiving new data.
-      * @returns an object based on nomenclature defined in manifest, 
-        expecting object[s] for property marked as "bound" or "output"
-   */
+   ```
+   
+   # [After](#tab/after)
+   
+   ```typescript
+   public updateView(context: ComponentFramework.Context<IInputs>): void {
+      // Add code to update control view
+      // storing the latest context from the control.
+      this._value = context.parameters.controlValue.raw!;
+      this._context = context;
+      this.inputElement.setAttribute(
+         "value",
+         context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : ""
+      );
+      this.labelElement.innerHTML = context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : "";
+   }
+   ```
+   
+   ---
+   
+1. Edit the `getOutputs` function.
+   
+   # [Before](#tab/before)
+   
+   ```typescript
    public getOutputs(): IOutputs {
       return {};
    }
-
-   /**
-      * Called when the control is to be removed from the DOM tree. 
-        Controls should use this call for cleanup.
-      * i.e. cancelling any pending remote calls, removing listeners, etc.
-   */
-   public destroy(): void {
-      // Add code to cleanup control if necessary
-       }
+   ```
+   
+   
+   # [After](#tab/after)
+   
+   ```typescript
+   public getOutputs(): IOutputs {
+      return {
+         controlValue: this._value,
+      };
    }
    ```
-
+   
+   ---
+   
+1. Edit the `destroy` function.
+   
+   # [Before](#tab/before)
+   
+   ```typescript
+   public destroy(): void {
+      // Add code to cleanup control if necessary
+      }
+   }
+   ```
+   
+   
    # [After](#tab/after)
+   
+   ```typescript
+   public destroy(): void {
+      // Add code to cleanup control if necessary
+      this.inputElement.removeEventListener("input", this._refreshData);
+      }
+   }
+   ```
+   
+   ---
 
+   The complete `index.ts` file should look like this:
+   
    ```typescript
    import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
@@ -430,18 +550,18 @@ The next step after implementing the manifest file is to implement the component
 
    /**
       * Used to initialize the control instance. Controls can kick off remote server calls 
-        and other initialization actions here.
+         and other initialization actions here.
       * Data-set values are not initialized here, use updateView.
       * @param context The entire property bag available to control via Context Object; 
-        It contains values as set up by the customizer mapped to property names defined 
-        in the manifest, as well as utility functions.
+         It contains values as set up by the customizer mapped to property names defined 
+         in the manifest, as well as utility functions.
       * @param notifyOutputChanged A callback method to alert the framework that the 
-        control has new outputs ready to be retrieved asynchronously.
+         control has new outputs ready to be retrieved asynchronously.
       * @param state A piece of data that persists in one session for a single user. 
-        Can be set at any point in a controls life cycle by calling 'setControlState' 
-        in the Mode interface.
+         Can be set at any point in a controls life cycle by calling 'setControlState' 
+         in the Mode interface.
       * @param container If a control is marked control-type='standard', it will receive 
-        an empty div element within which it can render its content.
+         an empty div element within which it can render its content.
    */
    public init(
       context: ComponentFramework.Context<IInputs>,
@@ -498,11 +618,11 @@ The next step after implementing the manifest file is to implement the component
 
    /**
       * Called when any value in the property bag has changed. This includes field values, 
-        data-sets, global values such as container height and width, offline status, control 
-        metadata values such as label, visible, etc.
+         data-sets, global values such as container height and width, offline status, control 
+         metadata values such as label, visible, etc.
       * @param context The entire property bag available to control via Context Object; 
-        It contains values as set up by the customizer mapped to names defined in the manifest, 
-        as well as utility functions
+         It contains values as set up by the customizer mapped to names defined in the manifest, 
+         as well as utility functions
    */
    public updateView(context: ComponentFramework.Context<IInputs>): void {
       // Add code to update control view
@@ -523,7 +643,7 @@ The next step after implementing the manifest file is to implement the component
    /**
       * It is called by the framework prior to a control receiving new data.
       * @returns an object based on nomenclature defined in manifest, 
-        expecting object[s] for property marked as "bound" or "output"
+         expecting object[s] for property marked as "bound" or "output"
    */
    public getOutputs(): IOutputs {
       return {
@@ -533,21 +653,18 @@ The next step after implementing the manifest file is to implement the component
 
    /**
       * Called when the control is to be removed from the DOM tree. 
-        Controls should use this call for cleanup.
+         Controls should use this call for cleanup.
       * i.e. cancelling any pending remote calls, removing listeners, etc.
    */
    public destroy(): void {
       // Add code to cleanup control if necessary
       this.inputElement.removeEventListener("input", this._refreshData);
-       }
+         }
    }
-
    ```
-
-   ---
-
+   
 1. Save the changes to the `index.ts` file.
-
+   
 ## Adding style to the code component
 
 Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
