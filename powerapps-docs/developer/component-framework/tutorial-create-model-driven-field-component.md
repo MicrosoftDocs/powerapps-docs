@@ -315,7 +315,7 @@ Now, update the `updateView` to render the `ChoicesPickerComponent`:
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): void {
     const { value, configuration } = context.parameters;
-    if (value && value.attributes && configuration && configuration.raw) {
+    if (value && value.attributes && configuration) {
         ReactDOM.render(
             React.createElement(ChoicesPickerComponent, {
                 label: value.attributes.DisplayName,
@@ -386,10 +386,10 @@ ReactDOM.render(
     masked: masked,
 ```
 
-Inside the `ChoicesPickerComponent`, you can accept this by adding them to the `ChoicesPickerProps` interface:
+In ChoicesPickerComponent.tsx, you can accept this by adding them to the `ChoicesPickerComponentProps` interface:
 
 ```typescript
-export interface ChoicesPickerProps {
+export interface ChoicesPickerComponentProps {
   ...
   disabled: boolean;
   masked: boolean;
@@ -427,10 +427,10 @@ You will also need to add `disabled` and `masked` to the 'destructuring' of the 
 
 Code components can be rendered on web, tablet, and mobile apps. It's important to consider the space available. Make the choices component render as a drop-down when the available width is restricted.
 
-First, update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerProps` interface:
+First, update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerComponentProps` interface:
 
 ```typescript
-export interface ChoicesPickerProps {
+export interface ChoicesPickerComponentProps {
     ...
     formFactor: 'small' | 'large';
 ```
@@ -438,9 +438,8 @@ export interface ChoicesPickerProps {
 The component renders the small version using the Fluent UI `Dropdown` component, so you add it to the imports:
 
 ```typescript
-import { Dropdown } from '@fluentui/react/lib/components/Dropdown/Dropdown';
-import { IDropdownOption } from '@fluentui/react/lib/components/Dropdown/Dropdown.types';
-import { Icon } from '@fluentui/react/lib/components/Icon/Icon';
+import { Dropdown, IDropdownOption } from '@fluentui/react/lib/Dropdown';
+import { Icon } from '@fluentui/react/lib/Icon';
 ```
 
 The drop-down component needs some different rendering methods, so above the `ChoicesPickerComponent`, add the following:
@@ -577,11 +576,22 @@ Now save all the changes so they're automatically reflected in the test harness 
 
 ## Localization
 
-If you want to support multiple languages, your code component can hold a resource file that provides translations for both design and runtime strings. 
+If you want to support multiple languages, your code component can hold a resource file that provides translations for both design and runtime strings.
 
 1. Add a new file at the location `ChoicesPicker\strings\ChoicesPicker.1033.resx`. If you want to add labels for a different locale, change the 1033 (`en-us`) to the locale of your choosing.
 
-2. Add the following content:
+1. Using the Visual Studio Code resource editor, enter the following:
+
+   |Name  |Value  |
+   |---------|---------|
+   |`ChoicesPicker_Name`|Choices Picker (Model Driven)|
+   |`ChoicesPicker_Desc`|Shows choices as a picker with icons|
+   |`Value_Name`|Value|
+   |`Value_Desc`|The choices field to bind the control to|
+   |`Configuration_Name`|Icon Mapping Configuration|
+  |`Configuration_Desc`|Configuration that maps the choice value to a fluent ui icon. E.g. {"1":"ContactInfo","2":"Send"}|
+
+   Otherwise, set the content of the .resx file with the following XML:
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -672,7 +682,7 @@ If you want to support multiple languages, your code component can hold a resour
    ```
 
    > [!TIP]
-   > It's not recommended to edit `resx` files directly. Instead you can use either Visual Studio Code resource editor or an extension for Visual Studio Code.
+   > It's not recommended to edit `resx` files directly. The Visual Studio Code resource editor or an extension for Visual Studio Code makes this easier.
 
    Now that you have the resource strings, you can reference them by updating the `ControlManifest.Input.xml` as follows:
 
