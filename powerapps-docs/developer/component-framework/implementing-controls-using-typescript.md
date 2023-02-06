@@ -89,56 +89,56 @@ For the purpose of this tutorial we will start in a folder located at `C:\repos`
 
 The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, this manifest file is created under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you'll notice that the manifest file is predefined with some properties. More information: [Manifest](manifest-schema-reference/manifest.md).
 
-Make changes to the predefined manifest file, as shown here:
-
-1. The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component.
+The [control](manifest-schema-reference/control.md) node defines the namespace, version, and display name of the code component.
    
-   The tooling has generated the [control](manifest-schema-reference/control.md) element that is a good starting point for your control.
+The tooling has generated the [control](manifest-schema-reference/control.md) element that is a good starting point for your control.
 
-   > [!TIP]
-   > You may find the XML easier to read by formatting it so that attributes appear on separate lines. Try right-clicking on the XML document in Visual Studio Code and selecting Format Document, or using the `Shift+Alt+F` shortcut.
-   >
-   > The examples below have been formatted to make them easier to read.
+> [!TIP]
+> You may find the XML easier to read by formatting it so that attributes appear on separate lines. Try right-clicking on the XML document in Visual Studio Code and selecting Format Document, or using the `Shift+Alt+F` shortcut.
+>
+> The examples below have been formatted to make them easier to read.
 
-   |Attribute|Description|
-   |---------|---------|
-   |`namespace`|Namespace of the code component.|
-   |`constructor`|Constructor of the code component.|
-   |`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
-   |`display-name-key`|Name of the code component that is displayed on the UI.|
-   |`description-key`|Description of the code component that is displayed on the UI.|
-   |`control-type`|The code component type. Only *standard* types of code components are supported.|
+|Attribute|Description|
+|---------|---------|
+|`namespace`|Namespace of the code component.|
+|`constructor`|Constructor of the code component.|
+|`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
+|`display-name-key`|Name of the code component that is displayed on the UI.|
+|`description-key`|Description of the code component that is displayed on the UI.|
+|`control-type`|The code component type. Only *standard* types of code components are supported.|
 
-   If you ignore the commented areas, this is the manifest that was generated for you:
+If you ignore the commented areas and format the document, this is the manifest that was generated for you:
 
-   ```XML
-   <?xml version="1.0" encoding="utf-8" ?>
-   <manifest>
-   <control namespace="SampleNamespace"
-      constructor="LinearInputControl"
-      version="0.0.1"
-      display-name-key="LinearInputControl"
-      description-key="LinearInputControl description"
-      control-type="standard">
-      <external-service-usage enabled="false">
-      </external-service-usage>
-      <property name="sampleProperty"
-         display-name-key="Property_Display_Key"
-         description-key="Property_Desc_Key"
-         of-type="SingleLine.Text"
-         usage="bound"
-         required="true" />
-      <resources>
-         <code path="index.ts"
-            order="1" />
-      </resources>
-    </control>
-   </manifest>
-   ```
+```XML
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+<control namespace="SampleNamespace"
+   constructor="LinearInputControl"
+   version="0.0.1"
+   display-name-key="LinearInputControl"
+   description-key="LinearInputControl description"
+   control-type="standard">
+   <external-service-usage enabled="false">
+   </external-service-usage>
+   <property name="sampleProperty"
+      display-name-key="Property_Display_Key"
+      description-key="Property_Desc_Key"
+      of-type="SingleLine.Text"
+      usage="bound"
+      required="true" />
+   <resources>
+      <code path="index.ts"
+         order="1" />
+   </resources>
+</control>
+</manifest>
+```
+
+From this starting point, make the following changes:
 
 1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` within the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
 
-   You can replace the `external-service-usage` element since it isn't used by this control.
+   Replace the `external-service-usage` element since it isn't used by this control.
 
    # [Before](#tab/before)
 
@@ -191,156 +191,334 @@ Make changes to the predefined manifest file, as shown here:
       </resources>
     </control>
    ```
+   
    ---
 
-1. Edit the generated `sampleProperty` [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.  Define the [property](manifest-schema-reference/property.md) node as shown here:
+1. Edit the generated `sampleProperty` [property](manifest-schema-reference/property.md) element within the `control` element. This element defines the properties of the code component like defining the data type of the column.
 
-   - **name**: Name of the property.
-   - **display-name-key**: Display name of the property that is displayed on the UI.
-   - **description-name-key**: Description of the property that is displayed on the UI.
-   - **of-type-group**: Use the `of-type-group` attribute when you want refer to the name of a specific type group. Here, we are referring to the `type-group` named `numbers` created in the previous step.
-   - **usage**: Has two properties, *bound* and *input*. Bound properties are bound only to the value of the column. Input properties are either bound to a column or allow a static value.
-   - **required**: Defines whether the property is required.
+   |Attribute|Description|
+   |---------|---------|
+   |`name`|Name of the property.|
+   |`display-name-key`|Display name of the property that is displayed on the UI.|
+   |`description-key`|Description of the property that is displayed on the UI.|
+   |`of-type-group`|Use the `of-type-group` attribute when you want refer to the name of a specific type group.<br /> Here, we are referring to the `type-group` named `numbers` created in the previous step.|
+   |`usage`|Has two properties, `bound` and `input`.<br /><br />- Bound properties are bound only to the value of the column.<br /><br />- Input properties are either bound to a column or allow a static value.|
+   |`required`|Defines whether the property is required.|
 
-     ```XML
-     <property name="controlValue"
-      display-name-key="controlValue_Display_Key"
-      description-key="controlValue_Desc_Key"
+
+   Edit the [property](manifest-schema-reference/property.md) node as shown here:
+
+   # [Before](#tab/before)
+
+   ```xml
+   <property name="sampleProperty"
+      display-name-key="Property_Display_Key"
+      description-key="Property_Desc_Key"
+      of-type="SingleLine.Text"
+      usage="bound"
+      required="true" />
+   ```
+
+   # [After](#tab/after)
+
+   ```xml
+   <property name="controlValue"
+      display-name-key="Control Value"
+      description-key="Control value description."
       of-type-group="numbers"
       usage="bound"
       required="true" />
-     ```
+   ```
 
-1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element. Define the [resources](manifest-schema-reference/resources.md) as shown here:
+   ---
+
+1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element.
+
+   The generated manifest already includes a definition of the [code element](manifest-schema-reference/code.md) with `path` and `order` attribute values set. We will use these. In the following [Adding style to the code component](#adding-style-to-the-code-component) section, we will add CSS styles for the control. To support that, let's edit the manifest to add them while we have it open.
+
+   Edit the [resources](manifest-schema-reference/resources.md) node to add the following [css element](manifest-schema-reference/css.md):
+
+   # [Before](#tab/before)
+
+   ```xml
+   <resources>
+    <code path="index.ts"
+      order="1" />
+   </resources>
+   ```
+
+   # [After](#tab/after)
+
+   ```xml
+   <resources>
+    <code path="index.ts"
+      order="1" />
+    <css path="css/LinearInputControl.css"
+      order="1" />
+   </resources>
+   ```
+
+   ---
+
+### Completed manifest
    
-   - **code**: Refers to the path where all the resource files are located.
-   
-      ```XML
+The completed manifest file should look like this:
+
+```XML
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+   <control namespace="SampleNamespace"
+      constructor="LinearInputControl"
+      version="0.0.1"
+      display-name-key="LinearInputControl"
+      description-key="LinearInputControl description"
+      control-type="standard">
+      <type-group name="numbers">
+         <type>Whole.None</type>
+         <type>Currency</type>
+         <type>FP</type>
+         <type>Decimal</type>
+      </type-group>
+      <property name="controlValue"
+         display-name-key="Control Value"
+         description-key="Control value description."
+         of-type-group="numbers"
+         usage="bound"
+         required="true" />
       <resources>
-       <code path="index.ts"
+         <code path="index.ts"
             order="1" />
-       <css path="css/LinearInputControl.css"
+         <css path="css/LinearInputControl.css"
             order="1" />
       </resources>
-      ```
-   
-      The completed manifest file should look like this: 
-
-     ```XML
-      <?xml version="1.0" encoding="utf-8" ?>
-      <manifest>
-         <control namespace="SampleNamespace"
-            constructor="LinearInputControl"
-            version="1.1.0"
-            display-name-key="LinearInputControl_Display_Key"
-            description-key="LinearInputControl_Desc_Key"
-            control-type="standard">
-            <type-group name="numbers">
-               <type>Whole.None</type>
-               <type>Currency</type>
-               <type>FP</type>
-               <type>Decimal</type>
-            </type-group>
-            <property name="controlValue"
-               display-name-key="controlValue_Display_Key"
-               description-key="controlValue_Desc_Key"
-               of-type-group="numbers"
-               usage="bound"
-               required="true" />
-            <resources>
-               <code path="index.ts"
-                  order="1" />
-               <css path="css/LinearInputControl.css"
-                  order="1" />
-            </resources>
-         </control>
-      </manifest>
-     ```
+   </control>
+</manifest>
+```
 
 1. Save the changes to the `ControlManifest.Input.xml` file.
-1. After making changes to the manifest, you will need to generate ManifestDesignTypes.d.ts file in this directory using the below command."
+1. Generate `ManifestDesignTypes.d.ts` file using the following command.
    
-   ```
+   ```CLI
    npm run refreshTypes
    ```
-   
+
+   The output should look like this:
+ 
+   ```CLI
+   PS C:\repos\LinearInput> npm run refreshTypes
+
+   > pcf-project@1.0.0 refreshTypes
+   > pcf-scripts refreshTypes
+
+   [12:38:06 PM] [refreshTypes]  Initializing...
+   [12:38:06 PM] [refreshTypes]  Generating manifest types...
+   DeprecationWarning: 'createInterfaceDeclaration' has been deprecated since v4.8.0. Decorators are no longer supported for this function. Callers should switch to an overload that does not accept a 'decorators' parameter.
+   [12:38:06 PM] [refreshTypes]  Generating design types...
+   [12:38:06 PM] [refreshTypes]  Succeeded
+   ```
+
+1. To see the results, open the `C:\repos\LinearInput\LinearInputControl\generated\ManifestTypes.d.ts` file to see the types generated:
+
+   ```typescript
+   /*
+   *This is auto generated from the ControlManifest.Input.xml file
+   */
+
+   // Define IInputs and IOutputs Type. They should match with ControlManifest.
+   export interface IInputs {
+      controlValue: ComponentFramework.PropertyTypes.NumberProperty;
+   }
+   export interface IOutputs {
+      controlValue?: number;
+   }
+   ```
+
 ## Implementing component logic
 
-The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions are predefined. Now, let's implement the logic for the code component. 
+The next step after implementing the manifest file is to implement the component logic using TypeScript. The component logic should be implemented inside the `index.ts` file. When you open the `index.ts` file in the Visual Studio Code, you'll notice that the four essential functions (init, updateView , getOutputs, and destroy) are predefined. Now, let's implement the logic for the code component. 
 
 1. Open the `index.ts` file in the code editor of your choice.
 1. Update the `LinearInputControl` class with the following code:
-   
-   ```TypeScript
+
+   # [Before](#tab/before)
+
+   ```typescript
    import { IInputs, IOutputs } from "./generated/ManifestTypes";
-   
-   export class LinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-      private _value: number;
-      private _notifyOutputChanged: () => void;
-      private labelElement: HTMLLabelElement;
-      private inputElement: HTMLInputElement;
-      private _container: HTMLDivElement;
-      private _context: ComponentFramework.Context<IInputs>;
-      private _refreshData: EventListenerOrEventListenerObject;
-   
-   public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement): void {
-         this._context = context;
-         this._container = document.createElement("div");
-         this._notifyOutputChanged = notifyOutputChanged;
-         this._refreshData = this.refreshData.bind(this);
-   
-         // creating HTML elements for the input type range and binding it to the function which refreshes the control data
-         this.inputElement = document.createElement("input");
-         this.inputElement.setAttribute("type", "range");
-         this.inputElement.addEventListener("input", this._refreshData);
-   
-         //setting the max and min values for the control.
-         this.inputElement.setAttribute("min", "1");
-         this.inputElement.setAttribute("max", "1000");
-         this.inputElement.setAttribute("class", "linearslider");
-         this.inputElement.setAttribute("id", "linearrangeinput");
-   
-         // creating a HTML label element that shows the value that is set on the linear range control
-         this.labelElement = document.createElement("label");
-         this.labelElement.setAttribute("class", "LinearRangeLabel");
-         this.labelElement.setAttribute("id", "lrclabel");
-   
-         // retrieving the latest value from the control and setting it to the HTMl elements.
-         this._value = context.parameters.controlValue.raw!;
-         this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
-         this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
-   
-         // appending the HTML elements to the control's HTML container element.
-         this._container.appendChild(this.inputElement);
-         this._container.appendChild(this.labelElement);
-         container.appendChild(this._container);
-      }
-   
-      public refreshData(evt: Event): void {
-         this._value = (this.inputElement.value as any) as number;
-         this.labelElement.innerHTML = this.inputElement.value;
-         this._notifyOutputChanged();
-      }
-   
-      public updateView(context: ComponentFramework.Context<IInputs>): void {
-         // storing the latest context from the control.
-         this._value = context.parameters.controlValue.raw!;
-         this._context = context;
-         this.inputElement.setAttribute("value", context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
-         this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
-      }
-   
-      public getOutputs(): IOutputs {
-         return {
-            controlValue: this._value
-         };
-      }
-   
-      public destroy(): void {
-         this.inputElement.removeEventListener("input", this._refreshData);
-      }
+
+   export class LinearInputControl
+   implements ComponentFramework.StandardControl<IInputs, IOutputs>
+   {
+   /**
+      * Empty constructor.
+      */
+   constructor() {}
+
+   /**
+      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+      * Data-set values are not initialized here, use updateView.
+      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+      * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
+      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
+      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
+      */
+   public init(
+      context: ComponentFramework.Context<IInputs>,
+      notifyOutputChanged: () => void,
+      state: ComponentFramework.Dictionary,
+      container: HTMLDivElement
+   ): void {
+      // Add control initialization code
+   }
+
+   /**
+      * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
+      */
+   public updateView(context: ComponentFramework.Context<IInputs>): void {
+      // Add code to update control view
+   }
+
+   /**
+      * It is called by the framework prior to a control receiving new data.
+      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
+      */
+   public getOutputs(): IOutputs {
+      return {};
+   }
+
+   /**
+      * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+      * i.e. cancelling any pending remote calls, removing listeners, etc.
+      */
+   public destroy(): void {
+      // Add code to cleanup control if necessary
+       }
    }
    ```
+
+   # [After](#tab/after)
+
+   ```typescript
+   import { IInputs, IOutputs } from "./generated/ManifestTypes";
+
+   export class LinearInputControl
+   implements ComponentFramework.StandardControl<IInputs, IOutputs>
+   {
+   private _value: number;
+   private _notifyOutputChanged: () => void;
+   private labelElement: HTMLLabelElement;
+   private inputElement: HTMLInputElement;
+   private _container: HTMLDivElement;
+   private _context: ComponentFramework.Context<IInputs>;
+   private _refreshData: EventListenerOrEventListenerObject;
+   /**
+      * Empty constructor.
+      */
+   constructor() {}
+
+   /**
+      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+      * Data-set values are not initialized here, use updateView.
+      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+      * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
+      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
+      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
+      */
+   public init(
+      context: ComponentFramework.Context<IInputs>,
+      notifyOutputChanged: () => void,
+      state: ComponentFramework.Dictionary,
+      container: HTMLDivElement
+   ): void {
+      // Add control initialization code
+      this._context = context;
+      this._container = document.createElement("div");
+      this._notifyOutputChanged = notifyOutputChanged;
+      this._refreshData = this.refreshData.bind(this);
+
+      // creating HTML elements for the input type range and binding it to the function which refreshes the control data
+      this.inputElement = document.createElement("input");
+      this.inputElement.setAttribute("type", "range");
+      this.inputElement.addEventListener("input", this._refreshData);
+
+      //setting the max and min values for the control.
+      this.inputElement.setAttribute("min", "1");
+      this.inputElement.setAttribute("max", "1000");
+      this.inputElement.setAttribute("class", "linearslider");
+      this.inputElement.setAttribute("id", "linearrangeinput");
+
+      // creating a HTML label element that shows the value that is set on the linear range control
+      this.labelElement = document.createElement("label");
+      this.labelElement.setAttribute("class", "LinearRangeLabel");
+      this.labelElement.setAttribute("id", "lrclabel");
+
+      // retrieving the latest value from the control and setting it to the HTMl elements.
+      this._value = context.parameters.controlValue.raw!;
+      this.inputElement.setAttribute(
+         "value",
+         context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : "0"
+      );
+      this.labelElement.innerHTML = context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : "0";
+
+      // appending the HTML elements to the control's HTML container element.
+      this._container.appendChild(this.inputElement);
+      this._container.appendChild(this.labelElement);
+      container.appendChild(this._container);
+   }
+
+   public refreshData(evt: Event): void {
+      this._value = this.inputElement.value as any as number;
+      this.labelElement.innerHTML = this.inputElement.value;
+      this._notifyOutputChanged();
+   }
+
+   /**
+      * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
+      */
+   public updateView(context: ComponentFramework.Context<IInputs>): void {
+      // Add code to update control view
+      // storing the latest context from the control.
+      this._value = context.parameters.controlValue.raw!;
+      this._context = context;
+      this.inputElement.setAttribute(
+         "value",
+         context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : ""
+      );
+      this.labelElement.innerHTML = context.parameters.controlValue.formatted
+         ? context.parameters.controlValue.formatted
+         : "";
+   }
+
+   /**
+      * It is called by the framework prior to a control receiving new data.
+      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
+      */
+   public getOutputs(): IOutputs {
+      return {
+         controlValue: this._value,
+      };
+   }
+
+   /**
+      * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+      * i.e. cancelling any pending remote calls, removing listeners, etc.
+      */
+   public destroy(): void {
+      // Add code to cleanup control if necessary
+      this.inputElement.removeEventListener("input", this._refreshData);
+       }
+   }
+
+   ```
+
+   ---
 
 1. Save the change to the `index.ts` file.
 
