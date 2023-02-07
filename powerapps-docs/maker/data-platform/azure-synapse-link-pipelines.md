@@ -2,7 +2,7 @@
 title: "Copy Dataverse data into Azure SQL | MicrosoftDocs"
 description: "Learn how to run Azure Synapse pipelines with your exported Dataverse table data"
 ms.custom: ""
-ms.date: 12/05/2022
+ms.date: 02/07/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,7 +28,7 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 
 > [!NOTE]
 > Azure Synapse Link for Microsoft Dataverse was formerly known as Export to data lake. The service was renamed effective May 2021 and will continue to export data to Azure Data Lake as well as Azure Synapse Analytics.
-> This template is a code sample. You are more than encouraged to use this template as a guidance to test out the functionality of retrieving data from ADLS Gen 2 storage to Azure SQL DB using the pipeline provided.
+> This template is a code sample. We encourage you to use this template as guidance to test out the functionality of retrieving data from Azure Data Lake Storage Gen2 to Azure SQL Database using the pipeline provided.
 
 ## Prerequisites
 
@@ -39,14 +39,15 @@ Use the Azure Synapse Link to connect your Microsoft Dataverse data to Azure Syn
 5. Create an Azure SQL database with the **Allow Azure services and resources to access this server** property enabled. More information: [What should I know when setting up my Azure SQL Database (PaaS)?](/archive/blogs/azureedu/what-should-i-know-when-setting-up-my-azure-sql-database-paas#firewall)
 6. Create and configure an Azure integration runtime. More information: [Create Azure integration runtime - Azure Data Factory & Azure Synapse](/azure/data-factory/create-azure-integration-runtime?tabs=data-factory)
 
-> [!NOTE]
-> Please note that using this template may incur additional costs. These costs are related to the usage of Azure Data Factory or Synapse workspace pipeline and are billed on a monthly basis. The cost of using pipeline mainly depends on the time interval for incremental update and the data volumes. To plan and manage the cost of using this feature, please visit: https://learn.microsoft.com/en-us/azure/data-factory/plan-manage-costs#monitor-costs-at-pipeline-level-with-cost-analysis 
+> [!IMPORTANT]
+> Using this template might incur additional costs. These costs are related to the usage of Azure Data Factory or Synapse workspace pipeline and are billed on a monthly basis. The cost of using pipelines mainly depends on the time interval for incremental update and the data volumes. To plan and manage the cost of using this feature, go to: [Monitor costs at pipeline level with cost analysis](/azure/data-factory/plan-manage-costs#monitor-costs-at-pipeline-level-with-cost-analysis)
 >
-> It is important to take these additional costs into consideration when deciding to use this template,  as they are not optional and must be paid in order to continue using this feature."
+> It's important to take these additional costs into consideration when deciding to use this template as they are not optional and must be paid in order to continue using this feature.
 
 ## Use the solution template
+
 # [Synapse Analytics](#tab/synapse-analytics)
-1. Go to the Azure portal and open Azure Synapse workspace.
+1. Go to the [Azure portal](https://portal.azure.com) and open Azure Synapse workspace.
 1. Select **Integrate** > **Browse gallery**.
 1. Select **Copy Dataverse data into Azure SQL using Synapse Link** from the integration gallery.
 
