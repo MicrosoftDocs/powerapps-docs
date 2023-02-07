@@ -245,13 +245,15 @@ Let's rebuild our adding machine by using a context variable:
 
     ![Screen1 is open.](media/working-with-variables/context-variable-6.png)
 
-8. To show the value of the context variable, select the **File** menu, and then select **Variables** in the left-hand pane.
+8. To show the value of the context variable, do one of the following:
 
-    ![Variables option on the File menu.](media/working-with-variables/context-variable-file-1.png)
+   - In preview, select **Variables** in the app authoring menu.
+    
+   - If you're using the classic version, select the **File** menu, and then select **Variables** in the left-hand pane.
 
-9. To show where the context variable is defined and used, select it.
 
-    ![List of where a variable is used.](media/working-with-variables/context-variable-file-2.png)
+9. To show where the context variable is defined and used, select it under **Context variables**.
+
 
 ## Use a collection
 
@@ -309,7 +311,7 @@ Let's recreate our adding machine by using a collection:
 
    - In preview, select **Variables** in the app authoring menu and then select **Collections**. 
     
-    - If you're using the classic version, select **Collections** on the **File** menu.
+   - If you're using the classic version, select **Collections** on the **File** menu.
 
 10. To store and retrieve your collection, add two additional button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
 
