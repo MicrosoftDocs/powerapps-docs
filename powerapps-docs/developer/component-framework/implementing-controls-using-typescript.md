@@ -986,7 +986,6 @@ To add the code component to a portal, follow the steps in the article [Use code
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
-[Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
 [Overview of tools and apps used with ALM](/power-platform/alm/tools-apps-used-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)<br/>
