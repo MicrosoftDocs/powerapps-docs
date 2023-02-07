@@ -107,7 +107,7 @@ The tooling has generated the [control](manifest-schema-reference/control.md) el
 |`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
 |`display-name-key`|Name of the code component that is displayed on the UI.|
 |`description-key`|Description of the code component that is displayed on the UI.|
-|`control-type`|The code component type. Only *standard* types of code components are supported.|
+|`control-type`|The code component type. This will be a `standard` control. |
 
 If you ignore the commented areas and format the document, this is the manifest that was generated for you:
 
