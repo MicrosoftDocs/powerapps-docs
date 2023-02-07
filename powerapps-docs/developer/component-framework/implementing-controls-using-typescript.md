@@ -763,7 +763,7 @@ Developers and app makers can define their styling to represent their code compo
     ```
     
 1. Save the `LinearInputControl.css` file.
-1. Note that the `ControlManifest.Input.xml` file already includes the `CSS` resource file inside the resources element because that was completed in the [Implementing manifest](#implementing-manifest) section earlier.
+1. Note that the `ControlManifest.Input.xml` file already includes the `css` resource file inside the resources element because that was completed in the [Implementing manifest](#implementing-manifest) section earlier.
    
     ```XML
    <resources>
@@ -908,7 +908,9 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > The [publisher-name](/power-platform/developer/cli/reference/solution#--publisher-name--pn) and [publisher-prefix](/power-platform/developer/cli/reference/solution#--publisher-prefix--pp) values must be the same as either an existing solution publisher, or a new one that you want to create in your target environment.
    > 
    > You can retrieve a list of current values using this query on your target environment:
+   >
    > `[Environment URI]/api/data/v9.2/publishers?$select=uniquename,customizationprefix`
+   >
    > More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
 
 
