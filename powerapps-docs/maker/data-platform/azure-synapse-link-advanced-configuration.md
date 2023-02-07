@@ -2,7 +2,7 @@
 title: "Azure Synapse Link Advance Configuration | MicrosoftDocs"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 01/18/2023
+ms.date: 02/07/2023
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -40,7 +40,7 @@ This article covers:
 
 While writing Dataverse table data to the Azure data lake, based on the `createdOn` value, which is the date and time when the record was created, there are two different settings to choose from. They are, **In place update** and **Append only**.
 
-The default setting (for tables where `createdOn` is available) is to do an in-place update or upsert (update or insert) of the incremental data in the destination. If the change is new and a corresponding row doesn't exist in the lake, in the case of a create, the destination files are scanned, and the changes are inserted into the corresponding file partition in the lake. If the change is an update and a row exists in the lake, the corresponding file in the lake is updated, rather than inserted, with the incremental data. In other words, the default setting for all CUD changes in Dataverse tables, where `createdOn` is available, is to do an in place update in the destination, in Azure data lake.
+The default setting (for tables where `createdOn` is available) is to do an in-place update or upsert (update or insert) of the incremental data in the destination. If the change is new and a corresponding row doesn't exist in the lake, in the case of a create, the destination files are scanned, and the changes are inserted into the corresponding file partition in the lake. If the change is an update and a row exists in the lake, the corresponding file in the lake is updated, rather than inserted, with the incremental data. In other words, the default setting for all CUD (create, update, delete) changes in Dataverse tables, where `createdOn` is available, is to do an in place update in the destination, in Azure data lake.
 
 You can switch the default behavior of an in place update by using an optional setting called **Append only**. Rather than an **In place update**, in **Append only** mode, incremental data from Dataverse tables are appended to the corresponding file partition in the lake. This is a per table setting and available as a checkbox under **Advanced** > **Show advanced configuration settings**. For Dataverse tables with **Append only** turned on, all the CUD changes are incrementally appended to the corresponding destination files in the lake. When you choose this option, the partition strategy defaults to **Year** and when data is written to the data lake, it's partitioned by yearly basis. **Append only** is also the default setting for Dataverse tables that don't have `createdOn` value.
 
@@ -57,7 +57,7 @@ The table below describes how rows are handled in the lake against CUD events fo
 >
 > Dirty read (**ALLOW_INCONSISTENT_READS**) for serverless is enabled for append only mode. **ALLOW_INCONSISTENT_READS** means that user is able to read the files that can be constantly modified while the `SELECT` query is running. Results will be consistent and equivalent to reading a snapshot of the file. (It isn't equivalent to database snapshot isolation because of the different snapshot generation time.)
 >
-> Not all CUD changes will be captured in **append only**: The Synapse Link processes changes in data in groups or "batches" before publishing them to the Data Lake. As a result, if the user makes changes within a short time interval, not all CUD (Create, Update, Delete) changes will be captured in the Data Lake.
+> Not all CUD changes will be captured in **append only**: The Synapse Link processes changes in data in groups or "batches" before publishing them to the data lake. As a result, if the user makes changes within a short time interval, not all CUD changes will be captured in the data lake.
 
 Here are some more details on when to use either of the options.
 
