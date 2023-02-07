@@ -107,7 +107,7 @@ The tooling has generated the [control](manifest-schema-reference/control.md) el
 |`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
 |`display-name-key`|Name of the code component that is displayed on the UI.|
 |`description-key`|Description of the code component that is displayed on the UI.|
-|`control-type`|The code component type. Only *standard* types of code components are supported.|
+|`control-type`|The code component type. This will be a `standard` control. |
 
 If you ignore the commented areas and format the document, this is the manifest that was generated for you:
 
@@ -986,7 +986,6 @@ To add the code component to a portal, follow the steps in the article [Use code
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
-[Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
 [Overview of tools and apps used with ALM](/power-platform/alm/tools-apps-used-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)<br/>
