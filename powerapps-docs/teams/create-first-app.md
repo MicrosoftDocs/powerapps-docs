@@ -35,7 +35,7 @@ Now let's go through each step in detail.
 
 ## Create your app
 
-After installing the Power Apps app from the Teams store:
+After installing the Power Apps app template:
 
 1. Start Teams, and sign in.
 
