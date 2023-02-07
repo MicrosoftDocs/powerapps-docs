@@ -9,6 +9,7 @@ ms.date: 12/14/2020
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: mkaur
+recommendations: false
 ---
 
 # Customize sample app templates 
