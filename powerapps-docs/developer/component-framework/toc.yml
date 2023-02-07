@@ -49,8 +49,6 @@ items:
       href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
     - name: Add components to portals (Preview)
       href: ../../maker/portals/component-framework-tutorial.md
-    - name: Update existing code components
-      href: updating-existing-controls.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
     - name: Customize the editable grid control (Preview)
