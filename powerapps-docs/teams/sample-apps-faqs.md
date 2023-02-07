@@ -12,6 +12,7 @@ ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - mduelae
+recommendations: false
 ---
 
 # Frequently Asked Questions (FAQs) for sample app templates
