@@ -137,17 +137,17 @@ Let's rebuild our adding machine by using a global variable:
 
     ![Text-input control contains a value, and the label contains the running total.](media/working-with-variables/global-variable-4.png)
 
-7. To show the global variable's value, choose one of the following:
-
-    - **Current release**: Select the **File** menu, and select **Variables** in the left-hand pane.
-    - **Preview**: Select **Variables** on the app authoring menu.
+7. To show the global variable's value, do one of the following:
+ 
+    - In preview select, **Variables** on the app authoring menu.
 
       ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
+      
+     - If you're using the classic version, select the **File** menu, and select **Variables** in the left-hand pane.
 
-8. To show all the places where the variable is defined and used, select it.
-   - For preview select it under **Global variables**.
+8. To show all the places where the variable is defined and used, select it under **Global variables**.
 
-    ![List of location where variable is used.](media/working-with-variables/var-collections-1.png)
+      ![List of location where variable is used.](media/working-with-variables/var-collections-1.png)
 
 ## Types of variables
 
@@ -305,9 +305,11 @@ Let's recreate our adding machine by using a collection:
 
     ![Data table that shows the values added to the collection.](media/working-with-variables/papertape-4.png)
 
-9. To see the values in your collection, select **Collections** on the **File** menu.
+9. To see the values in your collection, do one of the following:
 
-    ![Preview of the PaperTape collection.](media/working-with-variables/papertape-file.png)
+   - In preview, select **Variables** in the app authoring menu and then select **Collections**. 
+    
+    - If you're using the classic version, select **Collections** on the **File** menu.
 
 10. To store and retrieve your collection, add two additional button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
 
