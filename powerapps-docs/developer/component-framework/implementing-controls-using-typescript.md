@@ -793,8 +793,8 @@ PS C:\repos\LinearInput\LinearInputcontrol>
 The build generates an updated TypeScript type declaration file under the `LinearInputControl/generated` folder.
 The component is compiled into the `out/controls/LinearInputControl` folder. The build artifacts include:
 
-- bundle.js – Bundled component source code. 
-- ControlManifest.xml – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
+- `bundle.js` – Bundled component source code.
+- `ControlManifest.xml` – Actual component manifest file that is uploaded to the Microsoft Dataverse organization.
 
 > [!NOTE]
 > eslint rules may impact your build, depending on how they have been configured. If you receive an error during build:
@@ -810,7 +810,7 @@ The component is compiled into the `out/controls/LinearInputControl` folder. The
 > 
 > ```error  'EventListenerOrEventListenerObject' is not defined  no-undef```
 > 
-> Then you would open `.eslintrc.json` and edit the rules to add a `["warn"]` value for the rule `no-undef`:
+> Then you can open `.eslintrc.json` and edit the rules to add a `["warn"]` value for the rule `no-undef`:
 >
 > ```json
 >     "rules": {
@@ -862,7 +862,7 @@ Starting control harness...
 
 ```
 
-And a browser should open to the PCF Control Sandbox so that you can see the control.
+And a browser should open to the PCF Control Sandbox so that you can see the control and test it.
 
 :::image type="content" source="../model-driven-apps/clientapi/media/linear-input-control-pcf-control-sandbox.png" alt-text="Linear input control in PCF Control Sandbox":::
 
@@ -884,26 +884,45 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    ```
 
    > [!NOTE]
-   > The [publisher-name](../data-platform/reference/entities/publisher.md) and [publisher-prefix](/powerapps/maker/data-platform/change-solution-publisher-prefix) values must be the same as either an existing solution publisher, or a new one that you want to create in your target environment.
+   > The [publisher-name](/power-platform/developer/cli/reference/solution#--publisher-name--pn) and [publisher-prefix](/power-platform/developer/cli/reference/solution#--publisher-prefix--pp) values must be the same as either an existing solution publisher, or a new one that you want to create in your target environment.
+   > 
+   > You can retrieve a list of current values using this query on your target environment:
+   > `[Environment URI]/api/data/v9.2/publishers?$select=uniquename,customizationprefix`
+   > More information: [Query data using the Web API](../data-platform/webapi/query-data-web-api.md)
 
+
+
+   The output of the pac solution init command should look like this:
+
+   ```CLI
+   Dataverse solution project with name 'solutions' created successfully in: 'C:\repos\LinearInput\linearinputcontrol\solutions'
+   Dataverse solution files were successfully created for this project in the sub-directory Other, using solution name solutions, publisher name Samples, and customization prefix samples.
+   Please verify the publisher information and solution name found in the Solution.xml file.
+   PS C:\repos\LinearInput\linearinputcontrol\solutions> 
+   ```
 
 1. Once the new solution project is created, you need to refer to the location where the created component is located. You can add the reference by using the following command:
-
+   
     ```CLI
-     pac solution add-reference --path ..\
+    pac solution add-reference --path ..\..\
     ```
-
+   
     > [!NOTE]
-    >
     > The path provided here is related to the current **Solutions** folder that was created underneath the **LinearInputControl** folder. You can also provide an absolute path.
-
+   
+   The output of the command should look like this:
+   
+   ```CLI
+   Project reference successfully added to Dataverse solution project.
+   ```
+   
 1. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
 
    ```CLI
    msbuild /t:restore
    ```
 
-   Or if you have installed the .NET 5 SDK:
+   Or if you have installed the .NET 6 SDK:
 
    ```CLI
    dotnet build
@@ -922,7 +941,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Dataverse and run the solution checker. More information:  [Debug code components](debugging-custom-controls.md).
 
 1. The generated solution zip file is located in the `Solution\bin\debug` folder.
-1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
+1. Manually [import the solution into Dataverse](../../maker/data-platform/import-update-export-solutions.md) using [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 > [!NOTE]
 > Manually publish the customizations if you are importing unmanaged solution.
