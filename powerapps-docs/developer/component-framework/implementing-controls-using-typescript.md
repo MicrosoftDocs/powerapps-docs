@@ -15,7 +15,7 @@ contributors:
 
 In this tutorial, we demonstrate how to build a linear slider code component that enables users to change the numeric values using a visual slider instead of typing the values in the column.
 
-<!-- TODO Add screenshot showing what a linear slider code component looks like -->
+:::image type="content" source="media/sample-linear-input-control-mda.png" alt-text="Linear input control in a model-driven app.":::
 
 The sample code for the completed linear slider code component is available here: [PowerApps-Samples/component-framework/LinearInputControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LinearInputControl)
 
@@ -27,8 +27,12 @@ The following steps are required to build a linear slider code component:
 - [Add style to the code components](#adding-style-to-the-code-component)
 - [Build your code components](#build-your-code-components)
 - [Packaging code components](#packaging-your-code-components)
+
+After you have created the code component, you can add it to an app or portal:
+
 - [Adding component to a model-driven app](#adding-code-components-in-model-driven-apps)
 - [Adding component to a canvas app](#adding-code-components-to-a-canvas-app)
+- [Adding code components to a portal](#adding-code-components-to-a-portal)
 
 
 ## Prerequisites
@@ -133,12 +137,12 @@ If you ignore the commented areas and format the document, this is the manifest 
 ```
 
 From this starting point, make the following changes:
-
+  
 1. Add the definition of a [type-group](manifest-schema-reference/type-group.md) element named `numbers` within the `control` element. This element specifies the component value and can contain whole, currency, floating point, or decimal values.
+  
+   Replace the `external-service-usage` element with the `type-group` since `external-service-usage` functionality isn't used by this  control.
    
-   Replace the `external-service-usage` element with the `type-group` since `external-service-usage` functionality isn't used by this control.
-   
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```xml
    <control namespace="SampleNamespace"
@@ -162,8 +166,8 @@ From this starting point, make the following changes:
     </control>
    ```
    
-   # [After](#tab/after)
-   
+   ##### [After](#tab/after)
+
    ```xml
    <control namespace="SampleNamespace"
       constructor="LinearInputControl"
@@ -205,9 +209,9 @@ From this starting point, make the following changes:
    
    
    Edit the [property](manifest-schema-reference/property.md) node as shown here:
-   
-   # [Before](#tab/before)
-   
+
+   ### [Before](#tab/before)
+
    ```xml
    <property name="sampleProperty"
       display-name-key="Property_Display_Key"
@@ -216,8 +220,8 @@ From this starting point, make the following changes:
       usage="bound"
       required="true" />
    ```
-   
-   # [After](#tab/after)
+
+   ### [After](#tab/after)
    
    ```xml
    <property name="controlValue"
@@ -227,7 +231,7 @@ From this starting point, make the following changes:
       usage="bound"
       required="true" />
    ```
-   
+
    ---
    
 1. The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element.
@@ -236,7 +240,7 @@ From this starting point, make the following changes:
    
    Edit the [resources](manifest-schema-reference/resources.md) node to add the following [css element](manifest-schema-reference/css.md):
    
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```xml
    <resources>
@@ -245,7 +249,7 @@ From this starting point, make the following changes:
    </resources>
    ```
    
-   # [After](#tab/after)
+   ### [After](#tab/after)
    
    ```xml
    <resources>
@@ -338,7 +342,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
 
 1. Add properties for the control.
    
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```typescript
    export class LinearInputControl
@@ -349,7 +353,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    */
    constructor() {}
    ```
-   # [After](#tab/after)
+   ### [After](#tab/after)
    
    ```typescript
    export class LinearInputControl
@@ -382,7 +386,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    
 1. Update the `init` function
    
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```typescript
    public init(
@@ -396,7 +400,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    ```
    
    
-   # [After](#tab/after)
+   ### [After](#tab/after)
    
    ```typescript
    public init(
@@ -451,7 +455,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    
 1. Edit the `updateView` function.
    
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```typescript
    public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -459,7 +463,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    }
    ```
    
-   # [After](#tab/after)
+   ### [After](#tab/after)
    
    ```typescript
    public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -483,7 +487,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    
 1. Edit the `getOutputs` function.
    
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```typescript
    public getOutputs(): IOutputs {
@@ -492,7 +496,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    ```
    
    
-   # [After](#tab/after)
+   ### [After](#tab/after)
    
    ```typescript
    public getOutputs(): IOutputs {
@@ -506,7 +510,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    
 1. Edit the `destroy` function.
    
-   # [Before](#tab/before)
+   ### [Before](#tab/before)
    
    ```typescript
    public destroy(): void {
@@ -516,7 +520,7 @@ Open the `index.ts` file in the code editor of your choice and make the followin
    ```
    
    
-   # [After](#tab/after)
+   ### [After](#tab/after)
    
    ```typescript
    public destroy(): void {
