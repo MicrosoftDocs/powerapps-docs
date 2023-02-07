@@ -137,9 +137,11 @@ Let's rebuild our adding machine by using a global variable:
 
     ![Text-input control contains a value, and the label contains the running total.](media/working-with-variables/global-variable-4.png)
 
-7. To show the global variable's value, select the **File** menu, and select **Variables** in the left-hand pane.
+7. To show the global variable's value, choose one of the following:
+    Current: Select the **File** menu, and select **Variables** in the left-hand pane.
+    Preview: Select **Variables** on the app authoring menu.
 
-    ![Variables option in the File menu.](media/working-with-variables/global-variable-file-1.png)
+    ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
 
 8. To show all the places where the variable is defined and used, select it.
 
