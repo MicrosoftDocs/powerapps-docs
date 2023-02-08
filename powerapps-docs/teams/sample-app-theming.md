@@ -12,7 +12,6 @@ contributors:
   - mduelae
   - msftsamperl
   - joel-lindstrom
-recommendations: false
 ---
 
 # Theming in sample app templates
