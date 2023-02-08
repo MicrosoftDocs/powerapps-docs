@@ -96,7 +96,7 @@ The Power Apps sharing experience requires users to have permissions in the tena
 ## Sign in using Microsoft Account (preview) 
 Anyone can build Power Apps, even if you don't have a work or school account. Simply sign-up for a Dynamics 365 Sales trial using a [Microsoft Account](https://account.microsoft.com/) and then use that account to sign into [Power Apps](https://make.powerapps.com). 
 
-During the 30 day trial period, you can make and play with as many apps as you like. If you want to build with Dataverse and/or premium connectors. However, if you plan to run these apps beyond the trial period or share them with others, then you need to create a (free) Azure AD account. 
+During the 30 day trial period, you can make and play with as many apps as you like. You can also build with apps with Dataverse or other premium connectors. However, if you plan to run these apps beyond the trial period or share them with others, then you need to create a (free) Azure AD account. 
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -134,7 +134,7 @@ If your Microsoft Account is associated with an Azure Active Directory (Azure AD
 
 Today, Microsoft Accounts are bound to limited trial periods, you can't sign-up for the same free license twice with the same account. Also, Microsoft Accounts can't  [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
 
-You may proceed with building and running apps by creating an Azure AD identity in the same Azure AD tenant your Microsoft Account is associated and sign-up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/share-app) with your Azure AD identity to proceed with editing and playing them. 
+You may proceed with building and running apps by creating an Azure AD identity in the same Azure AD tenant your Microsoft Account is associated and sign-up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](share-app.md) with your Azure AD identity to proceed with editing and playing them. 
 
 To create an Azure AD identity with administrative rights. Please follow the steps under “How do I create an Azure Active Directory identity with the same administrative privileges as my Microsoft Account?”.
 
