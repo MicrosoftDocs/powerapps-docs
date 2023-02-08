@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/component-framework/updating-existing-controls.md",
+      "redirect_url": "overview",
+      "redirect_document_id": false
+    }, 
+    {
       "source_path": "powerapps-docs/maker/portals/embed-portal-website.md",
       "redirect_url": "/power-pages/configure/embed-website",
       "redirect_document_id": false
