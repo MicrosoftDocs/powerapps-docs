@@ -1,6 +1,6 @@
 ---
-title: Customize sample app templates installed from teams store | Microsoft Docs
-description: Learn how to customize sample app templates installed from teams store.
+title: Customize sample app templates  | Microsoft Docs
+description: Learn how to customize sample app templates.
 author: msftsamperl
 
 ms.topic: conceptual
@@ -9,19 +9,20 @@ ms.date: 12/14/2020
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: mkaur
+recommendations: false
 ---
 
-# Customize sample app templates installed from Teams store
+# Customize sample app templates 
 
-In this article, you'll learn about customizing sample app templates installed from the Teams store. For example, you may need to change the company logo, update the data inside the sample app templates to fit your business requirement, add or remove controls on the screens to extend the app.
+In this article, you'll learn about customizing sample app templates. For example, you may need to change the company logo, update the data inside the sample app templates to fit your business requirement, add or remove controls on the screens to extend the app.
 
 ## Prerequisites
 
-Install a sample app template. More details: [Use sample app templates from the Teams store](use-sample-apps-from-teams-store.md).
+Install a sample app template. More details: [Use sample app templates in Microsoft Teams](use-sample-apps.md).
 
 > [!NOTE]
-> - Sections of this article uses one of the available sample app templates from the Teams store as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
-> - Read [Sample app template updates](use-sample-apps-from-teams-store.md#sample-app-updates) before you customize sample app templates to understand the impact of new releases to the sample app template versions.
+> - Sections of this article uses one of the available sample app templates as an example. The tables, controls, screens and other components of the apps may vary depending on the app you installed. Use discretion when customizing the app that you select.
+> - Read [Sample app template updates](use-sample-apps.md#sample-app-template-updates) before you customize sample app templates to understand the impact of new releases to the sample app template versions.
 
 ## Open the sample app templates in Power Apps Studio
 
