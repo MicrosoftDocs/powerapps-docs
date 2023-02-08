@@ -113,7 +113,7 @@ In this step, we will enable the following flows that will publish reviewed data
 
 To enable these flows:
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 1.  From the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
 
@@ -136,7 +136,7 @@ If you face any issues working with flows, try [Troubleshooting a flow](/power-a
 
 The **Publish Data for All Facilities** flow contains the information about the data publish schedule. You can define the recurrence schedule when the flow will run automatically and publish the data that you have reviewed and marked as ready for publish.  
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 1.  From the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
 
@@ -172,7 +172,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 >
 > - Create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the SFTP server folder path as per the hospital. We'll show you how to do this later in this section.
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 1.  From the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
 
