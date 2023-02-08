@@ -19,14 +19,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-
 # Configure header properties in the form designer
 
 Makers can choose the columns displayed in the form header. Form headers have two main visual components, the form header and the flyout for the form header.
 
 ## Form header
 
-The form header is used to display common columns that are important for the table. Form headers can't display some columns, such as columns configured for a control, such as the checkbox or star rating controls. More information: [Controls that can be displayed on the form header](#controls-that-can-be-displayed-on-the-form-header)
+The form header is used to display common columns that are important for the table. Form headers can't display some columns, such as columns configured for a control, for example the star rating control. More information: [Controls that can be displayed on the form header](#controls-that-can-be-displayed-on-the-form-header)
 
 Most controls that can't be displayed in form header can be displayed in the [form header flyout](#form-header-flyout).
 
@@ -51,7 +50,6 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 
 > [!NOTE]
 > - Use the new form designer. The classic form designer doesn't provide the ability to show or hide the header flyout.
-> - The visibility of header flyout can only be controlled by choosing the option in the form header configuration.
 > - An image for a table will be displayed in the header only if the **Primary Image** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns). <br />
     Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute) attribute.
 
@@ -63,7 +61,7 @@ To ensure that key information is always visible, the framework displays up to f
 
 ## Controls that can be displayed on the form header
 
-High-density headers limit what controls will render in the header body and are limited to a checkbox, `datetime`, `decimal`, `duration`, `emailaddress`, `float`, `integer`, `languagepicker`, `lookup`, `money`, `phonenumber`, `picklist`, `radio`, `regarding`, `textbox`, `ticker`, and `timezonepicklist`.  Any other type of control, including custom Power Apps control framework controls or web resources won't be displayed.  These controls can be displayed in the form header flyout, if enabled in the form header properties.
+High-density headers limit what controls will render in the header body and are limited to a `checkbox`, `datetime`, `decimal`, `duration`, `emailaddress`, `float`, `integer`, `languagepicker`, `lookup`, `money`, `phonenumber`, `picklist`, `radio`, `regarding`, `textbox`, `ticker`, and `timezonepicklist`.  Any other type of control, including custom Power Apps control framework controls or web resources won't be displayed.  These controls can be displayed in the form header flyout, if enabled in the form header properties.
 
 ## Form designer messages related to form headers
 
