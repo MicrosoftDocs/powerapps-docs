@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.custom: 
   - model
 ms.reviewer: matp
-ms.date: 01/09/2023
+ms.date: 01/26/2023
 ms.subservice: dataverse-maker
 ms.author: nhelgren
 search.audienceType: 
@@ -67,7 +67,7 @@ In the following table, the data type mappings supported can assist you in plann
 
 ## Access and Dataverse data size comparison
 
-You'll notice some Dataverse columns don't have the same size capacity as Access. As noted above, if a column contains data too large to be migrated, the migration tool alerts the user that the contents can't be migrated. This is to prevent data loss. This decision is not based on the maximum possible size for the column, but rather the size of the actual data in each row.
+You'll notice some Dataverse columns don't have the same size capacity as Access. As noted above, if a column contains data too large to be migrated, the migration tool alerts the user that the contents can't be migrated. This is to prevent data loss. This decision isn't based on the maximum possible size for the column, but rather the size of the actual data in each row.
 
 |Access/Dataverse data type |Access limit  |Dataverse limit  |
 |---------|---------|---------|
@@ -77,8 +77,8 @@ You'll notice some Dataverse columns don't have the same size capacity as Access
 |Date and Time   |  Standard date and time | Standard data and time   |
 |Currency<sup>5</sup>  |  Min/max -922,337,203,685,477/+922,337,203,685,477   |  Min/max -922,337,203,685,477/+922,337,203,685,477   |
 |Decimal Number  | Min/max -10^28-1/+10^28-1 up to 28 decimals   |  Min/max -100,000,000,000/+100,000,000,000 up to 10 decimal places    |
-|Float (Number:Single) | -3.402823E38 to -1.401298E-45 for negative values and 1.401298E-45 to 3.402823E38 for positive values. |Min/max -100,000,000,000/+100,000,000,000 up to 5 decimal places |
-|Float (Number:Double) |-1.79769313486231E308 to -4.94065645841247E-324 for negative values and 4.94065645841247E-324 to 1.79769313486231E308 for positive values.  |Min/max -100,000,000,000/+100,000,000,000 up to 5 decimal places |
+|Float (Number:Single) | -3.402823E38 to -1.401298E-45 for negative values and 1.401298E-45 to 3.402823E38 for positive values. |Min/max -100,000,000,000/+100,000,000,000 up to five decimal places |
+|Float (Number:Double) |-1.79769313486231E308 to -4.94065645841247E-324 for negative values and 4.94065645841247E-324 to 1.79769313486231E308 for positive values.  |Min/max -100,000,000,000/+100,000,000,000 up to five decimal places |
 |Yes/No  |  Boolean   | Boolean   |
 |Int/Whole Number   |  Min/max -2^31/+2^31   | Min/max -2,147,483,647/+2,147,483,647   |
 |Lookup Wizard/ Lookup   | Multiple column return   |  Single column return   |
@@ -134,9 +134,9 @@ To successfully migrate a choice field from Access, the field must be created in
 
 ## Migrate Number:Single and Number:Double columns to Dataverse
 
-Both Access and Dataverse include the ability to store floating point numbers. Access uses `Number:Single` and `Number:Double` for this. These data types are often used for any number column. Dataverse has a **Floating Point Number** data type, but it has some limitations with how it's implemented. Dataverse only allows a maximum of five decimal places. Therefore, there is a danger of losing data when migrating floating point numbers from Access to Dataverse. Because of this possibility of data loss, `Number:Single` and `Number:Double` values can't currently be migrated to Dataverse.
+Both Access and Dataverse include the ability to store floating point numbers. Access uses `Number:Single` and `Number:Double` for this. These data types are often used for any number column. Dataverse has a **Floating Point Number** data type, but it has some limitations with how it's implemented. Dataverse only allows a maximum of five decimal places with a minimum/maximum value of -/+ 100,000,000,000. When migrating, the validator informs you that by migrating this data as a float you'll lose some decimal precision. If that's acceptable, you can migrate the tables automatically. During the migration process any rows that exceed the min/max size limits won't be migrated and will be stored locally in a file in Access just as with any other out of range data type.
 
-However, you can migrate Access `Number:Single` and `Number:Double` data to Dataverse by changing the data type in Access. You can use the Access table designer and change the type of `Number:Single` and `Number:Double` columns to **Decimal**. Then any row that does not exceed the minimum/maximum decimal limits can be migrated.
+However, if you need to migrate but don't want to lose decimal precision, you can migrate Access `Number:Single` and `Number:Double`  by changing the data type in Access. You can use the Access table designer and change the type of `Number:Single` and `Number:Double` columns to **Decimal**, which support up to 10 decimal places in Dataverse. Then any row that doesn't exceed the minimum/maximum decimal limits can be migrated.
 
 ### See also
 

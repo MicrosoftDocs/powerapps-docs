@@ -21,7 +21,7 @@ items:
     href: get-powerapps-cli.md
   - name: Learn Power Apps component framework
     href: /training/paths/use-power-apps-component-framework
-  - name: Tutorial
+  - name: Tutorials
     items:
     - name: Create your first component
       href: implementing-controls-using-typescript.md
@@ -49,8 +49,6 @@ items:
       href: component-framework-for-canvas-apps.md#add-components-to-a-canvas-app
     - name: Add components to portals (Preview)
       href: ../../maker/portals/component-framework-tutorial.md
-    - name: Update existing code components
-      href: updating-existing-controls.md
     - name: Publish code components on AppSource
       href: publish-components-app-source.md
     - name: Customize the editable grid control (Preview)

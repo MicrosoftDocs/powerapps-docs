@@ -46,9 +46,6 @@ After you select **Insert Template**, a window appears displaying a list of exis
 
 ### Enhanced email template selection dialog
 
-> [!Note] 
-> The enhanced email template editor is available only in environments with the Dynamics 365 Customer Service package installed.
-
 The application displays the enhanced email template selection window only if your admin has configured the [enhanced insert template dialog](customize-insert-email-template.md) option. You can perform the following actions in the enhanced email template selection window:
 
  -  Switch among list, tile, and grid views.

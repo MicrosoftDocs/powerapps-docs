@@ -47,6 +47,7 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 >
 > - The storage account and Synapse workspace must be created in the same Azure Active Directory (Azure AD) tenant as your Power Apps tenant.
 > - The storage account and Synapse workspace must be created in the same region as the Power Apps environment you will use the feature in and the same resource group.
+> - Using private endpoints for storage account or Synapse workspace isn't supported.
 > - You must have **Reader** role access to the resource group with the storage account and Synapse workspace.  
 > - To link the environment to Azure Data Lake Storage Gen2, you must have the Dataverse system administrator security role.
 > - Only tables that have change tracking enabled can be exported.
@@ -56,11 +57,11 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your preferred environment.
 
-2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link to data lake**.
+2. On the left navigation pane, select **Data**, select **Azure Synapse Link**, and then on the command bar, select **+ New link**.
 
     ![Navigate to Power Apps.](media/navigate-to-powerapps.png "Navigate to Power Apps")
 
-3. Select the the **Connect to your Azure Synapse workspace (Preview)** option.
+3. Select the **Connect to your Azure Synapse workspace** option.
 
 4. Select the **Subscription**, **Resource group**, **Workspace name**, and **Storage account**. Ensure that the Synapse workspace and storage account meet the requirements specified in the [Prerequisites](#prerequisites) section. Select **Next**.
 
