@@ -91,12 +91,10 @@ sections:
             required="true" />
           ```
 
-          With these properties defined, you can acccess the values using `context.parameters.entityId`` and `context.parameters.entityName`` respectively.
+          With these properties defined, you can access the values using `context.parameters.entityId` and `context.parameters.entityName` respectively.
           
-
           When registering the control in the form for a model-driven app, you must bind the **Entity Id** property to the column representing the unique 
           identifier for the record. In this case, the `accountid` for the [Account table](../data-platform/reference/entities/account.md).
-
 
           :::image type="content" source="media/configure-entityid-property.png" alt-text="Configure the Entity Id property to the accountid field":::
 
