@@ -91,19 +91,8 @@ sections:
             required="true" />
           ```
 
-          Will add them to the `IInputs` interface in the `ManifestTypes.d.ts` and your control can have these values passed into it.
-
-          ```typescript
-          export interface IInputs {
-              controlValue: ComponentFramework.PropertyTypes.NumberProperty;
-              entityId: ComponentFramework.PropertyTypes.StringProperty;
-              entityName: ComponentFramework.PropertyTypes.StringProperty;
-          }
-          export interface IOutputs {
-              controlValue?: number;
-          }
-
-          ```
+          With these properties defined, you can acccess the values using `context.parameters.entityId`` and `context.parameters.entityName`` respectively.
+          
 
           When registering the control in the form for a model-driven app, you must bind the **Entity Id** property to the column representing the unique 
           identifier for the record. In this case, the `accountid` for the [Account table](../data-platform/reference/entities/account.md).

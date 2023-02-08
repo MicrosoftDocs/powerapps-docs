@@ -63,7 +63,7 @@ Model-driven apps, canvas apps, & portals.
 
 The data provided to the component. Structure defined by the component's manifest, corresponding to parameter and dataset nodes.
 
-**Type**: `TInputs`
+**Type**: `IInputs`
 
 ### resources
 
