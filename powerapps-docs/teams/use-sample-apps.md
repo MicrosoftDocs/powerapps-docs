@@ -11,7 +11,6 @@ ms.author: saperlmu
 ms.reviewer: mkaur
 contributors:
   - mduelae
-recommendations: false
 ---
 
 # Use sample app templates in Microsoft Teams
