@@ -16,6 +16,8 @@ contributors:
 
 [!INCLUDE [context-description](includes/context-description.md)]
 
+[Power Apps component framework FAQs: How can I access the record id or table name?](../faq.yml#how-can-i-access-the-record-id-or-table-name)
+
 ## Available for
 
 Model-driven apps, canvas apps, & portals.
