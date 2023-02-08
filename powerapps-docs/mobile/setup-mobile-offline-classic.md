@@ -2,7 +2,7 @@
 title: Set up mobile offline (classic)
 ms.custom: Configure mobile offline synchronization
 description: Set up mobile offline for Power Apps mobile and Dynamics 365 phones and tablets app and
-ms.date: 01/09/2023
+ms.date: 02/08/2023
 ms.reviewer: 
 
 ms.suite: 
@@ -37,19 +37,13 @@ One of the first things you need to do is enable tables that will be available t
 To enable a table for mobile offline synchronization, follow the steps below.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-
-  
-2. In the navigation pane, select **Dataverse** > **Tables**.  
+ 
+2. In the navigation pane, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
   
 3. Select the row for the table that you want to enable for mobile offline, such as **Account**.  
 
-  
-   > ![Select the row for the table that you want to enable for mobile offline.](media/SelectTable.png "Select the row for the table that you want to enable for mobile offline.")
- 
-
 4. On the command bar, select **Properties**. 
 
-  
 5. On the **Edit table** pane, expand **Advanced options**. 
 
 6. Under **Rows in this table**, make sure the **Can be taken offline** check box is selected, and then select **Save**.
