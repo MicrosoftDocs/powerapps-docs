@@ -1,7 +1,7 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 02/08/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID Temp owner
@@ -37,12 +37,10 @@ More information: [Use the Dataverse Web API](webapi/overview.md)
 
 ### Organization service
 
-Use the .NET Framework SDK assemblies for projects that involve writing plug-ins or workflow extensions.
-
-More information: [Use the Dataverse Organization service](org-service/overview.md)
+Use classes provided in the Dataverse SDK for .NET assemblies to access the Organization web service from custom apps or for extending Dataverse operations using custom plug-ins or workflow activities. More information: [Use the Dataverse Organization service](org-service/overview.md)
 
 > [!NOTE]
-> Use the Xrm.Tooling assemblies if you are creating a Windows client application. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
+> Use the Xrm.Tooling assemblies if you want to access the Organization service using our PowerShell module or are creating a Windows client application and you want to use our custom login control. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
