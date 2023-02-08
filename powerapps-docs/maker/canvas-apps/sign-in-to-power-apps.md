@@ -21,7 +21,7 @@ contributors:
 
 To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
 
-For mormation on getting started, see [Get started with Power Apps](intro-maker-portal.md).
+For information on getting started, see [Get started with Power Apps](intro-maker-portal.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Power Apps sign in.](media/intro-maker-portal/power-apps-signin.png)
@@ -94,7 +94,7 @@ The Power Apps sharing experience requires users to have permissions in the tena
 - If multiple tabs in the same browser session are open, only resources in the most recently signed in tenant are accessible.
 
 ## Sign in using Microsoft Account (preview) 
-Anyone can build Power Apps, even if you don't have a work or school account. Simply sign up for a Dynamics 365 Sales trial using a [Microsoft Account](https://account.microsoft.com/) and then use that account to sign into [Power Apps](https://make.powerapps.com). 
+Anyone can build Power Apps, even if you don't have a work or school account. Simply sign-up for a Dynamics 365 Sales trial using a [Microsoft Account](https://account.microsoft.com/) and then use that account to sign into [Power Apps](https://make.powerapps.com). 
 
 During the 30 day trial period, you can make and play with as many apps as you like. If you want to build with Dataverse and/or premium connectors. However, if you plan to run these apps beyond the trial period or share them with others, then you need to create a (free) Azure AD account. 
 
@@ -103,22 +103,22 @@ During the 30 day trial period, you can make and play with as many apps as you l
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ### Where can I get a license with Power Apps use rights for my Microsoft Account?  
-The Dynamics 365 Sales free trial includes Power Apps use rights, along with other Dynamics and Power Platform use rights. You may sign up here: [Dynamics 365 free trial](https://dynamics.microsoft.com/dynamics-365-free-trial/).
+The Dynamics 365 Sales free trial includes Power Apps use rights, along with other Dynamics and Power Platform use rights. You may sign-up here: [Dynamics 365 free trial](https://dynamics.microsoft.com/dynamics-365-free-trial/).
 
 ![image](https://user-images.githubusercontent.com/11514622/217617662-25109f3c-d85a-404b-a4b3-459c08de04a1.png)
 
 > [!NOTE]
-> Not all Power Apps free licenses support Microsoft Account sign up. The list of free licenses that allow free sign up is expected to grow over time.
+> Not all Power Apps free licenses support Microsoft Account sign-up. The list of free licenses that allow free sign-up is expected to grow over time.
 
 ### How do I create model driven apps and use Dataverse? 
-Select or create an environment with Dataverse. You can create a Developer environments with Dataverse for free.
+Select or create an environment with Dataverse. You can create Developer environments with Dataverse for free.
 
 1. Sign in to [Power Apps](http://make.powerapps.com).
 2. Select the Environment picker. 
 3. In the **Need your own environment?** prompt, select **Try it now** to create an environment with Dataverse. 
 
 ### How do I access Power Platform Admin Center? 
-Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’t support Microsoft Account sign in. However, your Microsoft Account is associated with an Azure Active Directory tenant and you may provision an Azure Active Directory based identity to use in the Power Platform Admin Center. 
+Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’t support Microsoft account sign-in. However, your Microsoft Account is associated with an Azure Active Directory tenant and you may provision an Azure Active Directory based identity to use in the Power Platform Admin Center. 
 
 1.	Follow the steps under **How do I create an Azure Active Directory identity with the same administrative privileges as my Microsoft Account?**
 2.	Using the newly created Azure Active Directory identity, sign in to [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com). 
@@ -132,9 +132,9 @@ Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’
 ### The free license assigned to my Microsoft Account expired, how can I access Power Apps? 
 If your Microsoft Account is associated with an Azure Active Directory (Azure AD) tenant, you’ll be able to sign in to [Power Apps](https://make.powerapps.com) and edit your apps. However, without an active license you won’t be able to play the apps. 
 
-Today, Microsoft Accounts are bound to limited trial periods, you may not sign up for the same free license twice with the same account. Also, Microsoft Accounts cannot [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
+Today, Microsoft Accounts are bound to limited trial periods, you can't sign-up for the same free license twice with the same account. Also, Microsoft Accounts cannot [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
 
-You may proceed with building and running apps by creating an Azure AD identity in the same Azure AD tenant your Microsoft Account is associated and sign up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/share-app) with your Azure AD identity to proceed with editing and playing them. 
+You may proceed with building and running apps by creating an Azure AD identity in the same Azure AD tenant your Microsoft Account is associated and sign-up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/share-app) with your Azure AD identity to proceed with editing and playing them. 
 
 To create an Azure AD identity with administrative rights. Please follow the steps under “How do I create an Azure Active Directory identity with the same administrative privileges as my Microsoft Account?”.
 
@@ -149,7 +149,7 @@ Yes, however, you will need to add users to the Azure AD tenant associated with 
    1. Sign in to [https://portal.azure.com)](https://portal.azure.com). 
    2. Search for **Azure Active Directory**.
    3. [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user) or [Add a guest user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-guest-user). You can add users that have either a Microsoft Account or Azure AD identity. 
-3. With your Azure AD admin identity, either [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/) or sign up for [Power Apps trial](https://businessstore.microsoft.com/create-account/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). As an admin, you’ll receive 25 Power Apps per user trials. All of these trials expire. 
+3. With your Azure AD admin identity, either [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/) or sign-up for [Power Apps trial](https://businessstore.microsoft.com/create-account/signup?products=83d3609a-14c1-4fc2-a18e-0f5ca7047e46). As an admin, you’ll receive 25 Power Apps per user trials. All of these trials expire. 
 4. With your Azure AD admin identity, assign licenses to the users you added to your Azure AD tenant. With your Azure AD admin identity, [assign licenses to the users](/azure/active-directory/fundamentals/license-users-groups#assign-licenses-to-users-or-groups) you added to your Azure AD tenant. 
 5. Sign in to [Power Apps](https://make.powerapps.com) to proceed with [sharing your apps to users](share-app-guests.md). 
 
