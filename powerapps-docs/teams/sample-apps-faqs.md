@@ -1,6 +1,6 @@
 ---
-title: Frequently Asked Questions (FAQs) and answers when using sample app templates from Teams store | Microsoft Docs
-description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample app templates from Teams store
+title: Frequently Asked Questions (FAQs) and answers when using sample app templates | Microsoft Docs
+description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample app templates.
 author: msftsamperl
 
 ms.topic: conceptual
@@ -12,11 +12,12 @@ ms.reviewer: mkaur
 contributors:
   - msftsamperl
   - mduelae
+recommendations: false
 ---
 
 # Frequently Asked Questions (FAQs) for sample app templates
 
-In this article, learn about the frequently asked questions and the answers about using the sample app templates available in the Teams store.
+In this article, learn about the frequently asked questions and the answers about using the sample app templates.
 
 > [!IMPORTANT]
 > For any issues, feedback, support, or changes related to sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.

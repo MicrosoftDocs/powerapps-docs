@@ -46,7 +46,7 @@ You need to have **Contributor** permission for a model-driven app or canvas app
 
 When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
-1. Go to [Power Automate](https://flow.microsoft.com) and select **Create**.
+1. Go to [Power Automate](https://make.powerautomate.com) and select **Create**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select Create.](media/create-notification.png)

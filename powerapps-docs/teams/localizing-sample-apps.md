@@ -12,6 +12,7 @@ contributors:
   - joel-lindstrom
   - msftsamperl
   - mduelae
+recommendations: false
 ---
 
 # Localize sample app templates
