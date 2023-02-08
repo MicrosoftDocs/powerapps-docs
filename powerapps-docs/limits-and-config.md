@@ -96,7 +96,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
 | \*.blob.core.windows.net |https | Blob storage |
-| \*.flow.microsoft.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
 | vortex.data.microsoft.com |https |Telemetry |
 | localhost | https | Power Apps Mobile|
@@ -110,8 +110,9 @@ This list identifies all services to which Power Apps communicates and their usa
 <sup>2</sup> Replaces domain name `high.content.powerapps.us` used prior to July 2022. <br>
 <sup>3</sup> Replaces domain name `content.appsplatform.us` used prior to July 2022.
 
-> [!NOTE]
-> If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+> [!IMPORTANT]
+> - If you're using a VPN, it must be configured to exclude localhost from tunneling for Power Apps Mobile.
+> - If you are a US Government customer or a customer in China, there are additional service URLs that must be unblocked. More information:<br/>**US Government**: [Power Apps US Government service URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls), [Power Automate US Government service URLs](/power-automate/us-govt#power-automate-us-government-service-urls)<br/>**China**: [Power Platform and Dynamics 365 apps - operated by 21Vianet in China](/power-platform/admin/about-microsoft-cloud-china).  
 
 ## Deprecated endpoints
 
