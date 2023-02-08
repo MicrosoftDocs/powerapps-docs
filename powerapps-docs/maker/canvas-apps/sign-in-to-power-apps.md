@@ -132,7 +132,7 @@ Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’
 ### The free license assigned to my Microsoft Account expired, how can I access Power Apps? 
 If your Microsoft Account is associated with an Azure Active Directory (Azure AD) tenant, you’ll be able to sign in to [Power Apps](https://make.powerapps.com) and edit your apps. However, without an active license you won’t be able to play the apps. 
 
-Today, Microsoft Accounts are bound to limited trial periods, you can't sign-up for the same free license twice with the same account. Also, Microsoft Accounts cannot [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
+Today, Microsoft Accounts are bound to limited trial periods, you can't sign-up for the same free license twice with the same account. Also, Microsoft Accounts can't  [purchase Power Apps plans](https://powerapps.microsoft.com/pricing/).
 
 You may proceed with building and running apps by creating an Azure AD identity in the same Azure AD tenant your Microsoft Account is associated and sign-up for a [Power Apps Developer plan](https://powerapps.microsoft.com/developerplan/) with that identity. With your Microsoft Account you’ll need to [share your apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/share-app) with your Azure AD identity to proceed with editing and playing them. 
 
@@ -142,7 +142,7 @@ To create an Azure AD identity with administrative rights. Please follow the ste
 No. In the meantime, you can follow the steps called out in questions above where you add a new Azure Active Directory identity to the Azure AD tenant associated with your Microsoft Account to use the [Power Platform PowerShell cmdlets](/power-platform/admin/powerapps-powershell). 
 
 ### Can I share my apps with other users?
-Yes, however, you will need to add users to the Azure AD tenant associated with your Microsoft Account, you will need assign a license to these users and, finally, share your app with these users. As an admin, you may assign free licenses to users but these will expire. 
+Yes, however, you'll need to add users to the Azure AD tenant associated with your Microsoft Account, you'll need assign a license to these users and, finally, share your app with these users. As an admin, you may assign free licenses to users but these will expire. 
 
 1. Create an Azure AD identity with administrative rights. Please follow the steps under **How do I create an Azure AD identity with the same administrative privileges as my Microsoft Account?**.
 2. For each user you’d like to share an app, add their identity to Azure AD. 
