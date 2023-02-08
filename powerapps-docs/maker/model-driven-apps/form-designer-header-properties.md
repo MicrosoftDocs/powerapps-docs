@@ -34,61 +34,32 @@ Most controls that can't be displayed in form header can be displayed in the [fo
 
 ## Form header flyout
 
-The form header flyout displays when a user selects the down arrow located to the right of the form header, which can display more information otherwise hidden in the form header.
+The form header flyout displays when a user selects the chevron located to the right of the form header, which can display more information otherwise hidden in the form header. The header flyout enables users to edit column values.
 
 :::image type="content" source="media/form-header-flyout.png" alt-text="Form header flyout for the account main form that is displaying a control not viewable from the form header.":::
 
-## High-density header
-
-Model-driven app forms use a high-density form header to ensure that key information is always visible to users. High-density headers also make sure the row title never truncates and long row titles are displayed using multiple lines. Similarly, the high-density header also ensures that up to four column values are directly visible in the header and never truncated or hidden.  
-
-To ensure that key information is always visible, the framework displays up to four read-only column values and users can't directly edit the column values in the header. Visualizations such as custom components or web resources won't render on the header, but will be available in the flyout.
-
-<!-- When a form does not specify header density or when a new form is created, the framework defaults to high-density header. -->
-
-> [!div class="mx-imgBorder"] 
-> ![High-density form header.](media/form-header-high-density.png "High-density form header")
-    
-<!-- ### Configuring header density
-
-Use the new form designer to configure the header density; the classic form designer does not provide the ability to configure the header density.
-
-To configure the header density of a model-driven form, follow these steps:
-1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
-2.	Select the form header by selecting the header in the form preview or by using the [tree view](using-tree-view-on-form.md).
-3.	In the property pane, there's an option to use the flyout, which allows a user to edit the column shown on the header and any additional columns added to the header like a custom control, web resource, multi-line or choice. Go to the next section, [Header flyout](form-designer-header-properties.md#header-flyout) for more information.
-    > [!div class="mx-imgBorder"] 
-    > ![Configure header density.](media/configure-header-density.png "Configure header density")
-4.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users. -->
-
-## Header flyout
-
-The header flyout is displayed when users select the chevron in the form header. It enables users to edit column values and also displays visualizations such as custom components or web resources that are a part of the form header.
-
-The behavior of the header flyout changes depending on the header density configuration.
-
-### High-density header flyout
-
-With a high-density form header, the header flyout displays all header columns including the four columns that are directly displayed in the header. The framework defaults to show the header flyout when high-density header is being used. Makers can control the visibility of the header flyout with a high-density header.
-
-> [!div class="mx-imgBorder"] 
-> ![Header flyout with high-density header.](media/form-header-flyout-high-density.png "Header flyout with high-density header")
+The header flyout displays all header columns including the four columns that are directly displayed in the header. By default, the header flyout is available for display, but makers can hide it if needed.
 
 ### Show or hide the header flyout
 
 To show or hide the header flyout for a model-driven form, follow these steps:
 
-1.	Open the form designer to [create or edit a form](create-and-edit-forms.md).
-2.	Select the form header in the form preview or use the [tree view](using-tree-view-on-form.md) to select it.
-3.	In the property pane, select **High density** to use high-density form header. 
-4.	In the property pane, select **Show header flyout** to make the header flyout visible or clear it to hide the header flyout.
-5.	In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
+1. Open the form designer to [create or edit a form](create-and-edit-forms.md).
+1. Select the form header in the form preview or use the [tree view](using-tree-view-on-form.md) to select it.
+1. In the right property pane, select **Show header flyout** to make the header flyout visible or clear it to hide the header flyout.
+1. In the command bar, select **Save** to save the form, or select **Publish** to save and make your changes visible to users.
 
 > [!NOTE]
 > - Use the new form designer. The classic form designer doesn't provide the ability to show or hide the header flyout.
 > - The visibility of header flyout can only be controlled by choosing the option in the form header configuration.
 > - An image for a table will be displayed in the header only if the **Primary Image** attribute is defined for the table and the form property **Show image in the form** is enabled. More information: [Image columns](../data-platform/types-of-fields.md#image-columns). <br />
     Developers can specify an image for a table by using the [EntityMetadata.PrimaryImageAttribute](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute) attribute.
+
+## High-density header
+
+Model-driven app forms use a high-density form header to ensure that key information is always visible to users. High-density headers also make sure the row title never truncates and long row titles are displayed using multiple lines. Similarly, the high-density header also ensures that up to four column values are directly visible in the header and never truncated or hidden.  
+
+To ensure that key information is always visible, the framework displays up to four read-only column values and users can't directly edit the column values in the header. Visualizations such as custom components or web resources won't render on the header, but will be available in the flyout.
 
 ## Controls that can be displayed on the form header
 
