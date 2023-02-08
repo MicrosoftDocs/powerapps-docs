@@ -1,7 +1,7 @@
 ---
 title: View offline sync status (preview)
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
-ms.date: 01/31/2023
+ms.date: 02/08/2023
 ms.author: sericks
 author: sericks007
 manager: tapanm-MSFT
