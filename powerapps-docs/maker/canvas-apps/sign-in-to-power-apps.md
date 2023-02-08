@@ -126,8 +126,8 @@ Power Platform Admin Center (https://admin.powerplatform.microsoft.com) doesn’
 ### How do I create an Azure AD identity with the same administrative privileges as my Microsoft Account? 
 1.	Sign in to [https://portal.azure.com](https://portal.azure.com). 
 2.	Search for **Azure Active Directory**.
-3.	[Add a new user](https://learn.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user). 
-4.	[Assign an Azure Active directory role](https://learn.microsoft.com/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal#assign-roles). For administrative purposes you need to assign the same global administrator role your Microsoft Account has in Azure Active Directory.
+3.	[Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory#add-a-new-user). 
+4.	[Assign an Azure Active directory role](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal#assign-roles). For administrative purposes you need to assign the same global administrator role your Microsoft Account has in Azure Active Directory.
 
 ### The free license assigned to my Microsoft Account expired, how can I access Power Apps? 
 If your Microsoft Account is associated with an Azure Active Directory (Azure AD) tenant, you’ll be able to sign in to [Power Apps](https://make.powerapps.com) and edit your apps. However, without an active license you won’t be able to play the apps. 
@@ -139,7 +139,7 @@ You may proceed with building and running apps by creating an Azure AD identity 
 To create an Azure AD identity with administrative rights. Please follow the steps under “How do I create an Azure Active Directory identity with the same administrative privileges as my Microsoft Account?”.
 
 ### Can I use my Microsoft Account with the Power Platform PowerShell cmdlets? 
-No. In the meantime, you can follow the steps called out in questions above where you add a new Azure Active Directory identity to the Azure AD tenant associated with your Microsoft Account to use the [Power Platform PowerShell cmdlets](https://learn.microsoft.com/power-platform/admin/powerapps-powershell). 
+No. In the meantime, you can follow the steps called out in questions above where you add a new Azure Active Directory identity to the Azure AD tenant associated with your Microsoft Account to use the [Power Platform PowerShell cmdlets](/power-platform/admin/powerapps-powershell). 
 
 ### Can I share my apps with other users?
 Yes, however, you will need to add users to the Azure AD tenant associated with your Microsoft Account, you will need assign a license to these users and, finally, share your app with these users. As an admin, you may assign free licenses to users but these will expire. 
