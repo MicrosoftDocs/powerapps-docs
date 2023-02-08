@@ -2,7 +2,7 @@
 title: "Manage model-driven app settings in the Power Apps app designer | MicrosoftDocs"
 description: "Learn how to manage the settings for your app"
 keywords: ""
-ms.date: 01/26/2023
+ms.date: 02/08/2023
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -58,7 +58,7 @@ When you select **Settings** from the command bar, select **Features** to enable
 
 Here are a few of the features available to app makers: 
 
-- **Enable Power BI quick report visualizations on a table**. When enabled, lets app users view table data from a Power BI quick report. More information: [Visualize data in a view with Power BI service](../../user/visualize-in-power-bi.md)
+- **Enable Power BI quick report visualizations on a table**. Enabled by default, which lets app users create a Power BI quick report from a table view by selecting the **Visualize this view** command on the app command bar. More information: [Visualize data in a view with Power BI service](../../user/visualize-in-power-bi.md)
 - **In app notifications**. When enabled, the app polls for new in-app notifications and displays them. More information: [Send in-app notifications within model-driven apps](../../developer/model-driven-apps/clientapi/send-in-app-notifications.md)
 - **Lock tabs at the top of forms on mobile and tablets**. When enabled, tabs will remain visible at the top of a form while users scroll through the data on the form. More information: [Lock tabs at the top of forms](../../mobile/use-custom-model-driven-app-on-mobile.md#lock-tabs-at-the-top-of-forms)
 - **Mobile commanding improvements**. When enabled, optimizes the command bar for phone and tablet providing easy access to contextual commands to users helping increase productivity and satisfaction. More information: [Mobile commanding improvements](../../mobile/use-custom-model-driven-app-on-mobile.md#mobile-commanding-improvements)
