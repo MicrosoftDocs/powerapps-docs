@@ -1,5 +1,15 @@
 {
   "redirections": [
+   {
+      "source_path": "powerapps-docs/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md",
+      "redirect_url": "../work-with-data/retrieve-specific-columns-entity-via-query-apis",
+      "redirect_document_id": false
+   }, 
+   {
+      "source_path": "powerapps-docs/developer/component-framework/updating-existing-controls.md",
+      "redirect_url": "overview",
+      "redirect_document_id": false
+    }, 
     {
       "source_path": "powerapps-docs/maker/portals/embed-portal-website.md",
       "redirect_url": "/power-pages/configure/embed-website",
