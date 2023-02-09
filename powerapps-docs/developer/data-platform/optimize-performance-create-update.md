@@ -27,7 +27,7 @@ Performance is important for all applications, but it's critical for certain sce
 
 When you must create or update large numbers of records, the choice you make as a developer can save hours of time to complete a task. Applications that perform operations in bulk typically make the most extreme requests for shared resources and will encounter [Service protection API limits](api-limits.md). This article provides options you may use to achieve maximum throughput for the level of resources allocated to your Dataverse environment.
 
-A key point to appreciate in this scenario is that your code runs in a client application that makes individual calls to Dataverse APIs and you manage any errors that occur. The situation is different with plug-ins.
+A key point to recognize in this scenario is that your code runs in a client application that makes individual calls to Dataverse APIs and you manage any errors that occur. You have the option to re-try when an operation fails. The situation is different with plug-ins.
 
 ### Plug-ins
 
@@ -35,7 +35,7 @@ Plug-ins extend the behavior of existing Dataverse messages on the server or to 
 
 Plug-ins run in a sandbox, which is a virtual computer near but isolated from the Dataverse server. Your plug-in code is a client application that is invoked by Dataverse whenever an API call to Dataverse requires the logic your plug-in contains. When registered as part of a synchronous step, the time to perform the plug-in logic contributes to the total time of the operation it extends or implements. Plug-ins registered on synchronous steps can have a significant impact on the total performance of any Dataverse API used by a client application.
 
-Because the synchronous step is part of the transaction, any error that occurs in your plug-in code MUST force the entire operation to roll back in order to maintain data integrity.
+Because the synchronous step is part of the transaction, any error that occurs in your plug-in code MUST force the entire operation to roll back in order to maintain data integrity. Unlike bulk data operations from a client application, you cannot manage errors except to return the error as an [InvalidPluginExecutionException](xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException).
 
 Because of the way plug-ins run, there are the following constraints.
 
