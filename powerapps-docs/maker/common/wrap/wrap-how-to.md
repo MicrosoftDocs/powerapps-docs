@@ -5,7 +5,7 @@ author: makolomi
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 1/13/2023
+ms.date: 2/9/2023
 ms.subservice: canvas-maker
 ms.author: makolomi
 search.audienceType: 
@@ -95,7 +95,7 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Set the **Sign my app (prview)** toggle to **ON** to code sign your ap pand then select **Next**. For more information on code sign, see:
+3. Set the **Sign my app (preview)** toggle to **ON** to code sign your app and then select **Next**. For more information on code sign, see:
   
    - [Code sign for iOS](code-sign-ios.md)
    - [Code sign for Android](code-sign-android.md) 
