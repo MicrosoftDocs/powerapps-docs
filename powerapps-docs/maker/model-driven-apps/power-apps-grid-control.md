@@ -50,7 +50,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
      - **Yes**: Users can select and copy data from the grid.
      - **No**: Users can’t select and copy data from the grid.
    clients.
-   **Navigation types allowed**: Determines which lookup controls in the grid render as hyperlinks. The default value is All.
+   - **Navigation types allowed**: Determines which lookup controls in the grid render as hyperlinks. The default value is All.
      - **All**: All table lookup columns render in the grid as a hyperlink.
      - **Primary only**: Suppresses hyperlinks on all lookup fields except the primary column for the selected table.
 
