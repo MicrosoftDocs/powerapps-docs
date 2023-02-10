@@ -5,10 +5,11 @@ items:
     href: overview.md
   - name: What are code components
     href: custom-controls-overview.md
+    expanded: true
     items:
       - name: Manifest
         href: custom-controls-overview.md#manifest
-      - name: Component implementation
+      - name: Implementation
         href: custom-controls-overview.md#component-implementation
       - name: Resources
         href: custom-controls-overview.md#resources                  
