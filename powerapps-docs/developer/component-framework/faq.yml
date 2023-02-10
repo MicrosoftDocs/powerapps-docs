@@ -98,12 +98,9 @@ sections:
 
           :::image type="content" source="media/configure-entityid-property.png" alt-text="Configure the Entity Id property to the accountid field":::
 
-          For the **Entity Name** property, bind the value to the `entitylogicalname` field.
+          For the **Entity Name** property, you can bind the value to the `entitylogicalname` field or bind to a static value, such as `account``.
 
           :::image type="content" source="media/configure-entity-name-property.png" alt-text="Configure the Entity Name property to the accountid field":::
-
-          > [!NOTE]
-          > At the time of this writing, you must use the classic form editor to set these property values in model-driven apps.
 
      
 additionalContent: |
