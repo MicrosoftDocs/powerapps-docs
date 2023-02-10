@@ -1,10 +1,8 @@
 ---
 title: "User and team tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about user and team management using which you can create and maintain user accounts and profiles." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 01/13/2023
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -74,7 +72,7 @@ In Dataverse:
 1. Permanently delete the system user by an API call a second time
 
 > [!TIP]
-> There is an over-ride where the user row in Dataverse can be deleted without permanently deleting the user's AD record in Azure. This can be done by setting the [OrgDbOrgSetting](reference/entities/organization#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This removes the need to do step #2 in the above Azure procedure.
+> There is an over-ride where the user row in Dataverse can be deleted without permanently deleting the user's AD record in Azure. This can be done by setting the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This removes the need to do step #2 in the above Azure procedure.
 
 More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), [Update and delete table rows using the Organization Service](org-service/entity-operations-update-delete.md)
 
