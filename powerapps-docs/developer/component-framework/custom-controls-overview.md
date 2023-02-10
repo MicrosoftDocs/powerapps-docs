@@ -1,10 +1,9 @@
 ---
 title: "What are code components? | MicrosoftDocs"
 description: "Use the Power Apps component framework to create code components to provide enhanced user experiences for users to view and work with data in forms, views, and dashboards."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 11/27/2022
+ms.author: hemantg
+author: HemantGaur
+ms.date: 02/10/2023
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: pcf
@@ -45,7 +44,7 @@ When a user configures a code component, the data in the manifest file filters t
 
 ## Component implementation
 
-Code components are implemented using TypeScript. Each code component must include an object that implements the methods described in the code component interface. The CLI will auto-generate an `index.ts` file that includes stubbed implementations for these methods. This file is auto-generated via CLI tooling with main stub methods.
+Code components are implemented using TypeScript. Each code component must include an object that implements the methods described in the code component interface. The [Power Platform CLI](/power-platform/developer/cli/introduction) will auto-generate an `index.ts` file that includes stubbed implementations for these methods. This file is auto-generated using the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command with main stub methods.
 
 The object implements the following methods:
 
