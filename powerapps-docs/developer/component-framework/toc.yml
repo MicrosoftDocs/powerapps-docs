@@ -5,17 +5,7 @@ items:
     href: overview.md
   - name: Code components
     href: custom-controls-overview.md
-    displayName: "What are code components?"
-    expanded: true
-    items:
-      - name: Manifest
-        href: custom-controls-overview.md#manifest
-      - name: Implementation
-        href: custom-controls-overview.md#component-implementation
-      - name: Resources
-        href: custom-controls-overview.md#resources                  
-  - name: Limitations
-    href: limitations.md
+    displayName: "What are code components?"                
   - name: For model-driven apps
     href: code-components-model-driven-apps.md
   - name: For canvas apps
@@ -26,8 +16,8 @@ items:
     href: react-controls-platform-libraries.md
   - name: Get tooling
     href: get-powerapps-cli.md
-  - name: Online learning
-    href: /training/paths/use-power-apps-component-framework
+  - name: Limitations
+    href: limitations.md
   - name: Tutorials
     items:
     - name: Create your first component
@@ -38,6 +28,8 @@ items:
       href: tutorial-create-model-driven-app-dataset-component.md
     - name: Create a canvas app dataset component
       href: tutorial-create-canvas-dataset-component.md
+  - name: Online learning
+    href: /training/paths/use-power-apps-component-framework      
   - name: Code components ALM
     href: code-components-alm.md
   - name: Best practices
