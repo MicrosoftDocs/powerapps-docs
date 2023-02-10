@@ -16,7 +16,7 @@ contributors:
 
 # How to build apps for Microsoft Teams
 
-The [sample app templates](use-sample-apps-from-teams-store.md) for Microsoft Teams are designed, and built with the following goals:
+The [sample app templates](use-sample-apps.md) for Microsoft Teams are designed, and built with the following goals:
 
 - Provide fully functional apps for Teams that have relevance across multiple industries.
 - Provide examples of deeper integration of line-of-business data from Power Apps into collaborative elements of Teams to drive better more productive workloads.
@@ -127,8 +127,6 @@ To share an app for broad distribution, follow these steps:
     ![Toggle colleagues can use to on](media/how-templates-are-built/share-screen.png "Toggle colleagues can use to on")
 
 1. Select **Save**.
-
-Users will now be able to find your app in the Teams store in the **Built for[company name]** section.
 
 > [!NOTE]
 > You'll need to set table permissions for the Microsoft Dataverse tables included in your app before users will be able to use it. For more information on table permissions, see [Set permission and share apps with colleagues](set-perms-and-share.md).

@@ -514,6 +514,6 @@ This action should load all the required data appropriately after the app opens.
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
 - [Customize sample app templates](customize-sample-apps.md)
 - [Sample app templates FAQs](sample-apps-faqs.md)
-- [Use sample app templates from the Teams store](use-sample-apps-from-Teams-store.md)
+- [Use sample app templates in Microsoft Teams](use-sample-apps.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

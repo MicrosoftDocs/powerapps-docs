@@ -4,7 +4,7 @@ description: Configure mobile offline profiles for files and images.
 author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 02/15/2022
+ms.date: 02/08/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -31,7 +31,7 @@ Follow the steps in this topic, for a mobile offline profile that has a table wi
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-2. On the left nav select **Data** to expand it and then select **Tables**.   
+2. In the left navigation, select **Tables**. [!include [left nav](../includes/left-navigation-pane.md)] 
   
 3. Select the **Display name** of a column where **Data type** is set to **File** or **Image**.
 

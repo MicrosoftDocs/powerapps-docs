@@ -1,5 +1,15 @@
 {
   "redirections": [
+   {
+      "source_path": "powerapps-docs/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md",
+      "redirect_url": "../work-with-data/retrieve-specific-columns-entity-via-query-apis",
+      "redirect_document_id": false
+   }, 
+   {
+      "source_path": "powerapps-docs/developer/component-framework/updating-existing-controls.md",
+      "redirect_url": "overview",
+      "redirect_document_id": false
+    }, 
     {
       "source_path": "powerapps-docs/maker/portals/embed-portal-website.md",
       "redirect_url": "/power-pages/configure/embed-website",
@@ -7252,142 +7262,142 @@
     },
     {
       "source_path": "powerapps-docs/teams/boards-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Boards",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/boards.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Boards",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/bulletins-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/bulletins-contact-phone.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/bulletins-deploy-broadly.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/bulletins-notification-preference.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/bulletins-notify-me.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-bulletins.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-employee-ideas.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-inspection-steps.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-inspections.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-issue-reporting.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-milestones.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-profile-plus.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/ProfilePlus",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/deploy-employee-ideas-broad-distribution.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/deploy-profile-plus-broad-distribution.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/ProfilePlus",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/employee-ideas-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/employee-ideas.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-issue-auto-assignment.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-issue-remove-planner.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-issue-rename-work-order.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-issue-sign-up-notification.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-issue-urgency.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-milestones-add-column.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-milestones-send-notification.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/extend-milestones-weekly-report.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/get-connected-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/GetConnected",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/get-connected.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/GetConnected",
       "redirect_document_id": "false"
     },
     {
@@ -7397,72 +7407,72 @@
     },
     {
       "source_path": "powerapps-docs/teams/inspection-adaptive-card.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspection-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspection-deploy-broad.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspection.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspections-hierarchy-locations.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/issue-reporting-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/issue-reporting-broad-distribution.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/issue-reporting.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/make-ideas-editable-by-original-creator.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/milestones-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/milestones-broad-distribution.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/milestones.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Milestones",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/new-bulletin-alert.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/notify-manager-inspections.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
       "redirect_document_id": "false"
     },
     {
@@ -7472,22 +7482,22 @@
     },
     {
       "source_path": "powerapps-docs/teams/perspectives.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Perspectives",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/profile-app.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/ProfilePlus",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/profile-plus-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/ProfilePlus",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/profile-plus-org-specific.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/ProfilePlus",
       "redirect_document_id": "false"
     },
     {
@@ -7502,17 +7512,17 @@
     },
     {
       "source_path": "powerapps-docs/teams/bulletins.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/how-to.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/HowTo",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/how-to-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/HowTo",
       "redirect_document_id": "false"
     },
     {
