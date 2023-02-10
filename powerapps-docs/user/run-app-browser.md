@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/23/2022
+ms.date: 02/10/2023
 ms.subservice: end-user
 ms.author: sericks
 manager: tapanm-MSFT
