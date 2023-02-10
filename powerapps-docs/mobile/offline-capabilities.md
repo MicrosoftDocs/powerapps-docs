@@ -79,7 +79,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Supported view**: Only System views and Quick view are supported in mobile offline. Personal views are not supported.
 
-- **Offline search**: Available only for offline tables. User can only search one table at a time. Only categorized search is supported in offline mode and not relevant search.
+- **Offline search**: Available only for offline tables. User can only search one table at a time. Global search defaults to categorized search in offline mode, even if Dataverse search is enabled, as Dataverse search is not supported in offline mode. On grid pages, view-based search (Filter by keyword) is not supported in offline mode and grid search switches to quick find based search.
 
 - **Notes on the Timeline control**: Notes on the Timeline control are available in offline mode. You can take pictures, read notes, and add/remove attachments in offline mode.
   > [!NOTE]
