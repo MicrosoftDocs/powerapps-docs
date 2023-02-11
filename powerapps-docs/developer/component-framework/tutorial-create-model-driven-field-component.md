@@ -153,7 +153,7 @@ After the component is built, you'll see that:
    > [!NOTE]
    > Do not modify the contents of the `generated` and `out` folders directly. They'll be overwritten as part of the build process.
 
-## Implement the Choices picker Fluent UI React component
+## Implement the ChoicesPicker Fluent UI React component
 
 When the code component uses [React](https://reactjs.org/), there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
 
@@ -223,7 +223,7 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 
 ### ChoicesPickerComponent design notes
 
-This section includes comments on the design of the ChoicesPickerComponent.
+This section includes comments on the design of the `ChoicesPickerComponent`.
 
 #### It is a functional component
 
@@ -249,7 +249,7 @@ When importing the `ChoiceGroup` Fluent UI components using path-based imports, 
 
 #### Description of 'props'
 
-The input props have the following attributes that are provided by `index.ts`:
+The input props have the following attributes that will be provided by `index.ts` in the `updateView` method.:
 
 |`prop`|Description|
 |---------|---------|
@@ -292,9 +292,20 @@ If parsing of the JSON configuration input property fails, the error is rendered
 
 You need to update the generated `index.ts file` to render the ChoicesPickerComponent.
 
+<!-- TODO: I think this belongs someplace else -->
 When using React inside a code component, the rendering of the root component is performed inside the [`updateView`](reference\control\updateview.md). All the values needed to render the component are passed into the component such that when they are changed, and then it is re-rendered.
 
+### Add import statements and initialize icons
+
 Before you can add the `ChoicesPickerComponent` to the `index.ts`, you  must add the following at the top of the file:
+
+# [Before](#tab/before)
+
+```typescript
+import { IInputs, IOutputs } from "./generated/ManifestTypes";
+```
+
+# [After](#tab/after)
 
 ```typescript
 import { IInputs, IOutputs } from './generated/ManifestTypes';
@@ -306,43 +317,81 @@ import { ChoicesPickerComponent } from './ChoicesPickerComponent';
 initializeIcons(undefined, { disableWarnings: true });
 ```
 
+---
+
 > [!NOTE]
 > The import of `initializeIcons` is required because you're using the Fluent UI icon set. You need to call `initializeIcons` to load the icons inside the test harness. Inside model-driven apps, they're already initialized.
 
+### Add attributes to ChoicesPicker class
+
 The code component maintains its instance state using attributes. (This is different to React component state). Inside the `index.ts` `ChoicesPicker` class, add the following attributes:
 
+# [Before](#tab/before)
+
 ```typescript
-notifyOutputChanged: () => void;
-rootContainer: HTMLDivElement;
-context: ComponentFramework.Context<IInputs>;
-selectedValue: number | undefined;
+export class ChoicesPicker implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 ```
 
-- `notifyOutputChanged` - Holds a reference to the method used to notify the model-driven app that a user has changed a choice value and the code component is ready to pass it back to the parent context.
-- `rootContainer` - HTML DOM element that's created to hold the code component inside the model-driven app.
-- `context` - Power Apps component framework context that's used to read the properties defined in the manifest and other runtime properties, and access API methods such as `trackContainerResize`.
-- `selectedValue` - Holds the state of the choice selected by the user so that it can be returned inside the `getOutputs` method.
+# [After](#tab/after)
+
+```typescript
+export class ChoicesPicker implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+    notifyOutputChanged: () => void;
+    rootContainer: HTMLDivElement;
+    selectedValue: number | undefined;
+    context: ComponentFramework.Context<IInputs>;
+```
+
+---
+
+The following table explains these attributes:
+
+|Attribute|Description|
+|---------|---------|
+|`notifyOutputChanged`|Holds a reference to the method used to notify the model-driven app that a user has changed a choice value and the code component is ready to pass it back to the parent context.|
+|`rootContainer`|HTML DOM element that's created to hold the code component inside the model-driven app.|
+|`selectedValue`|Holds the state of the choice selected by the user so that it can be returned inside the `getOutputs` method.|
+|`context`|Power Apps component framework context that's used to read the properties defined in the manifest and other runtime properties, and access API methods such as `trackContainerResize`.|
+
+### Update the `init` method
 
 To set these attributes, update the `init` method to:
 
+
+# [Before](#tab/before)
+
 ```typescript
-public init(
-    context: ComponentFramework.Context<IInputs>,
-    notifyOutputChanged: () => void,
-    state: ComponentFramework.Dictionary,
-    container: HTMLDivElement,
-  ): void {
-    this.notifyOutputChanged = notifyOutputChanged;
-    this.rootContainer = container;
-    this.context = context;
-  }
+    public init(
+        context: ComponentFramework.Context<IInputs>, 
+        notifyOutputChanged: () => void, 
+        state: ComponentFramework.Dictionary, 
+        container: HTMLDivElement): 
+        void {
+        // Add control initialization code
+    }
 ```
 
-The `init` method is called when the code component is initialized on an app screen. You store a reference to the following:
+# [After](#tab/after)
 
-- `notifyOutputChanged` - This is the callback if you call to notify the canvas app that one of the properties has changed.
+```typescript
+    public init(
+        context: ComponentFramework.Context<IInputs>, 
+        notifyOutputChanged: () => void, 
+        state: ComponentFramework.Dictionary, 
+        container: HTMLDivElement): 
+        void {
+          this.notifyOutputChanged = notifyOutputChanged;
+          this.rootContainer = container;
+          this.context = context;
+    }
+```
 
-- `rootContainer` - This is the DOM element that you add your code component UI.
+---
+
+
+The `init` method is called when the code component is initialized on an app screen. This code sets the values in the attributes you added to the `ChoicesPicker` class in the previous step.
+
+### Add the `onChange` method
 
 When the user changes the value selected, you must call the `notifyOutputChanged` from the `onChange` event.
 Add a function:
@@ -354,7 +403,17 @@ onChange = (newValue: number | undefined): void => {
 };
 ```
 
-Update the `getOutputs` method:
+### Update the `getOutputs` method
+
+# [Before](#tab/before)
+
+```typescript
+public getOutputs(): IOutputs {
+    return {};
+}
+```
+
+# [After](#tab/after)
 
 ```typescript
 public getOutputs(): IOutputs {
@@ -362,10 +421,24 @@ public getOutputs(): IOutputs {
 }
 ```
 
+---
+
 > [!TIP]
 > If you've written client API scripts before in model-driven apps, you may be used to using the form context to update attribute values. Code components should never access this context. Instead, rely on `notifyOutputChanged` and `getOutputs` to provide one or more changed values. You don't need to return all bound properties defined in the `IOutput` interface, only the ones that have changed their value.
 
+### Update the `updateView` method
+
 Now, update the `updateView` to render the `ChoicesPickerComponent`:
+
+# [Before](#tab/before)
+
+```typescript
+  public updateView(context: ComponentFramework.Context<IInputs>): void {
+      // Add code to update control view
+  }
+```
+
+# [After](#tab/after)
 
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -385,9 +458,24 @@ public updateView(context: ComponentFramework.Context<IInputs>): void {
 }
 ```
 
+---
+
 Notice that you're pulling the label and options from `context.parameters.value`, and the `value.raw` provides the numeric choice selected or `null` if no value is selected.
 
+
+### Edit the destroy function
+
 Lastly, you need to tidy up when the code component is destroyed:
+
+# [Before](#tab/before)
+
+```typescript
+public destroy(): void {
+    // Add code to cleanup control if necessary
+}
+```
+
+# [After](#tab/after)
 
 ```typescript
 public destroy(): void {
