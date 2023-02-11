@@ -16,7 +16,7 @@ contributors:
 
 # Tutorial: Creating a model-driven app field component
 
-In this tutorial, you'll create a model-driven app `field` component, and deploy, configure, and test the component on a form using Visual Studio Code. This code component displays a set of choices on the form with an icon next to each choice value. The component uses some of the advanced features of model-driven apps, such as choices column definitions (metadata) and field-level security.
+In this tutorial, you'll create a model-driven app `field` component, and deploy, configure, and test the component on a form using Visual Studio Code. This code component displays a set of choices on the form with an icon next to each choice value. The component uses some of the advanced features of model-driven apps, such as choices column definitions (metadata) and column-level security.
 
 In addition to these, you'll also ensure the code component follows best practice guidance:
 
@@ -59,9 +59,9 @@ To create a new `pcfproj`:
    pac pcf init -ns SampleNamespace -n ChoicesPicker -t field -npm
    ```
 
-This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the required modules. The above command will also run `npm install` command for you to install the necessary modules.
+This adds a new `ChoicesPicker.pcfproj` and related files to the current folder, including a `package.json` that defines the required modules. The above command will also run `npm install` command for you to install the necessary modules.
 
-```
+```powershell
 Running 'npm install' for you...
 ```
 
@@ -274,7 +274,7 @@ The `ChoicesPickerComponent` is a controlled component, so once the model-driven
 
 The assignment of the `props` constant: `const { label, value, options, onChange, configuration } = props;` uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). In this way, you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
 
-### Use of React components and hooks
+#### Use of React components and hooks
 
 The following explains how `ChoicesPickerComponent.tsx` uses React components and hooks:
 
@@ -293,11 +293,11 @@ If parsing of the JSON configuration input property fails, the error is rendered
 You need to update the generated `index.ts file` to render the ChoicesPickerComponent.
 
 <!-- TODO: I think this belongs someplace else -->
-When using React inside a code component, the rendering of the root component is performed inside the [`updateView`](reference\control\updateview.md). All the values needed to render the component are passed into the component such that when they are changed, and then it is re-rendered.
+When using React inside a code component, the rendering of the root component is performed inside the [`updateView`](reference\control\updateview.md) method. All the values needed to render the component are passed into the component such that when they are changed, and then it is re-rendered.
 
 ### Add import statements and initialize icons
 
-Before you can add the `ChoicesPickerComponent` to the `index.ts`, you  must add the following at the top of the file:
+Before you can use the `ChoicesPickerComponent` in the `index.ts`, you  must add the following at the top of the file:
 
 # [Before](#tab/before)
 
@@ -355,41 +355,42 @@ The following table explains these attributes:
 
 ### Update the `init` method
 
-To set these attributes, update the `init` method to:
+To set these attributes, update the `init` method.
 
 
 # [Before](#tab/before)
 
 ```typescript
-    public init(
-        context: ComponentFramework.Context<IInputs>, 
-        notifyOutputChanged: () => void, 
-        state: ComponentFramework.Dictionary, 
-        container: HTMLDivElement): 
-        void {
-        // Add control initialization code
-    }
+public init(
+    context: ComponentFramework.Context<IInputs>, 
+    notifyOutputChanged: () => void, 
+    state: ComponentFramework.Dictionary, 
+    container: HTMLDivElement): 
+    void {
+    // Add control initialization code
+}
 ```
 
 # [After](#tab/after)
 
 ```typescript
-    public init(
-        context: ComponentFramework.Context<IInputs>, 
-        notifyOutputChanged: () => void, 
-        state: ComponentFramework.Dictionary, 
-        container: HTMLDivElement): 
-        void {
-          this.notifyOutputChanged = notifyOutputChanged;
-          this.rootContainer = container;
-          this.context = context;
-    }
+public init(
+    context: ComponentFramework.Context<IInputs>, 
+    notifyOutputChanged: () => void, 
+    state: ComponentFramework.Dictionary, 
+    container: HTMLDivElement): 
+    void {
+      this.notifyOutputChanged = notifyOutputChanged;
+      this.rootContainer = container;
+      this.context = context;
+}
 ```
 
 ---
 
 
-The `init` method is called when the code component is initialized on an app screen. This code sets the values in the attributes you added to the `ChoicesPicker` class in the previous step.
+The `init` method is called when the code component is initialized on an app screen.
+
 
 ### Add the `onChange` method
 
@@ -433,9 +434,9 @@ Now, update the `updateView` to render the `ChoicesPickerComponent`:
 # [Before](#tab/before)
 
 ```typescript
-  public updateView(context: ComponentFramework.Context<IInputs>): void {
-      // Add code to update control view
-  }
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    // Add code to update control view
+}
 ```
 
 # [After](#tab/after)
@@ -483,6 +484,10 @@ public destroy(): void {
 }
 ```
 
+---
+
+More information: [ReactDOM.unmountComponentAtNode](https://reactjs.org/docs/react-dom.html#unmountcomponentatnode)
+
 ## Start the test harness
 
 Ensure all the files are saved and at the terminal use:
@@ -502,71 +507,167 @@ You'll see that the test harness starts with the choices picker rendered inside 
 
 When you change the option selected, you'll see the value in the **Data Inputs** panel on the right. Additionally, if you change the value, the component shows the associated value updated.
 
-### Supporting read-only and field-level security
+## Supporting read-only and column-level security
 
-When creating model-driven apps `field` components, enterprise applications need to respect the control state when read-only or masked due to field-level security. If the code component does not render a read-only UI when the column is read-only, in some circumstances (for example, when a record is inactive) a column can be updated by the user where it should not be. More information: [Field level security in model-driven apps](/power-platform/admin/field-level-security).
+When creating model-driven apps `field` components, applications need to respect the control state when read-only or masked due to column-level security. If the code component does not render a read-only UI when the column is read-only, in some circumstances (for example, when a record is inactive) a column can be updated by the user where it should not be. More information: [Column-level security to control access](/power-platform/admin/field-level-security).
 
-Inside the `updateView`, add the following code to get the disabled and masked flags:
+### Edit the updateView method for read-only and column level security
+
+In `index.ts`, edit the `updateView` method to add the following code to get the `disabled` and `masked` flags:
+
+# [Before](#tab/before)
 
 ```typescript
-let disabled = context.mode.isControlDisabled;
-let masked = false;
-if (value.security) {
-    disabled = disabled || !value.security.editable;
-    masked = !value.security.readable;
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    const { value, configuration } = context.parameters;
+    if (value && value.attributes && configuration) {
+        ReactDOM.render(
+            React.createElement(ChoicesPickerComponent, {
+                label: value.attributes.DisplayName,
+                options: value.attributes.Options,
+                configuration: configuration.raw,
+                value: value.raw,
+                onChange: this.onChange,
+            }),
+            this.rootContainer,
+        );
+    }
 }
 ```
 
-The `value.security` will be populated only inside a model-driven app if field-level security configuration is applied to the bound column.
-
-These values can then be passed into the React component via its props:
+# [After](#tab/after)
 
 ```typescript
-ReactDOM.render(
-    React.createElement(ChoicesPicker, {
-    ... 
-    disabled: disabled,
-    masked: masked,
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    const { value, configuration } = context.parameters;
+
+    let disabled = context.mode.isControlDisabled;
+    let masked = false;
+    if (value.security) {
+        disabled = disabled || !value.security.editable;
+        masked = !value.security.readable;
+    }
+
+    if (value && value.attributes && configuration) {
+        ReactDOM.render(
+            React.createElement(ChoicesPickerComponent, {
+                label: value.attributes.DisplayName,
+                options: value.attributes.Options,
+                configuration: configuration.raw,
+                value: value.raw,
+                onChange: this.onChange,
+                disabled: disabled,
+                masked: masked,
+            }),
+            this.rootContainer,
+        );
+    }
+}
 ```
 
-In ChoicesPickerComponent.tsx, you can accept this by adding them to the `ChoicesPickerComponentProps` interface:
+---
+
+The `value.security` will be populated only inside a model-driven app if column-level security configuration is applied to the bound column.
+
+These values can then be passed into the React component via its props.
+
+### Edit ChoicesPickerComponent to add the disabled and masked properties
+
+In `ChoicesPickerComponent.tsx`, you can accept the `disabled` and `masked` properties by adding them to the `ChoicesPickerComponentProps` interface:
+
+# [Before](#tab/before)
 
 ```typescript
 export interface ChoicesPickerComponentProps {
-  ...
-  disabled: boolean;
-  masked: boolean;
+    label: string;
+    value: number | null;
+    options: ComponentFramework.PropertyHelper.OptionMetadata[];
+    configuration: string | null;
+    onChange: (newValue: number | undefined) => void;
 }
 ```
 
-Inside the `ChoicesPickerComponent` when returning the React nodes, you can use these new input props to ensure that the picker is disabled or masked:
+# [After](#tab/after)
+
+```typescript
+export interface ChoicesPickerComponentProps {
+    label: string;
+    value: number | null;
+    options: ComponentFramework.PropertyHelper.OptionMetadata[];
+    configuration: string | null;
+    onChange: (newValue: number | undefined) => void;
+    disabled: boolean;
+    masked: boolean;
+}
+```
+
+---
+
+### Edit ChoicesPickerComponent props
+
+# [Before](#tab/before)
+
+```typescript
+export const ChoicesPickerComponent = React.memo((props: ChoicesPickerComponentProps) => {
+    const { label, value, options, configuration, onChange } = props;
+```
+
+# [After](#tab/after)
+
+```typescript
+export const ChoicesPickerComponent = React.memo((props: ChoicesPickerComponentProps) => {
+    const { label, value, options, configuration, onChange, disabled, masked  } = props;
+```
+
+---
+
+
+### Edit ChoicesPickerComponent return node
+
+
+Inside the `ChoicesPickerComponent` when returning the React nodes, you can use these new input props to ensure that the picker is disabled or masked
+
+# [Before](#tab/before)
 
 ```typescript
 return (
-        <>
-            {items.error}
-            {masked && '****'}
-    
-            {!items.error && !masked && (
-                <ChoiceGroup
-                    label={label}
-                    options={items.choices}
-                    selectedKey={valueKey}
-                    disabled={disabled}
-                    onChange={onChangeChoiceGroup}
-                />
-            )}
-        </>
-    );
+    <>
+        {items.error}
+        <ChoiceGroup
+            label={label}
+            options={items.choices}
+            selectedKey={valueKey}
+            onChange={onChangeChoiceGroup}
+        />
+    </>
+);
 ```
 
-You will also need to add `disabled` and `masked` to the 'destructuring' of the props:
+# [After](#tab/after)
 
 ```typescript
- const { label, value, options, onChange, configuration, disabled, masked } = props;
+return (
+    <>
+      {items.error}
+      {masked && '****'}
+
+      {!items.error && !masked && (
+          <ChoiceGroup
+              label={label}
+              options={items.choices}
+              selectedKey={valueKey}
+              disabled={disabled}
+              onChange={onChangeChoiceGroup}
+          />
+      )}
+    </>
+);
 ```
 
-#### Making the code component responsive
+---
+
+
+## Making the code component responsive
 
 Code components can be rendered on web, tablet, and mobile apps. It's important to consider the space available. Make the choices component render as a drop-down when the available width is restricted.
 
