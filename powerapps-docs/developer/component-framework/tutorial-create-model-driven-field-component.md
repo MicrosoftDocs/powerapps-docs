@@ -678,7 +678,7 @@ Code components can be rendered on web, tablet, and mobile apps. It's important 
 
 ### Import the Dropdown component and Icons
 
-The component renders the small version using the Fluent UI `Dropdown` component, so you add it to the imports:
+In `ChoicesPickerComponent.tsx`, the component renders the small version using the Fluent UI `Dropdown` component, so you add it to the imports:
 
 # [Before](#tab/before)
 
@@ -700,7 +700,7 @@ import { Icon } from '@fluentui/react/lib/Icon';
 
 ### Add formFactor prop 
 
-Then, update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerComponentProps` interface:
+Update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerComponentProps` interface:
 
 # [Before](#tab/before)
 
@@ -758,11 +758,11 @@ export const ChoicesPickerComponent = React.memo((props: ChoicesPickerComponentP
 The drop-down component needs some different rendering methods.
 
 1. Above the `ChoicesPickerComponent`, add the following:
-
-  ```typescript
-  const iconStyles = { marginRight: '8px' };
-
-  const onRenderOption = (option?: IDropdownOption): JSX.Element => {
+   
+   ```typescript
+   const iconStyles = { marginRight: '8px' };
+   
+   const onRenderOption = (option?: IDropdownOption): JSX.Element => {
       if (option) {
           return (
               <div>
@@ -774,31 +774,31 @@ The drop-down component needs some different rendering methods.
           );
       }
       return <></>;
-  };
-
-  const onRenderTitle = (options?: IDropdownOption[]): JSX.Element => {
+   };
+   
+   const onRenderTitle = (options?: IDropdownOption[]): JSX.Element => {
       if (options) {
           return onRenderOption(options[0]);
       }
       return <></>;
-  };
-  ```
-
-  These methods will be used by the `Dropdown` to render the correct icon next to the drop-down value.
-
+   };
+   ```
+   
+   These methods will be used by the `Dropdown` to render the correct icon next to the drop-down value.
+   
 1. Add new `onChangeDropDown` method.
-
+   
    We need an `onChange` method for the `Dropdown` similar to the `ChoiceGroup`  event handler.  Just below the existing `onChangeChoiceGroup`, add the new `Dropdown` version:
-
-  ```typescript
-  const onChangeDropDown = React.useCallback(
+   
+   ```typescript
+   const onChangeDropDown = React.useCallback(
           (ev: unknown, option?: IDropdownOption): void => {
               onChange(option ? (option.data.value as number) : undefined);
           },
           [onChange],
       );
-  ```
-
+   ```
+   
 ### Change the rendered output
 
 Make the following changes to use the new `formFactor` property.
@@ -865,7 +865,7 @@ You can see that you output the `ChoiceGroup` component when `formFactor` is lar
 
 ### Change return values
 
-The last thing we need to do in `ChoicesPickerComponent.tsx ` is to map the options metadata slightly differently to what's used by the `ChoicesGroup`, so inside the `items` return block underneath the existing `choices`: `options.map`, add the following:
+The last thing we need to do in `ChoicesPickerComponent.tsx` is to map the options metadata slightly differently to what's used by the `ChoicesGroup`, so inside the `items` return block underneath the existing `choices`: `options.map`, add the following:
 
 # [Before](#tab/before)
 
@@ -944,7 +944,7 @@ React.createElement(ChoicesPickerComponent, {
     onChange: this.onChange,
     disabled: disabled,
     masked: masked,
-})
+}),
 ```
 
 # [After](#tab/after)
@@ -963,7 +963,7 @@ React.createElement(ChoicesPickerComponent, {
           context.mode.allocatedWidth < SmallFormFactorMaxWidth
             ? 'small'
             : 'large',
-})
+}),
 ```
 
 ---
