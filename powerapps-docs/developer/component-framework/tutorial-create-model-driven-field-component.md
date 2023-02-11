@@ -170,7 +170,7 @@ export interface ChoicesPickerComponentProps {
 }
 
 export const ChoicesPickerComponent = React.memo((props: ChoicesPickerComponentProps) => {
-    const { label, value, options, onChange, configuration } = props;
+    const { label, value, options, configuration, onChange } = props;
     const valueKey = value != null ? value.toString() : undefined;
     const items = React.useMemo(() => {
         let iconMapping: Record<number, string> = {};
@@ -223,24 +223,7 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 
 ### ChoicesPickerComponent design notes
 
-- The `const { label, value, options, onChange, configuration } = props;` uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), where you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
-
-- The input props have the following attributes that are provided by `index.ts`:
-
-   - `label` - Used to label the component. This is bound to the metadata field label that's provided by the parent context, using the UI language selected inside the model-driven app.
-
-   - `value` - Linked to the input property defined in the manifest. This can be null when the record is new or the field is not set. TypeScript `null` is used rather than `undefined` when passing/returning property values.
-
-   - `options` - When a code component is bound to a choices column in a model-driven app, the property contains the `OptionMetadata` that describes the choices available. You pass this to the component so it can render each item.
-
-   - `configuration` - The purpose of the component is to show an icon for each choice available. The configuration is provided by the app maker when they add the code component to a form. This property accepts a JSON string that maps each numeric choice value to a [Fluent UI  icon name](https://developer.microsoft.com/fluentui#/styles/web/icons#available-icons). For example, `{"0":"ContactInfo","1":"Send","2":"Phone"}`.
-
-   - `onChange` - When the user changes the choices selection, the React component triggers the `onChange` event. The code component then calls the `notifyOutputChanged` so that the model-driven app can update the column with the new value. There are two types of React components:
-
-      1. **Uncontrolled** - These components maintain their internal state and use the input props as default values only.
-      2. **Controlled** - These components render the value passed by the component props. If the `onChange` event does not update the prop values, the user will not see a change in the UI.
-
-      The `ChoicesPickerComponent` is a controlled component, so once the model-driven app has updated the value (after the `notifyOutputChanged` call), it calls the `updateView` with the new value, which is then passed to the component props, causing a re-render that displays the updated value.
+- This is a React *functional component*, but equally, it could be a *class component*. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React. More information: [Function and Class Components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
 
 - When importing the `ChoiceGroup` Fluent UI components using path-based imports, instead of:
 
@@ -258,13 +241,32 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 
    An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size)
 
-- This is a React functional component, but equally, it could be a class component. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React.
+- The input props have the following attributes that are provided by `index.ts`:
 
-- You're using  `React.memo` to wrap our functional component so that it won't render unless any of the input props have changed. 
+  |`prop`|Description|
+  |---------|---------|
+  |`label`|Used to label the component. This is bound to the metadata field label that's provided by the parent context, using the UI language selected inside the model-driven app.|
+  |`value`|Linked to the input property defined in the manifest. This can be null when the record is new or the field is not set. TypeScript `null` is used rather than `undefined` when passing/returning property values.|
+  |`options`|When a code component is bound to a choices column in a model-driven app, the property contains the `OptionMetadata` that describes the choices available. You pass this to the component so it can render each item.|
+  |`configuration`|The purpose of the component is to show an icon for each choice available. The configuration is provided by the app maker when they add the code component to a form. This property accepts a JSON string that maps each numeric choice value to a [Fluent UI  icon name](https://developer.microsoft.com/fluentui#/styles/web/icons#available-icons). For example, `{"0":"ContactInfo","1":"Send","2":"Phone"}`.|
+  |`onChange`|When the user changes the choices selection, the React component triggers the `onChange` event. The code component then calls the `notifyOutputChanged` so that the model-driven app can update the column with the new value.|
 
-- `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` has changed. This is a best practice of function components that will reduce unnecessary renders of the child components.
+  There are two types of React components:
+    
+  |Type|Description|
+  |---------|---------|
+  |[Uncontrolled](https://reactjs.org/docs/uncontrolled-components.html) |Maintain their internal state and use the input props as default values only.|
+  |[Controlled](https://reactjs.org/docs/forms.html#controlled-components)|Render the value passed by the component props. If the `onChange` event does not update the prop values, the user will not see a change in the UI.|
 
-- `React.useCallback` is used to create a callback closure that's called when the Fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.
+  The `ChoicesPickerComponent` is a controlled component, so once the model-driven app has updated the value (after the `notifyOutputChanged` call), it calls the `updateView` with the new value, which is then passed to the component props, causing a re-render that displays the updated value.
+
+- The assignment of the `props` constant: `const { label, value, options, onChange, configuration } = props;` uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). In this way, you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
+
+- This code uses [React.memo](https://reactjs.org/docs/react-api.html#reactmemo) to wrap our functional component so that it won't render unless any of the input props have changed.
+
+- This code uses [React.useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) to ensure that the item array created is only mutated when the input props `options` or `configuration` has changed. This is a best practice of function components that will reduce unnecessary renders of the child components.
+
+- This code uses [React.useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) to create a callback closure that's called when the Fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.
 
 - If parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
 
