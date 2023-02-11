@@ -90,11 +90,11 @@ One of the advantages of Microsoft Fluent UI is that it provides a consistent an
 
 The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
 
-### Defining the inputs and bound properties of the code component
+## Edit the manifest
 
-The `ChoicesPicker\ControlManifest.Input.xml` file defines the metadata that describes the behavior of the code component. The [control](manifest-schema-reference/control.md) attributes will already contain the namespace and name of your component. 
+The `ChoicesPicker\ControlManifest.Input.xml` file defines the metadata that describes the behavior of the code component. The [control](manifest-schema-reference/control.md) attributes will already contain the namespace and name of your component.
 
-You must define the following input and output properties:
+You must define the following bound and input properties:
 
 |Name|Usage|Type|Description|
 |---------|---------|---------|---------|
@@ -105,7 +105,7 @@ More information: [property element](manifest-schema-reference/property.md).
 
 [!INCLUDE [cc_tip-format-xml](includes/cc_tip-format-xml.md)]
 
-#### Replace existing sampleProperty with new properties
+### Replace existing sampleProperty with new properties
 
 Open the `ChoicesPicker\ControlManifest.Input.xml` and paste the following property definitions inside the [control element](manifest-schema-reference/control.md), replacing the existing `sampleProperty`:
 
@@ -153,7 +153,7 @@ After the component is built, you'll see that:
    > [!NOTE]
    > Do not modify the contents of the `generated` and `out` folders directly. They'll be overwritten as part of the build process.
 
-## Choices picker Fluent UI React component
+## Implement the Choices picker Fluent UI React component
 
 When the code component uses [React](https://reactjs.org/), there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
 
@@ -223,9 +223,15 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 
 ### ChoicesPickerComponent design notes
 
-- This is a React *functional component*, but equally, it could be a *class component*. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React. More information: [Function and Class Components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
+This section includes comments on the design of the ChoicesPickerComponent.
 
-- When importing the `ChoiceGroup` Fluent UI components using path-based imports, instead of:
+#### It is a functional component
+
+This is a React *functional component*, but equally, it could be a *class component*. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React. More information: [Function and Class Components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
+
+#### Minimize bundle.js size
+
+When importing the `ChoiceGroup` Fluent UI components using path-based imports, instead of:
 
    ```typescript
    import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react';
@@ -241,38 +247,54 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 
    An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size)
 
-- The input props have the following attributes that are provided by `index.ts`:
+#### Description of 'props'
 
-  |`prop`|Description|
-  |---------|---------|
-  |`label`|Used to label the component. This is bound to the metadata field label that's provided by the parent context, using the UI language selected inside the model-driven app.|
-  |`value`|Linked to the input property defined in the manifest. This can be null when the record is new or the field is not set. TypeScript `null` is used rather than `undefined` when passing/returning property values.|
-  |`options`|When a code component is bound to a choices column in a model-driven app, the property contains the `OptionMetadata` that describes the choices available. You pass this to the component so it can render each item.|
-  |`configuration`|The purpose of the component is to show an icon for each choice available. The configuration is provided by the app maker when they add the code component to a form. This property accepts a JSON string that maps each numeric choice value to a [Fluent UI  icon name](https://developer.microsoft.com/fluentui#/styles/web/icons#available-icons). For example, `{"0":"ContactInfo","1":"Send","2":"Phone"}`.|
-  |`onChange`|When the user changes the choices selection, the React component triggers the `onChange` event. The code component then calls the `notifyOutputChanged` so that the model-driven app can update the column with the new value.|
+The input props have the following attributes that are provided by `index.ts`:
 
-  There are two types of React components:
-    
-  |Type|Description|
-  |---------|---------|
-  |[Uncontrolled](https://reactjs.org/docs/uncontrolled-components.html) |Maintain their internal state and use the input props as default values only.|
-  |[Controlled](https://reactjs.org/docs/forms.html#controlled-components)|Render the value passed by the component props. If the `onChange` event does not update the prop values, the user will not see a change in the UI.|
+|`prop`|Description|
+|---------|---------|
+|`label`|Used to label the component. This is bound to the metadata field label that's provided by the parent context, using the UI language selected inside the model-driven app.|
+|`value`|Linked to the input property defined in the manifest. This can be null when the record is new or the field is not set. TypeScript `null` is used rather than `undefined` when passing/returning property values.|
+|`options`|When a code component is bound to a choices column in a model-driven app, the property contains the `OptionMetadata` that describes the choices available. You pass this to the component so it can render each item.|
+|`configuration`|The purpose of the component is to show an icon for each choice available. The configuration is provided by the app maker when they add the code component to a form. This property accepts a JSON string that maps each numeric choice value to a [Fluent UI  icon name](https://developer.microsoft.com/fluentui#/styles/web/icons#available-icons). For example, `{"0":"ContactInfo","1":"Send","2":"Phone"}`.|
+|`onChange`|When the user changes the choices selection, the React component triggers the `onChange` event. The code component then calls the `notifyOutputChanged` so that the model-driven app can update the column with the new value.|
 
-  The `ChoicesPickerComponent` is a controlled component, so once the model-driven app has updated the value (after the `notifyOutputChanged` call), it calls the `updateView` with the new value, which is then passed to the component props, causing a re-render that displays the updated value.
+#### Controlled React component
 
-- The assignment of the `props` constant: `const { label, value, options, onChange, configuration } = props;` uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). In this way, you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
+There are two types of React components:
+  
+|Type|Description|
+|---------|---------|
+|[Uncontrolled](https://reactjs.org/docs/uncontrolled-components.html) |Maintain their internal state and use the input props as default values only.|
+|[Controlled](https://reactjs.org/docs/forms.html#controlled-components)|Render the value passed by the component props. If the `onChange` event does not update the prop values, the user will not see a change in the UI.|
 
-- This code uses [React.memo](https://reactjs.org/docs/react-api.html#reactmemo) to wrap our functional component so that it won't render unless any of the input props have changed.
+The `ChoicesPickerComponent` is a controlled component, so once the model-driven app has updated the value (after the `notifyOutputChanged` call), it calls the `updateView` with the new value, which is then passed to the component props, causing a re-render that displays the updated value.
 
-- This code uses [React.useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) to ensure that the item array created is only mutated when the input props `options` or `configuration` has changed. This is a best practice of function components that will reduce unnecessary renders of the child components.
+#### Destructuring assignment
 
-- This code uses [React.useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) to create a callback closure that's called when the Fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.
+The assignment of the `props` constant: `const { label, value, options, onChange, configuration } = props;` uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). In this way, you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
 
-- If parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
+### Use of React components and hooks
 
-### Render the React component from inside `index.ts`
+The following explains how `ChoicesPickerComponent.tsx` uses React components and hooks:
 
-When using React inside a code component, the rendering of the root component is performed inside the [`updateView`](reference\control\updateview.md). All the values needed to render the component are passed into the component such that when they are changed, and then it is re-rendered. <!-- EJW: I'm confused by the previous sentence. Is something missing? The phrase following the comma doesn't seem to complete what came before. Please review and update as needed. -->Before you can add the `ChoicesPickerComponent` to the `index.ts`, you  must add the following at the top of the file:
+|Item|Explanation|
+|---------|---------|
+|[React.memo](https://reactjs.org/docs/react-api.html#reactmemo)|To wrap our functional component so that it won't render unless any of the input props have changed.|
+|[React.useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)|To ensure that the item array created is only mutated when the input props `options` or `configuration` have changed. This is a best practice for functional components that will reduce unnecessary renders of the child components.|
+|[React.useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)|To create a callback closure that's called when the Fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.|
+
+#### Error behavior for Configuration input property
+
+If parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
+
+## Update index.ts to render the ChoicesPicker component
+
+You need to update the generated `index.ts file` to render the ChoicesPickerComponent.
+
+When using React inside a code component, the rendering of the root component is performed inside the [`updateView`](reference\control\updateview.md). All the values needed to render the component are passed into the component such that when they are changed, and then it is re-rendered.
+
+Before you can add the `ChoicesPickerComponent` to the `index.ts`, you  must add the following at the top of the file:
 
 ```typescript
 import { IInputs, IOutputs } from './generated/ManifestTypes';
@@ -285,7 +307,7 @@ initializeIcons(undefined, { disableWarnings: true });
 ```
 
 > [!NOTE]
-> The import of `initializeIcons` is required because you're using the Fluent UI icon set. You need to call `initializeIcons` to load the icons inside the test harness. Inside model-driven apps, they're already initialized. 
+> The import of `initializeIcons` is required because you're using the Fluent UI icon set. You need to call `initializeIcons` to load the icons inside the test harness. Inside model-driven apps, they're already initialized.
 
 The code component maintains its instance state using attributes. (This is different to React component state). Inside the `index.ts` `ChoicesPicker` class, add the following attributes:
 
