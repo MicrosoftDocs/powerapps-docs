@@ -1204,6 +1204,8 @@
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
+      - name: Use the wrap wizard to build your mobile app (preview)
+        href: ./common/wrap/wrap-how-to.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
       - name: Code sign for iOS
@@ -2628,7 +2630,7 @@
       items:
       - name: Query data with serverless SQL pool
         href: ./data-platform/azure-synapse-link-serverless.md
-      - name: Query and analyze incremental updates (preview)
+      - name: Query and analyze incremental updates
         href: ./data-platform/azure-synapse-incremental-updates.md
       - name: Create a view on your Dataverse data
         href: ./data-platform/azure-synapse-link-create-view.md

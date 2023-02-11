@@ -177,7 +177,7 @@ automatically.
 
 ![Screenshot of the R3 role management screen and key stats dashboard.](media/r3-role-management.png "Screenshot of the R3 role management screen and key stats dashboard")
 
-R3 uses [Power Automate](https://flow.microsoft.com/) to send automated
+R3 uses [Power Automate](https://make.powerautomate.com/) to send automated
 notifications and reminders. All data is stored in Microsoft Dataverse.
 
 ### Capitol Music Group scheduling tools
