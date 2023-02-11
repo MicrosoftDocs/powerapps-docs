@@ -1126,47 +1126,122 @@ If you want to support multiple languages, your code component can hold a resour
    > [!TIP]
    > It's not recommended to edit `resx` files directly. The Visual Studio Code resource editor or an extension for Visual Studio Code makes this easier.
 
-   Now that you have the resource strings, you can reference them by updating the `ControlManifest.Input.xml` as follows:
+### Update the manifest for resource strings
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8" ?>
-   <manifest>
-    <control namespace="SampleNamespace"
-        constructor="ChoicesPicker"
-        version="0.0.1"
-        display-name-key="ChoicesPicker_Name"
-        description-key="ChoicesPicker_Desc"
-        control-type="standard">
-        <property name="value"
-          display-name-key="Value_Name"
-          description-key="Value_Desc"
-          of-type="OptionSet"
-          usage="bound"
-          required="true"/>
-        <property name="configuration"
-          display-name-key="Configuration_Name"
-          description-key="Configuration_Desc"
-          of-type="Multiple"
-          usage="input"
-          required="true"/>
-        <resources>
-          <code path="index.ts"
-              order="1"/>
-          <resx path="strings/ChoicesPicker.1033.resx"
-              version="1.0.0" />
-     </resources>
-    </control>
-   </manifest>
-   ```
+Now that you have the resource strings, you can reference them by updating the `ControlManifest.Input.xml` as follows:
+
+# [Before](#tab/before)
+
+With comments removed.
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SampleNamespace"
+    constructor="ChoicesPicker"
+    version="0.0.1"
+    display-name-key="ChoicesPicker"
+    description-key="ChoicesPicker description"
+    control-type="standard">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="value"
+      display-name-key="Value"
+      description-key="Value of the Choices Control"
+      of-type="OptionSet"
+      usage="bound"
+      required="true"/>
+    <property name="configuration"
+      display-name-key="Icon Mapping"
+      description-key="Configuration that maps the choice value to a fluent ui icon."
+      of-type="Multiple"
+      usage="input"
+      required="true"/>
+    <resources>
+      <code path="index.ts"
+        order="1"/>
+    </resources>
+  </control>
+</manifest>
+```
+
+# [After](#tab/after)
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SampleNamespace"
+    constructor="ChoicesPicker"
+    version="0.0.1"
+    display-name-key="ChoicesPicker_Name"
+    description-key="ChoicesPicker_Desc"
+    control-type="standard">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="value"
+      display-name-key="Value_Name"
+      description-key="Value_Desc"
+      of-type="OptionSet"
+      usage="bound"
+      required="true"/>
+    <property name="configuration"
+      display-name-key="Configuration_Name"
+      description-key="Configuration_Desc"
+      of-type="Multiple"
+      usage="input"
+      required="true"/>
+    <resources>
+      <code path="index.ts"
+        order="1"/>
+      <resx path="strings/ChoicesPicker.1033.resx"
+          version="1.0.0" />
+    </resources>
+  </control>
+</manifest>
+```
+
+---
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+<control namespace="SampleNamespace"
+    constructor="ChoicesPicker"
+    version="0.0.1"
+    display-name-key="ChoicesPicker_Name"
+    description-key="ChoicesPicker_Desc"
+    control-type="standard">
+    <property name="value"
+      display-name-key="Value_Name"
+      description-key="Value_Desc"
+      of-type="OptionSet"
+      usage="bound"
+      required="true"/>
+    <property name="configuration"
+      display-name-key="Configuration_Name"
+      description-key="Configuration_Desc"
+      of-type="Multiple"
+      usage="input"
+      required="true"/>
+    <resources>
+      <code path="index.ts"
+          order="1"/>
+      <resx path="strings/ChoicesPicker.1033.resx"
+          version="1.0.0" />
+  </resources>
+</control>
+</manifest>
+```
 
 You can see that:
 
-   1. The `display-name-key` and `description-key` values now point to the corresponding key in the `resx` file.
-   2. There's an additional entry in the `resources` element indicating that the code component should load resources from the referenced file.
+1. The `display-name-key` and `description-key` values now point to the corresponding key in the `resx` file.
+1. There's an additional entry in the `resources` element indicating that the code component should load resources from the referenced file.
 
 If you need any additional strings for use in your component, you can add them to the `resx` and then load the strings at runtime using [getString](reference\resources\getstring.md). More information: [Implementing localization API component](sample-controls\localization-api-control.md).
 
-One of the test harness limitations is that it does not load resource files, so you need to deploy the component to Microsoft Dataverse to fully test your component.
+> [!NOTE]
+> One of the test harness limitations is that it does not load resource files, so you need to deploy the component to Microsoft Dataverse to fully test your component.
 
 ## Deploying and configuring in a model-driven app
 
