@@ -765,12 +765,16 @@ The drop-down component needs some different rendering methods.
    const onRenderOption = (option?: IDropdownOption): JSX.Element => {
       if (option) {
           return (
-              <div>
-                  {option.data && option.data.icon && (
-                      <Icon style={iconStyles} iconName={option.data.icon} aria-hidden="true" title={option.data.icon} />
-                  )}
-                  <span>{option.text}</span>
-              </div>
+            <div>
+                {option.data && option.data.icon && (
+                  <Icon
+                      style={iconStyles}
+                      iconName={option.data.icon}
+                      aria-hidden="true"
+                      title={option.data.icon} />
+                )}
+                <span>{option.text}</span>
+            </div>
           );
       }
       return <></>;
@@ -863,7 +867,7 @@ return (
 
 You can see that you output the `ChoiceGroup` component when `formFactor` is large, and use `Dropdown` when it's small.
 
-### Change return values
+### Return DropdownOptions
 
 The last thing we need to do in `ChoicesPickerComponent.tsx` is to map the options metadata slightly differently to what's used by the `ChoicesGroup`, so inside the `items` return block underneath the existing `choices`: `options.map`, add the following:
 
