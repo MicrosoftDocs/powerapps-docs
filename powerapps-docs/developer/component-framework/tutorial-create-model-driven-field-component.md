@@ -28,13 +28,14 @@ In addition to these, you'll also ensure the code component follows best practic
 >[!div class="mx-imgBorder"]
 > ![ChoicesPicker component.](media/field-component-result.gif "ChoicesPicker component")
 
-Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
-
 ## Code
 
-You can download the complete sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl).
+You can download the complete sample from [PowerApps-Samples/component-framework/ChoicesPickerControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/ChoicesPickerControl).
 
 ## Create a new `pcfproj` project
+
+> [!NOTE]
+> Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
 
 To create a new `pcfproj`:
 
@@ -44,13 +45,17 @@ To create a new `pcfproj`:
 
 1. Inside the new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command to create a new code component project:
 
-   ```CLI
-   pac pcf init --namespace SampleNamespace --name ChoicesPicker --template field --run-npm-install
+   ```powershell
+   pac pcf init `
+      --namespace SampleNamespace `
+      --name ChoicesPicker `
+      --template field `
+      --run-npm-install
    ```
 
    or using the short form:
 
-   ```CLI
+   ```powershell
    pac pcf init -ns SampleNamespace -n ChoicesPicker -t field -npm
    ```
 
@@ -73,7 +78,7 @@ You can see that the template includes an `index.ts` file along with various con
 
 You'll be using Microsoft Fluent UI and React for creating UI, so you need to install these as dependencies. To install the dependencies, use:
 
-```shell
+```powershell
 npm install react react-dom @fluentui/react
 ```
 
@@ -87,48 +92,72 @@ The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#
 
 ### Defining the inputs and bound properties of the code component
 
-The `ChoicesPicker\ControlManifest.Input.xml` file defines the metadata that describes the behavior of the code component. The [control](manifest-schema-reference/control.md) attributes will already contain the namespace and name of your component. You should define the following input and output properties:
+The `ChoicesPicker\ControlManifest.Input.xml` file defines the metadata that describes the behavior of the code component. The [control](manifest-schema-reference/control.md) attributes will already contain the namespace and name of your component. 
 
-- **Value** - This is a **bound** [property](manifest-schema-reference\property.md) of type **`OptionSet`** that will be linked to the choice column. The code component receives the current value and then notifies the parent context when the value has changed.
-- **Configuration** - This is an **input**  [property](manifest-schema-reference\property.md) of type **Multiple lines of text** that will have its value set when the app maker adds the code component to the form. It contains a JSON string to configure which icons can be used for each choice value. More information: [Manifest](manifest-schema-reference/manifest.md).
+You must define the following input and output properties:
 
-Open the `ChoicesPicker\ControlManifest.Input.xml` and paste the following inside the control element (replacing the existing **`sampleProperty`**):
+|Name|Usage|Type|Description|
+|---------|---------|---------|---------|
+|**Value**|`bound`|OptionSet|This property will be linked to the choice column. The code component receives the current value and then notifies the parent context when the value has changed.|
+|**Icon Mapping**|`input`|Multiple lines of text|This property will have its value set when the app maker adds the code component to the form. It contains a JSON string to configure which icons can be used for each choice value.|
+
+More information: [property element](manifest-schema-reference/property.md).
+
+[!INCLUDE [cc_tip-format-xml](includes/cc_tip-format-xml.md)]
+
+#### Replace existing sampleProperty with new properties
+
+Open the `ChoicesPicker\ControlManifest.Input.xml` and paste the following property definitions inside the [control element](manifest-schema-reference/control.md), replacing the existing `sampleProperty`:
+
+# [Before](#tab/before)
+
+```xml
+<property name="sampleProperty"
+  display-name-key="Property_Display_Key"
+  description-key="Property_Desc_Key"
+  of-type="SingleLine.Text"
+  usage="bound"
+  required="true" />
+```
+
+# [After](#tab/after)
 
 ```xml
 <property name="value"
-   display-name-key="Value"
-   description-key="Value of the Choices Control"
-   of-type="OptionSet"
-   usage="bound"
-   required="true"/>
+  display-name-key="Value"
+  description-key="Value of the Choices Control"
+  of-type="OptionSet"
+  usage="bound"
+  required="true"/>
 <property name="configuration"
-   display-name-key="Icon Mapping"
-   description-key="Configuration that maps the choice value to a fluent ui icon."
-   of-type="Multiple"
-   usage="input"
-   required="true"/>
+  display-name-key="Icon Mapping"
+  description-key="Configuration that maps the choice value to a fluent ui icon."
+  of-type="Multiple"
+  usage="input"
+  required="true"/>
 ```
+
+---
 
 Save the changes and then use the following command to build the component:
 
-```shell
+```powershell
 npm run build
 ```
 
 After the component is built, you'll see that:
 
-1. An automatically generated file  `ChoicesPicker\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
-
-2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser. The `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that's used during deployment. 
+- An automatically generated file  `ChoicesPicker\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
+- The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser. The `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that's used during deployment.
 
    > [!NOTE]
    > Do not modify the contents of the `generated` and `out` folders directly. They'll be overwritten as part of the build process.
 
 ## Choices picker Fluent UI React component
 
-When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
+When the code component uses [React](https://reactjs.org/), there must be a single root component that's rendered within the `updateView` method. Inside the `ChoicesPicker` folder, add a new TypeScript file named `ChoicesPickerComponent.tsx`, and add the following content:
 
-```react
+```typescript
 import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
 import * as React from 'react';
 
@@ -192,11 +221,11 @@ ChoicesPickerComponent.displayName = 'ChoicesPickerComponent';
 > [!NOTE]
 > The file has the extension `tsx`, a TypeScript file that supports XML style syntax used by React. It's compiled into standard JavaScript by the build process.
 
-From the above code, you'll see that:
+### ChoicesPickerComponent design notes
 
-1. The `const { label, value, options, onChange, configuration } = props;` is called 'destructuring', where you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
+- The `const { label, value, options, onChange, configuration } = props;` uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), where you extract the attributes required to render from the props, rather than prefixing them with `props` each time they're used.
 
-2. The input props have the following attributes that are provided by `index.ts`:
+- The input props have the following attributes that are provided by `index.ts`:
 
    - `label` - Used to label the component. This is bound to the metadata field label that's provided by the parent context, using the UI language selected inside the model-driven app.
 
@@ -213,7 +242,7 @@ From the above code, you'll see that:
 
       The `ChoicesPickerComponent` is a controlled component, so once the model-driven app has updated the value (after the `notifyOutputChanged` call), it calls the `updateView` with the new value, which is then passed to the component props, causing a re-render that displays the updated value.
 
-3. Import the `ChoiceGroup` Fluent UI components using path-based imports so that your bundle size will be smaller, resulting in lower capacity requirements and better runtime performance. Instead of:
+- When importing the `ChoiceGroup` Fluent UI components using path-based imports, instead of:
 
    ```typescript
    import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react';
@@ -225,17 +254,19 @@ From the above code, you'll see that:
    import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
    ```
 
-   An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size) 
+   This way, your bundle size will be smaller, resulting in lower capacity requirements and better runtime performance.
 
-4. This is a React functional component, but equally, it could be a class component. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React.
+   An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size)
 
-5. You're using  `React.memo` to wrap our functional component so that it won't render unless any of the input props have changed. 
+- This is a React functional component, but equally, it could be a class component. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React.
 
-6. `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` has changed. This is a best practice of function components that will reduce unnecessary renders of the child components.
+- You're using  `React.memo` to wrap our functional component so that it won't render unless any of the input props have changed. 
 
-7. `React.useCallback` is used to create a callback closure that's called when the Fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.
+- `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` has changed. This is a best practice of function components that will reduce unnecessary renders of the child components.
 
-8. If parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
+- `React.useCallback` is used to create a callback closure that's called when the Fluent UI `ChoiceGroup` value changes. This React hook ensures that the callback closure is only mutated when the input prop `onChange` is changed. This is a performance best practice similar to `useMemo`.
+
+- If parsing of the JSON configuration input property fails, the error is rendered using `items.error`.
 
 ### Render the React component from inside `index.ts`
 
@@ -344,7 +375,7 @@ public destroy(): void {
 
 Ensure all the files are saved and at the terminal use:
 
-```shell
+```powershell
 npm start watch
 ```
 
@@ -398,7 +429,7 @@ export interface ChoicesPickerComponentProps {
 
 Inside the `ChoicesPickerComponent` when returning the React nodes, you can use these new input props to ensure that the picker is disabled or masked:
 
-```react
+```typescript
 return (
         <>
             {items.error}
@@ -444,7 +475,7 @@ import { Icon } from '@fluentui/react/lib/Icon';
 
 The drop-down component needs some different rendering methods, so above the `ChoicesPickerComponent`, add the following:
 
-```react
+```typescript
 const iconStyles = { marginRight: '8px' };
 
 const onRenderOption = (option?: IDropdownOption): JSX.Element => {
@@ -484,7 +515,7 @@ const onChangeDropDown = React.useCallback(
 
 Now you can add these all to the updated render output:
 
-```react
+```typescript
 return (
         <>
             {items.error}
@@ -805,11 +836,11 @@ If you need to make further changes to your component, you don't need to deploy 
 
 The **AutoResponder** would look similar to the following:
 
-```shell
+```powershell
 REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.ChoicesPicker[\.\/](?'fname'[^?]*\.*)(.*?)$
 ```
 
-```shell
+```powershell
 C:\repos\ChoicesPicker\out\controls\ChoicesPicker\${folder}\${fname}
 ```
 
