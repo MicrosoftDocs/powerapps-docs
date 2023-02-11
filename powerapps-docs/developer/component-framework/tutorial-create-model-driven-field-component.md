@@ -605,6 +605,8 @@ export interface ChoicesPickerComponentProps {
 
 ### Edit ChoicesPickerComponent props
 
+Add the new attributes to the props.
+
 # [Before](#tab/before)
 
 ```typescript
@@ -666,123 +668,253 @@ return (
 
 ---
 
+> [!NOTE]
+> You shouldn't see any difference in the test harness because it can't simulate read-only fields or column-level security. You will need to test this after deploying the control within a model-driven application.
+
 
 ## Making the code component responsive
 
 Code components can be rendered on web, tablet, and mobile apps. It's important to consider the space available. Make the choices component render as a drop-down when the available width is restricted.
 
-First, update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerComponentProps` interface:
-
-```typescript
-export interface ChoicesPickerComponentProps {
-    ...
-    formFactor: 'small' | 'large';
-```
+### Import the Dropdown component and Icons
 
 The component renders the small version using the Fluent UI `Dropdown` component, so you add it to the imports:
 
+# [Before](#tab/before)
+
 ```typescript
+import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
+import * as React from 'react';
+```
+
+# [After](#tab/after)
+
+```typescript
+import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
+import * as React from 'react';
 import { Dropdown, IDropdownOption } from '@fluentui/react/lib/Dropdown';
 import { Icon } from '@fluentui/react/lib/Icon';
 ```
 
-The drop-down component needs some different rendering methods, so above the `ChoicesPickerComponent`, add the following:
+---
+
+### Add formFactor prop 
+
+Then, update the code component to render differently depending on a new prop `formFactor`. Add the following attribute to the `ChoicesPickerComponentProps` interface:
+
+# [Before](#tab/before)
 
 ```typescript
-const iconStyles = { marginRight: '8px' };
-
-const onRenderOption = (option?: IDropdownOption): JSX.Element => {
-    if (option) {
-        return (
-            <div>
-                {option.data && option.data.icon && (
-                    <Icon style={iconStyles} iconName={option.data.icon} aria-hidden="true" title={option.data.icon} />
-                )}
-                <span>{option.text}</span>
-            </div>
-        );
-    }
-    return <></>;
-};
-
-const onRenderTitle = (options?: IDropdownOption[]): JSX.Element => {
-    if (options) {
-        return onRenderOption(options[0]);
-    }
-    return <></>;
-};
+export interface ChoicesPickerComponentProps {
+  label: string;
+  value: number | null;
+  options: ComponentFramework.PropertyHelper.OptionMetadata[];
+  configuration: string | null;
+  onChange: (newValue: number | undefined) => void;
+  disabled: boolean;
+  masked: boolean;
+}
 ```
 
-These methods will be used by the `Dropdown` to render the correct icon next to the drop-down value.
-
-You also need an `onChange` method for the `Dropdown` similar to the `ChoiceGroup`  event handler.  Just above the existing `onChangeChoiceGroup`, add the new `Dropdown` version:
+# [After](#tab/after)
 
 ```typescript
-const onChangeDropDown = React.useCallback(
-        (ev: unknown, option?: IDropdownOption): void => {
-            onChange(option ? (option.data.value as number) : undefined);
-        },
-        [onChange],
-    );
+export interface ChoicesPickerComponentProps {
+  label: string;
+  value: number | null;
+  options: ComponentFramework.PropertyHelper.OptionMetadata[];
+  configuration: string | null;
+  onChange: (newValue: number | undefined) => void;
+  disabled: boolean;
+  masked: boolean;
+  formFactor: 'small' | 'large';
+}
 ```
 
-Now you can add these all to the updated render output:
+---
+
+### Add formFactor to ChoicesPickerComponent props
+
+Add `formFactor` to the props.
+
+# [Before](#tab/before)
+
+```typescript
+export const ChoicesPickerComponent = React.memo((props: ChoicesPickerComponentProps) => {
+    const { label, value, options, configuration, onChange, disabled, masked  } = props;
+```
+
+# [After](#tab/after)
+
+```typescript
+export const ChoicesPickerComponent = React.memo((props: ChoicesPickerComponentProps) => {
+    const { label, value, options, configuration, onChange, disabled, masked, formFactor  } = props;
+```
+
+---
+
+### Add methods and modify to support drop-down component
+
+The drop-down component needs some different rendering methods.
+
+1. Above the `ChoicesPickerComponent`, add the following:
+
+  ```typescript
+  const iconStyles = { marginRight: '8px' };
+
+  const onRenderOption = (option?: IDropdownOption): JSX.Element => {
+      if (option) {
+          return (
+              <div>
+                  {option.data && option.data.icon && (
+                      <Icon style={iconStyles} iconName={option.data.icon} aria-hidden="true" title={option.data.icon} />
+                  )}
+                  <span>{option.text}</span>
+              </div>
+          );
+      }
+      return <></>;
+  };
+
+  const onRenderTitle = (options?: IDropdownOption[]): JSX.Element => {
+      if (options) {
+          return onRenderOption(options[0]);
+      }
+      return <></>;
+  };
+  ```
+
+  These methods will be used by the `Dropdown` to render the correct icon next to the drop-down value.
+
+1. Add new `onChangeDropDown` method.
+
+   We need an `onChange` method for the `Dropdown` similar to the `ChoiceGroup`  event handler.  Just below the existing `onChangeChoiceGroup`, add the new `Dropdown` version:
+
+  ```typescript
+  const onChangeDropDown = React.useCallback(
+          (ev: unknown, option?: IDropdownOption): void => {
+              onChange(option ? (option.data.value as number) : undefined);
+          },
+          [onChange],
+      );
+  ```
+
+### Change the rendered output
+
+Make the following changes to use the new `formFactor` property.
+
+# [Before](#tab/before)
 
 ```typescript
 return (
-        <>
-            {items.error}
+  <>
+      {items.error}
+      {masked && '****'}
 
-            {masked && '****'}
-
-            {formFactor == 'large' && !items.error && !masked && (
-                <ChoiceGroup
-                    label={label}
-                    options={items.choices}
-                    selectedKey={valueKey}
-                    disabled={disabled}
-                    onChange={onChangeChoiceGroup}
-                />
-            )}
-
-            {formFactor == 'small' && !items.error && !masked && (
-                <Dropdown
-                    placeholder={'---'}
-                    label={label}
-                    ariaLabel={label}
-                    options={items.options}
-                    selectedKey={valueKey}
-                    disabled={disabled}
-                    onRenderOption={onRenderOption}
-                    onRenderTitle={onRenderTitle}
-                    onChange={onChangeDropDown}
-                />
-            )}
-        </>
-    );
+      {!items.error && !masked && (
+        <ChoiceGroup
+            label={label}
+            options={items.choices}
+            selectedKey={valueKey}
+            disabled={disabled}
+            onChange={onChangeChoiceGroup}
+        />
+      )}
+  </>
+);
 ```
 
-You can see that you output the `ChoiceGroup` component when `formFactor` is large, and use `Dropdown` when it's small. Again, as above, you'll need to add the `formFactor` to the 'destructuring' of the input props:
+# [After](#tab/after)
 
 ```typescript
-const { label, value, options, onChange, configuration, disabled, masked, formFactor } = props;
+return (
+  <>
+      {items.error}
+      {masked && '****'}
+
+      {formFactor == 'large' && !items.error && !masked && (
+        <ChoiceGroup
+            label={label}
+            options={items.choices}
+            selectedKey={valueKey}
+            disabled={disabled}
+            onChange={onChangeChoiceGroup}
+        />
+      )}
+
+      {formFactor == 'small' && !items.error && !masked && (
+          <Dropdown
+              placeholder={'---'}
+              label={label}
+              ariaLabel={label}
+              options={items.options}
+              selectedKey={valueKey}
+              disabled={disabled}
+              onRenderOption={onRenderOption}
+              onRenderTitle={onRenderTitle}
+              onChange={onChangeDropDown}
+          />
+      )}
+  </>
+);
 ```
 
-Lastly, you need to map the options metadata slightly differently to what's used by the `ChoicesGroup`, so inside the `items` return block underneath the existing choices: `options.map`, add the following:
+---
+
+You can see that you output the `ChoiceGroup` component when `formFactor` is large, and use `Dropdown` when it's small.
+
+### Change return values
+
+The last thing we need to do in `ChoicesPickerComponent.tsx ` is to map the options metadata slightly differently to what's used by the `ChoicesGroup`, so inside the `items` return block underneath the existing `choices`: `options.map`, add the following:
+
+# [Before](#tab/before)
 
 ```typescript
-options: options.map((item) => {
-                return {
-                    key: item.Value.toString(),
-                    data: { value: item.Value, icon: iconMapping[item.Value] },
-                    text: item.Label,
-                } as IDropdownOption;
-            }),
+return {
+    error: configError,
+    choices: options.map((item) => {
+      return {
+          key: item.Value.toString(),
+          value: item.Value,
+          text: item.Label,
+          iconProps: { iconName: iconMapping[item.Value] },
+      } as IChoiceGroupOption;
+    }),
+};
 ```
 
-Now that the choices component will render differently based on the `formFactor` prop, you must pass the correct value from the render call inside `index.ts`. 
+# [After](#tab/after)
 
-First, add the following just above the `export class ChoicesPicker` class inside `index.ts`.
+```typescript
+return {
+    error: configError,
+    choices: options.map((item) => {
+      return {
+          key: item.Value.toString(),
+          value: item.Value,
+          text: item.Label,
+          iconProps: { iconName: iconMapping[item.Value] },
+      } as IChoiceGroupOption;
+    }),
+    options: options.map((item) => {
+      return {
+          key: item.Value.toString(),
+          data: { value: item.Value, icon: iconMapping[item.Value] },
+          text: item.Label,
+      } as IDropdownOption;
+  }),
+};
+```
+
+---
+
+### Edit index.ts
+
+Now that the choices component will render differently based on the `formFactor` prop, you must pass the correct value from the render call inside `index.ts`.
+
+#### Add SmallFormFactorMaxWidth and FormFactors enum
+
+Add the following just above the `export class ChoicesPicker` class inside `index.ts`.
 
 ```typescript
 const SmallFormFactorMaxWidth = 350;
@@ -797,23 +929,85 @@ const enum FormFactors {
 
 The `SmallFormFactorMaxWidth` is the width when the component starts to render using the `Dropdown` rather than `ChoiceGroup` component. The `FormFactors` `enum` is used for convenience when calling [`context.client.getFormFactor`](reference\client\getformfactor.md).
 
+#### Add code to detect formFactor
+
 Add the following to the `React.createElement` props underneath the existing props:
 
-```typescript
-formFactor:
-    context.client.getFormFactor() == FormFactors.Phone ||
-        context.mode.allocatedWidth < SmallFormFactorMaxWidth
-        ? 'small'
-    : 'large',
-```
-
-Since you're using `allocatedWidth`, you need to let the model-driven app know that you want to receive updates (via a call to `updateView`) when the available width changes. You do this inside the `init` method by adding a call to [`trackContainerResize`](reference\mode\trackcontainerresize.md): 
+# [Before](#tab/before)
 
 ```typescript
-this.context.mode.trackContainerResize(true);
+React.createElement(ChoicesPickerComponent, {
+    label: value.attributes.DisplayName,
+    options: value.attributes.Options,
+    configuration: configuration.raw,
+    value: value.raw,
+    onChange: this.onChange,
+    disabled: disabled,
+    masked: masked,
+})
 ```
 
-Now save all the changes so they're automatically reflected in the test harness browser window (because you still have `npm start watch` running from earlier). You can now switch the value of **Component Container Width** between **349** and **350** and see the rendering behave differently. You can also swap the **Form Factor** between **Web** and **Phone** and see the same behavior. 
+# [After](#tab/after)
+
+```typescript
+React.createElement(ChoicesPickerComponent, {
+    label: value.attributes.DisplayName,
+    options: value.attributes.Options,
+    configuration: configuration.raw,
+    value: value.raw,
+    onChange: this.onChange,
+    disabled: disabled,
+    masked: masked,
+    formFactor:
+      context.client.getFormFactor() == FormFactors.Phone ||
+          context.mode.allocatedWidth < SmallFormFactorMaxWidth
+            ? 'small'
+            : 'large',
+})
+```
+
+---
+
+#### Request updates for resize
+
+Since you're using `context.mode.allocatedWidth`, you need to let the model-driven app know that you want to receive updates (via a call to `updateView`) when the available width changes. You do this inside the `init` method by adding a call to [`context.mode.trackContainerResize`](reference\mode\trackcontainerresize.md):
+
+# [Before](#tab/before)
+
+```typescript
+public init(
+    context: ComponentFramework.Context<IInputs>, 
+    notifyOutputChanged: () => void, 
+    state: ComponentFramework.Dictionary, 
+    container: HTMLDivElement): 
+    void {
+      this.notifyOutputChanged = notifyOutputChanged;
+      this.rootContainer = container;
+      this.context = context;
+}
+```
+
+# [After](#tab/after)
+
+```typescript
+public init(
+    context: ComponentFramework.Context<IInputs>, 
+    notifyOutputChanged: () => void, 
+    state: ComponentFramework.Dictionary, 
+    container: HTMLDivElement): 
+    void {
+      this.notifyOutputChanged = notifyOutputChanged;
+      this.rootContainer = container;
+      this.context = context;
+      this.context.mode.trackContainerResize(true);
+}
+```
+
+---
+
+#### Try in the test harness
+
+Now save all the changes so they're automatically reflected in the test harness browser window (because you still have `npm start watch` running from earlier). You can now switch the value of **Component Container Width** between **349** and **350** and see the rendering behave differently. You can also swap the **Form Factor** between **Web** and **Phone** and see the same behavior.
 
 > [!div class="mx-imgBorder"]
 > ![trackContainerResize.](media/field-component-3.gif "trackContainerResize")
