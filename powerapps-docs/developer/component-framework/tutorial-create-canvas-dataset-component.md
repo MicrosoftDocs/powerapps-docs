@@ -1,10 +1,9 @@
 ---
 title: "Create canvas app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a canvas app dataset code component, and deploy, add to a screen, and test the component using Visual Studio Code."
-ms.author: noazarur
-author: noazarur-microsoft
-manager: lwelicki
-ms.date: 05/27/2022
+ms.author: HemantGaur
+author: hemantg
+ms.date: 02/12/2023
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -15,7 +14,7 @@ contributors:
 
 # Tutorial: Creating a canvas app dataset component
 
-In this tutorial, you'll create a canvas app dataset code component, and deploy, add to a screen, and test the component using Visual Studio Code. The code component displays a paged, scrollable dataset grid that provides sortable and filterable columns. It also allows the highlighting of specific rows by configuring an indicator column. This is a common request from app makers and can be complex to implement using native canvas app components. Code components in general can be written to work on both canvas and model-driven apps. However, this component is written to specifically target use within canvas apps.
+In this tutorial, you'll create a canvas app dataset code component, deploy it, add it to a screen, and test the component using Visual Studio Code. The code component displays a paged, scrollable dataset grid that provides sortable and filterable columns. It also allows the highlighting of specific rows by configuring an indicator column. This is a common request from app makers and can be complex to implement using native canvas app components. Code components can be written to work on both canvas and model-driven apps. However, this component is written to specifically target use within canvas apps.
 
 In addition to these requirements, you'll also ensure the code component follows best practice guidance:
 
@@ -33,7 +32,7 @@ Before you start, make sure you've installed all the [prerequisite components](i
 
 ## Code
 
-You can download the complete sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/CanvasGridControl).
+You can download the complete sample from [PowerApps-Samples/component-framework/CanvasGridControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/CanvasGridControl).
 
 ### Create a new `pcfproj` project
 
@@ -63,7 +62,7 @@ You can download the complete sample from [here](https://github.com/microsoft/Po
    >
    > If you receive the message, `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you've installed all the prerequisites, specifically [node.js](https://nodejs.org/en/download/) (LTS version is recommended).
 
-   > [!div class="mx-imgBorder"] 
+   > [!div class="mx-imgBorder"]
    > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
 
 The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
@@ -86,13 +85,35 @@ The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#
 
 ## Defining the dataset properties
 
-The `CanvasGrid\ControlManifest.Input.xml` file defines the metadata describing the behavior of the code component. The [control](manifest-schema-reference/control.md) attribute will already contain the namespace and name of the component. You must define the records that the code component can be bound to, by adding the following inside the `control` element, replacing the existing `data-set` element:
+The `CanvasGrid\ControlManifest.Input.xml` file defines the metadata describing the behavior of the code component. The [control](manifest-schema-reference/control.md) attribute will already contain the namespace and name of the component.
+
+[!INCLUDE [cc_tip-format-xml](includes/cc_tip-format-xml.md)]
+
+You must define the records that the code component can be bound to, by adding the following inside the `control` element, replacing the existing `data-set` element:
+
+# [Before](#tab/before)
 
 ```xml
-<data-set name="records" display-name-key="Records_Dataset_Display">
-      <property-set name="HighlightIndicator" display-name-key="HighlightIndicator_Disp" description-key="HighlightIndicator_Desc" of-type="SingleLine.Text" usage="bound" required="true" />
+<data-set name="sampleDataSet"
+  display-name-key="Dataset_Display_Key">
 </data-set>
 ```
+
+# [After](#tab/after)
+
+```xml
+<data-set name="records"
+  display-name-key="Records_Dataset_Display">
+  <property-set name="HighlightIndicator"
+    display-name-key="HighlightIndicator_Disp"
+    description-key="HighlightIndicator_Desc"
+    of-type="SingleLine.Text"
+    usage="bound"
+    required="true" />
+</data-set>
+```
+
+---
 
 The records [data-set](manifest-schema-reference\data-set.md) will be bound to a data source when the code component is added to a canvas app. The [property-set](manifest-schema-reference\property-set.md) indicates that the user must configure one of the columns of that dataset to be used as the row highlight indicator.
 
