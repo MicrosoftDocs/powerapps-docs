@@ -1132,8 +1132,6 @@ Now that you have the resource strings, you can reference them by updating the `
 
 # [Before](#tab/before)
 
-With comments removed.
-
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
@@ -1201,37 +1199,6 @@ With comments removed.
 ```
 
 ---
-
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<manifest>
-<control namespace="SampleNamespace"
-    constructor="ChoicesPicker"
-    version="0.0.1"
-    display-name-key="ChoicesPicker_Name"
-    description-key="ChoicesPicker_Desc"
-    control-type="standard">
-    <property name="value"
-      display-name-key="Value_Name"
-      description-key="Value_Desc"
-      of-type="OptionSet"
-      usage="bound"
-      required="true"/>
-    <property name="configuration"
-      display-name-key="Configuration_Name"
-      description-key="Configuration_Desc"
-      of-type="Multiple"
-      usage="input"
-      required="true"/>
-    <resources>
-      <code path="index.ts"
-          order="1"/>
-      <resx path="strings/ChoicesPicker.1033.resx"
-          version="1.0.0" />
-  </resources>
-</control>
-</manifest>
-```
 
 You can see that:
 
