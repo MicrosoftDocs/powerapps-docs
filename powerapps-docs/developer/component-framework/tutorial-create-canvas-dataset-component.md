@@ -42,13 +42,13 @@ You can download the complete sample from [PowerApps-Samples/component-framework
 
 1. Inside a new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the following command to create a new code component project:
 
-   ```shell
+   ```powershell
    pac pcf init --namespace SampleNamespace --name CanvasGrid --template dataset
    ```
 
    or using the short form:
 
-   ```shell
+   ```powershell
    pac pcf init -ns SampleNamespace -n CanvasGrid -t dataset
    ```
 
@@ -71,7 +71,7 @@ The template includes an `index.ts` file along with various configuration files.
 
 You'll be using Microsoft Fluent UI and React for creating UI, so you must install these as dependencies. Use the following at the terminal:
 
-```shell
+```powershell
 npm install react react-dom @fluentui/react
 ```
 
@@ -135,19 +135,48 @@ In addition to the input properties, an **output** property named `FilteredRecor
 > [!NOTE]
 > In the future, code components will support custom events so that you can define a specific event rather than using the generic `OnChange` event.
 
-To define these three properties, add the following to the `CanvasGrid\ControlManifest.Input.xml` file, below the `data-set` element:
+To define these three properties, add the following to the `CanvasGrid\ControlManifest.Input.xml` file, *below* the `data-set` element:
 
 ```xml
-<property name="FilteredRecordCount" display-name-key="FilteredRecordCount_Disp" description-key="FilteredRecordCount_Desc" of-type="Whole.None" usage="output" />
-<property name="HighlightValue" display-name-key="HighlightValue_Disp" description-key="HighlightValue_Desc" of-type="SingleLine.Text" usage="input" required="true"/>
-<property name="HighlightColor" display-name-key="HighlightColor_Disp" description-key="HighlightColor_Desc" of-type="SingleLine.Text" usage="input" required="true"/>
+<property name="FilteredRecordCount"
+  display-name-key="FilteredRecordCount_Disp"
+  description-key="FilteredRecordCount_Desc"
+  of-type="Whole.None"
+  usage="output" />
+<property name="HighlightValue"
+  display-name-key="HighlightValue_Disp"
+  description-key="HighlightValue_Desc"
+  of-type="SingleLine.Text"
+  usage="input"
+  required="true"/>
+<property name="HighlightColor"
+  display-name-key="HighlightColor_Disp"
+  description-key="HighlightColor_Desc"
+  of-type="SingleLine.Text"
+  usage="input"
+  required="true"/>
 ```
 
 **Save** this file and then, at the command-line, use:
 
-```shell
+```powershell
 npm run build
 ```
+
+> [!NOTE]
+> If you get an error like this while running `npm run build`:
+> 
+> ```powershell
+> [2:48:57 PM] [build]  Running ESLint...
+> [2:48:57 PM] [build]  Failed:
+> [pcf-1065] [Error] ESLint validation error:
+> C:\repos\CanvasGrid\CanvasGrid\index.ts
+>   2:47  error  'PropertyHelper' is not defined  no-undef
+> ```
+> 
+> Open index.ts file and add this: `// eslint-disable-next-line no-undef`, directly above the line:<br />
+> `import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;`
+
 
 After the component is built, you'll see that:
 
@@ -1304,11 +1333,11 @@ If you need to make further changes to your component, you don't need to deploy 
 
 The **AutoResponder** would look similar to the following:
 
-```shell
+```powershell
 REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.CanvasGrid[\.\/](?'fname'[^?]*\.*)(.*?)$
 ```
 
-```shell
+```powershell
 C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 ```
 
