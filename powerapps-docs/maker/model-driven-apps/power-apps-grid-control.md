@@ -41,7 +41,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
    :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
    - **Reflow behavior**: Use this parameter to specify when the grid reflows into a list format or a grid format. Reflowing the control into a list is often better suited for small displays such as a mobile device. The default value is Reflow.
      - **Reflow**: Allows the grid to render into list mode when there’s not enough display space.
-     - **Grid only**: Restricts the grid to reflow into list format even when there is not enough display space.
+     - **Grid only**: Displays only as a grid even on smaller displays such as a  mobile device.
      - **List only**: Displays only as a list even when there is enough space to display as grid.
    - **Allow filtering**: Determines whether filtering options are available to users in the grid column header dropdowns. The default value is Enable.
      - **Enable**: Filtering options are available to users.
@@ -49,10 +49,10 @@ When you configure the Power Apps read-only grid control for a table, *all* view
    - **Allow range selection**: Controls whether users can select a subset of the grid and copy that data to another application like Excel. The default value is Yes.
      - **Yes**: Users can select and copy data from the grid.
      - **No**: Users can’t select and copy data from the grid.
-   clients.
    - **Navigation types allowed**: Determines which lookup controls in the grid render as hyperlinks. The default value is All.
      - **All**: All table lookup columns render in the grid as a hyperlink.
      - **Primary only**: Suppresses hyperlinks on all lookup fields except the primary column for the selected table.
+     - **None**: Doesn't display hyperlinks, which allow table record navigation.
 
    :::image type="content" source="media/configure-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control" lightbox="media/configure-power-apps-grid-control.png":::
 1. To save your changes, select **Save** on the command bar. When you're ready to make the changes available to app users, select **Publish** on the command bar.
