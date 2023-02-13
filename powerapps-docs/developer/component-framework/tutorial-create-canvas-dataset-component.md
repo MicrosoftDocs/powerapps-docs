@@ -635,7 +635,24 @@ You need to set the width and height to see the code component grid that's popul
 > [!div class="mx-imgBorder"]
 > ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
 
-Here is some comma separated sample data you can use: [contacts.csv](media/contacts.csv)
+Here is some comma separated sample data you can save to a file and use:
+
+```text
+address1_city,address1_country,address1_stateorprovince,address1_line1,address1_postalcode,telephone1,emailaddress1,firstname,fullname,jobtitle,lastname
+Seattle,U.S.,WA,7842 Ygnacio Valley Road,12150,555-0112,someone_m@example.com,Thomas,Thomas Andersen (sample),Purchasing Manager,Andersen (sample)
+Renton,U.S.,WA,7165 Brock Lane,61795,555-0109,someone_j@example.com,Jim,Jim Glynn (sample),Owner,Glynn (sample)
+Snohomish,U.S.,WA,7230 Berrellesa Street,78800,555-0106,someone_g@example.com,Robert,Robert Lyon (sample),Owner,Lyon (sample)
+Seattle,U.S.,WA,931 Corte De Luna,79465,555-0111,someone_l@example.com,Susan,Susan Burk (sample),Owner,Burk (sample)
+Seattle,U.S.,WA,7765 Sunsine Drive,11910,555-0110,someone_k@example.com,Patrick,Patrick Sands (sample),Owner,Sands (sample)
+Seattle,U.S.,WA,4948 West Th St,73683,555-0108,someone_i@example.com,Rene,Rene Valdes (sample),Purchasing Assistant,Valdes (sample)
+Redmond,U.S.,WA,7723 Firestone Drive,32147,555-0107,someone_h@example.com,Paul,Paul Cannon (sample),Purchasing Assistant,Cannon (sample)
+Issaquah,U.S.,WA,989 Caravelle Ct,33597,555-0105,someone_f@example.com,Scott,Scott Konersmann (sample),Purchasing Manager,Konersmann (sample)
+Issaquah,U.S.,WA,7691 Benedict Ct.,57065,555-0104,someone_e@example.com,Sidney,Sidney Higa (sample),Owner,Higa (sample)
+Monroe,U.S.,WA,3747 Likins Avenue,37925,555-0103,someone_d@example.com,Maria,Maria Campbell (sample),Purchasing Manager,Campbell (sample)
+Duvall,U.S.,WA,5086 Nottingham Place,16982,555-0102,someone_c@example.com,Nancy,Nancy Anderson (sample),Purchasing Assistant,Anderson (sample)
+Issaquah,U.S.,WA,5979 El Pueblo,23382,555-0101,someone_b@example.com,Susanna,Susanna Stubberod (sample),Purchasing Manager,Stubberod (sample)
+Redmond,U.S.,WA,249 Alexander Pl.,86372,555-0100,someone_a@example.com,Yvonne,Yvonne McKay (sample),Purchasing Manager,McKay (sample)
+```
 
 > [!NOTE]
 > There's only a single column shown in the test harness regardless of the columns you provide in the loaded CSV file. This is because the test harness only shows `property-set` when there is one defined. If no `property-set` is defined, then all of the columns in the loaded CSV file will be populated.
