@@ -36,7 +36,7 @@ With the benefits available by re-using these component resources, we expect thi
 Just as with any component, you must install [Visual Studio Code](https://code.visualstudio.com/Download) and the [Microsoft Power Platform CLI](../data-platform/powerapps-cli.md#install-microsoft-power-platform-cli) as described here: [Prerequisites](implementing-controls-using-typescript.md#prerequisites)
 
 > [!NOTE]
-> If you have already installed the Standalone Power Platform CLI, make sure you are running the latest version by using the `pac install latest` command.
+> If you have already installed Power Platform CLI for Windows, make sure you are running the latest version by using the `pac install latest` command.
 > The Power Platform Tools for Visual Studio Code should update automatically.
 
 ## Create a React component
