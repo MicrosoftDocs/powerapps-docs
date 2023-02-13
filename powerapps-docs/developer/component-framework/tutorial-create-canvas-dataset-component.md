@@ -659,6 +659,8 @@ Redmond,U.S.,WA,249 Alexander Pl.,86372,555-0100,someone_a@example.com,Yvonne,Yv
 
 ## Adding row selection
 
+<!-- TODO: Continue from here -->
+
 Although the Fluent UI `DetailsList` allows selecting records by default, the selected records are not linked to the output of the code component. You need the `Selected` and `SelectedItems` properties to reflect the chosen records inside a canvas app, so that related components can be updated. In this example, you allow selection of only a single item at a time so `SelectedItems` will only ever contain a single record.
 
 Add the following to the imports inside `Grid.tsx`:
