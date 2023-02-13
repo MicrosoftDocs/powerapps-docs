@@ -2,7 +2,7 @@
 title: "Power Apps read-only grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view and open records from a view or subgrid"
 ms.custom: ""
-ms.date: 07/20/2022
+ms.date: 02/09/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -36,9 +36,25 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 ### Configure the Power Apps read-only grid control
 
 1. In the **Power Apps Read-Only Grid** row, select the app types you want to apply the grid to. This selection makes the control the default control for the selected clients.
-   :::image type="content" source="media/configure-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control":::
-1. By default, the jump bar is disabled. To display an alphabetic list at the bottom of views or subgrids (the jump bar), select the pencil icon in the **Jump bar** row. Under **Bind to static options**, select **Enable** in the dropdown list. Below is a screenshot of the jump bar enabled for the contact table in a model-driven app.
+1. Select the pencil icon next to the following properties to make the changes you want:
+   - **Jump bar**: By default, the jump bar is disabled. To display an alphabetic list at the bottom of views or subgrids (the jump bar), select the pencil icon in the **Jump bar** row. Under **Bind to static options**, select **Enable** in the dropdown list. Below is a screenshot of the jump bar enabled for the contact table in a model-driven app.
    :::image type="content" source="media/jump-bar-in-view.png" alt-text="Jump bar enabled and displayed in the view for an app":::
+   - **Reflow behavior**: Use this parameter to specify when the grid reflows into a list format or a grid format. Reflowing the control into a list is often better suited for small displays such as a mobile device. The default value is Reflow.
+     - **Reflow**: Allows the grid to render into list mode when there’s not enough display space.
+     - **Grid only**: Displays only as a grid even on smaller displays such as a  mobile device.
+     - **List only**: Displays only as a list even when there is enough space to display as grid.
+   - **Allow filtering**: Determines whether filtering options are available to users in the grid column header dropdowns. The default value is Enable.
+     - **Enable**: Filtering options are available to users.
+     - **Disable**: Filtering options aren’t available to users.
+   - **Allow range selection**: Controls whether users can select a subset of the grid and copy that data to another application like Excel. The default value is Yes.
+     - **Yes**: Users can select and copy data from the grid.
+     - **No**: Users can’t select and copy data from the grid.
+   - **Navigation types allowed**: Determines which lookup controls in the grid render as hyperlinks. The default value is All.
+     - **All**: All table lookup columns render in the grid as a hyperlink.
+     - **Primary only**: Suppresses hyperlinks on all lookup fields except the primary column for the selected table.
+     - **None**: Doesn't display hyperlinks, which allow table record navigation.
+
+   :::image type="content" source="media/configure-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control" lightbox="media/configure-power-apps-grid-control.png":::
 1. To save your changes, select **Save** on the command bar. When you're ready to make the changes available to app users, select **Publish** on the command bar.
 
 ## Add the Power Apps read-only grid control to a subgrid
@@ -50,6 +66,7 @@ When you configure the Power Apps read-only grid control for a table, *all* view
 1. To continue with configuring and publishing the control, see [Configure the Power Apps read-only grid control](#configure-the-power-apps-read-only-grid-control).
 
 ## Opt out of the Power Apps read-only grid control
+
 While the Power Apps read-only grid control became the default grid experience in April 2022, you can opt your organization out of the automatic switch to this grid by following the steps below. 
 
 1. Go to the [Power Platform Admin Center](https://admin.powerplatform.com/) > Environments > Features.
