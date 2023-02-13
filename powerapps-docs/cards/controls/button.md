@@ -24,23 +24,23 @@ A control that the user can click or tap to interact with the app.
 A button element that executes PowerFx on click.
 
 ## Properties
-**[Name](properties-core.md)** – A unique identifier associated with the item.
+**[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
-**[Type](properties-core.md)** – .
+**[Type](../control-reference.md#t)** – .
 
-**[OnSelect]()** - Actions to perform when the user taps or clicks on the button.
+**[OnSelect](../control-reference.md#o)** - Actions to perform when the user taps or clicks on the button.
 
-**[Title]()** - Label for button or link that represents this button.
+**[Title](../control-reference.md#t)** - Label for button or link that represents this button.
 
-**[Style]()** - Controls the style of a button, which influences how the button is displayed, spoken, etc.
+**[Style](../control-reference.md#s)** - Controls the style of a button, which influences how the button is displayed, spoken, etc.
 
-**[IconUrl]()** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
+**[IconUrl](../control-reference.md#i)** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
 
-**[Associated inputes]()** - Controls which inputs are associated with the action.
+**[Associated inputes](../control-reference.md#a)** - Controls which inputs are associated with the action.
 
-**[Show when]()** - Data context expression.
+**[Repeat for every](../control-reference.md#r)** - Data context expression.
 
-**[Show when]()** - Conditional layout expression.
+**[Show when](../control-reference.md#s)** - Conditional layout expression.
 
-**[Requires]()** - A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
+**[Requires](../control-reference.md#r)** - A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
 
