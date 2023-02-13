@@ -635,7 +635,7 @@ You need to set the width and height to see the code component grid that's popul
 > [!div class="mx-imgBorder"]
 > ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
 
-Here is some comma separated sample data you can save to a file and use:
+Here is some comma separated sample data you can save to a .csv file and use:
 
 ```text
 address1_city,address1_country,address1_stateorprovince,address1_line1,address1_postalcode,telephone1,emailaddress1,firstname,fullname,jobtitle,lastname
@@ -657,7 +657,7 @@ Redmond,U.S.,WA,249 Alexander Pl.,86372,555-0100,someone_a@example.com,Yvonne,Yv
 > [!NOTE]
 > There's only a single column shown in the test harness regardless of the columns you provide in the loaded CSV file. This is because the test harness only shows `property-set` when there is one defined. If no `property-set` is defined, then all of the columns in the loaded CSV file will be populated.
 
-### Adding row selection
+## Adding row selection
 
 Although the Fluent UI `DetailsList` allows selecting records by default, the selected records are not linked to the output of the code component. You need the `Selected` and `SelectedItems` properties to reflect the chosen records inside a canvas app, so that related components can be updated. In this example, you allow selection of only a single item at a time so `SelectedItems` will only ever contain a single record.
 
@@ -1031,10 +1031,10 @@ const onColumnClick = React.useCallback(
 
 You'll see that:
 
-1. The `contextualMenuProps` state is used to control the visibility of the context menu that's rendered using the Fluent UI `ContextualMenu` component.
-2. You're providing a simple filter to show only values where the field doesn't contain any data. You could extend this to provide additional filtering.
-3. You're using `resources.getString` to show labels on the context menu that can be localized.
-4. The `React.useCallback` hook is used (similar to `React.useMemo`), so that the callbacks are only mutated when the dependent values change. This optimizes the rendering of child components.
+- The `contextualMenuProps` state is used to control the visibility of the context menu that's rendered using the Fluent UI `ContextualMenu` component.
+- You're providing a simple filter to show only values where the field doesn't contain any data. You could extend this to provide additional filtering.
+- You're using `resources.getString` to show labels on the context menu that can be localized.
+- The `React.useCallback` hook is used (similar to `React.useMemo`), so that the callbacks are only mutated when the dependent values change. This optimizes the rendering of child components.
 
 Now add these new context menu functions to the column select and context menu events. Update the `const gridColumns` to add the `onColumnContextMenu` and `onColumnClick` callbacks:
 
@@ -1106,9 +1106,9 @@ onFilter = (name: string, filter: boolean): void => {
 
 You'll see that:
 
-1. The sort and filter are applied to the dataset property using the [`sorting`](reference\sortstatus.md) and [`filtering`](reference\filtering.md).
-2. When modifying the sort columns, the existing sort definitions must be removed using pop rather than the sorting array itself being replaced.
-3. [Refresh](reference\dataset\refresh.md) must be called after sorting and filtering is applied. If a filter and sort are applied at the same time, refresh only needs to be called once.
+- The sort and filter are applied to the dataset property using the [`sorting`](reference\sortstatus.md) and [`filtering`](reference\filtering.md).
+- When modifying the sort columns, the existing sort definitions must be removed using pop rather than the sorting array itself being replaced.
+- [Refresh](reference\dataset\refresh.md) must be called after sorting and filtering is applied. If a filter and sort are applied at the same time, refresh only needs to be called once.
 
 Lastly, you can pass these two callbacks into the `Grid` rendering call:
 
@@ -1149,7 +1149,7 @@ public getOutputs(): IOutputs {
 }
 ```
 
-### Adding paging to the grid
+## Adding paging to the grid
 
 For large datasets, canvas apps will split the records across multiple records. You can add a footer that shows page navigation controls. Each button will be rendered using a Fluent UI `IconButton`, so add this to the imports inside `Grid.tsx`:
 
@@ -1261,7 +1261,7 @@ ReactDOM.render(
 > [!NOTE]
 > There's currently an issue with paging in canvas datasets where `currentPage` may get out of sync with the dataset page. A fix for this issue is being deployed. More information: [Canvas dataset paging is not reset when external filter applied](issues-and-workarounds.md#canvas-dataset-paging-is-not-reset-when-external-filter-applied).
 
-### Adding full screen support
+## Adding full screen support
 
 Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen. You can use the Fluent UI `Link` component so it must be added to the imports at the top of `Grid.tsx`:
 
@@ -1338,7 +1338,7 @@ ReactDOM.render(
     }),
 ```
 
-### Highlighting rows
+## Highlighting rows
 
 Now you're ready to add the conditional row highlighting functionality. You've already defined the `HighlightValue` and `HighlightColor` input properties, and the `HighlightIndicator` `property-set`. The `property-set` allows the maker to nominate a field to use to compare with the value they provide in `HighlightValue`.
 
@@ -1368,9 +1368,9 @@ const onRenderRow: IDetailsListProps['onRenderRow'] = (props) => {
 
 You'll see that:
 
-1. You can retrieve the value of the field that's nominated by the maker via the `HighlightIndicator` alias using `item?.getValue('HighlightIndicator')`.
-2. Only when the value of the `HighlightIndicator` field matches that of the value of the `highlightValue` (provided by the input property on the code component), you can add a background color to the row.
-3. The `DetailsRow` component is the component that's used by the `DetailsList` to render the columns you defined. You don't need to change the behavior other than the background color.
+- You can retrieve the value of the field that's nominated by the maker via the `HighlightIndicator` alias using `item?.getValue('HighlightIndicator')`.
+- Only when the value of the `HighlightIndicator` field matches that of the value of the `highlightValue` (provided by the input property on the code component), you can add a background color to the row.
+- The `DetailsRow` component is the component that's used by the `DetailsList` to render the columns you defined. You don't need to change the behavior other than the background color.
 
 You'll see that you need to add some additional props for `highlightColor` and `highlightValue` that will be provided by the rendering inside `updateView`. You've already added to the `GridProps` interface, so you just need to add them to the props destructuring:
 
@@ -1473,7 +1473,7 @@ Now that you've implemented all the features, you must deploy the code component
 22. Set the `CanvasGrid1.OnSelect` property to be `Navigate(scrDetails)`.
     When you invoke the grid row select action, you should now see that the app navigates to the second screen with the item selected.
 
-### Debugging after deploying
+## Debugging after deploying
 
 You can easily debug your code component while it's running inside the canvas app by opening Developer Tools using `Ctrl` + `Shift` + `I`.
 
