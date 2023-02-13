@@ -25,21 +25,21 @@ A control that the user can click or tap to interact with the app.
 A container for a set of button elements.
 
 ## Properties
-**[Name](properties-core.md)** – A unique identifier associated with the item.
+**[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
-**[Initially visible](properties-core.md)** – If false, this item will be removed from the visual tree.
+**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Spacing](properties-text.md)** – Controls the amount of spacing between this control and the preceding control.
+**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**Divider** – When true, draw a separating line at the top of the control.
+**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Height](properties-color-border.md)** – Specifies the height of the control.
+**[Height](../control-reference.md#h)** – Specifies the height of the control.
 
-**[Repeat for every](properties-color-border.md)** – Data context expression.
+**[Repeat for every](../control-reference.md#r)** – Data context expression.
 
-**[Show when](properties-color-border.md)** – Conditional layout expression.
+**[Show when](../control-reference.md#s)** – Conditional layout expression.
 
-**[Require](properties-color-border.md)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
+**[Require](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
 
 
 
