@@ -80,7 +80,6 @@ The following list explains what you'll need before you can start using wrap fea
 ### Permissions and access requirements
 
 - Access to one or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project
-- Access to [Power Platform admin center](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) to [install the wrap feature](how-to.md#prerequisites)
 - Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
 - Access to [Microsoft App Center](https://appcenter.ms/)
 
@@ -166,6 +165,7 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 ## Next steps
 
+[Use the wrap wizard to build your mobile app (preview)](wrap-how-to.md) <br>
 [Wrap canvas apps as a native mobile app](how-to.md)
 
 ### See also
