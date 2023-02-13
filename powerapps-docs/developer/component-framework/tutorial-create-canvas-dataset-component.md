@@ -124,7 +124,7 @@ The records [data-set](manifest-schema-reference\data-set.md) will be bound to a
 
 In addition to the dataset, you can provide the following **input** properties:
 
-- `HighlightValue` - Allows the app maker to provide a value to be compared against the column defined as the `HighlightIndicator` `propert-set`. When the values are equal, the row should be highlighted.
+- `HighlightValue` - Allows the app maker to provide a value to be compared against the column defined as the `HighlightIndicator` `property-set`. When the values are equal, the row should be highlighted.
 - `HighlightColor` - Allows the app maker to select a color to use to highlight rows.
 
 > [!TIP]
@@ -180,9 +180,8 @@ npm run build
 
 After the component is built, you'll see that:
 
-1. An automatically generated file `CanvasGrid\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
-
-2. The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser, and the `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that's used during deployment.
+- An automatically generated file `CanvasGrid\generated\ManifestTypes.d.ts` is added to your project. This is generated as part of the build process from the `ControlManifest.Input.xml` and provides the types for interacting with the input/output properties.
+- The build output is added to the `out` folder. The `bundle.js` is the transpiled JavaScript that runs inside the browser, and the `ControlManifest.xml` is a reformatted version of the `ControlManifest.Input.xml` file that's used during deployment.
 
    > [!NOTE]
    > Do not modify the contents of the `generated` and `out` folders directly. They'll be overwritten as part of the build process.
@@ -191,7 +190,7 @@ After the component is built, you'll see that:
 
 When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `CanvasGrid` folder, add a new TypeScript file named `Grid.tsx`, and add the following content:
 
-```react
+```typescript
 import { DetailsList } from '@fluentui/react/lib/DetailsList';
 import {
     ConstrainMode,
@@ -337,44 +336,87 @@ Grid.displayName = 'Grid';
 > [!NOTE]
 > The file has the extension `tsx` which is a TypeScript file that supports XML style syntax used by React. It's compiled into standard JavaScript by the build process.
 
-From the above code, you'll see that:
+### Grid design notes
 
-1. The line `const { ... } = props;` is called 'destructuring', where you extract the columns (fields) required to render from the props, rather than prefixing them with `props.` each time they're used.
+This section includes commons on the design of the `Grid.tsx` component.
 
-2. You import the Fluent UI components using path-based imports so that your bundle size will be smaller. Instead of:
+#### It is a functional component
 
-   ```typescript
-   import { DetailsList, Stack } from "@fluentui/react";
-   ```
+This is a React *functional component*, but equally, it could be a *class component*. This is based on your preferred coding style. Class components and functional components can also be mixed in the same project. Both function and class components use the `tsx` XML style syntax used by React. More information: [Function and Class Components](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
 
-   you'll use:
+#### Minimize bundle.js size
 
-   ```typescript
-   import { DetailsList } from "@fluentui/react/lib/components/DetailsList/DetailsList";
-   import { Stack } from "@fluentui/react/lib/components/Stack/Stack";
-   ```
+When importing the `ChoiceGroup` Fluent UI components using path-based imports, instead of:
 
-   An alternative would be to use [tree-shaking](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size).
+```typescript
+import { DetailsList, Stack } from "@fluentui/react";
+```
 
-3. This is a React functional component, but equally, it could be a class component. This is entirely based on your preferred coding style. Class components and functional components can be mixed in the same project. Both functional and class components use the `tsx` XML style syntax used by React.
+we use:
 
-4. You can use `React.memo` to wrap your functional component so that it won't render unless any of the input props have changed.
+```typescript
+import { DetailsList } from "@fluentui/react/lib/components/DetailsList/DetailsList";
+import { Stack } from "@fluentui/react/lib/components/Stack/Stack";
+```
 
-5. `React.useMemo` is used to ensure that the item array created is only mutated when the input props `options` or `configuration` have change. This is a best practice of function components that reduces unnecessary renders of the child components.
+This way, your bundle size will be smaller, resulting in lower capacity requirements and better runtime performance.
 
-6. The `DetailsList` in a `Stack` is wrapped because, later< you'll add a footer element with the paging controls.
+An alternative would be to use [tree-shaking.](code-components-best-practices.md#use-path-based-imports-from-fluent-to-reduce-bundle-size)
 
-7. The Fluent UI `Sticky` component is used to wrap the header columns (using `onRenderDetailsHeader`) so that they remain visible when scrolling the grid.
+#### Destructuring assignment
 
-8. `setKey` is passed to the `DetailsList` along with `initialFocusedIndex` so that when the current page changes, the scroll position and selection will be reset.
+This code:
 
-9. The function `onRenderItemColumn` is used to render the cell contents. It accepts row item, on which you use [getFormattedValue](reference\entityrecord\getformattedvalue.md) to return the display value of the column. The [getValue](reference\entityrecord\getvalue.md) method returns a value that you could use to provide an alternative rendering. The advantage of `getFormattedValue` is that it contains a formatted string for columns of non-string types such as dates and lookups.
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+    const {
+        records,
+        sortedRecordIds,
+        columns,
+        width,
+        height,
+        hasNextPage,
+        hasPreviousPage,
+        sorting,
+        filtering,
+        currentPage,
+        itemsLoading,
+    } = props;
+```
 
-10. The `gridColumns` block is mapping the object shape of the columns provided by the dataset context, onto the shape expected by the `DetailsList` columns prop. Since this is wrapped in the `useMemo` React hook, the output will only change when the `columns` or `sorting` props change. You can display the sort and filter icons on the columns where the sorting and filtering details provided by the code component context matches the column being mapped. The columns are sorted using the [`column.order`](reference\column.md#order) property to ensure that they're in the correct order on the grid as defined by the app maker.
+Uses [destructuring assignment](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). In this way, you extract the attributes required to render from the props, rather than prefixing them with `props.` each time they're used.
 
-11. You're maintaining an internal state for `isComponentLoading` in our React component. This is because when the user selects sorting and filtering actions, you can grey out the grid as a visual cue until the `sortedRecordIds` are updated and the state is reset. There's an additional input prop called `itemsLoading` which is mapped to the [dataset.loading](reference\dataset.md#loading) property provided by the dataset context. Both flags are used to control the visual loading cue that's implemented using the Fluent UI `Overlay` component.
+The code also uses [React.memo](https://reactjs.org/docs/react-api.html#reactmemo) to wrap the functional component so that it won't render unless any of the input props have changed.
+
+#### Use of React.useMemo
+
+[React.useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) is used in several places to ensure that the item array created is only mutated when the input props `options` or `configuration` change. This is a best practice of function components that reduces unnecessary renders of the child components.
+
+#### Other items to note:
+
+- The `DetailsList` in a `Stack` is wrapped because, later you'll add a footer element with the paging controls.
+- The Fluent UI `Sticky` component is used to wrap the header columns (using `onRenderDetailsHeader`) so that they remain visible when scrolling the grid.
+- `setKey` is passed to the `DetailsList` along with `initialFocusedIndex` so that when the current page changes, the scroll position and selection will be reset.
+- The function `onRenderItemColumn` is used to render the cell contents. It accepts row item, on which you use [getFormattedValue](reference\entityrecord\getformattedvalue.md) to return the display value of the column. The [getValue](reference\entityrecord\getvalue.md) method returns a value that you could use to provide an alternative rendering. The advantage of `getFormattedValue` is that it contains a formatted string for columns of non-string types such as dates and lookups.
+- The `gridColumns` block is mapping the object shape of the columns provided by the dataset context, onto the shape expected by the `DetailsList` columns prop. Since this is wrapped in the [React.useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) hook, the output will only change when the `columns` or `sorting` props change. You can display the sort and filter icons on the columns where the sorting and filtering details provided by the code component context matches the column being mapped. The columns are sorted using the [`column.order`](reference\column.md#order) property to ensure that they're in the correct order on the grid as defined by the app maker.
+- You're maintaining an internal state for `isComponentLoading` in our React component. This is because when the user selects sorting and filtering actions, you can grey out the grid as a visual cue until the `sortedRecordIds` are updated and the state is reset. There's an additional input prop called `itemsLoading` which is mapped to the [dataset.loading](reference\dataset.md#loading) property provided by the dataset context. Both flags are used to control the visual loading cue that's implemented using the Fluent UI `Overlay` component.
+
+## Update index.ts
+
+The next step is to make changes to the `index.ts` file to match properties defined in `Grid.tsx.`
+
+### Add import statements and initialize icons
 
 To the header of `index.ts`, replace the existing imports with the following:
+
+# [Before](#tab/before)
+
+```typescript
+import { IInputs, IOutputs } from "./generated/ManifestTypes";
+import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
+```
+
+# [After](#tab/after)
 
 ```typescript
 import { initializeIcons } from "@fluentui/react/lib/Icons";
@@ -386,109 +428,189 @@ import { Grid } from "./Grid";
 initializeIcons(undefined, { disableWarnings: true });
 ```
 
+---
+
 > [!NOTE]
 > The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
 
-Add the following class fields underneath `export class CanvasGrid`:
+### Add fields to the CanvasGrid class
+
+Add the following fields to the `CanvasGrid` class:
+
+# [Before](#tab/before)
 
 ```typescript
-notifyOutputChanged: () => void;
-container: HTMLDivElement;
-context: ComponentFramework.Context<IInputs>;
-sortedRecordsIds: string[] = [];
-resources: ComponentFramework.Resources;
-isTestHarness: boolean;
-records: {
-    [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
-};
-currentPage = 1;
-filteredRecordCount?: number;
+export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+
+    /**
+     * Empty constructor.
+     */
+    constructor() {
+
+    }
 ```
+
+# [After](#tab/after)
+
+```typescript
+export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+    notifyOutputChanged: () => void;
+    container: HTMLDivElement;
+    context: ComponentFramework.Context<IInputs>;
+    sortedRecordsIds: string[] = [];
+    resources: ComponentFramework.Resources;
+    isTestHarness: boolean;
+    records: {
+        [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
+    };
+    currentPage = 1;
+    filteredRecordCount?: number;
+
+    /**
+     * Empty constructor.
+     */
+    constructor() {
+
+    }
+```
+
+---
+
+### Update the init method
 
 Add the following to `init`:
 
+# [Before](#tab/before)
+
 ```typescript
-this.notifyOutputChanged = notifyOutputChanged;
-this.container = container;
-this.context = context;
-this.context.mode.trackContainerResize(true);
-this.resources = this.context.resources;
-this.isTestHarness = document.getElementById("control-dimensions") !== null;
+public init(
+    context: ComponentFramework.Context<IInputs>, 
+    notifyOutputChanged: () => void, 
+    state: ComponentFramework.Dictionary, 
+    container: HTMLDivElement): void {
+    // Add control initialization code
+}
 ```
+
+# [After](#tab/after)
+
+```typescript
+public init(
+    context: ComponentFramework.Context<IInputs>,
+    notifyOutputChanged: () => void,
+    state: ComponentFramework.Dictionary,
+    container: HTMLDivElement): void {
+    this.notifyOutputChanged = notifyOutputChanged;
+    this.container = container;
+    this.context = context;
+    this.context.mode.trackContainerResize(true);
+    this.resources = this.context.resources;
+    this.isTestHarness = document.getElementById("control-dimensions") !== null;
+}
+```
+
+---
 
 The `init` function is called when the code component is first initialized on an app screen. You store a reference to the following:
 
-- `notifyOutputChanged` - This is the callback provided that you call to notify the canvas app that one of the properties has changed.
+- `notifyOutputChanged`: This is the callback provided that you call to notify the canvas app that one of the properties has changed.
+- `container`:This is the DOM element to which you add your code component UI.
+- `resources`:This is used to retrieve localized strings in the current user's language.
 
-- `container` - This is the DOM element to which you add your code component UI.
-
-- `resources` - This is used to retrieve localized strings in the current user's language.
-
-The [trackContainerResize(true)](reference\mode\trackcontainerresize.md) is used so that `updateView` will be called when the code component changes size.
+The [context.mode.trackContainerResize(true))](reference\mode\trackcontainerresize.md) is used so that `updateView` will be called when the code component changes size.
 
 > [!NOTE]
-> Currently, there's no way to determine if the code component is running inside the test harness. You need to detect if the control-dimensions div is present as an indicator.
+> Currently, there's no way to determine if the code component is running inside the test harness. You need to detect if the `control-dimensions` `div` element is present as an indicator.
+
+### Update the updateView method
 
 Add the following to `updateView`:
 
+# [Before](#tab/before)
+
 ```typescript
-const dataset = context.parameters.records;
-const paging = context.parameters.records.paging;
-const datasetChanged = context.updatedProperties.indexOf("dataset") > -1;
-const resetPaging =
-  datasetChanged &&
-  !dataset.loading &&
-  !dataset.paging.hasPreviousPage &&
-  this.currentPage !== 1;
-
-if (resetPaging) {
-  this.currentPage = 1;
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    // Add code to update control view
 }
-if (resetPaging || datasetChanged || this.isTestHarness) {
-  this.records = dataset.records;
-  this.sortedRecordsIds = dataset.sortedRecordIds;
-}
-
-// The test harness provides width/height as strings
-const allocatedWidth = parseInt(
-  context.mode.allocatedWidth as unknown as string
-);
-const allocatedHeight = parseInt(
-  context.mode.allocatedHeight as unknown as string
-);
-
-ReactDOM.render(
-  React.createElement(Grid, {
-    width: allocatedWidth,
-    height: allocatedHeight,
-    columns: dataset.columns,
-    records: this.records,
-    sortedRecordIds: this.sortedRecordsIds,
-    hasNextPage: paging.hasNextPage,
-    hasPreviousPage: paging.hasPreviousPage,
-    currentPage: this.currentPage,
-    totalResultCount: paging.totalResultCount,
-    sorting: dataset.sorting,
-    filtering: dataset.filtering && dataset.filtering.getFilter(),
-    resources: this.resources,
-    itemsLoading: dataset.loading,
-    highlightValue: this.context.parameters.HighlightValue.raw,
-    highlightColor: this.context.parameters.HighlightColor.raw,
-  }),
-  this.container
-);
 ```
+
+# [After](#tab/after)
+
+```typescript
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    const dataset = context.parameters.records;
+    const paging = context.parameters.records.paging;
+    const datasetChanged = context.updatedProperties.indexOf("dataset") > -1;
+    const resetPaging =
+        datasetChanged &&
+        !dataset.loading &&
+        !dataset.paging.hasPreviousPage &&
+        this.currentPage !== 1;
+
+    if (resetPaging) {
+        this.currentPage = 1;
+    }
+    if (resetPaging || datasetChanged || this.isTestHarness) {
+        this.records = dataset.records;
+        this.sortedRecordsIds = dataset.sortedRecordIds;
+    }
+
+    // The test harness provides width/height as strings
+    const allocatedWidth = parseInt(
+        context.mode.allocatedWidth as unknown as string
+    );
+    const allocatedHeight = parseInt(
+        context.mode.allocatedHeight as unknown as string
+    );
+
+    ReactDOM.render(
+        React.createElement(Grid, {
+            width: allocatedWidth,
+            height: allocatedHeight,
+            columns: dataset.columns,
+            records: this.records,
+            sortedRecordIds: this.sortedRecordsIds,
+            hasNextPage: paging.hasNextPage,
+            hasPreviousPage: paging.hasPreviousPage,
+            currentPage: this.currentPage,
+            totalResultCount: paging.totalResultCount,
+            sorting: dataset.sorting,
+            filtering: dataset.filtering && dataset.filtering.getFilter(),
+            resources: this.resources,
+            itemsLoading: dataset.loading,
+            highlightValue: this.context.parameters.HighlightValue.raw,
+            highlightColor: this.context.parameters.HighlightColor.raw,
+        }),
+        this.container
+    );
+}
+```
+
+---
 
 You can see that:
 
-1. You call `React.createElement`, passing the reference to the DOM container you received inside the `init` function.
-2. The `Grid` component is defined inside `Grid.tsx` and is imported at the top of the file.
-3. The `allocatedWidth` and `allocatedHeight` will be provided by the parent context whenever they change (for example, the app resizes the code component or you enter full screen mode), since you made a call to [trackContainerResize(true)](reference\mode\trackcontainerresize.md) inside the `init` function.
-4. You can detect when there are new rows to display when the [updatedProperties](reference\updatedproperties.md) array contains the `dataset` string.
-5. In the test harness, the `updatedProperties` array is not populated, so you can use the `isTestHarness` flag you set in the `init` function to short-circuit the logic that sets the `sortedRecordId` and `records`. You maintain a reference to the current values until they change, so that you don't mutate these when passed to the child component unless a re-render of the data is required.
-6. Since the code component maintains the state of which page you're displaying, the page number is reset when the parent context resets the records to the first page. You know when you're back on the first page when `hasPreviousPage` is false.
+- You call [React.createElement](https://reactjs.org/docs/react-api.html#createelement), passing the reference to the DOM container you received inside the `init` function.
+- The `Grid` component is defined inside `Grid.tsx` and is imported at the top of the file.
+- The `allocatedWidth` and `allocatedHeight` will be provided by the parent context whenever they change (for example, the app resizes the code component or you enter full screen mode), since you made a call to [trackContainerResize(true)](reference\mode\trackcontainerresize.md) inside the `init` function.
+- You can detect when there are new rows to display when the [updatedProperties](reference\updatedproperties.md) array contains the `dataset` string.
+- In the test harness, the `updatedProperties` array is not populated, so you can use the `isTestHarness` flag you set in the `init` function to short-circuit the logic that sets the `sortedRecordId` and `records`. You maintain a reference to the current values until they change, so that you don't mutate these when passed to the child component unless a re-render of the data is required.
+- Since the code component maintains the state of which page you're displaying, the page number is reset when the parent context resets the records to the first page. You know when you're back on the first page when `hasPreviousPage` is false.
+
+
+### Update the destroy method
 
 Lastly, you need to tidy up when the code component is destroyed:
+
+# [Before](#tab/before)
+
+```typescript
+public destroy(): void {
+    // Add code to cleanup control if necessary
+}
+```
+
+# [After](#tab/after)
 
 ```typescript
 public destroy(): void {
@@ -496,10 +618,24 @@ public destroy(): void {
 }
 ```
 
-You can use `npm start watch` to see the simple grid inside the test harness. You need to set the width and height to see the code component grid that's populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load it into the test harness using **Data Inputs** > **Records panel**:
+More information: [ReactDOM.unmountComponentAtNode](https://reactjs.org/docs/react-dom.html#unmountcomponentatnode)
 
-> [!div class="mx-imgBorder"] 
+---
+
+## Start the test harness
+
+Ensure all the files are saved and at the terminal use:
+
+```powershell
+npm start watch
+```
+
+You need to set the width and height to see the code component grid that's populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load it into the test harness using **Data Inputs** > **Records panel**:
+
+> [!div class="mx-imgBorder"]
 > ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
+
+You can download this file using sample contact data: [Download CSV file](data:text/csv;base64,YWRkcmVzczFfY2l0eSxhZGRyZXNzMV9jb3VudHJ5LGFkZHJlc3MxX3N0YXRlb3Jwcm92aW5jZSxhZGRyZXNzMV9saW5lMSxhZGRyZXNzMV9wb3N0YWxjb2RlLHRlbGVwaG9uZTEsZW1haWxhZGRyZXNzMSxmaXJzdG5hbWUsZnVsbG5hbWUsZ2VuZGVyY29kZSxqb2J0aXRsZSxsYXN0bmFtZQ0KU2VhdHRsZSxVLlMuLFdBLDc4NDIgWWduYWNpbyBWYWxsZXkgUm9hZCwxMjE1MCw1NTUtMDExMixzb21lb25lX21AZXhhbXBsZS5jb20sVGhvbWFzLFRob21hcyBBbmRlcnNlbiAoc2FtcGxlKSxNYWxlLFB1cmNoYXNpbmcgTWFuYWdlcixBbmRlcnNlbiAoc2FtcGxlKQ0KUmVudG9uLFUuUy4sV0EsNzE2NSBCcm9jayBMYW5lLDYxNzk1LDU1NS0wMTA5LHNvbWVvbmVfakBleGFtcGxlLmNvbSxKaW0sSmltIEdseW5uIChzYW1wbGUpLE1hbGUsT3duZXIsR2x5bm4gKHNhbXBsZSkNClNub2hvbWlzaCxVLlMuLFdBLDcyMzAgQmVycmVsbGVzYSBTdHJlZXQsNzg4MDAsNTU1LTAxMDYsc29tZW9uZV9nQGV4YW1wbGUuY29tLFJvYmVydCxSb2JlcnQgTHlvbiAoc2FtcGxlKSxNYWxlLE93bmVyLEx5b24gKHNhbXBsZSkNClNlYXR0bGUsVS5TLixXQSw5MzEgQ29ydGUgRGUgTHVuYSw3OTQ2NSw1NTUtMDExMSxzb21lb25lX2xAZXhhbXBsZS5jb20sU3VzYW4sU3VzYW4gQnVyayAoc2FtcGxlKSxGZW1hbGUsT3duZXIsQnVyayAoc2FtcGxlKQ0KU2VhdHRsZSxVLlMuLFdBLDc3NjUgU3Vuc2luZSBEcml2ZSwxMTkxMCw1NTUtMDExMCxzb21lb25lX2tAZXhhbXBsZS5jb20sUGF0cmljayxQYXRyaWNrIFNhbmRzIChzYW1wbGUpLE1hbGUsT3duZXIsU2FuZHMgKHNhbXBsZSkNClNlYXR0bGUsVS5TLixXQSw0OTQ4IFdlc3QgVGggU3QsNzM2ODMsNTU1LTAxMDgsc29tZW9uZV9pQGV4YW1wbGUuY29tLFJlbmUsUmVuZSBWYWxkZXMgKHNhbXBsZSksRmVtYWxlLFB1cmNoYXNpbmcgQXNzaXN0YW50LFZhbGRlcyAoc2FtcGxlKQ0KUmVkbW9uZCxVLlMuLFdBLDc3MjMgRmlyZXN0b25lIERyaXZlLDMyMTQ3LDU1NS0wMTA3LHNvbWVvbmVfaEBleGFtcGxlLmNvbSxQYXVsLFBhdWwgQ2Fubm9uIChzYW1wbGUpLE1hbGUsUHVyY2hhc2luZyBBc3Npc3RhbnQsQ2Fubm9uIChzYW1wbGUpDQpJc3NhcXVhaCxVLlMuLFdBLDk4OSBDYXJhdmVsbGUgQ3QsMzM1OTcsNTU1LTAxMDUsc29tZW9uZV9mQGV4YW1wbGUuY29tLFNjb3R0LFNjb3R0IEtvbmVyc21hbm4gKHNhbXBsZSksTWFsZSxQdXJjaGFzaW5nIE1hbmFnZXIsS29uZXJzbWFubiAoc2FtcGxlKQ0KSXNzYXF1YWgsVS5TLixXQSw3NjkxIEJlbmVkaWN0IEN0Liw1NzA2NSw1NTUtMDEwNCxzb21lb25lX2VAZXhhbXBsZS5jb20sU2lkbmV5LFNpZG5leSBIaWdhIChzYW1wbGUpLE1hbGUsT3duZXIsSGlnYSAoc2FtcGxlKQ0KTW9ucm9lLFUuUy4sV0EsMzc0NyBMaWtpbnMgQXZlbnVlLDM3OTI1LDU1NS0wMTAzLHNvbWVvbmVfZEBleGFtcGxlLmNvbSxNYXJpYSxNYXJpYSBDYW1wYmVsbCAoc2FtcGxlKSxGZW1hbGUsUHVyY2hhc2luZyBNYW5hZ2VyLENhbXBiZWxsIChzYW1wbGUpDQpEdXZhbGwsVS5TLixXQSw1MDg2IE5vdHRpbmdoYW0gUGxhY2UsMTY5ODIsNTU1LTAxMDIsc29tZW9uZV9jQGV4YW1wbGUuY29tLE5hbmN5LE5hbmN5IEFuZGVyc29uIChzYW1wbGUpLEZlbWFsZSxQdXJjaGFzaW5nIEFzc2lzdGFudCxBbmRlcnNvbiAoc2FtcGxlKQ0KSXNzYXF1YWgsVS5TLixXQSw1OTc5IEVsIFB1ZWJsbywyMzM4Miw1NTUtMDEwMSxzb21lb25lX2JAZXhhbXBsZS5jb20sU3VzYW5uYSxTdXNhbm5hIFN0dWJiZXJvZCAoc2FtcGxlKSxGZW1hbGUsUHVyY2hhc2luZyBNYW5hZ2VyLFN0dWJiZXJvZCAoc2FtcGxlKQ0KUmVkbW9uZCxVLlMuLFdBLDI0OSBBbGV4YW5kZXIgUGwuLDg2MzcyLDU1NS0wMTAwLHNvbWVvbmVfYUBleGFtcGxlLmNvbSxZdm9ubmUsWXZvbm5lIE1jS2F5IChzYW1wbGUpLEZlbWFsZSxQdXJjaGFzaW5nIE1hbmFnZXIsTWNLYXkgKHNhbXBsZSkNCg==)
 
 > [!NOTE]
 > There's only a single column shown in the test harness regardless of the columns you provide in the loaded CSV file. This is because the test harness only shows `property-set` when there is one defined. If no `property-set` is defined, then all of the columns in the loaded CSV file will be populated.
