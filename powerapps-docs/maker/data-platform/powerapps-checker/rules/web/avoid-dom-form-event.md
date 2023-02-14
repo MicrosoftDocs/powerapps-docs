@@ -4,7 +4,7 @@ description: Power Apps checker rule reference for avoid-dom-form-event.
 author: ecarrleemsft
 manager: tapanm-msft
 ms.topic: reference
-ms.date: 07/18/2022
+ms.date: 02/14/2023
 ms.service: "powerapps"
 ms.subservice: dataverse-maker
 ms.author: matp
