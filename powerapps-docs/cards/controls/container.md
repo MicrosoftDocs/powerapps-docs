@@ -51,6 +51,6 @@ A collection of other elements
 
 **[Show when](../control-reference.md#s)** – Conditional layout expression.
 
-**[SelectAction](../control-reference.md#n)s** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
+**[SelectAction](../control-reference.md#s)** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
 
 **[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
