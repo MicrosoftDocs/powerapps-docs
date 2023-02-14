@@ -1,5 +1,5 @@
 ---
-title: Create push notifications for the Power Apps mobile app
+title: Create push notifications for the Power Apps mobile app using Power Automate
 description: Learn how to send push notifications for Power Apps mobile.
 author: sericks007
 
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 ---
 
-# Create push notifications for the Power Apps mobile app
+# Create push notifications for the Power Apps mobile app using Power Automate
 
 
 Push notifications are used in Power Apps mobile to engage app users and help them prioritize key tasks. In Power Apps, you can create notifications for Power Apps mobile by using the Power Apps Notification connector. You can send notifications to any app that you create in Power Apps. 
