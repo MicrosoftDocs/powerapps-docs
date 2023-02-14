@@ -1685,7 +1685,7 @@
     href: ../mobile/relevance-search-mobile.md  
   - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
-  - name: Create push notifications for the Power Apps mobile app
+  - name: Create push notifications for the Power Apps mobile app using Power Automate
     href: ../mobile/power-apps-mobile-notification.md
   - name: Use deep links with the Power Apps mobile app
     href: ../mobile/mobile-deep-links.md
