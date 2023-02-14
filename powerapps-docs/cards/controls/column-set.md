@@ -49,4 +49,4 @@ A collection of columns, each column is a container.
 
 **[SelectAction](../control-reference.md#n)s** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
 
-**[Require](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
+**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
