@@ -38,7 +38,7 @@ A container for a set of button elements.
 
 **[Show when](../control-reference.md#s)** – Conditional layout expression.
 
-**[Require](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
+**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
 
 
 
