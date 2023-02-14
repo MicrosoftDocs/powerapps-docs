@@ -22,8 +22,6 @@ search.app:
 ---
 # Query and analyze the incremental updates
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Microsoft Dataverse data can continuously change through create, update, and delete transactions. Synapse Link for Dataverse provides incremental folders to help you query and analyze the incremental updates made to Dataverse data during a user-specified time interval. Organizations with large datasets can analyze the incremental update data and:
 
 - Drop stale and stagnant data to save data storage costs.  
