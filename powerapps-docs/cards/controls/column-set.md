@@ -27,7 +27,7 @@ A collection of columns, each column is a container.
 
 **[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
-**[Style](../control-reference.md#s)** – Style hint for this column set
+**[Style](../control-reference.md#s)** – Style hint for this column set.
 
 **[Bleed](../control-reference.md#b)** – Determines whether the control should bleed through its parent's padding.
 
