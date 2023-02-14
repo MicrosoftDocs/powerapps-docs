@@ -18,11 +18,10 @@ contributors:
 
 # Check box control for cards in Power Apps
 
-A control that the user can select or clear to set its value to **true** or **false**.
+An checkbox that lets users choose between two options by selecting or clearing.
 
 ## Description
 
-An checkbox that lets users choose between two options by selecting or clearing.
 
 ## Properties
 
