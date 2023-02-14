@@ -27,7 +27,7 @@ An image with properties to control what the image looks like.
 
 **[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
-**[Url](../control-reference.md#n)** – The URL to the image. Supports data URI in version 1.2+.
+**[Url](../control-reference.md#u)** – The URL to the image. Supports data URI in version 1.2+.
 
 **[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
