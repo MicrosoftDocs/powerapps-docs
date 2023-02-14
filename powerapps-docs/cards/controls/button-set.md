@@ -18,11 +18,10 @@ contributors:
 
 # Button set control for cards in Power Apps
 
-A control that the user can click or tap to interact with the app.
+A container for a set of button elements.
 
 ## Description
 
-A container for a set of button elements.
 
 ## Properties
 **[Name](../control-reference.md#n)** – A unique identifier associated with the item.
