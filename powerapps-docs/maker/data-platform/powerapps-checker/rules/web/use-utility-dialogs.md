@@ -23,5 +23,5 @@ Alerts should be replaced with `Xrm.Navigation.openAlertDialog`,
 while confirms should be replaced with `Xrm.Navigation.openConfirmDialog`. For more information, go to [Xrm.Navigation](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-navigation).
 
 ## Options
-- By default, violations are only reported when certain `Xrm` or `Mscrm` calls are made in the same file, so that DOM usages outside of Dataverse are not reported.  The `requireXrm` option, which is `true` by default, can be set to `false` to report all violations regardless of `Xrm` or `Mscrm` usage
+- By default, violations are only reported when certain `Xrm` or `Mscrm` calls are made in the same file, so that violations outside of Dataverse are not reported.  The `requireXrm` option, which is `true` by default, can be set to `false` to report all violations regardless of `Xrm` or `Mscrm` usage
   - Example: `"@microsoft/power-apps/use-utility-dialogs": ["error", { requireXrm: false }]`
