@@ -18,10 +18,10 @@ contributors:
 
 # Button control for cards in Power Apps
 
-A control that the user can click or tap to interact with the app.
+A button element that executes PowerFx on click.
 
 ## Description
-A button element that executes PowerFx on click.
+
 
 ## Properties
 **[Name](../control-reference.md#n)** – A unique identifier associated with the item.
