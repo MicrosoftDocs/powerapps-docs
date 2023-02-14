@@ -35,9 +35,9 @@ contributors:
 
 **[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Maximum value](../control-reference.md#m)** – Hint of maximum value expressed in YYYY-MM-DD(may be ignored by some clients).
+**[Maximum value](../control-reference.md#m)** – Hint of maximum value expressed in YYYY-MM-DD (may be ignored by some clients).
 
-**[Minimum value](../control-reference.md#m)** – Hint of minimum value expressed in YYYY-MM-DD(may be ignored by some clients).
+**[Minimum value](../control-reference.md#m)** – Hint of minimum value expressed in YYYY-MM-DD (may be ignored by some clients).
 
 **[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
