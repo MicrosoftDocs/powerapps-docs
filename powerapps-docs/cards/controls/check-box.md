@@ -34,9 +34,9 @@ An checkbox that lets users choose between two options by selecting or clearing.
 
 **[Wrap](../control-reference.md#w)** – If true, allow text to wrap. Otherwise, text is clipped.
 
-**[Default value](../control-reference.md#d)** – 
+**[Default value](../control-reference.md#d)** – The initial selected value. If you want the toggle to be initially on, set this to the value of valueOn's value.
 
-**[Initially visible](../control-reference.md#i)** – 
+**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
 **[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
