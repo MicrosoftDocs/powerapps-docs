@@ -18,51 +18,39 @@ contributors:
 
 # Container control for cards in Power Apps
 
-Groups logically-related controls to create hierarchies.
+A collection of other elements
 
 ## Description
 
-The container can hold a set of controls and has its own properties.
-
-You can start with inserting a blank container. And then, customize it by adding controls to it, resizing it, moving it, hiding it, and making other changes. You can also start with a number of controls, select them and add using tree view.
-
-## Limitations
-
-- Containers don't work within forms.
-- The following controls are not supported within a container:
-    - [Data table](control-data-table.md)
-    - [PDF viewer](control-pdf-viewer.md)
-    - [Web barcode scanner](control-barcodescanner.md)
 
 ## Properties
 
-**[BorderColor](properties-color-border.md)** – The color of a control's border.
+**[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
-**[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
+**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**[Fill](properties-color-border.md)** – The background color of a control.
+**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[Horizontal alignment](../control-reference.md#h)** – Controls the horizontal alignment of the column set.
 
-**[Width](properties-size-location.md)** – The distance between a control's left and right edges.
+**[Content alignment](../control-reference.md#c)** – Defines how the content should be aligned vertically within the column.
 
-**[Visible](properties-core.md)** – Whether a control appears or is hidden.
+**[Minimum height](../control-reference.md#m)** – Specifies the minimum height of the column set in pixels, like "80px".
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen, if no parent container). 
+**[Height](../control-reference.md#h)** – Specifies the height of the control.
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen, if no parent container). 
+**[Style](../control-reference.md#s)** – Style hint for container.
 
+**[Bleed](../control-reference.md#b)** – Determines whether the control should bleed through its parent's padding.
 
-## Frequently asked questions
+**[Background image](../control-reference.md#b)** – Specifies a background image. Acceptable formats are PNG, JPEG, and GIF.
 
-### What is the difference between a container and a group?
+**[Repeat for every](../control-reference.md#r)** – Data context expression.
 
-When editing an app, you can select controls and group them using Ctrl + G or the context menu. You can modify common properties of controls within the group. Groups are an aid for app making. They don't have properties of their own and don't affect the layout of the app.
+**[Show when](../control-reference.md#s)** – Conditional layout expression.
 
-In contrast, containers are actual controls with their own properties like **Width** and **BorderColor**. Containers affect app layout and help screen reader users understand the structure of the app.
+**[SelectAction](../control-reference.md#n)s** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
 
-While you can add any controls in a group, you should only add logically-related controls in a container. For example, [controls in a tile should be placed in containers](../accessible-apps-structure.md#logical-control-order).
-
-
+**[Require](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
