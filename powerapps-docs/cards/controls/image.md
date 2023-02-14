@@ -41,7 +41,7 @@ An image with properties to control what the image looks like.
 
 **[Size](../control-reference.md#s)** – Controls the approximate size of the image. The physical dimensions will vary per host.
 
-**[Height](../control-reference.md#h)** –The desired height of the image. If specified as a pixel value, ending in 'px', E.g., "50px", the image will distort to fit that exact height. This overrides the size property.
+**[Height](../control-reference.md#h)** – The desired height of the image. If specified as a pixel value, ending in 'px', E.g., "50px", the image will distort to fit that exact height. This overrides the size property.
 
 **[Width](../control-reference.md#w)** – The desired on-screen width of the image, ending in 'px'. E.g., "50px". This overrides the size property.
 
