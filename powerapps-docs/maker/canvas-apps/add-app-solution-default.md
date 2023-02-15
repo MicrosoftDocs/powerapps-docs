@@ -101,7 +101,7 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 
 - If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 
-- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back. 
+- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back.
 
 ## Known issues
 
