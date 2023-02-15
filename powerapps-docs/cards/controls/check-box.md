@@ -18,7 +18,7 @@ contributors:
 
 # Check box control in cards
 
-An checkbox that lets users choose between two options by selecting or clearing.
+A checkbox that lets users choose between two options by selecting or clearing.
 
 ## Properties
 
