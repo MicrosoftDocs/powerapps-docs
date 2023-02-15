@@ -26,7 +26,7 @@ A menu that lets users choose one item from an expandable list of items.
 
 **[Name](../control-reference.md#n)** – Unique identifier for the value. Used to identify collected input when the Submit action is performed.
 
-**[Value](../control-reference.md#v)** The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
+**[Value](../control-reference.md#v)** – The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
 
 **[Placeholder](../control-reference.md#p)** – Description of the input desired. Only visible when no selection has been made, the style is compact and isMultiSelect is false
 
