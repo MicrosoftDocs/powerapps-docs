@@ -18,7 +18,7 @@ contributors:
 
 # Text label control for cards in Power Apps
 
-A block of text with properties to control what the text looks like
+A block of text with properties to control what the text looks like.
 
 ## Description
 
