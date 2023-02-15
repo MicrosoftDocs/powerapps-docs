@@ -1,6 +1,6 @@
 ---
 title: Drop down control in cards for Power Apps
-description: Learn about the properties of the drop down control in cards for Power Apps.
+description: Learn about the properties of the drop-down control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
