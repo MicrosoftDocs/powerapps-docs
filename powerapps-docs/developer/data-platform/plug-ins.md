@@ -1,37 +1,39 @@
 ---
 title: "Use plug-ins to extend business processes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how plug-ins provide a way to respond to a data processing event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Learn how plug-ins execute in response to a data processing event to augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 03/22/2022
+ms.date: 02/14/2023
 ms.reviewer: "phecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "dikamath" # MSFT alias of Microsoft employees only
+manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 contributors:
-  - PHecke
+  - phecke
 ---
+
 # Use plug-ins to extend business processes
 
-A plug-in is a .NET assembly that you can upload to the Microsoft Dataverse. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
+A plug-in is a class compiled into a .NET Framework assembly that can be uploaded and registered with Microsoft Dataverse. Classes within the assembly can be registered on specific events (steps) within the Dataverse event framework. When the target event occurs in response to a data operation, the code within the registered class executes providing a means to augment or modify the default data processing behavior of the platform.
 
-> [!IMPORTANT]
+> [!TIP]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Dataverse](../../maker/data-platform/processes.md)<br/><br/>
 > Use plug-ins when a declarative process doesn’t meet your requirement.
 
-The classes in the assembly that can be registered to a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method: <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*>. When an event occurs that has a class registered to it, contextual data is passed to the `Execute` method. Within the `Execute` method you can:
+The classes in the assembly that can be registered on a step must implement the 
+<xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method called <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*>. When an event occurs that has a compiled class registered to it, contextual data about the data operation being processed is passed to the `Execute` method. Within the `Execute` method your code can:
 
 - Cancel the event and display an error to the user
 - Make changes to the data in the operation
-- Initiate other actions using the Organization Service to add automation
+- Invoke other data operations
 
-Plug-ins can be configured to execute synchronously or asynchronously. A synchronous plug-in will cause the operation to wait until the code in the plug-in completes. This has an impact on perceived performance of the system. The operations in an asynchronous plug-in are placed in a queue and are executed after the operation is completed so that the operation can complete with minimal interruption.
+Plug-ins can be configured to execute synchronously or asynchronously. A synchronous plug-in will cause the date operation to wait until the code in the plug-in completes. This has an impact on perceived performance of the system. Asynchronous plug-in execution is queued and later executed after the data operation has completed.
 
 ## When to use plug-ins
 

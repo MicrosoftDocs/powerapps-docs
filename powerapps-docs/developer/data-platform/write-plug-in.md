@@ -1,52 +1,31 @@
 ---
 title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to write custom code to be executed on specific events of the Dataverse database transaction." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+description: "Learn how to write custom code to be executed in response to specific Dataverse data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
+ms.date: 02/14/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: "dikamath" # MSFT alias of Microsoft employees only
+manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 contributors:
-  - PHecke
+  - phecke
 ---
+
 # Write a plug-in
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 You can use Power Platform Tools for Visual Studio to quickly create and deploy (register) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how.
 
-A more manual process of writing, registering, and debugging a plug-in is:
-
-1. Create a .NET Framework Class library project in Visual Studio
-1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
-1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
-1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
-    1. Get references to services you need
-    1. Add your business logic
-1. Sign & build the assembly
-1. Test the assembly
-    1. Register the assembly in a test environment
-    1. Add your registered assembly and steps to an unmanaged solution
-    1. Test the behavior of the assembly
-    1. Verify expected trace logs are written
-    1. Debug the assembly as needed
-
-Content in this topic discusses steps 1 thru 5 above and supports the following tutorials:
-
-- [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
-- [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
-- [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
-
 ## Assembly constraints
 
-When creating assemblies keep the following constraints in mind.
+When creating assemblies, keep the following constraints in mind.
 
 ### Use .NET Framework 4.6.2
 
@@ -204,7 +183,6 @@ Run-time information about plug-ins and custom workflow extensions is captured a
 
 This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Dataverse** > **Plug-ins**.
 
-
 ## Next steps
 
 [Register a plug-in](register-plug-in.md)<br />
@@ -212,13 +190,8 @@ This data is also available for you to browse using the [Power Platform Admin Ce
 
 ### See also
 
-[Write plug-ins to extend business processes](plug-ins.md)<br />
-[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)<br />
-[Handle exceptions](handle-exceptions.md)<br />
-[Impersonate a user](impersonate-a-user.md)<br />
-[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
-[Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
-[Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />
-
+[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)  
+[Handle exceptions](handle-exceptions.md)  
+[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
