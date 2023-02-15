@@ -22,7 +22,6 @@ An checkbox that lets users choose between two options by selecting or clearing.
 
 ## Description
 
-
 ## Properties
 
 **[Name](../control-reference.md#n)** – Unique identifier for the value. Used to identify collected input when the Submit action is performed.

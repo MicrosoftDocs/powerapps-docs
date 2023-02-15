@@ -24,6 +24,7 @@ A container for a set of button elements.
 
 
 ## Properties
+
 **[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
 **[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.

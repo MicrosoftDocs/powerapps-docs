@@ -24,6 +24,7 @@ A button element that executes PowerFx on click.
 
 
 ## Properties
+
 **[Name](../control-reference.md#n)** – A unique identifier associated with the item.
 
 **[Type](../control-reference.md#t)** – .
