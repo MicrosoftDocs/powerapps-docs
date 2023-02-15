@@ -22,37 +22,37 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ## Controls
 
-**[Button](controls/button.md)** – A button element that executes Power Fx on click.
+**[Button](../controls/button.md)** – A button element that executes Power Fx on click.
 
-**[Button set](controls/button.md)** – A container for a set of button elements.
+**[Button set](../controls/button.md)** – A container for a set of button elements.
 
-**[Check box](controls/check-box.md)** – An checkbox that lets users choose between two options by selecting or clearing.
+**[Check box](../controls/check-box.md)** – An checkbox that lets users choose between two options by selecting or clearing.
 
-**[Column](controls/column.md)** - An individual column which acts as a container for other elements.
+**[Column](../controls/column.md)** - An individual column which acts as a container for other elements.
 
-**[Column set](controls/column-set.md)** - A collection of columns, each column is a container.
+**[Column set](../controls/column-set.md)** - A collection of columns, each column is a container.
 
-**[Container](controls/container.md)** - A collection of other elements.
+**[Container](../controls/container.md)** - A collection of other elements.
 
-**[Date picker](controls/date-picker.md)** – A field for users to select a date.
+**[Date picker](../controls/date-picker.md)** – A field for users to select a date.
 
-**[Drop down](controls/drop-down.md)** – A menu that lets users choose one item from an expandable list of items.
+**[Drop down](../controls/drop-down.md)** – A menu that lets users choose one item from an expandable list of items.
 
-**[Fact set](controls/fact-set.md)** – A container element for facts.
+**[Fact set](../controls/fact-set.md)** – A container element for facts.
 
-**[Image](controls/image.md)** – An image with properties to control what the image looks like.
+**[Image](../controls/image.md)** – An image with properties to control what the image looks like.
 
-**[Image set](controls/image-set.md)** – A container of images that acts as a photo gallery.
+**[Image set](../controls/image-set.md)** – A container of images that acts as a photo gallery.
 
-**[Media](controls/media.md)** – A video or image specified by its Url and MimeType.
+**[Media](../controls/media.md)** – A video or image specified by its Url and MimeType.
 
-**[Number input](controls/number-input.md)** – A field for users to type a number.
+**[Number input](../controls/number-input.md)** – A field for users to type a number.
 
-**[Text input](controls/text-input.md)** – A field for users to type text.
+**[Text input](../controls/text-input.md)** – A field for users to type text.
 
-**[Text label](controls/text-label.md)** – A block of text with properties to control what the text looks like.
+**[Text label](../controls/text-label.md)** – A block of text with properties to control what the text looks like.
 
-**[Time picker](controls/time-picker.md)** – A field for users to select a time.
+**[Time picker](../controls/time-picker.md)** – A field for users to select a time.
 
 ## All properties
 
