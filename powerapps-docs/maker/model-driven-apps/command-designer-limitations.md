@@ -38,7 +38,7 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 
 ## Delete a model-driven app element record
 
->[WARNING] 
+> [!WARNING] 
 > If the app includes Power Fx-based commands, they will no longer work after you delete the app's model-driven app element table record.
 
 Using the **Model-driven App Elements** table, do the following:
