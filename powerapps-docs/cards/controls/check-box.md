@@ -44,7 +44,7 @@ An checkbox that lets users choose between two options by selecting or clearing.
 
 **[ErrorMessage](../control-reference.md#e)** – Error message to display when entered input is invalid.
 
-**[Required Field](../control-reference.md#r)** – Whether or not this input is required
+**[Required Field](../control-reference.md#r)** – Whether or not this input is required.
 
 **[Repeat for every](../control-reference.md#r)** – Data context expression.
 
