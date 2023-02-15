@@ -1,6 +1,6 @@
 ---
-title: Button set control for cards in Power Apps
-description: Learn about the details, properties and examples of the button set control for cards in Power Apps.
+title: Button set control in cards for Power Apps
+description: Learn about the properties of the button set control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
@@ -16,30 +16,20 @@ contributors:
   - anuitz
 ---
 
-# Button set control for cards in Power Apps
+# Button set control in cards
 
 A container for a set of button elements.
 
-## Description
-
-
 ## Properties
 
-**[Name](../control-reference.md#n)** – A unique identifier associated with the item.
+**[Initially visible](control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
+**[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
+**[Divider](control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
+**[Height](control-reference.md#h)** – Specifies the height of the control.
 
-**[Height](../control-reference.md#h)** – Specifies the height of the control.
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
-**[Repeat for every](../control-reference.md#r)** – Data context expression.
-
-**[Show when](../control-reference.md#s)** – Conditional layout expression.
-
-**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
-
-
-
+**[Show when](control-reference.md#s)** – Conditional layout expression.

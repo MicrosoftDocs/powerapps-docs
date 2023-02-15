@@ -1,6 +1,6 @@
 ---
-title: Fact set control for cards in Power Apps
-description: Learn about the details, properties and examples of the fact set control for cards in Power Apps.
+title: Fact set control in cards for Power Apps
+description: Learn about the properties of the fact set control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
@@ -18,25 +18,20 @@ contributors:
 
 # Fact set control for cards in Power Apps
 
-A container element for facts.
-
-## Description
-
+Displays a series of facts (i.e. name/value pairs) in a tabular form.
 
 ## Properties
 
-**[Name](../control-reference.md#n)** – Unique identifier associated with the item.
+**[Facts](control-reference.md#f)** - The facts to display.
 
-**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
+**[Initially visible](control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
+**[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
+**[Divider](control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Height](../control-reference.md#h)** – Specifies the height of the control.
+**[Height](control-reference.md#h)** – Specifies the height of the control.
 
-**[Repeat for every](../control-reference.md#r)** – Data context expression.
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
-**[Show when](../control-reference.md#s)** – Conditional layout expression.
-
-**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
+**[Show when](control-reference.md#s)** – Conditional layout expression.

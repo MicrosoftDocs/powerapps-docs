@@ -1,6 +1,6 @@
 ---
-title: Date picker control for cards in Power Apps
-description: Learn about the details, properties and examples of the date picker control for cards in Power Apps.
+title: Date picker control in cards for Power Apps
+description: Learn about the properties of the date picker control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
@@ -16,43 +16,34 @@ contributors:
   - anuitz
 ---
 
-# Date picker control for cards in Power Apps
+# Date picker control in cards
 
- A field for users to select a date.
-
-## Description
-
+Allows the user to enter a date in mm/dd/yyyy format or select a date on the calendar. The value is stored as a date.
 
 ## Properties
 
-**[Name](../control-reference.md#n)** – Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+**[Default value](control-reference.md#d)** – The initial value for this field expressed in YYYY-MM-DD.
 
-**[Default value](../control-reference.md#d)** – The initial value for this field expressed in YYYY-MM-DD.
+**[Placeholder](control-reference.md#p)** – Description of the input desired. Displayed when no selection has been made.
 
-**[Placeholder](../control-reference.md#p)** – Description of the input desired. Displayed when no selection has been made.
+**[Label](control-reference.md#l)** – Label for this input.
 
-**[Label](../control-reference.md#l)** – Label for this input.
+**[Initially visible](control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
+**[Maximum value](control-reference.md#m)** – Hint of maximum value expressed in YYYY-MM-DD (may be ignored by some clients).
 
-**[Maximum value](../control-reference.md#m)** – Hint of maximum value expressed in YYYY-MM-DD (may be ignored by some clients).
+**[Minimum value](control-reference.md#m)** – Hint of minimum value expressed in YYYY-MM-DD (may be ignored by some clients).
 
-**[Minimum value](../control-reference.md#m)** – Hint of minimum value expressed in YYYY-MM-DD (may be ignored by some clients).
+**[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
+**[Divider](control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
+**[Height](control-reference.md#h)** – Specifies the height of the control.
 
-**[Height](../control-reference.md#h)** – Specifies the height of the control.
+**[Error message](control-reference.md#e)** – Error message to display when entered input is invalid.
 
-**[ErrorMessage](../control-reference.md#e)** – Error message to display when entered input is invalid.
+**[Required field](control-reference.md#r)** – Whether or not this input is required.
 
-**[Required field](../control-reference.md#r)** – Whether or not this input is required.
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
-**[Repeat for every](../control-reference.md#r)** – Data context expression.
-
-**[Show when](../control-reference.md#s)** – Conditional layout expression.
-
-**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
-
-
+**[Show when](control-reference.md#s)** – Conditional layout expression.

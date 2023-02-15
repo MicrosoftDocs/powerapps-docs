@@ -1,6 +1,6 @@
 ---
-title: Drop down control for cards in Power Apps
-description: Learn about the details, properties and examples of the drop down control for cards in Power Apps.
+title: Drop down control in cards for Power Apps
+description: Learn about the properties of the drop down control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
@@ -16,45 +16,36 @@ contributors:
   - anuitz
 ---
 
-# Drop down control for cards in Power Apps
+# Drop down control in cards
 
-A menu that lets users choose one item from an expandable list of items.
-
-## Description
+A menu that lets users choose one item from an expandable list of items. The default is two choices, but more can be added.
 
 ## Properties
 
-**[Name](../control-reference.md#n)** – Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+**[Value](control-reference.md#v)** – The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
 
-**[Value](../control-reference.md#v)** – The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
+**[Choices](control-reference.md#c)** - The list of items the user can select from.
 
-**[Placeholder](../control-reference.md#p)** – Description of the input desired. Only visible when no selection has been made, the style is compact and isMultiSelect is false
+**[Placeholder](control-reference.md#p)** – Description of the input desired. Only visible when no selection has been made, the style is compact and isMultiSelect is false.
 
-**[Label](../control-reference.md#l)** – Label for this input.
+**[Label](control-reference.md#l)** – Label for this input.
 
-**[Wrap](../control-reference.md#w)** – If true, allow text to wrap. Otherwise, text is clipped.
+**[Wrap](control-reference.md#w)** – If true, allow text to wrap. Otherwise, text is clipped.
 
-**[Multiple selection](../control-reference.md#m)** – Allow multiple items to be selected.
+**[Multiple selection](control-reference.md#m)** – Allow multiple items to be selected.
 
-**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
+**[Initially visible](control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
+**[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
+**[Divider](control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Height](../control-reference.md#h)** – Specifies the height of the control.
+**[Height](control-reference.md#h)** – Specifies the height of the control.
 
-**[ErrorMessage](../control-reference.md#e)** – Error message to display when entered input is invalid.
+**[Error message](control-reference.md#e)** – Error message to display when entered input is invalid.
 
-**[Required field](../control-reference.md#r)** – Whether or not this input is required.
+**[Required field](control-reference.md#r)** – Whether or not this input is required.
 
-**[Repeat for every](../control-reference.md#r)** – Data context expression.
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
-**[Show when](../control-reference.md#s)** – Conditional layout expression.
-
-**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
-
-
-
-
-
+**[Show when](control-reference.md#s)** – Conditional layout expression.

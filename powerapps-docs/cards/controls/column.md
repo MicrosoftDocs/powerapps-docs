@@ -1,6 +1,6 @@
 ---
-title: Column control for cards in Power Apps
-description: Learn about the details, properties and examples of the column control for cards in Power Apps.
+title: Column control in cards for Power Apps
+description: Learn about the properties of the column control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
@@ -16,43 +16,32 @@ contributors:
   - anuitz
 ---
 
-# Column control for cards in Power Apps
+# Column control in cards
 
-An individual column which acts as a container for other elements.
+An individual column which acts as a container for other elements. This column can be arranged side-by-side with other columns using the [column set control](column-set.md).
 
-## Description
-
+Add to a column set to create dividers on the page. Empty columns aren't visible. You'll need to put another control (like a text input control) into a column to make it visible.
 
 ## Properties
 
-**[Name](../control-reference.md#n)** – A unique identifier associated with the item.
+**[Initially visible](control-reference.md#i)** – If false, this item will be removed from the visual tree.
 
-**[Initially visible](../control-reference.md#i)** – If false, this item will be removed from the visual tree.
+**[Spacing](control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
 
-**[Spacing](../control-reference.md#s)** – Controls the amount of spacing between this control and the preceding control.
+**[Divider](control-reference.md#d)** – When true, draw a separating line at the top of the control.
 
-**[Divider](../control-reference.md#d)** – When true, draw a separating line at the top of the control.
+**[Minimum height](control-reference.md#m)** – Specifies the minimum height of the column set in pixels, like "80px".
 
-**[Minimum height](../control-reference.md#m)** – Specifies the minimum height of the column set in pixels, like "80px".
+**[Content alignment](control-reference.md#c)** – Defines how the content should be aligned vertically within the column.
 
-**[Content alignment](../control-reference.md#c)** – Defines how the content should be aligned vertically within the column.
+**[Width](control-reference.md#w)** – Auto, stretch, a number representing relative width of the column in the column group, or in version 1.1 and higher, a specific pixel width, like "50px".
 
-**[Width](../control-reference.md#w)** – Auto, stretch, a number representing relative width of the column in the column group, or in version 1.1 and higher, a specific pixel width, like "50px".
+**[Style](control-reference.md#s)** – Style hint for this control, allowed values: default, emphasis, good, attention, warning, accent.
 
-**[Style](../control-reference.md#s)** – Style hint for this column set.
+**[Background image](control-reference.md#b)** – Specifies a background image. Acceptable formats are PNG, JPEG, and GIF.
 
-**[Background image](../control-reference.md#b)** – Specifies a background image. Acceptable formats are PNG, JPEG, and GIF.
+**[Bleed](control-reference.md#b)** – Determines whether the control should bleed through its parent's padding.
 
-**[Bleed](../control-reference.md#b)** – Determines whether the control should bleed through its parent's padding.
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
-**[Repeat for every](../control-reference.md#r)** – Data context expression.
-
-**[Show when](../control-reference.md#s)** – Conditional layout expression.
-
-**[SelectAction](../control-reference.md#s)** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
-
-**[Requires](../control-reference.md#r)** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
-
-
-
-
+**[Show when](control-reference.md#s)** – Conditional layout expression.

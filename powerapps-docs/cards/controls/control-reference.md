@@ -16,13 +16,13 @@ contributors:
   - anuitz
 ---
 
-# Controls and properties in cards for Power Apps
+# Controls and properties in cards
 
-Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
+Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **OnSelect**, are specific to one type of control.
 
 ## Controls
 
-**[Button](controls/button.md)** – A button element that executes PowerFx on click. 
+**[Button](controls/button.md)** – A button element that executes Power Fx on click.
 
 **[Button set](controls/button.md)** – A container for a set of button elements.
 
@@ -72,6 +72,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### C
 
+**Choices** - The list of items the user can select from.
+
 **Color** – Controls the color of the text.
 
 **Content alignment** – Defines how the content should be aligned vertically within the column.
@@ -84,12 +86,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### E
 
-**ErrorMessage** – Error message to display when entered input is invalid.
+**Error message** – Error message to display when entered input is invalid.
 
 ### F
 
-**Font type** – Type of font to use for rendering
+**Facts** - The facts to display in a fact set.
 
+**Font type** – Type of font to use for rendering
 
 ### H
 
@@ -127,10 +130,6 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Multiple selection** – Allow multiple items to be selected.
 
-### N
-
-**Name** – A unique identifier associated with a property.
-
 ### O
 
 **OnSelect** - Actions to perform when the user taps or clicks on the button.
@@ -145,7 +144,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Regex** – Regular expression indicating the required format of this text input.
 
-**Repeat for every** – Data context expression.
+**Repeat for every** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
 **Required field** – Whether or not this input is required.
 
@@ -153,29 +152,35 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### S
 
+**Screen** - The screen that is shown below the current card when a user taps or clicks on a button of type 'Show Screen'.
+
 **SelectAction** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
 
 **Show when** – Conditional layout expression.
 
 **Size** – Controls the approximate size of the image or text.
 
+**Sources** - The media content to play. Plays the first one specified by default.
+
 **Spacing** – Controls the amount of spacing between this control and the preceding control.
 
-**Style** - Controls the style of a property.
+**Style** - Determines the styling of the control.
 
 **Subtle** – If true, displays text slightly toned down to appear less prominent.
 
 ### T
 
+**Target Elements** - The elements to change the visibility of when a user taps or clicks on a button of type 'Toggle Visibility'.
+
 **Text** – Text to display. A subset of markdown is supported (https://aka.ms/ACTextFeatures).
 
 **Title** - Label for this button.
 
-**Type** – 
+**Type** –  What action the button should take on select - can be Show Screen, Run Power Fx, Open Url, or Toggle Visibility.
 
 ### U
 
-**Url** – The URL to the image. Supports data URI in version 1.2+.
+**Url** – The URL to the image or to open when a button is selected. Supports data URI in version 1.2+.
 
 ### V
 
@@ -188,7 +193,3 @@ Configure the appearance and behavior of a control by setting one of its propert
 **Width** – The desired width of a property.
 
 **Wrap** – If true, allow text to wrap. Otherwise, text is clipped.
-
-### See also
-
-[Limitations of controls for cards in Power Apps](control-limitations.md)

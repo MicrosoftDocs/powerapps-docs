@@ -1,6 +1,6 @@
 ---
-title: Button control for cards in Power Apps
-description: Learn about the details, properties and examples of the button control for cards in Power Apps.
+title: Button control in cards for Power Apps
+description: Learn about the properties of the button control in cards for Power Apps.
 author: anuitz
 ms.topic: reference
 ms.custom: 
@@ -16,32 +16,32 @@ contributors:
   - anuitz
 ---
 
-# Button control for cards in Power Apps
+# Button control in cards
 
-A button element that executes PowerFx on click.
+A button control that executes Power Fx on select. This button can be grouped with other buttons using a [button set control](button-set.md).
 
-## Description
-
+Learn more about [how to use the button control](../make-a-card/ui-elements/use-buttons.md).
 
 ## Properties
 
-**[Name](../control-reference.md#n)** – A unique identifier associated with the item.
+**[Type](control-reference.md#t)** – What action the button should take on select - can be Show Screen, Run Power Fx, Open Url, or Toggle Visibility.
 
-**[Type](../control-reference.md#t)** – .
+**[OnSelect](control-reference.md#o)** - The Power Fx that executes when a user taps or clicks on the button of type 'Run Power Fx'.
 
-**[OnSelect](../control-reference.md#o)** - Actions to perform when the user taps or clicks on the button.
+**[Screen](control-reference.md#s)** - The screen that is shown below the current card when a user taps or clicks on a button of type 'Show Screen'.
 
-**[Title](../control-reference.md#t)** - Label for button or link that represents this button.
+**[Url](control-reference.md#u)** - The url to open when a user taps or clicks on a button of type 'Open Url'.
 
-**[Style](../control-reference.md#s)** - Controls the style of a button, which influences how the button is displayed, spoken, etc.
+**[Target Elements](control-reference.md#t)** - The elements to change the visibility of when a user taps or clicks on a button of type 'Toggle Visibility'.
 
-**[IconUrl](../control-reference.md#i)** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
+**[Title](control-reference.md#t)** - Label for button or link that represents this button.
 
-**[Associated inputes](../control-reference.md#a)** - Controls which inputs are associated with the action.
+**[Style](control-reference.md#s)** - Controls the style of a button, which influences how the button is displayed, spoken, etc.
 
-**[Repeat for every](../control-reference.md#r)** - Data context expression.
+**[IconUrl](control-reference.md#i)** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
 
-**[Show when](../control-reference.md#s)** - Conditional layout expression.
+**[Associated inputs](control-reference.md#a)** - Controls which inputs are associated with the action.
 
-**[Requires](../control-reference.md#r)** - A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
+**[Repeat for every](control-reference.md#r)** - The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
 
+**[Show when](control-reference.md#s)** - Conditional layout expression.

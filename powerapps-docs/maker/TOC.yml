@@ -2818,9 +2818,9 @@
         - name: Control reference
           items: 
             - name: List of controls and properties
-              href: ../cards/control-reference.md
-            - name: Limitations of controls
-              href: ../cards/control-limitations.md
+              href: ../cards/controls/control-reference.md
+            - name: Repeat for every property
+              href: ../cards/controls/repeat-for-every.md
             - name: Button
               href: ../cards/controls/button.md
             - name: Button set
