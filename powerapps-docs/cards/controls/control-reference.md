@@ -106,7 +106,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Image size** – Controls the approximate size of each image. The physical dimensions will vary per host. Auto and stretch are not supported for image set. The size will default to medium if those values are set.
 
-**InlineAction** – The inline action for the input. Typically displayed to the right of the input. It is strongly recommended to provide an icon on the action (which will be displayed instead of the title of the action).
+**InlineAction** – The inline action for the input. Typically displayed to the right of the input. It is recommended to provide an icon on the action (which will be displayed instead of the title of the action).
 
 **Initially visible** – If false, this item will be removed from the visual tree.
 
@@ -122,7 +122,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Maximum value** – Hint of maximum value (may be ignored by some clients).
 
-**Minimum height** – Specifies the minimum height of the column set in pixels, like "80px".
+**Minimum height** – Specifies the minimum height of the column set in pixels, like "80 px".
 
 **Minimum value** – Hint of minimum value (may be ignored by some clients).
 
