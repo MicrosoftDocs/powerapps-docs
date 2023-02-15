@@ -1,6 +1,6 @@
 ---
-title: Add canvas apps and cloud flows to solution by default (preview)
-description: Learn how to configure an environment to adding all new canvas apps and cloud flows to default solution through various methods.
+title: Add canvas apps and cloud flows to a solution by default (preview)
+description: Learn how to configure an environment to add new canvas apps and cloud flows to a default solution through various methods.
 author: ChrisGarty
 ms.topic: conceptual
 ms.custom: canvas
@@ -16,7 +16,7 @@ contributors:
   - mduelae
 ---
 
-# Add canvas apps and cloud flows to solution by default (preview)
+# Add canvas apps and cloud flows to a solution by default (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -101,7 +101,7 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 
 - If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 
-- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back. 
+- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back.
 
 ## Known issues
 
