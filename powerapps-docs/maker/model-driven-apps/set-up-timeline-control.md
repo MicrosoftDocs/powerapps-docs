@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 12/15/2022
+ms.date: 02/08/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -316,11 +316,7 @@ Based on the activity type, you can also enable other command actions. For examp
 You can also move the position of the  command actions to change the order in which they're displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
 
 
-#### Display related records on the timeline (Preview)
-
-> [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
-For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+#### Display related records on the timeline
 
 Accounts, contacts, cases, and opportunities linked to an activity are displayed on the timeline record. The administrator can enable or disable the records in **Regarding records**.
 
@@ -595,6 +591,9 @@ Power platform administrators can configure the file types that are blocked from
 ## Set file size limits for attachments
 
 Power platform administrators can restrict the file size of attachments users can upload in the rich text editor.
+
+> [!NOTE]
+> File sizes for attachments generally can be any size under 128 MB, but for optimal system performance, smaller file sizes are recommended.
 
 1.	Go to **Advanced Settings**, and then on the Settings menu, select System > Administration.
 1.	On the **Administration page**, select **System Settings**.

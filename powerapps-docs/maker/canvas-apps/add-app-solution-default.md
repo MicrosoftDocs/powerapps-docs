@@ -24,7 +24,7 @@ You can [create canvas apps from within a solution](add-app-solution.md) or [cre
 
 Canvas apps and cloud flows can now be created in a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
 
-Canvas apps and cloud flows in a solution are defined in Microsoft Dataverse and are more manageable because of Dataverse capabilities including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), and solution-based [application lifecycle management (ALM)](/power-platform/alm). 
+Canvas apps and cloud flows in a solution are defined in Microsoft Dataverse and are more manageable because of Dataverse capabilities including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), [role-based security](/power-platform/admin/database-security#environments-with-a-dataverse-database), and solution-based [application lifecycle management (ALM)](/power-platform/alm). 
 
 > [!IMPORTANT]
 > - This is a preview feature.
