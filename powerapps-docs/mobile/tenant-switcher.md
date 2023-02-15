@@ -24,6 +24,9 @@ This means that:
 - Users can specify the directory they want to work in from a list of directories on the user profile page.
 - Users, including guest users, can access apps shared with them in different directories.
 
+> [!Important]
+> The ability to easily switch to a different directory is available on iOS and Android devices at this time.
+
 To switch to a different directory in the Power Apps mobile app:
 
 1. Open the Power Apps mobile app.
