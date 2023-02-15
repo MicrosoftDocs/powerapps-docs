@@ -1,6 +1,6 @@
 ---
-title: Limitations of controls in canvas apps
-description: Learn about the limitations of controls in canvas apps.
+title: Limitations of controls in cards for Power Apps
+description: Learn about the limitations of controls in cards for Power Apps.
 author: navjotm
 ms.topic: conceptual
 ms.custom: canvas
@@ -18,7 +18,7 @@ contributors:
   - chmoncay
 ---
 
-# Limitations of controls in canvas apps
+# Limitations of controls in cards for Power Apps
 
 In this article, learn about the general limitations of the controls used in canvas apps. In addition, [limitations of controls in Teams](#limitations-of-controls-in-teams) lists the control limitations applicable to apps played inside Microsoft Teams. For more information about environments, go to [Types of environments](/power-platform/admin/environments-overview#types-of-environments).
 
