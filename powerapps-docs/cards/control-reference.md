@@ -58,9 +58,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### A
 
+**Alt text** – Alternate text describing the image, audio, or video.
+
 **Associated inputes** - Controls which inputs are associated with the action.
 
 ### B
+
+**Background color** – Applies a background to a transparent image. This property will respect the image style.
 
 **Background image** – Specifies a background image. Acceptable formats are PNG, JPEG, and GIF.
 
@@ -68,11 +72,13 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### C
 
+**Color** – Controls the color of the text.
+
 **Content alignment** – Defines how the content should be aligned vertically within the column.
 
 ### D
 
-**Default value** – The initial value for this property.
+**Default value** – The initial value for the property.
 
 **Divider** – When true, draw a separating line at the top of the control.
 
@@ -82,20 +88,22 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 ### F
 
-
-### G
-
+**Font type** – Type of font to use for rendering
 
 
 ### H
 
-**Height** – Specifies the height of the control.
+**Height** – Specifies the height of the property.
 
-**Horizontal alignment** – Controls the horizontal alignment of the column set.
+**Horizontal alignment** – Controls the horizontal alignment.
 
 ### I
 
 **IconUrl** - Optional icon to be shown on the button in conjunction with the title. Supports data URI in version 1.2+.
+
+**Image size** – Controls the approximate size of each image. The physical dimensions will vary per host. Auto and stretch are not supported for image set. The size will default to medium if those values are set.
+
+**InlineAction** – The inline action for the input. Typically displayed to the right of the input. It is strongly recommended to provide an icon on the action (which will be displayed instead of the title of the action).
 
 **Initially visible** – If false, this item will be removed from the visual tree.
 
@@ -103,15 +111,21 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Label** – Label for the input.
 
-
 ### M
 
-**Maximum value** – Hint of maximum value expressed in YYYY-MM-DD (may be ignored by some clients).
+**Max length** – Hint of maximum length characters to collect (may be ignored by some clients).
+
+**Maximum lines** – Specifies the maximum number of lines to display.
+
+**Maximum value** – Hint of maximum value (may be ignored by some clients).
 
 **Minimum height** – Specifies the minimum height of the column set in pixels, like "80px".
 
-**Minimum value** – Hint of minimum value expressed in YYYY-MM-DD (may be ignored by some clients).
+**Minimum value** – Hint of minimum value (may be ignored by some clients).
 
+**Multiline** – If true, allow multiple lines of input.
+
+**Multiple selection** – Allow multiple items to be selected.
 
 ### N
 
@@ -121,13 +135,15 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **OnSelect** - Actions to perform when the user taps or clicks on the button.
 
-
 ### P
 
 **Placeholder** – Description of the input desired. Displayed when no selection has been made.
 
+**Poster** – URL of an image to display before playing. Supports data URI in version 1.2+
 
 ### R
+
+**Regex** – Regular expression indicating the required format of this text input.
 
 **Repeat for every** – Data context expression.
 
@@ -141,40 +157,37 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Show when** – Conditional layout expression.
 
+**Size** – Controls the approximate size of the image or text.
+
 **Spacing** – Controls the amount of spacing between this control and the preceding control.
 
 **Style** - Controls the style of a property.
 
+**Subtle** – If true, displays text slightly toned down to appear less prominent.
+
 ### T
+
+**Text** – Text to display. A subset of markdown is supported (https://aka.ms/ACTextFeatures).
 
 **Title** - Label for this button.
 
 **Type** – 
 
-
 ### U
 
+**Url** – The URL to the image. Supports data URI in version 1.2+.
 
 ### V
 
-
+**Value** – The initial item (or set of items) that should be selected. For multi-select, specify a comma-separated string of values.
 
 ### W
 
-**Width** – Auto, stretch, a number representing relative width of the column in the column group, or in version 1.1 and higher, a specific pixel width, like "50px".
+**Weight** – Controls the weight of the text.
+
+**Width** – The desired width of a property.
 
 **Wrap** – If true, allow text to wrap. Otherwise, text is clipped.
-
-### X
-
-
-### Y
-
-*
-
-### Z
-
-
 
 ### See also
 
