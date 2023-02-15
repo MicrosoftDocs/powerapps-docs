@@ -18,7 +18,7 @@ contributors:
 
 # Container control for cards in Power Apps
 
-A collection of other elements
+A collection of other elements.
 
 ## Description
 
