@@ -1,6 +1,6 @@
 ---
-title: Add canvas apps and cloud flows to solution by default (preview)
-description: Learn how to configure an environment to adding all new canvas apps and cloud flows to default solution through various methods.
+title: Add canvas apps and cloud flows to a solution by default (preview)
+description: Learn how to configure an environment to add new canvas apps and cloud flows to a default solution through various methods.
 author: ChrisGarty
 ms.topic: conceptual
 ms.custom: canvas
@@ -16,7 +16,7 @@ contributors:
   - mduelae
 ---
 
-# Add canvas apps and cloud flows to solution by default (preview)
+# Add canvas apps and cloud flows to a solution by default (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
