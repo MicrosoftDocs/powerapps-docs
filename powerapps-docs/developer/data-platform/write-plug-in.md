@@ -23,9 +23,13 @@ contributors:
 
 In the past, plug-ins were created by manually writing code using your favorite editor or IDE. Today you can still write plug-ins that way, but the easier and more modern method is to use one of the available Power Platform development tools. The tools being referred to here are *Power Platform Tools for Visual Studio*, and *Power Platform CLI*. Both these Power Platform tool sets generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
 
+| Plug-in coding methods |
+| --- | --- | --- |
+| Manually write code | Use Power Platform Tools for Visual Studio | Use Power Platform CLI |
+
 You can use Power Platform Tools for Visual Studio to quickly create and register (deploy) plug-ins. A [Quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
 
-The Power Platform CLI can create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, you use the interactive Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
+The Power Platform CLI can create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
 
 The rest of the plug-in documentation in this topic and the other related topics is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
 
@@ -38,7 +42,7 @@ A plug-in is a class within an assembly created using a .NET Framework Class lib
 
 The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService*>. You will use this method to get several different types of services that you can use in your code. More information: [Services you can use in your code](#services-you-can-use-in-your-code)
 
-## Pass configuration data to your plug-in
+### Pass configuration data to your plug-in
 
 When you register a plug-in you have the ability to pass configuration data to it. Configuration data allows you to define how a specific instance of a registered plug-in should behave. This information is passed as string data to parameters in the constructor of your class. There are two parameters: `unsecure` and `secure`.
 Use the first `unsecure` parameter for data that you don't mind if people can see. Use the second `secure` parameter for sensitive data.
@@ -66,7 +70,7 @@ The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> me
 > [!NOTE]
 > When you write a plug-in that uses Azure Service Bus integration, you will use a notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this will not be described here. More information: [Azure Integration](azure-integration.md)
 
-## Organization web service
+### Organization web service
 
 To work with data within a plug-in you use the Organization service. Do not try to use the Web API. Plug-ins can only be written using the SDK API and compiled as .NET assemblies.
 
@@ -108,7 +112,7 @@ context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRO
 
 This will cause an <xref:System.Runtime.Serialization.SerializationException> to occur.
 
-## Use the tracing service
+### Tracing service
 
 Use the tracing service to write messages to the [PluginTraceLog Table](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
 
@@ -131,7 +135,7 @@ More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and trac
 
 ## Assembly constraints
 
-When creating assemblies, keep the following constraints in mind.
+When building a plug-in project, keep the following output assembly constraints in mind.
 
 ### Use .NET Framework 4.6.2
 
