@@ -1,7 +1,7 @@
 ---
 title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write custom code to be executed in response to specific Dataverse data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/14/2023
+ms.date: 02/15/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
@@ -21,33 +21,13 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-You can use Power Platform Tools for Visual Studio to quickly create and deploy (register) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how.
+In the past, plug-ins were created by manually writing code using your favorite editor or IDE. Today you can still write plug-ins that way, but the easier and more modern method is to use one of the available Power Platform development tools. The tools being referred to here are *Power Platform Tools for Visual Studio*, and *Power Platform CLI*. Both these Power Platform tool sets generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
 
-## Assembly constraints
+You can use Power Platform Tools for Visual Studio to quickly create and register (deploy) plug-ins. A [Quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
 
-When creating assemblies, keep the following constraints in mind.
+The Power Platform CLI can create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, you use the interactive Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
 
-### Use .NET Framework 4.6.2
-
-Plug-ins and custom workflow assemblies should use .NET Framework 4.6.2. While assemblies built using later versions should generally work, if they use any features introduced after 4.6.2 an error will occur.
-
-### Optimize assembly development
-
-The assembly should include multiple plug-in classes (or types), but can be no larger than 16 MB. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB. More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
-
-### Assemblies must be signed
-
-All assemblies must be signed before they can be registered. This can be done using Visual Studio Signing tab on the project or by using [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
-
-### Do not depend on .NET assemblies that interact with low-level Windows APIs
-
-Plug-in assemblies must contain all the necessary logic within the respective DLL.  Plug-ins may reference some core .Net assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
-
-### Do not depend on any other assemblies
-
-Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package will include these assemblies in the build folder for your assembly, but you will not upload these assemblies with the assembly that includes your logic. These assemblies are already present in the sandbox runtime.
-
-Do not include any other NuGet packages or assemblies to the build folder of your project. You cannot include these assemblies when you register the assembly with your logic. You cannot assume that the assemblies other than those included in the  `Microsoft.CrmSdk.CoreAssemblies` NuGet package will be present and compatible with your code.
+The rest of the plug-in documentation in this topic and the other related topics is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
 
 ## IPlugin interface
 
@@ -86,7 +66,7 @@ The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> me
 > [!NOTE]
 > When you write a plug-in that uses Azure Service Bus integration, you will use a notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this will not be described here. More information: [Azure Integration](azure-integration.md)
 
-## Organization Service
+## Organization web service
 
 To work with data within a plug-in you use the Organization service. Do not try to use the Web API. Plug-ins can only be written using the SDK API and compiled as .NET assemblies.
 
@@ -148,6 +128,35 @@ tracingService.Trace("Write {0} {1}.", "your", "message");
 ```
 
 More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and tracing](logging-tracing.md).
+
+## Assembly constraints
+
+When creating assemblies, keep the following constraints in mind.
+
+### Use .NET Framework 4.6.2
+
+Plug-in and custom workflow activity assembly projects must target .NET Framework 4.6.2. While assemblies built using later versions of the Framework should generally work, if the plug-in code uses any features introduced after 4.6.2, an error will occur.
+
+### Optimize assembly development
+
+The assembly should include multiple plug-in classes (or types), but can be no larger than 16 MB. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB. More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+
+### Assemblies must be signed
+
+All assemblies must be signed before they can be registered. This can be done using Visual Studio Signing tab on the project or by using [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
+
+### Do not depend on .NET assemblies that interact with low-level Windows APIs
+
+Plug-in assemblies must contain all the necessary logic within the respective DLL.  Plug-ins may reference some core .Net assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
+
+### Dependency on any other (non-Dataverse) assemblies
+
+Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project will include the necessary Dataverse assembly references in your project, but you will not upload these assemblies along with your plug-in assembly as these dataverse assemblies already exist in the server's sandbox run-time.
+
+In the past, non-Dataverse assemblies could not be included in your plug-in projects in a supported way. However, that has changed with the new dependent assembly (preview) capability. For more information see [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
+
+> [!IMPORTANT]
+> The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
 
 ## Performance considerations
 
