@@ -1,7 +1,7 @@
 ---
 title: "powerbidataset table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the powerbidataset table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -71,6 +71,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DatasetOriginalObjectId](#BKMK_DatasetOriginalObjectId)
 - [DataverseConnectionUpdateEnabled](#BKMK_DataverseConnectionUpdateEnabled)
 - [Etag](#BKMK_Etag)
+- [ImportPowerBIComponentSequenceNumber](#BKMK_ImportPowerBIComponentSequenceNumber)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [name](#BKMK_name)
@@ -152,6 +153,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|etag|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ImportPowerBIComponentSequenceNumber"></a> ImportPowerBIComponentSequenceNumber
+
+|Property|Value|
+|--------|-----|
+|Description|Sequence number of the import component event that created this Power BI record.|
+|DisplayName|Import Power BI Component Sequence Number|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|importpowerbicomponentsequencenumber|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|

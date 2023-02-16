@@ -1,7 +1,7 @@
 ---
 title: "Duplicate Detection Rule (DuplicateRule)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Duplicate Detection Rule (DuplicateRule)  table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -438,6 +438,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |300|Canvas App|An application built through a canvas-based editing experience.|
 |301|Callback Registration|Callback Registration that stores configuration.|
 |372|Connector|Connector Entity to support Solutioning Integration|
+|373|Connection Instance||
 |380|Environment Variable Definition|Contains information about the settable variable: its type, default value, and etc.|
 |381|Environment Variable Value|Holds the value for the associated EnvironmentVariableDefinition entity.|
 |400|AI Template||
@@ -763,114 +764,119 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10041|CascadeGrantRevokeAccessRecordsTracker||
 |10042|CascadeGrantRevokeAccessVersionTracker||
 |10043|RevokeInheritedAccessRecordsTracker||
-|10044|Model-Driven App Element|Associates a model-driven app with its components.|
-|10045|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10046|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10047|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10048|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10049|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10050|Setting Definition|Contains Setting Definitions|
-|10051|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10052|Service Plan Mapping|Service Plan Mapping|
-|10054|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10057|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10058|Workflow Binary||
-|10059|Flow Machine||
-|10060|Flow Machine Group||
-|10061|Flow Machine Image||
-|10062|Flow Machine Image Version||
-|10063|Flow Machine Network||
-|10064|ProcessStageParameter||
-|10065|Desktop Flow Binary||
-|10066|Connection Reference||
-|10067|Connection Instance||
-|10068|AI Builder Feedback Loop||
-|10069|AI Form Processing Document||
-|10070|AI Object Detection Image||
-|10071|AI Object Detection Label||
-|10072|AI Object Detection Bounding Box||
-|10073|AI Object Detection Image Mapping||
-|10075|AI Builder Dataset||
-|10076|AI Builder Dataset File||
-|10077|AI Builder Dataset Record||
-|10078|AI Builder Datasets Container||
-|10079|AI Builder File||
-|10080|AI Builder File Attached Data||
-|10081|Help Page||
-|10082|Tour||
-|10083|BotContent||
-|10084|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10085|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10086|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10092|Comment|A collaborative comment on a maker artifact|
-|10093|PDF Setting|PDF Settings to save enabled pdf entities|
-|10094|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10095|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10096|Service Configuration||
-|10097|SLA KPI||
-|10098|Knowledge Management Setting|Setup knowledge management for your organization.|
-|10099|Knowledge Federated Article||
-|10100|Knowledge Federated Article Incident||
-|10101|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
-|10102|Search provider||
-|10103|Knowledge Article Image||
-|10104|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10105|Knowledge Search Insight|Knowledge Search Insight|
-|10106|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10107|Knowledge Article Attachment||
-|10108|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10109|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10110|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10111|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10113|Plugin Package||
-|10114|PowerfxRule||
-|10115|SupportUserTable||
-|10116|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10117|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10118|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
-|10119|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10120|MobileOfflineProfileItemFilter||
-|10121|TeamMobileOfflineProfileMembership||
-|10122|UserMobileOfflineProfileMembership||
-|10123|OrganizationDataSyncSubscription||
-|10124|OrganizationDataSyncSubscriptionEntity||
-|10125|OrganizationDataSyncState|Information regarding data synchronization state|
-|10126|App Insights Metadata|Metadata for App Insights Platform components|
-|10127|Workflow Action Status|PA Workflows action processing status|
-|10128|NonRelational Data Source||
-|10129|Notification|Notification to be provided to a user.|
-|10130|User Rating||
-|10131|Insights Store Data Source||
-|10132|Insights Store Virtual Entity|Insights Store Virtual Entity|
-|10133|App Action|Contains Modern Command Information|
-|10134|App Action Migration||
-|10135|App Action Rule||
-|10138|Card|Card|
-|10139|Entity link chat configuration||
-|10140|Rich Text Attachment|Image or file attached to a rich text field|
-|10141|Custom Control Extended Setting||
-|10142|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10143|Virtual Connector Data Source||
-|10144|PM Analysis History||
-|10145|PM Calendar||
-|10146|PM Calendar Version||
-|10147|PM Inferred Task||
-|10148|PM Process Extended Metadata Version||
-|10149|PM Process User Settings||
-|10150|PM Process Version||
-|10151|PM Recording||
-|10152|PM Template||
-|10153|PM View||
-|10154|Analysis Component||
-|10155|Analysis Job||
-|10156|Analysis Result||
-|10157|Analysis Result Detail||
-|10158|Solution Health Rule||
-|10159|Solution Health Rule Argument||
-|10160|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10161|Power BI Dataset||
-|10162|Power BI Mashup Parameter||
-|10163|Power BI Report||
+|10044|TdsMetadata||
+|10045|Model-Driven App Element|Associates a model-driven app with its components.|
+|10046|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10047|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10048|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10049|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10050|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10051|Setting Definition|Contains Setting Definitions|
+|10052|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10053|Service Plan Mapping|Service Plan Mapping|
+|10055|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10058|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10059|Workflow Binary||
+|10060|Desktop Flow Module||
+|10061|Flow Machine||
+|10062|Flow Machine Group||
+|10063|Flow Machine Image||
+|10064|Flow Machine Image Version||
+|10065|Flow Machine Network||
+|10066|ProcessStageParameter||
+|10067|Desktop Flow Binary||
+|10068|Connection Reference||
+|10069|Help Page||
+|10070|Tour||
+|10071|BotContent||
+|10072|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10073|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10074|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10080|Comment|A collaborative comment on a maker artifact|
+|10081|PDF Setting|PDF Settings to save enabled pdf entities|
+|10082|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10083|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10084|Service Configuration||
+|10085|SLA KPI||
+|10086|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10087|Knowledge Federated Article||
+|10088|Knowledge Federated Article Incident||
+|10089|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
+|10090|Search provider||
+|10091|Knowledge Article Image||
+|10092|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10093|Knowledge Search Insight|Knowledge Search Insight|
+|10094|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10095|Knowledge Article Attachment||
+|10096|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10097|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10098|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10099|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10101|Plugin Package||
+|10102|PowerfxRule||
+|10103|SupportUserTable||
+|10104|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10105|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10106|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
+|10107|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10108|MobileOfflineProfileExtension||
+|10109|MobileOfflineProfileItemFilter||
+|10110|TeamMobileOfflineProfileMembership||
+|10111|UserMobileOfflineProfileMembership||
+|10112|OrganizationDataSyncSubscription||
+|10113|OrganizationDataSyncSubscriptionEntity||
+|10114|OrganizationDataSyncState|Information regarding data synchronization state|
+|10115|App Insights Metadata|Metadata for App Insights Platform components|
+|10116|Workflow Action Status|PA Workflows action processing status|
+|10117|NonRelational Data Source||
+|10118|Notification|Notification to be provided to a user.|
+|10119|User Rating||
+|10120|Insights Store Data Source||
+|10121|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10122|RoleEditorLayout||
+|10123|App Action|Contains Modern Command Information|
+|10124|App Action Migration||
+|10125|App Action Rule||
+|10128|Card|Card|
+|10129|Entity link chat configuration||
+|10130|Rich Text Attachment|Image or file attached to a rich text field|
+|10131|Custom Control Extended Setting||
+|10132|SearchRelationshipSettings||
+|10133|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10134|Virtual Connector Data Source||
+|10135|Virtual Table Column Candidate||
+|10136|AI Builder Feedback Loop||
+|10137|AI Form Processing Document||
+|10138|AI Object Detection Image||
+|10139|AI Object Detection Label||
+|10140|AI Object Detection Bounding Box||
+|10141|AI Object Detection Image Mapping||
+|10143|AI Builder Dataset||
+|10144|AI Builder Dataset File||
+|10145|AI Builder Dataset Record||
+|10146|AI Builder Datasets Container||
+|10147|AI Builder File||
+|10148|AI Builder File Attached Data||
+|10149|PM Analysis History||
+|10150|PM Calendar||
+|10151|PM Calendar Version||
+|10152|PM Inferred Task||
+|10153|PM Process Extended Metadata Version||
+|10154|PM Process User Settings||
+|10155|PM Process Version||
+|10156|PM Recording||
+|10157|PM Template||
+|10158|PM View||
+|10159|Analysis Component||
+|10160|Analysis Job||
+|10161|Analysis Result||
+|10162|Analysis Result Detail||
+|10163|Solution Health Rule||
+|10164|Solution Health Rule Argument||
+|10165|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10166|Power BI Dataset||
+|10167|Power BI Mashup Parameter||
+|10168|Power BI Report||
 
 
 
@@ -1122,6 +1128,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |300|Canvas App|An application built through a canvas-based editing experience.|
 |301|Callback Registration|Callback Registration that stores configuration.|
 |372|Connector|Connector Entity to support Solutioning Integration|
+|373|Connection Instance||
 |380|Environment Variable Definition|Contains information about the settable variable: its type, default value, and etc.|
 |381|Environment Variable Value|Holds the value for the associated EnvironmentVariableDefinition entity.|
 |400|AI Template||
@@ -1447,114 +1454,119 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10041|CascadeGrantRevokeAccessRecordsTracker||
 |10042|CascadeGrantRevokeAccessVersionTracker||
 |10043|RevokeInheritedAccessRecordsTracker||
-|10044|Model-Driven App Element|Associates a model-driven app with its components.|
-|10045|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
-|10046|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
-|10047|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
-|10048|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
-|10049|Organization Setting|Holds the value for the associated Organization Setting Definition.|
-|10050|Setting Definition|Contains Setting Definitions|
-|10051|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
-|10052|Service Plan Mapping|Service Plan Mapping|
-|10054|ApplicationUser|Application User that has non-interactive access to the CDS system|
-|10057|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
-|10058|Workflow Binary||
-|10059|Flow Machine||
-|10060|Flow Machine Group||
-|10061|Flow Machine Image||
-|10062|Flow Machine Image Version||
-|10063|Flow Machine Network||
-|10064|ProcessStageParameter||
-|10065|Desktop Flow Binary||
-|10066|Connection Reference||
-|10067|Connection Instance||
-|10068|AI Builder Feedback Loop||
-|10069|AI Form Processing Document||
-|10070|AI Object Detection Image||
-|10071|AI Object Detection Label||
-|10072|AI Object Detection Bounding Box||
-|10073|AI Object Detection Image Mapping||
-|10075|AI Builder Dataset||
-|10076|AI Builder Dataset File||
-|10077|AI Builder Dataset Record||
-|10078|AI Builder Datasets Container||
-|10079|AI Builder File||
-|10080|AI Builder File Attached Data||
-|10081|Help Page||
-|10082|Tour||
-|10083|BotContent||
-|10084|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
-|10085|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
-|10086|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
-|10092|Comment|A collaborative comment on a maker artifact|
-|10093|PDF Setting|PDF Settings to save enabled pdf entities|
-|10094|Activity File Attachment|Attachment entity with data stored in file type attribute|
-|10095|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10096|Service Configuration||
-|10097|SLA KPI||
-|10098|Knowledge Management Setting|Setup knowledge management for your organization.|
-|10099|Knowledge Federated Article||
-|10100|Knowledge Federated Article Incident||
-|10101|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
-|10102|Search provider||
-|10103|Knowledge Article Image||
-|10104|Knowledge Interaction Insight|Knowledge Interaction Insight|
-|10105|Knowledge Search Insight|Knowledge Search Insight|
-|10106|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
-|10107|Knowledge Article Attachment||
-|10108|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
-|10109|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
-|10110|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
-|10111|Knowledge search filter|Allows you to configure and manage filter settings.|
-|10113|Plugin Package||
-|10114|PowerfxRule||
-|10115|SupportUserTable||
-|10116|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
-|10117|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
-|10118|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
-|10119|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
-|10120|MobileOfflineProfileItemFilter||
-|10121|TeamMobileOfflineProfileMembership||
-|10122|UserMobileOfflineProfileMembership||
-|10123|OrganizationDataSyncSubscription||
-|10124|OrganizationDataSyncSubscriptionEntity||
-|10125|OrganizationDataSyncState|Information regarding data synchronization state|
-|10126|App Insights Metadata|Metadata for App Insights Platform components|
-|10127|Workflow Action Status|PA Workflows action processing status|
-|10128|NonRelational Data Source||
-|10129|Notification|Notification to be provided to a user.|
-|10130|User Rating||
-|10131|Insights Store Data Source||
-|10132|Insights Store Virtual Entity|Insights Store Virtual Entity|
-|10133|App Action|Contains Modern Command Information|
-|10134|App Action Migration||
-|10135|App Action Rule||
-|10138|Card|Card|
-|10139|Entity link chat configuration||
-|10140|Rich Text Attachment|Image or file attached to a rich text field|
-|10141|Custom Control Extended Setting||
-|10142|Search Telemetry|Entity to log telemetry that used to improve search quality|
-|10143|Virtual Connector Data Source||
-|10144|PM Analysis History||
-|10145|PM Calendar||
-|10146|PM Calendar Version||
-|10147|PM Inferred Task||
-|10148|PM Process Extended Metadata Version||
-|10149|PM Process User Settings||
-|10150|PM Process Version||
-|10151|PM Recording||
-|10152|PM Template||
-|10153|PM View||
-|10154|Analysis Component||
-|10155|Analysis Job||
-|10156|Analysis Result||
-|10157|Analysis Result Detail||
-|10158|Solution Health Rule||
-|10159|Solution Health Rule Argument||
-|10160|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
-|10161|Power BI Dataset||
-|10162|Power BI Mashup Parameter||
-|10163|Power BI Report||
+|10044|TdsMetadata||
+|10045|Model-Driven App Element|Associates a model-driven app with its components.|
+|10046|Model-Driven App Component Node's Edge|Contains Model-Driven App Component Node's Edge Information.|
+|10047|Model-Driven App Component Node|Contains Model-Driven App Component Node Information|
+|10048|Model-Driven App Setting|Holds the value for the associated App Setting Definition.|
+|10049|Model-Driven App User Setting|Holds the value for the associated App User Setting Definition.|
+|10050|Organization Setting|Holds the value for the associated Organization Setting Definition.|
+|10051|Setting Definition|Contains Setting Definitions|
+|10052|CanvasApp Extended Metadata|Holds extended metadata values for canvas apps that are not solution aware|
+|10053|Service Plan Mapping|Service Plan Mapping|
+|10055|ApplicationUser|Application User that has non-interactive access to the CDS system|
+|10058|OData v4 Data Source|Data sources used by the OData v4 data provider to access data from an external web service.|
+|10059|Workflow Binary||
+|10060|Desktop Flow Module||
+|10061|Flow Machine||
+|10062|Flow Machine Group||
+|10063|Flow Machine Image||
+|10064|Flow Machine Image Version||
+|10065|Flow Machine Network||
+|10066|ProcessStageParameter||
+|10067|Desktop Flow Binary||
+|10068|Connection Reference||
+|10069|Help Page||
+|10070|Tour||
+|10071|BotContent||
+|10072|ConversationTranscript|Contains the transcripts of conversations between participants such as customers, Virtual Agents or Human agents.|
+|10073|Chatbot|Represents a Power Virtual Agents Chatbot. https://powerva.microsoft.com/|
+|10074|Chatbot subcomponent|Holds key authoring components of a Chatbot such a topics, entities, variables, etc.|
+|10080|Comment|A collaborative comment on a maker artifact|
+|10081|PDF Setting|PDF Settings to save enabled pdf entities|
+|10082|Activity File Attachment|Attachment entity with data stored in file type attribute|
+|10083|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10084|Service Configuration||
+|10085|SLA KPI||
+|10086|Knowledge Management Setting|Setup knowledge management for your organization.|
+|10087|Knowledge Federated Article||
+|10088|Knowledge Federated Article Incident||
+|10089|Integrated search provider|Ingest and search files, documents, or articles from data sources outside of your current Dynamics 365 organization with a unified ranking.|
+|10090|Search provider||
+|10091|Knowledge Article Image||
+|10092|Knowledge Interaction Insight|Knowledge Interaction Insight|
+|10093|Knowledge Search Insight|Knowledge Search Insight|
+|10094|Knowledge article language setting|Allows you to select default language for knowledge authoring.|
+|10095|Knowledge Article Attachment||
+|10096|Knowledge personalization|Allows users to personalize their knowledge search filters and knowledge authoring language.|
+|10097|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10098|Knowledge search personal filter config|Allows you to configure and manage personal filter settings.|
+|10099|Knowledge search filter|Allows you to configure and manage filter settings.|
+|10101|Plugin Package||
+|10102|PowerfxRule||
+|10103|SupportUserTable||
+|10104|Key Vault Reference|Contains data that refers to an Azure Key Vault containing credentials used to connect to secure web-hosted resources.|
+|10105|Managed Identity|Contains data to represent an Azure Active Directory Application used to connect to secure web-hosted resources.|
+|10106|Ms Graph Resource To Subscription|For internal use only. The mapping between Ms Graph Resources and Subscriptions.|
+|10107|Virtual Entity  Metadata|Holds  metadata values for virtual entities|
+|10108|MobileOfflineProfileExtension||
+|10109|MobileOfflineProfileItemFilter||
+|10110|TeamMobileOfflineProfileMembership||
+|10111|UserMobileOfflineProfileMembership||
+|10112|OrganizationDataSyncSubscription||
+|10113|OrganizationDataSyncSubscriptionEntity||
+|10114|OrganizationDataSyncState|Information regarding data synchronization state|
+|10115|App Insights Metadata|Metadata for App Insights Platform components|
+|10116|Workflow Action Status|PA Workflows action processing status|
+|10117|NonRelational Data Source||
+|10118|Notification|Notification to be provided to a user.|
+|10119|User Rating||
+|10120|Insights Store Data Source||
+|10121|Insights Store Virtual Entity|Insights Store Virtual Entity|
+|10122|RoleEditorLayout||
+|10123|App Action|Contains Modern Command Information|
+|10124|App Action Migration||
+|10125|App Action Rule||
+|10128|Card|Card|
+|10129|Entity link chat configuration||
+|10130|Rich Text Attachment|Image or file attached to a rich text field|
+|10131|Custom Control Extended Setting||
+|10132|SearchRelationshipSettings||
+|10133|Search Telemetry|Entity to log telemetry that used to improve search quality|
+|10134|Virtual Connector Data Source||
+|10135|Virtual Table Column Candidate||
+|10136|AI Builder Feedback Loop||
+|10137|AI Form Processing Document||
+|10138|AI Object Detection Image||
+|10139|AI Object Detection Label||
+|10140|AI Object Detection Bounding Box||
+|10141|AI Object Detection Image Mapping||
+|10143|AI Builder Dataset||
+|10144|AI Builder Dataset File||
+|10145|AI Builder Dataset Record||
+|10146|AI Builder Datasets Container||
+|10147|AI Builder File||
+|10148|AI Builder File Attached Data||
+|10149|PM Analysis History||
+|10150|PM Calendar||
+|10151|PM Calendar Version||
+|10152|PM Inferred Task||
+|10153|PM Process Extended Metadata Version||
+|10154|PM Process User Settings||
+|10155|PM Process Version||
+|10156|PM Recording||
+|10157|PM Template||
+|10158|PM View||
+|10159|Analysis Component||
+|10160|Analysis Job||
+|10161|Analysis Result||
+|10162|Analysis Result Detail||
+|10163|Solution Health Rule||
+|10164|Solution Health Rule Argument||
+|10165|Solution Health Rule Set|Represents a set that owns a number of solution health rules.|
+|10166|Power BI Dataset||
+|10167|Power BI Mashup Parameter||
+|10168|Power BI Report||
 
 
 

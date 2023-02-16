@@ -1,7 +1,7 @@
 ---
 title: "connectionreference table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connectionreference table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -31,6 +31,7 @@ search.app:
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/connectionreferences<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -42,6 +43,7 @@ search.app:
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/connectionreferences(*connectionreferenceid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -879,9 +881,10 @@ Listed by **SchemaName**.
 - [connectionreference_ProcessSession](#BKMK_connectionreference_ProcessSession)
 - [connectionreference_BulkDeleteFailures](#BKMK_connectionreference_BulkDeleteFailures)
 - [connectionreference_PrincipalObjectAttributeAccesses](#BKMK_connectionreference_PrincipalObjectAttributeAccesses)
-- [msdyn_AIConfiguration_ConnectionReference](#BKMK_msdyn_AIConfiguration_ConnectionReference)
+- [connectionreference_connectioninstance](#BKMK_connectionreference_connectioninstance)
 - [bot_connectionreference](#BKMK_bot_connectionreference)
 - [msdyn_connreference_msdyn_connectordatasource](#BKMK_msdyn_connreference_msdyn_connectordatasource)
+- [msdyn_AIConfiguration_ConnectionReference](#BKMK_msdyn_AIConfiguration_ConnectionReference)
 
 
 ### <a name="BKMK_connectionreference_SyncErrors"></a> connectionreference_SyncErrors
@@ -986,21 +989,21 @@ Same as the [connectionreference_PrincipalObjectAttributeAccesses](principalobje
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_msdyn_AIConfiguration_ConnectionReference"></a> msdyn_AIConfiguration_ConnectionReference
+### <a name="BKMK_connectionreference_connectioninstance"></a> connectionreference_connectioninstance
 
-**Added by**: AISolution Solution
+**Added by**: Connection Instance Solution Solution
 
-Same as the [msdyn_AIConfiguration_ConnectionReference](msdyn_aiconfiguration.md#BKMK_msdyn_AIConfiguration_ConnectionReference) many-to-one relationship for the [msdyn_aiconfiguration](msdyn_aiconfiguration.md) table/entity.
+Same as the [connectionreference_connectioninstance](connectioninstance.md#BKMK_connectionreference_connectioninstance) many-to-one relationship for the [connectioninstance](connectioninstance.md) table/entity.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|msdyn_aiconfiguration|
-|ReferencingAttribute|msdyn_connectionreferenceid|
+|ReferencingEntity|connectioninstance|
+|ReferencingAttribute|connectionreferenceid|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|msdyn_AIConfiguration_ConnectionReference|
+|ReferencedEntityNavigationPropertyName|connectionreference_connectioninstance|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
 ### <a name="BKMK_bot_connectionreference"></a> bot_connectionreference
@@ -1035,6 +1038,23 @@ Same as the [msdyn_connreference_msdyn_connectordatasource](msdyn_connectordatas
 |ReferencedEntityNavigationPropertyName|msdyn_connreference_msdyn_connectordatasource|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_AIConfiguration_ConnectionReference"></a> msdyn_AIConfiguration_ConnectionReference
+
+**Added by**: AISolution Solution
+
+Same as the [msdyn_AIConfiguration_ConnectionReference](msdyn_aiconfiguration.md#BKMK_msdyn_AIConfiguration_ConnectionReference) many-to-one relationship for the [msdyn_aiconfiguration](msdyn_aiconfiguration.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aiconfiguration|
+|ReferencingAttribute|msdyn_connectionreferenceid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_AIConfiguration_ConnectionReference|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

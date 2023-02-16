@@ -1,7 +1,7 @@
 ---
 title: "msdyn_pmview table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_pmview table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -72,6 +72,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_configuration](#BKMK_msdyn_configuration)
 - [msdyn_isprivate](#BKMK_msdyn_isprivate)
 - [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_outputdata](#BKMK_msdyn_outputdata)
 - [msdyn_parentpmviewid](#BKMK_msdyn_parentpmviewid)
 - [msdyn_pmcalendarversionid](#BKMK_msdyn_pmcalendarversionid)
 - [msdyn_pmprocessextendedmetadataversionid](#BKMK_msdyn_pmprocessextendedmetadataversionid)
@@ -174,6 +175,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_outputdata"></a> msdyn_outputdata
+
+|Property|Value|
+|--------|-----|
+|Description|JSON property bag for view specific output data.|
+|DisplayName|Output Data|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_outputdata|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_msdyn_parentpmviewid"></a> msdyn_parentpmviewid

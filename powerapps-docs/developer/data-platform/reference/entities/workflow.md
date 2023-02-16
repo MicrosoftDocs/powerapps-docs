@@ -1,7 +1,7 @@
 ---
 title: "Process (Workflow)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Process (Workflow)  table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -79,6 +79,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DeleteStage](#BKMK_DeleteStage)
 - [Dependencies](#BKMK_Dependencies)
 - [Description](#BKMK_Description)
+- [DesktopFlowModules](#BKMK_DesktopFlowModules)
+- [DynamicsSolutionContext](#BKMK_DynamicsSolutionContext)
 - [EntityImage](#BKMK_EntityImage)
 - [FormId](#BKMK_FormId)
 - [InputParameters](#BKMK_InputParameters)
@@ -321,6 +323,42 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Memo|
 
 
+### <a name="BKMK_DesktopFlowModules"></a> DesktopFlowModules
+
+**Added by**: Power Automate Extensions Workflow Customization package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Desktop flow modules related to this workflow.|
+|DisplayName|Desktop flow modules|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|desktopflowmodules|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_DynamicsSolutionContext"></a> DynamicsSolutionContext
+
+**Added by**: Power Automate Extensions Workflow Customization package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|comma separated list of one or more Dynamics First Party Solution Unique names that this workflow is in context of.|
+|DisplayName|DynamicsSolutionContext|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|dynamicssolutioncontext|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_EntityImage"></a> EntityImage
 
 |Property|Value|
@@ -379,7 +417,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|inputs|
-|MaxLength|100000|
+|MaxLength|1048576|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -560,7 +598,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|outputs|
-|MaxLength|100000|
+|MaxLength|1048576|
 |RequiredLevel|None|
 |Type|Memo|
 
@@ -1084,6 +1122,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ParentWorkflowId](#BKMK_ParentWorkflowId)
 - [ParentWorkflowIdName](#BKMK_ParentWorkflowIdName)
 - [PluginTypeId](#BKMK_PluginTypeId)
+- [ResourceContainer](#BKMK_ResourceContainer)
+- [ResourceId](#BKMK_ResourceId)
 - [SdkMessageId](#BKMK_SdkMessageId)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
@@ -1599,6 +1639,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
+### <a name="BKMK_ResourceContainer"></a> ResourceContainer
+
+**Added by**: Power Automate Extensions Workflow Customization package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|ResourceContainer|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|resourcecontainer|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ResourceId"></a> ResourceId
+
+**Added by**: Power Automate Extensions Workflow Customization package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|ResourceId|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|resourceid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_SdkMessageId"></a> SdkMessageId
 
 |Property|Value|
@@ -1730,9 +1803,9 @@ Listed by **SchemaName**.
 - [regardingobjectid_process](#BKMK_regardingobjectid_process)
 - [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
 - [workflow_desktopflowbinary_Process](#BKMK_workflow_desktopflowbinary_Process)
+- [msdyn_workflow_slaitem_customtimecalculationworkflowid](#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid)
 - [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
 - [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](#BKMK_msdyn_scheduleinferenceworkflow_msdyn_toaimodel)
-- [msdyn_workflow_slaitem_customtimecalculationworkflowid](#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid)
 - [msdyn_workflow_msdyn_pmrecording](#BKMK_msdyn_workflow_msdyn_pmrecording)
 - [msdyn_workflow_msdyn_solutionhealthrule_Workflow](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow)
 - [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction)
@@ -2001,6 +2074,23 @@ Same as the [workflow_desktopflowbinary_Process](desktopflowbinary.md#BKMK_workf
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
+### <a name="BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid"></a> msdyn_workflow_slaitem_customtimecalculationworkflowid
+
+**Added by**: Service Level Agreement (SLA) Extension Solution
+
+Same as the [msdyn_workflow_slaitem_customtimecalculationworkflowid](slaitem.md#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|slaitem|
+|ReferencingAttribute|msdyn_customtimecalculationworkflowid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_workflow_slaitem_customtimecalculationworkflowid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_msdyn_retrainworkflow_msdyn_toaimodel"></a> msdyn_retrainworkflow_msdyn_toaimodel
 
 **Added by**: AISolution Solution
@@ -2031,23 +2121,6 @@ Same as the [msdyn_scheduleinferenceworkflow_msdyn_toaimodel](msdyn_aimodel.md#B
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_scheduleinferenceworkflow_msdyn_toaimodel|
-|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid"></a> msdyn_workflow_slaitem_customtimecalculationworkflowid
-
-**Added by**: Service Level Agreement (SLA) Extension Solution
-
-Same as the [msdyn_workflow_slaitem_customtimecalculationworkflowid](slaitem.md#BKMK_msdyn_workflow_slaitem_customtimecalculationworkflowid) many-to-one relationship for the [slaitem](slaitem.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|slaitem|
-|ReferencingAttribute|msdyn_customtimecalculationworkflowid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|msdyn_workflow_slaitem_customtimecalculationworkflowid|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

@@ -1,7 +1,7 @@
 ---
 title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -31,6 +31,7 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.2/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/botcomponents<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/botcomponents(*botcomponentid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -42,6 +43,7 @@ Holds key authoring components of a Chatbot such a topics, entities, variables, 
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.2/botcomponents(*botcomponentid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/botcomponents(*botcomponentid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -163,11 +165,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |6|Language understanding|Language Understanding (LU) is used by a bot to understand language naturally and contextually to determine what next to do in a conversation flow.|
 |7|Language generation|Language Generation (LG) lets you define multiple variations of a phrase, execute simple expressions based on context, and refer to conversational memory.|
 |8|Dialog schema|Schema of the dialog that specifies dialog's input and output parameters|
-|9|Topic|A topic defines a how a bot conversation plays out. A topic has trigger phrases - these are phrases, keywords, or questions - and conversation nodes - these are what you use to define how a bot should respond and what it should do.|
-|10|Unused|Unused|
-|11|Bot entity|An entity can be viewed as an information unit that represents a certain type of a real-world subject, like a phone number, zip code, city, or even a person's name.|
-|12|Bot variable|Variables let you save responses from your customers in a conversation with your bot so that you can reuse them later in the conversation.|
-|13|Skill|Power Virtual Agents enables you to extend your bot using Bot Framework Skills. Bot Framework Skills are re-usable conversational skill building-blocks covering conversational use-cases.|
+|9|Topic (V2)|A topic defines a how a bot conversation plays out. A topic has trigger phrases - these are phrases, keywords, or questions - and conversation nodes - these are what you use to define how a bot should respond and what it should do.|
+|10|Bot translations (V2)|Bot translations (V2)|
+|11|Bot entity (V2)|An entity can be viewed as an information unit that represents a certain type of a real-world subject, like a phone number, zip code, city, or even a person's name.|
+|12|Bot variable (V2)|Variables let you save responses from your customers in a conversation with your bot so that you can reuse them later in the conversation.|
+|13|Skill (V2)|Power Virtual Agents enables you to extend your bot using Bot Framework Skills. Bot Framework Skills are re-usable conversational skill building-blocks covering conversational use-cases.|
 
 
 

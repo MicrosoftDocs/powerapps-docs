@@ -1,7 +1,7 @@
 ---
 title: "Entity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Entity table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -329,6 +329,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
+- [IsActivity](#BKMK_IsActivity)
+- [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [OverwriteTime](#BKMK_OverwriteTime)
 - [SolutionId](#BKMK_SolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
@@ -355,6 +357,44 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Deleted||
 |3|Deleted Unpublished||
 
+
+
+### <a name="BKMK_IsActivity"></a> IsActivity
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Whether this entity is of type activity.|
+|DisplayName|Is Activity|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isactivity|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsActivity Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+
+
+### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
+
+**Added by**: Metadata Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The object type code of this entity.|
+|DisplayName|Object Type Code|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|objecttypecode|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime

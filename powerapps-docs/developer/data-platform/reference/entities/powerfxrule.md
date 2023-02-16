@@ -1,7 +1,7 @@
 ---
 title: "powerfxrule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the powerfxrule table/entity."
-ms.date: 12/07/2022
+ms.date: 02/15/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -31,6 +31,7 @@ search.app:
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.2/powerfxrules(*powerfxruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/powerfxrules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/powerfxrules(*powerfxruleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -42,6 +43,7 @@ search.app:
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.2/powerfxrules(*powerfxruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/powerfxrules(*powerfxruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -66,10 +68,12 @@ search.app:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [Category](#BKMK_Category)
-- [Context](#BKMK_Context)
+- [CompiledExpression](#BKMK_CompiledExpression)
+- [EntityLogicalName](#BKMK_EntityLogicalName)
 - [Expression](#BKMK_Expression)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [MessageName](#BKMK_MessageName)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -103,20 +107,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
-### <a name="BKMK_Context"></a> Context
+### <a name="BKMK_CompiledExpression"></a> CompiledExpression
 
 |Property|Value|
 |--------|-----|
 |Description||
-|DisplayName|Context|
+|DisplayName|CompiledExpression|
 |Format|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|context|
-|MaxLength|2000|
+|LogicalName|compiledexpression|
+|MaxLength|200000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_EntityLogicalName"></a> EntityLogicalName
+
+|Property|Value|
+|--------|-----|
+|Description|The name of the primary entity on which rule is defined.|
+|DisplayName|EntityLogicalName|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|entitylogicalname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Expression"></a> Expression
@@ -167,6 +187,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+
+### <a name="BKMK_MessageName"></a> MessageName
+
+|Property|Value|
+|--------|-----|
+|Description|The sdkMessage on which will trigger rule execution.|
+|DisplayName|MessageName|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|messagename|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_name"></a> name
@@ -1005,7 +1041,7 @@ Same as the [powerfxrule_sdkmessageprocessingstep](sdkmessageprocessingstep.md#B
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|powerfxrule_sdkmessageprocessingstep|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
