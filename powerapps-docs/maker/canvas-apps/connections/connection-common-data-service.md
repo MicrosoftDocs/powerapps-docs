@@ -110,7 +110,7 @@ Without this feature, it has been common for authors to use Power Automate to ca
 
 Working with untyped fields is not restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
 
-### Add the Power Fx `Environment` language object to your app
+### Add the Power Fx Environment language object to your app
 
 To use Dataverse actions in your Power Fx formulas, select **Add data** and search for **Environment** and add it to your application. 
 
