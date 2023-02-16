@@ -44,6 +44,6 @@ Allows a user to enter a number.
 
 **[Required field](control-reference.md#r)** – Whether or not this input is required.
 
-**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use control-reference.md#r.
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.
