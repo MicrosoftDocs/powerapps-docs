@@ -48,6 +48,7 @@ Displays text, allowing control over font sizes, weight, and color.
 
 **[Font type](control-reference.md#f)** – Type of font to use for rendering
 
-**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use control-reference.md#r.
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
+
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.
