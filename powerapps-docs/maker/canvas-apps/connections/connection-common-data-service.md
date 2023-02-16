@@ -25,7 +25,7 @@ You can securely store your business data in Dataverse and build rich apps in Po
 
 By default, the app connects to the current environment for Dataverse tables. If your app moves to another environment, the connector connects to data in the new environment. This behavior works well for an app using a single environment or an app that follows an ALM process for moving from Development to Test to Production.
 
-When you add data from Dataverse, you can change the environment and then select one or more tables. By default, the app connects to data in the current environment.
+When you add data from Dataverse, you can change the environment, and then select one or more tables. By default, the app connects to data in the current environment.
 
 ![Default environment.](media/connection-common-data-service/common-data-service-connection-change-environment.png)
 
@@ -133,7 +133,7 @@ Unbound Dataverse actions are peer level to tables and need the parenting scope 
 
 ### Passing in untyped objects
 
-Some Dataverse actions require an untyped object as a parameter value.  If you have a Power Fx record you can convert it to an untyped object so that it can be passed into a Dataverse action.
+Some Dataverse actions require an untyped object as a parameter value.  If you have a Power Fx record, you can convert it to an untyped object so that it can be passed into a Dataverse action.
 
 In the example below `TargetObject` is assigned a Power Fx record with the properties of name, accountid, and @odata.type. 
 
