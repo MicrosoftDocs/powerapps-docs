@@ -35,10 +35,10 @@ The rest of the plug-in documentation in this topic and the other related topics
 
 ## IPlugin interface
 
-A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.6.2 in Visual Studio. Each class in the project that will be registered on a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
+A plug-in is a compiled class within an assembly created using a .NET Framework 4.6.2 Class library project. Each class in the project that will be registered on a pipeline step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires implementation of the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
 
 > [!IMPORTANT]
-> When implementing `IPlugin`, the class should be *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method. There are some exceptions to this. For example you can have a property that represents a constant and you can have methods that represent functions that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These change with every invocation and you don't want that data to be cached and applied to subsequent invocations.  More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
+> When deriving from `IPlugin`, the class should be *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method. There are some exceptions to this. For example you can have a property that represents a constant and you can have methods that represent functions that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These change with every invocation and you don't want that data to be cached and applied to subsequent invocations.  More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
 
 The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService*>. You will use this method to get several different types of services that you can use in your code. More information: [Services you can use in your code](#services-you-can-use-in-your-code)
 
@@ -74,12 +74,11 @@ The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> me
 
 To work with data within a plug-in you use the Organization service. Do not try to use the Web API. Plug-ins can only be written using the SDK API and compiled as .NET assemblies.
 
-To gain access to a `svc` variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface, use the following code:
+To obtain an object reference to the Organization service use the following code:
 
 
 ```csharp
-// Obtain the organization service reference which you will need for  
-// web service calls.  
+// Obtain the Organization service reference  
 IOrganizationServiceFactory serviceFactory =
     (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
 IOrganizationService svc = serviceFactory.CreateOrganizationService(context.UserId);
@@ -151,11 +150,11 @@ All assemblies must be signed before they can be registered. This can be done us
 
 ### Do not depend on .NET assemblies that interact with low-level Windows APIs
 
-Plug-in assemblies must contain all the necessary logic within the respective DLL.  Plug-ins may reference some core .Net assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
+Plug-in assemblies must contain all the necessary logic within the respective DLL.  Plug-ins may reference some core .NET assemblies. However, we do not support dependencies on .NET assemblies that interact with low-level Windows APIs, such as the graphics design interface.
 
 ### Dependency on any other (non-Dataverse) assemblies
 
-Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project will include the necessary Dataverse assembly references in your project, but you will not upload these assemblies along with your plug-in assembly as these dataverse assemblies already exist in the server's sandbox run-time.
+Adding the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to your project will include the necessary Dataverse assembly references in your project, but you will not upload these assemblies along with your plug-in assembly as these Dataverse assemblies already exist in the server's sandbox run-time.
 
 In the past, non-Dataverse assemblies could not be included in your plug-in projects in a supported way. However, that has changed with the new dependent assembly (preview) capability. For more information see [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
 
