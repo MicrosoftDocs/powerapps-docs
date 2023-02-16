@@ -123,7 +123,7 @@ This adds the Power Fx **Environment** language object to your application.
 
 ### Accessing Dataverse actions 
 
-When the Power Fx **Environment** object is added to your application, you can access Dataverse actions by adding ‘Environment’ to your formula and then dotting into the actions.
+When the Power Fx ‘Environment’ object is added to your application, you can access Dataverse actions by adding ‘Environment’ to your formula and then dotting into the actions.
 
 ![ Using the Power Fx Environment object.](media/connection-common-data-service/common-data-service-connection-using-the-Envrionment-PowerFx-object.png)
 
