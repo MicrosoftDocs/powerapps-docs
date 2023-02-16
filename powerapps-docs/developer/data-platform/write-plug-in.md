@@ -21,17 +21,15 @@ contributors:
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-In the past, plug-ins were created by manually writing code using your favorite editor or IDE. Today you can still write plug-ins that way, but the easier and more modern method is to use one of the available Power Platform development tools. The tools being referred to here are *Power Platform Tools for Visual Studio*, and *Power Platform CLI*. Both these Power Platform tool sets generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
+You can create plug-ins by using one of the following two ways:
 
-| Plug-in coding methods |
-| --- | --- | --- |
-| Manually write code | Use Power Platform Tools for Visual Studio | Use Power Platform CLI |
+- Power Platform development tools that provide a modern way to create plug-ins. The tools being referred here are *Power Platform Tools for Visual Studio* and *Power Platform CLI*. Both these Power Platform tool sets generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
 
-You can use Power Platform Tools for Visual Studio to quickly create and register (deploy) plug-ins. A [Quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
+    - Use Power Platform Tools for Visual Studio to quickly create and register (deploy) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
+    
+    - Use Power Platform CLI to create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
 
-The Power Platform CLI can create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
-
-The rest of the plug-in documentation in this topic and the other related topics is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
+- Manually write code using your favorite editor or IDE. The rest of the plug-in documentation in this topic and the other related topics is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
 
 ## IPlugin interface
 
