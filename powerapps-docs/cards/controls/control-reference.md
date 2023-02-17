@@ -157,13 +157,10 @@ Using the Dataverse Accounts table and a text label's **Repeat for every** prope
 
 **Required field** – Whether or not this input is required.
 
-**Requires** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
 
 ### S
 
 **Screen** - The screen that is shown below the current card when a user taps or clicks on a button of type 'Show Screen'.
-
-**SelectAction** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
 
 **Show when** – Conditional layout expression.
 
