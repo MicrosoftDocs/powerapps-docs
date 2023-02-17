@@ -82,7 +82,7 @@ When a flow is enabled, the enabling user needs to own all the connections. This
 1. Select **Save** to complete the sharing.
 
 In cases where automating the sharing of connections is a requirement, the **Edit Connection Role Assignment** action in the Power Apps for Makers connector can be used. More information: [Power Apps for Makers](/connectors/powerappsformakers/#edit-connection-role-assignment). An example of using this connector can be found in the **ShareConnectionWithServicePrincipal** flow in the ALM Accelerator for Power Platform solution. More information: [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
-:::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Connection reference example":::
+:::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Connection sharing example":::
 
 ### Connection reference naming
 
