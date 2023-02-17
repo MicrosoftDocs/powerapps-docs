@@ -20,7 +20,7 @@ search.app:
 The custom page is a new page type within model-driven apps. Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
 
 > [!IMPORTANT]
-> Custom pages on mobile are currently in public preview with no support for offline or device capabilities controls like barcode scanning, capturing photos from device, or attaching files.
+> Using custom pages with mobile devices is currently in public preview. Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files isn't supported.
 
 ## Maker-related issues
 
