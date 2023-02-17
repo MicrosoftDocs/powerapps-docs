@@ -1,7 +1,7 @@
 ---
 title: "Execute multiple requests using the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "ExecuteMultipleRequest message supports higher throughput bulk message passing scenarios in Microsoft Dataverse." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 03/22/2022
+ms.date: 02/16/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: divkamath # GitHub ID
@@ -26,7 +26,7 @@ You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> message
   
 In general, <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> behaves the same as if you executed each message request in the input request collection separately, except with better performance. Use of the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId> parameter of the service proxy is honored and will apply to the execution of every message in the input request collection. Plug-ins and workflow activities are executed as you would expect for each message processed.  
   
-Custom code in the form of plug-ins and custom workflow activities may execute <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. However, this is not recommended and there are a few key points to keep in mind. An exception thrown by a synchronous registered plug-in is returned in the response collection item <xref:Microsoft.Xrm.Sdk.ExecuteMultipleResponseItem.Fault> parameter. If a plug-in executes within a database transaction, the plug-in executes <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, and a transaction rollback is initiated, the rollback includes any data changes resulting from requests executed by <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>.
+Plug-ins and custom workflow activities are not blocked from using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>. However, this is not recommended. Any failures in the synchronous step must rollback all data operations to maintain data integrity. Each operation performed within `ExecuteMultiple` will not be rolled back. `ExecuteMultiple` also causes issues when the operations exceed the maximum plug-in timeout duration.
 
 More information: [Do not use batch request types in plug-ins and workflow activities](../best-practices/business-logic/avoid-batch-requests-plugin.md)
   
