@@ -104,9 +104,9 @@ Dataverse for processing (rather than processing locally within Power Apps).
 
 As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It is available with Power Apps release version 3.23022.
 
-This feature is on by defualt. To check the setting, go to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** while keeping your canvas app open for editing.
+This feature is on by defualt. To verify that the feature is on, open your canvas app for editing and go to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions**.
 
-![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverseAction-switch.png)
+![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch.png)
 
 This feature update also allows authors to work with untyped object fields for both inputs and outputs, on the input side, for instance, many Dataverse actions require an untyped object as an argument. You can now pass these arguments in by using ParseJSON to convert a Power Fx record into an untyped object. On the output side, for actions that return untyped objects, you can simply `dot` into returned objects properties. You will need to cast specific values for use in specific contexts for use in Power Apps (such as a label.)
 
