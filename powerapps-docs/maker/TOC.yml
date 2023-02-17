@@ -2229,11 +2229,11 @@
     - name: Compliance and accessibility
       items:
         - name: Implement GDPR in portals
-          href: ./portals/configure/implement-gdpr.md
+          href: /power-pages/configure/implement-gdpr
         - name: Cookies used by portal
-          href: ./portals/admin/portal-cookies.md
+          href: /power-pages/admin/cookies
         - name: Accessibility in portals
-          href: ./portals/admin/accessibility.md
+          href: /power-pages/admin/accessibility
     - name: Portals for customer engagement apps
       items:
         - name: Knowledge article
