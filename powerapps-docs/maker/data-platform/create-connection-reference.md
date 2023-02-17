@@ -19,11 +19,11 @@ search.app:
 ---
 # Use a connection reference in a solution
 
+A **connector** is a proxy or a wrapper around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. It provides a way for users to connect their accounts and use a set of pre-built actions and triggers to build their apps and workflows.
 
+A **[connection](/power-automate/add-manage-connections)** is a stored [authentication credential](/connectors/custom-connectors/connection-parameters#authentication-types) for a connector, for example OAuth credentials for the SharePoint connector.
 
-A connector is a proxy or a wrapper around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. It provides a way for users to connect their accounts and use a set of pre-built actions and triggers to build their apps and workflows.
-
-A connection reference is a solution component that contains information about a connector. Both canvas app and operations within a Power Automate flow bind to a connection reference. You can import your connection reference into a target environment with no further configuration needed after the import completes. To change a specific connection associated with a canvas app or flow, you edit the connection reference component within the solution.
+A **connection reference** is a solution component that contains a reference to a connection about a specific connector. Both solution-aware canvas apps and operations within a [solution-aware flow](https://learn.microsoft.com/en-us/power-automate/overview-solution-flows) bind to a connection reference instead of directly to a connection. During solution import into a target environment, a connection is provided for all the connection references so any referencing flows can be [turned on]([url](/power-automate/disable-flow#turn-flows-on) automatically after the import completes. To change a specific connection associated with a canvas app or flow, you edit the connection reference component within the solution.
 
 You can add a connection reference to a solution in a few different ways:
 - From the **Solutions** area as described in this article.
