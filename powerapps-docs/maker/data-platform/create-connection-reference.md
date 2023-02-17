@@ -86,7 +86,7 @@ Sharing connections can be accomplished by using the following steps.
 
 #### Automated sharing of connections for flow enablement
 
-In cases where automating the sharing of connections is a requirement, the [**Edit Connection Role Assignment** action](/connectors/powerappsformakers/#edit-connection-role-assignment) in the Power Apps for Makers connector can be used. An example of using this connector action usage can be found in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
+To automated sharing of connections, use the [Edit Connection Role Assignment action](/connectors/powerappsformakers/#edit-connection-role-assignment) on the Power Apps for Makers connector. An automated connection sharing example can be found in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
 :::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Connection sharing example":::
 
 ### Connection reference naming
