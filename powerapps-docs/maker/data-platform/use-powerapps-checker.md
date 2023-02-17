@@ -153,7 +153,7 @@ The following table lists the component type, rule description, severity, and wh
 |Web Resources  | [avoid-dom-form-event](./powerapps-checker/rules/web/avoid-dom-form-event.md)  | | High | Yes |
 |Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     | Critical | Yes |
 |Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   | Critical | Yes  |
-|Web Resources  | [avoid-loadtheme-api](./powerapps-checker/rules/web/avoid-loadtheme-api.md)  | Don't use `loadTheme` Fluent v8 API.   | Low | Yes |
+|Web Resources  | [avoid-loadtheme](./powerapps-checker/rules/web/avoid-loadtheme.md)  | Don't use `loadTheme` Fluent v8 API.   | Low | No |
 |Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins. | Critical  | Yes  |
 |Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  | High | Yes |
 |Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | | High | Yes |

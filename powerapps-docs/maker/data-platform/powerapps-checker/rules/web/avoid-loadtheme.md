@@ -1,6 +1,6 @@
 ---
-title: avoid-loadtheme-api Power Apps checker reference | Microsoft Docs
-description: Power Apps checker rule reference for avoid-loadtheme-api.
+title: avoid-loadtheme Power Apps checker reference | Microsoft Docs
+description: Power Apps checker rule reference for avoid-loadtheme.
 author: vilesyk
 manager: tapanm-msft
 ms.topic: reference
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
 ---
 
-# `avoid-loadtheme-api`
+# `avoid-loadtheme`
 
 `loadTheme` is a way to provide a theme in global (and only global) scope, which will affect your entire application. It's recommended to replace it with `ThemeProvider`. That way, your application consistently has one way of providing a theme.
 
