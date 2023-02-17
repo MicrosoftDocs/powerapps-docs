@@ -1046,7 +1046,7 @@
             href: /power-platform/power-fx/reference/function-datetime-parts
       - name: Create an app in a solution
         href: ./canvas-apps/add-app-solution.md
-      - name: Add canvas apps to solution by default (preview)
+      - name: Add canvas apps and cloud flows to a solution by default (preview)
         href: ./canvas-apps/add-app-solution-default.md
       - name: Create an app with relational data
         items:
@@ -1204,6 +1204,8 @@
     items:
       - name: Overview of wrap
         href: ./common/wrap/overview.md
+      - name: Use the wrap wizard to build your mobile app (preview)
+        href: ./common/wrap/wrap-how-to.md
       - name: Customize and build your mobile app
         href: ./common/wrap/how-to.md
       - name: Code sign for iOS
@@ -1683,7 +1685,7 @@
     href: ../mobile/relevance-search-mobile.md  
   - name: In-app notifications in the Power Apps mobile app
     href: ../mobile/mobile-notifications.md
-  - name: Create push notifications for the Power Apps mobile app
+  - name: Create push notifications for the Power Apps mobile app using Power Automate
     href: ../mobile/power-apps-mobile-notification.md
   - name: Use deep links with the Power Apps mobile app
     href: ../mobile/mobile-deep-links.md
@@ -2813,6 +2815,44 @@
           href: ../cards/make-a-card/ui-elements/use-buttons.md
         - name: Add and configure screens
           href: ../cards/make-a-card/screens/use-screens.md
+        - name: Control reference
+          items: 
+            - name: List of controls and properties
+              href: ../cards/controls/control-reference.md
+            - name: Repeat for every property
+              href: ../cards/controls/repeat-for-every.md
+            - name: Button
+              href: ../cards/controls/button.md
+            - name: Button set
+              href: ../cards/controls/button-set.md
+            - name: Check box
+              href: ../cards/controls/check-box.md
+            - name: Column
+              href: ../cards/controls/column.md
+            - name: Column set
+              href: ../cards/controls/column-set.md
+            - name: Container
+              href: ../cards/controls/container.md
+            - name: Date picker
+              href: ../cards/controls/date-picker.md
+            - name: Drop down
+              href: ../cards/controls/drop-down.md
+            - name: Fact set
+              href: ../cards/controls/fact-set.md
+            - name: Image
+              href: ../cards/controls/Image.md
+            - name: Image set
+              href: ../cards/controls/image-set.md
+            - name: Media
+              href: ../cards/controls/media.md
+            - name: Number input
+              href: ../cards/controls/number-input.md
+            - name: Text input
+              href: ../cards/controls/text-input.md
+            - name: Text label
+              href: ../cards/controls/text-label.md
+            - name: Time picker
+              href: ../cards/controls/time-picker.md
     - name: Connect to data and services
       items:
         - name: Add variables
