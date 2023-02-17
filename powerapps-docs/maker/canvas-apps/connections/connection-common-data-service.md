@@ -104,7 +104,7 @@ Dataverse for processing (rather than processing locally within Power Apps).
 
 As a part of the Power Fx language, authors can now directly invoke a Dataverse action within a formula. A new Power Fx `Environment` language object that authors can add to their app enables access to Dataverse actions. It is available with Power Apps release version 3.23022.
 
-This feature is on by defualt. To verify that the feature is on, open your canvas app for editing and go to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions**.
+To enable access to Dataverse actions, open your canvas app for editing and go to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
 
 ![Enable access to Microsoft Dataverse actions.](media/connection-common-data-service/common-data-service-connection-dataverse-action-switch.png)
 
