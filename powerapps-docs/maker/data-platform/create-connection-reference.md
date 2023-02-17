@@ -56,9 +56,9 @@ There is also no limit to the number of actions in each flow that can be associa
 
 ## Updating a flow to use connection references instead of connections
 
-When a flow is not in a solution it uses connections. If that flow is then added into solution, it will continue to use connections intially. 
+When a flow is not in a solution it uses connections. If that flow is then added into solution, it will continue to use connections intially.
 Flows can be updated to use connections references instead of connections in one of two ways:
-1. If the flow is exported in an unmanaged solution and imported, the connections will be removed and replaced with connection references. 
+1. If the flow is exported in an unmanaged solution and imported, the connections will be removed and replaced with connection references.
 2. When a solution flow is opened, the flow checker on the flow details page will show a warning to **Use connection references**. The warning message contains an action to **Remove connections so connection references can be added**. Selecting that action will remove connections from the trigger and actions in the flow and allow connection references to be selected and created.
 
 ## Connection reference usage tips
@@ -73,8 +73,16 @@ When an action is added to a solution flow, Power Automate will try to reuse exi
 
 ### Enabling flows containing connections from another user
 
-When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. 
-Directly sharing a connection with someone else is not currently possible. So if a user other than the owner needs to provide the connections, then [an admin account can impersonate that user](/powerapps/developer/data-platform/impersonate-another-user) and then enable the flow. This impersonation mechanism is one that is used to [activate flows in the ALM accelerator](https://github.com/microsoft/coe-alm-accelerator-templates/blob/main/Pipelines/Templates/activate-flows.yml).
+When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. If a user other than the owner provides the connections on a flow, then those connections need to be shared with the owner who is enabling (turning on) the flow. Sharing connections can be accomplished by using the following steps.
+
+1. Navigate to the target environment where the connection exists in the Power Apps maker portal.
+1. Select **Connections** and then select the connection you want to share.
+1. From the sharing screen, enter the name of the user or service principal that will be enabling the flow.
+1. Select **Can use** for the permissions.
+1. Select **Save** to complete the sharing.
+
+In cases where automating the sharing of connections is a requirement, the **Edit Connection Role Assignment** action in the Power Apps for Makers connector can be used. More information: [Power Apps for Makers](/connectors/powerappsformakers/#edit-connection-role-assignment). An example of using this connector can be found in the **ShareConnectionWithServicePrincipal** flow in the ALM Accelerator for Power Platform solution. More information: [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
+:::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Connection reference example":::
 
 ### Connection reference naming
 
