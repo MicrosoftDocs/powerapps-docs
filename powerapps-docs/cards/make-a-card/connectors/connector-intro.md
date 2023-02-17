@@ -31,6 +31,7 @@ Connectors allow your card to connect to other apps, data sources, and devices i
     :::image type="content" source="../../media/connector-intro/add-data-location.png" alt-text="Screenshot of a list of data sources in the card designer.":::
 
 ## Refresh a connector
+
 When the schema provided by your connector changes, you can refresh the connector in your card to ensure you have access to the updated properties in your [Power Fx expressions](/power-platform/power-fx/overview). An example of a schema change would be adding a column to the Dataverse table you are using in your card. After refreshing your connector, you would be able to use the new column in your PowerFx expressions.
 
 > [!IMPORTANT]
