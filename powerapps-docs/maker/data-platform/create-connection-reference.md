@@ -73,15 +73,20 @@ When an action is added to a solution flow, Power Automate will try to reuse exi
 
 ### Enabling flows containing connections from another user
 
-When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. If a user other than the owner provides the connections on a flow, then those connections need to be shared with the owner who is enabling (turning on) the flow. Sharing connections can be accomplished by using the following steps.
+When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. If a user other than the owner provides the connections on a flow, then those connections need to be shared with the owner who is enabling (turning on) the flow. 
 
-1. Navigate to the target environment where the connection exists in the Power Apps maker portal.
+#### Manual sharing of connections for flow enablement
+Sharing connections can be accomplished by using the following steps.
+
+1. Open the maker portal and select the environment containing the connection.
 1. Select **Connections** and then select the connection you want to share.
-1. From the sharing screen, enter the name of the user or service principal that will be enabling the flow.
+1. From the sharing screen, enter the name of the user or service principal that will enable the flow.
 1. Select **Can use** for the permissions.
 1. Select **Save** to complete the sharing.
 
-In cases where automating the sharing of connections is a requirement, the **Edit Connection Role Assignment** action in the Power Apps for Makers connector can be used. More information: [Power Apps for Makers](/connectors/powerappsformakers/#edit-connection-role-assignment). An example of using this connector can be found in the **ShareConnectionWithServicePrincipal** flow in the ALM Accelerator for Power Platform solution. More information: [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
+#### Automated sharing of connections for flow enablement
+
+In cases where automating the sharing of connections is a requirement, the [**Edit Connection Role Assignment** action](/connectors/powerappsformakers/#edit-connection-role-assignment) in the Power Apps for Makers connector can be used. An example of using this connector action usage can be found in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
 :::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Connection sharing example":::
 
 ### Connection reference naming
