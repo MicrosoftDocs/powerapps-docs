@@ -144,17 +144,23 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **Regex** – Regular expression indicating the required format of this text input.
 
-**Repeat for every** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
+**Repeat for every** – Repeat for every is used to display a control multiple times based on a data source. The repeat for every property is set to a collection or data source, then the relevant property can use `ThisItem` to reference specific items within the collection or data source.
+
+Using the Dataverse Accounts table and a text label's **Repeat for every** property, a maker can create a card that displays the account name of every account within the Accounts table.
+
+1. Add the Accounts table using the [Dataverse connection](../make-a-card/connectors/connector-intro.md).
+1. Add a text label control.
+1. Set the text label **Repeat for every** property to `Accounts`.
+1. Set the text label **Text** property to `ThisItem.'Account Name'`.
+1. Play the card, which will show a list of text labels the length of the Accounts table, each one displaying an account name.
+
 
 **Required field** – Whether or not this input is required.
 
-**Requires** – A series of key/value pairs indicating features that the item requires with corresponding minimum version. When a feature is missing or of insufficient version, fallback is triggered.
 
 ### S
 
 **Screen** - The screen that is shown below the current card when a user taps or clicks on a button of type 'Show Screen'.
-
-**SelectAction** – An Action that will be invoked when the column set is tapped or selected. Action.ShowCard is not supported.
 
 **Show when** – Conditional layout expression.
 
