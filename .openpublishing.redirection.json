@@ -7536,6 +7536,21 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "powerapps-docs/maker/portals/configure/implement-gdpr.md",
+      "redirect_url": "/power-pages/admin/implement-gdpr",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-cookies.md",
+      "redirect_url": "/power-pages/admin/cookies",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/accessibility.md",
+      "redirect_url": "/power-pages/admin/accessibility",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/teams/when-create-teams-apps.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
       "redirect_document_id": "false"
