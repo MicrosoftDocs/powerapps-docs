@@ -81,6 +81,7 @@ Sharing connections can be accomplished by using the following steps.
 
 1. Open the maker portal and select the environment containing the connection.
 1. Select **Connections** and then select the connection you want to share.
+1. Select **Share** from menu.
 1. From the sharing screen, enter the name of the user or service principal that will enable the flow.
 1. Select **Can use** for the permissions.
 1. Select **Save** to complete the sharing.
