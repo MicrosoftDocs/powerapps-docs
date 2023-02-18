@@ -26,21 +26,21 @@ In addition to these requirements, you'll also ensure the code component follows
 > [!div class="mx-imgBorder"] 
 > ![Canvas Grid Demo.](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
 
-Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
+> [!NOTE]
+> Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
 
 ## Code
 
 You can download the complete sample from [PowerApps-Samples/component-framework/CanvasGridControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/CanvasGridControl).
 
-### Create a new `pcfproj` project
+## Create a new `pcfproj` project
 
 1. Create a new folder to use for your code component. For example, `C:\repos\CanvasGrid`.
 
 1. Open **Visual Studio Code** and then **File** > **Open Folder** and select the `CanvasGrid` folder. If you've added the Windows Explorer extensions during installation of Visual Studio Code, you can use the **Open with Code** context menu option inside the folder. You can also load any folder into Visual Studio Code using `code .` at the command prompt when the current directory is set to that location.
 
-1. Inside a new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the following command to create a new code component project:
+1. Inside a new Visual Studio Code PowerShell terminal (**Terminal** > **New Terminal**), use the [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) command to create a new code component project:
 
    ```powershell
    pac pcf init --namespace SampleNamespace --name CanvasGrid --template dataset
@@ -52,7 +52,7 @@ You can download the complete sample from [PowerApps-Samples/component-framework
    pac pcf init -ns SampleNamespace -n CanvasGrid -t dataset
    ```
 
-1. This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the modules needed. To install the required modules, use:
+1. This adds a new `pcfproj` and related files to the current folder, including a `packages.json` that defines the modules needed. To install the required modules, use [npm install](https://docs.npmjs.com/cli/v8/commands/npm-install):
 
    ```CLI
    npm install
@@ -91,7 +91,7 @@ The `CanvasGrid\ControlManifest.Input.xml` file defines the metadata describing 
 
 You must define the records that the code component can be bound to, by adding the following inside the `control` element, replacing the existing `data-set` element:
 
-# [Before](#tab/before)
+#### [Before](#tab/before)
 
 ```xml
 <data-set name="sampleDataSet"
@@ -99,7 +99,7 @@ You must define the records that the code component can be bound to, by adding t
 </data-set>
 ```
 
-# [After](#tab/after)
+#### [After](#tab/after)
 
 ```xml
 <data-set name="records"
@@ -355,8 +355,8 @@ import { DetailsList, Stack } from "@fluentui/react";
 we use:
 
 ```typescript
-import { DetailsList } from "@fluentui/react/lib/components/DetailsList/DetailsList";
-import { Stack } from "@fluentui/react/lib/components/Stack/Stack";
+import { DetailsList } from '@fluentui/react/lib/DetailsList';
+import { Stack } from '@fluentui/react/lib/Stack';
 ```
 
 This way, your bundle size will be smaller, resulting in lower capacity requirements and better runtime performance.
@@ -409,14 +409,15 @@ The next step is to make changes to the `index.ts` file to match properties defi
 
 To the header of `index.ts`, replace the existing imports with the following:
 
-# [Before](#tab/before)
+#### [Before](#tab/before)
 
 ```typescript
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
+import {IInputs, IOutputs} from './generated/ManifestTypes';
 import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
+type DataSet = ComponentFramework.PropertyTypes.DataSet;
 ```
 
-# [After](#tab/after)
+#### [After](#tab/after)
 
 ```typescript
 import { initializeIcons } from "@fluentui/react/lib/Icons";
@@ -437,7 +438,7 @@ initializeIcons(undefined, { disableWarnings: true });
 
 Add the following fields to the `CanvasGrid` class:
 
-# [Before](#tab/before)
+#### [Before](#tab/before)
 
 ```typescript
 export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -450,7 +451,7 @@ export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, I
     }
 ```
 
-# [After](#tab/after)
+#### [After](#tab/after)
 
 ```typescript
 export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -480,7 +481,7 @@ export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, I
 
 Add the following to `init`:
 
-# [Before](#tab/before)
+#### [Before](#tab/before)
 
 ```typescript
 public init(
@@ -492,7 +493,7 @@ public init(
 }
 ```
 
-# [After](#tab/after)
+#### [After](#tab/after)
 
 ```typescript
 public init(
@@ -526,7 +527,7 @@ The [context.mode.trackContainerResize(true))](reference\mode\trackcontainerresi
 
 Add the following to `updateView`:
 
-# [Before](#tab/before)
+#### [Before](#tab/before)
 
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -534,7 +535,7 @@ public updateView(context: ComponentFramework.Context<IInputs>): void {
 }
 ```
 
-# [After](#tab/after)
+#### [After](#tab/after)
 
 ```typescript
 public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -602,7 +603,7 @@ You can see that:
 
 Lastly, you need to tidy up when the code component is destroyed:
 
-# [Before](#tab/before)
+#### [Before](#tab/before)
 
 ```typescript
 public destroy(): void {
@@ -610,7 +611,7 @@ public destroy(): void {
 }
 ```
 
-# [After](#tab/after)
+#### [After](#tab/after)
 
 ```typescript
 public destroy(): void {
@@ -659,32 +660,156 @@ Redmond,U.S.,WA,249 Alexander Pl.,86372,555-0100,someone_a@example.com,Yvonne,Yv
 
 ## Adding row selection
 
-<!-- TODO: Continue from here -->
-
 Although the Fluent UI `DetailsList` allows selecting records by default, the selected records are not linked to the output of the code component. You need the `Selected` and `SelectedItems` properties to reflect the chosen records inside a canvas app, so that related components can be updated. In this example, you allow selection of only a single item at a time so `SelectedItems` will only ever contain a single record.
+
+### Update Grid.tsx imports
 
 Add the following to the imports inside `Grid.tsx`:
 
+#### [Before](#tab/before)
+
 ```typescript
-import { useConst } from "@fluentui/react-hooks/lib/useConst";
-import { useForceUpdate } from "@fluentui/react-hooks/lib/useForceUpdate";
+import { DetailsList } from '@fluentui/react/lib/DetailsList';
+import {
+    ConstrainMode,
+    DetailsListLayoutMode,
+    IColumn,
+    IDetailsHeaderProps,
+} from '@fluentui/react/lib/DetailsList';
+import { Overlay } from '@fluentui/react/lib/Overlay';
+import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane';
+import { ScrollbarVisibility } from '@fluentui/react/lib/ScrollablePane';
+import { Stack } from '@fluentui/react/lib/Stack';
+import { Sticky } from '@fluentui/react/lib/Sticky';
+import { StickyPositionType } from '@fluentui/react/lib/Sticky';
+import { IObjectWithKey } from '@fluentui/react/lib/Selection';
+import { IRenderFunction } from '@fluentui/react/lib/Utilities';
+import * as React from 'react';
+```
+
+#### [After](#tab/after)
+
+```typescript
+import { DetailsList } from '@fluentui/react/lib/DetailsList';
+import {
+    ConstrainMode,
+    DetailsListLayoutMode,
+    IColumn,
+    IDetailsHeaderProps,
+} from '@fluentui/react/lib/DetailsList';
+import { Overlay } from '@fluentui/react/lib/Overlay';
+import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane';
+import { ScrollbarVisibility } from '@fluentui/react/lib/ScrollablePane';
+import { Stack } from '@fluentui/react/lib/Stack';
+import { Sticky } from '@fluentui/react/lib/Sticky';
+import { StickyPositionType } from '@fluentui/react/lib/Sticky';
+import { IObjectWithKey } from '@fluentui/react/lib/Selection';
+import { IRenderFunction } from '@fluentui/react/lib/Utilities';
+import * as React from 'react';
+import { useConst, useForceUpdate } from "@fluentui/react-hooks";
 import { Selection } from "@fluentui/react/lib/Selection";
 import { SelectionMode } from "@fluentui/react/lib/Utilities";
 ```
 
+---
+
+### Add setSelectedRecords to GridProps
+
 To the `GridProps` interface, inside `Grid.tsx`, add the following:
 
-```typescript
-setSelectedRecords: (ids: string[]) => void;
-```
-
-Inside the `Grid.tsx` function component (just below `export const Grid = React.memo((props: GridProps) => {`), update the destructuring of the props to add the new prop `setSelectedRecords` using:
+#### [Before](#tab/before)
 
 ```typescript
-const { ...setSelectedRecords } = props;
+export interface GridProps {
+    width?: number;
+    height?: number;
+    columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+    records: Record<string, ComponentFramework.PropertyHelper.DataSetApi.EntityRecord>;
+    sortedRecordIds: string[];
+    hasNextPage: boolean;
+    hasPreviousPage: boolean;
+    totalResultCount: number;
+    currentPage: number;
+    sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+    filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+    resources: ComponentFramework.Resources;
+    itemsLoading: boolean;
+    highlightValue: string | null;
+    highlightColor: string | null;
+}
 ```
 
-And then add the following:
+#### [After](#tab/after)
+
+```typescript
+export interface GridProps {
+    width?: number;
+    height?: number;
+    columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+    records: Record<string, ComponentFramework.PropertyHelper.DataSetApi.EntityRecord>;
+    sortedRecordIds: string[];
+    hasNextPage: boolean;
+    hasPreviousPage: boolean;
+    totalResultCount: number;
+    currentPage: number;
+    sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+    filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+    resources: ComponentFramework.Resources;
+    itemsLoading: boolean;
+    highlightValue: string | null;
+    highlightColor: string | null;
+    setSelectedRecords: (ids: string[]) => void;
+}
+```
+
+---
+
+### Add setSelectedRecords property to Grid
+
+Inside the `Grid.tsx` function component, update the destructuring of the `props` to add the new prop `setSelectedRecords`.
+
+#### [Before](#tab/before)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+    const {
+        records,
+        sortedRecordIds,
+        columns,
+        width,
+        height,
+        hasNextPage,
+        hasPreviousPage,
+        sorting,
+        filtering,
+        currentPage,
+        itemsLoading,
+    } = props;
+```
+
+#### [After](#tab/after)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+    const {
+        records,
+        sortedRecordIds,
+        columns,
+        width,
+        height,
+        hasNextPage,
+        hasPreviousPage,
+        sorting,
+        filtering,
+        currentPage,
+        itemsLoading,
+        setSelectedRecords,
+    } = props;
+```
+
+---
+
+Directly below that, add:
 
 ```typescript
 const forceUpdate = useForceUpdate();
@@ -707,65 +832,311 @@ const selection: Selection = useConst(() => {
 });
 ```
 
-The `useCallback` and `useConst` hooks are used to ensure that these values do not mutate between renders and cause unnecessary child component rendering. The `useForceUpdate` hook is used to ensure that when selection is updated, the component is re-rendered to reflect the updated selection count.
+The [React.useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) and `useConst` hooks are used to ensure that these values do not mutate between renders and cause unnecessary child component rendering.
 
-The selection object created to maintain the state of the selection is then passed into the `DetailsList` component:
+The `useForceUpdate` hook is used to ensure that when selection is updated, the component is re-rendered to reflect the updated selection count.
+
+### Add selection to DetailsList
+
+The `selection` object created to maintain the state of the selection is then passed into the `DetailsList` component:
+
+#### [Before](#tab/before)
 
 ```typescript
 <DetailsList
-    ...
-    selection={selection}
+columns={gridColumns}
+onRenderItemColumn={onRenderItemColumn}
+onRenderDetailsHeader={onRenderDetailsHeader}
+items={items}
+setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+initialFocusedIndex={0}
+checkButtonAriaLabel="select row"
+layoutMode={DetailsListLayoutMode.fixedColumns}
+constrainMode={ConstrainMode.unconstrained}
+></DetailsList>
 ```
 
-You need to define the new `setSelectedRecords` callback inside `index.ts` and pass it to the `Grid` component. At the top of `CanvasGrid` class, inside `index.ts`, add the following:
+#### [After](#tab/after)
 
 ```typescript
-setSelectedRecords = (ids: string[]): void => {
-  this.context.parameters.records.setSelectedRecordIds(ids);
-};
+<DetailsList
+columns={gridColumns}
+onRenderItemColumn={onRenderItemColumn}
+onRenderDetailsHeader={onRenderDetailsHeader}
+items={items}
+setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+initialFocusedIndex={0}
+checkButtonAriaLabel="select row"
+layoutMode={DetailsListLayoutMode.fixedColumns}
+constrainMode={ConstrainMode.unconstrained}
+selection={selection}
+></DetailsList>
 ```
+
+---
+
+### Define setSelectedRecords callback
+
+You need to define the new `setSelectedRecords` callback inside `index.ts` and pass it to the `Grid` component. At the top of `CanvasGrid` class, add the following:
+
+#### [Before](#tab/before)
+
+```typescript
+export class CanvasGrid
+  implements ComponentFramework.StandardControl<IInputs, IOutputs>
+{
+  notifyOutputChanged: () => void;
+  container: HTMLDivElement;
+  context: ComponentFramework.Context<IInputs>;
+  sortedRecordsIds: string[] = [];
+  resources: ComponentFramework.Resources;
+  isTestHarness: boolean;
+  records: {
+    [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
+  };
+  currentPage = 1;
+  filteredRecordCount?: number;
+```
+
+#### [After](#tab/after)
+
+```typescript
+export class CanvasGrid
+  implements ComponentFramework.StandardControl<IInputs, IOutputs>
+{
+  notifyOutputChanged: () => void;
+  container: HTMLDivElement;
+  context: ComponentFramework.Context<IInputs>;
+  sortedRecordsIds: string[] = [];
+  resources: ComponentFramework.Resources;
+  isTestHarness: boolean;
+  records: {
+    [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
+  };
+  currentPage = 1;
+  filteredRecordCount?: number;
+
+  setSelectedRecords = (ids: string[]): void => {
+    this.context.parameters.records.setSelectedRecordIds(ids);
+  };
+
+```
+
+---
 
 > [!NOTE]
 > The method is defined as an 'arrow function' to bind it to the current `this` instance of the code component.
 
 The call to [setSelectedRecordIds](reference\dataset\setselectedrecordids.md) informs the canvas app that the selection has changed so that other components referencing `SelectedItems` and `Selected` will be updated.
 
+### Add new callback to the input props
+
 Finally, add the new callback to the input props of the `Grid` component in the `updateView` method:
+
+#### [Before](#tab/before)
 
 ```typescript
 ReactDOM.render(
-    React.createElement(Grid, {
-        ...
-        setSelectedRecords: this.setSelectedRecords,
-    }),
+React.createElement(Grid, {
+   width: allocatedWidth,
+   height: allocatedHeight,
+   columns: dataset.columns,
+   records: this.records,
+   sortedRecordIds: this.sortedRecordsIds,
+   hasNextPage: paging.hasNextPage,
+   hasPreviousPage: paging.hasPreviousPage,
+   currentPage: this.currentPage,
+   totalResultCount: paging.totalResultCount,
+   sorting: dataset.sorting,
+   filtering: dataset.filtering && dataset.filtering.getFilter(),
+   resources: this.resources,
+   itemsLoading: dataset.loading,
+   highlightValue: this.context.parameters.HighlightValue.raw,
+   highlightColor: this.context.parameters.HighlightColor.raw,
+}),
+this.container
+);
 ```
+
+#### [After](#tab/after)
+
+```typescriptReactDOM.render(
+React.createElement(Grid, {
+   width: allocatedWidth,
+   height: allocatedHeight,
+   columns: dataset.columns,
+   records: this.records,
+   sortedRecordIds: this.sortedRecordsIds,
+   hasNextPage: paging.hasNextPage,
+   hasPreviousPage: paging.hasPreviousPage,
+   currentPage: this.currentPage,
+   totalResultCount: paging.totalResultCount,
+   sorting: dataset.sorting,
+   filtering: dataset.filtering && dataset.filtering.getFilter(),
+   resources: this.resources,
+   itemsLoading: dataset.loading,
+   highlightValue: this.context.parameters.HighlightValue.raw,
+   highlightColor: this.context.parameters.HighlightColor.raw,
+   setSelectedRecords: this.setSelectedRecords,
+}),
+this.container
+);
+```
+
+---
 
 ### Invoking the `OnSelect` event
 
 There's a pattern in canvas apps where if a gallery or grid has an item selection invoked (for example, selecting a chevron icon), it raises the `OnSelect` event. You can implement this pattern using the [openDatasetItem](reference\dataset\opendatasetitem.md) method of the dataset.
 
+#### Add onNavigate to GridProps
+
 As before, you add an additional callback prop on the `Grid` component by adding the following to the `GridProps` interface inside `Grid.tsx`:
+
+##### [Before](#tab/before)
 
 ```typescript
 export interface GridProps {
-    ...
-    onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
+  width?: number;
+  height?: number;
+  columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+  records: Record<
+    string,
+    ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+  >;
+  sortedRecordIds: string[];
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+  totalResultCount: number;
+  currentPage: number;
+  sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+  filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+  resources: ComponentFramework.Resources;
+  itemsLoading: boolean;
+  highlightValue: string | null;
+  highlightColor: string | null;
+  setSelectedRecords: (ids: string[]) => void;
 }
 ```
 
-Again, you must add the new prop to the destructuring of the props:
+##### [After](#tab/after)
 
 ```typescript
-const { ...onNavigate } = props;
+export interface GridProps {
+  width?: number;
+  height?: number;
+  columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+  records: Record<
+    string,
+    ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+  >;
+  sortedRecordIds: string[];
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+  totalResultCount: number;
+  currentPage: number;
+  sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+  filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+  resources: ComponentFramework.Resources;
+  itemsLoading: boolean;
+  highlightValue: string | null;
+  highlightColor: string | null;
+  setSelectedRecords: (ids: string[]) => void;
+  onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
+}
 ```
+
+---
+
+#### Add onNavigate to Grid props
+
+Again, you must add the new prop to the destructuring of the props:
+
+##### [Before](#tab/before)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+  const {
+    records,
+    sortedRecordIds,
+    columns,
+    width,
+    height,
+    hasNextPage,
+    hasPreviousPage,
+    sorting,
+    filtering,
+    currentPage,
+    itemsLoading,
+    setSelectedRecords,
+  } = props;
+```
+
+##### [After](#tab/after)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+  const {
+    records,
+    sortedRecordIds,
+    columns,
+    width,
+    height,
+    hasNextPage,
+    hasPreviousPage,
+    sorting,
+    filtering,
+    currentPage,
+    itemsLoading,
+    setSelectedRecords,
+    onNavigate,
+  } = props;
+```
+
+---
+
+#### Add onItemInvoked to DetailsList
 
 The `DetailList` has a callback prop called `onItemInvoked` which, in turn, you pass your callback to:
 
-```react
+##### [Before](#tab/before)
+
+```typescript
 <DetailsList
-    ...
-    onItemInvoked={onNavigate}
+   columns={gridColumns}
+   onRenderItemColumn={onRenderItemColumn}
+   onRenderDetailsHeader={onRenderDetailsHeader}
+   items={items}
+   setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+   initialFocusedIndex={0}
+   checkButtonAriaLabel="select row"
+   layoutMode={DetailsListLayoutMode.fixedColumns}
+   constrainMode={ConstrainMode.unconstrained}
+   selection={selection}
+></DetailsList>
 ```
+
+##### [After](#tab/after)
+
+```typescript
+<DetailsList
+   columns={gridColumns}
+   onRenderItemColumn={onRenderItemColumn}
+   onRenderDetailsHeader={onRenderDetailsHeader}
+   items={items}
+   setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+   initialFocusedIndex={0}
+   checkButtonAriaLabel="select row"
+   layoutMode={DetailsListLayoutMode.fixedColumns}
+   constrainMode={ConstrainMode.unconstrained}
+   selection={selection}
+   onItemInvoked={onNavigate}
+></DetailsList>
+```
+
+---
+
+#### Add onNavigate method to index.ts
 
 Add the `onNavigate` method to the `index.ts` just below the `setSelectedRecords` method:
 
@@ -783,18 +1154,65 @@ This simply invokes the `openDatasetItem` method on the dataset record so that t
 
 You need to pass this callback into the `Grid` component props inside the `updateView` method:
 
+##### [Before](#tab/before)
+
 ```typescript
-ReactDOM.render(
-    React.createElement(Grid, {
-        ...
-        onNavigate: this.onNavigate,
-    }),
+    ReactDOM.render(
+      React.createElement(Grid, {
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+      }),
+      this.container
+    );
 ```
+
+##### [After](#tab/after)
+
+```typescript
+
+    ReactDOM.render(
+      React.createElement(Grid, {
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
+      }),
+      this.container
+    );
+```
+
+---
 
 When you save all files, the test harness will reload. If you use `Ctrl` + `Shift` + `I` (or `F12`) and use **Open File** (`Ctrl` + `P`) searching for `index.ts`, you can place a breakpoint inside the `onNavigate` method. Double-clicking on a row (or highlighting it with the cursor keys and pressing `Enter`) will cause the breakpoint to be hit because the `DetailsList` invokes the `onNavigate` callback.
 
-> [!div class="mx-imgBorder"] 
-> ![Canvas data grids 3.](media/canvas-datagrid-3.png "Canvas data grids 3")
+:::image type="content" source="media/canvas-datagrid-3.png" alt-text="Canvas Data Grid debug OnNavigate in index.ts":::
 
 There is a reference to `_this` because the function is defined as an arrow function and has been transpiled into a JavaScript closure to capture the instance of `this`.
 
