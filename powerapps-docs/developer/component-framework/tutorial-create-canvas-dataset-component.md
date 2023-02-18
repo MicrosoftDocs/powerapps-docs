@@ -2221,9 +2221,6 @@ ReactDOM.render(
 
 ---
 
-> [!NOTE]
-> There's currently an issue with paging in canvas datasets where `currentPage` may get out of sync with the dataset page. A fix for this issue is being deployed. More information: [Canvas dataset paging is not reset when external filter applied](issues-and-workarounds.md#canvas-dataset-paging-is-not-reset-when-external-filter-applied).
-
 ## Adding full screen support
 
 Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen. You can use the Fluent UI `Link` component so it must be added to the imports at the top of `Grid.tsx`:
