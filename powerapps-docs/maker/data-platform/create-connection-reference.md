@@ -46,7 +46,7 @@ You can add a connection reference to a solution in different ways:
 
 1. Create a new or open an existing solution.
 
-1. On the command bar select **New**, and then in the list of components select **Connection Reference**.
+1. On the command bar, select **New**, and then in the list of components select **Connection Reference**.
 
 1. On the **New Connection Reference** pane, enter the following information. Required columns are denoted with an asterisk (*).
    - **Display name**: Enter a unique and useful name to help differentiate this connection reference from others.
