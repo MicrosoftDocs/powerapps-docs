@@ -2223,44 +2223,227 @@ ReactDOM.render(
 
 ## Adding full screen support
 
-Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen. You can use the Fluent UI `Link` component so it must be added to the imports at the top of `Grid.tsx`:
+Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen. 
+
+### Import Fluent UI Link component
+
+To launch the full screen mode, you can use the Fluent UI `Link` component. Add it to the imports at the top of `Grid.tsx`:
 
 ```typescript
 import { Link } from "@fluentui/react/lib/components/Link/Link";
 ```
 
+### Add the Link control
+
 To add a full screen link, you add the following to the existing `Stack` that contains the paging controls. (Be sure to add this to the nested `Stack`, and not the root `Stack`):
 
-```react
-<Stack.Item grow align="center">
-    {!isFullScreen && (
-        <Link onClick={onFullScreen}>{resources.getString('Label_ShowFullScreen')}</Link>
-    )}
-</Stack.Item>
+##### [Before](#tab/before)
+
+```typescript
+<Stack horizontal style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>
+    <IconButton
+      alt="First Page"
+      iconProps={{ iconName: 'Rewind' }}
+      disabled={!hasPreviousPage}
+      onClick={loadFirstPage}
+    />
+    <IconButton
+      alt="Previous Page"
+      iconProps={{ iconName: 'Previous' }}
+      disabled={!hasPreviousPage}
+      onClick={loadPreviousPage}
+    />
+    <Stack.Item align="center">
+      {stringFormat(
+          resources.getString('Label_Grid_Footer'),
+          currentPage.toString(),
+          selection.getSelectedCount().toString(),
+      )}
+    </Stack.Item>
+    <IconButton
+      alt="Next Page"
+      iconProps={{ iconName: 'Next' }}
+      disabled={!hasNextPage}
+      onClick={loadNextPage}
+    />
+</Stack>
 ```
+
+##### [After](#tab/after)
+
+```typescript
+<Stack horizontal style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>
+    <Stack.Item grow align="center">
+        {!isFullScreen && (
+            <Link onClick={onFullScreen}>{resources.getString('Label_ShowFullScreen')}</Link>
+        )}
+    </Stack.Item>
+    <IconButton
+      alt="First Page"
+      iconProps={{ iconName: 'Rewind' }}
+      disabled={!hasPreviousPage}
+      onClick={loadFirstPage}
+    />
+    <IconButton
+      alt="Previous Page"
+      iconProps={{ iconName: 'Previous' }}
+      disabled={!hasPreviousPage}
+      onClick={loadPreviousPage}
+    />
+    <Stack.Item align="center">
+      {stringFormat(
+          resources.getString('Label_Grid_Footer'),
+          currentPage.toString(),
+          selection.getSelectedCount().toString(),
+      )}
+    </Stack.Item>
+    <IconButton
+      alt="Next Page"
+      iconProps={{ iconName: 'Next' }}
+      disabled={!hasNextPage}
+      onClick={loadNextPage}
+    />
+</Stack>
+```
+
+---
 
 You'll see that:
 
 1. You use resources to show the label to support localization.
-2. If full screen mode is open, then the link is not shown. Instead, a close icon is automatically rendered by the parent app context.
+1. If full screen mode is open, then the link is not shown. Instead, a close icon is automatically rendered by the parent app context.
 
-There are two props that must be added to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
+### Add props to support full screen to GridProps
+
+Add the `onFullScreen` and `isFullScreen` props to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
+
+##### [Before](#tab/before)
 
 ```typescript
 export interface GridProps {
-    ...
-    onFullScreen: () => void;
-    isFullScreen: boolean;
+   width?: number;
+   height?: number;
+   columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+   records: Record<string, ComponentFramework.PropertyHelper.DataSetApi.EntityRecord>;
+   sortedRecordIds: string[];
+   hasNextPage: boolean;
+   hasPreviousPage: boolean;
+   totalResultCount: number;
+   currentPage: number;
+   sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+   filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+   resources: ComponentFramework.Resources;
+   itemsLoading: boolean;
+   highlightValue: string | null;
+   highlightColor: string | null;
+   setSelectedRecords: (ids: string[]) => void;
+   onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
+   onSort: (name: string, desc: boolean) => void;
+   onFilter: (name: string, filtered: boolean) => void;
+   loadFirstPage: () => void;
+   loadNextPage: () => void;
+   loadPreviousPage: () => void;
 }
 ```
 
-Add these new props, along with the resources, to the props destructuring:
+##### [After](#tab/after)
 
 ```typescript
-const { ...onFullScreen, isFullScreen } = props;
+export interface GridProps {
+   width?: number;
+   height?: number;
+   columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+   records: Record<string, ComponentFramework.PropertyHelper.DataSetApi.EntityRecord>;
+   sortedRecordIds: string[];
+   hasNextPage: boolean;
+   hasPreviousPage: boolean;
+   totalResultCount: number;
+   currentPage: number;
+   sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+   filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+   resources: ComponentFramework.Resources;
+   itemsLoading: boolean;
+   highlightValue: string | null;
+   highlightColor: string | null;
+   setSelectedRecords: (ids: string[]) => void;
+   onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
+   onSort: (name: string, desc: boolean) => void;
+   onFilter: (name: string, filtered: boolean) => void;
+   loadFirstPage: () => void;
+   loadNextPage: () => void;
+   loadPreviousPage: () => void;
+   onFullScreen: () => void;
+   isFullScreen: boolean;
+}
 ```
 
-To provide these new props, inside `index.ts`, add the following callback method:
+---
+
+### Add to support full screen to the Grid
+
+Add these new props to the props destructuring:
+
+##### [Before](#tab/before)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+   const {
+      records,
+      sortedRecordIds,
+      columns,
+      width,
+      height,
+      hasNextPage,
+      hasPreviousPage,
+      sorting,
+      filtering,
+      currentPage,
+      itemsLoading,
+      setSelectedRecords,
+      onNavigate,
+      onSort,
+      onFilter,
+      resources,
+      loadFirstPage,
+      loadNextPage,
+      loadPreviousPage,
+   } = props;
+```
+
+##### [After](#tab/after)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+   const {
+      records,
+      sortedRecordIds,
+      columns,
+      width,
+      height,
+      hasNextPage,
+      hasPreviousPage,
+      sorting,
+      filtering,
+      currentPage,
+      itemsLoading,
+      setSelectedRecords,
+      onNavigate,
+      onSort,
+      onFilter,
+      resources,
+      loadFirstPage,
+      loadNextPage,
+      loadPreviousPage,
+      onFullScreen, 
+      isFullScreen,
+   } = props;
+```
+
+---
+
+### Update index.ts to support full screen to the Grid
+
+To provide these new props, inside `index.ts`, add the following callback method below `loadPreviousPage`:
 
 ```typescript
 onFullScreen = (): void => {
@@ -2270,37 +2453,171 @@ onFullScreen = (): void => {
 
 The call to [setFullScreen](reference\mode\setfullscreen.md) causes the code component to open the full screen mode and adjust the `allocatedHeight` and `allocatedWidth` accordingly because you've made the call to `trackContainerResize(true)` in the `init` method. Once the full screen mode is open, `updateView` will be called, allowing us to update the rendering of the component with the new size. The `updatedProperties` contains `fullscreen_open` or `fullscreen_close`, depending on the transition that is happening.
 
-To store the state of the full screen mode, add a new field to the `CanvaGrid` class inside `index.ts`:
+To store the state of the full screen mode, add a new `isFullScreen` field to the `CanvasGrid` class inside `index.ts`:
+
+##### [Before](#tab/before)
 
 ```typescript
-isFullScreen = false;
+export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+    notifyOutputChanged: () => void;
+    container: HTMLDivElement;
+    context: ComponentFramework.Context<IInputs>;
+    sortedRecordsIds: string[] = [];
+    resources: ComponentFramework.Resources;
+    isTestHarness: boolean;
+    records: {
+        [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
+    };
+    currentPage = 1;
+    filteredRecordCount?: number;
 ```
 
-To the `updateView` method, add the following to track the state:
+##### [After](#tab/after)
 
 ```typescript
-if (context.updatedProperties.indexOf("fullscreen_close") > -1) {
-  this.isFullScreen = false;
-}
-if (context.updatedProperties.indexOf("fullscreen_open") > -1) {
-  this.isFullScreen = true;
-}
+export class CanvasGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+    notifyOutputChanged: () => void;
+    container: HTMLDivElement;
+    context: ComponentFramework.Context<IInputs>;
+    sortedRecordsIds: string[] = [];
+    resources: ComponentFramework.Resources;
+    isTestHarness: boolean;
+    records: {
+        [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
+    };
+    currentPage = 1;
+    filteredRecordCount?: number;
+    isFullScreen = false;
 ```
+
+---
+
+### Edit updateView to track the state
+
+Add the following to the `updateView` method to track the state:
+
+##### [Before](#tab/before)
+
+```typescript
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    const dataset = context.parameters.records;
+    const paging = context.parameters.records.paging;
+    const datasetChanged = context.updatedProperties.indexOf("dataset") > -1;
+    const resetPaging =
+        datasetChanged &&
+        !dataset.loading &&
+        !dataset.paging.hasPreviousPage &&
+        this.currentPage !== 1;
+
+    if (resetPaging) {
+        this.currentPage = 1;
+    }
+```
+
+##### [After](#tab/after)
+
+```typescript
+public updateView(context: ComponentFramework.Context<IInputs>): void {
+    const dataset = context.parameters.records;
+    const paging = context.parameters.records.paging;
+    const datasetChanged = context.updatedProperties.indexOf("dataset") > -1;
+    const resetPaging =
+        datasetChanged &&
+        !dataset.loading &&
+        !dataset.paging.hasPreviousPage &&
+        this.currentPage !== 1;
+
+    if (context.updatedProperties.indexOf('fullscreen_close') > -1) {
+        this.isFullScreen = false;
+    }
+    if (context.updatedProperties.indexOf('fullscreen_open') > -1) {
+        this.isFullScreen = true;
+    }
+
+    if (resetPaging) {
+        this.currentPage = 1;
+    }
+```
+
+---
+
+### Pass the callback and isFullScreen field to render in the Grid
 
 Now you can pass the callback and `isFullScreen` field into the `Grid` rendering props:
+
+##### [Before](#tab/before)
 
 ```typescript
 ReactDOM.render(
     React.createElement(Grid, {
-        ...
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
+        onSort: this.onSort,
+        onFilter: this.onFilter,
+        loadFirstPage: this.loadFirstPage,
+        loadNextPage: this.loadNextPage,
+        loadPreviousPage: this.loadPreviousPage,
+    }),
+    this.container
+);
+```
+
+##### [After](#tab/after)
+
+```typescript
+ReactDOM.render(
+    React.createElement(Grid, {
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
+        onSort: this.onSort,
+        onFilter: this.onFilter,
+        loadFirstPage: this.loadFirstPage,
+        loadNextPage: this.loadNextPage,
+        loadPreviousPage: this.loadPreviousPage,
         isFullScreen: this.isFullScreen,
         onFullScreen: this.onFullScreen,
     }),
+    this.container
+);
 ```
+
+---
 
 ## Highlighting rows
 
 Now you're ready to add the conditional row highlighting functionality. You've already defined the `HighlightValue` and `HighlightColor` input properties, and the `HighlightIndicator` `property-set`. The `property-set` allows the maker to nominate a field to use to compare with the value they provide in `HighlightValue`.
+
+### Import types to support highlighting
 
 Adding custom row rendering in the `DetailsList` requires some additional imports, so add the following to the top of `Grid.tsx`:
 
@@ -2332,20 +2649,114 @@ You'll see that:
 - Only when the value of the `HighlightIndicator` field matches that of the value of the `highlightValue` (provided by the input property on the code component), you can add a background color to the row.
 - The `DetailsRow` component is the component that's used by the `DetailsList` to render the columns you defined. You don't need to change the behavior other than the background color.
 
+### Add additional props to support highlighting
+
 You'll see that you need to add some additional props for `highlightColor` and `highlightValue` that will be provided by the rendering inside `updateView`. You've already added to the `GridProps` interface, so you just need to add them to the props destructuring:
 
+##### [Before](#tab/before)
+
 ```typescript
-const { ...highlightValue, highlightColor } = props;
+export const Grid = React.memo((props: GridProps) => {
+   const {
+      records,
+      sortedRecordIds,
+      columns,
+      width,
+      height,
+      hasNextPage,
+      hasPreviousPage,
+      sorting,
+      filtering,
+      currentPage,
+      itemsLoading,
+      setSelectedRecords,
+      onNavigate,
+      onSort,
+      onFilter,
+      resources,
+      loadFirstPage,
+      loadNextPage,
+      loadPreviousPage,
+      onFullScreen, 
+      isFullScreen,
+   } = props;
 ```
+
+##### [After](#tab/after)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+   const {
+      records,
+      sortedRecordIds,
+      columns,
+      width,
+      height,
+      hasNextPage,
+      hasPreviousPage,
+      sorting,
+      filtering,
+      currentPage,
+      itemsLoading,
+      setSelectedRecords,
+      onNavigate,
+      onSort,
+      onFilter,
+      resources,
+      loadFirstPage,
+      loadNextPage,
+      loadPreviousPage,
+      onFullScreen, 
+      isFullScreen,
+      highlightValue, 
+      highlightColor,
+   } = props;
+```
+
+---
+
+### Add the onRenderRow method to the DetailsList
 
 Now, you can pass the `onRenderRow` method into the `DetailsList` props:
 
-```react
+##### [Before](#tab/before)
+
+```typescript
 <DetailsList
-    ...
-    onRenderRow={onRenderRow}
-    ></DetailsList>
+  columns={gridColumns}
+  onRenderItemColumn={onRenderItemColumn}
+  onRenderDetailsHeader={onRenderDetailsHeader}
+  items={items}
+  setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+  initialFocusedIndex={0}
+  checkButtonAriaLabel="select row"
+  layoutMode={DetailsListLayoutMode.fixedColumns}
+  constrainMode={ConstrainMode.unconstrained}
+  selection={selection}
+  onItemInvoked={onNavigate}
+></DetailsList>
 ```
+
+##### [After](#tab/after)
+
+```typescript
+<DetailsList
+  columns={gridColumns}
+  onRenderItemColumn={onRenderItemColumn}
+  onRenderDetailsHeader={onRenderDetailsHeader}
+  items={items}
+  setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+  initialFocusedIndex={0}
+  checkButtonAriaLabel="select row"
+  layoutMode={DetailsListLayoutMode.fixedColumns}
+  constrainMode={ConstrainMode.unconstrained}
+  selection={selection}
+  onItemInvoked={onNavigate}
+  onRenderRow={onRenderRow}
+></DetailsList>
+```
+
+---
 
 ## Deploying and configuring
 
