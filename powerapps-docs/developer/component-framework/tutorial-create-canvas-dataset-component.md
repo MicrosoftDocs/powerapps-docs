@@ -23,8 +23,7 @@ In addition to these requirements, you'll also ensure the code component follows
 1. Assurance that the code component renders at the width and height provided by the parent canvas app screen
 1. Consideration for the app maker to customize the user interface using input properties and external app elements as far as possible
 
-> [!div class="mx-imgBorder"] 
-> ![Canvas Grid Demo.](media/canvas-datagrid-demo.gif "Canvas Grid Demo")
+:::image type="content" source="media/canvas-datagrid-demo.gif" alt-text="Canvas Grid Demo":::
 
 > [!NOTE]
 > Before you start, make sure you've installed all the [prerequisite components](implementing-controls-using-typescript.md#prerequisites).
@@ -62,8 +61,7 @@ You can download the complete sample from [PowerApps-Samples/component-framework
    >
    > If you receive the message, `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you've installed all the prerequisites, specifically [node.js](https://nodejs.org/en/download/) (LTS version is recommended).
 
-   > [!div class="mx-imgBorder"]
-   > ![Canvas dataset grid.](media/canvas-datagrid-1.gif "Canvas dataset grid")
+   :::image type="content" source="media/canvas-datagrid-1.gif" alt-text="Canvas dataset grid":::
 
 The template includes an `index.ts` file along with various configuration files. This is the starting point of your code component and contains the lifecycle methods described in [Component implementation](custom-controls-overview.md#component-implementation).
 
@@ -637,8 +635,7 @@ npm start watch
 
 You need to set the width and height to see the code component grid that's populated using the sample three records. You can then export a set of records into a CSV file from Dataverse and then load it into the test harness using **Data Inputs** > **Records panel**:
 
-> [!div class="mx-imgBorder"]
-> ![Test Harness.](media/canvas-datagrid-2.gif "Test Harness")
+:::image type="content" source="media/canvas-datagrid-2.gif" alt-text="Test Harness":::
 
 Here is some comma separated sample data you can save to a .csv file and use:
 
@@ -2011,10 +2008,10 @@ return (
 
 You'll see that:
 
-1. The `Stack` ensures that the footer will stack below the `DetailsList`. The `grow` attribute is used to make sure that the grid expands to fill the available space.
-1. You load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using the `stringFormat` function you added in the previous step.
-1. You can provide `alt` text for accessibility on the paging `IconButtons`.
-1. The style on the footer could equally be applied using a CSS class name referencing a CSS file added to the code component.
+- The `Stack` ensures that the footer will stack below the `DetailsList`. The `grow` attribute is used to make sure that the grid expands to fill the available space.
+- You load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using the `stringFormat` function you added in the previous step.
+- You can provide `alt` text for accessibility on the paging `IconButtons`.
+- The style on the footer could equally be applied using a CSS class name referencing a CSS file added to the code component.
 
 ### Add callback props to support paging
 
@@ -2310,8 +2307,8 @@ To add a full screen link, you add the following to the existing `Stack` that co
 
 You'll see that:
 
-1. You use resources to show the label to support localization.
-1. If full screen mode is open, then the link is not shown. Instead, a close icon is automatically rendered by the parent app context.
+- You use resources to show the label to support localization.
+- If full screen mode is open, then the link is not shown. Instead, a close icon is automatically rendered by the parent app context.
 
 ### Add props to support full screen to GridProps
 
@@ -2379,7 +2376,7 @@ export interface GridProps {
 
 ---
 
-### Add to support full screen to the Grid
+### Add props to support full screen to the Grid
 
 Add these new props to the props destructuring:
 
@@ -2629,7 +2626,8 @@ import { DetailsRow } from "@fluentui/react/lib/components/DetailsList/DetailsRo
 
 Now, create the custom row renderer by adding the following just below the `const rootContainerStyle` block:
 
-```react
+
+```typescript
 const onRenderRow: IDetailsListProps['onRenderRow'] = (props) => {
     const customStyles: Partial<IDetailsRowStyles> = {};
     if (props && props.item) {
@@ -2764,10 +2762,9 @@ Now that you've implemented all the features, you must deploy the code component
 
 1. Inside your Dataverse environment, ensure there's a publisher created with a prefix of `samples`:
 
-   > [!div class="mx-imgBorder"] 
-   > ![Add new publisher.](media/field-component-4.png "Add new publisher")
+   :::image type="content" source="media/field-component-4.png" alt-text="Add new publisher":::
 
-   Equally, this could be your own publisher, provided you update the publisher prefix parameter in the call to [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) below.
+   This could also be your own publisher, provided you update the publisher prefix parameter in the call to [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
 
 2. Once you've saved the publisher, you're ready to authorize the CLI against your environment so that we can push the compiled code component. At the command-line, use:
@@ -2790,14 +2787,12 @@ Now that you've implemented all the features, you must deploy the code component
 
 4. Once completed, this process will have created a small temporary solution named **PowerAppTools_samples** in your environment, and the `CanvasGrid` code component will be added to this solution. You can move the code component into your own solution later if necessary. More information: [Code Component Application Lifecycle Management (ALM)](code-components-alm.md).
 
-   > [!div class="mx-imgBorder"] 
-   > ![PowerAppsTools_samples solution.](media/canvas-datagrid-4.png "PowerAppsTools_samples solution")
+   :::image type="content" source="media/canvas-datagrid-4.png" alt-text="PowerAppsTools_samples solution":::
 
 5. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment.
    Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
 
-   > [!div class="mx-imgBorder"] 
-   > ![Enable Code Components.](media/canvas-datagrid-enable.png "Enable code components")
+   :::image type="content" source="media/canvas-datagrid-enable.png" alt-text="Enable code components":::
 
 6. Create a new canvas app using the **Tablet** layout.
 
@@ -2817,8 +2812,7 @@ Now that you've implemented all the features, you must deploy the code component
     - **Highlight Color** = `#FDE7E9` - This is the color to use when the record is inactive.
     - **`HighlightIndicator`** = `"statecode"` - This is the field to compare against. This will be on the **Advanced** panel in the **DATA** section.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Properties Panel.](media/canvas-datagrid-5.png "Properties Panel")
+   :::image type="content" source="media/canvas-datagrid-5.png" alt-text="Properties Panel":::
 
 13. Add a new `TextInput` component and name it `txtSearch`.
 
@@ -2850,8 +2844,7 @@ You can easily debug your code component while it's running inside the canvas ap
 
 Select `Ctrl` + `P` and type `Grid.tsx` or `Index.tsx`. You can then set a break point and step through your code.
 
-> [!div class="mx-imgBorder"] 
-> ![Debug in canvas apps.](media/canvas-datagrid-9.png "Debug in canvas apps")
+:::image type="content" source="media/canvas-datagrid-9.png" alt-text="Debug in canvas apps":::
 
 If you need to make further changes to your component, you don't need to deploy each time. Instead, use the technique described in [Debug code components](debugging-custom-controls.md) to create a Fiddler **AutoResponder** to load the file from your local file system while `npm start watch` is running.
 
@@ -2865,8 +2858,7 @@ REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.CanvasGrid[\.\/](?'f
 C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 ```
 
-> [!div class="mx-imgBorder"] 
-> ![AutoResponder rule.](media/canvas-datagrid-8.png "AutoResponder rule")
+:::image type="content" source="media/canvas-datagrid-8.png" alt-text="AutoResponder rule":::
 
 You'll also need to enable the filters to add the `Access-Control-Allow-Origin` header. More information: [Debugging after deploying into Microsoft Dataverse](debugging-custom-controls.md#debugging-after-deploying-into-microsoft-dataverse).
 
