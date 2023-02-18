@@ -1,15 +1,25 @@
 {
   "redirections": [
-   {
+    {
+      "source_path": "powerapps-docs/cards/controls/repeat-for-every.md",
+      "redirect_url": "/power-apps/cards/controls/control-reference#r",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/repreat-for-every.md",
+      "redirect_url": "/power-apps/cards/controls/control-reference#r",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md",
       "redirect_url": "../work-with-data/retrieve-specific-columns-entity-via-query-apis",
       "redirect_document_id": false
-   }, 
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/component-framework/updating-existing-controls.md",
       "redirect_url": "overview",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/portals/embed-portal-website.md",
       "redirect_url": "/power-pages/configure/embed-website",
@@ -7302,17 +7312,17 @@
     },
     {
       "source_path": "powerapps-docs/teams/customize-employee-ideas.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/EmployeeIdeas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-inspection-steps.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/customize-inspections.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
@@ -7332,7 +7342,7 @@
     },
     {
       "source_path": "powerapps-docs/teams/deploy-employee-ideas-broad-distribution.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/EmployeeIdeas",
       "redirect_document_id": "false"
     },
     {
@@ -7342,12 +7352,12 @@
     },
     {
       "source_path": "powerapps-docs/teams/employee-ideas-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/EmployeeIdeas",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/employee-ideas.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/EmployeeIdeas",
       "redirect_document_id": "false"
     },
     {
@@ -7407,27 +7417,27 @@
     },
     {
       "source_path": "powerapps-docs/teams/inspection-adaptive-card.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspection-architecture.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspection-deploy-broad.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspection.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
       "source_path": "powerapps-docs/teams/inspections-hierarchy-locations.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
@@ -7447,7 +7457,7 @@
     },
     {
       "source_path": "powerapps-docs/teams/make-ideas-editable-by-original-creator.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/EmployeeIdeas",
       "redirect_document_id": "false"
     },
     {
@@ -7472,7 +7482,7 @@
     },
     {
       "source_path": "powerapps-docs/teams/notify-manager-inspections.md",
-      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection",
+      "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection",
       "redirect_document_id": "false"
     },
     {
@@ -7523,6 +7533,21 @@
     {
       "source_path": "powerapps-docs/teams/how-to-architecture.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/HowTo",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/implement-gdpr.md",
+      "redirect_url": "/power-pages/admin/implement-gdpr",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-cookies.md",
+      "redirect_url": "/power-pages/admin/cookies",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/accessibility.md",
+      "redirect_url": "/power-pages/admin/accessibility",
       "redirect_document_id": "false"
     },
     {
