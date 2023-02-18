@@ -1507,6 +1507,8 @@ You need to add some imports to the top of `Grid.tsx` so that you can use the `C
 import { ContextualMenu, DirectionalHint, IContextualMenuProps } from '@fluentui/react/lib/ContextualMenu';
 ```
 
+#### Add context menu rendering functionality
+
 Now add the context menu rendering functionality to `Grid.tsx` just below the `const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);` line:
 
 ##### [Before](#tab/before)
@@ -1677,8 +1679,6 @@ const gridColumns = React.useMemo(() => {
 ```
 
 ---
-
-<!-- TODO Continue from here -->
 
 #### Add context menu to rendered output
 
@@ -1893,85 +1893,253 @@ public getOutputs(): IOutputs {
 
 ## Adding paging to the grid
 
-For large datasets, canvas apps will split the records across multiple records. You can add a footer that shows page navigation controls. Each button will be rendered using a Fluent UI `IconButton`, so add this to the imports inside `Grid.tsx`:
+For large datasets, canvas apps will split the records across multiple pages. You can add a footer that shows page navigation controls. Each button will be rendered using a Fluent UI `IconButton`, which you must import.
+
+### Add IconButton to imports
+
+Add this to the imports inside `Grid.tsx`:
 
 ```typescript
 import { IconButton } from "@fluentui/react/lib/components/Button/IconButton/IconButton";
 ```
 
+### Add stringFormat function
+
+The following step will add capabilities to load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using a simple `stringFormat` function. This function could equally be in a separate file and shared between your components for convenience:
+
+In this tutorial, add it at the top of `Grid.tsx`, right below `type DataSet ...`.
+
+```typescript
+function stringFormat(template: string, ...args: string[]): string {
+  for (const k in args) {
+    template = template.replace("{" + k + "}", args[k]);
+  }
+  return template;
+}
+```
+
+### Add Paging buttons
+
 Again to `Grid.tsx`, add the following `Stack.Item` below the existing `Stack.Item` that contains the `ScrollablePane`:
 
-```react
-<Stack.Item>
-    <Stack horizontal style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>
-        <IconButton
-            alt="First Page"
-            iconProps={{ iconName: 'Rewind' }}
-            disabled={!hasPreviousPage}
-            onClick={loadFirstPage}
-            />
-        <IconButton
-            alt="Previous Page"
-            iconProps={{ iconName: 'Previous' }}
-            disabled={!hasPreviousPage}
-            onClick={loadPreviousPage}
-            />
-        <Stack.Item align="center">
-            {stringFormat(
-                resources.getString('Label_Grid_Footer'),
-                currentPage.toString(),
-                selection.getSelectedCount().toString(),
-            )}
-        </Stack.Item>
-        <IconButton
-            alt="Next Page"
-            iconProps={{ iconName: 'Next' }}
-            disabled={!hasNextPage}
-            onClick={loadNextPage}
-            />
-    </Stack>
-</Stack.Item>
+##### [Before](#tab/before)
+
+```typescript
+return (
+  <Stack verticalFill grow style={rootContainerStyle}>
+      <Stack.Item grow style={{ position: 'relative', backgroundColor: 'white' }}>
+        <ScrollablePane scrollbarVisibility={ScrollbarVisibility.auto}>
+            <DetailsList
+              columns={gridColumns}
+              onRenderItemColumn={onRenderItemColumn}
+              onRenderDetailsHeader={onRenderDetailsHeader}
+              items={items}
+              setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+              initialFocusedIndex={0}
+              checkButtonAriaLabel="select row"
+              layoutMode={DetailsListLayoutMode.fixedColumns}
+              constrainMode={ConstrainMode.unconstrained}
+              selection={selection}
+              onItemInvoked={onNavigate}
+            ></DetailsList>
+            {contextualMenuProps && <ContextualMenu {...contextualMenuProps} />}
+        </ScrollablePane>
+        {(itemsLoading || isComponentLoading) && <Overlay />}
+      </Stack.Item>    
+  </Stack>
+);
 ```
+
+##### [After](#tab/after)
+
+```typescript
+return (
+  <Stack verticalFill grow style={rootContainerStyle}>
+      <Stack.Item grow style={{ position: 'relative', backgroundColor: 'white' }}>
+        <ScrollablePane scrollbarVisibility={ScrollbarVisibility.auto}>
+            <DetailsList
+              columns={gridColumns}
+              onRenderItemColumn={onRenderItemColumn}
+              onRenderDetailsHeader={onRenderDetailsHeader}
+              items={items}
+              setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+              initialFocusedIndex={0}
+              checkButtonAriaLabel="select row"
+              layoutMode={DetailsListLayoutMode.fixedColumns}
+              constrainMode={ConstrainMode.unconstrained}
+              selection={selection}
+              onItemInvoked={onNavigate}
+            ></DetailsList>
+            {contextualMenuProps && <ContextualMenu {...contextualMenuProps} />}
+        </ScrollablePane>
+        {(itemsLoading || isComponentLoading) && <Overlay />}
+      </Stack.Item>
+      <Stack.Item>
+        <Stack horizontal style={{ width: '100%', paddingLeft: 8, paddingRight: 8 }}>
+            <IconButton
+              alt="First Page"
+              iconProps={{ iconName: 'Rewind' }}
+              disabled={!hasPreviousPage}
+              onClick={loadFirstPage}
+            />
+            <IconButton
+              alt="Previous Page"
+              iconProps={{ iconName: 'Previous' }}
+              disabled={!hasPreviousPage}
+              onClick={loadPreviousPage}
+            />
+            <Stack.Item align="center">
+              {stringFormat(
+                  resources.getString('Label_Grid_Footer'),
+                  currentPage.toString(),
+                  selection.getSelectedCount().toString(),
+              )}
+            </Stack.Item>
+            <IconButton
+              alt="Next Page"
+              iconProps={{ iconName: 'Next' }}
+              disabled={!hasNextPage}
+              onClick={loadNextPage}
+            />
+        </Stack>
+      </Stack.Item>
+  </Stack>
+);
+```
+
+---
 
 You'll see that:
 
 1. The `Stack` ensures that the footer will stack below the `DetailsList`. The `grow` attribute is used to make sure that the grid expands to fill the available space.
+1. You load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using the `stringFormat` function you added in the previous step.
+1. You can provide `alt` text for accessibility on the paging `IconButtons`.
+1. The style on the footer could equally be applied using a CSS class name referencing a CSS file added to the code component.
 
-2. You load the format for the page indicator label from the resource strings (`"Page {0} ({1} Selected)"`) and format using a simple function that must be added at the top of `Grid.tsx`. This could equally be in a separate file and shared between your components for convenience:
-
-   ```typescript
-   function stringFormat(template: string, ...args: string[]): string {
-     for (const k in args) {
-       template = template.replace("{" + k + "}", args[k]);
-     }
-     return template;
-   }
-   ```
-
-3. You can provide `alt` text for accessibility on the paging `IconButtons`.
-
-4. The style on the footer could equally be applied using a CSS class name referencing a CSS file added to the code component.
+### Add callback props to support paging
 
 Next, you must add the missing `loadFirstPage`, `loadNextPage`, and `loadPreviousPage` callback props.
 
 To the `GridProps` interface, add the following:
 
+##### [Before](#tab/before)
+
 ```typescript
 export interface GridProps {
-    ...
-     loadFirstPage: () => void;
-     loadNextPage: () => void;
-     loadPreviousPage: () => void;
+   width?: number;
+   height?: number;
+   columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+   records: Record<string, ComponentFramework.PropertyHelper.DataSetApi.EntityRecord>;
+   sortedRecordIds: string[];
+   hasNextPage: boolean;
+   hasPreviousPage: boolean;
+   totalResultCount: number;
+   currentPage: number;
+   sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+   filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+   resources: ComponentFramework.Resources;
+   itemsLoading: boolean;
+   highlightValue: string | null;
+   highlightColor: string | null;
+   setSelectedRecords: (ids: string[]) => void;
+   onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
+   onSort: (name: string, desc: boolean) => void;
+   onFilter: (name: string, filtered: boolean) => void;
 }
 ```
 
-Then, add these new props, along with the resources, to the props destructuring:
+##### [After](#tab/after)
 
 ```typescript
-const { ...loadFirstPage, loadNextPage, loadPreviousPage } = props;
+export interface GridProps {
+   width?: number;
+   height?: number;
+   columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+   records: Record<string, ComponentFramework.PropertyHelper.DataSetApi.EntityRecord>;
+   sortedRecordIds: string[];
+   hasNextPage: boolean;
+   hasPreviousPage: boolean;
+   totalResultCount: number;
+   currentPage: number;
+   sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+   filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+   resources: ComponentFramework.Resources;
+   itemsLoading: boolean;
+   highlightValue: string | null;
+   highlightColor: string | null;
+   setSelectedRecords: (ids: string[]) => void;
+   onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
+   onSort: (name: string, desc: boolean) => void;
+   onFilter: (name: string, filtered: boolean) => void;
+   loadFirstPage: () => void;
+   loadNextPage: () => void;
+   loadPreviousPage: () => void;
+}
 ```
 
-These callbacks are then added to `index.ts` below the `onFilter` method:
+---
+
+### Add new paging props to the Grid
+
+Add these new props to the props destructuring:
+
+##### [Before](#tab/before)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+   const {
+      records,
+      sortedRecordIds,
+      columns,
+      width,
+      height,
+      hasNextPage,
+      hasPreviousPage,
+      sorting,
+      filtering,
+      currentPage,
+      itemsLoading,
+      setSelectedRecords,
+      onNavigate,
+      onSort,
+      onFilter,
+      resources,
+   } = props;
+```
+
+##### [After](#tab/after)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+   const {
+      records,
+      sortedRecordIds,
+      columns,
+      width,
+      height,
+      hasNextPage,
+      hasPreviousPage,
+      sorting,
+      filtering,
+      currentPage,
+      itemsLoading,
+      setSelectedRecords,
+      onNavigate,
+      onSort,
+      onFilter,
+      resources,
+      loadFirstPage, 
+      loadNextPage, 
+      loadPreviousPage,
+   } = props;
+```
+
+---
+
+
+### Add callbacks to index.ts
+
+Add these callbacks to `index.ts` below the `onFilter` method:
 
 ```typescript
 loadFirstPage = (): void => {
@@ -1988,17 +2156,70 @@ loadPreviousPage = (): void => {
 };
 ```
 
-The callbacks are then passed into the `GridProps` interface inside the `Grid` rendering call:
+And update the `Grid` rendering call to include these callbacks:
+
+##### [Before](#tab/before)
 
 ```typescript
 ReactDOM.render(
     React.createElement(Grid, {
-        ...
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
+        onSort: this.onSort,
+        onFilter: this.onFilter,
+    }),
+    this.container
+);
+```
+
+##### [After](#tab/after)
+
+```typescript
+ReactDOM.render(
+    React.createElement(Grid, {
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
+        onSort: this.onSort,
+        onFilter: this.onFilter,
         loadFirstPage: this.loadFirstPage,
         loadNextPage: this.loadNextPage,
         loadPreviousPage: this.loadPreviousPage,
     }),
+    this.container
+);
 ```
+
+---
 
 > [!NOTE]
 > There's currently an issue with paging in canvas datasets where `currentPage` may get out of sync with the dataset page. A fix for this issue is being deployed. More information: [Canvas dataset paging is not reset when external filter applied](issues-and-workarounds.md#canvas-dataset-paging-is-not-reset-when-external-filter-applied).
