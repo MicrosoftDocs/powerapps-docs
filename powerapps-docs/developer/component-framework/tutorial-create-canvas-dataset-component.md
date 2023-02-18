@@ -832,9 +832,9 @@ const selection: Selection = useConst(() => {
 });
 ```
 
-The [React.useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) and `useConst` hooks are used to ensure that these values do not mutate between renders and cause unnecessary child component rendering.
+The [React.useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) and [useConst](https://www.npmjs.com/package/@fluentui/react-hooks#useconst) hooks ensure that these values do not mutate between renders and cause unnecessary child component rendering.
 
-The `useForceUpdate` hook is used to ensure that when selection is updated, the component is re-rendered to reflect the updated selection count.
+The [useForceUpdate](https://www.npmjs.com/package/@fluentui/react-hooks#useforceupdate) hook ensures that when selection is updated, the component is re-rendered to reflect the updated selection count.
 
 ### Add selection to DetailsList
 
@@ -844,15 +844,15 @@ The `selection` object created to maintain the state of the selection is then pa
 
 ```typescript
 <DetailsList
-columns={gridColumns}
-onRenderItemColumn={onRenderItemColumn}
-onRenderDetailsHeader={onRenderDetailsHeader}
-items={items}
-setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
-initialFocusedIndex={0}
-checkButtonAriaLabel="select row"
-layoutMode={DetailsListLayoutMode.fixedColumns}
-constrainMode={ConstrainMode.unconstrained}
+   columns={gridColumns}
+   onRenderItemColumn={onRenderItemColumn}
+   onRenderDetailsHeader={onRenderDetailsHeader}
+   items={items}
+   setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+   initialFocusedIndex={0}
+   checkButtonAriaLabel="select row"
+   layoutMode={DetailsListLayoutMode.fixedColumns}
+   constrainMode={ConstrainMode.unconstrained}
 ></DetailsList>
 ```
 
@@ -860,16 +860,16 @@ constrainMode={ConstrainMode.unconstrained}
 
 ```typescript
 <DetailsList
-columns={gridColumns}
-onRenderItemColumn={onRenderItemColumn}
-onRenderDetailsHeader={onRenderDetailsHeader}
-items={items}
-setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
-initialFocusedIndex={0}
-checkButtonAriaLabel="select row"
-layoutMode={DetailsListLayoutMode.fixedColumns}
-constrainMode={ConstrainMode.unconstrained}
-selection={selection}
+   columns={gridColumns}
+   onRenderItemColumn={onRenderItemColumn}
+   onRenderDetailsHeader={onRenderDetailsHeader}
+   items={items}
+   setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+   initialFocusedIndex={0}
+   checkButtonAriaLabel="select row"
+   layoutMode={DetailsListLayoutMode.fixedColumns}
+   constrainMode={ConstrainMode.unconstrained}
+   selection={selection}
 ></DetailsList>
 ```
 
@@ -877,7 +877,7 @@ selection={selection}
 
 ### Define setSelectedRecords callback
 
-You need to define the new `setSelectedRecords` callback inside `index.ts` and pass it to the `Grid` component. At the top of `CanvasGrid` class, add the following:
+You need to define the new `setSelectedRecords` callback inside `index.ts` and pass it to the `Grid` component. Near the top of `CanvasGrid` class, add the following:
 
 #### [Before](#tab/before)
 
@@ -925,7 +925,7 @@ export class CanvasGrid
 ---
 
 > [!NOTE]
-> The method is defined as an 'arrow function' to bind it to the current `this` instance of the code component.
+> The method is defined as an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to bind it to the current `this` instance of the code component.
 
 The call to [setSelectedRecordIds](reference\dataset\setselectedrecordids.md) informs the canvas app that the selection has changed so that other components referencing `SelectedItems` and `Selected` will be updated.
 
@@ -937,7 +937,7 @@ Finally, add the new callback to the input props of the `Grid` component in the 
 
 ```typescript
 ReactDOM.render(
-React.createElement(Grid, {
+ React.createElement(Grid, {
    width: allocatedWidth,
    height: allocatedHeight,
    columns: dataset.columns,
@@ -953,7 +953,7 @@ React.createElement(Grid, {
    itemsLoading: dataset.loading,
    highlightValue: this.context.parameters.HighlightValue.raw,
    highlightColor: this.context.parameters.HighlightColor.raw,
-}),
+ }),
 this.container
 );
 ```
@@ -961,7 +961,8 @@ this.container
 #### [After](#tab/after)
 
 ```typescriptReactDOM.render(
-React.createElement(Grid, {
+ReactDOM.render(
+ React.createElement(Grid, {
    width: allocatedWidth,
    height: allocatedHeight,
    columns: dataset.columns,
@@ -978,7 +979,7 @@ React.createElement(Grid, {
    highlightValue: this.context.parameters.HighlightValue.raw,
    highlightColor: this.context.parameters.HighlightColor.raw,
    setSelectedRecords: this.setSelectedRecords,
-}),
+ }),
 this.container
 );
 ```
@@ -1150,7 +1151,7 @@ onNavigate = (
 };
 ```
 
-This simply invokes the `openDatasetItem` method on the dataset record so that the code component will raise the `OnSelect` event. The method is defined as an 'arrow function' to bind it to the current `this` instance of the code component.
+This simply invokes the `openDatasetItem` method on the dataset record so that the code component will raise the `OnSelect` event. The method is defined as an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to bind it to the current `this` instance of the code component.
 
 You need to pass this callback into the `Grid` component props inside the `updateView` method:
 
@@ -1214,11 +1215,34 @@ When you save all files, the test harness will reload. If you use `Ctrl` + `Shif
 
 :::image type="content" source="media/canvas-datagrid-3.png" alt-text="Canvas Data Grid debug OnNavigate in index.ts":::
 
-There is a reference to `_this` because the function is defined as an arrow function and has been transpiled into a JavaScript closure to capture the instance of `this`.
+There is a reference to `_this` because the function is defined as an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) and has been transpiled into a JavaScript closure to capture the instance of `this`.
 
 ## Adding Localization
 
-Before you go any further, you need to add resource strings to the code component so that you can use localized strings for messages such as paging, sorting, and filtering. Add a new file `CanvasGrid\strings\CanvasGrid.1033.resx` with the following contents:
+Before you go any further, you need to add resource strings to the code component so that you can use localized strings for messages such as paging, sorting, and filtering. Add a new file `CanvasGrid\strings\CanvasGrid.1033.resx` and use the Visual Studio resource editor or Visual Studio Code with an extension to enter the following:
+
+
+|Name|Value|
+|---------|---------|
+|`Records_Dataset_Display`|Records|
+|`FilteredRecordCount_Disp`|Filtered Record Count|
+|`FilteredRecordCount_Desc`|The number of records after filtering|
+|`HighlightValue_Disp`|Highlight Value|
+|`HighlightValue_Desc`|The value to indicate a row should be highlighted|
+|`HighlightColor_Disp`|Highlight Color|
+|`HighlightColor_Desc`|The color to highlight a row using|
+|`HighlightIndicator_Disp`|Highlight Indicator Field|
+|`HighlightIndicator_Desc`|Set to the name of the field to compare against the Highlight Value|
+|`Label_Grid_Footer`|Page {0} ({1} Selected)|
+|`Label_SortAZ`|A to Z|
+|`Label_SortZA`|Z to A|
+|`Label_DoesNotContainData`|Does not contain data|
+|`Label_ShowFullScreen`|Show Full Screen|
+
+> [!TIP]
+> It's not recommended to edit `resx` files directly. Instead, use either Visual Studio's resource editor or an extension for Visual Studio Code. Find a Visual Studio Code extension: [Search Visual Studio Marketplace for a resx editor](https://marketplace.visualstudio.com/search?term=resx%20editor&target=VSCode&category=All%20categories&sortBy=Relevance)
+
+The data for this file can also be set by opening the `CanvasGrid.1033.resx` file in Notepad and copying the XML content below:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1303,7 +1327,7 @@ Before you go any further, you need to add resource strings to the code componen
     <value>The color to highlight a row using</value>
   </data>
   <data name="HighlightIndicator_Disp" xml:space="preserve">
-    <value>Hightlight Indicator Field</value>
+    <value>Highlight Indicator Field</value>
   </data>
   <data name="HighlightIndicator_Desc" xml:space="preserve">
     <value>Set to the name of the field to compare against the Highlight Value</value>
@@ -1326,164 +1350,332 @@ Before you go any further, you need to add resource strings to the code componen
 </root>
 ```
 
-> [!TIP]
-> It's not recommended to edit `resx` files directly. Instead, use either Visual Studio's resource editor or an extension for Visual Studio Code.
-
 You have resource strings for the `input`/`output` properties and the `dataset` and associated `property-set`. These will be used in Power Apps Studio at design time based on the maker's browser language. You can also add label strings that can be retrieved at runtime using [getString](reference\resources\getstring.md). More information: [Implementing localization API component](sample-controls\localization-api-control.md).
 
 This new resource file should be added to the `ControlManifest.Input.xml` file inside the `resources` element:
 
+##### [Before](#tab/before)
+
 ```xml
-<resx path="strings/CanvasGrid.1033.resx" version="1.0.0" />
+<resources>
+   <code path="index.ts"
+      order="1" />
+</resources>
 ```
+
+##### [After](#tab/after)
+
+```xml
+<resources>
+   <code path="index.ts"
+      order="1" />
+   <resx path="strings/CanvasGrid.1033.resx"
+      version="1.0.0" />
+</resources>
+```
+
+---
 
 ### Adding column sorting and filtering
 
 If you want to allow the user to sort and filter using grid column headers, the Fluent UI `DetailList` provides an easy way of adding context menus to the column headers.
 
-First, add to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
+#### Add onSort and onFilter to GridProps
+
+First, add `onSort` and `onFilter` to the `GridProps` interface inside `Grid.tsx` to provide callback functions for sorting and filtering:
+
+##### [Before](#tab/before)
 
 ```typescript
 export interface GridProps {
-    ...
-    onSort: (name: string, desc: boolean) => void;
-    onFilter: (name: string, filtered: boolean) => void;
+  width?: number;
+  height?: number;
+  columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+  records: Record<
+    string,
+    ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+  >;
+  sortedRecordIds: string[];
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+  totalResultCount: number;
+  currentPage: number;
+  sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+  filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+  resources: ComponentFramework.Resources;
+  itemsLoading: boolean;
+  highlightValue: string | null;
+  highlightColor: string | null;
+  setSelectedRecords: (ids: string[]) => void;
+  onNavigate: (
+    item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+  ) => void;
 }
 ```
 
-Then, add these new props along with the `resources` reference (so you can retrieve localized labels for sorting and filtering) to the props destructuring:
+##### [After](#tab/after)
 
 ```typescript
-const { ...onSort, onFilter, resources } = props;
+export interface GridProps {
+  width?: number;
+  height?: number;
+  columns: ComponentFramework.PropertyHelper.DataSetApi.Column[];
+  records: Record<
+    string,
+    ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+  >;
+  sortedRecordIds: string[];
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+  totalResultCount: number;
+  currentPage: number;
+  sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
+  filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
+  resources: ComponentFramework.Resources;
+  itemsLoading: boolean;
+  highlightValue: string | null;
+  highlightColor: string | null;
+  setSelectedRecords: (ids: string[]) => void;
+  onNavigate: (
+    item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord
+  ) => void;
+  onSort: (name: string, desc: boolean) => void;
+  onFilter: (name: string, filtered: boolean) => void;
+}
 ```
+
+---
+
+#### Add onSort, onFilter, and resources to props
+
+Then, add these new props along with the `resources` reference (so you can retrieve localized labels for sorting and filtering) to the props destructuring:
+##### [Before](#tab/before)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+  const {
+    records,
+    sortedRecordIds,
+    columns,
+    width,
+    height,
+    hasNextPage,
+    hasPreviousPage,
+    sorting,
+    filtering,
+    currentPage,
+    itemsLoading,
+    setSelectedRecords,
+    onNavigate,
+  } = props;
+```
+
+##### [After](#tab/after)
+
+```typescript
+export const Grid = React.memo((props: GridProps) => {
+  const {
+    records,
+    sortedRecordIds,
+    columns,
+    width,
+    height,
+    hasNextPage,
+    hasPreviousPage,
+    sorting,
+    filtering,
+    currentPage,
+    itemsLoading,
+    setSelectedRecords,
+    onNavigate,
+    onSort, 
+    onFilter, 
+    resources,
+  } = props;
+```
+
+---
+
+#### Import ContextualMenu components
 
 You need to add some imports to the top of `Grid.tsx` so that you can use the `ContextualMenu` component provided by Fluent UI. You can use path-based imports to reduce the size of the bundle.
 
 ```typescript
-import {
-  DirectionalHint,
-  IContextualMenuProps,
-} from "@fluentui/react/lib/components/ContextualMenu/ContextualMenu.types";
-import { ContextualMenu } from "@fluentui/react/lib/components/ContextualMenu/ContextualMenu";
+import { ContextualMenu, DirectionalHint, IContextualMenuProps } from '@fluentui/react/lib/ContextualMenu';
 ```
 
-Now add the context menu rendering functionality to `Grid.tsx` just below the `const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);`:
+Now add the context menu rendering functionality to `Grid.tsx` just below the `const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);` line:
 
-```react
-const [contextualMenuProps, setContextualMenuProps] = React.useState<IContextualMenuProps>();
+##### [Before](#tab/before)
+
+```typescript
+const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);
+```
+
+##### [After](#tab/after)
+
+```typescript
+const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);
+
+const [contextualMenuProps, setContextualMenuProps] =
+    React.useState<IContextualMenuProps>();
 
 const onContextualMenuDismissed = React.useCallback(() => {
     setContextualMenuProps(undefined);
-}, [setContextualMenuProps]);
+  }, [setContextualMenuProps]);
 
 const getContextualMenuProps = React.useCallback(
-    (column: IColumn, ev: React.MouseEvent<HTMLElement>): IContextualMenuProps => {
-    const menuItems = [
-    {
-    key: 'aToZ',
-    name: resources.getString('Label_SortAZ'),
-      iconProps: { iconName: 'SortUp' },
-          canCheck: true,
-              checked: column.isSorted && !column.isSortedDescending,
-                  disable: (column.data as ComponentFramework.PropertyHelper.DataSetApi.Column).disableSorting,
-                      onClick: () => {
-                          onSort(column.key, false);
-                          setContextualMenuProps(undefined);
-                          setIsLoading(true);
-                      },
-},
-    {
-        key: 'zToA',
-            name: resources.getString('Label_SortZA'),
-                iconProps: { iconName: 'SortDown' },
-                    canCheck: true,
-                        checked: column.isSorted && column.isSortedDescending,
-                            disable: (column.data as ComponentFramework.PropertyHelper.DataSetApi.Column).disableSorting,
-                                onClick: () => {
-                                    onSort(column.key, true);
-                                    setContextualMenuProps(undefined);
-                                    setIsLoading(true);
-                                },
-    },
+    (
+      column: IColumn,
+      ev: React.MouseEvent<HTMLElement>
+    ): IContextualMenuProps => {
+      const menuItems = [
         {
-            key: 'filter',
-                name: resources.getString('Label_DoesNotContainData'),
-                    iconProps: { iconName: 'Filter' },
-                        canCheck: true,
-                            checked: column.isFiltered,
-                                onClick: () => {
-                                    onFilter(column.key, column.isFiltered !== true);
-                                    setContextualMenuProps(undefined);
-                                    setIsLoading(true);
-                                },
+          key: "aToZ",
+          name: resources.getString("Label_SortAZ"),
+          iconProps: { iconName: "SortUp" },
+          canCheck: true,
+          checked: column.isSorted && !column.isSortedDescending,
+          disable: (
+            column.data as ComponentFramework.PropertyHelper.DataSetApi.Column
+          ).disableSorting,
+          onClick: () => {
+            onSort(column.key, false);
+            setContextualMenuProps(undefined);
+            setIsLoading(true);
+          },
         },
-            ];
-return {
-    items: menuItems,
-    target: ev.currentTarget as HTMLElement,
-    directionalHint: DirectionalHint.bottomLeftEdge,
-    gapSpace: 10,
-    isBeakVisible: true,
-    onDismiss: onContextualMenuDismissed,
-};
-},
-    [setIsLoading, onFilter, setContextualMenuProps],
-        );
+        {
+          key: "zToA",
+          name: resources.getString("Label_SortZA"),
+          iconProps: { iconName: "SortDown" },
+          canCheck: true,
+          checked: column.isSorted && column.isSortedDescending,
+          disable: (
+            column.data as ComponentFramework.PropertyHelper.DataSetApi.Column
+          ).disableSorting,
+          onClick: () => {
+            onSort(column.key, true);
+            setContextualMenuProps(undefined);
+            setIsLoading(true);
+          },
+        },
+        {
+          key: "filter",
+          name: resources.getString("Label_DoesNotContainData"),
+          iconProps: { iconName: "Filter" },
+          canCheck: true,
+          checked: column.isFiltered,
+          onClick: () => {
+            onFilter(column.key, column.isFiltered !== true);
+            setContextualMenuProps(undefined);
+            setIsLoading(true);
+          },
+        },
+      ];
+      return {
+        items: menuItems,
+        target: ev.currentTarget as HTMLElement,
+        directionalHint: DirectionalHint.bottomLeftEdge,
+        gapSpace: 10,
+        isBeakVisible: true,
+        onDismiss: onContextualMenuDismissed,
+      };
+    },
+    [setIsLoading, onFilter, setContextualMenuProps]
+  );
 
 const onColumnContextMenu = React.useCallback(
     (column?: IColumn, ev?: React.MouseEvent<HTMLElement>) => {
-        if (column && ev) {
-            setContextualMenuProps(getContextualMenuProps(column, ev));
-        }
+      if (column && ev) {
+        setContextualMenuProps(getContextualMenuProps(column, ev));
+      }
     },
-    [getContextualMenuProps, setContextualMenuProps],
-);
+    [getContextualMenuProps, setContextualMenuProps]
+  );
 
 const onColumnClick = React.useCallback(
     (ev: React.MouseEvent<HTMLElement>, column: IColumn) => {
-        if (column && ev) {
-            setContextualMenuProps(getContextualMenuProps(column, ev));
-        }
+      if (column && ev) {
+        setContextualMenuProps(getContextualMenuProps(column, ev));
+      }
     },
-    [getContextualMenuProps, setContextualMenuProps],
-);
+    [getContextualMenuProps, setContextualMenuProps]
+  );
 ```
+
+---
 
 You'll see that:
 
-- The `contextualMenuProps` state is used to control the visibility of the context menu that's rendered using the Fluent UI `ContextualMenu` component.
+- The `contextualMenuProps` state controls the visibility of the context menu that's rendered using the Fluent UI `ContextualMenu` component.
 - You're providing a simple filter to show only values where the field doesn't contain any data. You could extend this to provide additional filtering.
 - You're using `resources.getString` to show labels on the context menu that can be localized.
-- The `React.useCallback` hook is used (similar to `React.useMemo`), so that the callbacks are only mutated when the dependent values change. This optimizes the rendering of child components.
+- The `React.useCallback` hook, similar to `React.useMemo`, ensures that the callbacks are only mutated when the dependent values change. This optimizes the rendering of child components.
+
+#### Add new context menu functions to the column select and context menu events
 
 Now add these new context menu functions to the column select and context menu events. Update the `const gridColumns` to add the `onColumnContextMenu` and `onColumnClick` callbacks:
 
+##### [Before](#tab/before)
+
 ```typescript
 const gridColumns = React.useMemo(() => {
-  return columns
-    .filter((col) => !col.isHidden && col.order >= 0)
-    .sort((a, b) => a.order - b.order)
-    .map((col) => {
+   return columns
+   .filter((col) => !col.isHidden && col.order >= 0)
+   .sort((a, b) => a.order - b.order)
+   .map((col) => {
       const sortOn = sorting && sorting.find((s) => s.name === col.name);
       const filtered =
-        filtering &&
-        filtering.conditions &&
-        filtering.conditions.find((f) => f.attributeName == col.name);
+         filtering &&
+         filtering.conditions &&
+         filtering.conditions.find((f) => f.attributeName == col.name);
       return {
-        key: col.name,
-        name: col.displayName,
-        fieldName: col.name,
-        isSorted: sortOn != null,
-        isSortedDescending: sortOn?.sortDirection === 1,
-        isResizable: true,
-        isFiltered: filtered != null,
-        data: col,
-        onColumnContextMenu: onColumnContextMenu,
-        onColumnClick: onColumnClick,
+         key: col.name,
+         name: col.displayName,
+         fieldName: col.name,
+         isSorted: sortOn != null,
+         isSortedDescending: sortOn?.sortDirection === 1,
+         isResizable: true,
+         isFiltered: filtered != null,
+         data: col,
       } as IColumn;
-    });
-}, [columns, sorting, onColumnContextMenu, onColumnClick]);
+   });
+}, [columns, sorting]);
 ```
+
+##### [After](#tab/after)
+
+```typescript
+const gridColumns = React.useMemo(() => {
+   return columns
+     .filter((col) => !col.isHidden && col.order >= 0)
+     .sort((a, b) => a.order - b.order)
+     .map((col) => {
+       const sortOn = sorting && sorting.find((s) => s.name === col.name);
+       const filtered =
+         filtering &&
+         filtering.conditions &&
+         filtering.conditions.find((f) => f.attributeName == col.name);
+       return {
+         key: col.name,
+         name: col.displayName,
+         fieldName: col.name,
+         isSorted: sortOn != null,
+         isSortedDescending: sortOn?.sortDirection === 1,
+         isResizable: true,
+         isFiltered: filtered != null,
+         data: col,
+         onColumnContextMenu: onColumnContextMenu,
+         onColumnClick: onColumnClick,
+       } as IColumn;
+     });
+ }, [columns, sorting, onColumnContextMenu, onColumnClick]);
+```
+
+---
+
+<!-- TODO Continue from here -->
 
 For the context menu to be shown, you need to add it to the rendered output. Add the following directly underneath the `DetailsList` component in the returned output:
 
