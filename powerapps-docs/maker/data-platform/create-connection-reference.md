@@ -24,7 +24,7 @@ A *connector* is a proxy or a wrapper around an API that allows the underlying s
 
 A [connection](/power-automate/add-manage-connections) is a stored [authentication credential](/connectors/custom-connectors/connection-parameters#authentication-types) for a connector, for example OAuth credentials for the SharePoint connector.
 
-A *connection reference* is a solution component that contains a reference to a connection about a specific connector. Both solution-aware canvas apps and operations within a [solution-aware flow](https://learn.microsoft.com/en-us/power-automate/overview-solution-flows) bind to a connection reference instead of directly to a connection. During solution import into a target environment, a connection is provided for all the connection references so any referencing flows can be [turned on](/power-automate/disable-flow#turn-flows-on) automatically after the import completes. To change a specific connection associated with a canvas app or flow, you edit the connection reference component within the solution.
+A *connection reference* is a solution component that contains a reference to a connection about a specific connector. Both solution-aware canvas apps and operations within a [solution-aware flow](/power-automate/overview-solution-flows) bind to a connection reference instead of directly to a connection. During solution import into a target environment, a connection is provided for all the connection references so any referencing flows can be [turned on](/power-automate/disable-flow#turn-flows-on) automatically after the import completes. To change a specific connection associated with a canvas app or flow, you edit the connection reference component within the solution.
 
 You can add a connection reference to a solution in different ways:
 - From the **Solutions** area as described in this article.
@@ -54,7 +54,7 @@ You can add a connection reference to a solution in different ways:
    - **Connector**: Select an existing connector from the list such as in the screenshot here. You can also select **New** to create a new connection for this connection reference. Once your finished creating a new connection, select **Refresh** to select your connection from the list.  
    - **Connection**: Based on the **Connector** you selected, select an existing connection or select **New connection** to create one.
   
-    :::image type="content" source="media/connection-reference-example.png" alt-text="Connection reference example":::
+    :::image type="content" source="media/connection-reference-example.png" alt-text="Screenshot of the New Connection Reference panel.":::
 
 1. Select **Create**.
 
