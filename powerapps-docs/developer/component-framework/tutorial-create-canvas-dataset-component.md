@@ -176,6 +176,8 @@ npm run build
 > 
 > Open index.ts file and add this: `// eslint-disable-next-line no-undef`, directly above the line:<br />
 > `import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;`
+>
+> The run `npm run build` again.
 
 
 After the component is built, you'll see that:
@@ -287,7 +289,9 @@ export const Grid = React.memo((props: GridProps) => {
             .map((col) => {
                 const sortOn = sorting && sorting.find((s) => s.name === col.name);
                 const filtered =
-                    filtering && filtering.conditions && filtering.conditions.find((f) => f.attributeName == col.name);
+                    filtering && 
+                    filtering.conditions && 
+                    filtering.conditions.find((f) => f.attributeName == col.name);
                 return {
                     key: col.name,
                     name: col.displayName,
@@ -1184,7 +1188,6 @@ You need to pass this callback into the `Grid` component props inside the `updat
 ##### [After](#tab/after)
 
 ```typescript
-
     ReactDOM.render(
       React.createElement(Grid, {
         width: allocatedWidth,
@@ -1622,15 +1625,15 @@ Now add these new context menu functions to the column select and context menu e
 ```typescript
 const gridColumns = React.useMemo(() => {
    return columns
-   .filter((col) => !col.isHidden && col.order >= 0)
-   .sort((a, b) => a.order - b.order)
-   .map((col) => {
-      const sortOn = sorting && sorting.find((s) => s.name === col.name);
-      const filtered =
+     .filter((col) => !col.isHidden && col.order >= 0)
+     .sort((a, b) => a.order - b.order)
+     .map((col) => {
+       const sortOn = sorting && sorting.find((s) => s.name === col.name);
+       const filtered =
          filtering &&
          filtering.conditions &&
          filtering.conditions.find((f) => f.attributeName == col.name);
-      return {
+       return {
          key: col.name,
          name: col.displayName,
          fieldName: col.name,
@@ -1639,9 +1642,9 @@ const gridColumns = React.useMemo(() => {
          isResizable: true,
          isFiltered: filtered != null,
          data: col,
-      } as IColumn;
-   });
-}, [columns, sorting]);
+       } as IColumn;
+     });
+ }, [columns, sorting]);
 ```
 
 ##### [After](#tab/after)
@@ -1677,11 +1680,56 @@ const gridColumns = React.useMemo(() => {
 
 <!-- TODO Continue from here -->
 
+#### Add context menu to rendered output
+
+
 For the context menu to be shown, you need to add it to the rendered output. Add the following directly underneath the `DetailsList` component in the returned output:
 
-```react
-{contextualMenuProps && <ContextualMenu {...contextualMenuProps} />}
+
+##### [Before](#tab/before)
+
+```typescript
+<ScrollablePane scrollbarVisibility={ScrollbarVisibility.auto}>
+    <DetailsList
+      columns={gridColumns}
+      onRenderItemColumn={onRenderItemColumn}
+      onRenderDetailsHeader={onRenderDetailsHeader}
+      items={items}
+      setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+      initialFocusedIndex={0}
+      checkButtonAriaLabel="select row"
+      layoutMode={DetailsListLayoutMode.fixedColumns}
+      constrainMode={ConstrainMode.unconstrained}
+      selection={selection}
+      onItemInvoked={onNavigate}
+    ></DetailsList>
+</ScrollablePane>
 ```
+
+##### [After](#tab/after)
+
+```typescript
+<ScrollablePane scrollbarVisibility={ScrollbarVisibility.auto}>
+    <DetailsList
+      columns={gridColumns}
+      onRenderItemColumn={onRenderItemColumn}
+      onRenderDetailsHeader={onRenderDetailsHeader}
+      items={items}
+      setKey={`set${currentPage}`} // Ensures that the selection is reset when paging
+      initialFocusedIndex={0}
+      checkButtonAriaLabel="select row"
+      layoutMode={DetailsListLayoutMode.fixedColumns}
+      constrainMode={ConstrainMode.unconstrained}
+      selection={selection}
+      onItemInvoked={onNavigate}
+    ></DetailsList>
+    {contextualMenuProps && <ContextualMenu {...contextualMenuProps} />}
+</ScrollablePane>
+```
+
+---
+
+#### Add onSort and OnFilter functions
 
 Now that you've added the sorting and filtering UI, you need to add the callbacks to `index.ts` to actually perform the sort and filter on the records bound to the code component. Add the following to `index.ts` just below the `onNavigate` function:
 
@@ -1722,36 +1770,116 @@ You'll see that:
 - When modifying the sort columns, the existing sort definitions must be removed using pop rather than the sorting array itself being replaced.
 - [Refresh](reference\dataset\refresh.md) must be called after sorting and filtering is applied. If a filter and sort are applied at the same time, refresh only needs to be called once.
 
+#### Add OnSort and OnFilter callbacks to Grid rendering
+
 Lastly, you can pass these two callbacks into the `Grid` rendering call:
+
+##### [Before](#tab/before)
 
 ```typescript
 ReactDOM.render(
     React.createElement(Grid, {
-        ...
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
+    }),
+    this.container
+);
+```
+
+##### [After](#tab/after)
+
+```typescript
+ReactDOM.render(
+    React.createElement(Grid, {
+        width: allocatedWidth,
+        height: allocatedHeight,
+        columns: dataset.columns,
+        records: this.records,
+        sortedRecordIds: this.sortedRecordsIds,
+        hasNextPage: paging.hasNextPage,
+        hasPreviousPage: paging.hasPreviousPage,
+        currentPage: this.currentPage,
+        totalResultCount: paging.totalResultCount,
+        sorting: dataset.sorting,
+        filtering: dataset.filtering && dataset.filtering.getFilter(),
+        resources: this.resources,
+        itemsLoading: dataset.loading,
+        highlightValue: this.context.parameters.HighlightValue.raw,
+        highlightColor: this.context.parameters.HighlightColor.raw,
+        setSelectedRecords: this.setSelectedRecords,
+        onNavigate: this.onNavigate,
         onSort: this.onSort,
         onFilter: this.onFilter,
     }),
+    this.container
+);
 ```
+
+---
 
 At this point, you can no longer test using the test harness because it doesn't provide support for sorting and filtering. Later, you can deploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) and then add to a canvas app for testing. If you wish, you can skip to that step to see how the code component looks inside canvas apps.
 
-### Updating `FilteredRecordCount` output property
+### Update the FilteredRecordCount output property
 
 Since the grid can now filter records internally, it's important to report back to the canvas app how many records are displayed. This is so that you can show a 'No Records' type message.
 
 > [!TIP]
 > You could implement this internally within the code component, however it's recommended that as much user interface is left up to the canvas app since it will give the app maker more flexibility.
 
-You have already defined an output property called `FilteredRecordCount` in the `ControlManifest.Input.xml`. When the filtering takes place and the filtered records are loaded, the `updateView` function will be called with string `dataset` in the [updatedProperties](reference\updatedproperties.md) array. If the number of records has changed, you need to make a call to `notifyOutputChanged` so that the canvas app knows it must update any controls that use the `FilteredRecordCount` property. Inside the `updateView` method of `index.ts`, add the following just above the `ReactDOM.render`:
+You have already defined an output property called `FilteredRecordCount` in the `ControlManifest.Input.xml`. When the filtering takes place and the filtered records are loaded, the `updateView` function will be called with string `dataset` in the [updatedProperties](reference\updatedproperties.md) array. If the number of records has changed, you need to make a call to `notifyOutputChanged` so that the canvas app knows it must update any controls that use the `FilteredRecordCount` property. Inside the `updateView` method of `index.ts`, add the following just above the `ReactDOM.render` and below `allocatedHeight`:
+
+##### [Before](#tab/before)
 
 ```typescript
+const allocatedHeight = parseInt(
+    context.mode.allocatedHeight as unknown as string
+);
+```
+
+##### [After](#tab/after)
+
+```typescript
+const allocatedHeight = parseInt(
+    context.mode.allocatedHeight as unknown as string
+);
+
 if (this.filteredRecordCount !== this.sortedRecordsIds.length) {
-  this.filteredRecordCount = this.sortedRecordsIds.length;
-  this.notifyOutputChanged();
+    this.filteredRecordCount = this.sortedRecordsIds.length;
+    this.notifyOutputChanged();
+}
+
+```
+
+---
+
+#### Add FilteredRecordCount to getOutputs
+
+This updates the `filteredRecordCount` on the code component class you defined earlier when it/s different to the new data received. After `notifyOutputChanged` is called, you need to ensure the value is returned when `getOutputs` is called, so update the `getOutputs` method to be:
+
+##### [Before](#tab/before)
+
+```typescript
+public getOutputs(): IOutputs {
+    return {};
 }
 ```
 
-This updates the `filteredRecordCount` on the code component class you defined earlier when it/s different to the new data received. After `notifyOutputChanged` is called, you need to ensure the value is returned when `getOutputs` is called, so update the `getOutputs` method to be:
+##### [After](#tab/after)
 
 ```typescript
 public getOutputs(): IOutputs {
@@ -1760,6 +1888,8 @@ public getOutputs(): IOutputs {
     } as IOutputs;
 }
 ```
+
+---
 
 ## Adding paging to the grid
 
