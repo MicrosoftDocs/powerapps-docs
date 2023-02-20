@@ -191,8 +191,8 @@ After the component is built, you'll see that:
 When the code component uses React, there must be a single root component that's rendered within the [updateView method](reference/control/updateview.md). Inside the `CanvasGrid` folder, add a new TypeScript file named `Grid.tsx`, and add the following content:
 
 ```typescript
-import { DetailsList } from '@fluentui/react/lib/DetailsList';
 import {
+    DetailsList,
     ConstrainMode,
     DetailsListLayoutMode,
     IColumn,
@@ -357,7 +357,13 @@ import { DetailsList, Stack } from "@fluentui/react";
 we use:
 
 ```typescript
-import { DetailsList } from '@fluentui/react/lib/DetailsList';
+import {
+    DetailsList,
+    ConstrainMode,
+    DetailsListLayoutMode,
+    IColumn,
+    IDetailsHeaderProps,
+} from '@fluentui/react/lib/DetailsList';
 import { Stack } from '@fluentui/react/lib/Stack';
 ```
 
@@ -670,8 +676,8 @@ Add the following to the imports inside `Grid.tsx`:
 #### [Before](#tab/before)
 
 ```typescript
-import { DetailsList } from '@fluentui/react/lib/DetailsList';
 import {
+    DetailsList,
     ConstrainMode,
     DetailsListLayoutMode,
     IColumn,
@@ -691,8 +697,8 @@ import * as React from 'react';
 #### [After](#tab/after)
 
 ```typescript
-import { DetailsList } from '@fluentui/react/lib/DetailsList';
 import {
+    DetailsList,
     ConstrainMode,
     DetailsListLayoutMode,
     IColumn,
@@ -1898,7 +1904,7 @@ For large datasets, canvas apps will split the records across multiple pages. Yo
 Add this to the imports inside `Grid.tsx`:
 
 ```typescript
-import { IconButton } from "@fluentui/react/lib/components/Button/IconButton/IconButton";
+import { IconButton } from '@fluentui/react/lib/Button';
 ```
 
 ### Add stringFormat function
@@ -2228,7 +2234,7 @@ Code components offer the ability to show in full screen mode. This is especiall
 To launch the full screen mode, you can use the Fluent UI `Link` component. Add it to the imports at the top of `Grid.tsx`:
 
 ```typescript
-import { Link } from "@fluentui/react/lib/components/Link/Link";
+import { Link } from '@fluentui/react/lib/Link';
 ```
 
 ### Add the Link control
@@ -2620,13 +2626,36 @@ Now you're ready to add the conditional row highlighting functionality. You've a
 
 ### Import types to support highlighting
 
-Custom row rendering in the `DetailsList` requires some additional imports, so add the following to the top of `Grid.tsx`:
+Custom row rendering in the `DetailsList` requires some additional imports. There are already some types from `@fluentui/react/lib/DetailsList`, so add `IDetailsListProps`, `IDetailsRowStyles` and `DetailsRow` to that import statement in  `Grid.tsx`:
+
+##### [Before](#tab/before)
 
 ```typescript
-import { IDetailsListProps } from "@fluentui/react/lib/components/DetailsList/DetailsList.types";
-import { IDetailsRowStyles } from "@fluentui/react/lib/components/DetailsList/DetailsRow.types";
-import { DetailsRow } from "@fluentui/react/lib/components/DetailsList/DetailsRow";
+import {
+    DetailsList,
+    ConstrainMode,
+    DetailsListLayoutMode,
+    IColumn,
+    IDetailsHeaderProps
+} from '@fluentui/react/lib/DetailsList';
 ```
+
+##### [After](#tab/after)
+
+```typescript
+import {
+    DetailsList,
+    ConstrainMode,
+    DetailsListLayoutMode,
+    IColumn,
+    IDetailsHeaderProps,
+    IDetailsListProps,
+    IDetailsRowStyles,
+    DetailsRow
+} from '@fluentui/react/lib/DetailsList';
+```
+
+---
 
 Now, create the custom row renderer by adding the following just below the `const rootContainerStyle` block:
 
@@ -2760,7 +2789,7 @@ Pass the `onRenderRow` method into the `DetailsList` props:
 
 ---
 
-## Deploying and configuring
+## Deploy and configure the component
 
 Now that you've implemented all the features, you must deploy the code component to Microsoft Dataverse for testing.
 
