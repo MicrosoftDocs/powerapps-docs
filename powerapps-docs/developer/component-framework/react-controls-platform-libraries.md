@@ -4,7 +4,7 @@ description: "You can achieve significant performance gains using React and plat
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
 author: HemantGaur
-ms.date: 10/18/2022
+ms.date: 02/20/2022
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
