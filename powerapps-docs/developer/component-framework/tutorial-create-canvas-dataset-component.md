@@ -3,7 +3,7 @@ title: "Create canvas app dataset component in Microsoft Dataverse | MicrosoftDo
 description: "In this tutorial, learn how to create a canvas app dataset code component, and deploy, add to a screen, and test the component using Visual Studio Code."
 ms.author: hemantg
 author: HemantGaur
-ms.date: 02/12/2023
+ms.date: 02/20/2023
 ms.reviewer: jdaly
 ms.topic: tutorial
 ms.subservice: pcf
@@ -81,7 +81,7 @@ One of the advantages of Microsoft Fluent UI is that it provides a consistent an
 
 The template used by [pac pcf init](/power-platform/developer/cli/reference/pcf#pac-pcf-init) installs the `eslint` module to your project and configures it by adding an `.eslintrc.json` file. `Eslint` now requires configuring for TypeScript and React coding styles. More information: [Linting - Best practices and guidance for code components](code-components-best-practices.md#linting).
 
-## Defining the dataset properties
+## Define the dataset properties
 
 The `CanvasGrid\ControlManifest.Input.xml` file defines the metadata describing the behavior of the code component. The [control](manifest-schema-reference/control.md) attribute will already contain the namespace and name of the component.
 
@@ -186,9 +186,9 @@ After the component is built, you'll see that:
    > [!NOTE]
    > Do not modify the contents of the `generated` and `out` folders directly. They'll be overwritten as part of the build process.
 
-## Grid Fluent UI React component
+## Add the Grid Fluent UI React component
 
-When the code component uses React, there must be a single root component that's rendered within the `updateView` method. Inside the `CanvasGrid` folder, add a new TypeScript file named `Grid.tsx`, and add the following content:
+When the code component uses React, there must be a single root component that's rendered within the [updateView method](reference/control/updateview.md). Inside the `CanvasGrid` folder, add a new TypeScript file named `Grid.tsx`, and add the following content:
 
 ```typescript
 import { DetailsList } from '@fluentui/react/lib/DetailsList';
@@ -399,7 +399,7 @@ The code also uses [React.memo](https://reactjs.org/docs/react-api.html#reactmem
 - The `DetailsList` in a `Stack` is wrapped because, later you'll add a footer element with the paging controls.
 - The Fluent UI `Sticky` component is used to wrap the header columns (using `onRenderDetailsHeader`) so that they remain visible when scrolling the grid.
 - `setKey` is passed to the `DetailsList` along with `initialFocusedIndex` so that when the current page changes, the scroll position and selection will be reset.
-- The function `onRenderItemColumn` is used to render the cell contents. It accepts row item, on which you use [getFormattedValue](reference\entityrecord\getformattedvalue.md) to return the display value of the column. The [getValue](reference\entityrecord\getvalue.md) method returns a value that you could use to provide an alternative rendering. The advantage of `getFormattedValue` is that it contains a formatted string for columns of non-string types such as dates and lookups.
+- The function `onRenderItemColumn` is used to render the cell contents. It accepts row item and uses [getFormattedValue](reference\entityrecord\getformattedvalue.md) to return the display value of the column. The [getValue](reference\entityrecord\getvalue.md) method returns a value that you could use to provide an alternative rendering. The advantage of `getFormattedValue` is that it contains a formatted string for columns of non-string types such as dates and lookups.
 - The `gridColumns` block is mapping the object shape of the columns provided by the dataset context, onto the shape expected by the `DetailsList` columns prop. Since this is wrapped in the [React.useMemo](https://reactjs.org/docs/hooks-reference.html#usememo) hook, the output will only change when the `columns` or `sorting` props change. You can display the sort and filter icons on the columns where the sorting and filtering details provided by the code component context matches the column being mapped. The columns are sorted using the [`column.order`](reference\column.md#order) property to ensure that they're in the correct order on the grid as defined by the app maker.
 - You're maintaining an internal state for `isComponentLoading` in our React component. This is because when the user selects sorting and filtering actions, you can grey out the grid as a visual cue until the `sortedRecordIds` are updated and the state is reset. There's an additional input prop called `itemsLoading` which is mapped to the [dataset.loading](reference\dataset.md#loading) property provided by the dataset context. Both flags are used to control the visual loading cue that's implemented using the Fluent UI `Overlay` component.
 
@@ -434,7 +434,7 @@ initializeIcons(undefined, { disableWarnings: true });
 ---
 
 > [!NOTE]
-> The import of `initializeIcons` is required because you're using the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
+> The import of `initializeIcons` is required because this code uses the Fluent UI icon set. You call `initializeIcons` to load the icons inside the test harness. Inside canvas apps, they're already initialized.
 
 ### Add fields to the CanvasGrid class
 
@@ -598,7 +598,7 @@ You can see that:
 - The `allocatedWidth` and `allocatedHeight` will be provided by the parent context whenever they change (for example, the app resizes the code component or you enter full screen mode), since you made a call to [trackContainerResize(true)](reference\mode\trackcontainerresize.md) inside the `init` function.
 - You can detect when there are new rows to display when the [updatedProperties](reference\updatedproperties.md) array contains the `dataset` string.
 - In the test harness, the `updatedProperties` array is not populated, so you can use the `isTestHarness` flag you set in the `init` function to short-circuit the logic that sets the `sortedRecordId` and `records`. You maintain a reference to the current values until they change, so that you don't mutate these when passed to the child component unless a re-render of the data is required.
-- Since the code component maintains the state of which page you're displaying, the page number is reset when the parent context resets the records to the first page. You know when you're back on the first page when `hasPreviousPage` is false.
+- Since the code component maintains the state of which page displayed, the page number is reset when the parent context resets the records to the first page. You know when you're back on the first page when `hasPreviousPage` is false.
 
 
 ### Update the destroy method
@@ -659,7 +659,7 @@ Redmond,U.S.,WA,249 Alexander Pl.,86372,555-0100,someone_a@example.com,Yvonne,Yv
 > [!NOTE]
 > There's only a single column shown in the test harness regardless of the columns you provide in the loaded CSV file. This is because the test harness only shows `property-set` when there is one defined. If no `property-set` is defined, then all of the columns in the loaded CSV file will be populated.
 
-## Adding row selection
+## Add row selection
 
 Although the Fluent UI `DetailsList` allows selecting records by default, the selected records are not linked to the output of the code component. You need the `Selected` and `SelectedItems` properties to reflect the chosen records inside a canvas app, so that related components can be updated. In this example, you allow selection of only a single item at a time so `SelectedItems` will only ever contain a single record.
 
@@ -765,7 +765,7 @@ export interface GridProps {
 
 ---
 
-### Add setSelectedRecords property to Grid
+### Add the setSelectedRecords property to Grid
 
 Inside the `Grid.tsx` function component, update the destructuring of the `props` to add the new prop `setSelectedRecords`.
 
@@ -876,7 +876,7 @@ The `selection` object created to maintain the state of the selection is then pa
 
 ---
 
-### Define setSelectedRecords callback
+### Define the setSelectedRecords callback
 
 You need to define the new `setSelectedRecords` callback inside `index.ts` and pass it to the `Grid` component. Near the top of `CanvasGrid` class, add the following:
 
@@ -961,7 +961,7 @@ this.container
 
 #### [After](#tab/after)
 
-```typescriptReactDOM.render(
+```typescript
 ReactDOM.render(
  React.createElement(Grid, {
    width: allocatedWidth,
@@ -991,7 +991,7 @@ this.container
 
 There's a pattern in canvas apps where if a gallery or grid has an item selection invoked (for example, selecting a chevron icon), it raises the `OnSelect` event. You can implement this pattern using the [openDatasetItem](reference\dataset\opendatasetitem.md) method of the dataset.
 
-#### Add onNavigate to GridProps
+#### Add onNavigate to GridProps interface
 
 As before, you add an additional callback prop on the `Grid` component by adding the following to the `GridProps` interface inside `Grid.tsx`:
 
@@ -1211,13 +1211,13 @@ You need to pass this callback into the `Grid` component props inside the `updat
 
 ---
 
-When you save all files, the test harness will reload. If you use `Ctrl` + `Shift` + `I` (or `F12`) and use **Open File** (`Ctrl` + `P`) searching for `index.ts`, you can place a breakpoint inside the `onNavigate` method. Double-clicking on a row (or highlighting it with the cursor keys and pressing `Enter`) will cause the breakpoint to be hit because the `DetailsList` invokes the `onNavigate` callback.
+When you save all files, the test harness will reload. Use `Ctrl` + `Shift` + `I` (or `F12`) and use **Open File** (`Ctrl` + `P`) searching for `index.ts` and you can place a breakpoint inside the `onNavigate` method. Double-click on a row (or highlight it with the cursor keys and pressing `Enter`) will hit the breakpoint because the `DetailsList` invokes the `onNavigate` callback.
 
 :::image type="content" source="media/canvas-datagrid-3.png" alt-text="Canvas Data Grid debug OnNavigate in index.ts":::
 
 There is a reference to `_this` because the function is defined as an [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) and has been transpiled into a JavaScript closure to capture the instance of `this`.
 
-## Adding Localization
+## Add Localization
 
 Before you go any further, you need to add resource strings to the code component so that you can use localized strings for messages such as paging, sorting, and filtering. Add a new file `CanvasGrid\strings\CanvasGrid.1033.resx` and use the Visual Studio resource editor or Visual Studio Code with an extension to enter the following:
 
@@ -1352,7 +1352,7 @@ The data for this file can also be set by opening the `CanvasGrid.1033.resx` fil
 
 You have resource strings for the `input`/`output` properties and the `dataset` and associated `property-set`. These will be used in Power Apps Studio at design time based on the maker's browser language. You can also add label strings that can be retrieved at runtime using [getString](reference\resources\getstring.md). More information: [Implementing localization API component](sample-controls\localization-api-control.md).
 
-This new resource file should be added to the `ControlManifest.Input.xml` file inside the `resources` element:
+Add this new resource file to the `ControlManifest.Input.xml` file inside the `resources` element:
 
 ##### [Before](#tab/before)
 
@@ -1376,7 +1376,7 @@ This new resource file should be added to the `ControlManifest.Input.xml` file i
 
 ---
 
-### Adding column sorting and filtering
+### Add column sorting and filtering
 
 If you want to allow the user to sort and filter using grid column headers, the Fluent UI `DetailList` provides an easy way of adding context menus to the column headers.
 
@@ -1506,7 +1506,7 @@ import { ContextualMenu, DirectionalHint, IContextualMenuProps } from '@fluentui
 
 #### Add context menu rendering functionality
 
-Now add the context menu rendering functionality to `Grid.tsx` just below the `const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);` line:
+Now add the context menu rendering functionality to `Grid.tsx` just below the line<br /> `const [isComponentLoading, setIsLoading] = React.useState<boolean>(false);`:
 
 ##### [Before](#tab/before)
 
@@ -1611,13 +1611,13 @@ const onColumnClick = React.useCallback(
 You'll see that:
 
 - The `contextualMenuProps` state controls the visibility of the context menu that's rendered using the Fluent UI `ContextualMenu` component.
-- You're providing a simple filter to show only values where the field doesn't contain any data. You could extend this to provide additional filtering.
-- You're using `resources.getString` to show labels on the context menu that can be localized.
+- This code provides a simple filter to show only values where the field doesn't contain any data. You could extend this to provide additional filtering.
+- This code uses `resources.getString` to show labels on the context menu that can be localized.
 - The `React.useCallback` hook, similar to `React.useMemo`, ensures that the callbacks are only mutated when the dependent values change. This optimizes the rendering of child components.
 
 #### Add new context menu functions to the column select and context menu events
 
-Now add these new context menu functions to the column select and context menu events. Update the `const gridColumns` to add the `onColumnContextMenu` and `onColumnClick` callbacks:
+Add these new context menu functions to the column select and context menu events. Update the `const gridColumns` to add the `onColumnContextMenu` and `onColumnClick` callbacks:
 
 ##### [Before](#tab/before)
 
@@ -1763,7 +1763,7 @@ onFilter = (name: string, filter: boolean): void => {
 
 You'll see that:
 
-- The sort and filter are applied to the dataset property using the [`sorting`](reference\sortstatus.md) and [`filtering`](reference\filtering.md).
+- The sort and filter are applied to the dataset using the [sorting](reference/dataset.md#sorting) and [filtering](reference/dataset.md#filtering) properties.
 - When modifying the sort columns, the existing sort definitions must be removed using pop rather than the sorting array itself being replaced.
 - [Refresh](reference\dataset\refresh.md) must be called after sorting and filtering is applied. If a filter and sort are applied at the same time, refresh only needs to be called once.
 
@@ -1829,7 +1829,8 @@ ReactDOM.render(
 
 ---
 
-At this point, you can no longer test using the test harness because it doesn't provide support for sorting and filtering. Later, you can deploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) and then add to a canvas app for testing. If you wish, you can skip to that step to see how the code component looks inside canvas apps.
+> [!NOTE]
+> At this point, you can no longer test using the test harness because it doesn't provide support for sorting and filtering. Later, you can deploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) and then add to a canvas app for testing. If you wish, you can skip to that step to see how the code component looks inside canvas apps.
 
 ### Update the FilteredRecordCount output property
 
@@ -1866,7 +1867,7 @@ if (this.filteredRecordCount !== this.sortedRecordsIds.length) {
 
 #### Add FilteredRecordCount to getOutputs
 
-This updates the `filteredRecordCount` on the code component class you defined earlier when it/s different to the new data received. After `notifyOutputChanged` is called, you need to ensure the value is returned when `getOutputs` is called, so update the `getOutputs` method to be:
+This updates the `filteredRecordCount` on the code component class you defined earlier when it's different from the new data received. After `notifyOutputChanged` is called, you need to ensure the value is returned when `getOutputs` is called, so update the `getOutputs` method to be:
 
 ##### [Before](#tab/before)
 
@@ -1888,7 +1889,7 @@ public getOutputs(): IOutputs {
 
 ---
 
-## Adding paging to the grid
+## Add paging to the grid
 
 For large datasets, canvas apps will split the records across multiple pages. You can add a footer that shows page navigation controls. Each button will be rendered using a Fluent UI `IconButton`, which you must import.
 
@@ -1917,7 +1918,7 @@ function stringFormat(template: string, ...args: string[]): string {
 
 ### Add Paging buttons
 
-Again to `Grid.tsx`, add the following `Stack.Item` below the existing `Stack.Item` that contains the `ScrollablePane`:
+In `Grid.tsx`, add the following `Stack.Item` below the existing `Stack.Item` that contains the `ScrollablePane`:
 
 ##### [Before](#tab/before)
 
@@ -2153,7 +2154,7 @@ loadPreviousPage = (): void => {
 };
 ```
 
-And update the `Grid` rendering call to include these callbacks:
+Then update the `Grid` rendering call to include these callbacks:
 
 ##### [Before](#tab/before)
 
@@ -2218,9 +2219,9 @@ ReactDOM.render(
 
 ---
 
-## Adding full screen support
+## Add full screen support
 
-Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen. 
+Code components offer the ability to show in full screen mode. This is especially useful on small screen sizes or where there's limited space for the code component within a canvas app screen.
 
 ### Import Fluent UI Link component
 
@@ -2232,7 +2233,10 @@ import { Link } from "@fluentui/react/lib/components/Link/Link";
 
 ### Add the Link control
 
-To add a full screen link, you add the following to the existing `Stack` that contains the paging controls. (Be sure to add this to the nested `Stack`, and not the root `Stack`):
+To add a full screen link, you add the following to the existing `Stack` that contains the paging controls. 
+
+> [!NOTE]
+> Be sure to add this to the nested `Stack`, and not the root `Stack`.
 
 ##### [Before](#tab/before)
 
@@ -2307,8 +2311,8 @@ To add a full screen link, you add the following to the existing `Stack` that co
 
 You'll see that:
 
-- You use resources to show the label to support localization.
-- If full screen mode is open, then the link is not shown. Instead, a close icon is automatically rendered by the parent app context.
+- This code uses resources to show the label to support localization.
+- If full screen mode is open, then the link is not shown. Instead, the parent app context automatically renders a close icon.
 
 ### Add props to support full screen to GridProps
 
@@ -2448,7 +2452,7 @@ onFullScreen = (): void => {
 };
 ```
 
-The call to [setFullScreen](reference\mode\setfullscreen.md) causes the code component to open the full screen mode and adjust the `allocatedHeight` and `allocatedWidth` accordingly because you've made the call to `trackContainerResize(true)` in the `init` method. Once the full screen mode is open, `updateView` will be called, allowing us to update the rendering of the component with the new size. The `updatedProperties` contains `fullscreen_open` or `fullscreen_close`, depending on the transition that is happening.
+The call to [setFullScreen](reference\mode\setfullscreen.md) causes the code component to open the full screen mode and adjust the `allocatedHeight` and `allocatedWidth` accordingly because of the call to `trackContainerResize(true)` in the `init` method. Once the full screen mode is open, `updateView` will be called, updating the rendering of the component with the new size. The `updatedProperties` contains `fullscreen_open` or `fullscreen_close`, depending on the transition that is happening.
 
 To store the state of the full screen mode, add a new `isFullScreen` field to the `CanvasGrid` class inside `index.ts`:
 
@@ -2612,11 +2616,11 @@ ReactDOM.render(
 
 ## Highlighting rows
 
-Now you're ready to add the conditional row highlighting functionality. You've already defined the `HighlightValue` and `HighlightColor` input properties, and the `HighlightIndicator` `property-set`. The `property-set` allows the maker to nominate a field to use to compare with the value they provide in `HighlightValue`.
+Now you're ready to add the conditional row highlighting functionality. You've already defined the `HighlightValue` and `HighlightColor` input properties, and the `HighlightIndicator` `property-set`. The `property-set` allows the maker to choose a field to use to compare with the value they provide in `HighlightValue`.
 
 ### Import types to support highlighting
 
-Adding custom row rendering in the `DetailsList` requires some additional imports, so add the following to the top of `Grid.tsx`:
+Custom row rendering in the `DetailsList` requires some additional imports, so add the following to the top of `Grid.tsx`:
 
 ```typescript
 import { IDetailsListProps } from "@fluentui/react/lib/components/DetailsList/DetailsList.types";
@@ -2643,13 +2647,13 @@ const onRenderRow: IDetailsListProps['onRenderRow'] = (props) => {
 
 You'll see that:
 
-- You can retrieve the value of the field that's nominated by the maker via the `HighlightIndicator` alias using `item?.getValue('HighlightIndicator')`.
-- Only when the value of the `HighlightIndicator` field matches that of the value of the `highlightValue` (provided by the input property on the code component), you can add a background color to the row.
-- The `DetailsRow` component is the component that's used by the `DetailsList` to render the columns you defined. You don't need to change the behavior other than the background color.
+- You can retrieve the value of the field chosen by the maker via the `HighlightIndicator` alias using:<br /> `item?.getValue('HighlightIndicator')`.
+- When the value of the `HighlightIndicator` field matches the value of the `highlightValue` provided by the input property on the code component, you can add a background color to the row.
+- The `DetailsRow` component is used by the `DetailsList` to render the columns you defined. You don't need to change the behavior other than the background color.
 
 ### Add additional props to support highlighting
 
-You'll see that you need to add some additional props for `highlightColor` and `highlightValue` that will be provided by the rendering inside `updateView`. You've already added to the `GridProps` interface, so you just need to add them to the props destructuring:
+Add some additional props for `highlightColor` and `highlightValue` that will be provided by the rendering inside `updateView`. You've already added to the `GridProps` interface, so you just need to add them to the props destructuring:
 
 ##### [Before](#tab/before)
 
@@ -2715,7 +2719,7 @@ export const Grid = React.memo((props: GridProps) => {
 
 ### Add the onRenderRow method to the DetailsList
 
-Now, you can pass the `onRenderRow` method into the `DetailsList` props:
+Pass the `onRenderRow` method into the `DetailsList` props:
 
 ##### [Before](#tab/before)
 
