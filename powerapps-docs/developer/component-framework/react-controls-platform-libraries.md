@@ -124,9 +124,9 @@ Platform libraries are made available both at the build and runtime to the contr
 
 A: No. You must create a new control using the new template and then update the manifest and index.ts methods. For reference, compare the standard and react samples described above.
 
-### Q: Can I use React controls with portals?
+### Q: Can I use React controls & platform libraries with portals?
 
-A: No. React controls are currently only available for canvas and model-driven apps.
+A: No. React controls & platform libraries are currently only available for canvas and model-driven apps.
 
 ## Related topics
 
