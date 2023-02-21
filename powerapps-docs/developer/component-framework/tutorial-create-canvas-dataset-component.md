@@ -199,8 +199,10 @@ import {
     IDetailsHeaderProps,
 } from '@fluentui/react/lib/DetailsList';
 import { Overlay } from '@fluentui/react/lib/Overlay';
-import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane';
-import { ScrollbarVisibility } from '@fluentui/react/lib/ScrollablePane';
+import { 
+   ScrollablePane, 
+   ScrollbarVisibility 
+} from '@fluentui/react/lib/ScrollablePane';
 import { Stack } from '@fluentui/react/lib/Stack';
 import { Sticky } from '@fluentui/react/lib/Sticky';
 import { StickyPositionType } from '@fluentui/react/lib/Sticky';
@@ -351,10 +353,17 @@ This is a React *functional component*, but equally, it could be a *class compon
 When importing the `ChoiceGroup` Fluent UI components using path-based imports, instead of:
 
 ```typescript
-import { DetailsList, Stack } from "@fluentui/react";
+import { 
+    DetailsList, 
+    ConstrainMode, 
+    DetailsListLayoutMode, 
+    IColumn, 
+    IDetailsHeaderProps, 
+    Stack 
+} from "@fluentui/react";
 ```
 
-we use:
+This code uses:
 
 ```typescript
 import {
@@ -684,8 +693,10 @@ import {
     IDetailsHeaderProps,
 } from '@fluentui/react/lib/DetailsList';
 import { Overlay } from '@fluentui/react/lib/Overlay';
-import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane';
-import { ScrollbarVisibility } from '@fluentui/react/lib/ScrollablePane';
+import { 
+   ScrollablePane, 
+   ScrollbarVisibility 
+} from '@fluentui/react/lib/ScrollablePane';
 import { Stack } from '@fluentui/react/lib/Stack';
 import { Sticky } from '@fluentui/react/lib/Sticky';
 import { StickyPositionType } from '@fluentui/react/lib/Sticky';
@@ -705,8 +716,10 @@ import {
     IDetailsHeaderProps,
 } from '@fluentui/react/lib/DetailsList';
 import { Overlay } from '@fluentui/react/lib/Overlay';
-import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane';
-import { ScrollbarVisibility } from '@fluentui/react/lib/ScrollablePane';
+import { 
+   ScrollablePane, 
+   ScrollbarVisibility 
+} from '@fluentui/react/lib/ScrollablePane';
 import { Stack } from '@fluentui/react/lib/Stack';
 import { Sticky } from '@fluentui/react/lib/Sticky';
 import { StickyPositionType } from '@fluentui/react/lib/Sticky';
@@ -2800,7 +2813,7 @@ Now that you've implemented all the features, you must deploy the code component
    This could also be your own publisher, provided you update the publisher prefix parameter in the call to [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) below.
    More information: [Create a solution publisher](/powerapps/maker/data-platform/create-solution#solution-publisher).
 
-2. Once you've saved the publisher, you're ready to authorize the CLI against your environment so that we can push the compiled code component. At the command-line, use:
+1. Once you've saved the publisher, you're ready to authorize the CLI against your environment so that we can push the compiled code component. At the command-line, use:
 
    ```powershell
    pac auth create --url https://myorg.crm.dynamics.com
@@ -2809,7 +2822,7 @@ Now that you've implemented all the features, you must deploy the code component
    Replace `myorg.crm.dynamics.com` with the URL of your own Dataverse environment.
    Sign in with an administrator/customizer user when prompted. The privileges provided by these user roles are needed to deploy any code components to Dataverse.
 
-3. To deploy your code component, use:
+1. To deploy your code component, use:
 
    ```powershell
    pac pcf push --publisher-prefix samples
@@ -2818,64 +2831,59 @@ Now that you've implemented all the features, you must deploy the code component
    > [!NOTE]
    > If you receive the error, `Missing required tool: MSBuild.exe/dotnet.exe. Please add MSBuild.exe/dotnet.exe in Path environment variable or use 'Developer Command Prompt for VS`, you must install either [Visual Studio 2019 for Windows & Mac](https://visualstudio.microsoft.com/downloads/) or [Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019), being sure to select the '.NET build tools' workload as described in the prerequisites.
 
-4. Once completed, this process will have created a small temporary solution named **PowerAppTools_samples** in your environment, and the `CanvasGrid` code component will be added to this solution. You can move the code component into your own solution later if necessary. More information: [Code Component Application Lifecycle Management (ALM)](code-components-alm.md).
+1. Once completed, this process will have created a small temporary solution named **PowerAppTools_samples** in your environment, and the `CanvasGrid` code component will be added to this solution. You can move the code component into your own solution later if necessary. More information: [Code Component Application Lifecycle Management (ALM)](code-components-alm.md).
 
    :::image type="content" source="media/canvas-datagrid-4.png" alt-text="PowerAppsTools_samples solution":::
 
-5. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment.
-   Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
-
+1. To use code components inside canvas apps, you must enable the **Power Apps component framework for canvas apps** on the environment you're using.
+   
+    a. Open the **Admin center** (admin.powerplatform.microsoft.com) and navigate to your environment.
+    b. Navigate to **Settings** > **Product** > **Features** . Ensure **Power Apps component framework for canvas apps** is turned **On**:
+   
    :::image type="content" source="media/canvas-datagrid-enable.png" alt-text="Enable code components":::
+   
+1. Create a new canvas app using the **Tablet** layout.
+1. From the **Insert** panel, select **Get more components**.
+1. Select the **Code** tab on the **Import components** pane.
+1. Select the **`CanvasGrid`** component.
+1. Select **Import**. The code component will now appear under **Code components** on the **Insert** panel.
+1. Drag the `CanvasGrid` component onto the screen and bind to the `Contacts` table in Microsoft Dataverse.
+1. Set the following properties on the `CanvasGrid` code component using the properties panel:
 
-6. Create a new canvas app using the **Tablet** layout.
-
-7. From the **Insert** panel, select **Get more components**.
-
-8. Select the **Code** tab on the **Import components** pane.
-
-9. Select the **`CanvasGrid`** component.
-
-10. Select **Import**. The code component will now appear under **Code components** on the **Insert** panel.
-
-11. Drag the `CanvasGrid` component onto the screen and bind to the `Contacts` table in Microsoft Dataverse.
-
-12. Set the following properties on the `CanvasGrid` code component using the properties panel:
-
-    - **Highlight Value** = `1` - This is the value that `statecode` has when the record is inactive.
-    - **Highlight Color** = `#FDE7E9` - This is the color to use when the record is inactive.
-    - **`HighlightIndicator`** = `"statecode"` - This is the field to compare against. This will be on the **Advanced** panel in the **DATA** section.
+   - **Highlight Value** = `1` - This is the value that `statecode` has when the record is inactive.
+   - **Highlight Color** = `#FDE7E9` - This is the color to use when the record is inactive.
+   - **`HighlightIndicator`** = `"statecode"` - This is the field to compare against. This will be on the **Advanced** panel in the **DATA** section.
 
    :::image type="content" source="media/canvas-datagrid-5.png" alt-text="Properties Panel":::
 
-13. Add a new `TextInput` component and name it `txtSearch`.
-
-14. Update the `CanvaGrid1.Items` property to be `Search(Contacts,txtSearch.Text,"fullname")`.
-    As you type in the **Text Input**, you'll see that the contacts are filtered in the grid.
+1. Add a new `TextInput` component and name it `txtSearch`.
+1. Update the `CanvasGrid.Items` property to be `Search(Contacts,txtSearch.Text,"fullname")`.
+   
+   As you type in the **Text Input**, you'll see that the contacts are filtered in the grid.
 
 15. Add a new **Text label** and set the text to be "No records found". Position the label on top of the Canvas Grid.
-
-16. Set the **Visible** property of the Text label to be `CanvasGrid1.FilteredRecordCount = 0`.
-    This means that when there are no records matching the `txtSearch` value, or if a column filter is applied using the context menu that returns no records (for example, Full Name does not contain data), the label will be displayed.
-
-17. Add a **Display Form** (from the **Input** group in the **Insert** panel).
-
-18. Set the form `DataSource` to the `Contacts` table and add some **form fields**.
-
-19. Set the form `Item` property to `CanvasGrid1.Selected`.
-    You should now see that when you select items on the grid, the form displays the item selected.
-
-20. Add a new **Screen** to the canvas app called `scrDetails`.
-
-21. Copy the form from the previous screen and paste it onto the new screen.
-
-22. Set the `CanvasGrid1.OnSelect` property to be `Navigate(scrDetails)`.
-    When you invoke the grid row select action, you should now see that the app navigates to the second screen with the item selected.
+16. Set the **Visible** property of the Text label to be `CanvasGrid1.FilteredRecordCount=0`.
+   
+   This means that when there are no records matching the `txtSearch` value, or if a column filter is applied using the context menu that returns no records (for example, **Full Name** does not contain data), the label will be displayed.
+   
+1. Add a **Display Form** (from the **Input** group in the **Insert** panel).
+1. Set the form `DataSource` to the `Contacts` table and add some **form fields**.
+1. Set the form `Item` property to `CanvasGrid1.Selected`.
+   
+   You should now see that when you select items on the grid, the form displays the item selected.
+   
+1. Add a new **Screen** to the canvas app called `scrDetails`.
+1. Copy the form from the previous screen and paste it onto the new screen.
+1. Set the `CanvasGrid1.OnSelect` property to be `Navigate(scrDetails)`.
+   
+   When you invoke the grid row select action, you should now see that the app navigates to the second screen with the item selected.
+  
 
 ## Debugging after deploying
 
-You can easily debug your code component while it's running inside the canvas app by opening Developer Tools using `Ctrl` + `Shift` + `I`.
+You can easily debug your code component while it's running inside the canvas app by opening Developer Tools using `Ctrl+Shift+I`.
 
-Select `Ctrl` + `P` and type `Grid.tsx` or `Index.tsx`. You can then set a break point and step through your code.
+Select `Ctrl+P` and type `Grid.tsx` or `Index.ts`. You can then set a break point and step through your code.
 
 :::image type="content" source="media/canvas-datagrid-9.png" alt-text="Debug in canvas apps":::
 
@@ -2883,11 +2891,11 @@ If you need to make further changes to your component, you don't need to deploy 
 
 The **AutoResponder** would look similar to the following:
 
-```powershell
+```
 REGEX:(.*?)((?'folder'css|html)(%252f|\/))?SampleNamespace\.CanvasGrid[\.\/](?'fname'[^?]*\.*)(.*?)$
 ```
 
-```powershell
+```
 C:\repos\CanvasGrid\out\controls\CanvasGrid\${folder}\${fname}
 ```
 
@@ -2899,11 +2907,30 @@ You'll need to **Empty cache and hard refresh** on your browser session for the 
 
 Once you're happy with your changes, you can increment the patch version in the manifest, and then redeploy using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push).
 
-So far, you've deployed a development build, which is not optimized and will run slower at runtime. You can choose to deploy an optimized build using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) by editing the `CanvasGrid.pcfproj`. Underneath the `OutputPath`, add the following:
+So far, you've deployed a development build, which is not optimized and will run slower at runtime. You can choose to deploy an optimized build using [pac pcf push](/power-platform/developer/cli/reference/pcf#pac-pcf-push) by editing the `CanvasGrid.pcfproj`. Underneath the `OutputPath`, add the following: `<PcfBuildMode>production</PcfBuildMode>`
+
+##### [Before](#tab/before)
 
 ```xml
-<PcfBuildMode>production</PcfBuildMode>
+  <PropertyGroup>
+    <Name>CanvasGrid</Name>
+    <ProjectGuid>a670bba8-e0ae-49ed-8cd2-73917bace346</ProjectGuid>
+    <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+  </PropertyGroup>
 ```
+
+##### [After](#tab/after)
+
+```xml
+  <PropertyGroup>
+    <Name>CanvasGrid</Name>
+    <ProjectGuid>a670bba8-e0ae-49ed-8cd2-73917bace346</ProjectGuid>
+    <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
+  </PropertyGroup>
+```
+
+---
 
 ### Related articles
 
