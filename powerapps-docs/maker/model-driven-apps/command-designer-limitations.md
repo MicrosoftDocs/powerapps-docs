@@ -36,15 +36,19 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 - Dynamically populated buttons aren't supported. We recommend creating them declaratively.
 - Global application header and dashboard command bars aren't currently supported in command designer. These are customized infrequently. Share feedback if you find this valuable to prioritize.
 
-## Delete a Model-Driven App Element record
+## Delete a model-driven app element record
 
-Using the Model-driven App Elements table, do the following:
+> [!WARNING] 
+> If the app includes Power Fx-based commands, they will no longer work after you delete the app's model-driven app element table record.
+
+Using the **Model-driven App Elements** table, do the following:
 
 1. Create a flow to get a list of rows. More information: [Get a list of rows](/power-automate/dataverse/list-rows#get-a-list-of-rows)
    :::image type="content" source="media/list-rows-flow.png" alt-text="List model-driven app element Dataverse table rows using a flow":::
 1. Then, run the flow to find the **Row id unique** value for the row you want to delete and copy it. You can also find this row value by viewing the table rows in the table hub for the Model-driven App Element table at make.powerapps.com.
 1. Create a step to delete the row by using the unique ID value you copied in the previous step. More information: [Delete a row](/power-automate/dataverse/delete-row).
    :::image type="content" source="media/delete-row-flow.png" alt-text="Delete a row flow action using the model-driven app element Dataverse table row":::
+1. Publish the model-driven app associated with the model-driven app element record.
 
 ### See also
 
