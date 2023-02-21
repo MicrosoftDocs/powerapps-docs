@@ -588,7 +588,7 @@ Example:
 	
   ```
   "readOnlySettings": {
-	"height:": 500,
+	"height": 500,
 	"showFullScreenExpander": true
 }
   ```
