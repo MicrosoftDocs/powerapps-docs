@@ -153,10 +153,10 @@ You can set your app to open, for example, the **Case details** page as soon as 
 > 2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
 
 
-## Known limitations
+## Considerations
 
-* Currently, we don't provide push notifications for users who run apps only in a web browser.
 * You can send a push notification from one app to another or to the same app. For more information, see [Send notification from an app](../maker/canvas-apps/add-notifications.md).
+* Notifications show the generic Power Apps icon instead of a specific app icon.
 * Notifications are not supported in China.
 * Battery optimization settings on an Android device can interfere with receiving notifications for Power Apps mobile. To receive notifications for Power Apps mobile, turn off battery optimization for the app.
 * The example push notifications that are mentioned in this topic are only supported on Power Apps mobile. Other mobile apps such as  [Dynamics 365 Sales mobile app](/dynamics365/sales/sales-mobile/use-sales-mobile-app) or [Dynamics 365 for phones and tablets](/dynamics365/mobile-app/overview) do not support these types of notifications.
