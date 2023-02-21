@@ -2,7 +2,7 @@
 title: "Query and analyze the incremental updates | MicrosoftDocs"
 description: "Learn how to query and analyze the incremental updates made to Microsoft Dataverse data during a user-specified time interval with Power Apps and Azure Synapse Analytics"
 ms.custom: ""
-ms.date: 01/11/2023
+ms.date: 02/07/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,9 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Query and analyze the incremental updates (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Query and analyze the incremental updates
 
 Microsoft Dataverse data can continuously change through create, update, and delete transactions. Synapse Link for Dataverse provides incremental folders to help you query and analyze the incremental updates made to Dataverse data during a user-specified time interval. Organizations with large datasets can analyze the incremental update data and:
 
@@ -32,13 +30,11 @@ Microsoft Dataverse data can continuously change through create, update, and del
 When creating an Azure Synapse Link for Dataverse, you can enable the incremental update feature to create a series of timestamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval. In each timestamp folder, each exported table is stored under a separate *DataverseTableName* folder.
 
 > [!IMPORTANT]
-> This is a preview feature.
-> 
 > Timestamp and table folders are created only when there is a data update during the user-specified time interval.
-> 
+>
 > This feature will apply to all selected tables within Azure Synapse Link for Dataverse and, by default, all the tables selected will be assigned append-only mode with incremental updates.
-> 
-> This feature cannot be enabled with the option: **Connect to your Azure Synapse workspace Azure Synapse workspace**. For customers who require Azure Synapse analytics access, follow this instruction to setup the link: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md) 
+>
+> This feature can't be enabled with the option: **Connect to your Azure Synapse workspace**. For customers who require Azure Synapse analytics access, follow this instruction to setup the link: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md) 
 >  
 > This feature is designed to work with Azure Data Factory or Synapse Pipeline to copy data from Azure Data Lake Storage Gen2 to an Azure SQL Database. More information:[Copy Dataverse data into Azure SQL](azure-synapse-link-pipelines.md)
 
@@ -58,9 +54,11 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
    :::image type="content" source="media/azure-synapse-add-tables-settings.png" alt-text="Add tables settings":::
 
 > [!NOTE]
-> The minimum time interval should be 15. That means the incremental update folder will be created every 15 minutes and contain the changes that occurred within the time interval.
+> Please be advised that **time interval configuration** is considered final once the setup process is completed and will be grayed out to indicate that it can't be changed. 
+>
+> The minimum time interval is 15 minutes. That means the incremental update folder will be created every 15 minutes and contain the changes that occurred within the time interval.
+> 
 > Ensure **Connect to your Azure Synapse workspace Azure Synapse workspace** is not checked in the first page of setup.
-
 
 ## View incremental folder at Microsoft Azure Storage
 
@@ -70,12 +68,8 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
 
    :::image type="content" source="media/azure-synapse-incremental-folders.png" alt-text="Incremental folders in Azure Synapse":::
 
-
-> [!NOTE] 
-> Near real-time data view is not supported when the view incremental folder feature is enabled. To view real-time data use snapshot data instead. More information: [Access near real-time data and read-only snapshot data](azure-synapse-link-synapse.md#access-near-real-time-data-and-read-only-snapshot-data)
-> Due to the retry mechanism features, an extra empty timestampe folder might be created within the user-specified time interval.
-
-
+> [!NOTE]
+> Due to the retry mechanism features, an extra empty timestamp folder might be created within the user-specified time interval.
 
 ### See also
 
