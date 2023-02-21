@@ -58,7 +58,7 @@ The Inspection solution for Microsoft Teams is a general inspection app that can
 
 ![Screenshot of the Inspection app for Microsoft Teams.](media/review-inspection.png "Screenshot of the Inspection app for Microsoft Teams")
 
-Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](/powerapps/teams/inspection) |  [Teams app installer](https://aka.ms/TeamsInspection)
+Learn more about the solution:  [Video](https://aka.ms/TeamsInspectionVideo) |  [Documentation](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection)
 
 ## Template: Hospital Emergency Response sample solution
 
