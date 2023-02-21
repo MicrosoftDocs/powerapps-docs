@@ -26,12 +26,14 @@ A [connection](/power-automate/add-manage-connections) is a stored [authenticati
 
 A *connection reference* is a solution component that contains a reference to a connection about a specific connector. Both solution-aware canvas apps and operations within a [solution-aware flow](/power-automate/overview-solution-flows) bind to a connection reference instead of directly to a connection. During solution import into a target environment, a connection is provided for all the connection references so any referencing flows can be [turned on](/power-automate/disable-flow#turn-flows-on) automatically after the import completes. To change a specific connection associated with a canvas app or flow, you edit the connection reference component within the solution.
 
-You can add a connection reference to a solution in different ways:
-- From the **Solutions** area as described in this article.
+## Connection references and solutions
 
-- During solution import. To learn more, go to [Import solutions](import-update-export-solutions.md).
+Connection references can be added to a solution in different ways:
+- When you using the **Solutions** explorer to create a new connection reference in a solution.
 
-- When you build your [canvas apps](../canvas-apps/add-app-solution.md) and [flows](/power-automate/create-flow-solution) in a solution.
+- When you import a solution. To learn more, go to [Import solutions](import-update-export-solutions.md).
+
+- Implicitly when you build your [canvas apps](../canvas-apps/add-app-solution.md) and [flows](/power-automate/create-flow-solution) that are defined in a Dataverse solution.
 
 > [!NOTE]
 >
@@ -39,6 +41,8 @@ You can add a connection reference to a solution in different ways:
 > - A connection reference is automatically created when you create new connections from the flow and canvas app designers.
 > - Canvas apps and flows added from outside solutions will not automatically be upgraded to use connection references. 
 > - Connection references get associated with canvas apps only at the time a data source is added to the app. To upgrade apps you must remove the connection from the app and then add a connection containing an associated connection reference. 
+
+## Manually add a connection reference to a solution using solution explorer
 
 1. Sign in to [Power Apps](https://make.powerapps.com/) or [Power Automate](https://make.powerautomate.com/).
 
@@ -58,10 +62,13 @@ You can add a connection reference to a solution in different ways:
 
 1. Select **Create**.
 
-## Limits
+## Connection reference naming
 
-Connection references are now saved asynchronously, so unlike during the preview period, there is no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner will be shown that links to a panel containing asynchronous update details.
-There is also no limit to the number of actions in each flow that can be associated with the connection reference.
+The display name of a connection reference should be unique so different connection references can be differentiated by name alone. By default, a connection reference name mentions the target connector, includes the current solution name for context, and includes a random suffix to ensure uniqueness. Consider adjusting the connection reference name to something unique and something that explains what it will be used for.
+
+## Reusing connections in a solution flow
+
+Flows created outside a solution use connections directly. Flows created in a solution use connection references and the connection reference points at the connection. To reuse a connection within a solution flow, you first need to create a connection reference pointing at that connection.
 
 ## Updating a flow to use connection references instead of connections
 
@@ -72,21 +79,19 @@ Flows can be updated to use connections references instead of connections in one
 
 1. When a solution flow is opened, the flow checker on the flow details page will show a warning to **Use connection references**. The warning message contains an action to **Remove connections so connection references can be added**. Selecting that action will remove connections from the trigger and actions in the flow and allow connection references to be selected and created.
 
-## Connection reference usage tips
-
-### Reusing connections in a solution flow
-
-Flows created outside a solution use connections directly. Flows created in a solution use connection references and the connection reference points at the connection. To reuse a connection within a solution flow, you first need to create a connection reference pointing at that connection.
-
-### Automatic use of connection references in a solution flow
+## Automatic use of connection references in a solution flow
 
 When an action is added to a solution flow, Power Automate will try to reuse existing connection references from the current solution or other solutions before creating a new Connection Reference. To ensure that the connection reference is inside the same solution as the flow, create or add a connection reference in the same solution and reference that connection reference from the flow.
 
-### Enable flows containing connections from another user
+## Sharing connections with another user so flows can be enabled
 
 When a flow is enabled, the enabling user needs to own all the connections. This is usually accomplished by having the flow owner create the connections inside all the connection references that the flow uses. If a user other than the owner provides the connections on a flow, then those connections need to be shared with the owner who is enabling (turning on) the flow.
 
-#### Manual sharing of connections for flow enablement
+> [!NOTE]
+>
+> - Currently, connections can only be explicitly shared with a user representing a service principal
+
+### Manual sharing of connections for flow enablement
 
 Sharing connections can be accomplished by using the following steps.
 
@@ -96,23 +101,24 @@ Sharing connections can be accomplished by using the following steps.
 
 1. From the menu, select **Share**.
 
-1. From the sharing screen, enter the name of the user or service principal that will enable the flow.
+1. From the sharing screen, enter the name of the user (service principal) that will enable the flow.
 
 1. For the permissions, select **Can use**.
 
 1. To complete the sharing, select **Save**.
 
-#### Automated sharing of connections for flow enablement
+### Automated sharing of connections for flow enablement
 
 To automate sharing of connections, use the [Edit Connection Role Assignment action](/connectors/powerappsformakers/#edit-connection-role-assignment) on the Power Apps for Makers connector. An automated connection sharing example can be found in the **ShareConnectionWithServicePrincipal** flow in the [ALM Accelerator for Power Platform](/power-platform/guidance/coe/setup-almacceleratorpowerplatform-preview).
 
 :::image type="content" source="media/share-connections-with-service-principal-flow.png" alt-text="Screenshot of a connection sharing example.":::
 
-### Connection reference naming
+## Limits
 
-The display name of a connection reference should be unique so different connection references can be differentiated by name alone. By default, a connection reference name mentions the target connector, includes the current solution name for context, and includes a random suffix to ensure uniqueness. Consider adjusting the connection reference name to something unique and something that explains what it will be used for.
+Connection references are now saved asynchronously, so unlike during the preview period, there is no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner will be shown that links to a panel containing asynchronous update details.
+There is also no limit to the number of actions in each flow that can be associated with the connection reference.
 
-### See also
+## See also
 
 [Connectors](/connectors/connectors)
 
