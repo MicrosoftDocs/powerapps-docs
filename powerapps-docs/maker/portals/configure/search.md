@@ -155,6 +155,10 @@ The following content snippets are related to global search:
 
 - **Case**: By default, the only cases that are searchable are in the **Resolved** state with the **Publish to Web** field set to **True**. This behavior can be modified by updating the Portal Search view of the Case table and removing the filters available in the Portal Search view. However, when this check is removed, it's important to ensure that the Customer Service – Case web template is modified appropriately, as this web template restricts all users from viewing cases that are active and aren't published to the web. If the web template isn't modified, cases will be visible in search results. However, when you select them, the case detail web page is displayed with the Permission denied error.
 
+[!NOTE]
+The site marker name for Case table is **Case**. For custom / additional tables, the site marker name remains as **entitylogicalname_SearchResultPage**. This is required to find the associated record details page.
+
+
 - **Knowledge Base**: Knowledge articles are searchable only if they are in the **Published** state with the **Internal** field set to **No**. This behavior can't be modified. Knowledge articles also have special functionality available in search results as follows:
 
     - **Facets**: Two special facets are available only for knowledge articles and are displayed if knowledge article records are available in search results.
