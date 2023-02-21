@@ -44,6 +44,9 @@ You can also select a column heading from the table view, and then select **Filt
 
 ## Create a table
 
+Watch this video for a quick overview about how to create a table:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM]
+
 While [viewing tables](#view-tables), on the menu bar select **New table**. This opens the **New table** panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
