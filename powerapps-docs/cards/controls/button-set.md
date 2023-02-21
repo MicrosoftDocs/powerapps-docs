@@ -30,6 +30,6 @@ A container for a set of button elements.
 
 **[Height](control-reference.md#h)** – Specifies the height of the control.
 
-**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](repeat-for-every.md).
+**[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.
