@@ -1,7 +1,7 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 01/30/2023
+ms.date: 02/22/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -35,18 +35,18 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 1. Open the solution that contains the model-driven app.  
 
-1. Select the model-driven app and click **Edit** split menu to open using the modern app designer
+1. Select the model-driven app and click **Edit** split menu to open using the modern app designer.
 
-1. Open **Settings** and switch to **Upcoming**
+1. Open **Settings** and switch to **Features**.
 
-1. Enable "In-app notifications"
+1. Enable "In-app notifications".
 
     > [!div class="mx-imgBorder"]
     > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
 
-1. Click **Save** to save the settings change
+1. Click **Save** to save the settings change.
 
-1. Click **Publish** on the model-driven app
+1. Click **Publish** on the model-driven app.
 
 
 ## Send basic in-app notifications
