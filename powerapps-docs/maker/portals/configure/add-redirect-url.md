@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 02/22/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -35,7 +35,7 @@ Customers frequently want to have a simple URL that redirects to a page deeper i
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Name        | The friendly name of the redirect. (Can be anything. Make it easy to identify.)                                                              |
 | Website     | The website the redirect is associated with. (The site the user is redirected from.)                                                         |
-| Inbound URL | The partial URL that is to be redirected. (The page the user is redirected from.)                                                            |
+| Inbound URL | The partial URL that is to be redirected. Ensure that there is a `/` prefix added to the inbound URL, for example: `/oldpage`. |
 | Status Code | One of the following:  **302 (Temporary Redirect)**: returns a temporary redirect status. This is the default.                                               -   **301 (Permanent Redirect)**: returns a permanent redirect status, indicating the resource has moved permanently.                          |
 | URL         | A target external URL to be redirected to. (Use this if the user is being redirected to a link external to the website specified above.)                            |
 | Web Page    | A target internal webpage to be redirected to. (Use this if the user is being redirected to a page internal to the website specified above.) |
