@@ -109,7 +109,7 @@ The following are limitations for each data source.
    - “Error calling... please verify that connection... exists in environment”
    - "Sequence matches no element for "msdyn_get_required_fields""<br />
   **Solution**: In some cases you might not have the most up to date solution for the virtual connector provider. To determine whether your virtual connector provider solution needs an update:
-  1. Select **Solutions** on the left navigation pane.
+  1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   1. Select the **History** tab.
   1. **Search** for ConnectorProvider.
   1. View the information to see whether the solution needs to be updated.
@@ -119,7 +119,7 @@ The following are limitations for each data source.
 - A message is displayed “Connection ‘xyz’ not found in current environment.” when retrieving the list of connections.<br />
    **Solution**: This occurs when there are a large number of connectins in the user's Dataverse environment. This is fixed with version 1029 of the COnnector Provider solution. The updated version should be in all regions by Feb 20, 2023.
   To determine whether your virtual connector provider solution needs an update:
-  1. Select **Solutions** on the left navigation pane.
+  1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   1. Select the **History** tab.
   1. **Search** for ConnectorProvider.
   1. View the information to see whether the solution needs to be updated.
