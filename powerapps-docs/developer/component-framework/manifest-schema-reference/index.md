@@ -38,6 +38,7 @@ This section contains reference documentation for manifest schema generated usin
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|Model-driven and canvas apps|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|Model-driven apps|
 |[uses-feature](uses-feature.md)|[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]|Model-driven apps|
+|[external-service-usage](external-service-usage.md)|[!INCLUDE [external-service-usage](includes/external-service-usage.md)]|Canvas apps|
 
 
 ### Related topics
