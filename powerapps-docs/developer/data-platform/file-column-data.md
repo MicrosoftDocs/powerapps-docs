@@ -761,7 +761,7 @@ private static byte[] DownloadFile(
    string fileContinuationToken = initializeFileBlocksDownloadResponse.FileContinuationToken;
    long fileSizeInBytes = initializeFileBlocksDownloadResponse.FileSizeInBytes;
 
-   List<byte> fileBytes = new();
+   List<byte> fileBytes = new((int)fileSizeInBytes);
 
    long offset = 0;
    long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
