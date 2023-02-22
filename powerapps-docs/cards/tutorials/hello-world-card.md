@@ -25,7 +25,7 @@ In this tutorial, you'll create a card that asks the user to enter their name, a
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-1. In the left pane, select **Cards (preview)**.
+1. In the left pane, select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 
 1. Select **+ Create a card**.
 
