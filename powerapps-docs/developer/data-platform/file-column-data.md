@@ -312,14 +312,10 @@ static Guid UploadFile(
 
          blockIds.Add(blockId);
 
-         // Copy the next block of data to send.
-         var blockData = new byte[buffer.Length];
-         buffer.CopyTo(blockData, 0);
-
          // Prepare the request
          UploadBlockRequest uploadBlockRequest = new()
          {
-            BlockData = blockData,
+            BlockData = buffer,
             BlockId = blockId,
             FileContinuationToken = fileContinuationToken,
          };

@@ -32,7 +32,7 @@ Because these columns are part of the data for the attachment or note record, yo
 
 You can directly get and set the values of the `activitymimeattachment.body` and `annotation.documentbody` columns as Base64 encoded strings. This should be fine as long as the files are not too large, for example under 4 MB.
 
-By default the maximum size is 5 MB. You can configure these columns to accept files as large as 125 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.  For information about retrieving or changing the file size limits, see [File size limits](#file-size-limits).
+By default the maximum size is 5 MB. You can configure these columns to accept files as large as 128 MB. When you have increased the maximum file size and are working with larger files, you should use messages provided to break the files into smaller chunks when uploading or downloading files.  For information about retrieving or changing the file size limits, see [File size limits](#file-size-limits).
 
 ## Attachment files
 
@@ -134,14 +134,10 @@ static CommitAttachmentBlocksUploadResponse UploadAttachment(
 
          blockIds.Add(blockId);
 
-         // Copy the next block of data to send.
-         var blockData = new byte[buffer.Length];
-         buffer.CopyTo(blockData, 0);
-
          // Prepare the request
          UploadBlockRequest uploadBlockRequest = new()
          {
-            BlockData = blockData,
+            BlockData = buffer,
             BlockId = blockId,
             FileContinuationToken = fileContinuationToken,
          };
@@ -379,7 +375,7 @@ static (byte[] bytes, string fileName) DownloadAttachment(
    int fileSizeInBytes = response.FileSizeInBytes;
    string fileName = response.FileName;
 
-   List<byte> fileBytes = new();
+   List<byte> fileBytes = new(fileSizeInBytes);
 
    long offset = 0;
    long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
@@ -609,14 +605,10 @@ static CommitAnnotationBlocksUploadResponse UploadNote(
 
          blockIds.Add(blockId);
 
-         // Copy the next block of data to send.
-         var blockData = new byte[buffer.Length];
-         buffer.CopyTo(blockData, 0);
-
          // Prepare the request
          UploadBlockRequest uploadBlockRequest = new()
          {
-            BlockData = blockData,
+            BlockData = buffer,
             BlockId = blockId,
             FileContinuationToken = fileContinuationToken,
          };
@@ -849,7 +841,7 @@ string fileContinuationToken = response.FileContinuationToken;
 int fileSizeInBytes = response.FileSizeInBytes;
 string fileName = response.FileName;
 
-List<byte> fileBytes = new();
+List<byte> fileBytes = new(fileSizeInBytes);
 
 long offset = 0;
 long blockSizeDownload = 4 * 1024 * 1024; // 4 MB
@@ -981,7 +973,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md)
 
 The [Organization.MaxUploadFileSize](reference/entities/organization.md#BKMK_MaxUploadFileSize) column specifies the maximum allowed size of an a file (in bytes) for an attachment and note, as well as other kinds of data, such as web resource files used for model-driven apps.
 
-The default size is 5 MB (5242880 bytes) and the maximum value is 125 MB (131072000 bytes) and can be set in the email settings for the environment. More information: [Manage email settings](/power-platform/admin/settings-email)
+The default size is 5 MB (5242880 bytes) and the maximum value is 128 MB (131072000 bytes) and can be set in the email settings for the environment. More information: [Manage email settings](/power-platform/admin/settings-email)
 
 If you try to upload a file that is too large, you'll get the following error:
 
