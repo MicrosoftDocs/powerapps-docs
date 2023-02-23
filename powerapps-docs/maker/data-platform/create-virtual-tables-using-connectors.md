@@ -89,7 +89,7 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 
 These steps describe how to create a virtual table from a solution. Use similar steps to create a virtual table by going to **Data** > **Tables**.
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Create a new solution or open an existing unmanaged solution.
 1. On the command bar, select **New** > **Table** > **Table from external data**.
 
@@ -228,7 +228,7 @@ Watch a short video showing how to create a virtual table with the Excel virtual
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4YcGf]
 
 1.	Go to Power Apps (make.powerapps.com), and select the environment in which you would like to set up the virtual table.
-1.	In the left navigation pane, select **Data** > **Connections**, and then select **New connection**.
+1.	In the left navigation pane, select **Connections**, and then select **New connection**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Microsoft Excel Online (Business) Virtual Connector** from the list of connections.
 1. You'll be asked to provide additional details to connect to the data source.
 1. Select **Create**, your current signed-in credentials will be used.
