@@ -31,7 +31,8 @@ The following steps walk you through opening the new modern app designer, which 
 
 1. Sign into [Power Apps](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
-1. On the left navigation pane, select **Solutions** and then open or create a solution to contain the new model-driven app.
+1. On the left navigation pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open or create a solution to contain the new model-driven app.
 
 1. Select **New** > **App** > **Model-driven app**.
 
@@ -49,7 +50,8 @@ The following steps walk you through opening the new modern app designer, which 
 
 1. Open [make.powerapps.com](https://make.powerapps.com/?cds-app-module-designer.isCustomPageEnabled=true&oneCdsDesigner.enableCustomCanvasPage=true)
 
-1. On the left navigation pane, select **Solutions**, and then open the solution containing the existing model-driven app.
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution containing the existing model-driven app.
 
 1. Open the model-driven app menu and select **Edit** to open the modern app designer.
 
