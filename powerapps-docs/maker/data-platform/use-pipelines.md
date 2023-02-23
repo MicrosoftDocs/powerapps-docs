@@ -6,7 +6,7 @@ ms.author: matp
 ms.topic: overview
 ms.date: 02/23/2023
 ms.custom: template-overview
-ms.service: power-apps
+ms.service: powerapps
 ms.subservice: dataverse-maker
 contributors:
 - caburk
