@@ -1,7 +1,7 @@
 ---
 title: "Analyze plug-in performance (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to find and analyze performance data on plug-ins execution."
-ms.date: 03/22/2022
+ms.date: 02/23/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath"
@@ -45,15 +45,15 @@ Run-time information about plug-ins and custom workflow extensions is captured a
 |TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
 |TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
 
-This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Dataverse** > **Plug-ins**.
-
 ## Plug-in performance analytics
 
-In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can obtain metrics as to the overall performance of your registered plug-ins in an organization through [Microsoft Dataverse analytics](/power-platform/admin/analytics-common-data-service).
+In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can interactively obtain metrics as to the overall performance of your registered plug-ins in an organization through [Microsoft Dataverse analytics](/power-platform/admin/analytics-common-data-service).
 
 Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
 
 ![Analytics plug-in dashboard.](media/cds-insights-plugins.png)
+
+To access the dashboard, navigate to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Dataverse** > **Plug-ins**.
 
 ## See also
 

@@ -25,15 +25,15 @@ You can create plug-ins by using one of the following two methods:
 
 - Power Platform development tools provide a modern way to create plug-ins. The tools being referred to here are *Power Platform Tools for Visual Studio* and *Power Platform CLI*. Both these Power Platform tools generate similar plug-in code so moving from one tooling method to the other is fairly easy and understandable.
 
-  - Use Power Platform Tools for Visual Studio to quickly create and register (deploy) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
+  - Use [Power Platform Tools for Visual Studio](tools/devtools-install.md) to quickly create and register (deploy) plug-ins. A [quickstart](tools/devtools-create-plugin.md) article is available to show you how. Use this tool if you like to work in Visual Studio.
 
-  - Use Power Platform CLI to create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
+  - Use [Power Platform CLI](cli/introduction.md) to create a basic (Visual Studio compatible) plug-in project with template plug-in code using a single [pac plugin](/power-platform/developer/cli/reference/plugin) command. Afterwards, using the [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) command, you interactively use the Plug-in Registration tool to register your creation with Microsoft Dataverse. Use this CLI tool set if you like working in a terminal window or Visual Studio Code.
 
 - Manually write code using your favorite editor or IDE. The rest of the plug-in documentation in this topic and the other related topics is written with the developer writing code in mind, however the concepts introduced apply to all methods of plug-in development.
 
 ## IPlugin interface
 
-A plug-in is a compiled class within an assembly built to target .NET Framework 4.6.2. Each class in a plug-in project that will be registered on an event pipeline step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which defines a single <xref:Microsoft.Xrm.Sdk.IPlugin.Execute%2A?displayProperty=nameWithType> method.
+A plug-in is a compiled class within an assembly built to target .NET Framework 4.6.2. Each class in a plug-in project that will be registered on an [event pipeline step](event-framework.md) must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which defines a single <xref:Microsoft.Xrm.Sdk.IPlugin.Execute%2A?displayProperty=nameWithType> method.
 
 ```csharp
 public class MyPlugin : IPlugin
@@ -54,13 +54,13 @@ More information: [Services you can use in your code](#services-you-can-use-in-y
 >
 > When using Power Platform tools for plug-in creation, the generated `PluginBase` class is derived from `IPlugin`.
 
-There are some exceptions to the statement about adding properties or methods in the note above. For example you can have a property that represents a constant and you can have methods that represent functions that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
+There are some exceptions to the statement about adding properties or methods in the note above. For example you can have a property that represents a constant and you can have methods that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These values change with every invocation and you don't want that data to be cached and applied to subsequent invocations.
 
 More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
 
 ### Pass configuration data to your plug-in
 
-When you register a plug-in you may optionally specify configuration data to pass to the plug-in at run-time. Configuration data allows you to define how a specific instance of a registered plug-in should behave. This information is passed as string data to parameters in the constructor of your class. There are two parameters: `unsecure` and `secure`. Use the first `unsecure` parameter for data that you don't mind if someone can see. Use the second `secure` parameter for sensitive data.
+When you register a plug-in you may optionally specify configuration data to pass to the plug-in at run-time. Configuration data allows you to define how a specific instance of a registered plug-in should behave. This information is passed as string data to parameters in the constructor of your class. There are two parameters named `unsecure` and `secure`. Use the first `unsecure` parameter for data that you don't mind if someone else can see. Use the second `secure` parameter for sensitive data.
 
 The following code shows the three possible constructor signatures for a plug-in class named MyPlugin.
 
@@ -82,7 +82,7 @@ Typically, within your plug-in you will:
 - Access the Organization web service using SDK for .NET calls to perform message request operations like query, create, update, delete, and more.
 - Write messages to the Tracing service so you can evaluate how your plug-in code is executing.
 
-The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service you invoke the `GetService` method passing the type of service. Read more about this in the next section.
+The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method provides you with a way to access service references passed in the execution context when needed. To get an instance of a service you invoke the `GetService` method passing the type of service. Read more about this in the next sections.
 
 ### Execution context
 
@@ -127,7 +127,7 @@ To write to the trace, use the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Mi
 tracingService.Trace("Write {0} {1}.", "your", "message");
 ```
 
-More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and tracing](logging-tracing.md).
+More information: [Use Tracing](debug-plug-in.md#use-tracing), [Tracing and logging](logging-tracing.md).
 
 ### Other services
 
@@ -206,7 +206,7 @@ Plug-in and custom workflow activity assembly projects must target .NET Framewor
 
 The assembly may include multiple plug-in classes (or types), but can be no larger than 16 MB in size. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
 
-More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+Best practice information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
 
 ### Assemblies must be signed
 
