@@ -70,7 +70,9 @@ public MyPlugin(string unsecure) {}
 public MyPlugin(string unsecure, string secure) {}
 ```
 
-The secure configuration data is stored in a separate table which only system administrators have privileges to read. More information: [Register plug-in step > Set configuration data](register-plug-in.md#set-configuration-data)
+The secure configuration data is stored in a separate table which only system administrators have privileges to read.
+
+More information: [Register plug-in step > Set configuration data](register-plug-in.md#set-configuration-data)
 
 ## Services you can use in your code
 
@@ -106,8 +108,6 @@ IOrganizationServiceFactory serviceFactory =
     (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
 IOrganizationService orgService = serviceFactory.CreateOrganizationService(context.UserId);
 ```
-
-The `context.UserId` variable used with <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> comes from the execution context <xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> property, so this call must be done after the execution context has been accessed.
 
 ### Tracing service
 
