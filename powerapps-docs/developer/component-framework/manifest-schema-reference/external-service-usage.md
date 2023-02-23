@@ -10,7 +10,7 @@ ms.subservice: pcf
 contributors:
  - JimDaly
 ---
-# external-service-usage Element
+# external-service-usage element
 
 [!INCLUDE [external-service-usage-description](includes/external-service-usage-description.md)]
 
