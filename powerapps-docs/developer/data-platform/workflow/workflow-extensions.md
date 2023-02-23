@@ -377,7 +377,7 @@ When all processes are converted to use the new assembly, you can use the Plug-i
 
 ## Performance Guidance
 
-Performance considerations for your workflow extensions are the same as for ordinary plug-ins.  More information: [Performance considerations](../write-plug-in.md#performance-considerations)
+Performance considerations for your workflow extensions are the same as for ordinary plug-ins.  More information: [Analyze plug-in performance](../analyze-performance.md)
 
 Unlike an ordinary plug-in, with workflow extensions you don't have the opportunity to explicitly register your code for a specific step. This means you don't control whether the code in your workflow extension will run synchronously or asynchronously. Particular care must be considered for code that runs synchronously because it will directly impact the application user's experience.
 
