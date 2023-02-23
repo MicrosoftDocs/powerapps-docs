@@ -161,7 +161,8 @@ public class MyPlugin : IPlugin
 
     try
     {
-      // TODO Plug-in business logic goes here 
+      // TODO Plug-in business logic goes here. You can access data in the context,
+      // and make calls to the Organization web service using the Dataverse SDK.
     }
     catch (FaultException<OrganizationServiceFault> ex)
     {
@@ -203,7 +204,9 @@ Plug-in and custom workflow activity assembly projects must target .NET Framewor
 
 ### Optimize assembly development
 
-The assembly should include multiple plug-in classes (or types), but can be no larger than 16 MB. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB. More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+The assembly may include multiple plug-in classes (or types), but can be no larger than 16 MB in size. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB.
+
+More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
 
 ### Assemblies must be signed
 
@@ -225,40 +228,6 @@ More information: [Dependent Assembly plug-ins](dependent-assembly-plugins.md).
 > The dependent assembly capability is so important to plug-in development that you should consider using it from the start even if you do not have an immediate need to do so. Adding support for dependent assemblies to your plug-in project is much more difficult later on in the development cycle.
 >
 > Since this feature is a Preview release, do not use this feature for production work.
-
-## Performance considerations
-
-When you add the business logic for your plug-in you need to be very aware of the impact they will have on overall performance.
-
-> [!IMPORTANT]
-> The business logic in plug-ins registered for synchronous steps should take no more than 2 seconds to complete.
-
-### Time and resource constraints
-
-There is a 2-minute time limit for message operations to complete. There are also limitations on the amount of CPU and memory resources that can be used by extensions. If the limits are exceeded an exception is thrown and the operation will be cancelled.
-
-If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown. If any custom extension exceeds threshold CPU, memory, or handle limits or is otherwise unresponsive, that process will be killed by the platform. At that point any current extension in that process will fail with exceptions. However, the next time that the extension is executed it will run normally.
-
-### Monitor Performance
-
-Run-time information about plug-ins and custom workflow extensions is captured and stored in the [PluginTypeStatistic Table](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This table provides the following data points:
-
-|**Column**|**Description**|
-|--|--|
-|AverageExecuteTimeInMilliseconds|The average execution time (in milliseconds) for the plug-in type. |
-|CrashContributionPercent|The plug-in type percentage contribution to crashes. |
-|CrashCount|Number of times the plug-in type has crashed. |
-|CrashPercent|Percentage of crashes for the plug-in type. |
-|ExecuteCount|Number of times the plug-in type has been executed. |
-|FailureCount |Number of times the plug-in type has failed. |
-|FailurePercent|Percentage of failures for the plug-in type. |
-|PluginTypeIdName|Unique identifier of the user who last modified the plug-in type statistic. |
-|TerminateCpuContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive CPU usage. |
-|TerminateHandlesContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive handle usage. |
-|TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
-|TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
-
-This data is also available for you to browse using the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/). Select **Analytics** > **Dataverse** > **Plug-ins**.
 
 ## Next steps
 
