@@ -34,23 +34,31 @@ Canvas apps
 
 ## Example 1
 
+External usage enabled for www.microsoft.com only.
+
 ```xml
-   <external-service-usage enabled="true">
-      <domain>www.Microsoft.com</domain>
-   </external-service-usage>
+<external-service-usage enabled="true">
+   <domain>www.Microsoft.com</domain>
+</external-service-usage>
 ```
 
 ## Example 2
 
-```xml
-   <external-service-usage enabled="false" />
+External usage enabled for multiple domains.
 
-   <external-service-usage enabled="false">
-      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
-   <domain></domain>
-   <domain></domain>
-   -->
-   </external-service-usage>
+```xml
+<external-service-usage enabled="false">
+  <domain>www.contoso.com</domain>
+  <domain>www.yourcompany.com</domain>
+</external-service-usage>
+```
+
+## Example 3
+
+External usage is not enabled.
+
+```xml
+<external-service-usage enabled="false" />
 ```
 
 ### Related topics
