@@ -469,8 +469,7 @@ Default:
 </td>
 
 <td>
-
-  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To process images, set this property to true.
+  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to **true**.
 </td>
 <td>
 
