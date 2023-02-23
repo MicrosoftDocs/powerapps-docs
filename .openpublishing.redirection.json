@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/data-platform/data-platform-cr.md",
+      "redirect_url": "create-edit-entities-portal",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/cards/controls/repeat-for-every.md",
       "redirect_url": "/power-apps/cards/controls/control-reference#r",
       "redirect_document_id": false
