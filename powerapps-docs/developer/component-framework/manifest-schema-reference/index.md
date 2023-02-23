@@ -24,6 +24,7 @@ This section contains reference documentation for manifest schema generated usin
 |[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|Model-driven and canvas apps|
 |[css](css.md)|[!INCLUDE [css-description](includes/css-description.md)]|Model-driven and canvas apps|
 |[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|Model-driven apps|
+|[domain](domain.md)|[!INCLUDE [domain-description](includes/domain-description.md)]|Canvas apps|
 |[external-service-usage](external-service-usage.md)|[!INCLUDE [external-service-usage-description](includes/external-service-usage-description.md)]|Canvas apps|
 |[feature-usage](feature-usage.md)|The feature-usage element acts as a wrapper around the `uses-feature` elements, which themselves allow developers to declare which features their component wants to use. If there are no uses-feature elements defined, the feature-usage element is not required.|Model-driven apps|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|Model-driven apps|
