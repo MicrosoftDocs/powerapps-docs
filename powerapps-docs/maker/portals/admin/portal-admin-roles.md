@@ -119,7 +119,7 @@ To assign a user the System administrator Power Platform role, go to [Configure 
 
 *System customizer* is a Microsoft Power Platform security role. This role has full permissions to customize a Microsoft Power Platform environment.
 
-To assign a user the System administrator Power Platform role, go to [Configure user security to resources in an environment](/power-platform/admin/database-security).
+To assign a user the System Customizer Power Platform role, go to [Configure user security to resources in an environment](/power-platform/admin/database-security).
 
 ### Power Platform administrator
 

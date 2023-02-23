@@ -442,6 +442,10 @@ items:
         href: manifest-schema-reference/css.md
       - name: data-set
         href: manifest-schema-reference/data-set.md
+      - name: domain
+        href: manifest-schema-reference/domain.md
+      - name: external-service-usage
+        href: manifest-schema-reference/external-service-usage.md
       - name: feature-usage
         href: manifest-schema-reference/feature-usage.md
       - name: img
