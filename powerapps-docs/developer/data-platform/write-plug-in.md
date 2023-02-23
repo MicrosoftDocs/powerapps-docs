@@ -175,7 +175,7 @@ More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and trac
 When you add the business logic for your plug-in you need to be very aware of the impact they will have on overall performance.
 
 > [!IMPORTANT]
-> The business logic in plug-ins registered for synchronous steps should take no more than 2 seconds to complete.
+> The business logic in plug-ins registered for synchronous steps should take no more than 2 minutes to complete.
 
 ### Time and resource constraints
 
