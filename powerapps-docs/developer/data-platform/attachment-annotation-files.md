@@ -22,7 +22,7 @@ contributors:
 
 These tables existed before file or image columns, so they work differently.
 
-- The binary file data is stored as Base64 encoded string values in string columns: [ActivityMimeAttachment.Body](reference/entities/activitymimeattachment.md#BKMK_Body) and [Annotation.DocumentBody](reference/entities/annotation.md#BKMK_DocumentBody) .
+- The binary file data is stored as Base64 encoded string values in string columns: [ActivityMimeAttachment.Body](reference/entities/activitymimeattachment.md#BKMK_Body) and [Annotation.DocumentBody](reference/entities/annotation.md#BKMK_DocumentBody).
 - File name data is stored in the `FileName` column.
 - Mime type data is stored in the `MimeType` column.
 
