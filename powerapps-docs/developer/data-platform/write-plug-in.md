@@ -1,7 +1,7 @@
 ---
 title: "Write a plug-in (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to write custom code to be executed in response to data processing events." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 02/22/2023
+ms.date: 02/23/2023
 ms.reviewer: "pehecke"
 ms.topic: "article"
 author: "divkamath" # GitHub ID
@@ -93,7 +93,7 @@ IPluginExecutionContext context = (IPluginExecutionContext)
     serviceProvider.GetService(typeof(IPluginExecutionContext));
 ```
 
-More information: <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>
+More information: <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>, [Understand the execution context](understand-the-data-context.md)
 
 ### Organization web service
 
