@@ -100,7 +100,7 @@ the solution</td>
 <ul>
 <li>Content provided in the solution could be rendered in
 all the intended devices.<br/>Example: Do not have videos that could not render in
-certain browsers.<li>
+certain browsers.</li>
 <li>Does not have unnecessary redirects</li>
 <li>Does not have interstitials that interrupts the user's
 flow</li>
