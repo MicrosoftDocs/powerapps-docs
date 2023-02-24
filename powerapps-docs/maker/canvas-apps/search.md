@@ -1,5 +1,5 @@
 ---
-title: Use the Search pane (preview)
+title: Use the Search pane
 description: Learn how to use the Search pane inside Power Apps Studio to find text.
 author: TashasEv
 ms.topic: conceptual
