@@ -737,6 +737,21 @@ Depends on showAsTabControl and showPreview set to true.
   ```"showPreviewHeaderWarning": false```
 </td>
 
+<tr>
+<td>
+  allowSameOriginSandbox
+</td>
+<td>
+  This property enables the content within the Rich Text Editor to be treated as from the same origin as the rendering app. Use this property with caution as any untrusted external content could be allowed access to internal resources. <br></br>
+  
+  Defaults to false
+</td>
+<td>
+	
+  ```"allowSameOriginSandbox": false```
+</td>
+</tr>
+
 </tr>
 </table>
 
