@@ -2498,6 +2498,8 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
+      - name: Use pipelines to simplify solution deployment
+        href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
         href: ./data-platform/update-solutions.md
       - name: Other solution tasks

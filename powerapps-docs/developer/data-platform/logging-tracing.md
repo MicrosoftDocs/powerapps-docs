@@ -106,7 +106,7 @@ Each `Trace` call is logged as a new line in the [PluginTraceLog](reference/enti
 [Plug-ins](plug-ins.md)  
 [Debug a plug-in](debug-plug-in.md#use-tracing)  
 [View trace logs](tutorial-write-plug-in.md#view-trace-logs)  
-[Use the tracing service](write-plug-in.md#use-the-tracing-service)  
+[Tracing service](write-plug-in.md#tracing-service)  
 [PluginTraceLog Table](reference/entities/plugintracelog.md)
 
 
