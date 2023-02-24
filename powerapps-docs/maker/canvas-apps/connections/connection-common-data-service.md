@@ -110,6 +110,9 @@ Without this feature, it has been common for authors to use Power Automate to ca
 
 Working with untyped fields is not restricted to Dataverse. It works for all types of connectors and provides basic ad-hoc dynamic schema support.
 
+> [!NOTE]
+> If you encounter an error while executing a Dataverse action, it could be because of a temporary misconfiguration. To fix this issue, remove the environment data source and add it again.
+
 ### Enable access to Microsoft Dataverse actions
 
 To enable access to Dataverse actions, you will need to open your canvas app for editing and navigate to **Settings** > **Upcoming features** > **Experimental** > **Enable access to Microsoft Dataverse actions** and set the toggle to **On**.
