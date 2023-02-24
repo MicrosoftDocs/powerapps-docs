@@ -4,7 +4,7 @@ description: Learn how to create a connection reference.
 ms.custom: ""
 ms.date: 02/24/2023
 ms.reviewer: angieandrews
-ms.topic: "how-to"
+ms.topic: conceptual
 author: ChrisGarty
 contributors:
   - ChrisGarty
@@ -29,7 +29,7 @@ A *connection reference* is a solution component that contains a reference to a 
 ## Add connection references to a solution
 
 Connection references can be added to a solution in different ways:
-- When you're using the **Solutions** explorer to create a new connection reference in a solution.
+- When you're using the solution explorer to create a new connection reference in a solution.
 
 - When you import a solution. To learn more, go to [Import solutions](import-update-export-solutions.md).
 
@@ -57,10 +57,10 @@ Connection references can be added to a solution in different ways:
    - **Add a description**: Enter text that describes the connection.
    - **Connector**: Select an existing connector from the list such as in the screenshot here. You can also select **New** to create a new connection for this connection reference. Once your finished creating a new connection, select **Refresh** to select your connection from the list.  
    - **Connection**: Based on the **Connector** you selected, select an existing connection or select **New connection** to create one.
-  
-    :::image type="content" source="media/connection-reference-example.png" alt-text="Screenshot of the New Connection Reference panel.":::
 
 1. Select **Create**.
+  
+    :::image type="content" source="media/connection-reference-example.png" alt-text="Screenshot of the New Connection Reference panel.":::
 
 ## Connection reference naming
 
