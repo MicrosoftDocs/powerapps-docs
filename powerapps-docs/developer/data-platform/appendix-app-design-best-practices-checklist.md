@@ -83,7 +83,7 @@ use-case.
 <li>UI layout is suitable for providing the information in
 the best way</li>
 <li>UI layout provides seamless experience in all the
-devices that solution could be run/</li>
+devices that solution could be run</li>
 </ul>
 </td>
 </tr>
