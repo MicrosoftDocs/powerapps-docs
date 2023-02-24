@@ -106,6 +106,12 @@ Context variable selected:
 
 :::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the information screen of the selected context variables.":::
 
+
+> [!NOTE]
+> In privew, the **Variables** pane shows the information for selected type of variable.
+> :::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
+
+
 ### Collections
 
 Selecting a collection under the **Collections** header will take you to the information screen for that collection.
