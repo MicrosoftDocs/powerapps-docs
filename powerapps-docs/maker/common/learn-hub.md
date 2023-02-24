@@ -45,27 +45,33 @@ The **Overview** tab lists featured training paths and modules, posts from the c
 
 The **Courses** tab provides guided training such as training paths, modules, and training events.
 
-> [!div class="mx-imgBorder"] 
-> ![Courses tab.](media/learn/learn-courses.png "Courses tab") 
-
 ## Articles
 
 The **Articles** tab has information from public blogs articles.
-
-> [!div class="mx-imgBorder"] 
-> ![Articles tab.](media/learn/learn-articles.png "Articles tab") 
-
 
 ## Community
 
 The **Community** tab provides access to content from the Power Apps community including user groups, networking events, LinkedIn Power Apps community, and more. 
 
-> [!div class="mx-imgBorder"] 
-> ![Community tab.](media/learn/learn-community.png "Community tab") 
-
 ## Support
 
 Go to the **Support** tab to get help with common issues, report a problem, submit an idea, and get access to help topics.
 
-> [!div class="mx-imgBorder"] 
-> ![Support tab.](media/learn/learn-support.png "Support tab") 
+## From your org (preview)
+
+In Managed Environments, admins can provide customized welcome content to help makers get started with Power Apps. More information: [Enable maker welcome content (Preview)](/power-platform/admin/welcome-content)
+
+When welcome content is enabled, upon signing in to Power Apps as a maker, you will be greeted with customized getting started information.
+
+If you select **Don't show this again here,** you can still access the getting starting information from the **Learn** hub.
+
+To access the getting started information from the **Learn** hub:
+
+1. Select **Learn** on the left pane.
+2. Select **From your org**.
+  
+   > [!div class="mx-imgBorder"] 
+   > ![Maker welcome screen.](media/learn/maker-welcome-4.png "Maker welcome screen") 
+ 
+
+ 
