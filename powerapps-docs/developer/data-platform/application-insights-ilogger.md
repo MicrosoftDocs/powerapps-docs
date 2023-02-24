@@ -350,7 +350,7 @@ The formatted message text is captured as part of the `customDimensions`.
 [Plug-ins](plug-ins.md)<br />
 [Debug a plug-in](debug-plug-in.md#use-tracing)<br />
 [View trace logs](tutorial-write-plug-in.md#view-trace-logs)<br />
-[Use the tracing service](write-plug-in.md#use-the-tracing-service)<br />
+[Tracing service](write-plug-in.md#tracing-service)<br />
 [PluginTraceLog Table](reference/entities/plugintracelog.md)
 
 
