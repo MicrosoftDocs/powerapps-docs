@@ -25,6 +25,7 @@
       "redirect_url": "/power-pages/configure/search/progressive",
       "redirect_document_id": false
     },
+    {
       "source_path": "powerapps-docs/maker/data-platform/data-platform-cr.md",
       "redirect_url": "create-edit-entities-portal",
       "redirect_document_id": false
