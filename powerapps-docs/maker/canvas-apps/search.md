@@ -108,7 +108,7 @@ Context variable selected:
 
 
 > [!NOTE]
-> In privew, the **Variables** pane shows the information for selected type of variable.
+> If you're using the preview version then the **Variables** pane shows the information for the selected type of variable.
 > :::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
 
 
