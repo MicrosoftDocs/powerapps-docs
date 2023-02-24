@@ -139,7 +139,7 @@ Let's rebuild our adding machine by using a global variable:
 
 7. To show the global variable's value, do one of the following:
  
-    - In preview select, **Variables** on the app authoring menu.
+    - If you're using the preview verstion, select **Variables** on the app authoring menu.
 
       ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
       
@@ -247,7 +247,7 @@ Let's rebuild our adding machine by using a context variable:
 
 8. To show the value of the context variable, do one of the following:
 
-   - In preview, select **Variables** in the app authoring menu.
+   - If you're using the preview version, select **Variables** in the app authoring menu.
     
    - If you're using the classic version, select the **File** menu, and then select **Variables** in the left-hand pane.
 
@@ -309,7 +309,7 @@ Let's recreate our adding machine by using a collection:
 
 9. To see the values in your collection, do one of the following:
 
-   - In preview, select **Variables** in the app authoring menu and then select **Collections**. 
+   - If you're using the preview version, select **Variables** in the app authoring menu and then select **Collections**. 
     
    - If you're using the classic version, select **Collections** on the **File** menu.
 
