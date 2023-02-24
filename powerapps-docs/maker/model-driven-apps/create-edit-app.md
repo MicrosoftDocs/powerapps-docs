@@ -43,8 +43,7 @@ Verify the following prerequisites before creating an app:
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 1. Choose the environment by selecting the environment icon ![Environment icon.](media/icon-environment.PNG "Environment icon")
-1. Select **Solutions** from the left navigation pane.
-
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md)
 1. Select **New** > **App** > **Model-driven app**.  
 1. There a two options.  [Modern app designer](app-designer-overview.md) and Classic App designer.  Select **Classic App Designer**.  

@@ -220,7 +220,7 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
     ![Sign the assembly.](media/tutorial-write-plug-in-sign-assembly.png)
 
 1. In the **Choose a strong name key file**: dropdown, select **<New…>**. 
-1. In the **Create Strong Name Key**dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
+1. In the **Create Strong Name Key** dialog, enter a **key file name** and deselect the **Protect my key file with a password** checkbox.
 1. Click **OK** to close the **Create Strong Name Key** dialog.
 1. In the project properties **Build** tab, verify that the **Configuration** is set to **Debug**.
 1. Press **F6** to build the plug-in again.
