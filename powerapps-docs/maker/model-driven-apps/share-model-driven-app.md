@@ -176,7 +176,8 @@ Unlike sharing canvas apps, sharing model-driven apps doesn't currently send an 
 To get the direct link to an app:
 
 1. Go to [Power Apps](https://make.powerapps.com).
-1. Select **Solutions** from the left navigation pane, and then open the solution that contains the model-driven app.
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that contains the model-driven app.
 1. Select the model-driven app, and then select **Edit** on the command bar.
 1. In the classic designer, select the **Properties** tab, and then copy the **Unified Interface URL.**
 
