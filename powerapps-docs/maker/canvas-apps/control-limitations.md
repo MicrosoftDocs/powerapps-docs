@@ -29,7 +29,7 @@ In this article, learn about the general limitations of the controls used in can
 - [Barcode control](controls/control-barcodereader.md), [Camera control](controls/control-camera.md)
     - On iOS, the camera control is supported in the Power Apps for mobile app. It's not supported within the browser or Teams Mobile.
    - On Android, the camera control isn't supported in Teams Mobile.
-   - When using desktop browsers, the barcode reader aren't supported. Use the Power Apps for mobile app.
+   - When using desktop browsers, the barcode reader isn't supported. Use the Power Apps for mobile app.
 
 - [Container control](controls/control-container.md) - see [Container control limitations](controls/control-container.md#limitations).
 
