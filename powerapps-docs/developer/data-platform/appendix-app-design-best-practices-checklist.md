@@ -83,7 +83,7 @@ use-case.
 <li>UI layout is suitable for providing the information in
 the best way</li>
 <li>UI layout provides seamless experience in all the
-devices that solution could be run/</li>
+devices that solution could be run</li>
 </ul>
 </td>
 </tr>
@@ -100,7 +100,7 @@ the solution</td>
 <ul>
 <li>Content provided in the solution could be rendered in
 all the intended devices.<br/>Example: Do not have videos that could not render in
-certain browsers.<li>
+certain browsers.</li>
 <li>Does not have unnecessary redirects</li>
 <li>Does not have interstitials that interrupts the user's
 flow</li>
