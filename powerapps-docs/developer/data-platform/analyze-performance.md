@@ -33,7 +33,7 @@ If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown.
 >
 > If your plug-in requires more time to execute, consider registering your plug-in for asynchronous rather than synchronous execution. In fact, asynchronous execution should always be considered first when possible as it results in better application responsiveness and system scalability.
 
-More information: [Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/)
+More information: [Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
 
 ## Monitor performance
 
