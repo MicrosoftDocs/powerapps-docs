@@ -180,7 +180,7 @@ More information about handling exceptions: [Handle exceptions in plug-ins](hand
 
 ## Plug-in design impacts performance
 
-When writing your plug-in, it is critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this can result in a non-responsive application UI.
+When writing your plug-in, it is critical that it must execute efficiently and quickly. However long your plug-in takes to execute causes the end user that invoked the message operation (which triggered your plug-in) to wait. In addition to processing the message operation, Dataverse executes all registered synchronous plug-ins in the pipeline including your plug-in. When plug-ins take too long to execute, or if too many plug-ins are registered in a pipeline, this can result in a non-responsive application UI or worst case a timeout error with pipeline rollback.
 
 More information: [Anaylyze plug-in performance](analyze-performance.md)
 
