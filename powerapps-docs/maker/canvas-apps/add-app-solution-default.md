@@ -60,10 +60,10 @@ There are different entry points for creating cloud flows. The following table s
 
 | Entry point | Available for cloud flows within a solution by default?  |
 | - | - |
-| [Create a cloud flow from blank in portal](/power-automate/get-started-logic-flow) | Private preview |
-| [Create a cloud flow from template in portal](/power-automate/get-started-logic-template) | Private preview |
-| Create a cloud flow from Power Automate Management connector | Private preview |
-| Create a cloud flow from PowerShell | Private preview |
+| [Create a cloud flow from blank in portal](/power-automate/get-started-logic-flow) | Yes |
+| [Create a cloud flow from template in portal](/power-automate/get-started-logic-template) | Yes |
+| Create a cloud flow from Power Automate Management connector | Yes |
+| Create a cloud flow from PowerShell | Yes |
 | Create a cloud flow from Mobile App | No |
 | [Create a cloud flow from OneDrive](/power-automate/onedrive-business-launch-panel) | No |
 | [Create a cloud flow from SharePoint](https://support.microsoft.com/en-us/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No |
