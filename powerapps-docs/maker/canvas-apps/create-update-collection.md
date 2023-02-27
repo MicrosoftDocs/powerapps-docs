@@ -70,15 +70,14 @@ Watch this video to learn how to create and update a collection:
 
 1. Repeat the previous step at least two more times, and then press Esc.
 
-1. If you're using the preview version of the app, select the **Variables** pane and then select **Collections** to see the collection that you created.
+1. If you're using the preview version of Power Apps Studio, select the **Variables** pane and then select **Collections** to see the collections that you created.
 
    ![Show collection.](./media/create-update-collection/collections.png)
 
-   If you're using the classic version, on the **File** menu, select **Collections**.
+   If you're using the classic version of Power Apps Studio, on the **File** menu, select **Collections**.
    
    ![Show collection.](./media/create-update-collection/show-collection.png)
    
-
 
 
 
