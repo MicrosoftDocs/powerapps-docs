@@ -1,12 +1,37 @@
 {
   "redirections": [
     {
-      "source_path": "powerapps-docs/cards/controls/repeat-for-every.md",
-      "redirect_url": "/power-apps/cards/controls/control-reference#r",
+      "source_path": "powerapps-docs/maker/portals/configure/search.md",
+      "redirect_url": "/power-pages/configure/search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/cards/controls/repreat-for-every.md",
+      "source_path": "powerapps-docs/maker/portals/configure/search-additional-entities.md",
+      "redirect_url": "/power-pages/configure/search/additional-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/improve-portal-search-faceted-search.md",
+      "redirect_url": "/power-pages/configure/search/faceted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/search-file-attachment.md",
+      "redirect_url": "/power-pages/configure/search/file-attachment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/progressive-search.md",
+      "redirect_url": "/power-pages/configure/search/progressive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/data-platform-cr.md",
+      "redirect_url": "create-edit-entities-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/repeat-for-every.md",
       "redirect_url": "/power-apps/cards/controls/control-reference#r",
       "redirect_document_id": false
     },
@@ -18,6 +43,16 @@
     {
       "source_path": "powerapps-docs/developer/component-framework/updating-existing-controls.md",
       "redirect_url": "overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/annotation-note-entity.md",
+      "redirect_url": "attachment-annotation-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/upload-retrieve-download-attachment.md",
+      "redirect_url": "attachment-annotation-files",
       "redirect_document_id": false
     },
     {
