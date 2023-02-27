@@ -27,7 +27,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 ## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
 
-A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](/power-apps/mobile/run-powerapps-on-mobile). You must be running one of the following versions or later:
+A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
 
 -	Android: 3.23012.16
 -	iOS: 13.23012.16
