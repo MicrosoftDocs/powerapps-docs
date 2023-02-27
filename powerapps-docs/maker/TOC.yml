@@ -2229,11 +2229,11 @@
     - name: Compliance and accessibility
       items:
         - name: Implement GDPR in portals
-          href: ./portals/configure/implement-gdpr.md
+          href: /power-pages/configure/implement-gdpr
         - name: Cookies used by portal
-          href: ./portals/admin/portal-cookies.md
+          href: /power-pages/admin/cookies
         - name: Accessibility in portals
-          href: ./portals/admin/accessibility.md
+          href: /power-pages/admin/accessibility
     - name: Portals for customer engagement apps
       items:
         - name: Knowledge article
@@ -2498,6 +2498,8 @@
         href: ./data-platform/export-solutions.md
       - name: Import solutions
         href: ./data-platform/import-update-export-solutions.md
+      - name: Use pipelines to simplify solution deployment
+        href: ./data-platform/use-pipelines.md
       - name: Update or upgrade solutions
         href: ./data-platform/update-solutions.md
       - name: Other solution tasks
@@ -2821,8 +2823,6 @@
           items: 
             - name: List of controls and properties
               href: ../cards/controls/control-reference.md
-            - name: Repeat for every property
-              href: ../cards/controls/repeat-for-every.md
             - name: Button
               href: ../cards/controls/button.md
             - name: Button set

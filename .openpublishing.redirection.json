@@ -1,15 +1,60 @@
 {
   "redirections": [
-   {
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/search.md",
+      "redirect_url": "/power-pages/configure/search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/search-additional-entities.md",
+      "redirect_url": "/power-pages/configure/search/additional-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/improve-portal-search-faceted-search.md",
+      "redirect_url": "/power-pages/configure/search/faceted",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/search-file-attachment.md",
+      "redirect_url": "/power-pages/configure/search/file-attachment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/progressive-search.md",
+      "redirect_url": "/power-pages/configure/search/progressive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/data-platform/data-platform-cr.md",
+      "redirect_url": "create-edit-entities-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/cards/controls/repeat-for-every.md",
+      "redirect_url": "/power-apps/cards/controls/control-reference#r",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/best-practices/work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md",
       "redirect_url": "../work-with-data/retrieve-specific-columns-entity-via-query-apis",
       "redirect_document_id": false
-   }, 
-   {
+    },
+    {
       "source_path": "powerapps-docs/developer/component-framework/updating-existing-controls.md",
       "redirect_url": "overview",
       "redirect_document_id": false
-    }, 
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/annotation-note-entity.md",
+      "redirect_url": "attachment-annotation-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/upload-retrieve-download-attachment.md",
+      "redirect_url": "attachment-annotation-files",
+      "redirect_document_id": false
+    },
     {
       "source_path": "powerapps-docs/maker/portals/embed-portal-website.md",
       "redirect_url": "/power-pages/configure/embed-website",
@@ -7523,6 +7568,21 @@
     {
       "source_path": "powerapps-docs/teams/how-to-architecture.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates/tree/main/HowTo",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/implement-gdpr.md",
+      "redirect_url": "/power-pages/admin/implement-gdpr",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-cookies.md",
+      "redirect_url": "/power-pages/admin/cookies",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/accessibility.md",
+      "redirect_url": "/power-pages/admin/accessibility",
       "redirect_document_id": "false"
     },
     {
