@@ -1,13 +1,13 @@
 ---
 title: avoid-loadtheme Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for avoid-loadtheme.
-author: vilesyk
+author: lesyk
 manager: tapanm-msft
 ms.topic: reference
 ms.date: 02/17/2023
 ms.service: "powerapps"
 ms.subservice: dataverse-maker
-ms.author: matp
+ms.author: vilesyk
 search.audienceType:
   - maker
 search.app:
