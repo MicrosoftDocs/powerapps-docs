@@ -139,11 +139,11 @@ Let's rebuild our adding machine by using a global variable:
 
 7. To show the global variable's value, do one of the following:
  
-    - If you're using the preview version, select **Variables** on the app authoring menu.
+    - If you're using the preview version of Power Apps Studio, select **Variables** on the app authoring menu.
 
       ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
       
-     - If you're using the classic version, select the **File** menu, and select **Variables** in the left-hand pane.
+     - If you're using the classic version of Power Apps Studio, select the **File** menu, and select **Variables** in the left-hand pane.
 
 8. To show all the places where the variable is defined and used, select it under **Global variables**.
 
