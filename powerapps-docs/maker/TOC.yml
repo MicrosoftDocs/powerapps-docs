@@ -2552,6 +2552,8 @@
                 href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form-event.md"
               - name: "avoid-isactivitytype"
                 href: "./data-platform/powerapps-checker/rules/web/avoid-isactivitytype.md"
+              - name: "avoid-loadtheme"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-loadtheme.md"                
               - name: "avoid-modals"
                 href: "./data-platform/powerapps-checker/rules/web/avoid-modals.md"
               - name: "avoid-ui-refreshribbon"
