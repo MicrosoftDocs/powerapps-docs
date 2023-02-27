@@ -169,15 +169,23 @@ To configure advisors:
     - To remove an advisor, choose an advisor by selecting the ellipsis (**…**), and then select **Remove**.
 
 
-## Disable maker matching for your tenent
+## Disable maker matching for your tenant
 
-A Power Platform admin can use the following command to disable maker matching for their tenant.
+Members of the Power Platform admin role can disable maker matching by running the Set-TenantSettings cmdlet.
+
+To display tenant settings, run the cmdlet:
 
    ```powershell
    $settings=Get-TenantSettings 
+   $settings.PowerPlatform.PowerApps.disableMakerMatch
+   ```
+To disable maker match, run this cmdlet:
+
+   ```powershell
    $settings.powerPlatform.powerApps.disableMakerMatch = $True
    Set-TenantSettings -RequestBody $settings
    ```
+
 
 ## Known issues
 
