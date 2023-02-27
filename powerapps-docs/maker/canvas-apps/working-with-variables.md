@@ -247,10 +247,9 @@ Let's rebuild our adding machine by using a context variable:
 
 8. To show the value of the context variable, do one of the following:
 
-   - If you're using the preview version, select **Variables** in the app authoring menu.
+   - If you're using the preview version of Power Apps Studio, select **Variables** in the app authoring menu.
     
-   - If you're using the classic version, select the **File** menu, and then select **Variables** in the left-hand pane.
-
+   - If you're using the classic version of Power Apps Studio, select the **File** menu, and then select **Variables** in the left-hand pane.
 
 9. To show where the context variable is defined and used, select it under **Context variables**.
 
@@ -309,9 +308,9 @@ Let's recreate our adding machine by using a collection:
 
 9. To see the values in your collection, do one of the following:
 
-   - If you're using the preview version, select **Variables** in the app authoring menu and then select **Collections**. 
+   - If you're using the preview version of Power Apps Studio, select **Variables** in the app authoring menu and then select **Collections**. 
     
-   - If you're using the classic version, select **Collections** on the **File** menu.
+   - If you're using the classic versionof Power Apps Studio, select **Collections** on the **File** menu.
 
 10. To store and retrieve your collection, add two additional button controls, and set their **Text** properties to **Load** and **Save**. Set the **OnSelect** property of the **Load** button to this formula:
 
