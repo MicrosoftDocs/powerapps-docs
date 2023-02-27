@@ -96,7 +96,11 @@ Search result:
 
 :::image type="content" source="media/search/variables-1.png" alt-text="Global and context variables available in search result.":::
 
-Depending on the selected global or context variable, you're taken to the information screen for the selected type of variable.
+If you're using the preview version of the app, select the **Variables** pane and then select **Context variables** or **Global variables** to see information about the variable.
+:::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
+
+
+If you're using the classic version of the app, depending on the selected global or context variable, you're taken to the information screen for the selected type of variable.
 
 Global variable selected:
 
@@ -108,7 +112,7 @@ Context variable selected:
 
 
 > [!NOTE]
-> If you're using the preview version of the app, select the **Variables** pane and select Context or Global variable to see information about the variable.<br>
+> If you're using the preview version of the app, select the **Variables** pane and select **Context variables** or **Global variables** to see information about the variable.<br>
 > :::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
 
 
