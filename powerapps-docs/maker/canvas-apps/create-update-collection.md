@@ -77,7 +77,7 @@ Watch this video to learn how to create and update a collection:
     
 If you're using the preview version, select the **Variables** pane to wokr with **Collections**.
 
-    ![Show collection.](./media/create-update-collection/collections.png)
+   ![Show collection.](./media/create-update-collection/collections.png)
 
 
 
