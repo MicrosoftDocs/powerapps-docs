@@ -4,8 +4,8 @@ description: Learn how to configure an environment to add new canvas apps and cl
 author: ChrisGarty
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: mkaur
-ms.date: 12/15/2022
+ms.reviewer: angieandrews
+ms.date: 02/27/2023
 ms.subservice: canvas-maker
 ms.author: cgarty
 search.audienceType: 
