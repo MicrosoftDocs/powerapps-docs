@@ -16,7 +16,7 @@ search.app:
 
 # `avoid-loadtheme`
 
-`loadTheme` is a way to provide a theme in global (and only global) scope, which will affect your entire application. It's recommended to replace it with `ThemeProvider`. That way, your application consistently has one way of providing a theme.
+`loadTheme` is a way to provide a theme in global (and only global) scope, which will affect your entire application. We recommend that you replace `loadTheme` with `ThemeProvider`. That way, your application consistently has one way of providing a theme.
 
 ## Recommendation
 
