@@ -111,11 +111,6 @@ Context variable selected:
 :::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the information screen of the selected context variables.":::
 
 
-> [!NOTE]
-> If you're using the preview version of the app, select the **Variables** pane and select **Context variables** or **Global variables** to see information about the variable.<br>
-> :::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
-
-
 ### Collections
 
 Selecting a collection under the **Collections** header will take you to the information screen for that collection.
