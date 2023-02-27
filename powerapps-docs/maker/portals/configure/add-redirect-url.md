@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/24/2023
+ms.date: 02/27/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -57,6 +57,6 @@ results in the browser requesting the following URL:
 https://customerportal.contoso.com/surveys/customer-service-survey/
 
 > [!WARNING]
-> There is a known issue where if you navigate to the inbound page using the site default navigation (the navigation menu that appears in the header of your site), a `/` will be appended to the URL, for example `https://contoso.powerappsportals.com/page/` and will **not** redirect to the target URL. If you navigate directly to the URL, for example `https://contoso.powerappsportals.com/page` the redirect will navigate to the target URL.
+> There is a known issue where if you navigate to the inbound page using the site default navigation (the navigation menu that appears in the header of your site), a `/` will be appended to the URL, for example `https://contoso.powerappsportals.com/cs-survey/` and will **not** redirect to the target URL. If you navigate directly to the URL, for example `https://contoso.powerappsportals.com/cs-survey` the redirect will navigate to the target URL.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
