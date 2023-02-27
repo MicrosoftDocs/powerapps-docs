@@ -139,7 +139,7 @@ Let's rebuild our adding machine by using a global variable:
 
 7. To show the global variable's value, do one of the following:
  
-    - If you're using the preview verstion, select **Variables** on the app authoring menu.
+    - If you're using the preview version, select **Variables** on the app authoring menu.
 
       ![Variables and collections menu.](media/working-with-variables/var-collections-menu.png)
       
