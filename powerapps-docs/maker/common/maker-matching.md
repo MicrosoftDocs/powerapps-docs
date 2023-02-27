@@ -168,6 +168,17 @@ To configure advisors:
 
     - To remove an advisor, choose an advisor by selecting the ellipsis (**…**), and then select **Remove**.
 
+
+## Disable maker matching for your tenent
+
+A Power Platform admin can use the following command to disable maker matching for their tenant.
+
+   ```powershell
+   $settings=Get-TenantSettings 
+   $settings.powerPlatform.powerApps.disableMakerMatch = $True
+   Set-TenantSettings -RequestBody $settings
+   ```
+
 ## Known issues
 
 -  The virtual agent dialog may appear blank when you [restart the virtual agent](virtual-agent.md#restart-or-close-a-session). To fix the issue, refresh your browser page.
