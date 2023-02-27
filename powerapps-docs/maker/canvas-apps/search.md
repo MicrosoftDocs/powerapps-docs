@@ -108,7 +108,7 @@ Context variable selected:
 
 
 > [!NOTE]
-> If you're using the preview version then the **Variables** pane shows the information for the selected type of variable.<br>
+> If you're using the preview version of the app, select the **Variables** pane and select Context or Global variable to see information about the variable.<br>
 > :::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
 
 
