@@ -68,5 +68,31 @@ If you're an administrator, you can check the access another user has to a row.
   
 3.   The **Check Access** dialog box will appear and display the user's access information.
 
+## Check all users who have access to a row
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!NOTE]
+> There are 2 environment database settings to configure to use the **Who has access**. [Install the Organization settings editor tool](https://learn.microsoft.com/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) and set the following to true:
+
+1.  *IsAccessCheckerAllUsersEnabled*. This allows the admin to see who has access to the row.
+2.  *IsAccessCheckerNonAdminAllUsersEnabled*. This allows the admin, owner of the record and users who have access to the row to see who has access.
+
+
+The admin, owner of the record or users who have the privilege to the row can share the row to other users for collaboration. You can see who has access to the row and their respective access level such as read, write, create, delete, append, append to, share, and assign.
+
+1. Select a row and then select **Edit** on the command bar.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select a row to edit it.](media/edit_record.png "Select a row to edit it")
+  
+2. On the open row, select **Check Access** on the command bar.
+3. On the Check Access window, click on **Who has access**.
+
+  >> add new Check access who has access image here
+
+> [!NOTE]
+> The manager list from [heirarchy and position security](https://learn.microsoft.com/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
