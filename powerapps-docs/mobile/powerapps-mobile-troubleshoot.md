@@ -185,7 +185,7 @@ Access the **Active** users section in the admin center and verify you have a **
  `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.RetrieveUserContext(UserContextRetrieveRequest userContextRetrieveRequest)`  
  
 ## Error message: The language installed on your company’s system isn’t available on the app. Please contact your system administrator to set up a supported language
- **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and tablets](dynamics-365-customer-engagement-pr/ce/mobile-app/support-phones-tablets.md).
+ **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/support-phones-tablets.md).
 
 ## Error message: The process assigned to this record is unavailable or has been deleted 
  If you receive this message for a record which has a non-deleted process assigned to it, you should manually synchronize Dynamics 365 mobile app data with Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app data. Close the mobile app, reopen it, and then choose to download the latest customizations. This procedure forces the mobile app to check for updated customizations. Recently viewed data while you were connected is cached and synched. Record data like Accounts or Contacts are not synched.
