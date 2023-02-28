@@ -5,7 +5,7 @@ author: sericks007
 manager: tapanm-MSFT
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/27/2023
+ms.date: 02/28/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -143,7 +143,7 @@ To check for recently-added apps, select Refresh. If you can’t find your app, 
  
 ## The list of apps is empty
 
-Make sure the user has a [default security role](/power-platform/admin/security-roles-privileges) assigned to them such as **Basic**. This is in addition to any custom security role assigned to the user. For more information, see [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).
+Make sure the user has a [default security role](/power-platform/admin/security-roles-privileges) assigned to them such as **Basic**. This is in addition to any custom security role assigned to the user. For more information, see [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).
 
 ## Error message: This record is unavailable
 If this message appears when a user starts the mobile app, and then selects the **Home** button, or **Dashboards** from the menu, the user likely doesn’t have access to the expected dashboards.  
@@ -154,13 +154,13 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
 ## Error message: Your server is not available or does not support this application  
  **Cause 1**: The Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) server is down. Verify that the server is on and connected to your network.  
  
- **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](../mobile-app/support-phones-tablets.md). 
+ **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](/dynamics-365-customer-engagement-pr/ce/mobile-app/support-phones-tablets.md). 
   
  **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device  
 
 ## Error message: You haven't been authorized to use this app. Check with your system administrator to update your settings
 
- **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).  
+ **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements).  
   
  **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user has not been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
  
@@ -168,12 +168,9 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
  
 Access the **Active** users section in the admin center and verify you have a **Dynamics 365 Customer Engagement Plan** license assigned to your user record.  
   
-   > [!div class="mx-imgBorder"]
-   > ![License.](media/customer_engagement_lic.png "Dynamics 365 Customer Engagement Plan License")  
-
 ## Error message: Sorry, something went wrong while initializing the app. Please try again, or restart the app  
 
- **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](./set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements)).  
+ **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md#requirements)).  
   
  **Cause 2**: See the following KB article:  
   
@@ -296,7 +293,7 @@ If the information provided previously doesn’t resolve your issue, either [Pos
 - What type of device are you using, such as iPad 4th Generation, Microsoft Surface. What is the version of the operating system, such as iOS 10.0 or Windows 10.
 
 ### See also
- [Set up Dynamics 365 for phones and tablets](set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md)
+ [Set up Dynamics 365 for phones and tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md)
  
  
  
