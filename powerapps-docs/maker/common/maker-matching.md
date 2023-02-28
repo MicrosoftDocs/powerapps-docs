@@ -179,7 +179,7 @@ To display tenant settings, run the cmdlet:
    $settings=Get-TenantSettings 
    $settings.PowerPlatform.PowerApps.disableMakerMatch
    ```
-To disable maker match, run this cmdlet:
+To disable maker matching, run this cmdlet:
 
    ```powershell
    $settings.powerPlatform.powerApps.disableMakerMatch = $True
