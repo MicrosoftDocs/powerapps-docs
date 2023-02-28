@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 11/18/2022
+ms.date: 02/28/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -742,20 +742,21 @@ Depends on showAsTabControl and showPreview set to true.
   allowSameOriginSandbox
 </td>
 <td>
-  This property enables the content within the Rich Text Editor to be treated as from the same origin as the rendering app. Use this property with caution as any untrusted external content could be allowed access to internal resources. <br></br>
+  This property enables the content within the rich text editor to be treated as from the same origin as the rendering app. 
+
+  > [!CAUTION]
+  > Use this property with caution. Only use trusted external content because any untrusted external content could be allowed access to internal resources. <br></br>
   
-  Defaults to false
+  Default value is false.
 </td>
 <td>
-	
+
   ```"allowSameOriginSandbox": false```
 </td>
 </tr>
 
 </tr>
 </table>
-
-
 
 ## Commonly used rich text editor configurations
 
