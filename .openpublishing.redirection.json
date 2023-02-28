@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/portals/known-issues.md",
+      "redirect_url": "/power-pages/known-issues",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/configure/search.md",
       "redirect_url": "/power-pages/configure/search/overview",
       "redirect_document_id": false
