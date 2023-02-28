@@ -4,7 +4,7 @@ description: Learn about how to code sign for Android for Power Apps wrap.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/06/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - larryk78
 ---
 
@@ -83,7 +83,7 @@ Parameters:
 - **keystore** - the name of the keystore you're using.
 - **openssl** - generates SHA1 key for Android.
 
-Add the generated signature has in the **Redirect URI** while [registering the app](how-to.md#app-registration).
+Add the generated signature hash in the **Redirect URI** while [registering the app](how-to.md#app-registration).
 
 ### Convert SHA1 hex to Base64-encoded signature hash manually
 

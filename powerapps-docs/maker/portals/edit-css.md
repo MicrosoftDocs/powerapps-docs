@@ -5,28 +5,28 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/28/2022
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Edit CSS for themes
 
-
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Power Apps portals are based on Bootstrap 3.3.x with the exception of [Event portal](/dynamics365/marketing/developer/event-management-web-application). Portal developers should not replace Bootstrap 3 with other CSS libraries as some of the scenarios in Power Apps portals are dependent on Bootstrap 3.3.x. For more information, see [Understanding Bootstrap framework](#understanding-bootstrap-framework) and [Customize Bootstrap](#customize-bootstrap) sections in this article.
 
-### To open a CSS in code editor:
+### Open a CSS in code editor
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+To open a CSS in code editor, [edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 1.  Select **Theme** ![Theme icon.](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
@@ -36,9 +36,9 @@ Cascading Style Sheets (CSS) allows you to control the formatting of your websit
 
 1.  Edit the code and save the changes.
 
-### To upload a new CSS file:
+### Upload a new CSS file
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
+To upload a new CSS file, [edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 1.  Select **Theme** ![Theme icon.](media/theme-icon.png "Theme icon") from the left side of the screen. The available themes are displayed.  
 
@@ -48,9 +48,11 @@ Cascading Style Sheets (CSS) allows you to control the formatting of your websit
 
 1. Browse and select the CSS file to upload.
 
-### To delete a custom CSS file
+### Delete a custom CSS file
 
-1. The CSS files are stored as [web files](configure/web-files.md). To remove the CSS file, go to the [Portal Management app](./configure/configure-portal.md) and select **Web Files**. 
+The CSS files are stored as [web files](configure/web-files.md). 
+
+1. To remove the CSS file, go to the [Portal Management app](./configure/configure-portal.md) and select **Web Files**. 
 
 1. Locate the CSS file record. You may need to filter on the **Name** and **Website** values to locate the correct record.
 

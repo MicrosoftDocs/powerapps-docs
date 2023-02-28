@@ -5,7 +5,7 @@ author: lancedMicrosoft
 
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 02/23/2022
 ms.subservice: canvas-maker
 ms.author: lanced
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
   - lanced-microsoft
 ---
@@ -38,7 +38,7 @@ Delegation is supported for certain tabular data sources only. If a data source 
 
 - [Power Apps delegable functions and operations for Microsoft Dataverse](connections/connection-common-data-service.md#power-apps-delegable-functions-and-operations-for-dataverse) 
 - [Power Apps delegable functions and operations for SharePoint](/connectors/sharepointonline/#power-apps-delegable-functions-and-operations-for-sharepoint) 
-- [Power Apps delegable functions and operations for SQL Server](/connectors/sql/#power-apps-delegable-functions-and-operations-for-sql-server) 
+- [Power Apps delegable functions and operations for SQL Server](/connectors/sql/#power-apps-functions-and-operations-delegable-to-sql-server) 
 - [Power Apps delegable functions and operations for Salesforce](/connectors/salesforce/#power-apps-delegable-functions-and-operations-for-salesforce) 
 
 Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full Power Apps language can be applied.

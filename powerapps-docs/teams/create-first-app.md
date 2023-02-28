@@ -8,9 +8,9 @@ ms.custom: intro-internal
 ms.date: 08/05/2021
 ms.subservice: teams
 ms.author: saperlmu
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 contributors:
-  - tapanm-msft
+  - mduelae
   - wimcoor
   - msftsamperl
 ---
@@ -35,7 +35,7 @@ Now let's go through each step in detail.
 
 ## Create your app
 
-After installing the Power Apps app from the Teams store:
+After installing the Power Apps app template:
 
 1. Start Teams, and sign in.
 

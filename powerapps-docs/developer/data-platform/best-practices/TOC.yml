@@ -40,10 +40,11 @@
         href: ../api-limits.md
       - name: Manage invalid characters
         href: work-with-data/invalidcharactersinfield.md
+      - name: Retrieve specific columns for an entity via query APIs
+        href: work-with-data/retrieve-specific-columns-entity-via-query-apis.md 
   - name: Work with metadata using code
     href: work-with-metadata/index.md
     items:
       - name: Retrieve published metadata
         href: work-with-metadata/retrieve-published-metadata.md
-      - name: Retrieve specific columns for an entity via query APIs
-        href: work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md  
+ 

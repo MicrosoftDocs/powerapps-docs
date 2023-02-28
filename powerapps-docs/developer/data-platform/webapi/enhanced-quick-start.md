@@ -2,7 +2,7 @@
 title: "Enhanced quick start (Microsoft Dataverse)| Microsoft Docs"
 description: "An enhanced quick start building on the simple quick start using Dataverse Web API"
 ms.date: 04/06/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 manager: sunilg

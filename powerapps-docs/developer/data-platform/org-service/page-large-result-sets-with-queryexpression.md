@@ -2,7 +2,7 @@
 title: "Page large result sets with QueryExpression (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the paging cookie feature to make paging in an application faster for large datasets." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
 ms.topic: "article"

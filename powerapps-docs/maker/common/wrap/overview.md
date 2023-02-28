@@ -4,7 +4,7 @@ description: Learn about the wrap functionality in Power Apps.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Overview of wrap
@@ -30,7 +30,7 @@ You can update the wrapped mobile apps by publishing changes to the canvas app(s
 
 **Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
 
-- **No-code mobile app development**&mdash;make mobile apps with no previous experienc
+- **No-code mobile app development**&mdash;make mobile apps with no previous experience
 - **Managed mobile app builds**&mdash;we generate the app for you
 - **Seamless end-to-end branding**&mdash;use your own logo and color palette
 - **Multiple canvas apps support**&mdash;bundle multiple apps in a single mobile app
@@ -80,7 +80,6 @@ The following list explains what you'll need before you can start using wrap fea
 ### Permissions and access requirements
 
 - Access to one or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project
-- Access to [Power Platform admin center](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) to [install the wrap feature](how-to.md#prerequisites)
 - Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
 - Access to [Microsoft App Center](https://appcenter.ms/)
 
@@ -166,6 +165,7 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 ## Next steps
 
+[Use the wrap wizard to build your mobile app (preview)](wrap-how-to.md) <br>
 [Wrap canvas apps as a native mobile app](how-to.md)
 
 ### See also

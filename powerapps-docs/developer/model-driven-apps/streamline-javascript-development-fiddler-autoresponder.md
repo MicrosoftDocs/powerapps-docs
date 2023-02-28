@@ -1,8 +1,8 @@
 ---
 title: "Script web resource development using Fiddler AutoResponder (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to setup and use AutoResponder in Fiddler for local debugging of JavaScript web resources." # 115-145 characters including spaces. This abstract displays in the search result.
-author: HemantGaur
-ms.author: hemantg
+author: sriharibs-msft
+ms.author: srihas
 ms.date: 12/04/2022
 ms.reviewer: jdaly
 ms.topic: article
