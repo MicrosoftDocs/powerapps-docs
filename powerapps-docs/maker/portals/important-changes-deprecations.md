@@ -52,7 +52,7 @@ The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details
 
 ## List OData feed 
 
-Starting June 2022, using [OData feeds](configure/list-odata-feeds.md) to interact with data via RESTful web services will be deprecated. We recommend that you migrate to the portal [Web API](web-api-overview.md) by April 2023. 
+Starting June 2022, using [OData feeds](configure/list-odata-feeds.md) to interact with data via RESTful web services will be deprecated. We recommend that you migrate to the portal [Web API](web-api-overview.md). 
 
 > [!NOTE] 
 > - Starting October 2022, newly provisioned portals won't able to use list OData features. 
