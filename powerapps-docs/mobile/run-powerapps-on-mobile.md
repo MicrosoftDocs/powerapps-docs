@@ -43,19 +43,6 @@ Review the following privileges and supported devices to run Power Apps Mobile a
 - [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges)
 - [Supported platforms for running apps using the Power Apps mobile app](../limits-and-config.md#supported-platforms-for-running-apps-using-the-power-apps-mobile-app)
 
-## Other mobile apps
-
-The table below outlines which mobile app you can use to run your app.
-
-
-| **Mobile App** | **Apps you can run** |
-|-------------------------|-------------------------|
-| [Power Apps mobile](run-powerapps-on-mobile.md) (covered in this topic) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
-| [Power Apps for Windows](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
-| [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
-| [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
-| [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
-
 
 ## Sign in
 
@@ -280,6 +267,19 @@ Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map
 
 >[!Note]
 > An app maker can customize the navigation bar and show or hide the **Home**, **Recent**, **Pinned** buttons in the site map. An app maker can also make groups collapsible. For more information, see [Hide or show the Home, Pinned, Recent, and collapsible groups](../user/navigation.md#hide-or-show-the-home-pinned-recent-and-collapsible-groups).
+
+## Other mobile apps
+
+The table below outlines which mobile app you can use to run your app.
+
+
+| **Mobile App** | **Apps you can run** |
+|-------------------------|-------------------------|
+| [Power Apps mobile](run-powerapps-on-mobile.md) (covered in this topic) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li><li>[Dynamics 365 Marketing](/dynamics365/marketing/help-hub)</li><li>[Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub)</li></ul> |
+| [Power Apps for Windows](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
+| [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
+| [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
+| [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
 ## See also
 
