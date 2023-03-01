@@ -25,8 +25,8 @@ A powerful way to send cards is through Power Automate. You can create a flow th
 
 ## Prerequisites
 
-- A [Power Automate](https://make.powerautomate.com) account
-- A [card](../tutorials/hello-world-card.md)
+- [Power Automate](https://make.powerautomate.com) account
+- Create a [card](../tutorials/hello-world-card.md)
 - The [Power Apps Teams app](send-card-in-teams.md#add-power-apps-to-teams) installed in the chat, group chat, or channel that the card will be sent to
 
 ## Cards for Power Apps connector
