@@ -257,9 +257,10 @@ Most columns have options to enable searching or sorting of the column's content
 
 Almost every column data type is created with the **Searchable** value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types can't be search enabled:
 
-- Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
 - File. Files are stored and retrieved using reference URLS and because of this they can't be searched.
 - Formulas. Formulas are used to create a dynamically calculated output and because of this can't be searched.
+- Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
+- Multivalue lookup (PartyList). Some system lookup columns can contain multiple values. For example, the **To** lookup column of **Email** rows can contain multiple recipients. Searching multivalue lookup columns is not supported.
 
 The **Customer** datatype is search enabled by default and this can't be disabled. It's required to be searchable by the system.
 
@@ -267,8 +268,12 @@ The **Customer** datatype is search enabled by default and this can't be disable
 
 Almost every data type is created with the **Sortable** value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types don't provide the ability to enable a sortable attribute:
 
+- Calculated. These columns are dynamically computed and can't be sorted.
+- Choices. Sorting columns with multiple values is not supported.
+- Customer. Customer is a standard lookup column and can't be sorted because it is dynamically retrieved.
+- File. Files are stored using reference URLS and sorting these are not useful.
 - Formulas. Formulas are used to create a dynamically calculated output and because of this can't be sorted.
-- Lookup. Lookups have values that are dynamically retrieved from the source table and because of this can't be sorted.
-- Customer. Customer is a standard lookup field and can't be sorted because it is dynamically retrieved.
+- Image. There is no meaningful way to sort images.
+- Multivalue lookup (PartyList). Some system lookup columns can contain multiple values. For example, the **To** lookup column of **Email** rows can contain multiple recipients. Sorting columns with multiple values is not supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
