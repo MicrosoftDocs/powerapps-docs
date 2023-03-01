@@ -279,8 +279,14 @@ The table below outlines which mobile app you can use to run your app.
 | [Power Apps for Windows](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
 | [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
-| [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
+| [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
+  
+  
+## Privacy Notice
+Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event in order to support push notifications. 
+  
+Power Apps mobile app and [wrapped native mobile apps](../maker/common/wrap/overview.md) may use device sensors, such as the device accelerometer, in order to react to user inputs. For example, [wrapped native mobile apps](../maker/common/wrap/overview.md) would automatically show the menu when the user shakes the device. 
     
 ## See also
 
