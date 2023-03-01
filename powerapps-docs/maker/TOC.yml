@@ -2283,7 +2283,7 @@
     - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
     - name: Known issues
-      href: ./portals/known-issues.md
+      href: /power-pages/known-issues
     - name: Power Apps portals FAQs
       href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs

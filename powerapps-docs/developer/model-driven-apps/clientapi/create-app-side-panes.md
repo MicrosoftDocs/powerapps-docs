@@ -28,6 +28,8 @@ You can use a platform-provided header with the title and Close button, or you c
 
 You can add a badge to the side pane to indicate to the user that a change needs attention. The badge supports three modes: a simple dot, a count, or an image. By default, the badge is cleared when the user switches to the pane. You can control when the badge is cleared.
 
+App side panes are only supported in web browsers and are prevented within native players.
+
 
 ## Examples
 
