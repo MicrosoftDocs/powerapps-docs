@@ -268,7 +268,6 @@ The **Customer** datatype is search enabled by default and this can't be disable
 
 Almost every data type is created with the **Sortable** value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types don't provide the ability to enable a sortable attribute:
 
-- Calculated. These columns are dynamically computed and can't be sorted.
 - Choices. Sorting columns with multiple values is not supported.
 - Customer. Customer is a standard lookup column and can't be sorted because it is dynamically retrieved.
 - File. Files are stored using reference URLS and sorting these are not useful.
