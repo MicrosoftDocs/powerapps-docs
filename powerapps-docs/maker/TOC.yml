@@ -2867,7 +2867,7 @@
       items:
         - name: Share a card in Teams
           href: ../cards/send-a-card/send-card-in-teams.md
-        - name: Send cards automatically with a flow
+        - name: Send cards automatically with a flow (preview)
           href: ../cards/send-a-card/send-card-with-flow.md
     - name: Manage cards
       href: ../cards/manage-cards/manage-cards.md
