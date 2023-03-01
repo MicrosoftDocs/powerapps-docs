@@ -1,16 +1,15 @@
 ---
 title: "Check your user access and permissions| MicrosoftDocs"
 description: How to check user access and security role.
-author: mduelae
-manager: kvivek
-
+author: paulliew
+manager: tapanm-msft
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 1/15/2021
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: paulliew
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -20,7 +19,6 @@ search.app:
 ---
 
 # Check your user access to a row
-
 
 To perform an action on a row, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
@@ -72,22 +70,17 @@ If you're an administrator, you can check the access another user has to a row.
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!NOTE]
-> There are 2 environment database settings to configure to use the **Who has access**. [Install the Organization settings editor tool](https://learn.microsoft.com/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) and set the following to true:
+The admin, owner of the record, or users who have access to a row can share the row with other users for collaboration. 
 
-1.  *IsAccessCheckerAllUsersEnabled*. This allows the admin to see who has access to the row.
-2.  *IsAccessCheckerNonAdminAllUsersEnabled*. This allows the admin, owner of the record and users who have access to the row to see who has access.
-
-
-The admin, owner of the record or users who have the privilege to the row can share the row to other users for collaboration. You can see who has access to the row and their respective access level such as read, write, create, delete, append, append to, share, and assign.
+To see who has access to a row and their respective access level, complete the following steps.
 
 1. Select a row and then select **Edit** on the command bar.
 
     > [!div class="mx-imgBorder"]
     > ![Select a row to edit it.](media/edit_record.png "Select a row to edit it")
   
-2. On the open row, select **Check Access** on the command bar.
-3. On the Check Access window, click on **Who has access**.
+2. Select **Check Access** on the command bar.
+3. In the **Check Access** window, select on **Who has access**.
 
   >> add new Check access who has access image here
 
