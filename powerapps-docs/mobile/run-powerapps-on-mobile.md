@@ -279,8 +279,9 @@ The table below outlines which mobile app you can use to run your app.
 | [Power Apps for Windows](windows-app-install.md) | <ul><li>[Model-driven apps](../maker/index.md#model-driven-apps)</li><li>[Canvas apps](../maker/index.md#canvas-apps)</li></ul> |
 | [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
-| [Field Service Mobile](/dynamics365/field-service/field-service-mobile-app-user-guide) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
+| [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
 
+    
 ## See also
 
 [Use model-driven apps on Power Apps mobile](use-custom-model-driven-app-on-mobile.md) <br/>
