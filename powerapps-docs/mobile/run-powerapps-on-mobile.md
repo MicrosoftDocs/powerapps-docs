@@ -284,9 +284,9 @@ The table below outlines which mobile app you can use to run your app.
   
   
 ## Privacy Notice
-Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event in order to support push notifications. 
+Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 
   
-Power Apps mobile app and [wrapped native mobile apps](../maker/common/wrap/overview.md) may use device sensors, such as the device accelerometer, in order to react to user inputs. For example, [wrapped native mobile apps](../maker/common/wrap/overview.md) would automatically show the menu when the user shakes the device. 
+Power Apps mobile app and [wrapped native mobile apps](../maker/common/wrap/overview.md) may use device sensors, such as the device accelerometer, to respond to user actions. For example, [wrapped native mobile apps](../maker/common/wrap/overview.md) would automatically show the app menu when the user shakes the device. 
     
 ## See also
 
