@@ -29,12 +29,12 @@ search.app:
 
 Unless someone has 'pinned' a different view in your app as their personal default, they will see the default view specified by the app maker. Any of the public views can be set as the default view for a table.  
   
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Select **Solutions** on the left navigation pane where the table is located.
-3. Open the table, and then select the **Views** area.
-
-4. Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for forms") next to the view, and then select **Set as default view**. This can also be set on the command bar.
+1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution where the table is located.
+1. Open the table, and then select the **Views** area.
+1. Select **More commands** ![More Commands button.](media/more-commands.gif "More Commands button for forms") next to the view, and then select **Set as default view**. This can also be set on the command bar.
 
     > [!div class="mx-imgBorder"] 
     > ![Set as default view.](media/set-as-default-menu-maker.png)

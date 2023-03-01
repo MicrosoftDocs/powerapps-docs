@@ -27,13 +27,7 @@ The following steps are required to build a linear slider code component:
 - [Add style to the code components](#adding-style-to-the-code-component)
 - [Build your code components](#build-your-code-components)
 - [Packaging code components](#packaging-your-code-components)
-
-After you have created the code component, you can add it to an app or portal:
-
-- [Adding component to a model-driven app](#adding-code-components-in-model-driven-apps)
-- [Adding component to a canvas app](#adding-code-components-to-a-canvas-app)
-- [Adding code components to a portal](#adding-code-components-to-a-portal)
-
+- [Add your code component to an app](#add-your-code-component-to-an-app)
 
 ## Prerequisites
 
@@ -95,10 +89,7 @@ The [control](manifest-schema-reference/control.md) node defines the namespace, 
    
 The tooling has generated the [control](manifest-schema-reference/control.md) element that is a good starting point for your control.
 
-> [!TIP]
-> You may find the XML easier to read by formatting it so that attributes appear on separate lines. Find and install an XML formatting tool of your choice in the Visual Studio Code Marketplace: [Search for xml formatting](https://marketplace.visualstudio.com/search?term=xml%20formatting&target=VSCode&category=Programming%20Languages&sortBy=Relevance).
->
-> The examples below have been formatted with attributes on separate lines to make them easier to read.
+[!INCLUDE [cc_tip-format-xml](includes/cc_tip-format-xml.md)]
 
 |Attribute|Description|
 |---------|---------|
@@ -107,7 +98,7 @@ The tooling has generated the [control](manifest-schema-reference/control.md) el
 |`version`|Version of the component. Whenever you update the component, you need to update the version to see the latest changes in the runtime.|
 |`display-name-key`|Name of the code component that is displayed on the UI.|
 |`description-key`|Description of the code component that is displayed on the UI.|
-|`control-type`|The code component type. Only *standard* types of code components are supported.|
+|`control-type`|The code component type. This will be a `standard` control. |
 
 If you ignore the commented areas and format the document, this is the manifest that was generated for you:
 
@@ -969,24 +960,19 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
 > [!NOTE]
 > Manually publish the customizations if you are importing unmanaged solution.
 
-## Adding code components in model-driven apps
+## Add your code component to an app
 
-To add a code component like a linear input component, follow the steps mentioned in the article [Add components to columns and tables](add-custom-controls-to-a-field-or-entity.md).
+To add a code component to an app, follow the steps in these articles:
 
-## Adding code components to a canvas app
+- [Add components to columns and tables for model-driven apps](add-custom-controls-to-a-field-or-entity.md)
+- [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app)
+- [Use code components in portals](/powerapps/maker/portals/component-framework-tutorial)
 
-To add the code components to a canvas app, follow the steps in the article [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
-
-
-## Adding code components to a portal
-
-To add the code component to a portal, follow the steps in the article [Use code components in portals](/powerapps/maker/portals/component-framework-tutorial).
 
 ### See also
 
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](/training/paths/use-power-apps-component-framework)<br/>
-[Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
 [Overview of tools and apps used with ALM](/power-platform/alm/tools-apps-used-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)<br/>

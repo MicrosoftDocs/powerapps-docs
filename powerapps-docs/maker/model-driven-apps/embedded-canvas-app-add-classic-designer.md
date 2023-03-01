@@ -39,7 +39,8 @@ Two methods of integration are described in this article. First, using the moder
 To embed a canvas app on a model-driven app main form, such as the main form for the Accounts table, follow these steps:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Choose the environment, select Solutions from the left navigation pane, and then open the solution that has the table where you want to add a canvas app to a main form.
+1. Choose the environment, and then select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that has the table where you want to add a canvas app to a main form.
 1. Open the table, select **Forms**, and then open the **Main** form you want.
 
    > [!TIP]
