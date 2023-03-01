@@ -4,7 +4,7 @@ description: Learn about the important changes, including deprecations, coming s
 author: sandhangitmsft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/21/2022
+ms.date: 03/01/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -55,21 +55,22 @@ The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details
 Starting June 2022, using [OData feeds](configure/list-odata-feeds.md) to interact with data via RESTful web services will be deprecated. We recommend that you migrate to the portal [Web API](web-api-overview.md) by April 2023. 
 
 > [!NOTE] 
-> Starting October 2022, newly provisioned portals won't able to use list OData features. 
+> - Starting October 2022, newly provisioned portals won't able to use list OData features. 
+> - The OData feeds list feature will be removed October 1, 2023.
 
 ## Portal content editor
 
 Starting June 2022, the portal content editor tool to design your website is deprecated. We recommend using Power Apps portals Studio to edit the portal.
 
 > [!NOTE]
-> This feature will be removed by April 2023.
+> This feature will be removed on October 1, 2023.
 
 ## Portals search using Lucene.NET search 
 
 Starting with website version 9.4.4.xx, portal search uses Dataverse search as a default search provider for all new portals. Lucene.NET search is deprecated; however, existing portals that use Lucene.NET search won't be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by setting the Search/EnableDataverseSearch site setting to true.
 
 > [!NOTE]
-> All existing customers who use Lucene.NET search must migrate to Dataverse search by October 2023.
+> All existing customers who use Lucene.NET search must migrate to Dataverse search by October 1, 2023.
 
 ## Content Delivery Network for US Government
 
