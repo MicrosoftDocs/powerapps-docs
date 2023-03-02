@@ -1,6 +1,31 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/portals/admin/convert-portal.md",
+      "redirect_url": "/power-pages/admin/convert-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/migrate-portal-configuration.md",
+      "redirect_url": "/power-pages/admin/migrate-site-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/update-dynamics365-instance.md",
+      "redirect_url": "/power-pages/admin/update-dynamics365-instance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/update-portal-solution.md",
+      "redirect_url": "/power-pages/admin/update-solution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/upgrade-portal.md",
+      "redirect_url": "/power-pages/admin/upgrade-site",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/known-issues.md",
       "redirect_url": "/power-pages/known-issues",
       "redirect_document_id": false
