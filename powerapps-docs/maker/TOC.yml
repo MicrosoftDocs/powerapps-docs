@@ -303,7 +303,7 @@
         - name: Connections overview
           href: ./canvas-apps/connections-list.md
         - name: Working with untyped and dynamic objects
-        - href: ./canvas-apps/untyped-and-dynamic-objects.md
+          href: ./canvas-apps/untyped-and-dynamic-objects.md
         - name: Popular connectors
           items:
             - name: Dataverse
