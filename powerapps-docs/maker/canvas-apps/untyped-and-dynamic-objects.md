@@ -20,7 +20,7 @@ contributors:
 ---
 # Working with untyped and dynamic objects 
 
-When dealing with actions in Power Apps, it's possible to encounter untyped return values or input values for some actions. In the past, Power Apps would simply ignore untyped or dynamic input fields, and they would not be visible in PowerFX expressions. However, this has changed, and now it's possible to work directly with these fields. Previously, when a return type was untyped, Power Apps would return a Boolean value. Now, it returns an untyped object instead.
+When dealing with actions in Power Apps, it's possible to encounter untyped return values or input values for some actions. In the past, Power Apps would simply ignore untyped or dynamic input fields, and they would not be visible in PowerFX expressions. Now it's possible to work directly with these fields. Previously, when a return type was untyped, Power Apps would return a Boolean value. Now, it returns an untyped object instead.
 
 > [!NOTE]
 > Suppose your Power Fx expressions rely on a Boolean return value from these functions. In that case, you'll have to rewrite the formula and explicitly cast the untyped object to a Boolean. Certain functions, such as 'IfError,' don't fully support untyped objects yet. If your expression contains such a function, refer to the note at the end of this article for workarounds.
@@ -30,7 +30,7 @@ When dealing with actions in Power Apps, it's possible to encounter untyped retu
 
 Certain actions necessitate an untyped object as a parameter value. If you have a Power Fx record, you can convert it to an untyped object, making it suitable for passing to the action.
 
-In the example below, the merge action available on a Dataverse account table requires several untyped arguments. To prepare for this, we'll define three variables to hold the TargetObject, SubordinateObject, and UpdateContextObject. We'll begin by assigning the text string **Microsoft.Dynamics.CRM.account** to a variable, which we'll reuse throughout the example.
+In the example below, the merge action available on a Dataverse **Account** table requires several untyped arguments. To prepare, we'll define three variables to hold the TargetObject, SubordinateObject, and UpdateContextObject. We'll begin by assigning the text string **Microsoft.Dynamics.CRM.account** to a variable, which will be reuse throughout the example.
 
 ```powerapps-dot
 Set (OdataType, “Microsoft.Dynamics.CRM.account”);
@@ -43,7 +43,7 @@ Set (SubordinateObject, {name: FirstRecord.’Account name’, accountid: FirstR
 Set (UpdateContextObject, {telephone1: FirstRecord.’Main Phone’, address1_city: FirstRecord.’Address 1 : City’, ‘@odata.type’ : OdataType }); 
 ```
 
-Next, we'll create three additional variables to store the untyped records after the conversion: TargetUntypedObject, SubordinateUntypedObject, and UpdateContextUntypedObject. To perform the conversion, we'll use the ParseJSON(JSON()) function on the original variables. This will transform the Power Fx records into untyped objects.
+Next, we'll create three more variables to store the untyped records after the conversion: TargetUntypedObject, SubordinateUntypedObject, and UpdateContextUntypedObject. To perform the conversion, we'll use the ParseJSON(JSON()) function on the original variables. This action will transform the Power Fx records into untyped objects.
 
 ```powerapps-dot
 Set (TargetUntypedObject, ParseJSON(JSON(TargetObject)));
@@ -85,7 +85,7 @@ Set (teamsResponse, MicrosoftTeams.GetMessageDetails ( 1661365068558, “channel
 ```
 ## Converting formulas that return untyped objects that previously returned Boolean.  
 
-Power Fx takes a limited number of untyped objects so explicit conversion may be necessary for your formula. In particular if your formula depends on a Boolean response then you will need to convert. If you need to simply know if an error exists, you can use the IsError function:
+Power Fx takes a limited number of untyped objects so explicit conversion may be necessary for your formula. In particular, if your formula depends on a Boolean response then you will need to convert. If you need to simply know if an error exists, you can use the IsError function:
 
 ```powerapps-dot
 If(
@@ -93,7 +93,8 @@ If(
   Notify("An Outlook appointment could not be found or could not be deleted")
 )
 ```
-On the other hand, if you need error information (which is only exposed in IfError), then you need to convert the untyped object into some other valid type.  You can do this with any conversion function (Boolean, Text, Value, …).  Conversion functions will return an error if one is given to them. Below is an example for this case: 
+To access error information that is exclusively available through IfError, you must transform the untyped object into a valid type using a conversion function such as Boolean, Text, or Value. These functions will produce an error if they are given one. The following example, illustrates this:
+
 ```powerapps-dot
 With({result: Office365Outlook.CalendarDeleteItemV2("Calendar", 1)},
 If( IsError(result),
