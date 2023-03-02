@@ -259,7 +259,7 @@ The table below outlines which mobile app you can use to run your app.
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
   
-## Privacy Notice
+## Privacy notice
 Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 
   
 Power Apps mobile app and [wrapped native mobile apps](../maker/common/wrap/overview.md) may use device sensors, such as the device accelerometer, to respond to user actions. For example, [wrapped native mobile apps](../maker/common/wrap/overview.md) would automatically show the app menu when the user shakes the device. 
