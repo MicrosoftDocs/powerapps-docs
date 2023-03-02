@@ -4,7 +4,7 @@ description: Learn about the important changes, including deprecations, coming s
 author: sandhangitmsft
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/21/2022
+ms.date: 03/01/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -28,6 +28,10 @@ Makers, developers, and IT pros can use this information to prepare for future r
 > [!IMPORTANT]
 > *Deprecated* means that we intend to remove the feature or capability from a future major release. The feature or capability will continue to work and is fully supported until it's officially removed. This deprecation notification can span a few months or years. After it's removal, the feature or capability no longer work. This notice is to allow you sufficient time to plan and update your code before the feature or capability is removed.
 
+## Power Apps portal admin center
+
+The Power Apps portal admin center is now deprecated and no longer available as of June 2023. Use the new [Power Pages admin hub](/power-pages/admin/admin-overview) in the Power Platform admin center. 
+
 ## Controlling site visibility changes in Power Pages
 
 Starting October 2022 with website version 9.4.9.xx, any new site created in Power Pages or Power Apps portals will be private by default. Only makers or people in the organization granted permission by makers will have website access, making Power Pages sites secure. This feature will provide another layer of security using Azure Active Directory authentication to prevent accidental leaks of partially developed website data and design. When a website is ready to go-live, the site visibility can be changed to public making it accessible to everyone over the internet anonymously or secured with identity providers.  
@@ -35,7 +39,7 @@ Starting October 2022 with website version 9.4.9.xx, any new site created in Pow
 At launch, users with the system administrator role along with [service admins](/power-platform/admin/use-service-admin-role-manage-tenant) will by default have privilege to change site visibility status (private to public or vice versa). 
 
 > [!Note] 
-> All system administrators being able to change the site visibility will only be for a certain duration after which service admins will need to explicitly specify whether all system administrators are allowed to change site visibility. However, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
+> Beginning February 1st, 2023, service admins need to explicitly specify which system administrators are allowed to change site visibility; however, admins can grant or revoke the privilege of changing site visibility status for system administrators at tenant level by running a PowerShell script. Additionally, to provide granular control on who can change the site visibility status, admins can delegate the permissions to specific System administrators in certain Azure Directory security groups. 
 
 ## OAuth 2.0 implicit grant flow within your portal 
 
@@ -48,24 +52,25 @@ The [authorize endpoint](oauth-implicit-grant-flow.md#authorize-endpoint-details
 
 ## List OData feed 
 
-Starting June 2022, using [OData feeds](configure/list-odata-feeds.md) to interact with data via RESTful web services will be deprecated. We recommend that you migrate to the portal [Web API](web-api-overview.md) by April 2023. 
+Starting June 2022, using [OData feeds](configure/list-odata-feeds.md) to interact with data via RESTful web services will be deprecated. We recommend that you migrate to the portal [Web API](web-api-overview.md). 
 
 > [!NOTE] 
-> Starting October 2022, newly provisioned portals won't able to use list OData features. 
+> - Starting October 2022, newly provisioned portals won't able to use list OData features. 
+> - The OData feeds list feature will be removed October 1, 2023.
 
 ## Portal content editor
 
 Starting June 2022, the portal content editor tool to design your website is deprecated. We recommend using Power Apps portals Studio to edit the portal.
 
 > [!NOTE]
-> This feature will be removed by April 2023.
+> This feature will be removed on October 1, 2023.
 
 ## Portals search using Lucene.NET search 
 
 Starting with website version 9.4.4.xx, portal search uses Dataverse search as a default search provider for all new portals. Lucene.NET search is deprecated; however, existing portals that use Lucene.NET search won't be affected. We recommend that users migrate to Dataverse search. Enable Dataverse search for existing portal by setting the Search/EnableDataverseSearch site setting to true.
 
 > [!NOTE]
-> All existing customers who use Lucene.NET search must migrate to Dataverse search by October 2023.
+> All existing customers who use Lucene.NET search must migrate to Dataverse search by October 1, 2023.
 
 ## Content Delivery Network for US Government
 

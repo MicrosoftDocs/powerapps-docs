@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 05/20/2021
 ms.subservice: teams
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Use Fluent UI controls

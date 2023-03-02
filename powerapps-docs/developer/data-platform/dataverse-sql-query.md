@@ -21,7 +21,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change. Note that only the SQL data connection is in preview. Power BI is General Availability (GA)]
 
-The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access to.
+The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
 ## Prerequisites
 
@@ -161,6 +161,13 @@ The solution is to verify the TCP ports 1433 or 5558 from the client are unblock
 2. Run the Test-connection command. <br> `Test-NetConnection -ComputerName <environment>.crm.dynamics.com -port 1433`
 
 If the connection is successful a line "TcpTestSucceeded : True" will be returned.
+
+In some cases traffic may be blocked directly at the IP level. To validate the IP address is also working, take the IP address returned from the above domain test connection and replace the ComputerName parameter value with the IP address.
+
+3. Take the address returned from the above command as "RemoteAddress"
+4. Run the Test-NetConnection -ComputerName \<RemoteAddress> -port 1433
+  
+This should return "TcpTestSucceeded : True"
 
 #### Establish a telnet session to the TDS endpoint
 

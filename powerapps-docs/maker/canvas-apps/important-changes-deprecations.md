@@ -8,9 +8,9 @@ ms.custom:
 ms.date: 07/07/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
-ms.reviewer: tapanm-msft
+ms.reviewer: mkaur-msft
 contributors:
-    - tapanm-msft
+    - mduelae
 ---
 
 # Important upcoming changes (deprecations) in canvas apps

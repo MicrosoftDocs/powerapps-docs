@@ -2,7 +2,7 @@
 title: "Manage plug-ins in a single solution | MicrosoftDocs"
 description: "The definition of a Plug-in assembly should be maintained within a single solution. You may want to have a separate solution that contains only plug-in definitions to help manage the plugin definitions."
 ms.date: 04/03/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 manager: sunilg
 ms.reviewer: pehecke

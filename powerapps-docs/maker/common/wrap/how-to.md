@@ -1,11 +1,11 @@
 ﻿---
 title: Customize and build your mobile app
 description: Learn about how to use the wrap functionality to package one or more canvas apps into a native mobile app package.
-author: larryk78
+author: makolomi
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/31/2022
+ms.reviewer: mkaur
+ms.date: 11/21/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -13,7 +13,8 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - makolomi
+  - mduelae
 ---
 
 # Customize and build your mobile app
@@ -22,7 +23,6 @@ Earlier, you learned about the capabilities of wrap feature, how it works, and i
 
 ## Prerequisites
 
-- You must enable your environment for the wrap capability. Refer to [Install an app in an environment](/power-platform/admin/manage-apps#install-an-app), and install the **Wrap for Power Apps** solution using Power Platform admin center.
 - You'll need access to [Azure portal](https://portal.azure.com) to register your app, and configure the API permissions on the Microsoft Identity platform.
 - You'll need access to [Visual Studio App Center](https://appcenter.ms/) to add new organization and apps.
 - You'll need one or more canvas apps (saved in a solution) that you can package for mobile user distribution.
@@ -39,7 +39,9 @@ Create a new registration for your app in the organizational directory using the
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
 
-When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory. Whether you are a single or multitenant maker, select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap:
+Whether you're a single or multitenant maker, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap. Choose one of the following account types:
+ - Accounts in any organizational directory (Any Azure AD directory - Multitenant)
+ - Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
 
 :::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
 
@@ -87,6 +89,8 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 - **APIs my organization uses**
     - *Azure API Connections*
     - *PowerApps Service*
+    - *Power BI* (only required if your canvas app(s) use Power BI data)
+    - *Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:

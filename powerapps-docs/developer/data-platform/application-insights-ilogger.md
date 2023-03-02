@@ -2,7 +2,7 @@
 title: "Write Telemetry to your Application Insights resource using ILogger (Microsoft Dataverse) | Microsoft Docs"
 description: "When you enable Application Insights for your organization, any plug-ins written using the ILogger Interface provided in the SDK will write telemetry to your Application Insights resource."
 ms.date: 10/06/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
 ms.topic: article
@@ -350,7 +350,7 @@ The formatted message text is captured as part of the `customDimensions`.
 [Plug-ins](plug-ins.md)<br />
 [Debug a plug-in](debug-plug-in.md#use-tracing)<br />
 [View trace logs](tutorial-write-plug-in.md#view-trace-logs)<br />
-[Use the tracing service](write-plug-in.md#use-the-tracing-service)<br />
+[Tracing service](write-plug-in.md#tracing-service)<br />
 [PluginTraceLog Table](reference/entities/plugintracelog.md)
 
 

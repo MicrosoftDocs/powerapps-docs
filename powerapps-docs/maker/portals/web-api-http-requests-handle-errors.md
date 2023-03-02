@@ -33,7 +33,7 @@ Construct the Web API URL by using the format in the following table.
 | Protocol | https://                                 |
 | Base URL | \<portal URL\>                          |
 | Web API Path | \_api                                    |
-| Resource     | Name of the table you want to use |
+| Resource     | Logical name of the table you want to use |
 
 For example, use this format when referring a case:
 
@@ -48,10 +48,10 @@ HTTP requests can use different kinds of methods. However, the portals Web API o
 | Method | Usage |
 | - | - |
 | Get    | Use when retrieving data from tables. |
-| Post   | Use when creating tables and calling actions. |
+| Post   | Use when creating records. |
 | Patch  | Use when updating tables or doing upsert operations. |
-| Delete | Use when deleting tables or individual properties of tables. |
-| Put    | Use in limited situations to update individual properties of tables. |
+| Delete | Use when deleting records or individual field values of records. |
+| Put    | Use in limited situations to update individual fields of records. |
 
 ## HTTP headers
 

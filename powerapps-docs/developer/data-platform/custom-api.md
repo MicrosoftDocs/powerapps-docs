@@ -1,12 +1,12 @@
 ---
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/29/2022
+author: divkamath
+ms.author: dikamath
+ms.date: 01/31/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: dikamath # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -204,9 +204,9 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-#### Bound Action
+#### Function bound to table
 
-This action named `myapi_CustomBoundAPI` is bound to the account table:
+This function named `myapi_CustomBoundAPI` is bound to the account table:
 
 ```http
 GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
@@ -215,7 +215,7 @@ OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
 ```
 
-#### Bound Function
+#### Function bound to table collection
 
 This function named `myapi_CustomEntityCollectionBoundAPI` is bound to the account table collection:
 

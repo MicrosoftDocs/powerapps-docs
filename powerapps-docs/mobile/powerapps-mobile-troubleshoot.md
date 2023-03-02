@@ -1,14 +1,14 @@
 ---
-title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
+title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
-author: mduelae
-manager: kvivek
+author: sericks007
+manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/12/2021
+ms.date: 02/27/2023
 ms.subservice: mobile
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -18,22 +18,36 @@ search.app:
   - PowerApps
 ---
 
-# Troubleshoot issues for Power Apps mobile app
+# Troubleshoot issues in the Power Apps mobile app
 
 This troubleshooting article helps fix common issues for the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md).
 
 > [!NOTE]
-> If you are having an issue with Power Apps for iOS or Android and you don’t find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.”
+> If you are having an issue with Power Apps for iOS or Android and you don't find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.
 
-## Debug mobile apps with Monitor
+## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
+
+A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
+
+-	Android: 3.23012.16
+-	iOS: 13.23012.16
+-	Windows: 23.22121.38
+
+If you are unable to upgrade, contact your administrator.
+
+## Diagnose mobile apps with Monitor
 
 Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](../maker/monitor-canvasapps.md#for-apps-running-on-power-apps-mobile-preview) to better diagnose and troubleshoot issues faster.
+
+## Debug JavaScript web resources in mobile apps
+
+While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in mobile apps](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps)
 
 ## Error: There was a problem signing you in
 
 You are unable to sign in due to issues with the Microsoft Authenticator app.
 
-If you don’t have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
+If you don't have the Microsoft Authenticator app, download the app from the App Store or Play Store and then sign in to Power Apps mobile again.
 
 If you already have the Microsoft Authenticator app installed and you're having sign in issues, then try these steps:
 
@@ -53,14 +67,14 @@ Microsoft authentication apps are Authenticator and Company Portal. Your company
  > [!NOTE]
  > Power Apps requires a valid license to sign in. For more information, see [Licensing overview](/power-platform/admin/pricing-billing-skus).
 
-Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device manufacturer and authentication app. 
+Sometimes, updating and manually opening the authentication app on your device before signing in to Power Apps mobile can fix the problem. If this doesn't fix the issue, then follow the next steps depending on your device manufacturer and authentication app.
 
 ### Huawei or Honor device
 
 1. Go to **Settings** > **Battery** > **App launch**.
 
     > [!NOTE]
-    > The **App launch** menu can have different names depending on the model and the operating version of your mobile device. If you   don’t see the **App launch** menu option, then look for one of the following menu options:
+    > The **App launch** menu can have different names depending on the model and the operating version of your mobile device. If you   don't see the **App launch** menu option, then look for one of the following menu options:
     > - **Close apps after screen lock** 
     > - **Applications**
     > - **Background applications**
@@ -82,7 +96,7 @@ If the issue is still not fixed, then try these steps:
 5. Install [Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
 6. Open Power Apps mobile and sign in.
 
-If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get. 
+If you still can't sign in, then email us at pamobsup@microsoft.com and include your device make and model, session ID, and provide the exact error message that you get.
 
 ## App list is empty
 
@@ -102,17 +116,11 @@ To resolve connection related issues, ensure you remain connected to the interne
 
 ## App resets when running it on Power Apps mobile
 
-When you run a canvas or model-driven app on Power Apps mobile it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large complex webpage, and the web browser suspends the page because it is consuming too much power.
+When you run a canvas or model-driven app on Power Apps mobile, it can reset if the app is using too many resources. If the app uses more resources than are available on your device, the app will reset. This is similar to when you visit a large, complex webpage and the web browser suspends the page because it is consuming too much power.
 
-Power Apps mobile is designed to run on a wide range of devices, including low-end devices with limited resources. When you create a canvas or model-driven app, remember to optimize the app to run on the lowest-specification device that your end-users will use.
+On Android devices, this app restart can look like a crash because the app is completely closed and the user is taken to the home screen of the device.
 
-If you experience a reset, contact your app developer, and point them to this topic.
-
-For more information for developers, see:
-
-- Blog post: [PowerApps coding standards and guidelines](https://powerapps.microsoft.com/blog/powerapps-canvas-app-coding-standards-and-guidelines/)
-- Whitepaper: [PowerApps canvas app coding
-standards and guidelines](https://pahandsonlab.blob.core.windows.net/documents/PowerApps%20canvas%20app%20coding%20standards%20and%20guidelines.pdf) (Note, review the section titled, **Optimizing for performance**).
+If you experience a reset while using a canvas app, contact your app developer, and see [Prevent canvas app restarts](../mobile/power-apps-mobile-canvas-app-restarts.md).
 
 ## Unable to download SharePoint attachment in the mobile app
 
