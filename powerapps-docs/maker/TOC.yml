@@ -2283,7 +2283,7 @@
     - name: Important upcoming changes and deprecations
       href: ./portals/important-changes-deprecations.md
     - name: Known issues
-      href: ./portals/known-issues.md
+      href: /power-pages/known-issues
     - name: Power Apps portals FAQs
       href: ./portals/faq.yml
     - name: Legacy Adxstudio Portals v7 FAQs
@@ -2552,6 +2552,8 @@
                 href: "./data-platform/powerapps-checker/rules/web/avoid-dom-form-event.md"
               - name: "avoid-isactivitytype"
                 href: "./data-platform/powerapps-checker/rules/web/avoid-isactivitytype.md"
+              - name: "avoid-loadtheme"
+                href: "./data-platform/powerapps-checker/rules/web/avoid-loadtheme.md"                
               - name: "avoid-modals"
                 href: "./data-platform/powerapps-checker/rules/web/avoid-modals.md"
               - name: "avoid-ui-refreshribbon"
