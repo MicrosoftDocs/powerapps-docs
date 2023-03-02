@@ -58,6 +58,6 @@ Once someone removes the page, it disappears for other makers in real-time.
 
 ## See also
 
-[Discover who's working on an app (preview)](copresence.md)
+[Discover who's working on an app](copresence.md)
 
 [Add comments](comments.md)

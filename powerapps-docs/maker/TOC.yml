@@ -368,7 +368,7 @@
         items:
           - name: Understand Power Apps Studio
             href: ./canvas-apps/power-apps-studio.md
-          - name: Add comments (preview)
+          - name: Add comments
             href: ./canvas-apps/comments.md
           - name: Add and configure controls
             href: ./canvas-apps/add-configure-controls.md
@@ -1576,7 +1576,7 @@
         href: ./model-driven-apps/collaboration-model-driven-apps.md
       - name: Add comments 
         href: ./model-driven-apps/comments.md 
-      - name: Copresence (preview)
+      - name: Copresence
         href: ./model-driven-apps/copresence.md 
       - name: Coauthoring (preview)
         href: ./model-driven-apps/coauthoring.md
@@ -2217,15 +2217,15 @@
     - name: Update, upgrade, migrate and convert portals
       items:
         - name: Convert a portal
-          href: ./portals/admin/convert-portal.md
+          href: /power-pages/admin/convert-site
         - name: Upgrade a portal
-          href: ./portals/admin/upgrade-portal.md
+          href: /power-pages/admin/upgrade-site
         - name: Update portal solution
-          href: ./portals/admin/update-portal-solution.md
+          href: /power-pages/admin/update-solution
         - name: Update Dynamics 365 instance
-          href: ./portals/admin/update-dynamics365-instance.md
+          href: /power-pages/admin/update-dynamics365-instance
         - name: Migrate portal configuration
-          href: ./portals/admin/migrate-portal-configuration.md
+          href: /power-pages/admin/migrate-site-configuration
     - name: Compliance and accessibility
       items:
         - name: Implement GDPR in portals

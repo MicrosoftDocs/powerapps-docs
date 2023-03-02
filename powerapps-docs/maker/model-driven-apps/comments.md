@@ -38,5 +38,5 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 ## Next steps
 
-[Discover who's working on an app (preview)](copresence.md) <br />
+[Discover who's working on an app](copresence.md) <br />
 [Coauthoring in model-driven apps (preview)](coauthoring.md)
