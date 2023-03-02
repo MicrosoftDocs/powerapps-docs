@@ -57,7 +57,7 @@ Environment.Merge({Target: TargetUntypedObject, Subordinate: SubordinateUntypedO
 When a Action based connector returns an object, you can directly access the object's properties even if the values are untyped. To use such a property however, you will need to first cast it for specific use in Power Apps such as label. 
 For instance, in the example below, the httpRequest returns an untyped object (which previously was cast to Boolean.) 
 ```powerapps-dot
-Set (response, Office365Groups.HttpRequest("/v1.0/me", "GET", "");
+Set (response, Office365Groups.HttpRequest("/v1.0/me", "GET", ""));
 ```
 One of the properties in the response is displayName. It can be accessed, and cast, with a Power Fx expression like the following:
 ```powerapps-dot
