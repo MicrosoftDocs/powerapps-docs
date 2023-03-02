@@ -4,7 +4,7 @@ description: "You can achieve significant performance gains using React and plat
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: hemantg
 author: HemantGaur
-ms.date: 10/18/2022
+ms.date: 02/20/2022
 ms.reviewer: jdaly
 ms.custom:
   - "dyn365-a11y"
@@ -36,7 +36,7 @@ With the benefits available by re-using these component resources, we expect thi
 Just as with any component, you must install [Visual Studio Code](https://code.visualstudio.com/Download) and the [Microsoft Power Platform CLI](../data-platform/powerapps-cli.md#install-microsoft-power-platform-cli) as described here: [Prerequisites](implementing-controls-using-typescript.md#prerequisites)
 
 > [!NOTE]
-> If you have already installed the Standalone Power Platform CLI, make sure you are running the latest version by using the `pac install latest` command.
+> If you have already installed Power Platform CLI for Windows, make sure you are running the latest version by using the `pac install latest` command.
 > The Power Platform Tools for Visual Studio Code should update automatically.
 
 ## Create a React component
@@ -123,6 +123,10 @@ Platform libraries are made available both at the build and runtime to the contr
 ### Q: Can I convert an existing standard control to a React control using platform libraries?
 
 A: No. You must create a new control using the new template and then update the manifest and index.ts methods. For reference, compare the standard and react samples described above.
+
+### Q: Can I use React controls & platform libraries with portals?
+
+A: No. React controls & platform libraries are currently only available for canvas and model-driven apps.
 
 ## Related topics
 

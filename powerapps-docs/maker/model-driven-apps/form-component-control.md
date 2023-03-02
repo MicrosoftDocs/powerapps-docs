@@ -2,7 +2,7 @@
 title: "Edit table records directly from another table’s main form | MicrosoftDocs"
 description: Learn how to design a main form that can be used to edit a related table record.
 ms.custom: ""
-ms.date: 10/17/2022
+ms.date: 02/28/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -129,6 +129,8 @@ Note the following limitations when you add the form component control to a tabl
 - Using the same form for different form component controls on a single form isn't supported.
 
 - The form that you use with a form component must be included in your app. If it isn't, or if the current user doesn't have access to the form, it will fall back to the top-most main form that is included in the app and available to the user (based on form order). More information: [Add a component](add-edit-app-components.md#add-a-component).
+
+- Form component controls have certain limitations when rendered in multi-session apps. If the client API is used to modify the form component control, the changes might not be persisted when switching multi-session tabs.
 
 - You may notice that the timeline wall may not update when a column that is used to set the timeline wall has changed in the form component. When the page is refreshed the timeline wall will update as expected.
 

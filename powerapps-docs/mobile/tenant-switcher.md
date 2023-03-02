@@ -1,14 +1,12 @@
 ---
-title: Switch to a different tenant in the Power Apps mobile app
-description: Users can easily switch tenants in Power Apps mobile.
+title: Switch to a different directory in the Power Apps mobile app
+description: Users can easily switch to a different directory in Power Apps mobile.
 author: sericks007
 ms.author: sericks
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 01/12/2023
+ms.date: 02/15/2023
 ms.custom: 
-
-
 manager: tapanm-MSFT
 search.audienceType: 
   - admin
@@ -16,25 +14,35 @@ search.audienceType:
   - enduser
 ---
 
-# Switch to a different tenant in the Power Apps mobile app
+# Switch to a different directory in the Power Apps mobile app
 
-Users can now easily switch to a different tenant, without having to log out of Power Apps, when using Power Apps on mobile devices. Users can specify the tenant they want to work in on the user profile page.  This means that:
+When a user signs into the Power Apps mobile app, they sign into their *home tenant*, which is the Azure Active Directory (Azure AD) tenant where their credentials are provisioned. After signing in, a user can easily change the tenant or *directory* with which they intend to use the Power Apps mobile app. This enables users to easily access the Power Apps that have been shared with them in different directories.
 
-- Users no longer need to sign out of Power Apps to switch tenants.
-- Users can now access shared apps from a list on the user profile page.
+This means that:
+
+- Users no longer need to log out of the Power Apps mobile app to switch directories.
+- Users can specify the directory they want to work in from a list of directories on the user profile page.
+- Users, including guest users, can access apps shared with them in different directories.
 
 > [!Important]
-> The ability to easily switch to a different tenant is available on only Android devices at this time.
+> The ability to easily switch to a different directory is available on iOS and Android devices at this time.
 
-To switch to a different tenant on Power Apps mobile:
+To switch to a different directory in the Power Apps mobile app:
 
-1. Open Power Apps on your mobile device.
+1. Open the Power Apps mobile app.
 2. From the **Home**, **All apps**, or **More** page, select your profile image. Your user profile page appears.
-3. Select the tenant you're signed in to. A list of tenants appears.
+
+    > [!Note]
+    > Users signing into the Power Apps mobile app with a Microsoft account cannot switch directories from their user profile page. They must use a [deeplink](mobile-deep-links.md), instead.
+    > 
+    > For more information about how to share canvas apps with guest users, see [Share a canvas app with guest users](../maker/canvas-apps/share-app-guests.md#in-power-apps-mobile-how-does-a-guest-see-apps-in-the-guest-tenant).
+
+3. Select the directory you're signed in to. A list of directories appears.
     
     > [!div class="mx-imgBorder"] 
-    > ![A list of tenants.](media/tenant-switcher.png "A list of tenants.")
+    > ![A list of directories.](media/tenant-switcher.png "A list of directories.")
    
-4. Select the tenant you want to switch to.
+4. Select the directory you want to switch to.
+
 
 
