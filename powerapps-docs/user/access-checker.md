@@ -5,7 +5,7 @@ author: paulliew
 manager: tapanm-msft
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/15/2021
+ms.date: 03/02/2023
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -85,7 +85,7 @@ To see who has access to a row and their respective access level, complete the f
   >> add new Check access who has access image here
 
 > [!NOTE]
-> The manager list from [heirarchy and position security](https://learn.microsoft.com/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
+> The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security.md#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
