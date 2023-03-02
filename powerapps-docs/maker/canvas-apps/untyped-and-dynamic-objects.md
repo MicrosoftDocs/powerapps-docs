@@ -1,6 +1,6 @@
 ---
 title: Working with untyped and dynamic objects 
-description: How to work with untyped and dynamic objects .
+description: How to work with untyped and dynamic objects.
 author: lancedMicrosoft
 ms.topic: overview
 ms.custom: 
@@ -20,7 +20,7 @@ contributors:
 ---
 # Working with untyped and dynamic objects 
 
-When dealing with actions in Power Apps, it's possible to encounter untyped return values or input values for some actions. In the past, Power Apps would simply ignore untyped or dynamic input fields, and they would not be visible in PowerFX expressions. Now it's possible to work directly with these fields. Previously, when a return type was untyped, Power Apps would return a Boolean value. Now, it returns an untyped object instead.
+When dealing with actions in Power Apps, it's possible to encounter untyped return values or input values for some actions. Before, Power Apps would ignore untyped or dynamic input fields, and they wouldn't be visible in PowerFX expressions but now, you can work directly with these fields. Before, when a return type was untyped, Power Apps would return a Boolean value. Now, it returns an untyped object instead.
 
 > [!NOTE]
 > Suppose your Power Fx expressions rely on a Boolean return value from these functions. In that case, you'll have to rewrite the formula and explicitly cast the untyped object to a Boolean. Certain functions, such as 'IfError,' don't fully support untyped objects yet. If your expression contains such a function, refer to the note at the end of this article for workarounds.
@@ -57,7 +57,7 @@ Environment.Merge({Target: TargetUntypedObject, Subordinate: SubordinateUntypedO
 ```
 ## Using untyped object returned via an action
 
-If an **Action** based connector returns an object, its properties can be accessed directly, regardless of whether they have been assigned a type. However, if you intend to use a property for a specific purpose in Power Apps, such as for labeling, you will need to cast it first.
+If an **Action** based connector returns an object, its properties can be accessed directly, regardless of whether they've been assigned a type. However, if you intend to use a property for a specific purpose in Power Apps, such as for labeling, you'll need to cast it first.
 
 In the following example, the httpRequest function returns an untyped object that has been previously cast as a Boolean.
 
@@ -74,7 +74,7 @@ Cast to the object **Text** to use it in a Power Apps label control.
 
 Action responses now capture dynamic output, and you can utilize the method described above to access these properties. Additionally, working with dynamic input fields is also possible.
 
-For instance, consider the 'GetMessageDetails' action in Microsoft Teams that has a dynamic input body parameter. Previously, this parameter could not be viewed or specified. However, with the recent update, you can set a variable called 'body' with the appropriate Power Fx record structur 
+Consider the 'GetMessageDetails' action in Microsoft Teams that has a dynamic input body parameter. Previously, this parameter could not be viewed or specified. With the recent update, you can set a variable called 'body' with the appropriate Power Fx record structure. 
 
 ```powerapps-dot
 Set ( body, ParseJSON(JSON( {recipient: { groupID: “7f733b36-7c7f-4f4c-9699-0a7b7a2b3897”, channelID: “19: 085d522328fb4a439220641006f7f25@thread.tacv2”}}));
