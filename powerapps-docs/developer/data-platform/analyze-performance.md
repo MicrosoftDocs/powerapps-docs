@@ -67,6 +67,7 @@ To access the dashboard, navigate to [Power Platform Admin Center](https://admin
 ## See also
 
 [Use plug-ins to extend business processes](plug-ins.md)  
+[Write Telemetry to your Application Insights resource using ILogger](application-insights-ilogger.md)  
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)  
 [Debug Plug-ins](debug-plug-in.md)
 
