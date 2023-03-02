@@ -1,13 +1,13 @@
 ---
 title: Working with untyped and dynamic objects 
-description: Working with untyped and dynamic objects .
+description: How to work with untyped and dynamic objects .
 author: lancedMicrosoft
 ms.topic: overview
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: mkaur
-ms.date: 03/1/2023
+ms.date: 03/2/2023
 ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
@@ -17,20 +17,20 @@ search.app:
 contributors:
   - lancedMicrosoft
   - mduelae
-  - alaug
 ---
 # Working with untyped and dynamic objects 
 
-When working with actions the return value or input value of some actions may be untyped. Previously Power Apps would ignore untyped or dynamic input fields. They would simply not show up in PowerFX expressions. Now you can work directly with them. Additionally, Power Apps would return Boolean if a return type was untyped. Now we return an untyped object. 
+When dealing with actions in Power Apps, it's possible to encounter untyped return values or input values for some actions. In the past, Power Apps would simply ignore untyped or dynamic input fields, and they would not be visible in PowerFX expressions. However, this has changed, and now it's possible to work directly with these fields. Previously, when a return type was untyped, Power Apps would return a Boolean value. Now, it returns an untyped object instead.
 
 > [!NOTE]
-> If your Power Fx expressions depend on a Boolean return value from one of these functions, you will need to rewrite the formula to parse the untyped object and explicitly cast it to a Boolean.  For instance, ‘IfError’ of an untyped object is not yet fully supported.  If you have an expression like this please see the note at the bottom of this article on work-arounds.
+> Suppose your Power Fx expressions rely on a Boolean return value from these functions. In that case, you'll have to rewrite the formula and explicitly cast the untyped object to a Boolean. Certain functions, such as 'IfError,' don't fully support untyped objects yet. If your expression contains such a function, refer to the note at the end of this article for workarounds.
+
 
 ## Passing in untyped objects as parameters
-Some actions require an untyped object as a parameter value. If you have a Power Fx record, you can convert it to an untyped object so that it can be passed to the action.
-The example below uses the merge action that is available on a Dataverse Account table.  This action requires several untyped arguments. 
-We will first set up three variables to hold the TargetObject, SubordinateObject, and the UpdateContextObject.  
-First we assign the text string “Microsoft.Dynamics.CRM.account” to a variable – which we will use in several places.
+
+Certain actions necessitate an untyped object as a parameter value. If you have a Power Fx record, you can convert it to an untyped object, making it suitable for passing to the action.
+
+In the example below, the merge action available on a Dataverse account table requires several untyped arguments. To prepare for this, we'll define three variables to hold the TargetObject, SubordinateObject, and UpdateContextObject. We'll begin by assigning the text string **Microsoft.Dynamics.CRM.account** to a variable, which we'll reuse throughout the example.
 
 ```powerapps-dot
 Set (OdataType, “Microsoft.Dynamics.CRM.account”);
@@ -43,19 +43,24 @@ Set (SubordinateObject, {name: FirstRecord.’Account name’, accountid: FirstR
 Set (UpdateContextObject, {telephone1: FirstRecord.’Main Phone’, address1_city: FirstRecord.’Address 1 : City’, ‘@odata.type’ : OdataType }); 
 ```
 
-Next we will create three more variables to hold the untyped records after conversion : TargetUntypedObject, SubordinateUntypedObject, and UpdateContextUntypedObject.  We use ParseJSON(JSON()) on the original variables to convert them to untyped objects. 
+Next, we'll create three additional variables to store the untyped records after the conversion: TargetUntypedObject, SubordinateUntypedObject, and UpdateContextUntypedObject. To perform the conversion, we'll use the ParseJSON(JSON()) function on the original variables. This will transform the Power Fx records into untyped objects.
+
 ```powerapps-dot
 Set (TargetUntypedObject, ParseJSON(JSON(TargetObject)));
 Set (SubordinateUntypedObject, ParseJSON(JSON(SubordinateObject)));
 Set (UpdateContextUntypedObject, ParseJSON(JSON(UpdateContextObject)));
 ```
-Finally we call the merge action by passing in the required parameters (both untyped and typed):
+Lastly, we call the merge action by passing in the necessary parameters, including for both untyped and typed:
+
 ```powerapps-dot
 Environment.Merge({Target: TargetUntypedObject, Subordinate: SubordinateUntypedObject, UpdateContent: UpdateContextUntypedObject, PerformParentingChecks: false  });
 ```
 ## Using untyped object returned via an action
-When a Action based connector returns an object, you can directly access the object's properties even if the values are untyped. To use such a property however, you will need to first cast it for specific use in Power Apps such as label. 
-For instance, in the example below, the httpRequest returns an untyped object (which previously was cast to Boolean.) 
+
+If an **Action** based connector returns an object, its properties can be accessed directly, regardless of whether they have been assigned a type. However, if you intend to use a property for a specific purpose in Power Apps, such as for labeling, you will need to cast it first.
+
+In the following example, the httpRequest function returns an untyped object that has been previously cast as a Boolean.
+
 ```powerapps-dot
 Set (response, Office365Groups.HttpRequest("/v1.0/me", "GET", ""))```;
 
@@ -63,10 +68,14 @@ One of the properties in the response is displayName. It can be accessed, and ca
 ```powerapps-dot
 Text(response.displayName)
 ```
-Cast to the object Text to use it in a Power Apps label control. 
+Cast to the object **Text** to use it in a Power Apps label control. 
+
 ## Working with Dynamic fields
-Dynamic output is now captured in action responses and you can access those properties using the method described above.  You can also work with dynamic input fields. 
-In the example below, the Microsoft Teams ‘GetMessageDetails’ action has a dynamic input body argument.  Previously you would not have been able to see or specify this argument.  Now, however, you can.  Again, we set a variable ‘body’ to have the appropriate Power Fx record structure. 
+
+Action responses now capture dynamic output, and you can utilize the method described above to access these properties. Additionally, working with dynamic input fields is also possible.
+
+For instance, consider the 'GetMessageDetails' action in Microsoft Teams that has a dynamic input body parameter. Previously, this parameter could not be viewed or specified. However, with the recent update, you can set a variable called 'body' with the appropriate Power Fx record structur 
+
 ```powerapps-dot
 Set ( body, ParseJSON(JSON( {recipient: { groupID: “7f733b36-7c7f-4f4c-9699-0a7b7a2b3897”, channelID: “19: 085d522328fb4a439220641006f7f25@thread.tacv2”}}));
 ```
@@ -75,7 +84,8 @@ Then, we can call the GetMessageDetails action and assign the response to the te
 Set (teamsResponse, MicrosoftTeams.GetMessageDetails ( 1661365068558, “channel”, body ));
 ```
 ## Converting formulas that return untyped objects that previously returned Boolean.  
-Power Fx takes a limited number of untyped objects so explicit conversion may be necessary for your formula.  In particular if your formula depends on a Boolean response then you will need to convert.  If you need to simply know if an error exists, you can use the IsError function:
+
+Power Fx takes a limited number of untyped objects so explicit conversion may be necessary for your formula. In particular if your formula depends on a Boolean response then you will need to convert. If you need to simply know if an error exists, you can use the IsError function:
 
 ```powerapps-dot
 If(
