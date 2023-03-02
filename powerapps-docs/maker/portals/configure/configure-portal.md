@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: overview
 
-ms.date: 09/13/2021
+ms.date: 03/02/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -22,7 +22,7 @@ contributors:
 The Portal Management app lets you do advanced configuration actions on your portal. The app is available after the database on Microsoft Dataverse is created successfully.
 
 > [!NOTE]
-> To use the Portal Management app, you will need to be assigned the [system administrator role](/power-platform/admin/assign-security-roles) in the same Microsoft Dataverse environment as your site. 
+> To use the Portal Management app, you will need to be assigned the [system administrator role or the system customizer](/power-platform/admin/assign-security-roles) in the same Microsoft Dataverse environment as your site. 
 
 > [!NOTE]
 > The Portal Management app also lets you manage Power Pages. More information: [What is Power Pages](/power-pages/introduction).
