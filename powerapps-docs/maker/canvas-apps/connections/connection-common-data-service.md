@@ -137,37 +137,10 @@ When the Power Fx `Environment` object is added to your application, you can acc
 
 ![ Using the Power Fx Environment object.](media/connection-common-data-service/common-data-service-connection-using-the-Envrionment-PowerFx-object.png)
 
-Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. Bound Dataverse actions, when supported, will be available by dotting into the table name.
+Unbound Dataverse actions are peer level to tables and need the parenting scope of the **Environment** language object. All actions in your environment will be available – both system level and custom. 
 
 ![Using a Dataverse action.](media/connection-common-data-service/common-data-service-connection-hooking-up-an-action-to-a-button.png)
 
-### Passing in untyped objects
-
-Some Dataverse actions require an untyped object as a parameter value.  If you have a Power Fx record, you can convert it to an untyped object so that it can be passed into a Dataverse action.
-
-In the example below `TargetObject` is assigned a Power Fx record with the properties of name, accountid, and @odata.type. 
-
-`Set (TargetObject, {name: "Test 2", accountid: "145dc2ba-85a2-ed11-aado-0022482d76a5", '@odata.type': "Microsoft.Dynamics.CRM.account"});` 
-
-`TargetObject` can be converted to an untyped object by using ParseJSON on it. 
-
-Note, that this example requires that you first enable the ParseJSON function.   
-
-`Set (TargetUntypedObject, ParseJSON(JSON(TargetObject)));`
-
-Then you can use the variable `TargetUntypedObject` directly in a Dataverse action as a parameter. 
-
-### Using untyped object returned via an action
-
-When a Dataverse actions returns an object you can directly access the object's properties although the values are untyped. To use a property, you will need to cast it for specific use in Power Apps such as label. For instance, in the example below, the httpRequest returns an object.
-
-`Set (response, Office365Groups.HttpRequest("/v1.0/me", "GET", "");` 
-
-DisplayName is one of the properties in the response. It can be accessed, and cast, with a Power Fx expression like the following:
-
-`Text(response.displayName)`
-
-In the example above, the displayName is being cast to type Text for use (for example) in a label.
-
+For more details on how to use Dataverse actions in your formulas, see [Working with untyped and dynamic objects](../untyped-and-dynamic-objects.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
