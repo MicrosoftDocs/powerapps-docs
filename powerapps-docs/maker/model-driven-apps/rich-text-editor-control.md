@@ -2,7 +2,7 @@
 title: Use the rich text editor control in Power Apps | MicrosoftDocs
 description: "The rich text editor control provides the app user a WYSIWYG editing area for formatting text"
 ms.custom: ""
-ms.date: 11/18/2022
+ms.date: 02/28/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -50,7 +50,8 @@ To enable the rich text editor with default values on any new or existing text c
    > [!NOTE]
    > If you have an existing rich text field, you can use the API to change the format to `Richtext`. More information: [Data type format conversions](/powerapps/developer/data-platform/data-type-format-conversions)
 
-1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Columns** area.
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that you want, open the table that you want, and then select the **Columns** area.
 1. Select **+Add** > **Column**, enter a name for your column, select a text **Data** type, and then select the **Rich text** format option.
 1. Save the column. You can now add the new column to any existing or new form for this table.
 
@@ -59,7 +60,8 @@ To enable the rich text editor with default values on any new or existing text c
 The rich text editor control comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. To enable the rich text editor with a specific configuration on a new or existing column, complete the following steps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-1. On the left navigation pane, select **Solutions**, open the solution that you want, open the table that you want, and then select the **Forms** area.
+1. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that you want, open the table that you want, and then select the **Forms** area.
 1. Select the form, and then select **Edit form** > **Edit form in new tab**.
 1. On the form designer canvas, add or create a text column or select an existing text column, such as the custom multi-line text column used in this article.
 1. On the right column properties pane, expand the **Components** section, select **+ Component**, and then select **Rich Text Editor Control**.
@@ -467,8 +469,7 @@ Default:
 </td>
 
 <td>
-
-  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To process images, set this property to true.
+  By default, images will be uploaded using the client API. As soon as an image is added to the editor, it will be uploaded to the platform. To store images as base64 strings directly in the column configured to use the rich text editor control set this value to **true**.
 </td>
 <td>
 
@@ -736,10 +737,26 @@ Depends on showAsTabControl and showPreview set to true.
   ```"showPreviewHeaderWarning": false```
 </td>
 
+<tr>
+<td>
+  allowSameOriginSandbox
+</td>
+<td>
+  This property enables the content within the rich text editor to be treated as from the same origin as the rendering app. 
+
+  > [!CAUTION]
+  > Use this property with caution. Only use trusted external content because any untrusted external content could be allowed access to internal resources. <br></br>
+  
+  Default value is false.
+</td>
+<td>
+
+  ```"allowSameOriginSandbox": false```
+</td>
+</tr>
+
 </tr>
 </table>
-
-
 
 ## Commonly used rich text editor configurations
 

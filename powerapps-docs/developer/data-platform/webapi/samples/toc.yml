@@ -37,6 +37,8 @@ items:
       href: file-operations.md
     - name: Image operations
       href: image-operations.md
+    - name: Attachment and Annotation file operations
+      href: attachment-annotation-file-operations.md
     - name: Query schema definitions and detect changes
       href: retrievemetadatachanges.md
 - name: (JavaScript) samples
