@@ -114,7 +114,7 @@ When retrieving data through through the TDS endpoint there are a few key query 
 When building a query only return the necessary columns. This helsp both execution of the query and also transferring the results back to the client application. In general keeping a query under 100 columns is recommended. 
 
 ### Choice columns
-Choice columns have been flattened into two columns which helps usability. However, it is important to do any aggregates and filters against the value portion of the choice column. The value portion can have indexes and is stored in the base table. However, the label portion (<choicecolumn>name) is stored separately which cost more to retrieve and can't be indexed. Using a significant number of choice label columns may generate a very slow query. 
+Choice columns have been flattened into two columns which helps usability. However, it is important to do any aggregates and filters against the value portion of the choice column. The value portion can have indexes and is stored in the base table. However, the label portion ('choicecolumn'name) is stored separately which cost more to retrieve and can't be indexed. Using a significant number of choice label columns may generate a very slow query. 
 
 ### Use Top X
 It is very important to use a top clause in your queries to prevent trying to return the whole table of data. For example use Select Top 1000 accountid, name From account Where revenue > 50000 limits the results to the first 1000 accounts. 
