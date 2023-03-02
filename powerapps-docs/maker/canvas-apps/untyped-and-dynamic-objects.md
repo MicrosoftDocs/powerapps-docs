@@ -62,8 +62,8 @@ If an **Action** based connector returns an object, its properties can be access
 In the following example, the httpRequest function returns an untyped object that has been previously cast as a Boolean.
 
 ```powerapps-dot
-Set (response, Office365Groups.HttpRequest("/v1.0/me", "GET", "")```;
-
+Set (response, Office365Groups.HttpRequest("/v1.0/me", "GET", ""));
+```
 One of the properties in the response is displayName. It can be accessed, and cast, with a Power Fx expression like the following:
 ```powerapps-dot
 Text(response.displayName)
