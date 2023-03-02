@@ -141,6 +141,6 @@ Unbound Dataverse actions are peer level to tables and need the parenting scope 
 
 ![Using a Dataverse action.](media/connection-common-data-service/common-data-service-connection-hooking-up-an-action-to-a-button.png)
 
-For more details on how to use Dataverse actions in your formulas, see [Working with untyped and dynamic objects](../untyped-and-dynamic-objects.md) 
+For more details on how to use Dataverse actions in your formulas, see [Working with untyped and dynamic objects](../untyped-and-dynamic-objects.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
