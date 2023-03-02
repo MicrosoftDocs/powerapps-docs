@@ -80,9 +80,9 @@ To see who has access to a row and their respective access level, complete the f
     > ![Select a row to edit it.](media/edit_record.png "Select a row to edit it")
   
 2. Select **Check Access** on the command bar.
-3. In the **Check Access** window, select on **Who has access**.
+3. In the **Check Access** window, select **Who has access**.
 
-  >> add new Check access who has access image here
+  :::image type="content" source="../media/who-has-access.png" alt-text="<alt text>" link="Select Who has access:::
 
 > [!NOTE]
 > The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security.md#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
