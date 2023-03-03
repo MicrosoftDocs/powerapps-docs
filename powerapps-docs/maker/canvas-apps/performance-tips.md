@@ -29,13 +29,28 @@ In the previous articles, you learned about the [execution phases and data call 
 
 You can quickly measure your app's performance by turning on Developer Tools in [Microsoft Edge](/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 connections. Each added connection is counted individually in this limit, irrespective of the connected data source type&mdash;such as Microsoft Dataverse or SQL Server tables, or lists created using Microsoft Lists.
 
+## Avoid control dependencies between screens
+
+To improve performance, the screens of an app are loaded into memory only as they're needed. This optimization can be hampered if, for example, screen 1 is loaded and one of its formulas uses the property of a control from screen 2. Now screen 2 must be loaded to fulfill the dependency before screen 1 can be displayed. Imagine screen 2 has a dependency on screen 3, which has another dependency on screen 4, and so on. This dependency chain can cause many screens to be loaded.
+
+For this reason, avoid formula dependencies between screens. In some cases, you can use a global variable or collection to share information between screens.
+
+There's an exception: In the previous example, imagine that the only way to display screen 1 is by navigating from screen 2. Then screen 2 will have already been loaded in memory when screen 1 is to be loaded. No extra work is needed to fulfill the dependency for screen 2, and therefore there's no performance impact.
+
+
+Please note: There is no limit to number of screens at this time. As mentioned above, app user experience will not be impacted so long as there are not dependencies between screens. However, when using the Power Apps Studio you may begin to experience slowness when editing an app that contains many controls due to Power Apps Studio needing to render all screens within the studio. If this begins to impact development times, the recommendation is to break up the app into multiple apps. (See [Launch() and Param() functions for details.](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/function-param))
+
+
 ## Limit the number of controls
 
-**Don't add more than 500 controls in one app**. Power Apps generates an HTML document object model to render each control. The more controls you add, the more generation time Power Apps needs.
+
+**Avoid adding more than 300 controls in each screen** Power Apps generates an HTML document object model to render each control. The more controls you add, the more generation time Power Apps needs.
+
 
 You can, in some cases, achieve the same result and have the app start faster if you use a gallery instead of individual controls. In
 addition, you might want to reduce the number of control types on the same screen. Some controls (such as PDF viewer, data table, and
 combo box) pull in large execution scripts and take longer to render.
+
 
 ## Optimize the OnStart property
 
@@ -88,13 +103,7 @@ Set(CustomerPhone, CustomerOrder.Phone);
 
 This method is more useful for data such as contact information, default values, or user information that doesn't change frequently. You can also use this technique with the **Defaults** and **User** functions.
 
-## Avoid control dependency between screens
 
-To improve performance, the screens of an app are loaded into memory only as they're needed. This optimization can be hampered if, for example, screen 1 is loaded and one of its formulas uses the property of a control from screen 2. Now screen 2 must be loaded to fulfill the dependency before screen 1 can be displayed. Imagine screen 2 has a dependency on screen 3, which has another dependency on screen 4, and so on. This dependency chain can cause many screens to be loaded.
-
-For this reason, avoid formula dependencies between screens. In some cases, you can use a global variable or collection to share information between screens.
-
-There's an exception: In the previous example, imagine that the only way to display screen 1 is by navigating from screen 2. Then screen 2 will have already been loaded in memory when screen 1 is to be loaded. No extra work is needed to fulfill the dependency for screen 2, and therefore there's no performance impact.
 
 ## Use delegation
 
