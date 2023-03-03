@@ -212,7 +212,7 @@ This means the port has been blocked at the client.
 
 [How Dataverse SQL differs from Transact-SQL](./how-dataverse-sql-differs-from-transact-sql.md)
 [Get started with virtual tables (entities)](./virtual-entities/get-started-ve.md)  
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
+[Use FetchXML to construct a query](./use-fetchxml-construct-query.md)  
 [Service Protection API Limits](api-limits.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
