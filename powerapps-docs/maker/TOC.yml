@@ -2283,11 +2283,11 @@
         - name: Integrate Field Service
           href: ./portals/customer-engagement-apps/integrate-field-service.md
     - name: Important upcoming changes and deprecations
-      href: ./portals/important-changes-deprecations.md
+      href: /power-pages/important-changes-deprecations
     - name: Known issues
       href: /power-pages/known-issues
     - name: Power Apps portals FAQs
-      href: ./portals/faq.yml
+      href: /power-pages/faq
     - name: Legacy Adxstudio Portals v7 FAQs
       href: ./portals/legacy-portal-faq.yml
     - name: Version releases and updates
