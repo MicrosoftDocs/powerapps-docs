@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Microsoft Dataverse table data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/06/2022
+ms.date: 03/02/2023
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -19,13 +19,13 @@ search.app:
 
 # Use SQL to query data
 
-[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection through SQL Server Management Studio and .Net libraries is in preview. Power BI is General Availability (GA)]
+[This topic is pre-release documentation and is subject to change. Note that only the SQL data connection through SQL Server Management Studio and .NET libraries is in preview. Power BI is General Availability (GA)]
 
 The Microsoft Dataverse business layer provides a Tabular Data Stream (TDS) endpoint that emulates a SQL data connection. The SQL connection provides read-only access to the table data of the target Dataverse environment thereby allowing you to execute SQL queries against the Dataverse data tables. No custom views of the data have been provided. The Dataverse endpoint SQL connection uses the Dataverse security model for data access. Data can be obtained for all Dataverse tables to which a user has access.
 
 ## Prerequisites
 
-The **Enable TDS endpoint** setting must be enabled in your environment (on by default). More information: [Manage feature settings](/power-platform/admin/settings-features)
+The **Enable TDS endpoint** setting must be enabled in your environment. It is enabled by default. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 ## Applications support
 
@@ -101,27 +101,31 @@ Dataverse choice columns are represented as \<choice\>Name and \<choice\>Label i
 >[!TIP]
 > After making changes to labels for a choice column, the table needs to have customizations published. 
 
->[!NOTE]
-> Inlcuding a large number of choice lables in your query will haev significant impact on performance. It is best to use less than 10 if possible. Because choice lables are localized the localized string is more expensive to return. 
+> [!NOTE]
+> Including a large number of choice lables in your query will have significant impact on performance. It is best to use less than 10 labels if possible. Because choice lables are localized, the localized string is more expensive to return. 
 
 ### Reported SQL version
 The Dataverse TDS endpoint emulates Microsoft SQL Server read-only query capabilities over the Dataverse business logic. Dataverse returns the current SQL Azure version 12.0.2000.8 for `select @@version`.
 
 ## Performance guidance
-When retrieving data through through the TDS endpoint there are a few key query patterns that should be used. Described below these will mange performance and size of result sets.
+
+When retrieving data through through the TDS endpoint, there are a few key query patterns that should be used. Described below, these query patterns will manage performance and size of result sets.
 
 ### Only necessary columns
-When building a query only return the necessary columns. This helsp both execution of the query and also transferring the results back to the client application. In general keeping a query under 100 columns is recommended. 
+
+When building a query, only return the necessary columns. This helps both execution of the query and also transferring the results back to the client application. In general keeping a query under 100 columns is recommended. 
 
 ### Choice columns
-Choice columns have been flattened into two columns which helps usability. However, it is important to do any aggregates and filters against the value portion of the choice column. The value portion can have indexes and is stored in the base table. However, the label portion ('choicecolumn'name) is stored separately which cost more to retrieve and can't be indexed. Using a significant number of choice label columns may generate a very slow query. 
+
+Choice columns have been flattened into two columns which helps usability. However, it is important to do any aggregates and filters against the value portion of the choice column. The value portion can have indexes and is stored in the base table. However, the label portion ('choicecolumn' name) is stored separately which cost more to retrieve and can't be indexed. Using a significant number of choice label columns may generate a very slow query. 
 
 ### Use Top X
-It is very important to use a top clause in your queries to prevent trying to return the whole table of data. For example use Select Top 1000 accountid, name From account Where revenue > 50000 limits the results to the first 1000 accounts. 
+
+It is very important to use a top clause in your queries to prevent trying to return the whole table of data. For example, use `Select Top 1000 accountid,name From account Where revenue > 50000` limits the results to the first 1000 accounts. 
 
 ### Do not use NOLOCK
+
 When building queries do not use the table hint NOLOCK. This will prevent Dataverse from optimizing queries. 
- 
   
 ## Limitations
 
