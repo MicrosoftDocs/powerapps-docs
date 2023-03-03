@@ -1,7 +1,7 @@
 ---
 title: Get the session or app ID
 description: Learn about how to get a session ID or a canvas-app ID for troubleshooting.
-author: tapanm-msft
+author: mduelae
 
 ms.subservice: troubleshoot
 ms.topic: conceptual
