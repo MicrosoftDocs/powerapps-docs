@@ -65,6 +65,7 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | Filter                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
 | Sort                                                            | Yes            | Yes          | Yes        | Yes              | \-       |
 | SortByColumns                                                   | Yes            | Yes          | Yes        | Yes              | \-       |
+| Search                                                          | No             | Yes          | No         | No               | \-       |
 | Lookup                                                          | Yes            | Yes          | Yes        | Yes              | Yes      |
 | =, \<\>                                                         | Yes            | Yes          | Yes        | Yes              | Yes      |
 | \<, \<=, \>, \>=                                                | Yes            | Yes          | No         | Yes              | \-       |
