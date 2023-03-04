@@ -4,7 +4,7 @@ description: Learn about the execution phases of canvas apps while starting-up, 
 author: JinManAhn-MSFT
 
 ms.topic: conceptual
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/22/2021
 ms.subservice: canvas-maker
 ms.author: jiahn

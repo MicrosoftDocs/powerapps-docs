@@ -3,7 +3,6 @@ title: Code components for model-driven apps  | Microsoft Docs
 description: Learn how to create code components using Power Apps component framework for model-driven apps
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article
@@ -21,7 +20,7 @@ Power Apps component framework gives developers the ability to extend the visual
 
 ## Implementing code components
 
-Before you start creating code components, make sure that you have installed all the prerequisites that are required to develop components using Power Apps component framework. 
+Before you start creating code components, make sure that you have installed all the [prerequisites](create-custom-controls-using-pcf.md#prerequisites) that are required to develop components using Power Apps component framework.
 
 The [create your first code component](implementing-controls-using-typescript.md) article demonstrates the step-by-step process to create code components.
 

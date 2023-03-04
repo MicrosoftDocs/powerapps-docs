@@ -1,7 +1,7 @@
 ---
 title: "Retrieve the history of audited data changes (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to programmatically retrieve the audit change history." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 07/25/2022
+ms.date: 12/07/2022
 ms.reviewer: jdaly
 ms.topic: overview
 author: paulliew # GitHub ID
@@ -37,7 +37,7 @@ The following table summarizes important columns in the audit table.
 |SchemaName<br />LogicalName<br />DisplayName  |Type  |Description  |
 |---------|---------|---------|
 |`Action`<br />`action`<br />**Event**|Choice|Options that represent the event that caused the change. More information: [Actions](#audit-actions)|
-|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br /><br />**Note:** Rather han try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history) |
+|`AttributeMask`<br />`attributemask`<br />**Changed Field**|Memo| When the change represents a data change to a record, contains a comma separated list of numbers that correspond to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ColumnNumber> for the columns changed in the transaction for the action.<br /><br />**Note:** Rather than try to use this data, use the messages to retrieve change history. More information: [Retrieve audit change history](#retrieve-audit-change-history) |
 |`AuditId`<br />`auditid`<br /> **Record Id**|Unique Identifier|The primary key for the audit table.|
 |`CallingUserId`<br />`callinguserid`<br />**Calling User**|Lookup|The calling user when impersonation is used for the operation. Otherwise null. |
 |`CreatedOn`<br />`createdon`<br />**Changed Date**|DateTime|When the audit record was created, which is when the user operation took place.|
@@ -124,7 +124,7 @@ These events capture changes to audit settings.
 |106|Attribute Audit Started|A column was enabled for auditing.|
 |107|Audit Enabled|Auditing was enabled for the organization.|
 |108|Entity Audit Stopped|A table was disabled for auditing.|
-|109|Attribute Audit Stopped|Auditing was disabled for |
+|109|Attribute Audit Stopped|Auditing was disabled for the attribute. |
 |110|Audit Disabled|A column was disabled for auditing.|
 |111|Audit Log Deletion|An audit log was deleted.|
 

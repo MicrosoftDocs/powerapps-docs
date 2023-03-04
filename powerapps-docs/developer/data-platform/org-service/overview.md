@@ -1,8 +1,8 @@
 ---
-title: "What is the Organization service"
+title: "Use the Organization service"
 description: "Learn how you can use the Microsoft Dataverse Organization service to work with business data."
 ms.date: 09/27/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
 ms.topic: overview
@@ -13,7 +13,7 @@ contributors:
  - phecke
 ---
 
-# What is the Organization service
+# Use the Organization service
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
@@ -45,7 +45,7 @@ In the Dataverse SDK, web service operations are initiated by sending *messages*
 
 Take a look at the available message request and response classes in the <xref:Microsoft.Xrm.Sdk.Messages> and <xref:Microsoft.Crm.Sdk.Messages> namespaces.
 
-## A few words about the legacy SOAP endpoint
+## About the legacy SOAP endpoint
 
 The Organization service endpoint that was introduced in 2011, known as the SOAP endpoint, has been deprecated for some time now. This means that it will continue to work and be supported until we remove it. We have also announced that we will update the SDK for .NET assemblies so that they will continue to work after the endpoint is removed. This means that there will be updated SDK for .NET assemblies available before the endpoint is removed. Developers will be required to update their code to use these new assemblies at some point in the future. The key takeaway is that developers will access the Organization service using the SDK for .NET and ignore the endpoint and its protocol. More information: [Transition apps to Dataverse ServiceClient](../sdk-client-transition.md)
 

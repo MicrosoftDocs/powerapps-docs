@@ -2,7 +2,7 @@
 title: "Create and design model-driven app forms | MicrosoftDocs"
 description: "Overview of model-driven forms in Power Apps"
 ms.custom: intro-internal
-ms.date: 07/26/2022
+ms.date: 10/21/2022
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -33,9 +33,7 @@ With Power Apps model-driven apps, forms provide the user interface that people 
 
 In the default solution or an unmanaged solution, it's possible to create new forms or edit existing forms for all tables that allow form customization.
 
-## Model-driven app form UI enhancements (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+## Model-driven app form UI enhancements
 
 Form UI enhancements consist of multiple small changes to improve data presentation and usability of model-driven app forms:
 

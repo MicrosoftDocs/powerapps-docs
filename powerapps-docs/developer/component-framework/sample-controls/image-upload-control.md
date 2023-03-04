@@ -1,12 +1,19 @@
 ---
 title: "Image Upload component | Microsoft Docs"
 description: "This sample component renders as an `Upload` button to upload the image and a default image when the component loads for the first time."
-ms.author: jdaly
 author: noazarur-microsoft
-manager: kvivek
+ms.author: noazarur
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Implementing an image upload component
@@ -30,12 +37,12 @@ You can download the complete sample component from [here](https://github.com/mi
 
 This sample shows how to create an image picker and showcases the device API and resources API to load the image defined in manifest. Image content is stored in base64 encoding and could be saved and revisited.
 
-The `resources.getResource` method takes the input as the web resource name defined in the component manifest and loads that web resource. The component renders an `Upload` button and the default image for initial rendering. Images are defined in the manifest’s [resource](../reference/resources.md) node.
+The `resources.getResource` method takes the input as the web resource name defined in the component manifest and loads that web resource. The component renders an `Upload` button and the default image for initial rendering. Images are defined in the manifest's [resource](../reference/resources.md) node.
 
 ```xml
     <resources>
       <code path="index.ts" order="1" />
-	    <css path="css/TS_ImageUploadControl.css" order="1" />
+       <css path="css/TS_ImageUploadControl.css" order="1" />
       <img path="img/default.png" />
       <resx path="strings/TSImageUploadControl.1033.resx" version="1.0.0" />
     </resources>

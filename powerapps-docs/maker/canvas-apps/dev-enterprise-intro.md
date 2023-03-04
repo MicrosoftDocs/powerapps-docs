@@ -1,12 +1,12 @@
 ---
 title: Canvas apps for enterprise developers, partners, and ISVs
 description: Learn about developing solutions with canvas apps for enterprise developers, partners, and ISVs.
-author: tapanm-msft
+author: mduelae
 
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/17/2022
 ms.author: tapanm
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - KumarVivek
   - evlew
 ---

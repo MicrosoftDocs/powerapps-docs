@@ -1,12 +1,19 @@
 ---
 title: " Navigation API component| Microsoft Docs" 
 description: "This sample component explores the various methods available as part of the Power Apps component framework navigation API." 
-ms.author: jdaly
 author: noazarur-microsoft
-manager: kvivek
+ms.author: noazarur
 ms.date: 03/12/2022
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Implementing Navigation API component
@@ -40,7 +47,7 @@ This sample shows you a confirm dialog when you click on the `openConfirmDialogB
 > [!NOTE]
 > This is similar to calling the [Xrm.Navigation.openConfirmDialog](/dynamics365/customer-engagement/developer/clientapi/reference/xrm-navigation/openconfirmdialog) method in ClientAPI.
   
-The `openFile` method provides the ability to open a file. You’d need to pass in the file object which has the filename, content, mimetype and the filesize. You can also pass in the optional parameter of the mode you want to open the file as 1 or 2, 1 being the default which opens the file in read or open mode.
+The `openFile` method provides the ability to open a file. You'd need to pass in the file object which has the filename, content, mimetype and the filesize. You can also pass in the optional parameter of the mode you want to open the file as 1 or 2, 1 being the default which opens the file in read or open mode.
   
 This sample opens a file named `SampleDemo.txt` in save mode on clicking the `openFileButton`.
 

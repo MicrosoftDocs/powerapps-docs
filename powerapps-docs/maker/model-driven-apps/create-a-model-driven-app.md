@@ -1,8 +1,7 @@
 ---
 title: "Create a model-driven app using the account page"
 description: "Learn how to create a model-driven app that has the account table added to it."
-ms.date: 05/19/2022
-
+ms.date: 12/15/2022
 ms.subservice: mda-maker
 ms.topic: tutorial
 author: joel-lindstrom
@@ -33,7 +32,8 @@ Select the environment you want, or go to the [Power Platform admin center](http
 
 We recommend creating your model-driven app from a solution. A solution is a package that can contain Dataverse tables, forms, views, apps, flows, and other components. By building your model driven-app in a solution, you can easily move it to other environments or preserve a copy in your source control repository.
 
-1. Select **Solutions** on the left navigation pane, and then select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
+1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **New solution**. More information: [Create a solution](/powerapps/maker/data-platform/create-solution).
 
 1. Enter a **Display name** for your solution, such as **Power Apps Training**. Next, you add the account table that will be included in your model-driven app.
 
@@ -68,11 +68,10 @@ Next, you add a new page to the model-driven app.
 
    The contact form and view appear in the pages menu.
 
-1. Select **Contact view**, and then select **Add views**.
-
-   :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-4.png" alt-text="Manage an account view.":::
-
-1. Select the views that you want to add.
+1. Select **Contact views** to display the table views and charts right pane:
+   - To remove a view, under **In this app** next to the view your want to remove select **...** > **Remove**. 
+   - To add a view, under **Not in this app** next to the view you want to add select **...** > **+ Add**.
+   - To edit a view, next to the view select **...** > **Edit** or **Edit in new tab**.
 
    :::image type="content" source="media/create-a-model-driven-app/add-pages-to-an-app-5.png" alt-text="Select the views to add in the app.":::
 

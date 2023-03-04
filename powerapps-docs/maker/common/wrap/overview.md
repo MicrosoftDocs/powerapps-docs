@@ -4,7 +4,7 @@ description: Learn about the wrap functionality in Power Apps.
 author: larryk78
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/08/2022
 ms.subservice: canvas-maker
 ms.author: mkaur
@@ -13,17 +13,22 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Overview of wrap
 
 
-The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps, for native distribution to mobile users.
+The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as custom-branded Android and iOS apps for native distribution to mobile users. You can distribute such wrapped native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
 :::image type="content" source="media/wrap-intro/wrap.png" alt-text="Canvas apps published to mobile users as mobile app package using wrap feature." border="false":::
 
-**Wrap** brings mobile application development platform (MADP) capabilities to Power Apps.
+You can wrap a single or multiple Power Apps canvas apps in the same native mobile app package. You can use wrap feature to customize your mobile app start up experience to match the branding requirements of your organization. You can specify the app icon, splash screen image, welcome (sign in) screen image, and color palette to use in the mobile app.
+
+You can update the wrapped mobile apps by publishing changes to the canvas app(s) that are included in the mobile package using the [Power Apps](https://make.powerapps.com) maker portal. All published changes to the included canvas app(s) are downloaded automatically by the existing, released versions of your wrapped mobile apps. 
+
+
+**Wrap** brings native mobile application development platform (MADP) capabilities to Power Apps.
 
 - **No-code mobile app development**&mdash;make mobile apps with no previous experience
 - **Managed mobile app builds**&mdash;we generate the app for you
@@ -33,9 +38,9 @@ The **wrap** feature in Power Apps enables you to *wrap* your canvas apps as cus
 
 ## Understand wrap process
 
-The **wrap** feature in Power Apps lets you *wrap* your canvas apps as custom-branded Android and iOS apps for distribution to mobile users through Intune or other native distribution channels.
+The **wrap** feature will *wrap* your canvas apps in a native mobile app shell and produce a mobile package. You can digitally sign and distribute this mobile package as your custom-branded Android and iOS apps to mobile users through the native distribution channels like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
 
-The following section explains steps involved in using the wrap feature to create mobile apps:
+The following section explains steps involved in using the wrap feature to create native mobile apps:
 
 :::image type="content" source="media/wrap-intro/wrap-steps.png" alt-text="Steps involved in using wrap feature to create mobile apps." border="false":::
 
@@ -75,7 +80,6 @@ The following list explains what you'll need before you can start using wrap fea
 ### Permissions and access requirements
 
 - Access to one or more [canvas apps](../../canvas-apps/share-app.md) to build the wrap project
-- Access to [Power Platform admin center](/power-platform/admin/use-service-admin-role-manage-tenant#service-administrator-permission-matrix) to [install the wrap feature](how-to.md#prerequisites)
 - Access to Azure portal to create [app registration](/azure/active-directory/develop/quickstart-register-app#prerequisites)
 - Access to [Microsoft App Center](https://appcenter.ms/)
 
@@ -161,6 +165,7 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 ## Next steps
 
+[Use the wrap wizard to build your mobile app (preview)](wrap-how-to.md) <br>
 [Wrap canvas apps as a native mobile app](how-to.md)
 
 ### See also

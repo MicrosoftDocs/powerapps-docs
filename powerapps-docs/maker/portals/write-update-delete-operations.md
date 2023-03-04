@@ -11,7 +11,7 @@ ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - mduelae
     - nickdoelman
 ---
 
@@ -158,7 +158,7 @@ As an example, the following request body posted to the **Account** table set wi
   </tr>
 </table>
 
-### Delete a single property value
+### Delete or clear a field value
 
 <table>
   <tr>
@@ -167,7 +167,7 @@ As an example, the following request body posted to the **Account** table set wi
     <th>URI</th>
   </tr>
   <tr>
-    <td>Delete a single property value</td>
+    <td>Delete or clear a field value</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000001)/description</i></td>
   </tr>

@@ -11,7 +11,7 @@ ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
-    - tapanm-msft
+    - mduelae
     - nickdoelman
 ---
 
@@ -134,6 +134,10 @@ The Web API supports these standard OData string query functions:
 | contains     | *$filter=contains(name,'(sample)')* |
 | endswith     | *$filter=endswith(name,'Inc.')*     |
 | startswith   | *$filter=startswith(name,'a')*      |
+
+### Dataverse query functions
+
+The Web API supports Dataverse query functions to filter results. For more information, see [Web API Query Function Reference](/power-apps/developer/data-platform/webapi/reference/queryfunctions).
 
 ## Order results
 

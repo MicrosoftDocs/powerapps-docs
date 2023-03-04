@@ -84,6 +84,15 @@
       href: query-throttling.md
     - name: Query Hierarchical data
       href: query-hierarchical-data.md
+    - name: Files and images overview
+      href: files-images-overview.md
+      items:
+      - name: Use file column data
+        href: file-column-data.md
+      - name: Use image column data
+        href: image-column-data.md
+      - name: Use Attachments and Annotations
+        href: attachment-annotation-files.md
     - name: Audit data changes
       items:
         - name: Overview
@@ -277,8 +286,6 @@
               href: update-recurring-appointment.md
             - name: Link custom columns of the recurring appointment master and appointment tables
               href: link-custom-attributes-recurring-master-appointment-entities.md
-    - name: Annotation (note) table
-      href: annotation-note-entity.md
     - name: Calendar tables
       href: calendar-entities.md
       items:
@@ -320,6 +327,8 @@
   items:
     - name: Browse table definitions in your environment
       href: browse-your-metadata.md
+    - name: Generate entity relationship diagrams
+      href: use-metadata-generate-entity-diagrams.md
     - name: Table definitions
       href: entity-metadata.md
       items:
@@ -363,6 +372,10 @@
           href: configure-entity-relationship-cascading-behavior.md
     - name: Customize table and column mappings
       href: customize-entity-attribute-mappings.md
+    - name: Query schema definitions
+      href: query-schema-definitions.md
+    - name: Cache schema data
+      href: cache-schema-data.md
     - name: Use connections to link records to each other
       href: connection-entities.md
       items:
@@ -440,6 +453,8 @@
           href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
     - name: Build Windows client apps using XRM tools
       href: xrm-tooling/
+    - name: Send parallel requests
+      href: send-parallel-requests.md
     - name: Discover user organizations
       href: discovery-service.md
     - name: "Sample: Global Discovery Service"

@@ -45,8 +45,9 @@ Follow the procedures given below to access the form designer.
 
 ### Access the form designer for an unmanaged solution
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions** from the left navigation pane, and then open the unmanaged [solution](advanced-navigation.md#solutions) you want to work with. The solution type, managed or unmanaged, is displayed in the **Managed externally?** column.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the unmanaged [solution](advanced-navigation.md#solutions) you want to work with. The solution type, managed or unmanaged, is displayed in the **Managed externally?** column.
 1. In the list of components, locate the table with the form you want to edit. If the table isn’t there, you’ll need to add it.
 
 #### Add a table to an unmanaged solution
