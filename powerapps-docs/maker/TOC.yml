@@ -14,12 +14,12 @@
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Request a Power Apps license
-    href: ../user/request-license.md
   - name: "What's new?"
     href: ../whats-new.md
   - name: System requirements, limits, and configuration
     href: ../limits-and-config.md
+  - name: Request a Power Apps license
+    href: ../user/request-license.md
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
