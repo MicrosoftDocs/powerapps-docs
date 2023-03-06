@@ -2651,7 +2651,9 @@
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+        href: ./data-platform/azure-synapse-link-choices-serverless.md
+      - name: Use managed identities for Azure
+        href: ./data-platform/azure-synapse-link-msi.md  
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory
