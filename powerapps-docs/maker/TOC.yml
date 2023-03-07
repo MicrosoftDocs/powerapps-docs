@@ -2867,8 +2867,12 @@
       href: ../cards/make-a-card/power-fx/intro-to-pfx.md 
     - name: Test and debug cards
       href: ../cards/make-a-card/testing/debugging-cards.md
-    - name: Send a card in Teams
-      href: ../cards/send-a-card/send-card-in-teams.md
+    - name: Send cards
+      items:
+        - name: Share a card in Teams
+          href: ../cards/send-a-card/send-card-in-teams.md
+        - name: Send cards automatically with a flow (preview)
+          href: ../cards/send-a-card/send-card-with-flow.md
     - name: Manage cards
       href: ../cards/manage-cards/manage-cards.md
     - name: Tutorials
