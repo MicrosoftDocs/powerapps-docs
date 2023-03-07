@@ -42,7 +42,7 @@ With managed identities, access to your storage account is restricted to request
   - GetIdentityEnterprisePolicyforEnvironment.ps1
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
-## Create Enterprise policy
+## Create enterprise policy
 
 1. Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
 1. Open Azure CLI with run as administrator and sign into your Azure subscription use the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
@@ -57,11 +57,11 @@ With managed identities, access to your storage account is restricted to request
    - Provide the Azure resource group location.
 1. Save the copy of the **ResourceId** after policy creation.
 
-## Grant Reader access to the enterprise policy via Azure
+## Grant reader access to the enterprise policy via Azure
 
-Azure global admins, Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the Reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
+Azure global admins, Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
 
-Only the Dynamics 365 and Power Platform admins who were granted the Reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
+Only the Dynamics 365 and Power Platform admins who were granted the reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
 
 1. Sign into the [Azure portal](https://portal.azure.com/).
 1. Obtain the Dynamics 365 Power Platform admin user’s **ObjectID**.
@@ -80,25 +80,25 @@ Only the Dynamics 365 and Power Platform admins who were granted the Reader role
 ## Connect enterprise policy to Dataverse environment
 
 1. Obtain Dataverse environment ID.
-   1. Sign into to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+   1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
    1. Select **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
    1. To link to the Dataverse environment run this PowerShell script: `./ NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
-   1. Provide the **ResourceId**.
-   **StatusCode = 202** shows indicates the link is successfully created.
-1. Sign into the Power Platform admin center.
+   1. Provide the **ResourceId**. <br />
+   **StatusCode = 202** indicates the link was successfully created.
+1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 1. Select **Environments**, and then open the environment you specified earlier.
 1. In the **Recent operations** area, select **Full history** to validate the connection of the new identity.
 
-## Configure network access to the Azure Data Lake storage Gen2
+## Configure network access to the Azure Data Lake Storage Gen2
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Open the storage account connected to your Azure Synapse Link for Dataverse profile.
 1. On the left navigation pane, select **Networking**. Then, on the **Firewalls and virtual networks** tab select the following settings:
 
    1. **Enabled from selected virtual networks and IP addresses**.
-   1. Under **Resource instances** > **Allow Azure services on the trusted services list to access this storage account**
+   1. Under **Resource instances**, select **Allow Azure services on the trusted services list to access this storage account**
 1. Select **Save**.
 
 ## Configure network access to the Azure Synapse Workspace
