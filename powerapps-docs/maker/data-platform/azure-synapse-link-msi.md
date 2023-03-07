@@ -116,7 +116,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the Reader role
 
 When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure Product. <!-- what is Azure Product?-->
 
-1. Sign into [Power Apps](make.powerapps.com) and select your environment.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
 1. In your web browsers address bar, append `?athena.managedIdentity=true` to the web address that ends with **exporttodatalake**.
 1. On the left navigation pane, select **Azure Synapse Link**, and then select **+ New link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Select Enterprise Policy with Managed Service Identity**, and then select **Next**.
