@@ -53,7 +53,6 @@ For example, if you had a table collection named **Locations** with **Name**, **
 | Litware, Inc. (sample) | -96.85572 | 32.55253 |
 | Adventure Works (sample) | -96.99952 | 32.72058 |
 
-
 To display these as labeled pins on the map:
 
 1. Set the **Items** property to Locations
@@ -66,6 +65,11 @@ To display these as labeled pins on the map:
     >The relevant column names need to be in quotation marks in the related properties. The data source should not have quotation marks.
 
 You can see how to do [display pins from an Excel sheet](geospatial-map-excel.md) or [build an app](how-to/mobile-apps-address-map.md) that uses the address input control to populate pins on the map control as additional examples.
+
+ >[!NOTE]
+ > Each map control can display up to 5000 pins from latitude or longitude and 50 pins from addresses. The pin limit is lower for addresses as the map needs to geocode these addresses into latitude or longitude to display them. We recommend not using addresses where possible. You can [save geocoded addresses back to your data source](geospatial-map-excel.md#save-geocoded-addresses-from-map-control-to-data-source).
+ >
+ > When both latitude or longitude and an address is given for a single pin, the map control will prioritize using the latitude or longitude to avoid geocoding the address.
 
 ## Properties
 
@@ -123,7 +127,7 @@ The map control has six different types of properties:
 
 | Property | Description | Type | Tab |
 | - | - | - | - |
-| Locations(Items) | Identifies a [data source](./geospatial-map-excel.md) (**Items**) in the form of a table from which to get locations to show on the map. The table lists sets of longitudes and latitudes, or physical addresses, to display as pins. The table can be a collection or from a data source like Excel Online. Each row must have an entry for label, longitude, and latitude, or a physical address, and optionally the pin color and icon. | Not applicable | Properties; Advanced: **Items** |
+| Locations(Items) | Identifies a [data source](./geospatial-map-excel.md) (**Items**) in the form of a table from which to get locations to show on the map. The table lists sets of longitudes and latitudes, or physical addresses, to display as pins. Using latitude or longitude is recommended as addresses need to be geocoded and so have a more restrictive pin limit. The table can be a collection or from a data source like Excel Online. Each row must have an entry for label, longitude, and latitude, or a physical address, and optionally the pin color and icon. | Not applicable | Properties; Advanced: **Items** |
 | ItemsLabels | Identifies the column in **Items** that contains the labels for the pins. | ColumnName | Advanced |
 | ItemsLatitudes | Identifies the column in **Items** that contains the latitude position of the pins. | ColumnName | Advanced |
 | ItemsLongitudes | Identifies the column in **Items** that contains the longitude position of the pins.  | ColumnName | Advanced |
