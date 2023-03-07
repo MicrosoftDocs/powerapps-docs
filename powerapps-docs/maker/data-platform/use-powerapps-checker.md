@@ -118,7 +118,7 @@ You can run solution checker rules in your development environment to detect iss
 
 ## Best practice rules used by solution checker (preview)
 
-The following table lists the component type, rule description, severity, and whether validation occurs when configured for solution import with managed environments. More information: [Enable managed environments](/power-platform/admin/managed-environment-enable)
+The following table lists the component type, rule description, severity, and whether validation occurs when configured for solution import with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
 
 > [!IMPORTANT]
 > Solution import validation with managed environments is a preview feature.
