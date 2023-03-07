@@ -2,13 +2,12 @@
 title: Create a canvas app with the barcode reader control (contains video)
 description: Learn how to make a canvas app that uses the barcode reader control.
 author: joel-lindstrom
-
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
-ms.author: vipare
+ms.author: anuitz
 search.audienceType: 
   - maker
 search.app: 
