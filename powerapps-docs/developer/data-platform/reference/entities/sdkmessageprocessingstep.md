@@ -1,7 +1,7 @@
 ---
 title: "SdkMessageProcessingStep table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -61,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [Category](#BKMK_Category)
 - [Configuration](#BKMK_Configuration)
 - [Description](#BKMK_Description)
+- [EnablePluginProfiler](#BKMK_EnablePluginProfiler)
 - [EventExpander](#BKMK_EventExpander)
 - [EventHandler](#BKMK_EventHandler)
 - [EventHandlerTypeCode](#BKMK_EventHandlerTypeCode)
@@ -182,6 +183,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|256|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_EnablePluginProfiler"></a> EnablePluginProfiler
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|EnablePluginProfiler|
+|DisplayName|EnablePluginProfiler|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|enablepluginprofiler|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### EnablePluginProfiler Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_EventExpander"></a> EventExpander

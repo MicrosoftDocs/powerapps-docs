@@ -1,6 +1,6 @@
 ---
-title: "processstageparameter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
-description: "Includes schema information and supported messages for the processstageparameter table/entity."
+title: "msdyn_pmprocesstemplate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
+description: "Includes schema information and supported messages for the msdyn_pmprocesstemplate table/entity."
 ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
@@ -15,51 +15,51 @@ search.app:
   - D365CE
 ---
 
-# processstageparameter table/entity reference
+# msdyn_pmprocesstemplate table/entity reference
 
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
 
 
-**Added by**: Power Automate Extensions core package Solution
+**Added by**: Process Mining Solution
 
 
 ## Messages
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
-|Assign|PATCH [*org URI*]/api/data/v9.2/processstageparameters(*processstageparameterid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
-|Create|POST [*org URI*]/api/data/v9.2/processstageparameters<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Assign|PATCH [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates(*msdyn_pmprocesstemplateid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
-|Delete|DELETE [*org URI*]/api/data/v9.2/processstageparameters(*processstageparameterid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates(*msdyn_pmprocesstemplateid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
-|Retrieve|GET [*org URI*]/api/data/v9.2/processstageparameters(*processstageparameterid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
-|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/processstageparameters<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates(*msdyn_pmprocesstemplateid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
 |RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
-|SetState|PATCH [*org URI*]/api/data/v9.2/processstageparameters(*processstageparameterid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
-|Update|PATCH [*org URI*]/api/data/v9.2/processstageparameters(*processstageparameterid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|SetState|PATCH [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates(*msdyn_pmprocesstemplateid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.2/msdyn_pmprocesstemplates(*msdyn_pmprocesstemplateid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
 |Property|Value|
 |--------|-----|
-|CollectionSchemaName|processstageparameters|
-|DisplayCollectionName|ProcessStageParameters|
-|DisplayName|ProcessStageParameter|
-|EntitySetName|processstageparameters|
+|CollectionSchemaName|msdyn_pmprocesstemplates|
+|DisplayCollectionName|PM Process Templates|
+|DisplayName|PM Process Template|
+|EntitySetName|msdyn_pmprocesstemplates|
 |IsBPFEntity|False|
-|LogicalCollectionName|processstageparameters|
-|LogicalName|processstageparameter|
+|LogicalCollectionName|msdyn_pmprocesstemplates|
+|LogicalName|msdyn_pmprocesstemplate|
 |OwnershipType|UserOwned|
-|PrimaryIdAttribute|processstageparameterid|
-|PrimaryNameAttribute|name|
-|SchemaName|processstageparameter|
+|PrimaryIdAttribute|msdyn_pmprocesstemplateid|
+|PrimaryNameAttribute|msdyn_name|
+|SchemaName|msdyn_pmprocesstemplate|
 
 <a name="writable-attributes"></a>
 
@@ -68,20 +68,25 @@ search.app:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
-- [name](#BKMK_name)
+- [IsCustomizable](#BKMK_IsCustomizable)
+- [msdyn_name](#BKMK_msdyn_name)
+- [msdyn_pminferredtaskid](#BKMK_msdyn_pminferredtaskid)
+- [msdyn_pmprocesstemplateId](#BKMK_msdyn_pmprocesstemplateId)
+- [msdyn_processdataflowconfig](#BKMK_msdyn_processdataflowconfig)
+- [msdyn_processmashupscript](#BKMK_msdyn_processmashupscript)
+- [msdyn_processminingmetadataconfig](#BKMK_msdyn_processminingmetadataconfig)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
-- [ProcessStageId](#BKMK_ProcessStageId)
-- [processstageparameterId](#BKMK_processstageparameterId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
-- [Value](#BKMK_Value)
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -98,20 +103,111 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Integer|
 
 
-### <a name="BKMK_name"></a> name
+### <a name="BKMK_IsCustomizable"></a> IsCustomizable
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description|The name of the stage parameter|
+|Description|For internal use only.|
+|DisplayName|Is Customizable|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iscustomizable|
+|RequiredLevel|SystemRequired|
+|Type|ManagedProperty|
+
+
+### <a name="BKMK_msdyn_name"></a> msdyn_name
+
+|Property|Value|
+|--------|-----|
+|Description|The name of the custom entity.|
 |DisplayName|Name|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|True|
 |IsValidForRead|True|
-|LogicalName|name|
+|LogicalName|msdyn_name|
 |MaxLength|100|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_msdyn_pminferredtaskid"></a> msdyn_pminferredtaskid
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|PM Inferred Task Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_pminferredtaskid|
+|RequiredLevel|None|
+|Targets|msdyn_pminferredtask|
+|Type|Lookup|
+
+
+### <a name="BKMK_msdyn_pmprocesstemplateId"></a> msdyn_pmprocesstemplateId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for entity instances|
+|DisplayName|PM Process Template|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|msdyn_pmprocesstemplateid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_msdyn_processdataflowconfig"></a> msdyn_processdataflowconfig
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Process Dataflow Configuration|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_processdataflowconfig|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_msdyn_processmashupscript"></a> msdyn_processmashupscript
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for a process template|
+|DisplayName|Mashup Script|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_processmashupscript|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_msdyn_processminingmetadataconfig"></a> msdyn_processminingmetadataconfig
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Process Mining Metadata Configuration|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_processminingmetadataconfig|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -161,39 +257,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|EntityName|
 
 
-### <a name="BKMK_ProcessStageId"></a> ProcessStageId
-
-|Property|Value|
-|--------|-----|
-|Description|The parent stage for the parameter.|
-|DisplayName|Stage|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|processstageid|
-|RequiredLevel|ApplicationRequired|
-|Targets|processstage|
-|Type|Lookup|
-
-
-### <a name="BKMK_processstageparameterId"></a> processstageparameterId
-
-|Property|Value|
-|--------|-----|
-|Description|Unique identifier for entity instances|
-|DisplayName|ProcessStageParameter|
-|IsValidForForm|False|
-|IsValidForRead|True|
-|IsValidForUpdate|False|
-|LogicalName|processstageparameterid|
-|RequiredLevel|SystemRequired|
-|Type|Uniqueidentifier|
-
-
 ### <a name="BKMK_statecode"></a> statecode
 
 |Property|Value|
 |--------|-----|
-|Description|Status of the ProcessStageParameter|
+|Description|Status of the PM Process Template|
 |DisplayName|Status|
 |IsValidForCreate|False|
 |IsValidForForm|True|
@@ -215,7 +283,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Property|Value|
 |--------|-----|
-|Description|Reason for the status of the ProcessStageParameter|
+|Description|Reason for the status of the PM Process Template|
 |DisplayName|Status Reason|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -263,28 +331,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Type|Integer|
 
-
-### <a name="BKMK_Value"></a> Value
-
-|Property|Value|
-|--------|-----|
-|Description|The parameter value.|
-|DisplayName|Value|
-|FormatName|Text|
-|IsLocalizable|False|
-|IsValidForForm|True|
-|IsValidForRead|True|
-|LogicalName|value|
-|MaxLength|2000|
-|RequiredLevel|None|
-|Type|String|
-
 <a name="read-only-attributes"></a>
 
 ## Read-only columns/attributes
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [ComponentIdUnique](#BKMK_ComponentIdUnique)
+- [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
 - [CreatedByYomiName](#BKMK_CreatedByYomiName)
@@ -292,6 +346,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfBy](#BKMK_CreatedOnBehalfBy)
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
+- [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -299,14 +354,57 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_pminferredtaskidName](#BKMK_msdyn_pminferredtaskidName)
+- [OverwriteTime](#BKMK_OverwriteTime)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningBusinessUnitName](#BKMK_OwningBusinessUnitName)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
-- [ProcessStageIdName](#BKMK_ProcessStageIdName)
+- [SolutionId](#BKMK_SolutionId)
+- [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_ComponentIdUnique"></a> ComponentIdUnique
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Row id unique|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ComponentState"></a> ComponentState
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### ComponentState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Published||
+|1|Unpublished||
+|2|Deleted||
+|3|Deleted Unpublished||
+
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
@@ -428,6 +526,31 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_IsManaged"></a> IsManaged
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether the solution component is part of a managed solution.|
+|DisplayName|Is Managed|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsManaged Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Managed||
+|0|Unmanaged||
+
+**DefaultValue**: 0
+
+
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 **Added by**: Active Solution Solution
@@ -547,6 +670,39 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_msdyn_pminferredtaskidName"></a> msdyn_pminferredtaskidName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_pminferredtaskidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_OverwriteTime"></a> OverwriteTime
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
+
+
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
 **Added by**: Active Solution Solution
@@ -649,20 +805,34 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Lookup|
 
 
-### <a name="BKMK_ProcessStageIdName"></a> ProcessStageIdName
+### <a name="BKMK_SolutionId"></a> SolutionId
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
-|Description||
-|DisplayName||
-|FormatName|Text|
-|IsLocalizable|False|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
 |IsValidForForm|False|
 |IsValidForRead|True|
-|LogicalName|processstageidname|
-|MaxLength|100|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
+
+**Added by**: Basic Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
 |RequiredLevel|None|
-|Type|String|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
@@ -687,19 +857,21 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 Listed by **SchemaName**.
 
-- [processstageparameter_SyncErrors](#BKMK_processstageparameter_SyncErrors)
-- [processstageparameter_AsyncOperations](#BKMK_processstageparameter_AsyncOperations)
-- [processstageparameter_MailboxTrackingFolders](#BKMK_processstageparameter_MailboxTrackingFolders)
-- [processstageparameter_ProcessSession](#BKMK_processstageparameter_ProcessSession)
-- [processstageparameter_BulkDeleteFailures](#BKMK_processstageparameter_BulkDeleteFailures)
-- [processstageparameter_PrincipalObjectAttributeAccesses](#BKMK_processstageparameter_PrincipalObjectAttributeAccesses)
+- [msdyn_pmprocesstemplate_SyncErrors](#BKMK_msdyn_pmprocesstemplate_SyncErrors)
+- [msdyn_pmprocesstemplate_DuplicateMatchingRecord](#BKMK_msdyn_pmprocesstemplate_DuplicateMatchingRecord)
+- [msdyn_pmprocesstemplate_DuplicateBaseRecord](#BKMK_msdyn_pmprocesstemplate_DuplicateBaseRecord)
+- [msdyn_pmprocesstemplate_AsyncOperations](#BKMK_msdyn_pmprocesstemplate_AsyncOperations)
+- [msdyn_pmprocesstemplate_MailboxTrackingFolders](#BKMK_msdyn_pmprocesstemplate_MailboxTrackingFolders)
+- [msdyn_pmprocesstemplate_ProcessSession](#BKMK_msdyn_pmprocesstemplate_ProcessSession)
+- [msdyn_pmprocesstemplate_BulkDeleteFailures](#BKMK_msdyn_pmprocesstemplate_BulkDeleteFailures)
+- [msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses](#BKMK_msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses)
 
 
-### <a name="BKMK_processstageparameter_SyncErrors"></a> processstageparameter_SyncErrors
+### <a name="BKMK_msdyn_pmprocesstemplate_SyncErrors"></a> msdyn_pmprocesstemplate_SyncErrors
 
 **Added by**: System Solution Solution
 
-Same as the [processstageparameter_SyncErrors](syncerror.md#BKMK_processstageparameter_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
+Same as the [msdyn_pmprocesstemplate_SyncErrors](syncerror.md#BKMK_msdyn_pmprocesstemplate_SyncErrors) many-to-one relationship for the [syncerror](syncerror.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -707,16 +879,50 @@ Same as the [processstageparameter_SyncErrors](syncerror.md#BKMK_processstagepar
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstageparameter_SyncErrors|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_SyncErrors|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_processstageparameter_AsyncOperations"></a> processstageparameter_AsyncOperations
+### <a name="BKMK_msdyn_pmprocesstemplate_DuplicateMatchingRecord"></a> msdyn_pmprocesstemplate_DuplicateMatchingRecord
 
 **Added by**: System Solution Solution
 
-Same as the [processstageparameter_AsyncOperations](asyncoperation.md#BKMK_processstageparameter_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
+Same as the [msdyn_pmprocesstemplate_DuplicateMatchingRecord](duplicaterecord.md#BKMK_msdyn_pmprocesstemplate_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|duplicaterecord|
+|ReferencingAttribute|duplicaterecordid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_DuplicateMatchingRecord|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_pmprocesstemplate_DuplicateBaseRecord"></a> msdyn_pmprocesstemplate_DuplicateBaseRecord
+
+**Added by**: System Solution Solution
+
+Same as the [msdyn_pmprocesstemplate_DuplicateBaseRecord](duplicaterecord.md#BKMK_msdyn_pmprocesstemplate_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|duplicaterecord|
+|ReferencingAttribute|baserecordid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_DuplicateBaseRecord|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_pmprocesstemplate_AsyncOperations"></a> msdyn_pmprocesstemplate_AsyncOperations
+
+**Added by**: System Solution Solution
+
+Same as the [msdyn_pmprocesstemplate_AsyncOperations](asyncoperation.md#BKMK_msdyn_pmprocesstemplate_AsyncOperations) many-to-one relationship for the [asyncoperation](asyncoperation.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -724,16 +930,16 @@ Same as the [processstageparameter_AsyncOperations](asyncoperation.md#BKMK_proce
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstageparameter_AsyncOperations|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_AsyncOperations|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_processstageparameter_MailboxTrackingFolders"></a> processstageparameter_MailboxTrackingFolders
+### <a name="BKMK_msdyn_pmprocesstemplate_MailboxTrackingFolders"></a> msdyn_pmprocesstemplate_MailboxTrackingFolders
 
 **Added by**: System Solution Solution
 
-Same as the [processstageparameter_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_processstageparameter_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
+Same as the [msdyn_pmprocesstemplate_MailboxTrackingFolders](mailboxtrackingfolder.md#BKMK_msdyn_pmprocesstemplate_MailboxTrackingFolders) many-to-one relationship for the [mailboxtrackingfolder](mailboxtrackingfolder.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -741,16 +947,16 @@ Same as the [processstageparameter_MailboxTrackingFolders](mailboxtrackingfolder
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstageparameter_MailboxTrackingFolders|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_MailboxTrackingFolders|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_processstageparameter_ProcessSession"></a> processstageparameter_ProcessSession
+### <a name="BKMK_msdyn_pmprocesstemplate_ProcessSession"></a> msdyn_pmprocesstemplate_ProcessSession
 
 **Added by**: System Solution Solution
 
-Same as the [processstageparameter_ProcessSession](processsession.md#BKMK_processstageparameter_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
+Same as the [msdyn_pmprocesstemplate_ProcessSession](processsession.md#BKMK_msdyn_pmprocesstemplate_ProcessSession) many-to-one relationship for the [processsession](processsession.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -758,16 +964,16 @@ Same as the [processstageparameter_ProcessSession](processsession.md#BKMK_proces
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstageparameter_ProcessSession|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_ProcessSession|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_processstageparameter_BulkDeleteFailures"></a> processstageparameter_BulkDeleteFailures
+### <a name="BKMK_msdyn_pmprocesstemplate_BulkDeleteFailures"></a> msdyn_pmprocesstemplate_BulkDeleteFailures
 
 **Added by**: System Solution Solution
 
-Same as the [processstageparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK_processstageparameter_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
+Same as the [msdyn_pmprocesstemplate_BulkDeleteFailures](bulkdeletefailure.md#BKMK_msdyn_pmprocesstemplate_BulkDeleteFailures) many-to-one relationship for the [bulkdeletefailure](bulkdeletefailure.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -775,16 +981,16 @@ Same as the [processstageparameter_BulkDeleteFailures](bulkdeletefailure.md#BKMK
 |ReferencingAttribute|regardingobjectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstageparameter_BulkDeleteFailures|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_BulkDeleteFailures|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_processstageparameter_PrincipalObjectAttributeAccesses"></a> processstageparameter_PrincipalObjectAttributeAccesses
+### <a name="BKMK_msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses"></a> msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses
 
 **Added by**: System Solution Solution
 
-Same as the [processstageparameter_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_processstageparameter_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
+Same as the [msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses](principalobjectattributeaccess.md#BKMK_msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses) many-to-one relationship for the [principalobjectattributeaccess](principalobjectattributeaccess.md) table/entity.
 
 |Property|Value|
 |--------|-----|
@@ -792,7 +998,7 @@ Same as the [processstageparameter_PrincipalObjectAttributeAccesses](principalob
 |ReferencingAttribute|objectid|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|processstageparameter_PrincipalObjectAttributeAccesses|
+|ReferencedEntityNavigationPropertyName|msdyn_pmprocesstemplate_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -802,66 +1008,64 @@ Same as the [processstageparameter_PrincipalObjectAttributeAccesses](principalob
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
-- [lk_processstageparameter_createdby](#BKMK_lk_processstageparameter_createdby)
-- [lk_processstageparameter_createdonbehalfby](#BKMK_lk_processstageparameter_createdonbehalfby)
-- [lk_processstageparameter_modifiedby](#BKMK_lk_processstageparameter_modifiedby)
-- [lk_processstageparameter_modifiedonbehalfby](#BKMK_lk_processstageparameter_modifiedonbehalfby)
-- [user_processstageparameter](#BKMK_user_processstageparameter)
-- [team_processstageparameter](#BKMK_team_processstageparameter)
-- [business_unit_processstageparameter](#BKMK_business_unit_processstageparameter)
-- [processstage_processstageparameter](#BKMK_processstage_processstageparameter)
+- [lk_msdyn_pmprocesstemplate_createdby](#BKMK_lk_msdyn_pmprocesstemplate_createdby)
+- [lk_msdyn_pmprocesstemplate_createdonbehalfby](#BKMK_lk_msdyn_pmprocesstemplate_createdonbehalfby)
+- [lk_msdyn_pmprocesstemplate_modifiedby](#BKMK_lk_msdyn_pmprocesstemplate_modifiedby)
+- [lk_msdyn_pmprocesstemplate_modifiedonbehalfby](#BKMK_lk_msdyn_pmprocesstemplate_modifiedonbehalfby)
+- [user_msdyn_pmprocesstemplate](#BKMK_user_msdyn_pmprocesstemplate)
+- [team_msdyn_pmprocesstemplate](#BKMK_team_msdyn_pmprocesstemplate)
+- [business_unit_msdyn_pmprocesstemplate](#BKMK_business_unit_msdyn_pmprocesstemplate)
+- [msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid)
 
 
-### <a name="BKMK_lk_processstageparameter_createdby"></a> lk_processstageparameter_createdby
-
-**Added by**: System Solution Solution
-
-See the [lk_processstageparameter_createdby](systemuser.md#BKMK_lk_processstageparameter_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_processstageparameter_createdonbehalfby"></a> lk_processstageparameter_createdonbehalfby
+### <a name="BKMK_lk_msdyn_pmprocesstemplate_createdby"></a> lk_msdyn_pmprocesstemplate_createdby
 
 **Added by**: System Solution Solution
 
-See the [lk_processstageparameter_createdonbehalfby](systemuser.md#BKMK_lk_processstageparameter_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_msdyn_pmprocesstemplate_createdby](systemuser.md#BKMK_lk_msdyn_pmprocesstemplate_createdby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_lk_processstageparameter_modifiedby"></a> lk_processstageparameter_modifiedby
-
-**Added by**: System Solution Solution
-
-See the [lk_processstageparameter_modifiedby](systemuser.md#BKMK_lk_processstageparameter_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_lk_processstageparameter_modifiedonbehalfby"></a> lk_processstageparameter_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_pmprocesstemplate_createdonbehalfby"></a> lk_msdyn_pmprocesstemplate_createdonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [lk_processstageparameter_modifiedonbehalfby](systemuser.md#BKMK_lk_processstageparameter_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+See the [lk_msdyn_pmprocesstemplate_createdonbehalfby](systemuser.md#BKMK_lk_msdyn_pmprocesstemplate_createdonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_user_processstageparameter"></a> user_processstageparameter
-
-**Added by**: System Solution Solution
-
-See the [user_processstageparameter](systemuser.md#BKMK_user_processstageparameter) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
-
-### <a name="BKMK_team_processstageparameter"></a> team_processstageparameter
+### <a name="BKMK_lk_msdyn_pmprocesstemplate_modifiedby"></a> lk_msdyn_pmprocesstemplate_modifiedby
 
 **Added by**: System Solution Solution
 
-See the [team_processstageparameter](team.md#BKMK_team_processstageparameter) one-to-many relationship for the [team](team.md) table/entity.
+See the [lk_msdyn_pmprocesstemplate_modifiedby](systemuser.md#BKMK_lk_msdyn_pmprocesstemplate_modifiedby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
 
-### <a name="BKMK_business_unit_processstageparameter"></a> business_unit_processstageparameter
-
-**Added by**: System Solution Solution
-
-See the [business_unit_processstageparameter](businessunit.md#BKMK_business_unit_processstageparameter) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
-
-### <a name="BKMK_processstage_processstageparameter"></a> processstage_processstageparameter
+### <a name="BKMK_lk_msdyn_pmprocesstemplate_modifiedonbehalfby"></a> lk_msdyn_pmprocesstemplate_modifiedonbehalfby
 
 **Added by**: System Solution Solution
 
-See the [processstage_processstageparameter](processstage.md#BKMK_processstage_processstageparameter) one-to-many relationship for the [processstage](processstage.md) table/entity.
+See the [lk_msdyn_pmprocesstemplate_modifiedonbehalfby](systemuser.md#BKMK_lk_msdyn_pmprocesstemplate_modifiedonbehalfby) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_user_msdyn_pmprocesstemplate"></a> user_msdyn_pmprocesstemplate
+
+**Added by**: System Solution Solution
+
+See the [user_msdyn_pmprocesstemplate](systemuser.md#BKMK_user_msdyn_pmprocesstemplate) one-to-many relationship for the [systemuser](systemuser.md) table/entity.
+
+### <a name="BKMK_team_msdyn_pmprocesstemplate"></a> team_msdyn_pmprocesstemplate
+
+**Added by**: System Solution Solution
+
+See the [team_msdyn_pmprocesstemplate](team.md#BKMK_team_msdyn_pmprocesstemplate) one-to-many relationship for the [team](team.md) table/entity.
+
+### <a name="BKMK_business_unit_msdyn_pmprocesstemplate"></a> business_unit_msdyn_pmprocesstemplate
+
+**Added by**: System Solution Solution
+
+See the [business_unit_msdyn_pmprocesstemplate](businessunit.md#BKMK_business_unit_msdyn_pmprocesstemplate) one-to-many relationship for the [businessunit](businessunit.md) table/entity.
+
+### <a name="BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid"></a> msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid
+
+See the [msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid](msdyn_pminferredtask.md#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid) one-to-many relationship for the [msdyn_pminferredtask](msdyn_pminferredtask.md) table/entity.
 
 ### See also
 
 [Dataverse table/entity reference](../about-entity-reference.md)  
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)  
-<xref href="Microsoft.Dynamics.CRM.processstageparameter?text=processstageparameter EntityType" />
+<xref href="Microsoft.Dynamics.CRM.msdyn_pmprocesstemplate?text=msdyn_pmprocesstemplate EntityType" />

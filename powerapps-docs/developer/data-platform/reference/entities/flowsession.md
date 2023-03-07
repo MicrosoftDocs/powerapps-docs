@@ -1,7 +1,7 @@
 ---
 title: "flowsession table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowsession table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Entity to store the information that is generated when a modern flow or UI flow runs.
+Entity to store the information that is generated when a Power Automate Desktop flow runs.
 
 **Added by**: Power Automate Extensions core package Solution
 

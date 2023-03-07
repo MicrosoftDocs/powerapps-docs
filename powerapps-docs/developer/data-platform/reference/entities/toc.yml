@@ -354,6 +354,8 @@
   href: msdyn_pminferredtask.md
 - name: msdyn_pmprocessextendedmetadataversion
   href: msdyn_pmprocessextendedmetadataversion.md
+- name: msdyn_pmprocesstemplate
+  href: msdyn_pmprocesstemplate.md
 - name: msdyn_pmprocessusersettings
   href: msdyn_pmprocessusersettings.md
 - name: msdyn_pmprocessversion

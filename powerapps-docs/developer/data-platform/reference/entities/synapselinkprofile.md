@@ -1,7 +1,7 @@
 ---
 title: "synapselinkprofile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkprofile table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -65,6 +65,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [CopyAttachments](#BKMK_CopyAttachments)
 - [CopyFiles](#BKMK_CopyFiles)
 - [datalakefolder](#BKMK_datalakefolder)
+- [DestinationSyncState](#BKMK_DestinationSyncState)
 - [ExtendedProperties](#BKMK_ExtendedProperties)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -156,6 +157,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|ApplicationRequired|
 |Targets|datalakefolder|
 |Type|Lookup|
+
+
+### <a name="BKMK_DestinationSyncState"></a> DestinationSyncState
+
+|Property|Value|
+|--------|-----|
+|Description|Sync state of the profile|
+|DisplayName|Destination Sync State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|destinationsyncstate|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### DestinationSyncState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|None|None|
+|1|NotCompleted|Not Completed|
+|2|Completed|Completed|
+
 
 
 ### <a name="BKMK_ExtendedProperties"></a> ExtendedProperties

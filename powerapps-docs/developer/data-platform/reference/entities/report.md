@@ -1,7 +1,7 @@
 ---
 title: "Report table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Report table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -542,6 +542,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 These columns/attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [CdsDatasetId](#BKMK_CdsDatasetId)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -572,6 +573,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningUser](#BKMK_OwningUser)
 - [ParentReportIdName](#BKMK_ParentReportIdName)
 - [PowerBiReportName](#BKMK_PowerBiReportName)
+- [PowerBiWorkspaceInfo](#BKMK_PowerBiWorkspaceInfo)
 - [QueryInfo](#BKMK_QueryInfo)
 - [RdlHash](#BKMK_RdlHash)
 - [ReportIdUnique](#BKMK_ReportIdUnique)
@@ -580,6 +582,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_CdsDatasetId"></a> CdsDatasetId
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Represents the dataset id of a report.|
+|DisplayName|cdsdatasetid|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|cdsdatasetid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
@@ -1071,6 +1091,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForRead|True|
 |LogicalName|powerbireportname|
 |MaxLength|500|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_PowerBiWorkspaceInfo"></a> PowerBiWorkspaceInfo
+
+**Added by**: CDS Report Schema Changes Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the workspace information of the Power Bi embedded report.|
+|DisplayName|Power Bi Workspace Information|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerbiworkspaceinfo|
+|MaxLength|1024|
 |RequiredLevel|None|
 |Type|String|
 

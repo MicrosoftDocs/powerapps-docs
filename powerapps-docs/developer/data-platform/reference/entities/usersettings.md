@@ -1,7 +1,7 @@
 ---
 title: "UserSettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the UserSettings table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -136,6 +136,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [TimeZoneStandardYear](#BKMK_TimeZoneStandardYear)
 - [TrackingTokenId](#BKMK_TrackingTokenId)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
+- [TryToggleStatus](#BKMK_TryToggleStatus)
 - [UILanguageId](#BKMK_UILanguageId)
 - [UseCrmFormForAppointment](#BKMK_UseCrmFormForAppointment)
 - [UseCrmFormForContact](#BKMK_UseCrmFormForContact)
@@ -1591,6 +1592,31 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|transactioncurrency|
 |Type|Lookup|
+
+
+### <a name="BKMK_TryToggleStatus"></a> TryToggleStatus
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Enable or disable try toggle status.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|trytogglestatus|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### TryToggleStatus Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_UILanguageId"></a> UILanguageId

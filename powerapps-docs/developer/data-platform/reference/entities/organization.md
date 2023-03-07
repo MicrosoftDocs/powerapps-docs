@@ -1,7 +1,7 @@
 ---
 title: "Organization table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Organization table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -69,6 +69,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AllowAutoUnsubscribeAcknowledgement](#BKMK_AllowAutoUnsubscribeAcknowledgement)
 - [AllowClientMessageBarAd](#BKMK_AllowClientMessageBarAd)
 - [AllowedIpRangeForFirewall](#BKMK_AllowedIpRangeForFirewall)
+- [AllowedMimeTypes](#BKMK_AllowedMimeTypes)
 - [AllowEntityOnlyAudit](#BKMK_AllowEntityOnlyAudit)
 - [AllowLeadingWildcardsInGridSearch](#BKMK_AllowLeadingWildcardsInGridSearch)
 - [AllowLeadingWildcardsInQuickFind](#BKMK_AllowLeadingWildcardsInQuickFind)
@@ -98,6 +99,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [BaseCurrencyId](#BKMK_BaseCurrencyId)
 - [BingMapsApiKey](#BKMK_BingMapsApiKey)
 - [BlockedAttachments](#BKMK_BlockedAttachments)
+- [BlockedMimeTypes](#BKMK_BlockedMimeTypes)
 - [BoundDashboardDefaultCardExpanded](#BKMK_BoundDashboardDefaultCardExpanded)
 - [BulkOperationPrefix](#BKMK_BulkOperationPrefix)
 - [BusinessCardOptions](#BKMK_BusinessCardOptions)
@@ -369,6 +371,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [RecurrenceExpansionJobBatchSize](#BKMK_RecurrenceExpansionJobBatchSize)
 - [RecurrenceExpansionSynchCreateMax](#BKMK_RecurrenceExpansionSynchCreateMax)
 - [ReferenceSiteMapXml](#BKMK_ReferenceSiteMapXml)
+- [ReleaseCadence](#BKMK_ReleaseCadence)
 - [ReleaseWaveName](#BKMK_ReleaseWaveName)
 - [RelevanceSearchEnabledByPlatform](#BKMK_RelevanceSearchEnabledByPlatform)
 - [RelevanceSearchModifiedOn](#BKMK_RelevanceSearchModifiedOn)
@@ -803,6 +806,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |LogicalName|allowediprangeforfirewall|
 |MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_AllowedMimeTypes"></a> AllowedMimeTypes
+
+**Added by**: File Store Service Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Allow upload or download of certain mime types.|
+|DisplayName|List of allowed mime types.|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|allowedmimetypes|
+|MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1431,6 +1452,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|blockedattachments|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_BlockedMimeTypes"></a> BlockedMimeTypes
+
+**Added by**: File Store Service Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Prevent upload or download of certain mime types that are considered dangerous.|
+|DisplayName|List of blocked mime types.|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|blockedmimetypes|
 |MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|String|
@@ -6842,6 +6881,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|1073741823|
 |RequiredLevel|None|
 |Type|String|
+
+
+### <a name="BKMK_ReleaseCadence"></a> ReleaseCadence
+
+**Added by**: PowerAppsUnifiedClientInfraExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Current orgnization release cadence value|
+|DisplayName|Current orgnization release cadence value|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|releasecadence|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_ReleaseWaveName"></a> ReleaseWaveName

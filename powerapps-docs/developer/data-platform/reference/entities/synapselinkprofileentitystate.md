@@ -1,7 +1,7 @@
 ---
 title: "synapselinkprofileentitystate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkprofileentitystate table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -61,6 +61,9 @@ Runtime state of the Synapse Link entity
 
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [AdditionTime](#BKMK_AdditionTime)
+- [CrmRecordCount](#BKMK_CrmRecordCount)
+- [CrmRecordCountModifiedTime](#BKMK_CrmRecordCountModifiedTime)
 - [EntityName](#BKMK_EntityName)
 - [EntityType](#BKMK_EntityType)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
@@ -68,6 +71,8 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [InitialSyncMetadataCreatedTime](#BKMK_InitialSyncMetadataCreatedTime)
 - [InitialSyncProcessCompletedTime](#BKMK_InitialSyncProcessCompletedTime)
 - [InitialSyncState](#BKMK_InitialSyncState)
+- [LakeRecordCount](#BKMK_LakeRecordCount)
+- [LakeRecordCountModifiedTime](#BKMK_LakeRecordCountModifiedTime)
 - [LastSyncedDataTime](#BKMK_LastSyncedDataTime)
 - [LastSyncedDataVersion](#BKMK_LastSyncedDataVersion)
 - [LastSyncedMetadataTime](#BKMK_LastSyncedMetadataTime)
@@ -84,6 +89,51 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [SyncState](#BKMK_SyncState)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
+
+
+### <a name="BKMK_AdditionTime"></a> AdditionTime
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Addition time of entity|
+|DisplayName|Addition Time|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|additiontime|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_CrmRecordCount"></a> CrmRecordCount
+
+|Property|Value|
+|--------|-----|
+|Description|CRM record count|
+|DisplayName|CRM Record Count|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|crmrecordcount|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_CrmRecordCountModifiedTime"></a> CrmRecordCountModifiedTime
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|CRM record count modified time for entity|
+|DisplayName|CRM Record Count Modified Time|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|crmrecordcountmodifiedtime|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_EntityName"></a> EntityName
@@ -211,6 +261,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |32|Paused|Paused|
 |64|PostProcessing|Post processing|
 
+
+
+### <a name="BKMK_LakeRecordCount"></a> LakeRecordCount
+
+|Property|Value|
+|--------|-----|
+|Description|Lake record count|
+|DisplayName|Lake Record Count|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lakerecordcount|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_LakeRecordCountModifiedTime"></a> LakeRecordCountModifiedTime
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Lake record count modified time for entity|
+|DisplayName|Lake Record Count Modified Time|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lakerecordcountmodifiedtime|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_LastSyncedDataTime"></a> LastSyncedDataTime

@@ -1,7 +1,7 @@
 ---
 title: "SLA table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the SLA table/entity."
-ms.date: 02/15/2023
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -993,7 +993,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4710|Process Session|Information that is generated when a dialog is run. Every time that you run a dialog, a dialog session is created.|
 |4711|Expander Event|For internal use only. An event that will be expanded into jobs whose executions can proceed in the background.|
 |4712|Process Trigger|Trigger that invoke a rule.|
-|4720|Flow Session|Entity to store the information that is generated when a modern flow or UI flow runs.|
+|4720|Flow Session|Entity to store the information that is generated when a Power Automate Desktop flow runs.|
 |4724|Process Stage|Stage associated with a process.|
 |4725|Business Process Flow Instance|Active path associated with every Business Process Flow instance|
 |4800|Web Wizard|Definition for a Web-based wizard.|
@@ -1277,6 +1277,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |10166|Power BI Dataset||
 |10167|Power BI Mashup Parameter||
 |10168|Power BI Report||
+|10321|PM Process Template||
 
 
 
