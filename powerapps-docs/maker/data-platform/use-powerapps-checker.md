@@ -34,22 +34,6 @@ Solution checker works with unmanaged solutions that can be exported from an env
 > - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of unmanaged solutions for Power Apps environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module&preserve-view=true) 
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
 > - Use of solution checker does not guarantee that a solution import will be successful. The static analysis checks performed against the solution do not know the configured state of the destination environment and import success may be dependent on other solutions or configurations in the environment. 
-<!-- 
-## Enable the solution checker
-The Solution checker is enabled by default in every environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
-
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment where you want to enable the solution checker. 
-2. On the left navigation pane, select **Solutions**.
-3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You need to allow pop-up windows if your browser blocks the page from opening. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Install solution checker.](media/solution-checker-install.png "Install solution checker")
-
-4. Select **Free Trial** on the AppSource page. 
-
-5. If you agree, accept the terms and conditions and select the environment to install the Power Apps checker solution. 
-6. When the installation is complete, refresh the **Solution** list on the Power Apps site to verify that the solution checker is available.  
-7. To check a solution, [Run the solution checker](#run-the-solution-checker). -->
 
 ## Run the solution checker
 
@@ -153,6 +137,7 @@ The following table lists the component type, rule description, severity, and wh
 |Web Resources  | [avoid-dom-form-event](./powerapps-checker/rules/web/avoid-dom-form-event.md)  | | High | Yes |
 |Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     | Critical | Yes |
 |Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   | Critical | Yes  |
+|Web Resources  | [avoid-loadtheme](./powerapps-checker/rules/web/avoid-loadtheme.md)  | Don't use `loadTheme` Fluent v8 API.   | Low | No |
 |Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins. | Critical  | Yes  |
 |Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  | High | Yes |
 |Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | | High | Yes |

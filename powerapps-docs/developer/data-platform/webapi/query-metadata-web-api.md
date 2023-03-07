@@ -1,7 +1,7 @@
 ---
 title: "Query table definitions using the Web API (Microsoft Dataverse) | Microsoft Docs"
 description: "The capability to query table definitions (metadata) is available using the Web API and using the Organization service by using RetrieveMetadataChangesRequest"
-ms.date: 01/11/2023
+ms.date: 03/01/2023
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
@@ -81,6 +81,14 @@ OData-Version: 4.0
 You can use any of the `EntityMetadata` properties with `$select` system query options and you can use `$filter` on any properties that use primitive or enumeration values.  
 
 There are no limits on the number of metadata entities that will be returned in a query. There's no paging. All matching resources will be returned in the first response.  
+
+## Limit languages returned
+
+When an environment has many languages provisioned, the amount of data returned can grow large. For best performance, limit the language labels returned using the `LabelLanguages` parameter with the LCID value of the language you want to return.
+
+[!INCLUDE [languagecode](../../../includes/languagecode.md)]
+
+For example, appending the following will limit the localized language labels to English: `&LabelLanguages=1033`.
 
 <a name="bkmk_filterEnumTypes"></a>
 
