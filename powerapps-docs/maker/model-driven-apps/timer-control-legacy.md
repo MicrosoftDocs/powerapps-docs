@@ -42,7 +42,7 @@ To add a timer control to a form:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  On the left navigation pane, expand **Data**, and then select **Tables**.
+2.  On the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 3.  Select a table, such as the account table, and then select the **Forms** area.
 

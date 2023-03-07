@@ -44,6 +44,9 @@ You can also select a column heading from the table view, and then select **Filt
 
 ## Create a table
 
+Watch this video for a quick overview about how to create a table:
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWEEuM]
+
 While [viewing tables](#view-tables), on the menu bar select **New table**. This opens the **New table** panel.
 
 :::image type="content" source="media/new-entity-panel.png" alt-text="Create a new table pane.":::
@@ -60,6 +63,8 @@ Select **Enable Attachments** to append notes and files to records for this tabl
 
 Select the **Primary column** tab if you want to change the **Display Name** or **Name** of the primary column. The primary column is used by lookup fields when establishing relationships with other tables.
 
+### Advanced options
+
 Select **Advanced options** to display additional properties that are optional for a table.
 
 |Property |Description|
@@ -70,7 +75,7 @@ Select **Advanced options** to display additional properties that are optional f
 | **Choose a table image**  | You can choose whether to display an image for the table. This image is displayed in Power Apps in some design areas. Notice that the image doesn't appear in apps using the table. To display images in apps, use the image column. More information: [Image columns](types-of-fields.md#image-columns) |
 | **Color** | Set a color to be used for the table in model-driven apps.  |
 |**Apply duplicate detection rules**   | If duplicate detection is enabled for your organization, enabling this allows you to create duplicate detection rules for this table.  |
-|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  |
+|**Track changes**   | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.  This option must be enabled for certain features such as Azure Synapse Link for Dataverse. |
 | **Provide custom help**  | When selected, set a **Help URL** to control what page users will see when they select the help button in the application. Use this to provide guidance specific to your company processes for the table.  |
 | **Audit changes to its data**  | When auditing is enabled for your organization, this allows for changes to table records to be captured over time. When you enable auditing for a table, auditing is also enabled on all its fields. You can select or clear fields that you want to enable auditing on.  |
 | **Leverage quick create form if available**  |After you've created and published a Quick Create Form for this table, people will have the option to create a new record using the Create button in the navigation pane. More information: [Create and design model-driven app forms](../model-driven-apps/create-design-forms.md)  <br /> When this is enabled for a custom activity table, the custom activity will be visible in the group of activity entities when people use the **Create** button in the navigation pane. However, because activities don’t support quick create forms, the main form will be used when the custom table icon is selected.  |

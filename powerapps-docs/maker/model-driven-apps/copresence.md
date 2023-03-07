@@ -6,12 +6,10 @@ ms.author: matp
 ms.service: "powerapps"
 ms.subservice: mda-maker
 ms.topic: how-to
-ms.date: 01/23/2023
+ms.date: 03/01/2023
 ms.custom: template-how-to
 ---
-# Discover who's working on an app (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Discover who's working on an app
 
 Find who's working on an app at the same time as you with copresence. Copresence provides the following benefits:
 
@@ -22,9 +20,7 @@ Find who's working on an app at the same time as you with copresence. Copresence
 - The name of the maker who made the first save or the last save is displayed.
 
 > [!IMPORTANT]
-> - This is a public preview feature. More information: Public previews for [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
-> - This feature is being rolled out, and&mdash;depending on your region&mdash;it might not be available for your tenant yet.
-> - By default, most Power Platform environments have [coauthoring](coauthoring.md) enabled by default. In case you disable coauthoring or your tenant doesn’t have coauthoring yet, you'll have the copresence experience that is described in this article. 
+> By default, most Power Platform environments have [coauthoring](coauthoring.md) enabled by default. In case you disable coauthoring or your tenant doesn’t have coauthoring yet, you'll have the copresence experience that is described in this article. 
 
 :::image type="content" source="media/co-authoring.png" alt-text="Copresence feature in app designer":::
 1. Command bar displays makers currently working in the app and allows you to chat or email them.

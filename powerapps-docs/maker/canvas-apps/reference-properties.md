@@ -258,6 +258,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[FindText](controls/control-pdf-viewer.md)** – The search term to look for in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
+**[FocusedBorderColor](controls/properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](controls/properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Font](controls/properties-text.md)** – The name of the family of fonts in which text appears.  Applies to many controls.
 
 **[FontWeight](controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.  Applies to many controls.
