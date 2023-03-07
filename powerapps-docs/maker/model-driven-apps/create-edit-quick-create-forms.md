@@ -4,7 +4,6 @@ description: "Learn how to create or edit a quick create form"
 ms.custom: ""
 ms.date: 08/28/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -50,14 +49,14 @@ Custom activity tables that support quick create forms can be enabled, and it is
   
 > [!NOTE]
 >  - The table must have the **Enable quick create forms** option enabled for the quick create form to be displayed. 
->  - The table and the quick create form must be added to your app.
+>  - The table must be added to your app.
 >  - Some columns, such as the CREATEDON column, aren't available to add to a quick create form.  
   
 ### How to create a quick create form
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Select **Solutions**, open the solution you want, select **Tables**, select the table, and then select the **Forms** tab.  
+2.  Select **Solutions**, open the solution you want, select **Tables**, select the table, and then select the **Forms** area.  
 
 3.  On the toolbar, select **Add form** > **Quick Create Form**.  
   
@@ -92,7 +91,7 @@ If you add a composite column to a quick create form, it will be displayed as se
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Select **Solutions**, open the solution you want, select **Tables**, select the table, and then select the **Forms** tab.
+2. Select **Solutions**, open the solution you want, select **Tables**, select the table, and then select the **Forms** area.
 
 3. In the form list, select a form where the form **Type** is **Quick Create**.  
   

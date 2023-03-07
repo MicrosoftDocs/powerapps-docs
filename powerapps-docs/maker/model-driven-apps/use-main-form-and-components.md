@@ -45,8 +45,9 @@ Follow the procedures given below to access the form designer.
 
 ### Access the form designer for an unmanaged solution
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions** from the left navigation pane, and then open the unmanaged [solution](advanced-navigation.md#solutions) you want to work with. The solution type, managed or unmanaged, is displayed in the **Managed externally?** column.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the unmanaged [solution](advanced-navigation.md#solutions) you want to work with. The solution type, managed or unmanaged, is displayed in the **Managed externally?** column.
 1. In the list of components, locate the table with the form you want to edit. If the table isn’t there, you’ll need to add it.
 
 #### Add a table to an unmanaged solution
@@ -57,7 +58,7 @@ Follow the procedures given below to access the form designer.
    - For a custom table, select **Include all components**.
    - For a standard table choose **Select components**, and then browse to and select the main form you want to customize, and then select **Add**.
 
-1. The table is added to the solution. In the list of components, open the table, select the **Forms** tab, and then open form of type **Main**.
+1. The table is added to the solution. In the list of components, open the table, select the **Forms** area, and then open form of type **Main**.
 
 6. In the form designer, make the changes you want.
 
@@ -71,7 +72,7 @@ Certain customizations that make changes to the user interface require that they
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.  
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.  
 
 3. In the list of forms, open the form of type **Main**.
 

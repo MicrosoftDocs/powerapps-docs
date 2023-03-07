@@ -1,17 +1,15 @@
 ---
 title: Resources | Microsoft Docs
 description: Provides access to the methods to get all the information about the resource files defined in the manifest.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Resources
@@ -20,7 +18,7 @@ ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Methods
 

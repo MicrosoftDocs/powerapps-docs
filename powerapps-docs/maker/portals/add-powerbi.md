@@ -5,21 +5,23 @@ author: neerajnandwana-msft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/23/2021
+ms.date: 12/22/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Add Power BI
 
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+
 You can add a Power BI component on a page to display Power BI dashboards and reports on your portal.
 
-> [!NOTE]
-> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
+Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
 
 To add a Power BI component to a webpage:
 
@@ -49,7 +51,7 @@ To add a Power BI component to a webpage:
             > [!NOTE]
             > Ensure you've shared Power BI workspaces with the maker and target portal users.
 
-        3. **Publish to web** - Allows you to share Power BI dashboards or reports to anyone on the internet.
+        1. **Publish to web** - Allows you to share Power BI dashboards or reports to anyone on the internet.
 
         For more information about access types, go to [Power BI access type considerations](#power-bi-access-type-considerations).
 
@@ -107,14 +109,17 @@ The following list explains Power BI access types in brief and lists access type
 
 ### General Power BI considerations
 
-- [Portals Studio](../portals/portal-designer-anatomy.md) performance can degrade while working with Power BI workspaces because of the following:
+- [Portals Studio](../portals/portal-designer-anatomy.md) performance can degrade while working with Power BI workspaces because of the following reasons:
     - A high number of workspaces shared with a logged-in user.
     - Power BI workspaces are shared with many users.
 - [The capture Liquid variable](../portals/liquid/portals-entity-tags.md#powerbi) isn't supported in portals Studio while working with a Power BI component.
 - If you [reset a portal](../portals/admin/reset-portal.md) and provision a new portal, you must add the portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](../portals/admin/set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
 - If you make a change in the Power Apps portals admin center, you must reload the portals Studio if you already have it open.
 - Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
-- Power BI dashboards and reports connected to a shared dataset present on a different workspace are not supported.
+- Power BI dashboards and reports connected to a shared dataset present on a different workspace aren't supported.
+- Paginated Power BI reports aren't supported.
+- If you're using Power BI **Embed for your customers** access type to provide reports and dashboards for your customers, refer to the [powerbi-client JavaScript library](/admin/add-powerbi-report.md#how-to-use-powerbi-client-javascript-library-in-portals) for advanced customizations. 
+- If you're using the Power BI **Embed for your organization** access type and want to hide the filter pane, refer to [hide filter pane in reading mode](/power-bi/create-reports/power-bi-report-filter?tabs=powerbi-desktop#hide-the-filters-pane-in-reading-mode) in the Power BI documentation.  
 
 ### Power BI performance and optimization considerations
 
@@ -126,10 +131,10 @@ Embedding multiple Power BI workspaces may need extra considerations. Refer to t
 
 ### See also
 
-[Set up Power BI integration](admin/set-up-power-bi-integration.md) <br>
-[Add a Power BI report or dashboard to a web page in portal](admin/add-powerbi-report.md) <br>
-[Power Apps portals Studio](portal-designer-anatomy.md) <br>
-[Create and manage webpages](create-manage-webpages.md) <br>
+[Set up Power BI integration](admin/set-up-power-bi-integration.md) <br />
+[Add a Power BI report or dashboard to a web page in portal](admin/add-powerbi-report.md) <br />
+[Power Apps portals Studio](portal-designer-anatomy.md) <br />
+[Create and manage webpages](create-manage-webpages.md) <br />
 [WYSIWYG editor](compose-page.md)
 
 

@@ -47,9 +47,10 @@ Configure the following features after you add the Read Only Grid control to a t
 
 1. Go to [Power Apps](https://make.powerapps.com)
 
-1. Select **Dataverse** on the left navigation pane, and then select **Tables** .  Alternatively, select **Solutions**, open the [solution](model-driven-app-glossary.md#solution), and then open the table, such as **Account**.
+1. Select **Tables** on the left navigation pane. Alternatively, select **Solutions**, and then open the [solution](model-driven-app-glossary.md#solution). [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the table, such as **Account**.
 
-1. Select the **Forms** tab, and open the select the form that you want to edit.
+1. Select the **Forms** area, and select the form that you want to edit.
 1. Select **Switch to classic**. The classic form editor opens as a new tab in your browser. (You may need to select **...** before selecting **Switch to classic**.)
 
 1. In the navigation pane expand **Entities**, select the table (such as **Account** or **Contact**), and then on the **Controls** tab, select **Add Control**.
@@ -89,8 +90,8 @@ Configure the following features after you add the Read Only Grid control to a t
 
     |Flow Type|Description|
     |--------------|--------------------|
-    |**Reflow**|Allows the grid to render into list mode depending when there is no enough display space.|
-    |**Grid Only**|Restricts the grid to reflow into list even when there is no enough display space.|
+    |**Reflow**|Allows the grid to render into list mode depending when there is not enough display space.|
+    |**Grid Only**|Restricts the grid to reflow into list even when there is not enough display space.|
     |**List Only**|Displays only as a list even when there is enough space to display as grid.|
 
      ![Reflow behavior properties.](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Reflow behavior properties")

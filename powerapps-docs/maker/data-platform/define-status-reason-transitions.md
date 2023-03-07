@@ -27,12 +27,10 @@ search.app:
 
 # Define status reason transitions for the Case or custom tables
 
-
-
 You can specify status reason transitions for the Incident (**Case**) table or a custom table.
 
 > [!NOTE]
-> Although the Incident (Case) table isn't included in a default Microsoft Dataverse environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Although the Incident (Case) table isn't included in a default Microsoft Power Apps environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
   
 Status reason transitions are an optional additional level of filtering to define what the status reason value can be changed to for each status reason. Defining a limited list of valid options can make it easier for people to choose the correct next status reason for a row when you have a large number of combinations for valid status reason values.  
   
@@ -85,7 +83,7 @@ The screenshot below provides an example that meets the following requirements:
 ### See Also  
 
 [Create and edit columns for Dataverse using Power Apps solution explorer](create-edit-field-solution-explorer.md)<br />
-[Table metadata > Table states](/powerapps/developer/data-platform/table-metadata#table-states)<br />
+[Table metadata > Table states](/powerapps/developer/data-platform/entity-metadata#table-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 
 

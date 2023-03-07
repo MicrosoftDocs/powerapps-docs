@@ -35,7 +35,7 @@ search.app:
 
 ## Set the form order
 
-1. Sign into Power Apps, select **Solutions**, open the solution required, select a table, and then select the **Forms** tab.
+1. Sign into Power Apps, select **Solutions**, open the solution required, select a table, and then select the **Forms** area.
 2. Next to the main form you want to configure the fallback form for, select **...**, and then select **Form settings**.
 3. In the left navigation on the **Form settings** page, select **Form order**.
 4. Select the form set that is required, such as **Main Form**, **Quick Create Form**, **Quick View Form**, or **Card Form**.

@@ -1,4 +1,4 @@
-- name: Docs
+- name: Learn
   href: /
   topicHref: /
   items:
@@ -7,46 +7,12 @@
     topichref: /power-platform/
     items:
     - name: Power Apps
-      tocHref: /powerapps/
-      topicHref: /powerapps/
+      tocHref: /power-apps/
+      topicHref: /power-apps/
       items:
-      # Adding Create app for each type of app
-      - name: Create apps
-        tocHref: /powerapps/maker/data-platform/
-        topicHref: /powerapps/maker/index
-      - name: Create apps
-        tocHref: /powerapps/maker/model-driven-apps/
-        topicHref: /powerapps/maker/index     
-      - name: Create apps
-        tocHref: /powerapps/maker/canvas-apps/
-        topicHref: /powerapps/maker/index       
-      #  Make sure Create apps appears for topics in developer folder 
-      - name: Create apps
-        tocHref: /powerapps/developer/data-platform/
-        topicHref: /powerapps/maker/index
-        items: 
-        - name: Microsoft Dataverse
-          tocHref: /powerapps/developer/data-platform/
-          topicHref: /powerapps/maker/data-platform/index          
-          items:
-          - name: Developer
-            tocHref: /powerapps/developer/data-platform/
-            topicHref: /powerapps/developer/data-platform/index
-            items:
-            - name: Organization Service
-              tocHref: /powerapps/developer/data-platform/org-service/
-              topicHref: /powerapps/developer/data-platform/org-service/index
-            - name: Web API
-              tocHref: /powerapps/developer/data-platform/webapi/
-              topicHref: /powerapps/developer/data-platform/webapi/index
-      - name: Create apps
-        tocHref: /powerapps/developer/model-driven-apps/
-        topicHref: /powerapps/maker/index
-        items:
-        - name: Model-driven apps
-          tocHref: /powerapps/developer/model-driven-apps/
-          topicHref: /powerapps/maker/model-driven-apps/index      
-          items:
-          - name: Developer
-            tocHref: /powerapps/developer/model-driven-apps/
-            topicHref: /powerapps/developer/model-driven-apps/index    
+      - name: Dataverse
+        tocHref: /power-apps/developer/data-platform/
+        topicHref: /power-apps/developer/data-platform/
+      - name: Dataverse
+        tocHref: /power-apps/maker/data-platform/
+        topicHref: /power-apps/maker/data-platform/

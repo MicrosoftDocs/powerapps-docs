@@ -1,17 +1,15 @@
 ---
 title: openErrorDialog | Microsoft Docs
 description: Displays an error dialog.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 10c154b9-45a0-44ee-a621-73d6a9009c6d
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 # openErrorDialog
 

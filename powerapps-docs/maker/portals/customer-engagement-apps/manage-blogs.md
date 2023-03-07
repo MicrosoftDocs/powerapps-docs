@@ -1,22 +1,23 @@
 ---
 title: Manage blogs
 description: Learn how to manage blogs on a portal."
-author: sbmjais
-
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Manage blogs
 
-Learn how to manage blog comments and blog posts both within Portalsand from the portal content editor.
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
+Learn how to manage blog comments and blog posts both within portals and from the portal content editor.
 
 ## Manage blogs in Dynamics 365 Portals
 

@@ -1,27 +1,27 @@
 ---
 title: "Sample: Import data using complex data map (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to create new records by using data import" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: "pehecke"
-
+ms.date: 04/03/2022
+author: JimDaly #TODO: No Owner
+ms.author: jdaly
+manager: kvivek
+ms.reviewer: pehecke
 ms.topic: sample
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
+contributors:
+  - JimDaly
+  - phecke
 ---
+
 # Sample: Import data using complex data map
 
+This sample shows how to create new records by using data import. The sample uses a complex data map. You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ImportComplexDataMap).
 
-
-This sample shows how to create new records by using data import. The sample uses a complex data map. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportComplexDataMap).
-
->[!NOTE]
+> [!NOTE]
 > The source data for this sample is contained in the following file `ImportComplexDataMap\import accounts.csv`
 
 ## How to run this sample
@@ -41,15 +41,13 @@ In order to simulate the scenario described above, the sample will do the follow
 1. The `LookUpMapping` method creates a lookup mapping to the parent account.
 1. The `ImportFile` method creates a import file.
 1. The `GetHeaderColumnsImportFileRequest` method retrieves the header columns used in the import file.
-1. The `ParseImportRequest` method parses the import file. 
+1. The `ParseImportRequest` method parses the import file.
 1. The `RetrievedParsedDataImportFileRequest` method retrieves the data from the parse table.
 1. The `TransformImportRequest` method transforms the import.
-
 
 ### Clean up
 
 Display an option to delete the records created in the [Setup](#setup). The deletion is optional in case you want to examine the tables and data created by the sample. You can manually delete the records to achieve the same result.
-
 
 ### See Also
 
@@ -61,6 +59,5 @@ Display an option to delete the records created in the [Setup](#setup). The dele
 [Run data import](../../run-data-import.md)<br />
 [Data import tables](../../data-import-entities.md)<br />
 [Sample: Export and import a data map](export-import-data-map.md)<br />
-
 
 [!INCLUDE[footer-include](../../../../includes/footer-banner.md)]

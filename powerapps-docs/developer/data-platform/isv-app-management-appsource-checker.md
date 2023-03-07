@@ -1,19 +1,20 @@
 ---
 title: Introduction to the AppSource checker | Microsoft Docs
 description: Learn how to use AppSource checker
-author: "nkrb" # GitHub ID
-
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
+ms.reviewer: jdaly
+manager: jstrauss
 ms.topic: article
 ms.subservice: dataverse-developer
-ms.author: nabuthuk
-ms.reviewer: pehecke
-ms.workload: na
-ms.date: 04/07/2020
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
 ---
 
 # AppSource checker

@@ -1,20 +1,20 @@
 ---
 title: Enable content moderation on ideas
 description: Learn how to enable content moderation for ideas on a portal.
-author: sbmjais
-
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: kkendrick
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Enable content moderation on ideas
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 A content moderation policy allows you to moderate the ideas that are submitted on your portal. After you create a moderation policy, you add it to an idea forum. The moderation policy will be applicable to all ideas in the idea forum. A portal user can flag an idea by selecting an appropriate reason and adding any additional details, if required. 
 

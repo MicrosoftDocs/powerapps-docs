@@ -1,0 +1,1 @@
+Provides access to all the information about the table forms.

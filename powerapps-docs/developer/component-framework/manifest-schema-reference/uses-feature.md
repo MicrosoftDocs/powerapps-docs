@@ -1,22 +1,20 @@
 ---
 title: uses-feature | Microsoft Docs
 description: Indicates which feature their components want to use.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
+contributors:
+ - JimDaly
 ---
 
 # uses-feature element
 
-Indicates which feature their components want to use.
+[!INCLUDE [uses-feature-description](includes/uses-feature-description.md)]
 
 ## Available for
 
@@ -47,8 +45,8 @@ The table below shows the relationship of these settings to what happens in the 
 
 |Manifest|If Host supports|If Host doesn't support|
 |----|----|-----|
-|`uses-feature name="device.captureImage" required=”true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
-|`uses-feature name="device.captureImage" required=”false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
+|`uses-feature name="device.captureImage" required="true"`|`Context.device.captureImage != null`, no check needed.|Warning at design time. Component load will  fail at runtime.|
+|`uses-feature name="device.captureImage" required="false"`|`Context.device.captureImage != null`|`Context.device.captureImage == null`, component can adaptively check this at runtime. |
 |(none)|`Context.device.captureImage == null` |`Context.device.captureImage == null` |
 
 ### Related topics

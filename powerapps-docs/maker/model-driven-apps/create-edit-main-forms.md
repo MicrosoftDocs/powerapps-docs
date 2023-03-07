@@ -39,7 +39,7 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
   
 1.   Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** area.
 
 3. To create a new main form, on the toolbar select **Add form** > **Main Form**.  
     \-OR-

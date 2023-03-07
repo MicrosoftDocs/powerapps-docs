@@ -1,0 +1,1 @@
+Provides all the information about attributes/columns definitions.

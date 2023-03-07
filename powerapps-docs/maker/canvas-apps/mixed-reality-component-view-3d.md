@@ -1,5 +1,5 @@
 ---
-title: Use the View in 3D control in Power Apps
+title: Use the 3D object control in Power Apps
 description: View 3D models in Power Apps.
 author: anuitz
 ms.topic: conceptual
@@ -29,12 +29,12 @@ Easily add interactive 3D content to your canvas apps. You can [select from a ga
 > [!TIP]
 > The mixed reality (MR) controls in Power Apps use Babylon and Babylon React Native. Mixed reality content that works in the [Babylon sandbox](https://sandbox.babylonjs.com/) should work in Power Apps through this shared MR platform. If your content works in Babylon but not in Power Apps, ask a question in the [Power Apps Community Forum](https://powerusers.microsoft.com/t5/Get-Help-with-Power-Apps/ct-p/PA_General). (Tag it with "mixed reality.")
 
-## Add View in 3D control to an app screen
+## Add 3D object control to an app screen
 
 With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Media**.
-2. Select **View in 3D** to place the control in the app screen, or drag the control to the screen to position it more precisely.
+2. Select **3D object** to place the control in the app screen, or drag the control to the screen to position it more precisely.
 
 ## Key properties
 
@@ -45,7 +45,7 @@ Change the 3D content control's behavior and appearance using properties. Some p
 
 | Property | Description | Type | Location |
 | - | - | - | - |
-| Source | Identifies the object file to display. The **View in 3D** control supports loading models from various sources. See [Loading external 3D models](mixed-reality-component-view-3d-store.md) for details. | Not applicable | Properties; Advanced: **Source** |
+| Source | Identifies the object file to display. The **3D object** control supports loading models from various sources. See [Loading external 3D models](mixed-reality-component-view-3d-store.md) for details. | Not applicable | Properties; Advanced: **Source** |
 | Alternative text | Specifies the text to be displayed if the model can't load or if the user hovers over the model. | String | Properties; Advanced: **AltText** |
 | Background fill | Sets the control's background color. | Color picker | Properties; Advanced: **BackgroundFill** (accepts RGBA or HTML hexadecimal color codes) |
 | Pins(Items) | [Shows pins on the model at specific coordinates](mixed-reality-add-pins-3d-model.md), provided in a data source (**Items**). If *None*, no pins are shown. | Data table | Properties; Advanced: **Items** |
@@ -73,13 +73,14 @@ Change the 3D content control's behavior and appearance using properties. Some p
 
 ## Performance considerations
 
-We recommend that you use one 3D control on a screen for the best user experience. Multiple instances of the **View in 3D** control on one screen will try to load their 3D models at the same time, which can severely degrade the performance of your app.
+We recommend that you use one 3D control on a screen for the best user experience. Multiple instances of the **3D object** control on one screen will try to load their 3D models at the same time, which can severely degrade the performance of your app.
 
 ## Other mixed reality controls
 
 - View 3D content and images in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** control.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** control.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** control.
+- Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 ### See also
 

@@ -3,7 +3,10 @@
 
 /powerapps-docs/                                    @KumarVivek
 /powerapps-docs/administrator/                      @jimholtz @KumarVivek
-/powerapps-docs/developer/                          @PHecke @KumarVivek
+/powerapps-docs/developer/                          @PHecke @KumarVivek @JimDaly
+/powerapps-docs/developer/data-platform/cli         @JimDaly @KumarVivek
+/powerapps-docs/developer/data-platform/cli         @JimDaly @KumarVivek
+/powerapps-docs/developer/model-driven-apps         @JimDaly @KumarVivek
 /powerapps-docs/maker/canvas-apps                   @tapanm-msft @KumarVivek
 /powerapps-docs/maker/data-platform                 @Mattp123 @KumarVivek
 /powerapps-docs/maker/model-driven-apps             @Mattp123 @KumarVivek

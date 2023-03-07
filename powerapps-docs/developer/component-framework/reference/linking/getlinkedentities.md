@@ -1,17 +1,15 @@
 ---
 title: getLinkedEntities | Microsoft Docs
 description: Returns all the linked tables information.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: feb4e449-935f-452e-a67a-d3cf3c2bdcfb
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # getLinkedEntities

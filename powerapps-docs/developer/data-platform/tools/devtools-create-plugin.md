@@ -2,7 +2,7 @@
 title: "Quickstart: Create a plug-in using Power Platform Tools | Microsoft Docs"
 description: "Learn how to create and register a Dataverse plug-in using the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
-ms.date: 11/04/2021
+ms.date: 01/27/2023
 ms.reviewer: "pehecke"
 
 ms.topic: "article"
@@ -25,10 +25,9 @@ If you already have an existing Dataverse solution set up, then follow these [in
 
 ## Prerequisites
 
-- Visual Studio 2019 or later
+- Visual Studio 2019 or 2022
 - Power Platform Tools extension for Visual Studio
-- C# language
-- .NET Framework 4.6.2 (only for plug-in or custom workflow activity development)
+- .NET Framework 4.6.2 is required for plug-in or custom workflow activity development
 - Power Apps/Dataverse subscription or a trial environment
 
 ## Connect to your Dataverse environment

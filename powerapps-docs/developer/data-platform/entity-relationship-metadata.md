@@ -1,26 +1,20 @@
 ---
 title: Table relationship definitions | Microsoft Docs
 description: Learn about the relationship definitions used in Microsoft Dataverse.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: "mayadumesh" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+author: NHelgren
+ms.author: nhelgren
 ms.date: 03/11/2021
+suite: powerapps
+ms.topic: article
 ms.subservice: dataverse-developer
-ms.author: jdaly
+ms.reviewer: jdaly
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Table relationship definitions

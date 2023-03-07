@@ -44,7 +44,7 @@ The Azure Synapse Link for Dataverse is a service designed for enterprise big da
 
 The Azure Synapse Link for Dataverse provides these features:
 
-- Linking or unlinking the Dataverse environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
+- Linking or unlinking the environment to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
 - Continuous replication of tables to Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure Subscription.
 - Replication of both standard and custom tables as well as create, update, and delete (CUD) transactions.
 - Fewer clicks to process, transform, and visualize your data in Azure Synapse Analytics.

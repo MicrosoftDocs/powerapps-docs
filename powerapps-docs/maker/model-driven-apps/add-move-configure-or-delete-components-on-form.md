@@ -2,9 +2,8 @@
 title: "Add, configure, move, or delete components on a form | MicrosoftDocs"
 description: Learn how to use the form designer to work with form components.
 ms.custom: ""
-ms.date: 08/26/2019
+ms.date: 06/27/2022
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -27,14 +26,14 @@ search.app:
 
 # Add, configure, move, or delete components on a form
 
-By using the form designer, makers can easily add and configure popular components such as [subgrid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
+By using the form designer, makers can easily add and configure popular components such as [subgrid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), [web resources](web-resource-properties-legacy.md), [pen input](additional-controls-for-dynamics-365-for-phones-and-tablets.md#pen-input), and more.
 
 ## Add components to a form
 
 To add components to a form, use the **Components** pane. Components can be found easily using the search in the  **Components** pane.  
 
 > [!div class="mx-imgBorder"]
-> ![Components pane.](media/FormDesignerComponentsPane.PNG "Components pane")
+> ![Components pane.](media/formdesignercomponentspane.png "Components pane")
 
 ### Add components to a form using drag and drop
 
@@ -44,7 +43,7 @@ To add components to a form, use the **Components** pane. Components can be foun
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 1. On the command bar, select **Add component**, or in the left pane, select **Components** to see a list of available components. Hover over a component in the list to see a preview image, description, and other details of that component.
 1. In the **Components** pane, search or scroll to find the required component then select to add the component.
-1. Drag and drop the component onto the form preview. As the component is dragged on the form preview, drop targets will appear.
+1. Drag and drop the component onto the form preview. As the component is dragged on the form preview, drop targets appear.
 
     > [!NOTE]
     >
@@ -53,7 +52,7 @@ To add components to a form, use the **Components** pane. Components can be foun
     > - Hovering over a tab header when dragging a component changes the currently selected tab, allowing the component to be added to a different tab.
     > - When the component is dropped, in most cases, a dialog to configure the properties of the component will appear. Ensure that all the required properties of the component are configured.
   
-1. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile**, and **Tablet** options are selected by default to ensure the component is used when the form is displayed on the web, mobile app, and tablet app. Based on the  requirements some of these options to limit the usage of the component can be cleared.
+1. In the dialog to configure the properties of the component, under **Show component on**, the **Web**, **Mobile**, and **Tablet** options are selected by default to ensure the component is used when the form is displayed on the web, mobile app, and tablet app. Based on you app's requirements, you might want to clear some of the client types for the component.
 1. Select **Done**.
 1. Repeat steps 3-6 above to add more components.
 1. On the command bar, select **Save** to save the form, or select **Publish** to make the changes visible to users.
@@ -89,14 +88,14 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
 1. In the form preview, select the component to move and drag and drop it. As the component is dragged onto the form preview, drop targets appear where it can be moved.
 
-  > [!NOTE]
-  >
-  > - Components can be dropped before or after any existing component or column.
-  > - Components can also be dropped in the empty area within a section. In this case the component will be added in an available space to evenly distribute components and columns across the section columns.
-  > - Hover over a tab header while using drag and drop to add the component to a different tab.
+   > [!NOTE]
+   >
+   > - Components can be dropped before or after any existing component or column.
+   > - Components can also be dropped in the empty area within a section. In this case the component will be added in an available space to evenly distribute components and columns across the section columns.
+   > - Hover over a tab header while using drag and drop to add the component to a different tab.
 
 1. Repeat steps 2-3 above to move more components.
-1. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes visible to users.
+1. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes available to users.
 
 ### Move components on a form using cut and paste
 
@@ -106,7 +105,7 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 1. In the form preview, select another existing component, column, or section. It is possible to switch to a different tab if needed.
 1. On the command bar, select **Paste** or select the chevron, and then select **Paste before**.
 
-   >  [!NOTE]
+   > [!NOTE]
    >
    > - When **Paste** is selected, the component being moved is pasted after the existing component or column.
    > - When **Paste before** is selected, the component being moved is pasted before the existing component or column.
@@ -114,6 +113,16 @@ To move components on a form, either use drag-and-drop or cut-and-paste actions.
 
 1. Repeat steps 2-5 above if to move more components.
 1. On the command bar, select **Save** to save the form, or select **Publish** to save and make the changes visible to users.
+
+## Get more components
+
+1. Select **Get more components** to find and add other Power Apps components as well as custom controls that aren't available by default in the **Component** pane.
+   :::image type="content" source="media/get-more-components1.png" alt-text="Get more components link":::
+1. Select the tab you want, either **Built by Microsoft** or **Built by others**, and then select the component.
+   :::image type="content" source="media/get-more-components2.png" alt-text="Available components from the get more components link":::
+
+1. Select **Add**.
+   The component appears under the **More components** section of the **Component** pane.
 
 ## Delete components on a form
 

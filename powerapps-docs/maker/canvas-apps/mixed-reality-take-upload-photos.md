@@ -20,14 +20,15 @@ contributors:
 
 # Take and upload mixed-reality photos
 
-In this article, we'll create an app that can take photos of a mixed-reality session and upload them to a folder on OneDrive. We'll use the **View in MR** control in this example, but the **View shape in MR** and **Measure in MR** controls would work as well.
+In this article, we'll create an app that can take photos of a mixed-reality session and upload them to a folder on OneDrive. We'll use the **View in MR** control in this example, but the **View shape in MR** and **Measuring camera** controls would work as well.
 
 We'll cover the following tasks:
 
-- Adding a **View in 3D** control to view and manipulate a sample 3D object
-- Connecting the **View in 3D** control to a **View in MR** control to view the 3D object in the real world
+- Adding a **3D object** control to view and manipulate a sample 3D object
+- Connecting the **3D object** control to a **View in MR** control to view the 3D object in the real world
 - Adding a gallery control to view photos taken with the **View in MR** control
 - Uploading the photos to OneDrive with a Microsoft Power Automate flow
+- Uploading photos captured in mixed-reality to Dataverse
 
 ## Prerequisites
 
@@ -41,22 +42,22 @@ We'll cover the following tasks:
 
 This example has three parts. First, we'll add a button that lets users take a photo of a 3D object in a mixed reality experience.
 
-### Insert a **View in 3D** control
+### Insert a **3D object** control
 
 With your app open for [editing](edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab and expand **Media**.
-1. Select **View in 3D** to place a 3D object on the app screen. Drag the control to the screen to position it more precisely.
+1. Select **3D object** to place a 3D object on the app screen. Drag the control to the screen to position it more precisely.
 
     The control comes with a transparent cube shape. If you like, change the control's **Source** property to [load a different 3D model](mixed-reality-component-view-3d-store.md). In this example, we'll use the URL *<https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb>*.
 
-    :::image type="content" source="./media/augmented-upload-photo/augmented-view-3d-shape.png" alt-text="A screenshot of a View in 3D control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
+    :::image type="content" source="./media/augmented-upload-photo/augmented-view-3d-shape.png" alt-text="A screenshot of a 3D object control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
 
 ### Insert and connect a **View in MR** control
 
 1. Open the **Insert** tab and expand **Mixed Reality**.
 1. Select **View in MR** to place the control on the app screen, or drag the control to the screen to position it more precisely.
-1. Change the control's **Source** property to **ViewIn3D1.Source**. (*ViewIn3D1* is the name of the **View in 3D** control we added earlier.) This expression directs the **View in MR** control to overlay the 3D model on the device camera feed.
+1. Change the control's **Source** property to **3DObject1.Source**. (*3DObject1* is the name of the **3D object** control we added earlier.) This expression directs the **View in MR** control to overlay the 3D model on the device camera feed.
 
    :::image type="content" source="./media/augmented-upload-photo/augmented-view-mr.png" alt-text="A screenshot of a View in MR control under construction in Microsoft Power Apps Studio, shown with its Source property.":::
 
@@ -107,23 +108,23 @@ To make the photos in the gallery easier to see, you can add a full-size overlay
 
 ## Upload photos to OneDrive with a Power Automate flow
 
-Last, we'll create a workflow in Power Automate. The workflow uploads photos from the app to a folder named **MRPhotos** on OneDrive.
+Last, we'll create a workflow using the Power Automate pane. The workflow uploads photos from the app to a folder named **MRPhotos** on OneDrive.
 
 ### Create a flow in Power Automate
 
-1. Edit your app. Select **Action** > **Power Automate** > **Create a new flow**. (You may need to sign in to Power Automate first.)
-
-    :::image type="content" source="./media/augmented-upload-photo/open-automate.png" alt-text="A screenshot of an app in Microsoft Power Apps Studio, with a new Power Automate flow selected.":::
+1. Edit your app. On the app authoring menu, select **Power Automate** > **Create new flow**.
 
 1. Search for and select the Power Apps button template.
 
     :::image type="content" source="./media/augmented-upload-photo/create-power-apps-button.png" alt-text="A screenshot of the Power Automate template page, with the Power Apps button template selected.":::
+    
+1. In the **Create your flow** window, select **Edit in advanced mode**.    
 
 1. Select **Power Apps button** at the top of the window and enter a new name for your flow. In this example, we'll name the flow *Upload MR Photo*.
 
     :::image type="content" source="./media/augmented-upload-photo/rename-flow.png" alt-text="A screenshot of the Power Automate edit window, with the workflow name highlighted.":::
 
-1. In the PowerApps step in the workflow, select **...**, and then select **Delete**.
+1. Select Power Apps button at the top of the window and enter a new name for your flow. In this example, we'll name the flow Upload MR Photo.
 
     :::image type="content" source="./media/augmented-upload-photo/rename-flow-delete-trigger.png" alt-text="A screenshot of the Power Automate edit window, with the PowerApps step selected for deletion.":::
 
@@ -181,10 +182,20 @@ The complete flow should look like this:
 
 You can use your app even when you have limited or no network connectivity using the [**SaveData** and **LoadData** functions](./functions/function-savedata-loaddata.md).
 
+## Upload photos captured in mixed-reality to Dataverse
+
+You can add photos to Dataverse tables through an Image data type column. Image columns in Dataverse have two required fields - Full and Value - which can be set to the ImageURI output of the MR controls.
+
+For example, if you wanted to upload the first photo captured by the Markup in MR control to a Dataverse column called Image:
+
+```powerapps-dot
+    Image: {Full: First(MarkupInMR.Photos).ImageURI, Value: First(MarkupInMR.Photos).ImageURI}
+```
+
 ### See also
 
-- [View in 3D control](mixed-reality-component-view-3d.md)
-- [Measure in MR control](mixed-reality-component-measure-distance.md)
+- [3D object control](mixed-reality-component-view-3d.md)
+- [Measuring Camera control](mixed-reality-component-measure-distance.md)
 - [View shape in MR control](mixed-reality-component-view-shape.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

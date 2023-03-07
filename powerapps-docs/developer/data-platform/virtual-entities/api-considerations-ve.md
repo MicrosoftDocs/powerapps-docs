@@ -1,20 +1,22 @@
 ---
 title: "API considerations of virtual tables (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes API considerations of virtual tables"
-ms.date: 04/09/2021
-
-ms.topic: "article"
+ms.date: 04/01/2022
+author: NHelgren
+ms.author: nhelgren
+ms.reviewer: pehecke
+manager: sunilg
+ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
-ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996dea
-author: "Sunil-Garg" # GitHub ID
-ms.author: "pehecke"
-manager: "ryjones"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+  - PHecke
+  - JimDaly
 ---
 
 # API considerations of virtual tables
@@ -48,7 +50,7 @@ The following changes to the standard Dataverse reference types were introduced 
 
 ### New tables
 
-The Dataverse exposes virtual table data providers and sources as the following new tables: [EntityDataProvider](../reference/entities/entitydataprovider.md) and [EntityDataSource](../reference/entities/entitydatasource.md). 
+The Dataverse exposes virtual table data providers and sources as the following tables: [EntityDataProvider](../reference/entities/entitydataprovider.md) and `EntityDataSource`.
 
 ### New table definition properties
 
@@ -78,14 +80,14 @@ The approach to programmatically creating a virtual table type differs slightly 
 - If the associated data provider (and optionally data source) is known at creation time, then these are specified.
 - If the data provider for this type is not known, then at minimum, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataProviderId> is set to `7015A531-CC0D-4537-B5F2-C882A1EB65AD`, and the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataSourceId> is set to `null`. Before instances of this type are used at runtime, these properties must be assigned appropriate values.
 
-Two new tables, [EntityDataProvider](../reference/entities/entitydataprovider.md) and optionally [EntityDataSource](../reference/entities/entitydatasource.md), will be created when you register a plugin, and their respective ID's, `entitydataproviderid` and `entitydatasourceid`, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property `entitydataproviderid` that must match the corresponding DataProvider type or a runtime exception will be thrown.
+Two new tables, [EntityDataProvider](../reference/entities/entitydataprovider.md) and optionally `EntityDataSource`, will be created when you register a plugin, and their respective ID's, `entitydataproviderid` and `entitydatasourceid`, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property `entitydataproviderid` that must match the corresponding DataProvider type or a runtime exception will be thrown.
 
 > [!WARNING]
 > Standard (non-virtual) tables must have the values of their associated `DataProviderId` and `DataSourceId` set to their default values (`null`), otherwise a runtime exception will be thrown.  Once created, you cannot convert from a non-virtual type to a virtual type, or the reverse. 
 
 ### Table definition property behavior changes
 
-The following table details how the behavior of standard [EntityMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata?view=dynamics-general-ce-9#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
+The following table details how the behavior of standard [EntityMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
 
 |**Metadata Property**|**Applies?**|**Notes**|
 |---------------------|------------|---------|
@@ -181,7 +183,7 @@ The following table details how the behavior of standard [EntityMetadata propert
 
 ### Column definition property behavior changes
 
-The following table explains how the behavior of standard [AttributeMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata?view=dynamics-general-ce-9#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
+The following table explains how the behavior of standard [AttributeMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata#properties) are modified when applied to virtual tables. Some properties are not valid for virtual tables, whereas others are limited in scope or value.
 
 |**Metadata Property**|**Applies?**|**Notes**|
 |---------------------|------------|---------|

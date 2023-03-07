@@ -1,20 +1,15 @@
 ---
 title: setFullScreen | Microsoft Docs
 description: Make the component full screen.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # setFullScreen
@@ -27,7 +22,7 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 ## Available for 
 
-Model-driven and canvas apps
+Model-driven apps, canvas apps, & portals.
 
 ## Parameters
 

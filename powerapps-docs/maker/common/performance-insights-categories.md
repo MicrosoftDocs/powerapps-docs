@@ -152,7 +152,7 @@ Here's how to look up the name of dashboard using the dashboard ID. Then, you ca
 
 1. Go to your model-driven app, such as *https://contoso.crm.dynamics.com*.
 
-1. Modify the URL as shown in this example (https://contoso.dynamics.com/api/data/v9.1/systemforms(<DashboardId>)/name) by appending *api/data/v9.1/systemforms(<DashboardId>)/name* to the app URL.
+1. Modify the URL as shown in this example (https://contoso.dynamics.com/api/data/v9.1/systemforms[DashboardId]/name) by appending *api/data/v9.1/systemforms[DashboardId]/name* to the app URL.
 
 1. You will receive OData request similar to the below. **Agent Dashboard** displayed below represents the user-friendly name of the given dashboard ID.
 

@@ -5,7 +5,7 @@ author: sandhangitmsft
 
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 02/27/2023
 ms.subservice: portals
 ms.author: sandhan
 ms.reviewer: ndoelman
@@ -15,6 +15,8 @@ contributors:
 ---
 
 # Add a redirect URL to a new URL on a portal
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Customers frequently want to have a simple URL that redirects to a page deeper in the site, or they want to allow for a legacy URL to be used with the site and automatically redirect to a new URL in the site. Page redirects allow a content author to specify a URL that, when requested, will be redirected on a permanent or temporary basis to a specific webpage or web file. These redirect URLs are managed separately from the page content so that they do not have to fit directly in the web hierarchy.
 
@@ -32,7 +34,7 @@ Customers frequently want to have a simple URL that redirects to a page deeper i
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Name        | The friendly name of the redirect. (Can be anything. Make it easy to identify.)                                                              |
 | Website     | The website the redirect is associated with. (The site the user is redirected from.)                                                         |
-| Inbound URL | The partial URL that is to be redirected. (The page the user is redirected from.)                                                            |
+| Inbound URL | The partial URL that is to be redirected. |
 | Status Code | One of the following:  **302 (Temporary Redirect)**: returns a temporary redirect status. This is the default.                                               -   **301 (Permanent Redirect)**: returns a permanent redirect status, indicating the resource has moved permanently.                          |
 | URL         | A target external URL to be redirected to. (Use this if the user is being redirected to a link external to the website specified above.)                            |
 | Web Page    | A target internal webpage to be redirected to. (Use this if the user is being redirected to a page internal to the website specified above.) |
@@ -54,6 +56,7 @@ results in the browser requesting the following URL:
 
 https://customerportal.contoso.com/surveys/customer-service-survey/
 
-
+> [!WARNING]
+> There is a known issue where if you navigate to the inbound page using the site default navigation (the navigation menu that appears in the header of your site), a `/` will be appended to the URL, for example `https://contoso.powerappsportals.com/cs-survey/` and will **not** redirect to the target URL. If you navigate directly to the URL, for example `https://contoso.powerappsportals.com/cs-survey` the redirect will navigate to the target URL.
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

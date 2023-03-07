@@ -27,7 +27,7 @@ Add pins (shown as circular markers) to 3D models in your canvas apps. Users can
 
 The easiest way to add pins to a 3D model is to load them from an Excel workbook.
 
-The data source for the pins must be a named table in Excel. The table must have four columns. Each column corresponds to a property of the **View in 3D** control. Each row is plotted as a pin on the model. The rows determine the placement of the pins in a three-dimensional coordinate system.
+The data source for the pins must be a named table in Excel. The table must have four columns. Each column corresponds to a property of the **3D object** control. Each row is plotted as a pin on the model. The rows determine the placement of the pins in a three-dimensional coordinate system.
 
 > [!IMPORTANT]
 > The mixed-reality (MR) controls in Power Apps use a [left-handed coordinate system](/windows/uwp/graphics-concepts/coordinate-systems).
@@ -61,10 +61,10 @@ To try this example, start by creating a table in Excel.
 Next, add the table as a data source to display pins on a 3D model.
 
 1. In Power Apps Studio, [insert a 3D model](mixed-reality-component-view-3d.md) or select an existing model.
-2. [Set the **View in 3D** control's **Source** property](mixed-reality-component-view-3d-store.md) to *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb* (or any other model file of your choosing).
+2. [Set the **3D object** control's **Source** property](mixed-reality-component-view-3d-store.md) to *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb* (or any other model file of your choosing).
 
 > [!NOTE]
-> The first instance of the **View in 3D** control is named *ViewIn3D1* by default and that's the name we'll use in the following examples. Additional instances of the control would be referred to as *ViewIn3D2*, *ViewIn3D3*, and so on.
+> The first instance of the **3D object** control is named *3DObject1* by default and that's the name we'll use in the following examples. Additional instances of the control would be referred to as *ViewIn3D2*, *ViewIn3D3*, and so on.
 
 1. On the model's **Properties** tab, select the **Pins(Items)** dropdown list.
 2. Type *excel* in the search box, and then select **Import from Excel**.
@@ -88,7 +88,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
    - **Show all pins:** In the **Properties** pane, select the **Pins(Items)** dropdown list and select the Excel table you connected to earlier.
 
-   - **Show the selected pin only:** In the Power Apps Studio expression editor, enter *ViewIn3D1.SelectedItems*.
+   - **Show the selected pin only:** In the Power Apps Studio expression editor, enter *3DObject1.SelectedItems*.
 
        :::image type="content" source="./media/augmented/pins-label-selected.png" alt-text="A screenshot of the Power Apps Studio expression editor showing the expression used to display information about a selected pin.":::
 
@@ -105,7 +105,7 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 
 1. Open the **Insert** tab.
 2. Select **Text label** to place a text box in the app screen, or drag the control to the screen to position it more precisely.
-3. In the expression editor, enter *ViewIn3D1.Selected.Label*.
+3. In the expression editor, enter *3DObject1.Selected.Label*.
 
 ## Create a collection to let users add their own pins to a 3D model
 
@@ -129,7 +129,7 @@ Next, add a button to append the user's data to the pin collection.
 3. Set the button's **Text** property to *Add pin*.
 4. Enter the following code in the button's **OnSelect** property, exactly as shown:
 
-    ```json
+    ```powerapps-dot
     Collect( 
     PinsCollection,
       {
@@ -166,8 +166,8 @@ With your app open for [editing](edit-app.md) in [Power Apps Studio](https://cre
 ## Other mixed reality controls
 
 - View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** control.
-- Measure distance, area, and volume with the **[Measure in MR](mixed-reality-component-measure-distance.md)** control.
-- Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** control
+- Measure distance, area, and volume with the **[Measuring Camera](mixed-reality-component-measure-distance.md)** control.
+- Create and view predefined 3D shapes with the **[View shape in MR](mixed-reality-component-view-shape.md)** control.
+- Paint 3D lines or draw 3D arrows to specify an area or asset in your environment with the **[Markup in MR](markup-in-mixed-reality.md)** control.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
-

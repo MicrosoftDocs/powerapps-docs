@@ -1,21 +1,21 @@
 ---
-title: "Work with Dynamics 365 data in your Azure solution (Microsoft Dataverse) | Microsoft Docs"
+title: "Work with Microsoft Dataverse data in your Azure solution (Microsoft Dataverse) | Microsoft Docs"
 description: "Provides an overview of passing data from Dataverse to an Azure cloud hosted solution."
-keywords: ""
-ms.date: 03/17/2021
-
+ms.date: 04/03/2022
+author: jaredha
+ms.author: jaredha
+manager: sunilg
+ms.reviewer: jdaly
 ms.topic: article
-ms.assetid: 1ef66369-71c9-3b89-ac1a-09d523ca737b
-author: JimDaly # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
+ - phecke
 ---
 
 # Work with Microsoft Dataverse data in your Azure solution

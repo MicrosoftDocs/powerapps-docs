@@ -2,16 +2,15 @@
 title: formatInteger | Microsoft Docs
 description: Returns a formatted string represents a given integer value.
 keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # formatInteger

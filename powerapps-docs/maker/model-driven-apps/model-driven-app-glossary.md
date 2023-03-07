@@ -82,7 +82,7 @@ Business rules are server-side logic that is used with canvas or model-driven ap
 
 [Learn more about business rules](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-[Business rules - Microsoft Learn content](/learn/modules/define-create-business-rules/1-rules)  
+[Define business rules](/training/modules/define-create-business-rules/1-rules)
 
 ## Canvas app
 
@@ -285,7 +285,7 @@ It is a tool for enabling model-driven apps and [canvas apps](#canvas-app) to ex
 
 ## Power Automate
 
-A Power Platform service that allows users to streamline repetitive tasks. Typically, this automation is performed using cloud [flows](model-driven-app-glossary.md#flow). 
+A Power Platform service that allows users to streamline repetitive tasks. Typically, this automation is performed using cloud [flows](model-driven-app-glossary.md#flow).
 
 Model-driven app [business process flows](model-driven-app-glossary.md#business-process-flow) that direct users to complete table records in a specific fashion, are authored within Power Automate.
 
@@ -348,9 +348,9 @@ Security roles are created and users are put into security roles either as indiv
 
 You grant access to model-driven apps through security roles.
 
-- [Find out more about security roles](/power-platform/admin/security-roles-privileges##%20security-roles)
+- [Find out more about security roles](/power-platform/admin/security-roles-privileges#security-roles)
 - [General overview of security in Microsoft Dataverse](/power-platform/admin/wp-security)
-- [Getting started with security roles using content from Microsoft Learn](/learn/modules/get-started-security-roles/)
+- [Get started with security roles in Dataverse](/training/modules/get-started-security-roles/)
 
 ## Site map
 
@@ -371,6 +371,7 @@ A solution is a wrapper for a very wide range of components including [tables](#
 When you make a model-driven app, ensure that the assets associated with it are held inside a solution.
 
 Solutions have two forms:
+
 - Managed solutions generally permit only a small amount of customization or no customization at all.
 - Unmanaged solutions give makers full control over the project that they are creating.
 

@@ -1,17 +1,15 @@
 ---
 title: setSelectedRecordIds | Microsoft Docs
 description: Set the ids of the selected records.
-keywords:
-author: adrianorth
-ms.date: 03/07/2022
-ms.author: jdaly
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
 ms.reviewer: jdaly
-manager: kvivek
-
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 61989422-7745-4a0b-9606-37c16a04eab9
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # setSelectedRecordIds
