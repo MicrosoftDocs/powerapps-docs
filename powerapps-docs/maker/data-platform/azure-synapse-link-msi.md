@@ -15,7 +15,7 @@ ms.custom: template-how-to
 
 Azure Data Lake Storage provides a layered security model. This model enables you to secure and control the level of access to your storage accounts that your applications and enterprise environments demand, based on the type and subset of networks or resources used. When network rules are configured, only applications requesting data over the specified set of networks or through the specified set of Azure resources can access a storage account. You can limit access to your storage account to requests originating from specified IP addresses, IP ranges, subnets in an Azure Virtual Network (VNet), or resource instances of some Azure services.
 
-Managed identities for Azure, formerly know as Managed service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of Enterprise Policy creation) which can be used for one or more Dataverse environments. This managed identity that will be provisioned in the your tenant is then used by Dataverse to access your Azure data lake.
+Managed identities for Azure, formerly know as Managed service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of Enterprise Policy creation) which can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
 
 With managed identities, access to your storage account is restricted to requests originating from the Dataverse environment associated with your tenant. When Dataverse connects to storage on behalf of you, it includes additional context information to prove that the request originates from a secure, trusted environment. This allows storage to grant Dataverse access to your storage account. Managed identities are used to sign the context information in order to establish trust. This adds application-level security in addition to the network and infrastructure security provided by Azure for connections between Azure services.
 
@@ -45,23 +45,23 @@ With managed identities, access to your storage account is restricted to request
 ## Create Enterprise policy
 
 1. Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
-1. Open Azure CLI with run as administrator and sign into your Azure subscription use command az login  <!-- What's this? -->
+1. Open Azure CLI with run as administrator and sign into your Azure subscription use the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
-1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell Script **./SetupSubscriptionForPowerPlatform.ps1**.
+1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
    1. Provide the Azure subscription ID.
 1. Create the enterprise policy. Run PowerShell script `./CreateIdentityEnterprisePolicy.ps1`
 
    - Provide the Azure subscription ID.
-   - Provide the Azure Resource Group name.
+   - Provide the Azure resource group name.
    - Provide preferred enterprise policy name.
    - Provide the Azure resource group location.
 1. Save the copy of the **ResourceId** after policy creation.
 
-## Grant Reader access to the enterprise policy via Azure IAM/RBAC
+## Grant Reader access to the enterprise policy via Azure
 
-Azure global admins, Dynamics 365 admins,and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the Reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
+Azure global admins, Dynamics 365 admins, and Power Platform admins can access the Power Platform admin center to assign environments to the enterprise policy. To access the enterprise policies, the global or Azure Key vault admin is required to grant the **Reader role** to the Dynamics 365 or Power Platform admin. Once the Reader role is granted, the Dynamics 365 or Power Platform admins will see the enterprise policies on the Power Platform admin center.
 
-Only the Dynamics 365 and Power Platform admins who were granted the Reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they will get an error when they try to add environment.
+Only the Dynamics 365 and Power Platform admins who were granted the Reader role to the enterprise policy can ‘add environment’ to the policy. Other Dynamics 365 and PowerPlatform admins might be able to view the enterprise policy, but they'll get an error when they try to add environment.
 
 1. Sign into the [Azure portal](https://portal.azure.com/).
 1. Obtain the Dynamics 365 Power Platform admin user’s **ObjectID**.
@@ -71,9 +71,10 @@ Only the Dynamics 365 and Power Platform admins who were granted the Reader role
 1. Obtain the enterprise policies ID:
    1. Go to the Azure **Resource Graph Explorer**.
    1. Run this query: `resources | where type == 'microsoft.powerplatform/enterprisepolicies'`
+   :::image type="content" source="media/azure-graph-enterprise-pol-id.png" alt-text="Run query from Azure Resource Graph Explorer":::
    1. Scroll to the right of the results page and select the **See details** link.
    1. On the **Details** page, copy the ID.
-1. Open Azure CLI and run the following command, replacing the {objId} with the user’s ObjectID and the {EP Resource Id} with the enterprise policy ID.
+1. Open Azure CLI and run the following command, replacing the {objId} with the user’s **ObjectID** and the {EP Resource Id} with the enterprise policy ID.
    - `New-AzRoleAssignment -ObjectId {objId} -RoleDefinitionName Reader -Scope {EP Resource Id}`
 
 ## Connect enterprise policy to Dataverse environment
@@ -82,12 +83,12 @@ Only the Dynamics 365 and Power Platform admins who were granted the Reader role
    1. Sign into to [Power Platform admin center](https://admin.powerplatform.microsoft.com).
    1. Select **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
-   1. To link to the Dataverse environment run this Powershell script: `./ NewIdentity.ps1`
+   1. To link to the Dataverse environment run this PowerShell script: `./ NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
-   1. Provide the ResourceId.
-   StatusCode = 202 shows indicates the link is created
+   1. Provide the **ResourceId**.
+   **StatusCode = 202** shows indicates the link is successfully created.
 1. Sign into the Power Platform admin center.
-1. Select **Environments**, and open the environment.
+1. Select **Environments**, and then open the environment you specified earlier.
 1. In the **Recent operations** area, select **Full history** to validate the connection of the new identity.
 
 ## Configure network access to the Azure Data Lake storage Gen2
@@ -111,9 +112,9 @@ Only the Dynamics 365 and Power Platform admins who were granted the Reader role
    :::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
 1. Select **Save**.
 
-## Create Synapse Link for Dataverse with managed identity
+## Create Azure Synapse Link for Dataverse with managed identity
 
-When you create the link, Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure Product. <!-- what is Azure Product?-->
+When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure Product. <!-- what is Azure Product?-->
 
 1. Sign into [Power Apps](make.powerapps.com) and select your environment.
 1. In your web browsers address bar, append `?athena.managedIdentity=true` to the web address that ends with **exporttodatalake**.
