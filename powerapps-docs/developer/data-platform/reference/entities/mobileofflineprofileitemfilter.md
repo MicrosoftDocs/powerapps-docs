@@ -1,7 +1,7 @@
 ---
 title: "mobileofflineprofileitemfilter table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the mobileofflineprofileitemfilter table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -62,6 +62,8 @@ search.app:
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [fetchxml](#BKMK_fetchxml)
+- [IsActivity](#BKMK_IsActivity)
+- [IsIntersect](#BKMK_IsIntersect)
 - [mobileofflineprofileid](#BKMK_mobileofflineprofileid)
 - [mobileofflineprofileitemfilterId](#BKMK_mobileofflineprofileitemfilterId)
 - [mobileofflineprofileitemid](#BKMK_mobileofflineprofileitemid)
@@ -86,6 +88,52 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|1048576|
 |RequiredLevel|SystemRequired|
 |Type|Memo|
+
+
+### <a name="BKMK_IsActivity"></a> IsActivity
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|IsActivity|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isactivity|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsActivity Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
+
+
+### <a name="BKMK_IsIntersect"></a> IsIntersect
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|IsIntersect|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isintersect|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsIntersect Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_mobileofflineprofileid"></a> mobileofflineprofileid
@@ -198,6 +246,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|CUD_OUT||
 |5|FULL_SYNC||
 |6|RELATED_ENTITIES||
+|7|RELATED_INTERSECT_ENTITIES||
 
 
 
