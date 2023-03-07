@@ -25,6 +25,8 @@ End users can request a Power Apps license from their admin directly in the prod
 ## Request a license through a trial
 If you are already in an active Power Apps trial, you can request a license by selecting **Request license** at the top of the page.
 
+:::image type="content" source="media/request-license-in-trial.png" alt-text="Users who are already in an active Power Apps trial, can request a license.":::
+
 ## Wait for response
 After you request a license, you will see a banner at the top of the page that confirms that your request was sent, and that it might take a few days for your admin to respond to the request.
 
