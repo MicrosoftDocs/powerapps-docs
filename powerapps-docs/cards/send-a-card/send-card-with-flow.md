@@ -52,3 +52,10 @@ Sending a card in Teams requires a card instance. To get a card instance, use th
 1. On the action, set **Card** to the `card` or `body` dynamic content from the **Cards for Power Apps** connector action you added earlier.
 
    :::image type="content" source="../media/send-a-card/card-in-flow-example.png" alt-text="Screenshot a flow that creates a card instance when an account record is created and sends it in Teams.":::
+
+
+## Common issues and resolutions
+
+1. When you select a card from the drop-down to create a card instance, the connector action can sometimes show the error **GetCardDescription failed with InternalServerError**. This is a transient error, you need to try again and reselect a card. 
+
+2.. If your card doesn't have any input variables, it will show an empty body parameter after selecting a card to create an instance of. You can ignore that parameter and continue building your flow. 
