@@ -1,17 +1,15 @@
 ---
 title: Resources Element | Microsoft Docs
 description: The resources node in the component manifest refers to the resource files that component requires to implement it's visualization.
-keywords:
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
 ms.subservice: pcf
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
+contributors:
+ - JimDaly
 ---
 
 # resources element
@@ -36,7 +34,7 @@ Model-driven and canvas apps
 |[css](css.md)|[!INCLUDE [css-description](includes/css-description.md)]|0 or more|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|
 |[resx](resx.md)|[!INCLUDE [resx-description](includes/resx-description.md)]|0 or more|
-<!--|[html](html.md)|[!INCLUDE [html-description](includes/html-description.md)]|0 or more|-->
+|[platform-library](platform-library.md)|[!INCLUDE [platform-library-description](includes/platform-library-description.md)]|0 or more|
 
 
 ## Example
@@ -44,8 +42,8 @@ Model-driven and canvas apps
 ```xml
 <resources>
   <code path="JS_HelloWorldControl.js" order="1" />
-<css path="css/JS_HelloWorldControl.css" order="1" />
-		</resources>
+    <css path="css/JS_HelloWorldControl.css" order="1" />
+</resources>
 ```
 
 ### Related topics

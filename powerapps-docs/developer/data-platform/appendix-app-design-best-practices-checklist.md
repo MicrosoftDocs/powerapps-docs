@@ -4,7 +4,7 @@ description: "Use the app design checklist to evaluate your app design in Power 
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+
 ms.topic: "article"
 author: "omarcdoc" 
 ms.subservice: dataverse-developer
@@ -83,7 +83,7 @@ use-case.
 <li>UI layout is suitable for providing the information in
 the best way</li>
 <li>UI layout provides seamless experience in all the
-devices that solution could be run/</li>
+devices that solution could be run</li>
 </ul>
 </td>
 </tr>
@@ -100,7 +100,7 @@ the solution</td>
 <ul>
 <li>Content provided in the solution could be rendered in
 all the intended devices.<br/>Example: Do not have videos that could not render in
-certain browsers.<li>
+certain browsers.</li>
 <li>Does not have unnecessary redirects</li>
 <li>Does not have interstitials that interrupts the user's
 flow</li>

@@ -4,7 +4,7 @@ description: "Learn how to invoke a custom process action from a workflow"
 ms.custom: ""
 ms.date: 04/28/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

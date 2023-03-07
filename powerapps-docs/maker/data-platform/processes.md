@@ -4,7 +4,7 @@ description: "Learn about the different types of business logic you can use in y
 ms.custom: intro-internal
 ms.date: 12/20/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

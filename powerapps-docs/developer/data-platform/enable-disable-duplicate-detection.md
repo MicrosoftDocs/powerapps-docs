@@ -4,7 +4,7 @@ description: "Describes how to enable duplicate detection for all data tables in
 ms.custom: ""
 ms.date: 03/26/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

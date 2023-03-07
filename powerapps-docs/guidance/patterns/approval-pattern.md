@@ -2,7 +2,7 @@
 title: "Power Apps pattern: Approval | Microsoft Docs"
 description: Learn how approval apps make it easier to get reviews and sign off on decisions.
 author: topness-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 01/04/2021
@@ -18,7 +18,7 @@ ms.reviewer: kathyos
 Power Apps makers use the approval pattern to ensure that data, decisions,
 and documents are reviewed by a stakeholder or multiple stakeholders, either all at
 once or in sequence. Although the approval pattern can be valuable on its own, it's
-frequently combined with other patterns, especially the [inspection or audit pattern](/inspection-pattern).
+frequently combined with other patterns, especially the [inspection or audit pattern](/powerapps/guidance/patterns/inspection-pattern).
 Approvals can be easily implemented with [Power Automate approval workflows](/power-automate/modern-approvals), but
 can also be implemented with capability you build into your app.
 

@@ -4,7 +4,7 @@ description: "The activity pointer (activity) table represents any activity or t
 ms.custom: ""
 ms.date: 03/25/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" 
 ms.subservice: dataverse-developer

@@ -2,7 +2,7 @@
 title: Create and show portal content using Portal Management app
 description: Learn how to create and show portal content using Portal Management app.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Create and show portal content using Portal Management app
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 To create a webpage by using basic forms and lists is a complex task. **Create Portal Content** wizard simplifies this process. You can use this wizard to create and expose portal content easily by filling in the minimum required fields.
 

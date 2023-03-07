@@ -11,7 +11,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 03/17/2020
-ms.service: powerapps
+
 ms.topic: overview
 ms.assetid: e0790865-c5a4-4e86-bce2-584af2b8ed93
 search.audienceType: 

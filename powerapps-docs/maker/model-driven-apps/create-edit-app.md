@@ -3,7 +3,7 @@ title: "Create or edit a model-driven app using the app designer in Power Apps |
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
 ms.date: 03/05/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: get-started-article
 applies_to: 
@@ -35,7 +35,7 @@ This article describes the basics of creating and editing a model-driven app tha
 
 Verify the following prerequisites before creating an app:
 - A Power Apps [environment](model-driven-app-glossary.md#environment) used for app development must exist within the tenant. More information [Create an environment](/power-platform/admin/create-environment) and [Environment strategy for ALM](/power-platform/alm/environment-strategy-alm).
-- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/learn/modules/create-manage-environments/)
+- The environment used will need to have a Dataverse database associated with it.  Dataverse environments can exist with or without a database and generally these are provisioned on creation of the environment.  The database holds the tables and other components that will be used by the model-driven app. [Create and manage environments in Dataverse](/training/modules/create-manage-environments/)
 - Within the environment the app developer needs to have an environment maker, system administrator, or system customizer security role. More information: [About predefined security roles](./share-model-driven-app.md#about-predefined-security-roles)
 
 ## Create a model-driven app  
@@ -43,8 +43,7 @@ Verify the following prerequisites before creating an app:
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 1. Choose the environment by selecting the environment icon ![Environment icon.](media/icon-environment.PNG "Environment icon")
-1. Select **Solutions** from the left navigation pane.
-
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md)
 1. Select **New** > **App** > **Model-driven app**.  
 1. There a two options.  [Modern app designer](app-designer-overview.md) and Classic App designer.  Select **Classic App Designer**.  
@@ -62,7 +61,7 @@ Verify the following prerequisites before creating an app:
       > [!div class="mx-imgBorder"]
       > ![Create a new app.](media/create-new-app.png "Create a new app")
 
-     - **Icon**: By default, the **Use Default App** thumbnail check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app.  
+     - **Icon**: By default, the **Use Default Image**check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app. For more information about how to create a web resource, go to [Create or edit model-driven app web resources to extend an app](create-edit-web-resources.md).
   
     - **Use existing solution to create the App (Optional)**: Select this option to create the app from a list of installed solutions. When this option is selected, **Done** switches to **Next** on the header. If **Next** is selected, the **Create app from existing solution** page opens. From the **Select Solution** drop-down list, select a solution. If any site map is available for the selected solution, the **Select Sitemap** drop-down list will appear. Select the site map, and then select **Done**.
 

@@ -2,7 +2,7 @@
 title: Customize the behavior and format of the fields in portals
 description: Learn how to customize the behavior and format of the Microsoft Dataverse fields in portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Customize the behavior and format of the fields in portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 In this article, you'll learn about working with Microsoft Dataverse fields, and the field data types that can be customized in Power Apps portals.
 

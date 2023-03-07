@@ -2,18 +2,18 @@
 title: Export and import canvas app packages
 description: Learn how to export and import canvas apps.
 author: caburk
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.date: 08/21/2020
 ms.subservice: canvas-maker
 ms.author: caburk
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - caburk
 ---
 
@@ -102,7 +102,7 @@ To import a canvas app package, select **Import canvas app**. Be sure to select 
 
 ![Import package GIF demo with example export walkthrough.](media/export-import-app/import-app.gif "Import package GIF demo with example export walkthrough")
 
-If you're updating an existing app or resource, be sure to [publish](save-publish-app.md#publish-an-app) the app so users can see the changes.
+If you're updating an existing app or resource, be sure to [publish](save-publish-app.md) the app so users can see the changes.
 
 > [!TIP]
 > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type.
@@ -171,7 +171,7 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
 1. Select **Import** to import the app package.
 
     > [!IMPORTANT]
-    > If you select to **Update** an existing app, the new changes will be saved as a draft of the app. You'll need to [publish](save-publish-app.md#publish-an-app) the app so users can see the changes.
+    > If you select to **Update** an existing app, the new changes will be saved as a draft of the app. You'll need to [publish](save-publish-app.md) the app so users can see the changes.
 
 ### See also
 

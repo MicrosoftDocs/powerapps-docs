@@ -2,7 +2,7 @@
 title: Power Apps portals version 9.3.3.x
 description: Learn about the updates included in Power Apps portals version 9.3.3.x, including fixes, enhancements, and the scope of the release.
 author: dileepsinghmicrosoft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 03/18/2021
@@ -15,6 +15,9 @@ contributor:
 ---
 
 # Power Apps portals version 9.3.3.x
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Power Apps portals version 9.3.3.x is generally available. To keep track of upcoming changes, check the [Message center](/microsoft-365/admin/manage/message-center) for release schedules in your geographical region.
 

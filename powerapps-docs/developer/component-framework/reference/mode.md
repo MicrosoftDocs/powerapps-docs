@@ -1,26 +1,23 @@
 ---
 title: Mode | Microsoft Docs
 description: Provides access to methods to get the information about the current state of the code component.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8b51654c-ee67-40f8-ae5b-be684dad3520
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+contributors:
+ - JimDaly
 ---
 
 # Mode
-
 
 [!INCLUDE [mode-description](includes/mode-description.md)]
 
 ## Available for 
 
-Model-driven and canvas apps.
+Model-driven apps, canvas apps, & portals.
 
 ## Properties
 
@@ -32,25 +29,25 @@ Height in pixels allocated to the component.
 
 ### allocatedWidth
 
-Width in pixels allocated to the component. This property is supported in both model-driven and canvas apps.
+Width in pixels allocated to the component.
 
 **Type**: `number`
 
 ### isControlDisabled
 
-Whether the component is disabled. This property is supported in both model-driven and canvas apps.
+Whether the component is disabled.
 
 **Type**: `string`
 
 ### isVisible
 
-Whether the component is visible on the page. This property is supported in both model-driven and canvas apps.
+Whether the component is visible on the page.
 
 **Type**: `boolean`
 
 ### label
 
-The defined component label. This property is supported in both model-driven and canvas apps.
+The defined component label.
 
 **Type**: `string`
 

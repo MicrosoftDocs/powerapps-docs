@@ -2,10 +2,10 @@
 title: Email-screen template for canvas apps
 description: Understand how the email-screen template for canvas apps works, modify the screen, and extend it as part of an app.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 12/29/2018
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 

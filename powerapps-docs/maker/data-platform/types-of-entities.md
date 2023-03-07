@@ -2,9 +2,8 @@
 title: "Types of tables | MicrosoftDocs"
 description: "Learn about the different types of Microsoft Dataverse tables."
 ms.custom: ""
-ms.date: 04/27/2021
+ms.date: 02/13/2023
 ms.reviewer: ""
-ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -26,14 +25,12 @@ search.app:
 ---
 # Types of tables
 
-
-
 A table defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone.
 
 Tables appear in Power Apps as one of three different types, which indicate how the table came into the environment, whether the table is managed or unmanaged, and whether it can be customized.  
-- Standard: Several standard tables, also known as out-of-box tables, are included with a Dataverse environment. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
+- Standard: Several standard tables, also known as out-of-box tables, are included with a Power Platform environment, that includes Microsoft Dataverse. Account, business unit, contact, task, and user tables are examples of standard tables in Dataverse. Most of the standard tables included with Dataverse can be customized. Tables that are imported as part of a managed solution and set as customizable also appear as standard tables. Any user with appropriate privileges can customize these tables where the table property has customizable set to true.
 - Managed: Are tables that aren’t customizable and have been imported into the environment as part of a managed solution.
-- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the Dataverse environment. Any user with appropriate privileges can fully customize these tables.
+- Custom: Custom tables are unmanaged tables that are either imported from an unmanaged solution or are new tables created directly in the environment. Any user with appropriate privileges can fully customize these tables.
 
 For more information about how components are customizable, see [Managed properties](solutions-overview.md#managed-properties).
 
@@ -45,7 +42,7 @@ An activity can be thought of as any action for which an entry can be made on a 
   
 Activity tables are a special kind of table that can only be owned by a user or team, but can’t be owned by an organization. When you create a table, you can specify it as a standard or activity table.
   
-The following table lists activity tables that are available in a default Dataverse environment.
+The following table lists activity tables that are available in a default environment.
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  
@@ -59,7 +56,7 @@ The following table lists activity tables that are available in a default Datave
   
 When you can create a new custom activity table, you might create it to read instant message communications. Creating an activity table is different from creating a non-activity table because you don’t specify a primary column. All activity tables have a **Primary Field** set to **Subject** and other common columns that are defined by the Activity table. This allows all types of activities to be shown in a view where just the common columns are displayed.  
 
-To create a custom activity table, open the **More settings** section in the **New table** panel, select **Activity table** option from the **Choose table type** drop-down list. After you select this, you’ll see that **Display in Activity Menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
+To create a custom activity table, open the **Advanced options** section in the **New table** panel, select the **Activity** option from the **Type** drop-down list. After you select this, you’ll see that **Display in Activity menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the table, you can’t change these settings.  
 
 #### Enable activities for a table
 
@@ -112,7 +109,8 @@ Notice that there are a few Dataverse  system tables that are similar to standar
 A virtual table is a custom table in Dataverse that has columns containing data from an external data source. Virtual tables appear in your app to users as regular table rows, but contain data that is sourced from an external database dynamically at runtime, such as an  Azure SQL Database. Rows based on virtual tables are available in all clients including custom clients developed using the Dataverse web services.  More information: [Create and edit virtual tables that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
-[Create or edit tables](./data-platform-create-entity.md)
+[Create tables](./data-platform-create-entity.md)<br/>
+[Edit tables](./edit-entities.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

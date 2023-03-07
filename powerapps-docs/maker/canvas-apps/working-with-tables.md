@@ -2,10 +2,10 @@
 title: Understand tables and records in canvas apps
 description: Reference information about working with tables, columns, and records in canvas apps.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 07/07/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Understand tables and records in canvas apps

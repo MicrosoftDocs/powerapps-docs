@@ -2,7 +2,7 @@
 title: Enable header and footer output caching on a portal
 description: Learn how to enable header and footer output caching on a portal for existing users.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Enable header and footer output caching on a portal
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 To improve processing performance for Header and Footer web templates in a portal, enable header and footer output caching. Header and Footer web templates are parsed and rendered every time a page is loaded. Caching header and footer output significantly reduces page processing time.
 

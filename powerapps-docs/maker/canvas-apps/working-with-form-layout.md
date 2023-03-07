@@ -2,10 +2,10 @@
 title: Understand data-form layout for canvas apps
 description: Learn about how to create great-looking form layouts in canvas apps by using rows and columns.
 author: gregli-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/11/2021
 ms.subservice: canvas-maker
 ms.author: gregli
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
 ---
 # Understand data-form layout for canvas apps

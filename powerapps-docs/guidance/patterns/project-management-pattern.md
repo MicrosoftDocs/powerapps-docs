@@ -2,7 +2,7 @@
 title: "Power Apps pattern: Project management | Microsoft Docs"
 description: Learn how project management apps help you manage projects to ensure teams achieve their goals and meet success criteria as planned.
 author: Vasavib
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 1/4/2021
@@ -177,7 +177,7 @@ automatically.
 
 ![Screenshot of the R3 role management screen and key stats dashboard.](media/r3-role-management.png "Screenshot of the R3 role management screen and key stats dashboard")
 
-R3 uses [Power Automate](https://flow.microsoft.com/) to send automated
+R3 uses [Power Automate](https://make.powerautomate.com/) to send automated
 notifications and reminders. All data is stored in Microsoft Dataverse.
 
 ### Capitol Music Group scheduling tools

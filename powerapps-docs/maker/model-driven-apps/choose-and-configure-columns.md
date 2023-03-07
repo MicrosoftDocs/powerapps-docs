@@ -3,7 +3,7 @@ title: "Choose and configure columns in model-driven app views in Power Apps | M
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 11/27/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -47,12 +47,12 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** tab. You can also navigate to the table and views via solutions as shown below.
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** area. You can also navigate to the table and views via solutions as shown below.
 
     > [!div class="mx-imgBorder"] 
     > ![Account view definitions.](media/account-view-definitions.png)
 
-3. Select an existing view to open it or on the toolbar select **Add view**. 
+3. Select an existing view to open it or on the toolbar select **New view**. 
 
 <a name="BKMK_AddColumns"></a>   
 ## Adding columns  

@@ -2,19 +2,19 @@
 title: Column chart and Line chart controls in Power Apps
 description: Learn about the details, properties and examples of the Column chart, and Line chart controls in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.subservice: canvas-maker
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Column chart and Line chart controls in Power Apps

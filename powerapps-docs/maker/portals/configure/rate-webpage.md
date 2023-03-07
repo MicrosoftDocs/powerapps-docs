@@ -2,7 +2,7 @@
 title: Rate or vote on a webpage on a portal
 description: Learn how to enable and manage ratings on a web page on a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Rate or vote on a webpage on a portal
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Ratings provide users with the ability to rate or vote on a webpage. Ratings can also be enabled for comments on pages. By default, this feature is disabled, but it can be enabled on a page-by-page basis.
 

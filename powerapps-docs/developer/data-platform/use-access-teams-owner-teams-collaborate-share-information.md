@@ -4,7 +4,7 @@ description: "Learn about using access teams and owner teams to colloborate and 
 ms.custom: ""
 ms.date: 03/28/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
@@ -24,7 +24,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
 > [!NOTE]
 >  While teams provide access to a group of users, you must still associate individual users with security roles that grant the privileges they need to create, update, or delete user-owned records. These privileges cannot be applied by assigning security roles to a team and then adding the user to that team.  
   
- An access team doesn’t own records and doesn’t have security roles assigned to the team. The team members have privileges defined by their individual security roles and by roles from the teams in which they are members. The records are shared with an access team and the team is granted access rights on the records, such as Read, Write or Append.  
+ An access team doesn’t own records and doesn’t have security roles assigned to the team. The team members have privileges defined by their individual security roles and by roles from the teams in which they are members. The records are shared with an access team and the team is granted access rights on the records, such as Read, Write or Append, and therefore access team members cannot create records using the access rights of the access team. User is required to have a security role with Create privilege to create records.
   
  The team functionality is supported by the `Team` and `TeamTemplate` tables. The `Team` table is used to create owner teams and user-created access teams. For auto-created access teams, the `Team` table and the `TeamTemplate` table are used.  
  

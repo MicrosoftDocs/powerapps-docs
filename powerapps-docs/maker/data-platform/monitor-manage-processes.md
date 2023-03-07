@@ -4,7 +4,7 @@ description: "Learn how to manage real-time workflow processes with Power Apps"
 ms.custom: ""
 ms.date: 09/03/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

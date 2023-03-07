@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
 author: sabinn-msft
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

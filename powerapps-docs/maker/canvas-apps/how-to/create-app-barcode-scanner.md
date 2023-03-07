@@ -2,10 +2,10 @@
 title: Create a canvas app with the barcode scanner control (contains video)
 description: Learn how to make a canvas app that uses the barcode scanner control.
 author: joel-lindstrom
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: vipare
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 contributors:
     - joel-lindstrom
-    - tapanm-msft
+    - mduelae
     - chmoncay
 ---
 

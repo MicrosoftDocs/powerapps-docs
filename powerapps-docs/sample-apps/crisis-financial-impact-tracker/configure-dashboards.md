@@ -2,7 +2,7 @@
 title: Configure Power BI dashboards | Microsoft Docs
 description: Provides an overview of how to configure the Power BI dashboards.
 author: ramanasridhar
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/22/2020

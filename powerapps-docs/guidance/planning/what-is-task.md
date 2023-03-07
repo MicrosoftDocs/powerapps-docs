@@ -2,7 +2,7 @@
 title: Documenting the tasks in a business process | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, document all the tasks needed to perform the business process from start to finish.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 10/12/2021
@@ -27,8 +27,8 @@ what they are.
 > [!NOTE]
 > If your task is done fully on the desktop, you can discover all the steps 
 different people in your organization are performing to complete the task by 
-using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview.md). 
-Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize.md) 
+using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview). 
+Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize) 
 and reveals bottlenecks and metrics for your process through an analytical report.
 
 ## Example: Expense reporting tasks

@@ -2,7 +2,7 @@
 title: Set up data alerts for the Power BI dashboard
 description: Learn about how to add an alert in Power BI to let us know if pending projects are taking too long to approve, and create a flow that responds when that alert occurs.
 author: NickWaggoner
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
 ---
@@ -44,7 +44,7 @@ The alert won't fire right now even though 56 is above the threshold of 25. It w
 When the alerts fires, Power BI sends email to the creator of the alert, and we'll see how to send additional mail using Power Automate, in the next step.
 
 ## Step 2: Create a flow that responds to the alert
-1. Sign into flow.microsoft.com, click or tap **Services**, then **Power BI**.
+1. Sign into [make.powerautomate.com](https://make.powerautomate), click or tap **Services**, then **Power BI**.
    
     ![Power BI in Power Automate.](./media/sharepoint-scenario-alerts-flow/07-01-05-power-bi.png)
 2. Click or tap **Send an e-mail to any audience when a Power BI data alert is triggered**.

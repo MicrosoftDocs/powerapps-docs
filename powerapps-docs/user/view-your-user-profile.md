@@ -3,7 +3,7 @@ title: "View your user profile in model-driven apps| MicrosoftDocs"
 description: View your user profile in Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/4/2021

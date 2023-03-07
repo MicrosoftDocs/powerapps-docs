@@ -2,20 +2,20 @@
 title: Connect to Excel from Power Apps
 description: Display and update data in Excel by storing the workbook in a cloud-storage account and then connecting to the data from your app.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
   - lancedMicrosoft
-  - tapanm-msft
+  - mduelae
 ---
 # Connect to Excel from Power Apps
 

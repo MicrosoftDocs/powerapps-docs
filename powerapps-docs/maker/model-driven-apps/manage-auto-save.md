@@ -4,7 +4,7 @@ description: Learn how to configure autosave for a model-driven app
 ms.custom: ""
 ms.date: 07/28/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -68,9 +68,9 @@ Auto-save helps app users focus on their work without having to manage saving da
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** tab.
+2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Forms** area.
    
-    You can also make adjustments to the tables from within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution).  To do this, select **Solutions** on the side pane, select the table, and then select the **Forms** tab.
+    You can also make adjustments to the tables from within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution).  To do this, select **Solutions** on the side pane, select the table, and then select the **Forms** area.
   
 3.  Open the form you want to edit.
 

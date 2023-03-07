@@ -4,7 +4,7 @@ description: "Learn how to create many-to-may relationships using solution explo
 ms.custom: ""
 ms.date: 05/29/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

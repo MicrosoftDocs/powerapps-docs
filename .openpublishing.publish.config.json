@@ -9,7 +9,7 @@
       "moniker_ranges": [],
       "xref_query_tags": [
         "/dotnet",
-        "/dynamics365/customer-engagement/web-api"
+        "/power-apps/developer/data-platform/webapi/reference"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -28,33 +28,7 @@
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ]
-      },
-      "JoinTOCPlugin": [
-        {
-          "ConceptualTOC": "powerapps-docs/developer/data-platform/webapi/toc.yml",
-          "ReferenceTOCUrl": "/dynamics365/customer-engagement/web-api/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/data-platform/org-service/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-general/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/data-platform/workflow/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-workflow/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/data-platform/xrm-tooling/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-xrmtooling/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/data-platform/virtual-entities/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-virtualentity/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/data-platform/online-management-api/toc.yml",
-          "ReferenceTOCUrl": "/rest/api/dynamics365/toc.json"
-        }
-      ]
+      }
     }
   ],
   "notification_subscribers": [],
@@ -129,6 +103,28 @@
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
       "version": "latest"
+    }
+  ],
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "powerapps-docs/developer/data-platform/webapi/toc.yml",
+      "ReferenceTOCUrl": "/power-apps/developer/data-platform/webapi/reference/toc.json"
+    },
+    {
+      "ConceptualTOC": "powerapps-docs/developer/data-platform/org-service/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/ce-9-general/toc.json"
+    },
+    {
+      "ConceptualTOC": "powerapps-docs/developer/data-platform/workflow/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/ce-9-workflow/toc.json"
+    },
+    {
+      "ConceptualTOC": "powerapps-docs/developer/data-platform/xrm-tooling/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/ce-9-xrmtooling/toc.json"
+    },
+    {
+      "ConceptualTOC": "powerapps-docs/developer/data-platform/virtual-entities/toc.yml",
+      "ReferenceTOCUrl": "/dotnet/api/ce-9-virtualentity/toc.json"
     }
   ],
   "need_generate_intellisense": false

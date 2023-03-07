@@ -4,7 +4,7 @@ description: "Understand the recommended ways to use workflows"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

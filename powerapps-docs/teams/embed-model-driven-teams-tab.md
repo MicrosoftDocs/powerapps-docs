@@ -3,7 +3,7 @@ title: Embed a model-driven app as tab app | Microsoft Docs
 description: "Embed a model-driven app as tab app"
 author: mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: article
 ms.date: 11/16/2020

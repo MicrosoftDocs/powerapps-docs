@@ -2,7 +2,7 @@
 title: Use the content editor to edit page content
 description: Learn how to use portal content editor to edit pages and page content.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -17,6 +17,9 @@ contributors:
 ---
 
 # Use the content editor to edit page content
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 You can use the portal content editor to edit text, create links, and display images on webpage. To use the portal content editor, you need the appropriate permissions and the content to be modified must be in the page template.
 

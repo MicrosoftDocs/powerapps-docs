@@ -1,16 +1,15 @@
 ---
 title: CaptureImage | Microsoft Docs
 description: Invokes the device camera to capture the image.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 09/08/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 1d9c0063-add2-4002-acab-1be07ca1f6b6
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # captureImage
@@ -49,7 +48,7 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 ## Exceptions
 
-See [Web service error codes](../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

@@ -2,7 +2,7 @@
 title: Planning - Optimizing your business process | Microsoft Docs
 description: Now that you've documented the business process you want to automate with Power Apps, optimize it. Learn some helpful approaches and key questions for optimization.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 10/12/2021
@@ -72,10 +72,10 @@ Some key questions to ask:
         human attention
 
 > [!NOTE]
-> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview.md)
+> If your task is done fully on the desktop, you can use [process advisor](/power-automate/process-advisor-overview)
 to automatically optimize the process. 
 Process advisor has capabilities to [analyze your process](/power-automate/process-advisor-analyze), 
-and visualize it in a [process map](/power-automate/process-advisor-visualize.md).
+and visualize it in a [process map](/power-automate/process-advisor-visualize).
 Process map reveals bottlenecks and metrics for your process through an analytical report.
 
 ## Example: Optimizing the expense report process

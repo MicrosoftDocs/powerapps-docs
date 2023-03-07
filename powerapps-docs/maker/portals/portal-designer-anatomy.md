@@ -2,21 +2,27 @@
 title: Power Apps portals Studio
 description: Learn how to use Power Apps portals Studio.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: intro-internal
-ms.date: 07/09/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Power Apps portals Studio
 
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
+
 You can use Power Apps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists.
+
+> [!NOTE]
+> To use the portals Studio, you will need to be assigned the [system administrator role](/power-platform/admin/assign-security-roles) in the same Microsoft Dataverse environment as your site. 
 
 ## Open portals Studio
 

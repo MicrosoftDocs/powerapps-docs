@@ -4,7 +4,7 @@ description: "You can use the Metadata Browser to view tables and their properti
 ms.custom: ""
 ms.date: 03/16/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer

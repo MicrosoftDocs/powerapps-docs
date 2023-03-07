@@ -1,16 +1,15 @@
 ---
 title: Property | Microsoft Docs
 description: Interface for context.parameters.<property_key>
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # Property
@@ -25,27 +24,48 @@ Model-driven and canvas apps
 
 ### error
 
+Whether this parameter has either encountered an error in the population of its data, or that the data currently associated with this field is of an invalid format.
+
 **Type**: `boolean`
 
 ### errorMessage
+
+The error message associated with the last encountered error, if applicable.
 
 **type**: `string`
 
 ### formatted
 
+The formatted string value of this field. 
+
+This is only set if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+
 **Type**: `string`
+
 
 ### security
 
+Information concerning the field level security of the field to which this control was bound. 
+
+This value is only present if the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+
 **Type**: [SecurityValues](securityvalues.md)
 
+
 ### raw
+
+The raw, unformatted value of this field.
 
 **Type**: `any`
 
 ### attributes
 
-**Type**: `FieldPropertyMetadata`
+The attribute metadata associated with the field this property is configured against. 
+
+This is only set when the corresponding manifest [property element](../manifest-schema-reference/property.md) `usage` attribute value is `bound`, indicating that the component can change the value.
+
+**Type**:  `FieldPropertyMetadata`
+
 
 ### Related topics
 

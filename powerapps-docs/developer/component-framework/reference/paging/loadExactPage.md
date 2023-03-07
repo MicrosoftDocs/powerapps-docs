@@ -1,21 +1,24 @@
 ---
 title: loadExactPage | Microsoft Docs
 description: Request the exact page of results to be loaded.
-keywords:
-ms.author: nabuthuk
-author: lesyk
-manager: kvivek
-ms.date: 06/12/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # loadExactPage
 
 [!INCLUDE [loadexactpage-description](includes/loadexactpage-description.md)]
+
+> [!NOTE]
+> `loadExactPage` does not support parallel execution.
+> Executing `loadExactPage` will trigger `updateView` on the control with newly fetched results.
 
 ## Available for
 

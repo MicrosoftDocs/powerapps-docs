@@ -2,10 +2,10 @@
 title: Restore your canvas app to a previous version
 description: Learn about how to restore a canvas app to a previous version.
 author: emcoope-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/12/2021
 ms.subservice: canvas-maker
 ms.author: emcoope
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - emcoope-msft
 ---
 # Restore a canvas app to a previous version

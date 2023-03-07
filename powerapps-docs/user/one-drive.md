@@ -3,7 +3,7 @@ title: "Use OneDrive for Business| MicrosoftDocs"
 description: How to use OneDrive for Business
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2020

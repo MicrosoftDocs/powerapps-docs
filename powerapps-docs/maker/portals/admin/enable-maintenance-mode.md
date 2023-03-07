@@ -2,7 +2,7 @@
 title: Maintenance mode for a portal
 description: Learn how to enable maintenance mode with your portal.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Maintenance mode for a portal
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 There might be times when your website is under scheduled maintenance or is down because of temporary outage. When a customer accesses the website during maintenance, unpredictable behavior and intermittent unavailability might be experienced. 
 
@@ -82,7 +85,6 @@ You can also choose to disable maintenance mode on your portal when the schedule
 
 ### See also
 
-[Microsoft Learn: Power App portal maintenance and troubleshooting](/learn/modules/portals-maintenance-troubleshooting/)
-
+[Power Apps portals maintenance and troubleshooting](/training/modules/portals-maintenance-troubleshooting/)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

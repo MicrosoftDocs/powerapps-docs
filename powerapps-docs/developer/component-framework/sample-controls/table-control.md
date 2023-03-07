@@ -1,13 +1,19 @@
 ---
 title: " Table component| Microsoft Docs" 
 description: "This sample component renders a table with two columns. The left column shows the name of the API method or property, and the right column shows the value returned by the API." 
-ms.custom: ""
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
+author: noazarur-microsoft
+ms.author: noazarur
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: sample
+ms.subservice: pcf
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+contributors:
+ - JimDaly
 ---
 
 # Implementing table component

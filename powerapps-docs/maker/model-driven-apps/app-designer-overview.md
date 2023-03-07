@@ -2,8 +2,7 @@
 title: "Overview of the model-driven app designer | MicrosoftDocs"
 description: Learn about the app designer for model-driven apps.
 ms.custom: ""
-ms.date: 10/26/2021
-ms.service: powerapps
+ms.date: 12/15/2022
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview
@@ -22,9 +21,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Overview of the model-driven app designer (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Overview of the model-driven app designer
 
 The new model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
 
@@ -38,7 +35,8 @@ The app designer interface has the following areas:
 
    - **Back**. Closes the model-driven app designer and returns you to the Power Apps website (make.powerapps.com).
    - **New page**. Creates a new page for one or more table forms and views or table dashboards for the app.
-   - **Settings**. Opens the app properties such as name and description. <!-- and whether the app can be used offline-->
+   - **Settings**. Opens the app properties such as name and description.
+   - **Edit form**: Open the form designer to edit the default form shown in app preview.
    - **Switch to classic**. Opens the app in the classic app designer.
    - **Save**. Saves the app.
    - **Publish**. Makes the changes made available to other users.
@@ -51,8 +49,9 @@ The app designer interface has the following areas:
    - **Pages**. Displays the components in your app. From the page area you can choose to add or remove forms, views, and dashboards for each table.
    - **Navigation**. Displays a navigation structure  of your app that is formed using areas, groups, and subareas. You can add or remove groups and subareas to the navigation.
    - **Data**. Provides a view of all available tables that are currently used within your app and a view of all tables that are available in your environment.
+   - **Automation**. Displays business process flows that are a part of this app. You can add, remove, or create new business process flows to the app.
 
-4. Property pane – Displays properties of the selected component and also allows you to make changes.
+4. Property pane – Displays properties of the selected component and associated forms and views with the selected table. Selecting the pencil or ellipsis opens the form or view designer.
 
 5. Preview size switcher - Changes the size of the form preview helping you to see how the form will appear on various screen sizes.
 
@@ -60,7 +59,7 @@ The app designer interface has the following areas:
 
 7. Fit to screen - Quick action to fit the app preview to the available screen size.
 
-   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added.":::
+   :::image type="content" source="media/app-designer-layout.png" alt-text="Layout of the model-driven app designer that has the account and contact tables added."lightbox="media/app-designer-layout.png":::
 
 ## Navigation pane options
 
@@ -73,17 +72,9 @@ From the **Navigation** pane, select **Navigation bar** to set the following opt
 
    :::image type="content" source="media/navigation-pane-options.png" alt-text="Options available for app navigation":::
 
-## Known limitations
+## Known limitation
 
-- You can’t add the following model-driven app components:
-   - URLs
-   - Business process flows
-   - Charts
-- You can’t change the app’s icon.
-- You can’t specify the app’s URL.
-
-> [!TIP]
-> Select **Switch to classic** to use the classic designer to complete the app design tasks that aren't currently available in the designer.
+- The app’s URL can’t be specified.
 
 ## Next steps
 

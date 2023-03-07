@@ -1,14 +1,13 @@
 ---
 title: "Use the ConditionExpression class (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the ConditionExpression class to compare a table column to a value or set of values by using an operator, such as &quot;equal to&quot; or &quot;greater than&quot;." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 06/01/2021
+ms.date: 03/13/2022
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -130,11 +129,16 @@ creates a condition to return only records where the first name is John.
 
 More information: [Use column comparison in queries](../column-comparison.md)
 
-### See also  
- [Building Queries](build-queries-with-queryexpression.md)   
- [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
- [Use the FilterExpression Class](use-filterexpression-class.md)   
- <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>
+## Use Wildcard characters in conditions using string values
+
+You can use wildcard characters when you construct queries using conditions on string values. More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)
+
+### See also
+
+[Building Queries](build-queries-with-queryexpression.md)<br />
+[Build Queries with QueryExpression](build-queries-with-queryexpression.md)<br />
+[Use the FilterExpression Class](use-filterexpression-class.md)<br />
+<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>
 
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

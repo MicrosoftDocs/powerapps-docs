@@ -2,7 +2,7 @@
 title: Server-side cache in portals
 description: Learn how to force the portal to refresh its cache immediately.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/03/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Server-side cache in portals
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Microsoft Dataverse is immediately reflected on the portal. Updates from Dataverse  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Dataverse and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
@@ -43,8 +46,6 @@ The server-side cache is deleted, and data is reloaded from Dataverse.
 [Capacity based](/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
 
 ![Clear portal cache with capacity-based license.](media/clear-server-side-cache/clear-config-capacity-license.png)
-
-To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portals, Dynamics 365 portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals).
 
 Portal metadata is stored in tables called *configuration tables*. If you change configuration tables using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
@@ -217,7 +218,7 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
-- [Capacity-based portals and add-on portals](../overview.md#power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
+- Capacity-based portals and add-on portals will use the same caching functionality.
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]

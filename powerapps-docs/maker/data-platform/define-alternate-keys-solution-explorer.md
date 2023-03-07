@@ -4,7 +4,7 @@ description: "Learn how to define alternate keys that can be used to reference r
 ms.custom: ""
 ms.date: 08/01/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -37,7 +37,7 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 ## Open solution explorer
 
-Part of the name of any alternate key you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
+Part of the name of any alternate key you create is the customization prefix. This is set based on the solution publisher for the solution you're working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this table. More information: [Change the solution publisher prefix](create-solution.md#solution-publisher) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -63,7 +63,7 @@ Part of the name of any alternate key you create is the customization prefix. Th
     
     This system job will have a name that follows this pattern: `Create index for {0} for table {1}` where `0` is the **Display Name** of the alternate key and `1` is the name of the table.
 
-    The link to the system job will not be displayed after the system job completes successfully. More information: [Monitor and manage system jobs](/power-platform/admin/monitor-manage-system-jobs)
+    The link to the system job will not be displayed after the system job completes successfully. More information: [Monitor system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs)
 
 
 ## Delete an alternate key

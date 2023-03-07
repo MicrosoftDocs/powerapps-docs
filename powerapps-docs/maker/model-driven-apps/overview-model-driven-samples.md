@@ -6,7 +6,7 @@ documentationcenter: na
 author: caburke
 reviewer: Mattp123
 manager: kvivek
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: overview
 ms.component: model

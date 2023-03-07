@@ -4,7 +4,7 @@ description: "In Microsoft Dataverse, the *template* tables help you create cons
 ms.custom: ""
 ms.date: 03/27/2021
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer

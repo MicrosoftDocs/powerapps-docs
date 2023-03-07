@@ -2,19 +2,22 @@
 title: Themes overview
 description: Overview of themes and basic themes in Power Apps portals.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
-ms.date: 05/10/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: nenandw
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - neerajnandwana-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
 # Themes overview
+
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 

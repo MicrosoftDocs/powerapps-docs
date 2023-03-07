@@ -1,16 +1,15 @@
 ---
 title: CaptureAudio | Microsoft Docs
 description: Invokes the device microphone to record audio.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 09/08/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 3e6a82ab-dbb2-4a60-acc2-c4f1012a8630
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # captureAudio
@@ -33,7 +32,7 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/reference/Global
 
 ## Exceptions
 
-See [Web service error codes](../../../data-platform/org-service/web-service-error-codes.md)
+See [Web service error codes](../../../data-platform/reference/web-service-error-codes.md)
 
 ### Related topics
 

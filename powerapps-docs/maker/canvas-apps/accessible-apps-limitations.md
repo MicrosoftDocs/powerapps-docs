@@ -2,13 +2,13 @@
 title: Accessibility limitations in canvas apps
 description: Learn about the accessibility limitations in canvas apps.
 author: tahoon-ms
-ms.service: powerapps
+
 ms.topic: article
 ms.custom: canvas
 ms.date: 02/26/2021
 ms.subservice: canvas-maker
 ms.author: tahoon
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
@@ -16,7 +16,7 @@ search.app:
 contributors:
   - chmoncay
   - tahoon-ms
-  - tapanm-msft
+  - mduelae
 ---
 
 # Accessibility limitations in canvas apps

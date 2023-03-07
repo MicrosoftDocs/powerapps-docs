@@ -3,7 +3,7 @@ title: "Distribute a model-driven app using a solution | MicrosoftDocs"
 description: "Learn how to distribute a model-driven app using solutions"
 keywords: ""
 ms.date: 08/06/2018
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -47,7 +47,7 @@ In order to distribute an app, you create a solution so that the app can be pack
 
 2. Select **Solutions** and then select **New solution**.
 3. Complete the columns on the **New Solution** page, and then select **Save**. More information: [Create a solution](../data-platform/create-solution.md)
-4. The **Solution** page appears. Select **Add Existing**, select **App**, select **Model-driven app**, select the app that to be added to the solution, and then select **Add**.
+4. The **Solution** page appears. Select **Add Existing**, select **App**, select **Model-driven app**, select the app that is to be added to the solution, and then select **Add**.
 
     ![Select solution components.](media/select-solution-components.png)
 
@@ -55,7 +55,7 @@ In order to distribute an app, you create a solution so that the app can be pack
 
 ## Export a solution
 
-To distribute an app so it can be imported into other environment or made available on [Microsoft AppSource](https://appsource.microsoft.com/), export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
+To distribute an app so it can be imported into other environments or made available on [Microsoft AppSource](https://appsource.microsoft.com/), export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
 
 1. Go to the **Solutions** area of Power Apps. 
 2. Select the solution required, and then on the toolbar select **Export**.

@@ -1,13 +1,12 @@
 ---
 title: " Map component| Microsoft Docs" 
 description: "This sample component changes the user experience of interacting with address fields on the form." 
-ms.custom: ""
+ms.author: jdaly
+author: noazarur-microsoft
 manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
+ms.date: 03/12/2022
+ms.reviewer: jdaly
 ms.topic: "article"
-ms.author: "nabuthuk" 
-author: Nkrb
 ---
 
 # Implementing map component

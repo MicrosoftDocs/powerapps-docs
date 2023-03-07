@@ -4,7 +4,7 @@ description: Learn how to sort rows in a model-driven app
 ms.custom: ""
 ms.date: 04/17/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -36,7 +36,7 @@ To change the sort order in the view designer, see [Create a public view in Powe
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Select **Solutions**, open the solution you want, select **Tables**, open the table you want, and then select the **Views** tab.
+2.  Select **Solutions**, open the solution you want, select **Tables**, open the table you want, and then select the **Views** area.
 
 3.  Select a view to open it in the view designer.
 

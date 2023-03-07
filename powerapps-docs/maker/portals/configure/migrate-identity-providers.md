@@ -2,13 +2,13 @@
 title: Migrate identity providers to Azure AD B2C
 description: Learn how to migrate identity providers to Azure AD B2C.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Migrate identity providers to Azure AD B2C
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 The portals feature supports a configurable security system that lets you support multiple authentication systems. The portal includes its own local credentials in addition to federating with external identity providers by using standard protocols such as OIDC, SAML, and WS-Federation. Going forward, we recommend that you use only the Azure AD B2C identity provider for authentication and that you deprecate other identity providers.
 

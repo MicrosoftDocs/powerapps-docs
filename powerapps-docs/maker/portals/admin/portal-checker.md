@@ -2,10 +2,10 @@
 title: How to run Portal Checker
 description: Learn how to run Portal Checker within Power Apps to help you identify common problems within your portal and get suggestions on how to fix them.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2021
+ms.date: 07/18/2022
 ms.subservice: portals
 ms.author: nenandw
 ms.reviewer: ndoelman
@@ -43,26 +43,40 @@ For a list of common issues diagnosed by Portal Checker, see [Common portal issu
 
 To run Portal Checker:
 
-1.	Open [Power Apps portals admin center](admin-overview.md).
+1. Open [Power Apps portals admin center](admin-overview.md).
 
-2.	Go to **Run Portal Checker**.
+1. Go to **Run Portal Checker**.
 
     > [!div class=mx-imgBorder]
     > ![Run Portal Checker.](../media/run-diagnostics.png "Run Portal Checker")
 
-3.	Select the **Run Portal Checker** button. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic Results** section.
+1. Select the **Run Portal Checker** button. The diagnostic session will start and gather data about the customer issues. The results are displayed in the **Diagnostic Results** section.
 
     > [!div class=mx-imgBorder]
     > ![Diagnostic results.](../media/diagnostic-results.png "Diagnostic results")
 
-4.	To rerun the diagnostic checks, select **Refresh results**.
+1. To rerun the diagnostic checks, select **Refresh results**.
 
     > [!div class=mx-imgBorder]
     > ![Refresh diagnostic results.](../media/diagnostic-results-refresh.png "Refresh diagnostic results")
 
+## Identifying web pages listed in diagnostic results
+
+The portal checker diagnostic results could list web pages that have the same name as other pages in the portal. If there are multiple web pages with the same name, you can identify the specific page affected using the unique guid of the page.
+
+1. Open the [Portal Management app](../configure/configure-portal.md).
+1. In the left pane, select **Web Pages**.
+1. Open any web page.
+1. Replace the ID in the URL with the guid specified in the portal checker diagnostic results.
+
+    :::image type="content" source="media/portal-checker-analysis/webpage-by-id.png" alt-text="Replacing the web page ID the URL.":::
+
 ## Next steps
 
-[Analyze and resolve Portal Checker diagnostics results](portal-checker-analysis.md)
+Analyze and resolve Portal Checker diagnostics results:
+- [Cache invalidation issues](portal-checker-cache-invalidation.md)
+- [Configuration issues](portal-checker-configuration-issues.md)
+- [Performance issues](portal-checker-performance.md)
+- [Portal start-up issues](portal-checker-startup-issue.md)
+- [Provisioning issues](portal-checker-provisioning-issues.md)
 
-
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

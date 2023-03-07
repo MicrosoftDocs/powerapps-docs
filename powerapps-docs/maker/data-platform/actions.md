@@ -4,7 +4,7 @@ description: "With custom process actions, you can perform operations, such as C
 ms.custom: intro-internal
 ms.date: 04/28/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 author: MSFTMAN
 ms.suite: ""
 ms.tgt_pltfrm: ""

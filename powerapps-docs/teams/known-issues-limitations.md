@@ -2,19 +2,20 @@
 title: Known issues and limitations for Dataverse for Teams | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
 author: matthewbolanos
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/18/2022
+ms.date: 02/02/2022
 ms.subservice: teams
 ms.author: mabolan
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - matthewbolanos
   - msftman
   - amchern
   - hemantgaur
+  - carrema
 ---
 # Known issues and limitations
 
@@ -32,20 +33,14 @@ The following components aren't supported:
 > - The app or flow is running in the context of Microsoft Teams.
 > - And, the custom connector points at an APIM endpoint in Azure. 
 
-## Component library
-
-[Component library](../maker/canvas-apps/component-library.md) isn't supported.
-
 ## Controls
 
 To learn about the limitations of controls in Dataverse for Teams environments, go to [Limitations of controls in Power Apps](../maker/canvas-apps/control-limitations.md).
 
-## Government Community Cloud (GCC)
+## Region availability
 
 Dataverse for Teams currently isn't available in:
 
-- Power Apps Government Community Cloud – High (GCC High)
-- Power Apps Department of Defense (DoD)
 - Power Apps operated by 21Vianet in China
 
 ## Hidden membership groups

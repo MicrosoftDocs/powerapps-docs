@@ -1,8 +1,8 @@
 ---
 title: Create a canvas app from a template
 description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
-author: tapanm-msft
-ms.service: powerapps
+author: mduelae
+
 ms.topic: conceptual
 ms.custom: 
   - canvas
@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 
 # Create a canvas app from a template

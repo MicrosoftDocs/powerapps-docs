@@ -2,7 +2,7 @@
 title: "3: Building a low-code prototype | Microsoft Docs"
 description: "Learn about building a low-code prototype."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021
@@ -583,9 +583,9 @@ The final stage is to add a **Home** screen to the app. The **Home** screen will
     > [!NOTE]
     > Currently, this formula just acts as a placeholder. You'll modify the label later to retrieve the next appointment for the engineer, rather than always display the first one.
 
-9.  Select the third **Text label** control, and set the **Text** property to **First(Appointments).\'Appointment Date**.
+9.  Select the third **Text label** control, and set the **Text** property to **First(Appointments).\'Appointment Date\'**.
 
-10. Set the **Text** property of the fourth label control to **First(Appointments).\'Appointment Time**. Set the **Font size** property to 30.
+10. Set the **Text** property of the fourth label control to **First(Appointments).\'Appointment Time\'**. Set the **Font size** property to 30.
 
 11. From the list of controls, add a **Rectangle** control. Set the following properties for this control:
 
@@ -633,7 +633,7 @@ In addition to navigating from the **Home** screen to the other screens in the s
 
 9.  Similarly, add an icon named **IconReturn3** to the **RectQuickActionBar1\_1** control in the **BrowseAppointments** screen.
 
-10. On the **Tree view** pane, select the **App** object. Change the **OnStart** action property to the expression **Navigate(Home, ScreenTransition.Fade)**. This action ensures that the **Home** screen is displayed whenever the app starts:
+10. On the **Tree view** pane, select the **App** object. Change the **StartScreen** property to the expression **Home**. This ensures that the **Home** screen is displayed whenever the app starts:
 
     ![Set App OnStart formula.](media/image74.png)
 

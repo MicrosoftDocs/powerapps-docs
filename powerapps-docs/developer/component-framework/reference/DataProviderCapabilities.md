@@ -1,21 +1,20 @@
 ---
 title: DataProviderCapabilities | Microsoft Docs
 description: Provides methods to use dataset capabilities.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 12/13/2021
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8907f07a-ad45-47e4-a503-8eaae9bba5f7
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
 # DataProviderCapabilities
 
-Provides access to all the properties of a file.
+[!INCLUDE [dataprovidercapabilities-description](includes/dataprovidercapabilities-description.md)]
 
 ## Available for
 
@@ -50,6 +49,18 @@ If the dataset records can be paged.
 ### canCreateNewRecords
 
 Whether adding new records is supported or not.
+
+**Type**: `boolean`
+
+### hasRecordNavigation
+
+Whether the dataset supports record navigation for lookup and primary fields.
+
+**Type**: `boolean`
+
+### hasCellImageInfo
+
+Whether image info for record columns can be retrieved.
 
 **Type** `boolean`
 

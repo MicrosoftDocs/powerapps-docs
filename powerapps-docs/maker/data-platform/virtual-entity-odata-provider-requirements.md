@@ -4,7 +4,7 @@ description: Learn what's required and best practices when you use the OData v4 
 ms.custom: ""
 ms.date: 08/11/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -36,7 +36,7 @@ This topic describes how to configure the OData v4 Data Provider as well as the 
 -  OData tables with nullable properties must be set to match the mapped column in the virtual table. For example, an OData table property with Nullable=False must have the mapped column in Dataverse **Field Requirement** attribute set to **Business Required**. 
 - For retrieve multiple queries, such as when you load data in to a grid, control the size of the dataset returned from the external data source by using the select and filter query parameters.
 - If not already enabled, system administrators should enable plug-in tracing. Once enabled, all errors from the OData endpoint are captured in the plug-in trace log. More information:  [Administrator Guide: System Settings dialog box - Customization tab](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab)
-- You can't use the OData v4 Data Provider to connect to another Microsoft Dataverse environment.
+- You can't use the OData v4 Data Provider to connect to another environment.
 
 ## Data type mapping
 

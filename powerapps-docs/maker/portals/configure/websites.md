@@ -2,7 +2,7 @@
 title: Manage websites
 description: Learn how to manage websites in portals.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Manage websites
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 A website is the core table of portals application. A portal application selects a single Website record, and this determines what portal tables such as [web pages](web-page.md), [web files](web-files.md), [web roles](create-web-roles.md), and [content snippets](customize-content-snippets.md) are applicable to this application.
 

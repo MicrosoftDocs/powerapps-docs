@@ -1,29 +1,28 @@
 ---
 title: Portals as progressive web apps (PWAs) overview
-description: Overview of a building a portal as a progressive web app.
+description: Overview of building a portal as a progressive web app.
 author: ankitavish
-ms.service: powerapps
+
 ms.topic: overview
 ms.custom: 
-ms.date: 11/30/2021
+ms.date: 12/01/2022
 ms.subservice: portals
 ms.author: avishwakarma
 ms.reviewer: ndoelman
 contributors:
     - ankitavish
-    - tapanm-msft
+    - mduelae
     - nickdoelman
+    - ProfessorKendrick
 ---
 
-# Overview of portals as progressive web apps (preview)
+# Overview of portals as progressive web apps
 
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+[!INCLUDE [cc-portals-studio-ga-banner](../../includes/cc-portals-studio-ga-banner.md)]
 
 You can enable your functional portal as a progressive web app (PWA), with native app–like look and feel, by using Power Apps portals Studio.
 
-With this preview feature, Power Apps portals now supports using progressive web app technology to provide multiplatform support to create an app that will work on all platforms (Android, iOS, Windows, and Chromebooks) and form factors (mobile, desktop, and tablet).
+With this feature, Power Apps portals now supports using progressive web app technology to provide multiplatform support to create an app that will work on all platforms (Android, iOS, Windows, and Chromebooks) and form factors (mobile, desktop, and tablet).
 
 PWAs are built for cross-platform interoperability through browser support that provides users a native app–like experience. PWAs bring a seamless experience for users across different web browsers. These apps can be installed from the browser or through app stores. This capability enables external and internal customers to use a portal as an app. They can also pin the app directly to the home screen on their mobile device.
 
@@ -35,7 +34,7 @@ The following graphics illustrate the users' experience of adding a portal to th
 
 Users can also install the portal from their device's app store, if you created an app package and published the app to the app store for their device.
 
-> [!Note]
+> [!NOTE]
 > Publishing your PWA to the iOS app store is currently not supported.
 
 :::image type="content" source="media/progressive-web-apps/app-store.png" alt-text="Mobile device app store." border="false":::

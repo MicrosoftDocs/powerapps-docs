@@ -3,7 +3,7 @@ title: "Export data to Excel in Power Apps | MicrosoftDocs"
 description: How to export data to Excel
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/12/2021

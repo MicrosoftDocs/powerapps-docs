@@ -8,7 +8,7 @@ author: jowells
 manager: austinj
 editor: ''
 tags: ''
-ms.service: powerapps
+
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -31,6 +31,7 @@ This list below contains all of the best practices and guidance around integrati
 |---------|---------|
 |[Service protection API limits (Dataverse)](../../api-limits.md)     |Understand the limits for API requests.         |
 |[Manage invalid characters](invalidcharactersinfield.md)| Manage invalid characters |
+|[Retrieve specific columns for a table via query APIs](retrieve-specific-columns-entity-via-query-apis.md) |Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.         |
 
 ### See Also
 

@@ -2,13 +2,13 @@
 title: Configure a SAML 2.0 provider for portals with AD FS
 description: Learn how to configure SAML 2.0 provider for portals with AD FS.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
 ms.subservice: portals
 ms.author: sandhan
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
     - sandhangitmsft
@@ -16,6 +16,9 @@ contributors:
 ---
 
 # Configure a SAML 2.0 provider for portals with AD FS
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 > [!IMPORTANT]
 > The steps for the configuration of Active Directory Federation Services (AD FS) might vary depending on the version of your AD FS server.
@@ -248,6 +251,9 @@ Add-ADFSRelyingPartyTrust -Name $name -Identifier $identifier -SamlEndpoint $sam
 
 # add the 'Identity Provider' claim description if it is missing
 
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+
 if (-not (Get-ADFSClaimDescription | ? { $_.Name -eq Persistent Identifier })) {
 
 Add-ADFSClaimDescription -name "Persistent Identifier" -ClaimType "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" -IsOffered:$true -IsAccepted:$true
@@ -255,6 +261,9 @@ Add-ADFSClaimDescription -name "Persistent Identifier" -ClaimType "urn:oasis:nam
 }
 
 # add the portal relying party trust
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Add-CrmRelyingPartyTrust $domain
 ```

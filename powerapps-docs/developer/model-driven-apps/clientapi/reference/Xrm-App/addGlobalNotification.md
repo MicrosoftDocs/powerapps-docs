@@ -1,16 +1,18 @@
 ---
 title: "addGlobalNotification (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Includes description and supported parameters for the addGlobalNotification method.
-ms.date: 04/21/2021
-ms.service: powerapps
-ms.topic: "reference"
-author: "Nkrb"
-ms.author: "nabuthuk"
-manager: "kvivek"
+author: adrianorth
+ms.author: aorth
+ms.date: 03/12/2022
+ms.reviewer: jdaly
+ms.topic: reference
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
+  - D365CE
+contributors:
+  - JimDaly
 ---
 # addGlobalNotification (Client API reference)
 
@@ -22,7 +24,7 @@ search.app:
 
 ## Parameters
 
-<table style="width:100%">
+<table>
 <tr>
 <th>Name</th>
 <th>Type</th>
@@ -134,7 +136,7 @@ var myAction =
 {
   actionLabel: "Learn more", 
   eventHandler: function () {
-        Xrm.Navigation.openUrl("https://docs.microsoft.com/powerapps/");
+        Xrm.Navigation.openUrl("https://learn.microsoft.com/powerapps/");
         // perform other operations as required on clicking
     }
 }

@@ -2,10 +2,10 @@
 title: Use Find and Replace in the formula bar
 description: Learn how to use the find and Replace to search for strings and make changes to one or more matches.
 author: TashasEv
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 12/13/2021
 ms.subservice: canvas-maker
 ms.author: tashas
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - TashasEv
 ---
 
@@ -142,6 +142,7 @@ Use the **Replace** or **Replace all** icons to update one or all matches return
 
 ### See also
 
+- [Use the Search pane (preview)](search.md)
 - [Get started with formulas in canvas apps](working-with-formulas.md)
 - [Add and configure controls](add-configure-controls.md)
 

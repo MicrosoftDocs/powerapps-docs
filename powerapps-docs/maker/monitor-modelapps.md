@@ -2,7 +2,7 @@
 title: Debug a model-driven app with Monitor
 description: Learn how to diagnose model-driven app issues using Monitor
 author: mattp123
-ms.service: powerapps
+
 ms.subservice: troubleshoot
 ms.topic: troubleshooting
 ms.custom: 

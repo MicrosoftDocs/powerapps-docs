@@ -1,20 +1,20 @@
 ---
 title: Manage knowledge articles by using content access levels
 description: Learn how to manage knowledge articles by using content access levels in a portal.
-author: sbmjais
-ms.service: powerapps
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: kkendrick
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Manage knowledge articles by using content access levels
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Content access levels give another level of control separate from web roles to control access to knowledge articles in a portal. Content access levels make a well-designed knowledge base more capable of providing the right content to the right audience. This allows for more structured learning paths that keep irrelevant content from surfacing.
 

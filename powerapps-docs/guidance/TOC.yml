@@ -118,3 +118,13 @@
         href: planning/discoverability.md
       - name: Collecting feedback and analyzing telemetry
         href: planning/feedback-telemetry.md
+  - name: Collaborating and co-developing apps
+    items:
+    - name: Overview
+      href: co-develop/overview.md
+    - name: Establishing a collaboration model
+      href: co-develop/collaboration.md
+    - name: Establishing co-development governance
+      href: co-develop/governance.md  
+    - name: Try community solutions and tools
+      href: co-develop/community-solutions-tools.md

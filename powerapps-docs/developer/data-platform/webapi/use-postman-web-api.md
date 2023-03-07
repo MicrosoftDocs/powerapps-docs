@@ -4,7 +4,7 @@ description: "Learn how to use Postman to work with Microsoft Dataverse Web API"
 ms.custom: 
 ms.date: 04/22/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Add a chart created in a model-driven app to a webpage in portal
 description: Learn how to add a chart created in a model-driven app to a webpage in the portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Add a chart created in a model-driven app to a webpage in portal
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/portals-entity-tags.md#chart). You can add the chart Liquid tag in:
 
@@ -146,7 +149,6 @@ The following table lists the charts that are currently not supported in portals
 
 ### See also
 
-[Microsoft Learn: Model-driven charts in portals](/learn/modules/portals-integration/4-model-driven-charts)
-
+[Model-driven charts in portals](/training/modules/portals-integration/4-model-driven-charts)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

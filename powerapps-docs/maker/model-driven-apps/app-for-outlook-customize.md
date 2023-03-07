@@ -7,7 +7,7 @@ ms.subservice: mda-maker
 ms.author: mkaur
 manager: kvivek
 ms.date: 05/21/2021
-ms.service: powerapps
+
 ms.topic: how-to
 applies_to: 
   - Dynamics 365 (online)

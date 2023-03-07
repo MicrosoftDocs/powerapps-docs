@@ -2,7 +2,7 @@
 title: Create and manage publishing states
 description: Learn how to create and manage publishing states in a portal.
 author: sandhangitmsft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom:
 ms.date: 04/21/2020
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Create and manage publishing states
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Publishing states allow for the definition of a content lifecycle in portals website. At a basic level, a publishing state can determine whether an associated table should be considered visible/published on a portal. In more complex configurations, they can define a multi-stage process for content review and publishing, with security restrictions on each stage.
 

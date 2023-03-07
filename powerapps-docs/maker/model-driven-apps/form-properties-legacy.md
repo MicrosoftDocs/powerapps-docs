@@ -12,7 +12,7 @@ ms.subservice: mda-maker
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.assetid: 4ed30bb7-dca1-4de8-80f3-842152ea921a
 search.audienceType: 

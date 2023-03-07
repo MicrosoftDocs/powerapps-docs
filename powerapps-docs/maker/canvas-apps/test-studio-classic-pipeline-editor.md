@@ -2,11 +2,11 @@
 title: Automate tests with Azure Pipelines using classic editor
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipelines.
 author: maustinjones
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 07/20/2021
+ms.reviewer: mkaur
+ms.date: 08/22/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - TYLEROL
   - maustinjones
@@ -271,7 +271,7 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 | OnlineUrl                 | <https://make.powerapps.com>                                                                                                   |
 | TestAutomationURLFilePath | ```$(Build.SourcesDirectory)\<test URL file>.json``` <br>**Note:** This is the [*Test URLs .json*](#step-2---create-test-url-json-file) file you created earlier.                      |
 | UsePrivateMode            | true                                                                                                                           |
-| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account. |
+| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account. Ensure this user has the ability to run the app and connect to any data sources the app might connect to. |
 
 1. Select **Add** and enter **OnlinePassword** in the variable name.
 
@@ -307,8 +307,6 @@ Select **RunTestAutomation** test to drill into the details on what test case ha
 ## Known limitations
 
 - Multifactor authentication isn't supported.
-
-- Internet Explorer 11 and Microsoft Edge aren't supported browsers.
 
 - Test summary will report a single test result per browser. The test result will contain one or more test cases or test suite results. 
 

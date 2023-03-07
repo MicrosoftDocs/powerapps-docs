@@ -2,15 +2,15 @@
 title: Manage your apps using Power Apps app in Teams | Microsoft Docs
 description: Learn how to manage your apps using Power Apps app in Teams.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
 ms.subservice: teams
 ms.author: chmoncay
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 

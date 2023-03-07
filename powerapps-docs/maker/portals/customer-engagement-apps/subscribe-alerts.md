@@ -1,20 +1,20 @@
 ---
 title: Subscribe to alerts
 description: Learn how to create and manage alerts in a portal.
-author: sbmjais
-ms.service: powerapps
+author: nickdoelman
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2020
 ms.subservice: portals
-ms.author: shjais
-ms.reviewer: shjais
+ms.author: kkendrick
 contributors:
     - nickdoelman
-    - shjais
 ---
 
 # Subscribe to alerts
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 Forum users can subscribe to threads and receive alerts when new posts are added keeping them up-to-date on conversations of importance. Alert settings are attached to the user's contact record providing further insight into the user's intent.
 

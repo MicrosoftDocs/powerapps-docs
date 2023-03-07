@@ -3,7 +3,7 @@ title: "Tutorial to add or edit model-driven app components with Power Apps | Mi
 description: "Use the Power Apps app designer to add or edit components"
 keywords: ""
 ms.date: 03/05/2020
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: tutorial
 applies_to: 
@@ -56,7 +56,7 @@ The app designer has two main areas. On the left side is the canvas, where app c
  > [!div class="mx-imgBorder"]
  > ![App designer components.](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
   
- The canvas includes areas for the **Site Map**, *Business Process Flow**, **Dashboards**, and **Tables**.
+ The canvas includes areas for the **Site Map**, **Business Process Flow**, **Dashboards**, and **Tables**.
 
  After the tables are in place, select each table and add the required table assets such as forms, views, and charts to it.
 

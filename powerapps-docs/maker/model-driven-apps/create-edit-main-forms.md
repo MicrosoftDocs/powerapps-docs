@@ -4,7 +4,7 @@ description: "Learn how to create or edit a main form"
 ms.custom: ""
 ms.date: 05/23/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -39,7 +39,7 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
   
 1.   Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** tab.
+2.  Expand **Data**, select **Tables**, select the table you want, and then select the **Forms** area.
 
 3. To create a new main form, on the toolbar select **Add form** > **Main Form**.  
     \-OR-
@@ -56,7 +56,7 @@ Each main form is composed of one or more tabs. Each tab can have one or more se
 4.  Edit the properties for parts of the form, as needed:
     
     - [Edit form properties](create-and-edit-forms.md#configure-a-form)
-    - [Edit form column properties](Add-move-or-delete-fields-on-form.md#configure-columns-on-a-form)  
+    - [Edit form column properties](Add-move-or-delete-fields-on-form.md#configure-column-properties-on-a-form)  
     - [Edit tab properties](add-move-or-delete-tabs-on-form.md#configure-tabs-on-a-form)
     - [Edit section properties](add-move-or-delete-sections-on-form.md)
 

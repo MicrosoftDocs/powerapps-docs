@@ -1,14 +1,12 @@
 ---
 title: "Improve performance using storage partitions when accessing entity data (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to improve performance when accessing non-relational entity date." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 01/25/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
+ms.reviewer: pehecke
+
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "sunilg" # MSFT alias of manager or PM counterpart
+author: Peakerbl # GitHub ID
+ms.author: peakerbl # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -17,7 +15,7 @@ search.app:
 ---
 # Improve performance using storage partitions when accessing entity data
 
-An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Cosmos DB](/azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
+An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Azure Cosmos DB](/azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
 
 When no partition key is specified, the table is the logical boundary and retrieving a single item or a set of logically related items from a large data set will not be as performant as when using a partition key.
 

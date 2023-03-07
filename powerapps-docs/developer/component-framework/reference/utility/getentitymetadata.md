@@ -1,19 +1,18 @@
 ---
-title: getEntityMetadata | Microsoft Docs
+title: getEntityMetadata (Component Framework) | Microsoft Docs
 description: Returns the table definitions for the specified table.
-keywords:
-ms.author: nabuthuk
-author: Nkrb
-manager: kvivek
-ms.date: 10/01/2019
-ms.service: "powerapps"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 6a334af7-ca5b-449c-b90f-0901824654d2
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: reference
+ms.subservice: pcf
+contributors:
+ - JimDaly
 ---
 
-# getEntityMetadata
+# getEntityMetadata (Component Framework)
 
 [!INCLUDE [getentitymetadata-description](includes/getentitymetadata-description.md)]
 

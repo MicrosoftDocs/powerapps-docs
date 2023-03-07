@@ -1,14 +1,11 @@
 ---
 title: "Access entity data faster using storage partitions (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to improve access performance for non-relational entity data." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
 ms.date: 01/27/2021
-ms.reviewer: "pehecke"
-ms.service: powerapps
-ms.topic: "article"
-author: "Bluebear73" # GitHub ID
-ms.author: "munzinge" # MSFT alias of Microsoft employees only
-manager: "mayadu" # MSFT alias of manager or PM counterpart
+ms.reviewer: pehecke
+ms.topic: article
+author: Peakerbl # GitHub ID
+ms.author: peakerbl # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 search.app: 
@@ -17,7 +14,7 @@ search.app:
 ---
 # Access entity data faster using storage partitions
 
-An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Cosmos DB](/azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
+An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Azure Cosmos DB](/azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
 
 When no partition key is specified, the table is the logical boundary and retrieving a single item or a set of logically related items from a large data set will not be as performant as when using a partition key.
 
@@ -73,7 +70,6 @@ Here are a few more details about the partition key and partition management.
 - Partition allocation is automatic. Specifying a unique partition key during a Create operation creates a partition. When all data has been deleted from the partition, the partition is deleted.
 - There is no method available to rename a key.
 - Presently, only the Create, Update, Retrieve, and Delete entity operations support storage partitioning.
-
 
 ### See Also
 

@@ -4,7 +4,7 @@ description: "Learn about the deployment web service." # 115-145 characters incl
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "jamesol-msft" # GitHub ID
 ms.subservice: dataverse-developer

@@ -2,19 +2,19 @@
 title: Connect to Dynamics AX from Power Apps
 description: See the available Dynamics AX functions, responses, and examples.
 author: lancedMicrosoft
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
 ms.date: 09/13/2016
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to Dynamics AX from Power Apps

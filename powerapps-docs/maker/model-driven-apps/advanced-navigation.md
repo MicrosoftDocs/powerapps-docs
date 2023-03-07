@@ -9,7 +9,7 @@ manager: kvivek
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -35,7 +35,8 @@ The [solutions](../model-driven-apps/model-driven-app-glossary.md#solution) area
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. On the top right select the [Environment](../model-driven-apps/model-driven-app-glossary.md#environment) where your solution is located.
-3. On the left navigation pane, select **Solutions**.
+3. On the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+4. Select the solution you want.
 
    :::image type="content" source="../../maker/model-driven-apps/media/solution-assets-explorer.png" alt-text="Reviewing the solution explorer":::
 

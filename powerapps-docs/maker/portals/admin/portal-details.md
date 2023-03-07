@@ -2,7 +2,7 @@
 title: Portal details
 description: Know what details are captured when portal is provisioned and what you can use.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Portal details
+
+
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
 After you create a portal, it will begin provisioning and you are notified about the status through notifications. Once the portal is provisioned, you are redirected to Power Apps portals Studio. You can use Power Apps portals Studio to create and customize your website.
 

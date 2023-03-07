@@ -3,7 +3,7 @@ title: "Work with definitions using code (Microsoft Dataverse) | Microsoft Docs"
 description: "Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the table schema"
 ms.custom: ""
 ms.date: 03/12/2021
-ms.service: powerapps
+
 ms.topic: "article"
 author: "mayadumesh"
 ms.subservice: dataverse-developer

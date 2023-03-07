@@ -3,7 +3,7 @@ title: "Manage model-driven app properties in the Power Apps app designer (class
 description: "Learn how to manage the properties for your app using the classic designer"
 keywords: ""
 ms.date: 02/05/2019
-ms.service: powerapps
+
 ms.custom: 
 ms.topic: how-to
 applies_to:

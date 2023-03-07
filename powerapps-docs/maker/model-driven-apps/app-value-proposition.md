@@ -4,7 +4,7 @@ description: "App Value Proposition"
 ms.custom: intro-internal
 ms.date: 09/27/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"

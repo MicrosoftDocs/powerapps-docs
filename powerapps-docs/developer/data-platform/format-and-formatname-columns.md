@@ -1,26 +1,26 @@
 ---
 title: "Format and FormatName columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about Format and FormatName columns that store the format values and are used by the controls and UI to know how to display the contents." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 09/09/2021
-ms.reviewer: "nabuthuk"
-ms.service: powerapps
-ms.topic: "article"
-author: "NHelgren" # GitHub ID
+ms.date: 06/15/2022
+ms.reviewer: jdaly
+ms.topic: article
+author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
+ms.author: nhelgren # MSFT alias of Microsoft employees only
+manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+ - JimDaly
 ---
 # Format and FormatName columns
 
 Format and FormatName are the columns that store the format values and are used by the controls and UI to know how to display the contents.
 
-**Format** is the older column that stores the values used by Microsoft Dataverse. To maintain backward compatibility, new formats were not able to be introduced. Because of this, some of the API responses won’t align with the new format. For `Text` and `Multiline Text` columns, it is recommended to use the `FormatName` column.
+**Format** is the older column that stores the values used by Microsoft Dataverse. To maintain backward compatibility, new formats were not able to be introduced. Because of this, some of the API responses won't align with the new format. For `Text` and `Multiline Text` columns, it is recommended to use the `FormatName` column.
 
 **FormatName** is the new column that is used to specify the format for `Text` and `Multiline Text` column data types. `FormatName` column provides a more accurate response for the format selected and supports newer format types.
 
@@ -66,6 +66,5 @@ The following table provides the **Format** and **FormatName** values and API re
 
 ### Related articles
 
-[Data type format conversions](data-type-format-conversions.md)
-
+[Data type format conversions](data-type-format-conversions.md)<br />
 [Format validations](format-validations.md)

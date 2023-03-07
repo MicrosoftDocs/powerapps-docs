@@ -1,8 +1,8 @@
 ---
 title: Add and configure controls in canvas apps
 description: Step-by-step instructions for adding and configuring canvas-app controls directly, from the toolbar, in the Properties tab, or in the formula bar.
-author: tapanm-msft
-ms.service: powerapps
+author: mduelae
+
 ms.topic: conceptual
 ms.reviewer: 
 ms.date: 01/27/2022
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ms.custom:
   - intro-internal

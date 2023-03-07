@@ -4,7 +4,7 @@ description: "Understand how to view dependencies for a component in Power Apps"
 ms.custom: ""
 ms.date: 05/27/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.topic: "article"
 author: "Mattp123"
 ms.assetid: 

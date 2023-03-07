@@ -3,7 +3,7 @@ title: "What is Dataverse search and its benefits| MicrosoftDocs"
 description: Benefits of Dataverse search
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 2/8/2021

@@ -3,7 +3,7 @@ title: "Community tools and sites related to model-driven apps | MicrosoftDocs"
 description: "Find community driven tools and help"
 keywords: ""
 ms.date: 06/23/2020
-ms.service: powerapps
+
 ms.custom:
 ms.topic: how-to
 applies_to:

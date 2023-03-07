@@ -2,17 +2,17 @@
 title: Replace notification with adaptive card (contains video)
 description: Learn about how to replace notification with adaptive card to increase collaboration
 author: sbahl10
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/29/2021
 ms.subservice: teams
-ms.author: jshum
-ms.reviewer: tapanm
+ms.author: saperlmu
+ms.reviewer: mkaur
 contributors:
   - joel-lindstrom
-  - josephshum
-  - tapanm-msft
+  - msftsamperl
+  - mduelae
   - sbahl10
 ---
 # Replace notification with adaptive card to increase collaboration
@@ -512,8 +512,8 @@ This action should load all the required data appropriately after the app opens.
 ### See also
 
 - [Understand Employee ideas app architecture](employee-ideas-architecture.md)
-- [Customize sample apps](customize-sample-apps.md)
-- [Sample apps FAQs](sample-apps-faqs.md)
-- [Use sample apps from the Teams store](use-sample-apps-from-Teams-store.md)
+- [Customize sample app templates](customize-sample-apps.md)
+- [Sample app templates FAQs](sample-apps-faqs.md)
+- [Use sample app templates in Microsoft Teams](use-sample-apps.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

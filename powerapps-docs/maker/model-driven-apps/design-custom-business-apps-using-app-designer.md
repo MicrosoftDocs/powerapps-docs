@@ -4,7 +4,7 @@ description: Learn how to design model-driven apps
 ms.custom: intro-internal
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

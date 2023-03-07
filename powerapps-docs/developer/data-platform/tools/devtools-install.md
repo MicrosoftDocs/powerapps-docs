@@ -2,9 +2,9 @@
 title: "Install Power Platform Tools | Microsoft Docs"
 description: "Learn how to install the Power Platform Tools extension for Visual Studio."
 ms.custom: ""
-ms.date: 08/31/2021
+ms.date: 01/27/2023
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
@@ -21,7 +21,7 @@ search.app:
 
 :::image type="content" source="../media/tools/devtools-main-views.png" alt-text="Power Platform Tools." lightbox="../media/tools/devtools-main-views.png":::
 
-Power Platform Tools for Visual Studio supports the rapid creation, debugging, and deployment of plug-ins. Other capabilities currently in preview include development of custom workflow activities, web resources, integration technologies like Azure Service endpoints and webhooks, and more. This topic describes how to install and uninstall the tools in Visual Studio.
+Power Platform Tools for Visual Studio supports the rapid creation, debugging, and deployment of plug-ins. Other capabilities include development of custom workflow activities, web resources, integration technologies like Azure Service endpoints and webhooks, and more. This topic describes how to install and uninstall the tools in Visual Studio.
 
 > [!IMPORTANT]
 > While Power Platform Tools for Visual Studio is similar in appearance and function to the Developer Toolkit for Microsoft Dynamics CRM 2013, Power Platform Tools is a new product and completely independent of the Developer Toolkit. Power Platform Tools is not directly compatible with any templates or projects from the Developer Toolkit and vice versa.
@@ -30,7 +30,7 @@ Power Platform Tools for Visual Studio supports the rapid creation, debugging, a
 
 Before installing Power Platform Tools into Visual Studio you must have the following applications and frameworks installed on your development computer:
 
-- Microsoft Visual Studio 2019 or later.
+- Microsoft Visual Studio 2019 or 2022.
 
 - .NET Framework 4.6.2 (required only for plug-in and workflow activity development)
 
@@ -82,6 +82,7 @@ You can find a few Power Platform Tools options in Visual Studio by choosing **T
 ### See Also
 
 [Quickstart: Create a Power Platform Tools project](devtools-create-project.md)  
-[Power Platform Tools on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatformTools)
+[Power Platform Tools extension for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatformTools)  
+[Power Platform Tools extension for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatformToolsVS2022)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

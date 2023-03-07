@@ -3,7 +3,7 @@ title: "Work with business processes in model-driven apps| MicrosoftDocs"
 description: Overview of business process 
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 08/21/2020

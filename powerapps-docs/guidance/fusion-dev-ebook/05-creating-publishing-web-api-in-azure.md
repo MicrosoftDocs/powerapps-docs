@@ -2,7 +2,7 @@
 title: "5: Creating and publishing a Web API in Azure  | Microsoft Docs"
 description: "Learn about creating and publishing a Web API in Azure."
 author: spboyer
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: ebook
 ms.date: 04/26/2021
@@ -88,7 +88,7 @@ The following image shows the high-level structure of the Web API.
 
 ![High-level structure of the Inventory Web API.](media/image83.png)
 
-Kiana used the following procedure to create the Web API using .NET 5.0 command-line tools and Visual Studio Code:
+Kiana used the following procedure to create the Web API using .NET 6.0 command-line tools and Visual Studio Code:
 
 1.  Open a terminal window in Visual Studio Code.
 

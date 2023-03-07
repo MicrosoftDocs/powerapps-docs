@@ -1,16 +1,16 @@
 ---
 title: "Create a model-driven app dataset component in Microsoft Dataverse | MicrosoftDocs"
 description: "In this tutorial, learn how to create a dataset code component, deploy it, and configure it inside a model-driven app using Visual Studio Code."
-ms.date: 06/30/2021
-ms.service: "powerapps"
-ms.custom: "intro-internal"
-ms.topic: "index-page"
-ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
+ms.author: noazarur
+author: noazarur-microsoft
+manager: lwelicki
+ms.date: 05/27/2022
+ms.reviewer: jdaly
+ms.topic: tutorial
 ms.subservice: pcf
-ms.author: "nabuthuk"
-author: Nkrb
 contributors:
-    - v-scottdurow
+ - JimDaly
+ - v-scottdurow
 ---
 
 # Tutorial: Creating a model-driven app dataset component
@@ -45,7 +45,7 @@ Firstly, download the [sample code](https://github.com/microsoft/PowerApps-Sampl
 npm install
 ```
 
-Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring). Also, make sure that you have authenticated against Microsoft Dataverse using `pac auth`.
+Ensure that you have a solution publisher created with the `samples` prefix, described in [Creating a canvas app dataset component tutorial: Deploy and configure the component](tutorial-create-canvas-dataset-component.md#deploy-and-configure-the-component). Also, make sure that you have authenticated against Microsoft Dataverse using [pac auth](/power-platform/developer/cli/reference/auth).
 
 At the terminal, use:
 
@@ -167,7 +167,7 @@ Once configured on a subgrid, it will look similar to the following:
 
 ### Related articles
 
-[Creating a canvas app dataset component tutorial](tutorial-create-canvas-dataset-component.md#deploying-and-configuring)<br/>
+[Creating a canvas app dataset component tutorial: Deploy and configure the component](tutorial-create-canvas-dataset-component.md#deploy-and-configure-the-component)<br/>
 [Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Create your first component](implementing-controls-using-typescript.md)<br/>

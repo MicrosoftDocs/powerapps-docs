@@ -2,9 +2,9 @@
 title: "Design a custom page for your model-driven app" 
 description: "Learn how to design a custom page for your model-driven app"
 ms.custom: ""
-ms.date: 07/21/2021
+ms.date: 05/26/2022
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.subservice: mda-maker
 ms.topic: "conceptual"
 author: "aorth"
@@ -16,14 +16,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Design a custom page for your model-driven app (preview)
+# Design a custom page for your model-driven app
 
 This article provides tips for designing a custom page for use in a model-driven app.
 
 > [!IMPORTANT]
-> - The base functionality of custom pages has moved to general availability in all regions.  However some specific or new capabilities are still in public preview and are marked with _(preview)_.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
+> Custom pages are a new feature with significant product changes and currently have a number of known limitations outlined in [Custom Page Known Issues](model-app-page-issues.md).
 
 ## Supported controls in a custom page
 

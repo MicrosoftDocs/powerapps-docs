@@ -4,7 +4,7 @@ description: "To maintain security of your files, all app developers must store 
 ms.custom: ""
 ms.date: 12/20/2019
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.subservice: dataverse-developer

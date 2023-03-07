@@ -3,7 +3,7 @@ title: "Understand the email experience in model-driven apps | MicrosoftDocs"
 description: Understand the email experience
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 6/30/2021

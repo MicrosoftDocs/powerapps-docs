@@ -1,26 +1,22 @@
 ---
 title: The Home page of ISV Studio | Microsoft Docs
 description: Learn about the home page capabilities provided by the ISV Studio portal.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: "phecke" # GitHub ID
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: article
+ms.date: 04/01/2022
+author: mikkelsen2000
+ms.author: pemikkel
 ms.reviewer: pehecke
-ms.workload: na
-ms.date: 07/11/2019
+manager: jstrauss
+suite: powerapps
+ms.topic: article
 ms.subservice: dataverse-developer
-ms.author: prkoduku
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
+contributors: 
+  - JimDaly
+  - phecke 
 ---
 
 # The Home page
@@ -68,6 +64,9 @@ Below the summary section the user can access additional insights and can choose
 **Top Certified Apps** and **Top Tenants** are visible on the page by default. The user can also select **See all** to show all the apps.
 
 The App names and icons are from AppSource.
+
+> [!IMPORTANT]
+> With the January 2022 update, the **Total Installs** tile is now tracking the total number of unique environments where an app is installed instead of the previous cumulative total installs. While this update provides more meaningful information about an app's actual install base, the change may lead to a possible sharp drop in the install charts.
 
 ![All apps.](media/isv-portal-homepage-seeall.png)
 

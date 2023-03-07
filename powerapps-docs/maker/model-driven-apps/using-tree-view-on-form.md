@@ -4,7 +4,7 @@ description: Work with the tree view control in the form designer.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -39,8 +39,8 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 ## Open the tree view
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-1. Select **Solutions** from the left navigation pane, and then open the solution you want.
-1. Select the table you want, and then select the **Forms** tab.
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution you want, select the table you want, and then select the **Forms** area.
 1. Open the form you want. The form designer opens to enable creation or editing of a form.
 1. In the left pane, select **Tree view**.
 

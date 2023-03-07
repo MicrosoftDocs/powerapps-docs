@@ -2,7 +2,7 @@
 title: Control portal creation in a tenant
 description: Instructions to control portal creation in a tenant.
 author: neerajnandwana-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/21/2021
@@ -15,6 +15,9 @@ contributors:
 ---
 
 # Control portal creation in a tenant
+
+
+[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
 
 As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](/power-platform/admin/powerapps-powershell#installation).
 
@@ -52,8 +55,7 @@ For more details about the required roles, and permissions to create a portal, g
 ### See also
 
 [Create additional portals in an environment](create-additional-portals.md) <br>
-[Microsoft Learn: Administer Power Apps portals](/learn/paths/administer-portals/) <br>
-[Microsoft Learn: Access Dataverse in Power Apps portals](/learn/modules/portals-access-data-platform/)
-
+[Administer Power Apps portals](/training/paths/administer-portals/) <br>
+[Access Dataverse in Power Apps portals](/training/modules/portals-access-data-platform/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

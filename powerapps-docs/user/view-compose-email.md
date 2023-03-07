@@ -3,10 +3,10 @@ title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 6/30/2021
+ms.date: 10/03/2022
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -51,20 +51,19 @@ When enabled by your system administrator, you can access email from the top nav
 
 Legend
 
-1. **Form**. The name displayed in the **From** field is automatically populated based on the user who is currently signed in.
+1. **From**. The name displayed in the **From** field is automatically populated based on the user who is currently signed in.
 2. **Expand**. The **Expand** ![Expand icon.](media\email-expand-icon.png "xpand email") icon allows you to compose your email in a full-screen view and minimize when done.
-3. **Rich text editor**. This tool bar helps you  format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default.<BR>
-  For more information, see [Use the rich text editor toolbar in emai](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). 
-4. **Body**. The body is where you compose and/or reply to an email.
-5. **Insert Signature**. Use this command to personalize your message.  
-6. **Insert Template**. This is used to apply an email template. <BR>
+3. **Rich text editor**. This tool bar helps you  format emails. The editor is displayed as a single line that can be expanded to view the full list of editing features by default. For more information, see [Use the rich text editor toolbar in email](email-rich-text-editor.md) and [Accessibility shortcuts for email](keyboard-shortcuts.md#email). **User Personalization**. The ![Set default.](media\personalization.png "personalization icon") icon allows you to set the default font and font size for your emails. Once set, the **Font** and **Font Size** display these values by default. 
+1.  **Body**. The body is where you compose and/or reply to an email.
+1. **Insert Signature**. Use this command to personalize your message.  
+1. **Insert Template**. This is used to apply an email template. <BR>
 For more information, see [Insert an email template](insert-email-template.md).
 
    > [!Note]
    > The **To** box must contain a recipient to select a template.
 
 7. **New Attachment**. This command is used to add a file to your email.
-8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality is used to drag-and-drop or copy-and-paste attachments. 
+8. **Attach File**.  This command uses the 'plus' ![attach file icon.](media\email-new-attachment-icon.png "attach file icon") icon functionality to drag-and-drop or copy-and-paste attachments. 
 
    > [!Note] 
    > After you save your email, you can use Attach file and New Attachments interchangeably.
@@ -73,6 +72,7 @@ For more information, see [Insert an email template](insert-email-template.md).
 
     >[!Important]
     > - The **From** and **To** fields are automatically populated based on the user and the account and contact of the original record.
+
 
 
 ## Reply to an email
@@ -99,7 +99,17 @@ When accessing email, there are a couple of options you can use.
 
    1. From the navigation bar, select the plus ![Plus icon.](media\email-plus-icon.png "email icon") icon.
    2. Select **Email** from the drop-down menu.
-
+  
+### Set the default font and font size
+  
+You can set the default font and font size for your email text. Perform the following steps:
+  
+  - In the email editor, in the Rich text editor tool bar, select ![Set default.](media\personalization.png "personalization icon").
+  - In **User Personalization** specify the **Font** and **Font Size**. 
+  - Select **Ok**. The application defaults the values specified in the Font and Font Size fields of the rich text editor toolbar.
+  
+  If your administrator has set default font and font size, the application displays the set values in the Font and Font Size fields of the rich text editor toolbar.
+  
 ## Reply to email in timeline
 When replying to emails in Timeline, the command bar in the top-right corner provides you with reply options. When you select an option, your email automatically is set and opens in that state ready for you to begin your message.  
 
@@ -108,5 +118,5 @@ You can use the following command options when working with emails in the timeli
    ![Respond to emails in timeline.](media\email-respond-in-timeline-1a.png "Respond to emails in timeline.") 
 
    1. **Reply**. Use this command to reply directly the the sender of the email you received.
-   2. **Reply All**. Use this command to replay to everyone on an email you received.
+   2. **Reply All**. Use this command to reply to everyone on an email you received.
    3. **Forward**. Use this command to forward the email to someone else.

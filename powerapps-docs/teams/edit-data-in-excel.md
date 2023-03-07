@@ -2,7 +2,7 @@
 title: Edit table data in Excel and publish it back to Dataverse for Teams | Microsoft Docs
 description: Explains how to edit table data in Dataverse for Teams.
 author: matp
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/13/2021

@@ -2,7 +2,7 @@
 title: Delete or edit a table in Dataverse for Teams| Microsoft Docs
 description: Explains how to delete or edit a table in Dataverse for Teams.
 author: NHelgren
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020

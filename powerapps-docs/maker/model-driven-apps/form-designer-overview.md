@@ -4,7 +4,7 @@ description: Learn about the form designer for model-driven apps.
 
 ms.date: 08/04/2021
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: overview

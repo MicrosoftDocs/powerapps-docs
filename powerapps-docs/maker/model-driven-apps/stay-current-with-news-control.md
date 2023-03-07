@@ -4,7 +4,7 @@ description: "Learn how to use the news control to get the latest news about you
 ms.custom: ""
 ms.date: 07/09/2020
 ms.reviewer: "matp"
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"

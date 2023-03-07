@@ -2,11 +2,11 @@
 title: Power BI tile control in Power Apps
 description: Learn about the details, properties, and examples of the Power BI tile control in Power Apps.
 author: chmoncay
-ms.service: powerapps
+
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 08/30/2021
+ms.reviewer: mkaur
+ms.date: 09/07/2022
 ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
@@ -14,8 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - chmoncay
+  - miglisic
 ---
 # Power BI tile control in Power Apps
 
@@ -28,7 +29,8 @@ Don't have Power BI? [Sign up](/power-bi/service-self-service-signup-for-power-b
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
 > [!NOTE]
-> - Power BI tile control isn't availbale on [GCC High and DoD](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) environments.
+> - Power BI tile control isn't available on [GCC High and DoD](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) environments.
+> - Power BI tile control isn't available in China.
 > - For licensing requirements when embedding Power BI tile, see [Licensing](/power-bi/collaborate-share/service-embed-secure#licensing).
 
 ## Sharing and security
@@ -49,6 +51,9 @@ You can control the use of API version using the **AllowNewAPI** property. For m
 | - | - |
 | True | You can embed a dashboard, report, or tile by taking the **Embed URL** from Power BI and making it the **TileUrl** value. |
 | False | You can embed a dashboard tile either by **Embed URL** and making it the **TileUrl** value, or using the graphical interface provided.
+
+> [!NOTE]
+> Embedding a Power BI URL (for example, in an IFrame) is not supported on Power Apps mobile since authenticating the Power BI URL request is not handled by the mobile player.
 
 ## Filtering
 

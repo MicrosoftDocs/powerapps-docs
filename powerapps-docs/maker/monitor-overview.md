@@ -2,11 +2,11 @@
 title: Monitor overview
 description: Overview of Power Apps Monitor.
 author: mattgon
-ms.service: powerapps
+
 ms.subservice: troubleshoot
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 11/23/2021
 ms.author: austinj
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - maustinjones
 ---

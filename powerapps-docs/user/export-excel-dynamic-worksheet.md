@@ -3,7 +3,7 @@ title: "Export to an Excel dynamic worksheet in model-driven Power Apps| Microso
 description: How to export to an Excel dynamic worksheet in model-driven Power Apps
 author: mduelae
 manager: kvivek
-ms.service: powerapps
+
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 3/12/2021
@@ -29,8 +29,8 @@ In the example below, we downloaded an Excel dynamic worksheet then went back to
 
 A few things to note:
 
-- You can export up to 100,000 rows at a time. You can’t export data to a dynamic worksheet in Excel for all table. If you don’t see the option for a table, then it’s not available for that table.
-- You can email a dynamic Excel file or store it as a shared file if the recipients are in the same domain as you. When recipients open the dynamic file, only see the data that they have permission to view.   
+- You can export up to 100,000 rows at a time. You can’t export data to a dynamic worksheet in Excel for all tables. If you don’t see the option for a table, then it’s not available for that table.
+- You can email a dynamic Excel file or store it as a shared file if the recipients are in the same domain as you. When recipients open the dynamic file, they only see the data that they have permission to view.   
 - Some system views can be exported only to a static Excel worksheet.    
 - Currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4).
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.    
@@ -93,7 +93,7 @@ This issue occurs when the data that you're accessing is password-protected and 
    > [!div class="mx-imgBorder"] 
    > ![Go connections properties.](media/excel-dynamic-ts-2.png "Go connections properties")
    
-5. The **Connection Properties** window opens. On **Definition** tab, and then **Edit Query**
+5. The **Connection Properties** window opens. On **Definition** tab, select **Edit Query**
 
    > [!div class="mx-imgBorder"] 
    > ![Edit query.](media/excel-dynamic-ts-3.png "Edit Query")

@@ -2,9 +2,9 @@
 title: "Quickstart: Create a Power Platform Tools project | Microsoft Docs"
 description: "Learn how to start a new Visual Studio project for plug-in or custom workflow assembly development using Power Platform Tools."
 ms.custom: ""
-ms.date: 07/19/2021
+ms.date: 01/27/2023
 ms.reviewer: "pehecke"
-ms.service: powerapps
+
 ms.topic: "article"
 author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
@@ -23,10 +23,10 @@ Like any Visual Studio solution, you begin by creating a new project. In the new
 
 ## Prerequisites
 
-- Visual Studio 2019 or later
+- Visual Studio 2019 or 2022
 - Power Platform Tools for Visual Studio
 - C# language
-- .NET Framework 4.6.2 (only for plug-in or custom workflow activity development)
+- .NET Framework 4.6.2 or greater - (plug-in and custom workflow activity development requires v4.6.2)
 - Power Apps/Dataverse subscription or a trial environment
 - Windows Workflow Foundation (only for custom workflow activity development)
 
@@ -61,7 +61,7 @@ The easy way to create a Power Platform solution containing a CrmPackage project
 
 1. In the Visual Studio new project dialog, search for and choose **Power Platform Solution Template** and then select **Next**.
 
-1. Enter the requested project information, choose .NET Framework 4.6.2 or 4.7.2, and select **Create**. <p/>At this point you should see either a Dataverse login dialog or a dialog to reuse your last Dataverse connection. Do whatever is appropriate to connect to your Dataverse development environment. Never develop code in a production environment.
+1. Enter the requested project information, choose a .NET Framework version, and select **Create**. <p/>At this point you should see either a Dataverse login dialog or a dialog to reuse your last Dataverse connection. Do whatever is appropriate to connect to your Dataverse development environment. Never develop code in a production environment.
 
 1. At the **Configure Microsoft Power Platform Solution** dialog, choose either to use an existing Dataverse solution or create a new solution. <p/>Depending on what you have chosen, you will either be prompted to enter information about the new solution or select the existing solution from a drop-down list. **Step #3 Select Solution** is displayed but won't be active until you are logged in and choose **Next** in step #2.
 
@@ -85,7 +85,7 @@ Only projects created with a Power Platform Tools template should be added to a 
 
 1. Select one of the installed Power Platform Tools templates and select **Next**.
 
-1. Fill in any required information and select **Create**. For a plug-in or workflow activity library, be sure to choose .NET Framework 4.6.2 (or 4.7.2).
+1. Fill in any required information and select **Create**. For a plug-in or workflow activity library, be sure to choose .NET Framework 4.6.2.
 
 ### Add an existing project to a Power Platform solution
 

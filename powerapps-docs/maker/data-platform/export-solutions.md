@@ -4,7 +4,7 @@ description: "Learn how to export a solution in Power Apps"
 ms.custom: ""
 ms.date: 05/26/2020
 ms.reviewer: ""
-ms.service: powerapps
+
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

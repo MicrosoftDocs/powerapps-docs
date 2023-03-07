@@ -1,43 +1,29 @@
-﻿---
+---
 title: Configure a choices column for portals
 description: Learn how to add and configure a Dataverse choices column on portal lists, forms, and templates.
 author: nageshbhat-msft
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/09/2021
+ms.date: 08/31/2022
 ms.subservice: portals
 ms.author: nabha
 ms.reviewer: ndoelman
 contributors:
     - nageshbhat-msft
     - nickdoelman
+    - ProfessorKendrick
 ---
 
-# Configure a choices column on portals (preview)
+# Configure a choices column on portals
 
-> [!Important]
-> - This is a preview feature.
-> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
+[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
 
-Makers can design [basic forms](entity-forms.md) and [advanced forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
+Makers can design [basic forms](entity-forms.md) and [multistep forms](web-form-properties.md) to include [choices columns](../../data-platform/types-of-fields.md#choices) defined in Microsoft Dataverse. This feature provides the ability for portal users to select multiple options while submitting data, and display views that include choices columns through [lists](entity-lists.md).
 
-## Prerequisites
+## Basic forms and multistep forms
 
-- Your portal must be version [9.3.11.x](/power-platform/released-versions/portals/portalupdate9311x) or later to use this feature.
-
-## Enable choices control
-
-To enable choices controls on forms in your portal, you need to create a new [site setting](configure-site-settings.md) with the name **Control/EnableChoices** and set the value to **true**.
-
-:::image type="content" source="media/choices-column/site-setting.png" alt-text="Control/EnableChoices site setting.":::
-
-> [!IMPORTANT]
-> This site setting is only required during the preview period.
-
-## Basic forms and advanced forms
-
-You can design a [basic form](entity-forms.md) or an [advanced form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.
+You can design a [basic form](entity-forms.md) or an [multistep form](web-form-properties.md) step in the portal website by using a Dataverse form that has a choices column to support the selection of multiple options. Portal users can insert, modify, or clear the selection.
 
 :::image type="complex" source="media/choices-column/choices-form.gif" alt-text="Choices column on a form.":::
 Screen showing a list of outdoor activities being created. The user expands the Select or search options box and selects some activities from the list that appears. The selected activities appear at the top of the window. The user enters the letters C a m in the box, and then selects the option Camping when it appears. At the top of the window in the list of activities, the user selects the Close button next to one of the options to deselect it.
@@ -167,7 +153,7 @@ Body –
 
 ## Known issues
 
-The choices control on basic and advanced forms currently only supports the default theme. If you're using any of the [preset themes](../theme-overview.md) defined in Power Apps portals Studio, the choices control won't be available.
+Choices control will not be available in [basic and multistep form metadata](configure-basic-form-metadata.md) to apply extra behavior modification logic or override the functionality of form fields.
 
  
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

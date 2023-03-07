@@ -2,7 +2,7 @@
 title: Understanding the current business process | Microsoft Docs
 description: When planning a Power Apps project, you first need to understand how the business process you want to automate works today.
 author: TGrounds
-ms.service: powerapps
+
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/16/2020
@@ -47,8 +47,8 @@ In our example scenario, we identified these key contributors:
 ## Discover processes to improve on using Process advisor
 If your task is done fully on the desktop, you can discover all the steps 
 different people in your organization are performing to complete the task by 
-using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview.md). 
-Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize.md) 
+using our process discovery functionality called [process advisor](/power-automate/process-advisor-overview). 
+Process advisor visualizes your process in a [process map](/power-automate/process-advisor-visualize) 
 and reveals bottlenecks and metrics for your process through an analytical report.
 
 ![Process map](media/process-map.png "Process advisor process map")
