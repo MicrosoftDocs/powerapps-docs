@@ -21,7 +21,7 @@ contributors:
 
 [!INCLUDE[cards_preview_notice](../includes/preview-include.md)]
 
-Using Power Automate is an effective method for sending cards. By setting up a flow that is triggered by an event, you can automate the process of sending cards. For instance, you can create a flow that requests the assigned individual to approve or reject an expense when a new record is added to Dataverse. Additionally, you can create a flow that sends a daily status update every morning.
+Use Power Automate to send cards. By setting up a flow that is triggered by an event, you can automate the process of sending cards. For instance, you can create a flow that requests the assigned individual to approve or reject an expense when a new record is added to Dataverse. Additionally, you can create a flow that sends a daily status update every morning.
 
 ## Prerequisites
 
