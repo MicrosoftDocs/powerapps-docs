@@ -37,6 +37,9 @@ The **Cards for Power Apps** connector is used to get or create instances of car
 - **Get the card instance** - Returns a card instance when given a user-specified card and a card instance id as `card` dynamic content.
 - **Get the card description** - Returns information about a user-specified card, including the id, environmentId, name, description, author, etc.
 
+> [!NOTE]
+> The **Cards for Power Apps** connector is temporarily marked as premium but the license requirements of people sending and receiving cards in Teams is dependent on the card - only cards with premium connectors or controls require users to have premium licenses. The connector will be updated to standard before general availability to reflect this licensing model.
+
    :::image type="content" source="../media/send-a-card/cards-connector.png" alt-text="Screenshot of the cards for Power Apps connector.":::
 
 ## Send card in Teams using the Teams connector
@@ -53,9 +56,8 @@ Sending a card in Teams requires a card instance. To get a card instance, use th
 
    :::image type="content" source="../media/send-a-card/card-in-flow-example.png" alt-text="Screenshot a flow that creates a card instance when an account record is created and sends it in Teams.":::
 
-
 ## Common issues and resolutions
 
-1. When you select a card from the drop-down to create a card instance, the connector action can sometimes show the error **GetCardDescription failed with InternalServerError**. This is a transient error, you need to try again and reselect a card. 
+1. When you select a card from the drop-down to create a card instance, the connector action can sometimes show the error **GetCardDescription failed with InternalServerError**. This is a transient error, you need to try again and reselect a card.
 
-2. If your card doesn't have any input variables, it will show an empty body parameter after selecting a card to create an instance of. You can ignore that parameter and continue building your flow. 
+2. If your card doesn't have any input variables, it will show an empty body parameter after selecting a card to create an instance of. You can ignore that parameter and continue building your flow.
