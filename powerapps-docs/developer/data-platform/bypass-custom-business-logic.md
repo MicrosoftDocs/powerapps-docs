@@ -1,6 +1,6 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
-description: "Make data changes which bypass custom business logic" 
+description: "Make data changes which bypass custom business logic." 
 ms.date: 03/08/2023
 ms.reviewer: jdaly
 ms.topic: article
@@ -20,8 +20,30 @@ contributors:
 ---
 # Bypass Custom Business Logic
 
-There are times when you want to be able to perform data operations without having custom business logic applied. For example, if you are going to import a lot of records which you know already conform to the data consistency logic for your business. You want this operation to be done as quickly as possible, so the additional time spent processing custom logic for each request is something you want to avoid.  
+There are times when you want to be able to perform data operations without having custom business logic applied. For example: You are going to create or update a lot of records which you know already conform to the data consistency logic for your business, or you have an alternate means to apply this logic so it doesn't need to be triggered by Dataverse events. These scenarios typically involve bulk operations where large numbers of records are being created, updated or deleted.
 
+As a developer of a client application, you can pass special [optional parameters](optional-parameters.md) with your requests to control two types of custom business logic as described in the following table:
+
+
+|Scenario|Rationale|Optional Parameter|
+|---------|---------|---------|
+|**Synchronous Logic**|To enable the bulk operation to be completed as quickly as possible. You need to bypass all custom synchronous logic to so that each operation can complete faster, shortening the time of the bulk operation.| SDK for .NET: `BypassCustomPluginExecution`<br />Web API: `MSCRM.BypassCustomPluginExecution`|
+|**Power Automate Flows**|When there are flows triggered by the bulk operations, processing all of these flows may cause a backup within Dataverse that can impact performance. You decide to mitigate this by not triggering the flows.|SDK for .NET: `SuppressCallbackRegistrationExpanderJob`<br />Web API: `MSCRM.SuppressCallbackRegistrationExpanderJob`|
+
+## Bypass Synchronous Logic
+
+## Bypass Power Automate Flows
+
+
+Here are two scenarios:
+
+- **Synchronous Logic**: 
+- **Power Automate Flows**: 
+
+
+
+
+ 
 One option is to locate and disable the custom plug-ins that contain the business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
 
 The option described here allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
