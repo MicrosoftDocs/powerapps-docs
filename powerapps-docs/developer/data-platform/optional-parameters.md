@@ -1,5 +1,5 @@
 ---
-title: "Use Optional parameters (Microsoft Dataverse) | Microsoft Docs" 
+title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
 ms.date: 03/08/2023
 ms.reviewer: jdaly
@@ -18,13 +18,13 @@ contributors:
   - LearningEveryday1
   - NHelgren
 ---
-# Use Optional parameters
+# Use optional parameters
 
 Dataverse provides a set of optional parameters or request header values a developer of a client application can use to modify the behavior of individual requests. This article describes the parameter values and request headers that you can use to get the behaviors you need.
 
 ## How to use
 
-The way you use these optional parameters depends on whether you are using the Dataverse SDK for .NET or Web API.
+How you use these optional parameters depends on whether you are using the Dataverse SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -52,23 +52,65 @@ More information:
 
 ## Associate a solution component with a solution
 
-When you create or update a solution component, you can associate it with a solution by specifying the solution unique name.
+When you perform data operations on a solution component, you can associate it with a solution by specifying the solution unique name with the `SolutionUniqueName` parameter.
 
 You can use this parameter with these messages:
 
 - `AddPrivilegesRole`
-- `Create` (`POST`)
-- `Delete` (`DELETE`)
+- `Create` (POST)
+- `Delete` (DELETE)
 - `MakeAvailableToOrganizationTemplate`
-- `Update` (`PATCH`)
+- `Update` (PATCH)
 
+The following examples will create a web resource solution component and add it to the solution with the unique name of `ExampleSolution`.
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+```csharp
+static void CreateWebResourceInSolution(IOrganizationService service)
+{
+    Entity webResource = new("webresource");
+
+    webResource["displayname"] = "Simple HTML web resource";
+    webResource["content"] = "PCFET0NUWVBFIGh0bWw+CjxodG1sPgogIDxib2R5PgogICAgPGgxPkhlbGxvIFdvcmxkPC9oMT4KICA8L2JvZHk+CjwvaHRtbD4=";
+    webResource["webresourcetype"] = new OptionSetValue(1);
+    webResource["name"] = "sample_SimpleHTMLWebResource.htm";
+    webResource["description"] = "An example HTML web resource";
+
+    CreateRequest request = new();
+    request.Target = webResource;
+    request["SolutionUniqueName"] = "ExampleSolution";
+
+    service.Execute(request);
+}
+
+```
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/webresourceset HTTP/1.1
+MSCRM.SolutionUniqueName: ExampleSolution
+Content-Type: application/json
+
+{
+  "displayname": "Simple HTML web resource",
+  "content": "PCFET0NUWVBFIGh0bWw+CjxodG1sPgogIDxib2R5PgogICAgPGgxPkhlbGxvIFdvcmxkPC9oMT4KICA8L2JvZHk+CjwvaHRtbD4=",
+  "webresourcetype": 1,
+  "name": "sample_SimpleHTMLWebResource.htm",
+  "description": "An example HTML web resource"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: [Organization URI]/api/data/v9.2/webresourceset(833aa051-05be-ed11-83ff-000d3a993550)
+
+```
 
 ---
 
