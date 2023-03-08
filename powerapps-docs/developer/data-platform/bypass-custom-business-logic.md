@@ -228,3 +228,4 @@ Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly con
 [Web API: Compose HTTP requests and handle errors](webapi/compose-http-requests-handle-errors.md)<br />
 [Passing optional parameters with a request](org-service/use-messages.md#passing-optional-parameters-with-a-request)
 
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
