@@ -45,7 +45,7 @@ In this article, you'll learn how to do the following tasks:
 * Sharing Power BI reports and datasets can only be done from Power BI (sharing the model driven app doesn't share the embedded report).
 * Recovery from workspace deletion isn't supported. Once the dedicated environment workspace has been deleted, you won't be able to add/import any Power BI component to the Power Apps environment.
 * Power Apps Application IDs aren't supported during public preview.
-* Information sharing between Power Apps environments and Power BI workspaces located in different geographies is supported if the relevant settings are **ON**. For more information, see [Cross-geo operations](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
+* Information sharing between Power Platform environments and Power BI workspaces located in different geographies is supported if the relevant settings are **ON**. More information: [Cross-geo operations](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#cross-geo-operations).
 * Environment life cycle operations aren't supported during preview. More information: [Considerations working with the Power Apps/Power BI integration](/power-bi/collaborate-share/service-power-bi-powerapps-integration-considerations#environment-life-cycle-operations).
 * Dataverse for Teams environments are not supported.
 * National clouds are not currently supported.  
