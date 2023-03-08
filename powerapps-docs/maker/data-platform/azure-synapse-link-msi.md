@@ -15,12 +15,13 @@ ms.custom: template-how-to
 
 Azure Data Lake Storage provides a layered security model. This model enables you to secure and control the level of access to your storage accounts that your applications and enterprise environments demand, based on the type and subset of networks or resources used. When network rules are configured, only applications requesting data over the specified set of networks or through the specified set of Azure resources can access a storage account. You can limit access to your storage account to requests originating from specified IP addresses, IP ranges, subnets in an Azure Virtual Network (VNet), or resource instances of some Azure services.
 
-Managed identities for Azure, formerly know as Managed service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of Enterprise Policy creation) which can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
+Managed identities for Azure, formerly know as Managed Service Identity (MSI), help with the management of secrets. Microsoft Dataverse customers using Azure capabilities create a managed identity (part of enterprise policy creation) that can be used for one or more Dataverse environments. This managed identity that will be provisioned in your tenant is then used by Dataverse to access your Azure data lake.
 
 With managed identities, access to your storage account is restricted to requests originating from the Dataverse environment associated with your tenant. When Dataverse connects to storage on behalf of you, it includes additional context information to prove that the request originates from a secure, trusted environment. This allows storage to grant Dataverse access to your storage account. Managed identities are used to sign the context information in order to establish trust. This adds application-level security in addition to the network and infrastructure security provided by Azure for connections between Azure services.
 
 > [!IMPORTANT]
 > This is a preview feature.
+>
 > Environment Lifecycle Operations listed below will not be available if this preview feature is enabled:
 >
 > - Recover environment
@@ -36,7 +37,7 @@ With managed identities, access to your storage account is restricted to request
 - Install these two PowerShell modules:
   - The Azure Az PowerShell module: `Install-Module -Name Az`
   - The Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-- These three PowerShell scripts must be in the same folder:
+- Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download the Common.zip compressed folder file. Extract the compressed folder file to you local computer. This folder includes the PowerShell scripts required for this feature. Note that these PowerShell scripts must be in the same folder:
   - CreateIdentityEnterprisePolicy.ps1
   - NewIdentity.ps1
   - GetIdentityEnterprisePolicyforEnvironment.ps1
@@ -47,6 +48,7 @@ With managed identities, access to your storage account is restricted to request
 1. Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
 1. Open Azure CLI with run as administrator and sign into your Azure subscription use the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
+1. Expand the compressed folder you downloaded as part of the [prerequisites](#prerequisites) for this feature to a location where you can run PowerShell.
 1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
    1. Provide the Azure subscription ID.
 1. Create the enterprise policy. Run PowerShell script `./CreateIdentityEnterprisePolicy.ps1`
