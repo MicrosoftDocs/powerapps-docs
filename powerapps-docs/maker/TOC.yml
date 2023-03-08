@@ -2624,7 +2624,7 @@
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
-    - name: Use managed identities for Azure
+    - name: Use managed identities for Azure (preview)
       href: ./data-platform/azure-synapse-link-msi.md        
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
