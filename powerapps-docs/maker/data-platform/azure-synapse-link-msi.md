@@ -34,10 +34,10 @@ With managed identities, access to your storage account is restricted to request
 
 - Power platform administrator or Dynamics 365 administrator role to manage environments on the Power Platform admin center.
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
-- Install these two PowerShell modules:
+- You need these two PowerShell modules:
   - The Azure Az PowerShell module: `Install-Module -Name Az`
   - The Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-- Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download the Common.zip compressed folder file. Extract the compressed folder file to you local computer. This folder includes the PowerShell scripts required for this feature. Note that these PowerShell scripts must be in the same folder:
+- Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. This folder includes the PowerShell scripts required for this feature. Note that these PowerShell scripts must be in the same folder:
   - CreateIdentityEnterprisePolicy.ps1
   - NewIdentity.ps1
   - GetIdentityEnterprisePolicyforEnvironment.ps1
