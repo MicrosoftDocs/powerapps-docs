@@ -63,7 +63,7 @@ You can also enable the capability to send emails or approval routing using [Pow
 
 ## Next steps
 
-[Design the app inteface - add, configure controls](add-configure-controls.md)
+[Design the app interface - add, configure controls](add-configure-controls.md)
 
 ### See also
 
