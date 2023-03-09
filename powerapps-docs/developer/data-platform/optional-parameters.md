@@ -329,13 +329,15 @@ Because this setting is applied to the service, it will remain set for all reque
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
-MSCRM.BypassCustomPluginExecution: true
-Authorization: Bearer [REDACTED]
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
 Content-Type: application/json
-Accept: */*
+Accept: application/json
+MSCRM.BypassCustomPluginExecution: true
 
 {
-  "name":"Sample Account"
+    "name":"Sample Account"
 }
 ```
 
@@ -347,19 +349,60 @@ More information: [Bypass Synchronous Logic](bypass-custom-business-logic.md#byp
 
 ## Bypass Power Automate Flows
 
+Massive data changes applied to Dataverse may cause a large number of Power Automate flows to be triggered. In certain circumstances this can create a backlog in the system that can impact overall performance. To mitigate this, client applications have the option to indicate that flow triggers should be bypassed.
+
+The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there is an internal operation called expander that manages calling the registered flow triggers.
+
+> [!NOTE]
+> When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
+
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+> [!NOTE]
+> This currently only works with the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) instance provided by the plug-in run time.
+
+```csharp
+static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationService service)
+{
+    Entity account = new("account");
+    account["name"] = "Sample Account";
+
+    CreateRequest request = new()
+    {
+        Target = account
+    };
+    request.Parameters.Add("SuppressCallbackRegistrationExpanderJob", true);
+    service.Execute(request);
+}
+```
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+Accept: application/json
+MSCRM.SuppressCallbackRegistrationExpanderJob: true
+
+{
+    "name":"Sample Account"
+}
+```
 
 ---
 
 More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#bypass-power-automate-flows)
 
 ### See also
+
+[Use messages with the Organization service](org-service/use-messages.md)
+[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)
+[Bypass Custom Business Logic](bypass-custom-business-logic.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
