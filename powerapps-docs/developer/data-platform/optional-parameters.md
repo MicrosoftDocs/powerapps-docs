@@ -31,7 +31,7 @@ How you use these optional parameters depends on whether you are using the Datav
 Add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
 
 > [!NOTE]
-> You cannot specify these parameters using the 7 shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A). 
+> You cannot specify these parameters using the 7 shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
 More information:
 
@@ -40,7 +40,12 @@ More information:
 
 ### [Web API](#tab/webapi)
 
-Add the parameter as a request header with the `MSCRM.` namespace.
+Usually you will add the parameter as a request header with the `MSCRM.` namespace.
+
+Two exceptions to are the following which are appended to the URL.
+
+The `tag` parameter. See [Add a shared variable to the plugin execution context](#add-a-shared-variable-to-the-plugin-execution-context)
+The `partitionid` parameter. See [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
 
 More information:
 
@@ -48,7 +53,6 @@ More information:
 - See the examples below.
 
 ---
-
 
 ## Associate a solution component with a solution
 
@@ -208,34 +212,141 @@ More information:
 - [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
 - [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
 
-
-
 ## Add a shared variable to the plugin execution context
+
+Use the `tag` parameter to include a shared variable value that an be detected within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
+
+To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
+
+```csharp
+if (ctx.SharedVariables.ContainsKey("tag")){
+string tagValue = context.SharedVariables["tag"];
+}
+```
 
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+```csharp
+static void DemonstrateTag(IOrganizationService service)
+{
+    Entity account = new("account");
+    account["name"] = "Sample Account";
+
+    CreateRequest request = new()
+    {
+        Target = account
+    };
+    request.Parameters.Add("tag", "A string value");
+    service.Execute(request);
+}
+```
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts?tag=A%20string%20value HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name":"Sample Account"
+}
+```
+
+The response should not be effected by sending the tag unless the plug-in contains logic to change it.
 
 ---
+
+More information: [Shared variables](understand-the-data-context.md#shared-variables)
 
 ## Perform a data operation with specified partition
 
-### [SDK for .NET](#tab/sdk)
+When using NoSQL tables you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition. Use this to improve performance when accessing table data in Azure heterogenous storage.
 
-Content for SDK...
+More information:
 
-### [Web API](#tab/webapi)
-
-Content for Web API...
-
----
+- [SDK for .NET: Improve performance using storage partitions when accessing entity data](org-service/azure-storage-partitioning-sdk.md)
+- [Web API: Access entity data faster using storage partitions](webapi/azure-storage-partitioning.md)
 
 ## Bypass custom synchronous logic
 
+Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. Use the `BypassCustomPluginExecution` parameter when you want to improve performance while performing bulk data operations.
+
+> [!IMPORTANT]
+> The calling user must have the `prvBypassCustomPlugins` privilege.
+
+### [SDK for .NET](#tab/sdk)
+
+There are two ways to use this with the SDK for .NET.
+#### Set the value as an optional parameter
+
+The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest).
+
+```csharp
+static void DemonstrateBypassCustomPluginExecution(IOrganizationService service)
+{
+    Entity account = new("account");
+    account["name"] = "Sample Account";
+
+    CreateRequest request = new()
+    {
+        Target = account
+    };
+    request.Parameters.Add("BypassCustomPluginExecution", true);
+    service.Execute(request);
+}
+```
+
+
+#### Set the CrmServiceClient.BypassPluginExecution property
+
+The following example sets the [CrmServiceClient.BypassPluginExecution Property](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.BypassPluginExecution) when creating a new account record:
+
+```csharp
+var service = new CrmServiceClient(connectionString);  
+
+service.BypassPluginExecution = true;
+
+var account = new Entity("account");
+account["name"] = "Sample Account";
+
+service.Create(account);
+```
+
+Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
+
+> [!NOTE]
+> This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
+
+### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+MSCRM.BypassCustomPluginExecution: true
+Authorization: Bearer [REDACTED]
+Content-Type: application/json
+Accept: */*
+
+{
+  "name":"Sample Account"
+}
+```
+
+The response should not be effected by sending the `MSCRM.BypassCustomPluginExecution` request header.
+
+---
+
+More information: [Bypass Synchronous Logic](bypass-custom-business-logic.md#bypass-synchronous-logic)
+
+## Bypass Power Automate Flows
+
 ### [SDK for .NET](#tab/sdk)
 
 Content for SDK...
@@ -246,17 +357,7 @@ Content for Web API...
 
 ---
 
-## Bypass flow triggers
-
-### [SDK for .NET](#tab/sdk)
-
-Content for SDK...
-
-### [Web API](#tab/webapi)
-
-Content for Web API...
-
----
+More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#bypass-power-automate-flows)
 
 ### See also
 
