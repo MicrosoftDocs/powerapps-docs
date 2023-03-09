@@ -42,13 +42,13 @@ Go to [Dynamics 365 apps](https://admin.powerplatform.microsoft.com/resources/ap
 
 ## Add canvas app to solution
 
-This feature requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to Solutions section and select a solution.
+This feature requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button.
 
-:::image type="content" source="media/Install_wrap_for_Power_Apps.png" alt-text="Install wrap for Power Apps.":::
+:::image type="content" source="media/Select_Solution.png" alt-text="Select a solution.":::
 
 Chooose **+ Add existing** option from the top menu and select **App > Canvas app** in the dropdown list.
 
-:::image type="content" source="media/Install_wrap_for_Power_Apps.png" alt-text="Install wrap for Power Apps.":::
+:::image type="content" source="media/Select_Add_Existing.png" alt-text="Select Add existing from the menu":::
 
 
 More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
