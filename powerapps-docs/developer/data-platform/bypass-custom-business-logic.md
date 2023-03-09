@@ -32,31 +32,19 @@ As a developer of a client application, you can pass special [optional parameter
 
 ## Bypass Synchronous Logic
 
-## Bypass Power Automate Flows
+The alternative to using the optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
 
-
-Here are two scenarios:
-
-- **Synchronous Logic**: 
-- **Power Automate Flows**: 
-
-
-
-
- 
-One option is to locate and disable the custom plug-ins that contain the business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
-
-The option described here allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
+Using the optional parameter allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
 
 For these kinds of situations, you have the option to disable custom business logic which would normally be applied. There are two requirements:
 
-- You must send the requests using the `BypassCustomPluginExecution` option.
+- You must send the requests using the optional parameter.
 - The user sending the requests must have the `prvBypassCustomPlugins` privilege. By default, only users with the system administrator security role have this privilege.
 
 > [!NOTE]
 > The `prvBypassCustomPlugins` is not available to be assigned in the UI at this time. You can add a privilege to a security role using the API. More information: [Adding the prvBypassCustomPlugins privilege to another role](#adding-the-prvbypasscustomplugins-privilege-to-another-role)
 
-## What does this do?
+### What does this do?
 
 This solution targets the custom synchronous business logic that has been applied for your organization. When you send requests that bypass custom business logic, all synchronous plug-ins and real-time workflows are disabled except:
 
@@ -70,94 +58,87 @@ Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365
 > [!IMPORTANT]
 > You may have purchased and installed solutions from other Independent Software Vendors (ISVs) which include their own business logic. The synchronous logic applied by these solutions will be bypassed. You should check with these ISVs before you use this option to understand what impact there may be if you use this option with data that their solutions use.
 
-## How do I use the BypassCustomPluginExecution option?
+### How do I use the BypassCustomPluginExecution option?
 
 You can use this option with either the Web API or the Organization service.
 
-# [Using Web API](#tab/webapi)
+#### [SDK for .NET](#tab/sdk)
+
+There are two ways to use this with the SDK for .NET.
+
+##### Set the CrmServiceClient.BypassPluginExecution property
+
+The following example sets the [CrmServiceClient.BypassPluginExecution Property](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.BypassPluginExecution) when creating a new account record:
+
+```csharp
+var service = new CrmServiceClient(connectionString);  
+
+service.BypassPluginExecution = true;
+
+var account = new Entity("account");
+account["name"] = "Sample Account";
+
+service.Create(account);
+```
+
+Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
+
+##### Set the value as an optional parameter
+
+The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest).
+
+```csharp
+static void DemonstrateBypassCustomPluginExecution(IOrganizationService service)
+{
+    Entity account = new("account");
+    account["name"] = "Sample Account";
+
+    CreateRequest request = new()
+    {
+        Target = account
+    };
+    request.Parameters.Add("BypassCustomPluginExecution", true);
+    service.Execute(request);
+}
+```
+
+This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>.
+
+You can use this method for data operations you initiate in your plug-ins.
+
+#### [Using Web API](#tab/webapi)
 
 To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution : true` as a header in the request.
 
 **Example request:**
 
-The following Web API request will create a new account record without custom business logic applied:
+The following Web API request will create a new account record without custom synchronous business logic applied:
 
 ```http
-POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
-MSCRM.BypassCustomPluginExecution: true
-Authorization: Bearer [REDACTED]
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
 Content-Type: application/json
-Accept: */*
+Accept: application/json
+MSCRM.BypassCustomPluginExecution: true
 
 {
-  "name":"Test Account"
+  "name":"Sample Account"
 }
 ```
 
-# [Using the Organization Service](#tab/orgservice)
-
-There are two ways to use this with the Organization Service.
-
-#### Set the BypassPluginExecution property
-
-The following example sets the [CrmServiceClient.BypassPluginExecution Property](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.bypasspluginexecution) when creating a new account record:
-
-```csharp
-var svc = new CrmServiceClient(conn);  
-// var svc = new  ServiceClient(conn);
-
-svc.BypassPluginExecution = true;
-
-var account = new Entity("account")
-{
-    Attributes = {
-        { "name", "Test Account" }
-    }
-};
-
-svc.Create(account);
-```
-
-Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
-
-#### Set the value as an optional parameter
-
-The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class.
-
-```csharp
-var svc = new CrmServiceClient(conn); 
-// var svc = new  ServiceClient(conn);
-
-var account = new Entity("account")
-{
-    Attributes = {
-        { "name", "Test Account" }
-    }
-};
-
-var createRequest = new CreateRequest
-{
-    Target = account
-};
-createRequest.Parameters.Add("BypassCustomPluginExecution", true);
-
-svc.Execute(createRequest);
-```
-This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>.
-
-You can use this method for data operations you initiate in your plug-ins.
-
 ---
 
-## Adding the prvBypassCustomPlugins privilege to another role
+### Adding the prvBypassCustomPlugins privilege to another role
 
 Because the `prvBypassCustomPlugins` privilege is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
 
 The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
 
-# [Using Web API](#tab/webapi)
+#### [Using Web API](#tab/webapi)
 
-Associate the `prvBypassCustomPlugins` privilege to the security role using the <xref:Microsoft.Dynamics.CRM.AddPrivilegesRole?text=AddPrivilegesRole Action>.
+Associate the `prvBypassCustomPlugins` privilege to the security role using the [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole).
 
 **Request**
 
@@ -187,11 +168,9 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```
 
-
-# [Using the Organization Service](#tab/orgservice)
+#### [SDK for .NET](#tab/sdk)
 
 Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
-
 
 ```csharp
 var request = new AddPrivilegesRoleRequest
@@ -209,21 +188,28 @@ svc.Execute(request);
 
 ---
 
-## Frequently asked questions (FAQ)
+### Frequently asked questions for BypassCustomPluginExecution (FAQ)
 
-### Does this bypass plug-ins for data operations by Microsoft plug-ins?
+Following are frequently asked questions about using the `BypassCustomPluginExecution` optional parameter to bypass synchronous business logic.
+#### Does this bypass plug-ins for data operations by Microsoft plug-ins?
 
 No. If a synchronous plug-in or real-time workflow in a Microsoft solution performs operations on other records, the logic for those operations are not bypassed. Only those synchronous plugins or real-time workflows that apply to the specific operation will be bypassed.
 
-### Can I use this option for data operations I perform within a plug-in?
+#### Can I use this option for data operations I perform within a plug-in?
 
-Yes, But only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest). You cannot use the `CrmServiceClient` or `ServiceClient` classes in a plug-in.
+Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You cannot use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
 
-### What about asychronous plug-in steps, asynchronous workflows and flows?
+#### What about asychronous plug-in steps, asynchronous workflows and flows?
 
 Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly contribute to the cost of processing the records, therefore it is not by passed by this parameter.
 
-## See also
+## Bypass Power Automate Flows
+
+When bulk data operations occur that have flows with triggers on the events, it is possible for a large number of system jobs to be created to execute the flows. This large number of system jobs can cause performance issues for the system.
+
+
+
+### See also
 
 [Web API: Compose HTTP requests and handle errors](webapi/compose-http-requests-handle-errors.md)<br />
 [Passing optional parameters with a request](org-service/use-messages.md#passing-optional-parameters-with-a-request)

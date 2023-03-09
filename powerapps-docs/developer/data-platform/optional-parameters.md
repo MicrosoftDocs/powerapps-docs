@@ -106,8 +106,12 @@ More information:
 
 ```http
 POST [Organization URI]/api/data/v9.2/webresourceset HTTP/1.1
-MSCRM.SolutionUniqueName: ExampleSolution
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
 Content-Type: application/json
+Accept: application/json
+MSCRM.SolutionUniqueName: ExampleSolution
 
 {
   "displayname": "Simple HTML web resource",
