@@ -167,7 +167,7 @@ However, even after deleting a user's developer environment, a new developer env
 
 ### Can I prevent users from creating developer environments?
 
-Yes. To prevent users from creating developer environments, go to [Control environment creation](/power-platform/admin/control-environment-creation?branch=pr-en-us-6000#developer-environments).
+Yes. To prevent users from creating developer environments, go to [Control environment creation](/power-platform/admin/control-environment-creation#developer-environments).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
 

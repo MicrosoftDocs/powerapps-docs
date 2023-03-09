@@ -5,7 +5,7 @@ author: sericks007
 ms.author: sericks
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 02/15/2023
+ms.date: 03/06/2023
 ms.custom: 
 manager: tapanm-MSFT
 search.audienceType: 
@@ -23,9 +23,6 @@ This means that:
 - Users no longer need to log out of the Power Apps mobile app to switch directories.
 - Users can specify the directory they want to work in from a list of directories on the user profile page.
 - Users, including guest users, can access apps shared with them in different directories.
-
-> [!Important]
-> The ability to easily switch to a different directory is available on iOS and Android devices at this time.
 
 To switch to a different directory in the Power Apps mobile app:
 
