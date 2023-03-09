@@ -22,16 +22,21 @@ contributors:
 
 Dataverse provides a set of optional parameters or request header values a developer of a client application can use to modify the behavior of individual requests. This article describes the parameter values and request headers that you can use to get the behaviors you need.
 
+> [!NOTE]
+> This article introduces these parameters but does not explain them in depth. Please follow the links for more information to fully understand the scenarios for using these parameters.
+
 ## How to use
 
 How you use these optional parameters depends on whether you're using the Dataverse SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
-Add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
+Usually, you will add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
 
 > [!NOTE]
 > You cannot specify these parameters using the 7 shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
+
+One exception is when setting the `partitionid`, this is set as a property of the entity instance. More information: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
 
 More information:
 
@@ -224,7 +229,7 @@ string tagValue = context.SharedVariables["tag"];
 }
 ```
 
-The following examples pass this value: `A string value`.
+The following examples pass this value: `A string value` while creating an account record.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -270,14 +275,51 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 When using NoSQL tables, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition. Use this method to improve performance when accessing table data in Azure heterogenous storage.
 
-More information:
+The following examples set the `partitionid` value of `CustomerPartition` when creating a `new_msdyn_customer` record. You can use this `partitionid` value later to retrieve the record more efficiently.
 
-- [SDK for .NET: Improve performance using storage partitions when accessing entity data](org-service/azure-storage-partitioning-sdk.md)
-- [Web API: Access entity data faster using storage partitions](webapi/azure-storage-partitioning.md)
+### [SDK for .NET](#tab/sdk)
+
+```csharp
+static void DemonstratePartition(IOrganizationService service)
+{
+    Entity entity = new("new_msdyn_customer");
+    entity["new_firstname"] = "Monica";
+    entity["new_lastname"] = "Thompson";
+    entity["partitionid"] = "CustomerPartition";
+
+    service.Create(entity);
+}
+```
+
+More information: [Improve performance using storage partitions when accessing entity data](org-service/azure-storage-partitioning-sdk.md)
+
+### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/new_msdyn_customers?partitionid=CustomerPartition HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+Accept: application/json
+
+{
+  "new_firstname": "Monica",
+  "new_lastname": "Thompson",
+}
+```
+
+The response shouldn't be affected by sending the tag unless the plug-in contains logic to change it.
+
+More information: [Access entity data faster using storage partitions](webapi/azure-storage-partitioning.md)
+
+---
 
 ## Bypass custom synchronous logic
 
-Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. Use the `BypassCustomPluginExecution` parameter when you want to improve performance while performing bulk data operations.
+Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. When performing bulk operations, the additional time for these individual operations can increase the time required. Use the `BypassCustomPluginExecution` parameter when you want to improve performance while performing bulk data operations.
 
 > [!IMPORTANT]
 > The calling user must have the `prvBypassCustomPlugins` privilege.
