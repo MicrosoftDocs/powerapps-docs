@@ -114,7 +114,7 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
     - *Azure API Connections*
     - *PowerApps Service*
     - *Power BI* (only required if your canvas app(s) use Power BI data)
-    - *Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
+    - *Microsoft Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
