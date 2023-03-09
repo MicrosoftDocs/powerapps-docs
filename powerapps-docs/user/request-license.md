@@ -22,7 +22,7 @@ If you do not have a license and are trying to open a Power Apps app, you will s
 > [!NOTE]
 > The options in the following image may differ depending on whether you've exhausted any Power Apps trials.
 
-    :::image type="content" source="media/request-license.png" alt-text="Request a license to Power Apps from your admin.":::
+:::image type="content" source="media/request-license.png" alt-text="Request a license to Power Apps from your admin.":::
 
 ## Request a license through a trial
 If you are already in an active Power Apps trial, you can request a license by selecting the **Request license** button near the top of the page.
