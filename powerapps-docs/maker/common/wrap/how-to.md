@@ -48,8 +48,11 @@ This feature requires the apps to be part of a solution. If your canvas apps are
 
 Chooose **+ Add existing** option from the top menu and select **App > Canvas app** in the dropdown list.
 
-:::image type="content" source="media/Select_Add_Existing.png" alt-text="Select Add existing from the menu":::
+:::image type="content" source="media/Select_Add_Existing.png" alt-text="Select Add existing from the menu.":::
 
+Select **Oustide Dataverse** tab and choose your app from the list. Press **Add** button to add this app to a solution.
+
+:::image type="content" source="media/Add-app.png" alt-text="Select Add app to a solution.":::
 
 More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
 
