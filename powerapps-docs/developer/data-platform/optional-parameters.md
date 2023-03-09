@@ -24,7 +24,7 @@ Dataverse provides a set of optional parameters or request header values a devel
 
 ## How to use
 
-How you use these optional parameters depends on whether you are using the Dataverse SDK for .NET or Web API.
+How you use these optional parameters depends on whether you're using the Dataverse SDK for .NET or Web API.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -40,12 +40,12 @@ More information:
 
 ### [Web API](#tab/webapi)
 
-Usually you will add the parameter as a request header with the `MSCRM.` namespace.
+Usually, you'll add the parameter as a request header with the `MSCRM.` namespace.
 
-Two exceptions to are the following which are appended to the URL.
+Two exceptions are the following that are appended to the URL.
 
-The `tag` parameter. See [Add a shared variable to the plugin execution context](#add-a-shared-variable-to-the-plugin-execution-context)
-The `partitionid` parameter. See [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
+- The `tag` parameter. See [Add a shared variable to the plugin execution context](#add-a-shared-variable-to-the-plugin-execution-context)
+- The `partitionid` parameter. See [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
 
 More information:
 
@@ -66,7 +66,7 @@ You can use this parameter with these messages:
 - `MakeAvailableToOrganizationTemplate`
 - `Update` (PATCH)
 
-The following examples will create a web resource solution component and add it to the solution with the unique name of `ExampleSolution`.
+The following examples create a web resource solution component and add it to the solution with the unique name of `ExampleSolution`.
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
@@ -134,14 +134,14 @@ More information:
 
 ## Suppress duplicate detection
 
-If you want to have the platform throw an error when a new row you create is determined to be a duplicate row, or you update an existing row so that duplicate detection rules will be evaluated, you must use the create or update the row using the `SuppressDuplicateDetection` parameter with a value of false.
+If you want to have Dataverse throw an error when a new record you create or a record you update matches the duplicate detection rules for another record, you must create or update the row using the `SuppressDuplicateDetection` parameter with a value of false.
 
-The following examples will return an error when the following are true:
+The following examples return an error when the following are true:
 
 - Duplicate Detection is enabled for the environment when a row is created or updated.
 - The `account` table has duplicate detection enabled
 - A Duplicate Detection Rule is published that checks whether the account `name` value is an exact match for an existing row
-- There is an existing account with the name` Sample Account`.
+- There's an existing account with the name` Sample Account`.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -214,7 +214,7 @@ More information:
 
 ## Add a shared variable to the plugin execution context
 
-Use the `tag` parameter to include a shared variable value that an be detected within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
+Use the `tag` parameter to include a shared variable value that is accessible within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
 
 To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
 
@@ -223,6 +223,8 @@ if (ctx.SharedVariables.ContainsKey("tag")){
 string tagValue = context.SharedVariables["tag"];
 }
 ```
+
+The following examples pass this value: `A string value`.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -258,7 +260,7 @@ Accept: application/json
 }
 ```
 
-The response should not be effected by sending the tag unless the plug-in contains logic to change it.
+The response shouldn't be affected by sending the tag unless the plug-in contains logic to change it.
 
 ---
 
@@ -266,7 +268,7 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 ## Perform a data operation with specified partition
 
-When using NoSQL tables you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition. Use this to improve performance when accessing table data in Azure heterogenous storage.
+When using NoSQL tables, you can pass a unique string value with the `partitionid` parameter to access non-relational table data within a storage partition. Use this method to improve performance when accessing table data in Azure heterogenous storage.
 
 More information:
 
@@ -282,7 +284,7 @@ Synchronous logic must be applied during the transaction and can significantly i
 
 ### [SDK for .NET](#tab/sdk)
 
-There are two ways to use this with the SDK for .NET.
+There are two ways to use this parameter with the SDK for .NET.
 #### Set the value as an optional parameter
 
 The following example sets the optional `BypassCustomPluginExecution` parameter when creating a new account record using the [CreateRequest class](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest).
@@ -318,7 +320,7 @@ account["name"] = "Sample Account";
 service.Create(account);
 ```
 
-Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
+Because this setting is applied to the service, it remains set for all requests sent using the service until it's set to `false`.
 
 > [!NOTE]
 > This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
@@ -341,7 +343,7 @@ MSCRM.BypassCustomPluginExecution: true
 }
 ```
 
-The response should not be effected by sending the `MSCRM.BypassCustomPluginExecution` request header.
+The response shouldn't be affected by sending the `MSCRM.BypassCustomPluginExecution` request header.
 
 ---
 
@@ -349,9 +351,9 @@ More information: [Bypass Synchronous Logic](bypass-custom-business-logic.md#byp
 
 ## Bypass Power Automate Flows
 
-Massive data changes applied to Dataverse may cause a large number of Power Automate flows to be triggered. In certain circumstances this can create a backlog in the system that can impact overall performance. To mitigate this, client applications have the option to indicate that flow triggers should be bypassed.
+Massive data changes applied to Dataverse may cause a large number of Power Automate flows to be triggered. In certain circumstances this situation can create a backlog in the system that can impact overall performance. To mitigate this performance issue, client applications can indicate that flow triggers should be bypassed.
 
-The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there is an internal operation called expander that manages calling the registered flow triggers.
+The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that calls the registered flow triggers.
 
 > [!NOTE]
 > When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
@@ -400,8 +402,8 @@ More information: [Bypass Power Automate Flows](bypass-custom-business-logic.md#
 
 ### See also
 
-[Use messages with the Organization service](org-service/use-messages.md)
-[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)
+[Use messages with the Organization service](org-service/use-messages.md)<br />
+[Web API: Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)<br />
 [Bypass Custom Business Logic](bypass-custom-business-logic.md)
 
 
