@@ -85,6 +85,12 @@ static void CreateWebResourceInSolution(IOrganizationService service)
 
 ```
 
+More information:
+
+- [Use messages with the Organization service](org-service/use-messages.md)
+- [Create table rows using the Organization Service](org-service/entity-operations-create.md)
+- [Import files as web resources](org-service/samples/import-files-as-web-resources.md)
+
 ### [Web API](#tab/webapi)
 
 **Request**
@@ -112,21 +118,97 @@ OData-EntityId: [Organization URI]/api/data/v9.2/webresourceset(833aa051-05be-ed
 
 ```
 
+More information: [Create a table row using the Web API](webapi/create-entity-web-api.md)
+
 ---
 
-More information: [Dependency tracking for solution components](/power-platform/alm/dependency-tracking-solution-components)
+More information:
+
+- [Create a custom table using code](org-service/create-custom-entity.md)
+- [Create and update table definitions using the Web API](webapi/create-update-entity-definitions-using-web-api.md)
+
 
 ## Suppress duplicate detection
 
+If you want to have the platform throw an error when a new row you create is determined to be a duplicate row, or you update an existing row so that duplicate detection rules will be evaluated, you must use the create or update the row using the `SuppressDuplicateDetection` parameter with a value of false.
+
+The following examples will return an error when the following are true:
+
+- Duplicate Detection is enabled for the environment when a row is created or updated.
+- The `account` table has duplicate detection enabled
+- A Duplicate Detection Rule is published that checks whether the account `name` value is an exact match for an existing row
+- There is an existing account with the name` Sample Account`.
+
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK...
+```csharp
+static void DemonstrateSuppressDuplicateDetection(IOrganizationService service)
+{
+    Entity account = new("account");
+    account["name"] = "Sample Account";
+
+    CreateRequest request = new()
+    {
+        Target = account
+    };
+    request.Parameters.Add("SuppressDuplicateDetection", false);
+
+    try
+    {
+        service.Execute(request);
+    }
+    catch (FaultException<OrganizationServiceFault> ex)
+    {
+        throw ex.Detail.ErrorCode switch
+        {
+            -2147220685 => new InvalidOperationException(ex.Detail.Message),
+            _ => ex,
+        };
+    }
+}
+```
 
 ### [Web API](#tab/webapi)
 
-Content for Web API...
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+Accept: application/json
+MSCRM.SuppressDuplicateDetection: false
+
+{
+    "name":"Sample Account"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 412 Precondition Failed
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0
+
+{
+    "error": {
+        "code": "0x80040333",
+        "message": "A record was not created or updated because a duplicate of the current record already exists."
+    }
+}
+```
 
 ---
+
+More information:
+
+- [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
+- [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
+
+
 
 ## Add a shared variable to the plugin execution context
 
