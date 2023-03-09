@@ -224,7 +224,7 @@ Use the `tag` parameter to include a shared variable value that is accessible wi
 To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
 
 ```csharp
-if (ctx.SharedVariables.ContainsKey("tag")){
+if (context.SharedVariables.ContainsKey("tag")){
 string tagValue = context.SharedVariables["tag"];
 }
 ```
