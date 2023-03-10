@@ -29,11 +29,11 @@ You'll have a few months to convert the rules into expressions using a converter
 
 ## Convert rules
 
-Upon having rules in your app, you will receive a prompt to convert them. The converter assists in migrating the rules within your app to a format that is compatible with future versions of Power Apps Studio. By utilizing the rules conditions in your app, the converter substitutes the references with corresponding inline expressions.
+When you edit an app that has rules, you will receive a prompt to convert them. The converter assists in migrating the rules within your app to a format that is compatible with future versions of Power Apps Studio. By utilizing the rules conditions in your app, the converter substitutes the references with corresponding inline expressions.
 
 Follow these steps to convert rules in your app:
 
-1. Open the Rule panel.
+1. Open your app for editing and go to the the Rules panel.
 2. On the warning message, select **Convert rules**.
 
      ![Convert rules.](./media/working-with-rules/convert-rules.png)
