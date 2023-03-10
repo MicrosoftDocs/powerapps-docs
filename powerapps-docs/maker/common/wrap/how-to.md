@@ -35,7 +35,7 @@ Go to [Dynamics 365 apps](https://admin.powerplatform.microsoft.com/resources/ap
  
  Select your environment from the list and click **Install** button.
  
-  :::image type="content" source="media/wrap-canvas-app/install-wrap-for-power-apps-1.png" alt-text="Select environment and begin installation.":::
+ :::image type="content" source="media/wrap-canvas-app/install-wrap-for-power-apps-1.png" alt-text="Select environment and begin installation.":::
 
 > [!NOTE]
 > You need to have admin rights to the environment to install wrap for Power Apps.
