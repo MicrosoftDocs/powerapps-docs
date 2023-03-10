@@ -31,11 +31,11 @@ Earlier, you learned about the capabilities of wrap feature, how it works, and i
 ## Install wrap for Power Apps in your environment
 Go to [Dynamics 365 apps](https://admin.powerplatform.microsoft.com/resources/applications) section on [Power Platform admin center](https://admin.powerplatform.microsoft.com), select **Wrap for Power Apps** and click on **Install** option.
 
- :::image type="content" source="media/Install_wrap_for_Power_Apps.png" alt-text="Install wrap for Power Apps.":::
+ :::image type="content" source="media/wrap-canvas-app/install-wrap-for-power-apps.png" alt-text="Install wrap for Power Apps.":::
  
  Select your environment from the list and click **Install** button.
  
-  :::image type="content" source="media/Install_wrap_for_Power_Apps_1.png" alt-text="Select environment and begin installation.":::
+  :::image type="content" source="media/wrap-canvas-app/install-wrap-for-power-apps-1.png" alt-text="Select environment and begin installation.":::
 
 > [!NOTE]
 > You need to have admin rights to the environment to install wrap for Power Apps.
@@ -44,15 +44,15 @@ Go to [Dynamics 365 apps](https://admin.powerplatform.microsoft.com/resources/ap
 
 This feature requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button.
 
-:::image type="content" source="media/Select_Solution.png" alt-text="Select a solution.":::
+:::image type="content" source="media/wrap-canvas-app/select-solution.png" alt-text="Select a solution.":::
 
 Chooose **+ Add existing** option from the top menu and select **App > Canvas app** in the dropdown list.
 
-:::image type="content" source="media/Select_Add_Existing.png" alt-text="Select Add existing from the menu.":::
+:::image type="content" source="media/wrap-canvas-app/select-add-existing.png" alt-text="Select Add existing from the menu.":::
 
 Select **Oustide Dataverse** tab and choose your app from the list. Press **Add** button to add this app to a solution.
 
-:::image type="content" source="media/Add-app.png" alt-text="Select Add app to a solution.":::
+:::image type="content" source="media/wrap-canvas-app/add-app.png" alt-text="Select Add app to a solution.":::
 
 More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
 
