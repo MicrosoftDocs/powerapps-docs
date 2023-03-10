@@ -27,7 +27,7 @@ You can create cards with just a few clicks. There are no complex systems or ser
 
 To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)**, and then select **+ Create a card**.
 
-:::image type="content" source="media/overview/cards-get-started.png" alt-text="Screenshot of the card create page in Power Apps.":::
+:::image type="content" source="media/overview/create-card-screen.png" alt-text="Screenshot of the card create page in Power Apps.":::
 
 There are two key components of a card:
 
