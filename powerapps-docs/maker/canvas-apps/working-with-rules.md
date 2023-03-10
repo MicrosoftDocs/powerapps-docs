@@ -20,25 +20,27 @@ contributors:
 
 # Convert rules to expressions
 
-The rules feature that let you create rules in canvas apps to automatically modify an app based on specified criteria will be removed. The feature was retired in 2019 and it will be completely removed. 
+The capability to create rules in canvas apps for automated app modification based on specified criteria will be removed. This feature was retired in 2019 and will now be fully removed.
 
-You'll have a few months to use a converter to convert the rules into expressions. After this period, if you still  have rules in your canvas app that haven't been converted the system will automatically do it for you.
+You'll have a few months to convert the rules into expressions using a converter. If there are any rules remaining in your canvas app that have not been converted by the end of this period, the system will perform the conversion automatically.
 
 > [!IMPORTANT]
 > Effective October 14, 2019, the rules feature in canvas apps is deprecated. More information: [Blog: Canvas Rules feature deprecation](https://powerapps.microsoft.com/blog/canvas-rules-feature-deprecation/).
 
 ## Convert rules
 
-If your app has rules, then you'll get a prompted to convert them. The converter helps you migrate rules in your app to a format that will be compatible with future versions of Power Apps Studio. The converter uses the rules conditions in your app and replaces the references with corresponding inline expressions. 
+Upon having rules in your app, you will receive a prompt to convert them. The converter assists in migrating the rules within your app to a format that is compatible with future versions of Power Apps Studio. By utilizing the rules conditions in your app, the converter substitutes the references with corresponding inline expressions.
 
 Follow these steps to convert rules in your app:
 
-1. Open your app for editing and edit a control with a rules.
+1. Open the Rule panel.
 2. On the warning message, select **Convert rules**.
 
      ![Convert rules.](./media/working-with-rules/convert-rules.png)
 
 3. On the **Convert rules** dialog box select **Convert now**.
+
+When the conversion is done, the rules are converted to the corresponding expression.
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
