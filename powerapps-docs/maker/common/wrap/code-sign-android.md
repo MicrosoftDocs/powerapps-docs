@@ -40,7 +40,7 @@ We'll use **keytool.exe** (available after installing Android Studio, from the f
 
 To generate a key, open a command prompt and run the following command:
 
-`keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 100`
+`keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 10000`
 
 
 Parameters:
