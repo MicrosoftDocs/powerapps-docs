@@ -17,7 +17,7 @@ searchScope:
 End users can request a Power Apps license from their admin directly in the product.
 
 ## Request a license
-If you do not have a license and are trying to open a Power Apps app, you will see the options in the following image. Select **Request license** to submit a license request to your admin.
+If you don't have a license and are trying to open a Power Apps app, you'll see the options in the following image. Select **Request license** to submit a license request to your admin.
 
 > [!NOTE]
 > The options in the following image may differ depending on whether you've exhausted any Power Apps trials.
@@ -25,16 +25,16 @@ If you do not have a license and are trying to open a Power Apps app, you will s
 :::image type="content" source="media/request-license.png" alt-text="Request a license to Power Apps from your admin.":::
 
 ## Request a license through a trial
-If you are already in an active Power Apps trial, you can request a license by selecting **Request license** near the top of the page.
+If you're already in an active Power Apps trial, you can request a license by selecting **Request license** near the top of the page.
 
 :::image type="content" source="media/request-license-in-trial.png" alt-text="Users who are already in an active Power Apps trial, can request a license.":::
 
 ## Wait for response
-After you request a license, you will see a banner at the top of the page that confirms that your request was sent, and that it might take a few days for your admin to respond to the request.
+After you request a license, you'll see a banner at the top of the page that confirms that your request was sent, and that it might take a few days for your admin to respond to the request.
 
-If you are using a Power Apps trial, you can continue to use the trial while you wait for your request to be approved.
+If you're using a Power Apps trial, you can continue to use the trial while you wait for your request to be approved.
 
-After your admin has reviewed your request, you will receive an email notification indicating whether the request was approved or denied.
+After your admin has reviewed your request, you'll receive an email notification indicating whether the request was approved or denied.
 
 
 
