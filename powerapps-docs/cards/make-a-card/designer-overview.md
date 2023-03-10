@@ -24,7 +24,7 @@ The Power Apps card designer is the drag-and-drop interface in which you build c
 
 1. To open the card designer, select **Create**, and then select **+ Create a card**.
 
-   :::image type="content" source="../media/designer-overview/create-new-card.png" alt-text="Screenshot showing card creation screen.":::
+   :::image type="content" source="../media/overview/create-card-screen.png" alt-text="Screenshot showing card creation screen.":::
 
 ## The card designer interface
 
