@@ -162,7 +162,7 @@ Intune only applies the policies of a user's home tenant. For instance, if Lesa@
 
 Connectors that don't use any type of Azure AD authentication will support guest access. The following table enumerates all connectors that do use Azure AD authentication, and identifies which connectors currently support guest access. More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
-| **Connector**                                     | **Supports guest access**                                              |
+| **Connector**                                     | **Supports guest access** [1]                                             |
 |---------------------------------------------------|------------------------------------------------------------------------|
 | 10to8 Appointment Scheduling                      | No                                                                     |
 | Adobe Creative Cloud                              | No                                                                     |
@@ -172,6 +172,7 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | AtBot Logic                                       | No                                                                     |
 | Azure AD                                          | Yes                                                                    |
 | Azure Automation                                  | Yes                                                                    |
+| Azure Blob Storage                                | No                                                                     |
 | Azure Container Instance                          | Yes                                                                    |
 | Azure Data Factory                                | Yes                                                                    |
 | Azure Data Lake                                   | Yes                                                                    |
@@ -266,6 +267,9 @@ Connectors that don't use any type of Azure AD authentication will support guest
 | Word Online (Business)                            | No                                                                     |
 
 \* When using the Microsoft Dataverse as the data source, ensure that the guest user is licensed from the same tenant where you have Dataverse data located.
+
+[1] External users explicitly added directly to your tenant are not considered guest users. External users that you have extended an invitation to access your tenant (but not directly added) are considered guest users.
+
 
 ### See also
 

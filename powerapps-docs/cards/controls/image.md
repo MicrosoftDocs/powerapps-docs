@@ -47,5 +47,3 @@ Use the [media control](media.md) for video and audio files.
 **[Background color](control-reference.md#b)** – Applies a background to a transparent image. This property will respect the image style.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
-
-
