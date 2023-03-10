@@ -27,14 +27,14 @@ As a developer of a client application, you can pass special [optional parameter
 
 |Logic type|When to use|
 |---------|---------|
-|**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Use this when the data you are changing is known to meet the requirements of the organization or you have a plan to achieve this by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
-|**Power Automate Flows**|When flows triggered by bulk operations cause a backup within Dataverse that can impact performance. You can mitigate this by not triggering the flows.|
+|**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Bypass synchronous logic when the data you're changing is known to meet the requirements of the organization or you have a plan to achieve this logic by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
+|**Power Automate Flows**|When flows triggered by bulk operations cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the flows.|
 
 ## Bypass Synchronous Logic
 
 Use the `BypassCustomPluginExecution` optional parameter to bypass custom synchronous logic.
 
-The alternative to using this optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
+The alternative to using this optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But this means that the logic is disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you're done.
 
 Using the optional parameter allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
 
@@ -50,12 +50,12 @@ There are two requirements:
 
 This solution targets the custom synchronous business logic that has been applied for your organization. When you send requests that bypass custom business logic, all synchronous plug-ins and real-time workflows are disabled except:
 
-- Plug-ins which are part of the core Microsoft Dataverse system or part of a solution where Microsoft is the publisher.
+- Plug-ins that are part of the core Microsoft Dataverse system or part of a solution where Microsoft is the publisher.
 - Workflows included in a solution where Microsoft is the publisher.
 
-System plug-ins define the core behaviors for specific entities. Without these plug-ins you would encounter data inconsistencies that may not be easily fixed.
+System plug-ins define the core behaviors for specific entities. Without these plug-ins, you would encounter data inconsistencies that may not be easily fixed.
 
-Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365 Customer Service, or Dynamics 365 Sales also include critical business logic that cannot be bypassed with this option.
+Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365 Customer Service, or Dynamics 365 Sales also include critical business logic that can't be bypassed with this option.
 
 > [!IMPORTANT]
 > You may have purchased and installed solutions from other Independent Software Vendors (ISVs) which include their own business logic. The synchronous logic applied by these solutions will be bypassed. You should check with these ISVs before you use this option to understand what impact there may be if you use this option with data that their solutions use.
@@ -66,7 +66,7 @@ You can use this option with either the SDK for .NET or the Web API.
 
 #### [SDK for .NET](#tab/sdk)
 
-There are two ways to use this with the SDK for .NET.
+There are two ways to use this optional parameter with the SDK for .NET.
 
 
 
@@ -117,7 +117,7 @@ To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution 
 
 **Request:**
 
-The following Web API request will create a new account record without custom synchronous business logic applied:
+The following Web API request creates a new account record without custom synchronous business logic applied:
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -137,9 +137,9 @@ MSCRM.BypassCustomPluginExecution: true
 
 ### Adding the prvBypassCustomPlugins privilege to another role
 
-Because the `prvBypassCustomPlugins` privilege is not available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
+Because the `prvBypassCustomPlugins` privilege isn't available in the UI to set for different security roles, if you need to grant this privilege to another security role you must use the API. For example, you may want to grant this privilege to a user with the system customizer security role.
 
-The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
+The `prvBypassCustomPlugins` privilege has the ID `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -200,19 +200,19 @@ OData-Version: 4.0
 Following are frequently asked questions about using the `BypassCustomPluginExecution` optional parameter to bypass synchronous business logic.
 #### Does this bypass plug-ins for data operations by Microsoft plug-ins?
 
-No. If a synchronous plug-in or real-time workflow in a Microsoft solution performs operations on other records, the logic for those operations are not bypassed. Only those synchronous plugins or real-time workflows that apply to the specific operation will be bypassed.
+No. If a synchronous plug-in or real-time workflow in a Microsoft solution performs operations on other records, the logic for those operations aren't bypassed. Only those synchronous plugins or real-time workflows that apply to the specific operation are bypassed.
 
 #### Can I use this option for data operations I perform within a plug-in?
 
-Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For plug-ins, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You cannot use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
+Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For plug-ins, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You can't use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
 
-#### What about asychronous plug-in steps, asynchronous workflows and flows?
+#### What about asynchronous plug-in steps, asynchronous workflows and flows?
 
-Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly contribute to the cost of processing the records, therefore it is not by passed by this parameter.
+Asynchronous logic isn't bypassed. Asynchronous logic doesn't significantly contribute to the cost of processing the records, therefore it isn't by passed by this parameter.
 
 ## Bypass Power Automate Flows
 
-When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is very large, it may cause performance issues for the system. If this occurs, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
+When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it may cause performance issues for the system. If performance issues occur, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
 The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that starts the registered flows.
 
@@ -229,7 +229,7 @@ Use this option if you see performance issues after bulk operations occur. You s
 
 You can use the following queries to get information about the status of these jobs.
 
-If the total count is greater than 50,000, these queries will return the following error.
+If the total count is greater than 50,000, these queries return the following error.
 
 > Name: `AggregateQueryRecordLimitExceeded`<br />
 > Code: `0x8004E023`<br />
@@ -239,7 +239,7 @@ If the total count is greater than 50,000, these queries will return the followi
 > [!NOTE]
 > If the queries do not return an error, the number of queued jobs is not likely to be the issue. Typically, the number of queued jobs exceeds 50,000 records before performance issues will occur.
 
-The following examples will output the number of **CallbackRegistration Expander Operation** system jobs by the state code. The `operationtype` value for this kind of system job is `79`.
+The following examples output the number of **CallbackRegistration Expander Operation** system jobs by the state code. The `operationtype` value for this kind of system job is `79`.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -330,7 +330,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ### How to bypass Power Automate flows
 
-How you bypass flows depends on whether you are using the SDK for .NET or Web API.
+How you bypass flows depends on whether you're using the SDK for .NET or Web API.
 
 > [!NOTE]
 > For data operations initiated within plug-ins, you must use the SDK for .NET.
@@ -374,9 +374,9 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 ### Mitigation strategies
 
-Bypassing flows using this optional parameter will result in business logic expected by the flow owner to not be executed. They will not have any notification that their logic was bypassed.  It is important that this be communicated to flow owners so that they will know when and why this was done. They can then determine whether or how to apply their logic.
+Bypassing flows using this optional parameter results in business logic expected by the flow owner to not be executed. They won't be notified that their logic was bypassed.  It's important to communicate to flow owners that the logic wasn't applied so that they'll know when and why this happened. They can then determine whether or how to apply their logic.
 
-People can create child flows which contain logic that could be invoked by multiple triggers, even manually. If the logic is contained within a child flow, it may be triggered by other means, perhaps manually later. More information [Create child flows](/power-automate/create-child-flows)
+People can create child flows that contain logic that can be invoked by multiple triggers, even manually. If the logic is contained within a child flow, it may be triggered by other means later. More information [Create child flows](/power-automate/create-child-flows)
 
 
 ### Frequently asked questions about bypassing Power Automate flows (FAQ)
@@ -388,11 +388,11 @@ No. Unlike [Bypass Synchronous Logic](#bypass-synchronous-logic), no special pri
 
 #### If my client application uses this optional parameter, will it also be applied by any plug-ins registered against the operation?
 
-No. The parameter is not passed through to any operations performed by plug-ins that are registered for the events that your client application will execute. If you want to bypass flows for operations performed by plug-ins, you must use the `SuppressCallbackRegistrationExpanderJob` optional parameter in your plug-in code.
+No. The parameter isn't passed through to any operations performed by plug-ins that are registered for the events that occur because of requests from your client application. If you want to bypass flows for operations performed by plug-ins, you must use the `SuppressCallbackRegistrationExpanderJob` optional parameter in your plug-in code.
 
 #### Can I create a plug-in that block all flows from being triggered for a given event?
 
-Yes, but we don't recommend you do this. This will not prevent people from creating flows using the triggers for these events, their flows will simply never be triggered.
+Yes, but we don't recommend you do this. This plug-in won't prevent people from creating flows using the triggers for these events, their flows will never be triggered, leading to confusion.
 
 
 ### See also
