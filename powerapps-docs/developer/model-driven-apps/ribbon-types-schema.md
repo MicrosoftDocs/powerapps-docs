@@ -21,7 +21,7 @@ The following is the schema definition for the ribbon types portion of an import
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Package and distribute Extensions with solutions](../data-platform/introduction-solutions.md).
+For more information, see [Package and distribute extensions with solutions](../data-platform/introduction-solutions.md).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
  
