@@ -254,21 +254,11 @@ If you do not want to receive all annotations in the response, you can specify w
 
 ## Add a Shared Variable from the Web API
 
-You can set a string value that will be available to plug-ins within the ExecutionContext in the `SharedVariables` collection. More information: [Shared variables](../understand-the-data-context.md#shared-variables)
+You can set a string value that will be available to plug-ins within the ExecutionContext in the `SharedVariables` collection. More information:
 
-To pass this value using the Web API, simply use the `tag` query option.
+- [Add a shared variable to the plugin execution context](../optional-parameters.md#add-a-shared-variable-to-the-plugin-execution-context)
+- [Shared variables](../understand-the-data-context.md#shared-variables)
 
-For example: `?tag=This is a value passed.`
-
-Will result in the following value within the `SharedVariables` collection when sent using a webhook.
-
-```json
-{
-"key": "tag",
-"value": "This is a value passed."
-}
-```
-This can also be done using the Organization Service: [Add a Shared Variable from the Organization Service](../org-service/use-messages.md#add-a-shared-variable-from-the-organization-service)
 
 ### See also  
 

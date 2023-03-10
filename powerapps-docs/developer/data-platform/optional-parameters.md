@@ -229,7 +229,7 @@ To access the value in a plug-in, use the [IExecutionContext.SharedVariables col
 
 ```csharp
 if (context.SharedVariables.ContainsKey("tag")){
-string tagValue = context.SharedVariables["tag"];
+    string tagValue = context.SharedVariables["tag"];
 }
 ```
 

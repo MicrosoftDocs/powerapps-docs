@@ -68,25 +68,7 @@ You can use this option with either the SDK for .NET or the Web API.
 
 There are two ways to use this with the SDK for .NET.
 
-##### Set the CrmServiceClient.BypassPluginExecution property
 
-The following example sets the [CrmServiceClient.BypassPluginExecution Property](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.BypassPluginExecution) when creating a new account record:
-
-```csharp
-var service = new CrmServiceClient(connectionString);  
-
-service.BypassPluginExecution = true;
-
-var account = new Entity("account");
-account["name"] = "Sample Account";
-
-service.Create(account);
-```
-
-Because this setting is applied to the service, it remains set for all requests sent using the service until it's set to `false`.
-
-> [!NOTE]
-> This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
 
 ##### Set the value as an optional parameter
 
@@ -109,11 +91,31 @@ static void DemonstrateBypassCustomPluginExecution(IOrganizationService service)
 
 You can use this method for data operations you initiate in your plug-ins when the calling user has the `prvBypassCustomPlugins` privilege.
 
+##### Set the CrmServiceClient.BypassPluginExecution property
+
+The following example sets the [CrmServiceClient.BypassPluginExecution Property](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.BypassPluginExecution) when creating a new account record:
+
+```csharp
+var service = new CrmServiceClient(connectionString);  
+
+service.BypassPluginExecution = true;
+
+var account = new Entity("account");
+account["name"] = "Sample Account";
+
+service.Create(account);
+```
+
+Because this setting is applied to the service, it remains set for all requests sent using the service until it's set to `false`.
+
+> [!NOTE]
+> This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
+
 #### [Using Web API](#tab/webapi)
 
 To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution : true` as a header in the request.
 
-**Example request:**
+**Request:**
 
 The following Web API request will create a new account record without custom synchronous business logic applied:
 
@@ -144,18 +146,20 @@ The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38
 Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
 
 ```csharp
-var request = new AddPrivilegesRoleRequest
+static void AddprvBypassCustomPluginsToRole(IOrganizationService service, Guid roleId)
 {
-    RoleId = new Guid("<id of role>"),
-    Privileges = new[]{
-        new RolePrivilege{
-            PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
-            Depth = PrivilegeDepth.Global
+    var request = new AddPrivilegesRoleRequest
+    {
+        RoleId = roleId,
+        Privileges = new[]{
+            new RolePrivilege{
+                PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
+                Depth = PrivilegeDepth.Global
+            }
         }
-    }
-};
-svc.Execute(request);
-
+    };
+    service.Execute(request);
+}
 ```
 #### [Using Web API](#tab/webapi)
 
@@ -200,7 +204,7 @@ No. If a synchronous plug-in or real-time workflow in a Microsoft solution perfo
 
 #### Can I use this option for data operations I perform within a plug-in?
 
-Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For the Organization Service, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You cannot use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
+Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For plug-ins, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You cannot use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
 
 #### What about asychronous plug-in steps, asynchronous workflows and flows?
 
@@ -235,8 +239,9 @@ If the total count is greater than 50,000, these queries will return the followi
 > [!NOTE]
 > If the queries do not return an error, the number of queued jobs is not likely to be the issue. Typically, the number of queued jobs exceeds 50,000 records before performance issues will occur.
 
-#### [SDK for .NET](#tab/sdk)
+The following examples will output the number of **CallbackRegistration Expander Operation** system jobs by the state code. The `operationtype` value for this kind of system job is `79`.
 
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 static void RetrieveCallbackRegistrationExpanderStatus(IOrganizationService service)
@@ -393,6 +398,6 @@ Yes, but we don't recommend you do this. This will not prevent people from creat
 ### See also
 
 [Web API: Compose HTTP requests and handle errors](webapi/compose-http-requests-handle-errors.md)<br />
-[Passing optional parameters with a request](org-service/use-messages.md#passing-optional-parameters-with-a-request)
+[Use optional parameters](optional-parameters.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
