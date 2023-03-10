@@ -55,7 +55,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - owner
 - state
 - status
-- multiselectpicklist
+
 
 ### [Not supported](#tab/not-supported)
 
@@ -70,6 +70,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - managedproperty
 - file
 - xml
+- multiselectpicklist
 
 ---
 

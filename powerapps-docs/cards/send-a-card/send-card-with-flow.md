@@ -37,9 +37,6 @@ The **Cards for Power Apps** connector is used to get or create instances of car
 - **Get the card instance** - Returns a card instance when given a user-specified card and a card instance id as `card` dynamic content.
 - **Get the card description** - Returns information about a user-specified card, including the id, environmentId, name, description, author, etc.
 
-> [!NOTE]
-> The **Cards for Power Apps** connector is temporarily marked as premium but the license requirements of people sending and receiving cards in Teams is dependent on the card - only cards with premium connectors or controls require users to have premium licenses. The connector will be updated to standard before general availability to reflect this licensing model.
-
    :::image type="content" source="../media/send-a-card/cards-connector.png" alt-text="Screenshot of the cards for Power Apps connector.":::
 
 ## Send card in Teams using the Teams connector
