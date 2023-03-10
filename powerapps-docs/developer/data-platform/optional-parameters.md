@@ -406,9 +406,6 @@ The [CallbackRegistration table](reference/entities/callbackregistration.md) man
 
 ### [SDK for .NET](#tab/sdk)
 
-> [!NOTE]
-> This currently only works with the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) instance provided by the plug-in run time.
-
 ```csharp
 static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationService service)
 {

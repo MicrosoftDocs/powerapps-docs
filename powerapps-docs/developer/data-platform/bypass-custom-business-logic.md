@@ -191,7 +191,7 @@ OData-Version: 4.0
 
 ---
 
-### Frequently asked questions for BypassCustomPluginExecution (FAQ)
+### Frequently asked questions for bypassing synchronous logic (FAQ)
 
 Following are frequently asked questions about using the `BypassCustomPluginExecution` optional parameter to bypass synchronous business logic.
 #### Does this bypass plug-ins for data operations by Microsoft plug-ins?
@@ -210,17 +210,17 @@ Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly con
 
 When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is very large, it may cause performance issues for the system. If this occurs, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
-The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that calls the registered flow triggers.
+The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that starts the registered flows.
 
 > [!NOTE]
 > When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
 
-### When to use this option
+### When to bypass Power Automate Flows
 
-People have added flows for business reasons and they shouldn't be bypassed without careful consideration.
+People have added flows for business reasons and they shouldn't be bypassed without careful consideration. Be sure to consider the [Mitigation strategies](#mitigation-strategies) mentioned below.
 
 
-Use this option if you see performance issues after bulk operations occur. You should look for a large number of **CallbackRegistration Expander Operation** system jobs with a status set to **Waiting for Resources**.
+Use this option if you see performance issues after bulk operations occur. You should look for a large number of **CallbackRegistration Expander Operation** system jobs with a [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode) set to `0` : **Waiting for Resources**.
 
 
 You can use the following queries to get information about the status of these jobs.
@@ -233,7 +233,7 @@ If the total count is greater than 50,000, these queries will return the followi
 > Message: `The maximum record limit is exceeded. Reduce the number of records.`
 
 > [!NOTE]
-> If the queries do not return an error, the number of queued jobs is not likely to be the issue. Typically, the number of queued jobs exceeds 1 million records before performance issues will occur.
+> If the queries do not return an error, the number of queued jobs is not likely to be the issue. Typically, the number of queued jobs exceeds 50,000 records before performance issues will occur.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -323,11 +323,71 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ---
 
+### How to bypass Power Automate flows
+
+How you bypass flows depends on whether you are using the SDK for .NET or Web API.
+
+> [!NOTE]
+> For data operations initiated within plug-ins, you must use the SDK for .NET.
+
+### [SDK for .NET](#tab/sdk)
+
+```csharp
+static void DemonstrateSuppressCallbackRegistrationExpanderJob(IOrganizationService service)
+{
+    Entity account = new("account");
+    account["name"] = "Sample Account";
+
+    CreateRequest request = new()
+    {
+        Target = account
+    };
+    request.Parameters.Add("SuppressCallbackRegistrationExpanderJob", true);
+    service.Execute(request);
+}
+```
+
+### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+If-None-Match: null
+OData-Version: 4.0
+OData-MaxVersion: 4.0
+Content-Type: application/json
+Accept: application/json
+MSCRM.SuppressCallbackRegistrationExpanderJob: true
+
+{
+    "name":"Sample Account"
+}
+```
+
+---
+
 ### Mitigation strategies
 
 Bypassing flows using this optional parameter will result in business logic expected by the flow owner to not be executed. They will not have any notification that their logic was bypassed.  It is important that this be communicated to flow owners so that they will know when and why this was done. They can then determine whether or how to apply their logic.
 
 People can create child flows which contain logic that could be invoked by multiple triggers, even manually. If the logic is contained within a child flow, it may be triggered by other means, perhaps manually later. More information [Create child flows](/power-automate/create-child-flows)
+
+
+### Frequently asked questions about bypassing Power Automate flows (FAQ)
+
+Following are frequently asked questions about using the `SuppressCallbackRegistrationExpanderJob` optional parameter to bypass Power Automate flows.
+#### Is there a specific privilege that calling users must have?
+
+No. Unlike [Bypass Synchronous Logic](#bypass-synchronous-logic), no special privilege is required.
+
+#### If my client application uses this optional parameter, will it also be applied by any plug-ins registered against the operation?
+
+No. The parameter is not passed through to any operations performed by plug-ins that are registered for the events that your client application will execute. If you want to bypass flows for operations performed by plug-ins, you must use the `SuppressCallbackRegistrationExpanderJob` optional parameter in your plug-in code.
+
+#### Can I create a plug-in that block all flows from being triggered for a given event?
+
+Yes, but we don't recommend you do this. This will not prevent people from creating flows using the triggers for these events, their flows will simply never be triggered.
 
 
 ### See also
