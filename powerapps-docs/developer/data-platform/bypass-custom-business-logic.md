@@ -20,25 +20,27 @@ contributors:
 ---
 # Bypass Custom Business Logic
 
-There are times when you want to be able to perform data operations without having custom business logic applied. For example: You are going to create or update a lot of records which you know already conform to the data consistency logic for your business, or you have an alternate means to apply this logic so it doesn't need to be triggered by Dataverse events. These scenarios typically involve bulk operations where large numbers of records are being created, updated or deleted.
+There are times when you want to be able to perform data operations without having custom business logic applied.  These scenarios typically involve bulk data operations where large numbers of records are being created, updated or deleted.
 
 As a developer of a client application, you can pass special [optional parameters](optional-parameters.md) with your requests to control two types of custom business logic as described in the following table:
 
 
-|Scenario|Rationale|Optional Parameter|
-|---------|---------|---------|
-|**Synchronous Logic**|To enable the bulk operation to be completed as quickly as possible. You need to bypass all custom synchronous logic to so that each operation can complete faster, shortening the time of the bulk operation.| SDK for .NET: `BypassCustomPluginExecution`<br />Web API: `MSCRM.BypassCustomPluginExecution`|
-|**Power Automate Flows**|When there are flows triggered by the bulk operations, processing all of these flows may cause a backup within Dataverse that can impact performance. You decide to mitigate this by not triggering the flows.|SDK for .NET: `SuppressCallbackRegistrationExpanderJob`<br />Web API: `MSCRM.SuppressCallbackRegistrationExpanderJob`|
+|Logic type|When to use|
+|---------|---------|
+|**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Use this when the data you are changing is known to meet the requirements of the organization or you have a plan to achieve this by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
+|**Power Automate Flows**|When flows triggered by bulk operations cause a backup within Dataverse that can impact performance. You can mitigate this by not triggering the flows.|
 
 ## Bypass Synchronous Logic
 
-The alternative to using the optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
+Use the `BypassCustomPluginExecution` optional parameter to bypass custom synchronous logic.
+
+The alternative to using this optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But this means that the logic will be disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you are done.
 
 Using the optional parameter allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
 
-For these kinds of situations, you have the option to disable custom business logic which would normally be applied. There are two requirements:
+There are two requirements:
 
-- You must send the requests using the optional parameter.
+- You must send the requests using the `BypassCustomPluginExecution` optional parameter.
 - The user sending the requests must have the `prvBypassCustomPlugins` privilege. By default, only users with the system administrator security role have this privilege.
 
 > [!NOTE]
@@ -60,7 +62,7 @@ Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365
 
 ### How do I use the BypassCustomPluginExecution option?
 
-You can use this option with either the Web API or the Organization service.
+You can use this option with either the SDK for .NET or the Web API.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -81,7 +83,10 @@ account["name"] = "Sample Account";
 service.Create(account);
 ```
 
-Because this setting is applied to the service, it will remain set for all requests sent using the service until it is set to `false`.
+Because this setting is applied to the service, it remains set for all requests sent using the service until it's set to `false`.
+
+> [!NOTE]
+> This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
 
 ##### Set the value as an optional parameter
 
@@ -102,9 +107,7 @@ static void DemonstrateBypassCustomPluginExecution(IOrganizationService service)
 }
 ```
 
-This optional parameter must be applied to each request individually. You cannot use this with the 7 other <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods, such as <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A>, or <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>. You can only use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method using one of the classes that are derived from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class, such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>.
-
-You can use this method for data operations you initiate in your plug-ins.
+You can use this method for data operations you initiate in your plug-ins when the calling user has the `prvBypassCustomPlugins` privilege.
 
 #### [Using Web API](#tab/webapi)
 
@@ -136,6 +139,24 @@ Because the `prvBypassCustomPlugins` privilege is not available in the UI to set
 
 The `prvBypassCustomPlugins` privilege has the id `148a9eaf-d0c4-4196-9852-c3a38e35f6a1` in every organization.
 
+#### [SDK for .NET](#tab/sdk)
+
+Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
+
+```csharp
+var request = new AddPrivilegesRoleRequest
+{
+    RoleId = new Guid("<id of role>"),
+    Privileges = new[]{
+        new RolePrivilege{
+            PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
+            Depth = PrivilegeDepth.Global
+        }
+    }
+};
+svc.Execute(request);
+
+```
 #### [Using Web API](#tab/webapi)
 
 Associate the `prvBypassCustomPlugins` privilege to the security role using the [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole).
@@ -168,24 +189,6 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0  
 ```
 
-#### [SDK for .NET](#tab/sdk)
-
-Associate the `prvBypassCustomPlugins` privilege to the security role using <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>.
-
-```csharp
-var request = new AddPrivilegesRoleRequest
-{
-    RoleId = new Guid("<id of role>"),
-    Privileges = new[]{
-        new RolePrivilege{
-            PrivilegeId = new Guid("148a9eaf-d0c4-4196-9852-c3a38e35f6a1"),
-            Depth = PrivilegeDepth.Global
-        }
-    }
-};
-svc.Execute(request);
-```
-
 ---
 
 ### Frequently asked questions for BypassCustomPluginExecution (FAQ)
@@ -205,8 +208,126 @@ Asynchronous logic is not bypassed. Asynchronous logic doesn't significantly con
 
 ## Bypass Power Automate Flows
 
-When bulk data operations occur that have flows with triggers on the events, it is possible for a large number of system jobs to be created to execute the flows. This large number of system jobs can cause performance issues for the system.
+When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is very large, it may cause performance issues for the system. If this occurs, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
+The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that calls the registered flow triggers.
+
+> [!NOTE]
+> When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
+
+### When to use this option
+
+People have added flows for business reasons and they shouldn't be bypassed without careful consideration.
+
+
+Use this option if you see performance issues after bulk operations occur. You should look for a large number of **CallbackRegistration Expander Operation** system jobs with a status set to **Waiting for Resources**.
+
+
+You can use the following queries to get information about the status of these jobs.
+
+If the total count is greater than 50,000, these queries will return the following error.
+
+> Name: `AggregateQueryRecordLimitExceeded`<br />
+> Code: `0x8004E023`<br />
+> Number: `-2147164125`<br />
+> Message: `The maximum record limit is exceeded. Reduce the number of records.`
+
+> [!NOTE]
+> If the queries do not return an error, the number of queued jobs is not likely to be the issue. Typically, the number of queued jobs exceeds 1 million records before performance issues will occur.
+
+#### [SDK for .NET](#tab/sdk)
+
+
+```csharp
+static void RetrieveCallbackRegistrationExpanderStatus(IOrganizationService service)
+{
+    string fetchXml = @"<fetch aggregate='true'>
+        <entity name='asyncoperation'>
+        <attribute name='statuscode' alias='statuscode' groupby='true' />
+        <attribute name='statuscode' alias='count' aggregate='count' />
+        <filter>
+            <condition attribute='operationtype' operator='eq' value='79' />
+        </filter>
+        </entity>
+    </fetch>";
+
+    FetchExpression fetchExpression = new(fetchXml);
+
+    EntityCollection response = service.RetrieveMultiple(fetchExpression);
+
+    foreach (Entity result in response.Entities)
+    {
+        string statusCode = result.FormattedValues["statuscode"];
+        int count = (int)((AliasedValue)result["count"]).Value;
+        Console.WriteLine($"{statusCode}: {count}");
+    }
+}
+```
+
+**Output:**
+
+```
+Canceled: 4101
+Failed: 13
+Waiting for Resources: 50,000
+```
+
+#### [Using Web API](#tab/webapi)
+
+
+**Request**
+
+```http
+GET [Organization URI]/asyncoperations?$filter=operationtype eq 79&$apply=groupby((statuscode),aggregate($count as count)) HTTP/1.1
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+Content-Type: application/json   
+Accept: application/json   
+OData-MaxVersion: 4.0   
+OData-Version: 4.0 
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#asyncoperations",
+    "value": [
+
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Canceled",
+            "statuscode": 32,
+            "count@OData.Community.Display.V1.FormattedValue": "4,101",
+            "count": 4101
+        },
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Failed",
+            "statuscode": 31,
+            "count@OData.Community.Display.V1.FormattedValue": "13",
+            "count": 13
+        },
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Waiting for Resources",
+            "statuscode": 0,
+            "count@OData.Community.Display.V1.FormattedValue": "50,000",
+            "count": 50000
+        }
+    ]
+}
+
+```
+
+---
+
+### Mitigation strategies
+
+Bypassing flows using this optional parameter will result in business logic expected by the flow owner to not be executed. They will not have any notification that their logic was bypassed.  It is important that this be communicated to flow owners so that they will know when and why this was done. They can then determine whether or how to apply their logic.
+
+People can create child flows which contain logic that could be invoked by multiple triggers, even manually. If the logic is contained within a child flow, it may be triggered by other means, perhaps manually later. More information [Create child flows](/power-automate/create-child-flows)
 
 
 ### See also

@@ -36,7 +36,7 @@ Usually, you will add the parameter to the [OrganizationRequest.Parameters Colle
 > [!NOTE]
 > You cannot specify these parameters using the 7 shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
-One exception is when setting the `partitionid`, this is set as a property of the entity instance. More information: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
+One exception is when setting the `partitionid`, this is set as an attribute of the entity instance. More information: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
 
 More information:
 
@@ -397,7 +397,7 @@ More information: [Bypass Synchronous Logic](bypass-custom-business-logic.md#byp
 
 ## Bypass Power Automate Flows
 
-Massive data changes applied to Dataverse may cause a large number of Power Automate flows to be triggered. In certain circumstances this situation can create a backlog in the system that can impact overall performance. To mitigate this performance issue, client applications can indicate that flow triggers should be bypassed.
+When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is very large, it may cause performance issues for the system. If this occurs, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
 The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that calls the registered flow triggers.
 
