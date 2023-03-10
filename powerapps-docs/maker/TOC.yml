@@ -644,7 +644,7 @@
             href: ./canvas-apps/working-with-flows.md
           - name: Add a flow (retired)
             href: ./canvas-apps/using-logic-flows.md
-        - name: Create a rule in canvas apps
+        - name: Convert rules to expressions
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
