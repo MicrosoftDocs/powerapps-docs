@@ -29,7 +29,7 @@ At the end of the tutorial, your shopping list card should look like the followi
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-1. In the left pane, select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
+1. In the left pane, select **Cards**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select **+ Create a card**.
 
