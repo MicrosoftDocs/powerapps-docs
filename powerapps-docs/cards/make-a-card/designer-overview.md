@@ -20,7 +20,7 @@ The Power Apps card designer is the drag-and-drop interface in which you build c
 
 1. Sign in to [Power Apps](https://make.powerapps.com) and select your environment.
 
-1. In the left pane, select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
+1. In the left pane, select **Cards**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. To open the card designer, select **Create**, and then select **+ Create a card**.
 
