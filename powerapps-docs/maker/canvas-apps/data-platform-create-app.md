@@ -21,7 +21,7 @@ contributors:
 ---
 # Create a canvas app with data from Microsoft Dataverse
 
-In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../data-platform/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In Power Apps, create a canvas app based on a list of sample accounts in [Dataverse](../data-platform/data-platform-intro.md). In this app, you can browse all accounts, see details of an account, and create, update, or delete an account.
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
@@ -42,13 +42,13 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
-1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
+1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**. You can't select more than one table in this step. 
 
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 Your app opens to the browse screen, which shows a list of accounts in a control called a gallery. Near the top of the screen, a title bar shows icons for refreshing the data in the gallery, sorting the data in the gallery alphabetically, and adding data to the gallery. Under the title bar, a search box provides the option to filter the data in the gallery based on text that you type or paste. 
 
-By default, the gallery shows an email address, a city, and an account name. As you'll see in [Next steps](data-platform-create-app.md#next-steps), you can customize the gallery to change how the data appears and even show other types of data.
+By default, the gallery shows an account name, phone no and city. As you'll see in [Next steps](data-platform-create-app.md#next-steps), you can customize the gallery to change how the data appears and even show other types of data.
 
 ![Browse screen.](./media/data-platform-create-app/browse-screen.png)
 
