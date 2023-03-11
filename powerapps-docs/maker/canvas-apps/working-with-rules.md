@@ -36,11 +36,13 @@ Follow these steps to convert rules in your app:
 1. Open your app for editing and go to the Rules panel.
 2. On the warning message, select **Convert rules**.
 
-     ![Convert rules.](./media/working-with-rules/convert-rules.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Convert rules.](./media/working-with-rules/convert-rules.png)
 
 3. A dialog opens which shows all the rules which will be converted. The rule name is shown on the left, and its associated conditional expression is shown on the right. On the **Convert rules** dialog box, select **Convert now**.
 
-     ![Convert now.](./media/working-with-rules/rules-1.png)
+   > [!div class="mx-imgBorder"] 
+   >![Convert now.](./media/working-with-rules/rules-1.png)
 
 When the conversion is complete, a notification appears to alert you whether the conversion was successful. Formulas that previously referenced rule names have been updated to directly use their associated conditional expression instead.
 
