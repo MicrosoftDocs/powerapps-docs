@@ -40,7 +40,7 @@ Follow these steps to convert rules in your app:
 
 3. A dialog opens which shows all the rules which will be converted. The rule name is shown on the left, and its associated conditional expression is shown on the right. On the **Convert rules** dialog box, select **Convert now**.
 
-     ![Convert now.](./media/working-with-rules/convert-1.png)
+     ![Convert now.](./media/working-with-rules/rules-1.png)
 
 When the conversion is complete, a notification appears to alert you whether the conversion was successful. Formulas that previously referenced rule names have been updated to directly use their associated conditional expression instead.
 
