@@ -49,12 +49,12 @@ When the conversion is complete, a notification appears to alert you whether the
 Before the conversion, the Power Fx formula references rule names in the formula in place of their associated conditional expressions.
 
 > [!div class="mx-imgBorder"] 
-> ![Convert now.](./media/working-with-rules/rules-3.png)
+> ![Before the conversion.](./media/working-with-rules/rules-3.png)
 
 After the conversion, rule name references have been removed and replaced. In this example, **Rule2** was converted to **Slider1.Value > 50**.
 
 > [!div class="mx-imgBorder"] 
-> ![Convert now.](./media/working-with-rules/rules-2.png)
+> ![After the conversion.](./media/working-with-rules/rules-2.png)
 
 
 ## Reverting the conversion
