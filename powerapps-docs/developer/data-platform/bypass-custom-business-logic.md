@@ -1,7 +1,7 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic." 
-ms.date: 03/08/2023
+ms.date: 03/11/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -111,7 +111,7 @@ Because this setting is applied to the service, it remains set for all requests 
 > [!NOTE]
 > This property is not available in the [Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), but it is available on the [Dataverse.Client.Extensions.CRUDExtentions methods](xref:Microsoft.PowerPlatform.Dataverse.Client.Extensions.CRUDExtentions).
 
-#### [Using Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 To apply this option using the Web API, pass `MSCRM.BypassCustomPluginExecution : true` as a header in the request.
 
@@ -161,7 +161,7 @@ static void AddprvBypassCustomPluginsToRole(IOrganizationService service, Guid r
     service.Execute(request);
 }
 ```
-#### [Using Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 Associate the `prvBypassCustomPlugins` privilege to the security role using the [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole).
 
@@ -277,7 +277,7 @@ Failed: 13
 Waiting for Resources: 50,000
 ```
 
-#### [Using Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 
 **Request**
