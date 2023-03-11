@@ -46,6 +46,24 @@ Follow these steps to convert rules in your app:
 
 When the conversion is complete, a notification appears to alert you whether the conversion was successful. Formulas that previously referenced rule names have been updated to directly use their associated conditional expression instead.
 
+Before the conversion, the Power Fx formula references rule names in the formula in place of their associated conditional expressions.
+
+> [!div class="mx-imgBorder"] 
+> ![Convert now.](./media/working-with-rules/rules-3.png)
+
+After the conversion, rule name references have been removed and replaced. In this example, **Rule2** was converted to **Slider1.Value > 50**.
+
+> [!div class="mx-imgBorder"] 
+> ![Convert now.](./media/working-with-rules/rules-2.png)
+
+
+## Reverting the conversion
+
+When the conversion is done, the rules are converted to the corresponding expression. During the conversion period, you can revert your changes to bring the rules back to your app for review and troubleshooting if necessary. While in the same session, you can use the Undo button or Ctrl-Z to revert the rule conversion. If you save the app, you can restore the previous version to revert the change. However, you will be prompted to convert the rules again the next time the app is opened for editing.
+
+## Known Issues
+
+If your rules are in an error state or are empty, they will be replaced with the following formula: Boolean(Blank()). This formula preserves the behavior of rules in this state.
 
 
 
