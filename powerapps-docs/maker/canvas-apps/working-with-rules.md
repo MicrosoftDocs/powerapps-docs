@@ -33,14 +33,19 @@ When you edit an app that has rules, you'll receive a prompt to convert them. Th
 
 Follow these steps to convert rules in your app:
 
-1. Open your app for editing and go to the the Rules panel.
+1. Open your app for editing and go to the Rules panel.
 2. On the warning message, select **Convert rules**.
 
      ![Convert rules.](./media/working-with-rules/convert-rules.png)
 
-3. On the **Convert rules** dialog box, select **Convert now**.
+3. A dialog opens which shows all the rules which will be converted. The rule name is shown on the left, and its associated conditional expression is shown on the right. On the **Convert rules** dialog box, select **Convert now**.
 
-When the conversion is done, the rules are converted to the corresponding expression.
+     ![Convert now.](./media/working-with-rules/convert-1.png)
+
+When the conversion is complete, a notification appears to alert you whether the conversion was successful. Formulas that previously referenced rule names have been updated to directly use their associated conditional expression instead.
+
+
+
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
