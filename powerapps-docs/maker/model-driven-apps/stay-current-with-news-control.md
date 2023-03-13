@@ -4,7 +4,6 @@ description: "Learn how to use the news control to get the latest news about you
 ms.custom: ""
 ms.date: 07/09/2020
 ms.reviewer: "matp"
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -22,8 +21,6 @@ search.app:
   - D365CE
 ---
 # Set up and use the news control
-
-
 
 [!INCLUDE [cc-classic-interface-control-migration](../../includes/cc-classic-interface-control-migration.md)]
 
@@ -65,7 +62,7 @@ need to provide these by creating a [Bing Search azure resource](/bing/search-ap
 
 3. Sign-in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then in the upper right select the environment where you want to install the company news control.
 
-4. Select **Solutions** on the left pane, and then select **Import** on the    command bar.
+4. Select **Solutions** on the left pane, and then select **Import** on the command bar. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 5. In the Import solution wizard, select **Choose File**, browse to and select *Solutions.zip*, and then select **Open**.
 
@@ -73,7 +70,7 @@ need to provide these by creating a [Bing Search azure resource](/bing/search-ap
 
 ### Add the control to the account main form
 
-1. In Power Apps, select **Solutions** on the left pane, select **Settings** (gear) on the upper right, and then select **Advanced settings**.
+1. In Power Apps select **Settings** (gear) on the upper right, and then select **Advanced settings**.
 
 2. Go to **Settings** > **Customizations** > **Customize the System**.
 

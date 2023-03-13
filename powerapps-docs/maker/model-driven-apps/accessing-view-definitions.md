@@ -4,7 +4,6 @@ description: Learn how to open the view designer
 ms.custom: ""
 ms.date: 03/23/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: how-to
@@ -26,14 +25,12 @@ search.app:
 ---
 # Opening the view designer
 
-
-
 In this article, a view definition will be opened to display properties and options to configure the view.
 
 ## Open a view for editing in the solution explorer
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Select **Solutions**, and then open the solution that needs to be modified.  
+1. Select **Solutions**, and then open the solution that needs to be modified. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
 1. Select the table that contains the required view, such as the **Account** table.
 1. Select the **Views** area.
 
