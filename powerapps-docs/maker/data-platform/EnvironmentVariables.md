@@ -42,7 +42,7 @@ Environment variables can be created and modified within the modern solution int
 
 ### Create an environment variable in a solution
 
-1. Sign in to Power Apps (make.powerapps.com), and then on the left pane select **Solutions**.
+1. Sign in to Power Apps (make.powerapps.com), and then on the left pane select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the solution you want or create a new one.
 1. On the command bar, select **New** > **More**, and then select **Environment variable**. 
 1. On the right pane, complete the following columns, and then select **Save**:  
@@ -200,7 +200,7 @@ A simple scenario to demonstrate how to use a secret obtained from Azure Key Vau
 > [!NOTE]
 > The URI for the web service in this example is not a functioning web service.
 
-1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want.
+1.	Sign into [PowerApps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, and then open the unmanaged solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **New** > **Automation** > **Cloud flow** > **Instant**.
 1. Enter a name for the flow, select **Manually trigger a flow**, and then select **Create**.
 1.	Select **New step**, select the **Microsoft Dataverse** connector, and then on the **Actions** tab select **Perform an unbound action**.

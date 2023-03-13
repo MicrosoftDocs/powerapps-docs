@@ -41,7 +41,8 @@ Table relationships that are configured to be displayed can be hidden using the 
 > This is a preview feature.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-1. Go to **Solutions**, open the solution that has the table you want, open the table, select **Forms**, and then open the main form where you want to add a related table.
+1. Select **Solutions** on the left navigation pane, open the solution that has the table you want, and then open the table. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select **Forms**, and then open the main form where you want to add a related table.
 1. Select the **Related** tab. The **Related** menu appears:
    - Add and edit an existing relationship. Select a table in the list to display the table properties in the right pane. Select **Edit relationship** to make changes to the relationship. More information: [Add advanced relationship behavior](../data-platform/data-platform-entity-lookup.md#add-advanced-relationship-behavior)
    - Add a new relationship. Select **+** to **Search** for another relationship or select **New relationship** to create either a **One-to-many relationship** or **Many-to-many** relationship. More information: [Add a One-to-many relationship](../data-platform/data-platform-entity-lookup.md#add-a-one-to-many-relationship) and [Add a Many-to-many relationship](../data-platform/data-platform-entity-lookup.md#add-a-many-to-many-relationship)
