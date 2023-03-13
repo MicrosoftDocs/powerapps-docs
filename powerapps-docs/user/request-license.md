@@ -4,7 +4,7 @@ description: Learn how to request a Power Apps license.
 author: sericks007
 ms.subservice: common
 ms.topic: overview
-ms.date: 03/10/2023
+ms.date: 03/13/2023
 ms.author: sericks
 ms.reviewer: sericks
 ms.contributors: zadesa
@@ -30,7 +30,7 @@ If you're already in an active Power Apps trial, you can request a license by se
 :::image type="content" source="media/request-license-in-trial.png" alt-text="Users who are already in an active Power Apps trial, can request a license.":::
 
 ## Wait for response
-After you request a license, you'll see a banner at the top of the page that confirms that your request was sent, and that it might take a few days for your admin to respond to the request.
+After you request a license, you'll see a banner at the top of the page that confirms that your request was sent, and that it might take a few days for your [admin to respond to the request](/microsoft-365/commerce/licenses/manage-license-requests?view=o365-worldwide#approve-or-deny-a-license-request).
 
 If you're using a Power Apps trial, you can continue to use the trial while you wait for your request to be approved.
 
