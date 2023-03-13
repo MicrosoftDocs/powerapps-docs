@@ -35,6 +35,7 @@ Power Fx shares certain infrastructure with custom pages and canvas apps. Releva
 - Pre-existing classic commands can't be customized within the command designer until they're migrated to the modern infrastructure. This includes the out-of-the-box commands, which will be migrated incrementally over time. You may continue to use other mechanisms and third-party tools for customizing classic commands.
 - Dynamically populated buttons aren't supported. We recommend creating them declaratively.
 - Global application header and dashboard command bars aren't currently supported in command designer. These are customized infrequently. Share feedback if you find this valuable to prioritize.
+- Single PowerFx component library limitation in modern commanding => The problem with using the Command Designer in Power Apps is that it can generate an error message stating "Unable to initialize component manager. There are multiple component libraries associated with your app." This error occurs when an app has multiple duplicate component libraries associated with it, which is not supported by Model-driven Apps as of now. To solve this problem, you need to remove the additional AppElement entries for the app, as Model-driven Apps only support a single PowerFx component library as of now. This can be done by removing the multiple library dependencies with the app, ensuring that only one AppElement entry exists for the app.
 
 ## Delete a model-driven app element record
 
