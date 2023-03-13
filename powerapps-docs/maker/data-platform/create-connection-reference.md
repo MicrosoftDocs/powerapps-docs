@@ -46,7 +46,7 @@ Connection references can be added to a solution in different ways:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/) or [Power Automate](https://make.powerautomate.com/).
 
-1. On the left pane, select **Solutions**.
+1. On the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Create a new or open an existing solution.
 
@@ -95,9 +95,9 @@ When a flow is enabled, the enabling user needs to own all the connections. This
 
 Sharing connections can be accomplished with the following steps.
 
-1. Open the maker portal and select the environment containing the connection.
+1. Go to  [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment containing the connection.
 
-1. Select **Connections**, and then select the connection you want to share.
+1. Select **Connections** on the left navigation pane, and then select the connection you want to share. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. From the menu, select **Share**.
 

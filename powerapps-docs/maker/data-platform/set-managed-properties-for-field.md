@@ -30,7 +30,7 @@ Managed properties only apply when you include columns in a managed solution and
 
 To view and set managed properties for a column, follow these steps:
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the solution, and then on the command bar select **Switch to classic**.
 1. Expand **Entities**, expand the table you want, and then select **Fields**.
 1. Select the column you want.
