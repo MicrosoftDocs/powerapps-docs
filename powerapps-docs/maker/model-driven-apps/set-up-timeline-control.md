@@ -43,9 +43,9 @@ More information: [Create a custom table](../data-platform/data-platform-create-
 
 ### Add the timeline component to a form
 
-1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
-1. Select **Tables**, open the table you want, and then select the **Forms** area.
-1. Open the form where you want to add or configure a timeline.
+1. Sign into [Power Apps](https://make.powerapps.com).
+1. Select **Tables** on the left navigation pane, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area, and then open the form where you want to add or configure a timeline.
 1. In the form designer, select **Components** from the left navigation, and then scroll down to the **Timeline** component on the left side. Drag and drop it into a section on the form.
    ![Adding or removing a timeline from an entity form.](media\timeline-add-or-remove-entity-from-form-1b.png "Adding or removing a timeline from an entity form")
 1. Make the changes you want to the timeline settings. More information: [Configure the timeline component](#configure-the-timeline-component)
