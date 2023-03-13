@@ -1,14 +1,13 @@
 ---
-title: Create a canvas app from a template
-description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
+title: Build apps through conversation
+description: Build apps through conversation.
 author: mduelae
-
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date: 10/20/2021
+ms.date: 3/13/2022
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
@@ -19,57 +18,62 @@ contributors:
   - mduelae
 ---
 
-# Create a canvas app from a template
+# Build apps through conversation
 
-Create a canvas app automatically based on a template for a specific scenario, such as tracking budgets and scheduling vacations, and then run the app to understand its default behavior.
+Create Power Apps with the help of AI. Simply describe the app that you want to build, and AI will design it for you.
 
-To create an app from a template, you need a cloud-storage account (such as DropBox, OneDrive, or Google Drive) to store the template's sample data.
+With Power Apps you'll get in-app guidance using natural language processing to help you build your app.
 
-If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+The AI assistant is available from the Power Apps Home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
-## Create an app
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **+ Create** from the left-pane.
-
-    :::image type="content" source="media/get-started-test-drive/create-left-pane.png" alt-text="Select + Create from Power Apps.":::
-
-1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
-
-    :::image type="content" source="media/get-started-test-drive/start-from-template.png" alt-text="Choose a template.":::
-
-    > [!TIP]
-    > Select a template to learn more. If you want to choose another template, select **Cancel** to return.
-
-1. After you select the template you want to use, you can update the app name, and then select **Create** to open the app in Power Apps Studio. For example, the following shows creating an app using the **Power Apps Training for Office** template.
-
-    :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
-
-    > [!NOTE]
-    > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
-
-## Run the app
-
-An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
-
-1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the top-right corner of the screen.
-
-    :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
-
-    The app is populated with sample data to demonstrate the functionality of the app.
-
-1. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
-
-1. Return to the default workspace by pressing Esc (or by selecting **X** icon near the upper-right corner).
-
-## Next steps
-
-1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
-
-1. [Share your app](share-app.md) with other people in your organization.
+![Graphical user interface  application Description automatically generated](media/image1.png)
 
 > [!IMPORTANT]
-> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to Limited preview request.
+> To turn this feature off, TBD;.
+
+## Step 1: Create an app with the help of AI
+
+To help you get started, let's build an app to track housekeeping tasks for a hotel.
+
+1.  Sign in to Power Apps at <https://make.powerapps.com>.
+
+2.  In the text box enter **hotel housekeeping**.
+
+![](media/image2.png)
+
+3. A Dataverse table with data that includes typical hotel housekeeping tasks is created for you.
+
+## Step 2: Review the table for your app
+
+Based on what you described, AI will generate a table for your app. The following are actions you can take:
+
+1. **Suggestions**: These are suggested actions that you can ask the AI assistant to take to help you finalize the table.
+
+2. **View column**: Select to view the column name.
+
+3. **Edit table name**: View the table name and its properties.
+
+4. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, such as remove room type column.
+
+5\. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
+
+![Graphical user interface Description automatically generated with medium confidence](media/image3.png)
+
+## Step 3: Make edits
+
+If you want to make changes, use the **Copilot** panel to describe what you want to do, and it will make the change for you. Let's ask **Copilot** to add a column to track cleaning start and end time.
+
+1. In the **Copilot** text box enter, **Add columns to track start and end time**.
+
+![Graphical user interface  application Description automatically generated](media/image4.png)
+
+2. **Copilot** has added two new columns called, **Start Time** and **End Time**.
+
+![Graphical user interface  application Description automatically generated](media/image5.png)
+
+You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room.
+
+3. When you're ready to create your app, select **Create app**.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
