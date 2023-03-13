@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from a template
-description: Step-by-step instructions for creating a canvas app automatically based on a Power Apps template.
+title: AI overview
+description: AI overview.
 author: mduelae
 
 ms.topic: conceptual
@@ -19,57 +19,24 @@ contributors:
   - mduelae
 ---
 
-# Create a canvas app from a template
+# AI overview
 
-Create a canvas app automatically based on a template for a specific scenario, such as tracking budgets and scheduling vacations, and then run the app to understand its default behavior.
-
-To create an app from a template, you need a cloud-storage account (such as DropBox, OneDrive, or Google Drive) to store the template's sample data.
-
-If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
-
-## Create an app
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **+ Create** from the left-pane.
-
-    :::image type="content" source="media/get-started-test-drive/create-left-pane.png" alt-text="Select + Create from Power Apps.":::
-
-1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
-
-    :::image type="content" source="media/get-started-test-drive/start-from-template.png" alt-text="Choose a template.":::
-
-    > [!TIP]
-    > Select a template to learn more. If you want to choose another template, select **Cancel** to return.
-
-1. After you select the template you want to use, you can update the app name, and then select **Create** to open the app in Power Apps Studio. For example, the following shows creating an app using the **Power Apps Training for Office** template.
-
-    :::image type="content" source="media/get-started-test-drive/create-app.png" alt-text="Create app":::
-
-    > [!NOTE]
-    > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
-
-## Run the app
-
-An app from a template opens in Power Apps Studio, where you'll spend most of your time customizing. Before you make any changes to the app, explore how the app works in **Preview** mode.
-
-1. Press F5 to open the app in **Preview** mode. Alternatively, you can also select the play button on the top-right corner of the screen.
-
-    :::image type="content" source="media/get-started-test-drive/play-button.png" alt-text="Play the app":::
-
-    The app is populated with sample data to demonstrate the functionality of the app.
-
-1. Explore the app's default behavior by creating, updating, and deleting sample data, and then verify that the data in your cloud-storage account reflects your changes.
-
-1. Return to the default workspace by pressing Esc (or by selecting **X** icon near the upper-right corner).
-
-## Next steps
-
-1. Press Ctrl-S, give your app a name, and then select **Save** to save your app to the cloud.
-
-1. [Share your app](share-app.md) with other people in your organization.
+<Content TBD>
 
 > [!IMPORTANT]
-> Before you share an app, make sure that the people with whom you're sharing it have access to the data. For example, you must [share an Excel or other file](share-app-data.md) in a cloud-storage account.
+>
+> - This is a preview feature.
+>
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
+> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+>
+> - This capability is in process of rolling out, and may not be available in your region yet.
+>
+> - This capability  may be subject to usage limits or capacity throttling.
+
+
+>[!NOTE]
+>
+> This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
