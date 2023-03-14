@@ -89,4 +89,10 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
 
+
+## Turn off AI assistant
+
+TBD
+
+
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
