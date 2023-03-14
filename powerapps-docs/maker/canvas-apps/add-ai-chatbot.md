@@ -20,16 +20,23 @@ contributors:
 
 # Add a chatbot control to your canvas app
 
-A Chatbot control can embed a published Power Virtual Agents bot of any kind in the Canvas app. Makers will first need to create and publish a bot on the Power Virtual Agents web app and then follow the steps by adding in to the Chatbot control.
+Add a Chatbot control in your canvas app to embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to help your end-users with a range of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-This opens big opportunities for automation to help end-users to get answers faster. For example, with AI chatbots, makers can create an extended tree of answers to support their users. With boosted conversations in Power Virtual Agents bots, a new feature on PVA, makers can create a number of prompts and then have a fallback to the generative AI support that gets answers from the specific source that maker provides (for example, documentation or public web site).
+
+
+As a maker you'll need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal) and then follow the steps by adding in to the Chatbot control. 
+
+
+Embed the Chatbot contorl in your canvas app and use Power Virtual Agent bot  reate an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents bots, you can create a number of prompts and then use generative AI support to provides answers from your specified sources such as enternal documentation or a public web site.
+
+With generative AI assistance, you have the ability to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
+
 
 Maker can design the control by giving it a suitable name, changing the size of the control window and positioning it anywhere on the screen.
 
 > [!IMPORTANT]
 >
 > - This is a preview feature. This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
-
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
