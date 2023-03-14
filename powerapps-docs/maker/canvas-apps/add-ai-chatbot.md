@@ -80,20 +80,16 @@ There are other properties such as the position on the screen and size of the wi
 
 ## Limitations
 
-1. The PVA bot must be published in order for it to be added to Power Apps via Chatbot control.
+- The Power Virtual Agents bot must be published to added it to a canvas app using the Chatbot control.
+- You can only embed a bot with no user authentication.
 
-2. Currently, you can only embed a bot with no user authentication.
+## See also
 
-## Recommended content
+- [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 
--  PVA documentation: [Microsoft Power Virtual Agents documentation - Power Virtual Agents \| Microsoft Learn](https://learn.microsoft.com/en-us/power-virtual-agents/)
+- [AI-based boosted conversations overview](https://learn.microsoft.com/en-us/power-virtual-agents/nlu-gpt-overview)
 
--  Quickstart \| Create your bot: [Power Virtual Agents preview quickstart (preview) - Power Virtual Agents \| Microsoft Learn](https://learn.microsoft.com/en-us/power-virtual-agents/preview/quickstart)
-
--  AI-based boosted conversations overview (preview): [AI-based boosted conversations overview (preview) - Power Virtual Agents \| Microsoft Learn](https://learn.microsoft.com/en-us/power-virtual-agents/nlu-gpt-overview)
-
--  Power Apps Copilot control: //insert link when Miti's documentation has a link
-
+- [Use the Copilot control](add-ai-copilot.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
