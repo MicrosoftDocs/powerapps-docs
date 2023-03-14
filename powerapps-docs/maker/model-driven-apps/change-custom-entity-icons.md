@@ -112,7 +112,7 @@ See the [Developer tools for Microsoft Dataverse](../../developer/data-platform/
 
 ## Next steps
 
-[Create a table](/powerapps/maker/model-driven-apps/data-platform-create-entity)<br />
+[Create a custom table](../data-platform/data-platform-create-entity.md)<br />
 [Edit a table](../data-platform/edit-entities.md)
 
 
