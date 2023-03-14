@@ -14,7 +14,7 @@ searchScope:
 ---
 # Request a Power Apps license
 
-End users can request a Power Apps license from their admin directly in the product.
+You can request a Power Apps license from your admin directly using Power Apps.
 
 ## Request a license
 If you don't have a license and are trying to open a Power Apps app, you'll see the options in the following image. Select **Request license** to submit a license request to your admin.
