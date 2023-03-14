@@ -1306,7 +1306,7 @@
           href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Understanding app navigation
           href: ./model-driven-apps/app-navigation.md
-        - name: Work with pages (preview)
+        - name: Work with pages
           href: ./model-driven-apps/create-remove-pages.md
         - name: Manage app settings
           href: ./model-driven-apps/app-properties.md         
