@@ -73,8 +73,8 @@ There are two main properties: Schema name and Header label
 
 - **Header label**: How you want your bot be called and visible to your end users. If nothing is entered, the control defaults to **Chatbot**.
 
-> [!div class="mx-imgBorder"]
-> ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
+  > [!div class="mx-imgBorder"]
+  > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
 
 There are other properties such as the position on the screen and size of the window. You can use either these fields to adjust the look of your control, or you can adjust in directly on the screen by moving it around and resizing the window.
 
