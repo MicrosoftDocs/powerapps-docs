@@ -1,6 +1,6 @@
 ---
 title: Build apps through conversation
-description: Build apps through conversation.
+description: Build apps through conversation with AI.
 author: mduelae
 ms.topic: conceptual
 ms.custom: 
@@ -26,11 +26,12 @@ With Power Apps you'll get in-app guidance using natural language processing to 
 
 The AI assistant is available from the Power Apps Home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
-![Graphical user interface  application Description automatically generated](media/image1.png)
+> [!div class="mx-imgBorder"]
+> ![Tell the AI assistant the information you want to track in your app.](media/create-app-using-ai-1.png)
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
+> - This is a preview feature. This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
@@ -40,19 +41,17 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 >
 > - This capability  may be subject to usage limits or capacity throttling.
 
->[!NOTE]
->
-> This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 
 ## Step 1: Create an app with the help of AI
 
 To help you get started, let's build an app to track housekeeping tasks for a hotel.
 
-1.  Sign in to Power Apps at <https://make.powerapps.com>.
+1. Sign in to Power Apps at <https://make.powerapps.com>.
 
-2.  In the text box enter **hotel housekeeping**.
+2. In the text box enter **hotel housekeeping**.
 
-![](media/image2.png)
+   > [!div class="mx-imgBorder"]
+   > ![Describle your app.](media/describe-your-app.png)
 
 3. A Dataverse table with data that includes typical hotel housekeeping tasks is created for you.
 
@@ -68,9 +67,9 @@ Based on what you described, AI will generate a table for your app. The followin
 
 4. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, such as remove room type column.
 
-5\. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
+5. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
 
-![Graphical user interface Description automatically generated with medium confidence](media/image3.png)
+![Review the table for your app.(media/table-created.png)
 
 ## Step 3: Make edits
 
@@ -78,14 +77,15 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 1. In the **Copilot** text box enter, **Add columns to track start and end time**.
 
-![Graphical user interface  application Description automatically generated](media/image4.png)
+   > [!div class="mx-imgBorder"]
+   > ![Enter text to tell Copilot how you want to edit the table.](media/add-column.png)
 
 2. **Copilot** has added two new columns called, **Start Time** and **End Time**.
 
-![Graphical user interface  application Description automatically generated](media/image5.png)
+   > [!div class="mx-imgBorder"]
+   > ![Example of columns that Copilot created.](media/column-created.png)
 
-You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room.
 
-3. When you're ready to create your app, select **Create app**.
+3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
