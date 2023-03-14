@@ -18,8 +18,6 @@
     href: ../whats-new.md
   - name: System requirements, limits, and configuration
     href: ../limits-and-config.md
-  - name: Request a Power Apps license
-    href: ../user/request-license.md
   - name: "Learning catalog"
     items:
     - name: "Learning catalog"
@@ -41,6 +39,8 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
+  - name: Request a Power Apps license
+    href: ../user/request-license.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
