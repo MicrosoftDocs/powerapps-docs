@@ -735,7 +735,7 @@
           - name: CountRows
             href: /power-platform/power-fx/reference/function-table-counts
           - name: Data types
-            href: /power-platform/power-fx/reference/data-types
+            href: /power-platform/power-fx/data-types
           - name: DataSourceInfo
             href: /power-platform/power-fx/reference/function-datasourceinfo
           - name: Date
