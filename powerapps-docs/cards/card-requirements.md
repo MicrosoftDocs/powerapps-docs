@@ -35,8 +35,8 @@ The table below shows the environment regions cards are supported in.
 | India | Yes |
 | Canada | Yes |
 | United Kingdom | Yes |
-| Germany | No |
-| Switzerland | No |
+| Germany | Yes |
+| Switzerland | Yes |
 | United Arab Emirates | No |
 | South Africa | No |
 | Korea | No |

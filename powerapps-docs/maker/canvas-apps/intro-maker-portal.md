@@ -75,7 +75,7 @@ You can also unpin and item by selecting the more button and then select **Unpin
 
 ### Discover all 
 
-To see all your your Power Apps, from the left navigation pane, selct **More** > **Discover all**. 
+To see all your your Power Apps, from the left navigation pane, select **More** > **Discover all**. 
 
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")

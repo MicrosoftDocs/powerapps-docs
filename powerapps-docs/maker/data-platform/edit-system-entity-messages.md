@@ -35,7 +35,7 @@ The default display name of some system tables, such as account and contact tabl
 ## Add a message to a system table
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) (make.powerapps.com).
-1. Go to **Solutions**, open the solution that has the table you want, and then open the table.
+1. Go to **Solutions**, open the solution that has the table you want, and then open the table. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. In the **Customizations** area, select **Messages**.
    :::image type="content" source="media/open-messages-area.png" alt-text="Table messages area":::
 1. Select the message you want, and then select **Add**.
