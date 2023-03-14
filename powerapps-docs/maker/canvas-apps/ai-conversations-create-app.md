@@ -27,7 +27,7 @@ With Power Apps you'll get in-app guidance using natural language processing to 
 The AI assistant is available from the Power Apps Home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
 > [!div class="mx-imgBorder"]
-> ![Tell the AI assistant the information you want to track in your app.](media/create-app-using-ai-1.png)
+> ![Tell the AI assistant the information you want to track in your app.](media/artificial-intelligence/create-app-using-ai-1.png)
 
 > [!IMPORTANT]
 >
@@ -51,7 +51,7 @@ To help you get started, let's build an app to track housekeeping tasks for a ho
 2. In the text box enter **hotel housekeeping**.
 
    > [!div class="mx-imgBorder"]
-   > ![Describle your app.](media/describe-your-app.png)
+   > ![Describle your app.](media/artificial-intelligence/describe-your-app.png)
 
 3. A Dataverse table with data that includes typical hotel housekeeping tasks is created for you.
 
@@ -69,7 +69,8 @@ Based on what you described, AI will generate a table for your app. The followin
 
 5. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
 
-![Review the table for your app.(media/table-created.png)
+   > [!div class="mx-imgBorder"]
+   > ![Review the table for your app.(media/artificial-intelligence/table-created.png)
 
 ## Step 3: Make edits
 
@@ -78,12 +79,12 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 1. In the **Copilot** text box enter, **Add columns to track start and end time**.
 
    > [!div class="mx-imgBorder"]
-   > ![Enter text to tell Copilot how you want to edit the table.](media/add-column.png)
+   > ![Enter text to tell Copilot how you want to edit the table.](media/artificial-intelligence/add-column.png)
 
 2. **Copilot** has added two new columns called, **Start Time** and **End Time**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example of columns that Copilot created.](media/column-created.png)
+   > ![Example of columns that Copilot created.](media/artificial-intelligence/column-created.png)
 
 
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
