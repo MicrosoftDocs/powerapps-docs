@@ -70,7 +70,7 @@ Based on what you described, AI will generate a table for your app. The followin
 5. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
 
    > [!div class="mx-imgBorder"]
-   > ![Review the table for your app.(media/artificial-intelligence/table-created.png)
+   > ![Review table for your app.](media/artificial-intelligence/table-created.png)
 
 ## Step 3: Make edits
 
