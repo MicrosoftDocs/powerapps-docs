@@ -390,10 +390,6 @@ No. Unlike [Bypass Synchronous Logic](#bypass-synchronous-logic), no special pri
 
 No. The parameter isn't passed through to any operations performed by plug-ins that are registered for the events that occur because of requests from your client application. If you want to bypass flows for operations performed by plug-ins, you must use the `SuppressCallbackRegistrationExpanderJob` optional parameter in your plug-in code.
 
-#### Can I create a plug-in that block all flows from being triggered for a given event?
-
-Yes, but we don't recommend you do this. This plug-in won't prevent people from creating flows using the triggers for these events, their flows will never be triggered, leading to confusion.
-
 
 ### See also
 
