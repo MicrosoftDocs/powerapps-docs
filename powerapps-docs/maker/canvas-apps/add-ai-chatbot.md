@@ -24,6 +24,9 @@ Add a Chatbot control in your canvas apps and embed a published [Power Virtual A
 
 With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chabots, you have the ability to use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
 
+> [!div class="mx-imgBorder"]
+> ![Sample Chabot control in a canvas app.](media/chatbot-control/ai-chatbot-control-1.png)
+
 
 > [!IMPORTANT]
 >
@@ -50,11 +53,13 @@ As a maker you can design the control by giving it a suitable name, change the s
 
 1. First of all, you need to turn on the feature. Go Settings – Upcoming features – Chatbot component. Move toggle to "on". Close the Setting window.
 
-![](media/image2.png)
+   > [!div class="mx-imgBorder"]
+   > !![Turn on Chatbot control.](media/chatbot-control/ai-chatbot-control-2.png)
 
 2. Add control to your screen by finding the control name - Chatbot (preview) - under the "Input" section of the controls' list. The placeholder Chatbot window will be placed on your screen.
 
-![](media/image3.png)
+   > [!div class="mx-imgBorder"]
+   > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
 3. To connect your bot, you need to insert the bot's Schema name to the control Property panel. If you don't have any published bots yet, go to the PVA page and create a bot. You can create any bot: an AI bot or a new generative AI enriched PVA bot. Once you publish it, you will have a Schema name that you can add to the control properties.
 
@@ -68,7 +73,8 @@ Schema name – is the property you use to connect your published PVA bot to the
 
 Header label – is how you want your bot be called and visible to your end users. If nothing is entered, the control defaults to "Chatbot".
 
-![](media/image4.png)
+> [!div class="mx-imgBorder"]
+> ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
 
 There are other properties such as the position on the screen and size of the window. You can use either these fields to adjust the look of your control, or you can adjust in directly on the screen by moving it around and resizing the window.
 
