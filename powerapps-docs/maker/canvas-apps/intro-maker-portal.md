@@ -51,7 +51,7 @@ Legend:
 3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 4. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in to the new navigation experience the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
-6. **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
+6. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
 7. **Power Platform**: Explore other Power Platform products or service.
 
 ### Pin and unpin
@@ -158,7 +158,7 @@ In Power Apps, you can create and run these types of apps:
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 - **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
 
-In addition, Power Apps also allows you to create Power Pages website. More information: [What is Power Pages](/power-pages/introduction).
+In addition, Power Apps also allows you to create Power Pages websites. More information: [What is Power Pages](/power-pages/introduction).
 
 If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 
