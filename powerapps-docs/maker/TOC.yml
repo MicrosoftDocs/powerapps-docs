@@ -6,6 +6,8 @@
     href: ../powerapps-overview.md
   - name: Sign up for 30-day trial version
     href: signup-for-powerapps.md
+  - name: Request a Power Apps license
+    href: ../user/request-license.md
   - name: Sign up for Developer Plan
     href: developer-plan.md
   - name: Power Apps preview program
@@ -39,8 +41,6 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: Request a Power Apps license
-    href: ../user/request-license.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
