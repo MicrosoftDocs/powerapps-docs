@@ -2,7 +2,6 @@
 title: Add a chatbot control to your canvas app
 description: A control that enables embedding of any published Power Virtual Agent (PVA) bot into Power Apps for end-user.
 author: mduelae
-
 ms.topic: conceptual
 ms.custom: 
   - canvas
@@ -21,7 +20,7 @@ contributors:
 
 # Add a chatbot control to your canvas app
 
-A Chatbot control can embed a published PVA bot of any kind in the Canvas app. Makers will first need to create and publish a bot on the PVA web app and then follow the steps by adding in to the Chatbot control.
+A Chatbot control can embed a published Power Virtual Agents bot of any kind in the Canvas app. Makers will first need to create and publish a bot on the Power Virtual Agents web app and then follow the steps by adding in to the Chatbot control.
 
 This opens big opportunities for automation to help end-users to get answers faster. For example, with AI chatbots, makers can create an extended tree of answers to support their users. With boosted conversations in Power Virtual Agents bots, a new feature on PVA, makers can create a number of prompts and then have a fallback to the generative AI support that gets answers from the specific source that maker provides (for example, documentation or public web site).
 
@@ -29,7 +28,8 @@ Maker can design the control by giving it a suitable name, changing the size of 
 
 > [!IMPORTANT]
 >
-> - This is a preview feature.
+> - This is a preview feature. This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
+
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
@@ -39,9 +39,6 @@ Maker can design the control by giving it a suitable name, changing the size of 
 >
 > - This capability  may be subject to usage limits or capacity throttling.
 
->[!NOTE]
->
-> This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 
 ## Steps to add a control with a bot
 
