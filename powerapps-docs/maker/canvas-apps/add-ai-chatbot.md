@@ -20,18 +20,10 @@ contributors:
 
 # Add a chatbot control to your canvas app
 
-Add a Chatbot control in your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) AI chatbot to help your end-users with a range of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
-
-As a maker you'll need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal) and then follow the steps by adding in to the Chatbot control. 
+Add a Chatbot control in your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to help your end-users with a range of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
 With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chabots, you have the ability to use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
 
-
-
-
-
-
-Maker can design the control by giving it a suitable name, changing the size of the control window and positioning it anywhere on the screen.
 
 > [!IMPORTANT]
 >
@@ -45,8 +37,16 @@ Maker can design the control by giving it a suitable name, changing the size of 
 >
 > - This capability  may be subject to usage limits or capacity throttling.
 
+## Prerequisites 
 
-## Steps to add a control with a bot
+- To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).
+- You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot. Once you publish it, you'll need the schema name to add it to the Chatbot control properties.  
+
+
+## Add a control with a bot
+
+As a maker you can design the control by giving it a suitable name, change the size of the control window, and position it anywhere on the screen.
+
 
 1. First of all, you need to turn on the feature. Go Settings – Upcoming features – Chatbot component. Move toggle to "on". Close the Setting window.
 
