@@ -61,17 +61,17 @@ As a maker you can design the control by giving it a suitable name, change the s
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
-3. To connect your bot, you need to insert the bot's Schema name to the control Property panel. If you don't have any published bots yet, go to the PVA page and create a bot. You can create any bot: an AI bot or a new generative AI enriched PVA bot. Once you publish it, you will have a Schema name that you can add to the control properties.
+3. To connect your bot, you need to insert the bot's Schema name to the control Property panel. 
 
-4. You can change the position of the control, or its name, or its size to your liking.
+5. You can change the position of the control, or its name, or its size to your liking.
 
 ## Key properties 
 
 There are two main properties: Schema name and Header label
 
-Schema name – is the property you use to connect your published PVA bot to the Chatbot control. You take it from the PVA side, and once added – your bot is embedded to your app. You must use this property to connect your bot.
+- **Schema name**: The property you use to connect your published PVA bot to the Chatbot control. You take it from the PVA side, and once added – your bot is embedded to your app. You must use this property to connect your bot.
 
-Header label – is how you want your bot be called and visible to your end users. If nothing is entered, the control defaults to "Chatbot".
+- **Header label**: How you want your bot be called and visible to your end users. If nothing is entered, the control defaults to **Chatbot**.
 
 > [!div class="mx-imgBorder"]
 > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
