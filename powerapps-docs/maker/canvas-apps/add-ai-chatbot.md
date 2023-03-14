@@ -42,8 +42,8 @@ With AI chatbots, you can create an extended tree of answers to support your use
 
 ## Prerequisites 
 
-- To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).
-- You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot. Once you publish it, you'll need the schema name to add it to the Chatbot control properties.  
+- To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
+- You need the schema name from the bot details settings. The schema name is used add it to the Chatbot control properties.  
 
 
 ## Add a control with a bot
