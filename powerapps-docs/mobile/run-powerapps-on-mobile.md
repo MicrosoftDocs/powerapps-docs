@@ -272,9 +272,10 @@ Mobile users have an option to sign in as a guest user and choose a different re
 ![Choose a different region.](media/Select_user_region_mobile_app.jpg "Choose a region when signing in to Power Apps mobile app")
  
  More information:
- - [Azure Government documentation](https://learn.microsoft.com/en-us/azure/azure-government/)
- - [Dynamics 365 US Government](https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
-  - [Power Platform and Dynamics 365 apps in China](https://learn.microsoft.com/en-us/power-platform/admin/about-microsoft-cloud-china)
+ -[Azure Government documentation](https://learn.microsoft.com/en-us/azure/azure-government/)
+ -[Dynamics 365 US Government](https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+  -[Power Platform and Dynamics 365 apps in China](https://learn.microsoft.com/en-us/power-platform/admin/about-microsoft-cloud-china)
+  - [Required privileges](/dynamics365/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#required-privileges)
   
 ## Privacy notice
 Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 
