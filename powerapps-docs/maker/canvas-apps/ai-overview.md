@@ -57,8 +57,12 @@ The following are requirements to access to the waitlist for this preview:
 
 - Licensed customers will be prioritized for access.  
 
- AI Builder must be enabled for your environment to leverage the AI models or controls leveraging AI models.
+- AI Builder must be enabled for your environment to leverage the AI models or controls leveraging AI models:
 
+    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
+    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Features**.
+
+    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
 
