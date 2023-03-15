@@ -34,7 +34,7 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 > [!IMPORTANT]
 >
-> - This is a preview feature. This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
+> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
@@ -43,14 +43,13 @@ You can design the Chabot control by giving it a name, change the size of the co
 > - This capability is in process of rolling out, and may not be available in your region yet.
 >
 > - This capability  may be subject to usage limits or capacity throttling.
-> 
-> - For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
 
 
 ## Prerequisites 
 
 - To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
 - You need the bot schema name to add it to the Chatbot control properties. The get the schema name, in Power Virtual Agents, open the bot you want to use. In the navigation menu, go to **Settings** > **Details**. Select the **Advanced** tab and note the **Schema name**.
+- For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
 
 
 ## Turn on the Chatbot control
@@ -93,7 +92,6 @@ Use the other properties or move the control on the screen to set position and s
 
 ## Limitations
 
-- The Power Virtual Agents bot must be published so it can be added to canvas apps using the Chatbot control.
 - You can only embed a bot with no user authentication.
 
 ## See also
