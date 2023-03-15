@@ -39,7 +39,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Prerequisites
 
-For general requirements for AI features, see [AI overview (preview)](ai-overview.md)
+Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
 
 1. If you don't already have a Power Apps license, [sign up](/power-apps/maker/signup-for-powerapps), and then sign in to [Power Apps](https://make.powerapps.com). 
 
