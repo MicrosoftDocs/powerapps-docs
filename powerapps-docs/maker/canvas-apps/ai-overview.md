@@ -30,10 +30,11 @@ To learn how to use the new AI features in Power Apps, see:
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
 - [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 
 > [!IMPORTANT]
 >
-> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
+> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
@@ -44,21 +45,19 @@ To learn how to use the new AI features in Power Apps, see:
 > - This capability  may be subject to usage limits or capacity throttling.
 
 
-## Prerequisites for the preview  
+## Prerequisites for the AI preview 
 
-AI Builder must be enabled for your environment. Specifically, enable the AI Builder preview feature:
+The following are requirements to access to the waitlist for this preview:
 
-1. AI Builder must be enabled for your environment. Specifically, enable the AI Builder preview feature:
+- Your environment must be in US region. 
 
-    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+- Your account must have en-us browser language. 
 
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Features**.
+- Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
 
-    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
+- Licensed customers will be prioritized for access.  
 
-3. Open a [canvas app for editing](edit-app.md), on the command bar, select **Settings**.
-2. Select **Upcoming features**.
-3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
+To leverage the AI models, or controls leveraging AI models, AI Builder must be enabled for your environment.  
 
 
 
