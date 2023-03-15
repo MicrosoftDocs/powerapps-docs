@@ -133,7 +133,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Calculated and rollup fields**: Calculated and rollup fields that are part of rows synced to the client will not be re-evaluated by the client. The re-evaluation will happen on the server when the updated row is synced.
 
-- **Mapped fields**: When you run an app in offline mode, mapped field aren’t prepopulated when you create a new record from a table that has fields mapped to another table. 
+- **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table. 
 
 ## Tips
 
