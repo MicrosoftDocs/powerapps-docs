@@ -49,15 +49,15 @@ To learn how to use the new AI features in Power Apps, see:
 
 The following are requirements to access to the waitlist for this preview:
 
-- Your environment must be in US region. 
+- Your environment must be in United States region. 
 
-- Your account must have en-us browser language. 
+- Your account must have **en-us** browser language. 
 
 - Have a [Microsoft Dataverse database](/power-platform/admin/create-database) in your environment.  
 
 - Licensed customers will be prioritized for access.  
 
-To leverage the AI models, or controls leveraging AI models, AI Builder must be enabled for your environment.  
+ AI Builder must be enabled for your environment to leverage the AI models or controls leveraging AI models.
 
 
 
