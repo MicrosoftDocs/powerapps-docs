@@ -94,9 +94,14 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
 
 
-## Turn off AI assistant
+## Disable Copilot
 
-TBD
+You need to have administrator access to disable this feature for your tenant. 
 
+I
+
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. Select **Settings** > **Tenant settings** in the left-side navigation pane. 
+3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
