@@ -46,7 +46,7 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 
 ## Prerequisites
 
-For general information about prerequisites for AI features, see [AI overview (preview)](ai-overview.md)
+For information about prerequisites for AI features, see [AI overview (preview)](ai-overview.md)
 
 
 ## Step 1: Create an app with the help of AI
