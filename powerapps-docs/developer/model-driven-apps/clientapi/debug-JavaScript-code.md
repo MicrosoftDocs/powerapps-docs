@@ -121,16 +121,16 @@ To debug JavaScript on Windows, you must first install the prerequisite applicat
 
 1. Enable Developer Mode.
 
-   a. Open Windows Settings > Privacy & security > For developers.
-   b. Enable **Developer Mode**.
+   1. Open **Windows Settings** > **Privacy & security** > **For developers**.
+   1. Enable **Developer Mode**.
 
 1. Enable Device Portal.
 
-   a. Open Windows Settings > Privacy & security > For developers.
-   b. Enable **Device Portal**.
-   c. Click **Yes** to install Windows Developer Mode package when prompted.
-   d. Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it's `https://localhost:50080`  
-   e. For debugging Power Apps / Field Service Mobile locally, you can continue with **Restrict to loopback connections only** enabled and **Authentication** disabled (otherwise you need to set a user password)
+   1. Open **Windows Settings** > **Privacy & security** > **For developers**.
+   1. Enable **Device Portal**.
+   1. Click **Yes** to install Windows Developer Mode package when prompted.
+   1. Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it's `https://localhost:50080`  
+   1. For debugging Power Apps / Field Service Mobile locally, you can continue with **Restrict to loopback connections only** enabled and **Authentication** disabled (otherwise you need to set a user password)
 
    Here's a screenshot summary of the recommended developer settings:
 
