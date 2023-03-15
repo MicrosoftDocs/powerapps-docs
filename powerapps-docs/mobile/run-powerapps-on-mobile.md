@@ -249,7 +249,7 @@ Select the site map ![Site map icon.](media/pa_mobile_sitemap_icon.png "Site map
 
 ## Other mobile apps
 
-The table below outlines which mobile app you can use to run your app.
+The table below outlines which other mobile apps you can use to run your app.
 
 | **Mobile App** | **Apps you can run** |
 |-------------------------|-------------------------|
@@ -258,6 +258,10 @@ The table below outlines which mobile app you can use to run your app.
 | [Dynamics 365 for phone and tablets](/dynamics365/mobile-app/overview) | <ul><li>[Microsoft Dynamics 365 Customer Engagement (on-premises)](/dynamics365/customerengagement/on-premises/overview)</li> <b>Note</b>: Dynamics 365 for Tablets is deprecated, and won't be supported in 2023. |
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
+  
+## Regional availability of Power Apps Mobile app
+  
+You have an option to sign in as a guest user and choose a different region in Power Apps Mobile app.
   
 ## Privacy notice
 Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 
