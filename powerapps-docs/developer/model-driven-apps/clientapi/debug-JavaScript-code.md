@@ -23,6 +23,11 @@ Custom logic using JavaScript in model-driven apps are contained within JavaScri
 
 In a model-driven app viewed within a web browser, you can use developer tools that all modern browsers provide. With these tools you can locate the JavaScript libraries loaded in the model-driven application, set break points and debug your code using common methods.
 
+Model-driven apps viewed using mobile apps on Android, or the Windows desktop app require some additional steps. See:
+
+- [Debug JavaScript in mobile apps on Android](#debug-javascript-in-mobile-apps-on-android)
+- [Debug JavaScript in the Windows desktop app](#debug-javascript-in-the-windows-desktop-app)
+
 > [!NOTE]
 > Because of the way that the libraries are added to the page, you may not easily find the library representing the JavaScript Web resource. These libraries may not be listed in the file list or in the hierarchy of source files.
 > 
