@@ -268,7 +268,7 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create an app using AI (preview)
+    - name: Create an app using AI Copilot (preview)
       items:
       - name: Overview
         href: ./canvas-apps/ai-overview.md
