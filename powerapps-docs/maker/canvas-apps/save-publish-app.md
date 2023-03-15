@@ -61,6 +61,21 @@ To publish the most recent version, highlight the version and select ellipsis (.
 > - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
 > - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here](performance-tips.md#enable-preload-app-for-enhanced-performance).
 
+## Showing toast notifications on app availability
+
+Recently published changes may not be immediately available when an app is launched, depending on the complexity of the app. When we detect this, we will inform end-users with a toast notification that says 'A new version of this app is coming. We'll let you know when it's available". When the published changes are ready, we will show an additional toast notification that says "You're using an old version of this app. Refresh to use the latest version", with a button for end-users to 'Refresh'.
+
+The following table shows the scenarios where this notification is available.
+
+| Scenario | Availability |
+| - | - |
+| Canvas app on web | Generally available |
+| Customized SharePoint Forms | Not available |
+| Canvas app embedded in Teams | Not available | 
+| Canvas app embedded in PowerBI | Not available |
+| Power Apps web part | Not available |
+| Canvas app embedded in iframe | Generally available |
+
 ## Next steps
 
 * Find and run the app in a [browser](../../user/run-app-browser.md) or on a [phone](../../mobile/run-powerapps-on-mobile.md).
