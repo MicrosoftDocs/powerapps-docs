@@ -112,19 +112,20 @@ More information: [Microsoft Edge: Remotely debug Android devices](/microsoft-ed
 
 ## Debug JavaScript in the Windows desktop app
 
-To debug JavaScript on Windows, you first must make sure of the following requirements:
+To debug JavaScript on Windows, you must first install the prerequisite applications.
 
-### Prerequisites
-
-1. You must have a WebView2 runtime installed on your machine with a minimum version of 111. [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)
-1. You must install the Remote Tools for Microsoft Edge from the Microsoft Store: [Remote Tools for Microsoft Edge - Microsoft Store Apps](https://apps.microsoft.com/store/detail/remote-tools-for-microsoft-edge/9P6CMFV44ZLT)
+- You must have a WebView2 runtime installed on your machine with a minimum version of 111. [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)
+- You must install the Remote Tools for Microsoft Edge from the Microsoft Store: [Remote Tools for Microsoft Edge - Microsoft Store Apps](https://apps.microsoft.com/store/detail/remote-tools-for-microsoft-edge/9P6CMFV44ZLT)
 
 ### 1. Configure your Windows device
 
 1. Enable Developer Mode.
+
     a. Open Windows Settings > Privacy & security > For developers.
     b. Enable **Developer Mode**.
+
 1. Enable Device Portal.
+
     a. Open Windows Settings > Privacy & security > For developers.
     b. Enable **Device Portal**.
     c. Click **Yes** to install Windows Developer Mode package when prompted.
