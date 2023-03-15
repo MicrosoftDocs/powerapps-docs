@@ -1,6 +1,6 @@
 ---
 title: Convert rules to expressions
-description: Learn about how convert rules to expressions in canvas apps.
+description: Learn about how to convert rules to expressions in canvas apps.
 author: gregli-msft
 
 ms.topic: conceptual
@@ -29,7 +29,7 @@ You'll have a few months to convert the rules into expressions using a converter
 
 ## Convert rules
 
-When you edit an app that has rules, you'll receive a prompt to convert them. The converter assists in migrating the rules within your app to a format that is compatible with future versions of Power Apps Studio. By utilizing the rules conditions in your app, the converter substitutes the references with corresponding inline expressions.
+When you edit an app that has rules, you'll receive a prompt to convert them. The converter helps in migrating the rules within your app to a format that is compatible with future versions of Power Apps Studio. By utilizing the rules conditions in your app, the converter substitutes the references with corresponding inline expressions.
 
 Follow these steps to convert rules in your app:
 
@@ -39,7 +39,7 @@ Follow these steps to convert rules in your app:
    > [!div class="mx-imgBorder"] 
    > ![Convert rules.](./media/working-with-rules/convert-rules.png)
 
-3. A dialog opens which shows all the rules which will be converted. The rule name is shown on the left, and its associated conditional expression is shown on the right. On the **Convert rules** dialog box, select **Convert now**.
+3. A dialog opens, which shows all the rules which will be converted. The rule name is shown on the left, and its associated conditional expression is shown on the right. On the **Convert rules** dialog box, select **Convert now**.
 
    > [!div class="mx-imgBorder"] 
    >![Convert now.](./media/working-with-rules/rules-1.png)
