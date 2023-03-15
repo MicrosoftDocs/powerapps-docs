@@ -19,7 +19,7 @@ contributors:
   - mduelae
 ---
 
-# AI overview (preview)
+# AI Copilot overview (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
