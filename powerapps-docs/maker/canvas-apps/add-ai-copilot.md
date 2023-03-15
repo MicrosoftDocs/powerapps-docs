@@ -35,7 +35,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Prerequisites
 
-- Follow the prerequisites for AI features: [AI overview (preview)](ai-overview.md).
+- Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md).
 
 
 ## Enable Copilot control for your app:
