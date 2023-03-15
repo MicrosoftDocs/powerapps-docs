@@ -39,24 +39,15 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Prerequisites
 
-Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
+- Follow the prerequisites for AI features: [AI overview (preview)](ai-overview.md).
+- Enable Copilot control for your app:
 
-1. If you don't already have a Power Apps license, [sign up](/power-apps/maker/signup-for-powerapps), and then sign in to [Power Apps](https://make.powerapps.com). 
+    1. Sign in to [Power Apps](https://make.powerapps.com) and open a [canvas app for editing](edit-app.md), on the command bar, select **Settings**.
+    2. Select **Upcoming features**.
+    3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
 
-2. AI Builder must be enabled for your environment. Specifically, enable the AI Builder preview feature:
-
-    1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-
-    2. In the admin center, go to **Environments** &gt; *\[select an environment\]* &gt; **Settings** &gt; **Features**.
-
-    3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
-
-3. Sign in to [Power Apps](https://make.powerapps.com) and open a [canvas app for editing](edit-app.md), on the command bar, select **Settings**.
-2. Select **Upcoming features**.
-3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Turn on Copilot control.](media/copilot/copilot-1.png)
+       > [!div class="mx-imgBorder"]
+       > ![Turn on Copilot control.](media/copilot/copilot-1.png)
 
 ## Add the Copilot control
 
