@@ -46,7 +46,7 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 
 ## Prerequisites
 
-For information about prerequisites for AI features, see [AI overview (preview)](ai-overview.md)
+Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
 
 
 ## Step 1: Create an app with the help of AI
@@ -96,6 +96,6 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
 
-
+ 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
