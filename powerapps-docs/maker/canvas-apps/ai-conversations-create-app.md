@@ -24,7 +24,7 @@ contributors:
 
 Create Power Apps with the help of AI. Simply describe the app that you want to build, and AI will design it for you.
 
-With Power Apps you'll get in-app guidance using natural language processing to help you build your app.
+With the **Copilot** feature in Power Apps you'll get in-app guidance using natural language processing to help you build your app.
 
 The AI assistant is available from the Power Apps Home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
@@ -96,12 +96,19 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 
 ## Disable Copilot
 
-You need to have administrator access to disable this feature for your tenant. 
+You need to have administrator access to disable the **Copilot** feature.
 
-I
+Follow these steps to disable **Copilot** for your tenant.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane. 
 3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
+
+Follow these steps to disable **Copilot** for your enviroment.
+
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. In the left-side navigation pane **Envioronmnet**.
+3. Select the envorment and on the command bar, select **Settings**.
+4. Set the toggle to **Off** for **Copilot**.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
