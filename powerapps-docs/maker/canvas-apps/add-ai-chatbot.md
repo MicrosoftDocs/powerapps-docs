@@ -18,11 +18,11 @@ contributors:
   - mduelae
 ---
 
-# Add a chatbot control to your canvas app (preview)
+# Add a chatbot control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
-Add a Chatbot control in your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
+Add a Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
 With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chabots you can use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
 
