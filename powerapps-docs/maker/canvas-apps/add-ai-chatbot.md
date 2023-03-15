@@ -43,7 +43,7 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 ## Prerequisites 
 
-- Follow the prerequisites for AI features: [AI overview (preview)](ai-overview.md)
+- Follow the prerequisites for AI features: [AI Copilot overview (preview)](ai-overview.md)
 - To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
 
 
