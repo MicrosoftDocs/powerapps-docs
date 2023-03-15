@@ -47,9 +47,9 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 ## Prerequisites 
 
+- Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
 - To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
 - You need the bot schema name to add it to the Chatbot control properties. The get the schema name, in Power Virtual Agents, open the bot you want to use. In the navigation menu, go to **Settings** > **Details**. Select the **Advanced** tab and note the **Schema name**.
-- Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
 
 
 ## Turn on the Chatbot control
