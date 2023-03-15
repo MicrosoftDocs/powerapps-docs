@@ -109,23 +109,22 @@ More information: [Microsoft Edge: Remotely debug Android devices](/microsoft-ed
 
 To debug JavaScript on Windows, you first must make sure of the following requirements:
 
-### Requirements
+### Prerequisites
 
-1. You must have a WebView2 runtime installed on your machine with a minimum version of 111  
-1. You must install the Remote Tools for Edge from the Microsoft Store: [Remote Tools for Microsoft Edge - Microsoft Store Apps](https://apps.microsoft.com/store/detail/remote-tools-for-microsoft-edge/9P6CMFV44ZLT)  
-1. You must have Developer mode enabled on your Windows device with Device Portal (see sub-section below to enable it)
+1. You must have a WebView2 runtime installed on your machine with a minimum version of 111. Download it here: [https://developer.microsoft.com/microsoft-edge/webview2/](https://developer.microsoft.com/microsoft-edge/webview2/)
+1. You must install the Remote Tools for Edge from the Microsoft Store: [Remote Tools for Microsoft Edge - Microsoft Store Apps](https://apps.microsoft.com/store/detail/remote-tools-for-microsoft-edge/9P6CMFV44ZLT)
 
 ### Configure your Windows device
 
 1. Enable Developer Mode
-   - Open Windows Settings > Privacy & security > For developers.
-   - Enable **"Developer Mode"**.
+    a. Open Windows Settings > Privacy & security > For developers.
+    b. Enable **Developer Mode**.
 1. Enable Device Portal
-   - Open Windows Settings > Privacy & security > For developers.
-   - Enable **"Device Portal"** 
-   - Click Yes to install Windows Developer Mode package when prompted. 
-   - Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it will be https://localhost:50080  
-   - For debugging Power Apps / Field Service Mobile locally, you can continue with "Restrict to loopback connections only" enabled and "Authentication" disabled (otherwise you need to set a user password)
+    a. Open Windows Settings > Privacy & security > For developers.
+    b. Enable **Device Portal**.
+    c. Click **Yes** to install Windows Developer Mode package when prompted.
+    d. Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it will be `https://localhost:50080`  
+    e. For debugging Power Apps / Field Service Mobile locally, you can continue with **Restrict to loopback connections only** enabled and **Authentication** disabled (otherwise you need to set a user password)
 
    Here is a screenshot summary of the recommended developer settings:
 
@@ -135,16 +134,16 @@ To debug JavaScript on Windows, you first must make sure of the following requir
 
 Configure the Power Apps or Field Service Windows desktop app for remote debugging.
 
-1. Use the **"Run" command** (shortcut is Windows + R) and use the following deeplink to launch the Windows app with special arguments.
-   - Power Apps: ms-apps://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging
-   - Field Service Mobile: ms-apps-fs://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging
+1. Use the **Run command** (shortcut is `Windows + R`) and use the following deeplink to launch the Windows app with special arguments.
+   - Power Apps: `ms-apps://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging`
+   - Field Service Mobile: `ms-apps-fs://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging`
 1. Use the Windows app and open a model-driven app.
-1. Open the Edge browser and navigate to edge://inspect
-   - Use the **"Connect to a remote Windows device" section** and connect to http://localhost:50080. It'll take a few seconds to connect, but you should see the organization URL.
+1. Open the Edge browser and navigate to `edge://inspect`.
+    a. Use the **"Connect to a remote Windows device" section** and connect to http://localhost:50080. It'll take a few seconds to connect, but you should see the organization URL.
 
-   :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in the DevTools screen":::
+      :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in the DevTools screen":::
 
-   - **Click "inspect"** and the DevTools will open.
+    a. **Click "inspect"** and the DevTools will open.
 
 ### See also
 
