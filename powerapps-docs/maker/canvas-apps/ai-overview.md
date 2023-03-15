@@ -45,7 +45,7 @@ To learn how to use the new AI features in Power Apps, see:
 > - This capability  may be subject to usage limits or capacity throttling.
 
 
-## Prerequisites for the AI preview 
+## Prerequisites for the AI features in Power Apps 
 
 The following are requirements to access to the waitlist for this preview:
 
