@@ -48,7 +48,7 @@ You can design the Chabot control by giving it a name, change the size of the co
 - You need the bot schema name to add it to the Chatbot control properties. The get the schema name, in Power Virtual Agents, open the bot you want to use. In the navigation menu, go to **Settings** > **Details**. Select the **Advanced** tab and note the **Schema name**.
 
 
-## Turn on Chatbot control
+## Turn on the Chatbot control
 
 With your [canvas app open for editing](edit-app.md):
 
@@ -63,21 +63,22 @@ With your [canvas app open for editing](edit-app.md):
 
 With your [canvas app open for editing](edit-app.md):
 
-1. On the app authoring menu, select **Insert** 
-3. With you canvas app open for editing, select Add control to your screen by finding the control name - Chatbot (preview) - under the "Input" section of the controls' list. The placeholder Chatbot window will be placed on your screen.
+1. On the app authoring menu, select **Insert**.
+2. Expand the **Input** menu and then select **Chatbot (preview**,)
+3. Place the chatbot control where you want to add it on the screen. 
 
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
-2. To connect your bot, you need to insert the bot's Schema name to the control Property panel. 
+2. In the Chatbot propertites pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
 
-3. You can change the position of the control, or its name, or its size to your liking.
+You can change the name, the position and sizie of the control.
 
-## Key properties 
+### Key properties 
 
 There are two main properties: Schema name and Header label
 
-- **Schema name**: The property you use to connect your published PVA bot to the Chatbot control. You take it from the PVA side, and once added – your bot is embedded to your app. You must use this property to connect your bot.
+- **Schema name**: The property you use to connect your published ower Virtual Agents bot to the Chatbot control. You take it from the PVA side, and once added – your bot is embedded to your app. You must use this property to connect your bot.
 
 - **Header label**: How you want your bot be called and visible to your end users. If nothing is entered, the control defaults to **Chatbot**.
 
