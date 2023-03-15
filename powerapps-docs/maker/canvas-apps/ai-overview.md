@@ -65,4 +65,20 @@ The following are requirements to access to the waitlist for this preview:
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
+## Disable Copilot
+
+For this preview, Copilot will be turn on by default. To disable it, you need to have administrator access.
+
+Follow these steps to disable **Copilot** for your tenant.
+
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. Select **Settings** > **Tenant settings** in the left-side navigation pane. 
+3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
+
+Follow these steps to disable **Copilot** for your enviroment.
+
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+2. In the left-side navigation pane **Envioronmnet**.
+3. Select the envorment and on the command bar, select **Settings**.
+4. Set the toggle to **Off** for **Copilot**.
 
