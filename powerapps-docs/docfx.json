@@ -111,6 +111,15 @@
           "PowerApps",
           "powerapps-docs",
           "dataverse-docs"
+        ],
+        "teams/**/*.md": [
+          "PowerApps",
+          "powerapps-docs",
+          "teams-docs"
+        ],
+        "maker/portals/**/*.md": [
+          "PowerApps",
+          "powerpages-docs"
         ]
       }
     },
