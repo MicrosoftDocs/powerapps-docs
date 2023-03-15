@@ -30,6 +30,7 @@ To learn how to use the new AI features in Power Apps, see:
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
 - [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
 - [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai) 
 
 
 > [!IMPORTANT]
