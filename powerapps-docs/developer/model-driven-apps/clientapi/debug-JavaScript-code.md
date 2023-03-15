@@ -134,15 +134,14 @@ Here is a screenshot summary of the recommended developer settings:
 Configure the Power Apps or Field Service Windows desktop app for remote debugging
 1.	Use the **“Run” command** (shortcut is Windows + R) and use the following deeplink to launch the Windows app with special arguments
       - Power Apps: ms-apps://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging
-      -	Field Service Mobile: ms-apps-fs://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging
+      - Field Service Mobile: ms-apps-fs://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging
 2.	Use the Windows app and open a model-driven app. 
 3.	Open the Edge browser and navigate to edge://inspect 
       - Use the **“Connect to a remote Windows device” section** and connect to http://localhost:50080. It’ll take a few seconds to connect, but you should see the organization URL.
       
-      :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in 
-       the DevTools screen":::
+      :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in the DevTools screen":::
       
-      -	**Click "inspect"** and the DevTools will open.
+      - **Click "inspect"** and the DevTools will open.
 
 
 ### See also
