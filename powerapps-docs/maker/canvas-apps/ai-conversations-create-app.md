@@ -97,21 +97,5 @@ If you want to make changes, use the **Copilot** panel to describe what you want
 3. You can continue editing the table by adding features such as room status, change rooms, or set priority levels for each room. When you're ready to create your app, select **Create app**.
 
 
-## Disable Copilot
-
-You need to have administrator access to disable the **Copilot** feature.
-
-Follow these steps to disable **Copilot** for your tenant.
-
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. Select **Settings** > **Tenant settings** in the left-side navigation pane. 
-3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
-
-Follow these steps to disable **Copilot** for your enviroment.
-
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. In the left-side navigation pane **Envioronmnet**.
-3. Select the envorment and on the command bar, select **Settings**.
-4. Set the toggle to **Off** for **Copilot**.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
