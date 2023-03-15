@@ -1,6 +1,6 @@
 ---
-title: Add copilot control to your canvas app
-description: Add copilot AI control in your canvas app.
+title: Add copilot control to a canvas app
+description: Add copilot AI control to your canvas app.
 author: mduelae
 ms.topic: conceptual
 ms.custom: 
@@ -18,7 +18,7 @@ contributors:
   - mduelae
 ---
 
-# Add the copilot control in your canvas app (preview)
+# Add the copilot control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
