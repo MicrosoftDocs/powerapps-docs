@@ -149,12 +149,11 @@ Use the **Run command** (shortcut is `Windows + R`) and use the following deep l
 
 1. Use the Windows app and open a model-driven app.
 1. Open the Microsoft Edge browser and navigate to `edge://inspect`.
-   
-   a. Use the **Connect to a remote Windows device** section and connect to `http://localhost:50080`. It takes a few seconds to connect, but you should see the organization URL.
+1. Use the **Connect to a remote Windows device** section and connect to `http://localhost:50080`. It takes a few seconds to connect, but you should see the organization URL.
 
    :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in the DevTools screen":::
 
-   a. Click **inspect** and the DevTools will open.
+1. Click **inspect** and the DevTools will open.
 
 ### See also
 
