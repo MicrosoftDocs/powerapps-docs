@@ -85,7 +85,7 @@ To see who has access to a row and their respective access level, complete the f
     :::image type="content" source="media/who-has-access.png" alt-text="Select who has access":::
 
 > [!NOTE]
-> The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security.md#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
+> The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
