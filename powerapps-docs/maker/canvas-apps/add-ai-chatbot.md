@@ -71,24 +71,24 @@ With your [canvas app open for editing](edit-app.md):
 
 2. In the Chatbot propertites pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
 
-    You can change the name, the position and sizie of the control.
+    You can change the name, the position, and size of the control.
 
 ### Key properties 
 
-There are two main properties: Schema name and Header label
+The following are the two main contorl properties: 
 
-- **Schema name**: The property you use to connect your published ower Virtual Agents bot to the Chatbot control. You take it from the PVA side, and once added – your bot is embedded to your app. You must use this property to connect your bot.
+- **Schema name**:  The schema name property must be entered to connect your published Power Virtual Agents bot to your canvas app. For more information on how to get the Schema name, see [Prerequisites](add-ai-chatbot.md#prerequisites) section in this article.
 
-- **Header label**: How you want your bot be called and visible to your end users. If nothing is entered, the control defaults to **Chatbot**.
+- **Header label**: This is the name of the bot that your end-user will see. If don't enter a header label, it will be **Chatbot**.
 
   > [!div class="mx-imgBorder"]
   > ![Add schema name.](media/chatbot-control/ai-chatbot-control-4.png)
 
-There are other properties such as the position on the screen and size of the window. You can use either these fields to adjust the look of your control, or you can adjust in directly on the screen by moving it around and resizing the window.
+Use the other properties or move the control on the screen to set position and size of the control on the screen. 
 
 ## Limitations
 
-- The Power Virtual Agents bot must be published to added it to a canvas app using the Chatbot control.
+- The Power Virtual Agents bot must be published so it can be added to canvas apps using the Chatbot control.
 - You can only embed a bot with no user authentication.
 
 ## See also
