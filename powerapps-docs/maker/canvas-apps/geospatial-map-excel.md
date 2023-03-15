@@ -39,7 +39,7 @@ Latitude of the pin | ItemsLatitudes | Required
 Color of the pin | ItemsColors | Optional
 Icon for the pin | ItemsIcons | Optional
 
-The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/functions/function-colors).
+The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](/power-platform/power-fx/reference/function-colors).
 
 You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
 

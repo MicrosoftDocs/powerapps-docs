@@ -4,7 +4,6 @@ description: Learn how to create and edit dashboards for model-driven apps
 ms.custom: ""
 ms.date: 04/08/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -26,9 +25,6 @@ search.app:
 ---
 # Create or edit model-driven app dashboards
 
-
-## Dashboard types
-
 Dashboards are collections of charts relating to Microsoft Dataverse tables.
 
 There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas where they have privileges.
@@ -47,7 +43,7 @@ Dashboards can be standard or interactive.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-1. Select **Solutions**, and then open the required solution.
+1. Select **Solutions** on the left navigation pane, and then open the required solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. On the toolbar select **New**, select **Dashboard**, and then choose one of the following layouts:
 
@@ -75,7 +71,7 @@ Dashboards can be standard or interactive.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Select **Solutions**, and then open the required solution.  
+1. Select **Solutions** on the left navigation pane, and then open the required solution. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. In the list of solution components, open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
