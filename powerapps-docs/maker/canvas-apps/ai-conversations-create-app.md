@@ -42,6 +42,8 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 > - This capability is in process of rolling out, and may not be available in your region yet.
 >
 > - This capability  may be subject to usage limits or capacity throttling.
+>  
+> - For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
 
 
 ## Step 1: Create an app with the help of AI
