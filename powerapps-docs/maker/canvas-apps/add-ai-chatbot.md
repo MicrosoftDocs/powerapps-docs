@@ -24,7 +24,7 @@ contributors:
 
 Add a Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chabots you can use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
+With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chatbots you can use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
 
@@ -62,7 +62,7 @@ With your [canvas app open for editing](edit-app.md):
 3. From the **Preview** tab, set the toggle for **Chatbot component** to **On**.
 
    > [!div class="mx-imgBorder"]
-   > !![Turn on Chatbot control.](media/chatbot-control/ai-chatbot-control-2.png)
+   > ![Turn on Chatbot control.](media/chatbot-control/ai-chatbot-control-2.png)
 
 ## Add a control with a bot
 
@@ -74,7 +74,7 @@ With your [canvas app open for editing](edit-app.md):
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
-2. In the Chatbot propertites pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
+2. In the Chatbot properties pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
 
     You can change the name, the position, and size of the control.
 
