@@ -50,7 +50,7 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 
 To help you get started, let's build an app to track housekeeping tasks for a hotel.
 
-1. Sign in to Power Apps at <https://make.powerapps.com>.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
 2. In the text box enter **hotel housekeeping**.
 

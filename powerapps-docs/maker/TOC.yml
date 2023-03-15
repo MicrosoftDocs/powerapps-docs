@@ -268,7 +268,7 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: Create apps using AI
+    - name: Create an app using AI (preview)
       items:
       - name: Overview
         href: ./canvas-apps/ai-overview.md
@@ -384,9 +384,9 @@
                 href: ./canvas-apps/add-screen-context-variables.md
               - name: Add a scrolling screen
                 href: ./canvas-apps/add-scrolling-screen.md
-              - name: Add a chatbot
+              - name: Add a chatbot (preview)
                 href: ./canvas-apps/add-ai-chatbot.md
-              - name: Add a copilot
+              - name: Add a copilot (preview)
                 href: ./canvas-apps/add-ai-copilot.md
               - name: Configure Office 365 screens
                 items:

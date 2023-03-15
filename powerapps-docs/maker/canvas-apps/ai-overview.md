@@ -23,13 +23,13 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Bringing the power of Copilot to both application makers and their end users. Now you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. The apps you create can have copilot-powered experiences built in from the first screen - so your users can discover insights in conversation instead of clicks. 
+Bringing the power of Copilot to both application makers and their end users. Now you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. The apps you create can have copilot-powered experiences built in from the first screen - so your users can discover insights in conversation instead of mouse-clicks.
 
 To learn how to use the new AI features in Power Apps, see:
 
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
-- [Add a chatbot control to a canvas app (preview)](add-ai-chatbot.md)
-- [Add the copilot control to a canvas app (preview)](add-ai-copilot.md)
+- [Add Chatbot control to a canvas app (preview)](add-ai-chatbot.md)
+- [Add Copilot control to a canvas app (preview)](add-ai-copilot.md)
 
 > [!IMPORTANT]
 >

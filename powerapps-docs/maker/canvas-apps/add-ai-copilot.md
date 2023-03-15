@@ -1,5 +1,5 @@
 ---
-title: Add copilot control to a canvas app
+title: Add Copilot control to a canvas app
 description: Add copilot AI control to your canvas app.
 author: mduelae
 ms.topic: conceptual
@@ -18,7 +18,7 @@ contributors:
   - mduelae
 ---
 
-# Add the copilot control to a canvas app (preview)
+# Add the Copilot control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -42,7 +42,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Prerequisites
 
-1. If you don't already have a Power Apps license, [sign up](/power-apps/maker/signup-for-powerapps), and then sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
+1. If you don't already have a Power Apps license, [sign up](/power-apps/maker/signup-for-powerapps), and then sign in to [Power Apps](https://make.powerapps.com). 
 
 2. AI Builder must be enabled for your environment. Specifically, enable the AI Builder preview feature:
 
