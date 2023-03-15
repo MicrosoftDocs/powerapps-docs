@@ -33,7 +33,7 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 
 > [!IMPORTANT]
 >
-> - This is a preview feature. This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
+> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
@@ -42,8 +42,11 @@ The AI assistant is available from the Power Apps Home screen. You can tell the 
 > - This capability is in process of rolling out, and may not be available in your region yet.
 >
 > - This capability  may be subject to usage limits or capacity throttling.
->  
-> - For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
+
+
+## Prerequisites
+
+For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
 
 
 ## Step 1: Create an app with the help of AI
