@@ -40,7 +40,7 @@ For more information, go to the following articles:
 
 ## Create an app
 
-1. On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane.
+1. On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md)
    > [!NOTE]   

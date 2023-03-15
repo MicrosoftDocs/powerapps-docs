@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 01/30/2023
+ms.date: 02/08/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -43,9 +43,9 @@ More information: [Create a custom table](../data-platform/data-platform-create-
 
 ### Add the timeline component to a form
 
-1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
-1. Select **Tables**, open the table you want, and then select the **Forms** area.
-1. Open the form where you want to add or configure a timeline.
+1. Sign into [Power Apps](https://make.powerapps.com).
+1. Select **Tables** on the left navigation pane, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area, and then open the form where you want to add or configure a timeline.
 1. In the form designer, select **Components** from the left navigation, and then scroll down to the **Timeline** component on the left side. Drag and drop it into a section on the form.
    ![Adding or removing a timeline from an entity form.](media\timeline-add-or-remove-entity-from-form-1b.png "Adding or removing a timeline from an entity form")
 1. Make the changes you want to the timeline settings. More information: [Configure the timeline component](#configure-the-timeline-component)
@@ -226,8 +226,6 @@ You can send and receive records with images, but they won't display when the re
    This email has been blocked due to potentially harmful content. View full email content.
 3. When you select the message, the warning goes away, and the image appears.
 
-If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity) for more information.
-
 #### Enable “What you’ve missed” summary
 
 **What you’ve missed** helps you stay on top of updates and changes made to records by displaying updates at the top of the timeline when you access a record.
@@ -316,11 +314,7 @@ Based on the activity type, you can also enable other command actions. For examp
 You can also move the position of the  command actions to change the order in which they're displayed on the timeline.| When enabled, the command action will appear on the activity record in the timeline.|
 
 
-#### Display related records on the timeline (Preview)
-
-> [!NOTE]
-> This is an early access feature. You can opt in early to enable these features in your environment, which will allow you to test these features and then adopt them across your environments.
-For information about how to enable these features, see [Opt in to early access updates](/power-platform/admin/opt-in-early-access-updates).
+#### Display related records on the timeline
 
 Accounts, contacts, cases, and opportunities linked to an activity are displayed on the timeline record. The administrator can enable or disable the records in **Regarding records**.
 

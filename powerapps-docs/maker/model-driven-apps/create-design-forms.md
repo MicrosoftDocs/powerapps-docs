@@ -103,7 +103,7 @@ By default all forms are made available to users. However, through the app desig
 ### Change the forms displayed in an app
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Solutions**, and then open the solution to be updated.
+2. Select **Solutions** on the left navigation pane, and then open the solution to be updated. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 3. Edit the model-driven app in app designer.
 4. In the **Table View** area, select **Forms** next to the table.  The components tab will become visible.
 
@@ -121,10 +121,10 @@ A form can be set as the default form through the form order configuration **or*
 When we set the default form order this is done at the level of the **table** and not the app.  Therefore, one form order per table.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Dataverse** and navigate to the required table.
+2. Select **Tables** on the left navigation pane, and then open the required table. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 3. Select the **Forms** area, select the ellipses (...) and select **Form settings**
 
-:::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms forms to include in app":::
+   :::image type="content" source="../../maker/model-driven-apps/media/create-and-edit-a-model-driven-form/form-settings-navigation.png" alt-text="select forms forms to include in app":::
 
 4. In the form settings dialogue select **form order** and then the **form set**, or form type, you would like to order.
 
@@ -244,6 +244,7 @@ There are still a number of tables, referred to here as classic tables, that ret
 :::row-end:::
 
 ## Main form dialogs
+
 With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
 
 ## Next steps

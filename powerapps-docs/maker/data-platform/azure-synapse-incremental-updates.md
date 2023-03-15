@@ -22,8 +22,6 @@ search.app:
 ---
 # Query and analyze the incremental updates
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Microsoft Dataverse data can continuously change through create, update, and delete transactions. Synapse Link for Dataverse provides incremental folders to help you query and analyze the incremental updates made to Dataverse data during a user-specified time interval. Organizations with large datasets can analyze the incremental update data and:
 
 - Drop stale and stagnant data to save data storage costs.  
@@ -47,7 +45,8 @@ Azure Synapse Link for Dataverse. This guide assumes that you have already met t
 ## Connect Dataverse to Synapse workspace with incremental folder enabled 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
-1. On the left navigation pane, select **Dataverse**, select **Azure Synapse Link**, and then on the command bar, select **+ New link**.
+1. On the left navigation pane,  select **Azure Synapse Link**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
+1. On the command bar, select **+ New link**.
 1. Select the **Subscription**, **Resource group**, and **Storage account**. Select **Next**.  
 1. Add the tables you want to export, and then select **Advanced**.  
 1. Turn on **Show advanced configuration settings** and **Enable Incremental Update Folder Structure**.

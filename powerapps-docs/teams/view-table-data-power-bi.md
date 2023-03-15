@@ -4,14 +4,14 @@ description: Provides an overview of Dataverse for Teams.
 author: RichdiMSFT
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/01/2023
+ms.date: 02/28/2023
 ms.subservice: teams
 ms.author: richdi
 ms.reviewer: matp
 contributors:
   - mattp123
 ---
-# View Dataverse for Teams table data in Power BI Desktop (preview)
+# View Dataverse for Teams table data in Power BI Desktop
 
 You can use Power BI Desktop to view data from tables in Dataverse for Teams. This enables you to create sophisticated reports to analyze data from your Dataverse for Teams tables. This is possible using a new connector that can use direct query mode for real-time data while enforcing the Dataverse for Teams security model when accessing data. Additionally, the connector automatically maps relationships.
 

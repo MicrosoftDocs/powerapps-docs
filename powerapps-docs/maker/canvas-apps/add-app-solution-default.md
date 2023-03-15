@@ -1,11 +1,11 @@
 ---
-title: Add canvas apps and cloud flows to solution by default (preview)
-description: Learn how to configure an environment to adding all new canvas apps and cloud flows to default solution through various methods.
+title: Add canvas apps and cloud flows to a solution by default (preview)
+description: Learn how to configure an environment to add new canvas apps and cloud flows to a default solution through various methods.
 author: ChrisGarty
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: mkaur
-ms.date: 12/15/2022
+ms.reviewer: angieandrews
+ms.date: 02/27/2023
 ms.subservice: canvas-maker
 ms.author: cgarty
 search.audienceType: 
@@ -16,7 +16,7 @@ contributors:
   - mduelae
 ---
 
-# Add canvas apps and cloud flows to solution by default (preview)
+# Add canvas apps and cloud flows to a solution by default (preview)
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -24,7 +24,7 @@ You can [create canvas apps from within a solution](add-app-solution.md) or [cre
 
 Canvas apps and cloud flows can now be created in a solution by default. For more information about solutions, see [Solutions overview](../data-platform/solutions-overview.md), and [application lifecycle management (ALM) guide](/power-platform/alm/overview-alm).
 
-Canvas apps and cloud flows in a solution are defined in Microsoft Dataverse and are more manageable because of Dataverse capabilities including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), and solution-based [application lifecycle management (ALM)](/power-platform/alm). 
+Canvas apps and cloud flows in a solution are defined in Microsoft Dataverse and are more manageable because of Dataverse capabilities including [connection references](/power-apps/maker/data-platform/create-connection-reference), [environment variables](/power-apps/maker/data-platform/environmentvariables), the [Dataverse API](/power-apps/developer/data-platform/webapi/overview), [role-based security](/power-platform/admin/database-security#environments-with-a-dataverse-database), and solution-based [application lifecycle management (ALM)](/power-platform/alm). 
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -60,10 +60,10 @@ There are different entry points for creating cloud flows. The following table s
 
 | Entry point | Available for cloud flows within a solution by default?  |
 | - | - |
-| [Create a cloud flow from blank in portal](/power-automate/get-started-logic-flow) | Private preview |
-| [Create a cloud flow from template in portal](/power-automate/get-started-logic-template) | Private preview |
-| Create a cloud flow from Power Automate Management connector | Private preview |
-| Create a cloud flow from PowerShell | Private preview |
+| [Create a cloud flow from blank in portal](/power-automate/get-started-logic-flow) | Yes |
+| [Create a cloud flow from template in portal](/power-automate/get-started-logic-template) | Yes |
+| Create a cloud flow from Power Automate Management connector | Yes |
+| Create a cloud flow from PowerShell | Yes |
 | Create a cloud flow from Mobile App | No |
 | [Create a cloud flow from OneDrive](/power-automate/onedrive-business-launch-panel) | No |
 | [Create a cloud flow from SharePoint](https://support.microsoft.com/en-us/office/create-a-flow-for-a-list-or-library-a9c3e03b-0654-46af-a254-20252e580d01) | No |
@@ -101,7 +101,7 @@ Once this feature is enabled, consider using solutions [export](../data-platform
 
 - If you're planning to change the prefix for the default publisher, or solution for your environment, see [Solution publisher prefix](/power-platform/alm/solution-concepts-alm#solution-publisher-prefix), [Create solution publisher prefix](../data-platform/create-solution.md#create-a-solution-publisher) and [Change solution publisher prefix](../data-platform/create-solution.md#change-a-solution-publisher).
 
-- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back. 
+- Non-solution canvas apps and non-solution cloud flows can be added into a solution to add them into Dataverse, but there is no way to revert back.
 
 ## Known issues
 

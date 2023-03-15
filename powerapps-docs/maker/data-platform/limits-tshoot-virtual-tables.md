@@ -109,7 +109,7 @@ The following are limitations for each data source.
    - “Error calling... please verify that connection... exists in environment”
    - "Sequence matches no element for "msdyn_get_required_fields""<br />
   **Solution**: In some cases you might not have the most up to date solution for the virtual connector provider. To determine whether your virtual connector provider solution needs an update:
-  1. Select **Solutions** on the left navigation pane.
+  1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   1. Select the **History** tab.
   1. **Search** for ConnectorProvider.
   1. View the information to see whether the solution needs to be updated.
@@ -119,24 +119,24 @@ The following are limitations for each data source.
 - A message is displayed “Connection ‘xyz’ not found in current environment.” when retrieving the list of connections.<br />
    **Solution**: This occurs when there are a large number of connectins in the user's Dataverse environment. This is fixed with version 1029 of the COnnector Provider solution. The updated version should be in all regions by Feb 20, 2023.
   To determine whether your virtual connector provider solution needs an update:
-  1. Select **Solutions** on the left navigation pane.
+  1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   1. Select the **History** tab.
   1. **Search** for ConnectorProvider.
   1. View the information to see whether the solution needs to be updated.
   1. If the history indicates an update is needed, go to [the Microsoft commercial marketplace](https://appsource.microsoft.com/) search for **Virtual Connector Provider**, and then select **Get it now** to import the solution into your environment.
   1. Follow the steps to create the virtual table again.
 
-- I get notified that a timeout occured during the Virtual Table creation. <br />
-   **Solution**: This can occur when other existing jobs cause the Virtual Table creation to be delayed. Wait for a few minutes and try again.
+- I get notified that a timeout occurred during the virtual table creation. <br />
+   **Solution**: This can occur when other existing jobs cause the virtual table creation to be delayed. Wait for a few minutes and try again.
 
 - I get notified that "An unexpected error occurred" <br />
   **Solution**: This occurs when the Virtual Table Data Souce was created with invalid values. To resolve this, you will need to locate the virtual table data source that is causing the error, delete it, and then recreate the virtual table. 
-   1. Access the Advanced Settings from the Maker Portal.
-   2. In the top menu select Settings.
-   3. Go to Solutions.
+   1. Select **Settings** (gear icon) > **Advanced settings** from [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+   2. In the top menu select **Settings**.
+   3. Go to **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
    4. Go to the solution that includes your virtual table (if you were not using a solution then go to Common Data Services Default Solution).
    5. In the left hand panel select Virtual table data sources.
-   6. Double click on each data source (they all start with VCP_DS_..."), when you locate the one with the error, delete that data source.
+   6. Double-click on each data source (they all start with VCP_DS_..."), when you locate the one with the error, delete that data source.
    7. Recreate your virtual table.
 
 - A message is displayed "This table already exists, you're recreating the table. Primary field and Schema name cannot be changed."<br />

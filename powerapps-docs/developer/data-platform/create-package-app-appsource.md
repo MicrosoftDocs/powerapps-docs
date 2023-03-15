@@ -40,7 +40,7 @@ A package lets you bundle and deploy multiple files related to your app at once.
   
     - **\<PackageName>.dll**: The assembly contains the custom code for your package. For example: **SamplePackage.dll**.
 
-2. Next, create a **[Content_Types].xml** file that provides MIME type information of the file type extensions that are included in your package. This is separate from the one that will be included again in the AppSource package. Here is the sample contents of a Content_Types].xml file with file types listed:
+2. Next, create a **[Content_Types].xml** file that provides MIME type information of the file type extensions that are included in your package. This is separate from the one that will be included again in the AppSource package. Here is the sample contents of a [Content_Types].xml file with file types listed:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>

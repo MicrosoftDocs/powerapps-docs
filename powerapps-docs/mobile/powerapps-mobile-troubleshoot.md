@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 01/31/2023
+ms.date: 02/27/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
@@ -24,6 +24,16 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 > [!NOTE]
 > If you are having an issue with Power Apps for iOS or Android and you don't find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.
+
+## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
+
+A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
+
+-	Android: 3.23023.24
+-	iOS: 13.23023.24
+-	Windows: 3.23024.17
+
+If you are unable to upgrade, contact your administrator.
 
 ## Diagnose mobile apps with Monitor
 
