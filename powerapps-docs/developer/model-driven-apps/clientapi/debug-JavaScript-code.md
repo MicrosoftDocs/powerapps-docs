@@ -128,7 +128,7 @@ To debug JavaScript on Windows, you first must make sure of the following requir
 
 Here is a screenshot summary of the recommended developer settings:
 
-   :::image type="content" source="media/security-privacy-for-developers.png" alt-text="Edge DevTools Devices screen":::
+   :::image type="content" source="media/security-privacy-for-developers.png" alt-text="Enable device portal screen":::
 
 ### Configure the Windows application 
 Configure the Power Apps or Field Service Windows desktop app for remote debugging
@@ -139,7 +139,8 @@ Configure the Power Apps or Field Service Windows desktop app for remote debuggi
 3.	Open the Edge browser and navigate to edge://inspect 
       - Use the **“Connect to a remote Windows device” section** and connect to http://localhost:50080. It’ll take a few seconds to connect, but you should see the organization URL.
       
-      :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Edge DevTools Devices screen":::
+      :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in 
+       the DevTools screen":::
       
       -	**Click "inspect"** and the DevTools will open.
 
