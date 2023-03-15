@@ -51,7 +51,7 @@ For overview of the necessary requirements for AI features, see [AI overview (pr
 
     3. On the **Features** settings page, under **AI Builder**, enable or disable **AI Builder preview models**.
 
-3. Open a [canvas app for editing](edit-app.md), on the command bar, select **Settings**.
+3. Sign in to [Power Apps](https://make.powerapps.com) and open a [canvas app for editing](edit-app.md), on the command bar, select **Settings**.
 2. Select **Upcoming features**.
 3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
 
