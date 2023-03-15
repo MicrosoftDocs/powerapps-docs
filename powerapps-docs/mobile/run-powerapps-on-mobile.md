@@ -259,9 +259,22 @@ The table below outlines which other mobile apps you can use to run your app.
 | [Dynamics 365 Sales Mobile](/dynamics365/sales/sales-mobile/dynamics-365-sales-mobile-app) | <ul><li>[Dynamics 365 Sales](/dynamics365/sales/help-hub)</li></ul> |
 | [Field Service Mobile](/dynamics365/field-service/mobile-power-app-overview) | <ul><li>[Field Service (Dynamics 365) ](/dynamics365/field-service/overview)</li></ul> |
   
-## Regional availability of Power Apps Mobile app
+## Regional availability of Power Apps mobile app
+ 
+Power Apps mobile app is available to users in Azure global cloud and also in the following regions:
+- [US Department of Defense (US DoD)] (https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-overview-dod)
+- [US Government Community Cloud (GCC) High] (https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+- [US Government Community Cloud (GCC)] (https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+- [China](https://learn.microsoft.com/en-us/power-platform/admin/about-microsoft-cloud-china)
   
-You have an option to sign in as a guest user and choose a different region in Power Apps Mobile app.
+Mobile users have an option to sign in as a guest user and choose a different region in Power Apps mobile app sign in screen.
+  
+![Choose a different region.](media/Select_user_region_mobile_app.jpg "Choose a region when signing in to Power Apps mobile app")
+ 
+ More information:
+ - [Azure Government documentation](https://learn.microsoft.com/en-us/azure/azure-government/)
+ - [Dynamics 365 US Government](https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+  - [Power Platform and Dynamics 365 apps in China](https://learn.microsoft.com/en-us/power-platform/admin/about-microsoft-cloud-china)
   
 ## Privacy notice
 Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 
