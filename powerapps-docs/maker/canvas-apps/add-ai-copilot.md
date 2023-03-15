@@ -26,7 +26,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 > [!IMPORTANT]
 >
-> - This is a preview feature. This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
+> - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2LogRPRiTJDo1Rd8KnmcFRUMzlLTDZVQlJKSzNIWkVCMzE0VDFYVzk2QS4u).
 >
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 >
@@ -35,12 +35,11 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - This capability is in process of rolling out, and may not be available in your region yet.
 >
 > - This capability  may be subject to usage limits or capacity throttling.
-> 
-> - For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
-
 
 
 ## Prerequisites
+
+For overview of the necessary requirements for AI features, see [AI overview (preview)](ai-overview.md)
 
 1. If you don't already have a Power Apps license, [sign up](/power-apps/maker/signup-for-powerapps), and then sign in to [Power Apps](https://make.powerapps.com). 
 
