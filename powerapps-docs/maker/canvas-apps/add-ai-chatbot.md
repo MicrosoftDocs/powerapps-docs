@@ -18,11 +18,13 @@ contributors:
   - mduelae
 ---
 
-# Add a chatbot control to your canvas app
+# Add a chatbot control to your canvas app (preview)
+
+[This article is prerelease documentation and is subject to change.]
 
 Add a Chatbot control in your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chabots, you can use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
+With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chabots you can use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
 
@@ -75,7 +77,7 @@ With your [canvas app open for editing](edit-app.md):
 
 ### Key properties 
 
-The following are the two main contorl properties: 
+The following are the main control properties: 
 
 - **Schema name**:  The schema name property must be entered to connect your published Power Virtual Agents bot to your canvas app. For more information on how to get the Schema name, see [Prerequisites](add-ai-chatbot.md#prerequisites) section in this article.
 
