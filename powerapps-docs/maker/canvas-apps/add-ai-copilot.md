@@ -39,9 +39,10 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Enable Copilot control for your app:
 
-1. Sign in to [Power Apps](https://make.powerapps.com) and open a [canvas app for editing](edit-app.md).
-2. On the command bar, select **Settings** > **Upcoming features**.
-3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
+With your [canvas app open for editing](edit-app.md):
+
+1. On the command bar, select **Settings** > **Upcoming features**.
+2. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
 
    > [!div class="mx-imgBorder"]
    > ![Turn on Copilot control.](media/copilot/copilot-1.png)
