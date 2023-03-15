@@ -735,7 +735,7 @@
           - name: CountRows
             href: /power-platform/power-fx/reference/function-table-counts
           - name: Data types
-            href: /power-platform/power-fx/reference/data-types
+            href: /power-platform/power-fx/data-types
           - name: DataSourceInfo
             href: /power-platform/power-fx/reference/function-datasourceinfo
           - name: Date
@@ -1306,7 +1306,7 @@
           href: ./model-driven-apps/create-a-model-driven-app.md
         - name: Understanding app navigation
           href: ./model-driven-apps/app-navigation.md
-        - name: Work with pages (preview)
+        - name: Work with pages
           href: ./model-driven-apps/create-remove-pages.md
         - name: Manage app settings
           href: ./model-driven-apps/app-properties.md         
