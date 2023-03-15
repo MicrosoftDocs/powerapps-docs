@@ -53,6 +53,8 @@
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
+    - name: Use open types with Custom APIs 
+      href: use-open-types.md
     - name: Use FetchXML to query data
       href: use-fetchxml-construct-query.md
       items:
