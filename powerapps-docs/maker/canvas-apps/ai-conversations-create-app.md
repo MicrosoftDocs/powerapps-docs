@@ -18,7 +18,9 @@ contributors:
   - mduelae
 ---
 
-# Build apps through conversation
+# Build apps through conversation (preview)
+
+[This article is prerelease documentation and is subject to change.]
 
 Create Power Apps with the help of AI. Simply describe the app that you want to build, and AI will design it for you.
 
