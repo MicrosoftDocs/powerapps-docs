@@ -25,29 +25,26 @@ contributors:
 The Copilot control is a next-generation AI assistant that makers can add to their apps for end-users. This is an AI-powered experience for app users to get insights about the data in their apps through conversation in natural language. Makers can add this control to any app and choose what data it can answer questions about.
 
 > [!IMPORTANT]
->
 > - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
->
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
->
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
->
 > - This capability is in process of rolling out, and may not be available in your region yet.
->
 > - This capability  may be subject to usage limits or capacity throttling.
 
 
 ## Prerequisites
 
 - Follow the prerequisites for AI features: [AI overview (preview)](ai-overview.md).
-- Enable Copilot control for your app:
 
-    1. Sign in to [Power Apps](https://make.powerapps.com) and open a [canvas app for editing](edit-app.md), on the command bar, select **Settings**.
-    2. Select **Upcoming features**.
-    3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
 
-       > [!div class="mx-imgBorder"]
-       > ![Turn on Copilot control.](media/copilot/copilot-1.png)
+## Enable Copilot control for your app:
+
+1. Sign in to [Power Apps](https://make.powerapps.com) and open a [canvas app for editing](edit-app.md).
+2. On the command bar, select **Settings** > **Upcoming features**.
+3. From the **Preview** tab, set the toggle for **Copilot component** to **On**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Turn on Copilot control.](media/copilot/copilot-1.png)
 
 ## Add the Copilot control
 
