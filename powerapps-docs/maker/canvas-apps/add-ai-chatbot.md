@@ -64,15 +64,14 @@ With your [canvas app open for editing](edit-app.md):
 With your [canvas app open for editing](edit-app.md):
 
 1. On the app authoring menu, select **Insert**.
-2. Expand the **Input** menu and then select **Chatbot (preview**,)
-3. Place the chatbot control where you want to add it on the screen. 
+2. Expand the **Input** menu and then select **Chatbot (preview)**). Place the chatbot control where you want to add it on the screen. 
 
    > [!div class="mx-imgBorder"]
    > ![Add the Chatbot control.](media/chatbot-control/ai-chatbot-control-3.png)
 
 2. In the Chatbot propertites pane, enter the Power Virtual Agents bot schema name in the **Schema Name** field.
 
-You can change the name, the position and sizie of the control.
+    You can change the name, the position and sizie of the control.
 
 ### Key properties 
 
