@@ -42,7 +42,7 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 ## Prerequisites 
 
-- Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
+- Follow the prerequisites for AI features: [AI overview (preview)](ai-overview.md)
 - To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
 
 
@@ -59,9 +59,8 @@ You need the bot schema name to add it to the Chatbot control properties in Powe
 
 With your [canvas app open for editing](edit-app.md):
 
-1. On the command bar, select **Settings**.
-2. Select **Upcoming features**.
-3. From the **Preview** tab, set the toggle for **Chatbot component** to **On**.
+1. On the command bar, select **Settings** > **Upcoming features**.
+2. From the **Preview** tab, set the toggle for **Chatbot component** to **On**.
 
    > [!div class="mx-imgBorder"]
    > ![Turn on Chatbot control.](media/chatbot-control/ai-chatbot-control-2.png)
