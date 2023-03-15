@@ -33,15 +33,10 @@ To learn how to use the new AI features in Power Apps, see:
 - [Leverage Azure OpenAI Service in AI Builder (preview)](/ai-builder/prebuilt-azure-openai)
 
 > [!IMPORTANT]
->
 > - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
->
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
->
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
->
 > - This capability is in process of rolling out, and may not be available in your region yet.
->
 > - This capability  may be subject to usage limits or capacity throttling.
 
 
