@@ -35,6 +35,9 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 > - This capability is in process of rolling out, and may not be available in your region yet.
 >
 > - This capability  may be subject to usage limits or capacity throttling.
+> 
+> - For information and prerequisites for this preview, see [AI overview (preview)](ai-overview.md)
+
 
 
 ## Prerequisites
