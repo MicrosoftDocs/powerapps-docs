@@ -98,11 +98,11 @@ Use the other properties or move the control on the screen to set position and s
 
 ## See also
 
-- [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
+[Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 
-- [AI-based boosted conversations overview](https://learn.microsoft.com/en-us/power-virtual-agents/nlu-gpt-overview)
+[AI-based boosted conversations overview](/power-virtual-agents/nlu-gpt-overview)
 
-- [Use the Copilot control](add-ai-copilot.md)
+[Use the Copilot control](add-ai-copilot.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
