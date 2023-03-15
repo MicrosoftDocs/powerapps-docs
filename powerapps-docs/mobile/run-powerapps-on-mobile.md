@@ -265,9 +265,9 @@ Power Apps mobile app is available to users in Azure global cloud and also in th
 - [US Department of Defense (US DoD)](https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-overview-dod)
 - [US Government Community Cloud (GCC) High](https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
 - [US Government Community Cloud (GCC)](https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
-- [China](https://learn.microsoft.com/en-us/power-platform/admin/about-microsoft-cloud-china)
+- [China Sovereign Cloud](https://learn.microsoft.com/en-us/power-platform/admin/about-microsoft-cloud-china)
   
-Mobile users have an option to sign in as a guest user and choose a different region in Power Apps mobile app sign in screen.
+Mobile users have an option to select their region on Power Apps mobile app sign in screen.
   
 ![Choose a different region.](media/Select_user_region_mobile_app.jpg "Choose a region when signing in to Power Apps mobile app")
  
