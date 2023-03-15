@@ -28,8 +28,8 @@ Bringing the power of Copilot to both application makers and their end users. No
 To learn how to use the new AI features in Power Apps, see:
 
 - [Build apps through conversation (preview)](ai-conversations-create-app.md)
-- [Add a chatbot control to your canvas app (preview)](add-ai-chatbot.md)
-- [Add the copilot control in your canvas app (preview)](add-ai-copilot.md)
+- [Add a chatbot control to a canvas app (preview)](add-ai-chatbot.md)
+- [Add the copilot control to a canvas app (preview)](add-ai-copilot.md)
 
 > [!IMPORTANT]
 >
