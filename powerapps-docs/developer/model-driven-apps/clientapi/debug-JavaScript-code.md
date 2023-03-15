@@ -43,7 +43,7 @@ When an event handler causes a script error in a model-driven app, the following
 
 :::image type="content" source="media/script-error-dialog.png" alt-text="Script error dialog":::
 
-If you click the **Show Details** link, you can find the details which include: event name, function name, web resource name, solution name, and publisher name.
+If you click the **Show Details** link, you can find the details that include: event name, function name, web resource name, solution name, and publisher name.
 
 ```
 Xrm.Navigation.openalertDialog is not a function
@@ -89,7 +89,7 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
    :::image type="content" source="media/field-service-mobile-app-settings.png" alt-text="Field service mobile app settings":::
 
-1. When enabling this option, you'll have a confirmation dialog. Select **Confirm**.
+1. When enabling this option, there's a confirmation dialog. Select **Confirm**.
 
    :::image type="content" source="media/field-service-mobile-app-settings-confirm-remote-debugging.png" alt-text="Confirm remote debugging dialog":::
 
@@ -97,7 +97,7 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
 1. Plug your computer to your Android device.
 1. Open any model-driven app from Power Apps or the Field Service Mobile application
-1. In the `edge://inspect/#devices` page in your browser, you'll be able to see the page available from the **Remote Target** section.
+1. In the `edge://inspect/#devices` page in your browser, are able to see the page available from the **Remote Target** section.
 
    :::image type="content" source="media/edge-inspect-devices.png" alt-text="Edge DevTools Devices screen":::
 
@@ -112,21 +112,21 @@ To debug JavaScript on Windows, you first must make sure of the following requir
 ### Prerequisites
 
 1. You must have a WebView2 runtime installed on your machine with a minimum version of 111. [Download the WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section)
-1. You must install the Remote Tools for Edge from the Microsoft Store: [Remote Tools for Microsoft Edge - Microsoft Store Apps](https://apps.microsoft.com/store/detail/remote-tools-for-microsoft-edge/9P6CMFV44ZLT)
+1. You must install the Remote Tools for Microsoft Edge from the Microsoft Store: [Remote Tools for Microsoft Edge - Microsoft Store Apps](https://apps.microsoft.com/store/detail/remote-tools-for-microsoft-edge/9P6CMFV44ZLT)
 
 ### 1. Configure your Windows device
 
-1. Enable Developer Mode
+1. Enable Developer Mode.
     a. Open Windows Settings > Privacy & security > For developers.
     b. Enable **Developer Mode**.
-1. Enable Device Portal
+1. Enable Device Portal.
     a. Open Windows Settings > Privacy & security > For developers.
     b. Enable **Device Portal**.
     c. Click **Yes** to install Windows Developer Mode package when prompted.
-    d. Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it will be `https://localhost:50080`  
+    d. Once Device Portal is enabled, **note the URL you will use to connect using localhost**. On most devices, it's `https://localhost:50080`  
     e. For debugging Power Apps / Field Service Mobile locally, you can continue with **Restrict to loopback connections only** enabled and **Authentication** disabled (otherwise you need to set a user password)
 
-   Here is a screenshot summary of the recommended developer settings:
+   Here's a screenshot summary of the recommended developer settings:
 
    :::image type="content" source="media/security-privacy-for-developers.png" alt-text="Enable device portal screen":::
 
@@ -134,7 +134,7 @@ To debug JavaScript on Windows, you first must make sure of the following requir
 
 Configure the Power Apps or Field Service Windows desktop app for remote debugging.
 
-Use the **Run command** (shortcut is `Windows + R`) and use the following deeplink to launch the Windows app with special arguments.
+Use the **Run command** (shortcut is `Windows + R`) and use the following deep link to launch the Windows app with special arguments.
 
 - Power Apps: `ms-apps://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging`
 - Field Service Mobile: `ms-apps-fs://?addWebView2AdditionalBrowserArgument=--enable-features=msEdgeDevToolsWdpRemoteDebugging`
@@ -142,9 +142,9 @@ Use the **Run command** (shortcut is `Windows + R`) and use the following deepli
 ### 3. Debug from Windows
 
 1. Use the Windows app and open a model-driven app.
-1. Open the Edge browser and navigate to `edge://inspect`.
+1. Open the Microsoft Edge browser and navigate to `edge://inspect`.
    
-   a. Use the **Connect to a remote Windows device** section and connect to `http://localhost:50080`. It'll take a few seconds to connect, but you should see the organization URL.
+   a. Use the **Connect to a remote Windows device** section and connect to `http://localhost:50080`. It takes a few seconds to connect, but you should see the organization URL.
 
    :::image type="content" source="media/devtools-configuration-for-windows.png" alt-text="Inspect in the DevTools screen":::
 
