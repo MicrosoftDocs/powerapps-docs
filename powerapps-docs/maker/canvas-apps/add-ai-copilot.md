@@ -42,7 +42,7 @@ The Copilot control is a next-generation AI assistant that makers can add to the
 
 ## Prerequisites
 
-1. If you don't already have a Power Apps license, [sign up](https://learn.microsoft.com/en-us/power-apps/maker/signup-for-powerapps), and then [sign in](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. If you don't already have a Power Apps license, [sign up](/power-apps/maker/signup-for-powerapps), and then sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
 
 2. AI Builder must be enabled for your environment. Specifically, enable the AI Builder preview feature:
 
@@ -97,8 +97,7 @@ In addition to choosing the data source, you can also configure the following pr
 
    > [!div class="mx-imgBorder"]
    > ![Configure the control.](media/copilot/copilot-5.png)
-   > 
-## Transparency notes
+
 
 
 
