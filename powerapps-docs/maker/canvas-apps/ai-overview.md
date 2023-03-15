@@ -1,6 +1,6 @@
 ---
-title: AI overview
-description: AI overview.
+title: AI overview in Power Apps
+description: Overview and prerequisites for Copilot AI features in Power Apps.
 author: mduelae
 
 ms.topic: conceptual
