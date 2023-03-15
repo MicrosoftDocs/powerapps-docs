@@ -33,15 +33,10 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 
 > [!IMPORTANT]
->
 > - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
->
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
->
 > - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
->
 > - This capability is in process of rolling out, and may not be available in your region yet.
->
 > - This capability  may be subject to usage limits or capacity throttling.
 
 
@@ -49,7 +44,15 @@ You can design the Chabot control by giving it a name, change the size of the co
 
 - Prerequisites for AI features: [AI overview (preview)](ai-overview.md)
 - To add the Chatbot control, you need to create and publish a bot on the [Power Virtual Agents web app](/power-virtual-agents/fundamentals-what-is-power-virtual-agents-portal).  You can create any bot such as an AI bot or a new generative AI enriched Power Virtual Agents bot.
-- You need the bot schema name to add it to the Chatbot control properties. The get the schema name, in Power Virtual Agents, open the bot you want to use. In the navigation menu, go to **Settings** > **Details**. Select the **Advanced** tab and note the **Schema name**.
+
+
+## Bot schema name 
+
+You need the bot schema name to add it to the Chatbot control properties in Power Apps Studio. Following these steps to get the schema name.
+
+1. In Power Virtual Agents, open the bot you want to use. 
+2. In the navigation menu, go to **Settings** > **Details**. 
+3. Select the **Advanced** tab and note the **Schema name**.
 
 
 ## Turn on the Chatbot control
@@ -79,7 +82,7 @@ With your [canvas app open for editing](edit-app.md):
 
 ### Key properties 
 
-The following are the main control properties: 
+The following are the main properties for Chatbot control: 
 
 - **Schema name**:  The schema name property must be entered to connect your published Power Virtual Agents bot to your canvas app. For more information on how to get the Schema name, see [Prerequisites](add-ai-chatbot.md#prerequisites) section in this article.
 
