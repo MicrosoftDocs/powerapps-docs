@@ -80,7 +80,7 @@
         ]
       },
       "ms.topic": {
-        "developer/**/*.md": "article"
+        "developer/**/*.md": "overview"
       },
       "ms.service": {
         "**.*": "powerapps"
