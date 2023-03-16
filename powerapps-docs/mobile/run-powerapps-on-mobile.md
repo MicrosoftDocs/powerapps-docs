@@ -264,20 +264,19 @@ The table below outlines which other mobile apps you can use to run your app.
 ## Regional availability of Power Apps mobile app
  
 Power Apps mobile app is available to users in Azure global cloud and also in the following regions:
-- [US Department of Defense (US DoD)](https://learn.microsoft.com/azure/azure-government/documentation-government-overview-dod)
-- [US Government Community Cloud (GCC) High](https://learn.microsoft.com/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
-- [US Government Community Cloud (GCC)](https://learn.microsoft.com/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
-- [China Sovereign Cloud](https://learn.microsoft.com/power-platform/admin/about-microsoft-cloud-china)
+- [US Department of Defense (US DoD)](/azure/azure-government/documentation-government-overview-dod)
+- [US Government Community Cloud (GCC) High](/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+- [US Government Community Cloud (GCC)](/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+- [China Sovereign Cloud](/power-platform/admin/about-microsoft-cloud-china)
   
 Mobile users have an option to select their region on Power Apps mobile app sign in screen.
   
 ![Choose a different region.](media/Select_user_region_mobile_app.jpg "Choose a region when signing in to Power Apps mobile app")
  
  More information:
- - [Azure Government documentation](https://learn.microsoft.com/azure/azure-government/)
- - [Dynamics 365 US Government](https://learn.microsoft.com/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
- - [Power Platform and Dynamics 365 apps in China](https://learn.microsoft.com/power-platform/admin/about-microsoft-cloud-china)
-
+ - [Azure Government documentation](/azure/azure-government/)
+ - [Dynamics 365 US Government](/power-platform/admin/microsoft-dynamics-365-government#about-dynamics-365-us-government-environments-and-products)
+ - [Power Platform and Dynamics 365 apps in China](/power-platform/admin/about-microsoft-cloud-china)
   
 ## Privacy notice
 Power Apps mobile app for Android registers for a system event that is broadcasted when the device is finished booting. Power Apps mobile app for Android registers for this event to support push notifications sent to the app. 
