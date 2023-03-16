@@ -48,7 +48,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
   
 ### How to merge duplicate rows
 > [!NOTE]
->  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables.  
+>  Merging rows is only supported for account, contact, and lead tables, it does not support any other Dataverse out of box tables or custom tables. You can only merge two records at a time.
   
 1. Select the duplicate rows from the view page in your model-driven app, and then select **Merge** in the command bar at the top of the page.  
   
