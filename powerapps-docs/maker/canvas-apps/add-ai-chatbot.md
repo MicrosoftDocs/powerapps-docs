@@ -24,7 +24,12 @@ contributors:
 
 Add Chatbot control to your canvas apps and embed a published [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) chatbot to assist your end-users with a variety of requests&mdash;from providing simple answers to common questions to resolving issues requiring complex conversations. 
 
-With AI chatbots, you can create an extended tree of answers to support your users. With boosted conversations in Power Virtual Agents chatbots you can use generative AI assistance to generate prompts and obtain answers from designated sources, including external documents or publicly available websites.
+You can use an AI bot or AI boosted conversations bot:
+
+- With AI chatbots, you can create an extended tree of answers to support your users. More information: [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
+
+- With AI boosted conversations Power Virtual Agents bot your bot can have a higher ability to respond to the user by using a number of prompts or generating a response based on provided "fallback" website which you set. The "fallback" website can include internal documents or publicly available websites. More information: [AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
+
 
 You can design the Chabot control by giving it a name, change the size of the control window, and position it anywhere on the screen.
 
@@ -101,7 +106,7 @@ Use the other properties or move the control on the screen to set position and s
 
 [Power Virtual Agents preview quickstart (preview)](/power-virtual-agents/preview/quickstart)
 
-[AI-based boosted conversations overview](/power-virtual-agents/nlu-gpt-overview)
+[AI-based boosted conversations overview (preview)](/power-virtual-agents/nlu-gpt-overview)
 
 [Use the Copilot control](add-ai-copilot.md)
 
