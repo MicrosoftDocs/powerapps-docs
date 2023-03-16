@@ -19,6 +19,8 @@ contributors:
 
 Scans barcodes, QR codes, and data-matrix codes on Android, iOS, and Windows devices.
 
+:::image type="content" source="./media/control-barcode-reader/barcode-hero.gif" alt-text="A gif showcasing the different capabilities of the barcode reader control.":::
+
 ## Description
 
 The control opens a native scanner on Android, iOS, and Windows devices. On iOS and Android, the scanner supports the following scanning modes:
@@ -33,6 +35,8 @@ The barcode reader control supports different zoom levels and turning on/off the
 
 > [!NOTE]
 > The barcode scanner control is supported on Android, iOS, and Windows devices. All other platforms will show a warning stating that some features of the app won't work.
+
+:::image type="content" source="./media/control-barcode-reader/barcode-three-screens.PNG" alt-text="A set of three screens side-by-side showing the different capabilities of the barcode reader control.":::
 
 ## Key properties
 
