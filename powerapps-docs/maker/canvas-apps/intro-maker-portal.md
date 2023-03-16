@@ -75,7 +75,7 @@ You can also unpin and item by selecting the more button and then select **Unpin
 
 ### Discover all 
 
-To see all your your Power Apps, from the left navigation pane, selct **More** > **Discover all**. 
+To see all your your Power Apps, from the left navigation pane, select **More** > **Discover all**. 
 
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
@@ -130,7 +130,6 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
 - **Developer resources**: Access developer resources.
 - **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
-- **DevTools**: Access DevToos.
 - **Themes**: From the list of themes, select a theme for your organization.
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.

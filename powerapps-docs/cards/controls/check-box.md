@@ -44,6 +44,4 @@ A checkbox that lets users choose between two options by selecting or clearing.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
 
-
-
 **[Show when](control-reference.md#s)** – Conditional layout expression.
