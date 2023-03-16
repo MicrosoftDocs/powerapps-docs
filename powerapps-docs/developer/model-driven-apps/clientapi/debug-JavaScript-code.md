@@ -102,7 +102,7 @@ To debug JavaScript in mobile apps, you must complete the three steps below:
 
 1. Plug your computer to your Android device.
 1. Open any model-driven app from Power Apps or the Field Service Mobile application
-1. In the `edge://inspect/#devices` page in your browser, are able to see the page available from the **Remote Target** section.
+1. In the `edge://inspect/#devices` page in your browser, find your organization URL in the **Remote Target** section.
 
    :::image type="content" source="media/edge-inspect-devices.png" alt-text="Edge DevTools Devices screen":::
 
@@ -147,7 +147,7 @@ Use the **Run command** (shortcut is `Windows + R`) and use the following deep l
 
 ### 3. Debug from Windows
 
-1. Use the Windows app and open a model-driven app.
+1. Launch Power Apps or Field Service for Windows.
 1. Open the Microsoft Edge browser and navigate to `edge://inspect`.
 1. Use the **Connect to a remote Windows device** section and connect to `http://localhost:50080`. It takes a few seconds to connect, but you should see the organization URL.
 
