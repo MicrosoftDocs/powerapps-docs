@@ -22,7 +22,7 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Bringing the power of AI Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. The apps have copilot-powered experience built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
+Bringing the power of AI Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps will have copilot-powered experience built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
 
 To learn how to use the new AI features in Power Apps, see:
 
