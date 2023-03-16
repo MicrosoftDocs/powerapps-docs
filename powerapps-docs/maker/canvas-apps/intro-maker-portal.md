@@ -130,7 +130,6 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
 - **Developer resources**: Access developer resources.
 - **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
-- **DevTools**: Access DevToos.
 - **Themes**: From the list of themes, select a theme for your organization.
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.
