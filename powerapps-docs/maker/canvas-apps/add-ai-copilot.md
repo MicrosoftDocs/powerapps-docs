@@ -18,7 +18,7 @@ contributors:
   - mduelae
 ---
 
-# Add the Copilot control to a canvas app (preview)
+# Add Copilot control to a canvas app (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
