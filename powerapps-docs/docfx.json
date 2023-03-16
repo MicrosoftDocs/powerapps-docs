@@ -79,6 +79,9 @@
           "Power Apps"
         ]
       },
+      "ms.topic": {
+        "developer/**/*.md": "article"
+      },
       "ms.service": {
         "**.*": "powerapps"
       },
