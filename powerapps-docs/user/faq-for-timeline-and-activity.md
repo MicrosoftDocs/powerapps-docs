@@ -52,7 +52,6 @@ Yes. You can add activities to tables that are read only such as, notes, phone c
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
-[Dynamics 365 Sales: Frequently asked questions](/dynamics365/sales-enterprise/faqs-sales#entity-activity)
 
     
 
