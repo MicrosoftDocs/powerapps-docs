@@ -74,7 +74,7 @@ Follow these steps to disable **Copilot** for your tenant.
 Follow these steps to disable **Copilot** for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. In the left-side navigation pane **Envioronmnet**.
-3. Select the envorment and on the command bar, select **Settings**.
+2. In the left-side navigation pane **Environment**.
+3. Select the environment and on the command bar, select **Settings**.
 4. Set the toggle to **Off** for **Copilot**.
 
