@@ -22,7 +22,7 @@ contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Bringing the power of Copilot to both app makers and their end-users in Power Apps. Now you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. The apps you create can have copilot-powered experiences built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
+Bringing the power of AI Copilot to both app makers and their end-users in Power Apps. With Copilot you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. The apps have copilot-powered experience built in from the first screen&mdash;so your users can discover insights in conversation instead of mouse-clicks.
 
 To learn how to use the new AI features in Power Apps, see:
 
@@ -53,7 +53,7 @@ The following are requirements to access the waitlist for this preview:
 
 - Licensed customers will be prioritized for access.  
 
-- AI Builder must be enabled for your environment to leverage the AI models or controls leveraging AI models:
+- AI Builder must be enabled for your environment to use the AI models or controls leveraging AI models:
 
     1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
@@ -71,7 +71,7 @@ Follow these steps to disable **Copilot** for your tenant.
 2. Select **Settings** > **Tenant settings** in the left-side navigation pane. 
 3. Select **Copilot (preview)** > set the toggle to **Off** > **Save**.
 
-Follow these steps to disable **Copilot** for your enviroment.
+Follow these steps to disable **Copilot** for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. In the left-side navigation pane **Envioronmnet**.
