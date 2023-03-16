@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 03/15/2023
+ms.date: 03/16/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -20,6 +20,8 @@ search.audienceType:
 search.app: 
   - D365CE
   - D365Sales
+contributors:
+- joliedes 
 ---
 
 # Mobile offline capabilities and limitations
@@ -135,7 +137,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
-- **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml)
+- **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
 ## Tips
 
