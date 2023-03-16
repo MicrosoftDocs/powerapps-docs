@@ -5,7 +5,7 @@ author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/13/2022
+ms.date: 03/16/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -27,11 +27,17 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
 1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select **Tables**, and then select the table where you want to add a formula column. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select the **Columns** area, and then select **New column**.
-1. Enter a **Display name** for the column.
-1. Optionally, enter a **Description** of the column.
-1. In **Data type**, select ***fx* Formula**.
-1. Enter the formula in the **Formula** box.
-1. Select **Save**.
+1. Enter the following information:
+
+   - A **Display name** for the column.
+   - Optionally, enter a **Description** of the column.
+   - In **Data type**, select ***fx* Formula**.
+   - Enter the formula in the **Formula** box.
+   - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
+   - **Advanced options**:
+      - If the formula contains a decimal value, expand **Advanced options** to changed the number of points of precision, between 0 and 10. The default value is 2.
+
+5. Select **Save**.
 
 The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
 
@@ -57,11 +63,11 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- Decimal Number
+- Decimal number
 - Yes/No (boolean)
 - Date
 
-The Currency data type isn't currently supported.
+The currency data type isn't currently supported.
 
 ## Function types
 
