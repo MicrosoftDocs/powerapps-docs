@@ -1,14 +1,13 @@
 ---
-title: AI Copilot overview in Power Apps
-description: Overview and prerequisites for Copilot AI features in Power Apps.
+title: AI Copilot overview
+description: AI Copilot overview in Power Apps.
 author: mduelae
-
 ms.topic: conceptual
 ms.custom: 
   - canvas
   - intro-internal
 ms.reviewer: 
-ms.date:3/16/2022
+ms.date: 3/13/2023
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
