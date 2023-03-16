@@ -270,8 +270,8 @@ Power Apps mobile app is available to users in Azure global cloud and also in th
 - [China Sovereign Cloud](/power-platform/admin/about-microsoft-cloud-china)
   
 Mobile users have an option to select their region on Power Apps mobile app sign in screen.
-  
-![Choose a different region.](media/Select_user_region_mobile_app.jpg "Choose a region when signing in to Power Apps mobile app")
+
+:::image type="content" source="media/Select_user_region_mobile_app.jpg" alt-text="Choose a region when signing in to Power Apps mobile app":::
  
  More information:
  - [Azure Government documentation](/azure/azure-government/)
