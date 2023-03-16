@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/02/2023
+ms.date: 03/16/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.reviewer: ""
@@ -18,6 +18,8 @@ search.app:
 searchScope:
   - "Power Apps"
 ms.custom: intro-internal
+contributors:
+- makolomi
 ---
 
 #  Install the Power Apps mobile app
