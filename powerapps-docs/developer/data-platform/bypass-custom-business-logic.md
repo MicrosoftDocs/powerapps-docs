@@ -28,7 +28,7 @@ As a developer of a client application, you can pass special [optional parameter
 |Logic type|When to use|
 |---------|---------|
 |**Synchronous Logic**|To enable bulk data operation to be completed as quickly as possible. Bypass synchronous logic when the data you're changing is known to meet the requirements of the organization or you have a plan to achieve this logic by other means. Bypass all custom synchronous logic so that each operation can complete faster, shortening the total time of the bulk operation.|
-|**Power Automate Flows**|When flows triggered by bulk operations cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the flows.|
+|**Power Automate Flows**|When large numbers of system jobs created to support flows cause a backup within Dataverse that can impact performance. You can mitigate this performance issue by not triggering the flows while performing bulk operations.|
 
 ## Bypass Synchronous Logic
 
@@ -400,7 +400,7 @@ You may not be able to identify exactly which flows will be bypassed. You can qu
 |`ownerid`|The owner of the callback registration and the flow.|
 |`softdeletestatus`|Whether the flow is deleted. `0` isn't deleted. `1` is deleted.|
 
-The following example queries that return these values:
+The following example queries return these values:
 
 ### [SDK for .NET](#tab/sdk)
 
