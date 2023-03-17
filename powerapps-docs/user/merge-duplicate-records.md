@@ -1,22 +1,24 @@
 ---
 title: "Merge duplicate records| MicrosoftDocs"
 description: How to merge duplicate records
-author: mduelae
-manager: kvivek
+author: sericks
+manager: tapanm-msft
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/10/2020
+ms.date: 03/17/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+- fafuxa-ms
 ---
 # Merge duplicate rows 
 
