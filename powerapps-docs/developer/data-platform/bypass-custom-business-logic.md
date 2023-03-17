@@ -34,7 +34,7 @@ As a developer of a client application, you can pass special [optional parameter
 
 Use the `BypassCustomPluginExecution` optional parameter to bypass custom synchronous logic.
 
-The alternative to using this optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But this means that the logic is disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you're done.
+The alternative to using this optional parameter is to locate and disable the custom plug-ins that contain the synchronous business logic. But disabling plug-ins means that the logic is disabled for all users while those plug-ins are disabled. It also means that you have to take care to only disable the right plug-ins and remember to re-enable them when you're done.
 
 Using the optional parameter allows you to disable custom synchronous plug-ins for specific requests sent by an application configured to use this option.
 
@@ -46,7 +46,7 @@ There are two requirements:
 > [!NOTE]
 > The `prvBypassCustomPlugins` is not available to be assigned in the UI at this time. You can add a privilege to a security role using the API. More information: [Adding the prvBypassCustomPlugins privilege to another role](#adding-the-prvbypasscustomplugins-privilege-to-another-role)
 
-### What does this do?
+### What does BypassCustomPluginExecution do?
 
 This solution targets the custom synchronous business logic that has been applied for your organization. When you send requests that bypass custom business logic, all synchronous plug-ins and real-time workflows are disabled except:
 
@@ -67,7 +67,6 @@ You can use this option with either the SDK for .NET or the Web API.
 #### [SDK for .NET](#tab/sdk)
 
 There are two ways to use this optional parameter with the SDK for .NET.
-
 
 
 ##### Set the value as an optional parameter
@@ -184,7 +183,7 @@ OData-Version: 4.0
 }
 ```
 
-You must set the <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege>.`Depth` property to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.`Global` (`3`) because this is a global privilege.
+You must set the <xref:Microsoft.Dynamics.CRM.RolePrivilege?text=RolePrivilege>.`Depth` property to <xref:Microsoft.Dynamics.CRM.PrivilegeDepth?text=PrivilegeDepth>.`Global` (`3`) because `prvBypassCustomPlugins` is a global privilege.
 
 **Response**
 
@@ -198,11 +197,12 @@ OData-Version: 4.0
 ### Frequently asked questions for bypassing synchronous logic (FAQ)
 
 Following are frequently asked questions about using the `BypassCustomPluginExecution` optional parameter to bypass synchronous business logic.
-#### Does this bypass plug-ins for data operations by Microsoft plug-ins?
+
+#### Does BypassCustomPluginExecution bypass plug-ins for data operations by Microsoft plug-ins?
 
 No. If a synchronous plug-in or real-time workflow in a Microsoft solution performs operations on other records, the logic for those operations aren't bypassed. Only those synchronous plugins or real-time workflows that apply to the specific operation are bypassed.
 
-#### Can I use this option for data operations I perform within a plug-in?
+#### Can I use BypassCustomPluginExecution for data operations I perform within a plug-in?
 
 Yes, but only when the plug-in is running in the context of a user who has the `prvByPassPlugins` privilege. For plug-ins, set the optional `BypassCustomPluginExecution` parameter on the class derived from [OrganizationRequest Class](xref:Microsoft.Xrm.Sdk.OrganizationRequest). You can't use the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes in a plug-in.
 
@@ -214,7 +214,7 @@ Asynchronous logic isn't bypassed. Asynchronous logic doesn't significantly cont
 
 Power Automate flows can respond to Dataverse events using the **When a row is added, modified or deleted** or **When an action is performed** triggers. When these events occur, Dataverse creates system jobs to execute these flows.
 
-When a program performs bulk operations, a large number of system jobs may be created. This can cause performance issues for Dataverse. You can choose to bypass creating these system jobs by using the `SuppressCallbackRegistrationExpanderJob` optional parameter
+When a program or plug-in performs bulk operations, a large number of system jobs may be created. A large number of system jobs can cause performance issues for Dataverse. You can choose to bypass creating these system jobs in your program or plug-in by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
 The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that creates the system jobs.
 
@@ -224,12 +224,12 @@ The [CallbackRegistration table](reference/entities/callbackregistration.md) man
 ### When to bypass Power Automate Flows
 
 > [!IMPORTANT]
-> Don't use the `SuppressCallbackRegistrationExpanderJob` optional parameter unless you know that the performance issues you are experiencing are because of the specific issues this solution is intended to address.
+> Don't use the `SuppressCallbackRegistrationExpanderJob` optional parameter unless you know that the performance issues you are experiencing are because of a large number of specific system jobs that are created.
 
 People have added flows for business reasons and they shouldn't be bypassed without careful consideration. Be sure to consider the [Mitigation strategies](#mitigation-strategies) mentioned below.
 
 
-#### Will this help you?
+#### Will SuppressCallbackRegistrationExpanderJob help you?
 
 Use this option only if you see performance issues after bulk operations occur and you have a large number of  **CallbackRegistration Expander Operation** system jobs with a [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode) set to `0` : **Waiting for Resources**.
 
@@ -341,6 +341,8 @@ How you bypass flows depends on whether you're using the SDK for .NET or Web API
 > [!NOTE]
 > For data operations initiated within plug-ins, you must use the SDK for .NET.
 
+The following examples create an account record that won't trigger Power Automate.
+
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
@@ -380,23 +382,23 @@ MSCRM.SuppressCallbackRegistrationExpanderJob: true
 
 ### Mitigation strategies
 
-Bypassing flows using this optional parameter results in business logic expected by the flow owner to not be executed. They won't be notified that their logic was bypassed.  It's important to communicate to flow owners that the logic wasn't applied so that they'll know when and why this happened. They can then determine whether or how to apply their logic.
+Flow owners expect their logic to be executed. Flow owners won't be notified that their logic was bypassed when you use this option.  It's important to communicate to flow owners that the logic wasn't applied so that they know when and why their logic wasn't applied. They can then determine whether or how to apply their logic.
 
 People can create child flows that contain logic that can be invoked by multiple triggers, even manually. If the logic is contained within a child flow, it may be triggered by other means later. More information [Create child flows](/power-automate/create-child-flows)
 
 #### Identify flows that will be bypassed
 
-You may not be able to identify exactly which flows will be bypassed. You can query the [CallbackRegistration table](reference/entities/callbackregistration.md) table to assess how much impact there will be and who to contact about their flows not running. The following table desribes some CallbackRegistration table columns that are useful;
+You may not be able to identify exactly which flows will be bypassed. You can query the [CallbackRegistration table](reference/entities/callbackregistration.md) table to assess how much impact there will be and who to contact about their flows not running. The following table describes some `CallbackRegistration` table columns that are useful;
 
 
 |Column|Description|
 |---------|---------|
-|`name`|If this value is a GUID value, it should match the `flowid` value and you should be able to view the flow definition in a URL with this value by adding it to this URL `https://make.powerautomate.com/environments/<environmentid>/flows/<flowid>/details`.|
-|`message`|When the flow uses the **When a row is added, modified or deleted** trigger, it may subscribe to all the combinations of `Create`, `Update`, and `Delete` operations with these options:<br />- 1 : Added<br />- 2 : Deleted<br />- 3 : Modified<br />- 4 : Added or Modified<br />- 5 : Added or Deleted<br />- 6 : Modified or Deleted<br />- 7 : Added or Modified or Deleted|
-|`sdkmessage`|When the flow uses the **When an action is performed** trigger, this column will contain the name of the message.|
-|`scope`|Flows only apply to the scope specified by the user as defined using these options:<br />- 1 : User<br />- 2 : BusinessUnit<br />- 3 : ParentChildBusinessUnit<br />- 4 : Organization|
+|`name`|If this value is a GUID value, it should match the `flowid` value and you should be able to view the flow definition in a URL with this value by adding it to this URL: `https://make.powerautomate.com/environments/<environmentid>/flows/<flowid>/details`.|
+|`message`|When the flow uses the **When a row is added, modified or deleted** trigger, it may subscribe to all the combinations of `Create`, `Update`, and `Delete` operations with these options:<br />- 1: Added<br />- 2: Deleted<br />- 3: Modified<br />- 4: Added or Modified<br />- 5: Added or Deleted<br />- 6: Modified or Deleted<br />- 7: Added or Modified or Deleted|
+|`sdkmessage`|When the flow uses the **When an action is performed** trigger, this column contains the name of the message.|
+|`scope`|Flows only apply to the scope specified by the user as defined using these options:<br />- 1: User<br />- 2: BusinessUnit<br />- 3: ParentChildBusinessUnit<br />- 4: Organization|
 |`ownerid`|The owner of the callback registration and the flow.|
-|`softdeletestatus`|Whether the flow is deleted. `0` is not deleted. `1` is deleted.|
+|`softdeletestatus`|Whether the flow is deleted. `0` isn't deleted. `1` is deleted.|
 
 The following example queries that return these values:
 
@@ -413,7 +415,7 @@ static void RetrieveCallbackOperations(IOrganizationService service)
         {
             Conditions = {
                 { new ConditionExpression("softdeletestatus",ConditionOperator.Equal,0) },
-                // Add more filters here to narrow down the results
+                // Add more conditions here to filter the results
             }
         }
     };
@@ -502,7 +504,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
             "sdkmessagename": null,
             "scope@OData.Community.Display.V1.FormattedValue": "Organization",
             "scope": 4,
-      "sdkmessage": "sample_BusinessEvent"
+            "sdkmessage": "sample_BusinessEvent"
             "_ownerid_value@OData.Community.Display.V1.FormattedValue": "FirstName LastName ",
             "_ownerid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e",
             "callbackregistrationid": "dabfa1a1-b794-44d0-ad34-cd49ea650606"
@@ -516,11 +518,11 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 ### Frequently asked questions about bypassing Power Automate flows (FAQ)
 
 Following are frequently asked questions about using the `SuppressCallbackRegistrationExpanderJob` optional parameter to bypass Power Automate flows.
-#### Is there a specific privilege that calling users must have?
+#### Do users need a special privilege?
 
 No. Unlike [Bypass Synchronous Logic](#bypass-synchronous-logic), no special privilege is required.
 
-#### If my client application uses this optional parameter, will it also be applied by any plug-ins registered against the operation?
+#### If my client application uses this optional parameter, will any operations performed by plug-ins registered against the operation also apply it?
 
 No. The parameter isn't passed through to any operations performed by plug-ins that are registered for the events that occur because of requests from your client application. If you want to bypass flows for operations performed by plug-ins, you must use the `SuppressCallbackRegistrationExpanderJob` optional parameter in your plug-in code.
 
