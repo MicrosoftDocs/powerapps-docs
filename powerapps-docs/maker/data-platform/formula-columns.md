@@ -34,9 +34,8 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    - In **Data type**, select ***fx* Formula**.
    - Enter the formula in the **Formula** box.
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
-   - **Advanced options**:
-      - If the formula contains a decimal value, expand **Advanced options** to changed the number of points of precision, between 0 and 10. The default value is 2.
-
+   - **Advanced options**: 
+     - If the formula contains a decimal value, expand **Advanced options** to changed the number of points of precision, between 0 and 10. The default value is 2.
 5. Select **Save**.
 
 The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
