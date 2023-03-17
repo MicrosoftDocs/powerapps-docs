@@ -1,7 +1,7 @@
 ---
 title: "Bypass Custom Business Logic (Microsoft Dataverse) | Microsoft Docs" 
 description: "Make data changes which bypass custom business logic." 
-ms.date: 03/11/2023
+ms.date: 03/17/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath
@@ -212,9 +212,11 @@ Asynchronous logic isn't bypassed. Asynchronous logic doesn't significantly cont
 
 ## Bypass Power Automate Flows
 
-When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it may cause performance issues for the system. If performance issues occur, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
+Power Automate flows can respond to Dataverse events using the **When a row is added, modified or deleted** or **When an action is performed** triggers. When these events occur, Dataverse creates system jobs to execute these flows.
 
-The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that starts the registered flows.
+When a program performs bulk operations, a large number of system jobs can be created. This can cause performance issues for Dataverse. You can choose to bypass creating these system jobs by using the `SuppressCallbackRegistrationExpanderJob` optional parameter
+
+The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that creates the system jobs.
 
 > [!NOTE]
 > When this option is used, the flow owners will not receive a notification that their flow logic was bypassed.
@@ -223,9 +225,7 @@ The [CallbackRegistration table](reference/entities/callbackregistration.md) man
 
 People have added flows for business reasons and they shouldn't be bypassed without careful consideration. Be sure to consider the [Mitigation strategies](#mitigation-strategies) mentioned below.
 
-
 Use this option if you see performance issues after bulk operations occur. You should look for a large number of **CallbackRegistration Expander Operation** system jobs with a [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode) set to `0` : **Waiting for Resources**.
-
 
 You can use the following queries to get information about the status of these jobs.
 
