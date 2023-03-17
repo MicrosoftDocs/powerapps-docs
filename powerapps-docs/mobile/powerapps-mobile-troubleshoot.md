@@ -26,7 +26,7 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
 
--   Android: 13.23031.18
+-   Android: 3.23031.18
 -   iOS: 13.23031.18
 -   Windows: 3.23024.21
 
