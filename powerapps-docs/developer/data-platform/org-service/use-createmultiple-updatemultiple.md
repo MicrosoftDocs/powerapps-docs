@@ -18,7 +18,7 @@ contributors:
 
 # Use CreateMultiple and UpdateMultiple (Preview)
 
-The `CreateMultiple` and `UpdateMultiple` messages are unique because they're optimized for performance when performing multiple create or update operations on the same table. This is useful in cases where you're loading or updating records in bulk.
+The `CreateMultiple` and `UpdateMultiple` messages are optimized for performance when performing multiple create or update operations on the same table. This optimization is useful in cases where you're loading or updating records in bulk.
 
 ## Usage
 
@@ -31,7 +31,7 @@ The .NET SDK classes to use these messages are just like the individual operatio
 |`Update`|[UpdateRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest)<br/>Properties:<br/>- [Target](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target)<br />- [ConcurrencyBehavior](xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.ConcurrencyBehavior)|[UpdateResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse)|
 |`UpdateMultiple`|[UpdateMultipleRequest](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest)<br/>Properties:<br/>- [Targets](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.Targets)<br />- [ConcurrencyBehavior](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest.ConcurrencyBehavior)|[UpdateMultipleResponse](xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleResponse)|
 
-As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request and the response type is returned. More information: [Use messages with the Organization service](use-messages.md)
+As with all Dataverse messages, use the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)) method to send the request, and the response type is returned. More information: [Use messages with the Organization service](use-messages.md)
 
 ## Performance improvements
 
@@ -41,11 +41,11 @@ Consider this: If you create a *single* record using `Create` or `CreateMultiple
 
 Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
 
-Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the operations with greater efficiency.
+Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this invocation adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the operations with greater efficiency.
 
 ## Message pipelines merged
 
-As mentioned above, creating or updating a single record using the single or multiple version of the operation has the same result and performance characteristics. It must also have the same custom logic applied to it and developers must not be required to maintain this logic in two different places. In order to achieve this, we've *merged* the message processing pipelines for these messages. What does this mean?
+As mentioned above, creating or updating a single record using the single or multiple version of the operation has the same result and performance characteristics. It must also have the same custom logic applied to it and developers must not be required to maintain this logic in two different places. In order to have the same custom logic and maintain that logic in a single place, we've *merged* the message processing pipelines for these messages. What does this mean?
 
 This means:
 
@@ -165,13 +165,13 @@ OData-Version: 4.0
 
 The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so there's incentive to try to use the largest possible number with projects that perform bulk operations.
 
-There's currently no set limit on the number of entities you might try to send with your requests. If you send too many the request fails. You'll need to experiment to find the best number. Generally, we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+There's currently no set limit on the number of entities you might try to send with your requests. If you send too many the request fails. You need to experiment to find the best number. Generally, we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
 #### Message size limits
 
-When you have a plug-in registered for any message, you may encounter the [Message size exceeded when sending context to Sandbox](../troubleshoot-plug-in.md#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB. With `CreateMultiple` and `UpdateMultiple`, it's more likely you'll hit this limit as you send larger payloads.
+When you have a plug-in registered for any message, you may encounter the [Message size exceeded when sending context to Sandbox](../troubleshoot-plug-in.md#error-message-size-exceeded-when-sending-context-to-sandbox) error when the total size of the request exceeds 116.85 MB. With `CreateMultiple` and `UpdateMultiple`, it's more likely to hit this limit as you send larger payloads.
 
-This error won't occur if there's no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
+This error doesn't occur if there's no plug-in registered for the event. You can avoid this error by disabling the plugin(s) or by sending your request with the `BypassCustomPluginExecution` optional parameter. More information: [Bypass Custom Business Logic](../bypass-custom-business-logic.md)
 
 #### Time Limits
 
@@ -186,7 +186,7 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
 
-You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that will allow the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail.
+You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail.
 
 ### .NET SDK only
 
@@ -232,7 +232,7 @@ There are two kinds of API limits: Service Protection limits and Power Platform 
 These limits have three facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
 
 - **Number of requests**: Each `CreateMultiple` and `UpdateMultiple` request counts as single request that accrues to the limit of 6000 requests per user, per server, during the 5-minute window. By grouping multiple requests with these messages, the likelihood of hitting this limit is reduced.
-- **Execution time**: Because each request may take longer, and if you're sending requests in parallel, you're more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window. More information: [Send parallel requests](../send-parallel-requests.md)
+- **Execution time**: Because each request takes longer, and if you're sending requests in parallel, you're more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window. More information: [Send parallel requests](../send-parallel-requests.md)
 
 #### Power Platform Request (API Entitlement) limits
 
