@@ -3,7 +3,7 @@ title: Write plug-ins for CreateMultiple and UpdateMultiple | Microsoft Docs
 description: How to write plug-ins for CreateMultiple and UpdateMultiple messages.
 author: divkamath
 ms.topic: article
-ms.date: 01/27/2023
+ms.date: 03/18/2023
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -26,26 +26,26 @@ If you have existing plug-ins for the `Create` and `Update` messages for tables 
 
 ## Is updating plug-ins required?
 
-There is no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic will continue to be applied when applications use `CreateMultiple` or `UpdateMultiple`. This is because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the `Create` and `Update` messages. More information: [Message pipelines merged](org-service/use-createmultiple-updatemultiple.md#message-pipelines-merged)
+There's no requirement to migrate your plug-ins to use `CreateMultiple` and `UpdateMultiple` instead of `Create` and `Update`. Your logic continues to be applied when applications use `CreateMultiple` or `UpdateMultiple`. There's no requirement to migrate your plug-ins because the Dataverse message processing pipeline merges the logic for plugins written for either the single or multiple version of the `Create` and `Update` messages. More information: [Message pipelines merged](org-service/use-createmultiple-updatemultiple.md#message-pipelines-merged)
 
-However, only plug-ins written for the multiple version of these messages will enable optimum performance when developers use `CreateMultiple` and `UpdateMultiple`. Over time, as more applications choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations will become the standard, and plug-ins written for single operations will be the exception.
+However, only plug-ins written for the multiple version of these messages enable optimum performance when developers use `CreateMultiple` and `UpdateMultiple`. Over time, as more applications choose to optimize performance by using the `CreateMultiple` and `UpdateMultiple` messages, we expect writing plug-ins for multiple operations will become the standard, and plug-ins written for single operations will be the exception.
 
 ## What is different?
 
-The following are some of the differences you will need to manage when migrating existing plugins to the multiple version.
+The following are some of the differences you need to manage when migrating existing plugins to the multiple version.
 
 ### Targets instead of Target
 
-The multiple version of these messages has a `Targets` parameter that is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) rather than a `Target` parameter that is a single [Entity](xref:Microsoft.Xrm.Sdk.Entity). Your plug-in code will need to loop through the entities in the collection and apply logic for each one.
+The multiple version of these messages has a `Targets` parameter that is an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) rather than a `Target` parameter that is a single [Entity](xref:Microsoft.Xrm.Sdk.Entity). Your plug-in code needs to loop through the entities in the collection and apply logic for each one.
 
 ### Entity Images
 
-Entity images configured in the step registration for your plug-ins are an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4) which provides the [PreEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PreEntityImagesCollection) and [PostEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PostEntityImagesCollection) properties. These arrays provide access to the same entity images in an array that is synchronized with the EntityCollection.
+Entity images configured in the step registration for your plug-ins are an array of [EntityImageCollection](xref:Microsoft.Xrm.Sdk.EntityImageCollection). These entity images are only available when you use the [IPluginExecutionContext4 Interface](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4), which provides the [PreEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PreEntityImagesCollection) and [PostEntityImagesCollection](xref:Microsoft.Xrm.Sdk.IPluginExecutionContext4.PostEntityImagesCollection) properties. These arrays provide access to the same entity images in an array that is synchronized with the EntityCollection.
 
-If you are using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, in the `PluginBase.cs` file you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collections of entity images are available to your plug-in.
+If you're using the `PluginBase` class that is the standard when initializing plug-in projects using Power Platform tools, in the `PluginBase.cs` file you should replace all instances of `IPluginExecutionContext` with `IPluginExecutionContext4` so that these collections of entity images are available to your plug-in.
 
 > [!IMPORTANT]
-> When configuring entity images for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it is very important that you carefully select with column data to include in the entity image. Do not select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total message size that will be sent to the sandbox.
+> When configuring entity images for plug-in steps for `CreateMultiple` and `UpdateMultiple`, it is very important that you carefully select which column data to include in the entity image. Do not select the default option of all columns. This data is multiplied by the number of entities passed in the `Targets` parameter and contributes to the total message size that will be sent to the sandbox.
 > More information:
 > - [Define entity images](register-plug-in.md#define-entity-images)
 > - [Message size limits](org-service/use-createmultiple-updatemultiple.md#message-size-limits)
@@ -54,8 +54,8 @@ If you are using the `PluginBase` class that is the standard when initializing p
 
 For a plug-in registered on `Update` or `UpdateMultiple`, you can specify **Filtering Attributes** in the step registration.
 
-- With `Update`, the plug-in will only run when any of the selected attributes are included with the `Target` entity being updated.
-- With `UpdateMultiple` the plug-in will run when any of the selected attributes are included *in any* of the entities in the `Targets` parameter.
+- With `Update`, the plug-in only runs when any of the selected attributes are included with the `Target` entity being updated.
+- With `UpdateMultiple`, the plug-in runs when any of the selected attributes are included *in any* of the entities in the `Targets` parameter.
 
 > [!IMPORTANT]
 > For `UpdateMultiple` you can't assume that every entity in the `Targets` parameter contains attributes used in a filter.
@@ -225,12 +225,12 @@ else
 
 ## Replace Single operation plug-ins in solution
 
-When you deploy plug-in step registrations via solutions there is currently no way to force an existing step registration to be disabled or deleted. This creates a challenge when replacing logic from a single operation to a multiple operation plug-in.
+When you deploy plug-in step registrations via solutions, there's currently no way to force an existing step registration to be disabled or deleted. Replacing logic from a single operation to a multiple operation plug-in is a challenge without a way to force the existing step registration to be deleted or disabled.
 
 When you deploy a new plug-in step via a solution for `CreateMultiple` or `UpdateMultiple` that replaces a plug-in step for `Create` or `Update`, you want to mitigate the amount of time where no logic or duplicate logic is applied. You can manually disable the steps for `Create` or `Update` before or after installing the solution.
 
-- If you disable before, there will be a period where no logic will be applied.
-- If you disable after, there will be a period where duplicate logic will be applied.
+- If you disable before, there's a period where no logic is applied.
+- If you disable after, there's a period where duplicate logic is applied.
 
 In either case, the organization may require scheduled downtime to ensure logic is applied consistently.
 
