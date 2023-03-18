@@ -209,6 +209,9 @@ The following are known issues that will be addressed before this feature become
 
 The following are frequently asked question related to the introduction of these messages.
 
+> [!NOTE]
+> If you haven't found answers to questions you have about using `CreateMultiple` and `UpdateMultiple` in this article, please use the button at the bottom of this article to **Submit and view feedback for This Page**. You will need a GitHub account to submit feedback.
+
 ### Will there be an UpsertMultiple?
 
 Yes. `UpsertMultiple` is planned to be released later.
