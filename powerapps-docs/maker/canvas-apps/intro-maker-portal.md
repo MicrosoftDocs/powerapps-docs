@@ -22,8 +22,6 @@ contributors:
 
 # Get started with Power Apps 
 
-[This article is pre-release documentation and is subject to change.]
-
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
 
@@ -42,10 +40,6 @@ Legend:
 
 Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
 
->[!IMPORTANT]
->This is a preview feature.
->[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
 
@@ -57,7 +51,7 @@ Legend:
 3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
 4. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
 5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in to the new navigation experience the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
-6. **More**: Pin your most-used items to the left navigation such as tables, flows, and more.
+6. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
 7. **Power Platform**: Explore other Power Platform products or service.
 
 ### Pin and unpin
@@ -81,7 +75,7 @@ You can also unpin and item by selecting the more button and then select **Unpin
 
 ### Discover all 
 
-To see all your your Power Apps, from the left navigation pane, selct **More** > **Discover all**. 
+To see all your your Power Apps, from the left navigation pane, select **More** > **Discover all**. 
 
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
@@ -136,7 +130,6 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
 - **Developer resources**: Access developer resources.
 - **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
-- **DevTools**: Access DevToos.
 - **Themes**: From the list of themes, select a theme for your organization.
 - **Password**: Change your password.
 - **Contact preferences**: Update your contact information.
@@ -164,7 +157,7 @@ In Power Apps, you can create and run these types of apps:
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 - **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
 
-In addition, Power Apps also allows you to create Power Pages website. More information: [What is Power Pages](/power-pages/introduction).
+In addition, Power Apps also allows you to create Power Pages websites. More information: [What is Power Pages](/power-pages/introduction).
 
 If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 

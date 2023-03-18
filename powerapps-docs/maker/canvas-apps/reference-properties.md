@@ -32,7 +32,9 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
-**[Barcode scanner](controls/control-new-barcode-scanner.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
+**[Barcode reader](controls/control-barcodereader.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android, iOS, or Windows device.
+
+**[Barcode scanner (retired)](controls/control-new-barcode-scanner.md)** – Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device. Replaced by the [barcode reader](controls/control-barcodereader.md).
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
@@ -48,7 +50,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Combo box](controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
 
-**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness. 
+**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness.
 
 **[Data table (preview)](controls/control-data-table.md)** - Show data in a tabular format.
 
@@ -257,6 +259,10 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[FindPrevious](controls/control-pdf-viewer.md)** – Finds the previous instance of **FindText** in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
 
 **[FindText](controls/control-pdf-viewer.md)** – The search term to look for in the document.  Applies to the **[PDF viewer](controls/control-pdf-viewer.md)** control.
+
+**[FocusedBorderColor](controls/properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](controls/properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](controls/properties-text.md)** – The name of the family of fonts in which text appears.  Applies to many controls.
 

@@ -32,7 +32,7 @@ The following table lists sample app templates available for [download](https://
       ![Bulletins app](media/app-icons/bulletins-app-icon.png "Bulletins app") <br> [Bulletins](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Bulletins) <br> Manager and user apps for company communications.
    :::column-end:::
    :::column span="":::
-      ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Employee%20Ideas) <br> App for campaigns and ideas.
+      ![Employee ideas](media/app-icons/employee-ideas-app-icon.png "Employee ideas app") <br> [Employee ideas](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/EmployeeIdeas) <br> App for campaigns and ideas.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -40,7 +40,7 @@ The following table lists sample app templates available for [download](https://
       ![How to.](media/app-icons/how-to-app-icon.png "How to app") <br> [How to](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/HowTo) <br> Learn how to be a Power Apps maker.
    :::column-end:::
    :::column span="":::
-      ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Area%20Inspection) <br> Manager and user apps for area inspections.
+      ![Inspection app](media/app-icons/inspection-app-icon.png "Inspection app") <br> [Inspection](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/Inspection) <br> Manager and user apps for area inspections.
    :::column-end:::
    :::column span="":::
       ![Issue reporting app](media/app-icons/issue-reporting-app-icon.png "Issue reporting app") <br> [Issue reporting](https://github.com/microsoft/teams-powerapps-app-templates/tree/main/IssueReporting) <br> Manager and user apps for issue reporting.

@@ -6,12 +6,9 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 01/31/2023
+ms.date: 03/15/2023
 ms.subservice: mobile
 ms.author: sericks
-ms.custom: ""
-ms.reviewer: ""
-ms.assetid: 
 search.audienceType: 
   - enduser
 search.app: 
@@ -25,13 +22,23 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 > [!NOTE]
 > If you are having an issue with Power Apps for iOS or Android and you don't find a solution on this page, please send a description of your issue with a screenshot and session ID to [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com?subject=Power%20Mobile%20issues). Comments on this page are not received by the support team.
 
+## Error: A major update is available. Upgrade your app to the latest version to keep your app working. If you are unable to upgrade, contact your administrator.
+
+A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
+
+-   Android: 3.23031.18
+-   iOS: 13.23031.18
+-   Windows: 3.23024.21
+
+If you are unable to upgrade, contact your administrator.
+
 ## Diagnose mobile apps with Monitor
 
 Monitor is a tool that offers makers a deep view of what an app does and how it does it by logging all key activities that occur in the app as it runs. You can [connect a mobile app session to Monitor](../maker/monitor-canvasapps.md#for-apps-running-on-power-apps-mobile-preview) to better diagnose and troubleshoot issues faster.
 
 ## Debug JavaScript web resources in mobile apps
 
-While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in mobile apps](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps)
+While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in mobile apps on Android](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps-on-android).
 
 ## Error: There was a problem signing you in
 

@@ -1,7 +1,7 @@
 ---
 title: How to check license designation for an app
 description: Explains how to check license designation for the selected canvas app.
-author: tapanm-msft
+author: mduelae
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
