@@ -41,7 +41,7 @@ Consider this: If you create a *single* record using `Create` or `CreateMultiple
 
 Performance is improved because these messages apply the data operations in a single transaction against multiple rows in the table rather than as separate operations on individual rows. This design also enables improving performance by writing plug-ins that respond to these messages more efficiently than plug-ins that respond to individual create and update events. More information: [Write plug-ins for CreateMultiple and UpdateMultiple (Preview)](../write-plugin-multiple-operation.md)
 
-Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this invocation adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the operations with greater efficiency.
+Each time a plug-in is invoked, some milliseconds are required to invoke the plug-in class containing the logic. For plug-ins registered for synchronous `Create` or `Update` steps, this invocation adds time to each individual operation. When a plug-in is registered on `CreateMultiple` and `UpdateMultiple` events, the plug-in class is invoked once and can process all the records with greater efficiency.
 
 ## Message pipelines merged
 
@@ -50,13 +50,13 @@ As mentioned above, creating or updating a single record using the single or mul
 This means:
 
 - When `CreateMultiple` and `UpdateMultiple` messages are used, the respective `Create` and `Update` events occur for each [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance in the `Targets` parameter. Any existing plug-ins or other event handlers for the `Create` and `Update` events continue to work as they always have. You aren't required to write new plug-ins to manage events raised by these messages.
-- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter. You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events and the logic is applied for both single and multiple operations.
+- When `Create` and `Update` messages are used, the respective `CreateMultiple` and `UpdateMultiple` events occur with an [EntityCollection](xref:Microsoft.Xrm.Sdk.EntityCollection) containing a *single* [Entity](xref:Microsoft.Xrm.Sdk.Entity) instance passed in the `Targets` parameter. You can move any existing logic that currently responds to individual `Create` and `Update` events to the more efficient `CreateMultiple` and `UpdateMultiple` events and the logic is applied for both single and multiple operations.
 
 Before the introduction of `CreateMultiple` and `UpdateMultiple`, all custom logic has been on the `Create` or `Update` messages. That logic must continue to be applied when client applications use the `CreateMultiple` and `UpdateMultiple` messages.
 
-With the introduction of the `CreateMultiple` and `UpdateMultiple` messages, for best performance we recommend that you begin to move any existing synchronous logic from `Create` and `Update` events to `CreateMultiple` and `UpdateMultiple` events. If you're introducing new logic, use the `CreateMultiple` and `UpdateMultiple` events rather than `Create` and `Update`. For asynchronous logic, such as Power Automate flows, there's no direct performance gain by moving logic to the multiple versions of these events because they occur after the operation has completed.
+With the introduction of the `CreateMultiple` and `UpdateMultiple` messages, for tables used with high-volume bulk operations, we recommend that you begin to move any existing synchronous logic from `Create` and `Update` events to `CreateMultiple` and `UpdateMultiple` events. If you're introducing new logic, use the `CreateMultiple` and `UpdateMultiple` events rather than `Create` and `Update`.
 
-> [!IMPORTANT]
+> [!CAUTION]
 > With this design there is potential for duplicate logic to be applied on both the single and multiple versions of events for the operations. Dataverse does not try to prevent this because we cannot know your intent.
 >
 > It is the plug-in developer's responsibility to make sure that the same logic applied for the single version of events is migrated to the multiple version of the event *and removed* from the single version of the event. Otherwise, the logic will be applied twice.
@@ -69,7 +69,7 @@ Keep these limitations in mind when using `CreateMultiple` and `UpdateMultiple` 
 
 ### Limited to certain tables
 
-Currently, `CreateMultiple` and `UpdateMultiple` messages are limited to those tables that have been created recently. You can use these messages on a new custom table you create. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
+Currently, `CreateMultiple` and `UpdateMultiple` messages are not available for all tables. These messages will be enabled for all tables that support individual `Create` and `Update` messages in the coming months.
 
 You can test whether individual tables support these messages today using the examples below.
 
@@ -165,7 +165,7 @@ OData-Version: 4.0
 
 The efficiency gained per operation using `CreateMultiple` and `UpdateMultiple` messages increases with the number of entities included in the `Targets` parameter, so there's incentive to try to use the largest possible number with projects that perform bulk operations.
 
-There's currently no set limit on the number of entities you might try to send with your requests. If you send too many the request fails. You need to experiment to find the best number. Generally, we expect that 1000 entities per request is a reasonable place to start. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
+There's currently no set limit on the number of entities you might try to send with your requests. If you send too many records in a single request, the entire request fails. You need to experiment to find the best number. Generally, we expect that 1000 entities per request is a reasonable place to start if the size of the record data is small and there are no plug-ins. The kinds of errors you may encounter can usually be addressed by sending fewer entities with each request. We recommend you include the ability to configure the number of entities sent so that you can adapt by sending fewer.
 
 #### Message size limits
 
@@ -186,7 +186,7 @@ The default timeout set using ServiceClient is 4 minutes, which is long for any 
 
 The `ExecuteMultiple` message supports the option that continues processing requests even when one or more requests fail. Because `CreateMultiple` and `UpdateMultiple` messages achieve performance improvements by unifying all operations in a single transaction, it isn't possible to support the continue-on-error behaviors.
 
-You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail.
+You should use `CreateMultiple` and `UpdateMultiple` messages when you have a high degree of confidence that all the operations will succeed. You may want to use a strategy that allows the set of operations to fall back to use `ExecuteMultiple` if `CreateMultiple` and `UpdateMultiple` messages fail. If the success rate for your initial try is low, this will result in worse performance. Only use this fall back strategy when most operations are expected to succeed.
 
 ### .NET SDK only
 
@@ -194,7 +194,7 @@ Currently the `CreateMultiple` and `UpdateMultiple` messages are only available 
 
 ### Not supported for use in Plug-ins
 
-At this time, we don't support using `CreateMultiple` or `UpdateMultiple` within plug-ins, but we plan to support this soon.
+At this time, we don't support using `CreateMultiple` or `UpdateMultiple` within plug-ins. More information: [Do not use batch request types in plug-ins and workflow activities](../best-practices/business-logic/avoid-batch-requests-plugin.md)
 
 ## Known issues
 
@@ -229,7 +229,7 @@ There are two kinds of API limits: Service Protection limits and Power Platform 
 
 #### Service Protection limits
 
-These limits have three facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
+As described in [Service protection API limits](../api-limits.md), limits have three facets. Two of these limits are evaluated on a 5-minute sliding window and apply when using these messages.
 
 - **Number of requests**: Each `CreateMultiple` and `UpdateMultiple` request counts as single request that accrues to the limit of 6000 requests per user, per server, during the 5-minute window. By grouping multiple requests with these messages, the likelihood of hitting this limit is reduced.
 - **Execution time**: Because each request takes longer, and if you're sending requests in parallel, you're more likely to hit the execution time limit that is 20 minutes per user, per server, during the 5-minute window. More information: [Send parallel requests](../send-parallel-requests.md)
