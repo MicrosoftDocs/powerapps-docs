@@ -384,7 +384,7 @@ This section isn't visible on the timeline record.
 |**Column 1**<BR>1. For this example, we selected **Owner** for this column.<br><BR>**Column 2**<BR>2. For this example, we selected **Regarding** for this column.<br><BR>**Column 3**<BR>3. For this example, we selected **Priority** for this column.| These columns aren't visible on the timeline record |
 
 > [!NOTE]
-> Records _Modified On_ is updated to same time & _Modified By_ is assigned to 1 user if the Entity is assigned to a new user. This is caused due to the Cascading Behaviour. Please refer to this [link](/dynamics365/customerengagement/on-premises/developer/entity-relationship-behavior?view=op-9-1&preserve-view=true) for more information.  
+> Records _Modified On_ is updated to same time & _Modified By_ is assigned to 1 user if the Entity is assigned to a new user. This is caused due to the Cascading Behaviour. Please refer to this [link](/dynamics365/customerengagement/on-premises/developer/entity-relationship-behavior?view=op-9-1&preserve-view=true#cascading-behavior) for more information.  
   
 #### Set the date to use when sorting activities in timeline
 
