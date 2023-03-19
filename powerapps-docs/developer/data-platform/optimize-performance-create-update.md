@@ -3,7 +3,7 @@ title: Optimize performance for Create and Update operations | Microsoft Docs
 description: Choose the best approach when creating or updating large numbers records.
 author: divkamath
 ms.topic: article
-ms.date: 02/08/2023
+ms.date: 03/19/2023
 ms.subservice: dataverse-developer
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -90,7 +90,7 @@ The following sections summarize strategies that can be applied for bulk create 
 - These specialized messages optimize performance when the same operation (`Create` or `Update`) is performed on a single table.
 - These messages are currently only available using the Dataverse SDK for .NET. Web API will enable PATCH operations on entity sets to enable same capabilities soon.
 - These messages are only available for tables that have been created recently, but we're rolling out changes that will enable them for any table that supports `Create` or `Update` operations.
-- These messages are currently not supported for use in plug-ins, but we expect to support them soon.
+- These messages are currently not supported for use in plug-ins.
 - Rather than apply data changes row-by-row, these messages apply changes to multiple rows at the same time, which is much more efficient and performant.
 - There's no continue-on-error behavior for these operations. An error for any single item causes the entire request to fall and roll back.
 - There's no set limit on the number of items that can be sent with these requests. The per-row efficiency improves as the number of items sent increases, but if you send too many items, the request will time out.
@@ -99,7 +99,7 @@ The following sections summarize strategies that can be applied for bulk create 
 
     - Whether any synchronous plug-in steps are registered for the operation. All synchronous business logic for the operations is applied. For best performance, no synchronous plug-in logic at all is recommended. You can suppress synchronous plug-ins logic for all items using the `BypassCustomPluginExecution` header.
     - The nature of the entities sent. For example, operations that create related records using 'deep insert' must include changes to related tables in the transaction, and execute any plug-in logic for the related records. You'll be able to send more items with smaller individual entity changes using simple data types.
-    - Whether synchronous plug-in steps for the table have been optimized for the `CreateMultiple` or `UpdateMultiple` operations. 
+    - Whether synchronous plug-in steps for the table have been optimized for the `CreateMultiple` or `UpdateMultiple` operations.
     
       - All logic for plug-ins registered for individual `Create` and `Update` operations are applied when the `CreateMultiple` or `UpdateMultiple` messages are used, but these plug-ins limit optimum performance.
       - We recommend transferring logic from plug-ins that support single operations to plug-ins that support multiple operations to achieve optimum performance. 
@@ -125,7 +125,7 @@ To optimize throughput for create and update operations, we recommend the follow
 ### Plug-ins
 
 - For tables containing data that may need to be loaded in bulk, you should transfer any synchronous business logic from the individual operation events to the corresponding message that supports multiple operations.
-- When we support `CreateMultiple` and `UpdateMultiple` operations for use in plug-ins, and you have logic that creates or updates records of the same table, you can get some performance benefit by using `CreateMultiple` and `UpdateMultiple` rather than by looping through individual operations. We don't expect you'll initiate operations that create thousands of records in plug-ins. But if you're currently creating 10, 50, or 200 records in a loop, or by using ExecuteMultiple, you should see better performance by using `CreateMultiple` and `UpdateMultiple`.
+- When we support `CreateMultiple` and `UpdateMultiple` operations for use in plug-ins, and you have logic that creates or updates records of the same table, you can get some performance benefit by using `CreateMultiple` and `UpdateMultiple` rather than by looping through individual operations. We don't expect you'll initiate operations that create thousands of records in plug-ins. But if you're currently able to reliabley create or update 10, 50, or 200 records in a loop, or by using `ExecuteMultiple`, you should see better performance by using `CreateMultiple` and `UpdateMultiple`.
 
 
 ### See also
