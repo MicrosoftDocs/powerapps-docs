@@ -4,18 +4,22 @@
   items:
   - name: What is Power Apps?
     href: ../powerapps-overview.md
-  - name: Sign up for 30-day trial version
-    href: signup-for-powerapps.md
-  - name: Sign up for Developer Plan
-    href: developer-plan.md
-  - name: Power Apps preview program
-    href: powerapps-preview-program.md
+  - name: Get access to Power Apps
+    items:
+    - name: Sign up for 30-day trial version
+      href: signup-for-powerapps.md
+    - name: Request a Power Apps license
+      href: ../user/request-license.md
+    - name: Sign up for Developer Plan
+      href: developer-plan.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: Power Apps preview program
+    href: powerapps-preview-program.md
   - name: System requirements, limits, and configuration
     href: ../limits-and-config.md
   - name: "Learning catalog"
