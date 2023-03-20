@@ -1,5 +1,11 @@
 {
-  "redirections": [    {
+  "redirections": [
+    {
+      "source_path": "powerapps-docs/developer/data-platform/troubleshoot-plug-in.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/important-changes-deprecations.md",
       "redirect_url": "/power-pages/important-changes-deprecations",
       "redirect_document_id": "false"
