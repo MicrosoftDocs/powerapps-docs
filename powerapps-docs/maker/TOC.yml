@@ -2490,6 +2490,8 @@
           href: ./data-platform/monitor-manage-processes.md
         - name: Best practices for real-time workflow processes
           href: ./data-platform/best-practices-workflow-processes.md
+      - name: Use Dataverse actions (preview)
+        href: ./data-platform/dataverse-actions.md
       - name: Work with actions
         items:
         - name: Use actions
