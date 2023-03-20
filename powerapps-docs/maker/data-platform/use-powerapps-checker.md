@@ -5,7 +5,7 @@ author: Mattp123
 manager: kvivek
 ms.component: cds
 ms.topic: article
-ms.date: 03/20/2023
+ms.date: 09/28/2022
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -125,54 +125,53 @@ The following table lists the component type, rule description, and severity. Cr
 > [!IMPORTANT]
 > Solution import validation with managed environments is a preview feature.
 
-|Solution component  |Rule name  |Rule description  | Severity  | Validated with managed environments?  |
-|---------|---------|---------|---------|---------|
-|Plug-in or workflow activity   | [meta-remove-dup-reg](../../developer/data-platform/best-practices/business-logic/do-not-duplicate-plugin-step-registration.md?client=PAChecker&error=meta-remove-dup-reg&source=featuredocs)     | Avoid duplicate Dataverse plug-in registrations.     | Critical  | No  |
-|Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](../../developer/data-platform/best-practices/business-logic/include-filtering-attributes-plugin-registration.md?client=PAChecker&error=meta-avoid-reg-no-attribute&source=featuredocs)  | Include filtering attributes with Dataverse plug-in registrations.    | Medium | No  |
-|Plug-in or workflow activity   | [meta-avoid-reg-retrieve](../../developer/data-platform/best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md?client=PAChecker&error=meta-avoid-reg-retrieve&source=featuredocs)  | Use caution with Dataverse plug-ins registered for Retrieve and RetrieveMultiple messages.    | Medium | No |
-|Plug-in or workflow activity   | [meta-remove-inactive](../../developer/model-driven-apps/best-practices/business-logic/remove-deactivated-disabled-configurations.md?client=PAChecker&error=meta-remove-inactive&source=featuredocs)    | Remove inactive configurations in Dataverse.    | Low | No |
-|Plug-in or workflow activity   | [meta-avoid-crm4-event](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=meta-avoid-crm4-event&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    | Medium | No |
-|Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  | High  | No |
-|Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   | Critical | Yes |
-|Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   | High  | Yes |
-|Web Resources  | [avoid-dom-form](./powerapps-checker/rules/web/avoid-dom-form.md)  | | High  | Yes |
-|Web Resources  | [avoid-dom-form-event](./powerapps-checker/rules/web/avoid-dom-form-event.md)  | | High | Yes |
-|Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     | Critical | Yes |
-|Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   | Critical | Yes  |
-|Web Resources  | [avoid-loadtheme](./powerapps-checker/rules/web/avoid-loadtheme.md)  | Don't use `loadTheme` Fluent v8 API.   | Low | No |
-|Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins. | Critical  | Yes  |
-|Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  | High | Yes |
-|Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | | High | Yes |
-|Web Resources  | [avoid-2011-api](./powerapps-checker/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](/powerapps/developer/data-platform/webapi/overview) documentation. | High  | Yes  |
-|Web Resources  | [use-relative-uri](./powerapps-checker/rules/web/use-relative-uri.md)   | Don't use absolute Dataverse endpoint URLs.    | Medium  |  Yes  |
-|Web Resources  | [use-cached-webresource](./powerapps-checker/rules/web/use-cached-webresource.md)   |  | Medium  | Yes  |
-|Web Resources  | [use-client-context](./powerapps-checker/rules/web/use-client-context.md)  | Use client contexts.   | Medium  | Yes  |
-|Web Resources  | [use-navigation-api](./powerapps-checker/rules/web/use-navigation-api.md)   | Use navigation API parameters.   | Medium  | Yes  |
-|Web Resources  | [use-offline](./powerapps-checker/rules/web/use-offline.md)   |  | Medium  | Yes  |
-|Web Resources  | [do-not-make-parent-assumption](./powerapps-checker/rules/web/do-not-make-parent-assumption.md)   |  | High  | Yes  |
-|Web Resources  | [use-org-setting](./powerapps-checker/rules/web/use-org-setting.md)   | Use organization settings.   | Medium  | Yes  |
-|Web Resources  | [use-global-context](./powerapps-checker/rules/web/use-global-context.md)   |  | Medium  | Yes  |
-|Web Resources  | [use-grid-api](./powerapps-checker/rules/web/use-grid-api.md)   | Use the grid APIs.    | Medium  | Yes  |
-|Web Resources  | [use-utility-dialogs](./powerapps-checker/rules/web/use-utility-dialogs.md)   |    | Medium  | Yes  |
-|Web Resources  | [avoid-isActivityType](./powerapps-checker/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    | Medium  | Yes  |
-|Web Resources  | [meta-avoid-silverlight](/power-platform/important-changes-coming?client=PAChecker&error=meta-avoid-silverlight&source=featuredocs)   | Silverlight web resource usage is deprecated.   | Medium | Yes |
-| Web Resources  | [remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | Medium  | Yes  |
-| Web Resources  | [use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | Medium   | Yes  |
-| Web Resources  | [use-strict-equality-operators](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | Medium  | Yes  |
-| Web Resources  | [avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | Critical  | Yes  |
-| Web Resources  | [avoid-with](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-with&client=PAChecker)  | Don't use the 'with' operator.  | High  | No  |
-| Web Resources  | [remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | Medium  | Yes  |
-| Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | Medium  | Yes  |
-| Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | Critical  | Yes  |
-| Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | Critical  | Yes  |
-| Canvas App  | [app-formula-issues-high](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-high&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | Medium  | No  |
-| Canvas App  | [app-formula-issues-medium](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-medium&client=PAChecker)  | Refer to Power Apps formula references for additional details.  |  Low  | No  |
-| Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. |  Medium  | No  |
-| Canvas App  | [app-use-delayoutput-text-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-use-delayoutput-text-input&client=PAChecker)  | Use delayed load in some scenarios to improve performance. |  Medium  | No  |
-| Canvas App  | [app-reduce-screen-controls](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-reduce-screen-controls&client=PAChecker)  | Limit the number of app controls for improved performance.  |  Medium  | No  |
-| Canvas App  | [app-include-accessible-label](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-accessible-label&client=PAChecker)  | Use explicit labels to improve app accessibility. |  Medium  | No  |
-| Canvas App  | [app-include-alternative-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-alternative-input&client=PAChecker)  | Ensure all interactive elements are accessible to alternative inputs.  |  Medium  | No  |
-| Canvas App  | [app-avoid-autostart](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-avoid-autostart&client=PAChecker)  | Avoid using autostart on players within an app.  |  Medium  | No  |
+|Solution component  |Rule name  |Rule description  | Severity  |
+|---------|---------|---------|---------|
+|Plug-in or workflow activity   | [meta-remove-dup-reg](../../developer/data-platform/best-practices/business-logic/do-not-duplicate-plugin-step-registration.md?client=PAChecker&error=meta-remove-dup-reg&source=featuredocs)     | Avoid duplicate Dataverse plug-in registrations.     | Critical  |
+|Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](../../developer/data-platform/best-practices/business-logic/include-filtering-attributes-plugin-registration.md?client=PAChecker&error=meta-avoid-reg-no-attribute&source=featuredocs)  | Include filtering attributes with Dataverse plug-in registrations.    | Medium |
+|Plug-in or workflow activity   | [meta-avoid-reg-retrieve](../../developer/data-platform/best-practices/business-logic/limit-registration-plugins-retrieve-retrievemultiple.md?client=PAChecker&error=meta-avoid-reg-retrieve&source=featuredocs)  | Use caution with Dataverse plug-ins registered for Retrieve and RetrieveMultiple messages.    | Medium |
+|Plug-in or workflow activity   | [meta-remove-inactive](../../developer/model-driven-apps/best-practices/business-logic/remove-deactivated-disabled-configurations.md?client=PAChecker&error=meta-remove-inactive&source=featuredocs)    | Remove inactive configurations in Dataverse.    | Low |
+|Plug-in or workflow activity   | [meta-avoid-crm4-event](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=meta-avoid-crm4-event&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.    | Medium |
+|Plug-in or workflow activity  | [meta-avoid-retrievemultiple-annotation](../../developer/data-platform/best-practices/index.md?client=PAChecker&error=meta-avoid-retrievemultiple-annotation)  | Avoid registering a plugin on RetrieveMultiple of annotation.  | High  |
+|Web Resources  | [use-async](./powerapps-checker/rules/web/use-async.md)  |  Interact with HTTP and HTTPS resources asynchronously.   | Critical |
+|Web Resources  | [avoid-modals](./powerapps-checker/rules/web/avoid-modals.md)  | Avoid using modal dialogs.   | High  |
+|Web Resources  | [avoid-dom-form](./powerapps-checker/rules/web/avoid-dom-form.md)  | | High  |
+|Web Resources  | [avoid-dom-form-event](./powerapps-checker/rules/web/avoid-dom-form-event.md)  | | High |
+|Web Resources  | [avoid-crm2011-service-odata](./powerapps-checker/rules/web/avoid-crm2011-service-odata.md) | Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.     | Critical |
+|Web Resources  | [avoid-crm2011-service-soap](./powerapps-checker/rules/web/avoid-crm2011-service-soap.md)  | Don't target the Microsoft Dynamics CRM 2011 SOAP services.   | Critical |
+|Web Resources  | [avoid-loadtheme](./powerapps-checker/rules/web/avoid-loadtheme.md)  | Don't use `loadTheme` Fluent v8 API.   | Low |
+|Web Resources  | [avoid-browser-specific-api](./powerapps-checker/rules/web/avoid-browser-specific-api.md) | Don't use Internet Explorer legacy APIs or browser plug-ins. | Critical  |
+|Web Resources  | [avoid-unpub-api](./powerapps-checker/rules/web/avoid-unpub-api.md) |  | High |
+|Web Resources  | [avoid-window-top](./powerapps-checker/rules/web/avoid-window-top.md) | | High |
+|Web Resources  | [avoid-2011-api](./powerapps-checker/rules/web/avoid-2011-api.md)  | Don't use the deprecated Microsoft Dynamics CRM 2011 object model. Instead follow [Dataverse Web API](/powerapps/developer/data-platform/webapi/overview) documentation. | High  |
+|Web Resources  | [use-relative-uri](./powerapps-checker/rules/web/use-relative-uri.md)   | Don't use absolute Dataverse endpoint URLs.    | Medium  | 
+|Web Resources  | [use-cached-webresource](./powerapps-checker/rules/web/use-cached-webresource.md)   |  | Medium  |
+|Web Resources  | [use-client-context](./powerapps-checker/rules/web/use-client-context.md)  | Use client contexts.   | Medium  |
+|Web Resources  | [use-navigation-api](./powerapps-checker/rules/web/use-navigation-api.md)   | Use navigation API parameters.   | Medium  |
+|Web Resources  | [use-offline](./powerapps-checker/rules/web/use-offline.md)   |  | Medium  |
+|Web Resources  | [do-not-make-parent-assumption](./powerapps-checker/rules/web/do-not-make-parent-assumption.md)   |  | High  |
+|Web Resources  | [use-org-setting](./powerapps-checker/rules/web/use-org-setting.md)   | Use organization settings.   | Medium  |
+|Web Resources  | [use-global-context](./powerapps-checker/rules/web/use-global-context.md)   |  | Medium  |
+|Web Resources  | [use-grid-api](./powerapps-checker/rules/web/use-grid-api.md)   | Use the grid APIs.    | Medium  |
+|Web Resources  | [use-utility-dialogs](./powerapps-checker/rules/web/use-utility-dialogs.md)   |    | Medium  |
+|Web Resources  | [avoid-isActivityType](./powerapps-checker/rules/web/avoid-isactivitytype.md)   | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.gettableMetadata and don't use in ribbon rules.    | Medium  |
+|Web Resources  | [meta-avoid-silverlight](/power-platform/important-changes-coming?client=PAChecker&error=meta-avoid-silverlight&source=featuredocs)   | Silverlight web resource usage is deprecated.   | Medium |
+| Web Resources  | [remove-debug-script](../../developer/model-driven-apps/best-practices/index.md?client=PAChecker&error=web-remove-debug-script)  | Avoid including debug script in non-development environments.  | Medium  |
+| Web Resources  | [use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | Medium   |
+| Web Resources  | [use-strict-equality-operators](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | Medium  |
+| Web Resources  | [avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | Critical  |
+| Web Resources  | [remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | Medium  |
+| Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | Medium  |
+| Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | Critical  |
+| Web Resources  | [use-getsecurityroleprivilegesinfo](./powerapps-checker/rules/web/use-getsecurityroleprivilegesinfo.md)  | Avoid userSettings.securityRolePrivileges. Use userSettings.getSecurityRolePrivilegesInfo instead. | High  |
+| Canvas App  | [app-formula-issues-high](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-high&client=PAChecker)  | Refer to Power Apps formula references for additional details.  | Critical  |
+| Canvas App  | [app-formula-issues-medium](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-medium&client=PAChecker)  | Refer to Power Apps formula references for additional details.  |  Medium  |
+| Canvas App  | [app-formula-issues-low](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-formula-issues-low&client=PAChecker)  | Refer to Power Apps formula references for additional details. |  Low  |
+| Canvas App  | [app-use-delayoutput-text-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-use-delayoutput-text-input&client=PAChecker)  | Use delayed load in some scenarios to improve performance. |  Medium  |
+| Canvas App  | [app-reduce-screen-controls](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-reduce-screen-controls&client=PAChecker)  | Limit the number of app controls for improved performance.  |  Medium  |
+| Canvas App  | [app-include-accessible-label](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-accessible-label&client=PAChecker)  | Use explicit labels to improve app accessibility. |  Medium  |
+| Canvas App  | [app-include-alternative-input](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-include-alternative-input&client=PAChecker)  | Ensure all interactive elements are accessible to alternative inputs.  |  Medium  |
+| Canvas App  | [app-avoid-autostart](https://go.microsoft.com/fwlink/?LinkID=398563&error=app-avoid-autostart&client=PAChecker)  | Avoid using autostart on players within an app.  |  Medium  |
 
 ### See also
 
