@@ -249,7 +249,7 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: 1 - Create an app from a design or a template
+    - name: Create an app from a design or a template
       items:
       - name: Create an app from a template
         href: ./canvas-apps/get-started-test-drive.md
@@ -272,7 +272,13 @@
           - name: Troubleshoot common errors
             href: ./canvas-apps/figma/common-errors.md
             displayName: Troubleshoot common errors when creating app from Figma
-    - name: 2 - Create an app using data
+    - name: Create an app using AI Copilot (preview)
+      items:
+      - name: Overview
+        href: ./canvas-apps/ai-overview.md
+      - name: Create an app from conversations
+        href: ./canvas-apps/ai-conversations-create-app.md
+    - name: Create an app using data
       items:
       - name: From Microsoft Dataverse
         href: ./canvas-apps/data-platform-create-app.md
@@ -282,13 +288,13 @@
         href: ./canvas-apps/get-started-create-from-data.md
       - name: From Azure SQL Database
         href: ./canvas-apps/app-from-azure-sql-database.md
-    - name: 3 - Make basic customizations
+    - name: Make basic customizations
       items:
-      - name: 1 - Galleries
+      - name: Galleries
         href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: 2 - Forms
+      - name: Forms
         href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: 3 - Cards
+      - name: Cards
         href: ./canvas-apps/customize-card.md
   - name: Create an app from scratch
     items:
@@ -382,6 +388,10 @@
                 href: ./canvas-apps/add-screen-context-variables.md
               - name: Add a scrolling screen
                 href: ./canvas-apps/add-scrolling-screen.md
+              - name: Add a chatbot (preview)
+                href: ./canvas-apps/add-ai-chatbot.md
+              - name: Add a copilot (preview)
+                href: ./canvas-apps/add-ai-copilot.md
               - name: Configure Office 365 screens
                 items:
                   - name: Calendar-screen overview
@@ -646,7 +656,7 @@
             href: ./canvas-apps/working-with-flows.md
           - name: Add a flow (retired)
             href: ./canvas-apps/using-logic-flows.md
-        - name: Create a rule in canvas apps
+        - name: Convert rules to expressions
           href: ./canvas-apps/working-with-rules.md
         - name: Create or update bulk records
           href: ./canvas-apps/create-update-records-bulk.md
