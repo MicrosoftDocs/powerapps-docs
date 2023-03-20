@@ -160,7 +160,7 @@
         - name: Analyze performance
           href: analyze-performance.md
         - name: Troubleshoot plug-ins
-          href: troubleshoot-plug-in.md
+          href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
         - name: Dependent Assemblies (Preview)
