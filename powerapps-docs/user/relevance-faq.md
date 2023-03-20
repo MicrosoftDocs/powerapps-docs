@@ -54,6 +54,9 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields that aren't searchable or viewable in the results page. 
 
+## Why do return do not support HTLM formatting for memo data types?
+
+Dataverse search does not return html formatting for memo types to optomize the UI experience.
 
 ### See also
 
