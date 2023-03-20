@@ -38,7 +38,7 @@ Solution checker works with unmanaged solutions that can be exported from an env
 ## Run the solution checker
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. In the left pane, select **Solutions**. 
+2. In the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 3. Next to the unmanaged solution that you want to analyze, select **...**, point to **Solution checker**, and then select **Run**. 
 
    > [!div class="mx-imgBorder"]
@@ -65,6 +65,7 @@ After you submit a solutions check in your environment, the check can be cancele
 When you cancel a check, the solution check stops running and the solution check status returns to the previous state. 
 
 ## Solution checker states
+
 When you install the solution checker in your environment, the **Solution check** column becomes available in the **Solutions** list. This column displays the solution analysis states for a solution. 
 
 |State  |Description  |
@@ -79,9 +80,10 @@ When you install the solution checker in your environment, the **Solution check*
 
 
 ## Review the solution checker report
+
 When a solution check is completed, you can view the analysis report in the portal, or you can download the report from your web browser. In the portal, you have options to filter, group results by **Issue**, **Location** or by **Severity** and view detailed information for issues detected in your solution. 
 
-1. In the left pane, select **Solutions**.
+1. In the left pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Next to the unmanaged solution where you want to view the solution checker report, select **...**, point to **Solution checker**, and then select **View results**.  
 3. Select an Issue to view the details and guidance on how to resolve.
 
@@ -90,7 +92,7 @@ When a solution check is completed, you can view the analysis report in the port
 
 The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser. The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
-1. In the left pane, select **Solutions**.
+1. In the left pane, select **Solutions**. [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download results**.  
 3. The solution checker zip file is downloaded to the folder specified by your web browser.
 
@@ -118,7 +120,7 @@ You can run solution checker rules in your development environment to detect iss
 
 ## Best practice rules used by solution checker (preview)
 
-The following table lists the component type, rule description, severity, and whether validation occurs when configured for solution import with managed environments. More information: [Enable managed environments](/power-platform/admin/managed-environment-enable)
+The following table lists the component type, rule description, and severity. Critical violations are blocked or warned when configured for solution import with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
 
 > [!IMPORTANT]
 > Solution import validation with managed environments is a preview feature.

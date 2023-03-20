@@ -25,7 +25,7 @@ The notification table stores notifications for each user. Your model-driven app
 
 Each notification row is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
 
-This article outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md).
+This article outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md). To see how these notifications appear in applications, see [In-app notifications in model-driven apps](/powerapps/user/notifications).
 
 ## Enable the in-app notification feature
 
