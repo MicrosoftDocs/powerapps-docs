@@ -41,14 +41,15 @@ When you  interact with activities with code, it's important to keep in mind tha
 
 ### StatusCode label differences
 
-The `statuscode` options provide reasons for the `statecode` of the record. These option sets can be customized by adding new options, so each table can have a different set of options, some of them have the same value as the [ActivityPointer](reference/entities/activitypointer.md) status option value, but the labels can be different.
+The `statuscode` options provide reasons for the `statecode` of the record. These option sets can be customized by adding new options, so each table can have a different set of options. Some of the options have the same value as the [ActivityPointer](reference/entities/activitypointer.md) `statuscode` option values, but the labels can be different.
 
 Labels for `statuscode` options vary based on whether you're retrieving rows as an [ActivityPointer](reference/entities/activitypointer.md) or a specific activity type such as an [Appointment](reference/entities/appointment.md), [Email](reference/entities/email.md), or [Task](reference/entities/task.md).
 
-For example, if you retrieve an `ActivityPointer` row that represents an `Appointment`, the name value for `statuscode` of `1` shows up as **Open** rather than **Free**.
+For example, if you retrieve an `ActivityPointer` row that represents an `Appointment`, the label for `statuscode` value `1` shows up as **Open** rather than **Free**.
 
 You can find the labels in the definition of the default `statuscode` options for each table here:
 
+- [ActivityPointer.StatusCode Options](/power-apps/developer/data-platform/reference/entities/activitypointer#statuscode-choicesoptions)
 - [Appointment.StatusCode Options](/power-apps/developer/data-platform/reference/entities/appointment#statuscode-choicesoptions)
 - [Chat.StatusCode Options](/power-apps/developer/data-platform/reference/entities/chat#statuscode-choicesoptions)
 - [Email.StatusCode Options](/power-apps/developer/data-platform/reference/entities/email#statuscode-choicesoptions)
