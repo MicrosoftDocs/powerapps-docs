@@ -36,10 +36,12 @@ When you  interact with activities with code, it's important to keep in mind tha
 |**Canceled**|2|
 |**Scheduled**|3|
 
-- Appointment, Chat, RecurringAppointmentMaster, and any custom activities have all four `statecode` options.
-- Email, Fax, Letter, PhoneCall, Task, and SocialActivity only have the first three `statecode` options. There's no valid option to set the state of these activity types as Scheduled.
+- [Appointment](reference/entities/appointment.md), [Chat](reference/entities/chat.md), [RecurringAppointmentMaster](reference/entities/recurringappointmentmaster.md), and any custom activities have all four `statecode` options.
+- [Email](reference/entities/email.md), [Fax](reference/entities/fax.md), [Letter](reference/entities/letter.md), [PhoneCall](reference/entities/phonecall.md), [Task](reference/entities/task.md), and [SocialActivity](reference/entities/socialactivity.md) only have the first three `statecode` options. There's no valid option to set the state of these activity types as Scheduled.
 
 ### StatusCode label differences
+
+The `statuscode` options provide reasons for the `statecode` of the record. These option sets can be customized by adding new options, so each table can have a different set of options, some of them have the same value as the [ActivityPointer](reference/entities/activitypointer.md) status option value, but the labels can be different.
 
 Labels for `statuscode` options vary based on whether you're retrieving rows as an [ActivityPointer](reference/entities/activitypointer.md) or a specific activity type such as an [Appointment](reference/entities/appointment.md), [Email](reference/entities/email.md), or [Task](reference/entities/task.md).
 
@@ -55,7 +57,7 @@ You can find the labels in the definition of the `statuscode` options for each t
 - [PhoneCall.StateCode Options](/power-apps/developer/data-platform/reference/entities/phonecall#statuscode-choicesoptions)
 - [RecurringAppointmentMaster.StateCode Options](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster#statuscode-choicesoptions)
 - [Task.StateCode Options](/power-apps/developer/data-platform/reference/entities/task#statuscode-choicesoptions)
-- [SocialActivity.StateCode Options](/power-apps/developer/data-platform/reference/socialactivity/appointment#statuscode-choicesoptions)
+- [SocialActivity.StateCode Options](/power-apps/developer/data-platform/reference/socialactivity#statuscode-choicesoptions)
 
 
 
