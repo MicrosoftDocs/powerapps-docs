@@ -49,15 +49,15 @@ For example, if you retrieve an `ActivityPointer` row that represents an `Appoin
 
 You can find the labels in the definition of the `statuscode` options for each table here:
 
-- [Appointment.StateCode Options](/power-apps/developer/data-platform/reference/entities/appointment#statuscode-choicesoptions)
-- [Chat.StateCode Options](/power-apps/developer/data-platform/reference/entities/chat#statuscode-choicesoptions)
-- [Email.StateCode Options](/power-apps/developer/data-platform/reference/entities/email#statuscode-choicesoptions)
-- [Fax.StateCode Options](/power-apps/developer/data-platform/reference/entities/fax#statuscode-choicesoptions)
-- [Letter.StateCode Options](/power-apps/developer/data-platform/reference/entities/letter#statuscode-choicesoptions)
-- [PhoneCall.StateCode Options](/power-apps/developer/data-platform/reference/entities/phonecall#statuscode-choicesoptions)
-- [RecurringAppointmentMaster.StateCode Options](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster#statuscode-choicesoptions)
-- [Task.StateCode Options](/power-apps/developer/data-platform/reference/entities/task#statuscode-choicesoptions)
-- [SocialActivity.StateCode Options](/power-apps/developer/data-platform/reference/socialactivity#statuscode-choicesoptions)
+- [Appointment.StatusCode Options](/power-apps/developer/data-platform/reference/entities/appointment#statuscode-choicesoptions)
+- [Chat.StatusCode Options](/power-apps/developer/data-platform/reference/entities/chat#statuscode-choicesoptions)
+- [Email.StatusCode Options](/power-apps/developer/data-platform/reference/entities/email#statuscode-choicesoptions)
+- [Fax.StatusCode Options](/power-apps/developer/data-platform/reference/entities/fax#statuscode-choicesoptions)
+- [Letter.StatusCode Options](/power-apps/developer/data-platform/reference/entities/letter#statuscode-choicesoptions)
+- [PhoneCall.StatusCode Options](/power-apps/developer/data-platform/reference/entities/phonecall#statuscode-choicesoptions)
+- [RecurringAppointmentMaster.StatusCode Options](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster#statuscode-choicesoptions)
+- [Task.StatusCode Options](/power-apps/developer/data-platform/reference/entities/task#statuscode-choicesoptions)
+- [SocialActivity.StatusCode Options](/power-apps/developer/data-platform/reference/socialactivity#statuscode-choicesoptions)
 
 
 
