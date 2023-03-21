@@ -36,11 +36,11 @@ You can configure the enhanced email template editing experience for apps across
 
 ## Disable the enhanced email template editor for an app
 
-For an app to display the default email template selection dialog, you must disable the enhanced email template selection option. To disable the option for a specific app, you must add the app to the Solution in which you've added the the email template selection option. Perform the following steps:
+For an app to display the default email template selection dialog, you must disable the enhanced email template selection option. To disable the option for a specific app, you must add the app to the Solution in which you've added the email template selection option. Perform the following steps:
 
 1. Open the **Power Apps** environment.
 1. Select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)]
-1. Open the Solution in where you've added the the email template selection option.
+1. Open the Solution in where you've added the email template selection option.
 1. Go to **Add Existing** > **App** > **Model-driven app**> **Add existing model-driven apps** pane. Select the app for which you want to disable the enhanced insert email template selection dialog. The app is added to the solution. 
 1. Select the **Enable the New Email Template Editor** option in the solution.
 1. On the **Edit Enable the New Email Template Editor**, in the **Setting app value** section, the selected app is displayed. 
