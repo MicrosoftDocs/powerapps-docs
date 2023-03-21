@@ -57,7 +57,7 @@ You can find the labels in the definition of the default `statuscode` options fo
 - [PhoneCall.StatusCode Options](/power-apps/developer/data-platform/reference/entities/phonecall#statuscode-choicesoptions)
 - [RecurringAppointmentMaster.StatusCode Options](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster#statuscode-choicesoptions)
 - [Task.StatusCode Options](/power-apps/developer/data-platform/reference/entities/task#statuscode-choicesoptions)
-- [SocialActivity.StatusCode Options](/power-apps/developer/data-platform/reference/socialactivity#statuscode-choicesoptions)
+- [SocialActivity.StatusCode Options](/power-apps/developer/data-platform/reference/entities/socialactivity#statuscode-choicesoptions)
 
 <a name="bkmk_sortdate"></a>
 
