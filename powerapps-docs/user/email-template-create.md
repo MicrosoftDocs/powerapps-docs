@@ -68,7 +68,7 @@ Start with an existing template to create an email template faster and with less
   
 3. The template editor page is displayed.
 
-When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the the following template editors:
+When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the following template editors:
   - Enhanced email template: If the selected email template was created with the enhanced email template.
   - Email template: If the selected template was created with the legacy email template.
 
