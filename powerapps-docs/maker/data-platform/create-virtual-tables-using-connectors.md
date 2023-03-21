@@ -123,17 +123,12 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions in SharePoint.
 
-- Select to **Connect directly (cloud-services)** or **Connect using on-premises data gateway**.
+>[!NOTE] At this time virtual tables using the Virtual Connector Provider wizard only supports online options for SharePoint. 
+
+- Select to **Connect directly (cloud-services)** 
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
-- For **Direct connection**, sign into SharePoint.
-
-   :::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
-
-- For on-premises, select your authentication type, provide your credentials, choose a gateway, and then select **Create**.
-
-   :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
 
