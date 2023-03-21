@@ -37,7 +37,7 @@ When you  interact with activities with code, it's important to keep in mind tha
 |**Scheduled**|3|
 
 - [Appointment](reference/entities/appointment.md), [Chat](reference/entities/chat.md), [RecurringAppointmentMaster](reference/entities/recurringappointmentmaster.md), and any custom activities have all four `statecode` options.
-- [Email](reference/entities/email.md), [Fax](reference/entities/fax.md), [Letter](reference/entities/letter.md), [PhoneCall](reference/entities/phonecall.md), [Task](reference/entities/task.md), and [SocialActivity](reference/entities/socialactivity.md) only have the first three `statecode` options. There's no valid option to set the state of these activity types as Scheduled.
+- [Email](reference/entities/email.md), [Fax](reference/entities/fax.md), [Letter](reference/entities/letter.md), [PhoneCall](reference/entities/phonecall.md), [Task](reference/entities/task.md), and [SocialActivity](reference/entities/socialactivity.md) only have the first three `statecode` options. There's no valid option to set the state of these activity types as **Scheduled**.
 
 ### StatusCode label differences
 
@@ -47,7 +47,7 @@ Labels for `statuscode` options vary based on whether you're retrieving rows as 
 
 For example, if you retrieve an `ActivityPointer` row that represents an `Appointment`, the name value for `statuscode` of `1` shows up as **Open** rather than **Free**.
 
-You can find the labels in the definition of the `statuscode` options for each table here:
+You can find the labels in the definition of the default `statuscode` options for each table here:
 
 - [Appointment.StatusCode Options](/power-apps/developer/data-platform/reference/entities/appointment#statuscode-choicesoptions)
 - [Chat.StatusCode Options](/power-apps/developer/data-platform/reference/entities/chat#statuscode-choicesoptions)
@@ -59,10 +59,6 @@ You can find the labels in the definition of the `statuscode` options for each t
 - [Task.StatusCode Options](/power-apps/developer/data-platform/reference/entities/task#statuscode-choicesoptions)
 - [SocialActivity.StatusCode Options](/power-apps/developer/data-platform/reference/socialactivity#statuscode-choicesoptions)
 
-
-
-
-  
 <a name="bkmk_sortdate"></a>
 
 ## Control how activities are sorted by date  
