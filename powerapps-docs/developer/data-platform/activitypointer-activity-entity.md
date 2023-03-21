@@ -1,15 +1,12 @@
 ---
 title: "ActivityPointer (activity) table (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The activity pointer (activity) table represents any activity or task that is performed, or to be performed by a user. An activity is any action for which an entry can be made on a calendar" 
-ms.custom: ""
-ms.date: 03/25/2021
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" 
+ms.date: 03/25/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: DataMartens
 ms.subservice: dataverse-developer
-ms.author: "jdaly" 
-manager: "ryjones" 
+ms.author: dmartens 
 search.audienceType: 
   - developer
 search.app: 
@@ -18,19 +15,21 @@ search.app:
 ---
 # ActivityPointer (activity) table
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 The activity pointer (activity) table represents any activity or task that is performed, or to be performed by a user. An activity is any action for which an entry can be made on a calendar.  
   
  Whenever you create an activity record in Microsoft Dataverse, a corresponding activity pointer record is created. This indicates that the activity record and the corresponding activity pointer record have the same value for the `ActivityId` column. For example, if you create an `Email` record, the column values of `Email.ActivityId` and the corresponding `ActivityPointer.ActivityId` will be the same.  
   
  The `ActivityPointer.ActivityTypeCode` column defines the type of the activity. The possible values for this column are defined in `activitypointer_activitytypecode` global option set.  
  
-> [!NOTE]
->  If you programmatically interact with activities, it's important to keep in mind that the name values for statecode and statuscode will vary based on whether you are retrieving rows as an ActivityPointer or a specific activity type such as an Appointment, Email, or Task. For example, if you retrieve an Appointment as an ActivityPointer, the name value for statuscode of 1 will show up as ["Open"](/powerapps-docs/developer/data-platform/reference/entities/activitypointer.md#statuscode-choicesoptions) rather than ["Free"](/powerapps-docs/developer/data-platform/reference/entities/appointment.md#statuscode-choicesoptions).
+
+## Inherited statecode and statuscode options
+
+When you  interact with activities with code, it's important to keep in mind that the labels for `statecode` and `statuscode` options will vary based on whether you are retrieving rows as an [ActivityPointer](reference/entities/activitypointer.md) or a specific activity type such as an [Appointment](reference/entities/appointment.md), [Email](reference/entities/email.md), or [Task](reference/entities/task.md).
+
+For example, if you retrieve an `ActivityPointer` row that represents an `Appointment`, the name value for `statuscode` of 1 will show up as ["Open"](/powerapps-docs/developer/data-platform/reference/entities/activitypointer.md#statuscode-choicesoptions) rather than ["Free"](/powerapps-docs/developer/data-platform/reference/entities/appointment.md#statuscode-choicesoptions).
 
   
-<a name="bkmk_sortdate"></a>   
+<a name="bkmk_sortdate"></a>
 
 ## Control how activities are sorted by date  
   
