@@ -36,8 +36,8 @@ When you  interact with activities with code, it's important to keep in mind tha
 |**Canceled**|2|
 |**Scheduled**|3|
 
-- [Appointment](reference/entities/appointment.md), [Chat](reference/entities/chat.md), [RecurringAppointmentMaster](reference/entities/recurringappointmentmaster.md), and any custom activities have all four `statecode` options.
-- [Email](reference/entities/email.md), [Fax](reference/entities/fax.md), [Letter](reference/entities/letter.md), [PhoneCall](reference/entities/phonecall.md), [Task](reference/entities/task.md), and [SocialActivity](reference/entities/socialactivity.md) only have the first three `statecode` options. There's no valid option to set the state of these activity types as **Scheduled**.
+- [Appointment](/power-apps/developer/data-platform/reference/entities/appointment#statecode-choicesoptions), [Chat](/power-apps/developer/data-platform/reference/entities/chat#statecode-choicesoptions), [RecurringAppointmentMaster](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster#statecode-choicesoptions), and any custom activities have all four `statecode` options.
+- [Email](/power-apps/developer/data-platform/reference/entities/email#statecode-choicesoptions), [Fax](/power-apps/developer/data-platform/reference/entities/fax#statecode-choicesoptions), [Letter](/power-apps/developer/data-platform/reference/entities/letter#statecode-choicesoptions), [PhoneCall](/power-apps/developer/data-platform/reference/entities/phonecall#statecode-choicesoptions), [Task](/power-apps/developer/data-platform/reference/entities/task#statecode-choicesoptions), and [SocialActivity](/power-apps/developer/data-platform/reference/entities/socialactivity#statecode-choicesoptions) only have the first three `statecode` options. There's no valid option to set the state of these activity types as **Scheduled**.
 
 ### StatusCode label differences
 
