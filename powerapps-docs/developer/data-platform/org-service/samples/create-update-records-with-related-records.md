@@ -46,7 +46,7 @@ Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `Account` method creates a account record for which we will add letters.
+1. The `Account` method creates an account record for which we will add letters.
 1. The `Relationship` method creates the reference between letter and account.
 
 ### Clean up
