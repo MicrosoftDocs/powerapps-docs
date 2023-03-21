@@ -122,7 +122,8 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions in SharePoint.
 
-> [!NOTE] At this time virtual tables using the virtual connector provider wizard only support online versions of SharePoint.
+> [!NOTE]
+> At this time virtual tables using the virtual connector provider wizard only support online versions of SharePoint.
 
 - Select to **Connect directly (cloud-services)** 
 
