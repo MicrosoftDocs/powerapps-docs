@@ -25,6 +25,10 @@ The activity pointer (activity) table represents any activity or task that is pe
  Whenever you create an activity record in Microsoft Dataverse, a corresponding activity pointer record is created. This indicates that the activity record and the corresponding activity pointer record have the same value for the `ActivityId` column. For example, if you create an `Email` record, the column values of `Email.ActivityId` and the corresponding `ActivityPointer.ActivityId` will be the same.  
   
  The `ActivityPointer.ActivityTypeCode` column defines the type of the activity. The possible values for this column are defined in `activitypointer_activitytypecode` global option set.  
+ 
+> [!NOTE]
+>  If you programmatically interact with activities, it's important to keep in mind that the name values for statecode and statuscode will vary based on whether you are retrieving rows as an ActivityPointer or a specific activity type such as an Appointment, Email, or Task. For example, if you retrieve an Appointment as an ActivityPointer, the name value for statuscode of 1 will show up as ["Open"](/powerapps-docs/developer/data-platform/reference/entities/activitypointer.md#statuscode-choicesoptions) rather than ["Free"](/powerapps-docs/developer/data-platform/reference/entities/appointment.md#statuscode-choicesoptions).
+
   
 <a name="bkmk_sortdate"></a>   
 
