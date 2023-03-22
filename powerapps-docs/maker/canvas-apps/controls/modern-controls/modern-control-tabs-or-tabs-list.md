@@ -7,7 +7,8 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 3/23/2023
 ms.subservice: canvas-maker
-ms.author: yogesh.gupta
+ms.author: yogupta
+
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
@@ -43,4 +44,3 @@ contributors:
 
 
 
-[!INCLUDE[footer-include](../../../includes/footer-banner.md)]

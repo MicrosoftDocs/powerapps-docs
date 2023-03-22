@@ -8,7 +8,8 @@ ms.custom: canvas
 ms.reviewer: mkaur-msft
 ms.date: 03/22/2023
 ms.subservice: canvas-maker
-ms.author: yogesh.gupta
+ms.author: yogupta
+
 search.audienceType:
   - maker
 search.app:
@@ -29,4 +30,3 @@ contributors:
 
 
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
