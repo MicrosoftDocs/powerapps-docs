@@ -381,6 +381,9 @@ This section isn't visible on the timeline record.
 |![Customize a card form in timeline - Footer section.](media\timeline-create-and-use-card-forms-details-footer-1a.png "Customize a card form in timeline - Footer section")|             |
 |**Column 1**<BR>1. For this example, we selected **Owner** for this column.<br><BR>**Column 2**<BR>2. For this example, we selected **Regarding** for this column.<br><BR>**Column 3**<BR>3. For this example, we selected **Priority** for this column.| These columns aren't visible on the timeline record |
 
+> [!NOTE]
+> Records _Modified On_ are all updated to the same time by which the modification occurred and & _Modified By_ is assigned to one user when the table is assigned to a new user. This occurs due to the cascading behaviour. More information: [Configure table relationships cascading behavior](/power-apps/developer/data-platform/configure-entity-relationship-cascading-behavior?preserve-view=true)  
+  
 #### Set the date to use when sorting activities in timeline
 
 How users view data is important, and setting a default display view of the data varies based on the needs of your business. App makers can choose how data is sorted and create a default setting for **Activity types** in **Record settings**. **Last Updated** is on all activities, which is why it's set as the default in ascending order.

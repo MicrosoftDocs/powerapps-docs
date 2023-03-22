@@ -37,7 +37,7 @@ Based on the email's sender specified in the **From** field, one of the followin
 
 - If the sender is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the user.
 - If the sender is set to a queue and the  queue's owner is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the queue's owner. 
- - If the sender is set to a queue and the queue's owner is a team, the the dynamic placeholders are replaced with the values corresponding to the team's administrator.
+ - If the sender is set to a queue and the queue's owner is a team, the dynamic placeholders are replaced with the values corresponding to the team's administrator.
 
 
 ## Create an email signature

@@ -110,7 +110,7 @@ Only projects created from Power Platform Tools templates should be added to a s
 1. Remove any deployed assembly and steps of your project from the Dataverse environment and solution. <p/>If you removed a plug-in or workflow activity library project from the Visual Studio solution, you may want to also remove any related assembly and steps from the Dataverse environment and solution. You can do this in **Power Platform Explorer** by expanding the Plug-in Assemblies node of your environment tree, right-click the target assembly, and choose **Delete Assembly**. This will delete the assembly and any registered steps.
 
     > [!IMPORTANT]
-    > Your Dataverse logon account must own or have delete access to the the deployed assembly in order for you to delete it from the environment.
+    > Your Dataverse logon account must own or have delete access to the deployed assembly in order for you to delete it from the environment.
 
 ## Next steps
 
