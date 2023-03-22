@@ -25,13 +25,13 @@ contributors:
 
 ## What is the scope of content searched by Dataverse search?
 
-The scope of content that's searched is defined by your administrator. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
+Your administrator defines the scope of content that's searched. An administrator can configure the tables, and specific columns in the tables, that can be searched. The specific columns that were searched for a table are indicated on the results page on each tab.
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
 ## Why am I not seeing search results from a table that is enabled for Dataverse search?
 
-This happens when the table is not part of the model-driven app. Use the Power Apps app designer to verify that the table is included in tha app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
+If a table is not part of the model-driven app, it's not included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. For more information see, [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component).
 
 
 ## Can I configure quick actions to show or hide certain commands?
