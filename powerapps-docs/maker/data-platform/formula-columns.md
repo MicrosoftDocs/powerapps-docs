@@ -5,7 +5,7 @@ author: matp
 reviewer: mattp123
 ms.topic: how-to
 ms.custom: 
-ms.date: 03/16/2023
+ms.date: 03/22/2023
 ms.subservice: teams
 ms.author: dikamath
 ms.reviewer: matp
@@ -34,8 +34,8 @@ Formula columns are columns that display a calculated value in a Microsoft Datav
    - In **Data type**, select ***fx* Formula**.
    - Enter the formula in the **Formula** box.
    - Select **Searchable** if you want this column to be available in views, charts, dashboards and Advanced Find.
-   - **Advanced options**: 
-     - If the formula contains a decimal value, expand **Advanced options** to changed the number of points of precision, between 0 and 10. The default value is 2.
+   - **Advanced options**:
+     - If the formula contains a decimal value, expand **Advanced options** to change the number of points of precision, between 0 and 10. The default value is 2.
 5. Select **Save**.
 
 The following example creates a formula column called *Total price*. The *Number of units* column is a whole number data type. The *Price* column is a decimal data type.
@@ -64,9 +64,8 @@ You can display the following data types in a formula column:
 - Text
 - Decimal number
 - Yes/No (boolean)
-- Date
 
-The currency data type isn't currently supported.
+The currency and date data data types aren't currently supported.
 
 ## Function types
 
@@ -77,8 +76,8 @@ You can use the following function types in a formula column:
 - Boolean
 - Option Set
 - DateTime (TZI)
-- DateTime (User local) (limited to comparisons with other user local values and the DateAdd function)
-- DateTime (Date only) (limited to comparisons with other date-only values, and the DateAdd function)
+- DateTime (User local) (limited to comparisons with other user local values DateAdd, and DateDiff functions)
+- DateTime (Date only) (limited to comparisons with other date-only values, DateAdd, and DateDiff functions)
 - Currency
 - Whole Number, promoted to Decimal
 
@@ -286,6 +285,12 @@ You can use the following scalar functions in a formula column:
 :::row-end:::
 
 \* The **Text** and **Value** functions only work with whole numbers, where no decimal separator is involved. The decimal separator varies across locales. Since formula columns are evaluated without locale knowledge, there's no way to properly interpret or generate the decimal separator.
+
+### Function example
+
+|Description  |Example  |
+|---------|---------|
+|Retrieve a date value.  |  `DateAdd(Now(), -1, TimeUnit.Year)`    |
 
 ### See also
 
