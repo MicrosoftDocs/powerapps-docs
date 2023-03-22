@@ -65,7 +65,7 @@ You can display the following data types in a formula column:
 - Decimal number
 - Yes/No (boolean)
 
-The currency and date data data types aren't currently supported.
+The currency and date data types aren't currently supported.
 
 ## Function types
 
