@@ -1,22 +1,24 @@
 ---
 title: "FAQ for Dataverse search | MicrosoftDocs"
 description: FAQ about Dataverse search
-author: mduelae
-manager: kvivek
+author: sericks
+manager: tapanm-msft
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 2/8/2020
+ms.date: 3/22/2023
 ms.subservice: end-user
-ms.author: mkaur
+ms.author: sericks
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
 search.app: 
   - PowerApps
   - D365CE
+contributors:
+- mspilde
 ---
 
 # Frequently asked questions about Dataverse search
@@ -54,9 +56,9 @@ Currently, Dataverse search searches your data in Microsoft Dataverse only. Shar
 
 Party list fields are special fields that aren't searchable or viewable in the results page. 
 
-## Why do return do not support HTLM formatting for memo data types?
+## How come returns do not support HTLM formatting for memo data types?
 
-Dataverse search does not return html formatting for memo types to optomize the UI experience.
+Dataverse search does not return HTML formatting for memo types to optomize the UI experience.
 
 ### See also
 
