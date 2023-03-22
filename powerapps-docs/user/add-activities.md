@@ -451,7 +451,7 @@ The following table describes the different formatting features and functionalit
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
-For more information, see [Rich text editor control configurations](/model-driven-apps/rich-text-editor-control#rich-text-editor-control-configuration-options).
+For more information, see [Commonly used rich text editor configurations](../maker/model-driven-apps/rich-text-editor-control.md#commonly-used-rich-text-editor-configurations).
   
   
 ## View a conversation transcript
