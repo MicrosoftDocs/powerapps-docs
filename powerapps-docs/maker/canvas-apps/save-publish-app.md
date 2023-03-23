@@ -63,7 +63,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 
 ## Toast notifications for an updated app
 
-Depending on the complexity of an app, changes that are recently published may not be available when a user launches an app. If this happens, users will get a toast notification stating **A new version of this app is coming. We'll let you know when it's available.** When the published changes are ready, users will see a notification stating **You're using an old version of this app. Refresh to use the latest version**. Users can select the **Refresh** button to see the latest version of the app.
+Depending on the complexity of an app, changes that are recently published may not be available when a user launches the app. If this happens, users will get a toast notification stating **A new version of this app is coming. We'll let you know when it's available.** When the published changes are ready, users will see a notification stating **You're using an old version of this app. Refresh to use the latest version**. Users can select the **Refresh** button to see the latest version of the app.
 
 The following table shows the scenarios where this notification is available.
 
