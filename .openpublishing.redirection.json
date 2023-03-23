@@ -1,5 +1,66 @@
 {
   "redirections": [    {
+      "source_path": "powerapps-docs/maker/portals/release-updates.md",
+      "redirect_url": "/power-pages/release-updates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/version-9.3.6.x.md",
+      "redirect_url": "/power-platform/released-versions/portals",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/version-9.3.4.x.md",
+      "redirect_url": "/power-platform/released-versions/portals",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/version-9.3.3.x.md",
+      "redirect_url": "/power-platform/released-versions/portals",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/versions-before-9.3.3.x.md",
+      "redirect_url": "/power-platform/released-versions/portals",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/package-version-9.3.2209.md",
+      "redirect_url": "/power-platform/released-versions/pagessolutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/package-version-9.3.2204.md",
+      "redirect_url": "/power-platform/released-versions/pagessolutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/package-version-9.3.2201.md",
+      "redirect_url": "/power-platform/released-versions/pagessolutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/package-version-9.3.2109.md",
+      "redirect_url": "/power-platform/released-versions/pagessolutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/package-version-9.2.2108.md",
+      "redirect_url": "/power-platform/released-versions/pagessolutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/versions/package-version-9.2.2103.md",
+      "redirect_url": "/power-platform/released-versions/pagessolutions",
+      "redirect_document_id": "false"
+    },
+
+    {
+      "source_path": "powerapps-docs/developer/data-platform/troubleshoot-plug-in.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/important-changes-deprecations.md",
       "redirect_url": "/power-pages/important-changes-deprecations",
       "redirect_document_id": "false"

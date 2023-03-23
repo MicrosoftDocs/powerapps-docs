@@ -62,7 +62,7 @@ A view provides access to specified columns and rows in one or more related tabl
 
 ![Defining a view in Dataverse.](media/image79.png)
 
-You use business rules to define validations and automate the flow of control when data is added, modified, or deleted in an entity. A business rule comprises a condition that can test for certain conditions in the affected entity, such as whether the data in a column matches or breaks a given rule. The business rules designer in Power Apps Studio provides a graphical user interface for defining business rules, as shown in the the following image.
+You use business rules to define validations and automate the flow of control when data is added, modified, or deleted in an entity. A business rule comprises a condition that can test for certain conditions in the affected entity, such as whether the data in a column matches or breaks a given rule. The business rules designer in Power Apps Studio provides a graphical user interface for defining business rules, as shown in the following image.
 
 ![Defining business rules in Dataverse.](media/image80.png)
 

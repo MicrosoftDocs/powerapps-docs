@@ -5,7 +5,7 @@ author: Mattp123
 manager: kvivek
 ms.component: cds
 ms.topic: article
-ms.date: 09/28/2022
+ms.date: 03/20/2023
 ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
@@ -160,6 +160,7 @@ The following table lists the component type, rule description, and severity. Cr
 | Web Resources  | [use-strict-mode](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Use strict mode when possible.  | Medium   |
 | Web Resources  | [use-strict-equality-operators](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Use strict equality operators.  | Medium  |
 | Web Resources  | [avoid-eval](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Don't use the 'eval' function or its functional equivalents.  | Critical  |
+| Web Resources  | [avoid-with](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-with&client=PAChecker)  | Don't use the 'with' operator.  | High  |
 | Web Resources  | [remove-alert](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-alert&client=PAChecker)  | Don't use the 'alert' function or its functional equivalents.  | Medium  |
 | Web Resources  | [remove-console](https://go.microsoft.com/fwlink/?LinkID=398563&error=web-remove-console&client=PAChecker)  | Avoid using methods on console.  | Medium  |
 | Web Resources  | [avoid-ui-refreshribbon](./powerapps-checker/rules/web/avoid-ui-refreshribbon.md)  | Avoid using refreshRibbon in form onload and EnableRule. | Critical  |
