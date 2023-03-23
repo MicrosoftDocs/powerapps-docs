@@ -61,7 +61,7 @@ To publish the most recent version, highlight the version and select ellipsis (.
 > - If you already have an app open while a new version is published, you must reload the app to get the latest changes.
 > - To reduce the time users wait to access your app, the app preload capability is turned on. You can chose to turn it off. Learn more [here](performance-tips.md#enable-preload-app-for-enhanced-performance).
 
-## Toast notifications for an updated app
+## In-app notifications for an updated version of the app
 
 Depending on the complexity of an app, changes that are recently published may not be available when a user launches the app. If this happens, users will get a toast notification stating **A new version of this app is coming. We'll let you know when it's available.** When the published changes are ready, users will see a notification stating **You're using an old version of this app. Refresh to use the latest version**. Users can select the **Refresh** button to see the latest version of the app.
 
