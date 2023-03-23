@@ -19,8 +19,8 @@ Use the retention policies dashboard to view and manage retention policies. From
 1. The following retention policy actions are available:
   - **History**. Displays the retention [policy run status](#policy-run-status), run start, run end and tables included in the last run.
   - **Policy details**.
-  - **Deactivate**. Stops the retention policy from running by disabling the policy schedule. To activate the policy, select **Policy details**, and update the policy schedule.
-  - **Delete**. 
+  - **Deactivate**. Stops the retention policy from running by disabling the policy schedule. To activate the policy, select **Policy details**, set the policy **Schedule**, and then select **Update**.
+  - **Delete**. Removes the policy.
 
 ### Policy run status
 
@@ -35,12 +35,20 @@ Use the retention policies dashboard to view and manage retention policies. From
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  Retention process failed       |
 
-## [Section 2 heading]
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+## View retained data
 
+There are a few ways you can view retained data.
 
+> [!NOTE]
+> To view retained data in an environment requires the system administrator security role.
 
+### View retained data using advanced find
 
+1. Play a model-driven app, and then open advanced find. 
+1. At the top of the advanced find pane, select **Change to retained data**.
+   :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the advanced find pane.":::
+1. Select tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
+
+### View retained data using a flow
+
+Use the Power Automate cloud flow template to generate and retrieve retained data in Excel is available. <!-- Continue here-->

@@ -70,7 +70,7 @@ For information about how to create a table view, go to [Create and edit public 
 
 ## Setup a retention policy
 
-T> [!IMPORTANT]
+> [!IMPORTANT]
 > To complete this task you must have the Power Platform administrator role.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]

@@ -2362,7 +2362,7 @@
       href: ./data-platform/create-custom-entity.md
     - name: Import or export data
       href: ./data-platform/data-platform-import-export.md
-    - name: Long term data retention for tables
+    - name: Long term data retention for tables (preview)
       href: ./data-platform/data-retention-overview.md
       items:
       - name: Set a data retention policy
