@@ -50,6 +50,8 @@ The Organization service endpoint that was introduced in 2011, known as the SOAP
 
 Since the Web API uses a different endpoint, it is not affected by this 2011 SOAP endpoint deprecation.
 
+Note-There is a 1 GB size limitation on the size of a response that can be returned by Dataverse.  Few APIs or queries are capable of returning this much data. The deprecated SOAP endpoint returns serialized XML data which is much more verbose than the serialized JSON data returned by the Web API. If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests. If you are using the deprecated SOAP endpoint, you should use the Web API equivalent operation.
+
 ## Next steps
 
 Let's write some code! [Quickstart: Organization service sample (C#)](quick-start-org-service-console-app.md)
