@@ -45,7 +45,7 @@ More information: [Use the Dataverse Organization service](org-service/overview.
 
 ### Limitations
 
-There's a 1-GB size limitation on the size of a response that returned by Dataverse.  Few APIs or queries are capable of returning this much data. The deprecated SOAP endpoint returns serialized XML data that is much more verbose than the serialized JSON data returned by the Web API. If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests. If you're using the deprecated SOAP endpoint, you should use the Web API equivalent operation.
+There's a 1-GB size limitation on the size of a response that returned by Dataverse.  Few APIs or queries are capable of returning this much data. The deprecated SOAP endpoint returns serialized XML data that is much more verbose than the serialized JSON data returned by the Web API. If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests. If you're using the deprecated SOAP endpoint, you should use the Web API equivalent operation. More information: [About the legacy SOAP endpoint](org-service/overview.md#about-the-legacy-soap-endpoint)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
