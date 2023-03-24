@@ -265,7 +265,7 @@ In read mode:
 2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
 
 > [!Note]
-> The use of **Attachment preview** dialog to view the file can be skipped in the browser by doing **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
+> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
   
 ### Access the command bar to perform actions
 
