@@ -43,9 +43,9 @@ More information: [Create a custom table](../data-platform/data-platform-create-
 
 ### Add the timeline component to a form
 
-1. Sign into [Power Apps](https://make.powerapps.com), and then go to the **Dataverse** section.
-1. Select **Tables**, open the table you want, and then select the **Forms** area.
-1. Open the form where you want to add or configure a timeline.
+1. Sign into [Power Apps](https://make.powerapps.com).
+1. Select **Tables** on the left navigation pane, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Forms** area, and then open the form where you want to add or configure a timeline.
 1. In the form designer, select **Components** from the left navigation, and then scroll down to the **Timeline** component on the left side. Drag and drop it into a section on the form.
    ![Adding or removing a timeline from an entity form.](media\timeline-add-or-remove-entity-from-form-1b.png "Adding or removing a timeline from an entity form")
 1. Make the changes you want to the timeline settings. More information: [Configure the timeline component](#configure-the-timeline-component)
@@ -226,8 +226,6 @@ You can send and receive records with images, but they won't display when the re
    This email has been blocked due to potentially harmful content. View full email content.
 3. When you select the message, the warning goes away, and the image appears.
 
-If you don’t see a message and the image isn't displayed, see [Timeline FAQs](/power-platform/user/faq-for-timeline-and-activity) for more information.
-
 #### Enable “What you’ve missed” summary
 
 **What you’ve missed** helps you stay on top of updates and changes made to records by displaying updates at the top of the timeline when you access a record.
@@ -383,6 +381,9 @@ This section isn't visible on the timeline record.
 |![Customize a card form in timeline - Footer section.](media\timeline-create-and-use-card-forms-details-footer-1a.png "Customize a card form in timeline - Footer section")|             |
 |**Column 1**<BR>1. For this example, we selected **Owner** for this column.<br><BR>**Column 2**<BR>2. For this example, we selected **Regarding** for this column.<br><BR>**Column 3**<BR>3. For this example, we selected **Priority** for this column.| These columns aren't visible on the timeline record |
 
+> [!NOTE]
+> Records _Modified On_ are all updated to the same time by which the modification occurred and & _Modified By_ is assigned to one user when the table is assigned to a new user. This occurs due to the cascading behaviour. More information: [Configure table relationships cascading behavior](/power-apps/developer/data-platform/configure-entity-relationship-cascading-behavior?preserve-view=true)  
+  
 #### Set the date to use when sorting activities in timeline
 
 How users view data is important, and setting a default display view of the data varies based on the needs of your business. App makers can choose how data is sorted and create a default setting for **Activity types** in **Record settings**. **Last Updated** is on all activities, which is why it's set as the default in ascending order.

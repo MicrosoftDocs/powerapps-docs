@@ -25,8 +25,6 @@ search.app:
 ---
 # Make model-driven app views editable using the editable grid control
 
-
-
 By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app, tablet, or phone.  
   
  ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
@@ -42,52 +40,52 @@ When editable grids are enabled through the editable grid control, users can edi
 ## Make main grids editable  
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**.  This opens solution explorer in a new browser window.
+1. Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. On the toolbar select **Switch to classic**.  This opens solution explorer in a new browser window.
+1. In the **Entities** list (these represent Dataverse tables), open the table you want, select the **Controls** tab, and then select **Add Control**.  
   
-2. In the **Entities** list (these represent Dataverse tables), open the table you want, select the **Controls** tab, and then select **Add Control**.  
+   ![Add Editable Grids custom control.](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
   
-     ![Add Editable Grids custom control.](media/add-editable-grids-custom-control.png "Add Editable Grids custom control")  
+1. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
-3. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
+1. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  As a minimum in most instances select **Web**.
   
-4. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  As a minimum in most instances select **Web**.
-  
-     ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
+   ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
 
    > [!NOTE]
-   >  At runtime, users can toggle between editable grids and read-only grids.  
-      
-5.  To add a lookup, in the **Editable Grid** option group, select **Add Lookup**, and then in the **Configure Property "Add Lookup"** dialog box:  
+   >  At runtime, users can toggle between editable grids and read-only grids.
+
+1. To add a lookup, in the **Editable Grid** option group, select **Add Lookup**, and then in the **Configure Property "Add Lookup"** dialog box:  
   
-    1.  In the **Available Views** list, select the view to add the lookup to (for example, select **My Active Accounts**).  
+   1. In the **Available Views** list, select the view to add the lookup to (for example, select **My Active Accounts**).  
   
-    2.  In the **Available Columns** list, select the lookup column to add (for example, select **Primary Contact**).  
+   1. In the **Available Columns** list, select the lookup column to add (for example, select **Primary Contact**).  
   
-    3.  In the **Default View** list, select the data source for the lookup column.  
+   1. In the **Default View** list, select the data source for the lookup column.  
   
-    4.  If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
+   1. If you want to limit the rows displayed, select the **Only show rows where** check box, and then select your criteria from the list, and then select **OK**.  
   
-         ![Add lookup in Editable Grid control.](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
-     
-6.  If you have a nested grid, select the pencil button for **Nested grid view**, and then select the table and view for the nested grid. For the **Nested grid parent ID** select the relationship for the tables. For example, the **ParentAccountID** column connects the **Account** and **Contact** tables.  
+       ![Add lookup in Editable Grid control.](media/add-lookup-in-editable-grid-control.png "Add lookup in Editable Grid control")  
+
+1. If you have a nested grid, select the pencil button for **Nested grid view**, and then select the table and view for the nested grid. For the **Nested grid parent ID** select the relationship for the tables. For example, the **ParentAccountID** column connects the **Account** and **Contact** tables.  
   
-    > [!NOTE]
-    >  Nested grids are only available for phones and tablets, not the web.  
+   > [!NOTE]
+   >  Nested grids are only available for phones and tablets, not the web.  
   
-7.  If you don't want to allow the user to group data by any column in the view (you want to save space, for example), in the **Group by Column** row, select the pencil button, and then in the **Configure Property "Group by Column"** dialog box, select **Disabled**, and then select **OK**.  
+1. If you don't want to allow the user to group data by any column in the view (you want to save space, for example), in the **Group by Column** row, select the pencil button, and then in the **Configure Property "Group by Column"** dialog box, select **Disabled**, and then select **OK**.  
   
-    > [!TIP]
-    >  This is mostly useful for sub-grids on forms.  
+   > [!TIP]
+   >  This is mostly useful for sub-grids on forms.  
   
-8.  If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](../../developer/model-driven-apps/use-editable-grids.md)
+1. If you want to add JavaScript events, select the **Events** tab, and then select the appropriate tables, columns, and events. More information: [Developer Documentation: Use editable grids](../../developer/model-driven-apps/use-editable-grids.md)
   
-     ![Add events in Editable Grid control.](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
+   ![Add events in Editable Grid control.](media/add-events-in-editable-grid-control.png "Add events in Editable Grid control")  
   
-9. To save your work, select **Save** on the action bar.  
+1. To save your work, select **Save** on the action bar.  
   
-10. When you're ready to make changes available to your team, select **Publish** on the action bar.  
+1. When you're ready to make changes available to your team, select **Publish** on the action bar.  
   
-11. To test your changes, go to the view you specified in step 5, and then make some in-line editing changes.  
+1. To test your changes, go to the view you specified in the previous step, and then make some in-line editing changes.  
   
 ## Make a subgrid on a form editable
 
@@ -96,7 +94,7 @@ When editable grids are enabled through the editable grid control, users can edi
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
-2. Select **Solutions**, open the solution you want. 
+2. Select **Solutions**, and then open the solution you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 3. Select the **Table** within the solution, and then select the **Forms** area.  Select the **Main Form** that contains the subgrid.
 
