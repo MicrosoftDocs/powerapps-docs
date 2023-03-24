@@ -31,7 +31,7 @@ Dataverse provides two web services that you can use to interact with data: data
 
 ### Web API
 
-The Web API is an OData v4 RESTful endpoint. Use this for any programming language that supports HTTP requests and authentication using OAuth 2.0.
+The Web API is an OData v4 RESTful endpoint. Use this for any programming language that supports HTTP requests and authentication using OAuth 2.0.Also, note that there is a 1 GB size limitation on the size of a response that can be returned by Dataverse.
 
 More information: [Use the Dataverse Web API](webapi/overview.md) 
 
