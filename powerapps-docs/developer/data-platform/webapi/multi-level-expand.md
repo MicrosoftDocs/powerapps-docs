@@ -1,11 +1,10 @@
 ---
 title: "Multi-level $expand with collection-valued navigation properties (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to expand collection-valued navigation properties more than a single level of depth."
-ms.date: 09/29/2022
+ms.date: 03/25/2022
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -17,13 +16,32 @@ contributors:
 
 # Multi-level $expand with collection-valued navigation properties
 
-You can retrieve results with deeper hierarchy by including multi-level `$expand` system query option with your query. When you use multi-level `$expand` with a collection-valued navigation property, the shape of the results is different than when you use only a single `$expand`. This article explains these differences.
+You can retrieve results with deeper hierarchy by including multi-level nested `$expand` system query option with your query. Using these with single-valued navigation properties is relatively straightforward. More information: 
 
-Collection-valued navigation properties represent a 1:N or N:N relationship. Use $`expand` to add related rows to the results of your query. Depending on your data and your query, expanding collection-valued navigation properties can significantly increase the amount of data returned. With multi-level expansions of collection-valued navigation properties, it is important that you apply bounds to the results returned, and this is typically done using paging with the `Prefer: odata.maxpagesize` request header.
+Collection-valued navigation properties represent a 1:N or N:N relationship. Use `$expand` to add related rows to the results of your query.
 
-It is important to note that `odata.maxpagesize` is a preference. Dataverse will attempt to apply the preference but may return a different number of pages or interprete as needed. When you use paging on a query with more than one level of `$expand`, the `odata.maxpagesize` preference is applied to the total number of records returned rather than only to the entityset resource you are querying.
+You can use a single level `$expand`: `systemusers?$select=fullname&$expand=user_accounts($select=name)`
 
-The following examples all apply to the same data, which can be represented this way:
+Or you can use a nested `$expand`: `systemusers?$select=fullname&$expand=user_accounts($select=name;$expand=Account_Tasks($select=subject))`
+
+## Limited options
+
+`$orderby` and `$top` not supported
+
+
+## Differences in paging behaviors
+
+When you use multi-level `$expand` with a collection-valued navigation property, the shape of the results is different than when you use only a single `$expand`.
+
+Depending on your data and your query, expanding collection-valued navigation properties can significantly increase the amount of data returned. With multi-level expansions of collection-valued navigation properties, it is important that you apply bounds to the results returned, and this is typically done using paging with the `Prefer: odata.maxpagesize` request header.
+
+It is important to note that `odata.maxpagesize` is a preference. Dataverse will attempt to apply the preference but may return a different number of pages or interpret as needed.
+
+When you use paging on a query with more than one level of `$expand`, the `odata.maxpagesize` preference is applied to each collection that is returned. Any `@odata.nextLink` URLs returned with these expanded collections include paging data to skip the records already returned.
+
+When you use only one level of expand, paging only applies to the base entityset resource returned by the query. No paging is applied to expanded collections. Each expanded collection can return up to 5000 records.  Any `@odata.nextLink` URLs returned with these expanded collections return the entire collection, without skipping those records already returned.
+
+The following examples all use the same data, which can be represented this way:
 
 ```
 systemuser(4026be43-6b69-e111-8f65-78e7d1620f5e): FirstName LastName
@@ -66,6 +84,9 @@ GET [Organization Uri]/api/data/v9.2/accounts?$filter=_ownerid_value eq 4026be43
 &$expand=Account_Tasks($select=subject) HTTP/1.1
 Prefer: odata.maxpagesize=2
 If-None-Match: null
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
 ```
 
 **Response**
@@ -134,6 +155,9 @@ GET [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d16
 &$expand=Account_Tasks($select=subject) HTTP/1.1
 Prefer: odata.maxpagesize=2
 If-None-Match: null
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
 ```
 
 **Response**
@@ -183,7 +207,8 @@ Preference-Applied: odata.maxpagesize=2
 }
 ```
 
-In this case, there are no `Account_Tasks@odata.nextLink` urls. This is because [TODO: Need explanation here].
+> [!NOTE]
+> In this case, there are no `Account_Tasks@odata.nextLink` urls. This is because [TODO: Need explanation here].
 
 
 ## [Multi-level $expand systemuser](#tab/multi-systemuser)
@@ -195,9 +220,13 @@ This query returns only the **FirstName LastName** systemuser record with multip
 ```http
 GET [Organization Uri]/api/data/v9.2/systemusers?$filter=systemuserid eq 4026be43-6b69-e111-8f65-78e7d1620f5e
 &$select=fullname
-&$expand=user_accounts($select=name;$expand=Account_Tasks($select=subject)) HTTP/1.1
+&$expand=user_accounts($select=name;
+ $expand=Account_Tasks($select=subject)) HTTP/1.1
 Prefer: odata.maxpagesize=2
 If-None-Match: null
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
 ```
 
 **Response**
@@ -264,15 +293,19 @@ The `odata.maxpagesize=2` preference was applied to limit the total number of re
 > 
 > I wanted to use this query as an example, but it only shows that the second `$expand` included in the query is completely ignored: `;$expand=Account_Tasks($select=subject)`.
 > 
-> We know that **Litware** has associated tasks, but these results make it seem like there are none.
+> We know that **Litware** has associated tasks, but these results show: `"Account_Tasks": []`.
 
 **Request**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)?$select=fullname
-&$expand=user_accounts($select=name;$expand=Account_Tasks($select=subject)) HTTP/1.1
+&$expand=user_accounts($select=name;
+$expand=Account_Tasks($select=subject)) HTTP/1.1
 Prefer: odata.maxpagesize=2
 If-None-Match: null
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
 ```
 
 **Response**
