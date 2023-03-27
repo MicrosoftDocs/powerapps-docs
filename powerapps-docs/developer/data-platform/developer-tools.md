@@ -11,8 +11,6 @@ ms.author: shmcarth # MSFT alias of Microsoft employees only
 
 # Developer resources and tools
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)
-
 Developers will use the following resources and tools when working with Dataverse and Power Platform.
 
 ## Dataverse development tools
