@@ -17,10 +17,6 @@ Developers will use the following tools and resources when working with Datavers
 
 There are several tools commonly used during Dataverse code development. Some of these tools have a user interface and some are command driven. Use this article to learn how to easily install, update, and launch these tools: [Dataverse development tools](download-tools-nuget.md)
 
-## Power Platform development tools
-
-In addition to the Dataverse development tools, use the tools listed in this article to learn about tools that you can use to extend Power Platform's features and capabilities using code: [Power Platform developer tools](/power-platform/developer/tools)
-
 ## Dataverse SDK for .NET
 
 The following describes available Dataverse SDK assemblies for .NET code development. The latest versions are available to download in the corresponding NuGet packages.
@@ -90,5 +86,9 @@ More information: [Get started with virtual tables (entities)](virtual-entities/
 |Assembly  |Namespaces  |
 |---------|---------|
 |Microsoft.Xrm.Sdk.Data.dll|<xref:Microsoft.Xrm.Sdk.Data><br /><xref:Microsoft.Xrm.Sdk.Data.CodeGen><br /><xref:Microsoft.Xrm.Sdk.Data.Converters><br /><xref:Microsoft.Xrm.Sdk.Data.Exceptions><br /><xref:Microsoft.Xrm.Sdk.Data.Expressions><br /><xref:Microsoft.Xrm.Sdk.Data.Mappings>|
+
+## Power Platform development tools
+
+In addition to the Dataverse development tools, use the tools listed in this article to learn about tools that you can use to extend Power Platform's features and capabilities using code: [Power Platform developer tools](/power-platform/developer/tools)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
