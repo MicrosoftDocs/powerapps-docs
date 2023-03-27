@@ -89,12 +89,12 @@
     - name: Files and images overview
       href: files-images-overview.md
       items:
-      - name: Use file column data
-        href: file-column-data.md
-      - name: Use image column data
-        href: image-column-data.md
-      - name: Use Attachments and Annotations
-        href: attachment-annotation-files.md
+        - name: Use file column data
+          href: file-column-data.md
+        - name: Use image column data
+          href: image-column-data.md
+        - name: Use Attachments and Annotations
+          href: attachment-annotation-files.md
     - name: Audit data changes
       items:
         - name: Overview
@@ -485,18 +485,16 @@
       href: org-service/samples/toc.yml
 - name: Resources
   items:
-    - name: Developer resources page
-      href: view-download-developer-resources.md
-    - name: Developer tools and resource overview
-      href: developer-tools.md
+    - name: Developer resources and tools
+      expanded: true
       items:
+        - name: Developer resource and tools
+          href: developer-tools.md
+        - name: Developer resources page
+          href: view-download-developer-resources.md
         - name: Dataverse development tools
           href: download-tools-nuget.md
-        - name: Power Platform CLI
-          href: /power-platform/developer/cli/introduction
-        - name: Power Platform Tools for Visual Studio
-          href: ./tools/devtools-install.md
-    - name: Community Tools
+    - name: Community tools
       href: community-tools.md
     - name: Testing tools
       href: testing-tools-server.md
