@@ -2,7 +2,7 @@
 title: Use a connection reference in a solution
 description: Learn how to create a connection reference.
 ms.custom: ""
-ms.date: 02/24/2023
+ms.date: 03/27/2023
 ms.reviewer: angieandrews
 ms.topic: conceptual
 author: ChrisGarty
@@ -117,7 +117,7 @@ To automate sharing of connections, use the [Edit Connection Role Assignment act
 
 - Connection references are now saved asynchronously. Unlike during the preview period, there's no longer a limit to how many flows can reference the same connection reference. When connection references are updated, an info banner that links to a panel containing asynchronous update details appears.
 - There is also no limit to the number of actions in each flow that can be associated with the connection reference.
-- Canvas apps do not recognize connection references on custom connectors. To mitigate this limitation, after a solution is imported to an environment the app must be edited to remove and then re-add the custom connector connection. Note, if this app is in a managed solution proceeding to edit the app will create an unmanaged layer.
+- Canvas apps don't recognize connection references on custom connectors. To work around this limitation, after a solution is imported to an environment the app must be edited to remove and then re-add the custom connector connection. Note, if this app is in a managed solution, proceeding to edit the app will create an unmanaged layer. More information: [Solution layers](solution-layers.md)
 
 ## See also
 
