@@ -64,7 +64,7 @@ These values are stored in the relationship definitions that can be accessed eit
 
 ### Lookup properties
 
-We introduced lookup properties in the the [Web API Properties](web-api-properties.md) topic. See [Lookup properties](web-api-properties.md#lookup-properties).
+We introduced lookup properties in the [Web API Properties](web-api-properties.md) topic. See [Lookup properties](web-api-properties.md#lookup-properties).
 
 Single-valued navigation properties have a `ReferentialConstraint` with a `Property` attribute that refers to a lookup property. You can recognize lookup properties because they use the following naming convention: `_<name>_value`. 
 

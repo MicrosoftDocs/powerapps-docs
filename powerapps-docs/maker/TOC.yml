@@ -1967,13 +1967,13 @@
         - name: Roles required for portal administration
           href: ./portals/admin/portal-admin-roles.md
         - name: Configure portal details
-          href: ./portals/admin/portal-details.md
+          href: /power-pages/admin/admin-overview#site-details
         - name: Configure portal actions
           items:
             - name: Download public key
               href: ./portals/admin/get-public-key.md
             - name: Diagnostics and error handling
-              href: ./portals/admin/view-portal-error-log.md
+              href: /power-pages/admin/view-portal-error-log
             - name: Reset or delete a portal
               href: ./portals/admin/reset-portal.md
             - name: Change base URL
@@ -1981,7 +1981,7 @@
             - name: Enable maintenance mode
               href: ./portals/admin/enable-maintenance-mode.md
             - name: Add custom domain name
-              href: ./portals/admin/add-custom-domain.md
+              href: /power-pages/admin/add-custom-domain
             - name: Import metadata translation
               href: ./portals/admin/import-metadata-translation.md
             - name: Set up Power BI integration
@@ -1991,31 +1991,31 @@
         - name: Manage custom certificates
           href: ./portals/admin/manage-custom-certificates.md  
         - name: Content Delivery Network
-          href: ./portals/configure/configure-cdn.md            
+          href: /power-pages/configure/configure-cdn            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
-              href: ./portals/admin/portal-checker.md             
+              href: /power-pages/admin/site-checker             
             - name: Analyze and resolve results
               items:
                 - name: Cache invalidation issues
-                  href: ./portals/admin/portal-checker-cache-invalidation.md
+                  href: /power-pages/admin/site-checker-cache-invalidation
                 - name: Configuration issues
-                  href: ./portals/admin/portal-checker-configuration-issues.md
+                  href: /power-pages/admin/site-checker-configuration-issues
                 - name: Performance issues
-                  href: ./portals/admin/portal-checker-performance.md
+                  href: /power-pages/admin/site-checker-performance
                 - name: Portal start-up issues
-                  href: ./portals/admin/portal-checker-startup-issue.md
+                  href: /power-pages/admin/site-checker-startup-issue
                 - name: Provisioning issues
-                  href: ./portals/admin/portal-checker-provisioning-issues.md
+                  href: /power-pages/admin/site-checker-provisioning-issues
         - name: Manage portal authentication key
-          href: ./portals/admin/manage-auth-key.md
+          href: /power-pages/admin/manage-auth-key
         - name: Restrict IP addresses
-          href: ./portals/admin/ip-address-restrict.md
+          href: /power-pages/admin/ip-address-restrict
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: View capacity consumption reports
-          href: ./portals/admin/portal-consumption-reports.md
+          href: /power-pages/admin/website-consumption-reports?tabs=PPS
     - name: Configure security in portals
       items:
         - name: Portal authentication
@@ -2029,7 +2029,7 @@
                     - name: Configure (using interface in preview)
                       href: ./portals/configure/configure-azure-ad-b2c-provider.md
                     - name: Configure manually
-                      href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
+                      href: /power-pages/security/authentication/azure-ad-b2c-provider
                     - name: Customize the Azure AD B2C user interface
                       href: ./portals/configure/azure-ad-b2c.md
               - name: OAuth 2.0
@@ -2043,7 +2043,7 @@
                     - name: Facebook
                       href: ./portals/configure/configure-oauth2-facebook.md
                     - name: Google
-                      href: ./portals/configure/configure-oauth2-google.md
+                      href: /power-pages/security/authentication/oauth2-google
                     - name: Twitter
                       href: ./portals/configure/configure-oauth2-twitter.md
                     - name: Additional settings
@@ -2079,7 +2079,7 @@
               - name: Migrate to Azure AD B2C
                 href: ./portals/configure/migrate-identity-providers.md
               - name: OAuth 2.0 implicit grant flow
-                href: ./portals/oauth-implicit-grant-flow.md
+                href: /power-pages/security/oauth-implicit-grant-flow
         - name: User management in portals
           items:
             - name: Configure contacts
@@ -2121,15 +2121,15 @@
     - name: Configure document storage in portals
       items:
         - name: Configure notes
-          href: ./portals/configure-notes.md
+          href: /power-pages/configure/configure-notes
         - name: Azure storage
           items:
             - name: Enable Azure storage
-              href: ./portals/enable-azure-storage.md
+              href: /power-pages/configure/enable-azure-storage
             - name: Add the Azure Storage web resource to a form
-              href: ./portals/add-web-resource.md
+              href: /power-pages/configure/add-web-resource
         - name: Manage SharePoint documents
-          href: ./portals/manage-sharepoint-documents.md
+          href: /power-pages/configure/manage-sharepoint-documents
     - name: Integrate Power BI with portals
       items:
         - name: Set up Power BI integration
