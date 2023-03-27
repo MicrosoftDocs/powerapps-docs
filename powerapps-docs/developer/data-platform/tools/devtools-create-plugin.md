@@ -10,18 +10,13 @@ author: "phecke" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
-search.audienceType: 
-  - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Quickstart: Create a plug-in using Power Platform Tools
 
-To create and deploy a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. Instructions to do this can be found in the topic [Create a Power Platform Tools project](devtools-create-project.md).
+To create and deploy a plug-in using the Power Platform Tools extension for Visual Studio, start by creating a new Dataverse solution with a plug-in library. For instructions to do this, go to the [Create a Power Platform Tools project](/power-platform/developer/devtools-vs) article in the Power Platform developer guide.
 
-If you already have an existing Dataverse solution set up, then follow these [instructions](devtools-create-project.md#add-a-new-project-to-a-power-platform-solution) to add a Plug-in Library project to the solution using the Power Platform Tools template.
+If you already have an existing Dataverse solution set up, then follow these [instructions](/power-platform/developer/devtools-vs#add-a-new-project-to-a-power-platform-solution) in the Power Platform developer guide to add a Plug-in Library project to the solution using the Power Platform Tools template.
 
 ## Prerequisites
 
