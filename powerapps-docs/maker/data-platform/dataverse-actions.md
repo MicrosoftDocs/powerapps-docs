@@ -18,7 +18,7 @@ Imagine you have a custom table named *jobapplication* that's used for job appli
 
 ### When to use Power Automate
 <!-- Need clarification on what Jobapplication is. Is it a Dataverse table? Also, need a high level explanation before these examples.-->
-When you want to create Jobapplication statistic record every night, Which is a recurring task that runs every night. For this situation, create a flow in Power Automate.
+When you want to create Jobapplication statistic record every night, which is a recurring task that runs every night. For this situation, create a flow in Power Automate.
 
 :::image type="content" source="media/jobapplication-flow.png" alt-text="Job application flow":::
 
