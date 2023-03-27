@@ -97,7 +97,7 @@ It's important to remember there are two types of navigation properties. More in
   
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
-Expanding a collection-valued navigation property can make the size of the response large. It's important that you include limits to control how much data is returned. The `Prefer: odata.maxpagesize` request header is the most common way to limit the number of records returned, although you can also use `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)
+Expanding a collection-valued navigation property can make the size of the response large in ways it is difficult to anticipate. It's important that you include limits to control how much data is returned. The `Prefer: odata.maxpagesize` request header is the most common way to limit the number of records returned, although you can also use `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)
 
 > [!NOTE]
 > There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
