@@ -395,7 +395,7 @@ You can't use `$top` or `$orderby` options to limit the total number of records 
 }
 ```
 
-This example is based on the previous example. The only difference in the URL is the addition of this nested `$expand` on a single-valued navigation property to return the owning user of the contact: `;$expand=owninguser($select=fullname)`.
+This example is based on the previous example and uses the same data. The only difference in the URL is the addition of this nested `$expand` on a single-valued navigation property to return the owning user of the contact: `;$expand=owninguser($select=fullname)`.
 
 **Request**
 
