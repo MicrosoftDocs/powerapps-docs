@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/13/2022
+ms.date: 03/27/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -25,7 +25,7 @@ Collaborate with colleagues and share links in model-driven Power Apps the same 
 
 ### Multiplayer apps 
 
-When you're working on a record form you can also see other users that are working on the same record.
+When you're working on a record, you can also see other users who are working on the same record.
 
 You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
 
@@ -46,9 +46,10 @@ App users, such as the record owner, as well as the users appearing in grids and
 
 
 ### Share 
-You can now easily share records with your colleagues via the new share button.  Choose to "Copy link" or "Email link" in order to send a record link to your colleagues.
+You can now easily share records with your colleagues via the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
 
-Note: If you have the share privilege on the record, when emailing a link to a colleague we will automatically give them read access to the record.
+> [!Note]
+> If you have the share privilege on a record and you email a record link to a colleague, the colleague will automatically get read access to the record.
 
 
 
