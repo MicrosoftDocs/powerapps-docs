@@ -324,7 +324,7 @@ Accounts, contacts, cases, and opportunities linked to an activity are displayed
 |1. Expand and view activities under the **Record settings** section using the caret (^). <br> 2. A list of records are displayed in **Regarding records**. <br> 3. To enable records, select the box next to **Enable** and select **Done**. | When the checkbox is enabled, users can view the linked records to an activity. The record linked to the activity is then displayed on the timeline. The linking of the record is not manual and it occurs due to the rollup of the record. More information: [Set the activity rollup type in timeline](/power-apps/maker/model-driven-apps/set-up-timeline-control#set-the-activity-rollup-type-in-timeline)|
 
 > [!NOTE]
-> A check mark appears to the right, next to the enabled record. Disabling the entity type in Maker will only disable the linked record for the Timeline records rolled up from the that entity.
+> A check mark appears to the right, next to the enabled record. Disabling the table type only disables the linked record for the Timeline records rolled up for that table.
 
 
 #### Create and use card forms in timeline
