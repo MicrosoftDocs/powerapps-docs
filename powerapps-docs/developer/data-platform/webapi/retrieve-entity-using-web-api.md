@@ -74,7 +74,7 @@ OData-Version: 4.0
 
 When you request certain types of properties, you can expect more read-only properties to be returned automatically.
 
-If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the <xref:Microsoft.Dynamics.CRM.transactioncurrency?text=transactioncurrency EntityType />. Alternatively, by requesting annotations you can also get more data in the same request. More information:[Retrieve data about lookup properties](query-data-web-api.md#bkmk_lookupProperty)  
+If you request a money value, the `_transactioncurrencyid_value` lookup property will be returned. This property contains only the GUID value of the transaction currency so you could use this value to retrieve information about the currency using the [transactioncurrency EntityType](xref:Microsoft.Dynamics.CRM.transactioncurrency). Alternatively, by requesting annotations you can also get more data in the same request. More information: [Retrieve data about lookup properties](query-data-web-api.md#bkmk_lookupProperty)  
 
 If you request a property that is part of a composite attribute for an address, you'll get the composite property as well. For example, if your query requests the `address1_line1` property for a contact, the `address1_composite` property will be returned as well.
 
