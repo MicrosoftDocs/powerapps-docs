@@ -16,7 +16,7 @@ contributors:
 
 # Retrieve related table records with a query
 
-Use the `$expand` system query option with navigation properties to control what data is returned from related entities.
+Use the `$expand` system query option with navigation properties to control what data is returned from related table records.
 
 > [!NOTE]
 >  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
@@ -164,7 +164,7 @@ OData-Version: 4.0
 
 ### Return references
 
-Instead of returning data, you can also return references (links) to the related records by expanding the single-valued navigation property with the `/$ref` option. The following example returns links to the primary contact records for all the accounts.  
+Instead of returning data, you can also return references (links) to the related records by expanding the single-valued navigation property with the `/$ref` option. The following example returns JSON objects with an `@odata.id` property that has a URL for each primary contact.
   
  **Request**
 
@@ -298,7 +298,7 @@ There are some important differences in the response that depend on whether you 
 ||Nested $expand|Single $expand|
 |---------|---------|---------|
 |**Paging**|Paging on expanded rows.|Paging only on resource entityset. `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
-|**Use `$top` or `$orderby` supported**|No|Yes|
+|**`$top` or `$orderby` supported**|No|Yes|
 
 ### Single $expand on collection-valued navigation properties
 
@@ -366,22 +366,6 @@ OData-Version: 4.0
                 }
             ],
             "contact_customer_accounts@odata.nextLink": "[Organization URI]/api/data/v9.2/accounts(78914942-34cb-ed11-b596-0022481d68cd)/contact_customer_accounts?$select=fullname"
-        },
-        {
-            "@odata.etag": "W/\"80649580\"",
-            "name": "Adventure Works (sample)",
-            "accountid": "7a914942-34cb-ed11-b596-0022481d68cd",
-            "Account_Tasks": [],
-            "Account_Tasks@odata.nextLink": "[Organization URI]/api/data/v9.2/accounts(7a914942-34cb-ed11-b596-0022481d68cd)/Account_Tasks?$select=subject",
-            "contact_customer_accounts": [
-                {
-                    "@odata.etag": "W/\"80648710\"",
-                    "fullname": "Nancy Anderson (sample)",
-                    "_parentcustomerid_value": "7a914942-34cb-ed11-b596-0022481d68cd",
-                    "contactid": "72bf4d48-34cb-ed11-b596-0022481d68cd"
-                }
-            ],
-            "contact_customer_accounts@odata.nextLink": "[Organization URI]/api/data/v9.2/accounts(7a914942-34cb-ed11-b596-0022481d68cd)/contact_customer_accounts?$select=fullname"
         }
     ],
     "@odata.nextLink": "[Organization URI]/api/data/v9.2/accounts?$select=name,accountid&$expand=Account_Tasks($select=subject),contact_customer_accounts($select=fullname)&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b7A914942-34CB-ED11-B596-0022481D68CD%257d%2522%2520first%253d%2522%257b78914942-34CB-ED11-B596-0022481D68CD%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
@@ -391,7 +375,7 @@ OData-Version: 4.0
 > [!NOTE]
 > Compare this response to the following example that includes a nested `$expand`.
 > 
-> You need to scroll the sample horizontally to see that only the `@odata.nextLink` URL for the account result contains paging information.
+> You need to scroll the example response horizontally to see that only the `@odata.nextLink` URL for the account result contains paging information.
 
 
 ### Nested $expand on collection-valued navigation properties
@@ -468,7 +452,9 @@ OData-Version: 4.0
 > [!NOTE]
 > Compare this response to the previous example that doesn't use nested `$expand`.
 > 
-> You need to scroll the sample horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and  `@odata.nextLink` URLs contain paging information.
+> In this response, the `Prefer: odata.maxpagesize=1` request header is applied to the `task` records returned with `Account_Tasks`. Only one task is returned instead of three. The `Account_Tasks@odata.nextLink` URL will return the next two tasks.
+>
+> You need to scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and  `@odata.nextLink` URLs contain paging information.
 
 
 ## See also
