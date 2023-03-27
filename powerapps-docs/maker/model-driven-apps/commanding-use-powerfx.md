@@ -141,7 +141,7 @@ Navigate( Defaults( Accounts ) )
 
 ## Optimize the user experience with data source and record information
 
-Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/function-datasourceinfo.md) and [**RecordInfo** function](/power-platform/power-fx/reference/function-recordinfo.md) to optimize the user experience with information about the data being displayed and manipulated.
+Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/function-datasourceinfo) and [**RecordInfo** function](/power-platform/power-fx/reference/function-recordinfo) to optimize the user experience with information about the data being displayed and manipulated.
 
 For example, use **RecordInfo** to determine if the current user has permission to modify a record and appropriately show or hide an "Edit" button using its **Visible** property:
 
@@ -159,7 +159,7 @@ CreateButton.Visible =
 
 ## Ask for confirmation before taking action
 
-Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm.md) to display a dialog box on top of the current screen.
+Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm) to display a dialog box on top of the current screen.
 
 ```powerapps-dot
 Notify( Confirm( "Are you sure?", 
