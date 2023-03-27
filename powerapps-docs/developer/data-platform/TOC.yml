@@ -165,12 +165,10 @@
           href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Dependent Assemblies (Preview)
+        - name: Dependent Assemblies (preview)
           href: dependent-assembly-plugins.md
         - name: Quickstarts
           items:
-            - name: Create a project using Power Platform Tools
-              href: tools/devtools-create-project.md
             - name: Create a plug-in using Power Platform Tools
               href: tools/devtools-create-plugin.md
         - name: Tutorials
@@ -485,15 +483,10 @@
       href: org-service/samples/toc.yml
 - name: Resources
   items:
-    - name: Developer resources and tools
-      expanded: true
-      items:
-        - name: Developer resource and tools
-          href: developer-tools.md
-        - name: Developer resources page
-          href: view-download-developer-resources.md
-        - name: Dataverse development tools
-          href: download-tools-nuget.md
+    - name: Developer resources page
+      href: view-download-developer-resources.md
+    - name: Dataverse development tools
+      href: download-tools-nuget.md
     - name: Community tools
       href: community-tools.md
     - name: Testing tools

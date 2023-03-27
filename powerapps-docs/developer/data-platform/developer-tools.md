@@ -1,5 +1,5 @@
 ---
-title: "Developer resources and tools (Microsoft Dataverse) | Microsoft Docs" 
+title: "Developer tools and resources (Microsoft Dataverse) | Microsoft Docs" 
 description: "Learn about available tools and resources when working with solutions."
 ms.date: 03/27/2023
 ms.reviewer: phecke
@@ -9,9 +9,9 @@ ms.subservice: dataverse-developer
 ms.author: shmcarth # MSFT alias of Microsoft employees only
 ---
 
-# Developer resources and tools
+# Developer tools and resources
 
-Developers will use the following resources and tools when working with Dataverse and Power Platform.
+Developers will use the following tools and resources when working with Dataverse and Power Platform.
 
 ## Dataverse development tools
 
