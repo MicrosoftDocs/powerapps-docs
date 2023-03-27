@@ -40,7 +40,7 @@ When creating an Azure Synapse Link for Dataverse, you can enable the incrementa
 
 ## Prerequisites
 
-Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link with a Synapse workspace.  More information: [Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace](azure-synapse-link-synapse.md#prerequisites)
+Azure Synapse Link for Dataverse. This guide assumes that you have already met the prerequisites to create an Azure Synapse Link. More information: [Create an Azure Synapse Link for Dataverse with Azure Data Lake](azure-synapse-link-data-lake.md#prerequisites)
 
 ## Connect Dataverse to Synapse workspace with incremental folder enabled 
 
