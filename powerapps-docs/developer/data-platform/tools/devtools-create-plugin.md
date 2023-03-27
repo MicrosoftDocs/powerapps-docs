@@ -190,14 +190,11 @@ You can send tool feedback to Microsoft using the feedback icon in the Power Pla
 
 ### See Also
 
-*Power Platform Tools specific articles*  
-[Install Power Platform Tools](devtools-install.md)  
-[Create a Power Platform Tools project](devtools-create-project.md)  
-[Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md?tabs=pptools)
+[Power Platform Tools for Visual Studio](/power-platform/developer/devtools-vs)<br/>  
+[Create a Power Platform Tools project](/power-platform/developer/devtools-vs-create-project.md)<br/>  
+[Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md?tabs=pptools)<br/>  
+[Event framework](../event-framework.md)<br/>  
+[Use plug-ins to extend business processes](../plug-ins.md)<br/>  
 
-*General event handler articles*  
-[Event framework](../event-framework.md)  
-[Use plug-ins to extend business processes](../plug-ins.md)  
-[Workflow extensions](../workflow/workflow-extensions.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
