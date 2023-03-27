@@ -20,7 +20,7 @@ Use the `$expand` system query option with navigation properties to control what
 
 > [!NOTE]
 >  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
-> - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+> - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 
 You can apply the following system query options within certain `$expand` options:
 
@@ -29,11 +29,11 @@ You can apply the following system query options within certain `$expand` option
 |---------|---------|
 |`$select`|Select which properties are returned. More information: [Limit columns with $select](#limit-columns-with-select)|
 |`$filter`|For collection-valued navigation properties, limit the records returned.|
-|`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. More information: [Nested $expand](#nested-expand)|
-|`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. More information: [Nested $expand](#nested-expand)|
-|`$expand`|Expand navigation properties in the related entity set. This is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand of single-valued navigation properties](#nested-expand)|
+|`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
+|`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
+|`$expand`|Expand navigation properties in the related entity set. Using `$expand` within an `$expand` is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 
-This is a subset of the system query options described in the **11.2.4.2.1 Expand Options** section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398299). The options `$skip`, `$count`, `$search`, and `$levels` aren't supported for the Dataverse Web API.
+These options are a subset of the system query options described in the **11.2.4.2.1 Expand Options** section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398299). The options `$skip`, `$count`, `$search`, and `$levels` aren't supported for the Dataverse Web API.
 
 Use these options with `$expand` by adding them in parentheses after the name of the navigation property. Separate each option with a semicolon. For example:
 
@@ -42,7 +42,7 @@ Use these options with `$expand` by adding them in parentheses after the name of
 ```
 ## Limit columns with $select
 
-Always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type..
+Always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type.
 
 **Request**
 
@@ -91,13 +91,13 @@ Preference-Applied: odata.maxpagesize=1
 
 ## Navigation property type differences
 
-It is important to remember there are two types of navigation properties. More information: [Web API Navigation Properties](web-api-navigation-properties.md)  
+It's important to remember there are two types of navigation properties. More information: [Web API Navigation Properties](web-api-navigation-properties.md)  
   
 - *Single-valued* navigation properties correspond to lookup attributes that support many-to-one relationships and allow setting a reference to another record.  
   
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
-Expanding a collection-valued navigation property can make the size of the response very large. It is important that you include limits to control how much data will be returned. The `Prefer: odata.maxpagesize` request header is the most common way to limit the number of records returned, although you can also use `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)
+Expanding a collection-valued navigation property can make the size of the response large. It's important that you include limits to control how much data is returned. The `Prefer: odata.maxpagesize` request header is the most common way to limit the number of records returned, although you can also use `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)
 
 > [!NOTE]
 > There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
@@ -210,7 +210,7 @@ OData-Version: 4.0
 }
 ```
 
-You can only use the `/$ref` option with single-valued navigation properties. If you use it with a collection-valued navigation property you will get the following error:
+You can only use the `/$ref` option with single-valued navigation properties. If you use it with a collection-valued navigation property, you get the following error:
 
 ```json
 {
@@ -297,14 +297,14 @@ There are some important differences in the response that depend on whether you 
 
 ||Nested $expand|Single $expand|
 |---------|---------|---------|
-|**Paging**|Paging on expanded rows.|Paging only on resource entityset. `<property name>@odata.nextLink` URLs for expanded rows do not include paging information.|
+|**Paging**|Paging on expanded rows.|Paging only on resource entityset. `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
 |**Use `$top` or `$orderby` supported**|No|Yes|
 
 ### Single $expand on collection-valued navigation properties
 
-If you use only single `$expand` there is no paging applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the entityset resource of the query.
+If you use only single `$expand`, there's no paging applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the entityset resource of the query.
 
-Each expanded collection-valued navigation property will return a `<property>@odata.nextLink` URL that includes no paging information. It is a URL that will take you to the collection filtered by the relationship. You can use that URL to send a separate `GET` request and it will return the same rows that were returned in your original request. You can apply paging to that request.
+Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that takes you to the collection filtered by the relationship. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
 
 Because no paging is applied to the expanded records, up to 5000 related records can be returned. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
 
@@ -396,11 +396,11 @@ OData-Version: 4.0
 
 ### Nested $expand on collection-valued navigation properties
 
-If you use a nested `$expand` anywhere in your query, and you have included the `Prefer: odata.maxpagesize` request header, paging is applied to each of the expanded collections.
+If you use a nested `$expand` anywhere in your query, and you've included the `Prefer: odata.maxpagesize` request header, paging is applied to each of the expanded collections.
 
-Each expanded collection-valued navigation property will return a `<property>@odata.nextLink` URL that includes paging information. You can use that URL to send a separate `GET` request and it will return the next set of records that were not included in your original request.
+Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes paging information. You can use that URL to send a separate `GET` request and it will return the next set of records that weren't included in your original request.
 
-You can't use `$top` or `$orderby` options to limit the total number of records returned with a nested `$expand`. The following error will be returned if you use these options:
+You can't use `$top` or `$orderby` options to limit the total number of records returned with a nested `$expand`. The following error is returned if you use these options:
 
 ```json
 {
