@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Button modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 A control that the user can select to interact with the app.
 
 ## Description

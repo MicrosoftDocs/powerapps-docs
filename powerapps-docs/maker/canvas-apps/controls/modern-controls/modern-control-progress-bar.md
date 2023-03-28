@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Progress bar modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
 ## Description

@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Link modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Open hyperlinks in new tab.
 
 ## Description

@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Text modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Display text on the app, can also be used as label for fields.
 
 ## Description

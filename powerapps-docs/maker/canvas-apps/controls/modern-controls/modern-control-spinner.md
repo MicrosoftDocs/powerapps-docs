@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Spinner modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Displays state in motion such as loading a page or table.
 
 ## Description

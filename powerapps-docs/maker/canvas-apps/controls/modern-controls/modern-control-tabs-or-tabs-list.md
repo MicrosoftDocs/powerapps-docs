@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Tabs or tab list modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Select a tab to move between screens or take action on app.
 
 ## Description

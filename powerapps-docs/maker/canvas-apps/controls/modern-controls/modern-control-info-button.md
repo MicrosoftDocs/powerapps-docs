@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Info button modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Use **Info button** control to provide additional information to users.
 
 ## Description

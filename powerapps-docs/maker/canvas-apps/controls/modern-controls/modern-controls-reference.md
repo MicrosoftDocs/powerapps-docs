@@ -21,6 +21,9 @@ contributors:
 ---
 
 # Modern controls and properties in canvas apps
+
+[This article is pre-release document and is subject to change.]
+
 Configure the behavior of a modern control by setting one of its properties. Each type of control has a different set of properties.
 
 

@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Checkbox modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 A control that the user can select or clear to set its value to **true** or **false**.
 
 ## Description

@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Drop down modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 Select a value from the list of items.
 
 ## Description

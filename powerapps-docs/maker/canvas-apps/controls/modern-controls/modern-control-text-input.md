@@ -21,6 +21,9 @@ contributors:
   
 ---
 # Text input modern control in Power Apps
+
+[This article is pre-release document and is subject to change.]
+
 A box in which the user can type text, numbers, and other data.
 
 ## Description
