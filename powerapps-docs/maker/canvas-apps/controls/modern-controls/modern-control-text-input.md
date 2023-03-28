@@ -28,7 +28,7 @@ The user can specify data by typing into a **Text input** control. Depending on 
 
 ## Key properties
 
-**Value** – The initial value of a control before it is changed by the user.
+**Value** – The initial value of a control before it's changed by the user.
 
 **Mode** – The control is in SingleLine or MultiLine mode.
 
