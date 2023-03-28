@@ -24,7 +24,7 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-Modern controls in canvas apps are a new set of controls that are based on Microsoft design system. Modern controls are quicker and simpler for makers to configure. They also provide a more cohesive experince for end-users. Modern controls are designed with a focus on accessibility, usability, and performance which makes them visually appealing, highly functional, and intuitive to use.
+Modern controls in canvas apps are a new set of controls that are based on Microsoft design system. Modern controls are quicker and simpler for makers to configure. They also provide a more cohesive experience for end-users. Modern controls are designed with a focus on accessibility, usability, and performance that makes them visually appealing, highly functional, and intuitive to use.
 
 
 > [!IMPORTANT]
@@ -43,10 +43,10 @@ With your [canvas app open for editing](../../edit-app.md):
 3. On the app authoring menu, select **Insert**.
 4. From the list of controls, select **Modern controls**.
 
-You will see list of all the modern controls.
+You'll see list of all the modern controls.
 
 > [!div class="mx-imgBorder"]
- > ![List of modern controls](media/modern-controls-list.png)
+> ![List of modern controls](media/modern-controls-list.png)
 
 ## What's next for these controls?
 We will be consistently shipping improvements and new capabilities for modern controls with up to date documentation. You can keep track of coming changes through this blog (link).
