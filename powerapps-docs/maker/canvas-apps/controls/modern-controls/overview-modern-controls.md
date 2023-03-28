@@ -49,11 +49,11 @@ You'll see list of all the modern controls.
 > ![List of modern controls](media/modern-controls-list.png)
 
 ## What's next for these controls?
-We're consistently improving and adding new capabilities for modern controls. See our blog for [what's new](add link to blog).
+We're consistently improving and adding new capabilities for modern controls. See our blog for [what's new](https://go.microsoft.com/fwlink/?linkid=2229189).
   
 ## Provide feedback to Microsoft
 
-If you'd like to provide feedback, offer suggestions, or report issues go to [community forum](add link).
+If you'd like to provide feedback, offer suggestions, or report issues go to [community forum](https://go.microsoft.com/fwlink/?linkid=2229838).
 
 You can also provide feedback for individual controls in Power Apps Studio from the control properties by selecting the thumbs up or down and comments option.
 
