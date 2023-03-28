@@ -24,7 +24,7 @@ contributors:
 Display text on the app, can also be used as label for fields.
 
 ## Description
-Use this versatile text control to display text, messages, information on the app.
+Use this versatile **Text** control to display text, messages, information on the app.
 
 ## Key properties
 
@@ -54,5 +54,4 @@ Use this versatile text control to display text, messages, information on the ap
 
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
-### Coming soon:
-Accessibility guidelines & examples
+
