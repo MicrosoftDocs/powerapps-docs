@@ -6,7 +6,7 @@ manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/13/2022
+ms.date: 03/27/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -23,19 +23,16 @@ search.app:
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
 
-### Multiplayer apps (preview)
-[This section is pre-release documentation and is subject to change.]
+### Multiplayer apps 
 
-When you're working on a record such as an **Opportunity**, **Account**, **Contact**, or **Case** you can also see other users that are working on the same record.
+When you're working on a record, you can also see other users who are working on the same record.
 
 You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
 
-> [!NOTE]
-> - This is currently a preview feature. Your system administrator needs to turn on the **Copresence** feature in your environment. For information, see [Manage feature settings](/power-platform/admin/settings-features).
-> - During the preview period, these features are only available in the **Opportunity**, **Account**, **Contact**, and **Case** tables that are in customer engagement apps such as [Dynamics 365 Sales](/dynamics365/sales-professional/help-hub), [Dynamics 365 Customer Service](/dynamics365/customer-service/help-hub), or stand-alone Power Apps.
+
 
 ### View a user's status and picture
 
@@ -49,8 +46,10 @@ App users, such as the record owner, as well as the users appearing in grids and
 
 
 ### Share 
+You can now easily share records with your colleagues via the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
 
-Easy sharing of direct links with others will be enabled during the preview period.
+> [!Note]
+> If you have the share privilege on a record and you email a record link to a colleague, the colleague will automatically get read access to the record.
 
 
 
