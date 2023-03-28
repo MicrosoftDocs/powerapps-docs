@@ -34,14 +34,14 @@ Modern controls in canvas apps are a new set of controls that are based on Micro
 
 ## Enable modern controls for your app
 With your [canvas app open for editing](../../edit-app.md):
-1.	On the command bar, select **Settings** > **Upcoming features**.
-2.	From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
+1. On the command bar, select **Settings** > **Upcoming features**.
+2. From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
 
    > [!div class="mx-imgBorder"]
    > ![Turn on modern controls](media/settings-panel.png)
 
-3.	On the app authoring menu, select **Insert**.
-4.	From the list of controls, select **Modern controls**.
+3. On the app authoring menu, select **Insert**.
+4. From the list of controls, select **Modern controls**.
 
 You will see list of all the modern controls.
 
