@@ -21,7 +21,7 @@ contributors:
   
 ---
 # Button modern control in Power Apps
-A control that the user can click or tap to interact with the app.
+A control that the user can select to interact with the app.
 
 ## Description
 With the modern button you can set a button to be primary or secondary. Configure the **[OnSelect](../properties-core.md)** property of a **Button** control to run one or more formulas when the user selects the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button to the right of it.
