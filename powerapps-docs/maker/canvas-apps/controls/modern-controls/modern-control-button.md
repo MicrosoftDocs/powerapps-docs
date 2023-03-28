@@ -20,27 +20,37 @@ contributors:
   
 ---
 # Button modern control in Power Apps
-
+A control that the user can click or tap to interact with the app.
 
 ## Description
-
+With the modern button you can set a button to be primary or secondary. Configure the OnSelect property of a Button control to run one or more formulas when the user clicks or taps the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button just to the right of it.
 
 ## Key properties
+**OnSelect** – Actions to perform when the user taps or clicks a control.
 
+**Text** – Text that appears on a component.
+
+**Type** – Primary and Secondary. Primary emphasizes the button as a primary action. Secondary gives emphasis to the button in such a way that it indicates a secondary action.
+
+**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 ## Additional properties
+**Accessible label** – Label for screen readers.
+
+**X** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**Y** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+**Size** – The font size of the text that appears on a component.
+
+### Coming soon:
+Accessibility guidelines & examples
 
 
-## Examples
 
 
 
-## Accessibility guidelines
 
-### Color contrast
-
-
-### Screen reader support
 
 
 
