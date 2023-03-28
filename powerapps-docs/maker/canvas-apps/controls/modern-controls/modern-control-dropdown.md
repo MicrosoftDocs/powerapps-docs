@@ -26,10 +26,12 @@ Select a value from the list of items.
 A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.
 
 ## Key properties
-Items(items) - 
-Fields – 
-Required - must fill in field.
-Display mode – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+
+**[Items](../properties-core.md)** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show.
+
+**Required** - must fill in field.
+
+**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 
 ## Additional properties
