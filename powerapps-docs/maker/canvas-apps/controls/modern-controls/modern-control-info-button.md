@@ -20,27 +20,27 @@ contributors:
   
 ---
 # Info button modern control in Power Apps
-
+Use this control to provide additional information to users.
 
 ## Description
-
+This control enable developers to provide help and guidance to app users in an accessible way.
 
 ## Key properties
+**Content** – Content to be displayed when users interact with the control.
+
+**Icon size** - Whether the information icon be small, medium or large.
+
+**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 
 ## Additional properties
+**Accessible label** – Label for screen readers.
 
+**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-## Examples
+**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-
-
-## Accessibility guidelines
-
-### Color contrast
-
-
-### Screen reader support
-
+### Coming soon:
+Accessibility guidelines & examples
 
 
