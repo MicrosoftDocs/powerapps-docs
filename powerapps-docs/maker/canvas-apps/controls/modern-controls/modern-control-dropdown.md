@@ -45,5 +45,4 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[Size](../properties-text.md)** – The size of the control on canvas.
 
 
-### Coming soon:
-Accessibility guidelines & examples
+
