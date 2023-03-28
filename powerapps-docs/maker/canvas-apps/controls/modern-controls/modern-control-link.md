@@ -24,7 +24,7 @@ contributors:
 Open hyperlinks in new tab.
 
 ## Description
-Use **Link** control to provide links which can be defined with accessiblity compliance. The link opens in a new tab on your device.
+Use **Link** control to provide links that can be defined with accessibility compliance. The link opens in a new tab on your device.
 
 ## Key properties
 **Text** – The text to be displayed on the app with link enabled.
