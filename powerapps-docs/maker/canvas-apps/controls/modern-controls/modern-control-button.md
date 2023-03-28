@@ -26,9 +26,9 @@ A control that the user can click or tap to interact with the app.
 With the modern button you can set a button to be primary or secondary. Configure the OnSelect property of a Button control to run one or more formulas when the user clicks or taps the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button just to the right of it.
 
 ## Key properties
-**OnSelect** – Actions to perform when the user taps or clicks a control.
+**[OnSelect](../properties-core.md)** – Actions to perform when the user taps or clicks a control.
 
-**Text** – Text that appears on a component.
+**[Text](../properties-core.md)** – Text that appears on a component.
 
 **Type** – Primary and Secondary. Primary emphasizes the button as a primary action. Secondary gives emphasis to the button in such a way that it indicates a secondary action.
 
@@ -37,11 +37,11 @@ With the modern button you can set a button to be primary or secondary. Configur
 ## Additional properties
 **Accessible label** – Label for screen readers.
 
-**X** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
-**Y** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**Size** – The font size of the text that appears on a component.
+**[Size](../properties-text.md)** – The font size of the text that appears on a component.
 
 ### Coming soon:
 Accessibility guidelines & examples
