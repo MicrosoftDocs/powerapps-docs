@@ -20,7 +20,7 @@ contributors:
   
 ---
 # Text input modern control in Power Apps
-Display text on the app, can also be used as label for fields.
+A box in which the user can type text, numbers, and other data.
 
 ## Description
 The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
