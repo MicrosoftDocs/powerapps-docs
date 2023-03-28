@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 03/28/2023
 ms.custom: template-how-to
 ---
-# Add comments
+# Add comments in the model-driven app designer
 
 Comments are notes that are associated with items in your app. Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app.  
 
