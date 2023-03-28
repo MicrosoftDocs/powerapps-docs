@@ -5,7 +5,7 @@ author: Mattp123
 ms.author: "emcoope"
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 05/19/2022
+ms.date: 03/28/2023
 ms.custom: template-how-to
 ---
 # Add comments
@@ -35,6 +35,10 @@ Comments are commonly questions, feedback, or ideas that are important context t
 1. In the **Comments** pane, next to a comment, select **...**, and then select **Resolve comment**.
 1. The comment thread appears as **Resolved**.
 1. To reopen select <img src = "media/reopen-thread-button.png" alt = "reopen comment thread button" width = "20" height = "20"> **Reopen thread** or <img src = "media/delete-thread-button.png" alt = "Delete comment thread button" width = "20" height = "20"> **Delete thread** to remove the comment.
+
+## Moving comments between environments
+
+Comments in model-driven apps aren't supported for export and import with solutions. To work around this limitation, you can export the comment table to Excel and then import the Excel file into the environment you want. More information: [Export data](../data-platform/data-platform-import-export.md#export-data)
 
 ## Next steps
 
