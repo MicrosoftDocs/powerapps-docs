@@ -20,27 +20,33 @@ contributors:
   
 ---
 # Text input modern control in Power Apps
-
+Display text on the app, can also be used as label for fields.
 
 ## Description
-
+The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
 
 ## Key properties
 
+**Value** – The initial value of a control before it is changed by the user.
+
+**Mode** – The control is in SingleLine or MultiLine mode.
+
+**Required** – must fill in field or not.
+
+**Display mode** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
+
 
 ## Additional properties
+**Accessible label** – Label for screen readers.
+
+**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+**[Size](../properties-text.md)** – The size of the control on the canvas.
 
 
-## Examples
-
-
-
-## Accessibility guidelines
-
-### Color contrast
-
-
-### Screen reader support
-
+### Coming soon:
+Accessibility guidelines & examples
 
 
