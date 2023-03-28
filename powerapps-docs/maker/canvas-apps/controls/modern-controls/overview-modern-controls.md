@@ -38,6 +38,14 @@ With your [canvas app open for editing](../../edit-app.md):
  > [!div class="mx-imgBorder"]
    > ![Turn on modern controls](media/settings-panel.png)
 
+3.	On the app authoring menu, select Insert.
+4.	From the list of controls, select Modern controls.
+
+You will see the list of the all the modern controls.
+
+ > [!div class="mx-imgBorder"]
+   > ![List of modern controls](media/modern-controls-list.png)
+
 
 
 ## Provide feedback
