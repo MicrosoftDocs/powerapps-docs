@@ -38,13 +38,13 @@ Configure the behavior of a control by setting one of its properties. Each type 
 
 **[Progress Bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
-**[Spinner](modern-control-spinner.md)** – Displays state in motion, eg. loading a page or table.
+**[Spinner](modern-control-spinner.md)** – Displays state in motion, for exmaple, loading a page or table.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 
 **[Text](modern-control-text.md)** – Display text on the app, can also be used as label for fields.
 
-**[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data..
+**[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data.
 
 
 
