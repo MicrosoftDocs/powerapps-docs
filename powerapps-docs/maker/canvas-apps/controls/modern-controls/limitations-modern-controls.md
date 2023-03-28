@@ -27,10 +27,10 @@ There are few current limitations & known issues which Microsoft is working towa
 
 1. For the modern controls, if add items through an array such as PowerFx bar or advance properties. Then, you will need to additionally select “Value” field from the properties panel.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![List in items](media/array-list.png)
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Enable value field](media/select-value-field.png)
 
 2. While updating properties of controls in property panel, some of the property value updates in format of:
