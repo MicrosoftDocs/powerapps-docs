@@ -24,7 +24,7 @@ contributors:
 A box in which the user can type text, numbers, and other data.
 
 ## Description
-The user can specify data by typing into a text-input control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
+The user can specify data by typing into a **Text input** control. Depending on how you configure the app, that data might be added to a data source, used to calculate a temporary value, or incorporated in some other way.
 
 ## Key properties
 
@@ -45,9 +45,5 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 **[Size](../properties-text.md)** – The size of the control on the canvas.
-
-
-### Coming soon:
-Accessibility guidelines & examples
 
 
