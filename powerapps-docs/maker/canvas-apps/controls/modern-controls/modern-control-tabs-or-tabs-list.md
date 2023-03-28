@@ -24,7 +24,7 @@ contributors:
 Select a tab to move between screens or take action on app.
 
 ## Description
-A tab is a navigation control which can help users switch between different context within the app. You can add list of items to tabs or select a data table field for the list in tabs to appear.
+A **Tab** is a navigation control which can help users switch between different context within the app. You can add list of items to tabs or select a data table field for the list in tabs to appear.
 
 ## Key properties
 
@@ -45,8 +45,6 @@ A tab is a navigation control which can help users switch between different cont
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
 
-### Coming soon:
-Accessibility guidelines & examples
 
 
 
