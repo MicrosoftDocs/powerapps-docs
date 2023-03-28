@@ -41,7 +41,7 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**[Size](../properties-text.md)** – The font size of the text that appears on a component.
+**[Size](../properties-text.md)** – The size of the control on the canvas.
 
 ### Coming soon:
 Accessibility guidelines & examples
