@@ -38,7 +38,7 @@ Comments are commonly questions, feedback, or ideas that are important context t
 
 ## Moving comments between environments
 
-Comments in model-driven apps aren't supported for export and import with solutions. To work around this limitation, you can export the comment table to Excel and then import the Excel file into the environment you want. More information: [Export data](../data-platform/data-platform-import-export.md#export-data)
+Comments in model-driven apps aren't supported for export and import with solutions. To work around this limitation, you can export the **Comment** table to Excel and then import the Excel file into the environment you want. More information: [Export data](../data-platform/data-platform-import-export.md#export-data)
 
 ## Next steps
 
