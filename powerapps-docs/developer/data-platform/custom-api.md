@@ -389,7 +389,7 @@ HTTP/1.1 204 No Content
 
 To retrieve the localized labels use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
 
-The following example shows using the RetrieveLocLabels Function to retrieve the labels for the the `displayname` property of a Custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
+The following example shows using the RetrieveLocLabels Function to retrieve the labels for the `displayname` property of a Custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
 
 **Request**
 

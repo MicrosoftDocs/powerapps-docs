@@ -4,7 +4,6 @@ description: Learn how to perform predefined actions in an embedded canvas app
 ms.custom: ""
 ms.date: 06/25/2019
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
@@ -27,8 +26,6 @@ search.app:
 ---
 # Perform predefined actions on the host model-driven form from within an embedded canvas app
 
-
-
 Embedded canvas apps provide the ability to perform predefined actions on the host model-driven form. These actions enable makers to navigate, refresh and save the host model-driven form. Using these actions, an embedded canvas app can act as a more integral part of the model-driven form and the model-driven app.  
 
 The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host model-driven form.  
@@ -49,6 +46,7 @@ Calling the NavigateToMainForm method can show the following error messages.
   
   
 ### NavigateToView(entityName, viewName)
+
 Navigates the host model-driven form to a view.  
 * **entityName** - A required string parameter that specifies the parent table of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
@@ -60,9 +58,9 @@ Calling the NavigateToView method can show the following error messages.
 |**Table not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid table name and that the user has access to it. |
 |**View not found: *[ViewName]*** | Please check the value of the *viewName* parameter and ensure it is a valid view name and that the user has access to it. |
   
-  
-### OpenQuickCreateForm(entityName)  
-Opens the default quick create form for an table.  
+### OpenQuickCreateForm(entityName)
+
+Opens the default quick create form for a table.  
 * **entityName** - A required string parameter that specifies the parent table of the quick create form.  
  
 Calling the OpenQuickCreateForm method can show the following error messages.

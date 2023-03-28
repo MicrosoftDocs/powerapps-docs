@@ -56,7 +56,7 @@ By combining conditions and actions, the following actions are possible with bus
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table required, and then under the **Customizations** area, select **Business rules**.
+2.  Select **Tables** on the left navigation pane, open the table you want, and then under the **Customizations** area, select **Business rules**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
    > [!note]
    > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution, and then open the table. Then, under the **Customizations** area, select **Business rules**.
 

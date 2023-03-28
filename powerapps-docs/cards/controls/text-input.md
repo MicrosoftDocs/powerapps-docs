@@ -52,6 +52,4 @@ A field for users to type text.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
 
-
-
 **[Show when](control-reference.md#s)** – Conditional layout expression.

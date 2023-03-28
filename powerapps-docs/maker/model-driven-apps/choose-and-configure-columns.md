@@ -3,7 +3,6 @@ title: "Choose and configure columns in model-driven app views in Power Apps | M
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 11/27/2018
-
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -26,33 +25,29 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
 # Choose and configure columns in model-driven app views
-
-
 
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 
  Along with the filter criteria, the columns visible in a Power Apps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  
-    
-  > [!IMPORTANT]
-  > The latest version of the view designer is currently in preview. Some features like enabling or disabling presence for a column and adding a find column are not yet supported. To accomplish these tasks, [open the view in the classic view designer](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
-  >  -   [Enable or disable presence for a column](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
-  >
-  >  -   [Add find columns](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_AddFindColumns) 
 
-
+> [!IMPORTANT]
+> The latest version of the view designer is currently in preview. Some features like enabling or disabling presence for a column and adding a find column are not yet supported. To accomplish these tasks, [open the view in the classic view designer](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
+>  -   [Enable or disable presence for a column](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
+>
+>  -   [Add find columns](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_AddFindColumns) 
 
 ## Opening the view editor
 
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Tables**, select the table that you want, and then select the **Views** area. You can also navigate to the table and views via solutions as shown below.
+1. Select **Tables**, and then select the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Select the **Views** area. You can also navigate to the table and views via solutions as shown below.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Account view definitions.](media/account-view-definitions.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Account view definitions.](media/account-view-definitions.png)
 
-3. Select an existing view to open it or on the toolbar select **New view**. 
+1. Select an existing view to open it or on the toolbar select **New view**.
 
 <a name="BKMK_AddColumns"></a>   
 ## Adding columns  
