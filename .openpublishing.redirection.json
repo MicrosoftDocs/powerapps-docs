@@ -1,5 +1,6 @@
 {
-  "redirections": [    {
+  "redirections": [
+    {
       "source_path": "powerapps-docs/maker/portals/release-updates.md",
       "redirect_url": "/power-pages/release-updates",
       "redirect_document_id": "false"
@@ -7855,6 +7856,106 @@
       "source_path": "powerapps-docs/teams/when-create-teams-apps.md",
       "redirect_url": "https://github.com/microsoft/teams-powerapps-app-templates",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-details.md",
+      "redirect_url": "/power-pages/admin/admin-overview#site-details",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/add-custom-domain.md",
+      "redirect_url": "/power-pages/admin/add-custom-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/view-portal-error-log.md",
+      "redirect_url": "/power-pages/admin/view-portal-error-log",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-checker.md",
+      "redirect_url": "/power-pages/admin/site-checker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-checker-cache-invalidation.md",
+      "redirect_url": "/power-pages/admin/site-checker-cache-invalidation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-checker-configuration-issues.md",
+      "redirect_url": "/power-pages/admin/site-checker-configuration-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-checker-performance.md",
+      "redirect_url": "/power-pages/admin/site-checker-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-checker-startup-issue.md",
+      "redirect_url": "/power-pages/admin/site-checker-startup-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-checker-provisioning-issues.md",
+      "redirect_url": "/power-pages/admin/site-checker-provisioning-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/manage-sharepoint-documents.md",
+      "redirect_url": "/power-pages/configure/manage-sharepoint-documents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure-notes.md",
+      "redirect_url": "/power-pages/configure/configure-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/enable-azure-storage.md",
+      "redirect_url": "/power-pages/configure/enable-azure-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/add-web-resource.md",
+      "redirect_url": "/power-pages/configure/add-web-resource",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-azure-ad-b2c-provider.md",
+      "redirect_url": "/power-pages/security/authentication/azure-ad-b2c-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-google.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-google",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/ip-address-restrict.md",
+      "redirect_url": "/power-pages/admin/ip-address-restrict",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/oauth-implicit-grant-flow.md",
+      "redirect_url": "/power-pages/security/oauth-implicit-grant-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/manage-auth-key.md",
+      "redirect_url": "/power-pages/admin/manage-auth-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-cdn.md",
+      "redirect_url": "/power-pages/configure/configure-cdn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-consumption-reports.md",
+      "redirect_url": "/power-pages/admin/website-consumption-reports?tabs=PPS",
+      "redirect_document_id": false
     }
   ]
 }
