@@ -40,7 +40,7 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**Size** – The size of the checkbox indicator.
+**[Size](../properties-text.md)** – The size of the checkbox indicator.
 
 
 ### Coming soon:
