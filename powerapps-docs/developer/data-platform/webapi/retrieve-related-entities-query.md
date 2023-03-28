@@ -461,5 +461,6 @@ OData-Version: 4.0
 
 [Query data using Web API](query-data-web-api.md)<br />
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Web API Query Data sample (C#)](samples/webapiservice-query-data.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
