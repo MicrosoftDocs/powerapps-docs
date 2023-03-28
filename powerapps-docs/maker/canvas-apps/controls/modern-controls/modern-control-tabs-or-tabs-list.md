@@ -20,12 +20,18 @@ contributors:
   
 ---
 # Tabs or tab list modern control in Power Apps
-Select a tab to move screens or take action on app.
+Select a tab to move between screens or take action on app.
 
 ## Description
-
+A tab is a navigation control which can help users switch between different context within the app. You can add list of items to tabs or select a data table field for the list in tabs to appear.
 
 ## Key properties
+
+**Items** – List of items to be shown in tabs. This can be array (select value in field) or this can be a data column from a table.
+
+**Render size** – Choose tabs to be shown as small, medium or large
+
+**Alignment** – Option for tabs to be displayed as vertical or horizontal
 
 
 ## Additional properties
