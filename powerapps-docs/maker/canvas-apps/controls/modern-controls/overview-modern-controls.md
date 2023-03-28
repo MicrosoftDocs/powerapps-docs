@@ -49,7 +49,7 @@ You'll see list of all the modern controls.
 > ![List of modern controls](media/modern-controls-list.png)
 
 ## What's next for these controls?
-We are consistently improving and adding new capabilities for modern controls. See our blog for [what's new](add link to blog).
+We're consistently improving and adding new capabilities for modern controls. See our blog for [what's new](add link to blog).
   
 ## Provide feedback to Microsoft
 
