@@ -264,7 +264,9 @@ In read mode:
 1. Select the attachment. The **Attachment preview** dialog opens with the attachment displayed. You can view and download the attachment from the dialog.
 2. When you're finished viewing or downloading the attachment, select **Close** to return to the note or post.
 
-
+> [!Note]
+> The use of the **Attachment preview** dialog to view the file can be skipped in the browser by using **Ctrl + Left click (of mouse)**. By doing so, the attachment will be directly downloaded without previewing it.
+  
 ### Access the command bar to perform actions
 
 When you hover your cursor on or expand an activity, post, or note, the command bar appears in the top-right corner of the row with the specific options that support that activity, such as assigning it to others, adding it to a queue, converting it to a case, liking or replying to a post, editing a note, or deleting an activity. However, not all rows can perform the same actions. 
