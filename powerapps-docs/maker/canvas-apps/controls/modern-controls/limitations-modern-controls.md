@@ -34,7 +34,9 @@ In this article, learn about the general limitations of the modern controls used
    > ![Enable value field](media/select-value-field.png)
 
 2. While updating properties of controls in property panel, some of the property value updates in format of:
+
   ‘PowerApps.CoreControls.<Control name>.<Property name>’.<Value>
+  
   This is a valid format, or you can update to value only. Both approaches will work for configuration of the control.
   
 3. The property sets for new controls are different than property sets of original controls. Not all scenarios are supported on new controls. We are consistently tyring to make improvements for new scenarios.
