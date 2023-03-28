@@ -1,5 +1,5 @@
 ---
-title: Dropdown modern control in Power Apps
+title: Drop down modern control in Power Apps
 description: Learn about the details, properties and examples of the dropdown modern control in Power Apps.
 author: yogeshgupta698
 
@@ -19,28 +19,28 @@ contributors:
   - yogeshgupta698
   
 ---
-# Dropdown modern control in Power Apps
-
+# Drop down modern control in Power Apps
+Select a value from the list of items.
 
 ## Description
-
+A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.
 
 ## Key properties
+Items(items) - 
+Fields – 
+Required - must fill in field.
+Display mode – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
 
 ## Additional properties
+**Accessible label** – Label for screen readers.
+
+**[X](../properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+**[Size](../properties-text.md)** – The size of the control on canvas.
 
 
-## Examples
-
-
-
-## Accessibility guidelines
-
-### Color contrast
-
-
-### Screen reader support
-
-
-]
+### Coming soon:
+Accessibility guidelines & examples
