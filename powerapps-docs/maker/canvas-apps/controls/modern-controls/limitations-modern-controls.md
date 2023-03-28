@@ -46,6 +46,6 @@ There are few current limitations & known issues which Microsoft is working towa
 
 ### See also
 
-
+[Overview of modern controls in canvas apps](overview-modern-controls.md)
 
 
