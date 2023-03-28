@@ -24,7 +24,7 @@ contributors:
 A control that the user can click or tap to interact with the app.
 
 ## Description
-With the modern button you can set a button to be primary or secondary. Configure the OnSelect property of a Button control to run one or more formulas when the user clicks or taps the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button just to the right of it.
+With the modern button you can set a button to be primary or secondary. Configure the **[OnSelect](../properties-core.md)** property of a **Button** control to run one or more formulas when the user selects the control. As a design pattern, we recommend always placing the primary button on the left, the secondary button to the right of it.
 
 ## Key properties
 **[OnSelect](../properties-core.md)** – Actions to perform when the user taps or clicks a control.
@@ -44,8 +44,7 @@ With the modern button you can set a button to be primary or secondary. Configur
 
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
-### Coming soon:
-Accessibility guidelines & examples
+
 
 
 
