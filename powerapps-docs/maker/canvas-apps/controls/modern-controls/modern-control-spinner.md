@@ -21,10 +21,10 @@ contributors:
   
 ---
 # Spinner modern control in Power Apps
-Displays state in motion, eg. loading a page or table.
+Displays state in motion such as loading a page or table.
 
 ## Description
-Spinner can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios.
+**Spinner** contorl can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios.
 
 ## Key properties
 **Label** – The label to the spinner. The label slot receives the styling related to the text associated with the Spinner.
@@ -46,7 +46,6 @@ Spinner can be used to display loading scenarios where an action is in progress.
 
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
-### Coming soon:
-Accessibility guidelines & examples
+
 
 
