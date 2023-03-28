@@ -37,7 +37,7 @@ With your [canvas app open for editing](../../edit-app.md):
 1.	On the command bar, select **Settings** > **Upcoming features**.
 2.	From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
 
- > [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Turn on modern controls](media/settings-panel.png)
 
 3.	On the app authoring menu, select **Insert**.
@@ -45,8 +45,8 @@ With your [canvas app open for editing](../../edit-app.md):
 
 You will see list of all the modern controls.
 
- > [!div class="mx-imgBorder"]
-   > ![List of modern controls](media/modern-controls-list.png)
+> [!div class="mx-imgBorder"]
+ > ![List of modern controls](media/modern-controls-list.png)
 
 ## What's next for these controls?
 We will be consistently shipping improvements and new capabilities for modern controls with up to date documentation. You can keep track of coming changes through this blog (link).
