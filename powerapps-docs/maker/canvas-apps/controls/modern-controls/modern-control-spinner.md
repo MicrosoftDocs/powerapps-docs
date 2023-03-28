@@ -26,7 +26,7 @@ Displays state in motion, eg. loading a page or table.
 Spinner can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios.
 
 ## Key properties
-**Label** – The label of the Slider. The label slot receives the styling related to the text associated with the Spinner.
+**Label** – The label to the spinner. The label slot receives the styling related to the text associated with the Spinner.
 
 **Appearance** – The appearance of the Spinner. Primary or Inverted. 
 
