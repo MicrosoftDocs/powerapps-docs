@@ -24,7 +24,7 @@ contributors:
 Open hyperlinks in new tab.
 
 ## Description
-Use this control to provide links which can be defined with accessiblity compliance. Currently, the link opens up in new tabs in desktop.
+Use **Link** control to provide links which can be defined with accessiblity compliance. The link opens in a new tab on your device.
 
 ## Key properties
 **Text** – The text to be displayed on the app with link enabled.
@@ -43,6 +43,5 @@ Use this control to provide links which can be defined with accessiblity complia
 
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
-### Coming soon:
-Accessibility guidelines & examples
+
 
