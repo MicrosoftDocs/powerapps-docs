@@ -50,13 +50,15 @@ Dataverse provides read-only access to the immutable retained data via:
 - Power Automate cloud flow templates.
 - Dataverse OData APIs that can be used to build custom application workflows.
 
-### Long term data retention and existing delete action and plugins 
+### Long term data retention and existing delete action and plugins
 
 All the existing delete action cascade relationships and plugins for a table are started when a data retention policy is run on a table.
 
 ## Kinds of data retained long term
 
 With the exception of system tables, Dataverse standard and activity tables, along with file entities can be retained in in the long term storage.
+
+Data retained by long term storage is made available to features like [Lockbox](/power-platform/admin/about-lockbox) and [customer managed key](/power-platform/admin/customer-managed-key).
 
 ### Tables not currently supported for retention
 

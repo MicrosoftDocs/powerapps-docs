@@ -51,4 +51,38 @@ There are a few ways you can view retained data.
 
 ### View retained data using a flow
 
-Use the Power Automate cloud flow template to generate and retrieve retained data in Excel is available. <!-- Continue here-->
+Use the Power Automate cloud flow template to generate and retrieve retained data in Excel is available. <!-- Need a demo of this or more specific steps how to do it.-->
+
+### Limitations for retrieval of retained data
+
+This restrictions are enforced by Dataverse for each environment:
+
+- Up to five users can query and retrieve retained data at the same time.
+- ‘Admin’ role or ‘global entity access’ role on table required to retrieve retained data <!-- Do you mean global read access to the Entity privilege? -->
+- Up to 30 queries per day are allowed for each environment.
+- Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
+- Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
+- Retained data includes lookup data and doesn't require joins. 
+- Lookup values in a table are denormalized with ID and name value.
+
+## Storage capacity reports
+
+When data is retained long term in Dataverse, it is a switch from a live (hot) state to a retained (cold) state for records.
+
+The existing Power Platform admin reports display the total consumed storage for each storage type with the details for each table. The total consumed storage for Database, file, and log is the sum of the live and retained data.
+ 
+## Solution aware retention policies
+
+Dataverse retention policies are solution aware. Dataverse retention policies added to a solution are known as solution-aware retention policies. You can add multiple retention policies to a single solution. Retention policies are added to an unmanaged solution. This helps makers follow application lifecycle management (ALM) best practices when working with Dataverse retention policies.
+
+When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a pre-production environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
+
+> [!NOTE]
+> - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
+> - Only retention policies created in Power Platform environments can be solution-aware.
+
+You create a solution before you add a retention policy to it. Exporting and importing solutions containing retention policies is the same as with other solution components.
+
+For more information about solutions and solution components, go to [Solutions overview](solutions-overview.md).
+
+<!-- Brief intro and link to dev article for Enterprise governance - GDPR Bulk Delete-->
