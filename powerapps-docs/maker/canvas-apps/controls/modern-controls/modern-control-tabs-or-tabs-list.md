@@ -7,7 +7,8 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 3/23/2023
 ms.subservice: canvas-maker
-ms.author: yogupta
+ms.author: yogupt
+
 
 ms.reviewer: mkaur
 search.audienceType: 

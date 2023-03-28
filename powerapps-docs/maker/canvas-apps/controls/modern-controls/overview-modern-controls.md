@@ -8,7 +8,8 @@ ms.custom: canvas
 ms.reviewer: mkaur-msft
 ms.date: 03/22/2023
 ms.subservice: canvas-maker
-ms.author: yogupta
+ms.author: yogupt
+
 
 search.audienceType:
   - maker
