@@ -20,107 +20,35 @@ contributors:
 ---
 
 # Modern controls and properties in canvas apps
-
+Configure the behavior of a control by setting one of its properties. Each type of control has a different set of properties.
 
 
 ## Modern Controls
 
+**[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
+**[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
-## Common properties by category
+**[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.
 
- 
+**[Info button](modern-control-info-button.md)** – Use this control to provide additional information to users.
 
-## All properties
+**[Link](modern-control-link.md)** – Open hyperlinks in new tab.
 
-### A
+**[Progress Bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
+**[Spinner](modern-control-spinner.md)** – Displays state in motion, eg. loading a page or table.
 
+**[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 
-### B
+**[Text](modern-control-text.md)** – Display text on the app, can also be used as label for fields.
 
-
-### C
-
-*
-### D
-
-
-### E
-
-
-
-### F
-
-
-
-### G
-
-
-
-### H
-
-
-
-### I
-
-
-
-### L
-
-
-
-### M
-
-
-### N
-
-
-
-### O
-
-
-
-### P
-
-
-
-### R
-
-
-### S
-
-
-
-### T
-
-
-
-### U
-
-
-
-### V
-
-
-### W
-
-
-
-### X
-
-
-
-### Y
-
-
-
-### Z
+**[Text input](modern-control-text-input.md)** – Type text, numbers, and other data.
 
 
 
 ### See also
-
+[Overview of modern controls in canvas apps](overview-modern-controls.md)
 
 
 
