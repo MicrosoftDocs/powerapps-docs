@@ -28,7 +28,7 @@ Follow these instructions to create a solution with plug-in library, connect to 
 
 1. Use Power Platform Tools extension for Visual Studio to create a new solution with a plug-in library. For instructions to do this, go to the [Create a Power Platform Tools project](/power-platform/developer/devtools-vs) article in the Power Platform developer guide.
 
-    If you already have an existing solution set up, follow instructions in [Add a new project to a Power Platform solution](/power-platform/developer/devtools-vs#add-a-new-project-to-a-power-platform-solution) in the Power Platform developer guide to add a Plug-in Library project to the solution using the Power Platform Tools template.
+    If you already have an existing solution set up, follow instructions in [Add a new project to a Power Platform solution](/power-platform/developer/devtools-vs-create-project#add-a-new-project-to-a-power-platform-solution) in the Power Platform developer guide to add a Plug-in Library project to the solution using the Power Platform Tools template.
 
 1. In the **Tools** menu, select **Connect to Dataverse**.
 
