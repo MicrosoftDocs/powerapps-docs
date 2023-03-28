@@ -50,7 +50,6 @@ The progress bar can be configured to show various states of progress in the app
 **[Size](../properties-text.md)** – The size of the control on the canvas.
 
 
-### Coming soon:
-Accessibility guidelines & examples
+
 
 
