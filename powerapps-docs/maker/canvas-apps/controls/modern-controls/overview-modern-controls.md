@@ -46,34 +46,18 @@ You will see list of all the modern controls.
  > [!div class="mx-imgBorder"]
    > ![List of modern controls](media/modern-controls-list.png)
 
-
-## Limitations and known issues
-
-1. For the modern controls, if add items through an array such as PowerFx bar or advance properties. Then, you will need to additionally select “Value” field from the properties panel.
-
-> [!div class="mx-imgBorder"]
-   > ![List in items](media/array-list.png)
-
-> [!div class="mx-imgBorder"]
-   > ![Enable value field](media/select-value-field.png)
-
-2. While updating properties of controls in property panel, some of the property value updates in format of:
-  ‘PowerApps.CoreControls.<Control name>.<Property name>’.<Value>
-  This is a valid format, or you can update to value only. Both approaches will work for configuration of the control.
-  
-3. The property sets for new controls are different than property sets of original controls. Not all scenarios are supported on new controls yet and we will ship consistent improvements to enable new scenarios.
-  
-4. The modern controls don’t have support right now for properties to show up in command bar too. We currently only support property value updates through property panel.
-  
-5. All app checker rules like accessibility and formulas, don’t run on modern controls currently. The support will come soon as the feature develops.
-
 ## What's next for these controls?
-We will be consistently shipping improvements and new capabilities for modern controls with up to date documentation. You can keep track of coming changes through this blog (link)
+We will be consistently shipping improvements and new capabilities for modern controls with up to date documentation. You can keep track of coming changes through this blog (link).
   
+## Provide feedback to Microsoft
+Your feedback will help us improve the new controls and make Power Apps even better. We are constantly listening to feedback from our users and working to improve the platform in meaningful ways.
 
+You can provide feedback even to individual controls within Power Apps studio while building apps. You will view thumbs up/down and comments option in properties of new controls. Once you provide feedback, our teams will consider those for next set of improvements. 
+
+You can also provide feedback and reach out to us via the community forum (add link) where we will also eagerly answer all your queries.
 
 ### See also
-
+[Limitations of modern controls in canvas apps](limitations-modern-controls.md)
 
 
 
