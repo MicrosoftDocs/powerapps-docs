@@ -35,7 +35,7 @@ In this article, learn about the general limitations of the modern controls used
 
 2. While updating properties of controls in property panel, some of the property value updates in format of:
 
-  ‘PowerApps.CoreControls.<Control name>.<Property name>’.<Value>
+  `PowerApps.CoreControls.<Control name>.<Property name>`.<Value>
   
   This is a valid format, or you can update to value only. Both approaches will work for configuration of the control.
   
