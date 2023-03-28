@@ -89,6 +89,6 @@ More information: [Get started with virtual tables (entities)](virtual-entities/
 
 ## Power Platform development tools
 
-In addition to the Dataverse development tools, use the tools listed in this article to learn about tools that you can use to extend Power Platform's features and capabilities using code: [Power Platform developer tools](/power-platform/developer/tools)
+In addition to the Dataverse development tools and Dataverse SDK for .NET, you can use the tools listed in this article to extend other features and capabilities of Power Platform using code: [Power Platform developer tools](/power-platform/developer/tools)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
