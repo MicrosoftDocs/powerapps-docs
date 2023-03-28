@@ -24,7 +24,7 @@ contributors:
 Displays state in motion such as loading a page or table.
 
 ## Description
-**Spinner** contorl can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios.
+**Spinner** control can be used to display loading scenarios where an action is in progress. This powerful control provides multiple display options suited for many scenarios.
 
 ## Key properties
 **Label** – The label to the spinner. The label slot receives the styling related to the text associated with the Spinner.
