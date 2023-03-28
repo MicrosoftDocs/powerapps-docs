@@ -55,7 +55,7 @@ We're consistently improving and adding new capabilities for modern controls. Se
 
 If you'd like to provide feedback, offer suggestions, or report issues go to [community forum](add link).
 
-You can also provide feedback for individual controls in Power Apps Studio from the contorl properties by selecting the thumbs up or down and comments option.
+You can also provide feedback for individual controls in Power Apps Studio from the control properties by selecting the thumbs up or down and comments option.
 
 
 ### See also
