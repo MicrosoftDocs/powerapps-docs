@@ -24,7 +24,7 @@ contributors:
 
 [This article is pre-release document and is subject to change.]
 
-Modern controls in canvas apps are a new set of controls that are based on Microsoft design system. Modern controls are quicker and simpler for makers to configure. They also provide a more cohesive experince and top-notch design for end-users. Modern controls are designed with a focus on accessibility, usability, and performance which makes them visually appealing, highly functional, and intuitive to use.
+Modern controls in canvas apps are a new set of controls that are based on Microsoft design system. Modern controls are quicker and simpler for makers to configure. They also provide a more cohesive experince for end-users. Modern controls are designed with a focus on accessibility, usability, and performance which makes them visually appealing, highly functional, and intuitive to use.
 
 
 > [!IMPORTANT]
