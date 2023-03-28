@@ -57,7 +57,7 @@ You will see list of all the modern controls.
 > [!div class="mx-imgBorder"]
    > ![Enable value field](media/select-value-field.png)
 
-2. B.	While updating properties of controls in property panel, some of the property value updates in format of:
+2. While updating properties of controls in property panel, some of the property value updates in format of:
   ‘PowerApps.CoreControls.<Control name>.<Property name>’.<Value>
   This is a valid format, or you can update to value only. Both approaches will work for configuration of the control.
   
@@ -65,12 +65,11 @@ You will see list of all the modern controls.
   
 4. The modern controls don’t have support right now for properties to show up in command bar too. We currently only support property value updates through property panel.
   
-5. E.	App checker rules like accessibility, formulas etc. don’t run on modern controls currently. The support will come soon as the feature develops.
+5. All app checker rules like accessibility and formulas, don’t run on modern controls currently. The support will come soon as the feature develops.
 
-
-
-
-## Upcoming updates
+## What's next for these controls?
+We will be consistently shipping improvements and new capabilities for modern controls with up to date documentation. You can keep track of coming changes through this blog (link)
+  
 
 
 ### See also
