@@ -24,7 +24,7 @@ contributors:
 Use **Info button** control to provide additional information to users.
 
 ## Description
-This control enable developers to provide help and guidance to app users in an accessible way.
+**Info button** control enable developers to provide help and guidance to app users in an accessible way.
 
 ## Key properties
 **Content** – Content to be displayed when users interact with the control.
