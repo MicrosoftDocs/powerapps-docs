@@ -44,7 +44,5 @@ The user can specify a Boolean value by using this familiar control, which has b
 **[Size](../properties-text.md)** – The size of the checkbox indicator.
 
 
-### Coming soon:
-Accessibility guidelines & examples
 
 
