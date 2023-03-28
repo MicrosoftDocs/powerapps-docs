@@ -43,7 +43,7 @@ Configure the behavior of a control by setting one of its properties. Each type 
 
 **[Text](modern-control-text.md)** – Display text on the app, can also be used as label for fields.
 
-**[Text input](modern-control-text-input.md)** – Type text, numbers, and other data.
+**[Text input](modern-control-text-input.md)** – A box in which the user can type text, numbers, and other data..
 
 
 
