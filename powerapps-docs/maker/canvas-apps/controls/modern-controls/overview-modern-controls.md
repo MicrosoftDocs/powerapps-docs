@@ -36,7 +36,7 @@ With your [canvas app open for editing](../../edit-app.md):
 2.	From the Preview tab, set the toggle for Try out the modern controls to On.
 
  > [!div class="mx-imgBorder"]
-   > ![Turn on modern controls](media/Settings panel.png)
+   > ![Turn on modern controls](media/settings-panel.png)
 
 
 
