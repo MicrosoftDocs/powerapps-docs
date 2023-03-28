@@ -61,7 +61,7 @@ Whereas Dataverse for Teams focuses on one environment per team for up to 10,000
 |Environment lifecycle  |Dataverse for Teams  |Dataverse  |
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
-|Maximum size     |   1 million rows or 2 GB      |  4 TB or more     |
+|Maximum size     |   1 million rows or 2 GB      |  Unlimited     |
 |Upgrade to Dataverse   |  Yes    |  N/A    |
 
 ## Security
