@@ -107,43 +107,58 @@ This type of connection isn't secure because it doesn't rely on end-user authent
 
 In SQL Server, this type of connection is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  They're using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users can't see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.** More information: [Use Microsoft SQL Server securely with Power Apps](connections/sql-server-security.md)
 
-### Secure Implicit Connections (Preview feature)
-Power Apps now has Experimental Preview support for ‘Secure implicit connections.’ These connections are more secure than the existing implicit connections. With this new feature, a Power App will work directly with a proxy connection object rather than a connection object. Each Power App that uses implicitly shared connections will have its own unique proxy connection object. The proxy connection object limits the queries the connection will execute to those that are defined in the corresponding Power The connection object is no longer shared with the end user. The proxy object is shared with the end-user but remains hidden. The result is that end users who are also authors cannot create new applications with either the connection or the proxy connection object.
+### Secure Implicit Connections (preview)
+Power Apps now has experimental preview support for **Secure implicit connections**. These connections are more secure than the existing implicit connections. With this new feature, an app will work directly with a proxy connection object rather than a connection object. Each app that uses implicitly shared connections will have its own unique proxy connection object. The proxy connection object limits the queries the connection will execute to those that are defined in the corresponding app. The connection object is no longer shared with the end-user. The proxy object is shared with the end-user but remains hidden. The result is that end-users who are also authors can't create new applications with either the connection or the proxy connection object.
 
-While in preview an app author must opt-in to use this feature. Eventually, this feature will be on for all apps. With the Experimental Preview switch turned on for a given Power App, all implicit connections in the app will automatically use this feature.  
+While in preview, an app author must opt-in to use this feature. Eventually, this feature will be on for all apps. With the experimental preview switch turned on for a given Power Apps app, all implicit connections in the app will automatically use this feature.  
 
-#### For new applications:
-1.	Create a new application that uses an implicitly shared connection.
-2.	Turn the ‘Secure implicit connections’ option On. 
-  * Go to Settings > Upcoming features.
-  * Choose the Experimental tab.
-  * Turn the ‘Secure implicit connections’ option On. ![Secure implicit connections.](./media/connections-list/secure_implicit_connection_option.png)
-3.	Publish it. 
-4.	Share with different users.   See the sharing section below.  
+#### Enable secure implicit connections for new app
 
-#### For existing applications:
-1.  Open an existing application with implicitly shared connections that has previously been published.
-2.  Turn the ‘Secure implicit connections option On  (see steps above.) 
-3.  Save it.
-4.  Republish it.
+Sign in to [Power Apps](https://make.powerapps.com) and create a new app that uses an implicitly shared connection:
 
+1. In Power Apps Studio, on the command bar, select **Settings** > **Upcoming features**.
+2. Select the **Experimental** tab.
+3. Set the toggle for **Secure implicit connections** to **On**
+   > [!div class="mx-imgBorder"]
+   > ![Secure implicit connections.](./media/connections-list/secure_implicit_connection_option.png)
+3. When you're done, publish the app. 
+
+To share with different users, see [Sharing](connections-list.md#sharing).
+
+#### Enable secure implicit connections for an existing app
+
+Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
+1. On the command bar, select **Settings** > **Upcoming features**.
+2. From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
+3. Save and publish the app.
 
 #### Sharing
-Once you have published your app there are a few things to check to make sure sharing works correctly. 
-1. Connections are shared with co-owners. If you do not want an end-user to get a connection, make sure that the ‘Co-owner’ checkbox is not checked. ![Co-owner property.](./media/connections-list/co-owner-property.png)
-2. Verify that the feature works correctly. Share to a different user (that is not an owner.) Once you have shared the app, check the ‘Connections’ list in the ‘Dataverse’ tab maker portal for that user. Verify that they do not have the connection available to them. 
-3. Once you have the Sharing panel open you can choose to change the end-user's right to the connection. Choosing the X will remove / revoke the user's access to the connection. 
-![Can Use / Revoke.](./media/connections-list/can-use-revoke.png)
 
-#### Using apps with the new Secure implicit connection
-Once republished and shared correctly, your Power Apps end users will not have access to the connection but will work with the hidden Proxy connection. They will not be able to create a new application based on your original connection. 
+Once the app is published follow these steps to verify that sharing works correctly:
 
-#### Current Limitations
-* All implicitly shared connection types work (Action and Tabular).
-* Server and database names are hidden in network traces but visible in the consent dialog.  Column names are not hidden.
-* For Tabular connectors, we only limit CRUD actions (e.g., Get, Post, Put, Delete, )  If you have permissions to Put then you have access to Post.
-* Action based connectors limit based on the specific API being used in the application. 
-* Warnings are still enabled in Sharing.  The warning around implicitly shared connections still warns while in private preview.  However, your connection with this feature is secure – despite the warning.
+- Check if connections are shared with co-owners. If you don't want an end-user to get a connection, then uncheck the **Co-owner** checkbox.
+
+   > [!div class="mx-imgBorder"]
+   > ![Co-owner property.](./media/connections-list/co-owner-property.png)
+
+- To verify the feature works correctly, share the app with a a different user who isn't an owner. Once you have shared the app, check the **Connections** list in the **Dataverse** tab in [Power Apps](https://make.powerapps.com) for that user. Verify that the user doesn't have a connection available.
+
+- Open the **Sharing** panel to change the end-user's right to the connection. Choosing the **X** will remove the user's access to the connection. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Can Use / Revoke.](./media/connections-list/can-use-revoke.png)
+
+#### Use apps with a new secure implicit connection
+
+When your app is republished and shared, then end-users won't have access to the connection but will work with the hidden proxy connection. They won't be able to create a new app based on your original connection. 
+
+#### Limitations
+
+1. All implicitly shared connection types work (Action and Tabular).
+2. Server and database names are hidden in network traces but visible in the consent dialog. Column names are not hidden.
+3. For Tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
+4. Action based connectors limit based on the specific API being used in the application. 
+5. Warnings are still enabled in Sharing.  The warning around implicitly shared connections still warns while in private preview.  However, your connection with this feature is secure – despite the warning.
 
 
 
