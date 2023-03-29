@@ -60,7 +60,7 @@ Customize a canvas app by changing its screen size and orientation.
     If this setting is off, the app adjusts to the aspect ratio of the device on which it's running. We do not recommend this because the app can be distorted to the point of being unusable, depending on the screen size. For example, controls may overlap or text might be clipped.
 
     > [!NOTE]
-    > This setting can't be turned off for certain controls like **[Rich text editor](controls/control-richtexteditor.md)** and [Fluent UI controls](/teams/use-the-fluent-ui-controls.md). They will not distort according to screen size. [Create a responsive layout](create-responsive-layout.md) to specify how these controls should adapt to different screen sizes.
+    > This setting can't be turned off for certain controls like **[Rich text editor](controls/control-richtexteditor.md)** and [Fluent UI controls](../../teams/use-the-fluent-ui-controls.md). They will not distort according to screen size. [Create a responsive layout](create-responsive-layout.md) to specify how these controls should adapt to different screen sizes.
 
 1. Under **Lock orientation**, specify either **On** or **Off**.
 
