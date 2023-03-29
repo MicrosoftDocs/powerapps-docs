@@ -24,7 +24,7 @@ contributors:
 > [!NOTE]
 > Have you checked out [Microsoft Power Fx](/power-platform/power-fx/overview)? 
 >
-> Try the new experimental Power Fx formula bar in Studio, with better IntelliSense and improved error highlighting. Turn it on [here](/power-apps/maker/canvas-apps/working-with-experimental-preview#controlling-which-features-are-enabled).
+> Try the new experimental Power Fx formula bar in Power Apps Studio, with better intellisense and improved error highlighting. To learn more about turning this feature on, see [Controlling which features are enabled](working-with-experimental-preview.md#controlling-which-features-are-enabled).
 
 Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
