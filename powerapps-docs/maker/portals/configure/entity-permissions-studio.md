@@ -221,10 +221,6 @@ The following message shows when you try to save a table permission without any 
 
 ![Saving a table permission without any associated web role.](media/entity-permissions-studio/table-permission-without-webrole.png "Saving a table permission without any associated web role")
 
-## Next steps
-
-[Tutorial: Configure table permissions using portals Studio](entity-permissions-studio-walkthrough.md)
-
 ### See also
 
 [Assign table permissions](assign-entity-permissions.md)
