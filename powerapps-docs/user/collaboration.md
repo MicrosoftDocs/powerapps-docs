@@ -1,16 +1,16 @@
 ---
 title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
-author: sericks007
+author: fikaradz 
 manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/27/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: fikaradz
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
@@ -46,7 +46,7 @@ App users, such as the record owner, as well as the users appearing in grids and
 
 
 ### Share 
-You can now easily share records with your colleagues via the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
+You can now easily share records with your colleagues using the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
 
 > [!Note]
 > If you have the share privilege on a record and you email a record link to a colleague, the colleague will automatically get read access to the record.
