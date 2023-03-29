@@ -123,7 +123,7 @@ Sign in to [Power Apps](https://make.powerapps.com) and create a new app that us
    > ![Secure implicit connections.](./media/connections-list/secure_implicit_connection_option.png)
 3. When you're done, publish the app. 
 
-To share with different users, see [Sharing](connections-list.md#sharing).
+   To share with different users, see [Sharing](connections-list.md#sharing).
 
 #### Enable secure implicit connections for an existing app
 
