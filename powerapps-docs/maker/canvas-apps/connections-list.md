@@ -141,7 +141,7 @@ Once the app is published follow these steps to verify that sharing works correc
    > [!div class="mx-imgBorder"]
    > ![Co-owner property.](./media/connections-list/co-owner-property.png)
 
-- To verify the feature works correctly, share the app with a a different user who isn't an owner. Once you have shared the app, check the **Connections** list in the **Dataverse** tab in [Power Apps](https://make.powerapps.com) for that user. Verify that the user doesn't have a connection available.
+- To verify the feature works correctly, share the app with a different user who isn't an owner. Once you have shared the app, check the **Connections** list in the **Dataverse** tab in [Power Apps](https://make.powerapps.com) for that user. Verify that the user doesn't have a connection available.
 
 - Open the **Sharing** panel to change the end-user's right to the connection. Choosing the **X** will remove the user's access to the connection. 
 
@@ -154,12 +154,11 @@ When your app is republished and shared, then end-users won't have access to the
 
 #### Limitations
 
-1. All implicitly shared connection types work (Action and Tabular).
+1. All types of implicitly shared connection work such as action and tabular.
 2. Server and database names are hidden in network traces but visible in the consent dialog. Column names are not hidden.
-3. For Tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
+3. For tabular connectors, we only limit CRUD actions such as Get, Post, Put, or Delete. If you have permissions to **Put** then you have access to **Post**.
 4. Action based connectors limit based on the specific API being used in the application. 
-5. Warnings are still enabled in Sharing.  The warning around implicitly shared connections still warns while in private preview.  However, your connection with this feature is secure – despite the warning.
-
+5. Warnings are still enabled in sharing. The warning around implicitly shared connections still warns while in private preview. However, your connection with this feature is secure – despite the warning.
 
 
 ### Windows Authentication
