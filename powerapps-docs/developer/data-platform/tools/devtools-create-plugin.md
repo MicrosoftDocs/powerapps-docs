@@ -190,7 +190,7 @@ You can send tool feedback to Microsoft using the feedback icon in the Power Pla
 ### See Also
 
 [Power Platform Tools for Visual Studio](/power-platform/developer/devtools-vs)<br/>  
-[Create a Power Platform Tools project](/power-platform/developer/devtools-vs-create-project.md)<br/>  
+[Create a Power Platform Tools project](/power-platform/developer/devtools-vs-create-project)<br/>  
 [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md?tabs=pptools)<br/>  
 [Event framework](../event-framework.md)<br/>  
 [Use plug-ins to extend business processes](../plug-ins.md)<br/>  
