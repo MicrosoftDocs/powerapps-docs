@@ -603,8 +603,35 @@ Power platform administrators can restrict the file size of attachments users ca
 
 ## Known issues
   
-- When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
-> This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+
+### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
+ There is a limit of 15 different entities that can be associated with Timeline. Either disable some activities, or follow the steps on [this page.](https://support.microsoft.com/hr-hr/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
+
+#### Mitigation 1
+
+You can contact customer support and provide details about this error and ask them to increase the QueryLinkEntityLimit setting for your organization.
+
+Note: This setting will affect all calls in the organization that have link-entities and might decrease performance for calls that have very high link-entity count. However, the performance hit should not be significant if increasing the limit by a single digit.
+
+#### Mitigation 2
+
+If the customer has created custom activities and is using card forms for them, they can disable the card forms in order to reduce the number of link-entities in the batch request. This can be achieved by doing the following steps:
+
+1. Go to the Timeline settings for UCI (on the form editor of the entity with issues, double click on the timeline section and the settings should open).
+
+2. In the Activities tab, Additional Options section, look for all custom activities that have a card form.
+
+3. Change the selection to 'Select Card Form' - this will disable the card form.
+
+It is also possible to not include a custom activity at all in the timeline if it is not useful:
+
+1. Go to the Timeline settings for UCI.
+
+2. In the Activities tab, Filter By section, instead of 'Show all' select 'Show selected'.
+
+3. Deselect the custom activities that are going to be removed from the timeline.
 
 ### See also
 
