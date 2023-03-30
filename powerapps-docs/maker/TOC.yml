@@ -2481,6 +2481,8 @@
       href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
+    - name: Validation for email address columns
+      href: ./data-platform/data-validation-email-column.md  
     - name: Behavior and format of the Date and Time column
       href: ./data-platform/behavior-format-date-time-field.md
     - name: "How-to guides: Columns"
