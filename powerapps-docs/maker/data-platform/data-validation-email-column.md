@@ -10,7 +10,7 @@ ms.custom: template-how-to
 ---
 # Data validation for email columns (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../../../../repos/powerapps-docs-pr/powerapps-docs/includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Get email address columns validated automatically in model-driven apps with no-code. Makers can build smarter and contextually aware next-gen apps for their workflows with better data quality.
 
