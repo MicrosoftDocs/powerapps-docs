@@ -52,7 +52,7 @@ Automatic updates in the preview will be limited to: 
    > [!NOTE]
    > The drop-down list will only display publishers if you have a third-party application installed.
 
-   :::image type="content" source="media/auto-app-update-2.jpg" alt-text="Configure app update settings":::
+   :::image type="content" source="media/autoappupdate-ppac-selectpublisher.jpg" alt-text="Configure app update settings":::
 
 1. Click **Save** to keep your changes.
 

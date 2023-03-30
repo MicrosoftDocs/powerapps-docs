@@ -33,7 +33,7 @@ contributors:
 
 ### Related topics
 
-[setActiveProcess)](setActiveProcess.md)
+[setActiveProcess](setActiveProcess.md)
 
 [formContext.data.process](../../formContext-data-process.md)
  
