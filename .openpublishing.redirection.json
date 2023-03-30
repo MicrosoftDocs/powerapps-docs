@@ -55,7 +55,6 @@
       "redirect_url": "/power-platform/released-versions/pagessolutions",
       "redirect_document_id": "false"
     },
-
     {
       "source_path": "powerapps-docs/developer/data-platform/troubleshoot-plug-in.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors",
@@ -236,7 +235,6 @@
       "redirect_url": "/power-pages/configure/vs-code-extension",
       "redirect_document_id": "false"
     },
-
     {
       "source_path": "powerapps-docs/maker/portals/admin/convert-portal.md",
       "redirect_url": "/power-pages/admin/convert-site",
@@ -7956,6 +7954,16 @@
       "source_path": "powerapps-docs/maker/portals/admin/portal-consumption-reports.md",
       "redirect_url": "/power-pages/admin/website-consumption-reports?tabs=PPS",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/tools/devtools-install.md",
+      "redirect_url": "/power-platform/developer/devtools-vs",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/tools/devtools-create-project.md",
+      "redirect_url": "/power-platform/developer/devtools-vs-create-project",
+      "redirect_document_id": "false"
     }
   ]
 }
