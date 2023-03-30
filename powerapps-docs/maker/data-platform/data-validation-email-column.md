@@ -8,13 +8,13 @@ ms.topic: how-to
 ms.date: 03/30/2023
 ms.custom: template-how-to
 ---
-# Data validation for email columns (preview)
+# Address validation for email columns (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Get email address columns validated automatically in model-driven apps with no-code. Makers can build smarter and contextually aware next-gen apps for their workflows with better data quality.
 
-Traditionally, the existing email column type had only basic email validation. With data validation, the email column format comes with smarter validation that includes reasons for the column being invalid. Any model-driven apps using a text column with email format receives automatic validation, which is helpful in guiding users to enter better email data. Data administrators can also review emails that are invalid on a regular basis so that they can correct them.
+Traditionally, the existing email column type had only basic email validation. With smart email address validation, the email column format comes with better validation that includes reasons for the column being invalid. Any model-driven apps using a text column with email format receives automatic validation, which is helpful in guiding users to enter better email data. Data administrators can also review emails that are invalid on a regular basis so that they can correct them.
 
 > [!IMPORTANT]
 > - This is a preview feature.
