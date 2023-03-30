@@ -1,7 +1,7 @@
 ---
 title: "Retrieve related table records with a query (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how you can retrieve related table records by expanding the navigation properties using the Web API."
-ms.date: 03/27/2023
+ms.date: 03/30/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -28,7 +28,7 @@ You can apply the following system query options within certain `$expand` option
 |Option|Description|
 |---------|---------|
 |`$select`|Select which properties are returned. More information: [Limit columns with $select](#limit-columns-with-select)|
-|`$filter`|For collection-valued navigation properties, limit the records returned.|
+|`$filter`|For collection-valued navigation properties, limit the records returned. More information: [Filter results](query-data-web-api.md#filter-results)|
 |`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 |`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 |`$expand`|Expand navigation properties in the related entity set. Using `$expand` within an `$expand` is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
