@@ -496,6 +496,34 @@
             href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
+          - name: Modern control reference (preview)
+            items:
+            - name: Overview
+              href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
+            - name: List of modern controls and properties
+              href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
+            - name: Limitations of modern controls 
+              href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
+            - name: Button
+              href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Checkbox
+              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md  
+            - name: Dropdown
+              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
+            - name: Info button
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
+            - name: Link
+              href: ./canvas-apps/controls/modern-controls/modern-control-link.md
+            - name: Progress bar
+              href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
+            - name: Spinner
+              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Tabs or tab list
+              href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Text
+              href: ./canvas-apps/controls/modern-controls/modern-control-text.md
+            - name: Text input
+              href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
           - name: Control reference
             items:
             - name: List of controls and properties
@@ -1961,35 +1989,35 @@
     - name: Administer portals from Power Platform admin center
       items:
         - name: Portals admin center overview
-          href: ./portals/admin/admin-overview.md
+          href: /power-pages/admin/admin-overview
         - name: Manage portals from admin center
-          href: ./portals/admin/power-platform-admin-center.md
+          href: /power-pages/admin/power-platform-admin-center
         - name: Roles required for portal administration
-          href: ./portals/admin/portal-admin-roles.md
+          href: /power-pages/admin/admin-roles
         - name: Configure portal details
           href: /power-pages/admin/admin-overview#site-details
         - name: Configure portal actions
           items:
             - name: Download public key
-              href: ./portals/admin/get-public-key.md
+              href: /power-pages/admin/get-public-key
             - name: Diagnostics and error handling
               href: /power-pages/admin/view-portal-error-log
             - name: Reset or delete a portal
-              href: ./portals/admin/reset-portal.md
+              href: /power-pages/admin/delete-website
             - name: Change base URL
-              href: ./portals/admin/change-base-url.md
+              href: /power-pages/admin/change-base-url
             - name: Enable maintenance mode
-              href: ./portals/admin/enable-maintenance-mode.md
+              href: /power-pages/admin/enable-maintenance-mode
             - name: Add custom domain name
               href: /power-pages/admin/add-custom-domain
             - name: Import metadata translation
-              href: ./portals/admin/import-metadata-translation.md
+              href: /power-pages/admin/import-metadata-translation
             - name: Set up Power BI integration
-              href: ./portals/admin/set-up-power-bi-integration.md
+              href: /power-pages/admin/set-up-power-bi-integration
         - name: Manage SSL certificates
-          href: ./portals/admin/manage-ssl-certificates.md              
+          href: /power-pages/admin/add-custom-domain             
         - name: Manage custom certificates
-          href: ./portals/admin/manage-custom-certificates.md  
+          href: /power-pages/admin/manage-custom-certificates 
         - name: Content Delivery Network
           href: /power-pages/configure/configure-cdn            
         - name: Use Portal Checker
