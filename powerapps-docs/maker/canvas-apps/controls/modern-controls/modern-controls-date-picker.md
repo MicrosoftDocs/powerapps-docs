@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Date picker control in Power Apps
+# Date picker control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
