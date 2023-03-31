@@ -22,13 +22,6 @@ With managed identities, access to your storage account is restricted to request
 > [!IMPORTANT]
 > This is a preview feature.
 >
-> Environment Lifecycle Operations listed below will not be available if this preview feature is enabled:
->
-> - Recover environment
-> - Reset environment
-> - Reset environment
-> - Copy environment
-> - Back up and restore environment
 
 ## Prerequisites
 
@@ -37,15 +30,11 @@ With managed identities, access to your storage account is restricted to request
 - You need these two PowerShell modules:
   - The Azure Az PowerShell module: `Install-Module -Name Az`
   - The Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
-- Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. This folder includes the PowerShell scripts required for this feature. Note that these PowerShell scripts must be in the same folder:
-  - CreateIdentityEnterprisePolicy.ps1
-  - NewIdentity.ps1
-  - GetIdentityEnterprisePolicyforEnvironment.ps1
+- Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 ## Create enterprise policy
 
-1. Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
 1. Open Azure CLI with run as administrator and sign into your Azure subscription use the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
 1. Expand the compressed folder you downloaded as part of the [prerequisites](#prerequisites) for this feature to a location where you can run PowerShell.
@@ -58,6 +47,14 @@ With managed identities, access to your storage account is restricted to request
    - Provide preferred enterprise policy name.
    - Provide the Azure resource group location.
 1. Save the copy of the **ResourceId** after policy creation.
+
+> [!NOTE]
+        > Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
+        > The following are the valid **location** inputs supported for policy creation. Kindly select the most appropriate one.
+        |--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+        | United States EUAP | United States | South Africa | UK | Australia | Korea |
+        | Japan | India | France | Europe | Asia | Norway |
+        | Germany | Switzerland | Canada  | Brazil | UAE | Singapore |
 
 ## Grant reader access to the enterprise policy via Azure
 
@@ -109,8 +106,9 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 1. Open the Azure Synapse workspace connected to your Azure Synapse Link for Dataverse profile.
 1. On the left navigation pane, select **Networking**.
 
-   1. Select **Allow all azure services and resources to access this workspace**.
-   1. If there are **Firewall rules**, delete them.
+   1. Enable **Public network access to workspace endpoints**
+   2. Select **Allow all azure services and resources to access this workspace**.
+   3. If there are **Firewall rules**, delete them.
    :::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
 1. Select **Save**.
 
