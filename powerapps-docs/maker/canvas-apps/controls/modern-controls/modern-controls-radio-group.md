@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Radio group control in Power Apps
+# Radio group control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
