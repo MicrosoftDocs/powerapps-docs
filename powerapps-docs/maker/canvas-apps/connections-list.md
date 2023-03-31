@@ -129,7 +129,7 @@ Sign in to [Power Apps](https://make.powerapps.com) and create a new app that us
 
 Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
 1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
+2. From the **Experimental** tab, set the toggle for **Secure implicit connections** to **On**.
 3. Save and publish the app.
 
 #### Sharing

@@ -1759,7 +1759,7 @@
         href: ../mobile/setup-mobile-offline.md 
       - name: Enable and use offline-first (preview)
         href: ../mobile/work-in-offline-mode.md 
-    - name: View offline sync status (preview)
+    - name: View offline sync status
       href: ../mobile/offline-sync-icon.md
     - name: Sync data in the background
       href: ../mobile/sync-data-offline-background.md
