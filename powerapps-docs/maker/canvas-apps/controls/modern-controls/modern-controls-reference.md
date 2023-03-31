@@ -29,7 +29,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 ## Modern Controls
 
-**[Badge](modern-control-badge.md)** – A badge is a visual decoration for UI elements.
+**[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
