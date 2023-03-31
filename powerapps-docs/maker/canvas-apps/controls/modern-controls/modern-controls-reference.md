@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
 ---
 
-# Modern controls and properties in canvas apps
+# Modern controls and properties in canvas apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
