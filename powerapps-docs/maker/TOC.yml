@@ -505,13 +505,13 @@
             - name: Limitations of modern controls 
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
             - name: Badge
-              href: ./canvas-apps/controls/modern-controls/modern-control-badge.md
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md  
             - name: Date picker
-              href: ./canvas-apps/controls/modern-controls/modern-control-date-picker.md
+              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
             - name: Dropdown
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Info button
@@ -521,7 +521,7 @@
             - name: Progress bar
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
             - name: Radio group
-              href: ./canvas-apps/controls/modern-controls/modern-radio-group.md
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
             - name: Tabs or tab list
