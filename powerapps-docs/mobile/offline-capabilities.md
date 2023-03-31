@@ -139,7 +139,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
 - **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
 
-- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients via Server Side Sync.
+- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 
