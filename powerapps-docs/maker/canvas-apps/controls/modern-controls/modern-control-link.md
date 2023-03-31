@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Link modern control in Power Apps
+# Link modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
