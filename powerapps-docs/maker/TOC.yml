@@ -2369,6 +2369,8 @@
         href: ./data-platform/data-retention-set.md
       - name: Manage data retention policies  
         href: ./data-platform/data-retention-manage.md
+      - name: Data retention FAQ
+        href: ./data-platform/data-retention-faq.yml
     - name: Create and edit virtual tables
       href: ./data-platform/create-edit-virtual-entities.md
       items:

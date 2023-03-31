@@ -58,7 +58,7 @@ Enable a table for long term data retention of historical cold data:
 The save process can take up to 15 minutes, as Dataverse enables this property for all cascade-related child tables. Notice that the larger the number of cascade-related tables, the longer it will take to complete the operation.
 
 > [!NOTE]
-> The long term retention property is disabled if the environment isn't enabled for long term retention. More information: [Prerequisite 1: Enable an environment for long term retention](#prerequisite-1-enable-an-environment-for-long-term-retention)
+> The long term retention property is disabled if the environment isn't enabled for long term retention. More information: [Prerequisite 2: Enable an environment for long term retention](#prerequisite-2-enable-an-environment-for-long-term-retention)
 
 ### Prerequisite 4: Create Dataverse views for policy criteria
 
