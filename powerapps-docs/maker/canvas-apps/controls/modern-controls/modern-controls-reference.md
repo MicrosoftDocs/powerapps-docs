@@ -35,7 +35,7 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
-**[Date picker](modern-control-date-picker.md)** - A control that the user can select to specify a date.
+**[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.
 
