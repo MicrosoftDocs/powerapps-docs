@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Text modern control in Power Apps
+# Radio group control in Power Apps
 
 [This article is pre-release document and is subject to change.]
 
@@ -43,7 +43,7 @@ A Radio group control is best used with only a few, mutually exclusive options.
 
 **[Y](../properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**[Size](../properties-text.md)** – The size of the text control on the canvas.
+**[Size](../properties-text.md)** – The size of the radio control on the canvas.
 
 
 
