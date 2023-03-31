@@ -1,7 +1,7 @@
 ---
 title: Auto app updates (preview) | Microsoft Docs
 description: Learn about the latest auto update feature for apps.
-ms.date: 08/05/2022
+ms.date: 03/22/2023
 author: angela21k
 ms.author: angelakim
 ms.reviewer: jdaly
@@ -20,7 +20,7 @@ contributors:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Auto app update feature allows automatic updates of applications installed through AppSource. This feature helps both publishers and customers keep software up to date in a simple and controlled way with minimal administrative overhead. 
+Auto app update feature allows automatic updates of third-party applications installed through AppSource. This feature helps both third-party  publishers and customers keep software up to date in a simple and controlled way with minimal administrative overhead.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -30,14 +30,14 @@ Automatic updates in the preview will be limited to: 
 
 - **Explicit tenant admin opt-in**: Tenant administrator user must opt-in from the Power Platform admin center to enable the feature.
 
-- **Pre-approved publishers**: Tenant administrator user must indicate which publishers are permitted to automatically update apps in their environment once opted-in from the Power Platform admin center.
+- **Pre-approved publishers**: Tenant administrator user must indicate which third-party publishers are permitted to automatically update apps in their environment once opted-in from the Power Platform admin center.
 
 - **Dark hours only**: To further minimize impact, automatic updates will only happen during dark hours defined by either the customer or at geo level.  
 
 ## Enabling auto app update  
 
 > [!NOTE]
-> Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select publishers.
+> Publishers do not require additional action to enable automatic updates for their apps. Only tenant admin users are required to act if they want to opt-in to this feature for select third-party publishers.
 
 1. Log into the [Power Platform admin center](https://admin.powerplatform.microsoft.com) as an administrator user. From the Environments page, select an environment and click on **Settings**.
 
@@ -47,9 +47,12 @@ Automatic updates in the preview will be limited to: 
 
    :::image type="content" source="media/auto-app-update-1.jpg" alt-text="Power Platform admin center environment settings":::
 
-1. Toggle the configurator to **'On'** to opt-in to the feature.  From the drop-down list of publishers, select for which publishers you want to automatically update apps.
+1. Toggle the configurator to **'On'** to opt-in to the feature.  From the drop-down list of publishers, select for which third-party publishers you want to automatically update apps.
 
-   :::image type="content" source="media/auto-app-update-2.jpg" alt-text="Configure app update settings":::
+   > [!NOTE]
+   > The drop-down list will only display publishers if you have a third-party application installed.
+
+   :::image type="content" source="media/autoappupdate-ppac-selectpublisher.jpg" alt-text="Configure app update settings":::
 
 1. Click **Save** to keep your changes.
 
