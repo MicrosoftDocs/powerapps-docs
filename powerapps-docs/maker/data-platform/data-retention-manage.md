@@ -27,11 +27,11 @@ Use the retention policies dashboard to view and manage retention policies. From
 |Status  |Description  |
 |---------|---------|
 |Scheduled     |  The policy has been scheduled to run.       |
-|In progress - Retention     | The process of moving and changing the data state from active to non-active (retained) for the records in the parent root table and all child tables.        |
-|In progress - Pending Reconciliation     |  Waiting to reconcile the retained records in Dataverse managed data lake.      |
-|In progress – Reconciling     | During this stage, ensures no data loss by reconciling the retained records with the original records before delete from active.     |
-|In progress – Pending Delete     |  Waiting to delete all retained records.       |
-|In progress – Delete     |  Delete of retained records from applications       |
+|In progress - Retention     | The process of moving and changing the data state from active to non-active (retained) for the rows in the parent root table and all child tables.        |
+|In progress - Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse managed data lake.      |
+|In progress – Reconciling     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
+|In progress – Pending Delete     |  Waiting to delete all retained rows.       |
+|In progress – Delete     |  Delete of retained rows from applications       |
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  Retention process failed       |
 
@@ -67,7 +67,7 @@ This restrictions are enforced by Dataverse for each environment:
 
 ## Storage capacity reports
 
-When data is retained long term in Dataverse, it is a switch from a live (hot) state to a retained (cold) state for records.
+When data is retained long term in Dataverse, it is a switch from a live (active) state to a retained cold (non-active) state for rows.
 
 The existing Power Platform admin reports display the total consumed storage for each storage type with the details for each table. The total consumed storage for Database, file, and log is the sum of the live and retained data.
  

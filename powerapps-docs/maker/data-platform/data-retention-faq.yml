@@ -1,0 +1,24 @@
+### YamlMime:FAQ
+metadata:
+  title: Frequently asked questions about long term data retention with Dataverse
+  description: Get answers to frequently asked questions about long term retention with Dataverse.
+  author: Mattp123
+  ms.search.keywords: 
+  ms.date: 03/31/2023
+  ms.author: matp
+  ms.reviewer: 
+  contributors:
+  ms.topic: faq
+title: Dataverse long term data retention FAQ
+summary: This article provides information on frequently asked questions about long term data reention with Microsoft Dataverse.
+sections:
+- name: General
+  questions:
+   - question: Can a data retention policy be set only on a particular table and not the related tables?
+     answer: |
+       No. Admins can set up a retention policy on a root table, such as the Dynamics 365 apps accounts table. Dataverse automatically sets all related child tables for data retention. So if the account row has related task rows, all task rows will also be set for data retention. 
+       Admins can always set up a retention policy on a specific table with no related tables.
+
+   - question: What about my existing custom Dataverse native delete action logic that I have written to ensure business rules are followed when any live data is deleted?
+     answer: |
+        All custom logic with Dataverse native delete actions will always be honored during the data retention process. # Does this mean it is deleted?

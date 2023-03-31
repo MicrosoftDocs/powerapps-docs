@@ -43,7 +43,7 @@ Power Platform admins use the Power Platform admin center settings to enable or 
 
 ## Prerequisite 3: Enable a table for long term retention
 
-Makers can enable or disable data retention for any table. Before setting up a retention policy to retain historical cold data long term in a Dataverse long term storage, makers should enable retention for the parent root table.
+Makers can enable or disable data retention for any table. Before setting up a retention policy to retain historical cold data (non-active data) long term in a Dataverse long term storage, makers should enable retention for the parent root table.
 
 > [!NOTE]
 > When a parent table is enabled for retention, all the cascade related child tables are automatically enabled. You can't disable retention for a child table when the parent table is already enabled for retention. For example, assume a custom table and notes table are child tables of the case table. The child tables can't be disabled for retention when the parent case table is enabled. Maker can disable the parent table for retention and separately enable the child table for retention.
@@ -58,18 +58,17 @@ Enable a table for long term data retention of historical cold data:
 The save process can take up to 15 minutes, as Dataverse enables this property for all cascade-related child tables. Notice that the larger the number of cascade-related tables, the longer it will take to complete the operation.
 
 > [!NOTE]
-> - *Cold* data is data that has been marked as non-active (read-only) data.
-> - The long term retention property is disabled if environment isn't enabled for long term retention. More information: [Prerequisite 1: Enable an environment for long term retention](#prerequisite-1-enable-an-environment-for-long-term-retention)
+> The long term retention property is disabled if the environment isn't enabled for long term retention. More information: [Prerequisite 1: Enable an environment for long term retention](#prerequisite-1-enable-an-environment-for-long-term-retention)
 
 ### Prerequisite 4: Create Dataverse views for policy criteria
 
 Dataverse views are used to determine which table rows are marked for retention using a long-term retention policy. Before setting up a data retention policy, you must set up a Dataverse view as the criteria for retention.
 
-Once you have a Dataverse view for use in a particular long term retention policy, you should test the view result. A good practice is to modify the view query with a `TOP N` statement and test it to ensure that the result set returned is as expected. This is always recommended especially when the number of records is large. 
+Once you have a Dataverse view for use in a particular long term retention policy, you should test the view result. A good practice is to modify the view query with a `TOP N` statement and test it to ensure that the result set returned is as expected. This is always recommended especially when the number of rows is large. 
 
 For example, consider a Dataverse view created to select all closed cases from the year 2015. The number of cases could be potentially very large. Therefore, you should add a `TOP N`, such as *TOP 10*, to the view and test it to confirm the sample set of the retrieved cases.
 
-During data retention, records from the parent table and all cascade related child tables are included for data retention as cold data. In the previous example, the parent cases might have associated records from child cascade tables, for example notes, task, and custom tables. The retention policy ensures that the case record and all its related child records are marked and retained as cold data in Dataverse. In addition, lookup values in the case table, as an example, are de-normalized with the ID and name values made available as part of the retained cold data. This allows in many scenarios for a single query to retrieve the relevant data.
+During data retention, rows from the parent table and all cascade related child tables are included for data retention as cold data. In the previous example, the parent cases might have associated rows from child cascade tables, for example notes, task, and custom tables. The retention policy ensures that the case record and all its related child rows are marked and retained as cold data in Dataverse. In addition, lookup values in the case table, as an example, are de-normalized with the ID and name values made available as part of the retained cold data. This allows in many scenarios for a single query to retrieve the relevant data.
 
 For information about how to create a table view, go to [Create and edit public or system views](../model-driven-apps/create-or-edit-model-driven-app-view.md).
 
