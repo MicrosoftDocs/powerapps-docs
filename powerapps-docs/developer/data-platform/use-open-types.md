@@ -21,19 +21,14 @@ contributors:
 
 An _open type_ is a structured type that can have dynamic properties. Most types that are defined in Dataverse are _closed types_. With closed types, every property name and type value is known. If you use the wrong name, or set the value to the wrong type you get an error. Normally, this structure is a good thing, but sometimes your business logic requires a more flexible approach.
 
-When you create a Dataverse message using Custom API, you can specify the names and types of each of the request parameters and response properties. There are currently [13 different types to choose from](/power-apps/developer/data-platform/reference/entities/customapirequestparameter#type-choicesoptions) so you can create closed types that the system knows about and can validate for you. But closed types aren't dynamic or allow for complex and nested properties.
+When you create a Dataverse message using Custom API, you must specify the names and types of each of the request parameters and response properties. There are currently [13 different types to choose from](/power-apps/developer/data-platform/reference/entities/customapirequestparameter#type-choicesoptions) so you can create closed types that the system knows about and can validate for you. But closed types aren't dynamic or allow for complex and nested properties.
 
-## Use JSON strings or open types
+Open types with custom APIs enable two scenarios:
 
-You don't need to use open types. You can define define request parameters and response properties as strings and require callers to pass JSON data as the value. You can return any kind of JSON data as the value of a string response property. When you do this, your plug-in code must deserialize the JSON received and serialize the JSON to return. Your code is responsible for validating the JSON data received and returning useful error messages when the data is invalid.
+1. **Sending structured data that is dynamic**. This data can't be described by a class, so there is no need to serialize or deserialize it.
+1. **Create custom closed types**. When you want a custom api to accept a request parameter or response property using a specific complex type that can't be expressed using the [options currently available](/power-apps/developer/data-platform/reference/entities/customapirequestparameter#type-choicesoptions).
 
-If your Custom API represents a customizable business operation, you will enable other developers to register steps for your plug-in. Those developers will also need to deserialize the JSON to work with the data in the message. If they need to change any values, they will need to serialize that data again to set the value.
-
-Serialization and deserialization are expensive operations and should be avoided. When strings are large, they can have a significant impact on performance.
-
-The advantage of using open types is that you can use existing Dataverse types to compose the data structures you want to use. Developers using your custom apis with the Dataverse SDK for .NET can use the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class to compose requests and process responses. There is no need for serialization and deserialization within your plug-in code, or anyone else who extends the logic of your custom api in their plug-ins.
-
-In either case, Dataverse doesn't know the details of the data structures you are using. As the API developer, you are responsible for documenting these structures and providing any helper classes to enable callers to be successful using your API. More information: [Recommendations](#recommendations)
+It is important to understand the scenario that applies to your custom api, but lets understand how to use open types first.
 
 ## How to use open types
 
@@ -50,7 +45,7 @@ While not actually an open type, it is worth mentioning that you can have a cust
 
 ### Use Entity as a dictionary
 
-The more common case is to use the Entity as a dictionary. Use the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection to specify a set of keys and values. The values can be any .NET type and can be nested. Other Entity class properties and methods are not used.
+The more common case is to use the Entity as a dictionary. Use the [Entity.Attributes](xref:Microsoft.Xrm.Sdk.Entity.Attributes) collection to specify a set of keys and values. The values can be any .NET type and can be nested. Other [Entity](xref:Microsoft.Xrm.Sdk.Entity) class properties are not used.
 
 Let's say that your application uses data that comes from or will be sent to Microsoft Graph and represents the [educationSchool resource type](/graph/api/resources/educationschool). You might use an open type like the following examples.
 
@@ -170,13 +165,30 @@ When using Web API, you must specify the type using the Web API namespace: `Micr
 
 ```
 
-## Recommendations
+## Sending structured dynamic data
+
+Structured dynamic data can be defined using a variety of formats that can be set as a string: JSON, XML, YAML, HTML. This kind of data can be easily set using a string parameter or response property. So why use open types?
+
+||When to use?  |
+|---------|---------|
+|**Use String**|When the structured data is being passed through your custom api and expected to be consumed by another application calling your custom api.|
+|**Use Open Type**|When the plug-in that supports your custom api, or any plug-ins that extend your custom api, must read or change the structured data.|
+
+Parsing a string value into an object such as [XDocument](xref:System.Xml.Linq.XDocument) or [JObject](https://www.newtonsoft.com/json/help/html/t_newtonsoft_json_linq_jobject.htm) so that you can manipulate it in your plug-in is a relatively expensive operation. When your plug-in, or any other plug-in that might extend the logic in your custom api, changes the data, they must convert the object back into a string. You can avoid this by using open types.  
+
+With open types, callers of your custom api can use the familar dictionary structure that the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class provides so your plug-in can interact with it in the same way you work with other Dataverse records.
+
+> [!NOTE]
+> If you are serializing or deserializing the string data to a class, your data isn't dynamic and you should review [Custom closed types](#custom-closed-types).
+
+
+## Custom closed types
 
 Open types allow for dynamic and unstructured data. But you should consider whether your API has truly dynamic parameters or if you actually want to have a custom type.
 
 Currently, you can't define a custom type that Dataverse knows about. But using open types you can define a class that Dataverse can process as an open type. Developers using your Custom API can use your classes to have a better, more productive experience using your custom api without less opportunity for errors.
 
-For example, let's say that your custom api requires a parameter that tracks a course using an array of points.
+For example, let's say that your custom api requires a parameter that tracks a course using an array of points that contain latitude and longitude information. You need a `Location` class.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -264,7 +276,7 @@ location.Longitude = -122.11446844957624;
 
 Because Web API can be used with .NET and other programming languages, the specific method will depend on the language and the technologies you will use to work with JSON.
 
-When using [Json.NET](https://www.newtonsoft.com/json) with C#, you can define a class like this:
+When using [Json.NET](https://www.newtonsoft.com/json) with C#, you can define a `Location` class like this:
 
 ```csharp
 using Newtonsoft.Json;
@@ -335,19 +347,23 @@ When sending data that contains an array using Web API, the following error will
 {
   "error": {
     "code": "0x80040224",
-    "message": "Element 'http://schemas.datacontract.org/2004/07/System.Collections.Generic:value' contains data from a type
-     that maps to the name 'System.Collections.Generic:List`1'. The deserializer has no knowledge of any type that maps to 
-     this name. Consider changing the implementation of the ResolveName method on your DataContractResolver to return a 
-     non-null value for name 'List`1' and namespace 'System.Collections.Generic'.",
+    "message": "Element 'http://schemas.datacontract.org/2004/07/System.Collections.Generic:value' contains 
+     data from a type that maps to the name 'System.Collections.Generic:List`1'. The deserializer has no 
+     knowledge of any type that maps to this name. Consider changing the implementation of the ResolveName 
+     method on your DataContractResolver to return a non-null value for name 'List`1' and namespace 
+     'System.Collections.Generic'.",
   }
 }
 ```
 
-This error doesn't occur when the client application is using the SDK for .NET.
+This error doesn't occur when the client application is using the SDK for .NET or when no plug-in is set for the custom api.
 
 
 ## Frequently asked questions (FAQ)
 
+Please use the **Feedback** for **This page** button below to submit questions you have about open types.
+
 ## See also
 
+[Create and use Custom APIs](custom-api.md)<br />
 [Odata.org Advanced Tutorial: Open Type](https://www.odata.org/getting-started/advanced-tutorial/#openType)
