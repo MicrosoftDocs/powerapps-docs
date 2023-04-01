@@ -252,6 +252,12 @@ var location = new Location {
    Latitude = 47.66132951804776,
    Longitude = -122.11446844957624
 };
+
+// OR 
+
+var location = new Location()
+location.Latitude = 47.66132951804776;
+location.Longitude = -122.11446844957624;
 ```
 
 # [Web API](#tab/webapi)
@@ -293,9 +299,15 @@ Location location = new() {
    Latitude = 47.66132951804776,
    Longitude = -122.11446844957624
 };
+
+// OR 
+
+var location = new()
+location.Latitude = 47.66132951804776;
+location.Longitude = -122.11446844957624;
 ```
 
-The `@odata.type` annotations will always be included:
+The `@odata.type` annotations will always be included when the class instance is serialized.
 
 ```json
 {
