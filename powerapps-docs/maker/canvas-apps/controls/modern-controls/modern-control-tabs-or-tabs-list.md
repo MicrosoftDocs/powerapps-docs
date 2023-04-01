@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Tabs or tab list modern control in Power Apps
+# Tabs or tab list modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 

@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
 ---
 
-# Limitations of modern controls in canvas apps
+# Limitations of modern controls in canvas apps (preview)
 [This article is pre-release document and is subject to change.]
 
 In this article, learn about the general limitations of the modern controls used in canvas apps. 
