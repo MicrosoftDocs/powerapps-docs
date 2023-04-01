@@ -25,8 +25,8 @@ When you create a Dataverse message using Custom API, you must specify the names
 
 Open types with custom APIs enable two scenarios:
 
-1. [Sending structured dynamic data](#sending-structured-dynamic-data). This data can't be described by a class, so there's no need to serialize or deserialize it.
-1. [Custom closed types](#custom-closed-types). When you want a custom api to accept a request parameter or response property using a specific complex type that can't be expressed using the [options currently available](/power-apps/developer/data-platform/reference/entities/customapirequestparameter#type-choicesoptions).
+1. [Structured dynamic data](#structured-dynamic-data). This data can't be described by a class, so there's no need to serialize or deserialize it.
+1. [Custom closed types](#custom-closed-types). When you want a custom api to accept a request parameter or return a response property using a specific complex type that can't be expressed using the [options currently available](/power-apps/developer/data-platform/reference/entities/customapirequestparameter#type-choicesoptions).
 
 It's important to understand the scenario that applies to your custom api to use open types correctly, but lets understand how to use open types first.
 
@@ -108,7 +108,7 @@ Notice that the `id` value has an `id@odata.type` annotation. This annotation is
 If the value is a number, it's `Int32`. If the value is `Decimal`, `Double`, `Int16`, or `Int64`, you must specify the type using the `<property name>@odata.type` annotation.
 
 > [!NOTE]
-> Notice that each of the string values also has an annotation to specify that they are strings. This is a mitigation against a known issue in OData [https://github.com/OData/odata.net/issues/764](https://github.com/OData/odata.net/issues/764). If the string value contains an open bracket '`[`' or single quote '`'`', the OData library will return an error like the following `Microsoft.OData.ODataException: Found an unbalanced bracket expression.`. Unless you are certain that the values sent will never include these characters, you must include the `"<property name>@odata.type": "String"` annotation to prevent this error.
+> Notice that each of the string values also has an annotation to specify that they are strings. This is a mitigation against a known issue in OData [https://github.com/OData/odata.net/issues/764](https://github.com/OData/odata.net/issues/764). If the string value contains an open bracket '`[`' or single quote '`'`', the OData library will return an `Microsoft.OData.ODataException`. Unless you are certain that the values sent will never include these characters, you must include the `"<property name>@odata.type": "String"` annotation to prevent this error.
 
 If the value is an array, you must always include an annotation using this pattern: `"<property name>@odata.type": "Collection(<type>)"`
 
@@ -165,7 +165,7 @@ When using Web API, you must specify the type using the Web API namespace: `Micr
 
 ```
 
-## Sending structured dynamic data
+## Structured dynamic data
 
 Structured dynamic data can be defined using various formats that can be set as a string: JSON, XML, YAML, HTML. This kind of data can be easily set using a string parameter or response property. So why use open types?
 
@@ -178,21 +178,20 @@ Parsing a string value into an object such as [XDocument](xref:System.Xml.Linq.X
 
 With open types, callers of your custom api can use the familiar dictionary structure that the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class provides so your plug-in can interact with it in the same way you work with other Dataverse records.
 
-> [!NOTE]
-> If you are serializing or deserializing the string data to a class, your data isn't dynamic and you should review [Custom closed types](#custom-closed-types).
+If you are serializing or deserializing the string data to a class, your data isn't dynamic and you should review the next section.
 
 
 ## Custom closed types
 
 Open types allow for dynamic and unstructured data. But you should consider whether your API has truly dynamic parameters or if you actually want to have a custom type.
 
-Currently, you can't define a custom type that Dataverse knows about. But using open types you can define a class that Dataverse can process as an open type. Developers using your Custom API can use your classes to have a better, more productive experience using your custom api without less opportunity for errors.
+Currently, you can't define a custom type that Dataverse knows about. But using open types you can define a closed-type class that Dataverse can process as an open type. Developers using your Custom API can use your classes to have a better, more productive experience using your custom api with fewer opportunities for errors.
 
 For example, let's say that your custom api requires a parameter that tracks a course using an array of points that contain latitude and longitude information. You need a `Location` class.
 
 # [SDK for .NET](#tab/sdk)
 
-You can create a `Location` class that inherits from the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class and contains the properties you need for example:
+You can create a `Location` class that inherits from the [Entity](xref:Microsoft.Xrm.Sdk.Entity) class and contains the properties you need. For example:
 
 ```csharp
 using Microsoft.Xrm.Sdk;
@@ -235,7 +234,7 @@ namespace MyCompany
 }
 ```
 
-Because this type inherits from the `Entity` class, it can use the `Entity` methods with to access the values in the `Attributes` collection. You can use this class within your plug-in code and share it with consumers a library or in sample code in your documentation.
+Because this type inherits from the `Entity` class, it can use the `Entity` [GetAttributeValue](xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%2A) and [SetAttributeValue](xref:Microsoft.Xrm.Sdk.Entity.SetAttributeValue%2A) methods with to access the values in the `Attributes` collection. You can use this class within your plug-in code and share it with consumers a library or in sample code in your documentation.
 
 The result is code that is easier to use and read.
 
@@ -288,13 +287,13 @@ namespace MyCompany
         [JsonProperty("@odata.type")]
         public string ODataType => "Microsoft.Dynamics.CRM.expando";
 
-        // Gets or sets the latitude of the GeoCoordinate.
+        // Gets or sets the latitude of the Location.
         public double? Latitude { get; set; }
 
         [JsonProperty("Latitude@odata.type")]
         public static string LatitudeType => "Double";
 
-        // Gets or sets the longitude of the GeoCoordinate.
+        // Gets or sets the longitude of the Location.
         public double? Longitude { get; set; }
 
         [JsonProperty("Longitude@odata.type")]
@@ -303,6 +302,8 @@ namespace MyCompany
 }
 
 ```
+
+You can share this class with consumers a library or in sample code in your documentation.
 
 When a developer uses this class, they don't need to worry about setting the `@odata.type` annotations.
 
