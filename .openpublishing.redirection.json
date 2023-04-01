@@ -7964,6 +7964,61 @@
       "source_path": "powerapps-docs/developer/data-platform/tools/devtools-create-project.md",
       "redirect_url": "/power-platform/developer/devtools-vs-create-project",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/admin-overview.md",
+      "redirect_url": "/power-pages/admin/admin-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/power-platform-admin-center.md",
+      "redirect_url": "/power-pages/admin/power-platform-admin-center",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-admin-roles.md",
+      "redirect_url": "/power-pages/admin/admin-roles",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/get-public-key.md",
+      "redirect_url": "/power-pages/admin/get-public-key",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/reset-portal.md",
+      "redirect_url": "/power-pages/admin/delete-website",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/change-base-url.md",
+      "redirect_url": "/power-pages/admin/change-base-url",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/enable-maintenance-mode.md",
+      "redirect_url": "/power-pages/admin/enable-maintenance-mode",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/import-metadata-translation.md",
+      "redirect_url": "/power-pages/admin/import-metadata-translation",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/set-up-power-bi-integration.md",
+      "redirect_url": "/power-pages/admin/set-up-power-bi-integration",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/manage-custom-certificates.md",
+      "redirect_url": "/power-pages/admin/manage-custom-certificates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/manage-ssl-certificates.md",
+      "redirect_url": "/power-pages/admin/add-custom-domain",
+      "redirect_document_id": "false"
     }
   ]
 }
