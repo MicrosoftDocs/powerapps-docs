@@ -8019,6 +8019,156 @@
       "source_path": "powerapps-docs/maker/portals/admin/manage-ssl-certificates.md",
       "redirect_url": "/power-pages/admin/add-custom-domain",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/assign-entity-permissions.md",
+      "redirect_url": "/power-pages/security/assign-table-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/column-permissions.md",
+      "redirect_url": "/power-pages/security/column-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/use-simplified-authentication-configuration.md",
+      "redirect_url": "/power-pages/security/authentication/configure-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/create-web-roles.md",
+      "redirect_url": "/power-pages/security/create-web-roles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-contacts.md",
+      "redirect_url": "/power-pages/security/external-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/invite-contacts.md",
+      "redirect_url": "/power-pages/security/invite-contacts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/manage-content-security-policy.md",
+      "redirect_url": "/power-pages/security/manage-content-security-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/migrate-identity-providers.md",
+      "redirect_url": "/power-pages/security/authentication/migrate-identity-providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-facebook.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-facebook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-linkedin.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-linkedin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-microsoft.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-microsoft",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-provider.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-settings.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-oauth2-twitter.md",
+      "redirect_url": "/power-pages/security/authentication/oauth2-twitter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-openid-faqs.md",
+      "redirect_url": "/power-pages/security/authentication/openid-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-openid-provider.md",
+      "redirect_url": "/power-pages/security/authentication/openid-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-openid-settings.md",
+      "redirect_url": "/power-pages/security/authentication/openid-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-portal-authentication.md",
+      "redirect_url": "/power-pages/security/authentication/configure-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/webpage-access-control.md",
+      "redirect_url": "/power-pages/security/page-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-saml2-faqs.md",
+      "redirect_url": "/power-pages/security/authentication/saml2-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-saml2-provider.md",
+      "redirect_url": "/power-pages/security/authentication/saml2-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-saml2-settings.md",
+      "redirect_url": "/power-pages/security/authentication/saml2-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-saml2-settings-azure-ad.md",
+      "redirect_url": "/power-pages/security/authentication/saml2-settings-azure-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/set-authentication-identity.md",
+      "redirect_url": "/power-pages/security/authentication/set-authentication-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/entity-permissions-studio.md",
+      "redirect_url": "/power-pages/security/table-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/entity-permissions-studio-walkthrough.md",
+      "redirect_url": "/power-pages/security/table-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/website-access-permission.md",
+      "redirect_url": "/power-pages/security/website-access-permission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-ws-federation-provider.md",
+      "redirect_url": "/power-pages/security/authentication/ws-federation-provider",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-ws-federation-settings.md",
+      "redirect_url": "/power-pages/security/authentication/ws-federation-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/configure-ws-federation-settings-azure-ad.md",
+      "redirect_url": "/power-pages/security/authentication/ws-federation-settings-azure-ad",
+      "redirect_document_id": false
     }
   ]
 }
