@@ -54,7 +54,7 @@ If your connector provides actions, you must still select your data source as yo
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
 
 > [!NOTE]
-> Note that for action based connectors, galleries and other controls do not automatcally page in more data for you automatically the same way they do for tables.  For instance, if you bind an action to a gallery then it will retrieve the first set of default set (or page) of records. But if the data requested exceeds a page of data, the control will not automatically fetch the next page for you. You must manage this directly with collections. 
+> For action based connectors, galleries and other controls don't page in more data automatically the same way they do for tables. Dor instance, if you bind an action to a gallery then it will retrieve the first set of default set (or page) of records. But if the data requested exceeds a page of data, then the control won't automatically fetch the next page for you. You must manage this directly with collections. 
 
 For more information about how to customize your formula for custom updates, see these articles:
 
