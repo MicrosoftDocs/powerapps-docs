@@ -91,7 +91,7 @@ For information about how to create a table view, go to [Create and edit public 
    - **Criteria**. Select a view from the list. The view should have been previously created and tested to ensure the right historical data was selected. If the view hasn't been created, create it.
    - **Schedule - Start date**. The policy runs during the off hours of your environment’s region.
    - **Frequency**. The choices available are **Once**, **Daily**, **Weekly**, **Monthly**, and **Yearly**.
-   :::image type="content" source="media/data-retention-policy.png" alt-text="Create a data retention policy":::
+   :::image type="content" source="media/data-retention-policy.png" alt-text="Create a data retention policy" lightbox="media/data-retention-policy.png":::
 1. Select **Save**.
 
 ## Next steps
