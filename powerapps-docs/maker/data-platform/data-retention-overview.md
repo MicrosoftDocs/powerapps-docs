@@ -33,7 +33,7 @@ Consider the business application data lifecycle in three stages. First active d
 
 Dataverse delivers native platform support for long term retention of data. It allows organizations to get immediate and ongoing benefits.
 
-- Reduces historical data in the live application and improve application performance, without the requirement to move data outside Dataverse. 
+- Reduces historical data in the live application and improves application performance, without the requirement to move data outside Dataverse. 
 - Ensures regulatory compliance with Dataverse enterprise governance.
 - Powers business value by using low cost with Microsoft low code/no code tools to build custom screens.
 - Reduces total cost of ownership when compared to custom compliance solutions.
@@ -43,6 +43,11 @@ Dataverse delivers native platform support for long term retention of data. It a
 When an application maker has enabled long term retention for a table in Power Apps (make.powerapps.com), a Power Platform admin can set a retention policy on the table from the Power Platform admin center. Notice that, when a maker enables retention on a parent root table, it also enables retention for all related child tables.
 
 The retained data is never moved out of Dataverse and the data is always secured with Dataverse security and backed by Azure Active Directory.
+
+> [!IMPORTANT]
+> - Once data is moved to long term data store it can't be moved back to the active data store.
+>
+> - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
 Dataverse provides read-only access to the immutable retained data via:
 
@@ -70,4 +75,5 @@ Data retained by long term storage is made available to features like [Lockbox](
 - PostComment
 
 ## Next steps
+
 [Set a data retention policy for a table](data-retention-set.md)
