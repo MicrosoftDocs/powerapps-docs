@@ -27,7 +27,7 @@ Consider the business application data lifecycle in three stages. First active d
 
 |Stage  |Description  |
 |---------|---------|
-|1. Active data     |  Data is readily available and transformed via apps. <br /> Accessed across al application workflows.  <br /> lso referred to as *live* data.     |
+|1. Active data     |  Data is readily available and transformed via apps. <br /> Accessed across al application workflows.  <br /> Also referred to as *live* data.     |
 |2. Non-active data     | Data is immutable. <br />  Is stored in long term retention.  <br /> Has limited access. Retained for compliance, audit, and legal discovery. <br />Also referred to as *cold* data.      |
 |3. Deleted data   |  Permanently deleted. Data lifecycle is completed.        |
 
