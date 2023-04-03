@@ -86,11 +86,12 @@ For information about how to create a table view, go to [Create and edit public 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. On the command bar, select **New retention policy**.
 1. Complete the following properties for the retention policy.
-  - **Table**. Select the parent root table that will be use to set up a policy to retain historical cold data in long term storage.
-  - **Name**. Enter a name for the retention policy.
-  - **Criteria**. Select a view from the list. The view should have been previously created and tested to ensure the right historical data was selected. If the view hasn't been created, create it.
-  - **Schedule - Start date**. The policy runs during the off hours of your environment’s region.
-  - **Frequency**. The choices available are **Once**, **Daily**, **Weekly**, **Monthly**, and **Yearly**.
+   - **Table**. Select the parent root table that will be use to set up a policy to retain historical cold data in long term storage.
+   - **Name**. Enter a name for the retention policy.
+   - **Criteria**. Select a view from the list. The view should have been previously created and tested to ensure the right historical data was selected. If the view hasn't been created, create it.
+   - **Schedule - Start date**. The policy runs during the off hours of your environment’s region.
+   - **Frequency**. The choices available are **Once**, **Daily**, **Weekly**, **Monthly**, and **Yearly**.
+   :::image type="content" source="media/data-retention-policy.png" alt-text="Create a data retention policy":::
 1. Select **Save**.
 
 ## Next steps
