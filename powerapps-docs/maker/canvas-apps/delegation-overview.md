@@ -70,6 +70,7 @@ The previous list doesn't include these notable items:
 
 * **[If](functions/function-if.md)**
 * **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
+*  Column casting operations **[Text](/power-platform/power-fx/reference/function-text)**, **[Value](/power-platform/power-fx/reference/function-value)**
 * **[Concatenate](functions/function-concatenate.md)** (including **[&](functions/operators.md)**)
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
