@@ -32,7 +32,8 @@ Only managed environments can use the long term data retention feature. More inf
 Power Platform admins use the Power Platform admin center settings to enable or disable environments for data retention.
 
 > [!IMPORTANT]
-> - By default, Dataverse long term retention is enabled in all Power Platform environments.>
+> - By default, Dataverse long term retention is enabled in all Power Platform environments.
+>
 > - If an environment isn't enabled for long term retention, you can't set up a retention policy.
 
 1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
@@ -75,7 +76,11 @@ For information about how to create a table view, go to [Create and edit public 
 ## Setup a retention policy
 
 > [!IMPORTANT]
-> To complete this task you must have the Power Platform administrator role.
+> - Once data is moved to long term (non-active) data store it can't be moved back to the active data store.
+>
+> - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
+>
+> - To complete this task you must have the Power Platform administrator role.
 
 1. Make sure you've met all the [prerequisites](#prerequisites) for long term data retention.
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Retention policies**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
@@ -90,4 +95,4 @@ For information about how to create a table view, go to [Create and edit public 
 
 ## Next steps
 
-<!-- Create a new article Manage retention policies -->
+[Manage data retention policies](data-retention-manage.md)

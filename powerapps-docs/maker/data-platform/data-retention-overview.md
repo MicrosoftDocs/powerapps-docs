@@ -45,7 +45,7 @@ When an application maker has enabled long term retention for a table in Power A
 The retained data is never moved out of Dataverse and the data is always secured with Dataverse security and backed by Azure Active Directory.
 
 > [!IMPORTANT]
-> - Once data is moved to long term data store it can't be moved back to the active data store.
+> - Once data is moved to long term (non-active) data store it can't be moved back to the active data store.
 >
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
