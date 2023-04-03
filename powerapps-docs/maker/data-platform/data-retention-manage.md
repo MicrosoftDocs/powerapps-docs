@@ -26,7 +26,7 @@ Use the retention policies dashboard to view and manage retention policies. From
 1. The following retention policy actions are available:
   - **History**. Displays the retention [policy run status](#policy-run-status), run start, run end and tables included in the last run.
   - **Policy details**.
-  - **Deactivate**. Stops the retention policy from running by disabling the policy schedule. To activate the policy, select **Policy details**, set the policy **Schedule**, and then select **Update**.
+  - **Deactivate**. Stops the retention policy from running by disabling the policy schedule. To activate a deactivated policy, select **Policy details**, set the policy **Schedule**, and then select **Update**.
   - **Delete**. Removes the policy.
 
 ### Policy run status
@@ -38,9 +38,9 @@ Use the retention policies dashboard to view and manage retention policies. From
 |In progress - Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse managed data lake.      |
 |In progress – Reconciling     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
 |In progress – Pending Delete     |  Waiting to delete all retained rows.       |
-|In progress – Delete     |  Delete of retained rows from applications       |
+|In progress – Delete     |  Delete of retained rows from applications.       |
 |Succeeded     |  Retention process completed successfully.       |
-|Failed     |  Retention process failed       |
+|Failed     |  The retention process failed  .     |
 
 ## View retained data
 
@@ -58,7 +58,7 @@ There are a few ways you can view retained data.
 
 ### View retained data using a flow
 
-Use the Power Automate cloud flow template to generate and retrieve retained data in Excel is available. <!-- Need a demo of this or more specific steps how to do it.-->
+Use the Power Automate cloud flow template to generate and retrieve retained data in Excel. <!-- Need a demo of this or more specific steps how to do it.-->
 
 ### Limitations for retrieval of retained data
 
@@ -77,7 +77,7 @@ This restrictions are enforced by Dataverse for each environment:
 When data is retained long term in Dataverse, it is a switch from a live (active) state to a retained cold (non-active) state for rows.
 
 The existing Power Platform admin reports display the total consumed storage for each storage type with the details for each table. The total consumed storage for Database, file, and log is the sum of the live and retained data.
- 
+
 ## Solution aware retention policies
 
 Dataverse retention policies are solution aware. Dataverse retention policies added to a solution are known as solution-aware retention policies. You can add multiple retention policies to a single solution. Retention policies are added to an unmanaged solution. This helps makers follow application lifecycle management (ALM) best practices when working with Dataverse retention policies.

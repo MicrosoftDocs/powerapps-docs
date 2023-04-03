@@ -89,7 +89,7 @@ For information about how to create a table view, go to [Create and edit public 
    - **Table**. Select the parent root table that will be use to set up a policy to retain historical cold data in long term storage.
    - **Name**. Enter a name for the retention policy.
    - **Criteria**. Select a view from the list. The view should have been previously created and tested to ensure the right historical data was selected. If the view hasn't been created, create it.
-   - **Schedule - Start date**. The policy runs during the off hours of your environment’s region.
+   - **Schedule - Start date**. Enter the date you want the policy to run for the first time. The policy runs during the off hours of your environment’s region.
    - **Frequency**. The choices available are **Once**, **Daily**, **Weekly**, **Monthly**, and **Yearly**.
    :::image type="content" source="media/data-retention-policy.png" alt-text="Create a data retention policy" lightbox="media/data-retention-policy.png":::
 1. Select **Save**.
