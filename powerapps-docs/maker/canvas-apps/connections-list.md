@@ -27,7 +27,7 @@ A connector may provide **tables** of data or **actions**. Some connectors provi
 
 ## Tables
 
-If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieve table data into your app and updates data in your data source for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
+If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieves table data into your app and updates data in your data source automatically for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
 
  ![Plain data source Items property.](./media/connections-list/ItemPropertyPlain.png)
 
@@ -52,6 +52,9 @@ If your connector provides actions, you must still select your data source as yo
 ![Action data source Items property.](./media/connections-list/ItemPropertyAction.png)
 
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
+
+> [!NOTE]
+> Note that for action based connectors, galleries and other controls do not automatcally page in more data for you automatically the same way they do for tables.  For instance, if you bind an action to a gallery then it will retrieve the first set of default set (or page) of records. But if the data requested exceeds a page of data, the control will not automatically fetch the next page for you. You must manage this directly with collections. 
 
 For more information about how to customize your formula for custom updates, see these articles:
 
