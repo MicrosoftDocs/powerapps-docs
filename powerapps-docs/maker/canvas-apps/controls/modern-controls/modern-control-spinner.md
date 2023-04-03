@@ -20,7 +20,7 @@ contributors:
   - yogeshgupta698
   
 ---
-# Spinner modern control in Power Apps
+# Spinner modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
