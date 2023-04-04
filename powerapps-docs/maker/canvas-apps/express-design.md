@@ -45,6 +45,29 @@ If you’re looking to generate a pixel-perfect app with exact styles that match
 > [!div class="nextstepaction"]
 > [Create an app from Figma](figma/overview.md)
 
+## Enabling and disabling
+Express design features are generally avaialbe now and will be by default enabled on your environment. Currently you can use PowerShell command to turn it on or off. 
+
+The setting name
+
+**powerPlatform.powerApps.disableCreateFromFigma**
+When this setting is true, users in the environment will not have the ability to use app from Figma. It is false by default.
+
+**powerPlatform.powerApps.disableCreateFromImage**
+When this setting is true, users in the environment will not have the ability to use app from Image. It is false by default.
+
+```
+# update the desired setting
+$requestBody = [pscustomobject]@{
+  powerPlatform = [pscustomobject]@{
+    powerApps = [pscustomobject]@{
+      disableCreateFromFigma = $True
+    }
+  }
+}
+Set-TenantSettings -RequestBody $requestBody
+```
+
 ### See also
 
 - [Create an app from an image](app-from-image.md)
