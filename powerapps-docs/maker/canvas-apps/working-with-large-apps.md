@@ -1,11 +1,11 @@
 ---
 title: Build large and complex canvas apps
-description: Learn how to work efficiently with large and complex Canvas apps in Power Apps Studio.
+description: Learn how to work efficiently with large and complex canvas apps in Power Apps Studio.
 author: gregli-MSFT
-ms.topic: conceptual
+ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 12/2/2022
+ms.date: 04/04/2023
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,22 +17,20 @@ search.app:
 
 # Build large and complex canvas apps
 
-Most of the topics in this section of the docs cover the runtime performance of apps as experienced by end users. For example, topics include optimizations to reduce the time needed to load an app into Power Apps player, see the first screen of information, and become interactive.  
+Most of the articles in this section of the documentation cover the runtime performance of apps as experienced by the people who use them. This article covers performance as experienced by the people who make them.
 
-This topic covers performance for the maker experience. As apps become large and complex, Power Apps Studio needs to load and manage a large number of controls, formulas, and data sources, with interdependencies that grow exponentially. App load time for Power Apps Studio can slow and features such as IntelliSense and color coding can lag.  
+As apps become larger and more complex, Power Apps Studio needs to load and manage larger numbers of controls, formulas, and data sources, all with interdependencies that grow exponentially. Power Apps Studio can take longer to load, and features such as IntelliSense and color coding can lag. Use the recommendations that follow to better work with large and complex apps in Power Apps Studio. They can also help to improve your apps' runtime performance.
 
-Use the recommendations in this topic to better work with large and complex apps in Power Apps Studio. These recommendations also help with runtime performance for your apps.
-
-All of the examples in this topic are based on the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md).  
+The examples in this article are based on the [Hospital Emergency Response sample solution](../../sample-apps/emergency-response/overview.md). 
 
 ## Use App.Formulas instead of App.OnStart
 
 > [!IMPORTANT]
-> - Named formulas is an experimental feature.
-> - Experimental features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - The With function and canvas component custom output properties can be used as an alternative to named formulas.  They are harder to use than named formulas, but are fully supported.  See below for more details.
+> Named formulas is an experimental feature. Experimental features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback You can use the With function and canvas component custom output properties as an alternative to named formulas. They're harder to use than named formulas, but are fully supported.
 
-The best way to improve load time for Power Apps Studio and your end user app is to replace variable and collection initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property). For example:
+The best way to reduce loading time for both Power Apps Studio and your app is to replace variable and collection initialization in **App.OnStart** with [named formulas in **App.Formulas**](/power-platform/power-fx/reference/object-app#formulas-property).
+
+Let's look at the following example.
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -69,9 +67,9 @@ If(
 );
 ```
 
-As a sequence of statements, these **Set** and **Collect** calls must be evaluated in order before the first screen is displayed, which slows end user app load time.  This formula is also complex for Studio to analyze as the entire **App.OnStart** must be considered as a whole, order preserved, errors aggregated, final result returned.
+Because they're a sequence of statements, your app must evaluate these **Set** and **Collect** calls in order before it can display the first screen, which makes the app load more slowly. And because the entire **App.OnStart** must be considered as a whole, order preserved, and errors aggregated before returning the final result, the formula is complex for Power Apps Studio to analyze.
 
-There's a better way. Use **App.Formulas** instead of **App.OnStart** and define these variables and collections as named formulas. The points at which the variables were used doesn't need to be modified:
+There's a better way. Use **App.Formulas** instead and define these variables and collections as named formulas, as in the following example.
 
 ```powerapps-dot
 // Get the color of text on a dark background.
@@ -105,15 +103,17 @@ ParamFacility =
     );
 ```
 
-This change may seem small, but it can have a huge impact. Each of these named formulas is independent and can be analyzed by Studio independently. Which effectively means we have split a large **App.OnStart** into smaller pieces. In some cases, we have seen Power Apps Studio load time drop by 80% by making this change.
+This change may seem small, but it can have a huge impact. Because each named formula is independent of the others, Power Apps Studio can analyze them independently, effectively splitting a large **App.OnStart** into smaller pieces. We've seen Power Apps Studio load time drop by as much as 80% with this change alone.
 
-End user app load time will also improve because we don't need to evaluate these formulas until the result is used. The first screen of the app is displayed immediately without waiting.
+Your app will also load faster because it doesn't have to evaluate these formulas until it needs the result. The first screen of the app is displayed immediately.
 
-Named formulas can't be used for all situations as they're immutable and can't be used with **Set**. Some situations require the use of a state variable that can be modified, and **Set** is perfect for these situations and should continue to be used. But, more often than not, global variables are used in **OnStart** to set up static values that don't change, and in those cases a named formula is preferred. Since named formulas are immutable, the prefix `var` short for "variable" as a naming convention is no longer appropriate, but wasn't modified in this example because it would require changes to the rest of the app to match.
+Named formulas can't be used in all situations because you can't modify them or use them with **Set**. Some situations require the use of a state variable that can be modified. **Set** is perfect for these situations and you should continue to use it. But, more often than not, you're using global variables in **OnStart** to set up static values that don't change. In those cases, a named formula is the better choice.
 
-Finally, it's tempting to place a named formula in **App.OnStart**, but they simply don't belong there. As an **On** behavior property, **App.OnStart** evaluates each of its statements in order, creating global variables, and talking to databases *only once when the app is loaded*. Instead named formulas are formulas that define how to calculate something *whenever needed* and are always true. It's this formula nature that allows them to be independent and allows the app to finish loading before they're evaluated.
+Note that since named formulas are immutable, the prefix `var` (short for "variable") as a naming convention is no longer appropriate. We didn't change the names in this example because it would require changes to the rest of the app to match.
 
-## Split up long formulas
+It's tempting to place a named formula in **App.OnStart**, but don't. They don't belong there. As an **On** behavior property, **App.OnStart** evaluates each of its statements in order, creating global variables, and talking to databases *only once, when the app is loaded*. Named formulas are formulas that define how to calculate something *whenever needed* and are always true. It's this formula nature that allows them to be independent and allows the app to finish loading before they're evaluated.
+
+## Split up long formulas (I STOPPED EDITING HERE)
 
 **App.OnStart** is one of the worst offenders for long formulas and definitely where you should start but it isn't the only case.
 
@@ -202,7 +202,7 @@ MySplashSelectionsCollection =
     )
 ```
 
-One downside is that `MyFacility` can't use `MyRegion` because they're defined within the same **With**, a problem not present with named formulas. One solution is to nest **With** functions and use the **As** keyword to name the record for each to give easy access to all of the **With** variables.  
+One downside is that `MyFacility` can't use `MyRegion` because they're defined within the same **With**, a problem not present with named formulas. One solution is to nest **With** functions and use the **As** keyword to name the record for each to give easy access to all of the **With** variables. 
 
 ### Use canvas components
 
@@ -213,7 +213,7 @@ To split logic:
 1. Create a new component.
 1. In the **Properties** pane, turn on **Access app scope**.
 1. Add a custom property.
-1. Set the **Property type** to **Output** and the **Data type** as appropriate.  
+1. Set the **Property type** to **Output** and the **Data type** as appropriate. 
 1. Select **Create** at the bottom of the pane.
 1. Select the newly created property in property picker next to the formula bar at the top of the screen.
 1. Write the formula for the logic to split out and reuse.
@@ -232,7 +232,7 @@ Named formulas are great, but at this time they can't be used with imperative lo
 A common trick for splitting up imperative logic is to use the **OnSelect** property of a hidden control. 
 1. Add a **Button** control to a screen.
 1. Set the **OnSelect** property to the imperative logic you want to execute.
-1. Set the **Visible** property to false.  No need for the end user to see it or interact with it.
+1. Set the **Visible** property to false. No need for the end user to see it or interact with it.
 1. Call `Select( Button )` when you want to execute the imperative logic. 
 
 For example, one of the screens of our sample has this **OnSelect** property on a **Button** control. This simple example is for illustration purposes only, normally you would only use this technique for longer formulas:
@@ -291,7 +291,7 @@ Also note that some logic splitting had already been done, as the comment mentio
 
 ## Partition the app
 
-Some apps grow to thousands of controls and hundred of data sources, and this volume of objects will slow down Studio. As with long formulas, large apps can be split into smaller sections that work together to create one user experience.  
+Some apps grow to thousands of controls and hundred of data sources, and this volume of objects will slow down Studio. As with long formulas, large apps can be split into smaller sections that work together to create one user experience. 
 
 ### Separate canvas apps
 
@@ -301,7 +301,7 @@ This approach was used in the [Hospital Emergency Response sample solution](../.
 
 ![Hospital Emergency Response Sample solution canvas app running on a phone, showing the switchboard canvas component](media/working-with-large-apps/app-components.png)
 
-When the end user selects an area, the component uses metadata about the apps available and which app is hosting the component. If the desired screen is in this app (**ThisItem.Screen** is not blank), a **Navigate** call is made.  But if the desired screen is in a different app (**ThisItem.PowerAppID** is not blank), a **Launch** is used with the App Id of the target and the FacilityID context:
+When the end user selects an area, the component uses metadata about the apps available and which app is hosting the component. If the desired screen is in this app (**ThisItem.Screen** is not blank), a **Navigate** call is made. But if the desired screen is in a different app (**ThisItem.PowerAppID** is not blank), a **Launch** is used with the App Id of the target and the FacilityID context:
 
 ```powerapps-dot
 If(
