@@ -29,7 +29,7 @@ To view existing multistep forms or to create new multistep forms, open the [Por
 > [!NOTE]
 > Before you continue, ensure you review [considerations](#considerations) for multistep forms.
 
-When creating or editing a webpage from the the [Portal Management app](configure-portal.md), an **Multistep Form** can be specified in the lookup field provided on the **New Web Page** form.
+When creating or editing a webpage from the [Portal Management app](configure-portal.md), an **Multistep Form** can be specified in the lookup field provided on the **New Web Page** form.
 
 ## Multistep form attributes
 

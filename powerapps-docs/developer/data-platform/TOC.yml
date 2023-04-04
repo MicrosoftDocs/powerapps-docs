@@ -53,6 +53,8 @@
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
+    - name: Use optional parameters
+      href: optional-parameters.md
     - name: Use FetchXML to query data
       href: use-fetchxml-construct-query.md
       items:
@@ -87,12 +89,12 @@
     - name: Files and images overview
       href: files-images-overview.md
       items:
-      - name: Use file column data
-        href: file-column-data.md
-      - name: Use image column data
-        href: image-column-data.md
-      - name: Use Attachments and Annotations
-        href: attachment-annotation-files.md
+        - name: Use file column data
+          href: file-column-data.md
+        - name: Use image column data
+          href: image-column-data.md
+        - name: Use Attachments and Annotations
+          href: attachment-annotation-files.md
     - name: Audit data changes
       items:
         - name: Overview
@@ -160,15 +162,13 @@
         - name: Analyze performance
           href: analyze-performance.md
         - name: Troubleshoot plug-ins
-          href: troubleshoot-plug-in.md
+          href: /troubleshoot/power-platform/power-apps/dataverse/dataverse-plug-ins-errors
         - name: Access external web resources
           href: access-web-services.md
-        - name: Dependent Assemblies (Preview)
+        - name: Dependent Assemblies (preview)
           href: dependent-assembly-plugins.md
         - name: Quickstarts
           items:
-            - name: Create a project using Power Platform Tools
-              href: tools/devtools-create-project.md
             - name: Create a plug-in using Power Platform Tools
               href: tools/devtools-create-plugin.md
         - name: Tutorials
@@ -485,16 +485,9 @@
   items:
     - name: Developer resources page
       href: view-download-developer-resources.md
-    - name: Developer tools and resource overview
-      href: developer-tools.md
-      items:
-        - name: Dataverse development tools
-          href: download-tools-nuget.md
-        - name: Power Platform CLI
-          href: /power-platform/developer/cli/introduction
-        - name: Power Platform Tools for Visual Studio
-          href: ./tools/devtools-install.md
-    - name: Community Tools
+    - name: Dataverse development tools
+      href: download-tools-nuget.md
+    - name: Community tools
       href: community-tools.md
     - name: Testing tools
       href: testing-tools-server.md
