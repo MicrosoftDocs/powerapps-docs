@@ -25,7 +25,7 @@ Use the retention policies dashboard to view and manage retention policies. From
 1. Select a retention policy from the list, and then on the command bar select **Policy details**.
 1. The following retention policy actions are available:
   - **History**. Displays the retention [policy run status](#policy-run-status), run start, run end and tables included in the last run.
-  - **Policy details**.
+  - **Policy details**. Displays the properties for the policy where you can view and edit.
   - **Deactivate**. Stops the retention policy from running by disabling the policy schedule. To activate a deactivated policy, select **Policy details**, set the policy **Schedule**, and then select **Update**.
   - **Delete**. Removes the policy.
 
