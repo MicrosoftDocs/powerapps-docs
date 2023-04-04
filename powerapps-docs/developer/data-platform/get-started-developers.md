@@ -65,7 +65,7 @@ If you are going to distribute the extensions you create or any customizations t
  - [Introduction to solutions](introduction-solutions.md)
  - [SolutionPackager tool](/power-platform/alm/solution-packager-tool)
  - [Package Deployer tool](/power-platform/alm/package-deployer-tool)
- - [Publish your app on AppSource](publish-app-appsource.md)
+ - [Publish your app on AppSource](/power-platform/developer/appsource/publish-app)
 
 ## Create client applications and authentication
 

@@ -1,5 +1,100 @@
 {
   "redirections": [
+   {
+      "source_path": "powerapps-docs/developer/data-platform/appendix-add-license-information-to-your-solution.md",
+      "redirect_url": "/power-platform/developer/appsource/appendix-add-license-information-to-your-solution",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/appendix-app-certification-checklist.md",
+      "redirect_url": "/power-platform/developer/appsource/appendix-app-certification-checklist",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/appendix-app-design-best-practices-checklist.md",
+      "redirect_url": "/power-platform/developer/appsource/appendix-app-design-best-practices-checklist",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/create-package-app-appsource.md",
+      "redirect_url": "/power-platform/developer/appsource/create-package-app",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/create-solution-app-appsource.md",
+      "redirect_url": "/power-platform/developer/appsource/create-solution-app",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/next-steps-submit-app-cloud-partner-portal.md",
+      "redirect_url": "/power-platform/developer/appsource/next-steps-submit-app-cloud-partner-portal",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/publish-app-appsource.md",
+      "redirect_url": "/power-platform/developer/appsource/publish-app",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/register-microsoft-partner-network.md",
+      "redirect_url": "/power-platform/developer/appsource/register-microsoft-partner-network",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/store-appsource-package-azure-storage.md",
+      "redirect_url": "/power-platform/developer/appsource/store-package-azure-storage",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management-apppage.md",
+      "redirect_url": "/power-platform/developer/isvstudio/app",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management-appsource-checker.md",
+      "redirect_url": "/power-platform/developer/isvstudio/appsource-checker",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management-autoupdate.md",
+      "redirect_url": "/power-platform/developer/isvstudio/auto-update",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management-certification.md",
+      "redirect_url": "/power-platform/developer/isvstudio/connector-certification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-embed-analytics.md",
+      "redirect_url": "/power-platform/developer/isvstudio/embed-analytics",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management-homepage.md",
+      "redirect_url": "/power-platform/developer/isvstudio/home",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management.md",
+      "redirect_url": "/power-platform/developer/isvstudio/index",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-install-failure-analytics.md",
+      "redirect_url": "/power-platform/developer/isvstudio/install-failure-analytics",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-management-tenantpage.md",
+      "redirect_url": "/power-platform/developer/isvstudio/tenant",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/isv-app-usage-analytics.md",
+      "redirect_url": "/power-platform/developer/isvstudio/usage-analytics",
+      "redirect_document_id": "false"
+    },
     {
       "source_path": "powerapps-docs/maker/portals/release-updates.md",
       "redirect_url": "/power-pages/release-updates",
