@@ -74,7 +74,7 @@ With your [canvas app open for editing](edit-app.md):
 
 
 > [!NOTE]
-> - For lookups, add related tables to your app by going to the app authoring menu and then select **Data** > **Add data**.
+> - For lookups, add the related tables to your app by going to the app authoring menu and then select **Data** > **Add data**.
 
 Due to current limitations, the Copilot control can answer questions for Dataverse tables that are smaller in size.
 
