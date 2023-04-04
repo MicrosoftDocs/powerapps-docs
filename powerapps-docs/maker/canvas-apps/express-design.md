@@ -34,7 +34,7 @@ If you have a wireframe or a visual design that you want to convert into an app,
 :::image type="content" source="media/express-design/app-from-image.png" alt-text="Create an app from an image.":::
 
 > [!div class="nextstepaction"]
-> [Create an app from an image (preview)](app-from-image.md)
+> [Create an app from an image](app-from-image.md)
 
 ## Figma to app
 
@@ -43,7 +43,7 @@ If you’re looking to generate a pixel-perfect app with exact styles that match
 :::image type="content" source="media/express-design/app-from-figma.png" alt-text="Create an app from a Figma page or a frame.":::
 
 > [!div class="nextstepaction"]
-> [Create an app from Figma (preview)](figma/overview.md)
+> [Create an app from Figma](figma/overview.md)
 
 ### See also
 
