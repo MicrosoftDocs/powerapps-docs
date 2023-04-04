@@ -21,21 +21,20 @@ With managed identities, access to your storage account is restricted to request
 
 > [!IMPORTANT]
 > This is a preview feature.
->
 
 ## Prerequisites
 
 - Power platform administrator or Dynamics 365 administrator role to manage environments on the Power Platform admin center.
 - Azure CLI is required on your local machine. [Download and install](https://aka.ms/InstallAzureCliWindows)
-- You need these two PowerShell modules:
-  - The Azure Az PowerShell module: `Install-Module -Name Az`
-  - The Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
+- You need these two PowerShell modules. If you don't have them, open PowerShell and run these commands:
+  - Azure Az PowerShell module: `Install-Module -Name Az`
+  - Power Platform admin PowerShell module: `Install-Module -Name Microsoft.PowerApps.Administration.PowerShell`
 - Go to this [compressed folder file on GitHub](https://github.com/Mattp123/PowerApps-Samples/blob/patch-1/powershell/managed-identities/Common.zip). Then select **Download** to download it. Extract the compressed folder file to a computer in a location where you can run PowerShell commands. **All files and folders extracted from a compressed folder should be preserved in their original location.**
 - We recommend that you create a new storage container under the same Azure resource group to onboard this feature.
 
 ## Create enterprise policy
 
-1. Open Azure CLI with run as administrator and sign into your Azure subscription use the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
+1. Open Azure CLI with run as administrator and sign into your Azure subscription using the command: `az login`  More information: [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli)
 1. (Optional) if you have multiple Azure subscriptions, make sure to run `Update-AzConfig -DefaultSubscriptionForLogin { Azure subscription id }` to update your default subscription.
 1. Expand the compressed folder you downloaded as part of the [prerequisites](#prerequisites) for this feature to a location where you can run PowerShell.
 1. To enable the enterprise policy for the selected Azure subscription, run the PowerShell script **./SetupSubscriptionForPowerPlatform.ps1**.
@@ -49,12 +48,71 @@ With managed identities, access to your storage account is restricted to request
 1. Save the copy of the **ResourceId** after policy creation.
 
 > [!NOTE]
-        > Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
-        > The following are the valid **location** inputs supported for policy creation. Kindly select the most appropriate one.
-        |--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-        | United States EUAP | United States | South Africa | UK | Australia | Korea |
-        | Japan | India | France | Europe | Asia | Norway |
-        | Germany | Switzerland | Canada  | Brazil | UAE | Singapore |
+> Obtain your Azure **Subscription ID**, **Location**, and **Resource group** name, from the overview page for the Azure resource group.
+> The following are the valid **location** inputs supported for policy creation. Select the location that's most appropriate for you.
+
+### Locations available for enterprise policy
+
+:::row:::
+  :::column span="":::
+     United States EUAP
+  :::column-end:::
+  :::column span="":::
+     United States
+  :::column-end:::
+  :::column span="":::
+     South Africa
+  :::column-end:::
+  :::column span="":::
+     UK
+  :::column-end:::
+  :::column span="":::
+     Australia
+  :::column-end:::
+  :::column span="":::
+     Korea
+  :::column-end:::
+::row-end:::
+::row:::
+  :::column span="":::
+     Japan
+  :::column-end:::
+  :::column span="":::
+     India
+  :::column-end:::
+  :::column span="":::
+     France
+  :::column-end:::
+  :::column span="":::
+     Europe
+  :::column-end:::
+  :::column span="":::
+     Asia
+  :::column-end:::
+  :::column span="":::
+     Norway
+  :::column-end:::
+::row-end:::
+::row:::
+  :::column span="":::
+     Germany
+  :::column-end:::
+  :::column span="":::
+     Switzerland
+  :::column-end:::
+  :::column span="":::
+     Canada
+  :::column-end:::
+  :::column span="":::
+     Brazil
+  :::column-end:::
+  :::column span="":::
+     UAE
+  :::column-end:::
+  :::column span="":::
+     Singapore
+  :::column-end:::
+:::row-end:::
 
 ## Grant reader access to the enterprise policy via Azure
 
@@ -73,16 +131,16 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
    :::image type="content" source="media/azure-graph-enterprise-pol-id.png" alt-text="Run query from Azure Resource Graph Explorer":::
    1. Scroll to the right of the results page and select the **See details** link.
    1. On the **Details** page, copy the ID.
-1. Open Azure CLI and run the following command, replacing the {objId} with the user’s **ObjectID** and the {EP Resource Id} with the enterprise policy ID.
-   - `New-AzRoleAssignment -ObjectId {objId} -RoleDefinitionName Reader -Scope {EP Resource Id}`
+1. Open Azure CLI and run the following command, replacing the `<objId>` with the user’s **ObjectID** and the `<EP Resource Id>` with the enterprise policy ID.
+   - `New-AzRoleAssignment -ObjectId <objId> -RoleDefinitionName Reader -Scope <EP Resource Id>`
 
 ## Connect enterprise policy to Dataverse environment
 
-1. Obtain Dataverse environment ID.
+1. Obtain the Dataverse environment ID.
    1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
    1. Select **Environments**, and then open your environment.
    1. In the **Details** section, copy the **Environment ID**.
-   1. To link to the Dataverse environment run this PowerShell script: `./ NewIdentity.ps1`
+   1. To link to the Dataverse environment, run this PowerShell script: `./ NewIdentity.ps1`
    1. Provide the Dataverse environment ID. 
    1. Provide the **ResourceId**. <br />
    **StatusCode = 202** indicates the link was successfully created.
@@ -114,7 +172,7 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
 ## Create Azure Synapse Link for Dataverse with managed identity
 
-When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure Product. <!-- what is Azure Product?-->
+When you create the link, Azure Synapse Link for Dataverse gets details about the currently linked enterprise policy under the Dataverse environment then caches the identity client secret URL to connect to Azure.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select your environment.
 1. In your web browsers address bar, append `?athena.managedIdentity=true` to the web address that ends with **exporttodatalake**.
