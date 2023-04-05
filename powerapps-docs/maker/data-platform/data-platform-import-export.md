@@ -156,4 +156,4 @@ To fix this issue:
 
 After the fix completes, retry the export.
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
