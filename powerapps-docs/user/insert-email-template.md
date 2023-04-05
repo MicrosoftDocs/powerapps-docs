@@ -71,16 +71,16 @@ The application displays the enhanced email template selection window only if yo
  
 > [!Note] 
 > - You can see the **Record** tab and switch between email template views only if your administrator has enabled the **Enable Email Template views** and **Skip Select Record dialog**. More information: [Customize the enhanced email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#customize-the-enhanced-email-template-selection-view)
-> - The enhanced email template selection view might vary based on the customizations your Administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
+> - The enhanced email template selection view might vary based on the customizations your administrator has configured on the **Template Gallery Filter Form**, **Email Template Sorted View**, and **Template Gallery Properties Form**.
 > - If you try to insert an email template on a device with a smaller screen size, you'll only see an option to search and select a template only.
 
 ### Customize your email template selector filters
 
 With the enhanced email template selector dialog, you can switch between multiple email template views. The filters set for the email template views are available on the template selector, and lets you to view only the relevant email templates. You can modify the filters set for the view, but you can't save the modified filter conditions.
 
-For example, you have a custom view, Agent email template view, with filters set to display only the templates which have "case" in the title.
+For example, you have a custom view, Agent email template view, with filters set to display only the templates that have "case" in the title.
 
-When you access the enhanced email template selector and choose Agent email template view, the application only displays the templates with "case" in the title.
+When you access the enhanced email template selector and choose Agent email template view, the application displays only the templates with "case" in the title.
 
 > [!Note]
 > The email templates that are displayed are filtered based on the specified email template view filters and record. 
