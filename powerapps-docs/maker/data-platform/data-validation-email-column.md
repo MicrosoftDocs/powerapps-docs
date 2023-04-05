@@ -19,6 +19,7 @@ Traditionally, the existing email column type had only basic email validation. W
 > [!IMPORTANT]
 > - This is a preview feature.
 > - During preview, these regions will have email address validation feature available: Australia (East, South-East), Canada (Central, East), Europe (North, West), US (East, West).
+> - Smart email validation currently only works for model-driven apps.
 
 Email address validation detects the following issues:
 
@@ -45,15 +46,14 @@ Email address validation detects the following issues:
 
 1. In the app designer, select Play on the command bar.
 1. Open a form that has the email column, such as the **Email** column for the accounts table.
-1. Enter an invalid email address, such as a domain that doesn't exit, such as *example12345678910.com*, in the **Email** column.
+1. Enter an invalid email address, such as a domain that doesn't exist, such as *example12345678910.com*, in the **Email** column.
 
 Notice that the notification message **The domain is unknown** appears under the column.
 :::image type="content" source="media/address-validation-test.png" alt-text="Email address with invalid domain.":::
 
 ## Known issues
 
-- Smart email validation currently only works for model-driven apps.
-- If the **Enable Smart Email Address Validation Control** app setting is enabled but the **Data Validation** Power Platform admin center environment setting is off, email address validation won't work.
+- The **Enable Smart Email Address Validation Control** app setting can be enabled even though the **Data Validation** Power Platform admin center environment setting is off. In this situation, email address validation won't work.
 - The mail to button isn't displayed in the email column when using address validation.
 - Tooltips and hints aren't displayed in the email column when using address validation.
 
