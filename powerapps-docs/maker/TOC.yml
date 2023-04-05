@@ -157,7 +157,7 @@
         href: ../user/add-powerbi-dashboards.md      
     - name: Collaboration
       items:
-      - name: Collaborate with others (preview)
+      - name: Collaborate with others
         href: ../user/collaboration.md
       - name: Use OneDrive for Business
         href: ../user/one-drive.md
