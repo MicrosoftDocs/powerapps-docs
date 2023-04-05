@@ -4,7 +4,7 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 02/06/2021
+ms.date: 04/05/2023
 ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
@@ -146,12 +146,14 @@ The following fields are system fields and are not supported for import and expo
 
 ## Troubleshoot connection issues
 
-Users may recieve an error message if the connection they are using for export requires a fix. In this case, the user will recieve an error message that states "Connection to Dataverse Failed. Please check the link below on how to fix this issue."
+Users might receive an error message if the connection they are using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
 
-To fix this issue: 
-1. In the Maker portal, select Connections from the left hand navigation bar
-2. Locate the Microsoft Dataverse (legacy) connection - you will notice it has a link that says "Fix connection" in the Status column
-3. Click the link and follow the provided steps
-4. After completion, retry the export action 
+To fix this issue:
 
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+1. In Power Apps (make.powerapps.com), select **Connections** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+2. Locate the **Microsoft Dataverse (legacy)** connection.
+3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
+
+After the fix completes, retry the export.
+
+[!INCLUDE[footer-include](../../includes/footer-banner.md)
