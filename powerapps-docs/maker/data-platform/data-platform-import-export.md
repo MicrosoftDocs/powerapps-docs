@@ -144,5 +144,14 @@ The following fields are system fields and are not supported for import and expo
  > [!NOTE]
  > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
+## Troubleshoot connection issues
+
+Users may recieve an error message if the connection they are using for export requires a fix. In this case, the user will recieve an error message that states "Connection to Dataverse Failed. Please check the link below on how to fix this issue."
+
+To fix this issue: 
+1. In the Maker portal, select Connections from the left hand navigation bar
+2. Locate the Microsoft Dataverse (legacy) connection - you will notice it has a link that says "Fix connection" in the Status column
+3. Click the link and follow the provided steps
+4. After completion, retry the export action 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
