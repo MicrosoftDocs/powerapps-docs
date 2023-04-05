@@ -1,7 +1,6 @@
 ---
 title: "Insert email template while composing an email in model-driven apps | MicrosoftDocs"
 description: "Insert a preformatted email message while composing an email."
-ms.custom: ""
 author: sbmjais
 manager: shujoshi
 ms.component: pa-user
@@ -52,7 +51,7 @@ The application displays the enhanced email template selection window only if yo
  - Switch between email template views.
  - Switch among list, tile, and grid views.
  - Search for templates based on their title, subject, description, or content of the template. 
- - By default, you can filter templates based on standard and custom attributes, and language, if your Administrator has enabled **Language** in the **Template Gallery Filter Form**. See: [Add the language filter in the email template selection view](/dynamics365/customer-service/.customer-service-hub-user-guide-email-font-admin#add-the-language-filter-in-the-email-template-selection-view) 
+ - By default, you can filter templates based on standard and custom attributes, and language, if your Administrator has enabled **Language** in the **Template Gallery Filter Form**. See: [Add the language filter in the email template selection view](/dynamics365/customer-service/customer-service-hub-user-guide-email-font-admin#add-the-language-filter-in-the-email-template-selection-view) 
  - Additionally, if your administrator has set **Enable Email Template views** in **Advanced Settings** to **Yes**, you can filter templates based on the email template view filters. 
  - Zoom in to view templates on a full screen. The application provides an option to navigate between templates.
  
