@@ -33,7 +33,7 @@ contributors:
 
 ### Related topics
 
-[setActiveStage)](setActiveStage.md)
+[setActiveStage](setActiveStage.md)
 
 [getSelectedStage (Client API reference)](../getSelectedStage.md)
 
