@@ -31,7 +31,7 @@ Email address validation detects the following issues:
 
 ## Prerequisites
 
-- The **Data validation** Power Platform environment setting must be enabled. By default, this setting is disabled. More information: [Manage feature settings](/power-platform/admin/settings-features) <!-- Update this PPAC article to include this setting-->
+- The **Data validation** Power Platform environment setting must be enabled. By default, this setting is disabled. More information: [Manage feature settings](/power-platform/admin/settings-features#settings)
 - Email address validation only performs validation on text columns with the **Email** format type. For example, the **Email** or **Email Address 2** columns for the account table.
 
 ## Enable an email format column for address validation
