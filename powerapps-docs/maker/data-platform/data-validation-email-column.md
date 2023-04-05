@@ -12,7 +12,7 @@ ms.custom: template-how-to
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Get email address columns validated automatically in model-driven apps with no-code. Makers can build smarter and contextually aware next-gen apps for their workflows with better data quality.
+Get email address columns validated automatically in model-driven apps with no-code. With smart data validation, makers can build smarter and contextually aware next-gen apps for their workflows with better data quality.
 
 Traditionally, the existing email column type had only basic email validation. With smart email address validation, the email column format comes with better validation that includes reasons for the column being invalid. Any model-driven apps using a text column with email format receives automatic validation, which is helpful in guiding users to enter better email data. Data administrators can also review emails that are invalid on a regular basis so that they can correct them.
 
