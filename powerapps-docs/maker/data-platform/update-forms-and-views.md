@@ -30,10 +30,30 @@ You can create columns directly in the table hub or table designer, which will t
 
 3. Select **Update forms and views** to configure what columns to be added to what forms and views:
 
-    | Property               | Description                                                                                                                                                                             | Available option                                                                     | Default option                                                                                                         |
-    | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-    | **Add these columns**  | Selected columns in this dropdown will be added to the selected forms and views.                                                                                                        | Only columns currently shown in the table preview.       | Both new columns that are just created and existing columns that are just added to the table. |
-    | **To these forms**     | Columns selected in **Add these columns** will be added to selected forms here. If a certain column has already been added to this form before, it won’t be added again as a duplicate. | All Main, Quick Create, and Quick View forms from this table.                        | All Main forms from this table.                                                                                        |
-    | **And to these views** | Columns selected in **Add these columns** will be added to selected views here. If a certain column has already been added to this view before, it won’t be added again as a duplicate. | All Public, Advanced Find, Associated, Quick Find, and Lookup views from this table. | All Public, Advanced Find, Associated, and Quick Find views from this table.                                           |
+    | Property               | Description                                                                                                                                                                             | Available option                                                                     | Default option                                                                                |
+    | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+    | **Add these columns**  | Selected columns in this dropdown will be added to the selected forms and views.                                                                                                        | Only columns currently shown in the table preview.                                   | Both new columns that are just created and existing columns that are just added to the table. |
+    | **To these forms**     | Columns selected in **Add these columns** will be added to selected forms here. If a certain column has already been added to this form before, it won’t be added again as a duplicate. | All Main, Quick Create, and Quick View forms from this table.                        | All Main forms from this table.                                                               |
+    | **And to these views** | Columns selected in **Add these columns** will be added to selected views here. If a certain column has already been added to this view before, it won’t be added again as a duplicate. | All Public, Advanced Find, Associated, Quick Find, and Lookup views from this table. | All Public, Advanced Find, Associated, and Quick Find views from this table.                  |
 
 4. Once you’re done with the configuration, simply select **Update**, and after a moment, the columns you selected will be added to the forms and views you selected.
+
+## Using inline table designer in modern app designer
+
+Occasionally you are working on your table in the modern app designer as you’re building an app. In this case, you can also update your forms and views directly using the inline table designer in modern app designer:
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+2. Have a model-driven app ready to work with. More information: [Build your first model-driven app](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/build-first-model-driven-app)
+
+3. In the left navigation pane, select **Apps**, then select the app from step 2, click on **Edit**.
+
+4. In the left navigation pane within the modern app designer, select **Data**, then **… > Edit table** to edit your table through the inline table designer.
+
+5. You can now see the **Update forms and views** option in the inline table designer:
+
+   :::image type="content" source="media/update-forms-and-views-inline-table-designer.png" alt-text="Update forms and views option in inline table designer.":::
+
+    You can follow the same step 3 and 4 as in table hub and table designer to update your forms and views. However, you can also just add the columns you want to your table, and once you’re happy with the update, simply select **Update and close** at the bottom right of the inline table designer. After a moment, the columns will be added to the forms and views preselected for you, and the inline table designer will be closed.
+
+   :::image type="content" source="media/update-forms-and-views-update-and-close-button.png" alt-text="Update forms and views option in inline table designer.":::
