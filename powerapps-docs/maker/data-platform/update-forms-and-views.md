@@ -33,7 +33,7 @@ Create columns directly in the table hub or table designer, which will then be a
 
     | Property               | Description                                                                                                                                                                             | Available option                                                                     | Default option                                                                                |
     | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-    | **Add these columns**  | Selected columns in this dropdown list will be added to the selected forms and views.                                                                                                        | Only columns currently shown in the table preview.                                   | Both new columns that are just created and existing columns that are just added to the table. |
+    | **Add these columns**  | Selected columns in this dropdown list will be added to the selected forms and views.                                                                                                        | Only columns currently shown in the table preview.                                   | Both new columns that are recently created and existing columns that are recently added to the table. |
     | **To these forms**     | Columns selected in **Add these columns** will be added to selected forms. If a certain column has already been added to this form before, it won’t be added again as a duplicate. | All main, quick create, and quick view forms from this table.                        | All Main forms from this table.                                                               |
     | **And to these views** | Columns selected in **Add these columns** will be added to selected views. If a certain column has already been added to this view before, it won’t be added again as a duplicate. | All public, advanced find, associated, quick find, and lookup views from this table. | All public, advanced find, associated, and quick find views from this table.                  |
 
@@ -45,7 +45,7 @@ You might be working on a table in the modern app designer as you’re building 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. On the left navigation pane, select **Apps**, select the app you're want, and then select **Edit**.
+1. On the left navigation pane, select **Apps**, select the app you want, and then select **Edit**.
 
 1. In the left navigation pane within the modern app designer, select **Data**, then **… > Edit table** to edit your table using the inline table designer.
 
@@ -53,7 +53,7 @@ You might be working on a table in the modern app designer as you’re building 
 
    :::image type="content" source="media/update-forms-and-views-inline-table-designer.png" alt-text="Update forms and views option in inline table designer.":::
 
-    Follow the same steps in 3 and 4 as in the table hub and table designer to update your forms and views. You can also just add the columns you want to your table. When you’re finished with the update, select **Update and close** at the bottom right of the inline table designer. The columns are added to the forms and views preselected for you, and the inline table designer is closed.
+    Follow the same steps in 3 and 4 as in the table hub and table designer to update your forms and views. You can also add the columns you want to your table. When you’re finished with the update, select **Update and close** at the bottom right of the inline table designer. The columns are added to the forms and views preselected for you, and the inline table designer is closed.
 
    :::image type="content" source="media/update-forms-and-views-update-and-close-button.png" alt-text="Update and close button in inline table designer.":::
 
