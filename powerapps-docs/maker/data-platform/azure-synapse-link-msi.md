@@ -54,24 +54,24 @@ With managed identities, access to your storage account is restricted to request
 ### Locations available for enterprise policy
 
 :::row:::
-  :::column span="":::
-     United States EUAP
-  :::column-end:::
-  :::column span="":::
-     United States
-  :::column-end:::
-  :::column span="":::
-     South Africa
-  :::column-end:::
-  :::column span="":::
-     UK
-  :::column-end:::
-  :::column span="":::
-     Australia
-  :::column-end:::
-  :::column span="":::
-     Korea
-  :::column-end:::
+   :::column span="":::
+      United States EUAP
+   :::column-end:::
+   :::column span="":::
+      United States
+   :::column-end:::
+   :::column span="":::
+      South Africa
+   :::column-end:::
+   :::column span="":::
+      UK
+   :::column-end:::
+   :::column span="":::
+      Australia
+   :::column-end:::
+   :::column span="":::
+      Korea
+   :::column-end:::
 ::row-end:::
 ::row:::
   :::column span="":::
