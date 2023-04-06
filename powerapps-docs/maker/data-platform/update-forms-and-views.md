@@ -44,7 +44,7 @@ Occasionally you are working on your table in the modern app designer as you’r
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. Have a model-driven app ready to work with. More information: [Build your first model-driven app](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/build-first-model-driven-app)
+2. Have a model-driven app ready to work with. More information: [Build your first model-driven app](../model-driven-apps/build-first-model-driven-app.md)
 
 3. In the left navigation pane, select **Apps**, then select the app from step 2, click on **Edit**.
 
