@@ -5086,8 +5086,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "powerapps-docs/developer/common-data-service/org-service/samples/persistent-queue-listener.md",
-      "redirect_url": "../../../data-platform/org-service/samples/persistent-queue-listener",
+      "source_path": "powerapps-docs/developer/data-platform/org-service/samples/persistent-queue-listener.md",
+      "redirect_url": "../../write-listener-application-azure-solution",
       "redirect_document_id": false
     },
     {
