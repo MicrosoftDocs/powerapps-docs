@@ -3,7 +3,6 @@ title: Context | Microsoft Docs
 description: Provides all the properties and methods available in the Power Apps component framework
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -2,7 +2,6 @@
 title: Use solution checker to validate your apps in Power Apps | Microsoft Docs
 description: Use the solution checker to validate your solution.
 author: Mattp123
-manager: kvivek
 ms.component: cds
 ms.topic: article
 ms.date: 03/20/2023
@@ -10,9 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use solution checker to validate your model-driven apps in Power Apps
 

@@ -10,9 +10,6 @@ ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Consider disabling NavBar when programmatically opening forms or views
 

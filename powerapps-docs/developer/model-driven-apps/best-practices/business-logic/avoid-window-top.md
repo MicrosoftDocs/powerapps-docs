@@ -12,9 +12,6 @@ ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Avoid using window.top
 

@@ -14,8 +14,6 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Power Apps read-only grid control
 

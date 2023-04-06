@@ -3,7 +3,6 @@ title: hasEntityPrivilege | Microsoft Docs
 description: Returns if the user has privilege for specific table.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
