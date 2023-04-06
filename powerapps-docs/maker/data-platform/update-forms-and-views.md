@@ -26,12 +26,6 @@ You can create columns directly from the table hub or table designer, which will
 
    :::image type="content" source="media/update-forms-and-views-table-designer.png" alt-text="Update forms and views option in table designer.":::
 
-| Status       | Status Reason                                                                                        |
-| ------------ | ---------------------------------------------------------------------------------------------------- |
-| **Active**   | <li>**In Progress**</li><li>**On Hold**</li><li>**Waiting for Details**</li><li>**Researching**</li> |
-| **Resolved** | <li>**Problem Solved**</li><li>**Information Provided**</li>                                         |
-| **Canceled** | <li>**Canceled**</li><li>**Merged**</li>                                                             |
-
 3. Select **Update forms and views** to configure what columns to be added to what forms and views:
 
 | Property               | Description                                                                                                                                                                                                                                                                                                                                                                                                               |
