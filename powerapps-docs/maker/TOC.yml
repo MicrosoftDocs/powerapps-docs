@@ -2414,7 +2414,7 @@
     - name: "How to guides: Table"
       items:
       - name: Automatically add columns to forms and views
-        href: .data-platform/update-forms-and-views.md
+        href: ./data-platform/update-forms-and-views.md
       - name: How to open table data in Excel
         href: ./data-platform/data-platform-excel-addin.md
       - name: How to define alternate keys
