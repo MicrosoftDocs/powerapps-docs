@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.date: 04/05/2023
 ms.subservice: dataverse-maker
 ms.author: yueshu
+ms.reviewer: matp
 search.audienceType:
   - maker
 search.app:
@@ -16,13 +17,13 @@ search.app:
 
 # Update forms and views using table designer
 
-You can create columns directly in the table hub or table designer, which will then be added to your forms and views. In this walkthrough, we will show you how to simply add the columns you created to forms and views of this table without manually doing so in the form or view designer.
+Create columns directly in the table hub or table designer, which will then be added to your forms and views. In this walkthrough, you'll learn how to simply add the columns you created to forms and views of this table without manually doing so in the form or view designer.
 
 ## Using table hub and table designer
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. In the left navigation pane, select **Tables**, then select the table that you wish to update from the table list. In the table hub and table designer, you can now see an **Update forms and views** option that allows you to directly add columns to selected forms and views in this table:
+2. In the left navigation pane, select **Tables**, and then select the table that you want to update from the table list. In the table hub and table designer, you can see an **Update forms and views** option that allows you to directly add columns to selected forms and views in this table:
 
    :::image type="content" source="media/update-forms-and-views-table-hub.png" alt-text="Update forms and views option in table hub.":::
 
@@ -36,24 +37,24 @@ You can create columns directly in the table hub or table designer, which will t
     | **To these forms**     | Columns selected in **Add these columns** will be added to selected forms here. If a certain column has already been added to this form before, it won’t be added again as a duplicate. | All Main, Quick Create, and Quick View forms from this table.                        | All Main forms from this table.                                                               |
     | **And to these views** | Columns selected in **Add these columns** will be added to selected views here. If a certain column has already been added to this view before, it won’t be added again as a duplicate. | All Public, Advanced Find, Associated, Quick Find, and Lookup views from this table. | All Public, Advanced Find, Associated, and Quick Find views from this table.                  |
 
-4. Once you’re done with the configuration, simply select **Update**, and after a moment, the columns you selected will be added to the forms and views you selected.
+4. Once you’re done with the configuration, select **Update**. After a moment, the columns you selected are added to the forms and views you selected.
 
 ## Using inline table designer in modern app designer
 
-Occasionally you are working on your table in the modern app designer as you’re building an app. In this case, you can also update your forms and views directly using the inline table designer in modern app designer:
+You might be working on a table in the modern app designer as you’re building an app. In this case, you can also update your forms and views directly using the inline table designer in the modern app designer:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. Have a model-driven app ready to work with. More information: [Build your first model-driven app](../model-driven-apps/build-first-model-driven-app.md)
+1. On the left navigation pane, select **Apps**, select the app you're want, and then select **Edit**.
 
-3. In the left navigation pane, select **Apps**, then select the app from step 2, click on **Edit**.
+1. In the left navigation pane within the modern app designer, select **Data**, then **… > Edit table** to edit your table using the inline table designer.
 
-4. In the left navigation pane within the modern app designer, select **Data**, then **… > Edit table** to edit your table through the inline table designer.
-
-5. You can now see the **Update forms and views** option in the inline table designer:
+1. The **Update forms and views** option is displayed in the inline table designer:
 
    :::image type="content" source="media/update-forms-and-views-inline-table-designer.png" alt-text="Update forms and views option in inline table designer.":::
 
-    You can follow the same step 3 and 4 as in table hub and table designer to update your forms and views. However, you can also just add the columns you want to your table, and once you’re happy with the update, simply select **Update and close** at the bottom right of the inline table designer. After a moment, the columns will be added to the forms and views preselected for you, and the inline table designer will be closed.
+    Follow the same steps in 3 and 4 as in the table hub and table designer to update your forms and views. You can also just add the columns you want to your table. When you’re finished with the update, select **Update and close** at the bottom right of the inline table designer. The columns are added to the forms and views preselected for you, and the inline table designer is closed.
 
    :::image type="content" source="media/update-forms-and-views-update-and-close-button.png" alt-text="Update and close button in inline table designer.":::
+
+
