@@ -166,9 +166,11 @@ Only the Dynamics 365 and Power Platform admins who were granted the reader role
 
    1. Enable **Public network access to workspace endpoints**
    2. Select **Allow all azure services and resources to access this workspace**.
-   3. If there are **Firewall rules**, delete them.
-   :::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
-1. Select **Save**.
+   3. If there is a **IP firewall rules** created for all IP range, delete them.
+   4. Add a new **IP firewall rule**, give it a name, Start IP, and End IP. 
+   5. Select Save when done. For more information: [Azure Synapse Analytics IP firewall rules](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-ip-firewall#ip-firewall-rules)
+
+:::image type="content" source="media/synapse-workspace-network-settings.png" alt-text="Azure Synapse workspace network settings":::
 
 ## Create Azure Synapse Link for Dataverse with managed identity
 
