@@ -23,21 +23,21 @@ Create columns directly in the table hub or table designer, which will then be a
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. In the left navigation pane, select **Tables**, and then select the table that you want to update from the table list. In the table hub and table designer, you can see an **Update forms and views** option that allows you to directly add columns to selected forms and views in this table:
+2. In the left navigation pane, select **Tables**, and then select the table that you want to update from the table list. In the table hub and table designer, there's an **Update forms and views** option that allows you to directly add columns to selected forms and views in this table.
 
    :::image type="content" source="media/update-forms-and-views-table-hub.png" alt-text="Update forms and views option in table hub.":::
 
    :::image type="content" source="media/update-forms-and-views-table-designer.png" alt-text="Update forms and views option in table designer.":::
 
-3. Select **Update forms and views** to configure what columns to be added to what forms and views:
+3. Select **Update forms and views** to configure what columns should be added to certain forms and views:
 
     | Property               | Description                                                                                                                                                                             | Available option                                                                     | Default option                                                                                |
     | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-    | **Add these columns**  | Selected columns in this dropdown will be added to the selected forms and views.                                                                                                        | Only columns currently shown in the table preview.                                   | Both new columns that are just created and existing columns that are just added to the table. |
-    | **To these forms**     | Columns selected in **Add these columns** will be added to selected forms here. If a certain column has already been added to this form before, it won’t be added again as a duplicate. | All Main, Quick Create, and Quick View forms from this table.                        | All Main forms from this table.                                                               |
-    | **And to these views** | Columns selected in **Add these columns** will be added to selected views here. If a certain column has already been added to this view before, it won’t be added again as a duplicate. | All Public, Advanced Find, Associated, Quick Find, and Lookup views from this table. | All Public, Advanced Find, Associated, and Quick Find views from this table.                  |
+    | **Add these columns**  | Selected columns in this dropdown list will be added to the selected forms and views.                                                                                                        | Only columns currently shown in the table preview.                                   | Both new columns that are just created and existing columns that are just added to the table. |
+    | **To these forms**     | Columns selected in **Add these columns** will be added to selected forms. If a certain column has already been added to this form before, it won’t be added again as a duplicate. | All main, quick create, and quick view forms from this table.                        | All Main forms from this table.                                                               |
+    | **And to these views** | Columns selected in **Add these columns** will be added to selected views. If a certain column has already been added to this view before, it won’t be added again as a duplicate. | All public, advanced find, associated, quick find, and lookup views from this table. | All public, advanced find, associated, and quick find views from this table.                  |
 
-4. Once you’re done with the configuration, select **Update**. After a moment, the columns you selected are added to the forms and views you selected.
+4. Once you’re done with the configuration, select **Update**. The columns you selected are added to the forms and views you selected.
 
 ## Using inline table designer in modern app designer
 
@@ -57,4 +57,6 @@ You might be working on a table in the modern app designer as you’re building 
 
    :::image type="content" source="media/update-forms-and-views-update-and-close-button.png" alt-text="Update and close button in inline table designer.":::
 
+## See also
 
+[Create a custom table](data-platform-create-entity.md)
