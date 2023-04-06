@@ -56,4 +56,4 @@ Occasionally you are working on your table in the modern app designer as you’r
 
     You can follow the same step 3 and 4 as in table hub and table designer to update your forms and views. However, you can also just add the columns you want to your table, and once you’re happy with the update, simply select **Update and close** at the bottom right of the inline table designer. After a moment, the columns will be added to the forms and views preselected for you, and the inline table designer will be closed.
 
-   :::image type="content" source="media/update-forms-and-views-update-and-close-button.png" alt-text="Update forms and views option in inline table designer.":::
+   :::image type="content" source="media/update-forms-and-views-update-and-close-button.png" alt-text="Update and close button in inline table designer.":::
