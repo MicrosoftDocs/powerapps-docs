@@ -52,13 +52,17 @@ To create an application registration in Azure AD, follow these steps.
 1. From the left navigation panel, select **Applications** > **App registrations**.
 1. Select **+ New registration**.
 1. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and then select **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
-  :::image type="content" source="media/S2S-app-registration-started.PNG" alt-text="Register an application form.":::
-1. On the **Overview** page, select **API permissions**
+
+    :::image type="content" source="media/S2S-app-registration-started.PNG" alt-text="Register an application form.":::
+
+1. In the navigation panel, select **API permissions**.
 1. On the **API permissions** page select **Grant admin consent for "org-name"**, if it is not already selected, and when prompted choose **Yes**. Note that Delegated permissions are not required for this server-to-server scenario.
-  :::image type="content" source="media/S2S-api-permission-completed.PNG" alt-text="Granting API permissions.":::
-1. Select **Overview** in the navigation panel, record the **Display name**, **Application (client) ID**, and **Directory (tenant) ID** values of the app registration. You will provide these later in the code sample.
-1. In the navigation panel, select **Certificates & secrets**
-1. Below **Client secrets**, choose **+ New client secret** to create a secret
+
+    :::image type="content" source="media/S2S-api-permission-completed.PNG" alt-text="Granting API permissions.":::
+
+1. Select **Overview** in the navigation panel then record the **Display name**, **Application (client) ID**, and **Directory (tenant) ID** values of the app registration.
+1. In the navigation panel, select **Certificates & secrets**.
+1. Below **Client secrets**, choose **+ New client secret** to create a secret.
 1. In the form, enter a description and select **Add**. Record the secret string. You will not be able to view the secret again once you leave the current screen.
 
 The Application ID, Directory ID, and client secret will be needed for web service authentication.
