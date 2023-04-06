@@ -6,7 +6,7 @@ ms.author: jasonhuang
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: how-to
-ms.date: 03/06/2023
+ms.date: 04/06/2023
 ms.custom: template-how-to 
 ---
 # Use managed identities for Azure with your Azure data lake storage (preview)
