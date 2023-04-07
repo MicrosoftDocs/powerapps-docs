@@ -5,7 +5,6 @@ ms.date: 01/19/2023
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: tapanm-msft
 ms.reviewer: sericks
 ms.custom: 
 ms.collection: 

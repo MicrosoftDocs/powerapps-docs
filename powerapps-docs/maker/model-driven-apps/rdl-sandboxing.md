@@ -15,13 +15,10 @@ caps.latest.revision: 13
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: annbe
 tags: 
   - MigrationHO
 search.audienceType: 
   - customizer
-search.app: 
-  - D365CE
 ---
 # RDL sandboxing 
 

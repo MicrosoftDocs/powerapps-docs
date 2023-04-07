@@ -4,14 +4,10 @@ description: "Use the QueryExpression class to build complex queries for use wit
 ms.date: 04/05/2023
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke
