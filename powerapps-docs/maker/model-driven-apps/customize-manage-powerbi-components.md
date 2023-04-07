@@ -2,7 +2,6 @@
 title: Customize and manage Power BI components (preview)
 description: Learn how to customize and work with Power BI components in Power Apps solutions.
 author: paulinbar
-manager: kfollis
 ms.component: cds
 ms.topic: how-to
 ms.date: 09/16/2022
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: painbar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Customize and manage Power BI components (preview)
 

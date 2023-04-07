@@ -14,12 +14,8 @@ author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "emcoope"
 ms.reviewer: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Overview of the model-driven app designer
 

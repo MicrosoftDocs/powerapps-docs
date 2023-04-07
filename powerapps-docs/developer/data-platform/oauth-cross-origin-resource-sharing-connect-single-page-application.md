@@ -11,9 +11,6 @@ applies_to:
   - "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use OAuth with Cross-Origin Resource Sharing to connect a Single-Page Application

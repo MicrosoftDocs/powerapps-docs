@@ -5,13 +5,9 @@ ms.date: 04/06/2022
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
-manager: kvivek
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Workflow operations

@@ -8,12 +8,8 @@ ms.topic: "article"
 author: "divkamath"
 ms.subservice: dataverse-developer
 ms.author: "pehecke"
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
 ---
