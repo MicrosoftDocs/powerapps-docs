@@ -13,8 +13,6 @@ search.audienceType:
   - admin
   - user
   - developer
-search.app: 
-  - PowerApps
 contributors:
   - kumarvivek
   - mduelae

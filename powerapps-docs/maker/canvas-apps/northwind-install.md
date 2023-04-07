@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - gregli-msft
@@ -40,7 +38,7 @@ This [solution](../../developer/data-platform/introduction-solutions.md) file (.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then ensure that you're working in an environment that contains a Dataverse database.
 
-1. In the left navigation pane, select **Solutions**, and then select **Import** in the toolbar near the top of the screen:
+1. In the left navigation pane, select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] Then select **Import** in the toolbar near the top of the screen:
 
     > [!div class="mx-imgBorder"]
     > ![Solutions view and import-solution entry point.](media/northwind-install/solution-import.png)

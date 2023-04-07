@@ -5,7 +5,6 @@ keywords: Main forms; Customer service; Customer Service Hub; Dynamics 365
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 06/06/2018
 
 ms.topic: how-to
@@ -16,9 +15,6 @@ applies_to:
 ms.assetid: 43bfface-4dc2-411d-99a1-83e934646989
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use the model-driven app main form and its components
 

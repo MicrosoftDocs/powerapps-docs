@@ -1,18 +1,14 @@
 ---
 title: "Auditing (Audit)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Auditing (Audit)  table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Auditing (Audit)  table/entity reference
@@ -154,6 +150,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |3|Delete||
 |4|Activate||
 |5|Deactivate||
+|6|Upsert||
 |11|Cascade||
 |12|Merge||
 |13|Assign||
@@ -222,6 +219,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |111|Audit Log Deletion||
 |112|User Access Audit Started||
 |113|User Access Audit Stopped||
+|115|Archive||
 
 
 
@@ -362,7 +360,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 
 |Property|Value|
 |--------|-----|
-|Description|The action that causes the audit--it will be create, delete, or update|
+|Description|The action that causes the audit--it will be create, delete, update, upsert or archive|
 |DisplayName|Operation|
 |IsValidForForm|False|
 |IsValidForRead|True|
@@ -378,6 +376,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |2|Update||
 |3|Delete||
 |4|Access||
+|5|Upsert||
+|115|Archive||
 
 
 

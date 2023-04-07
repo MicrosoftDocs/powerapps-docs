@@ -17,9 +17,6 @@ ms.suite:
 ms.tgt_pltfrm: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - mduelae
   - mattp123

@@ -1,7 +1,7 @@
 ---
 title: Components supported by the UI kit (preview)
 description: Learn about different components supported by the Create Apps from Figma UI Kit.
-author: tapanm-msft
+author: mduelae
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---

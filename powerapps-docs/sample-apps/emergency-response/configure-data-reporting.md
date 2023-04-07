@@ -2,7 +2,6 @@
 title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides instructions for hospital IT admins to configure data and view dashboards for their organization.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: conceptual
 ms.custom: 

@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -43,7 +41,5 @@ Learn more about [how to use the button control](../make-a-card/ui-elements/use-
 **[Associated inputs](control-reference.md#a)** - Controls which inputs are associated with the action.
 
 **[Repeat for every](control-reference.md#r)** - The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
-
-
 
 **[Show when](control-reference.md#s)** - Conditional layout expression.

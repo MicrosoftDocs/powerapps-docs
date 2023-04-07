@@ -1,10 +1,9 @@
 ---
-title: View offline sync status (preview)
+title: View offline sync status
 description: Learn how to interpret the offline sync icon in the mobile app navigation bar.
 ms.date: 02/08/2023
 ms.author: sericks
 author: sericks007
-manager: tapanm-MSFT
 ms.reviewer: 
 ms.topic: conceptual
 ms.service: powerapps
@@ -14,9 +13,7 @@ search.audienceType:
   - enduser
 ---
 
-# View offline sync status (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# View offline sync status
 
 The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
 
@@ -28,9 +25,6 @@ The offline sync icon indicates the synchronization status of the Power Apps mob
 The offline sync icon is always visible in the main app navigation on iOS and Android devices.
 
 :::image type="content" source="media/offline-sync-icon-small.png" alt-text="Screenshot of a mobile app, with the offline sync icon in the app navigation bar highlighted.":::
-
-> [!IMPORTANT]
-> This is a preview feature. [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]
 
 ## Sync status icons
 

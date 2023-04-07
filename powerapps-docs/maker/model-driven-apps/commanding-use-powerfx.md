@@ -5,14 +5,10 @@ Keywords: command bar, command designer, commanding, modern, dialog, flow
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 12/04/2022
 ms.topic: conceptual
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Using Power Fx with commands
 
@@ -141,16 +137,16 @@ Navigate( Defaults( Accounts ) )
 
 ## Optimize the user experience with data source and record information
 
-Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/function-datasourceinfo.md) and [**RecordInfo** function](/power-platform/power-fx/reference/function-recordinfo.md) to optimize the user experience with information about the data being displayed and manipulated.
+Use the [**DataSourceInfo** function](/power-platform/power-fx/reference/function-datasourceinfo) and [**RecordInfo** function](/power-platform/power-fx/reference/function-recordinfo) to optimize the user experience with information about the data being displayed and manipulated.
 
-For example, use **RecordInfo** to determine if the current user has permission to modify a record and appropriately show or hide an "Edit" buutton using its **Visible** property:
+For example, use **RecordInfo** to determine if the current user has permission to modify a record and appropriately show or hide an "Edit" button using its **Visible** property:
 
 ```powerapps-dot
 EditButton.Visible = 
    RecordInfo( Gallery1.Selected, RecordInfo.EditPermission )
 ```
 
-For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide an "Create" buutton using its **Visible** property:
+For example, use **DataSourceInfo** to determine if the current user has permission to create a record and appropriately show or hide an "Create" button using its **Visible** property:
 
 ```powerapps-dot
 CreateButton.Visible = 
@@ -159,7 +155,7 @@ CreateButton.Visible =
 
 ## Ask for confirmation before taking action
 
-Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm.md) to display a dialog box on top of the current screen.
+Use the [**Confirm** function](/power-platform/power-fx/reference/function-confirm) to display a dialog box on top of the current screen.
 
 ```powerapps-dot
 Notify( Confirm( "Are you sure?", 

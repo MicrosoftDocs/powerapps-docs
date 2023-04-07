@@ -2,19 +2,13 @@
 title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
 author: sericks007
-manager: tapanm-MSFT
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/28/2023
+ms.date: 03/15/2023
 ms.subservice: mobile
 ms.author: sericks
-ms.custom: ""
-ms.reviewer: ""
-ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 ---
 
 # Troubleshoot issues in the Power Apps mobile app
@@ -28,9 +22,9 @@ This troubleshooting article helps fix common issues for the [Power Apps mobile 
 
 A major update to the Power Apps offline sync engine has been made. To keep your app working, [upgrade to the latest version of the Power Apps mobile app](run-powerapps-on-mobile.md). You must be running one of the following versions or later:
 
--	Android: 3.23012.16
--	iOS: 13.23012.16
--	Windows: 23.22121.38
+-   Android: 3.23031.18
+-   iOS: 13.23031.18
+-   Windows: 3.23024.21
 
 If you are unable to upgrade, contact your administrator.
 
@@ -40,7 +34,7 @@ Monitor is a tool that offers makers a deep view of what an app does and how it 
 
 ## Debug JavaScript web resources in mobile apps
 
-While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in mobile apps](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps)
+While developing JavaScript web resources for mobile scenarios, you can use your Android device to debug your mobile-specific code and ensure it works as expected. More information: [Debug JavaScript in mobile apps on Android](../developer/model-driven-apps/clientapi/debug-JavaScript-code.md#debug-javascript-in-mobile-apps-on-android).
 
 ## Error: There was a problem signing you in
 

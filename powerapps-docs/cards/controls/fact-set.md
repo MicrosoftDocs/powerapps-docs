@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -33,7 +31,5 @@ Displays a series of facts (i.e. name/value pairs) in a tabular form.
 **[Height](control-reference.md#h)** – Specifies the height of the control.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
-
-
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.

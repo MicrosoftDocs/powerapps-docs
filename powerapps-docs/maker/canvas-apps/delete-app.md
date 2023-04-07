@@ -1,7 +1,7 @@
 ---
 title: Delete a canvas app
 description: Learn about how to delete an existing canvas app.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: canvas
@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---

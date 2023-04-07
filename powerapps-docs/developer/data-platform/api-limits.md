@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: dikamath 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

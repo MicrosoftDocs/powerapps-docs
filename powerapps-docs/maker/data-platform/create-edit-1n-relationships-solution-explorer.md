@@ -15,12 +15,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer 

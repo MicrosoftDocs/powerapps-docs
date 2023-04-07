@@ -12,12 +12,8 @@ applies_to:
 author: "mmercuri"
 ms.subservice: dataverse-maker
 ms.author: "kvivek"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Importing and exporting data
 

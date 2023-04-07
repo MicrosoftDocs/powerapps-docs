@@ -9,12 +9,8 @@ ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # How Dataverse SQL differs from Transact-SQL
@@ -55,7 +51,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - owner
 - state
 - status
-- multiselectpicklist
+
 
 ### [Not supported](#tab/not-supported)
 
@@ -70,6 +66,7 @@ More information: [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-t
 - managedproperty
 - file
 - xml
+- multiselectpicklist
 
 ---
 

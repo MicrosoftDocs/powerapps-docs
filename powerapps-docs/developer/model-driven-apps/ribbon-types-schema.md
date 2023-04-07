@@ -3,16 +3,12 @@ title: "Ribbon types schema (model-driven apps) | Microsoft Docs" # Intent and p
 description: "The following is the schema definition for the ribbon types portion of an import/export customization file. It is included from the Ribbon Core Schema." # 115-145 characters including spaces. This abstract displays in the search result.
 author: HemantGaur
 ms.author: hemantg
-
 ms.date: 04/01/2022
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -22,7 +18,7 @@ The following is the schema definition for the ribbon types portion of an import
 
 Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [Package and distribute Eetensions with solutions](../data-platform/introduction-solutions.md).
+For more information, see [Package and distribute extensions with solutions](../data-platform/introduction-solutions.md).
 
 [!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
  

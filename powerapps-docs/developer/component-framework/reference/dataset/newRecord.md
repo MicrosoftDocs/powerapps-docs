@@ -3,7 +3,6 @@ title: newRecord | Microsoft Docs
 description: Initialize a local record object for control to set the value. The control will need to invoke save() on the newly created record to persist the change.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

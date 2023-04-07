@@ -1,5 +1,5 @@
 ---
-title: Barcode scanner control in Power Apps
+title: Barcode scanner control (retired) in Power Apps
 description: Learn about the details, properties and examples of the Barcode scanner control in Power Apps.
 author: chmoncay
 ms.topic: reference
@@ -10,21 +10,30 @@ ms.author: chmoncay
 ms.reviewer: mduelae
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - chmoncay
 ---
-# Barcode scanner control in Power Apps
+# Barcode scanner control (retired) in Power Apps
 
-Scans barcodes, QR codes, and data-matrix codes on an Android, iOS, and Windows device.
+The legacy control for scanning barcodes, QR codes, and data-matrix codes on an Android, iOS, and Windows device.
+
+> [!IMPORTANT]
+> The barcode scanner control is retired as it is replaced by the [barcode reader control](control-barcodereader.md). While the legacy barcode scanner's existing functionality will continue to be supported in future versions of Power Apps, the barcode reader includes the latest improvements and should be used where possible.
+
+## Prerequisites
+
+The barcode scanner control is retired and needs to be enabled to show up in the insert pane.
+
+With your app open for [editing](../edit-app.md) in [Power Apps Studio](https://create.powerapps.com):
+
+1. Open **Settings**
+1. Select **Upcoming features** in the left-hand menu and select the **Retired** tab
+1. Turn on the **Legacy barcode scanner** setting
 
 ## Description
 
 The control opens a native scanner on an Android, iOS, and Windows device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
-
-The new experimental [barcode reader control](control-barcodereader.md) supports additional barcode types and has additional functionality like selecting which barcode in view to scan.
 
 > [!NOTE]
 > The barcode scanner control is supported on an Android, iOS, and Windows device. All other platforms will show a warning that some features of the app won't work.

@@ -5,9 +5,7 @@ Keywords: Main form; Common column properties; Dynamics 365
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 02/25/2020
-
 ms.topic: conceptual
 applies_to: 
   - "Dynamics 365 (online)"
@@ -16,9 +14,6 @@ applies_to:
 ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app common column properties
 
@@ -30,10 +25,10 @@ In addition to configuring aspects of the Dataverse column, such as its type and
 
 ## Common column properties in Power Apps portal
 
-1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Tables**, and then select the table that has the columns you want to view.
+1. From Power Apps [make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Tables**, and then select the table that has the columns you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-> [!note]
-> Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
+   > [!NOTE]
+   > Customizations to a table take should place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your **solution**, open the **table**, and then select the **Columns** area.
 
 2. Select the column that you want to view.
 

@@ -1,18 +1,14 @@
 ---
 title: "MobileOfflineProfile table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfile table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # MobileOfflineProfile table/entity reference
@@ -629,6 +625,7 @@ Listed by **SchemaName**.
 - [DefaultMobileOfflineProfile_Organization](#BKMK_DefaultMobileOfflineProfile_Organization)
 - [MobileOfflineProfile_MobileOfflineProfileItem](#BKMK_MobileOfflineProfile_MobileOfflineProfileItem)
 - [MobileOfflineProfile_SystemUser](#BKMK_MobileOfflineProfile_SystemUser)
+- [mobileofflineprofile_profileextension](#BKMK_mobileofflineprofile_profileextension)
 - [mobileofflineprofile_mobileofflineprofile](#BKMK_mobileofflineprofile_mobileofflineprofile)
 
 
@@ -675,6 +672,23 @@ Same as the [MobileOfflineProfile_SystemUser](systemuser.md#BKMK_MobileOfflinePr
 |ReferencedEntityNavigationPropertyName|MobileOfflineProfile_SystemUser|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_mobileofflineprofile_profileextension"></a> mobileofflineprofile_profileextension
+
+**Added by**: MobileOfflineProfileExtensionSolution Solution
+
+Same as the [mobileofflineprofile_profileextension](mobileofflineprofileextension.md#BKMK_mobileofflineprofile_profileextension) many-to-one relationship for the [mobileofflineprofileextension](mobileofflineprofileextension.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|mobileofflineprofileextension|
+|ReferencingAttribute|mobileofflineprofileid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|mobileofflineprofile_profileextension|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_mobileofflineprofile_mobileofflineprofile"></a> mobileofflineprofile_mobileofflineprofile

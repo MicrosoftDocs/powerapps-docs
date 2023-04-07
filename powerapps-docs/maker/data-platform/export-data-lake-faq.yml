@@ -72,6 +72,7 @@ sections:
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
         - Attachment
         - Calendar
+        - Calendarrule
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
         Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.

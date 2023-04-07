@@ -1,4 +1,4 @@
-﻿---
+---
 title: Customize and build your mobile app
 description: Learn about how to use the wrap functionality to package one or more canvas apps into a native mobile app package.
 author: makolomi
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - makolomi
   - mduelae
@@ -28,9 +26,35 @@ Earlier, you learned about the capabilities of wrap feature, how it works, and i
 - You'll need one or more canvas apps (saved in a solution) that you can package for mobile user distribution.
 - To use Android platform, ensure you [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [register the app](#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
+## Install wrap for Power Apps in your environment
+The wrap feature will create a mobile version of your canvas apps that you can distribute as your custom-branded Android and iOS native mobile apps through the distribution channels like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play Store](https://support.google.com/googleplay/work/answer/6138458) and [Apple Business Manager](https://developer.apple.com/custom-apps/).
+
+To use wrap for Power Apps, your need to install it in your environment. Go to [Dynamics 365 apps](https://admin.powerplatform.microsoft.com/resources/applications) section on [Power Platform admin center](https://admin.powerplatform.microsoft.com), select **Wrap for Power Apps** and click on **Install** option.
+
+ :::image type="content" source="media/wrap-canvas-app/install-wrap-for-power-apps.png" alt-text="Install wrap for Power Apps.":::
+ 
+ Select your environment from the list and click **Install** button.
+ 
+ :::image type="content" source="media/wrap-canvas-app/install-wrap-for-power-apps-1.png" alt-text="Select an environment and begin installation.":::
+
+> [!NOTE]
+> You need to have admin rights to the environment to install wrap for Power Apps.
+
 ## Add canvas app to solution
 
-This feature requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
+Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button.
+
+:::image type="content" source="media/wrap-canvas-app/select-solution.png" alt-text="Select a solution.":::
+
+Chooose **+ Add existing** option from the top menu and select **App > Canvas app** in the dropdown list.
+
+:::image type="content" source="media/wrap-canvas-app/select-add-existing.png" alt-text="Select Add existing from the menu.":::
+
+Select **Oustide Dataverse** tab and choose your app from the list. Press **Add** button to add this app to a solution.
+
+:::image type="content" source="media/wrap-canvas-app/add-app.png" alt-text="Select Add app to a solution.":::
+
+More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
 
 ## App registration
 
@@ -90,7 +114,7 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
     - *Azure API Connections*
     - *PowerApps Service*
     - *Power BI* (only required if your canvas app(s) use Power BI data)
-    - *Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
+    - *Microsoft Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
 
 > [!NOTE]
 > If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:

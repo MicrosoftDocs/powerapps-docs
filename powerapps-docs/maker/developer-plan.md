@@ -55,7 +55,7 @@ After signing up for the Developer Plan, you'll be redirected to [Power Apps](ht
 > [!NOTE]
 > It might take a couple of minutes for the new environment to be provisioned and become available in the list of the environments. You can see the progress of the environment creation in the [Power Platform admin center](https://admin.powerplatform.com).
 
-Use this developer environment instead of your tenant’s default environment to work with certain capabilities such as premium and custom connectors.
+Use this developer environment instead of your tenant's default environment to work with certain capabilities such as premium and custom connectors.
 
 ### Get the Developer Plan with Visual Studio Dev Essentials
 
@@ -112,8 +112,7 @@ You can't increase capacity by applying add-ons to the quantities we include. If
 ## Publishing to Microsoft AppSource
 
 Do you have an app that you'd like to share with customers? We now support Power Apps solutions on [Microsoft AppSource](https://appsource.microsoft.com/) as a way for you to share apps and flows with customers, and generate leads for your
-business. For more information, see [Publish your app on
-AppSource](../developer/data-platform/publish-app-appsource.md).
+business. For more information, see [Publish your app on AppSource](/power-platform/developer/appsource/publish-app).
 
 ## FAQ
 
@@ -167,7 +166,7 @@ However, even after deleting a user's developer environment, a new developer env
 
 ### Can I prevent users from creating developer environments?
 
-Yes. To prevent users from creating developer environments, go to [Control environment creation](/power-platform/admin/control-environment-creation?branch=pr-en-us-6000#developer-environments).
+Yes. To prevent users from creating developer environments, go to [Control environment creation](/power-platform/admin/control-environment-creation#developer-environments).
 
 ### Does the Power Apps Developer plan include Power Automate RPA use rights?
 
@@ -187,7 +186,7 @@ Since developer environments aren't intended to support production scenarios, ap
 
 No. Dynamics 365 apps can't be installed in a developer environment. You'll see the following message when you try to install them:
 
-"Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to “Yes”. Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
+"Installing Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service is only supported on environments that have been created with a database with the option to Enable Dynamics 365 apps set to "Yes". Try installing this application in an environment with a database and Enable Dynamics 365 apps enabled on it."
 
 If you want to explore Dynamics 365 apps, refer to the app-specific documentation for free trials, or to install them on existing environments.
 

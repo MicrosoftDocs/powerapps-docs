@@ -1,7 +1,7 @@
 ---
 title: Overview of creating app from Figma (preview)
 description: An overview about creating app from Figma feature in Power Apps.
-author: tapanm-msft
+author: mduelae
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: mkaur
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: kaagar
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---

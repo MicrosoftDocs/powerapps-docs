@@ -8,11 +8,8 @@ ms.topic: overview
 author: "mduelae"
 ms.subservice: common
 ms.author: "mkaur"
-manager: "kvivek"
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 
 # Maker matching using an integrated virtual agent in Power Apps (preview)
@@ -167,6 +164,25 @@ To configure advisors:
     - To add an advisor, select **Add an advisor**.
 
     - To remove an advisor, choose an advisor by selecting the ellipsis (**…**), and then select **Remove**.
+
+
+## Disable maker matching for your tenant
+
+Members of the Power Platform admin role can disable maker matching by running the Set-TenantSettings cmdlet.
+
+To display tenant settings, run the cmdlet:
+
+   ```powershell
+   $settings=Get-TenantSettings 
+   $settings.PowerPlatform.PowerApps.disableMakerMatch
+   ```
+To disable maker matching, run this cmdlet:
+
+   ```powershell
+   $settings.powerPlatform.powerApps.disableMakerMatch = $True
+   Set-TenantSettings -RequestBody $settings
+   ```
+
 
 ## Known issues
 

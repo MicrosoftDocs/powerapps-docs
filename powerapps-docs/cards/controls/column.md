@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -43,7 +41,5 @@ Add to a column set to create dividers on the page. Empty columns aren't visible
 **[Bleed](control-reference.md#b)** – Determines whether the control should bleed through its parent's padding.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
-
-
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.

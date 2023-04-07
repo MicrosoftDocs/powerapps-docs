@@ -8,12 +8,8 @@ author: "lalexms"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
 ms.subservice: mda-maker
 ms.author: "laalexan"
-manager: "shujoshi"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # FAQs for timeline control (classic)

@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -45,7 +43,5 @@ A container takes on the properties of the first control placed inside it. Only 
 **[Background image](control-reference.md#b)** – Specifies a background image. Acceptable formats are PNG, JPEG, and GIF.
 
 **[Repeat for every](control-reference.md#r)** – The source of data that is used to show multiple instances of this control. Learn how to use [repeat for every](control-reference.md#r).
-
-
 
 **[Show when](control-reference.md#s)** – Conditional layout expression.
