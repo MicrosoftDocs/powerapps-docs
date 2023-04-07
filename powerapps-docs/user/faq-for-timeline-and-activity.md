@@ -2,7 +2,6 @@
 title: "Frequently Asked Questions about activities and the timeline wall| MicrosoftDocs"
 description: Frequently Asked Questions about Activities and the Timeline Wall  
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Frequently Asked Questions about Activities and the Timeline Wall  
 

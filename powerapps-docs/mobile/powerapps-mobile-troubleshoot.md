@@ -2,7 +2,6 @@
 title: Troubleshoot issues in the Power Apps mobile app
 description: Troubleshooting and known issues for the Power Apps mobile app 
 author: sericks007
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -11,8 +10,6 @@ ms.subservice: mobile
 ms.author: sericks
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 ---
 
 # Troubleshoot issues in the Power Apps mobile app

@@ -2,7 +2,6 @@
 title: "Track your progress with dashboards and charts in model-driven apps| MicrosoftDocs"
 description: How to use charts in Power Apps.
 author: sericks007
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 searchScope:
   - D365-App-msdynce_saleshub
   - D365-Entity-dashboard

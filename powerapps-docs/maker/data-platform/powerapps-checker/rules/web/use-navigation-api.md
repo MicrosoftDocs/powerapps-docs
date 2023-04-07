@@ -2,7 +2,6 @@
 title: use-navigation-api Power Apps checker reference | Microsoft Docs
 description: Power Apps checker rule reference for use-navigation-api.
 author: ecarrleemsft
-manager: tapanm-msft
 ms.topic: reference
 ms.date: 07/18/2022
 ms.service: "powerapps"
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # `use-navigation-api`
 
