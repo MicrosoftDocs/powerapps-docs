@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Formula repair in Power Apps (preview) | MicrosoftDocs"
 description: Understand how to enable and use formula repair in Power Apps
 ms.custom: ""
@@ -10,8 +10,6 @@ ms.subservice: common
 ms.author: norliu
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - norliu

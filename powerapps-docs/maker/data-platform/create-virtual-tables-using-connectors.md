@@ -8,9 +8,6 @@ author: NHelgren # GitHub ID
 ms.author: nhelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - phecke 
@@ -114,7 +111,6 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions with SQL Server.
 
-
 - **Azure AD**: Select and sign in with your credentials.
 - **SQL Server**: Server name, database name, user name, password, gateway (on-premises deployments only).
 
@@ -123,17 +119,13 @@ Watch a short video showing how to create a virtual table with the virtual conne
 > [!IMPORTANT]
 > These will be the credentials used for all authentication for the virtual table so use credentials with the correct level of permissions in SharePoint.
 
-- Select to **Connect directly (cloud-services)** or **Connect using on-premises data gateway**.
+> [!NOTE]
+> At this time virtual tables using the virtual connector provider wizard only support online versions of SharePoint.
+
+- Select to **Connect directly (cloud-services)** 
 
    :::image type="content" source="media/ve-sharepoint-connect.png" alt-text="Connect to Sharepoint":::
 
-- For **Direct connection**, sign into SharePoint.
-
-   :::image type="content" source="media/ve-sharepoint-direct-connect.png" alt-text="Use Direct connection":::
-
-- For on-premises, select your authentication type, provide your credentials, choose a gateway, and then select **Create**.
-
-   :::image type="content" source="media/ve-sharepoint-connect-on-premises.png" alt-text="Connect to SharePoint with a gateway":::
 
 ---
 
@@ -163,7 +155,7 @@ To create a connection reference, when you're creating the connection for the vi
    - If you chose SQL and Azure AD as your authentication method, you'll be asked for your SQL server name and database name. Provide these and select **Next**.
    
 ### Configure your Data
-   - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Azure AD credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as *https://microsoft.sharepoint.com/teams/Contoso*.
+   - If you're creating a SharePoint virtual table, you're asked to enter the URL of your SharePoint site or select from your most recently used SharePoint sites. The most recently used list is populated by gathering information about your recently used sites using Microsoft Graph and your Azure AD credentials. If you're pasting the SharePoint URL, only include the information up to the site name, such as :::no-loc text="https://microsoft.sharepoint.com/teams/Contoso":::.
 
 1. A page is displayed where you can either search your data source for a specific table or list, or select a table or list from the provided list. 
 1. Select the check box if you want to configure the table name, column names, and primary field.

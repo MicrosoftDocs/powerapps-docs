@@ -2,7 +2,6 @@
 title: Create a Power BI report using the Dataverse connector | Microsoft Docs
 description: Connect to your Dataverse data from Power BI Desktop using the connector.
 author: Mattp123
-manager: kvivek
 ms.component: cds
 ms.topic: how-to
 ms.date: 10/10/2022
@@ -10,8 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Create a Power BI report using data from Dataverse
 

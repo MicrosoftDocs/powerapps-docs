@@ -5,7 +5,6 @@ Keywords: Main form; Common column properties; Dynamics 365
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 02/25/2020
 ms.topic: conceptual
 applies_to: 
@@ -15,9 +14,6 @@ applies_to:
 ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app common column properties
 

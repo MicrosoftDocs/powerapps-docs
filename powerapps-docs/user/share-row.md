@@ -2,7 +2,6 @@
 title: "Share rows with a user or team| MicrosoftDocs"
 description: How to share a row with a user or team.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
  # Share rows with a user or team

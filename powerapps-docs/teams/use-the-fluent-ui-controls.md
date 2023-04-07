@@ -66,9 +66,7 @@ search and multiple selections.
 
 ### Description
 
-A **Combo box** control allows a user to search for items to select. The search
-is done server-side on the *SearchField* property, so performance isn't
-affected by large data sources.
+A **Combo box** control allows a user to search for items to select.
 
 Single-select or multiple-select mode is configured via the *SelectMultiple* property.
 

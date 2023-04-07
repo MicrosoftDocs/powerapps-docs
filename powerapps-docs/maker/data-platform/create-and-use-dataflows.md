@@ -17,13 +17,9 @@ ms.assetid:
 caps.latest.revision: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create and use dataflows in Power Apps

@@ -4,18 +4,22 @@
   items:
   - name: What is Power Apps?
     href: ../powerapps-overview.md
-  - name: Sign up for 30-day trial version
-    href: signup-for-powerapps.md
-  - name: Sign up for Developer Plan
-    href: developer-plan.md
-  - name: Power Apps preview program
-    href: powerapps-preview-program.md
+  - name: Get access to Power Apps
+    items:
+    - name: Sign up for 30-day trial version
+      href: signup-for-powerapps.md
+    - name: Request a Power Apps license
+      href: ../user/request-license.md
+    - name: Sign up for Developer Plan
+      href: developer-plan.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: Power Apps preview program
+    href: powerapps-preview-program.md
   - name: System requirements, limits, and configuration
     href: ../limits-and-config.md
   - name: "Learning catalog"
@@ -492,6 +496,40 @@
             href: ./canvas-apps/add-editable-tables.md
           - name: Working with gallery
             href: ./canvas-apps/show-images-text-gallery-sort-filter.md
+          - name: Modern control reference (preview)
+            items:
+            - name: Overview
+              href: ./canvas-apps/controls/modern-controls/overview-modern-controls.md
+            - name: List of modern controls and properties
+              href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
+            - name: Limitations of modern controls 
+              href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
+            - name: Badge
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
+            - name: Button
+              href: ./canvas-apps/controls/modern-controls/modern-control-button.md
+            - name: Checkbox
+              href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md  
+            - name: Date picker
+              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
+            - name: Dropdown
+              href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
+            - name: Info button
+              href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
+            - name: Link
+              href: ./canvas-apps/controls/modern-controls/modern-control-link.md
+            - name: Progress bar
+              href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
+            - name: Radio group
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
+            - name: Spinner
+              href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
+            - name: Tabs or tab list
+              href: ./canvas-apps/controls/modern-controls/modern-control-tabs-or-tabs-list.md
+            - name: Text
+              href: ./canvas-apps/controls/modern-controls/modern-control-text.md
+            - name: Text input
+              href: ./canvas-apps/controls/modern-controls/modern-control-text-input.md
           - name: Control reference
             items:
             - name: List of controls and properties
@@ -1727,7 +1765,7 @@
         href: ../mobile/setup-mobile-offline.md 
       - name: Enable and use offline-first (preview)
         href: ../mobile/work-in-offline-mode.md 
-    - name: View offline sync status (preview)
+    - name: View offline sync status
       href: ../mobile/offline-sync-icon.md
     - name: Sync data in the background
       href: ../mobile/sync-data-offline-background.md
@@ -1957,61 +1995,61 @@
     - name: Administer portals from Power Platform admin center
       items:
         - name: Portals admin center overview
-          href: ./portals/admin/admin-overview.md
+          href: /power-pages/admin/admin-overview
         - name: Manage portals from admin center
-          href: ./portals/admin/power-platform-admin-center.md
+          href: /power-pages/admin/power-platform-admin-center
         - name: Roles required for portal administration
-          href: ./portals/admin/portal-admin-roles.md
+          href: /power-pages/admin/admin-roles
         - name: Configure portal details
-          href: ./portals/admin/portal-details.md
+          href: /power-pages/admin/admin-overview#site-details
         - name: Configure portal actions
           items:
             - name: Download public key
-              href: ./portals/admin/get-public-key.md
+              href: /power-pages/admin/get-public-key
             - name: Diagnostics and error handling
-              href: ./portals/admin/view-portal-error-log.md
+              href: /power-pages/admin/view-portal-error-log
             - name: Reset or delete a portal
-              href: ./portals/admin/reset-portal.md
+              href: /power-pages/admin/delete-website
             - name: Change base URL
-              href: ./portals/admin/change-base-url.md
+              href: /power-pages/admin/change-base-url
             - name: Enable maintenance mode
-              href: ./portals/admin/enable-maintenance-mode.md
+              href: /power-pages/admin/enable-maintenance-mode
             - name: Add custom domain name
-              href: ./portals/admin/add-custom-domain.md
+              href: /power-pages/admin/add-custom-domain
             - name: Import metadata translation
-              href: ./portals/admin/import-metadata-translation.md
+              href: /power-pages/admin/import-metadata-translation
             - name: Set up Power BI integration
-              href: ./portals/admin/set-up-power-bi-integration.md
+              href: /power-pages/admin/set-up-power-bi-integration
         - name: Manage SSL certificates
-          href: ./portals/admin/manage-ssl-certificates.md              
+          href: /power-pages/admin/add-custom-domain             
         - name: Manage custom certificates
-          href: ./portals/admin/manage-custom-certificates.md  
+          href: /power-pages/admin/manage-custom-certificates 
         - name: Content Delivery Network
-          href: ./portals/configure/configure-cdn.md            
+          href: /power-pages/configure/configure-cdn            
         - name: Use Portal Checker
           items:
             - name: Run Portal Checker
-              href: ./portals/admin/portal-checker.md             
+              href: /power-pages/admin/site-checker             
             - name: Analyze and resolve results
               items:
                 - name: Cache invalidation issues
-                  href: ./portals/admin/portal-checker-cache-invalidation.md
+                  href: /power-pages/admin/site-checker-cache-invalidation
                 - name: Configuration issues
-                  href: ./portals/admin/portal-checker-configuration-issues.md
+                  href: /power-pages/admin/site-checker-configuration-issues
                 - name: Performance issues
-                  href: ./portals/admin/portal-checker-performance.md
+                  href: /power-pages/admin/site-checker-performance
                 - name: Portal start-up issues
-                  href: ./portals/admin/portal-checker-startup-issue.md
+                  href: /power-pages/admin/site-checker-startup-issue
                 - name: Provisioning issues
-                  href: ./portals/admin/portal-checker-provisioning-issues.md
+                  href: /power-pages/admin/site-checker-provisioning-issues
         - name: Manage portal authentication key
-          href: ./portals/admin/manage-auth-key.md
+          href: /power-pages/admin/manage-auth-key
         - name: Restrict IP addresses
-          href: ./portals/admin/ip-address-restrict.md
+          href: /power-pages/admin/ip-address-restrict
         - name: Update to Power Apps portals domain
           href: ./portals/admin/update-portal-domain.md
         - name: View capacity consumption reports
-          href: ./portals/admin/portal-consumption-reports.md
+          href: /power-pages/admin/website-consumption-reports?tabs=PPS
     - name: Configure security in portals
       items:
         - name: Portal authentication
@@ -2025,7 +2063,7 @@
                     - name: Configure (using interface in preview)
                       href: ./portals/configure/configure-azure-ad-b2c-provider.md
                     - name: Configure manually
-                      href: ./portals/configure/configure-azure-ad-b2c-provider-manual.md
+                      href: /power-pages/security/authentication/azure-ad-b2c-provider
                     - name: Customize the Azure AD B2C user interface
                       href: ./portals/configure/azure-ad-b2c.md
               - name: OAuth 2.0
@@ -2039,7 +2077,7 @@
                     - name: Facebook
                       href: ./portals/configure/configure-oauth2-facebook.md
                     - name: Google
-                      href: ./portals/configure/configure-oauth2-google.md
+                      href: /power-pages/security/authentication/oauth2-google
                     - name: Twitter
                       href: ./portals/configure/configure-oauth2-twitter.md
                     - name: Additional settings
@@ -2075,7 +2113,7 @@
               - name: Migrate to Azure AD B2C
                 href: ./portals/configure/migrate-identity-providers.md
               - name: OAuth 2.0 implicit grant flow
-                href: ./portals/oauth-implicit-grant-flow.md
+                href: /power-pages/security/oauth-implicit-grant-flow
         - name: User management in portals
           items:
             - name: Configure contacts
@@ -2090,8 +2128,6 @@
               href: ./portals/configure/assign-entity-permissions.md
             - name: Configure table permissions using portals Studio
               href: ./portals/configure/entity-permissions-studio.md
-            - name: "Tutorial: Configure table permissions using portals Studio"
-              href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Configure column permissions
               href: ./portals/configure/column-permissions.md              
             - name: Manage page permissions
@@ -2117,15 +2153,15 @@
     - name: Configure document storage in portals
       items:
         - name: Configure notes
-          href: ./portals/configure-notes.md
+          href: /power-pages/configure/configure-notes
         - name: Azure storage
           items:
             - name: Enable Azure storage
-              href: ./portals/enable-azure-storage.md
+              href: /power-pages/configure/enable-azure-storage
             - name: Add the Azure Storage web resource to a form
-              href: ./portals/add-web-resource.md
+              href: /power-pages/configure/add-web-resource
         - name: Manage SharePoint documents
-          href: ./portals/manage-sharepoint-documents.md
+          href: /power-pages/configure/manage-sharepoint-documents
     - name: Integrate Power BI with portals
       items:
         - name: Set up Power BI integration
@@ -2632,6 +2668,8 @@
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
+    - name: Use managed identities for Azure (preview)
+      href: ./data-platform/azure-synapse-link-msi.md        
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
     - name: Application Lifecycle Management
@@ -2659,7 +2697,7 @@
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+        href: ./data-platform/azure-synapse-link-choices-serverless.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory

@@ -2,7 +2,6 @@
 title: Add a report from outside Power Apps| Microsoft Docs
 description: Add a report from outside Power Apps
 author: mduelae
-manager: kvivek
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/07/2022
@@ -13,9 +12,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add a report from outside Power Apps
 

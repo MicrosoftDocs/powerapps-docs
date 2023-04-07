@@ -13,12 +13,8 @@ author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - sama-zaki
   - ProfessorKendrick
@@ -53,7 +49,7 @@ The table below describes how rows are handled in the lake against CUD events fo
 |Delete     |  If the row exists in the partition file, it's removed from the file.    | The row is added to the end of the partition file with `isDeleted column = True`.    |
 
 > [!NOTE]
-> For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a as a new row in the lake and the `isDeleted` column is set to **True**.
+> For Dataverse tables where **Append only** is enabled, deleting a row in the source will not delete or remove the row in the lake. Instead, the deleted row is appended as a new row in the lake and the `isDeleted` column is set to **True**.
 >
 > Dirty read (**ALLOW_INCONSISTENT_READS**) for serverless is enabled for append only mode. **ALLOW_INCONSISTENT_READS** means that user is able to read the files that can be constantly modified while the `SELECT` query is running. Results will be consistent and equivalent to reading a snapshot of the file. (It isn't equivalent to database snapshot isolation because of the different snapshot generation time.)
 >

@@ -2,7 +2,6 @@
 title: "Check your user access and permissions| MicrosoftDocs"
 description: How to check user access and security role.
 author: paulliew
-manager: tapanm-msft
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2023
@@ -13,9 +12,6 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Check your user access to a row
