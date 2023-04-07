@@ -4,7 +4,6 @@ description: "After you have tested your code components and want it to distribu
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: article

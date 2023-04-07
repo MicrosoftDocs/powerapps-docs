@@ -9,12 +9,8 @@ author: "phecke" # GitHub ID
 ms.service: powerapps
 ms.subservice: dataverse-developer
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Transition apps to Dataverse ServiceClient

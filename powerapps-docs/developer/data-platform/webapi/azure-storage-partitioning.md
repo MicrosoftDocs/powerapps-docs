@@ -8,9 +8,6 @@ author: Peakerbl # GitHub ID
 ms.author: peakerbl # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Access entity data faster using storage partitions
 

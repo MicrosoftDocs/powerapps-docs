@@ -7,14 +7,11 @@ ms.date: 04/07/2023
 ms.service: powerapps
 ms.subservice: end-user
 ms.author: sericks
-manager: tapanm-MSFT
 ms.custom: bap-template
 ms.reviewer:
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 contributors:
   - HemantGaur
 

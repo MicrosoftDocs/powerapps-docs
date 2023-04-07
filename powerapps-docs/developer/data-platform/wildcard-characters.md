@@ -7,12 +7,8 @@ ms.topic: "article"
 author: "mayadumesh" # GitHub ID Temp owner
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use wildcard characters in conditions for string values
 

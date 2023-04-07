@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: ritesp # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use multi-tenant server-to-server authentication
 

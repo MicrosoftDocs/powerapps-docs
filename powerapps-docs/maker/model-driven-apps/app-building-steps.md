@@ -5,7 +5,6 @@ keywords: App designer; site map designer; my apps
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 10/26/2021
 
 ms.topic: article
@@ -14,8 +13,6 @@ applies_to:
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 
 ---
 

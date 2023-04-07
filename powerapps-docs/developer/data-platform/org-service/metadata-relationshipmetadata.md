@@ -4,14 +4,10 @@ description: "Shows code samples to create and retrieve table row relationships.
 ms.date: 04/03/2022
 author: NHelgren
 ms.author: nhelgren
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

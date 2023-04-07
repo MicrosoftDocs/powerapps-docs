@@ -71,6 +71,12 @@
         "master": "master",
         "live": "master"
       }
+    },
+    {
+      "path_to_root": "msft-shared-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {

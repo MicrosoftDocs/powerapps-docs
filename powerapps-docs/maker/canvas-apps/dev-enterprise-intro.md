@@ -11,8 +11,6 @@ ms.date: 08/17/2022
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - KumarVivek

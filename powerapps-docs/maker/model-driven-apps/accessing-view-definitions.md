@@ -16,12 +16,8 @@ ms.assetid: 034c8bef-0d1c-4ef9-8da7-f81343c4553a
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Opening the view designer
 

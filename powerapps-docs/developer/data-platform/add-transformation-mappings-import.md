@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add transformation mappings for import
 
