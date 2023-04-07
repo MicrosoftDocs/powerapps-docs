@@ -116,5 +116,8 @@ Provide closed captions and/or transcript if the video content has color contras
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 * **AutoStart** should be false because it can be difficult for keyboard users to stop playback quickly.
 
+### Known issue
+- Microsoft Stream appears as a connection in the [connection consent dialog](https://learn.microsoft.com/power-apps/maker/canvas-apps/connections-list#connection-consent-dialog) although it is a control. The control will appear in the app regardless of what actions the end-user takes in the connection consent dialog. The Microsoft Stream control will only display video for end-users that have permissions to the content presented in the control. 
+
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
