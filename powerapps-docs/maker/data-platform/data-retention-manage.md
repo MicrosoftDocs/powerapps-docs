@@ -65,7 +65,7 @@ Use the Power Automate cloud flow template to generate and retrieve retained dat
 This restrictions are enforced by Dataverse for each environment:
 
 - Up to five users can query and retrieve retained data at the same time.
-- ‘Admin’ role or ‘global entity access’ role on table required to retrieve retained data <!-- Do you mean global read access to the Entity privilege? -->
+- Environment admin role or ‘global entity access’ role on table required to retrieve retained data <!-- Do you mean global read access to the Entity privilege? -->
 - Up to 30 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.

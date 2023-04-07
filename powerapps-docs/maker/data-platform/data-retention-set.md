@@ -23,11 +23,12 @@ This article explains how to setup a data retention policy for a Microsoft Datav
 
 The following prerequisites must be completed before you can set a table for long term data retention.
 
+<!-- Add this back upon GA
 ### Prerequisite 1: The environment must be a managed environment
 
-Only managed environments can use the long term data retention feature. More information: [Managed environments overview](/power-platform/admin/managed-environment-overview)
+Only managed environments can use the long term data retention feature. More information: [Managed environments overview](/power-platform/admin/managed-environment-overview)  -->
 
-### Prerequisite 2: Enable an environment for long term retention
+### Prerequisite 1: Enable an environment for long term retention
 
 Power Platform admins use the Power Platform admin center settings to enable or disable environments for data retention.
 
@@ -42,7 +43,7 @@ Power Platform admins use the Power Platform admin center settings to enable or 
 1. Scroll down, and select **Long term data retention in Dataverse**.
 1. Select **Save**.
 
-## Prerequisite 3: Enable a table for long term retention
+## Prerequisite 2: Enable a table for long term retention
 
 Makers can enable or disable data retention for any table. Before setting up a retention policy to retain historical cold data (non-active data) long term in a Dataverse long term storage, makers should enable retention for the parent root table.
 
@@ -61,7 +62,7 @@ The save process can take up to 15 minutes, as Dataverse enables this property f
 > [!NOTE]
 > The long term retention property is disabled if the environment isn't enabled for long term retention. More information: [Prerequisite 2: Enable an environment for long term retention](#prerequisite-2-enable-an-environment-for-long-term-retention)
 
-### Prerequisite 4: Create Dataverse views for policy criteria
+### Prerequisite 3: Create Dataverse views for policy criteria
 
 Dataverse views are used to determine which table rows are marked for retention using a long-term retention policy. Before setting up a data retention policy, you must set up a Dataverse view as the criteria for retention.
 

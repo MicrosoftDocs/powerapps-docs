@@ -18,6 +18,7 @@ Microsoft Dataverse provides a custom policy driven approach to enable operation
 > - This is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - For public preview, only non-production environments are allowed for previewing the long-term data retention feature.
+> - There's no additional Power Platform licensing requirement during this preview. When this feature becomes generally available, there will be a licensing requirement.
 
 ## Business application data lifecycle
 
