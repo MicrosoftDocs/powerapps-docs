@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - tahoon-ms
   - mduelae

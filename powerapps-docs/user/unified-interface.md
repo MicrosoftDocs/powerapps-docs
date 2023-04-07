@@ -2,7 +2,6 @@
 title: "Enhanced user experience with Unified Interface for model-driven apps | MicrosoftDocs"
 description: Overview of Unified Interface in Power Apps
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Enhanced user experience with Unified Interface for model-driven apps 
 

@@ -3,7 +3,6 @@ title: EntityMetadata in Microsoft Dataverse| Microsoft Docs
 description: Information about methods and properties for table definitions.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

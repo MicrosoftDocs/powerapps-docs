@@ -2,7 +2,6 @@
 title: Create a business rule in Microsoft Dataverse | Microsoft Docs
 description: Step-by-step instructions for how to create a business rule in Microsoft Dataverse.
 author: lancedMicrosoft
-manager: kvivek
 ms.component: cds
 ms.topic: how-to
 ms.date: 04/05/2022
@@ -11,9 +10,6 @@ ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a business rule for a table

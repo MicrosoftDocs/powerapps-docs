@@ -9,9 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Import or export data from Dataverse
 

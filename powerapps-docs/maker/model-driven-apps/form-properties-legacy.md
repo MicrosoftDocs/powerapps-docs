@@ -10,16 +10,12 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 06/27/2018
 
 ms.topic: conceptual
 ms.assetid: 4ed30bb7-dca1-4de8-80f3-842152ea921a
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Model-driven app form properties 

@@ -9,9 +9,6 @@ ms.reviewer: pehecke
 ms.topic: article
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

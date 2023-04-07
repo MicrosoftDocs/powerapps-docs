@@ -3,7 +3,6 @@ title: clearSelectedRecordIds | Microsoft Docs
 description: Clears the selected record ids list.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

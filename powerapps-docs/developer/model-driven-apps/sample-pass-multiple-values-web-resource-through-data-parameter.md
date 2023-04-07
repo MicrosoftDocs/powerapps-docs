@@ -9,9 +9,6 @@ ms.topic: sample
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Sample: Pass multiple values to a  web resource through the data parameter
 

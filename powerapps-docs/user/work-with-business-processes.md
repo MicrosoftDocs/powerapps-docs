@@ -2,7 +2,6 @@
 title: "Work with business processes in model-driven apps| MicrosoftDocs"
 description: Overview of business process 
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Work with business processes
 

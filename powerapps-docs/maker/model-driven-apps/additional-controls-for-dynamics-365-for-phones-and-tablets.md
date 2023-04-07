@@ -18,9 +18,6 @@ ms.subservice: mda-maker
 ms.author: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # List of controls available for model-driven apps
 

@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 3ecea4a7-0d18-4ccd-9609-3a62179e9e1b
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 0
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Specify read only grid properties

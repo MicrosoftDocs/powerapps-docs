@@ -16,12 +16,8 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use controls for model-driven app data visualizations
 
