@@ -72,46 +72,46 @@ With managed identities, access to your storage account is restricted to request
    :::column span="":::
       Korea
    :::column-end:::
-::row-end:::
-::row:::
-  :::column span="":::
-     Japan
-  :::column-end:::
-  :::column span="":::
-     India
-  :::column-end:::
-  :::column span="":::
-     France
-  :::column-end:::
-  :::column span="":::
-     Europe
-  :::column-end:::
-  :::column span="":::
-     Asia
-  :::column-end:::
-  :::column span="":::
-     Norway
-  :::column-end:::
-::row-end:::
-::row:::
-  :::column span="":::
-     Germany
-  :::column-end:::
-  :::column span="":::
-     Switzerland
-  :::column-end:::
-  :::column span="":::
-     Canada
-  :::column-end:::
-  :::column span="":::
-     Brazil
-  :::column-end:::
-  :::column span="":::
-     UAE
-  :::column-end:::
-  :::column span="":::
-     Singapore
-  :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Japan
+   :::column-end:::
+   :::column span="":::
+      India
+   :::column-end:::
+   :::column span="":::
+      France
+   :::column-end:::
+   :::column span="":::
+      Europe
+   :::column-end:::
+   :::column span="":::
+      Asia
+   :::column-end:::
+   :::column span="":::
+      Norway
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      Germany
+   :::column-end:::
+   :::column span="":::
+      Switzerland
+   :::column-end:::
+   :::column span="":::
+      Canada
+   :::column-end:::
+   :::column span="":::
+      Brazil
+   :::column-end:::
+   :::column span="":::
+      UAE
+   :::column-end:::
+   :::column span="":::
+      Singapore
+   :::column-end:::
 :::row-end:::
 
 ## Grant reader access to the enterprise policy via Azure
