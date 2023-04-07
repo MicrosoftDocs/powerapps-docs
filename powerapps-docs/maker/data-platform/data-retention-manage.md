@@ -47,7 +47,7 @@ There are a few ways you can view retained data.
 1. Play a model-driven app, and then open advanced find. 
 1. At the top of the advanced find pane, select **Change to retained data**.
    :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the advanced find pane.":::
-1. Select tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
+1. Select the tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
 ### View retained data using a flow
 
