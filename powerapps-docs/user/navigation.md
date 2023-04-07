@@ -2,7 +2,6 @@
 title: "Basic navigation in a model-driven app | MicrosoftDocs"
 description: This explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -13,9 +12,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 #  Basic navigation in a model-driven app 
 

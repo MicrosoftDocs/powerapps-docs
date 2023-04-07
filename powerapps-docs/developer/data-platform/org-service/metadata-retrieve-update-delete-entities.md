@@ -8,9 +8,6 @@ ms.reviewer: jdaly
 ms.topic: "article"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Retrieve, update, and delete tables

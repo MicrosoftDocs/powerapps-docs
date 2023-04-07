@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - lancedmicrosoft
@@ -77,10 +75,10 @@ Dataverse for processing (rather than processing locally within Power Apps).
 | Sum, Min, Max, Avg [5]                                          | Yes            | \-           | \-         | No               | \-       |
 | CountRows [6] [7], CountIf [5]                                  | Yes            | Yes          | Yes        | Yes              | Yes      |
 
-1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable.
+1.  Numeric with arithmetic expressions (for example, `Filter(table, field + 10 > 100)` ) aren't delegable. Language and TimeZone aren't delegable. Casting to a column to a number isn't supported. 
 
 2.  Doesn't support Trim[Ends] or Len. Does support other functions such as
-    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc.
+    Left, Mid, Right, Upper, Lower, Replace, Substitute, etc. Also, casting such as Text(column) isn't supported for delegation.
 
 3.  DateTime is delegable except for DateTime functions Now() and
     Today().

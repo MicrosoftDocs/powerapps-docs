@@ -13,15 +13,11 @@ author: "daemelia"
 ms.assetid:
 ms.subservice: dataverse-maker
 ms.author: kvivek
-manager: kvivek
 ms.reviewer: Mattp123
 ms.suite: 
 ms.tgt_pltfrm: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Autonumber columns
 

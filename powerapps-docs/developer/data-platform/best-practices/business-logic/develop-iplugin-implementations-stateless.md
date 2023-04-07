@@ -6,7 +6,6 @@ suite: powerapps
 documentationcenter: na
 author: jowells
 ms.reviewer: phecke
-manager: austinj
 editor: ''
 tags: ''
 
@@ -19,9 +18,6 @@ ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Develop IPlugin implementations as stateless
 

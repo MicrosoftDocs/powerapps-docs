@@ -16,14 +16,10 @@ ms.assetid: 477f9792-8207-49ef-8968-45274b5355a8
 caps.latest.revision: 19
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Links to topic not migrated"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Change model-driven app custom table icons
 

@@ -7,13 +7,9 @@ ms.reviewer: "matp"
 ms.topic: "how-to"
 ms.subservice: mda-maker
 ms.author: "aorth"
-manager: "kvivek"
 author: "adrianorth"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create or edit a Power BI embedded system dashboard
 

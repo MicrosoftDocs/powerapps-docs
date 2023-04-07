@@ -1,29 +1,25 @@
 ---
 title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
-author: sericks007
-manager: tapanm-MSFT
+author: fikaradz 
 
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/27/2023
 ms.subservice: end-user
-ms.author: sericks
+ms.author: fikaradz
 ms.custom: ""
-ms.reviewer: ""
+ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Collaborate with others in model-driven apps 
 
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
-
-### Multiplayer apps 
+### Multiplayer apps (preview)
+[This section is pre-release documentation and is subject to change.]
 
 When you're working on a record, you can also see other users who are working on the same record.
 
@@ -31,8 +27,6 @@ You can also select a user's picture to see their online status, send them an em
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
-
-
 
 ### View a user's status and picture
 
@@ -46,7 +40,7 @@ App users, such as the record owner, as well as the users appearing in grids and
 
 
 ### Share 
-You can now easily share records with your colleagues via the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
+You can now easily share records with your colleagues using the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
 
 > [!Note]
 > If you have the share privilege on a record and you email a record link to a colleague, the colleague will automatically get read access to the record.

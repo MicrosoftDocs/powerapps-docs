@@ -9,9 +9,6 @@ ms.author: paulliew # MSFT alias of Microsoft employees only
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

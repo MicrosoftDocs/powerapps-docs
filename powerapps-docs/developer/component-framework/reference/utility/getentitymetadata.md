@@ -3,7 +3,6 @@ title: getEntityMetadata (Component Framework) | Microsoft Docs
 description: Returns the table definitions for the specified table.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

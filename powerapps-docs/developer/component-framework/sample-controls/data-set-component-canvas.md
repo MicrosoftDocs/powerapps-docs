@@ -10,9 +10,6 @@ ms.topic: sample
 ms.subservice: pcf
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
