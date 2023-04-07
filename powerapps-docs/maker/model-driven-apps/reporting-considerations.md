@@ -15,13 +15,10 @@ caps.latest.revision: 11
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 tags: 
   - MigrationHO
 search.audienceType: 
   - customizer
-search.app: 
-  - D365CE
 ---
 # Model-driven app reporting capabilities and considerations
 

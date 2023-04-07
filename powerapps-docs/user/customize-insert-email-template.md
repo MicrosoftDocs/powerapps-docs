@@ -2,13 +2,9 @@
 title: How to enable the enhanced insert email template selection dialog in Power Apps
 description: Turn on the enhanced insert email template selection dialo template option in Power Apps.
 author: gandhamm
-manager: shujoshi
 ms.topic: conceptual
 ms.date: 07/01/2022
 ms.author: mgandham
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Configure the enhanced insert email template selection dialog

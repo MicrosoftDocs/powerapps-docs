@@ -13,8 +13,6 @@ ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - yogeshgupta698

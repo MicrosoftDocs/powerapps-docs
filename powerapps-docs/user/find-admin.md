@@ -2,7 +2,6 @@
 title: "Find your administrator or support person| MicrosoftDocs"
 description: how to find your admin
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Find your administrator or support person 

@@ -9,9 +9,6 @@ ms.author: jdaly # MSFT alias of Microsoft employees only
 ms.reviewer: pehecke
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Tutorial: Create an ASP.NET Core Blazor WebAssembly app using Microsoft Dataverse

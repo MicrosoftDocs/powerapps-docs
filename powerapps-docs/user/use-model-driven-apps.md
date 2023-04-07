@@ -7,15 +7,11 @@ ms.topic: overview
 ms.date: 11/16/2018
 ms.subservice: end-user
 ms.author: mkaur
-manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Use model-driven apps in Power Apps

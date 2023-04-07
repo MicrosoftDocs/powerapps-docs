@@ -3,7 +3,6 @@ title: Share a model-driven app using Power Apps | Microsoft Docs
 description: Learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
-manager: kvivek
 editor: ''
 tags: ''
 
@@ -15,9 +14,6 @@ ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Share a model-driven app using Power Apps

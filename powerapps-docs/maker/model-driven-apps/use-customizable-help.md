@@ -8,12 +8,9 @@ ms.topic: how-to
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 topic-status: Drafting
 search.audienceType: 
   - customizer
-search.app: 
-  - PowerApps
 ---
 
 # Enable and use customizable help

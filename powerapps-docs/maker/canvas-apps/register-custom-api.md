@@ -11,8 +11,6 @@ ms.date: 05/05/2017
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - lancedmicrosoft

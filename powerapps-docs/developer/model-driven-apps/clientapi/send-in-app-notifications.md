@@ -11,9 +11,6 @@ ms.author: aorth
 search.audienceType: 
   - maker
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - caburk
