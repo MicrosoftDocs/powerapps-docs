@@ -165,6 +165,10 @@ You can optionally preload your app to increase performance.
     > 
     > In general, apps should retrieve media and information from data sources, through connections. If media and information must be added to the app, without coming from a connection, and it is considered sensitive you may want to disable this setting. Note, disabling this setting will result in users waiting a bit longer to access an app.
 
+## App data stored on your device
+
+To allow users to retrieve app details faster when the app starts, certain data is locally stored on your device in the browser cache. Information that's stored includes app, environment, and connection details. This data will stay stored in the browser based on each browsers’ storage limits.. To clear stored data, see [instructions for each browser](/troubleshoot/power-platform/power-apps/troubleshooting-startup-issues).
+
 
 ## Next steps
 
