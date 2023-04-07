@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mkaur-msft
 ---

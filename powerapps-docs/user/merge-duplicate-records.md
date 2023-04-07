@@ -2,7 +2,6 @@
 title: "Merge duplicate records| MicrosoftDocs"
 description: How to merge duplicate records
 author: sericks
-manager: tapanm-msft
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
 - fafuxa-ms
 ---

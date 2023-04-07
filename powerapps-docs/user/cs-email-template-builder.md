@@ -2,20 +2,18 @@
 title: How to enable the enhanced email template in Power Apps
 description: Turn on the enhanced email template option in Power Apps.
 author: gandhamm
-manager: shujoshi
-ms.topic: conceptual
-ms.date: 07/01/2022
+ms.topic: how-to
+ms.date: 04/04/2023
 ms.author: mgandham
-search.app: 
-  - PowerApps
-  - D365CE
+ms.custom: bap-template
 ---
 # Configure the enhanced email template editor page
 
 You can configure the enhanced email template editing experience for apps across your organization. If you need to, you can turn off the enhanced email template page for a specific app. And then, the users of the app see the default email template editor page.
 
 > [!NOTE]
->  In Customer Service workspace and Customer Service Hub, the enhanced email template dialog is enabled by default as an early access feature. 
+> - You must have an active subscription to **Dynamics 365 Customer Service Enterprise** to use the enhanced email template editor.
+> - In Customer Service workspace and Customer Service Hub, the enhanced email template dialog is enabled by default as an early access feature. 
 
 ### Enable the enhanced email template editor
 

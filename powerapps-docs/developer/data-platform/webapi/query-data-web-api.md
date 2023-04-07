@@ -1,24 +1,18 @@
 ---
 title: "Query data using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
-ms.date: 10/18/2022
+ms.date: 03/27/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
   - bgribaudo
 ---
 
 # Query data using the Web API
-
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
 If you want to retrieve data for an entity set, use a `GET` request. When retrieving data, you can apply query options to set criteria for the entity (table) data you want and the entity properties (columns) that should be returned.  
     
@@ -425,7 +419,7 @@ For example:
 ### Filter results based on values of collection-valued navigation properties
 
 > [!NOTE]
-> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded records](retrieve-entity-using-web-api.md#bkmk_optionsOnExpand).
+> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. [Retrieve related table records with a query](retrieve-related-entities-query.md)
 
 The two options for filtering results based on values of collection-valued navigation properties are:
 

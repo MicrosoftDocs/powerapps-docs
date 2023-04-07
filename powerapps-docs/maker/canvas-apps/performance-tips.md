@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: yingchin
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - yingchin
   - mduelae

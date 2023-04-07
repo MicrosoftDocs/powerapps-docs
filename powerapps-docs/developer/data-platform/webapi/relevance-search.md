@@ -8,12 +8,8 @@ applies_to:
 author: mspilde
 ms.author: mspilde
 ms.reviewer: pehecke
-manager: mayadumesh
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Search across table data using Dataverse search

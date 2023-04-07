@@ -13,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Set up mobile offline (preview)

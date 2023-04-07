@@ -1,22 +1,17 @@
 ---
 title: "Web API Query Data sample (C#) (Microsoft Dataverse)| Microsoft Docs"
 description: "This sample demonstrates how to query data of Microsoft Dataverse entity instances, using the Dataverse Web API along with the WebApiService class."
-ms.date: 08/29/2022
+ms.date: 03/28/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
 
 # Web API Query Data sample (C#)
-
-[!INCLUDE[cc-terminology](../../includes/cc-terminology.md)]
 
 This .NET 6.0 sample demonstrates how to perform common data operations using the Dataverse Web API.
 
@@ -109,7 +104,8 @@ Operations:
 - `$expand` with partner property.
 - `$expand` with collection-valued navigation properties.
 - `$expand` with multiple navigation property types in a single request.
-- Multi-level `$expand`.
+- Nested `$expand`.
+- Nested `$expand` having both single-valued and collection-valued navigation properties.
 
 ### Section 7 Aggregate results
 

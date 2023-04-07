@@ -3,15 +3,11 @@ title: "Sample: Work with views (Microsoft Dataverse) | Microsoft Docs" # Intent
 description: "This sample shows how to work with views" # 115-145 characters including spaces. This abstract displays in the search result.
 author: caburk
 ms.author: caburk
-manager: evlew
 ms.date: 06/10/2022
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

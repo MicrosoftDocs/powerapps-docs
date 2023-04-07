@@ -11,12 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "troubleshooting"
 author: "aorth"
 ms.author: "mspilde"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Use Monitor to troubleshoot custom page behavior in a model-driven app
 

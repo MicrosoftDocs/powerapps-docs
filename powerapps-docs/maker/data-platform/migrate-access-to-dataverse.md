@@ -12,8 +12,6 @@ ms.subservice: dataverse-maker
 ms.author: nhelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
 ---
 # Migrate Microsoft Access data to Microsoft Dataverse

@@ -11,8 +11,6 @@ ms.author: tahoon
 ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - chmoncay
   - tahoon-ms
