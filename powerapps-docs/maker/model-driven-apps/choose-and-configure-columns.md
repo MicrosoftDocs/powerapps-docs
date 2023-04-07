@@ -56,6 +56,9 @@ search.app:
  For example, perhaps you want to display the owner of a user-owned table in a column. You can choose the **Owner** column of the current table to display the name of the owner. This will appear as a link to open the **User** row for the person who is the owner.  
   
  If you want to display the phone number for the owner of the row, you must select **Owning User (User)** from the **Row type** drop-down and then select the **Main Phone** column.  
+ 
+    > [!TIP]
+    > Only include the specific columns you need for the view, as larger numbers of columns in a view can cause degradation of grid performance. 
   
 ### Add columns to views  
   
