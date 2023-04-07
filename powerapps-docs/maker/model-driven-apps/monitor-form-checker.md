@@ -11,12 +11,9 @@ ms.topic: "troubleshooting"
 author: "mspilde"
 ms.subservice: troubleshoot
 ms.author: "mspilde"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Use Monitor to troubleshoot model-driven app form behavior
 

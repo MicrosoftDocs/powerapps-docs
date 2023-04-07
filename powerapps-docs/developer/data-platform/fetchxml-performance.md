@@ -2,7 +2,6 @@
 title: Improve FetchXML request performance | Microsoft Docs
 description: "Learn how developers can improve FetchXML request performance when using Microsoft Dataverse."
 author: NHelgren
-manager: annbe
 
 ms.topic: article
 ms.date: 06/08/2021
@@ -11,9 +10,6 @@ ms.author: nhelgren
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Improve FetchXML request performance

@@ -2,7 +2,6 @@
 title: Customize an email template using the enhanced template editor
 description: Create an email template using the enhanced email template editor
 author: gandhamm
-manager: shujoshi
 
 ms.topic: conceptual
 ms.date: 05/06/2022
@@ -10,9 +9,6 @@ ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Customize an email template using the template editor 

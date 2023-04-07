@@ -13,7 +13,6 @@ ms.assetid: 31bfcf18-58c3-491c-91b5-f9b0f5424852
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -21,9 +20,6 @@ caps.latest.revision: 25
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Choose and configure columns in model-driven app views
 

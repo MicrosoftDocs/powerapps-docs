@@ -3,7 +3,6 @@ title: Privileges required to view apps in Power Apps | Microsoft Docs
 description: Learn about the privileges required to view and access apps in Power Apps.
 documentationcenter: ''
 author: Mattp123
-manager: kvivek
 editor: ''
 tags: ''
 
@@ -14,9 +13,6 @@ ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Privileges required to view and access apps

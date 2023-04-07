@@ -9,12 +9,8 @@ author: "mayadumesh"
 ms.subservice: dataverse-developer
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "ryjones"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Work with table definitions using code

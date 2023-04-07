@@ -8,11 +8,8 @@ ms.topic: overview
 author: "mduelae"
 ms.subservice: common
 ms.author: "mkaur"
-manager: "kvivek"
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 
 # Maker matching using an integrated virtual agent in Power Apps (preview)

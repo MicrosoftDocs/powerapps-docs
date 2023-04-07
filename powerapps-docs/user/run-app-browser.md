@@ -8,15 +8,11 @@ ms.topic: quickstart
 ms.date: 02/10/2023
 ms.subservice: end-user
 ms.author: sericks
-manager: tapanm-MSFT
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Run an app in a web browser

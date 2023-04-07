@@ -16,12 +16,8 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Make model-driven app views editable using the editable grid control
 

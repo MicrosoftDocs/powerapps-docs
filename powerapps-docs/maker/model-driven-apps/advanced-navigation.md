@@ -5,7 +5,6 @@ keywords:
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""
@@ -20,9 +19,6 @@ applies_to:
 ms.assetid: 60281cab-23d5-4421-ae51-f7e6c1176729
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Navigate to advanced model-driven app making and customization areas

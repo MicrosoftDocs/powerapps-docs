@@ -10,8 +10,6 @@ ms.date: 04/04/2023
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mattp123
 ---

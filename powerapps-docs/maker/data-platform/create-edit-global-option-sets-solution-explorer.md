@@ -13,13 +13,9 @@ applies_to:
   - "PowerApps"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create and edit global choices for Microsoft Dataverse using solution explorer
 

@@ -8,11 +8,8 @@ ms.topic: overview
 author: "mkaur"
 ms.subservice: common
 ms.author: "mkaur"
-manager: "tapanm"
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - alaug

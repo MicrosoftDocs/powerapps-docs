@@ -15,15 +15,11 @@ applies_to:
 ms.assetid: aa6aca00-f95a-4f06-bec4-18b427b4618c
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 author: Mattp123
 caps.latest.revision: 17
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Design model-driven apps using the classic app designer

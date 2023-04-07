@@ -4,7 +4,6 @@ description: Learn about how to use business events to connect and integrate bus
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: conceptual
 ms.subservice: dataverse-developer
@@ -12,9 +11,6 @@ search.audienceType:
   - maker
   - developer
   - flowmaker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
