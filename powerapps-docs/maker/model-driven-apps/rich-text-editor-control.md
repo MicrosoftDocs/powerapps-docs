@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "craigm"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add the rich text editor control to a model-driven app
 

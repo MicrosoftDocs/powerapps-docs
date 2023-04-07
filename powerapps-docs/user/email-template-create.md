@@ -2,11 +2,10 @@
 title: "How to create an email template  in model-driven apps | MicrosoftDocs"
 description: Learn how to create an email template.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 07/01/2022
+ms.date: 04/01/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -14,17 +13,11 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create email templates
 
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
-
-> [!NOTE]
-> The enhanced email template editor option is enabled out of the box as an early access feature in  Dynamics 365 Customer Service. 
 
 You can create email templates by using one of the following options:  
 - **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
@@ -90,7 +83,7 @@ You can use either the enhanced email template editor or the legacy email templa
 
 ### Enhanced email template editor
  
-The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default as an early access feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
+The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 

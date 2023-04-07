@@ -2,7 +2,6 @@
 title: "Understand the email experience in model-driven apps | MicrosoftDocs"
 description: Understand the email experience
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Understand the email experience

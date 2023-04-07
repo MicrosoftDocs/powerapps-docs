@@ -6,14 +6,10 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 11/23/2022
 ms.topic: overview
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - shmcarth
 ---

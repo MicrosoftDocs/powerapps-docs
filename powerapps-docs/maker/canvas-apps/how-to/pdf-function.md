@@ -9,8 +9,6 @@ ms.topic: how-to
 ms.custom: canvas, bap-template
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
     - tashaev
     - mduelae  

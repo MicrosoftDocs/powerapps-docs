@@ -11,8 +11,6 @@ ms.author: fikaradz
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - chmoncay

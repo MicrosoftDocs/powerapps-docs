@@ -10,8 +10,6 @@ ms.date: 04/04/2023
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---

@@ -3,7 +3,6 @@ title: "ReactControl.destroy | MicrosoftDocs"
 description: This method is invoked in a ReactControl when the component is to be removed from the DOM tree. Use it for the cleanup and to release any memory that the component is using.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

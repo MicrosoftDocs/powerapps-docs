@@ -11,8 +11,6 @@ manager: tapanm
 ms.custom: bap-template
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 
 # Use the Learn hub

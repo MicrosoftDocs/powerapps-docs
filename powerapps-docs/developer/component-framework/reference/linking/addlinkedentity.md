@@ -3,7 +3,6 @@ title: addLinkedEntity | Microsoft Docs
 description: Adds a new linked table relationship with the existing query primary table.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

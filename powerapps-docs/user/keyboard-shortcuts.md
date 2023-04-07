@@ -2,7 +2,6 @@
 title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
 description: How to use keyboard shortcuts
 author: mduelae
-manager: kvivek
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 09/30/2021
@@ -13,9 +12,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 
 ---
 # Use keyboard shortcuts in Power Apps

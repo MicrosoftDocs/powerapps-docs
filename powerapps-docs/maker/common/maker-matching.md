@@ -11,8 +11,6 @@ manager: kvivek
 ms.custom: bap-template
 search.audienceType: 
   - maker, admin
-search.app: 
-  - PowerApps
 ---
 
 # Maker matching using an integrated virtual agent in Power Apps (preview)
