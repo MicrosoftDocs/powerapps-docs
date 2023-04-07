@@ -213,6 +213,8 @@ You can continue drilling further into the chart data. As you drill down deeper,
 
 - Chart drill-down functionality is not available on charts in a subgrid or an associated grid.
 
+- When you add a list control to a dashboard and switch the control to **Power Apps Read-Only grid** control, you will see a blank tile on the dashboard because **Power Apps Read-Only grid** control is not supported on dashboards. We recommend that you use **Power Apps grid** control.
+
 
 
 
