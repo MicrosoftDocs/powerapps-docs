@@ -77,6 +77,16 @@ While the Power Apps read-only grid control became the default grid experience i
 
 ## Known issues and limitations
 
+### Grid rendering performance
+In general, grid performance can be increased by limiting the numer of records fetched at once and limiting the number of columns in a view. 
+- If the page size is sufficiently large, the grid may take a long time to render. The current recommendation is to ensure the page size is not too large, ideally no more than 25 rows.   
+
+### UI limitations and differences 
+- The grid doesn't currently support any theme customizations
+- Cells with no data are blank instead of displaying three dashes **---**.
+- The owner column doesn't show online status and a people card for the user.
+- Reordering columns from the grid column headers is not supported. 
+
 ### Limitations with card form lists
 
 When a view or subgrid is narrow it changes into a card list format that is better for small screens, such as mobile devices. The Power Apps read-only grid control displays the following behavior in a card list:
@@ -98,12 +108,6 @@ To work around this, you can display a custom card by configuring the table to u
 
 1. Select **Configure property** (pencil icon) for the **Card Form** property, and select the custom card form from the drop-down list.
 1. Select **OK**, and then **Publish** the customization.
-
-### UI limitations and differences 
-- The grid doesn't currently support any theme customizations
-- Cells with no data are blank instead of displaying three dashes **---**.
-- The owner column doesn't show online status and a people card for the user.
-- Reordering columns from the grid column headers is not supported. 
 
 ### See also
 
