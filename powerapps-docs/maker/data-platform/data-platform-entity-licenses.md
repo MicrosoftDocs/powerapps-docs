@@ -10,9 +10,6 @@ ms.author: sriknair
 ms.reviewer: kvivek
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # License requirements for tables

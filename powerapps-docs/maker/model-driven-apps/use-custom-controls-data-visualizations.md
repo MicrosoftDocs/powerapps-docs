@@ -16,12 +16,8 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use controls for model-driven app data visualizations
 
@@ -50,12 +46,11 @@ You can set one type of custom control to appear in the web browser client while
  Following the steps in this procedure will change the default label and text box column  of the **Budget Amount** column to the slider custom control on the opportunity table. You can use similar steps to replace an existing column with a custom control or configure a custom control for a custom column.
 
 [!INCLUDE [cc-classic-interface-control-note](../../includes/cc-classic-interface-control-note.md)]
-> 
-> The opportunity table requires a Dynamics 365 app, such as Dynamics 365 Service.
+> <br /><br /> The opportunity table requires a Dynamics 365 app, such as Dynamics 365 Sales.
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2. Expand **Data**, select **Tables**, select the Opportunity table, and then select the **Forms** area.  
+2. Select **Tables** on the left navigation pane, select the **Opportunity** table, and then select the **Forms** area. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
   
 3. Open a form such as the **Main** form for the **Opportunity** table.
 
@@ -104,11 +99,11 @@ You can set one type of custom control to appear in the web browser client while
        > > [!div class="mx-imgBorder"] 
        > > ![Default control.](media/default-control.png "Default control")  
   
-8.  Select **OK**, to close the **Column Properties** page.  
+10.  Select **OK**, to close the **Column Properties** page.  
   
-9. To activate the customization, on the table form select **Save**, and then select **Publish**.  
+11. To activate the customization, on the table form select **Save**, and then select **Publish**.  
   
-10. Select **Save and Close** to close the form editor.  
+12. Select **Save and Close** to close the form editor.  
   
 ### See the custom control in action
 

@@ -7,18 +7,13 @@ ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
 
 # Execute batch operations using the Web API
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
-
-You can group multiple operations into a single HTTP request using a batch operation. These operations will be performed sequentially in the order they're specified.
+You can group multiple operations into a single HTTP request using a batch operation. These operations will be performed sequentially in the order they're specified. The order of the responses will match the order of the requests in the batch operation.
 
 The format to send `$batch` requests is defined in this section of the OData specification: [11.7 Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313). The content in this article summarizes the specification requirements and provides Dataverse specific information and examples.
   
@@ -1075,7 +1070,7 @@ More information:
 
 ### .NET HttpRequestMessage to HttpMessageContent example
 
-In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. <xref:System.Net.Http.HttpMessageContent> inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
+In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
 
 ```csharp
 /// <summary>

@@ -5,7 +5,6 @@ ms.date: 11/17/2022
 ms.topic: overview
 author: sericks007
 ms.author: sericks
-manager: tapanm-MSFT
 ms.reviewer: 
 ms.custom: 
 ms.collection: 

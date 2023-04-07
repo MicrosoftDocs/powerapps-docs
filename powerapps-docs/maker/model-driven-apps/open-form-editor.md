@@ -4,7 +4,6 @@ description: Understand the ways you can open the model-driven app form editor
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,14 +16,9 @@ ms.assetid: 8478a07a-c697-4784-874b-36958eb4f95d
 caps.latest.revision: 63
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Open the model-driven app form editor
 
 Model-driven app forms allow a user to update the data within columns, or fields, associated with a given table record.
@@ -39,7 +33,7 @@ If you create any new solution components in the process of editing the form, fo
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-2. Select **Data** > **Tables** > and then select the table you want, such as the account table. 
+2. Select **Tables** on the left navigation, and then select the table you want, such as the account table. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 3. Select the **Forms** area and then open the form you want, such as the **Account** main form.
 
@@ -67,7 +61,7 @@ If you create any new solution components in the process of editing the form, fo
 
 ## Access the form editor for an unmanaged solution  
   
-1.  Open [Solutions](advanced-navigation.md#solutions).  
+1.  Open [Solutions](advanced-navigation.md#solutions). [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)] 
   
 2.  Select the unmanaged solution you want to work with.  
   

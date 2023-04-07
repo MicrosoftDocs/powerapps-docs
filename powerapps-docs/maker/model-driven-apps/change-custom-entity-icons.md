@@ -16,14 +16,10 @@ ms.assetid: 477f9792-8207-49ef-8968-45274b5355a8
 caps.latest.revision: 19
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Links to topic not migrated"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Change model-driven app custom table icons
 
@@ -55,7 +51,7 @@ Each type of icon is stored as a web resource. Create a web resource first and t
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-1. Select **Solutions**, and then open the solution you want or create a new one. Then open the custom table from the solution. To use the default solution, expand **Data**, select **Tables**, and then open the table you want.
+1. Select **Solutions** on the left navigation pane, and open the solution you want or create a new one. Then open the custom table from the solution. To use the default solution, select **Tables** on the left navigation pane, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select **Properties**. In the right **Edit table** pane, expand **Advanced options**.
 
@@ -81,7 +77,7 @@ Once the updates have taken effect the changes can be reviewed by playing the ap
 
 ### Set the icons for a custom table (classic)
 
-1. From the Power Apps portal, select **Solutions**.
+1. From Power Apps , select **Solutions** on the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Open the unmanaged solution with the tables where icons need to be set.
 3. Select **Switch to classic** from within the solution command bar (you may need to select **...** first). This opens the solution in the classic solution explorer.
 
@@ -112,7 +108,7 @@ See the [Developer tools for Microsoft Dataverse](../../developer/data-platform/
 
 ## Next steps
 
-[Create a table](/powerapps/maker/model-driven-apps/data-platform-create-entity)<br />
+[Create a custom table](../data-platform/data-platform-create-entity.md)<br />
 [Edit a table](../data-platform/edit-entities.md)
 
 

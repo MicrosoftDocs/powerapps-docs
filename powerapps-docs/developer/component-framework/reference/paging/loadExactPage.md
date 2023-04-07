@@ -3,7 +3,6 @@ title: loadExactPage | Microsoft Docs
 description: Request the exact page of results to be loaded.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

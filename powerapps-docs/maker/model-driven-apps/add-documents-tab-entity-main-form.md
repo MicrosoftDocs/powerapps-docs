@@ -13,11 +13,8 @@ ms.assetid:
 caps.latest.revision: 
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 search.audienceType: 
   - customizer
-search.app: 
-  - D365CE
 ---
 # Add or remove the SharePoint documents tab to the main form for any table
 

@@ -9,8 +9,6 @@ ms.date: 11/16/2022
 ms.author: tashas
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
     - tashaev
     - mduelae  

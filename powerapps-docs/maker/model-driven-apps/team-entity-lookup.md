@@ -4,7 +4,6 @@ description: "Learn how to add the team table as a lookup option in your app"
 ms.custom: ""
 ms.date: 07/24/2019
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,18 +16,11 @@ ms.assetid:
 caps.latest.revision: 25
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add a table as a lookup option in your app
 
-
-
-## Lookup functionality
 With model-driven apps, for a table to be available in a lookup it must be added to the app. For example, contact records have the ability to be assigned to a user or a team.  Both of these tables have a relationship with the contacts table.
 
 > [!div class="mx-imgBorder"] 
@@ -43,7 +35,7 @@ This can be resolved by adding the **Team** table to the app using the [App Desi
 
 ## Add a related table to an app to enable the lookup
 
-1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions**.
+1. Go to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the solution you want, and then select the model-driven app. This opens the app in the app designer.
 1. Select the **Components** tab, select **Entities** (tables), and then select **Team**.
 
@@ -52,7 +44,8 @@ This can be resolved by adding the **Team** table to the app using the [App Desi
 
 1. Select **Save**, and then select **Publish** to make the change available to app users within the organization.
 
-## Next Steps
+## Next steps
+
 [Share a model driven app](share-model-driven-app.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
