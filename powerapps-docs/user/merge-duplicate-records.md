@@ -6,7 +6,7 @@ manager: tapanm-msft
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/17/2023
+ms.date: 04/07/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -49,7 +49,7 @@ Dataverse includes duplicate detection rules for accounts and contacts. These ru
 >  If available on your system, you may also be able to check for duplicates of other row types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
 
 > [!NOTE]
->  To modify the columns that are visible for the current record in the Duplicate Detection dialog, administrators can modify the **Advanced Find View** for that entity. 
+>  To modify the columns that are visible for the current record in the duplicate detection dialog, administrators can modify the **Advanced Find View** for that entity. 
   
 ### How to merge duplicate rows
 > [!NOTE]
