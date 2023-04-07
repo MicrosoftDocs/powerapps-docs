@@ -10,8 +10,6 @@ ms.date: 03/07/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz

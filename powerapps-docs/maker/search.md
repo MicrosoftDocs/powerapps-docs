@@ -8,8 +8,6 @@ ms.date: 02/24/2021
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mattp123
 ---

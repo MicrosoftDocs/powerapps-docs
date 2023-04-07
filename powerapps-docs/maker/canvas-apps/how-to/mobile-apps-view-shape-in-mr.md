@@ -6,8 +6,6 @@ author: joel-lindstrom
 ms.subservice: canvas-maker
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ms.topic: conceptual
 ms.custom: canvas
 ms.date: 11/22/2021

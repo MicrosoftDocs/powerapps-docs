@@ -2,7 +2,6 @@
 title: Create a custom table that has components with Power Apps | Microsoft Docs
 description: Topic with step-by-step instructions for creating and configuring a table to use with a Power Apps app.
 author: Mattp123
-manager: kvivek
 
 ms.component: cds
 ms.topic: tutorial
@@ -11,9 +10,6 @@ ms.subservice: dataverse-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a custom table that has components in Power Apps

@@ -4,14 +4,10 @@ description: "This sample shows how to write a Azure Service Bus Listener for a 
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: REST listener

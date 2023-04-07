@@ -5,7 +5,6 @@ documentationcenter: na
 
 author: caburke
 reviewer: Mattp123
-manager: kvivek
 
 ms.devlang: na
 ms.topic: overview
@@ -15,9 +14,6 @@ ms.subservice: mda-maker
 ms.author: caburk
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Model-driven sample apps

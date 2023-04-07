@@ -1,4 +1,4 @@
-﻿---
+---
 title: Express design
 description: Learn about using the express design features such as creating apps from an image or a Figma design.
 author: norliu
@@ -10,8 +10,6 @@ ms.author: norliu
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - norliu
   - mduelae

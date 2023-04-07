@@ -2,7 +2,6 @@
 title: "Collaborate with others in model-driven apps| MicrosoftDocs"
 description: Collaborate with others in model-driven apps
 author: fikaradz 
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,16 +13,13 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Collaborate with others in model-driven apps 
 
 Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
 
-
-### Multiplayer apps 
+### Multiplayer apps (preview)
+[This section is pre-release documentation and is subject to change.]
 
 > [!IMPORTANT]
 > This feature is rolling out gradually, slower than the standard, weekly deployments and will be enabled by default for all customers through April and May 2023. If you have enabled this capability before 2023 Release Wave 1, you may not see other users working on the same record intermittently. This will be addressed as part of the gradual rollout through April and May 2023.
@@ -34,8 +30,6 @@ You can also select a user's picture to see their online status, send them an em
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
-
-
 
 ### View a user's status and picture
 

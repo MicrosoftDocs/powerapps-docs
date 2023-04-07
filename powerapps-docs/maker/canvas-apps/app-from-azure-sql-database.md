@@ -13,8 +13,6 @@ ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---

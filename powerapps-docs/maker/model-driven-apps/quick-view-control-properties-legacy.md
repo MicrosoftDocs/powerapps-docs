@@ -9,16 +9,12 @@ applies_to:
   - "powerapps"
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 05/04/2020
 
 ms.topic: how-to
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Model-driven app quick view control properties
 
