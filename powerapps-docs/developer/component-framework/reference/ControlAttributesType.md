@@ -3,7 +3,6 @@ title: ControlAttributesType in Microsoft Dataverse| Microsoft Docs
 description: Enumeration of control attribute type.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

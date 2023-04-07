@@ -8,12 +8,8 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Define alternate keys using Power Apps
 

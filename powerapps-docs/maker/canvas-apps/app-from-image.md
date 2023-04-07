@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create a canvas app from an image 
 description: Learn about how to use your own designs saved in image formats and create canvas apps from them.
 author: norliu
@@ -10,8 +10,6 @@ ms.author: norliu
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - norliu
   - mduelae

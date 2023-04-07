@@ -15,15 +15,11 @@ ms.assetid: 99c795e0-9165-4112-85b1-6b5e1a4aa5ec
 caps.latest.revision: 33
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 tags: 
   - "Links to topic not migrated"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create and design model-driven app forms 
 

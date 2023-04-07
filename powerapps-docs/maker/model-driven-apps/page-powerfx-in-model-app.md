@@ -8,12 +8,8 @@ ms.subservice: mda-maker
 ms.topic: "article"
 author: "aorth"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Use Power Fx in a custom page for your model-driven app
 

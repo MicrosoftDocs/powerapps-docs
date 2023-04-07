@@ -2,7 +2,6 @@
 title: "Add a connection role to link records to each other| MicrosoftDocs"
 description: How to add a connection role linked to records
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Add a connection role to link rows to each other
 

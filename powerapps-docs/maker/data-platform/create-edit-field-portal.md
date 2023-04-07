@@ -7,13 +7,9 @@ ms.reviewer: ""
 ms.topic: "how-to"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 author: "Mattp123"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create and edit columns in Dataverse using Power Apps
 

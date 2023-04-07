@@ -3,7 +3,6 @@ title: PickFile | Microsoft Docs
 description: Opens a window to select files for the upload.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference
