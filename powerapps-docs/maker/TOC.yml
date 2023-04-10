@@ -2422,8 +2422,8 @@
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using solution explorer
-        href: ./data-platform/create-edit-entities-solution-explorer.md
+      - name: Automatically add columns to forms and views
+        href: ./data-platform/update-forms-and-views.md
       - name: How to open table data in Excel
         href: ./data-platform/data-platform-excel-addin.md
       - name: How to define alternate keys
@@ -2442,6 +2442,8 @@
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
+      - name: How to create tables using solution explorer
+        href: ./data-platform/create-edit-entities-solution-explorer.md        
   - name: Work with table relationships
     href: ./data-platform/relationships-overview.md
     items:
