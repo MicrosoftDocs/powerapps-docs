@@ -163,6 +163,9 @@ Legend
 6. **Only my records**: Select to only show rows that you own.
 7. **Add new record**: Opens the quick create form where you can add a new row for the table. When you save the new row, the advanced lookup grid will refresh and show the newly added row.
 
+>[!WARNING] 
+>Advanced lookup is not available in offline scenarios. The Advanced lookup button is replaced by a *Change view* button when the user is offline.  
+
 
 ### Regarding advanced lookup
 
