@@ -114,7 +114,7 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     Any views that have linked tables (related table) that are not available offline are also not supported.
 
-- **Advanced lookups**: The [**Advanced lookup**](../user/lookup-field#advanced-lookup) functionality is not supported in offline scenarios. When you are offline, the Advanced lookup button is replaced by a "Change view" dropdown. 
+- **Advanced lookups**: The [**Advanced lookup**](../user/lookup-field#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
 
 - **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command will be hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command will not work in offline.
 
