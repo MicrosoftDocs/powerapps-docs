@@ -16,15 +16,14 @@ When you retrieve data with a query, you must make the following choices:
 
 |Query element|Description|
 |---------|---------|
-|Select Columns|Choose which columns of data to return.|
-|Join Tables|Choose which related tables to include in the results.|
-|Order rows|Choose the order the results are returned.|
-|Filter rows|Choose which rows of data to return.|
-|Page results|Choose how many rows of data to return.|
-|Aggregate data|Choose how to group and aggregate the data returned. |
+|[Select Columns](#select-columns)|Choose which columns of data to return.|
+|[Join Tables](#join-tables)|Choose which related tables to include in the results.|
+|[Order rows](#order-rows)|Choose the order the results are returned.|
+|[Filter rows](#filter-rows)|Choose which rows of data to return.|
+|[Page results](#page-results)|Choose how many rows of data to return.|
+|[Aggregate data](#aggregate-data)|Choose how to group and aggregate the data returned. |
 
 This article explains how to apply these choices when constructing a query to retrieve data using the Dataverse Web API.
-
 
 ## Entity Collections
 
@@ -84,24 +83,21 @@ If you want to retrieve data from the [account table](../reference/entities/acco
 GET [Organization URI]/api/data/v9.2/accounts
 ```
 
-
 ### Filtered collections
 
-You can also query any collection of entities represented by a collection-valued navigation property of a specified record.
+You can query any collection of entities represented by a collection-valued navigation property of a specified record.
 
-If you want to retrieve data from the [account table](../reference/entities/account.md), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser)
+If you want to retrieve data from the [account table](../reference/entities/account.md), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property.
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/user_accounts
 ```
 
+To locate the name of the collection-valued navigation property
 
+- For any Dataverse tables and relationships, you can check the <xref:Microsoft.Dynamics.CRM.EntityTypeIndex?displayProperty=fullName>
+- For any custom tables or relationships, look for the [Collection-valued navigation properties](web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](web-api-service-documents.md#csdl-metadata-document)
 
-More information:
-
-- [Service document](web-api-service-documents.md#service-document)
-- [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions)
-- [HTTP headers](compose-http-requests-handle-errors.md#http-headers)
 
 ## System Query options
 
