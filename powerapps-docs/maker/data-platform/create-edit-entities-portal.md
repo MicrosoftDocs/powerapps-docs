@@ -140,6 +140,10 @@ From the table hub, select **Edit** to open the table designer. The table design
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
 
+#### Update forms and views
+
+From the table hub, select **Update forms and views** to add selected columns to forms and views in this table without having to edit them in the form and view designers. More information: [Update forms and views using table designer](update-forms-and-views.md)
+
 ## Delete a table
 
 As someone with the system administrator security role, you can delete custom tables that aren’t part of a managed solution.  
