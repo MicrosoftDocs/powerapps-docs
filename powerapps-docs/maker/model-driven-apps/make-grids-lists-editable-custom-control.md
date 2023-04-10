@@ -152,7 +152,7 @@ Grouping behavior works only on the client side and does not span pages. Group b
 
 ### Inline grid modifications are not persisted
 
-Changes made to the structure of the editable grid from within the grid, such as column resizing, colum reordering, grouping, filtering, sorting, will be reset the next time the user visits the page. These types of changes are not saved across sessions or within views.  
+Changes made to the structure of the editable grid from within the grid, such as column resizing, colum reordering, grouping, filtering, and sorting, will be reset the next time the user visits the page. These types of changes are not saved across sessions or within views.  
 
 ### Business rules work only if conditional column is a column on the grid
 
