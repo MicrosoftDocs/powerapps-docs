@@ -6,9 +6,8 @@ author: mduelae
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 04/10/2023
-ms.subservice: how-to
+ms.topic: how-to
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
