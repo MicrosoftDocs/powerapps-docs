@@ -10,7 +10,6 @@ ms.assetid:
 author: Mattp123
 ms.subservice: dataverse-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -18,9 +17,6 @@ caps.latest.revision:
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Solution view

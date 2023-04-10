@@ -2,7 +2,6 @@
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View, compose and respond to email

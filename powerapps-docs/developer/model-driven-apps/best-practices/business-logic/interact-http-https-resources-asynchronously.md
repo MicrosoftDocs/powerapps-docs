@@ -12,9 +12,6 @@ ms.subservice: mda-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Interact with HTTP and HTTPS resources asynchronously
 

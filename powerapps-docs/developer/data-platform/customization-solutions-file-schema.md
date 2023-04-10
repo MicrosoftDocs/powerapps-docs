@@ -15,12 +15,8 @@ caps.latest.revision: 19
 author: "shmcarth" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly"
-manager: "ryjones"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Customization solutions file schema

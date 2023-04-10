@@ -8,9 +8,6 @@ ms.date: 04/01/2022
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Model-driven apps Developer Guide

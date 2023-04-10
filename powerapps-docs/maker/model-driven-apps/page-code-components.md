@@ -8,12 +8,8 @@ ms.reviewer: ""
 ms.topic: "article"
 author: "hemantg"
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # Add code components to a custom page for your model-driven app

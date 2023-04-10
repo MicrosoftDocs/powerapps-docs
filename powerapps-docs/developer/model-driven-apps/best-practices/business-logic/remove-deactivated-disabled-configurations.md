@@ -10,9 +10,6 @@ ms.subservice: mda-developer
 ms.author: shmcarth
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Remove deactivated or disabled customizations
 

@@ -2,7 +2,6 @@
 title: "Assign a row to someone else| MicrosoftDocs"
 description: How to reassign a row to someone else.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Assign or share a row 
 

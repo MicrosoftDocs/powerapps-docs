@@ -3,7 +3,6 @@ title: "Developers: Get started with Microsoft Dataverse | Microsoft Docs"
 description: Learn about some available methods that developers can use to access business data, customize business logic, write applications, and access external systems.
 suite: powerapps
 author: JimDaly
-manager: kvivek
 ms.date: 04/03/2022
 ms.subservice: dataverse-developer
 ms.author: jdaly
@@ -11,9 +10,6 @@ ms.reviewer: pehecke
 ms.custom: intro-internal
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Developers: Get started with Microsoft Dataverse

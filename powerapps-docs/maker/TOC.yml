@@ -157,7 +157,7 @@
         href: ../user/add-powerbi-dashboards.md      
     - name: Collaboration
       items:
-      - name: Collaborate with others
+      - name: Collaborate with others (preview)
         href: ../user/collaboration.md
       - name: Use OneDrive for Business
         href: ../user/one-drive.md
@@ -2670,6 +2670,8 @@
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
+    - name: Use managed identities for Azure (preview)
+      href: ./data-platform/azure-synapse-link-msi.md        
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
     - name: Application Lifecycle Management
@@ -2697,7 +2699,7 @@
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+        href: ./data-platform/azure-synapse-link-choices-serverless.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory

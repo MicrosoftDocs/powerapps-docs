@@ -10,12 +10,8 @@ author: "Mattp123"
 ms.assetid: b4098c96-bce1-4f57-804f-8694e6254e81
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Add reporting features to your model-driven app
 

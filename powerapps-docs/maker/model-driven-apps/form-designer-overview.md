@@ -15,14 +15,10 @@ applies_to:
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Overview of the model-driven form designer
 The new model-driven form designer provides a modern WYSIWYG authoring experience when you work with model-driven forms. It includes several improvements not available in the classic model-driven form designer. 
