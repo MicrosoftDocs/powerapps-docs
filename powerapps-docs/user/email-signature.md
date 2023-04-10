@@ -49,7 +49,7 @@ You can add a new email signature by:
    2. **Signature editor**. This allows you to create your email signature and **Save** when finished. 
 
       > [!Note] 
-      > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size. However, the inline image might not render properly if you open an email in the Outlook Desktop app.
+      > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size. However, the inline image might not render properly if you open the email in the Outlook Desktop app.
       > -  You can add only those fields as dynamic placeholders that are linked to the **Record type** user.
       > - Signatures can also be created and used for queues.
       
