@@ -30,7 +30,7 @@ This article explains how to apply these choices when constructing a query to re
 Every query begins with a collection of entities. Entity collections can be either:
 
 - [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
-- [Filtered collections](#filtered-collections): A the set of entities returned by a collection-valued navigation property for a specific record.
+- [Filtered collections](#filtered-collections): A set of entities returned by a collection-valued navigation property for a specific record.
 
 ### EntitySet resources
 
@@ -176,9 +176,9 @@ Formatted values are string values generated on the server that you can use in y
 - Currency values with currency symbols.
 - Formatted date values in the user's time zone
 
-To include formatted values in your results, use the `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"` request header. This is one of several annotations you can request Use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Annotations](#annotations)
+To include formatted values in your results, use the `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"` request header. This is one of several annotations you can request. Use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](#request-annotations)
 
-The formatted value will be returned with the record with an annotation that follows this convention: `<property name>@OData.Community.Display.V1.FormattedValue` as shown in the following example.
+The formatted value is returned with the record with an annotation that follows this convention: `<property name>@OData.Community.Display.V1.FormattedValue` as shown in the following example.
 
 **Request**
 
@@ -195,7 +195,8 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```http
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 {
     "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,revenue)",
@@ -219,8 +220,63 @@ OData-Version: 4.0
 }
 ```
 
+### Lookup property data
 
-### Annotations
+When a [lookup property](web-api-properties.md#lookup-properties) represents a multi-table (polymorphic) relationship, you need to request specific annotations to determine which table contains the related data.
+
+For example, many tables have records that can be owned by users or teams. This data is stored in a lookup column named `ownerid`. This column is represented by a single-valued navigation property in OData. You can't use `$select` to get this value, but you can use the corresponding `_ownerid_value` lookup property with `$select`.
+
+When you include the `_ownerid_value` lookup property with your `$select`, it will return a Guid value, but it will not tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
+
+To include these annotations in your results, use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"` request header. This is one of several annotations you can request. Or you can uses `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](#request-annotations)
+
+The following annotations are returned with the record with an annotation that follows this convention: `<lookup property name>@OData.Community.Display.V1.FormattedValue` as shown in the following example.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,_ownerid_value&$top=2
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
+
+{
+    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,_ownerid_value)",
+    "value": [
+        {
+            "@odata.etag": "W/\"81550512\"",
+            "name": "Adventure Works (sample)",
+            "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
+            "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "team",
+            "_ownerid_value": "39e0dbe4-131b-e111-ba7e-78e7d1620f5e",
+            "accountid": "1adef0b8-54d3-ed11-a7c7-000d3a993550"
+        },
+        {
+            "@odata.etag": "W/\"81359849\"",
+            "name": "Litware, Inc. (sample)",
+            "_ownerid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "ownerid",
+            "_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "systemuser",
+            "_ownerid_value": "4026be43-6b69-e111-8f65-78e7d1620f5e",
+            "accountid": "78914942-34cb-ed11-b596-0022481d68cd"
+        }
+    ]
+}
+```
+
+- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property.
+- `<lookup property name>@Microsoft.Dynamics.CRM.lookuplogicalname` is the logical name of the related table.
+
+### Request annotations
 
 In addition to properties, you can request different OData annotation data to be returned with the results using the `Prefer: odata.include-annotations` request header. You can choose to return all annotations, or specify specific annotations. The following table describes the annotations Dataverse Web API supports:
 
@@ -228,7 +284,7 @@ In addition to properties, you can request different OData annotation data to be
 |Annotation|Description|
 |---------|---------|
 |`OData.Community.Display.V1.FormattedValue`|See [Formatted values](#formatted-values)|
-|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|When a [lookup property](web-api-properties.md#lookup-properties) represents a polymorphic relationship, use this data to understand which table row is related.<br />`associatednavigationproperty` is the name of the corresponding single-valued navigation property.<br />`lookuplogicalname` is the logical name of the related table.|
+|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|See [Lookup property data](#lookup-property-data)|
 |`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Retrieve a count of rows](#retrieve-a-count-of-rows) |
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. This value will change when any schema change occurs. This is an indication that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide additional details when errors are returned. More information: [Include more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)|
@@ -239,6 +295,9 @@ In addition to properties, you can request different OData annotation data to be
 If you want only specific annotations, you can request them as comma separated values. You can also use the '`*`' character as a wildcard.  For example, `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"` will include only the formatted values and any additional error detail annotations.
 
 ## Join Tables
+
+Use the `$expand `system query option specify the related resources to be included in line with retrieved resources.
+
 
 ## Order rows
 

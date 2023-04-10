@@ -249,7 +249,7 @@ This response includes the following annotations:
 If you don't want to receive all annotations in the response, you can specify which specific annotations you want to have returned. Rather than using `Prefer: odata.include-annotations="*"`, you can use the following to receive only formatted values for operations that retrieve data and the helplink if an error occurs:
 `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.HelpLink"`.
 
-More information: [Annotations](query.md#annotations)
+More information: [Request annotations](query.md#request-annotations)
 
 ## Add a Shared Variable from the Web API
 
