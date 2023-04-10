@@ -9,7 +9,6 @@ search.audienceType:
   - developer
 contributors: 
   - JimDaly
-  - bgribaudo
 ---
 # Query data using the Web API (Microsoft Dataverse)
 
@@ -26,7 +25,17 @@ When you retrieve data with a query, you must make the following choices:
 
 This article explains how to apply these choices when constructing a query to retrieve data using the Dataverse Web API.
 
-Every query begins with an EntitySet resource. To find all the EntitySet resources available in your environment, send a `GET` request to the Web API endpoint url:
+
+## Entity Collections
+
+Every query begins with a collection of entities. Entity collections can be either:
+
+- [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
+- [Filtered collections](#filtered-collections): A the set of entities returned by a collection-valued navigation property for a specific record.
+
+### EntitySet resources
+
+To find all the EntitySet resources available in your environment, send a `GET` request to the Web API [Service document](web-api-service-documents.md#service-document):
 
 **Request**
 
@@ -34,7 +43,8 @@ Every query begins with an EntitySet resource. To find all the EntitySet resourc
 GET [Organization URI]/api/data/v9.2/
 Accept: application/json  
 OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+OData-Version: 4.0
+If-None-Match: null
 ```
 
 **Response**
@@ -62,13 +72,54 @@ OData-Version: 4.0
             "kind": "EntitySet",
             "url": "accounts"
         }
-      ...
+      ... <Truncated for brevity>
 ```
+
+> [!TIP]
+> These values are usually plural name of the table. But they can be different. Use this query to make sure you are using the correct EntitySet resource name.
+
+If you want to retrieve data from the [account table](../reference/entities/account.md), you start with the `accounts` EntitySet resource.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts
+```
+
+
+### Filtered collections
+
+You can also query any collection of entities represented by a collection-valued navigation property of a specified record.
+
+If you want to retrieve data from the [account table](../reference/entities/account.md), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser)
+
+```http
+GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/user_accounts
+```
+
+
 
 More information:
 
+- [Service document](web-api-service-documents.md#service-document)
 - [Web API URL and versions](compose-http-requests-handle-errors.md#web-api-url-and-versions)
 - [HTTP headers](compose-http-requests-handle-errors.md#http-headers)
+
+## System Query options
+
+Dataverse Web API supports the following system query options:
+
+
+|Option|Description|
+|---------|---------|
+|`$select`|Use this to request a specific set of properties for each entity or complex type.|
+|`$top`|Use this to specify the number of items in the queried collection to be included in the result. |
+|`$expand`|Use this to specify the related resources to be included in line with retrieved resources.|
+|`$filter `|Use this to filter a collection of resources that are addressed by a request URL. The expression specified with $filter is evaluated for each resource in the collection, and only items where the expression evaluates to true are included in the response. Resources for which the expression evaluates to false or to null, or which reference properties that are unavailable due to permissions, are omitted from the response.|
+|`$orderby`|Use this to request resources in a particular order.|
+|`$count`|Use this to request a count of the matching resources included with the resources in the response.|
+
+You can apply multiple options to a query. All query options must be separated from the resource path using '`?`'. After the first option, each option must be separated by '`&`'. The names of all options are case sensitive.
+
+The following OData system query options are not supported by Dataverse Web API: `$skip`,`$search`,`$format`.
 
 ## Select Columns
 
@@ -124,14 +175,14 @@ For the entity types included with Dataverse, see <xref:Microsoft.Dynamics.CRM.E
 
 Formatted values are string values generated on the server that you can use in your application. Formatted values include:
 
-- The localized labels for choice columns
-- The primary name value for lookup properties
-- Currency values with currency symbols
+- The localized labels for choice, choices, yes/no, status, and status reason columns
+- The primary name value for lookup and owner properties
+- Currency values with currency symbols.
 - Formatted date values in the user's time zone
 
-To include formatted values in your results, use the `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"` request header. This is one of several annotations you can request. More information: [Annotations](#annotations)
+To include formatted values in your results, use the `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"` request header. This is one of several annotations you can request Use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Annotations](#annotations)
 
-The formatted value will be returned with the record with an annotation that follows this convention: `<property name>@OData.Community.Display.V1.FormattedValue`.
+The formatted value will be returned with the record with an annotation that follows this convention: `<property name>@OData.Community.Display.V1.FormattedValue` as shown in the following example.
 
 **Request**
 
@@ -186,7 +237,8 @@ In addition to properties, you can request different OData annotation data to be
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. This value will change when any schema change occurs. This is an indication that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide additional details when errors are returned. More information: [Include more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)|
 
-It is common to use the `Prefer: odata.include-annotations="*"` request header to return all annotations.
+> [!TIP]
+> It is common to use the `Prefer: odata.include-annotations="*"` request header to return all annotations.
 
 If you want only specific annotations, you can request them as comma separated values. You can also use the '`*`' character as a wildcard.  For example, `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"` will include only the formatted values and any additional error detail annotations.
 
