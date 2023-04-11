@@ -17,7 +17,7 @@ search.audienceType:
 
 [This article is prerelease documentation and is subject to change.]
 
-Maker matching allows you to use an integrated chat bot in Power Apps to find internal maker resources and connect with experienced makers in your organization. The integrated virtual agent is available in all three Power Apps experiences.<!-- EDITOR'S NOTE: Please clarify, what are the three experiences? -->
+Maker matching allows you to use an integrated chat bot in Power Apps to find internal maker resources and connect with experienced makers in your organization. The integrated virtual agent is available in all three Power Apps personas:
 
 **Makers** can use the chat bot to get help from internal and public documentation and other experienced makers in the organization, known as advisors.
 
@@ -34,8 +34,7 @@ Maker matching allows you to use an integrated chat bot in Power Apps to find in
 
 1. Interact with the bot to find helpful resources based on the key terms and phrases you enter.
 
-    :::image type="content" source="media/skills-match/skills-match-2.png" alt-text="Screenshot of a maker conversation with a chat bot in Power Apps.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
-
+    :::image type="content" source="media/skills-match/skills-match-2.png" alt-text="Screenshot of a maker conversation with a chat bot in Power Apps.":::
 Chat bot interactions are broken into three stages:
 
 - Stage 1: Microsoft documentation
@@ -50,7 +49,7 @@ In the first stage of engagement, the virtual agent helps you find Microsoft doc
 
 In the following example, the user wants help with connecting data, specifically to help troubleshoot a data export error.
 
-:::image type="content" source="media/skills-match/skills-match-3.png" alt-text="Screenshot of the start of a bot conversation about exporting data.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+:::image type="content" source="media/skills-match/skills-match-3.png" alt-text="Screenshot of the start of a bot conversation about exporting data.":::
 
  In response to the user's answers to its prompts, the bot directs the user to an article about exporting data from Microsoft Dataverse.
 
@@ -60,7 +59,7 @@ In the following example, the user wants help with connecting data, specifically
 
 If you select **No** when the chat bot asks whether the Microsoft documentation solved your problem, then the second stage begins. In this stage, the bot suggests organizational resources that an [admin has previously identified](#add-internal-resources), like internal documentation, a Yammer community, and Microsoft Teams groups.
 
-:::image type="content" source="media/skills-match/skills-match-6.png" alt-text="Screenshot of a bot suggesting internal maker resources in a conversation with a user.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+:::image type="content" source="media/skills-match/skills-match-6.png" alt-text="Screenshot of a bot suggesting internal maker resources in a conversation with a user.":::
 
 ### Stage 3: Advisor engagement
 
@@ -124,7 +123,7 @@ By default, makers who are identified by the system and have opted in to the adv
 
 1. Select the **Advisors** tab.
 
-    :::image type="content" source="media/skills-match/skills-match-11.png" alt-text="Screenshot of the Advisors tab in the Power Platform admin center.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/skills-match/skills-match-11.png" alt-text="Screenshot of the Advisors tab in the Power Platform admin center.":::
 
 1. Add or remove an advisor:
 
