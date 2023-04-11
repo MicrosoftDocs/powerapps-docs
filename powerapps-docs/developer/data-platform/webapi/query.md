@@ -99,24 +99,24 @@ To locate the name of the collection-valued navigation property
 - For any custom tables or relationships, look for the [Collection-valued navigation properties](web-api-navigation-properties.md#collection-valued-navigation-properties) within the [$metadata service document](web-api-service-documents.md#csdl-metadata-document)
 
 
-## System Query options
+## OData query options
 
-Dataverse Web API supports the following system query options:
+Dataverse Web API supports the following OData query options:
 
 
-|Option|Description|
-|---------|---------|
-|`$select`|Use this to request a specific set of properties for each entity or complex type.|
-|`$top`|Use this to specify the number of items in the queried collection to be included in the result. |
-|`$expand`|Use this to specify the related resources to be included in line with retrieved resources.|
-|`$filter `|Use this to filter a collection of resources that are addressed by a request URL. The expression specified with $filter is evaluated for each resource in the collection, and only items where the expression evaluates to true are included in the response. Resources for which the expression evaluates to false or to null, or which reference properties that are unavailable due to permissions, are omitted from the response.|
-|`$orderby`|Use this to request resources in a particular order.|
-|`$count`|Use this to request a count of the matching resources included with the resources in the response.|
-|`$apply`|Use this to aggregate and group your data.|
+|Option|Description|More information|
+|---------|---------|---------|
+|`$select`|Use this to request a specific set of properties for each entity or complex type.|[Select Columns](#select-columns)|
+|`$top`|Use this to specify the number of items in the queried collection to be included in the result. Don't use this when you retrieving pages of data. |[Page results](#page-results) |
+|`$expand`|Use this to specify the related resources to be included in line with retrieved resources. |[Join Tables](#join-tables)|
+|`$filter `|Use this to filter a collection of resources that are addressed by a request URL. |[Filter rows](#filter-rows)|
+|`$orderby`|Use this to request resources in a particular order. |[Order rows](#order-rows)|
+|`$count`|Use this to request a count of the matching resources included with the resources in the response. |[Retrieve a count of rows](#retrieve-a-count-of-rows)|
+|`$apply`|Use this to aggregate and group your data. |[Aggregate data](#aggregate-data)|
 
 You can apply multiple options to a query. All query options must be separated from the resource path using '`?`'. After the first option, each option must be separated by '`&`'. The names of all options are case sensitive.
 
-The following OData system query options are not supported by Dataverse Web API: `$skip`,`$search`,`$format`.
+The following OData  query options are not supported by Dataverse Web API: `$skip`,`$search`,`$format`.
 
 ## Select Columns
 
@@ -391,7 +391,7 @@ These functions provide special capabilities as described in the following table
 
 |Group|Functions|
 |---------|---------|
-|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InFiscalYear>,<xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.Last7Days>,<br /><xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.LastFiscalYear>,<xref:Microsoft.Dynamics.CRM.LastMonth>,<xref:Microsoft.Dynamics.CRM.LastWeek>,<xref:Microsoft.Dynamics.CRM.LastXDay>,<xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<xref:Microsoft.Dynamics.CRM.LastXHours>,<xref:Microsoft.Dynamics.CRM.LastXMonths>,<xref:Microsoft.Dynamics.CRM.LastXWeeks>,<xref:Microsoft.Dynamics.CRM.LastXYears>,<xref:Microsoft.Dynamics.CRM.LastYear>,<xref:Microsoft.Dynamics.CRM.Next7Days>,<xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<xref:Microsoft.Dynamics.CRM.NextMonth>,<xref:Microsoft.Dynamics.CRM.NextWeek>,<xref:Microsoft.Dynamics.CRM.NextXDays>,<xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.NextXFiscalYears>,<xref:Microsoft.Dynamics.CRM.NextXHours>,<xref:Microsoft.Dynamics.CRM.NextXMonths>,<xref:Microsoft.Dynamics.CRM.NextXWeeks>,<xref:Microsoft.Dynamics.CRM.NextXYears>,<xref:Microsoft.Dynamics.CRM.NextYear>,<xref:Microsoft.Dynamics.CRM.OlderThanXDays>,<xref:Microsoft.Dynamics.CRM.OlderThanXHours>,<xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>,<xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>,<xref:Microsoft.Dynamics.CRM.OlderThanXYears>,<xref:Microsoft.Dynamics.CRM.On>,<xref:Microsoft.Dynamics.CRM.OnOrAfter>,<xref:Microsoft.Dynamics.CRM.OnOrBefore>,<xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.ThisFiscalYear>,<xref:Microsoft.Dynamics.CRM.ThisMonth>,<xref:Microsoft.Dynamics.CRM.ThisWeek>,<xref:Microsoft.Dynamics.CRM.ThisYear>,<xref:Microsoft.Dynamics.CRM.Today>,<xref:Microsoft.Dynamics.CRM.Tomorrow>,<xref:Microsoft.Dynamics.CRM.Yesterday>|
+|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InFiscalYear>,<xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.Last7Days>,<br /><xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.LastFiscalYear>,<xref:Microsoft.Dynamics.CRM.LastMonth>,<xref:Microsoft.Dynamics.CRM.LastWeek>,<xref:Microsoft.Dynamics.CRM.LastXDays>,<xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<xref:Microsoft.Dynamics.CRM.LastXHours>,<xref:Microsoft.Dynamics.CRM.LastXMonths>,<xref:Microsoft.Dynamics.CRM.LastXWeeks>,<xref:Microsoft.Dynamics.CRM.LastXYears>,<xref:Microsoft.Dynamics.CRM.LastYear>,<xref:Microsoft.Dynamics.CRM.Next7Days>,<xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<xref:Microsoft.Dynamics.CRM.NextMonth>,<xref:Microsoft.Dynamics.CRM.NextWeek>,<xref:Microsoft.Dynamics.CRM.NextXDays>,<xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.NextXFiscalYears>,<xref:Microsoft.Dynamics.CRM.NextXHours>,<xref:Microsoft.Dynamics.CRM.NextXMonths>,<xref:Microsoft.Dynamics.CRM.NextXWeeks>,<xref:Microsoft.Dynamics.CRM.NextXYears>,<xref:Microsoft.Dynamics.CRM.NextYear>,<xref:Microsoft.Dynamics.CRM.OlderThanXDays>,<xref:Microsoft.Dynamics.CRM.OlderThanXHours>,<xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>,<xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>,<xref:Microsoft.Dynamics.CRM.OlderThanXYears>,<xref:Microsoft.Dynamics.CRM.On>,<xref:Microsoft.Dynamics.CRM.OnOrAfter>,<xref:Microsoft.Dynamics.CRM.OnOrBefore>,<xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.ThisFiscalYear>,<xref:Microsoft.Dynamics.CRM.ThisMonth>,<xref:Microsoft.Dynamics.CRM.ThisWeek>,<xref:Microsoft.Dynamics.CRM.ThisYear>,<xref:Microsoft.Dynamics.CRM.Today>,<xref:Microsoft.Dynamics.CRM.Tomorrow>,<xref:Microsoft.Dynamics.CRM.Yesterday>|
 |**Id Values**|<xref:Microsoft.Dynamics.CRM.EqualBusinessId>,<xref:Microsoft.Dynamics.CRM.EqualUserId>,<xref:Microsoft.Dynamics.CRM.NotEqualBusinessId>,<xref:Microsoft.Dynamics.CRM.NotEqualUserId>|
 |**Hierarchy**|<xref:Microsoft.Dynamics.CRM.Above>,<xref:Microsoft.Dynamics.CRM.AboveOrEqual>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchy>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchyAndTeams>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserTeams>,<br /><xref:Microsoft.Dynamics.CRM.EqualUserTeams>,<xref:Microsoft.Dynamics.CRM.NotUnder>,<xref:Microsoft.Dynamics.CRM.Under>,<xref:Microsoft.Dynamics.CRM.UnderOrEqual><br />More information: [Query hierarchical data](../query-hierarchical-data.md)|
 |**Choices columns**|<xref:Microsoft.Dynamics.CRM.ContainValues>,<xref:Microsoft.Dynamics.CRM.DoesNotContainValues>|
@@ -425,5 +425,7 @@ These functions provide special capabilities as described in the following table
 ### Retrieve a count of rows
 
 ## Page results
+
+### $top
 
 ## Aggregate data
