@@ -15,9 +15,14 @@ search.app:
   - D365CE
 ---
 
-# Update forms and views using table designer
+# Update forms and views using table designer (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Create columns directly in the table hub or table designer, which will then be added to your forms and views. In this walkthrough, you'll learn how to simply add the columns you created to forms and views of this table without manually doing so in the form or view designer.
+
+> [!IMPORTANT]
+> This is a preview feature.
 
 ## Using table hub and table designer
 
