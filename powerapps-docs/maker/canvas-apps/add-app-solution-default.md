@@ -62,8 +62,8 @@ The following table summarizes the methods that allow you to create cloud flows 
 | Create a cloud flow from a legacy package import | No |
 
 > [!IMPORTANT]
-> Creating a cloud flow using a method that doesn't support creating cloud flows in a solution by default will fail. You must first create a cloud flow in a solution using a supported method.
-<!-- EDITOR'S NOTE: This wording is my attempt to make sense of the original statement. If my revision completely lost the intended meaning, please reword the original to be clearer. Thanks! -->
+> Unsupported entry points will fail to create any cloud flow until that support is added to create a solution cloud flow with that entry point. You must first create a cloud flow in a solution using a supported method.
+
 
 ## Enable the feature
 
