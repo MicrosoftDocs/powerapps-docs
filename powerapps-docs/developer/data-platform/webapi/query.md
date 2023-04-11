@@ -112,6 +112,7 @@ Dataverse Web API supports the following system query options:
 |`$filter `|Use this to filter a collection of resources that are addressed by a request URL. The expression specified with $filter is evaluated for each resource in the collection, and only items where the expression evaluates to true are included in the response. Resources for which the expression evaluates to false or to null, or which reference properties that are unavailable due to permissions, are omitted from the response.|
 |`$orderby`|Use this to request resources in a particular order.|
 |`$count`|Use this to request a count of the matching resources included with the resources in the response.|
+|`$apply`|Use this to aggregate and group your data.|
 
 You can apply multiple options to a query. All query options must be separated from the resource path using '`?`'. After the first option, each option must be separated by '`&`'. The names of all options are case sensitive.
 
@@ -230,7 +231,7 @@ When you include the `_ownerid_value` lookup property with your `$select`, it wi
 
 To include these annotations in your results, use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"` request header. This is one of several annotations you can request. Or you can uses `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](#request-annotations)
 
-The following annotations are returned with the record with an annotation that follows this convention: `<lookup property name>@OData.Community.Display.V1.FormattedValue` as shown in the following example.
+The following example shows two different account records. The first is owned by a team, the second by a user:
 
 **Request**
 
@@ -273,8 +274,9 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associated
 }
 ```
 
-- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property.
 - `<lookup property name>@Microsoft.Dynamics.CRM.lookuplogicalname` is the logical name of the related table.
+- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property.
+
 
 ### Request annotations
 
@@ -298,15 +300,130 @@ If you want only specific annotations, you can request them as comma separated v
 
 Use the `$expand `system query option specify the related resources to be included in line with retrieved resources.
 
+<!-- 
+
+This should mostly correspond to the existing retrieve-related-entities-query topic, recently re-written
+Look at other sections to see how much is necessary to explain.
+ -->
 
 ## Order rows
 
+Specify the order in which items are returned using the `$orderby` system query option. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the `name` and `revenue` properties of accounts ordered by ascending `revenue` and by descending `name`.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null
+```
+
+<!-- Not really much to say here -->
+
 ## Filter rows
 
+Use the `$filter` system query option to filter a collection of resources that are addressed by a request URL.
+
+Dataverse evaluates each resource in the collection using the expression set for `$filter`. Only records where the expression evaluates to `true` are returned in the response. Records are not returned if the expression evaluates to `false` or `null`, or if the user doesn't have read access to the record.
+
+To compose `$filter` expressions you can apply the following:
+
+
+| |Description| More information|
+|---------|---------|---------|
+|**Comparison operators**|Use the `eq`,`ne`,`gt`,`ge`,`lt`, and `le` operators to compare a property and a value.|[ Comparison operators](#comparison-operators)|
+|**Logical operators**|Use `and`, `or`, and `not` to create more complex expressions. |[Logical operators](#logical-operators)|
+|**Grouping operators**|Use parentheses: `(` & `)`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
+|**OData query functions**|Evaluate string values using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
+|**Dataverse query functions**|Use more than 60 specialized functions designed for business applications. |[Dataverse query functions](#dataverse-query-functions)|
+|**Lambda Expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
+
+
+### Comparison operators
+
+Use the following comparison operators to compare a property and a value.
+
+|Operator|Description|Example|  
+|--------------|-----------------|-------------|
+|`eq`|Equal|`$filter=revenue eq 100000`|  
+|`ne`|Not Equal|`$filter=revenue ne 100000`|  
+|`gt`|Greater than|`$filter=revenue gt 100000`|  
+|`ge`|Greater than or equal|`$filter=revenue ge 100000`|  
+|`lt`|Less than|`$filter=revenue lt 100000`|  
+|`le`|Less than or equal|`$filter=revenue le 100000`|  
+
+#### Column comparison
+
+You can use comparison operators to compare property values in the same row. For example, the following query will return any contacts where the `firstname` equals `lastname`.
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$filter=firstname eq lastname
+```
+
+> [!NOTE]
+> - Only comparison operators can be used to compare values in the same row.
+> - The types of columns must match.
+
+More information: [Use column comparison in queries](../column-comparison.md)
+
+### Logical operators
+
+Use the following logical operators to create more complex expressions:
+
+|Operator|Description|Example|  
+|--------------|-----------------|-------------|
+|`and`|Logical and|`$filter=revenue lt 100000 and revenue gt 2000`|  
+|`or`|Logical or|`$filter=contains(name,'(sample)') or contains(name,'test')`|  
+|`not`|Logical negation|`$filter=not contains(name,'sample')`|  
+
+### Grouping operators
+
+Use parentheses `(` & `)`, with logical operators to specify the precedence to evaluate a complex expression. For example:<br />
+`$filter=(contains(name,'sample') or contains(name,'test')) and revenue gt 5000`
+
+### Dataverse query functions
+
+Use more than 60 specialized functions designed for business applications. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> for the complete list.
+
+You must use the *fully qualified name* of these functions. This means you must append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
+
+Each function has a `PropertyName` parameter that specifies which property to be evaluated. The function may have additional parameters such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2` when you must supply a value to compare to the `PropertyName` parameter.
+
+These functions provide special capabilities as described in the following table:
+
+|Group|Functions|
+|---------|---------|
+|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InFiscalYear>,<xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.Last7Days>,<xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.LastFiscalYear>,<xref:Microsoft.Dynamics.CRM.LastMonth>,<xref:Microsoft.Dynamics.CRM.LastWeek>,<xref:Microsoft.Dynamics.CRM.LastXDay>,<xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<xref:Microsoft.Dynamics.CRM.LastXHours>,<xref:Microsoft.Dynamics.CRM.LastXMonths>,<xref:Microsoft.Dynamics.CRM.LastXWeeks>,<xref:Microsoft.Dynamics.CRM.LastXYears>,<xref:Microsoft.Dynamics.CRM.LastYear>,<xref:Microsoft.Dynamics.CRM.Next7Days>,<xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<xref:Microsoft.Dynamics.CRM.NextMonth>,<xref:Microsoft.Dynamics.CRM.NextWeek>,<xref:Microsoft.Dynamics.CRM.NextXDays>,<xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.NextXFiscalYears>,<xref:Microsoft.Dynamics.CRM.NextXHours>,<xref:Microsoft.Dynamics.CRM.NextXMonths>,<xref:Microsoft.Dynamics.CRM.NextXWeeks>,<xref:Microsoft.Dynamics.CRM.NextXYears>,<xref:Microsoft.Dynamics.CRM.NextYear>,<xref:Microsoft.Dynamics.CRM.OlderThanXDays>,<xref:Microsoft.Dynamics.CRM.OlderThanXHours>,<xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>,<xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>,<xref:Microsoft.Dynamics.CRM.OlderThanXYears>,<xref:Microsoft.Dynamics.CRM.On>,<xref:Microsoft.Dynamics.CRM.OnOrAfter>,<xref:Microsoft.Dynamics.CRM.OnOrBefore>,<xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.ThisFiscalYear>,<xref:Microsoft.Dynamics.CRM.ThisMonth>,<xref:Microsoft.Dynamics.CRM.ThisWeek>,<xref:Microsoft.Dynamics.CRM.ThisYear>,<xref:Microsoft.Dynamics.CRM.Today>,<xref:Microsoft.Dynamics.CRM.Tomorrow>,<xref:Microsoft.Dynamics.CRM.Yesterday>|
+|**Id Values**|<xref:Microsoft.Dynamics.CRM.EqualBusinessId>,<xref:Microsoft.Dynamics.CRM.EqualUserId>,<xref:Microsoft.Dynamics.CRM.NotEqualBusinessId>,<xref:Microsoft.Dynamics.CRM.NotEqualUserId>|
+|**Hierarchy**|<xref:Microsoft.Dynamics.CRM.Above>,<xref:Microsoft.Dynamics.CRM.AboveOrEqual>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchy>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchyAndTeams>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserTeams>,<xref:Microsoft.Dynamics.CRM.EqualUserTeams>,<xref:Microsoft.Dynamics.CRM.NotUnder>,<xref:Microsoft.Dynamics.CRM.Under>,<xref:Microsoft.Dynamics.CRM.UnderOrEqual><br />More information: [Query hierarchical data](../query-hierarchical-data.md)|
+|**Choices columns**|<xref:Microsoft.Dynamics.CRM.ContainValues>,<xref:Microsoft.Dynamics.CRM.DoesNotContainValues>|
+|**Between**|<xref:Microsoft.Dynamics.CRM.Between>,<xref:Microsoft.Dynamics.CRM.NotBetween>|
+|**In**|<xref:Microsoft.Dynamics.CRM.In>,<xref:Microsoft.Dynamics.CRM.NotIn>|
+|**Language**|<xref:Microsoft.Dynamics.CRM.EqualUserLanguage>|
+
+
+
+
+### Lambda Expressions
+
+### Filter using string values
+
+#### Use wildcard characters
+
+#### Use OData query functions
+
+
+
+#### Manage single quotes
+
+### Filter based on related data values
+
+#### Filter using lookup column property values
+
+#### Filter using values of related collections
+
+
+<!-- Where does this belong? -->
 ### Retrieve a count of rows
 
 ## Page results
-
-
 
 ## Aggregate data
