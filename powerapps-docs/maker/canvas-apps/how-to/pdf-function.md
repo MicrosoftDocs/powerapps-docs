@@ -46,7 +46,7 @@ In the following example, we use the PDF function in the `OnSelect` property of 
 
     In this example, we're targeting the screen `SubmitInspectionScreen` to generate a PDF file from the contents of our sample app's Inspection screen. Replace it with the name of a screen in your app.
 
-    :::image type="content" source="media/pdf/print-pdf-enter-formula-2.png" alt-text="Screenshot of adding the PDF function to a button's OnSelect property.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-enter-formula-2.png" alt-text="Screenshot of adding the PDF function to a button's OnSelect property.":::
 
 1. Select [**Save and publish**](../power-apps-studio.md#save).
 
@@ -64,13 +64,13 @@ You can use the generated PDF file in many ways. Here are a few, using the examp
 
 1. In the button's `OnSelect` property, enter the following formula, replacing `SubmitInspectionScreen` with the name of a screen in your app: `Set(myPDF, PDF(SubmitInspectionScreen));`
 
-    :::image type="content" source="media/pdf/print-pdf-button-prop-3.png" alt-text="Screenshot of setting the OnSelect property of a button in a canvas app.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-button-prop-3.png" alt-text="Screenshot of setting the OnSelect property of a button in a canvas app.":::
 
 1. Select **Insert** > **PDF viewer (experimental)**.
 
 1. From the [properties  list](../power-apps-studio.md#3--properties-list), select the **Document** property and then enter **myPDF** in the formula bar.
 
-    :::image type="content" source="media/pdf/print-pdf-document-prop-4.png" alt-text="Screenshot of setting the Document property of a button in a canvas app.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-document-prop-4.png" alt-text="Screenshot of setting the Document property of a button in a canvas app.":::
 
 1. Select [**Save and publish**](../power-apps-studio.md#save).
 
@@ -122,15 +122,15 @@ In this example, we generate a PDF file and pass it to a Power Automate flow tha
 
 1. To delete the default PowerApps trigger, select the trigger menu (**&hellip;**), and then select **Delete**.
 
-    :::image type="content" source="media/pdf/print-pdf-delete-flow-8.png" alt-text="Screenshot of deleting the default PowerApps trigger in the Power Automate flow.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-delete-flow-8.png" alt-text="Screenshot of deleting the default PowerApps trigger in the Power Automate flow.":::
 
 1. Search for and select **PowerApps (V2)**.
 
-    :::image type="content" source="media/pdf/print-pdf-select-trigger-9.png" alt-text="Screenshot of selecting the PowerApps (V2) trigger.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-select-trigger-9.png" alt-text="Screenshot of selecting the PowerApps (V2) trigger.":::
 
 1. Select the **PowerApps V2** trigger to expand the node, and then select **Add an input**.
 
-    :::image type="content" source="media/pdf/print-pdf-add-input-10.png" alt-text="Screenshot of adding an input to the PowerApps (V2) trigger node.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-add-input-10.png" alt-text="Screenshot of adding an input to the PowerApps (V2) trigger node.":::
 
 1. Select **File** as the type of user input.
 
@@ -138,13 +138,12 @@ In this example, we generate a PDF file and pass it to a Power Automate flow tha
 
 1. Rename the input **File Name** and change the description to **Please enter the name of the file**.
 
-    :::image type="content" source="media/pdf/print-pdf-add-input-12.png" alt-text="Screenshot of two user inputs in the PowerApps (V2) trigger node.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
-
+    :::image type="content" source="media/pdf/print-pdf-add-input-12.png" alt-text="Screenshot of two user inputs in the PowerApps (V2) trigger node.":::
 #### Add the SharePoint connector to the flow
 
 1. Select **New step** to add an action. Search for **SharePoint** and select **Create file**.
 
-    :::image type="content" source="media/pdf/print-pdf-create-file-13.png" alt-text="Screenshot of adding the SharePoint Create file connector to the flow.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-create-file-13.png" alt-text="Screenshot of adding the SharePoint Create file connector to the flow.":::
 
 1. In **Site Address**, select a SharePoint site that you have permission to add files to.
 
@@ -154,13 +153,13 @@ In this example, we generate a PDF file and pass it to a Power Automate flow tha
 
 1. Select the **File Content** input, and then select **File Content** in the list.
 
-    :::image type="content" source="media/pdf/print-pdf-create-file-14.png" alt-text="Screenshot of selecting a file to save using the SharePoint Create file connector.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
-
+    :::image type="content" source="media/pdf/print-pdf-create-file-14.png" alt-text="Screenshot of selecting a file to save using the SharePoint Create file connector.":::
+    
 1. Select **Save**, and then select the **x** in the upper-right corner to close the Power Automate window.
 
 1. The Power Automate pane refreshes, and the new PowerApps (V2) flow, **Create file**, appears in the list.
 
-    :::image type="content" source="media/pdf/print-pdf-flow-created-16.png" alt-text="Screenshot of the flow in the Power Automate list.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-flow-created-16.png" alt-text="Screenshot of the flow in the Power Automate list.":::
 
 #### Add the flow to a button in your app
 
@@ -178,7 +177,7 @@ In this example, we generate a PDF file and pass it to a Power Automate flow tha
     );  
     ```
 
-    :::image type="content" source="media/pdf/print-pdf-save-17.png" alt-text="Screenshot of the flow added to a button's OnSelect property.":::<!-- EDITOR'S NOTE: Please crop the screenshot IAW the new [screenshot guidelines](/bacx/screenshots-for-bap?branch=main).-->
+    :::image type="content" source="media/pdf/print-pdf-save-17.png" alt-text="Screenshot of the flow added to a button's OnSelect property.":::
 
 1. Select [**Save and publish**](../power-apps-studio.md#save).
 
