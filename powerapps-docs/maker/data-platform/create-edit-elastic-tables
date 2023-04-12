@@ -1,0 +1,43 @@
+---
+---
+# Create and edit elastic tables (Preview)
+
+An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API as makers and users love with Standard tables. They share many aspects and options with Standard tables, but they also come with their own specific features and capabilities.
+
+## When to consider Elastic tables?
+
+Elastic tables are designed to handle massive amounts of data in real-time, so you can:
+- Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates over 90M records/hour have been observed (+25k/s). 
+-	Store and analyze terabytes or petabytes of data without worrying about scalability, latency, or performance issues.
+
+## Elastic tables come with unique capabilities:
+-	Automatic removal of stale data: Time to Live (TTL) policies ensure that you are always working with the most up-to-date and accurate information, while optimizing resources and reducing risk. The TTL live value is set in seconds on a record, and it is interpreted as a delta from the time that a record was last modified.
+-	Flexible schema with JSON columns: Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. The JSON format is familiar to your web and mobile developers.
+  
+## Create an elastic table
+You create an elastic table just like any other new table in Dataverse, just select the Elastic option as Type under Advanced Options.
+1. Click **New table**.
+1. Expand **Advanced options**.
+1. Select **Elastic** as **Type**.
+
+## Considerations when you use elastic tables  
+
+Elastic tables do not provide the same level transaction support as Standard tables. This is relevant when you plan to use async operations as in Power Automate. More information: Transaction consistency. 
+Elastic tables do support most of the table options supported by Standard tables, such as Record ownership, Change tracking, Auditing, Mobile offline, Dataverse search and Long term data retention.
+Elastic tables currently do not support:
+-	Many-to-Many, N:N, relationships to Standard tables. 
+-	Many-to-One, N:1, relationships when the N table is a Standard table (Lookup).
+-	Custom alternate keys. More information: Work with alternate keys 
+-	Table options: Apply duplication detection rules.
+-	Row options:
+   o	Can have connections.
+   o	Can have access team.
+   o	Can be added to a queue.
+-	Column data types:
+	 Single line of text:
+     o	Choice
+     o	Currency
+     o	File
+     o	Formula
+-	Sublevel formats for Whole number
+-	Lookup based on the Customer option.
