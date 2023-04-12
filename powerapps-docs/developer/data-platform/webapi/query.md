@@ -1,5 +1,5 @@
 ---
-title: "Query data using the Web API (Microsoft Dataverse)"
+title: "Query data using the Web API"
 description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
 ms.date: 03/27/2023
 author: divkamath
@@ -10,18 +10,18 @@ search.audienceType:
 contributors: 
   - JimDaly
 ---
-# Query data using the Web API (Microsoft Dataverse)
+# Query data using the Web API
 
 When you retrieve data with a query, you must make the following choices:
 
-|Query element|Description|
+|Choice|Description|
 |---------|---------|
-|[Select Columns](#select-columns)|Choose which columns of data to return.|
-|[Join Tables](#join-tables)|Choose which related tables to include in the results.|
-|[Order rows](#order-rows)|Choose the order the results are returned.|
-|[Filter rows](#filter-rows)|Choose which rows of data to return.|
-|[Page results](#page-results)|Choose how many rows of data to return.|
-|[Aggregate data](#aggregate-data)|Choose how to group and aggregate the data returned. |
+|[Select Columns](#select-columns)|Which columns of data to return.|
+|[Join Tables](#join-tables)|Which related tables to include in the results.|
+|[Order rows](#order-rows)|What order to return the results.|
+|[Filter rows](#filter-rows)|Which rows of data to return.|
+|[Page results](#page-results)|How many rows of data to return.|
+|[Aggregate data](#aggregate-data)|How to group and aggregate the data returned.|
 
 This article explains how to apply these choices when constructing a query to retrieve data using the Dataverse Web API.
 
@@ -87,7 +87,7 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name
 
 You can query any collection of entities represented by a collection-valued navigation property of a specified record.
 
-If you want to retrieve data from the [account](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
+If you want to retrieve data from the [account EntityType](xref:Microsoft.Dynamics.CRM.account), where a specific user is the [OwningUser](../reference/entities/account.md#BKMK_OwningUser), you can use the `user_accounts` collection-valued navigation property from specified [systemuser](xref:Microsoft.Dynamics.CRM.systemuser) record.
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(<systemuserid value>)/user_accounts?$select=name
@@ -385,7 +385,7 @@ Use more than 60 specialized functions designed for business applications. These
 
 |Group|Functions|
 |---------|---------|
-|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.InFiscalYear>, <xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.Last7Days>,<br /><xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.LastFiscalYear>, <xref:Microsoft.Dynamics.CRM.LastMonth>, <xref:Microsoft.Dynamics.CRM.LastWeek>, <xref:Microsoft.Dynamics.CRM.LastXDays>, <xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>, <xref:Microsoft.Dynamics.CRM.LastXFiscalYears>, <xref:Microsoft.Dynamics.CRM.LastXHours>, <xref:Microsoft.Dynamics.CRM.LastXMonths>, <br /><xref:Microsoft.Dynamics.CRM.LastXWeeks>, <xref:Microsoft.Dynamics.CRM.LastXYears>, <xref:Microsoft.Dynamics.CRM.LastYear>, <xref:Microsoft.Dynamics.CRM.Next7Days>, <xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.NextFiscalYear>, <xref:Microsoft.Dynamics.CRM.NextMonth>, <xref:Microsoft.Dynamics.CRM.NextWeek>, <xref:Microsoft.Dynamics.CRM.NextXDays>, <br /><xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>, <xref:Microsoft.Dynamics.CRM.NextXFiscalYears>, <xref:Microsoft.Dynamics.CRM.NextXHours>, <xref:Microsoft.Dynamics.CRM.NextXMonths>, <xref:Microsoft.Dynamics.CRM.NextXWeeks>, <xref:Microsoft.Dynamics.CRM.NextXYears>, <xref:Microsoft.Dynamics.CRM.NextYear>, <xref:Microsoft.Dynamics.CRM.OlderThanXDays>,<br /><xref:Microsoft.Dynamics.CRM.OlderThanXHours>, <xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>, <xref:Microsoft.Dynamics.CRM.OlderThanXMonths>, <xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>, <xref:Microsoft.Dynamics.CRM.OlderThanXYears>, <xref:Microsoft.Dynamics.CRM.On>, <xref:Microsoft.Dynamics.CRM.OnOrAfter>, <xref:Microsoft.Dynamics.CRM.OnOrBefore>,<br /><xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.ThisFiscalYear>, <xref:Microsoft.Dynamics.CRM.ThisMonth>, <xref:Microsoft.Dynamics.CRM.ThisWeek>, <xref:Microsoft.Dynamics.CRM.ThisYear>, <xref:Microsoft.Dynamics.CRM.Today>, <xref:Microsoft.Dynamics.CRM.Tomorrow>, <xref:Microsoft.Dynamics.CRM.Yesterday>|
+|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.InFiscalYear>, <xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>, <xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<br /><xref:Microsoft.Dynamics.CRM.Last7Days>, <xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.LastFiscalYear>, <xref:Microsoft.Dynamics.CRM.LastMonth>, <xref:Microsoft.Dynamics.CRM.LastWeek>, <xref:Microsoft.Dynamics.CRM.LastXDays>, <xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>, <xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<br /><xref:Microsoft.Dynamics.CRM.LastXHours>, <xref:Microsoft.Dynamics.CRM.LastXMonths>, <xref:Microsoft.Dynamics.CRM.LastXWeeks>, <xref:Microsoft.Dynamics.CRM.LastXYears>, <xref:Microsoft.Dynamics.CRM.LastYear>, <xref:Microsoft.Dynamics.CRM.Next7Days>, <xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<br /><xref:Microsoft.Dynamics.CRM.NextMonth>, <xref:Microsoft.Dynamics.CRM.NextWeek>, <xref:Microsoft.Dynamics.CRM.NextXDays>, <xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>, <xref:Microsoft.Dynamics.CRM.NextXFiscalYears>, <xref:Microsoft.Dynamics.CRM.NextXHours>, <xref:Microsoft.Dynamics.CRM.NextXMonths>,<br /><xref:Microsoft.Dynamics.CRM.NextXWeeks>, <xref:Microsoft.Dynamics.CRM.NextXYears>, <xref:Microsoft.Dynamics.CRM.NextYear>, <xref:Microsoft.Dynamics.CRM.OlderThanXDays>, <xref:Microsoft.Dynamics.CRM.OlderThanXHours>, <xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>, <xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<br /><xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>, <xref:Microsoft.Dynamics.CRM.OlderThanXYears>, <xref:Microsoft.Dynamics.CRM.On>, <xref:Microsoft.Dynamics.CRM.OnOrAfter>, <xref:Microsoft.Dynamics.CRM.OnOrBefore>, <xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>, <xref:Microsoft.Dynamics.CRM.ThisFiscalYear>, <xref:Microsoft.Dynamics.CRM.ThisMonth>, <xref:Microsoft.Dynamics.CRM.ThisWeek>, <xref:Microsoft.Dynamics.CRM.ThisYear>, <xref:Microsoft.Dynamics.CRM.Today>, <xref:Microsoft.Dynamics.CRM.Tomorrow>, <xref:Microsoft.Dynamics.CRM.Yesterday>|
 |**Id Values**|<xref:Microsoft.Dynamics.CRM.EqualBusinessId>, <xref:Microsoft.Dynamics.CRM.EqualUserId>, <xref:Microsoft.Dynamics.CRM.NotEqualBusinessId>, <xref:Microsoft.Dynamics.CRM.NotEqualUserId>|
 |**Hierarchy**|<xref:Microsoft.Dynamics.CRM.Above>, <xref:Microsoft.Dynamics.CRM.AboveOrEqual>, <xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchy>, <xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchyAndTeams>, <xref:Microsoft.Dynamics.CRM.EqualUserOrUserTeams>, <br /><xref:Microsoft.Dynamics.CRM.EqualUserTeams>, <xref:Microsoft.Dynamics.CRM.NotUnder>, <xref:Microsoft.Dynamics.CRM.Under>, <xref:Microsoft.Dynamics.CRM.UnderOrEqual><br />More information: [Query hierarchical data](../query-hierarchical-data.md)|
 |**Choices columns**|<xref:Microsoft.Dynamics.CRM.ContainValues>, <xref:Microsoft.Dynamics.CRM.DoesNotContainValues><br />More information: [Query data from choices](../multi-select-picklist.md#query-data-from-choices)|
