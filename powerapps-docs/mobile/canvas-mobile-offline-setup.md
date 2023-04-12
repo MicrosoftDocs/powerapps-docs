@@ -26,11 +26,11 @@ When offline mode is enabled, users can interact with their data without interne
 
 Verify the following prerequisites before you enable mobile offline:
 
--   Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete and Share privileges on the **mobile offline profile** table. More information: [<u>About predefined security roles</u>](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/share-model-driven-app#about-predefined-security-roles)
+-   Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete and Share privileges on the **mobile offline profile** table. More information: [<u>About predefined security roles</u>](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
 -   Users with the **basic user** role can open and use an offline application. This role has the Read privilege for the **mobile offline profile** table.
 
-    If you have a custom security role, make sure you have the Read privilege for **Mobile Offline profile**. For more information, go to [<u>Miscellaneous privileges - Core Records tab</u>](https://learn.microsoft.com/en-us/power-platform/admin/miscellaneous-privileges).
+    If you have a custom security role, make sure you have the Read privilege for **Mobile Offline profile**. For more information, go to [<u>Miscellaneous privileges - Core Records tab</u>](/power-platform/admin/miscellaneous-privileges).
 
 ## Optimize your app for mobile offline
 
@@ -64,7 +64,7 @@ Follow these steps to verify whether a table is enabled for offline.
 
 ## Enable your app for offline use (preview)
 
-Set up the new mobile offline experience in the [canvas app studio](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/power-apps-studio).
+Set up the new mobile offline experience in the [canvas app studio](../maker/canvas-apps/power-apps-studio.md).
 
 1.  Sign in to <u>Power Apps</u>
 
@@ -86,7 +86,7 @@ Set up the new mobile offline experience in the [canvas app studio](https://lea
 
     > [!Note]
     > - We recommend to use an **auto-generated profile**. When auto-generated, the app downloads on the device the tables that are used in your app.
-    > - A page using the **Offline** template is automatically inserted. The page contains an icon hooked up with the [Connection](https://learn.microsoft.com/en-us/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon has multiple variant that reflect the offline sync status. You can decide to use it or not, and you can also customize it as appropriate.
+    > - A page using the **Offline** template is automatically inserted. The page contains an icon hooked up with the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon has multiple variant that reflect the offline sync status. You can decide to use it or not, and you can also customize it as appropriate.
 
 7.  Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
 
@@ -118,7 +118,7 @@ To create a profile, follow the steps below:
 
     ![Table list ](media/image7.png)
 
-10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [<u>Types of tables</u>](https://learn.microsoft.com/en-us/powerapps/maker/common-data-service/types-of-entities).
+10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [<u>Types of tables</u>](../maker/common-data-service/types-of-entities.md).
 
     | **Table ownership type** | **Available Data Download Filter options** |
     |-------------------------|-------------------------|
