@@ -4,7 +4,7 @@ description: Guidance for optimizing offline profiles for model-driven apps.
 author: sericks007
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/08/2022
+ms.date: 04/12/2023
 ms.subservice: mobile
 ms.author: sericks
 ms.custom: ""
