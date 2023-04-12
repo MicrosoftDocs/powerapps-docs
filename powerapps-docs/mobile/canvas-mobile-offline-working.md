@@ -28,7 +28,7 @@ With offline-first, all the calls to Dataverse data are executed against a local
 
 :::image type="content" source="media/conceptual-image.png" alt-text="Conceptual diagram showing that with offline-first, all the calls to Dataverse data are executed against a local Database mirroring the Dataverse server and scoped to the need of the app.":::
 
-**Initial Offline sync**
+## Initial Offline sync
 
 For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called *initial offline sync*.
 
@@ -36,7 +36,7 @@ The initial offline sync happens during the loading of the canvas app. you'll ge
 
 :::image type="content" source="media/initial-offline-sync.png" alt-text="Image of the mobile screen that indicates the app is syncing the offline data.":::
 
-**Offline delta sync**
+## Offline delta sync
 
 Canvas apps can be fully customized. However if the app is using the offline template, it comes with Out Of The Box capabilities such as synchronization errors or warning, network connectivity status, and last but nor least whether the data on the device are in sync with the server and the other way around.
 
@@ -50,17 +50,8 @@ The offline sync icon indicates the synchronization status of the Power Apps mob
 
 -   Whether the app has experienced an error or warning while syncing
 
-**Sync status icons**
+## Sync status icons
 
-The offline sync icon changes based on the app's sync status. The following table describes the possible sync states and the icons associated with them.
-
-| **Icon**                                                                                                                                           | **Description**                                    |
-|----------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| ![Icon showing that the app is connected to the internet ](media/image3.png)              | The app is connected to the internet.              |
-| ![Icon showing that the app isn  39](media/t connected to the internet..png)       | The app is not connected to the internet.          |
-| ![Icon showing that the app is syncing data ](media/image5.png)                           | The app is syncing data.                           |
-| ![Icon showing that the app has pending changes to upload ](media/image6.png)             | The app has pending changes to upload.             |
-| ![Icon showing that the synchronization process encountered an error ](media/image7.png)  | The synchronization process encountered an error.  |
-| ![Icon showing that the synchronization process encountered a warning ](media/image8.png) | The synchronization process encountered a warning. |
+The offline sync icon changes based on the app's sync status. For more information about the possible sync states and the icons associated with them, see [Sync status icons(offline-sync-icon.md#sync-status-icons).
 
 By clicking on the icon, you can have a clear description of the different states.
