@@ -60,7 +60,8 @@ Follow these steps to verify whether a table is enabled for offline.
 
 5.  In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
 
-    ![Enable a table for offline use ](media/image2.png)
+    :::image type="content" source="media/can-be-taken-offline.png" alt-text="Can be taken offline option.":::
+
 
 ## Enable your app for offline use (preview)
 
@@ -74,15 +75,13 @@ Set up the new mobile offline experience in the [canvas app studio](../maker/ca
 
 4.  On the command bar, select **Settings**.
 
-    ![A screenshot of a computer Description automatically generated with medium confidence](media/image3.png)
-
 5.  On the **Upcoming** **Features**  tab, select the **Experimental** sub tab. Set the **Dataverse Offline** toggle to **On**.
 
-    ![A screenshot of a computer Description automatically generated with medium confidence](media/image4.png)
+    :::image type="content" source="media/dataverse-offline.png" alt-text="Dataverse offline option.":::
 
 6.  On the **General** tab, set the **Can be used offline** toggle to **On**.
 
-    ![A screenshot of a computer Description automatically generated](media/image5.png)
+    :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
 
     > [!Note]
     > - We recommend to use an **auto-generated profile**. When auto-generated, the app downloads on the device the tables that are used in your app.
@@ -112,11 +111,7 @@ To create a profile, follow the steps below:
 
 8.  In the **Data available offline** area, select **Add table** to add a table to the profile.
 
-    ![Add table to the profile ](media/image6.png)
-
 9.  Select a table from the list of tables shown. Only tables that can be enabled for mobile offline appear in the list. Select **Next**.
-
-    ![Table list ](media/image7.png)
 
 10. Select a filter based on the ownership type for the table. Table ownership is decided when you create a table. For more information, see [<u>Types of tables</u>](../maker/common-data-service/types-of-entities.md).
 
@@ -146,7 +141,7 @@ To create a profile, follow the steps below:
 
     For example, if you select **Contact \| Field name: Primary contact** this means for every contact, the system will also download the account related to it.
 
-    ![Add table relationship ](media/image8.png)
+    :::image type="content" source="media/include-account-records.png" alt-text="Include accounts records options.":::
 
 12. Select **Save** to add the table to your profile so you can continue editing it.
 
