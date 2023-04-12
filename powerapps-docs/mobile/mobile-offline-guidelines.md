@@ -56,7 +56,8 @@ As you develop your offline profile and test with real or representative data, k
 
 - Limit the total records synced to no more than 200,000.
 - Limit the number of tables to fewer than 100.
-- Limit the total data size to less than 4 GB. If your users use file, image, or timeline annotations, apply filters to reduce the total download size.
+- Limit the total data size to less than 1 GB. 
+- Limit the total files and images size to less than 4 GB. Apply filters to reduce the total download size.
 
 If your app's offline data exceeds these recommendations, users will see slower syncs, higher data utilization, higher battery usage, and slower app performance.
 
