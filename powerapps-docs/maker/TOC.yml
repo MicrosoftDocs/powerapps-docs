@@ -2274,8 +2274,6 @@
           href: /power-pages/admin/migrate-site-configuration
     - name: Compliance and accessibility
       items:
-        - name: Implement GDPR in portals
-          href: /power-pages/configure/implement-gdpr
         - name: Cookies used by portal
           href: /power-pages/admin/cookies
         - name: Accessibility in portals
