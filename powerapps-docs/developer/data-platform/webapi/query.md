@@ -406,15 +406,11 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 &$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
 ```  
 
-### Lambda Expressions
-
 ### Filter using string values
 
 #### Use wildcard characters
 
 #### Use OData query functions
-
-
 
 #### Manage single quotes
 
@@ -423,6 +419,8 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 #### Filter using lookup column property values
 
 #### Filter using values of related collections
+
+##### Lambda Expressions
 
 
 <!-- Where does this belong? -->
