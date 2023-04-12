@@ -381,17 +381,11 @@ Use parentheses `(` & `)`, with logical operators to specify the precedence to e
 
 ### Dataverse query functions
 
-Use more than 60 specialized functions designed for business applications. See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> for the complete list.
-
-You must use the *fully qualified name* of these functions. This means you must append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
-
-Each function has a `PropertyName` parameter that specifies which property to be evaluated. The function may have additional parameters such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2` when you must supply a value to compare to the `PropertyName` parameter.
-
-These functions provide special capabilities as described in the following table:
+Use more than 60 specialized functions designed for business applications. These functions provide special capabilities as described in the following table:
 
 |Group|Functions|
 |---------|---------|
-|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InFiscalYear>,<xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.Last7Days>,<br /><xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.LastFiscalYear>,<xref:Microsoft.Dynamics.CRM.LastMonth>,<xref:Microsoft.Dynamics.CRM.LastWeek>,<xref:Microsoft.Dynamics.CRM.LastXDays>,<xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<xref:Microsoft.Dynamics.CRM.LastXHours>,<xref:Microsoft.Dynamics.CRM.LastXMonths>,<br /><xref:Microsoft.Dynamics.CRM.LastXWeeks>,<xref:Microsoft.Dynamics.CRM.LastXYears>,<xref:Microsoft.Dynamics.CRM.LastYear>,<xref:Microsoft.Dynamics.CRM.Next7Days>,<xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<xref:Microsoft.Dynamics.CRM.NextMonth>,<xref:Microsoft.Dynamics.CRM.NextWeek>,<xref:Microsoft.Dynamics.CRM.NextXDays>,<xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.NextXFiscalYears>,<xref:Microsoft.Dynamics.CRM.NextXHours>,<xref:Microsoft.Dynamics.CRM.NextXMonths>,<xref:Microsoft.Dynamics.CRM.NextXWeeks>,<xref:Microsoft.Dynamics.CRM.NextXYears>,<xref:Microsoft.Dynamics.CRM.NextYear>,<xref:Microsoft.Dynamics.CRM.OlderThanXDays>,<xref:Microsoft.Dynamics.CRM.OlderThanXHours>,<xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>,<xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>,<xref:Microsoft.Dynamics.CRM.OlderThanXYears>,<xref:Microsoft.Dynamics.CRM.On>,<xref:Microsoft.Dynamics.CRM.OnOrAfter>,<xref:Microsoft.Dynamics.CRM.OnOrBefore>,<xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.ThisFiscalYear>,<xref:Microsoft.Dynamics.CRM.ThisMonth>,<xref:Microsoft.Dynamics.CRM.ThisWeek>,<xref:Microsoft.Dynamics.CRM.ThisYear>,<xref:Microsoft.Dynamics.CRM.Today>,<xref:Microsoft.Dynamics.CRM.Tomorrow>,<xref:Microsoft.Dynamics.CRM.Yesterday>|
+|**Dates** |<xref:Microsoft.Dynamics.CRM.InFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.InFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InFiscalYear>,<xref:Microsoft.Dynamics.CRM.InOrAfterFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.InOrBeforeFiscalPeriodAndYear>,<xref:Microsoft.Dynamics.CRM.Last7Days>,<br /><xref:Microsoft.Dynamics.CRM.LastFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.LastFiscalYear>,<xref:Microsoft.Dynamics.CRM.LastMonth>,<xref:Microsoft.Dynamics.CRM.LastWeek>,<xref:Microsoft.Dynamics.CRM.LastXDays>,<xref:Microsoft.Dynamics.CRM.LastXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.LastXFiscalYears>,<xref:Microsoft.Dynamics.CRM.LastXHours>,<xref:Microsoft.Dynamics.CRM.LastXMonths>,<br /><xref:Microsoft.Dynamics.CRM.LastXWeeks>,<xref:Microsoft.Dynamics.CRM.LastXYears>,<xref:Microsoft.Dynamics.CRM.LastYear>,<xref:Microsoft.Dynamics.CRM.Next7Days>,<xref:Microsoft.Dynamics.CRM.NextFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.NextFiscalYear>,<xref:Microsoft.Dynamics.CRM.NextMonth>,<xref:Microsoft.Dynamics.CRM.NextWeek>,<xref:Microsoft.Dynamics.CRM.NextXDays>,<br /><xref:Microsoft.Dynamics.CRM.NextXFiscalPeriods>,<xref:Microsoft.Dynamics.CRM.NextXFiscalYears>,<xref:Microsoft.Dynamics.CRM.NextXHours>,<xref:Microsoft.Dynamics.CRM.NextXMonths>,<xref:Microsoft.Dynamics.CRM.NextXWeeks>,<xref:Microsoft.Dynamics.CRM.NextXYears>,<xref:Microsoft.Dynamics.CRM.NextYear>,<xref:Microsoft.Dynamics.CRM.OlderThanXDays>,<xref:Microsoft.Dynamics.CRM.OlderThanXHours>,<xref:Microsoft.Dynamics.CRM.OlderThanXMinutes>,<xref:Microsoft.Dynamics.CRM.OlderThanXMonths>,<xref:Microsoft.Dynamics.CRM.OlderThanXWeeks>,<xref:Microsoft.Dynamics.CRM.OlderThanXYears>,<xref:Microsoft.Dynamics.CRM.On>,<xref:Microsoft.Dynamics.CRM.OnOrAfter>,<xref:Microsoft.Dynamics.CRM.OnOrBefore>,<xref:Microsoft.Dynamics.CRM.ThisFiscalPeriod>,<xref:Microsoft.Dynamics.CRM.ThisFiscalYear>,<xref:Microsoft.Dynamics.CRM.ThisMonth>,<xref:Microsoft.Dynamics.CRM.ThisWeek>,<xref:Microsoft.Dynamics.CRM.ThisYear>,<xref:Microsoft.Dynamics.CRM.Today>,<xref:Microsoft.Dynamics.CRM.Tomorrow>,<xref:Microsoft.Dynamics.CRM.Yesterday>|
 |**Id Values**|<xref:Microsoft.Dynamics.CRM.EqualBusinessId>,<xref:Microsoft.Dynamics.CRM.EqualUserId>,<xref:Microsoft.Dynamics.CRM.NotEqualBusinessId>,<xref:Microsoft.Dynamics.CRM.NotEqualUserId>|
 |**Hierarchy**|<xref:Microsoft.Dynamics.CRM.Above>,<xref:Microsoft.Dynamics.CRM.AboveOrEqual>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchy>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserHierarchyAndTeams>,<xref:Microsoft.Dynamics.CRM.EqualUserOrUserTeams>,<br /><xref:Microsoft.Dynamics.CRM.EqualUserTeams>,<xref:Microsoft.Dynamics.CRM.NotUnder>,<xref:Microsoft.Dynamics.CRM.Under>,<xref:Microsoft.Dynamics.CRM.UnderOrEqual><br />More information: [Query hierarchical data](../query-hierarchical-data.md)|
 |**Choices columns**|<xref:Microsoft.Dynamics.CRM.ContainValues>,<xref:Microsoft.Dynamics.CRM.DoesNotContainValues>|
@@ -399,8 +393,18 @@ These functions provide special capabilities as described in the following table
 |**In**|<xref:Microsoft.Dynamics.CRM.In>,<xref:Microsoft.Dynamics.CRM.NotIn>|
 |**Language**|<xref:Microsoft.Dynamics.CRM.EqualUserLanguage>|
 
+See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> for the complete list. Each article provides a syntax example you can copy.
 
+You must use the *fully qualified name* of these functions. This means you must append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
 
+Each function has a `PropertyName` parameter that specifies which property to be evaluated. The function may have additional parameters such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2` when you must supply a value to compare to the `PropertyName` parameter.
+
+The following is an example of the <xref:Microsoft.Dynamics.CRM.Between?text=Between Function> searching for accounts with a number of employees between 5 and 2000.  
+  
+```http 
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
+&$filter=Microsoft.Dynamics.CRM.Between(PropertyName='numberofemployees',PropertyValues=["5","2000"])  
+```  
 
 ### Lambda Expressions
 
