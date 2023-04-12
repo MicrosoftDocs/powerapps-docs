@@ -1,7 +1,6 @@
 ---
 title: Export Microsoft Dataverse data in Delta Lake format
-description: Use Azure Synapse Link to export your Microsoft Dataverse data to Azure Synapse
-Analytics in Delta Lake format to explore your data and accelerate time to insight.
+description: Use Azure Synapse Link to export your Microsoft Dataverse data to Azure Synapse Analytics in Delta Lake format to explore your data and accelerate time to insight.
 author: JasonHQX
 ms.author: jasonhuang
 ms.reviewer: matp
@@ -60,10 +59,34 @@ This configuration can be considered a bootstrap step for average use cases.
 1. Select **+ New link**, and then in your web browsers address bar, append `?athena.deltaLake=true` to the web address that ends with `exporttodatalake`.
 1. Select **Connect to your Azure Synapse Analytics workspace**, and then select the **Subscription**, **Resource group**, and **Workspace name**.
 1. Select **Use Spark pool for processing**, and then select the pre-created **Spark pool** and **Storage account**.
-  
+   :::image type="content" source="media/synapse-link-usesparkpool.png" alt-text="Azure Synapse Link for Dataverse configuration that includes spark pool.":::
+
 1. Select **Next**.
 1. Add the tables you want to export, and then select **Advanced**.
 1. Optionally, select **Show advanced configuration settings** and enter the time interval, in minutes, for how often the incremental updates should be captured, 
 1. Select **Save**.
 
-## Next steps
+## Monitor your Azure Synapse Link and data conversion
+
+1. Select the Azure Synapse Link you want, and then select **Go to Azure Synapse Analytics
+workspace** on the command bar.
+1. Select **Monitor** > **Apache Spark applications**. More information: [Use Synapse Studio to monitor your Apache Spark applications](/azure/synapse-analytics/monitoring/apache-spark-applications)
+
+## View your data from Synapse workspace
+
+1. Select the Azure Synapse Link you want, and then select **Go to Azure Synapse Analytics workspace** on the command bar.
+1. Expand **Lake Databases** on the left pane, select **dataverse-***environmentNameorganizationUniqueName*,
+and then expand **Tables**. All Parquet tables are listed and available for analysis with the naming convention
+*DataverseTableName.* **(Non_partitioned Table)**.
+
+## View your data from Azure Data Lake Storage Gen2
+
+1. Select the Azure Synapse Link you want, and then select **Go to Azure data lake** on the command
+bar.
+1. Select the **Containers** under **Data Storage**.
+1. Select **dataverse-* **environmentName-organizationUniqueName*. All parquet files are stored in the
+**deltalake** folder.
+
+## See also
+
+[What is Azure Synapse Link for Dataverse?](export-to-data-lake.md)
