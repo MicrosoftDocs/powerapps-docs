@@ -144,7 +144,7 @@ To create a profile, follow the steps below:
 
 11. In the **Include \[table name\] rows related to these tables** area, select the related table relationships. You need to have added the table you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile.
 
-For example, if you select **Contact \| Field name: Primary contact** this means for every contact, the system will also download the account related to it.
+    For example, if you select **Contact \| Field name: Primary contact** this means for every contact, the system will also download the account related to it.
 
     ![Add table relationship ](media/image8.png)
 
