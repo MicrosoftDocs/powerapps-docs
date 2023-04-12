@@ -294,11 +294,13 @@ In addition to properties, you can request different OData annotation data to be
 > [!TIP]
 > It is common to use the `Prefer: odata.include-annotations="*"` request header to return all annotations.
 
-If you want only specific annotations, you can request them as comma separated values. You can also use the '`*`' character as a wildcard.  For example, `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"` will include only the formatted values and any additional error detail annotations.
+If you want only specific annotations, you can request them as comma separated values. You can also use the '`*`' character as a wildcard.  For example, the following `Prefer` request header only includes the formatted values and any additional error detail annotations:
+
+> `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"`
 
 ## Join Tables
 
-Use the `$expand `system query option specify the related resources to be included in line with retrieved resources.
+Use the `$expand` system query option specify the related resources to be included in line with retrieved resources.
 
 <!-- 
 
@@ -335,6 +337,17 @@ To compose `$filter` expressions you can apply the following:
 |**OData query functions**|Evaluate string values using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
 |**Dataverse query functions**|Use more than 60 specialized functions designed for business applications. |[Dataverse query functions](#dataverse-query-functions)|
 |**Lambda Expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
+
+> [!TIP]
+> Remember that you can also use [Filtered collections](#filtered-collections).
+>
+> If you are using a [lookup property](web-api-properties.md#lookup-properties) in a `$filter`, you could also use a filtered collection with the corresponding collection-valued navigation property.
+>
+> For example, these two queries return the same results:
+>
+> `accounts?$filter=_owninguser_value eq '<systemuserid value>'&$select=name`
+>
+> `systemusers(<systemuserid value>)/user_accounts?$select=name`
 
 
 ### Comparison operators
@@ -393,13 +406,16 @@ Use more than 60 specialized functions designed for business applications. These
 |**In**|<xref:Microsoft.Dynamics.CRM.In>, <xref:Microsoft.Dynamics.CRM.NotIn>|
 |**Language**|<xref:Microsoft.Dynamics.CRM.EqualUserLanguage>|
 
+> [!NOTE]
+> The [Contains Function](xref:Microsoft.Dynamics.CRM.Contains) is for use with columns that have full-text indexing. Only the Dynamics 365 KBArticle (article) table has columns that have full-text indexing. Use the OData `contains` function instead.
+
 See <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex?displayProperty=fullName> for the complete list. Each article provides a syntax example you can copy.
 
 You must use the *fully qualified name* of these functions. This means you must append the [Service namespace](web-api-service-documents.md#service-namespace) (`Microsoft.Dynamics.CRM`) to the name of the function.
 
-Each function has a `PropertyName` parameter that specifies which property to be evaluated. The function may have additional parameters such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2` when you must supply a value, or values, to compare to the `PropertyName` parameter.
+Each function has a `PropertyName` parameter that specifies which property to be evaluated. The function may have additional parameters such as `PropertyValue`, `PropertyValues`, or `PropertyValue1` and `PropertyValue2`. When these parameters exist, you must supply a value, or values, to compare to the `PropertyName` parameter.
 
-The following is an example of the <xref:Microsoft.Dynamics.CRM.Between?text=Between Function> searching for accounts with a number of employees between 5 and 2000.  
+The following is an example of the [Between Function](xref:Microsoft.Dynamics.CRM.Between) searching for accounts with a number of employees between 5 and 2000.  
   
 ```http 
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
@@ -408,19 +424,182 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,numberofemployees
 
 ### Filter using string values
 
+Keep the following in mind while filtering on string values:
+
+- All filters using string values are case insensitive.
+- You may use wildcard characters, but avoid trailing wildcards. More information: [Use wildcard characters](#use-wildcard-characters)
+- You can use OData query functions: `contains`, `startswith`, `endswith`. More information: [Use OData query functions](#use-odata-query-functions)
+- You must manage single quotes when using filters that accept an array of string values. More information: [Manage single quotes](#manage-single-quotes)
+
 #### Use wildcard characters
+
+When composing filters using strings, you can apply the following wildcard characters:
+
+|Characters  |Description  |T-SQL Documentation and examples  |
+|---------|---------|---------|
+|`% ` |Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.|[Percent character (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql)|
+|`_`  |Use the underscore character to match any single character in a string comparison operation that involves pattern matching.|[_ (Wildcard - Match One Character) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)|
+|`[]` |Matches any single character within the specified range or set that is specified between brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
+|`[^]`|Matches any single character that is not within the range or set specified between the square brackets.|[[^] (Wildcard - Character(s) Not to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|
+
+More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md&tabs=webapi)
+
+##### Trailing wildcards not supported
+
+When using wildcard characters, it is important not to use trailing wild cards. They are not supported. Queries using these anti-patterns introduce performance problems because the queries cannot be optimized. Some examples of trailing wildcards:
+
+```
+startswith(name,'%value')
+endswith(name,'value%')
+```
 
 #### Use OData query functions
 
+OData provides the following query functions:
+
+|Function|Example|  
+|--------------|-------------|  
+|`contains`|`$filter=contains(name,'(sample)')`|  
+|`endswith`|`$filter=endswith(name,'Inc.')`|  
+|`startswith`|`$filter=startswith(name,'a')`|
+
+You can use these functions together with the logical operator `not` to negate the result.
+
 #### Manage single quotes
+
+When specifying values for comparison in filters that accept an array of string values, such as the [In Query Function](xref:Microsoft.Dynamics.CRM.In), which contain single quote "`'`" (apostrophe) characters, such as `O'Brian` or `Men's clothes` you must use double quotes around the values. For example: 
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
+&$filter=Microsoft.Dynamics.CRM.In(PropertyName=@p1,PropertyValues=@p2)
+&@p1='lastname'
+&@p2=["OBrian","OBryan","O'Brian","O'Bryan"]
+```
+
+Otherwise you will get the following error: `Invalid JSON. A comma character ',' was expected in scope 'Array'. Every two elements in an array and properties of an object must be separated by commas.`
+
+If the filter is for a single value, replace the single quote character with two consecutive single quote characters. For example:
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
+&$filter=lastname eq 'O''Bryan'
+```
+
+Otherwise you will get an error like the following: `There is an unterminated literal at position 21 in 'lastname eq 'O'Bryan''.`
 
 ### Filter based on related data values
 
+You can filter rows returned based on values in related tables. How you do this depends on the type of relationship.
+
 #### Filter using lookup column property values
+
+You can filter based on values in single-valued navigation properties that represent lookup columns. Use this pattern:
+
+`<single-valued navigation property>/<property name>`
+
+The following example returns account records based on the value of the `primarycontactid/fullname` column.
+
+**Request**
+
+```http
+GET https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts?$filter=primarycontactid/fullname eq 'Susanna Stubberod (sample)'&$select=name,_primarycontactid_value HTTP/1.1
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+
+{
+    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,_primarycontactid_value)",
+    "value": [
+        {
+            "@odata.etag": "W/\"81359849\"",
+            "name": "Litware, Inc. (sample)",
+            "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Susanna Stubberod (sample)",
+            "_primarycontactid_value": "70bf4d48-34cb-ed11-b596-0022481d68cd",
+            "accountid": "78914942-34cb-ed11-b596-0022481d68cd"
+        }
+    ]
+}
+```
 
 #### Filter using values of related collections
 
-##### Lambda Expressions
+Use *Lambda operators* (`any` & `all` ) to get evaluate values in a collection to filter the results.
+
+
+|Operator|Description|
+|---------|---------|
+|`any`|Returns `true` if the expression applied is true for any member of the collection, otherwise it returns false. The `any` operator without an argument returns `true` if the collection is not empty.|
+|`all`|Returns true if the expression applied is true for all members of the collection, otherwise it returns false.|
+
+The syntax looks like this:
+
+`<collection>/[any | all](o:<expression to evaluate>)`
+
+In this case `o` is the variable that represents items in the collection. The convention is to use the first letter of the type.
+Within the expression, use `o/<property or collection name>` to refer to property or collection of a given item.
+
+You can include conditions on multiple collection-valued navigation properties and nested collections.
+
+More information: [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda)
+
+##### `any` example
+
+The example given below shows how you can retrieve all account entity records that have at least one email with `sometext` in the subject.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
+&$filter=Account_Emails/any(e:contains(e/subject,'sometext')) HTTP/1.1
+Prefer: odata.include-annotations="*"
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
+
+##### `all` examples
+
+The example given below shows how you can retrieve all account entity records that have all associated tasks closed.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
+&$filter=Account_Tasks/all(t:t/statecode eq 1) HTTP/1.1
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
+
+The example given below shows how you can retrieve all account entity records that have at least one email with "sometext" in the subject and whose statecode is active.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
+&$filter=Account_Emails/any(e:contains(e/subject,'sometext') and 
+e/statecode eq 0) HTTP/1.1
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
+The example given below shows how you can also create a nested query using `any` and `all` operators.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name
+&$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and 
+c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and 
+endswith(name,'Inc.') HTTP/1.1
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
 
 
 <!-- Where does this belong? -->
