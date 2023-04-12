@@ -1,6 +1,6 @@
 ---
-title: Set up mobile offline for canvas apps (preview)| Microsoft Docs
-description: Description goes here.
+title: Mobile offline for canvas apps (preview)| Microsoft Docs
+description: Learn about how to use canvas apps on your movile device in offline mode.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
