@@ -19,7 +19,7 @@ search.audienceType:
 
 Apps can be viewed by valid users with appropriate privileges who sign into Power Apps, the Power Apps mobile app, or Dynamics 365 home page. For a user to view and access apps in an environment, the following privileges, security role, or team membership are required:
 
-- A user who has the write or create privilege on the Model-driven App table makes the user a maker persona. That user can view and access all apps in the environment.
+- A user who has both write and create privilege on the Model-driven App table makes the user a maker persona. That user can view and access all apps in the environment.
 - A user who has only the read privilege on the Model-driven App table, must also have the associated security role(s) that are assigned to the app (or equivalent).
 
 Note that read, create, and write privileges can be granted to a user by the security roles assigned to the user or granted through team membership.
