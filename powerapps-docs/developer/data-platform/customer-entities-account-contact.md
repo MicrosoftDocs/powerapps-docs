@@ -1,21 +1,16 @@
 ---
 title: "Customer tables (account, contact, customeraddress) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The account and contact tables are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A customer address table is used to store address and shipping information for a customer." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/30/2020
-ms.reviewer: "pehecke"
-
-ms.topic: "article"
-author: "mayadumesh" # GitHub ID
+ms.date: 04/13/2023
+ms.reviewer: pehecke
+ms.topic: article
+author: mayadumesh # GitHub ID
 ms.subservice: dataverse-developer
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+ms.author: mayadu # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
 ---
 # Customer tables (account, contact, customeraddress)
-
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
-
 
 The *account* and *contact* tables in Microsoft Dataverse are essential for identifying and managing customers, selling products and services, and providing superior service to the customers. A *customer address* table is used to store address and shipping information for a customer.  
   
