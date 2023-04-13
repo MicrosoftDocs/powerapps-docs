@@ -1,6 +1,6 @@
 ---
 title: Working with canvas apps offline (preview)| Microsoft Docs
-description: Description goes here.
+description: This article explains how to work with canvas apps in offline mode on your mobile device.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
