@@ -22,8 +22,12 @@ When you retrieve data with a query, you must make the following choices:
 |[Filter rows](#filter-rows)|Which rows of data to return.|
 |[Page results](#page-results)|How many rows of data to return.|
 |[Aggregate data](#aggregate-data)|How to group and aggregate the data returned.|
+|[Count number of rows](#count-number-of-rows)|How to count the number of rows.|
 
 This article explains how to apply these choices when constructing a query to retrieve data using the Dataverse Web API.
+
+> [!NOTE]
+> This article is about querying data found in tables. You can also query data about table definitions. The structure of the data is different, so many of the capabilities described here do not apply. More information: [Query table definitions using the Web API](query-metadata-web-api.md) and [Query schema definitions](../query-schema-definitions.md)
 
 ## Entity Collections
 
@@ -111,12 +115,12 @@ Dataverse Web API supports the following OData query options:
 |`$expand`|Use this to specify the related resources to be included in line with retrieved resources. |[Join Tables](#join-tables)|
 |`$filter `|Use this to filter a collection of resources that are addressed by a request URL. |[Filter rows](#filter-rows)|
 |`$orderby`|Use this to request resources in a particular order. |[Order rows](#order-rows)|
-|`$count`|Use this to request a count of the matching resources included with the resources in the response. |[Retrieve a count of rows](#retrieve-a-count-of-rows)|
 |`$apply`|Use this to aggregate and group your data. |[Aggregate data](#aggregate-data)|
+|`$count`|Use this to request a count of the matching resources included with the resources in the response. |[Count number of rows](#count-number-of-rows)|
 
 You can apply multiple options to a query. All query options must be separated from the resource path using '`?`'. After the first option, each option must be separated by '`&`'. The names of all options are case sensitive.
 
-The following OData  query options are not supported by Dataverse Web API: `$skip`,`$search`,`$format`.
+The following OData query options are not supported by Dataverse Web API: `$skip`,`$search`,`$format`.
 
 ## Select Columns
 
@@ -231,7 +235,7 @@ When you include the `_ownerid_value` lookup property with your `$select`, it wi
 
 To include these annotations in your results, use the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"` request header. This is one of several annotations you can request. Or you can uses `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](#request-annotations)
 
-The following example shows two different account records. The first is owned by a team, the second by a user:
+The following example shows two different account records. The first is owned by a `team`, the second by a `systemuser`:
 
 **Request**
 
@@ -252,7 +256,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 
 {
-    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,_ownerid_value)",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,_ownerid_value)",
     "value": [
         {
             "@odata.etag": "W/\"81550512\"",
@@ -287,7 +291,7 @@ In addition to properties, you can request different OData annotation data to be
 |---------|---------|
 |`OData.Community.Display.V1.FormattedValue`|See [Formatted values](#formatted-values)|
 |`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|See [Lookup property data](#lookup-property-data)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Retrieve a count of rows](#retrieve-a-count-of-rows) |
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Count number of rows](#count-number-of-rows) |
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. This value will change when any schema change occurs. This is an indication that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide additional details when errors are returned. More information: [Include more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)|
 
@@ -442,7 +446,7 @@ When composing filters using strings, you can apply the following wildcard chara
 |`[]` |Matches any single character within the specified range or set that is specified between brackets.|[[ ] (Wildcard - Character(s) to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-to-match-transact-sql)|
 |`[^]`|Matches any single character that is not within the range or set specified between the square brackets.|[[^] (Wildcard - Character(s) Not to Match) (Transact-SQL)](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|
 
-More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md&tabs=webapi)
+More information: [Use wildcard characters in conditions for string values](../wildcard-characters.md)
 
 ##### Trailing wildcards not supported
 
@@ -502,7 +506,8 @@ The following example returns account records based on the value of the `primary
 **Request**
 
 ```http
-GET https://crmue.api.crm.dynamics.com/api/data/v9.2/accounts?$filter=primarycontactid/fullname eq 'Susanna Stubberod (sample)'&$select=name,_primarycontactid_value HTTP/1.1
+GET [Organization URI]/api/data/v9.2/accounts?$filter=primarycontactid/fullname eq 'Susanna Stubberod (sample)'
+&$select=name,_primarycontactid_value
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -518,7 +523,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 {
-    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(name,_primarycontactid_value)",
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,_primarycontactid_value)",
     "value": [
         {
             "@odata.etag": "W/\"81359849\"",
@@ -526,6 +531,59 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
             "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Susanna Stubberod (sample)",
             "_primarycontactid_value": "70bf4d48-34cb-ed11-b596-0022481d68cd",
             "accountid": "78914942-34cb-ed11-b596-0022481d68cd"
+        }
+    ]
+}
+```
+
+You can also compare values of further up the hierarchy of single-valued navigation properties.
+
+This example will return the first account where the contact record representing the `primarycontactid` was created by 'System Administrator', using `primarycontactid/createdby/fullname` in the `$filter`.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$filter=primarycontactid/createdby/fullname eq 'System Administrator'
+&$select=name,_primarycontactid_value
+&$expand=primarycontactid(
+$select=fullname,_createdby_value;
+$expand=createdby($select=fullname))
+&$top=1
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,_primarycontactid_value,primarycontactid(fullname,_createdby_value,createdby(fullname)))",
+    "value": [
+        {
+            "@odata.etag": "W/\"81359849\"",
+            "name": "Litware, Inc. (sample)",
+            "_primarycontactid_value@OData.Community.Display.V1.FormattedValue": "Susanna Stubberod (sample)",
+            "_primarycontactid_value": "70bf4d48-34cb-ed11-b596-0022481d68cd",
+            "accountid": "78914942-34cb-ed11-b596-0022481d68cd",
+            "primarycontactid": {
+                "fullname": "Susanna Stubberod (sample)",
+                "_createdby_value@OData.Community.Display.V1.FormattedValue": "System Administrator",
+                "_createdby_value": "4026be43-6b69-e111-8f65-78e7d1620f5e",
+                "contactid": "70bf4d48-34cb-ed11-b596-0022481d68cd",
+                "createdby": {
+                    "fullname": "System Administrator",
+                    "systemuserid": "4026be43-6b69-e111-8f65-78e7d1620f5e",
+                    "ownerid": "4026be43-6b69-e111-8f65-78e7d1620f5e"
+                }
+            }
         }
     ]
 }
@@ -552,26 +610,23 @@ You can include conditions on multiple collection-valued navigation properties a
 
 More information: [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda)
 
-##### `any` example
+##### Lambda operator examples
 
 The example given below shows how you can retrieve all account entity records that have at least one email with `sometext` in the subject.
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
-&$filter=Account_Emails/any(e:contains(e/subject,'sometext')) HTTP/1.1
-Prefer: odata.include-annotations="*"
+&$filter=Account_Emails/any(e:contains(e/subject,'sometext'))
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
 ```
 
-##### `all` examples
-
 The example given below shows how you can retrieve all account entity records that have all associated tasks closed.
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
-&$filter=Account_Tasks/all(t:t/statecode eq 1) HTTP/1.1
+&$filter=Account_Tasks/all(t:t/statecode eq 1)
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -582,7 +637,7 @@ The example given below shows how you can retrieve all account entity records th
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=Account_Emails/any(e:contains(e/subject,'sometext') and 
-e/statecode eq 0) HTTP/1.1
+e/statecode eq 0)
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -594,19 +649,113 @@ The example given below shows how you can also create a nested query using `any`
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
 &$filter=(contact_customer_accounts/any(c:c/jobtitle eq 'jobtitle' and 
 c/opportunity_customer_contacts/any(o:o/description ne 'N/A'))) and 
-endswith(name,'Inc.') HTTP/1.1
+endswith(name,'Inc.')
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-
-
-<!-- Where does this belong? -->
-### Retrieve a count of rows
-
 ## Page results
 
-### $top
+You can control the number of records returned using the `Prefer: odata.maxpagesize` request header. If you don't specify the number records to return, up to 5000 records may be returned for each request. You can't request a page size larger than 5000.
+
+> [!NOTE]
+> Dataverse doesn't support the `$skip` query option, so the combination of `$top` and `$skip` can't be used for paging. More information: [Use $top query option](#use-top-query-option)
+
+The following example returns just the first two contact records:
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Prefer: odata.maxpagesize=2
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+Preference-Applied: odata.maxpagesize=2
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#contacts(fullname)",
+    "value": [
+        {
+            "@odata.etag": "W/\"72201545\"",
+            "fullname": "Yvonne McKay (sample)",
+            "contactid": "49b0be2e-d01c-ed11-b83e-000d3a572421"
+        },
+        {
+            "@odata.etag": "W/\"80648695\"",
+            "fullname": "Susanna Stubberod (sample)",
+            "contactid": "70bf4d48-34cb-ed11-b596-0022481d68cd"
+        }
+    ],
+    "@odata.nextLink": "[Organization URI]/api/data/v9.2/contacts?$select=fullname&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253ccontactid%2520last%253d%2522%257bD5026A4D-D01C-ED11-B83E-000D3A572421%257d%2522%2520first%253d%2522%257b49B0BE2E-D01C-ED11-B83E-000D3A572421%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
+}
+```
+
+When there are more records than requested, the `@odata.nextLink` annotation provides a URL you can use with `GET` to return the next page of data.
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/contacts?$select=fullname&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253ccontactid%2520last%253d%2522%257bD5026A4D-D01C-ED11-B83E-000D3A572421%257d%2522%2520first%253d%2522%257b49B0BE2E-D01C-ED11-B83E-000D3A572421%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Prefer: odata.maxpagesize=2
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+Preference-Applied: odata.maxpagesize=2
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#contacts(fullname)",
+    "value": [
+        {
+            "@odata.etag": "W/\"80648710\"",
+            "fullname": "Nancy Anderson (sample)",
+            "contactid": "72bf4d48-34cb-ed11-b596-0022481d68cd"
+        },
+        {
+            "@odata.etag": "W/\"80648724\"",
+            "fullname": "Maria Campbell (sample)",
+            "contactid": "74bf4d48-34cb-ed11-b596-0022481d68cd"
+        }
+    ],
+    "@odata.nextLink": "[Organization URI]/api/data/v9.2/contacts?$select=fullname&$skiptoken=%3Ccookie%20pagenumber=%223%22%20pagingcookie=%22%253ccookie%2520page%253d%25222%2522%253e%253ccontactid%2520last%253d%2522%257bF2318099-171F-ED11-B83E-000D3A572421%257d%2522%2520first%253d%2522%257bBB55F942-161F-ED11-B83E-000D3A572421%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
+}
+```
+
+You should cache the results returned or the `@odata.nextLink` URL value and use it to return to previous pages.
+
+Don't change or append any additional system query options to the `@odata.nextLink` URL value. For every subsequent request for additional pages, you should use the same `odata.maxpagesize` preference value used in the original request. You can continue paging through the data until no `@odata.nextLink` is included in the results.
+
+In the examples above you can see that there is encoded information set as the value of the `$skiptoken` parameter within the `@odata.nextLink` URL value. This is set by the server to control paging. You should not modify the encoded information or encode it further, just use the URL value provided to retrieve the next page.
+
+### Use $top query option
+
+You can limit the number of results returned by using the `$top` system query option. The following example will return just the first three account rows.
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
+```
+
+You should not use `$top` together with the `Prefer: odata.maxpagesize` request header. If you include both, `$top `will be ignored.
+
+We also recommend you avoid using `$top` with `$count`. More information: [Count number of rows](#count-number-of-rows)
 
 ## Aggregate data
+
+
+
+## Count number of rows
