@@ -90,15 +90,16 @@ Unlike Access, Dataverse and Dataverse for Teams are data sources. The user inte
 |Row    | Row  or record   |  Sometimes referred to as a record in Dataverse and Dataverse for Teams    |
 |Short Text  |  Text    |  Supported for migration       |
 |Long Text  |  Multiline Text    |  Supported for migration       |
-|Number: Single   | Float        |  Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)           |
-|Number: Double     |  Float       | Currently not supported for migration - [workaround available](migrate-access-datatypes.md#migrate-numbersingle-and-numberdouble-columns-to-dataverse)            |
+|Rich Text  |  Rich Text    |  Supported for migration       |
+|Number: Single   | Float        |  Supported for migration       |
+|Number: Double   |  Float       |  Supported for migration        |
 |Large Number      |  Big Integer (BigInt)       | Supported for migration, usable through Dataverse API, Power Apps UI does not currently support this       |
 |Number: Decimal      | Decimal         | Supported for migration         |
 |Yes/No      | Yes/No         |  Supported for migration        |
 |Int      | Whole Number         |  Supported for migration       |
 |Multi-Select Options      | Choices        | Supported for migration         |
 |GUID      | Unique Identifier           |   In Dataverse and Dataverse for Teams, this is currently only used as a key        |
-|  Hyperlink         |  URL       | Supported for migration         |
+|Hyperlink         |  URL       | Supported for migration         |
 |Unique Index      |  Alternate Key        | Not supported for migration      |
 |Multi-Value Lookup      | Choice        | Supported for migration         |
 
