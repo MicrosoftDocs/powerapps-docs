@@ -55,7 +55,7 @@ Linking tables such as activities and notes to the contact table lets user see a
 
 ## CustomerAddress table
 
-This table contains address and shipping information. It is used to store additional addresses for an account or contact.
+This table contains address and shipping information. It is used to store additional addresses for an account or contact. The platform creates Customer Address rows by default upon creation of an account or contact, irrespective of whether the current address values are blank or not.
 
 >[!NOTE]
 >The Customer Address table is updated at the platform level when a change is made to the Account or Contact tables. Because of this, no separate SDK call will be made to update or create the Customer Address table. Any code that is triggering on address updates or creates should be pointing to the Contact or Account tables.
