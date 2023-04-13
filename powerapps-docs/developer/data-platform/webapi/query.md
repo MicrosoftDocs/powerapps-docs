@@ -1,7 +1,7 @@
 ---
 title: "Query data using the Web API"
 description: "Learn how to query Microsoft Dataverse table data using the Web API and the options that can be applied in these queries."
-ms.date: 03/27/2023
+ms.date: 04/13/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -750,12 +750,230 @@ You can limit the number of results returned by using the `$top` system query op
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 ```
 
-You should not use `$top` together with the `Prefer: odata.maxpagesize` request header. If you include both, `$top `will be ignored.
+You should not use `$top` together with the `Prefer: odata.maxpagesize` request header. If you include both, `$top` will be ignored.
 
 We also recommend you avoid using `$top` with `$count`. More information: [Count number of rows](#count-number-of-rows)
 
 ## Aggregate data
 
+By using `$apply` you can aggregate and group your data dynamically.
 
+The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with Dataverse can be found here: [Use FetchXML aggregation](../use-fetchxml-aggregation.md).
+
+Additional details on OData data aggregation can be found here: [OData extension for data aggregation version 4.0](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dataverse supports only a sub-set of these aggregate methods.
+
+Following are some examples:
+
+### List of unique statuses in the query
+
+```http
+GET accounts?$apply=groupby((statuscode))
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Active",
+            "statuscode": 1
+        },
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Inactive",
+            "statuscode": 2
+        }
+    ]
+}
+```
+
+### Count by status values
+
+```http
+GET accounts?$apply=groupby((statuscode),aggregate($count as count))
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Active",
+            "statuscode": 1,
+            "count@OData.Community.Display.V1.FormattedValue": "8",
+            "count": 8
+        },
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Inactive",
+            "statuscode": 2,
+            "count@OData.Community.Display.V1.FormattedValue": "1",
+            "count": 1
+        }
+    ]
+}
+```
+
+### Aggregate sum of revenue
+
+```http
+GET accounts?$apply=aggregate(revenue with sum as total)
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "total@OData.Community.Display.V1.FormattedValue": "$440,000.00",
+            "total": 440000.000000000
+        }
+    ]
+}
+```
+
+### Average revenue based on status
+
+```http
+GET accounts?$apply=groupby((statuscode),aggregate(revenue with average as averagevalue))
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Active",
+            "statuscode": 1,
+            "averagevalue@OData.Community.Display.V1.FormattedValue": "$53,750.00",
+            "averagevalue": 53750.000000000
+        },
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Inactive",
+            "statuscode": 2,
+            "averagevalue@OData.Community.Display.V1.FormattedValue": "$10,000.00",
+            "averagevalue": 10000.000000000
+        }
+    ]
+}
+```
+
+### Sum of revenue based on status
+
+```http
+GET accounts?$apply=groupby((statuscode),aggregate(revenue with sum as total))
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Active",
+            "statuscode": 1,
+            "total@OData.Community.Display.V1.FormattedValue": "$430,000.00",
+            "total": 430000.000000000
+        },
+        {
+            "statuscode@OData.Community.Display.V1.FormattedValue": "Inactive",
+            "statuscode": 2,
+            "total@OData.Community.Display.V1.FormattedValue": "$10,000.00",
+            "total": 10000.000000000
+        }
+    ]
+}
+```
+
+### Total account revenue by primary contact name
+
+```http
+GET accounts?$apply=groupby((primarycontactid/fullname),aggregate(revenue with sum as total))
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "total@OData.Community.Display.V1.FormattedValue": "$10,000.00",
+            "total": 10000.000000000,
+            "contact_fullname": "Jim Glynn (sample)"
+        },
+        {
+            "total@OData.Community.Display.V1.FormattedValue": "$80,000.00",
+            "total": 80000.000000000,
+            "contact_fullname": "Maria Campbell (sample)"
+        },
+      ... <truncated for brevity>
+      
+    ]
+}
+```
+
+### Primary contact names for accounts in 'WA'
+
+```http
+GET accounts??$apply=filter(address1_stateorprovince eq 'WA')/groupby((primarycontactid/fullname))
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "contact_fullname": "Rene Valdes (sample)"
+        },
+        {
+            "contact_fullname": "Robert Lyon (sample)"
+        },
+        {
+            "contact_fullname": "Scott Konersmann (sample)"
+        }
+    ]
+}
+```
+
+### Last created record date and time
+
+```http
+GET accounts??$apply=aggregate(createdon with max as lastCreate)
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "lastCreate@OData.Community.Display.V1.FormattedValue": "3/25/2023 10:42 AM",
+            "lastCreate": "2023-03-25T17:42:47Z"
+        }
+    ]
+}
+```
+
+### First created record date and time
+
+```http
+GET accounts?$apply=aggregate(createdon with min as firstCreate)
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
+```
+
+```json
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts",
+    "value": [
+        {
+            "firstCreate@OData.Community.Display.V1.FormattedValue": "3/25/2023 10:42 AM",
+            "firstCreate": "2023-03-25T17:42:46Z"
+        }
+    ]
+}
+```
 
 ## Count number of rows
