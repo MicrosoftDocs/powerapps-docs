@@ -31,6 +31,8 @@ Verify the following prerequisites before you enable mobile offline:
 -   Users with the **basic user** role can open and use an offline application. This role has the Read privilege for the **mobile offline profile** table.
 
     If you have a custom security role, make sure you have the Read privilege for **Mobile Offline profile**. For more information, go to [<u>Miscellaneous privileges - Core Records tab</u>](/power-platform/admin/miscellaneous-privileges).
+    
+- The canvas app must be associated to a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
 ## Optimize your app for mobile offline
 
