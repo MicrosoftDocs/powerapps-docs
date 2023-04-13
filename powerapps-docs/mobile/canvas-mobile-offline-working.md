@@ -52,6 +52,6 @@ The offline sync icon indicates the synchronization status of the Power Apps mob
 
 ## Sync status icons
 
-The offline sync icon changes based on the app's sync status. For more information about the possible sync states and the icons associated with them, see [Sync status icons(offline-sync-icon.md#sync-status-icons).
+The offline sync icon changes based on the app's sync status. For more information about the possible sync states and the icons associated with them, see [Sync status icons](offline-sync-icon.md#sync-status-icons).
 
 By clicking on the icon, you can have a clear description of the different states.
