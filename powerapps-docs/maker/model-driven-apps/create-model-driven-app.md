@@ -38,23 +38,25 @@ For more information, go to the following articles:
 
 1. On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md)
-   > [!NOTE]   
-   > Unmanaged solutions can be recognized by the open lock in the **Managed Externally?** column.
-   > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Viewing solutions within an environment":::
+1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md).
+   > [!NOTE]
+   > Unmanaged solutions can be identified when the solution has a **No** in the **Managed** column.
+   > 
    > Although the **Default Solution** is an unmanaged solution, it is in most circumstances not recommended to create or edit customizations in the default solution.
+
 1. Select **New** > **App** > **Model-driven app**.
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
-1. On the command bar select **Add page**, and then on the New page screen, select **Dataverse table**, and then select **Next**.
+1. On the command bar select **Add page**, and then on the **New page** screen, select **Dataverse table**, and then select **Next**.
 1. From the list of tables, select **Account**, select **Contact**, and then select **Add**.
-1. Select **Pages** on the left pane. Under **Navigation** the layout for the app is displayed.
+
+On the **Pages** left pane, under **Navigation** the layout for the app is displayed.
 
    :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the navigation pane" lightbox="media/navigation-area.png":::
 
-   Note the following: 
-   - Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
-   :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables.":::
-1. Select **Save**, and then select **Publish**.
+Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
+:::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables.":::
+
+To save and publish the app, select **Save**, and then select **Publish**.
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
 

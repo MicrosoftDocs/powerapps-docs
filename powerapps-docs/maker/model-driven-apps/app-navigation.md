@@ -19,11 +19,9 @@ In a model-driven app, there are the three main app runtime navigation component
 
 1. *Areas* - For apps with more than one area, a switch control is displayed in the lower left navigation pane. In the screenshot below, the current area is named *Accounts*.
 1. *Groups* - Group names appear as a navigation element in an app with the subarea names within the group listed beneath it. In the screenshot below, one group is named *Accounts* and one is named *New Group*.
-1. *Subareas* - Subareas and pages appear under the group that they're configured within in the app designer. In the screenshot below, one subarea is named *All accounts revenue* and another subarea is named *Contacts*.
+1. *Pages* - Pages appear under the group that they're configured within in the app designer. In the screenshot below, one page is named *All accounts revenue* and another page is named *Contacts*.
 
    :::image type="content" source="media/default-sitemap.png" alt-text="Default model-driven app site map":::
-
-By default, a new model-driven app's navigation includes one area named **Area1**, one group named **Group1**, and one subarea named **Subarea1**. You can change the default area, group, and subarea names to something that is more meaningful to your users or configure a different site map.
 
 ## Create an area
 
@@ -56,7 +54,7 @@ To create a new group, complete the following steps:
 1. On the left navigation pane, select **Pages**.
 1. Select **...** next to **Navigation**.
 1. Select **New group**.
-   :::image type="content" source="media/add-navigation.png" alt-text="Add a group or subarea":::
+   :::image type="content" source="media/add-navigation.png" alt-text="Add a group or page":::
 1. Complete the properties pane for the group:
 
    - **Title**: Enter a title used to describe the group.
@@ -76,6 +74,7 @@ Pages were formerly called *subareas* in the app designer. To create a new page,
 1. Select the content type you want.
    - **Dataverse table**. Select an existing table or create a new one. More information: [Create a custom table](../data-platform/data-platform-create-entity.md)
    - **Dashboard**. Select a dashboard. More information: [Create or edit model-driven app dashboards](create-edit-dashboards.md)
+   - **URL**. Add a URL, such as a website address. More information: [Add a URL to an app](#add-a-url-to-an-app)
    - **Custom page**. Add a custom page, such as a canvas app page. More information: [Overview of custom pages for model-driven apps](model-app-page-overview.md)
 1. Complete the choices that are on you screen to create the page, and then select **Add**.
 1. To save your app navigation changes select **Save**.
@@ -95,7 +94,8 @@ A URL is a type of page in the app navigation. When the user selects the page, t
 
      :::image type="content" source="media/create-url-page.png" alt-text="Add a URL subarea":::
 
-1. Select **Save**, and then select **Publish**.
+1. To save your app navigation changes select **Save**.
+1. To publish the changes and make them available to other users, select **Publish**.
 
 ## Remove a group or page
 

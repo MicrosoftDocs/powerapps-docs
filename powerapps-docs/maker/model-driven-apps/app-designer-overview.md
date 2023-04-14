@@ -28,7 +28,7 @@ The app designer interface has the following areas:
 1. Command bar – Displays the available actions:
 
    - **Back**. Closes the model-driven app designer and returns you to the Power Apps website (make.powerapps.com).
-   - **Add page**. Creates a new page for one or more table forms and views or table dashboards for the app.
+   - **Add page**. Creates a new page, which can include table forms and views, table dashboards, or a custom page for the app.
    - **Settings**. Opens the app properties such as name and description.
    - **Edit form**: Open the form designer to edit the default form shown in app preview.
    - **Comments**. Add a comment to the app. More information: [Add comments in the model-driven app designer](comments.md)
