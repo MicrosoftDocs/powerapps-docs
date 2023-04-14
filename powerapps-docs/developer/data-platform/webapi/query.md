@@ -12,9 +12,9 @@ contributors:
 ---
 # Query data using the Web API
 
-When you retrieve data with a query, you must make the following choices:
+When you create a query, you need to make the following decisions:
 
-|Choice|Description|
+|Decision|Description|
 |---------|---------|
 |[Select Columns](#select-columns)|Which columns of data to return.|
 |[Join Tables](#join-tables)|Which related tables to include in the results.|
@@ -24,7 +24,7 @@ When you retrieve data with a query, you must make the following choices:
 |[Aggregate data](#aggregate-data)|How to group and aggregate the data returned.|
 |[Count number of rows](#count-number-of-rows)|How to count the number of rows.|
 
-This article explains how to apply these choices when constructing a query to retrieve data using the Dataverse Web API.
+This article provides the information you need to make these decisions when constructing a query to retrieve data using the Dataverse Web API.
 
 > [!NOTE]
 > This article is about querying data found in tables. You can also use Web API to query data about *table definitions*, or entities. The structure of the data is different, so many of the capabilities described here do not apply. More information: [Query table definitions using the Web API](query-metadata-web-api.md) and [Query schema definitions](../query-schema-definitions.md)
@@ -34,7 +34,7 @@ This article explains how to apply these choices when constructing a query to re
 Every query begins with a collection of entities. Entity collections can be either:
 
 - [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
-- [Filtered collections](#filtered-collections): A set of entities returned by a collection-valued navigation property for a specific record.
+- [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
 
 ### EntitySet resources
 
@@ -47,7 +47,6 @@ GET [Organization URI]/api/data/v9.2/
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
-If-None-Match: null
 ```
 
 **Response**
@@ -74,8 +73,10 @@ OData-Version: 4.0
             "name": "accounts",
             "kind": "EntitySet",
             "url": "accounts"
-        }
+        },
       ... <Truncated for brevity>
+   [
+}
 ```
 
 > [!TIP]
@@ -127,7 +128,7 @@ These [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata0
 > [!IMPORTANT]
 > When you query data, it is important to limit the amount of data returned to optimize performance. Only select the columns with data that you need.
 
-Use the `$select` query option to choose which columns to return with your query. If you don't include a `$select` query option, all properties will be returned. In OData, every column is represented as a *property*. More information: [Web API Properties](web-api-properties.md)
+Use the `$select` [query option](#odata-query-options) to choose which columns to return with your query. If you don't include a `$select` query option, all properties will be returned. In OData, every column is represented as a *property*. More information: [Web API Properties](web-api-properties.md)
 
 **Request**
 
@@ -187,7 +188,7 @@ To include formatted values in your results, use this request header:
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
-Formatted values are one of several annotations you can request. Use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](#request-annotations)
+Formatted values are one of several annotations you can request. Use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 The formatted value is returned with the record with an annotation that follows this convention:
 
@@ -246,13 +247,13 @@ For example, many tables have records that can be owned by users or teams. This 
 
 When you include the `_ownerid_value` lookup property with your `$select`, it will return a Guid value, but it will not tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
 
-To include these annotations in your results, use this request header: 
+To include these annotations in your results, use this request header:
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 ```
 
-Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](#request-annotations)
+Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
 The following example shows two different account records. The first is owned by a `team`, the second by a `systemuser`:
 
@@ -301,30 +302,10 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associated
 - `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property.
 
 
-### Request annotations
-
-In addition to properties, you can request different OData annotation data to be returned with the results using the `Prefer: odata.include-annotations` request header. You can choose to return all annotations, or specify specific annotations. The following table describes the annotations Dataverse Web API supports:
-
-
-|Annotation|Description|
-|---------|---------|
-|`OData.Community.Display.V1.FormattedValue`|See [Formatted values](#formatted-values)|
-|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|See [Lookup property data](#lookup-property-data)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Count number of rows](#count-number-of-rows) |
-|`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. This value will change when any schema change occurs. This is an indication that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
-|`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide additional details when errors are returned. More information: [Include more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors)|
-
-> [!TIP]
-> It is common to use the `Prefer: odata.include-annotations="*"` request header to return all annotations.
-
-If you want only specific annotations, you can request them as comma separated values. You can also use the '`*`' character as a wildcard.  For example, the following `Prefer` request header only includes the formatted values and any additional error detail annotations:
-
-`Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.ErrorDetails*"`
-
 ## Join Tables
 
 
-Use the `$expand` query option with navigation properties to control what data is returned from related table records.
+Use the `$expand` [query option](#odata-query-options) with navigation properties to control what data is returned from related table records.
 
 > [!NOTE]
 >  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
@@ -766,7 +747,7 @@ OData-Version: 4.0
 
 ## Order rows
 
-Use the `$orderby` query option to specify the order in which items are returned. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the `name` and `revenue` properties of accounts ordered by ascending `revenue` and by descending `name`.
+Use the `$orderby` [query option](#odata-query-options) to specify the order in which items are returned. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the `name` and `revenue` properties of accounts ordered by ascending `revenue` and by descending `name`.
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
@@ -776,7 +757,7 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 
 ## Filter rows
 
-Use the `$filter` query option to filter a collection of resources that are addressed by a request URL.
+Use the `$filter` [query option](#odata-query-options) to filter a collection of resources that are addressed by a request URL.
 
 Dataverse evaluates each resource in the collection using the expression set for `$filter`. Only records where the expression evaluates to `true` are returned in the response. Records are not returned if the expression evaluates to `false` or `null`, or if the user doesn't have read access to the record.
 
