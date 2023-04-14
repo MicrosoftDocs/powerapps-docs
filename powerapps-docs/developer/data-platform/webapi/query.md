@@ -35,6 +35,7 @@ Every query begins with a collection of entities. Entity collections can be eith
 
 - [EntitySet resources](#entityset-resources): One of the Web API EntitySet collections.
 - [Filtered collections](#filtered-collections): A set of entities returned by a [collection-valued navigation property](web-api-navigation-properties.md#collection-valued-navigation-properties) for a specific record.
+- An expanded collection-valued navigation property. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
 ### EntitySet resources
 
@@ -130,6 +131,8 @@ These [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata0
 
 Use the `$select` [query option](#odata-query-options) to choose which columns to return with your query. If you don't include a `$select` query option, all properties will be returned. In OData, every column is represented as a *property*. More information: [Web API Properties](web-api-properties.md)
 
+The following example requests the `name` and `revenue` properties from one row of the `accounts` EntitySet resource.
+
 **Request**
 
 ```http
@@ -162,7 +165,7 @@ OData-Version: 4.0
 
 The primary key property is always returned so you don't need to include it in your `$select`. In this example, `accountid` is the primary key.
 
-Other property values may also be included. In this case, the `_transactioncurrencyid_value` [lookup property](web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../reference/entities/transactioncurrency.md) is included because revenue is a currency property.
+Other property values may also be included. In this case, the `_transactioncurrencyid_value` [lookup property](web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../reference/entities/transactioncurrency.md) is included because `revenue` is a currency property.
 
 ### Which properties are available?
 
@@ -196,7 +199,9 @@ The formatted value is returned with the record with an annotation that follows 
 <property name>@OData.Community.Display.V1.FormattedValue
 ```
 
-as shown in the following example.
+as shown in the following example. 
+
+
 
 **Request**
 
@@ -208,6 +213,18 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
+
+The response returns the values and formatted values for the requested properties:
+
+|Property  |Value|Formatted value|
+|---------|---------|---------|
+|`name`|`Litware, Inc. (sample)`|None|
+|`revenue`|`20000.0000`|`$20,000.00`|
+|`_primarycontactid_value`|`70bf4d48-34cb-ed11-b596-0022481d68cd`|`Susanna Stubberod (sample)`|
+|`customertypecode`|`1`|`Competitor`|
+|`modifiedon`|`2023-04-07T21:59:01Z`|`4/7/2023 2:59 PM`|
+|`_transactioncurrencyid_value`|`228f42f8-e646-e111-8eb7-78e7d162ced1`|`US Dollar`|
+|`accountid`|`78914942-34cb-ed11-b596-0022481d68cd`|None|
 
 **Response**
 
@@ -243,9 +260,9 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 When a [lookup property](web-api-properties.md#lookup-properties) represents a multi-table (polymorphic) relationship, you need to request specific annotations to determine which table contains the related data.
 
-For example, many tables have records that can be owned by users or teams. This data is stored in a lookup column named `ownerid`. This column is represented by a single-valued navigation property in OData. You can't use `$select` to get this value, but you can use the corresponding `_ownerid_value` lookup property with `$select`.
+For example, many tables have records that can be owned by users or teams. This data is stored in a lookup column named `ownerid`. This column is represented by a single-valued navigation property in OData. You could use `$expand` to create a join to get this value, but you can't use `$select`. However, you can use the corresponding `_ownerid_value` lookup property with `$select`.
 
-When you include the `_ownerid_value` lookup property with your `$select`, it will return a Guid value, but it will not tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
+When you include the `_ownerid_value` lookup property with your `$select`, it will return a Guid value. This value will not tell you whether the owner of the record is a user or a team. You need to request annotations to get this data.
 
 To include these annotations in your results, use this request header:
 
@@ -253,9 +270,9 @@ To include these annotations in your results, use this request header:
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 ```
 
-Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](compose-http-requests-handle-errors.md#request-annotations)
+> [!TIP]
+> Or you can use `Prefer: odata.include-annotations="*"` to include all annotations. More information: [Request annotations](compose-http-requests-handle-errors.md#request-annotations)
 
-The following example shows two different account records. The first is owned by a `team`, the second by a `systemuser`:
 
 **Request**
 
@@ -266,6 +283,8 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.associatednavigationproperty,Microsoft.Dynamics.CRM.lookuplogicalname"
 ```
+
+The following response returns two different account records. The first is owned by a `team`, the second by a `systemuser`. The `_ownerid_value@Microsoft.Dynamics.CRM.lookuplogicalname` annotation provides this information:
 
 **Response**
 
@@ -299,7 +318,7 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.associated
 ```
 
 - `<lookup property name>@Microsoft.Dynamics.CRM.lookuplogicalname` is the logical name of the related table.
-- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property.
+- `<lookup property name>@Microsoft.Dynamics.CRM.associatednavigationproperty` is the name of the corresponding single-valued navigation property. You can use `$expand` using this value in another request to get more data from the related record.
 
 
 ## Join Tables
@@ -311,27 +330,37 @@ Use the `$expand` [query option](#odata-query-options) with navigation propertie
 >  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
 > - Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. More information: [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 
-You can apply the following system query options within certain `$expand` options:
+You can apply the following [query options](#odata-query-options) within certain `$expand` options:
 
 
 |Option|Description|
 |---------|---------|
-|`$select`|Select which properties are returned. More information: [Limit columns with $select](#limit-columns-with-select)|
-|`$filter`|For collection-valued navigation properties, limit the records returned. More information: [Filter results](query-data-web-api.md#filter-results)|
+|`$select`|Select which properties are returned. More information: [Select Columns](#select-columns)|
+|`$filter`|For collection-valued navigation properties, limit the records returned. More information: [Filter rows](#filter-rows)|
 |`$orderby`|For collection-valued navigation properties, control the order of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 |`$top`|For collection-valued navigation properties, limit the number of records returned. Not supported with nested `$expand`. More information: [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 |`$expand`|Expand navigation properties in the related entity set. Using `$expand` within an `$expand` is called a *nested `$expand`*. More information: [Nested expand of single-valued navigation properties](#nested-expand-of-single-valued-navigation-properties) & [Nested $expand on collection-valued navigation properties](#nested-expand-on-collection-valued-navigation-properties)|
 
 These options are a subset of the system query options described in the **11.2.4.2.1 Expand Options** section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398299). The options `$skip`, `$count`, `$search`, and `$levels` aren't supported for the Dataverse Web API.
 
-Use these options with `$expand` by adding them in parentheses after the name of the navigation property. Separate each option with a semicolon. For example:
+Use these options with `$expand` by adding them in parentheses after the name of the navigation property. Separate each option with a semicolon. 
+
+For example, the following query:
+
+- Requests the `account.name` property
+- Joins the `AccountTasks` collection-valued navigation property requesting:
+
+   - The `task.subject` property
+   - Where the `task.subject` contains the string "`Task`"
+   - Ordered by the `task.createdon` date, descending
 
 ```http
 /accounts?$select=name&$expand=Account_Tasks($select=subject;$filter=contains(subject,'Task');$orderby=createdon desc)
 ```
+
 ### Limit columns with $select
 
-Always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type.
+As with any query, always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type.
 
 **Request**
 
@@ -386,7 +415,7 @@ It's important to remember there are two types of navigation properties. More in
   
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
-Expanding a collection-valued navigation property can make the size of the response large in ways it is difficult to anticipate. It's important that you include limits to control how much data is returned. More information: [Page results](#page-results)
+Expanding a collection-valued navigation property can make the size of the response large in ways it is difficult to anticipate. It's important that you include limits to control how much data is returned. This is usually done with paging. More information: [Page results](#page-results)
 
 > [!NOTE]
 > There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
@@ -450,6 +479,10 @@ OData-Version: 4.0
     "@odata.nextLink": "[Organization URI]/api/data/v9.2/accounts?$select=name%0A&$expand=primarycontactid($select=contactid,fullname),createdby($select=fullname)&$skiptoken=%3Ccookie%20pagenumber=%222%22%20pagingcookie=%22%253ccookie%2520page%253d%25221%2522%253e%253caccountid%2520last%253d%2522%257b7A914942-34CB-ED11-B596-0022481D68CD%257d%2522%2520first%253d%2522%257b78914942-34CB-ED11-B596-0022481D68CD%257d%2522%2520%252f%253e%253c%252fcookie%253e%22%20istracking=%22False%22%20/%3E"
 }
 ```  
+
+> [!NOTE]
+> The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This is because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance. > 
+> However, the [User (SystemUser) table](../reference/entities/systemuser.md) has the primary key of [SystemUserId](../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. More information: [EntityType inheritance](web-api-entitytypes.md#entitytype-inheritance)
 
 #### Return references
 
@@ -586,16 +619,17 @@ There are some important differences in the response that depend on whether you 
 
 ||Nested $expand|Single $expand|
 |---------|---------|---------|
-|**Paging**|Paging on expanded rows.|Paging only on resource entityset. `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
+|**Paging**|Paging on expanded rows.|Paging only on [EntitySet resource](#entityset-resources). `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
 |**`$top` or `$orderby` supported**|No|Yes|
 
 #### Single $expand on collection-valued navigation properties
 
-If you use only single `$expand`, there's no paging applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the entityset resource of the query.
+If you use only single-level `$expand`, there's no paging applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the entityset resource of the query.
 
-Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that takes you to the collection filtered by the relationship. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
+Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that represents the [filtered collection](#filtered-collections) for the relationship with your query options appended. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
 
-Because no paging is applied to the expanded records, up to 5000 related records can be returned. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
+> [!NOTE]
+> Because no paging is applied to the expanded records, up to 5000 related records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, this could be a lot of data. This could impact performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
 
 The following example includes single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in with the first page.
 
