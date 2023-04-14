@@ -108,7 +108,7 @@ You can use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the
 |---------|---------|
 |`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When this preference is applied to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference applied, both operations return status `204 No Content` to reflect that no data is returned in the body of the response by default. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
 |`odata.include-annotations`|See [Request annotations](#request-annotations)|
-|`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query.md#page-results) |
+|`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query-data-web-api.md#page-results) |
 |`odata.track-changes`|The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
 
 
@@ -119,9 +119,9 @@ You can request different OData annotation data to be returned with the results 
 
 |Annotation|Description|
 |---------|---------|
-|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query.md#formatted-values)|
-|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query.md#lookup-property-data)|
-|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Count number of rows](query.md#count-number-of-rows) |
+|`OData.Community.Display.V1.FormattedValue`| Returns formatted string values you can use in your application. More information: [Formatted values](query-data-web-api.md#formatted-values)|
+|`Microsoft.Dynamics.CRM.associatednavigationproperty`<br />`Microsoft.Dynamics.CRM.lookuplogicalname`|Returns information about related lookup columns. More information:  [Lookup property data](query-data-web-api.md#lookup-property-data)|
+|`Microsoft.Dynamics.CRM.totalrecordcount`<br />`Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded`|When you use the `$count` query option the `@odata.count` annotation tells the number of records, but only 5000 records can be returned at a time. Request the `Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded` to get a boolean value that will tell you if the total number of records matching the query exceeds 5000.  More information: [Count number of rows](query-data-web-api.md#count-number-of-rows) |
 |`Microsoft.Dynamics.CRM.globalmetadataversion`|This annotation is returned on the request and you can cache it in your application. This value will change when any schema change occurs. This is an indication that you may need to refresh any schema data that your application has cached. More information: [Cache Schema data](../cache-schema-data.md)|
 |`Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br />`Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br />`Microsoft.PowerApps.CDS.HelpLink`<br />`Microsoft.PowerApps.CDS.TraceText`<br />`Microsoft.PowerApps.CDS.InnerError.Message`|These annotations provide additional details when errors are returned. More information: [Include more details with errors](#include-more-details-with-errors)|
 

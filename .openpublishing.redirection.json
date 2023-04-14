@@ -1,6 +1,11 @@
 {
   "redirections": [
    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/retrieve-related-entities-query.md",
+      "redirect_url": "query-data-web-api.md#join-tables",
+      "redirect_document_id": "false"
+   },
+   {
       "source_path": "powerapps-docs/developer/data-platform/appendix-add-license-information-to-your-solution.md",
       "redirect_url": "/power-platform/developer/appsource/appendix-add-license-information-to-your-solution",
       "redirect_document_id": "false"

@@ -239,7 +239,7 @@ OData-Version: 4.0
 
 ## Retrieve related records by expanding navigation properties
 
-Use the `$expand` system query option to control what data from related entities is returned. More information: [Retrieve related table records with a query](retrieve-related-entities-query.md)
+Use the `$expand` system query option to control what data from related entities is returned. More information: [Join Tables](query-data-web-api.md#join-tables)
 
 <a name="bkmk_DetectIfChanged"></a>
 
@@ -255,7 +255,6 @@ Requesting formatted values for individual record retrievals is done the same wa
 
 ### See also
 
-[Retrieve related table records with a query](retrieve-related-entities-query.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

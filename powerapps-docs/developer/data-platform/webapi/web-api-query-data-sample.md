@@ -33,7 +33,7 @@ This sample is divided into the following principal sections, containing Web API
 |[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order results](query-data-web-api.md#bkmk_order)<br /> [Filter results](query-data-web-api.md#bkmk_filter)<br />[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
 |[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /> [Limits on number of rows returned](query-data-web-api.md#bkmk_limits)|
 |[Section 5: Pagination](#section-5-pagination)|[Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)|
-|[Section 6: Expanding results](#section-6-expanding-results)|[Retrieve related table records with a query](retrieve-related-entities-query.md)|
+|[Section 6: Expanding results](#section-6-expanding-results)|[Join Tables](query-data-web-api.md#join-tables)|
 |[Section 7: Aggregate results](#section-7-aggregate-results)|[Aggregate and grouping results](query-data-web-api.md#aggregate-and-grouping-results)|
 |[Section 8: FetchXML queries](#section-8-fetchxml-queries)|[FetchXML schema](../fetchxml-schema.md)<br /> [Use FetchXml with Web API](use-fetchxml-web-api.md)|
 |[Section 9: Using predefined queries](#section-9-using-predefined-queries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType>|
@@ -1574,7 +1574,7 @@ Page 2 of 3:
 
 ## Section 6: Expanding results
 
-To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Retrieve related table records with a query](retrieve-related-entities-query.md)
+To retrieve information on associated table rows, use the `$expand` query option on navigation properties. More information: [Join Tables](query-data-web-api.md#join-tables)
   
 ### Expand on single-valued navigation property
 
