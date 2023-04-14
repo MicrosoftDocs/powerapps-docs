@@ -348,7 +348,7 @@ Use these options with `$expand` by adding them in parentheses after the name of
 ```http
 /accounts?$select=name&$expand=Account_Tasks($select=subject;$filter=contains(subject,'Task');$orderby=createdon desc)
 ```
-## Limit columns with $select
+### Limit columns with $select
 
 Always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type.
 
@@ -397,7 +397,7 @@ Preference-Applied: odata.maxpagesize=1
 }
 ```
 
-## Navigation property type differences
+### Navigation property type differences
 
 It's important to remember there are two types of navigation properties. More information: [Web API Navigation Properties](web-api-navigation-properties.md)  
   
@@ -410,7 +410,7 @@ Expanding a collection-valued navigation property can make the size of the respo
 > [!NOTE]
 > There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
-## Expand single-valued navigation properties
+### Expand single-valued navigation properties
 
 The following example demonstrates how to retrieve contact records including the primary contact and the user who created the records.
   
@@ -470,7 +470,7 @@ OData-Version: 4.0
 }
 ```  
 
-### Return references
+#### Return references
 
 Instead of returning data, you can also return references (links) to the related records by expanding the single-valued navigation property with the `/$ref` option. The following example returns JSON objects with an `@odata.id` property that has a URL for each primary contact.
   
@@ -529,7 +529,7 @@ You can only use the `/$ref` option with single-valued navigation properties. If
 }
 ```
 
-## Nested expand of single-valued navigation properties
+### Nested expand of single-valued navigation properties
 
 You can expand single-valued navigation properties to multiple levels by nesting an `$expand` option within another `$expand` option.
 
@@ -599,7 +599,7 @@ OData-Version: 4.0
 }
 ```
 
-## Expand collection-valued navigation properties
+### Expand collection-valued navigation properties
 
 There are some important differences in the response that depend on whether you use nested `$expand` with a collection-valued navigation property anywhere in your query.
 
@@ -608,7 +608,7 @@ There are some important differences in the response that depend on whether you 
 |**Paging**|Paging on expanded rows.|Paging only on resource entityset. `<property name>@odata.nextLink` URLs for expanded rows don't include paging information.|
 |**`$top` or `$orderby` supported**|No|Yes|
 
-### Single $expand on collection-valued navigation properties
+#### Single $expand on collection-valued navigation properties
 
 If you use only single `$expand`, there's no paging applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the entityset resource of the query.
 
@@ -686,7 +686,7 @@ OData-Version: 4.0
 > You need to scroll the example response horizontally to see that only the `@odata.nextLink` URL for the account result contains paging information.
 
 
-### Nested $expand on collection-valued navigation properties
+#### Nested $expand on collection-valued navigation properties
 
 If you use a nested `$expand` anywhere in your query, and you've included the `Prefer: odata.maxpagesize` request header, paging is applied to each of the expanded collections.
 
