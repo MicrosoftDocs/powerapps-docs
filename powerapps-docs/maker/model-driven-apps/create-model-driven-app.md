@@ -51,10 +51,10 @@ For more information, go to the following articles:
 
 On the **Pages** left pane, under **Navigation** the layout for the app is displayed.
 
-   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the navigation pane" lightbox="media/navigation-area.png":::
+   :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the navigation pane":::
 
-Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
-:::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables.":::
+Notice the preview pane displays your app. Selecting a component, such as the **Accounts form**, affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
+:::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables." lightbox="media/create-app.png":::
 
 To save and publish the app, select **Save**, and then select **Publish**.
 
