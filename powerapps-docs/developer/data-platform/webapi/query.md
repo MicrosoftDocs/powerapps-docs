@@ -1229,6 +1229,18 @@ Additional details on OData data aggregation can be found here: [OData extension
 
 Following are some examples:
 
+- [List of unique statuses in the query](#list-of-unique-statuses-in-the-query)
+- [Count by status values](#count-by-status-values)
+- [Aggregate sum of revenue](#aggregate-sum-of-revenue)
+- [Average revenue based on status](#average-revenue-based-on-status)
+- [Sum of revenue based on status](#sum-of-revenue-based-on-status)
+- [Total account revenue by primary contact name](#total-account-revenue-by-primary-contact-name)
+- [Primary contact names for accounts in 'WA'](#primary-contact-names-for-accounts-in-wa)
+- [Last created record date and time](#last-created-record-date-and-time)
+- [First created record date and time](#first-created-record-date-and-time)
+
+These samples do not show the complete request and response for brevity.
+
 ### List of unique statuses in the query
 
 ```http
