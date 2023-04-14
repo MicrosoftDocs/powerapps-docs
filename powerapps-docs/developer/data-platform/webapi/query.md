@@ -1462,11 +1462,42 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ## Count number of rows
 
 Use the `$count=true` query option to include a count of entities that match the filter criteria up to 5000.  
+
+**Request**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=accountid&$count=true
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+OData-Version: 4.0
+
+{
+    "@odata.context": "https://crmue.api.crm.dynamics.com/api/data/v9.2/$metadata#accounts(accountid)",
+    "@odata.count": 9,
+    "value": [
+        {
+            "@odata.etag": "W/\"81359849\"",
+            "accountid": "78914942-34cb-ed11-b596-0022481d68cd"
+        },
+        ... <Truncated for brevity>
+    ]
+}
+```
+
+The response `@odata.count` annotation will contain the number of rows, up to 5000, that match the filter criteria irrespective of the page size requested.
   
 > [!NOTE]
 > If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5000, use the [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount).
+>
+>  You should not use `$top` with `$count=true`.  
   
-The response `@odata.count` annotation will contain the number of rows, up to 5000, that match the filter criteria irrespective of the page size requested.
 
 If the count value is 5000 and you want to know whether the count is exactly 5000 or greater than 5000, you can add the following header:
 
@@ -1498,11 +1529,7 @@ If there are fewer than 5000 records, the actual count will be returned.
 
 If you don't include the `$count=true` query option, the total `@Microsoft.Dynamics.CRM.totalrecordcount` value will be `-1`.
 
-  
-> [!NOTE]
->  You should not use `$top` with `$count=true`.  
-  
- The following example shows that there are ten accounts that match the criteria where the name contains "sample", but only the first three accounts are returned.  
+The following example shows that there are ten accounts that match the `$filter`, but only the first three accounts are returned.  
   
  **Request**
 
@@ -1553,7 +1580,7 @@ Preference-Applied: odata.include-annotations="Microsoft.Dynamics.CRM.*"
 
 ```  
   
- If you don't want to return any data except for the count, you can apply `/$count` to any collection to get just the value.  You cannot apply the `Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.*"` header in this case because the result is a number, not a collection.
+To get just a number representing the count of a collection, append `/$count` to get that value.
   
  **Request**  
 
