@@ -170,7 +170,7 @@ All the available properties for an entity are found in the [$metadata service d
 For the entity types included with Dataverse, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
 > [!TIP]
-> The easiest way to quickly discover which properties are available is to send a request using the `$top` system query option with a value of `1` without using `$select`.
+> The easiest way to quickly discover which properties are available is to send a request using the `$top` query option with a value of `1` without using `$select`.
 
 ### Formatted values
 
@@ -324,7 +324,7 @@ If you want only specific annotations, you can request them as comma separated v
 ## Join Tables
 
 
-Use the `$expand` system query option with navigation properties to control what data is returned from related table records.
+Use the `$expand` query option with navigation properties to control what data is returned from related table records.
 
 > [!NOTE]
 >  - You are limited to no more than 15 `$expand` options in a query. This is to protect performance. Each `$expand` options creates a join that can impact performance. 
@@ -405,7 +405,7 @@ It's important to remember there are two types of navigation properties. More in
   
 - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
-Expanding a collection-valued navigation property can make the size of the response large in ways it is difficult to anticipate. It's important that you include limits to control how much data is returned. The `Prefer: odata.maxpagesize` request header is the most common way to limit the number of records returned, although you can also use `$top`. More information: [Specify the number of rows to return in a page](query-data-web-api.md#specify-the-number-of-rows-to-return-in-a-page)
+Expanding a collection-valued navigation property can make the size of the response large in ways it is difficult to anticipate. It's important that you include limits to control how much data is returned. More information: [Page results](#page-results)
 
 > [!NOTE]
 > There is a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. More information: [Expand collection-valued navigation properties](#expand-collection-valued-navigation-properties)
@@ -766,7 +766,7 @@ OData-Version: 4.0
 
 ## Order rows
 
-Specify the order in which items are returned using the `$orderby` system query option. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the `name` and `revenue` properties of accounts ordered by ascending `revenue` and by descending `name`.
+Use the `$orderby` query option to specify the order in which items are returned. Use the `asc` or `desc` suffix to specify ascending or descending order respectively. The default is ascending if the suffix isn't applied. The following example shows retrieving the `name` and `revenue` properties of accounts ordered by ascending `revenue` and by descending `name`.
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
@@ -774,11 +774,9 @@ GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
 &$filter=revenue ne null
 ```
 
-<!-- Not really much to say here -->
-
 ## Filter rows
 
-Use the `$filter` system query option to filter a collection of resources that are addressed by a request URL.
+Use the `$filter` query option to filter a collection of resources that are addressed by a request URL.
 
 Dataverse evaluates each resource in the collection using the expression set for `$filter`. Only records where the expression evaluates to `true` are returned in the response. Records are not returned if the expression evaluates to `false` or `null`, or if the user doesn't have read access to the record.
 
@@ -911,7 +909,7 @@ endswith(name,'value%')
 
 #### Use OData query functions
 
-OData provides the following query functions:
+Use the following OData query functions to filter using string values:
 
 |Function|Example|  
 |--------------|-------------|  
