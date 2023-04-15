@@ -124,6 +124,29 @@ You can apply multiple options to a query. All query options must be separated f
 
 Dataverse Web API doesn't support these [OData query options](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752356): `$skip`,`$search`,`$format`.
 
+### Use parameter aliases with query options
+
+You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn't assigned a value it is assumed to be null.
+
+Without parameter aliases:
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
+&$orderby=revenue asc,name desc
+&$filter=revenue ne null
+```
+
+With parameter aliases:
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue
+&$orderby=@p1 asc,@p2 desc
+&$filter=@p1 ne @p3&@p1=revenue&@p2=name
+```
+
+You can also use parameter aliases when using functions. More information: [Use Web API functions](use-web-api-functions.md)
+
+
 ## Select Columns
 
 > [!IMPORTANT]
