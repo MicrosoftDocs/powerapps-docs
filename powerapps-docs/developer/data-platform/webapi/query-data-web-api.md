@@ -126,7 +126,7 @@ Dataverse Web API doesn't support these [OData query options](https://docs.oasis
 
 ### Use parameter aliases with query options
 
-You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn't assigned a value it is assumed to be null.
+You can use parameter aliases for `$filter` and `$orderby` query options, but not inside the `$expand` option. Parameter aliases allow for the same value to be used multiple times in a request. If the alias isn't assigned a value, it's assumed to be null.
 
 Without parameter aliases:
 
