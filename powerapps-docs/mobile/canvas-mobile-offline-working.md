@@ -17,6 +17,7 @@ searchScope:
 ---
 
 # Working with canvas apps offline (preview)
+[This topic is pre-release documentation and is subject to change.]
 
 Work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete—along with some special commands—so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
 
@@ -27,6 +28,9 @@ The app data includes all the resources needed for the app to run properly. The 
 With offline-first, all the calls to Dataverse data are executed against a local Database mirroring the Dataverse server and scoped to the need of the app.
 
 :::image type="content" source="media/conceptual-image.png" alt-text="Conceptual diagram showing that with offline-first, all the calls to Dataverse data are executed against a local Database mirroring the Dataverse server and scoped to the need of the app.":::
+
+> [!Important]
+> [!include [preview](../includes/cc-preview-features-definition.md)]
 
 ## Initial Offline sync
 
