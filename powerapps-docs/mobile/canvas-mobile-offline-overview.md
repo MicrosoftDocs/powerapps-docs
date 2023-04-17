@@ -41,3 +41,7 @@ After offline is enabled for your app, two versions of the app are produced .  A
 - **Offline-first with an internet connection**: Data is downloaded to the device, and all changes are saved locally. Because there's an internet connection, the app will automatically attempt to sync every few minutes.
 
 For more information, go to [Work offline on your mobile device (preview)](work-in-offline-mode.md).
+
+## System requirements
+
+To use canvas apps in offline mode, you must...
