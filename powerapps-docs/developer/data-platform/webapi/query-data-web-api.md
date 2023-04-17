@@ -1239,9 +1239,8 @@ You can limit the number of results returned by using the `$top` query option. T
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 ```
 
-You shouldn't use `$top` together with the `Prefer: odata.maxpagesize` request header. If you include both, `$top` is ignored.
-
-We also recommend you avoid using `$top` with `$count`. More information: [Count number of rows](#count-number-of-rows)
+> [!NOTE]
+> You shouldn't use `$top` together with the `Prefer: odata.maxpagesize` request header. If you include both, `$top` is ignored.
 
 ## Aggregate data
 
@@ -1529,9 +1528,7 @@ OData-Version: 4.0
 The response `@odata.count` annotation contains the number of rows, up to 5000, that matches the filter criteria irrespective of the page size requested.
   
 > [!NOTE]
-> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5000, use the [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount).
->
->  You should not use `$top` with `$count=true`.  
+> If you want to retrieve a snapshot within the past 24 hours of the total number of rows for a table beyond 5000, use the [RetrieveTotalRecordCount Function](xref:Microsoft.Dynamics.CRM.RetrieveTotalRecordCount). 
   
 
 If the count value is 5000 and you want to know whether the count is exactly 5000 or greater than 5000, you can add the following header:
