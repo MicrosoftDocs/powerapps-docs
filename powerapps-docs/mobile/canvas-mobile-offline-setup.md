@@ -128,7 +128,7 @@ To create an offline profile, follow these steps:
 
     If **Custom** is selected, admins can define a custom filter based on the following rules. Admins can create filters up to three levels.
 
-    | ** **                         | ** **                      | ** **                          |
+    |Rules                      |  &nbsp;                      |  &nbsp;                 |
     |-------------------------------|----------------------------|--------------------------------|
     | equal                         | not equal                  | gt – greater than              |
     | ge – greater than or equal to | le – less than or equal to | lt – less than                 |
