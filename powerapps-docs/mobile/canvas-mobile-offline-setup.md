@@ -140,7 +140,7 @@ To create an offline profile, follow these steps:
     | begins-with                   | not-begin-with             | ends-with                      |
     | not-end-with                  |                            |                                |
 
-11. In the **Include \[table name\] rows related to these tables** area, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the Mobile offline profile.
+11. In the **Include \[table name\] records related to these tables** area, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the Mobile offline profile.
 
     For example, if you select **Contact \| Field name: Primary contact** this means for every contact, the system will also download the account related to it.
 
