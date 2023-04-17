@@ -65,4 +65,4 @@ The offline sync icon changes based on the app's sync status.
 | ![Icon showing that the synchronization process encountered an error.](media/error.png "Icon showing that the synchronization process encountered an error.") | The synchronization process encountered an error. |
 | ![Icon showing that the synchronization process encountered a warning.](media/warning.png "Icon showing that the synchronization process encountered a warning.") | The synchronization process encountered a warning. |
 
-By clicking on the icon, you can have a clear description of the different states.
+By clicking on the icon, you get a description of the state.
