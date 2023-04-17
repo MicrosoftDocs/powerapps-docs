@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/12/2023
+ms.date: 04/17/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -140,7 +140,7 @@ To create an offline profile, follow these steps:
     | begins-with                   | not-begin-with             | ends-with                      |
     | not-end-with                  |                            |                                |
 
-11. In the **Include \[table name\] rows related to these tables** area, select the related table relationships. You need to have added the table you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the mobile offline profile.
+11. In the **Include \[table name\] rows related to these tables** area, select the related table relationships. You must have added the table that you want to create the relationship with. For example, if you want to add a relationship between the Account and Contact tables, then you need to add both tables to the Mobile offline profile.
 
     For example, if you select **Contact \| Field name: Primary contact** this means for every contact, the system will also download the account related to it.
 
@@ -150,12 +150,12 @@ To create an offline profile, follow these steps:
 
 ## Limitations and know issues
 
-The following is not supported
+The following is not supported:
 
 -   A canvas app doesn't work in offline on a web browser.
 
--   The Auto generated offline profile is not optimized yet for the app. For each table used in the app, it downloads the rows that the user has permissions on.
+-   The auto-generated offline profile is not optimized yet for the app. For each table used in the app, it downloads the rows that the user has permissions on.
 
--   Non Dataverse connectors like Sharepoint are not supported in offline. If you use a non-Dataverse connector, the app can only access the data when the device is connected to the network
+-   Non-Dataverse connectors like Sharepoint are not supported in offline. If you use a non-Dataverse connector, the app can only access the data when the device is connected to the network.
 
--   Dataverse Files and Images are not supported in an offline-enabled canvas app, neither when the device is connected to the network, nor when it is not connected. This is because the app operate in offline-first
+-   Dataverse files and images are not supported in an offline-enabled canvas app.
