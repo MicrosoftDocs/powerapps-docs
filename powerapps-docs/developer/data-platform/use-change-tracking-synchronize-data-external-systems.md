@@ -27,8 +27,7 @@ You can check whether this feature is enabled or enable it by using [Power Apps]
 You can set this programmatically by setting the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ChangeTrackingEnabled?text=EntityMetadata.ChangeTrackingEnabled Property> to `True`.
 
 > [!NOTE]
-> - Once change tracking has been enabled for a table, it is not possible to disable it.
-> - Some out of the box tables, such as Posts, cannot be enabled for change tracking. You can check if a table is eligible for change tracking by referencing the [CanChangeTrackingBeEnabled metadata property](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.canchangetrackingbeenabled). 
+> Once change tracking has been enabled for a table, it is not possible to disable it.
 
 For more information on how to use [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc): [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md)
 
@@ -61,6 +60,12 @@ Those entity sets which represent tables where change tracking is enabled will h
 ```
 
 More information: [Metadata annotations](webapi/web-api-service-documents.md#metadata-annotations).
+
+Some out of the box tables cannot be enabled for change tracking. You can check if a table is eligible for change tracking by referencing the [CanChangeTrackingBeEnabled metadata property](https://learn.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.canchangetrackingbeenabled). To see which tables cannot be enabled for change tracking, use this Web API query:
+
+```http
+GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName,ChangeTrackingEnabled&$filter=ChangeTrackingEnabled eq false and CanChangeTrackingBeEnabled/Value eq false
+```
 
 ## Retrieve changes for a table using the Web API
 
