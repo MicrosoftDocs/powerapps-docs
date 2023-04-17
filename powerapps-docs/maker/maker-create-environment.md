@@ -32,13 +32,13 @@ Developer type environments allow you to:
 
 ## Prerequisites
 
-To create a developer environment you need an active Power Platform plan that includes Dataverse. More information: [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
+To create a developer environment, you need an active Power Platform plan that includes Dataverse. More information: [Licensing overview for Microsoft Power Platform](/power-platform/admin/pricing-billing-skus)
 
 ## Create your own developer type environment
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Select the environment picker > **Try it now**.
-   :::image type="content" source="media/developer-plan/create-own-environment.png" alt-text="Try it now link to create your own environment":::
+   :::image type="content" source="media/create-own-environment.png" alt-text="Try it now link to create your own environment":::
 1. Follow the instructions on your screen to create your environment.
 
 ## Create your own environment when you sign up for the Power Apps Developer Plan
