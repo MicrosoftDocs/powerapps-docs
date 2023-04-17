@@ -4,7 +4,7 @@ description: This article explains how to work with canvas apps in offline mode 
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/12/2023
+ms.date: 04/17/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -19,30 +19,28 @@ searchScope:
 # Working with canvas apps offline (preview)
 [This topic is pre-release documentation and is subject to change.]
 
-Work with your data in offline mode even when you don't have internet access. The mobile app provides a rich offline experience that lets you work with commands like create, read, update, and delete—along with some special commands—so you always stay productive. After you're back online, changes you've made are synchronized with your apps in the Microsoft Dataverse environment.
+With the [offline-first](canvas-mobile-offline-overview.md#mobile-offline-first) experience, you can work with your Power Apps canvas app on your mobile device anytime, even when you don't have internet access. The mobile app provides a rich offline experience so that you can always stay productive. After you're back online, changes you've made are synchronized with your server in the Microsoft Dataverse environment.
 
-If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and will be synchronized to the app after you're back online.
+If you're working on a record and lose network connection, any updates made to the record are saved in offline mode and will be synchronized to the server after you're back online.
 
-The app data includes all the resources needed for the app to run properly. The User data is defined by the offline profile that is auto-generated from the processing of the code of the app.
-
-With offline-first, all the calls to Dataverse data are executed against a local Database mirroring the Dataverse server and scoped to the need of the app.
+With offline-first, all the calls to Dataverse data are executed against a local database mirroring the Dataverse server and are scoped to the need of the app.
 
 :::image type="content" source="media/conceptual-image.png" alt-text="Conceptual diagram showing that with offline-first, all the calls to Dataverse data are executed against a local Database mirroring the Dataverse server and scoped to the need of the app.":::
 
 > [!Important]
 > [!include [preview](../includes/cc-preview-features-definition.md)]
 
-## Initial Offline sync
+## Initial offline sync
 
-For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called *initial offline sync*.
+For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called the *initial offline sync*.
 
-The initial offline sync happens during the loading of the canvas app. you'll get a loading experience stating that your app is syncing the offline data with the **number of rows and tables that are downloaded**. This can take a few minutes or longer, depending on what has been configured in the app. If the initial offline sync isn't complete, it will be triggered every time the app is opened.
+The initial offline sync happens when you open the canvas app. You'll see a message stating that your app is syncing the offline data with the **number of rows and tables that are downloaded** on your device. This can take a few minutes or longer, depending on what has been configured in the app. If the initial offline sync isn't complete, it will be triggered every time the app is opened.
 
 :::image type="content" source="media/initial-offline-sync.png" alt-text="Image of the mobile screen that indicates the app is syncing the offline data.":::
 
 ## Offline delta sync
 
-Canvas apps can be fully customized. However if the app is using the offline template, it comes with Out Of The Box capabilities such as synchronization errors or warning, network connectivity status, and last but nor least whether the data on the device are in sync with the server and the other way around.
+Canvas apps can be fully customized. However, if the app is using the offline template, it comes with default capabilities, such as synchronization errors or warnings, network connectivity status, and whether the data on the device is in sync with the server.
 
 The offline sync icon indicates the synchronization status of the Power Apps mobile app. At a glance, you can tell:
 
@@ -54,7 +52,7 @@ The offline sync icon indicates the synchronization status of the Power Apps mob
 
 -   Whether the app has experienced an error or warning while syncing
 
-## Sync status icons
+### Sync status icons
 
 The offline sync icon changes based on the app's sync status. For more information about the possible sync states and the icons associated with them, see [Sync status icons](offline-sync-icon.md#sync-status-icons).
 
