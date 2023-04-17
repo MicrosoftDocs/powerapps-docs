@@ -26,9 +26,9 @@ When offline mode is enabled, users can interact with their data without interne
 
 Verify the following prerequisites before you enable mobile offline:
 
--   Environment maker, system administrator, or system customizer role is needed to configure offline mode for model-driven apps. These roles have Create, Read, Write, Delete and Share privileges on the **mobile offline profile** table. More information: [<u>About predefined security roles</u>](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
+-   Environment maker, system administrator, or system customizer role is needed to configure offline mode for canvas apps. These roles have Create, Read, Write, Delete and Share privileges on the **mobile offline profile** table. More information: [<u>About predefined security roles</u>](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
 
--   Users with the **basic user** role can open and use an offline application. This role has the Read privilege for the **mobile offline profile** table.
+-   Users with the **Basic user** role can open and use an offline application. This role has the Read privilege for the **mobile offline profile** table.
 
     If you have a custom security role, make sure you have the Read privilege for **Mobile Offline profile**. For more information, go to [<u>Miscellaneous privileges - Core Records tab</u>](/power-platform/admin/miscellaneous-privileges).
     
@@ -42,23 +42,23 @@ Follow these best practices when building an app for mobile offline use:
 
 -   Identify the on-the-go scenarios that are functionally related, such as tasks that are performed by users who work in the field.
 
--   Reduce the complexity of your app by limiting the amount of tables that needs to be downloaded on a user's device. Sometimes it is better to have two apps instead of one.
+-   Reduce the complexity of your app by limiting the amount of tables that need to be downloaded on a user's device. Sometimes it is better to have two apps instead of one.
 
 -   Use views that are optimized for the experience rather than displaying a large set of data. For example, it is preferable to rather use the **My active accounts** view than the **All accounts** view.
 
 ## Enable tables for offline
 
-Tables in your offline first app must be enabled for offline. Note that some built-in tables are enabled for offline by default. And, if you are using a table provided by a different solution, the solution author may not want the table to be enabled for offline. So, it may not be possible to enable some tables for offline. However, you can enable any new custom table for offline.
+Tables in your offline-first app must be enabled for offline. Note that some built-in tables are enabled for offline use, by default. And, if you are using a table provided by a different solution, the solution author may not want the table to be enabled for offline. So, it may not be possible to enable some tables for offline. However, you can enable any new custom table for offline.
 
 Follow these steps to verify whether a table is enabled for offline.
 
 1.  Sign in to <u>Power Apps</u>
 
-2.  On the left pane, **select** **Tables**. This will show the list of tables.
+2.  On the left pane, select **Tables**. This will display the list of tables.
 
-3. **Select the table**. This will open the Tables screen.
+3.  Select the table you want to enbable for offline use.
 
-4.  In the 'Table Properties' card, **select the properties gear**. This will open the Edit Table properties pane.
+4.  Select **Edit**. This will open the Edit Table properties pane.
 
 5.  In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
 
