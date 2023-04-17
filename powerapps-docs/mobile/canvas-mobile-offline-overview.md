@@ -31,6 +31,9 @@ Complex, offline apps are also supported. Complex, offline scenarios are enabled
 
 To get started with mobile offline for canvas apps, an app maker needs to enable the app for offline and enable the tables used in the app for offline. A basic offline screen template is automatically inserted into the app for you to use directly or as a starting point. More information: [Set up mobile offline for canvas apps](canvas-mobile-offline-setup.md).
 
+> [!Important]
+> [!include [preview](../includes/cc-preview-features-definition.md)]
+
 ## Mobile offline-first
 
 Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With the mobile *offline-first* experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connection.
