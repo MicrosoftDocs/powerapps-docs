@@ -19,7 +19,7 @@ search.audienceType:
 ---
 # Overview of the model-driven app designer
 
-The new model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
+The model-driven app designer provides a modern WYSIWYG authoring experience when you work with model-driven apps.
 
 Changes to the app are instantly reflected in the preview, enabling you to see exactly how the app will appear to users when published.
 
