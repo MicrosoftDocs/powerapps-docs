@@ -52,36 +52,29 @@ Tables in your offline-first app must be enabled for offline. Note that some bui
 
 Follow these steps to verify whether a table is enabled for offline.
 
-1.  Sign in to <u>Power Apps</u>
-
-2.  On the left pane, select **Tables**. This will display the list of tables.
-
+1.  Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+2.  In the left pane, select **Tables**.
 3.  Select the table you want to enbable for offline use.
+4.  Select **Edit**.
+5.  Select **Edit table properties**. 
+6.  In the **Edit table** pane, select **Advanced options**. Then scroll to the **Rows in this table** section.
+7.  Select **Can be taken offline**.
 
-4.  Select **Edit**. This will open the Edit Table properties pane.
+    :::image type="content" source="media/can-be-taken-offline.png" alt-text="Select the **Can taken offline** option.":::
 
-5.  In the **Edit table** settings, select **Advanced options**, and in the **Rows in this table** section, select **Can be taken offline**.
-
-    :::image type="content" source="media/can-be-taken-offline.png" alt-text="Can be taken offline option.":::
-
-
-## Enable your app for offline use (preview)
+## Enable your app for offline use
 
 Set up the new mobile offline experience in the [canvas app studio](../maker/canvas-apps/power-apps-studio.md).
 
-1.  Sign in to <u>Power Apps</u>
-
-2.  On the left pane, select **Apps**, and then select the canvas app that you want to enable for offline.
-
-3.  Select **More (...)** &gt; **Edit** to open the modern app designer.
-
-4.  On the command bar, select **Settings**.
-
-5.  On the **Upcoming** **Features**  tab, select the **Experimental** sub tab. Set the **Dataverse Offline** toggle to **On**.
+1.  In the left pane, select **Apps**, 
+1.  Select the canvas app that you want to enable for offline use.
+1.  Select **More (...)** &gt; **Edit** to open the modern app designer.
+1.  On the command bar, select **Settings**.
+1.  On the **Upcoming Features**  tab, select **Experimental**. Set the **Dataverse Offline** toggle to **On**.
 
     :::image type="content" source="media/dataverse-offline.png" alt-text="Dataverse offline option.":::
 
-6.  On the **General** tab, set the **Can be used offline** toggle to **On**.
+1.  On the **General** tab, set the **Can be used offline** toggle to **On**.
 
     :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
 
@@ -89,7 +82,7 @@ Set up the new mobile offline experience in the [canvas app studio](../maker/ca
     > - We recommend to use an **auto-generated profile**. When auto-generated, the app downloads on the device the tables that are used in your app.
     > - A page using the **Offline** template is automatically inserted. The page contains an icon hooked up with the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon has multiple variant that reflect the offline sync status. You can decide to use it or not, and you can also customize it as appropriate.
 
-7.  Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
+1.  Close the **Settings** dialog, and then save and publish your app. When you're done, the app will be set up for offline use.
 
 ## Set up a mobile offline profile (optional)
 
