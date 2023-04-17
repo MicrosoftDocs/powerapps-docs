@@ -22,6 +22,9 @@ searchScope:
 
 When offline mode is enabled, users can interact with their data without internet connectivity on the [<u>Power Apps mobile app</u>](https://powerapps.microsoft.com/downloads/).
 
+> [!Important]
+> [!include [preview](../includes/cc-preview-features-definition.md)]
+
 ## Prerequisites
 
 Verify the following prerequisites before you enable mobile offline:
