@@ -1792,11 +1792,11 @@
     - name: Understand portals architecture
       items:
          - name: Understand portals lifecycle
-           href: ./portals/admin/portal-lifecycle.md
+           href: /power-pages/admin/lifecycle
          - name: Understand how portals connects to Microsoft Dataverse
-           href: ./portals/admin/connectivity.md
+           href: /power-pages/admin/connectivity
          - name: Understand and clear server-side cache in portals
-           href: ./portals/admin/clear-server-side-cache.md
+           href: /power-pages/admin/clear-server-side-cache
     - name: Create and manage portals
       items:
         - name: Available portal templates
