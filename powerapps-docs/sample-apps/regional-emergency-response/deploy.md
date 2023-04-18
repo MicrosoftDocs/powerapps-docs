@@ -608,7 +608,7 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
 ### Step 10.2: Fix the Send Password Reset To Contact process
 
-In this step, we will fix the **Send Password Reset To Contact** process to specify the email address from which the portal password reset email will be sent to the portal user when she/he requests to reset the password using the **Forgot password** link in the portal.
+In this step, we will fix the **Send Password Reset To Contact** process to specify the email address from which the portal password reset email will be sent to the portal user when they request to reset the password using the **Forgot password** link in the portal.
 
 1.  Sign into [Power Apps](https://make.powerapps.com).
 
