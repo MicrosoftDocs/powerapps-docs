@@ -290,7 +290,7 @@ Maria creates the custom component as follows:
 
     ![Add a Rectangle control.](media/image184.png)
 
-Maria is familiar with adding controls to screens and building apps with Power Apps. However, reusable components don't work in quite the same way. Kiana described to Maria that to be able to use data in a custom component, she must add some additional custom input properties. Kiana also explained that Maria needs to provide example data for these properties, to allow her to reference the data fields in the controls in her component, as follows:
+Maria is familiar with adding controls to screens and building apps with Power Apps. However, reusable components don't work in quite the same way. Kiana described to Maria that to be able to use data in a custom component, some additional custom input properties must be added. Kiana also explained that Maria needs to provide example data for these properties to reference the data fields in the controls in the component, as follows:
 
 1.  On the **Tree view** pane, select **DateHistoryComponent**. On the right pane, on the **Properties** tab, select **New custom property**.
 
@@ -952,7 +952,7 @@ To create the custom connector that Power Apps can use to trigger the logic app,
 
     ![Power Apps custom connectors.](media/image226.png)
 
-Maria can now modify the VanArsdel app to enable a technician to order parts while attending a customer site. She adds an **Order** button to the **PartDetails** screen, as follows:
+Maria can now modify the VanArsdel app to enable a technician to order parts while attending a customer site. Maria adds an **Order** button to the **PartDetails** screen, as follows:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com) (if not already signed in).
 
