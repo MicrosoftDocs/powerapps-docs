@@ -47,7 +47,7 @@ If you’re looking to generate a pixel-perfect app with exact styles that match
 
 Express design features are generally available and turned on by default for your environment. You can use PowerShell command to turn the feature on or off.
 
-The setting name
+The setting name:
 
 **powerPlatform.powerApps.disableCreateFromFigma**
 When this setting is true, users in the environment will not have the ability to use app from Figma. It is false by default.
