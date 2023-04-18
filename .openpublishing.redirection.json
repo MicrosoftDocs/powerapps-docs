@@ -8264,6 +8264,21 @@
       "source_path": "powerapps-docs/maker/portals/configure/configure-ws-federation-settings-azure-ad.md",
       "redirect_url": "/power-pages/security/authentication/ws-federation-settings-azure-ad",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/portal-lifecycle.md",
+      "redirect_url": "/power-pages/admin/lifecycle",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/connectivity.md",
+      "redirect_url": "/power-pages/admin/connectivity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/portals/admin/clear-server-side-cache.md",
+      "redirect_url": "/power-pages/admin/clear-server-side-cache",
+      "redirect_document_id": false
     }
   ]
 }
