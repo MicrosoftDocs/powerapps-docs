@@ -43,8 +43,9 @@ If you’re looking to generate a pixel-perfect app with exact styles that match
 > [!div class="nextstepaction"]
 > [Create an app from Figma](figma/overview.md)
 
-## Enabling and disabling
-Express design features are generally avaialbe now and will be by default enabled on your environment. Currently you can use PowerShell command to turn it on or off. 
+## Enable and disable
+
+Express design features are generally available and turned on by default for your environment. You can use PowerShell command to turn the feature on or off.
 
 The setting name
 
