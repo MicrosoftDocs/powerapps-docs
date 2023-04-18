@@ -27,7 +27,7 @@ Elastic tables do support most of the table options supported by Standard tables
 Elastic tables currently do not support:
 -	Many-to-Many, N:N, relationships to Standard tables. 
 -	Many-to-One, N:1, relationships when the N table is a Standard table (Lookup).
--	Custom alternate keys. More information: Work with alternate keys 
+-	Custom alternate keys. More information: Work with alternate keys https://learn.microsoft.com/en-us/power-apps/developer/data-platform/define-alternate-keys-entity
 -	Table options: Apply duplication detection rules.
 -	Row options:
    o	Can have connections.
