@@ -122,8 +122,6 @@ When editable grids are enabled through the editable grid control, users can edi
   
 - Pagination. 
   
-- Saving changes from one session to another for grouping, sorting, filtering, pagination, and moving and resizing columns.
-  
 - Lookup configuration.
   
 - Calculated columns and rollup columns.
@@ -151,6 +149,10 @@ The following data types aren't editable in editable grids: Customer and Partyli
 ### Group by views work on client side only
 
 Grouping behavior works only on the client side and does not span pages. Group by is a client only function and works only on one page of data. Group by does not show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make main grids editable](#make-main-grids-editable)
+
+### Inline grid modifications are not persisted
+
+Changes made to the structure of the editable grid from within the grid, such as column resizing, colum reordering, grouping, filtering, and sorting, will be reset the next time the user visits the page. These types of changes are not saved across sessions or within views.  
 
 ### Business rules work only if conditional column is a column on the grid
 
