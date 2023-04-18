@@ -70,4 +70,4 @@ Set-TenantSettings -RequestBody $requestBody
 
 - [Create an app from an image](app-from-image.md)
 - [Create an app from Figma (preview)](figma/overview.md)
-- [Set-TenantSettings](/powershell/module/microsoft.powerapps.administration.powershell/set-tenantsettings?view=pa-ps-latest)
+- [Set-TenantSettings](/powershell/module/microsoft.powerapps.administration.powershell/set-tenantsettings)
