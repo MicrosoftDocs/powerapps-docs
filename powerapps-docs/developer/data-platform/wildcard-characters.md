@@ -44,7 +44,7 @@ More information: [Use the ConditionExpression class](org-service/use-conditione
 `startswith`<br/>
 `not startswith`<br/>
 `endswith`<br/>
-`notendswith`<br/>
+`not endswith`<br/>
 
 More information: [Standard query functions](webapi/query-data-web-api.md#standard-query-functions)
 
