@@ -93,6 +93,8 @@ As you author your app and create a connection to a data source, you may see tha
 
 > [!NOTE]
 > For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> [!NOTE] 
+> Power Apps does not currently support *External member* identities. See [Properties of an Azure Active Directory B2B collaboration user](https://learn.microsoft.com/en-us/azure/active-directory/external-identities/user-properties). 
 
 ### Azure AD Integrated
 
