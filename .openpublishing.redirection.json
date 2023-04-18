@@ -8264,6 +8264,11 @@
       "source_path": "powerapps-docs/maker/portals/configure/configure-ws-federation-settings-azure-ad.md",
       "redirect_url": "/power-pages/security/authentication/ws-federation-settings-azure-ad",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/developer-plan.md",
+      "redirect_url": "/power-platform/developer/create-developer-environment",
+      "redirect_document_id": false
     }
   ]
 }
