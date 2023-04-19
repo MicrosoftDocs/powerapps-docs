@@ -64,8 +64,8 @@ the same value across both columns.
 
 ### See Also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-[Column comparison using the Web API](webapi/query-data-web-api.md#column-comparison-using-the-web-api)  
+[Use FetchXML to construct a query](use-fetchxml-construct-query.md)<br />
+[Column comparison](webapi/query-data-web-api.md#column-comparison)<br />
 [Column comparison using the SDK API](org-service/use-conditionexpression-class.md#column-comparison-using-the-sdk-api)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
