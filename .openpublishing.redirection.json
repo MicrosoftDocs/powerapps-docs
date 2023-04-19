@@ -8271,6 +8271,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/developer-plan.md",
+      "redirect_url": "/power-platform/developer/create-developer-environment",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/maker/portals/admin/portal-lifecycle.md",
       "redirect_url": "/power-pages/admin/lifecycle",
       "redirect_document_id": false
