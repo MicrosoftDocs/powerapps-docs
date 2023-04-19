@@ -9,9 +9,6 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -33,7 +30,7 @@ contributors:
 
 ### Related topics
 
-[setActiveProcess)](setActiveProcess.md)
+[setActiveProcess](setActiveProcess.md)
 
 [formContext.data.process](../../formContext-data-process.md)
  

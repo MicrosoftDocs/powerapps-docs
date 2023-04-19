@@ -2,7 +2,6 @@
 title: "Check your user access and permissions| MicrosoftDocs"
 description: How to check user access and security role.
 author: paulliew
-manager: tapanm-msft
 ms.component: pa-user
 ms.topic: conceptual
 ms.date: 03/02/2023
@@ -13,9 +12,6 @@ ms.reviewer: sericks
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Check your user access to a row
@@ -85,7 +81,7 @@ To see who has access to a row and their respective access level, complete the f
     :::image type="content" source="media/who-has-access.png" alt-text="Select who has access":::
 
 > [!NOTE]
-> The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security.md#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
+> The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

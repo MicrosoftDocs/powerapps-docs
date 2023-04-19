@@ -12,9 +12,6 @@ ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Build your first model-driven app using the classic designer

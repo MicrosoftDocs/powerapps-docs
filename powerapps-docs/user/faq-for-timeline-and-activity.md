@@ -2,7 +2,6 @@
 title: "Frequently Asked Questions about activities and the timeline wall| MicrosoftDocs"
 description: Frequently Asked Questions about Activities and the Timeline Wall  
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Frequently Asked Questions about Activities and the Timeline Wall  
 
@@ -52,7 +48,6 @@ Yes. You can add activities to tables that are read only such as, notes, phone c
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
-[Dynamics 365 Sales: Frequently asked questions](/dynamics365/sales-enterprise/faqs-sales#entity-activity)
 
     
 

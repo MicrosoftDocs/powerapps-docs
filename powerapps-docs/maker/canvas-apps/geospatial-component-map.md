@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -110,8 +108,8 @@ The map control has six different types of properties:
 | Default longitude | Sets the longitude coordinate the map shows if **Use default location** is enabled. | Floating point number | Properties; Advanced: **DefaultLongitude** |
 | Default zoom level | Sets the zoom level if **Use default location** is enabled, from 0 to 22. | Integer | Properties; Advanced: **DefaultZoomLevel** |
 | Show current location | Displays the user's current location. | Boolean | Properties; Advanced: **CurrentLocation** |
-| Current location latitude | Sets the latitude coordinate of the current location pin that the map shows if **Show current location** is enabled. To place the pin at the user's current location, set this property to [Location.Latitude](/functions/signals#location). | Floating point number | Properties; Advanced: **CurrentLocationLatitude** |
-| Current location longitude | Sets the longitude coordinate of the current location pin that the map shows if **Show current location** is enabled. To place the pin at the user's current location, set this property to [Location.Longitude](/functions/signals#location). | Floating point number | Properties; Advanced: **CurrentLocationLongitude** |
+| Current location latitude | Sets the latitude coordinate of the current location pin that the map shows if **Show current location** is enabled. To place the pin at the user's current location, set this property to [Location.Latitude](/power-platform/power-fx/reference/signals#locationn). | Floating point number | Properties; Advanced: **CurrentLocationLatitude** |
+| Current location longitude | Sets the longitude coordinate of the current location pin that the map shows if **Show current location** is enabled. To place the pin at the user's current location, set this property to [Location.Longitude](/power-platform/power-fx/reference/signals#location). | Floating point number | Properties; Advanced: **CurrentLocationLongitude** |
 | Zoom control | Shows the zoom control. | Boolean | Properties; Advanced: **Zoom** |
 | Compass control | Shows the compass control. | Boolean | Properties; Advanced: **Compass** |
 | Pitch control | Shows the pitch (tilt) control. | Boolean | Properties; Advanced: **Pitch** |
