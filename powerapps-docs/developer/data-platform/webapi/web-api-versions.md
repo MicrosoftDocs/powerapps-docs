@@ -23,7 +23,7 @@ Going forward the capabilities of the service can change, including potentially 
 >
 > Differences in API behavior is driven more by the solutions installed in the system rather than version of the product. However, if we need to make a fundamental change that is not backward compatible, it will be included in a new version number.
 >
-> **Guidance**: Use the version number that was current when your code was written. Do not automatically use a newer version without looking for documented differences here and testing. Do not assume a newer version wll be fully backward compatible.
+> **Guidance**: Use the version number that was current when your code was written. Do not automatically use a newer version without looking for documented differences here and testing. Do not assume a newer version will be fully backward compatible.
   
 ## Web API version specific differences
 
