@@ -5,7 +5,7 @@ author: sericks007
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/15/2023
+ms.date: 04/18/2023
 ms.subservice: mobile
 ms.author: sericks
 search.audienceType: 
@@ -127,6 +127,12 @@ If you encounter a blank **Login to Flow** page when using the Power Automate Fl
 ## Flows created in a solution are not supported on Power Apps mobile
 
 The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
+
+## Network requests fail when Power Apps mobile app is running in the background
+
+When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
+
+If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
 
 ### See also  
 
