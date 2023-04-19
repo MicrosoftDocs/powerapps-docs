@@ -106,6 +106,9 @@ The timeline shows a simple icon before the activity, note, post, and custom tab
 
 Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
 
+> [!Note]
+> If a custom table has a custom icon, activities related to custom tables will display the deafult custom table icon instead of the custom icon
+
 ### Advanced
 
 This section describes the settings available in the Advanced area of the timeline control settings. The **Advanced** settings apply to all record types.
