@@ -76,7 +76,7 @@ Organization Data Service supports both JSON and ATOM. ATOM is an XML-based form
 
 Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-Web API allows to set a max page size and will return up to 5000 records. More information: [Limits on number of table rows (entities) returned](../../../data-platform/webapi/query-data-web-api.md#limits-on-number-of-table-rows-entities-returned).
+Web API allows to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query-data-web-api.md#page-results)
 
 ### Legacy documentation
 
