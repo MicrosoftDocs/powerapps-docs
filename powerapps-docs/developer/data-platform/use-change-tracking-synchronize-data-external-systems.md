@@ -63,13 +63,16 @@ There are two ways to check whether change tracking is enabled for a table using
 
 ### Tables not eligible for change tracking
 
-Some tables cannot be enabled for change tracking. You can check if a table is eligible for change tracking by referencing the [EntityMetadata.CanChangeTrackingBeEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanChangeTrackingBeEnabled). To see which tables cannot be enabled for change tracking, use this Web API query:
+Some tables cannot be enabled for change tracking. You can check if a table is eligible for change tracking by checking the  [EntityMetadata.CanChangeTrackingBeEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanChangeTrackingBeEnabled) managed property value. To see which tables cannot be enabled for change tracking, use this Web API query:
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName,ChangeTrackingEnabled&$filter=ChangeTrackingEnabled eq false and CanChangeTrackingBeEnabled/Value eq false
 ```
 
-More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+More information: 
+
+- [Query table definitions using the Web API: Use complex types in $filter operations](webapi/query-metadata-web-api.md#use-complex-types-in-filter-operations)
+- [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Retrieve changes for a table using the Web API
 
