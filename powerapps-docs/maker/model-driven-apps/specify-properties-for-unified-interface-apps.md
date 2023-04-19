@@ -2,8 +2,7 @@
 title: "Specify read only grid properties | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
-ms.date: 06/03/2019
-
+ms.date: 04/19/2023
 ms.custom: 
 ms.topic: how-to
 applies_to: 
@@ -100,8 +99,9 @@ Configure the following features after you add the Read Only Grid control to a t
 
 You can display a custom icon instead of a value in a list and establish the logic used to select them based on a column’s values by using JavaScript. For more information about conditional images, see [Display custom icons instead of values in list views](../data-platform/display-custom-icons-instead.md).
 
-### Known issues
--  If the dataset displayed in the grid contains duplicate rows, the duplicates may not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Read-only grid control. 
+### Known issue
+
+If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Read-only grid control.
 
 
 ## Next steps

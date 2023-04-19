@@ -2,7 +2,7 @@
 title: "Make model-driven app views and grids (lists) editable by using the Editable Grid custom control with Power Apps | MicrosoftDocs"
 description: "Learn how to use the editable grid custom control"
 ms.custom: ""
-ms.date: 05/25/2022
+ms.date: 04/19/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -162,8 +162,9 @@ Business rules on an editable grid are supported only if the conditional column 
 
 Based on customer feedback, we have removed the editable grid experience from phones. When using a editable grid on a phone, you will see a read-only version of the list control.
 
-### Duplicate rows in a dataset may not be displayed in the grid
-If the dataset displayed in the grid contains duplicate rows, the duplicates may not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find.  
+### Duplicate rows in a dataset might not be displayed in the grid
+
+If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find.
 
 ## Next steps
 
