@@ -2,7 +2,7 @@
 title: "Power Apps read-only grid control | MicrosoftDocs"
 description: "A control for use with Power Apps that lets users view and open records from a view or subgrid"
 ms.custom: ""
-ms.date: 04/07/2023
+ms.date: 04/19/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -87,6 +87,7 @@ If the page size is sufficiently large, the grid may take a long time to render.
 - Cells with no data are blank instead of displaying three dashes **---**.
 - The owner column doesn't show online status and a people card for the user.
 - Reordering columns from the grid column headers is not supported. 
+- If the dataset displayed in the grid contains duplicate rows, the duplicates might not display in the grid. This can lead to the reported record count showing more records than are actually in the grid, or more records appearing when exporting the data to Excel or viewing the data in legacy Advanced Find. This behavior applies to all grid controls, not just the Power Apps read-only grid.
 
 ### Limitations with card form lists
 
