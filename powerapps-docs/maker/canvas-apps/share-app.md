@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - alaug
@@ -145,6 +143,8 @@ Legend:
 - All existing members of the security group inherit the app permissions. New users joining the security group will inherit the security group permissions on the app. Users leaving the group will no longer have access through that group, but those users can continue to have access either by having permissions assigned to them directly or through membership in another security group.
 
 - Every member of a security group has the same permissions for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app. And then, you can also give User B, who belongs to that group, Co-owner permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A Co-owner permission and User B permission to run the app, that user can still edit the app.
+
+- Users must explicitly be a member of the security group. If a user is an owner of the group, they must also assign themselves as a member of the group to inherit app permissions.
 
 ### Share an app with Microsoft 365 groups
 

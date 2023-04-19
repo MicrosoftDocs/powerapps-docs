@@ -4,15 +4,11 @@ description: Learn how to write code to customize business data processing in Mi
 ms.date: 04/03/2022
 author: divkamath
 ms.author: dikamath
-manager: sunilg
 ms.reviewer: pehecke
 suite: powerapps
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

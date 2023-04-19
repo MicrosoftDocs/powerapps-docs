@@ -11,8 +11,6 @@ ms.subservice: dataverse-maker
 ms.author: nhelgren
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
 ---
 # Data types and sizes for Access data migration to Dataverse

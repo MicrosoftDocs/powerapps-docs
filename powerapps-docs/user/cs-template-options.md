@@ -2,7 +2,6 @@
 title: Customize an email template using the enhanced template editor
 description: Create an email template using the enhanced email template editor
 author: gandhamm
-manager: shujoshi
 
 ms.topic: conceptual
 ms.date: 05/06/2022
@@ -10,16 +9,9 @@ ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Customize an email template using the template editor 
-
-> [!NOTE]
-> The enhanced email template editor is available out of the box as an early access feature only in the Customer Service workspace and Customer Service Hub apps.
-
 
 Use the **Editor** tab in the **Email Template** form to create customized email templates. The **Editor** tab has three sections:
 

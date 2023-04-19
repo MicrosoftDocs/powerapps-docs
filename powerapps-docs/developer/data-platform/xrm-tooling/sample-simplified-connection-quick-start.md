@@ -6,14 +6,10 @@ author: MattB-msft
 ms.topic: sample
 ms.author: mbarbour
 ms.reviewer: jdaly
-manager: jstrauss
 applies_to:
   - Microsoft Dataverse (online)
 search.audienceType:
   - developer
-search.app:
-  - D365CE
-  - PowerApps
 contributors:
   - JimDaly
   - phecke

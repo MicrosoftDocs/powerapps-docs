@@ -9,12 +9,8 @@ ms.subservice: end-user
 ms.topic: "article"
 author: "aorth"
 ms.author: "mkaur"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 
 # In-app notifications in model-driven apps

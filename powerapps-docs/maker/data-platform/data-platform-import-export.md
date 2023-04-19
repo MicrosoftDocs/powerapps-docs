@@ -4,14 +4,11 @@ description: Bulk import and export data from Excel or CSV files into tables in 
 author: sabinn-msft
 ms.topic: how-to
 ms.component: cds
-ms.date: 02/06/2021
+ms.date: 04/05/2023
 ms.subservice: dataverse-maker
 ms.author: sabinn
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Import or export data from Dataverse
 
@@ -144,5 +141,16 @@ The following fields are system fields and are not supported for import and expo
  > [!NOTE]
  > Get Data from Excel and Export Data features are currently not included in the Power Apps Developer Plan.
 
+## Troubleshoot connection issues
+
+Users might receive an error message if the connection they are using for export requires a fix. In this case, the user receives an error message that states **Connection to Dataverse failed. Please check the link below on how to fix this issue**.
+
+To fix this issue:
+
+1. In Power Apps (make.powerapps.com), select **Connections** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+2. Locate the **Microsoft Dataverse (legacy)** connection.
+3. Select the **Fix connection** link in the **Status** column, and follow the instructions on your screen.
+
+After the fix completes, retry the export.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

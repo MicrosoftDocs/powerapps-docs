@@ -12,8 +12,6 @@ ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
   - mduelae
@@ -27,7 +25,7 @@ A connector may provide **tables** of data or **actions**. Some connectors provi
 
 ## Tables
 
-If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieve table data into your app and updates data in your data source for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
+If your connector provides tables, you add your data source and then select the table in the data source that you want to manage. Power Apps both retrieves table data into your app and updates data in your data source automatically for you. For example, you can add a data source that contains a table named **Lessons** and then set the **Items** property of a control, such as a gallery or a form, to this value in the formula bar:
 
  ![Plain data source Items property.](./media/connections-list/ItemPropertyPlain.png)
 
@@ -52,6 +50,9 @@ If your connector provides actions, you must still select your data source as yo
 ![Action data source Items property.](./media/connections-list/ItemPropertyAction.png)
 
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
+
+> [!NOTE]
+> For action-based connectors, galleries and other controls don't page in more data automatically the same way they do for tables. For instance, if you bind an action to a gallery then it’ll retrieve the first set or page of records. But if the data requested exceeds the size for a page of data, then the control won't automatically fetch the next page. You must manage this directly with collections.
 
 For more information about how to customize your formula for custom updates, see these articles:
 
@@ -91,7 +92,8 @@ You can ask questions about a specific connector in the [Power Apps forums](http
 As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
 
 > [!NOTE]
-> For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> - For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> - Power Apps doesn't  support **External member** identities. For more information, see [Properties of an Azure Active Directory B2B collaboration user](/azure/active-directory/external-identities/user-properties). 
 
 ### Azure AD Integrated
 
@@ -108,7 +110,7 @@ This type of connection isn't secure because it doesn't rely on end-user authent
 In SQL Server, this type of connection is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users don't need to supply a unique user name and password.  They're using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users can't see the user name or password, but the connection will be available to them.  **There are valid scenarios for this type of connection. For instance if you have a read-only database that is available to everyone in the company. Reference data scenarios (for example, a corporate calendar) can be useful for this kind of connection.** More information: [Use Microsoft SQL Server securely with Power Apps](connections/sql-server-security.md)
 
 ### Secure Implicit Connections (experimental)
-Power Apps now has support for **[Secure implicit connections (experimental)](working-with-experimental-preview.md)**. These connections are more secure than the existing implicit connections. With this new feature, an app in Power Apps will work directly with a proxy connection object rather than a connection object. Each app in Power Apps that uses implicitly shared connections will have its own unique proxy connection object. The proxy connection object limits the queries the connection will execute to those that are defined in the corresponding app. The connection object is no longer shared with the end-user. The proxy object is shared with the end-user but remains hidden. The result is that end-users who are also authors can't create new applications with either the connection or the proxy connection object.
+Power Apps now has support for **[Secure implicit connections (experimental)](working-with-experimental-preview.md)**. The secure implicit shared connections are more secure than the existing implicit connections. Power Apps implicitly shared connections are ones that use a fixed credential such as a SQL Server connection string rather than the end user's specific credentials such as AAD. With this feature, connections are no longer directly shared with the users of Power Apps. Instead, a proxy connection object that only grants access to the underlying resource such as a specific SQL server table is shared. End user authors can't create new applications with either the connection or the proxy connection. This feature also limits the end user to such actions as **get**, **put/patch**, and **delete** that are defined in the corresponding app. The result is that end users who are also authors can't create new applications with either the connection or the proxy connection object.
 
 While in preview, an app author must opt-in to use this feature. Eventually, this feature will be on for all apps. With the experimental preview switch turned on for a given Power Apps app, all implicit connections in the app will automatically use this feature.  
 
@@ -129,7 +131,7 @@ Sign in to [Power Apps](https://make.powerapps.com) and create a new app that us
 
 Open an existing [app open for editing](../../edit-app.md) with implicitly shared connections that has previously been published:
 1. On the command bar, select **Settings** > **Upcoming features**.
-2. From the Preview tab, set the toggle for **Try out the modern controls** to **On**.
+2. From the **Experimental** tab, set the toggle for **Secure implicit connections** to **On**.
 3. Save and publish the app.
 
 #### Sharing

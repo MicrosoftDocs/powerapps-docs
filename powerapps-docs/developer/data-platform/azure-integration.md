@@ -8,12 +8,8 @@ ms.topic: "article"
 author: "jaredha"
 ms.subservice: dataverse-developer
 ms.author: "jdaly" 
-manager: "kvivek"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
 ---
