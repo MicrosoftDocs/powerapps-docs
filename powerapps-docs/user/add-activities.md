@@ -2,7 +2,6 @@
 title: "Timeline Overview for Users| MicrosoftDocs"
 description: Timeline Overview for Users 
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: overview
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use timeline 
 

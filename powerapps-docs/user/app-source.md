@@ -2,7 +2,6 @@
 title: Discover apps via AppSource | Microsoft Docs
 description: Discover the apps shared with your organization via AppSource
 author: mkaur
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Discover apps via AppSource

@@ -5,14 +5,10 @@ Keywords: object checker, checker, solution checker, solution issue
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
 ms.date: 03/09/2023
 ms.topic: how-to
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Use object checker to diagnose a solution component (preview)
 

@@ -13,8 +13,6 @@ ms.subservice: teams
 ms.author: aheaney
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
 ---
 # Embed a model-driven app as personal app in Teams

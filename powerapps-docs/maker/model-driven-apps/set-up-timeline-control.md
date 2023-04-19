@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "lalexms"
 ms.subservice: mda-maker
 ms.author: "laalexan"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Set up the timeline control
@@ -555,7 +551,8 @@ The following image shows the Activities tab, where you can modify the Timeline 
 ## Configure auto-post messages to display on the timeline
 
 > [!NOTE]
-> The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - Dynamics 365 incudes auto-post rules for some standard tables such as account, contact, lead, and case. It is not possible to create new auto-post rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
 
 You can configure which auto-post messages will appear on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
 

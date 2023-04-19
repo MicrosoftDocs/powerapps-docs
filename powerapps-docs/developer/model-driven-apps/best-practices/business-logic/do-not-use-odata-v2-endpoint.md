@@ -4,15 +4,12 @@ description: "Describes the requirement to upgrade code to use Web API OData v4.
 suite: powerapps
 author: divkamath
 ms.author: dikamath
-ms.date: 09/30/2022
+ms.date: 04/12/2023
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -26,7 +23,9 @@ contributors:
 
 There are no immediate symptoms, but code using this endpoint will stop working when the deprecated endpoint is removed.
 
-We plan to remove this endpoint on April 30, 2023. [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval). The original removal date was November 11, 2022, but this was extended.
+The original removal date was November 11, 2022, but this was extended to April 30, 2023. We have decided not to remove the service on April 30, 2023.
+
+We are going to defer the removal of this service to allow people more time to complete the transition of their code to use the Web API. If you have detected that you are still using this endpoint, you must prioritize transitioning this code to use Web API so you will be prepared when the final removal date is announced. More information: [OData v2.0 Service removal date announcement](https://aka.ms/DataverseODataV2EndpointRemoval). 
 
 ## Guidance
 
@@ -77,7 +76,7 @@ Organization Data Service supports both JSON and ATOM. ATOM is an XML-based form
 
 Organization Data Service will only return 50 records at a time and doesn't provide a way to specify max page size.
 
-Web API allows to set a max page size and will return up to 5000 records. More information: [Limits on number of table rows (entities) returned](../../../data-platform/webapi/query-data-web-api.md#limits-on-number-of-table-rows-entities-returned).
+Web API allows to set a max page size and will return up to 5000 records. More information: [Page results](../../../data-platform/webapi/query-data-web-api.md#page-results)
 
 ### Legacy documentation
 

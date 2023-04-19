@@ -2,7 +2,6 @@
 title: Create a choice| Microsoft Docs
 description: Step-by-step instructions for how to create a choice.
 author: lancedMicrosoft
-manager: tapanm
 ms.component: cds
 ms.topic: how-to
 ms.date: 03/21/2018
@@ -10,9 +9,6 @@ ms.subservice: dataverse-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create a choice
 

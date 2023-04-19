@@ -3,7 +3,6 @@ title: getClient | Microsoft Docs
 description: Returns a value to indicate which client the script is executing in.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

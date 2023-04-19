@@ -16,26 +16,16 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Make model-driven app views editable using the editable grid control
 
-By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app, tablet, or phone.  
+By default, users can't enter data directly using the read-only view control for views and subgrids on forms. Users select the row in the grid to open a form, edit the data, and then save, which requires multiple steps. With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app or tablet. This editing experience is not available on phones.
   
  ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
   
- When editable grids are enabled through the editable grid control, users can edit the data inside most types of columns, including basic Lookup columns and choices.  This avoids the need to navigate to a form.
-
-With editable grids, users can do rich in-line editing directly from views and subgrids whether they're using a web app, tablet, or phone.  
-  
- ![Editable grid examples.](media/editable-grid-example.png "Editable grid examples")  
-  
-When editable grids are enabled through the editable grid control, users can edit the data inside most types of columns, including basic lookup columns and choices.  This avoids the need to navigate to a form.
+When editable grids are enabled through the editable grid control, users can edit the data inside most types of columns, including basic Lookup columns and choices.  This avoids the need to navigate to a form.
 
 ## Make main grids editable  
 
@@ -48,12 +38,12 @@ When editable grids are enabled through the editable grid control, users can edi
   
 1. In the **Add Control** dialog box, select **Editable Grid**, and then select **Add**.  
   
-1. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s).  As a minimum in most instances select **Web**.
-  
-   ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
+1. In the **Editable Grid** row that's added, select the form factor(s) you want to apply the grid to. This makes the editable grid control the default control for the selected form factor(s). As a minimum in most instances, select **Web**. At runtime, users will be able to toggle between editable grids and read-only grids.
 
    > [!NOTE]
-   >  At runtime, users can toggle between editable grids and read-only grids.
+   >  Since the editing experience is not available on the **Phone** form factor, if this control is configured for phones, you will see a read-only version of the list control.
+  
+   ![Editable Grid row with form factor selection.](media/editable-grid-row-wit-factor-selection.png "Editable Grid row with form factor selection")
 
 1. To add a lookup, in the **Editable Grid** option group, select **Add Lookup**, and then in the **Configure Property "Add Lookup"** dialog box:  
   
@@ -132,8 +122,6 @@ When editable grids are enabled through the editable grid control, users can edi
   
 - Pagination. 
   
-- Saving changes from one session to another for grouping, sorting, filtering, pagination, and moving and resizing columns.
-  
 - Lookup configuration.
   
 - Calculated columns and rollup columns.
@@ -161,6 +149,10 @@ The following data types aren't editable in editable grids: Customer and Partyli
 ### Group by views work on client side only
 
 Grouping behavior works only on the client side and does not span pages. Group by is a client only function and works only on one page of data. Group by does not show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make main grids editable](#make-main-grids-editable)
+
+### Inline grid modifications are not persisted
+
+Changes made to the structure of the editable grid from within the grid, such as column resizing, colum reordering, grouping, filtering, and sorting, will be reset the next time the user visits the page. These types of changes are not saved across sessions or within views.  
 
 ### Business rules work only if conditional column is a column on the grid
 
