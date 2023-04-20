@@ -77,7 +77,7 @@ As you can see from the example above, there are multiple types of people
 handling the same set of data. Canvas apps would be the best fit for employees
 filling in the expense form, which enables people like Lee to submit an expense
 report using an attractive mobile app that's intuitive to use and can be used
-when he's offline.
+when offline.
 
 ![A canvas app for expense report creation.](media/expense-canvas-app.png "A canvas app for expense report creation")
 
