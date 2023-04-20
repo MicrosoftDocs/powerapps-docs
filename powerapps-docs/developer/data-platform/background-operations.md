@@ -53,7 +53,7 @@ The `ExecuteBackgroundOperation` message has the following response properties:
 |`BackgroundOperationId`|Guid| The id of the background operation table row you can use to monitor the processing of your request. |
 |`Location`|string| The URL to use to retrieve the status of your request|
 
-The following static message sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> using `ExecuteBackgroundOperation`.
+The following static method sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> using `ExecuteBackgroundOperation`.
 
 <!-- I'm using a CreateRequest b/c it is simpler in explaining the use of this message w/o introducing some random Custom API. Most People know what a CreateRequest does. 
 
