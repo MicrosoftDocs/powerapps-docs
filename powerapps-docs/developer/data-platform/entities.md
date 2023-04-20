@@ -2,15 +2,11 @@
 title: Work with Dataverse tables using code | Microsoft Docs
 description: Learn about programmatically working with tables in Microsoft Dataverse.
 author: mayadumesh # GitHub ID
-manager: sunilg
 ms.date: 04/19/2022
 ms.subservice: dataverse-developer
 ms.author: mayadu
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Work with Dataverse tables using code

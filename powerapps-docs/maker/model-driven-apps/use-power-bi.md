@@ -11,12 +11,8 @@ ms.topic: overview
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 search.audienceType: 
   - admin
-search.app: 
-  - D365CE
-  - Powerplatform
 ---
 # Use Power BI
 

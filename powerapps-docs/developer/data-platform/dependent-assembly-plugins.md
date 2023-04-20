@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 01/18/2023
+ms.date: 04/17/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -310,16 +307,6 @@ The following are known issues that should be resolved before dependent assembli
 ### Plug-in profiler
 
 You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
-
-### Solution containing plugin package cannot include any steps using the plug-in
-
-When you prepare a solution that contains a plugin package, do not include any plug-in step registrations that use an assembly included in the plug-in package.
-
-The export of the solution will succeed, but you will not be able to import the solution. To test plug-ins that use a dependent assembly in a different environment, you must manually register the steps.
-
-### Custom API cannot use dependent assembly plug-ins
-
-The custom API will not work after being imported as part of a solution.
 
 ### See also
 

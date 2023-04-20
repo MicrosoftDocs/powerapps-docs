@@ -7,9 +7,6 @@ ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -728,7 +725,7 @@ This section demonstrates how to associate and disassociate existing table rows.
    Retrieved role: Example Security Role
    ``` 
    
-1. Dissociate the the security role from the from your user record.  Note again, that this has the same general syntax used to remove a one-to-many association.  
+1. Dissociate the security role from the from your user record.  Note again, that this has the same general syntax used to remove a one-to-many association.  
    
    **Request**
    

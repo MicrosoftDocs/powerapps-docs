@@ -6,15 +6,11 @@ ms.custom: intro-internal
 author: Mattp123
 ms.subservice: mda-maker
 ms.author: matp
-manager: kvivek
 ms.date: 05/19/2022
 
 ms.topic: conceptual
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Understand model-driven app components
 

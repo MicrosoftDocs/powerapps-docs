@@ -9,8 +9,6 @@ ms.subservice: canvas-maker
 ms.author: fikaradz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - chmoncay
   - tahoon-ms

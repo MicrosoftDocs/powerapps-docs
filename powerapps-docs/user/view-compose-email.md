@@ -2,7 +2,6 @@
 title: "View, compose and respond to email | MicrosoftDocs"
 description: How to view, compose and respond to email.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # View, compose and respond to email
@@ -117,6 +113,6 @@ You can use the following command options when working with emails in the timeli
 
    ![Respond to emails in timeline.](media\email-respond-in-timeline-1a.png "Respond to emails in timeline.") 
 
-   1. **Reply**. Use this command to reply directly the the sender of the email you received.
+   1. **Reply**. Use this command to reply directly the sender of the email you received.
    2. **Reply All**. Use this command to reply to everyone on an email you received.
    3. **Forward**. Use this command to forward the email to someone else.

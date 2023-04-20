@@ -8,9 +8,6 @@ ms.subservice: dataverse-developer
 ms.author: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Best practices and guidance around working with data for the Microsoft Dataverse

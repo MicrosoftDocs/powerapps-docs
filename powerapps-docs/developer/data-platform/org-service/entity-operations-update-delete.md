@@ -8,9 +8,6 @@ author: divkamath # GitHub ID
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
