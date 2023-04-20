@@ -147,8 +147,8 @@ Background operation has the following columns you can use to check the status o
 |Display Name<br />`SchemaName`<br />`LogicalName`|Type |Description|
 |---------|---------|---------|
 |**Background Operation**<br />`backgroundoperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key.|
-|**Status** <br />`StateCode`<br />`backgroundoperationstatecode`|Picklist|State of the background operation.|
-|**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.|
+|**Status** <br />`StateCode`<br />`backgroundoperationstatecode`|Picklist|State of the background operation.<br />**Options:**<br />Value: `0`, Label: **Ready**<br />Value: `2`, Label: **Locked**<br />Value: `3`, Label: **Completed**|
+|**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value:`31`,Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
 |**Name**<br />`Name`<br />`name`|String|The name of the background operation.|
 |**DisplayName**<br />`DisplayName`<br />`displayname`|String|The display name of background operation.|
 |**Input Parameters**<br />`InputParameters`<br />`inputparameters`|Memo|The input parameters that were supplied to start background operation.|
@@ -204,6 +204,7 @@ The following examples show sending a request using a webhook to [webhook.site](
 
 Set the `ExecuteBackgroundOperation.CallbackUri` parameter to the URL to send the request.
 
+```csharp
 static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 {
 
@@ -231,6 +232,7 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
     Console.WriteLine($"Location: {response["Location"]}");
 
 }
+```
 
 #### [Web API](#tab/webapi)
 
