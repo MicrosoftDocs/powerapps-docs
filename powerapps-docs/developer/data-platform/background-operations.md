@@ -159,19 +159,21 @@ Background operation has the following columns you can use to check the status o
 |**Error Code**<br />`ErrorCode`<br />`errorcode`|Integer|The error code of error for background operation in case of failure.|
 |**Error Message**<br />`ErrorMessage`<br />`errormessage`|Memo|The error message of error for background operation in case of failure. |
 |**Run As**<br />`RunAs`<br />`runas`|String|The system user identity of user (systemuser entity - systemuserid attribute) which was used to execute background operation.|
-|**Created On**<br />`CreatedOn`<br />`createdon`|DateTimewhen the record was created.|
+|**Created On**<br />`CreatedOn`<br />`createdon`|DateTime|When the record was created.|
 |**Time to live**<br />`TTLInSeconds`<br />`ttlinseconds`|Integer|Time to live in seconds after which the record will be automatically deleted. Default value is 90 days.|
 
 
 ### Poll the background operation table
 
+//TODO
+
 #### [SDK for .NET](#tab/sdk)
 
-Content for SDK
+//TODO Example for SDK
 
 #### [Web API](#tab/webapi)
 
-Content for Web API
+//TODO Example for Web API
 
 ---
 
@@ -252,23 +254,27 @@ Prefer: respond-async,callback,odata.include-annotations="*",url="https://webhoo
 
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK
+//TODO Example for SDK
 
 ### [Web API](#tab/webapi)
 
-Content for Web API
+//TODO Example for Web API
 
 ---
 
 ## Receive notification of result
 
+//TODO
+
 ### [SDK for .NET](#tab/sdk)
 
-Content for SDK
+//TODO Example for SDK
+
 
 ### [Web API](#tab/webapi)
 
-Content for Web API
+//TODO Example for Web API
+
 
 ---
 
