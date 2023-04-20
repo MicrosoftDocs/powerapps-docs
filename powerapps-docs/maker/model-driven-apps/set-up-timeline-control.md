@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 03/27/2023
+ms.date: 04/20/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -106,8 +106,9 @@ The timeline shows a simple icon before the activity, note, post, and custom tab
 
 Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
 
-> [!Note]
-> If a custom table has a custom icon, activities related to custom tables will display the deafult custom table icon instead of the custom icon
+> [!NOTE]
+>
+> When a custom table has a custom icon, activities related to the custom table are displayed using the default custom table icon not the custom icon.
 
 ### Advanced
 
