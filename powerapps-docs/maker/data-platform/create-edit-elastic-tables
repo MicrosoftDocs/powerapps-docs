@@ -7,12 +7,15 @@ An elastic table is a table managed by the Microsoft Dataverse storage service. 
 ## When to consider Elastic tables?
 
 Elastic tables are designed to handle massive amounts of data in real-time, so you can:
-- Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates over 90M records/hour have been observed (+25k/s). 
+- 	Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates over 90M records/hour have been observed (+25k/s). 
 -	Store and analyze terabytes or petabytes of data without worrying about scalability, latency, or performance issues.
 
 ## Elastic tables come with unique capabilities:
--	Automatic removal of stale data: Time to Live (TTL) policies ensure that you are always working with the most up-to-date and accurate information, while optimizing resources and reducing risk. The TTL live value is set in seconds on a record, and it is interpreted as a delta from the time that a record was last modified.
--	Flexible schema with JSON columns: Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. The JSON format is familiar to your web and mobile developers.
+-	**Partitioning and scaling:** Elastic table uses Cosmos DB’s partitioning mechanism to horizontally scale out data across multiple physical servers, allowing for high availability, low latency, and scalability.
+Partitions are the logical units of data that are distributed across multiple physical servers by Dataverse. Each partition contains a subset of the data stored in the database, and the partition key is used to determine which partition a particular piece of data belongs to. 
+Elastic table scaling involves adding or removing physical servers to accommodate increased or decreased workload demand. Dataverse automatically manages the partitioning and distribution of data across these servers, so you don't need to worry about managing individual servers or partitions yourself. 
+-	**Automatic removal of stale data:** Time to Live (TTL) policies ensure that you are always working with the most up-to-date and accurate information, while optimizing resources and reducing risk. The TTL live value is set in seconds on a record, and it is interpreted as a delta from the time that a record was last modified.
+-	**Flexible schema with JSON columns:** Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. The JSON format is familiar to your web and mobile developers.
   
 ## Create an elastic table
 You create an elastic table just like any other new table in Dataverse, just select the Elastic option as Type under Advanced Options.
@@ -20,9 +23,11 @@ You create an elastic table just like any other new table in Dataverse, just sel
 1. Expand **Advanced options**.
 1. Select **Elastic** as **Type**.
 
+    (Screenshot to be added)
+
 ## Considerations when you use elastic tables  
 
-Elastic tables do not provide the same level transaction support as Standard tables. This is relevant when you plan to use async operations as in Power Automate. More information: Transaction consistency. 
+Elastic tables do not provide the same level transaction support as Standard tables. Standard tables support strong, consistent transactions support. Elastic tables support what is called "eventual consistency" for transactions, which means that updates made to the database may take some time to propagate to all nodes in the system. This is relevant when you plan to use async operations as in Power Automate. More information: Transaction consistency (Link to new Page to be added). 
 Elastic tables do support most of the table options supported by Standard tables, such as Record ownership, Change tracking, Auditing, Mobile offline, Dataverse search and Long term data retention.
 Elastic tables currently do not support:
 -	Many-to-Many, N:N, relationships to Standard tables. 
@@ -41,3 +46,5 @@ Elastic tables currently do not support:
      o	Formula
 -	Sublevel formats for Whole number
 -	Lookup based on the Customer option.
+
+Options that are not yet supported are either disabled or not displayed in PowerApps when Type is set to Elastic for a table.
