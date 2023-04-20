@@ -310,7 +310,7 @@ To debug plug-ins that are part of a plug-in package, you must:
 
 1. Use the latest version of the Plug-in Registration tool (PRT). Version 9.1.0.184 or higher.
 
-   Using pac cli, use [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) with the `--update ` switch to update.
+   Using pac cli, use [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) with the `--update` switch to update.
 
 1. In the folder that contains the PRT, edit the `appsettings.json` file. Set `LegacyPluginProfiler` to `false`.
 
