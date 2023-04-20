@@ -55,7 +55,7 @@ The `ExecuteBackgroundOperation` message has the following response properties:
 
 The following static message sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> using `ExecuteBackgroundOperation`.
 
-<!-- I'm using a CreateRequest b/c it is simpler in explaining the use of this message w/o introducing some random Custom API. People know what a CreateRequest does. 
+<!-- I'm using a CreateRequest b/c it is simpler in explaining the use of this message w/o introducing some random Custom API. Most People know what a CreateRequest does. 
 
 Does it have to be a Custom API?
 -->
@@ -179,6 +179,8 @@ Background operation has the following columns you can use to check the status o
 
 ### Request a callback
 
+//TODO
+
 You can specify a URL in your request to recieve a callback when the operation is completed. Dataverse will use this URL to sent a POST request with the following payload:
 
 ```json
@@ -251,6 +253,8 @@ Prefer: respond-async,callback,odata.include-annotations="*",url="https://webhoo
 ---
 
 ## Cancel background operations
+
+//TODO
 
 ### [SDK for .NET](#tab/sdk)
 
