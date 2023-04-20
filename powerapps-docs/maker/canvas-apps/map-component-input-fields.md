@@ -1,19 +1,17 @@
 ---
 title: Map input fields of a component
 description: Learn about how to map input fields of a component to the table or record.
-author: hemantgaur
+author: jorisdg
 ms.subservice: canvas-developer
 ms.topic: article
 ms.date: 06/01/2022
-ms.author: hemantg
-ms.reviewer: tapanm
+ms.author: jorisde
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - hemantgaur
-  - tapanm-msft
+  - jorisdg
+  - mduelae
   - gregli-msft
 ---
 

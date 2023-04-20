@@ -15,12 +15,9 @@ ms.assetid:
 caps.latest.revision: 1
 ms.subservice: 
 ms.author: matp
-manager: ""
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 
 ---
 # The benefits of the model-driven approach

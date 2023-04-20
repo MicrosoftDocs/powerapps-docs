@@ -9,9 +9,6 @@ ms.topic: sample
 ms.subservice: pcf
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - aliry
@@ -35,7 +32,7 @@ You can find the code for sample here: [PowerApps-Samples/component-framework/Po
 
 The key change is to [PAGridCustomizer/customizers/CellRendererOverrides.tsx ](https://github.com/microsoft/PowerApps-Samples/blob/master/component-framework/PowerAppsGridCustomizerControl/PAGridCustomizer/customizers/CellRendererOverrides.tsx).
 
-This sample uses the following override for the cell renderer to change the the text color for text fields to green, and the color of the `creditlimit` column depends on the value.
+This sample uses the following override for the cell renderer to change the text color for text fields to green, and the color of the `creditlimit` column depends on the value.
 
 
 ```typescript

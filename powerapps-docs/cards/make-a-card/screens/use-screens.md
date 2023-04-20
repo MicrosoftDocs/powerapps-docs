@@ -5,7 +5,6 @@ ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -30,7 +29,7 @@ View the screens in your card and the controls you've added to them using the ca
 
 ## Create a screen
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards**, and then select a card. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 1. In the left pane of the card designer, select **Tree View**.
 1. Select **+ New screen**.
 1. Enter a name for your screen and select **Create**. Spaces and special characters aren't allowed in screen names.

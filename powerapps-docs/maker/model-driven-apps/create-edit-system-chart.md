@@ -13,13 +13,9 @@ applies_to:
 author: "joel-lindstrom"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: matp
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a model-driven app system chart
 
@@ -31,7 +27,8 @@ In this article you learn how to create a system chart. System charts are organi
 ## Create a new chart
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. On the left navigation pane, select **Dataverse**, select the table which requires a chart, and then select **Charts**.
+1. On the left navigation pane, select the **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the table that requires a chart, and then select **Charts**.
 
 1. Select **New chart**.
 
@@ -61,15 +58,15 @@ Now that the chart has been created, it can be used to visualize table data in t
 1. Open a model-driven app that contains your table via a solution or open the app directly from the **Apps** area.
 2. Select **...** next to the app, and then select **Play**. The model-driven app opens in a separate browser tab.
 
-4. On the left navigation pane, select a table such as **Accounts**.
+3. On the left navigation pane, select a table such as **Accounts**.
 
-5. On the command bar, select **Show Chart**.
+4. On the command bar, select **Show Chart**.
 
    The chart pane opens.
 
    :::image type="content" source="media/add-and-customize-visualizations-in-model-driven apps/view-your-visualization-in-your-model-driven-app-3.png" alt-text="Chart selector.":::
 
-6. By selecting the dropdown chart list, any of the system charts in the app will be available to select.
+5. By selecting the dropdown chart list, any of the system charts in the app will be available to select.
 
    The chart appears in-line with the data view.
 

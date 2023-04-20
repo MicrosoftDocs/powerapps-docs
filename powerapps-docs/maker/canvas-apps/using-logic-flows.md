@@ -5,16 +5,14 @@ author: TashasEv
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 02/14/2022
 ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - TashasEv
 ---
 # Start a flow in a canvas app (retired)

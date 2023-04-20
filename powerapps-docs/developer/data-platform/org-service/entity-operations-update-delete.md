@@ -4,13 +4,10 @@ description: "Learn how to update and delete table rows using the organization s
 ms.date: 08/01/2022
 ms.reviewer: "pehecke"
 ms.topic: "article"
-author: "divka78" # GitHub ID
+author: "divkamath" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

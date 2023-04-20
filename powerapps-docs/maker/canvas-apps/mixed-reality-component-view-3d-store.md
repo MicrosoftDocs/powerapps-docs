@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: anuitz
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -125,7 +123,7 @@ In Power Apps Studio, connect the **3D object** control to the list using the Sh
 
 #### Create a Base64-encoded 3D model with Microsoft Dataverse
 
-The [Note table](../../developer/data-platform/annotation-note-entity.md) in Microsoft Dataverse converts any file attached in the **Document** field to Base64.
+The [Note (Annotation) table](../../developer/data-platform/reference/entities/annotation.md) in Microsoft Dataverse converts any file attached in the **Document** field to Base64.
 
 ## Known constraints when loading 3D models from URLs in canvas apps
 

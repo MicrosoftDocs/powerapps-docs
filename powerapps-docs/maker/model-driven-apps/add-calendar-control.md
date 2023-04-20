@@ -8,7 +8,6 @@ author: sbmjais
 ms.subservice: mda-maker
 ms.author: shjais
 ms.reviewer: matp
-manager: shujoshi
 ---
 
 # Add the calendar control to tables

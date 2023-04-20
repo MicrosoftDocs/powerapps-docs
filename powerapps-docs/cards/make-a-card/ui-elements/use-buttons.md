@@ -5,7 +5,6 @@ ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -29,7 +28,7 @@ Buttons can do one of four things:
 
 ## Insert a button
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards**, and then select a card. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 
 1. In the left pane of the card designer, select **Insert**.
 

@@ -5,16 +5,14 @@ author: norliu
 
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 03/22/2021
 ms.subservice: canvas-maker
 ms.author: norliu
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - norliu
 ---
 

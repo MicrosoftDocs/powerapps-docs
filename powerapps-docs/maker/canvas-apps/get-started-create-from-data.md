@@ -1,7 +1,7 @@
 ---
 title: Create a canvas app with data from an Excel file (contains video)
 description: Learn about how to use Power Apps to automatically create a canvas app using data stored in an Excel file in a cloud-storage account.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: 
@@ -13,10 +13,8 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # Create a canvas app with data from an Excel file
 
@@ -31,7 +29,7 @@ Watch this video to learn how to create a canvas app with data from an Excel fil
 
 ## Prerequisites
 
-To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
+To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
 > - You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md).

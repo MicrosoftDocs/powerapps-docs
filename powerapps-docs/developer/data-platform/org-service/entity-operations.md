@@ -4,14 +4,10 @@ description: "Learn about the Entity class used for data operations using the Mi
 ms.date: 09/16/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.author: dikamath # MSFT alias of Microsoft employees only
-manager: kvivek # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

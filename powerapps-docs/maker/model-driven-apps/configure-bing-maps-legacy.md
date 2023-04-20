@@ -16,12 +16,8 @@ caps.latest.revision: 63
 ms.subservice: mda-maker
 ms.author: "matp"
 author: "Mattp123"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Configure a map on a form
 
@@ -41,7 +37,7 @@ When enabled, the map displays the location specified in the address composite c
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Go to **Data** > **Tables**, and then select the table where you want to configure a map on the main form.
+1. Select **Tables** on the left navigation pane, and then select the table where you want to configure a map on the main form. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 1. Select the **Forms** area, and then open the system main form you want.
 

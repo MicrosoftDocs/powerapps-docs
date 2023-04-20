@@ -2,9 +2,8 @@
 title: "Define alternate keys to reference rows with Microsoft Dataverse | MicrosoftDocs"
 description: "Learn how to define alternate keys that can be used to reference rows in Microsoft Dataverse"
 ms.custom: ""
-ms.date: 06/24/2020
+ms.date: 03/30/2023
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "conceptual"
@@ -17,16 +16,10 @@ ms.assetid: 29e53691-0b18-4fde-a1d0-7490aa227898
 caps.latest.revision: 10
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Define alternate keys to reference rows
-
-
 
 *Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify rows in Microsoft Dataverse. 
 
@@ -83,6 +76,9 @@ Only these kinds of columns can be used to create alternate keys:
  - Lookup
  - Choice
 
+> [!NOTE]
+> Columns that have the **Enable column security** property enabled can’t be used as an alternate key. More information: [Field security tables]( /power-apps/developer/data-platform/field-security-entities)
+
 ### Number of keys
 
 You can define up to ten different keys for a table.
@@ -93,7 +89,7 @@ When a key is created, the system validates that the key can be supported by the
 
 ### Unicode characters in key value
 
-If the data within a column that is used in an alternate key will contain one of the following characters `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\` then update or upsert (PATCH) actions will not work.
+If the data within a column that is used in an alternate key will contain one of the following characters `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\`,`#` then update or upsert (PATCH) actions will not work.
 
 If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on columns that won't have data with these characters.
 

@@ -15,12 +15,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Visualize hierarchical data with model-driven apps
 
@@ -28,7 +24,7 @@ search.app:
 
 When a table is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../data-platform/define-query-hierarchical-data.md)
 
-The  tables that have visualizations available by default include [Account](/powerapps/developer/data-platform/reference/tables/account), [Position](/powerapps/developer/data-platform/reference/tables/position), and [User](/powerapps/developer/data-platform/reference/tables/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that are related using the hierarchical relationship.  
+The  tables that have visualizations available by default include [Account](/powerapps/developer/data-platform/reference/entities/account), [Position](/powerapps/developer/data-platform/reference/entities/position), and [User](/powerapps/developer/data-platform/reference/entities/systemuser). In the grid view of these tables, you can see the icon depicting the hierarchy chart, to the left of the row name. The hierarchy icon isn’t present for all rows by default. The icon is shown for the rows that are related using the hierarchical relationship.  
 > [!div class="mx-imgBorder"] 
 > ![View hierarchy button.](media/view-hierarchy-button.png)  
   
@@ -37,7 +33,7 @@ The  tables that have visualizations available by default include [Account](/pow
 > [!div class="mx-imgBorder"] 
 > ![Tree and tile view in hierarchy.](media/tree-view-and-tile-view-in-hierarchy.png)  
   
- A few other tables can be enabled for a hierarchy. These tables include [Contact](/powerapps/developer/data-platform/reference/tables/contact) and [Team](/powerapps/developer/data-platform/reference/tables/team). All custom tables can be enabled for a hierarchy.  
+ A few other tables can be enabled for a hierarchy. These tables include [Contact](/powerapps/developer/data-platform/reference/entities/contact) and [Team](/powerapps/developer/data-platform/reference/entities/team). All custom tables can be enabled for a hierarchy.  
   
 ## Important things to remember 
   

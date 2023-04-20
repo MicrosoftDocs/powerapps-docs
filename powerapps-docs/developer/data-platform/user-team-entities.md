@@ -1,19 +1,14 @@
 ---
 title: "User and team tables (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about user and team management using which you can create and maintain user accounts and profiles." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: ""
-ms.date: 03/27/2021
+ms.date: 01/13/2023
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # User and team tables
 
@@ -29,8 +24,7 @@ User and team management is the area of Microsoft Dataverse where you can create
 
  ![User and team table relationship diagram.](media/crm-v5s-em-userteam.gif "User and team table relationship diagram")  
 
-## Users  
- In Dataverse, users can be disabled but they cannot be deleted. To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
+## Users
 
  The following table provides details about the significant attributes for the system user table.
  
@@ -50,10 +44,34 @@ User and team management is the area of Microsoft Dataverse where you can create
  Access checks are additive. You can access tables based on the roles assigned to the user plus the roles assigned to the team that a user is a member of. This allows a user to have privileges outside their business unit.  
 
 > [!NOTE]
->  A user's set of privileges is a union of privileges from the user's roles and privileges from all teams’ roles in which the user is a member.  
-
+> A user's set of privileges is a union of privileges from the user's roles and privileges from all teams’ roles in which the user is a member.  
 
  Non-interactive users are often used when writing service-to-service code because they do not use up a license. Dataverse allows for seven free non-interactive users. To disable a non-interactive user, update the user record changing the `accessmode` value to any other value. The user will be disabled automatically.
+
+To find the user who is currently logged on or who is impersonated, call the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> message.  
+
+### Delete a user (preview)
+
+ In Dataverse, users can be disabled and deleted. You can delete a user from Power Platform (Dataverse) assuming you have the required access permission to the [SystemUser table](reference/entities/systemuser.md) row. There is a sequence of tasks to follow. You cannot simply delete the row in a single call. You must first delete the user registered in Microsoft Azure Active Directory (AD) and then delete the user in Dataverse. The procedure to follow is outlined below.
+
+Log into Microsoft Azure [portal](https://portal.azure.com), and then follow these steps:
+
+1. Select **Azure Active Directory**, and then under **Manage** select **Users**
+1. Delete the user - this is called a 'soft delete' as the user record remains until permanently deleted
+1. Permanently delete the user either manually or wait thirty days until Azure permanently deletes the user through automation
+
+After the system user is soft or permanently deleted in Azure, the user status will be shown as disabled in Dataverse. You can find this user row in the SystemUser table.
+
+In Dataverse:
+
+1. Reassign any existing table rows the user is assigned to - there should be no table rows assigned to the user prior to deleting the user
+1. Delete the user by using an SDK or Web API call - this is a soft delete
+1. Permanently delete the system user by an API call a second time
+
+> [!TIP]
+> There is an over-ride where the user row in Dataverse can be deleted without permanently deleting the user's AD record in Azure. This can be done by setting the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This removes the need to do step #2 in the above Azure procedure.
+
+More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), [Update and delete table rows using the Organization Service](org-service/entity-operations-update-delete.md)
 
 ## Community tools
 

@@ -9,9 +9,6 @@ ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -45,6 +42,7 @@ Returns a reference to the object that the event occurred on.
 |[OnRecordSelect](../events/grid-onrecordselect.md)|[formContext.data.entity](../formcontext-data-entity.md)|
 |[OnResultOpened](../events/onresultopened.md)|[kbSearch](../controls.md#kbsearch-knowledge-base-search-control-type) control|
 |[OnSave](../events/form-onsave.md)|[formContext.data.entity](../formcontext-data-entity.md)|
+|[OnPostSave](../events/postsave.md)|None|
 |[OnSelection](../events/onselection.md)|None|
 |[OnStageChange](../events/onstagechange.md)|[formContext.data.process](../formcontext-data-process.md)|
 |[OnStageSelected](../events/onstageselected.md)|[formContext.data.process](../formcontext-data-process.md)|

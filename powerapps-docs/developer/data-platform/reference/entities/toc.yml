@@ -126,6 +126,8 @@
   href: dependency.md
 - name: desktopflowbinary
   href: desktopflowbinary.md
+- name: desktopflowmodule
+  href: desktopflowmodule.md
 - name: DisplayString
   href: displaystring.md
 - name: DocumentTemplate
@@ -238,6 +240,8 @@
   href: metric.md
 - name: MobileOfflineProfile
   href: mobileofflineprofile.md
+- name: mobileofflineprofileextension
+  href: mobileofflineprofileextension.md
 - name: MobileOfflineProfileItem
   href: mobileofflineprofileitem.md
 - name: MobileOfflineProfileItemAssociation
@@ -350,6 +354,8 @@
   href: msdyn_pminferredtask.md
 - name: msdyn_pmprocessextendedmetadataversion
   href: msdyn_pmprocessextendedmetadataversion.md
+- name: msdyn_pmprocesstemplate
+  href: msdyn_pmprocesstemplate.md
 - name: msdyn_pmprocessusersettings
   href: msdyn_pmprocessusersettings.md
 - name: msdyn_pmprocessversion
@@ -386,6 +392,8 @@
   href: msdyn_solutionhistorydatasource.md
 - name: msdyn_tour
   href: msdyn_tour.md
+- name: msdyn_virtualtablecolumncandidate
+  href: msdyn_virtualtablecolumncandidate.md
 - name: msdyn_workflowactionstatus
   href: msdyn_workflowactionstatus.md
 - name: msdynce_botcontent
@@ -486,6 +494,8 @@
   href: ribbonmetadatatoprocess.md
 - name: Role
   href: role.md
+- name: RoleEditorLayout
+  href: roleeditorlayout.md
 - name: RollupField
   href: rollupfield.md
 - name: SavedQuery
@@ -502,6 +512,8 @@
   href: sdkmessageprocessingstepimage.md
 - name: SdkMessageProcessingStepSecureConfig
   href: sdkmessageprocessingstepsecureconfig.md
+- name: searchrelationshipsettings
+  href: searchrelationshipsettings.md
 - name: searchtelemetry
   href: searchtelemetry.md
 - name: SemiAnnualFiscalCalendar

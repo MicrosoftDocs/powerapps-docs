@@ -2,7 +2,6 @@
 title: Deploy the Regional Government Emergency Response and Monitoring solution | Microsoft Docs
 description: Provides provides detailed instructions for regional IT admins to deploy the Regional Government Emergency Response and Monitoring solution for their organization.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: conceptual
 ms.custom: 
@@ -680,7 +679,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 In this step, we will fix the flows that are required by the app. You can view all the flows used by the app using the following steps:
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
 
@@ -720,7 +719,7 @@ In this step, we are going to do the following:
 |**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Dataverse and then specify a user account to send emails.|
 |**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Dataverse and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
 
@@ -769,7 +768,7 @@ In this step, we are going to do the following:
 
 In this step, we will authorize the connection information for the flows that help perform specific tasks, and then enable them.
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
+1.  Sign into [Power Automate](https://make.powerautomate.com/).
 
 2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
 

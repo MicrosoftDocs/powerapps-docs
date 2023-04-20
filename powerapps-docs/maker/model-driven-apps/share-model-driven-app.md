@@ -3,7 +3,6 @@ title: Share a model-driven app using Power Apps | Microsoft Docs
 description: Learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
-manager: kvivek
 editor: ''
 tags: ''
 
@@ -15,9 +14,6 @@ ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Share a model-driven app using Power Apps
@@ -176,7 +172,8 @@ Unlike sharing canvas apps, sharing model-driven apps doesn't currently send an 
 To get the direct link to an app:
 
 1. Go to [Power Apps](https://make.powerapps.com).
-1. Select **Solutions** from the left navigation pane, and then open the solution that contains the model-driven app.
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that contains the model-driven app.
 1. Select the model-driven app, and then select **Edit** on the command bar.
 1. In the classic designer, select the **Properties** tab, and then copy the **Unified Interface URL.**
 

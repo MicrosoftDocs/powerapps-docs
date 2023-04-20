@@ -1,17 +1,14 @@
 ---
 title: "getFormContext (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getFormContext method that returns a reference to the form or an item on the form depending on where the method was called." 
-author: adrianorth
-ms.author: aorth
+author: HemantGaur
+ms.author: hemantg
 ms.date: 03/12/2022
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

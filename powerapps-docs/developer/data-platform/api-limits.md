@@ -1,17 +1,14 @@
 ---
 title: "Service protection API limits (Microsoft Dataverse) | Microsoft Docs" 
 description: "Understand what a developer needs to do to manage service protection limits for API requests." 
-ms.date: 09/15/2022
+ms.date: 01/31/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78
+author: divkamath
 ms.subservice: dataverse-developer
 ms.author: dikamath 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -25,7 +22,7 @@ The limits should not affect normal users of interactive clients. Only client ap
 When a client application makes extraordinarily demanding requests, the Dataverse follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
 - With the Web API, we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
-- With the Organization Service, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service protection API limit errors returned](#service-protection-api-limit-errors-returned)
+- With the Dataverse SDK for .NET, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service protection API limit errors returned](#service-protection-api-limit-errors-returned)
 
 
 ## Impact on client applications
@@ -57,47 +54,7 @@ If your application performs operations that trigger custom logic, the number of
 When a service protection API limit error occurs, it will provide a value indicating the duration before any new requests from the user can be processed.
 
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
-- With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
-
-### Interactive application re-try
-
-If the client is an interactive application, you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
-
-### Non-interactive application re-try
-
-If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current task using [Task.Delay](/dotnet/api/system.threading.tasks.task.delay) or equivalent methods.
-
-## How Service Protection API Limits are enforced
-
-Two of the service protection API limits are evaluated within a 5 minute (300 second) sliding window. If either limits are exceeded within the preceding 300 seconds, a service protection API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
-
-The service protection API limits are evaluated per user. Each authenticated user is limited independently. Only those users accounts which are making extraordinary demands will be limited. Other users will not be impacted.
-
-Service protection API limits are enforced based on three facets:
-
-- The number of requests sent by a user.
-- The combined execution time required to process requests sent by a user.
-- The number of concurrent requests sent by a user.
-
-If the only limit was on the number of requests sent by a user, it would be possible to bypass it. The other facets were added to counter these attempts. For example:
-
-- You could send fewer requests by bundling them in batch operations.
-  - The combined execution time limit will counter this.
-- Rather than sending requests individually in succession, you could send a large number of concurrent requests before service protection API limits are enforced.
-  - The concurrent request limit will counter this.
-
-Each web server available to your environment will enforce these limits independently. Most environments will have more than one web server. Trial environments are allocated only a single web server. The actual number of web servers that are available to your environment depends on multiple factors that are part of the managed service we provide. One of the factors is how many user licenses you have purchased.
-
-The following table describes the default service protection API limits enforced *per web server*:
-
-|Measure|Description|Limit per web server|
-|--|--|--|
-|Number of requests|The cumulative number of requests made by the user.|6000 within the 5 minute sliding window|
-|Execution time|The combined execution time of all requests made by the user.| 20 minutes (1200 seconds) within the 5 minute sliding window|
-|Number of concurrent requests|The number of concurrent requests made by the user|52|
-
-> [!IMPORTANT]
-> These limits are subject to change and may vary between different environments. These numbers represent default values and are provided to give you some idea of what values you can expect.
+- With the SDK for .NET, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
 
 ### The Retry-After duration
 
@@ -107,142 +64,34 @@ Today, because of the way the limits are evaluated, you can expect to exceed the
 
 When possible, we recommend trying to achieve a consistent rate by starting with a lower number of requests and gradually increasing until you start hitting the service protection API limits. After that, let the server tell you how many requests it can handle within a 5 minute period. Keeping your maximum number of requests limited within this 5 minute period and gradually increasing will keep the retry-after duration low, optimizing your total throughput and minimizing server resource spikes.
 
-## Service Protection API Limit Errors returned
+### Interactive application re-try
 
-This section describes the three types of service protection API limit errors that can be returned as well as factors that cause these errors and possible mitigation strategies.
+If the client is an interactive application, you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
 
-- The **Error code** is the numerical error value returned by the Organization Service <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails>.
-- The **Hex code** is the hexadecimal error value returned by the Web API.
+### Non-interactive application re-try
 
-### Number of requests
+If the client is not interactive, the common practice is to simply wait for the duration to pass before sending the request again. This is commonly done by pausing the execution of the current task using [Task.Delay](/dotnet/api/system.threading.tasks.task.delay) or equivalent methods.
 
-This limit counts the total number of requests during the preceding 300 second period.
+### How to re-try
 
-| Error code | Hex code | Message |
-|------------|------------|-------------------------------------|
-|`-2147015902`|`0x80072322`|`Number of requests exceeded the limit of 6000 over time window of 300 seconds.`|
+The following describes how to retry .NET applications using the Dataverse SDK for .NET or Web API:
 
-It is not expected that a typical user of an interactive application will be able to send 1,200 requests per minute to exceed this limit unless the application enables users to perform bulk operations.
+#### [SDK for .NET](#tab/sdk)
 
-For example, if a list view enables selection of 250 records at a time and allows a user to perform some operation on all these records, the user would need to perform this operation 24 times in a span of 300 seconds. The user would need to complete the operation on each list within 12.5 seconds.
 
-If your application provides this capability, you should consider some of the following strategies:
+If you are using the SDK for .NET, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
 
-- Decreasing the total number of records that can be selected in a list. If the number of items displayed in a list is reduced to 50, the user would need to perform this operation 120 times within 300 seconds. The user would have to complete the operation on each list within 2.5 seconds.
-- Combine the selected operations into a batch. A batch can contain up to 1000 operations and will avoid the number of requests limit. However, you will need to be prepared for the execution time limit.
+Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
 
-### Execution time
-
-This limit tracks the combined execution time of incoming requests during the preceding 300 second period.
-
-| Error code | Hex code | Message |
-|------------|------------|-------------------------------------|
-|`-2147015903`|`0x80072321`|`Combined execution time of incoming requests exceeded limit of 1,200,000  milliseconds over time window of 300 seconds. Decrease number of concurrent requests or reduce the duration of requests and try again later.`|
-
-Some operations require more resources than others. Batch operations, importing solutions, and highly complex queries can be very demanding. These operations may also be performed simultaneously in concurrent requests. Therefore, within the 5 minute window it is possible to request operations that will require more than 20 minutes of combined computation time.
-
-This limit can be encountered when strategies using batch operations and concurrent requests are used to avoid the number of requests limit.
-
-### Concurrent requests
-
-This limit tracks the number of concurrent requests.
-
-| Error code | Hex code | Message |
-|------------|------------|-------------------------------------|
-|`-2147015898`|`0x80072326`|`Number of concurrent requests exceeded the limit of 52.`|
-
-Client applications are not limited to sending requests individually in succession. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously. The server can detect when it is responding to multiple requests from the same user simultaneously. If this number of concurrent requests is exceeded, this error will be thrown.
-
-Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control.
-
-When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed 52. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
-
-## How to maximize throughput
-
-When you have an application that must prioritize throughput to move the most data in the shortest period, there are some strategies you can apply.
-
-### Let the server tell you how much it can handle
-
-Don't try to calculate how many requests to send at a time. Each environment can be different. Gradually increase the rate you send requests until you begin to hit limits and then depend on the service protection API Limit `Retry-After` value to tell you when to send more. This value will keep your total throughput at the highest possible level.
-
-### Use multiple threads
-
-The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
-
-The `x-ms-dop-hint` response header value provides a hint for the Degree Of Parallelism (DOP) that represents a number of threads that should provide good results for a given environment. The value of this header will be an integer between 1 and 1024. When using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>, the `RecommendedDegreesOfParallelism` property will return this value.
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
 More information:
 
-- [Use Task Parallel Library with Web API](#use-task-parallel-library-with-web-api)
-- [Use Task Parallel Library with CrmServiceClient](#use-task-parallel-library-with-crmserviceclient)
+- [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
+- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Dataverse](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
 
-### Avoid large batches
 
-*Batching* refers to sending multiple operations in a single request.
-
-Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
-
-With the Organization Service SDK this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
-
-In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
-
-When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. Only use `$batch` if you want to manage transactions using `changesets`. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
-
-> [!NOTE]
-> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
-
-### Remove the affinity cookie
-
-When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. If you remove this cookie, each request you send will be routed any of the eligible servers. This increases throughput because limits are applied per server. This simply allows you to use more servers if they are available.
-
-> [!NOTE]
-> This strategy should only be used by applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
-
-The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegating-message-handler)
-
-```csharp
-HttpMessageHandler messageHandler = new OAuthMessageHandler(
-    config,
-    new HttpClientHandler() { UseCookies = false }
-    );
-HttpClient httpClient = new HttpClient(messageHandler)
-```
-
-If you are using the `CrmServiceClient` or `ServiceCLient` classes, add the following to the AppSettings node in the App.config file.
-
-```xml
-<add key="PreferConnectionAffinity" value="false" /> 
-```
-
-### Optimize your connection
-
-You can expect greater throughput by optimizing the connection. Supporting .NET sample code uses these settings:
-
-```csharp
-//Change max connections from .NET to a remote service default: 2
-System.Net.ServicePointManager.DefaultConnectionLimit = 65000;
-//Bump up the min threads reserved for this app to ramp connections faster - minWorkerThreads defaults to 4, minIOCP defaults to 4 
-System.Threading.ThreadPool.SetMinThreads(100, 100);
-//Turn off the Expect 100 to continue message - 'true' will cause the caller to wait until it round-trip confirms a connection to the server 
-System.Net.ServicePointManager.Expect100Continue = false;
-//Can decrease overall transmission overhead but can cause delay in data packet arrival
-System.Net.ServicePointManager.UseNagleAlgorithm = false;
-```
-More information: [Managing Connections](/dotnet/framework/network-programming/managing-connections)
-
-## Strategies to manage Service Protection API limits
-
-This section describes ways that you can design your clients and systems to avoid service protection API limit errors. You may also want to consider how you manage your licenses to reduce the impact.
-
-### Update your client application
-
-Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
-
-### Move towards real-time integration
-
-Remember that the main point of service protection API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact service protection limits will have.
-
-## Using the Web API
+#### [Web API](#tab/webapi)
 
 If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
 
@@ -283,7 +132,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy(Config config)
 
 This example uses [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
 
-### HTTP Response headers
+#### HTTP Response headers
 
 If you are using HTTP requests with the Web API, you can track the remaining limit values with the following HTTP response headers:
 
@@ -294,34 +143,131 @@ If you are using HTTP requests with the Web API, you can track the remaining lim
 
 You should not depend on these values to control how many requests you send. They are intended for debugging purposes. If you are removing the affinity cookie, these values are re-set when you connect to a different server.
 
-### Use Task Parallel Library with Web API
+---
 
-To achieve optimum throughput, you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
+## How Service Protection API Limits are enforced
 
-See these examples using the [WebAPIService class library (C#)](webapi/samples/webapiservice.md):
+Two of the service protection API limits are evaluated within a 5 minute (300 second) sliding window. If either limits are exceeded within the preceding 300 seconds, a service protection API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
 
-- [Web API CDSWebApiService Parallel Operations Sample (C#)](webapi/samples/webapiservice-parallel-operations.md)
-- [Web API Parallel Operations with TPL Dataflow components Sample (C#)](webapi/samples/webapiservice-tpl-dataflow-parallel-operations.md)
+The service protection API limits are evaluated per user. Each authenticated user is limited independently. Only those users accounts which are making extraordinary demands will be limited. Other users will not be impacted.
+
+Service protection API limits are enforced based on three facets:
+
+- The number of requests sent by a user.
+- The combined execution time required to process requests sent by a user.
+- The number of concurrent requests sent by a user.
+
+If the only limit was on the number of requests sent by a user, it would be possible to bypass it. The other facets were added to counter these attempts. For example:
+
+- You could send fewer requests by bundling them in batch operations.
+  - The combined execution time limit will counter this.
+- Rather than sending requests individually in succession, you could send a large number of concurrent requests before service protection API limits are enforced.
+  - The concurrent request limit will counter this.
+
+Each web server available to your environment will enforce these limits independently. Most environments will have more than one web server. Trial environments are allocated only a single web server. The actual number of web servers that are available to your environment depends on multiple factors that are part of the managed service we provide. One of the factors is how many user licenses you have purchased.
+
+The following table describes the default service protection API limits enforced *per web server*:
+
+|Measure|Description|Limit per web server|
+|--|--|--|
+|Number of requests|The cumulative number of requests made by the user.|6000 within the 5 minute sliding window|
+|Execution time|The combined execution time of all requests made by the user.| 20 minutes (1200 seconds) within the 5 minute sliding window|
+|Number of concurrent requests|The number of concurrent requests made by the user|52 or higher|
+
+> [!IMPORTANT]
+> These limits are subject to change and may vary between different environments. These numbers represent default values and are provided to give you some idea of what values you can expect.
 
 
-## Using the Organization Service
 
-If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> classes. Those classes implement the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned.
+## Service Protection API Limit Errors returned
 
-Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
+This section describes the three types of service protection API limit errors that can be returned as well as factors that cause these errors and possible mitigation strategies.
 
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the `CrmServiceClient` or `ServiceClient` class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+- The **Error code** is the numerical error value returned by the SDK for .NET <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails>.
+- The **Hex code** is the hexadecimal error value returned by the Web API.
 
-More information:
+### Number of requests
 
-- [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
-- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Dataverse](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
+This limit counts the total number of requests during the preceding 300 second period.
 
-### Use Task Parallel Library with CrmServiceClient
+| Error code | Hex code | Message |
+|------------|------------|-------------------------------------|
+|`-2147015902`|`0x80072322`|`Number of requests exceeded the limit of 6000 over time window of 300 seconds.`|
 
-To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
+It is not expected that a typical user of an interactive application will be able to send 1,200 requests per minute to exceed this limit unless the application enables users to perform bulk operations.
 
-TPL can be used with either <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> or <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> because both classes include a `Clone` method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
+For example, if a list view enables selection of 250 records at a time and allows a user to perform some operation on all these records, the user would need to perform this operation 24 times in a span of 300 seconds. The user would need to complete the operation on each list within 12.5 seconds.
+
+If your application provides this capability, you should consider some of the following strategies:
+
+- Decreasing the total number of records that can be selected in a list. If the number of items displayed in a list is reduced to 50, the user would need to perform this operation 120 times within 300 seconds. The user would have to complete the operation on each list within 2.5 seconds.
+- Combine the selected operations into a batch. A batch can contain up to 1000 operations and will avoid the number of requests limit. However, you will need to be prepared for the execution time limit.
+
+### Execution time
+
+This limit tracks the combined execution time of incoming requests during the preceding 300 second period.
+
+| Error code | Hex code | Message |
+|------------|------------|-------------------------------------|
+|`-2147015903`|`0x80072321`|`Combined execution time of incoming requests exceeded limit of 1,200,000  milliseconds over time window of 300 seconds. Decrease number of concurrent requests or reduce the duration of requests and try again later.`|
+
+Some operations require more resources than others. Batch operations, importing solutions, and highly complex queries can be very demanding. These operations may also be performed simultaneously in concurrent requests. Therefore, within the 5 minute window it is possible to request operations that will require more than 20 minutes of combined computation time.
+
+This limit can be encountered when strategies using batch operations and concurrent requests are used to avoid the number of requests limit.
+
+### Concurrent requests
+
+This limit tracks the number of concurrent requests.
+
+| Error code | Hex code | Message |
+|------------|------------|-------------------------------------|
+|`-2147015898`|`0x80072326`|`Number of concurrent requests exceeded the limit of 52.`|
+
+Client applications are not limited to sending individual requests sequentially. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously. The server can detect when it is responding to multiple requests from the same user simultaneously. If this number of concurrent requests is exceeded, this error will be thrown. The limit may be higher than 52 in some cases.
+
+Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control. When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed the limit. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
+
+More information: [Send parallel requests](send-parallel-requests.md)
+
+## How to maximize throughput
+
+When you have an application that must prioritize throughput to move the most data in the shortest period, there are some strategies you can apply.
+
+### Let the server tell you how much it can handle
+
+Don't try to calculate how many requests to send at a time. Each environment can be different. Gradually increase the rate you send requests until you begin to hit limits and then depend on the service protection API Limit `Retry-After` value to tell you when to send more. This value will keep your total throughput at the highest possible level.
+
+### Use multiple threads
+
+The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput. More information: [Send parallel requests](send-parallel-requests.md)
+
+### Avoid large batches
+
+*Batching* refers to sending multiple operations in a single request.
+
+Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
+
+With the Organization Service this means using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, which typically allows sending up to 1000 operations in a request. The main benefit this provides is that it reduces the total amount of XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue. For service protection limits it increases the total execution time per request. Larger sized batches increase the chance you will encounter execution time limits rather than limits on the number of requests.
+
+In the past, `ExecuteMultiple` operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection execution time API limits have made that limit redundant.
+
+When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
+
+> [!NOTE]
+> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+
+## Strategies to manage Service Protection API limits
+
+This section describes ways that you can design your clients and systems to avoid service protection API limit errors. You may also want to consider how you manage your licenses to reduce the impact.
+
+### Update your client application
+
+Service Protection API limits have been applied to Dataverse since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns to [Retry operations](#retry-operations) described above.
+
+### Move towards real-time integration
+
+Remember that the main point of service protection API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact service protection limits will have.
+
 
 ## Frequently asked questions
 
@@ -340,6 +286,10 @@ More information: [Search across table data using Dataverse search](webapi/relev
 ### How do these limits apply to how many requests a user is entitled to each day?
 
 These limits are not related to entitlement limits. More information: [Entitlement limits](../../maker/data-platform/api-limits-overview.md#entitlement-limits)
+
+### Are limits applied differently for application users?
+
+No. The limits are applied to all users in the same way.
 
 ### See also
 

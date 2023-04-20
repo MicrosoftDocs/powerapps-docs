@@ -10,10 +10,8 @@ ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - TashasEv
   - mduelae
 ---

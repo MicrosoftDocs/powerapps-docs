@@ -4,14 +4,10 @@ description: "This sample obtains the data context from the current Microsoft Da
 ms.date: 04/03/2022
 author: jaredha
 ms.author: jaredha
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: article
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Azure aware custom workflow activity

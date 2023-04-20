@@ -1,18 +1,14 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 12/01/2022
+ms.date: 04/17/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
-manager: sunilg # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -41,7 +37,7 @@ You will still be able to register plug-in assemblies individually, but using `P
 
 ## Send feedback
 
-If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas](https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas) site.
+If you have questions or issues with this feature you can contact technical support. If you have suggestions please post them on the [Power Apps Ideas Forum](https://ideas.powerapps.com/) site.
 
 ## Limitations
 
@@ -49,6 +45,7 @@ The following limitations apply to dependent assembly plug-ins.
 
 - [Workflow extensions](workflow/workflow-extensions.md), also known as *workflow assemblies*, *workflow activities* or *custom workflow activities* are not supported.
 - On-premises environments are not supported.
+- Unmanaged code is not supported. You can't include references to unmanaged resources.
 
 ## Signing Assemblies
 
@@ -307,28 +304,9 @@ More information:
 
 The following are known issues that should be resolved before dependent assemblies for plug-ins becomes generally available.
 
-### Asynchronous plug-in steps do not work
-
-If you use dependent assemblies for a plug-in registered for an asynchronous step an error with the message `Expected non-empty Guid.` will occur.
-
 ### Plug-in profiler
 
 You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
-
-### Solution containing plugin package cannot include any steps using the plug-in
-
-When you prepare a solution that contains a plugin package, do not include any plug-in step registrations that use an assembly included in the plug-in package.
-
-The export of the solution will succeed, but you will not be able to import the solution. To test plug-ins that use a dependent assembly in a different environment, you must manually register the steps.
-
-### Users must be granted read access to plug-in package
-
-Any users without the System Administrator security role must be granted read access to the [PluginPackage table](reference/entities/pluginpackage.md).
-
-You can manually edit this for each security role following the steps here: [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role). **Plugin Package** is located in the **Custom Entities** tab.
-
-:::image type="content" source="media/set-pluginpackage-read-access.png" alt-text="Setting plugin package read access.":::
-
 
 ### See also
 

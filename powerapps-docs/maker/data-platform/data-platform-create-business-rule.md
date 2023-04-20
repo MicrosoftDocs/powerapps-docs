@@ -2,7 +2,6 @@
 title: Create a business rule in Microsoft Dataverse | Microsoft Docs
 description: Step-by-step instructions for how to create a business rule in Microsoft Dataverse.
 author: lancedMicrosoft
-manager: kvivek
 ms.component: cds
 ms.topic: how-to
 ms.date: 04/05/2022
@@ -11,9 +10,6 @@ ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a business rule for a table
@@ -53,22 +49,18 @@ Business rules work with most column types including text, number, choice, date,
 
 ## Create a business rule
   
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**.
-
-2. In the list that appears, select **Tables**.
-  
-3. Open the table you want to create the business rule for (for example, open the **Account** table), and then select the **Business Rules** tab.  
-
-4. Select **Add business rule**.  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane, and select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the table you want to create the business rule for (for example, open the **Account** table), and then select the **Business Rules** tab.  
+1. Select **Add business rule**.  
   
     The business rule designer window opens with a single condition already created for you. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
 
     > [!TIP]
     > If you want to modify an existing business rule, you must deactivate it before you can modify it.  
   
-5. Add a description, if you want, in the description box in the upper-left corner of the window.
+1. Add a description, if you want, in the description box in the upper-left corner of the window.
   
-6. Set the scope, according to the following:  
+1. Set the scope, according to the following:  
   
     |**If you select this item...**|**The scope is set to...**|  
     |-|-|  
@@ -79,7 +71,7 @@ Business rules work with most column types including text, number, choice, date,
     > [!TIP]
     > If you're building a Canvas app, you must use table as the scope.
   
-7. **Add conditions.** To add more conditions to your business rule:  
+1. **Add conditions.** To add more conditions to your business rule:  
   
     1. Drag the **Condition** component from the **Components** tab to a plus sign in the designer.  
   
@@ -93,7 +85,7 @@ Business rules work with most column types including text, number, choice, date,
   
     4. When you're done setting properties for the condition, select **Apply**.  
   
-8. **Add actions.** To add an action:  
+1. **Add actions.** To add an action:  
   
     1. Drag one of the action components from the **Components** tab to a plus sign next to **Condition** component. Drag the action to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition isn't met.
   
@@ -103,7 +95,7 @@ Business rules work with most column types including text, number, choice, date,
   
     3. When you're done setting properties, select **Apply**.  
   
-9. **Add a business recommendation (model-driven apps only)**. To add a business recommendation:  
+1. **Add a business recommendation (model-driven apps only)**. To add a business recommendation:  
   
     1. Drag the **Recommendation** component from the **Components** tab to a plus sign next to a **Condition** component. Drag the **Recommendation** component to a plus sign next to a check mark if you want the business rule to take that action when the condition is met, or to a plus sign next to an  x if you want the business rule to take that action if the condition isn't met.  
   
@@ -116,10 +108,10 @@ Business rules work with most column types including text, number, choice, date,
   
     4. When you're done setting properties, select **Apply**.  
   
-10. To validate the business rule, select **Validate** on the action bar.  
+1. To validate the business rule, select **Validate** on the action bar.  
   
-11. To save the business rule, select **Save** on the action bar.  
-12. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. You can't activate the business rule from the designer window.  
+1. To save the business rule, select **Save** on the action bar.  
+1. To activate the business rule, select it in the Solution Explorer window, and then select **Activate**. You can't activate the business rule from the designer window.  
   
     > [!TIP]
     >  Here are a few tips to keep in mind as you work on business rules in the designer window:  
@@ -132,8 +124,7 @@ Business rules work with most column types including text, number, choice, date,
 
  This business rule example creates a condition that triggers a message in the task description field when a task is more than 30 days old.
 
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane expand **Data**.
-1. In the list that appears, select **Tables**.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), on the left navigation pane, select **Tables**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open the **Task** table, and then select the **Business rules** area.
 1. Select **Add business rule**.
 1. Select **New Condition** on the business process flow canvas, and enter or select the following properties:

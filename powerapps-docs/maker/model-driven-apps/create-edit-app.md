@@ -14,7 +14,6 @@ author: "Mattp123"
 ms.assetid: 2a44229e-44f0-4c4e-ba21-a476210d0a12
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -22,9 +21,6 @@ caps.latest.revision: 19
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create a model-driven app using the classic app designer
@@ -43,8 +39,7 @@ Verify the following prerequisites before creating an app:
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 1. Choose the environment by selecting the environment icon ![Environment icon.](media/icon-environment.PNG "Environment icon")
-1. Select **Solutions** from the left navigation pane.
-
+1. Select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Open an unmanaged solution or create a new one. More information: [Create a solution](../data-platform/create-solution.md)
 1. Select **New** > **App** > **Model-driven app**.  
 1. There a two options.  [Modern app designer](app-designer-overview.md) and Classic App designer.  Select **Classic App Designer**.  

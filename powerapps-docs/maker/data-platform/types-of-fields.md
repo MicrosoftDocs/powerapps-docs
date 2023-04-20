@@ -2,20 +2,16 @@
 title: "Column data types in Microsoft Dataverse (contains video) | MicrosoftDocs"
 description: "Understand the different column data types available for your app"
 keywords: ""
-ms.date: 07/29/2022
+ms.date: 03/02/2023
 ms.custom: 
 ms.topic: article
 author: "Mattp123"
 ms.assetid: 734b4ffa-5543-4f88-8517-299589f433f7
 ms.subservice: dataverse-maker
 ms.author: matp
-manager: kvivek
 ms.reviewer: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Types of columns
 
@@ -65,7 +61,7 @@ For more information about how column data types are defined in the API, see [At
 
 ## Column types used by the system
 
-There are some columns used by the system that you cannot add using the designer.
+There are some columns used by the system that you can't add using the designer.
 
 |Type|Description|
 |--|--|
@@ -110,7 +106,7 @@ Choices multi-select columns are supported in the following types of forms:
 |Form Type|Availability|
 |--|--|
 |**Turbo form**|Yes|
-|**Refresh form**|Read-only (column will available but cannot be edited)|
+|**Refresh form**|Read-only (column will available but can't be edited)|
 |**Legacy form**|No|
 |**Bulk Edit form**|No|
 
@@ -129,9 +125,9 @@ Decimal numbers are stored in the database exactly as specified. Floating point 
   
 Use decimals when you need to provide reports that require very accurate calculations, or if you typically use queries that look for values that are equal or not equal to another value.  
   
-Use floating point numbers when you store data that represents fractions or values that you will typically query comparing to another value using greater than or less than operators. In most cases, the difference between decimal and float isn't noticeable. Unless you require the most accurate possible calculations, floating point numbers should work for you.  
+Use floating point numbers when you store data that represents fractions or values that you'll typically query comparing to another value using greater than or less than operators. In most cases, the difference between decimal and float isn't noticeable. Unless you require the most accurate possible calculations, floating point numbers should work for you.  
 
-Big Integers (or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It is used to store very large numbers that exceed the capabilities of Whole Number and Decimal.  Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
+Big Integers (or BigInt) are large numbers with a max value of 9,223,372,036,854,775,807. It's used to store very large numbers that exceed the capabilities of Whole Number and Decimal.  Some uses for this include storage of time stamp values and as unique IDs, as well as numbers larger than 100 billion.
 
 > [!NOTE]
 > BigInt is currently only available for use through API. This includes column creation, data creation, and data management.
@@ -160,7 +156,7 @@ When you configure a currency column you can choose the precision value. There a
   
 ## Different types of lookups  
 
-When you create a new lookup column you are creating a new Many-to-One (N:1) table relationship between the table you're working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-entity-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
+When you create a new lookup column you're creating a new Many-to-One (N:1) table relationship between the table you're working with and the **Target Row Type** defined for the lookup. There are additional configuration options for this relationship that are described in [Create and edit relationships between tables](create-edit-entity-relationships.md). But all custom lookups can only allow for a reference to a single row for a single target row type.  
   
 However, you should be aware that not every lookup behaves this way. There are several different types of system lookups as shown here.  
   
@@ -194,7 +190,7 @@ People choose the image to upload a picture from their computer. Images must be 
   
 When the image is uploaded, it will be converted to a .jpg format and all downloaded images will also use this format. If an animated .gif is uploaded, only the first frame is saved.  
   
-When an image is uploaded, it will be resized as a "thumbnail" image to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they will display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.
+When an image is uploaded, it will be resized as a "thumbnail" image to a maximum size of 144 pixels by 144 pixels. People should resize or crop the images before they upload them so that they'll display well using this size. All images are cropped to be square. If both sides of an image are smaller than 144 pixels, the image will be cropped to be a square with the dimensions of the smaller side.
 
 > [!NOTE]
 > Image columns don't work with business process flows, business rules, charts, rollup columns, or calculated columns.
@@ -211,7 +207,7 @@ When an image is uploaded, it will be resized as a "thumbnail" image to a maximu
    - **Primary Image**. Image columns that are set as the primary image are displayed in the upper right corner of the form. You can have only one primary image for each table.
    - **Enable column security**. Use to control access for specific columns. More information: [Field-level security to control access](/power-platform/admin/field-level-security)
    - **Enable auditing**. Enables the logging of changes that are made to table records and user access so you can review the activity later. More information: [Administrators Guide: Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing)
-   - **Sortable in interactive experience dashboard**. Specifies the the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-the-interactive-dashboards)
+   - **Sortable in interactive experience dashboard**. Specifies the column will be used to configure interactive dashboards. More information: [Configure filter columns, and security roles for interactive dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md#configure-filter-columns-and-security-roles-for-the-interactive-dashboards)
    - **Maximum image size**. Default value is 10,240 KB. The minimum size is 1 KB and the maximum is 30,720 KB.
 
 1. Select **Save table**.
@@ -235,7 +231,7 @@ More information for developers working with image data:
 
 The **File** column is used for storing binary data. The primary intended use of this column is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more columns of this data type can be added to an existing standard customizable table or a custom table.
 
-The default **Maximum file size** is 32 MB and the largest size you can set is 131072 KB (131 MB). The file size limit can be set individually for each column of file type added to a table. 
+The default **Maximum file size** is 32 MB and the largest size you can set is 131,072 KB (131 MB). The file size limit can be set individually for each column of file type added to a table. 
 
 >[!NOTE]
 > - Once the maximum file size has been saved, it can't be changed.
@@ -257,9 +253,10 @@ Most columns have options to enable searching or sorting of the column's content
 
 Almost every column data type is created with the **Searchable** value enabled. This can be disabled at the time of creation, or later after the column is created. The following data types can't be search enabled:
 
-- Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
 - File. Files are stored and retrieved using reference URLS and because of this they can't be searched.
 - Formulas. Formulas are used to create a dynamically calculated output and because of this can't be searched.
+- Image. Images are stored and retrieved using reference URLS and because of this they can't be searched.
+- Multivalue lookup (PartyList). Some system lookup columns can contain multiple values. For example, the **To** lookup column of **Email** rows can contain multiple recipients. Searching multivalue lookup columns isn't supported.
 
 The **Customer** datatype is search enabled by default and this can't be disabled. It's required to be searchable by the system.
 
@@ -267,8 +264,11 @@ The **Customer** datatype is search enabled by default and this can't be disable
 
 Almost every data type is created with the **Sortable** value disabled. The value can be changed at the time of creation or after later after the column is created. The following data types don't provide the ability to enable a sortable attribute:
 
+- Choices. Sorting columns with multiple values isn't supported.
+- Customer. Customer is a standard lookup column and can't be sorted because it's dynamically retrieved.
+- File. Files are stored using reference URLS and sorting these aren't useful.
 - Formulas. Formulas are used to create a dynamically calculated output and because of this can't be sorted.
-- Lookup. Lookups have values that are dynamically retrieved from the source table and because of this can't be sorted.
-- Customer. Customer is a standard lookup field and can't be sorted because it is dynamically retrieved.
+- Image. There's no meaningful way to sort images.
+- Multivalue lookup (PartyList). Some system lookup columns can contain multiple values. For example, the **To** lookup column of **Email** rows can contain multiple recipients. Sorting columns with multiple values isn't supported.
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

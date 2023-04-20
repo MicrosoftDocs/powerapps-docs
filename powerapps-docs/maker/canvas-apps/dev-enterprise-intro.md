@@ -1,20 +1,18 @@
 ---
 title: Canvas apps for enterprise developers, partners, and ISVs
 description: Learn about developing solutions with canvas apps for enterprise developers, partners, and ISVs.
-author: tapanm-msft
+author: mduelae
 
 ms.subservice: canvas-developer
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/17/2022
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - KumarVivek
   - evlew
 ---
@@ -43,9 +41,6 @@ As a Microsoft partner or Independent Software Vendor (ISV), accelerate customer
 
 - **Build and certify custom connectors**: Bring your product into the Microsoft cloud by building a connector that enables Power Apps to talk to your service. [Learn more](/connectors/custom-connectors/submit-certification)
 
-- **List your solution on Microsoft AppSource**: Generate new leads for your business by building an app with Power Apps and publishing it to Microsoft AppSource for new customers to find. [Learn more](../../developer/data-platform/publish-app-appsource.md)
+- **List your solution on Microsoft AppSource**: Generate new leads for your business by building an app with Power Apps and publishing it to Microsoft AppSource for new customers to find. [Learn more](/power-platform/developer/appsource/publish-app)
 
 - **Get started today for free**: Sign-up for the Power Apps Developer Plan for free and start building apps in a dedicated developer environment. [Learn more](../developer-plan.md)
-
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]

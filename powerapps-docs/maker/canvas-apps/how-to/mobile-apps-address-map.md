@@ -10,11 +10,9 @@ ms.date: 03/3/2022
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
     - joel-lindstrom
-    - tapanm-msft
+    - mduelae
     - anuitz
 ---
 

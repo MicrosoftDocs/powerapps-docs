@@ -4,14 +4,11 @@ description: "Alternate keys can be used to create instances of Entity and Entit
 ms.date: 08/09/2022
 ms.reviewer: pehecke
 ms.topic: article
-author: divka78 # GitHub ID
+author: divkamath # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: dikamath # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

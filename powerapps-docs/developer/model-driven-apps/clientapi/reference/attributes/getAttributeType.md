@@ -9,9 +9,6 @@ ms.topic: reference
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---
@@ -37,6 +34,8 @@ This method will return one of the following **string** values:
 - datetime
 - decimal
 - double
+- file
+- image
 - integer
 - lookup
 - memo

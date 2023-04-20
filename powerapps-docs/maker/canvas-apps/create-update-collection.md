@@ -1,21 +1,19 @@
 ---
 title: Create and update a collection in a canvas app (contains video)
 description: Create a collection, add items to the collection, and remove one or all items from a collection in a canvas app.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/28/2019
 ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - gregli-msft
-  - tapanm-msft
+  - mduelae
 ---
 # Create and update a collection in a canvas app
 

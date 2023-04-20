@@ -1,7 +1,7 @@
 ---
 title: Create a canvas app with data from Microsoft Lists (contains video)
 description: In Power Apps, automatically create a canvas app to manage data in a list created using Microsoft Lists.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: 
@@ -13,11 +13,9 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - Steven-Jia
-  - tapanm-msft
+  - mduelae
   - navjotm
   - emcoope-msft
 ---

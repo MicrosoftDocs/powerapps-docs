@@ -10,9 +10,6 @@ ms.topic: "article"
 ms.subservice: mda-developer
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - caburk
@@ -131,6 +128,9 @@ When a list of records for a table is displayed within a sub grid on the form of
   You can hide these commands by using `<HideCustomAction>`.
 
 ### Form ribbons
+
+> [!NOTE]
+> This feature is not supported on Unified Interface.
 
 Each table can have multiple forms. You can define changes to the form ribbon for all forms for that table by adding your definition at the table level (`//ImportExportXml/Entities/Entity/RibbonDiffXml`).
 

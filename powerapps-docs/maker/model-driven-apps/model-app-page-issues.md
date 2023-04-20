@@ -8,23 +8,22 @@ ms.subservice: mda-maker
 ms.topic: "article"
 author: "adrianorth"
 ms.author: "aorth"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Known issues with custom pages in a model-driven app
 
 The custom page is a new page type within model-driven apps. Custom pages bring the power of canvas apps into model-driven apps. Below are the known issues to be aware of.
+
+> [!IMPORTANT]
+> Using custom pages with mobile devices is currently in public preview. Offline and device capability controls like barcode scanning, capturing photos from device, or attaching files isn't supported.
 
 ## Maker-related issues
 
 * When a custom page is modified, such as saved and published, the model-driven app isn't aware of the change. The model-driven app will continue to use the last version of the custom page when the model-driven app was published. A model-driven app published through app designer, solution explorer, or **Publish all** will update all custom pages in the model-driven app.
 
 * Images, icons and shapes are not currently supported with Right-To-Left (RTL) languages.
- 
+
 * The ability to get the current data formats from users settings including date, time, numbers and currency is not supported.
 
 * Custom pages use a canvas app hosting session that can time out after 8 hours.  However, the Unified Interface session has a longer timeout. When the timeout happens, an error message bar appears that prompts the user to refresh the browser.

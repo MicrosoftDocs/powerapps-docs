@@ -1,18 +1,14 @@
 ---
 title: "msdyn_pminferredtask table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_pminferredtask table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # msdyn_pminferredtask table/entity reference
@@ -497,6 +493,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |1|InProgress|1|InProgress|
 |2|Done|4|Done|
 |3|Failed|5|Failed|
+|4|Imported|7|Imported|
 
 
 
@@ -523,6 +520,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |4|Analyzed|2|
 |5|AnalyzeFailed|3|
 |6|DeleteFailed|3|
+|7|Imported|4|
 
 
 
@@ -1109,6 +1107,7 @@ Listed by **SchemaName**.
 - [msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmanalysishistory_parenttask)
 - [msdyn_pminferredtask_msdyn_pmprocessusersettings_parenttask](#BKMK_msdyn_pminferredtask_msdyn_pmprocessusersettings_parenttask)
 - [msdyn_pminferredtask_msdyn_pmprocessversion](#BKMK_msdyn_pminferredtask_msdyn_pmprocessversion)
+- [msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid](#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid)
 
 
 ### <a name="BKMK_msdyn_pminferredtask_SyncErrors"></a> msdyn_pminferredtask_SyncErrors
@@ -1303,6 +1302,21 @@ Same as the [msdyn_pminferredtask_msdyn_pmprocessversion](msdyn_pmprocessversion
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|msdyn_pminferredtask_msdyn_pmprocessversion|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
+
+
+### <a name="BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid"></a> msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid
+
+Same as the [msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid](msdyn_pmprocesstemplate.md#BKMK_msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid) many-to-one relationship for the [msdyn_pmprocesstemplate](msdyn_pmprocesstemplate.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_pmprocesstemplate|
+|ReferencingAttribute|msdyn_pminferredtaskid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_msdyn_pminferredtask_msdyn_pmprocesstemplate_pmnferredtaskid|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 

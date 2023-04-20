@@ -2,15 +2,11 @@
 title: "Use Web API functions (Microsoft Dataverse)| Microsoft Docs"
 description: "Functions are reusable operations that are used with a GET request to retrieve data from Microsoft Dataverse"
 ms.date: 04/26/2022
-author: divka78
+author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -207,7 +203,7 @@ Some functions listed in <xref:Microsoft.Dynamics.CRM.FunctionIndex> will return
   
 ### Query functions
 
-Functions listed in <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> are intended to be used to compose a query. These functions can be used in a manner similar to the [Built-in query functions](query-data-web-api.md#bkmk_buildInQueryFunctions), but there are some important differences.  
+Functions listed in <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex> are intended to be used to compose a query. These functions can be used in a manner similar to the [OData query functions](query-data-web-api.md#use-odata-query-functions), but there are some important differences.  
   
 You must use the full name of the function and include the names of the parameters. The following example shows how to use the <xref:Microsoft.Dynamics.CRM.LastXHours> query function to return all account entities modified in the past 12 hours.  
   

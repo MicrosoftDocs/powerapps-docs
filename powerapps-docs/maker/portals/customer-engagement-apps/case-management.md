@@ -7,7 +7,7 @@ ms.custom:
 ms.date: 04/21/2020
 ms.subservice: portals
 ms.author: ndoelman
-ms.reviewer: ndoelman
+ms.reviewer: kkendrick
 contributors:
     - nickdoelman
 ---
@@ -58,7 +58,7 @@ A web portal customer can close a case directly from the portal. When editing a 
 
 ![Close or cancel a case.](media/case-actions.png "Close or cancel a case") 
 
-A web portal customer also has the ability to re-open a closed case if they feel that his or her issue has not been dealt with properly.
+A web portal customer also has the ability to re-open a closed case if they feel that their issue has not been dealt with properly.
 
 ## Case deflection
 

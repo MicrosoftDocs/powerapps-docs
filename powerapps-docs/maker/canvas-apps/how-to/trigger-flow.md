@@ -5,17 +5,15 @@ author: joel-lindstrom
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: emcoope
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
     - joel-lindstrom
-    - tapanm-msft
+    - mduelae
 ---
 
 

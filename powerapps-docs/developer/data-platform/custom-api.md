@@ -1,17 +1,14 @@
 ---
 title: "Create and use Custom APIs (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Custom API is a new code-first way to define custom messages for the Microsoft Dataverse" # 115-145 characters including spaces. This abstract displays in the search result.
-author: divka78
+author: divkamath
 ms.author: dikamath
-ms.date: 07/29/2022
+ms.date: 01/31/2023
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -204,9 +201,9 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-#### Bound Action
+#### Function bound to table
 
-This action named `myapi_CustomBoundAPI` is bound to the account table:
+This function named `myapi_CustomBoundAPI` is bound to the account table:
 
 ```http
 GET [Organization URI]/api/v9.1/accounts(ed5d4e42-850c-45b7-8b38-2677545107cc)/Microsoft.Dynamics.CRM.myapi_CustomBoundAPI()
@@ -215,7 +212,7 @@ OData-Version: 4.0
 Content-Type: application/json; charset=utf-8
 ```
 
-#### Bound Function
+#### Function bound to table collection
 
 This function named `myapi_CustomEntityCollectionBoundAPI` is bound to the account table collection:
 
@@ -389,7 +386,7 @@ HTTP/1.1 204 No Content
 
 To retrieve the localized labels use the `RetrieveLocLabels` message using either the Web API [RetrieveLocLabels Function](/dynamics365/customer-engagement/web-api/retrieveloclabels) or the Organization Service <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.
 
-The following example shows using the RetrieveLocLabels Function to retrieve the labels for the the `displayname` property of a Custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
+The following example shows using the RetrieveLocLabels Function to retrieve the labels for the `displayname` property of a Custom API with the `customapiid` of `88602189-183d-4584-ba4b-8b60f0f5b89f`
 
 **Request**
 

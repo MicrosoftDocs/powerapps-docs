@@ -16,12 +16,8 @@ ms.assetid: 73d691c7-344e-4c96-8979-c661c290bf81
 caps.latest.revision: 47
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Behavior and format of the Date and Time column
 
@@ -115,9 +111,6 @@ The following date and time related query operators are invalid for the **Date O
 [Define calculated columns to automate manual calculations](define-calculated-fields.md)<br />
 [Column managed properties](/power-platform/alm/managed-properties-alm#view-and-edit-column-managed-properties)<br />
 [Managed properties](/power-platform/alm/managed-properties-alm)  
-[Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-data-platform/)
-
-
-
+[Blog: Working with time zones in the Dataverse](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

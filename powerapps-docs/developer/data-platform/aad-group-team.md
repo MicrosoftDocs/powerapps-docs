@@ -13,13 +13,9 @@ ms.assetid: 767f39d4-6a8e-48f0-bf7d-69ea1191acef
 caps.latest.revision: 8
 author: "paulliew" # GitHub ID
 ms.author: "paulliew" # MSFT alias of Microsoft employees only
-manager: "mayadu" # MSFT alias of manager or PM counterpart
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Work with Azure Active Directory group teams
@@ -36,6 +32,9 @@ Just-in-time updates mean that the actions are taken at run-time to eliminate th
 3. When an AAD group member accesses Dataverse interactively or through a non-interactive process makes a call on behalf of the user, and the user doesn't exist in Dataverse, the user is added in Dataverse just-in-time.
 
 The following sections describe how to work with AAD group teams using the Web API. 
+
+## Impersonate another user
+Your service can make calls on behalf of another system user by [impersonating the user](impersonate-another-user.md#impersonate-another-user-using-the-web-api). If the system user belongs to an AAD Security group and the AAD security group is a Dataverse group team, that user is added into Dataverse automatically (if the user doesn't already exist in Dataverse). The user is also automatically added into the Dataverse group team after being added to Dataverse or if the user already exists in Dataverse.
 
 ## Create an AAD group team
 An AAD group team can be created in Dataverse by making an API call (programmatically) or by just-in-time when a security role is assigned to the AAD group, or when a record is assigned to the AAD group. 
@@ -176,7 +175,7 @@ Accept: application/json
 
 ## Retrieve a user
 
-You can retrieve a user row using an Azure user object identifier (ID). If the user doesn't exist in Dataverse, the user is added to Dataverse automatically.
+You can retrieve a system user table row using an Azure user object identifier (ID). If the system user doesn't exist in Dataverse, the user is added to Dataverse automatically and added into the Dataverse group team if the user belongs to an AAD group that exists in Dataverse. **If the user exists in Dataverse, the user is not added to the Dataverse group team.** 
 
 The example below shows the syntax for retrieving a user row.
 

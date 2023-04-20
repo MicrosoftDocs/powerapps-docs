@@ -10,10 +10,8 @@ ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - gregli-msft
   - mkaur-msft
   - gesnaaggarwal

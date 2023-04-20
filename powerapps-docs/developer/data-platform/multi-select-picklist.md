@@ -1,17 +1,14 @@
 ---
 title: "Choices columns (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about choices columns that allow storing multiple choices in a single column." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 06/15/2022
+ms.date: 01/09/2023
 ms.reviewer: jdaly
-ms.topic: "article"
+ms.topic: article
 author: NHelgren # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -19,11 +16,14 @@ contributors:
 
 Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options?text=OptionSetMetadata.Options> property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
 
+> [!NOTE]
+> Only the publisher of a managed solution can import changes that delete an option from a global option set. This includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an Upgrade must be made to the solution that added the option set. More information: [Upgrade or update a solution](../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they are unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
+
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
 With the Web API, this column is defined using the <xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata?text=MultiSelectPicklistAttributeMetadata EntityType>.
 
-Just like choices columns, there is technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value cannot be set.
+Just like choices columns, there's technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value can't be set.
 
 ## Setting choices values
 
@@ -360,7 +360,7 @@ foreach (Contact contact in nonHikers.Entities)
 
 The easiest way to create choices is to use the column editor in the customization tools. More information: [How to create and edit columns](../../maker/data-platform/create-edit-fields.md)
 
-But if you need to automate creation of this kind of column you can use C# code like the following with the SDK for .NET which creates choices to allow choices of outdoor activities to the `contact` table. More information: [Create columns](org-service/metadata-attributemetadata.md#create-columns)
+But if you need to automate creation of this kind of column you can use C# code like the following with the SDK for .NET that creates choices to allow choices of outdoor activities to the `contact` table. More information: [Create columns](org-service/metadata-attributemetadata.md#create-columns)
 
 ```csharp
 private const int _languageCode = 1033; //English

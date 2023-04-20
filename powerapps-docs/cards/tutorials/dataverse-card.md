@@ -6,7 +6,6 @@ ms.date: 09/20/2022
 ms.topic: article
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -27,7 +26,7 @@ We'll assume that you've honed your Power Apps card skills in the [Hello World t
 
 ## Create a card
 
-1. Sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)** > **+ Create a card**.
+1. Sign in to [Power Apps](https://make.powerapps.com) and select **Cards**. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 
 1. Name the card *DataverseCard* and then select **Create**.
 

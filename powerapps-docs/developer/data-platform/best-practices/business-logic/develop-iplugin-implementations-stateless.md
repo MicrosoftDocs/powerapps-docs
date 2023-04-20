@@ -6,7 +6,6 @@ suite: powerapps
 documentationcenter: na
 author: jowells
 ms.reviewer: phecke
-manager: austinj
 editor: ''
 tags: ''
 
@@ -19,9 +18,6 @@ ms.subservice: dataverse-developer
 ms.author: jowells
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Develop IPlugin implementations as stateless
 
@@ -77,7 +73,7 @@ Read-only, static, and constant members are inherently thread-safe and can also 
 
         public Valid_ClassFieldConfigMember(string unsecure, string secure)
         {
-            this.validConfigField = !String.IsNullOrEmpty(secure)
+            this.validConfigField = String.IsNullOrEmpty(secure)
                 ? unsecure
                 : secure;
         }

@@ -8,15 +8,13 @@ ms.custom: canvas
 ms.date: 09/16/2022
 ms.subservice: canvas-maker
 ms.author: tahoon
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - chmoncay
   - tahoon-ms
-  - tapanm-msft
+  - mduelae
 ---
 
 # Organize controls in accessible canvas apps

@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Customize table definitions
 
@@ -107,7 +104,7 @@ Custom tables support the same base messages as system tables. The set of messag
   
 ### See also
   
-[Use the Web API with table definitions](webapi/use-web-api-metadata.md)
+[Use the Web API with table definitions](webapi/use-web-api-metadata.md)<br />
 [Work with table definitions using the Organization service](org-service/work-with-metadata.md)
 
 

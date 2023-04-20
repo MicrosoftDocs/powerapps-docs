@@ -5,16 +5,14 @@ author: maustinjones
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 08/22/2022
 ms.subservice: canvas-maker
 ms.author: austinj
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - mattgon
   - TYLEROL
   - maustinjones

@@ -5,7 +5,6 @@ ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -42,35 +41,4 @@ There are three categories of controls that you can add to your card:
 
 ## Controls reference
 
-The following tables describe the card controls.
-
-### Display
-
-| Item | Description |
-| --- | --- |
-| Text label | Standard text block; accepts strings and Power Fx formulas |
-| Image | Accepts image URLs |
-| Media | Accepts other media URLs |
-
-### Input
-
-| Item | Description |
-| --- | --- |
-| Text input | Allows the user to enter text. The value is stored as a string. |
-| Number input | Allows the user to enter a number. The value is stored as a string. |
-| Button | Allows the user to select a button. Use a Power Fx formula to control what happens when the button is selected. |
-| Date picker | Allows the user to enter a date in mm/dd/yyyy format or select a date on the calendar. The value is stored as a date. |
-| Time picker | Allows the user to enter a time in HH:MM AM/PM format or select a time from a list of hours and minutes. The value is stored as a time. |
-| Drop down | Allows the user to select an option from a list. The default is two choices, but more can be added. |
-| Check box | Allows the user to select a check box. The default is "not selected." |
-
-### Layout
-
-| Item | Description |
-| --- | --- |
-| Container | A standard container, useable with almost any control<br>A container takes on the properties of the first control placed inside it. Only controls of the same type can be added to a container. |
-| Button set | A container for a group of buttons |
-| Image set | A container for a group of images |
-| Fact set | A table of property-value pairs |
-| Column set | A container for columns |
-| Column  | Add to a column set to create dividers on the page<br>Empty columns aren't visible. You'll need to put another control (like a text input control) into a column to make it visible. |
+Learn about the [different controls and their properties](../../controls/control-reference.md).

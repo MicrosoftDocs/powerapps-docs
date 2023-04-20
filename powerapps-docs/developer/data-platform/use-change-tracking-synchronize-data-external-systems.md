@@ -1,7 +1,7 @@
 ---
 title: "Use change tracking to synchronize data with external systems (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 08/25/2022
+ms.date: 04/19/2023
 ms.reviewer: pehecke
 ms.topic: article
 author: Peakerbl # GitHub ID
@@ -9,9 +9,6 @@ ms.subservice: dataverse-developer
 ms.author: peakerbl # MSFT alias of Microsoft employees only
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly
@@ -36,33 +33,46 @@ For more information on how to use [Power Apps](https://make.powerapps.com/?utm_
 
 There are two ways to check whether change tracking is enabled for a table using Web API.
 
-You can query `EntityDefinitions` with the following GET request:
+1. You can query `EntityDefinitions` with the following GET request:
+
+   ```http
+   GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true
+   ```
+
+   More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+
+1. Find this information in the Web API $metadata service document. The annotation `Org.OData.Capabilities.V1.ChangeTracking` is set for entity sets that have change tracking enabled.
+
+   To see annotations in the Web API CDSL service document, use this Web API query:
+
+   ```http
+   GET [Organization URI]/api/data/v9.2/$metadata?annotations=true
+   ```
+
+   Those entity sets which represent tables where change tracking is enabled will have this annotation:
+
+   ```xml
+   <Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
+      <Record>
+            <PropertyValue Property="Supported" Bool="true" />
+      </Record>
+   </Annotation>
+   ```
+
+   More information: [Metadata annotations](webapi/web-api-service-documents.md#metadata-annotations).
+
+### Tables not eligible for change tracking
+
+Some tables cannot be enabled for change tracking. You can check if a table is eligible for change tracking by checking the  [EntityMetadata.CanChangeTrackingBeEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanChangeTrackingBeEnabled) managed property value. To see which tables cannot be enabled for change tracking, use this Web API query:
 
 ```http
-GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName&$filter=ChangeTrackingEnabled eq true
+GET [Organization URI]/api/data/v9.2/EntityDefinitions?$select=SchemaName,ChangeTrackingEnabled&$filter=ChangeTrackingEnabled eq false and CanChangeTrackingBeEnabled/Value eq false
 ```
 
-More information: [Query table definitions using the Web API](webapi/query-metadata-web-api.md)
+More information: 
 
-You can also find this information in the Web API $metadata service document. The annotation `Org.OData.Capabilities.V1.ChangeTracking` is set for entity sets that have change tracking enabled.
-
-To see annotations in the Web API CDSL service document, use this Web API query:
-
-```http
-GET [Organization URI]/api/data/v9.2/$metadata?annotations=true
-```
-
-Those entity sets which represent tables where change tracking is enabled will have this annotation:
-
-```xml
-<Annotation Term="Org.OData.Capabilities.V1.ChangeTracking">
-   <Record>
-         <PropertyValue Property="Supported" Bool="true" />
-   </Record>
-</Annotation>
-```
-
-More information: [Metadata annotations](webapi/web-api-service-documents.md#metadata-annotations).
+- [Query table definitions using the Web API: Use complex types in $filter operations](webapi/query-metadata-web-api.md#use-complex-types-in-filter-operations)
+- [Managed properties](/power-platform/alm/managed-properties-alm)
 
 ## Retrieve changes for a table using the Web API
 
@@ -170,10 +180,11 @@ The first time this message is used it returns all records for the table and tha
 You should be aware of the following constraints when retrieving changes for a table:
 
 - Only one table will be tracked in retrieve changes. If `RetrieveEntityChanges` is executed with no version / or token, the server will treat it as the system minimum version, returning all of the records as new. Deleted objects won't be returned.
-- Changes will be returned if the last token is within a default value of 90 days. If it is more than 90 days, the system will return all the records.
+- Changes will be returned if the last token is within a default value of 30 days. This is controlled by the value of the [Organization table ExpireChangeTrackingInDays column](reference/entities/organization.md#BKMK_ExpireChangeTrackingInDays) and can be changed. If there are unprocessed changes older than the configured value, the system will throw an exception.
 - If a client has a set of changes for a table, say version 1, a record is created and deleted prior to the next query for changes, they will get the deleted item even if they didn't have the item to begin with.
 - Records are retrieved in the order determined by server side logic. Usually, the caller will always get all new or updated records first (sorted by version number) followed by deleted records. If there are 3000 records created or updated and 2000 records deleted, Dataverse returns a collection of 5000 records, which have the first 3000 entries comprised of new or updated records and the last 2000 entries for deleted records.
 - If the new or updated item collection is greater than 5000, the user can page through the collection.
+- The calling user must have organization level read access to the table. If the user has limited read access, the system will throw a privilege check error.
 
 ### .NET SDK Sample code
 
@@ -220,6 +231,7 @@ while (true)
 
 [Define alternate keys for a table](define-alternate-keys-entity.md)<br />
 [Use an alternate key to reference a record](use-alternate-key-reference-record.md)<br />
-[Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)
+[Update Dynamics 365 with external data using Upsert](use-upsert-insert-update-record.md)<br />
+[Query table definitions using the Web API](webapi/query-metadata-web-api.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

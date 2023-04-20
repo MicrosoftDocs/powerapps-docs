@@ -8,13 +8,11 @@ ms.custom: canvas
 ms.date: 04/28/2021
 ms.subservice: canvas-maker
 ms.author: lanced
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - lancedmicrosoft
 ---
 # Connect to SQL Server from Power Apps

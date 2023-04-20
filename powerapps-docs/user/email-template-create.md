@@ -2,11 +2,10 @@
 title: "How to create an email template  in model-driven apps | MicrosoftDocs"
 description: Learn how to create an email template.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 07/01/2022
+ms.date: 04/01/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -14,17 +13,11 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Create email templates
 
 Email templates are a fast and easy way to send consistent, professional, preformatted email messages to your customers. To create email templates, the legacy email template editor is available by default. However, the enhanced email template editor is displayed as a choice if it is enabled by your administrator.
-
-> [!NOTE]
-> The enhanced email template editor is available only in Dynamics 365 Customer Service.
 
 You can create email templates by using one of the following options:  
 - **Start with a blank template**: Create a template from scratch. The editor that's displayed depends on wether the enhanced email template editor option is enabled.
@@ -52,7 +45,7 @@ When you start with a blank template, nothing is provided for you. You must add 
 The editor page you see depends on whether your administrator has turned on the enhanced email template editor option:
 
 - If yes, you'll use the enhanced email template editor page.
-- If not, you'll use the default email template editor page. 
+- If not, you'll use the email template editor page. 
 
 ## Start with existing templates
 
@@ -68,9 +61,9 @@ Start with an existing template to create an email template faster and with less
   
 3. The template editor page is displayed.
 
-When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the the following template editors:
+When you create a template from an existing template, irrespective of the enhanced email template editor option setting, the app displays the newly-created email template in one of the following template editors:
   - Enhanced email template: If the selected email template was created with the enhanced email template.
-  - Default email template: If the selected template was created with the default email template.
+  - Email template: If the selected template was created with the legacy email template.
 
 > [!Important]
 > If you create templates in the enhanced editing environment, don't edit them in the legacy web client. You'll lose any inline images and strip out some of the advanced formatting and functionality.
@@ -86,13 +79,11 @@ When you create a template from an existing template, irrespective of the enhanc
 
 ## Email template editor
 
-You can use either the enhanced email template editor or the default email template editor to create email templates.
+You can use either the enhanced email template editor or the legacy email template editor to create email templates.
 
 ### Enhanced email template editor
-> [!NOTE]
-> An administrator can enable the enhanced email template editor feature. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
-
-The enhanced email template editor is displayed the enhanced email template editor option is enabled. 
+ 
+The enhanced email template editor is displayed if the enhanced email template editor option is enabled. However, for Customer Service workspace and Customer Service Hub apps, the enhanced email template editor is displayed by default. More information: [Enhanced email template editor option](cs-email-template-builder.md) 
 
 :::image type="content" source="media/email-template-enh.png" alt-text="Screenshot of the enhanced email template editor with a blank template open for editing.":::
 
@@ -100,9 +91,9 @@ The enhanced email template editor is displayed the enhanced email template edit
 - **Template** tab: Specify or change the template details and the email subject.
 - **Attachments** tab: Add attachments to your template if needed.
 
-### Default email template editor
+### Email template editor
 
-The default email template editor is displayed the enhanced email template editor option is disabled. 
+The email template editor is displayed if the enhanced email template editor option is disabled. 
 
 :::image type="content" source="media/email-new-customer-template-1c.png" alt-text="Screenshot of the default email template editor with a blank template open for editing.":::
 
@@ -112,6 +103,6 @@ The default email template editor is displayed the enhanced email template edito
 
 ### See also
 
-[Personalize content with Insert dynamic text](email-dynamic-text.md)
+[Personalize content with Insert dynamic text](email-dynamic-text.md)<br>
 [Set up enhanced email](/power-platform/admin/system-settings-dialog-box-email-tab)<br>
 [Understand the email experience](view-create-email.md)   

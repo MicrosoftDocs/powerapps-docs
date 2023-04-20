@@ -11,10 +11,8 @@ ms.subservice: canvas-maker
 ms.author: niwaggon
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - navjotm
   - wimcoor
 ---
@@ -84,7 +82,7 @@ In this task, we'll publish our dataset and report to the Power BI service; then
 
 5. Repeat the pinning process for the other two visuals.
 
-6. In the left navigation pane, click or tap the dashboard name.
+6. In the left navigation pane, select the dashboard name.
    
     ![New dashboard in site navigation.](./media/sharepoint-scenario-publish-report/06-01-16-dashboard-menu.png)
 

@@ -4,7 +4,6 @@ description: "Learn how to get localizable text translated to support multiple l
 ms.custom: ""
 ms.date: 03/05/2020
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "how-to"
@@ -17,14 +16,9 @@ ms.assetid: 3d77d149-819b-45e6-8e70-1fbe54d5c153
 caps.latest.revision: 19
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
-
 # Translate localizable text for model-driven apps
 
 If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your environment who are not working with the base language version of your environment with this customized text in their preferred languages.
@@ -50,7 +44,7 @@ If you haven't already enabled the languages for your environment, use the steps
 
 The scope of the localizable text that will be exported is the unmanaged solution that contains the localizable text.
 
-1. From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**.
+1. From [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 2. In the **All Solutions** list, select the unmanaged solution that contains the localizable text you want.
 

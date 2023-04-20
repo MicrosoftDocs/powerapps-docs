@@ -5,17 +5,15 @@ author: tahoon-ms
 
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 05/19/2021
 ms.subservice: canvas-maker
 ms.author: tahoon
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - tahoon-ms
-  - tapanm-msft
+  - mduelae
   - chmoncay
 ---
 # Accessible colors for canvas apps

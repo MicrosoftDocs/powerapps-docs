@@ -2,7 +2,6 @@
 title: Delete a table | Microsoft Docs
 description: Step-by-step instructions for how to delete a custom table and clear all data in Power Apps
 author: lancedMicrosoft
-manager: kvivek
 
 ms.component: cds
 ms.topic: how-to
@@ -12,9 +11,6 @@ ms.author: lanced
 ms.reviewer: matp
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Delete a table
@@ -26,17 +22,20 @@ You can delete custom tables, but you can't delete standard tables. Notice that 
 > When you delete a table, you delete both the table definition and all data that the table contains. Tables and the data within them can't be recovered if deleted.
 
 ## Delete a custom table
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** in the left navigation pane, open the solution that contains the custom table you want to delete, and then select it.
+
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Solutions** in the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+1. Open the solution that contains the custom table you want to delete, and then select it.
 
     ![Table Details.](./media/data-platform-cds-create-entity/entitylist.png "Table List")
 
-2. On the command bar select **Remove**, and then select from the following choices:  
+1. On the command bar select **Remove**, and then select from the following choices:  
    - **Remove from this solution**. Removes the table from the solution. You can still access the table from the Default Solution. 
    - **Delete from this environment**. Deletes the table and associated data. 
 
-3. In the dialog box that appears, select **Delete** to delete the table. If you receive a message that the *component cannot be deleted because it is referenced by other components*, see the next section in this article. 
+1. In the dialog box that appears, select **Delete** to delete the table. If you receive a message that the *component cannot be deleted because it is referenced by other components*, see the next section in this article.
 
 ## Delete a table that has dependencies
+
 You can’t delete a table while it has a dependency on another component, such as a business process flow or a model-driven app. 
 
 There are two ways that you can remove a dependency: 

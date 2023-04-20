@@ -1,18 +1,14 @@
 ---
 title: "solutioncomponentconfiguration table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the solutioncomponentconfiguration table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # solutioncomponentconfiguration table/entity reference
@@ -65,6 +61,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [isdisplayable](#BKMK_isdisplayable)
+- [IsOneToOneChildComponent](#BKMK_IsOneToOneChildComponent)
 - [IsSoftDeleteEnabled](#BKMK_IsSoftDeleteEnabled)
 - [KeepActiveCustomizationAfterConversion](#BKMK_KeepActiveCustomizationAfterConversion)
 - [name](#BKMK_name)
@@ -186,6 +183,30 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
+
+
+### <a name="BKMK_IsOneToOneChildComponent"></a> IsOneToOneChildComponent
+
+|Property|Value|
+|--------|-----|
+|Description|Boolean that indicates if the component is 1-1 child component.|
+|DisplayName|Is 1-1 Child Component|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|isonetoonechildcomponent|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsOneToOneChildComponent Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_IsSoftDeleteEnabled"></a> IsSoftDeleteEnabled

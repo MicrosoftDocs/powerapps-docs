@@ -13,11 +13,9 @@ search.audienceType:
   - admin
   - user
   - developer
-search.app: 
-  - PowerApps
 contributors:
   - kumarvivek
-  - tapanm-msft
+  - mduelae
 ---
 
 # What's new in Power Apps?

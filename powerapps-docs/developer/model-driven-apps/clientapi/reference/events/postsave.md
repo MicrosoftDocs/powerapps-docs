@@ -1,17 +1,14 @@
 ---
 title: "PostSave Event (Client API reference) in model-driven apps| MicrosoftDocs"
 description: Information about PostSave event methods.
-author: adrianorth
-ms.author: aorth
+author: HemantGaur
+ms.author: hemantg
 ms.date: 09/15/2022
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
 ---

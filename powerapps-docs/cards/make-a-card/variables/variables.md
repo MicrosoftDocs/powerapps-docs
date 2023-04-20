@@ -5,7 +5,6 @@ ms.date: 11/17/2022
 ms.topic: how-to
 author: sericks007
 ms.author: sericks
-manager: tapanm-MSFT
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -29,7 +28,7 @@ As an example, you've created a card that counts how many times the user presses
 
 ## Create a variable
 
-1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards**, and then select a card. If the **Cards** tab is not visible, select **More** and pin the **Cards** tab.
 1. In the left pane of the card designer, select **Variables**
 1. Select **+ New variable**.
 1. In the **New variable** window, set the following values:
@@ -41,7 +40,7 @@ As an example, you've created a card that counts how many times the user presses
 
     You can't change the name or type of a variable. If you need to change them, create a new variable.
 
-    You can also customize sender options and, under **Additional variable information**, the **Title** and **Description** of the variable. This information may be helpful for testing and debugging and using your variable with Power Automate flows and Power Virtual Agents bots.
+    You can also customize sender options and, under **Additional variable information**, the **Title** and **Description** of the variable. This information may be helpful for testing, debugging, and using your variable with Power Automate flows and Power Virtual Agents bots.
 
     :::image type="content" source="../../media/variables/new-variable.png" alt-text="Screenshot of the New variable window in the card designer.":::
 

@@ -1,20 +1,18 @@
 ---
 title: Keyboard shortcuts for canvas apps
 description: Learn about the different keyboard shortcuts available to run various actions and operations within canvas apps.
-author: adrianorth
+author: TashasEv
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/12/2020
 ms.subservice: canvas-maker
-ms.author: aorth
+ms.author: tashas
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
 ---
 # Keyboard shortcuts for canvas apps
 

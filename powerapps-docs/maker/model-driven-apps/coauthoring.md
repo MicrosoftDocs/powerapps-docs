@@ -4,8 +4,9 @@ description: The model-driven app designer lets multiple makers make changes to 
 author: Mattp123
 ms.author: matp
 ms.service: powerapps
+ms.subservice: mda-maker
 ms.topic: how-to 
-ms.date: 11/17/2022
+ms.date: 01/23/2023
 ms.custom: template-how-to
 ---
 # Coauthoring in model-driven apps (preview)
@@ -16,17 +17,6 @@ Coauthoring allows multiple makers—whether pro or citizen developers—to make
 
 > [!IMPORTANT]
 > This is a preview feature. More information: [Model-driven apps and app management](../powerapps-preview-program.md#model-driven-apps-and-app-management)
-
-## Prerequisites
-
-During this preview, the coauthoring feature must be turned on.
-
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/), and select an environment.
-1. Select **Settings** > **Product** > **Features**. 
-1. Under **Coauthoring**, set **Enable coauthoring**, which lets people simultaneously edit model-driven apps together, to **On**.
-1. Select **Save**.
-
-   :::image type="content" source="media/coauthoring-enable-feature.png" alt-text="Enable coauthoring setting":::
 
 ## What you can coauthor in an app
 
@@ -52,14 +42,22 @@ When someone is adding or removing a page, all other makers will see it appearin
 
 Once someone removes the page, it disappears for other makers in real-time.
 
+## Disable coauthoring
+
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/), and select an environment.
+1. Select **Settings** > **Product** > **Features**. 
+1. Under **Coauthoring**, set the option, which lets people simultaneously edit model-driven apps together, to **Off**.
+1. Select **Save**.
+
 ## Limitations
 
 - Currently, there's no auto-save functionality, so you need to select the **Save** button to save changes. However, any maker that has access to the app can save the changes for others, as their changes are synced. Unsaved changes will be removed from the app in 24 hours.
 - Under **Settings**, changes to the **Features** and **Upcoming** sections must be saved from the settings dialog in order to be set. Users that don't see the changes immediately can close and open the settings dialog to see the most up-to-date settings.
 - Changes made in other designers, such as the view and form designers, won't be synchronized in real-time in the modern app designer.
 
-## Next steps
 
-[Discover who's working on an app (preview)](copresence.md)
+## See also
+
+[Discover who's working on an app](copresence.md)
 
 [Add comments](comments.md)

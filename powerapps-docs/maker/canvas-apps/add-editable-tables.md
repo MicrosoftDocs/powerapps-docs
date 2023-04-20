@@ -5,17 +5,15 @@ author: denisem-msft
 
 ms.topic: tutorial
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 01/27/2022
 ms.subservice: canvas-maker
 ms.author: denisem
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - denisem-msft
-  - tapanm-msft
+  - mduelae
 ---
 
 # Create an app to edit tables in canvas apps

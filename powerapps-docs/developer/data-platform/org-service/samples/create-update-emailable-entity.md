@@ -4,14 +4,10 @@ description: "This sample showcases how to create and update emailable table." #
 ms.date: 04/03/2022
 author: NHelgren
 ms.author: nhelgren
-manager: sunilg
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Create and update an emailable table

@@ -5,16 +5,14 @@ author: aengusheaney
 
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: mkaur
 ms.date: 06/04/2020
 ms.subservice: canvas-maker
 ms.author: aheaney
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
-  - tapanm-msft
+  - mduelae
   - aengusheaney
 ---
 
@@ -124,7 +122,7 @@ To add test steps and test assertions in the Kudos app:
 
 6. Select **Insert a step above** from the top menu or by selecting the option from the active row. This action creates an empty step.
 
-7. Enter an expression or formula in the action input to [Trace](./functions/function-trace.md) and write the *kudosBeforeTest* value to the test results record.
+7. Enter an expression or formula in the action input to [Trace](./functions/function-trace.md) and write the *kudosBeforeTest* value to test the results record.
 
     ```powerapps-dot
     Trace("kudosBeforeTest : " & kudosBeforeTest);
