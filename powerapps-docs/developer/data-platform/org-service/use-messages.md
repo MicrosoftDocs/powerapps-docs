@@ -92,11 +92,22 @@ Information about the input and output parameters is managed by Dataverse in pri
 
 The SDK for .NET contains definitions for all the common Dataverse messages in these namespaces:
 
-
 |Namespace|Description|
 |---------|---------|
 |<xref:Microsoft.Xrm.Sdk.Messages?displayProperty=fullName>|Messages for common data operations and messages used to create and modify schema data, also known as metadata.|
-|<xref:Microsoft.Crm.Sdk.Messages?displayProperty=fullName>|Messages for business logic and operations to support  |
+|<xref:Microsoft.Crm.Sdk.Messages?displayProperty=fullName>|Messages for business logic and operations to support special capabilities to support ALM and apps. Some messages in this namespace support capabilities only found in Microsoft Dynamics 365 business applications. |
+
+But there are other messages which do not have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions.
+
+Developers can generate Request and Response classes for the messages found in their environment using the following tools:
+
+
+|Tool|Description|
+|---------|---------|
+|Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>|
+|CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.|
+
+More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
 
 
 
