@@ -184,15 +184,15 @@ public static Guid CreateMethodExample(IOrganizationService service)
 }
 ```
 
-As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes except for the following cases.
+As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it is important to understand
 
 ## Working with messages in plug-ins
 
-The data describing an operation in a plug-in are in the form of <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>.
+The data describing an operation in a plug-in are in the form of [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters).
 
-In the `PreValidation` and `PreOperation` stages before the main operation of the event pipeline, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
+In the `PreValidation` and `PreOperation` stages before the main operation of the event pipeline, the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
 
-After the main operation, in the `PostOperation` stage, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
+After the main operation, in the `PostOperation` stage, the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
 
 Understanding the structure of the messages helps you understand where to find the data you want to check or change within the plug-in.
 
@@ -215,11 +215,11 @@ More information: [Create and use Custom APIs](../custom-api.md)
 
 Some messages can be used with multiple tables. For example the `Create`, `Update`, and `Delete` messages can be used for most tables, but some tables may not support all the common messages.
 
-This information is stored in the [SdkMessageFilter table](../reference/entities/sdkmessagefilter.md).
+This information is stored in the [SdkMessageFilter table](../reference/entities/sdkmessagefilter.md). You can query this table to determine if you can use a message for a table.
 
 #### [SDK for .NET](#tab/sdk)
 
-Use this static method to test whether a given table supports any specific named message:
+Use this static method to test whether a given table supports a message name:
 
 ```csharp
 /// <summary>
