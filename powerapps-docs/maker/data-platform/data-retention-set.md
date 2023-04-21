@@ -50,7 +50,7 @@ Makers can enable or disable data retention for any table. Before setting up a r
 > [!NOTE]
 > When a parent table is enabled for retention, all the cascade related child tables are automatically enabled. You can't disable retention for a child table when the parent table is already enabled for retention. For example, assume a custom table and notes table are child tables of the case table. The child tables can't be disabled for retention when the parent case table is enabled. Maker can disable the parent table for retention and separately enable the child table for retention.
 
-Enable a table for long term data retention of historical cold data:
+Some tables, such as the case <sup>1</sup> table, have long term retention enabled by default.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Tables**, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Properties** on the command bar, expand **Advanced options**, and then select the **Enable long term retention** property.
@@ -61,6 +61,8 @@ The save process can take up to 15 minutes, as Dataverse enables this property f
 
 > [!NOTE]
 > The long term retention property is disabled if the environment isn't enabled for long term retention. More information: [Prerequisite 2: Enable an environment for long term retention](#prerequisite-2-enable-an-environment-for-long-term-retention)
+
+<sup>1</sup>Requires a Dynamics 365 app, such as Dynamics 365 Customer Service.
 
 ### Prerequisite 3: Create Dataverse views for policy criteria
 
