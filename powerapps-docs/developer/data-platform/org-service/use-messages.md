@@ -17,7 +17,7 @@ contributors:
 
 The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works. This will help you as you move on to writing plug-ins, creating custom APIs or troubleshooting errors.
 
-It is important to understand that all data operations in Dataverse are defined as *messages*.
+It is important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse as data.
 
 Every message has:
 
@@ -33,7 +33,7 @@ There are three different ways you can use a message with the SDK for .NET as ex
 |---------|---------|
 |[OrganizationRequest and OrganizationResponse](#organizationrequest-and-organizationresponse)| Use this when you don't have SDK Request and Response classes. You might need to use this when trying a message that is in preview, or if you prefer to not generate SDK Request and Response for custom actions.|
 |[SDK Request and Response classes](#sdk-request-and-response-classes)|This is the most common way you will use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
-|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common table operations. These are the quickest and easiest ways to perform most common data operations, but sometimes you will need to use SDK Request and Response classes.|
+|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These are the quickest and easiest ways to perform most common data operations, but sometimes you will need to use SDK Request and Response classes.|
 
 ## OrganizationRequest and OrganizationResponse
 
@@ -88,7 +88,7 @@ To create an account record using this method, you need to know:
 
 This information stored in Dataverse. The [SdkMessage table](../reference/entities/sdkmessage.md) contains information about all the messages.
 
-Information about the input and output parameters is managed by Dataverse in private tables. You will not need to use it because there is an easier way.
+Information about the input and output parameters is managed by Dataverse in private tables. You will not need to retrieve it because there is an easier way.
 
 ## SDK Request and Response classes
 
@@ -102,15 +102,14 @@ The SDK for .NET contains definitions for all the common Dataverse messages in t
 
 ### Generate classes for custom actions
 
-There are other messages which do not have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions: custom API or custom process actions. More information: [Create your own messages](../custom-actions.md)
+There are other messages which do not have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
 
 Developers can generate Request and Response classes for the messages found in their environment using the following tools:
 
 |Tool|Description|
 |---------|---------|
-|Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [
---generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
-|CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the generateActions parameter to generate Request and Response classes.|
+|Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
+|CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the `generateActions` parameter to generate Request and Response classes.|
 
 More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
 
@@ -173,56 +172,19 @@ public static Guid CreateMethodExample(IOrganizationService service)
 }
 ```
 
-
-
-The following examples show three different ways to create an account row defined this way:
-
-```csharp
-var account = new Account();
-account.Name = "Test account";
-```
-
-Using [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A)
-
-```csharp
-var id = svc.Create(account);
-```
-
-Using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
-
-```csharp
-CreateRequest request = new CreateRequest()
-{ Target = account };
-var id = ((CreateResponse)svc.Execute(request)).id;
-```
-
-Using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
-
-```csharp
-ParameterCollection parameters = new ParameterCollection();
-parameters.Add("Target", account);
-
-OrganizationRequest request = new OrganizationRequest() {
-RequestName = "Create",
-Parameters = parameters
-};
-
-OrganizationResponse response = svc.Execute(request);
-
-var id = (Guid)response.Results["id"];
-```
-
-As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and system messages are made easier to use with the `*Request` and `*Response` classes in the SDK assemblies. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes except for the following cases.
+As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes except for the following cases.
 
 ## Working with messages in plug-ins
 
-The data describing an operation in a plug-in are in the form of <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>. 
+The data describing an operation in a plug-in are in the form of <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>.
 
-In the `PreValidation` and `PreOperation` stages before the main operation of the event pipeline, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> represent the <xref:Microsoft.Xrm.Sdk.OrganizationRequest>.<xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters>. After the main operation, in the `PostOperation` stage, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> represent the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results>.
+In the `PreValidation` and `PreOperation` stages before the main operation of the event pipeline, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
+
+After the main operation, in the `PostOperation` stage, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
 
 Understanding the structure of the messages helps you understand where to find the data you want to check or change within the plug-in.
 
-More information: 
+More information:
 
 - [Write plug-ins to extend business processes](../plug-ins.md)
 - [Event Framework](../event-framework.md)
