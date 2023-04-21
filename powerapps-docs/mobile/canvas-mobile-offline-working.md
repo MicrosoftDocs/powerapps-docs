@@ -34,9 +34,9 @@ With offline-first, all the calls to Dataverse data are executed against a local
 
 For the app to be available in offline mode, app and user data must be downloaded on your device. This process is called the *initial offline sync*.
 
-The initial offline sync happens when you open the canvas app. You'll see a message stating that your app is syncing the offline data with the **number of rows and tables that are downloaded** on your device. This can take a few minutes or longer, depending on what has been configured in the app. If the initial offline sync isn't complete, it will be triggered every time the app is opened.
+The initial offline sync happens when you open the canvas app. You'll see a message stating that your app is syncing the offline data with the **number of rows and tables that are downloaded** on your device. This can take a few minutes or longer, depending on what has been configured in the app. 
 
-:::image type="content" source="media/initial-offline-sync.png" alt-text="Image of the mobile screen that indicates the app is syncing the offline data.":::
+If the initial offline sync isn't complete, it will be triggered every time the app is opened.
 
 ## Offline delta sync
 
