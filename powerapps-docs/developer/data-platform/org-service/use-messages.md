@@ -201,22 +201,6 @@ More information:
 - [Write plug-ins to extend business processes](../plug-ins.md)
 - [Event Framework](../event-framework.md)
 
-## Using custom actions
-
-When you use a custom action, there are no classes in the SDK assemblies for these operations. You can generate classes for them using:
-
-- For .NET projects using [PowerPlatform.Dataverse.Client.ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), use the [pac modelbuilder](/power-platform/developer/cli/reference/modelbuilder) command that is part of the [Power Platform CLI](/power-platform/developer/cli/introduction). Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate classes for custom actions.
-- For .NET Framework projects, such as plug-ins, use `CrmSvcUtil.exe` code generation tool by using the `generateActions` parameter.
-
-
-Alternatively, you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance and set the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> and <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> to use them without the generated classes. To work with the results, you'll parse the values returned from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results> property.
-
-More information:
-
-- [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
-- [Create your own messages](../custom-actions.md)
-
-
 ## Private Messages
 
 Microsoft Dataverse contains some messages that aren't intended for third party developers to use. Microsoft added these messages enable feature functionality, but third party solutions can also add them with the Custom API feature. The [SdkMessage.IsPrivate](../reference/entities/sdkmessage.md#BKMK_IsPrivate) property tells you which messages are private.
@@ -226,6 +210,103 @@ Microsoft Dataverse contains some messages that aren't intended for third party 
 > Calling private messages from plug-ins is not supported.
 
 More information: [Create and use Custom APIs](../custom-api.md)
+
+## Table support for messages
+
+Some messages can be used with multiple tables. For example the `Create`, `Update`, and `Delete` messages can be used for most tables, but some tables may not support all the common messages.
+
+This information is stored in the [SdkMessageFilter table](../reference/entities/sdkmessagefilter.md).
+
+#### [SDK for .NET](#tab/sdk)
+
+Use this static method to test whether a given table supports any specific named message:
+
+```csharp
+/// <summary>
+/// Test whether a specified message is supported for the specified table.
+/// </summary>
+/// <param name="service">The IOrganizationService instance.</param>
+/// <param name="entityLogicalName">The logical name of the table.</param>
+/// <param name="messageName">The name of the message.</param>
+/// <returns></returns>
+public static bool IsMessageAvailable(
+    IOrganizationService service,
+    string entityLogicalName,
+    string messageName)
+{
+    QueryExpression query = new("sdkmessagefilter")
+    {
+        ColumnSet = new ColumnSet("sdkmessagefilterid"),
+        Criteria = new FilterExpression(LogicalOperator.And)
+        {
+            Conditions = {
+            new ConditionExpression(
+                attributeName:"primaryobjecttypecode",
+                conditionOperator: ConditionOperator.Equal,
+                value: entityLogicalName)
+            }
+        },
+        LinkEntities = {
+            new LinkEntity(
+                linkFromEntityName:"sdkmessagefilter",
+                linkToEntityName:"sdkmessage",
+                linkFromAttributeName:"sdkmessageid",
+                linkToAttributeName:"sdkmessageid",
+                joinOperator: JoinOperator.Inner)
+            {
+                    LinkCriteria = new FilterExpression(LogicalOperator.And){
+                    Conditions = {
+                        new ConditionExpression(
+                            attributeName:"name",
+                            conditionOperator: ConditionOperator.Equal,
+                            value: messageName)
+                        }
+                    }
+            }
+        }
+    };
+
+    EntityCollection entityCollection = service.RetrieveMultiple(query);
+
+    return entityCollection.Entities.Count.Equals(1);
+}
+```
+
+#### [Web API](#tab/webapi)
+
+Use the following `GET` request to detect whether a message is available for a table. The request below tests whether the `account` table supports the `Create` message.  Replace the `@message` and `@table` parameter values for the message and table you want to test.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/sdkmessagefilters?$select=sdkmessagefilterid
+&$filter=sdkmessageid/name eq @message and primaryobjecttypecode eq @table
+&@message='Create'
+&@table='account'
+Content-Type: application/json
+```
+
+When the table supports the message, an `sdkmessagefilterid` value is returned. If it isn't supported, the `value` is an empty array.
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#sdkmessagefilters(sdkmessagefilterid)",
+    "value": [
+        {
+            "@odata.etag": "W/\"2009110\"",
+            "sdkmessagefilterid": "c2c5bb1b-ea3e-db11-86a7-000a3a5473e8"
+        }
+    ]
+}
+```
+
+---
 
 ### See also
 
