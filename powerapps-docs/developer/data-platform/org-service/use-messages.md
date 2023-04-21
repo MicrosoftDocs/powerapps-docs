@@ -15,7 +15,7 @@ contributors:
 ---
 # Use messages with the Organization service
 
-The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works.
+The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works. This will help you as you move on to writing plug-ins, creating custom APIs or troubleshooting errors.
 
 It is important to understand that all data operations in Dataverse are defined as *messages*.
 
@@ -29,7 +29,7 @@ To perform a data operation, you can:
 
 1. Use these the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
-   - Set the [OrganizationRequest.Name](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Name)
+   - Set the [OrganizationRequest.RequestName](xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName)
    - Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
 
 1. Send the request using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, which will return an <xref:Microsoft.Xrm.Sdk.OrganizationResponse> instance.
@@ -74,9 +74,13 @@ To create an account record using this method, you need to know:
 - The name and data type of each input parameter: A single parameter named `Target` that is an [Entity](xref:Microsoft.Xrm.Sdk.Entity).
 - The name and data type of each output parameter: A single parameter named `id` that is a [Guid](xref:System.Guid).
 
-This information stored in Dataverse, but you will not need to use it because there is an easier way.
+This information stored in Dataverse. The [SdkMessage table/entity reference](../reference/entities/sdkmessage.md) contains information about all the messages.
+
+Information about the input and output parameters is managed by Dataverse in private tables. You will not need to use it because there is an easier way.
 
 ## SDK Request and Response classes
+
+
 
 ## IOrganizationService methods
 
