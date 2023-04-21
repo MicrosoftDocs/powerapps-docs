@@ -31,11 +31,11 @@ There are three different ways you can use a message with the SDK for .NET as ex
 
 |Method|Description|
 |---------|---------|
-|[OrganizationRequest and OrganizationResponse](#organizationrequest-and-organizationresponse)| Use this when you don't have SDK Request and Response classes. You might need to use this when trying a message that is in preview, or if you prefer to not generate SDK Request and Response for custom actions.|
-|[SDK Request and Response classes](#sdk-request-and-response-classes)|This is the most common way you will use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
+|[OrganizationRequest & OrganizationResponse classes](#organizationrequest-organizationresponse)| Use this when you don't have SDK Request and Response classes. You might need to use this when trying a message that is in preview, or if you prefer to not generate SDK Request and Response for custom actions.|
+|[SDK Request & Response classes](#sdk-request-response-classes)|This is the most common way you will use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
 |[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These are the quickest and easiest ways to perform most common data operations, but sometimes you will need to use SDK Request and Response classes.|
 
-## OrganizationRequest and OrganizationResponse
+## OrganizationRequest & OrganizationResponse classes
 
 You can use a message without SDK Request and Response classes.
 
@@ -88,16 +88,21 @@ To create an account record using this method, you need to know:
 
 This information stored in Dataverse. The [SdkMessage table](../reference/entities/sdkmessage.md) contains information about all the messages.
 
-Information about the input and output parameters is managed by Dataverse in private tables. You will not need to retrieve it because there is an easier way.
+Information about the input and output parameters is managed by Dataverse in private tables. You will not need to retrieve it because there is an easier way: using the SDK Request and Response classes.
 
-## SDK Request and Response classes
+## SDK Request & Response classes
 
-The SDK for .NET contains definitions for all the common Dataverse messages in these namespaces:
+The SDK for .NET contains definitions for common Dataverse messages in these namespaces:
 
 |Namespace|Description|
 |---------|---------|
 |<xref:Microsoft.Xrm.Sdk.Messages?displayProperty=fullName>|Messages for common data operations and messages used to create and modify schema data, also known as metadata.|
 |<xref:Microsoft.Crm.Sdk.Messages?displayProperty=fullName>|Messages for business logic and operations to support special capabilities to support ALM and apps. Some messages in this namespace support capabilities only found in Microsoft Dynamics 365 business applications. |
+
+These classes contain properties for all the input and output parameters.
+
+- The classes ending with *Request contain the properties for input parameters. These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+- The classes ending with *Response contain the output parameters. These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
 
 ### Generate classes for custom actions
@@ -113,7 +118,7 @@ Developers can generate Request and Response classes for the messages found in t
 
 More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
 
-To create an account record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class.
+To create an record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class.
 
 The following example uses this class with an generated early-bound class for the account entity:
 
@@ -141,9 +146,16 @@ public static Guid CreateRequestExample(IOrganizationService service)
 }
 ```
 
+### Passing optional parameters with a request
+
+There are several optional parameters you can pass to apply special behaviors to messages. When using these optional parameters, can't use the IOrganizationService methods. You must use the SDK Request classes or the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+
+More information: [Use optional parameters](../optional-parameters.md)
+
+
 ## IOrganizationService methods
 
-In addition to the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, the [IOrganizationService Interface](xref:Microsoft.Xrm.Sdk.IOrganizationService) specifies that the following methods must also be implemented. These methods encapsulate the Request and Response classes:
+In addition to the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, the [IOrganizationService Interface](xref:Microsoft.Xrm.Sdk.IOrganizationService) specifies that the following methods must also be implemented. These methods encapsulate the corresponding Request and Response classes:
 
 
 |Method|Request class|Response class|
@@ -156,7 +168,7 @@ In addition to the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrgani
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest>|<xref:Microsoft.Xrm.Sdk.Messages.AssociateResponse>|
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest>|<xref:Microsoft.Xrm.Sdk.Messages.DisassociateResponse>|
 
-These methods help simplify performing these operations with fewer lines of code. The following example uses the [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A) method:
+These methods help simplify performing these operations with fewer lines of code. The following example uses the [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A) method to create an account record:
 
 ```csharp
 public static Guid CreateMethodExample(IOrganizationService service)
@@ -167,7 +179,7 @@ public static Guid CreateMethodExample(IOrganizationService service)
         Name = "Test account"
     };
 
-    // Use Create method to get the id of the created account.
+    // Use the Create method to get the id of the created account.
     return service.Create(account);
 }
 ```
@@ -204,9 +216,6 @@ More information:
 - [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
 - [Create your own messages](../custom-actions.md)
 
-## Passing optional parameters with a request
-
-There are several optional parameters you can pass to apply special behaviors to messages. More information: [Use optional parameters](../optional-parameters.md)
 
 ## Private Messages
 
