@@ -4,7 +4,7 @@ description: Troubleshooting and known issues for the Power Apps mobile app
 author: sericks007
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/15/2023
+ms.date: 04/21/2023
 ms.subservice: mobile
 ms.author: sericks
 search.audienceType: 
@@ -286,20 +286,15 @@ If the information provided previously doesn’t resolve your issue, either [Pos
 
 - What type of device are you using, such as iPad 4th Generation, Microsoft Surface. What is the version of the operating system, such as iOS 10.0 or Windows 10.
 
+## Network requests fail when Power Apps mobile app is running in the background
+
+When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
+
+If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
+
 ### See also
- [Set up Dynamics 365 for phones and tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md)
+[Set up Dynamics 365 for phones and tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md)
  
- 
- 
- 
- 
- 
- 
- 
- 
-
-### See also  
-
 [Power Pages known issues](/power-pages/known-issues)
 
 [Power Automate known issues](/power-automate/process-advisor-issues)
