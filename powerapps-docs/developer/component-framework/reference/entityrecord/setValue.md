@@ -3,7 +3,7 @@ title: setValue | Microsoft Docs
 description: Set value for the column.
 ms.author: noazarur
 author: noazarur-microsoft
-ms.date: 08/22/2022
+ms.date: 04/21/2023
 ms.reviewer: jdaly
 ms.topic: reference
 ms.subservice: pcf
@@ -27,7 +27,7 @@ Model-driven and canvas [experimental](../../../../maker/canvas-apps/working-wit
 
 |Parameter Name |Type| Required | Description|
 |----|----|----|----|
-| `columnName`|`string`| Yes| Name of the column.|
+| `columnName`|`string`| Yes| The logical name of the column.|
 | `value`|`string`<br />`Date`<br />`number`<br />`number[]`<br />`boolean`<br />[EntityReference](./../entityreference.md)<br />`EntityReference[]`<br />[FileObject](./../fileobject.md)<br />[ImageObject](./../imageobject.md)| Yes      | New value for the record. |
 
 ## Return Value
