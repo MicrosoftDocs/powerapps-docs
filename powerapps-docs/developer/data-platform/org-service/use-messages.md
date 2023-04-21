@@ -29,8 +29,8 @@ To perform a data operation, you can:
 
 1. Use these the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
-- Set the [OrganizationRequest.Name](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Name)
-- Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
+   - Set the [OrganizationRequest.Name](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Name)
+   - Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
 
 1. Send the request using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, which will return an <xref:Microsoft.Xrm.Sdk.OrganizationResponse> instance.
 
@@ -41,22 +41,29 @@ For example, if you want to create an account record, you could do it this way:
 ```csharp
 public static Guid OrganizationRequestExample(IOrganizationService service) {
 
+   // Instantiate an Entity instance of type 'account'
     var account = new Entity("account");
     account["name"] = "Test account";
 
+   // Instantiate a collection of parameters with one item 'Target',
+   // set to the account entity instance
     ParameterCollection parameters = new ParameterCollection
     {
         { "Target", account }
     };
 
+   // Instantiate an OrganizationRequest instance setting the
+   // RequestName and Parameters
     OrganizationRequest request = new OrganizationRequest()
     {
         RequestName = "Create",
         Parameters = parameters
     };
 
+   // Send the request using the IOrganizationService.Execute method
     OrganizationResponse response = service.Execute(request);
 
+   // Parse the output parameter 'id' from the Results
     return (Guid)response.Results["id"];
 }
 ```
@@ -64,8 +71,8 @@ public static Guid OrganizationRequestExample(IOrganizationService service) {
 To create an account record using this method, you need to know:
 
 - The name of the message: `Create`.
-- The name and data type of each input parameter: a single parameter named `Target` that is an [Entity](xref:Microsoft.Xrm.Sdk.Entity).
-- The name and data type of each output parameter: a single parameter named `id` that is a [Guid](xref:System.Guid).
+- The name and data type of each input parameter: A single parameter named `Target` that is an [Entity](xref:Microsoft.Xrm.Sdk.Entity).
+- The name and data type of each output parameter: A single parameter named `id` that is a [Guid](xref:System.Guid).
 
 This information stored in Dataverse, but you will not need to use it because there is an easier way.
 
