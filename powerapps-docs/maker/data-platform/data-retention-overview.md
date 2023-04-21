@@ -62,7 +62,7 @@ All the existing delete action cascade relationships and plugins for a table are
 
 ## Kinds of data retained long term
 
-With the exception of system tables, Dataverse standard and activity tables, along with file entities can be retained in in the long term storage.
+With the exception of system tables, Dataverse standard and activity tables, along with attachments, can be retained in in the long term storage.
 
 Data retained by long term storage is made available to features like [Lockbox](/power-platform/admin/about-lockbox) and [customer managed key](/power-platform/admin/customer-managed-key).
 
