@@ -4,7 +4,7 @@ description: Learn about how to use canvas apps on your movile device in offline
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/17/2023
+ms.date: 04/21/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -35,8 +35,6 @@ To get started with mobile offline for canvas apps, an app maker needs to enable
 > [!include [preview](../includes/cc-preview-features-definition.md)]
 
 ## Mobile offline-first
-
-Wouldn't it be great to use your mobile app without worrying about spotty internet connectivity? With the mobile *offline-first* experience, it's possible. People who need to work from remote locations can continue to work seamlessly without worrying about their internet connection.
 
 Offline-first means that all the data you may need when offline is copied to your mobile device. This requires initial network access to download the data. Once you have your data, you only work with the data on your local device all the time. This is true both when you are online and offline.  
 
