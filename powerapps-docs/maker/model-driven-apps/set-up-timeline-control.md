@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 03/27/2023
+ms.date: 04/20/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -105,6 +105,10 @@ There are three primary record types: Activities, notes, and posts. All record t
 The timeline shows a simple icon before the activity, note, post, and custom table, making it easy for you to identify the record type.
 
 Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
+
+> [!NOTE]
+>
+> When a custom table has a custom icon, activities related to the custom table are displayed using the default custom table icon not the custom icon.
 
 ### Advanced
 
