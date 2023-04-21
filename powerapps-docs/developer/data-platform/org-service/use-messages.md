@@ -2,7 +2,7 @@
 title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 03/10/2023
+ms.date: 04/20/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -15,9 +15,83 @@ contributors:
 ---
 # Use messages with the Organization service
 
-[!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
+The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works.
 
-All data operations in the organization service are defined as messages. While the <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides seven methods to perform data operations (<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A>, and <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A> ), each of these methods is a convenience wrapper around the underlying message that is ultimately invoked using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method. The underlying organization service only has the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method which as a single parameter: an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class. The value returned by the `Execute` method is an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
+It is important to understand that all data operations in Dataverse are defined as *messages*.
+
+Every message has:
+
+- A name
+- A collection of input parameters
+- A collection of output parameters
+
+To perform a data operation, you can:
+
+1. Use these the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+
+- Set the [OrganizationRequest.Name](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Name)
+- Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
+
+1. Send the request using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, which will return an <xref:Microsoft.Xrm.Sdk.OrganizationResponse> instance.
+
+   The items in the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection contains the results.
+
+For example, if you want to create an account record, you could do it this way:
+
+```csharp
+public static Guid OrganizationRequestExample(IOrganizationService service) {
+
+    var account = new Entity("account");
+    account["name"] = "Test account";
+
+    ParameterCollection parameters = new ParameterCollection
+    {
+        { "Target", account }
+    };
+
+    OrganizationRequest request = new OrganizationRequest()
+    {
+        RequestName = "Create",
+        Parameters = parameters
+    };
+
+    OrganizationResponse response = service.Execute(request);
+
+    return (Guid)response.Results["id"];
+}
+```
+
+To create an account record using this method, you need to know:
+
+- The name of the message: `Create`.
+- The name and data type of each input parameter: a single parameter named `Target` that is an [Entity](xref:Microsoft.Xrm.Sdk.Entity).
+- The name and data type of each output parameter: a single parameter named `id` that is a [Guid](xref:System.Guid).
+
+This information stored in Dataverse, but you will not need to use it because there is an easier way.
+
+## SDK Request and Response classes
+
+## IOrganizationService methods
+
+- <xref:Microsoft.Xrm.Sdk.OrganizationRequest> using these properties:
+   - 
+- <xref:Microsoft.Xrm.Sdk.OrganizationResponse>
+
+
+
+The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides seven methods to perform data operations:
+
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A>
+- <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A>
+
+Each of these methods is a convenience wrapper around the underlying message that is ultimately invoked using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A> method.
+
+The organization service actually has just one method: <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A>. The `Execute` methods has a single parameter: `request`, that accepts an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class. The value returned by the `Execute` method is an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
 To make your experience better when you write code, all the standard system data operations have a pair of `*Request` and `*Response` classes defined in the SDK assemblies. Each of these classes inherits from the respective <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes and provide a more productive experience for you when you write code.
 
@@ -28,13 +102,13 @@ var account = new Account();
 account.Name = "Test account";
 ```
 
-Using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>
+Using [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A)
 
 ```csharp
 var id = svc.Create(account);
 ```
 
-Using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+Using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 CreateRequest request = new CreateRequest()
@@ -42,7 +116,7 @@ CreateRequest request = new CreateRequest()
 var id = ((CreateResponse)svc.Execute(request)).id;
 ```
 
-Using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+Using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A)
 
 ```csharp
 ParameterCollection parameters = new ParameterCollection();
