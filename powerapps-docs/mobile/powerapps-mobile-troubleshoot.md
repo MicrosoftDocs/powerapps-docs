@@ -123,12 +123,6 @@ The Power Apps platform does not support accessing authenticated URLs, including
 
 The Flow action menu in Power Apps mobile doesn't support flows created in a solution.
 
-## Network requests fail when Power Apps mobile app is running in the background
-
-When the Power Apps mobile app is running in the background and a canvas or model-driven app makes a network request, a mobile operating system could deprioritize or cancel this network request. This can cause an error message to appear in the mobile app when it returns from the background. 
-
-If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
-
 ## Error: Contact your administrator for access to your organizations mobile apps
 
 When using the Dynamics 365 mobile app, you encounter the following message: **Contact your administrator for access to your organizations mobile apps**. 
