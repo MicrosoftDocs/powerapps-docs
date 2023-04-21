@@ -144,13 +144,13 @@ The Flow action menu in Dynamics 365 for phones and tablets app doesn't support 
 ## Error message: Your server is not available or does not support this application  
  **Cause 1**: The Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) server is down. Verify that the server is on and connected to your network.  
  
- **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](/dynamics-365-customer-engagement-pr/ce/mobile-app/support-phones-tablets). 
+ **Cause 2**: Your Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app version is not supported. For supported version information, see [What's supported](/dynamics365/mobile-app/support-phones-tablets). 
   
  **Cause 3**: This error can also occur if you enter an invalid URL. Make sure the same URL you have provided works to access Dynamics 365 apps in your browser on your device  
 
 ## Error message: You haven't been authorized to use this app. Check with your system administrator to update your settings
 
- **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#requirements).  
+ **Cause 1**: Verify that your security role includes the **Use [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)]** privilege. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#requirements).  
   
  **Cause 2**: This error can occur if you have a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) organization and your user has not been assigned a license for the organization. If you add a Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) subscription to an existing [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)] tenant, your user may not have a  license assigned. 
  
@@ -160,7 +160,7 @@ Access the **Active** users section in the admin center and verify you have a **
   
 ## Error message: Sorry, something went wrong while initializing the app. Please try again, or restart the app  
 
- **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#requirements)).  
+ **Cause 1**: Permissions might not be set properly. See "Required privileges" in [Get started with Dynamics 365 for phones and Dynamics 365 for tablets](/dynamics-365/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets#requirements)).  
   
  **Cause 2**: See the following KB article:  
   
@@ -175,7 +175,7 @@ Access the **Active** users section in the admin center and verify you have a **
  `at Microsoft.Crm.Application.WebServices.ApplicationMetadataService.RetrieveUserContext(UserContextRetrieveRequest userContextRetrieveRequest)`  
  
 ## Error message: The language installed on your company’s system isn’t available on the app. Please contact your system administrator to set up a supported language
- **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/support-phones-tablets).
+ **Cause**: This error will occur if one of the supported languages is not enabled in Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises). For more information on the supported languages, see [Supported languages for Dynamics 365 for phones and tablets](/dynamics-365/ce/mobile-app/support-phones-tablets).
 
 ## Error message: The process assigned to this record is unavailable or has been deleted 
  If you receive this message for a record which has a non-deleted process assigned to it, you should manually synchronize Dynamics 365 mobile app data with Microsoft Dataverse or Dynamics 365 Customer Engagement (on-premises) app data. Close the mobile app, reopen it, and then choose to download the latest customizations. This procedure forces the mobile app to check for updated customizations. Recently viewed data while you were connected is cached and synched. Record data like Accounts or Contacts are not synched.
@@ -289,7 +289,7 @@ When the Power Apps mobile app is running in the background and a canvas or mode
 If you experience a failed network request when the Power Apps mobile app is running in the background, contact your app developer.
 
 ### See also
-[Set up Dynamics 365 for phones and tablets](/dynamics-365-customer-engagement-pr/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md)
+[Set up Dynamics 365 for phones and tablets](/dynamics-365/ce/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets.md)
  
 [Power Pages known issues](/power-pages/known-issues)
 
