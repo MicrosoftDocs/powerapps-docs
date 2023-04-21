@@ -29,6 +29,14 @@ When offline mode is enabled in the Power Apps mobile app, users who need to wor
 
 Verify the following prerequisites before you enable mobile offline:
 
+- You must be running a recent version of Power Apps mobile app. Be sure your mobile device is running on one of the following versions or later.
+
+  | Operating sytem | Version of Power Apps mobile app |
+  |-----------------|---------|
+  | iOS     | X    |
+  | Android | X   |
+  | Windows | X   |
+
 - The canvas app must be associated to a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
 -   The **Environment maker**, **System administrator**, or **System customizer** role is required to configure offline mode for canvas apps. These roles have Create, Read, Write, Delete, and Share privileges on the **Mobile offline profile** table. More information: [<u>About predefined security roles</u>](../maker/model-driven-apps/share-model-driven-app.md#about-predefined-security-roles)
