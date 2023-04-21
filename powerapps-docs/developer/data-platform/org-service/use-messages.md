@@ -25,9 +25,19 @@ Every message has:
 - A collection of input parameters
 - A collection of output parameters
 
+There are three different ways you can use a message with the SDK for .NET as explained in the following sections:
+
+|Method|Description|
+|---------|---------|
+|[OrganizationRequest and OrganizationResponse](#organizationrequest-and-organizationresponse)| Use this when you don't have SDK Request and Response classes. You might need to use this when trying a message that is in preview.|
+|[SDK Request and Response classes](#sdk-request-and-response-classes)|This is the most common way you will use messages.|
+|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common table operations. These are the quickest and easiest ways to perform most common data operations, but sometimes you will need to use SDK Request and Response classes.|
+
+## OrganizationRequest and OrganizationResponse
+
 To perform a data operation, you can:
 
-1. Use these the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+1. Use the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
    - Set the [OrganizationRequest.RequestName](xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName)
    - Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
@@ -79,6 +89,14 @@ This information stored in Dataverse. The [SdkMessage table/entity reference](..
 Information about the input and output parameters is managed by Dataverse in private tables. You will not need to use it because there is an easier way.
 
 ## SDK Request and Response classes
+
+The SDK for .NET contains definitions for all the common Dataverse messages in these namespaces:
+
+
+|Namespace|Description|
+|---------|---------|
+|<xref:Microsoft.Xrm.Sdk.Messages?displayProperty=fullName>|Messages for common data operations and messages used to create and modify schema data, also known as metadata.|
+|<xref:Microsoft.Crm.Sdk.Messages?displayProperty=fullName>|Messages for business logic and operations to support  |
 
 
 
