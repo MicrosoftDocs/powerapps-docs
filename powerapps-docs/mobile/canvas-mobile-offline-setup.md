@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/17/2023
+ms.date: 04/21/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -148,14 +148,12 @@ To create an offline profile, follow these steps:
 
 12. Select **Save** to add the table to your profile so you can continue editing it.
 
-## Limitations and know issues
+## Limitations and known issues
 
-The following is not supported:
+- The auto-generated offline profile does not handle filters. As a result, for each table used in the app, it downloads **all** rows that the user has permissions on.
 
--   A canvas app doesn't work in offline on a web browser.
+- Non-Dataverse connectors like Sharepoint are not supported in offline mode.
 
--   The auto-generated offline profile is not optimized yet for the app. For each table used in the app, it downloads the rows that the user has permissions on.
+- Dataverse files and images are not supported in an offline-enabled canvas app.
 
--   Non-Dataverse connectors like Sharepoint are not supported in offline. If you use a non-Dataverse connector, the app can only access the data when the device is connected to the network.
-
--   Dataverse files and images are not supported in an offline-enabled canvas app.
+- Some Dataverse tables aren't supported in offline mode. More information: [Mobile offline capabilities and limitations](offline-capabilities.md)
