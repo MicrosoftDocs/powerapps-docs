@@ -2,7 +2,7 @@
 ---
 # Create and edit elastic tables (Preview)
 
-An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API as makers and users love with Standard tables. They share many aspects and options with Standard tables, but they also come with their own specific features and capabilities.
+An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API as makers and users love with Standard tables. They share many aspects and options with Standard tables, but they also come with their own unique features and capabilities powered by Azure Cosmos DB.
 
 ## When to consider Elastic tables?
 
