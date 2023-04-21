@@ -46,7 +46,3 @@ After offline is enabled for your app, the Power Apps mobile app always runs off
 - **Offline-first with an internet connection**: Data is downloaded to the device, and all changes are saved locally. Because there's an internet connection, the app will automatically attempt to sync every few minutes.
 
 More information: [Working with canvas apps offline](canvas-mobile-offline-working.md).
-
-## System requirements
-
-To use canvas apps in offline mode, you must...
