@@ -27,7 +27,7 @@ There are three different ways you can use a message with the SDK for .NET as ex
 
 |Method|Description|
 |---------|---------|
-|[OrganizationRequest & OrganizationResponse classes](#organizationrequest--organizationresponse-classes)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes.|
+|[OrganizationRequest & OrganizationResponse classes](#organizationrequest--organizationresponse-classes)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes when you know the message name and details of the input and output parameters.|
 |[SDK Request & Response classes](#sdk-request--response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
 |[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These methods are the quickest and easiest ways to perform most common data operations.|
 
@@ -168,7 +168,7 @@ In addition to the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrgani
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest> / <xref:Microsoft.Xrm.Sdk.Messages.AssociateResponse>|
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest> / <xref:Microsoft.Xrm.Sdk.Messages.DisassociateResponse>|
 
-These methods help simplify performing these operations with fewer lines of code. The following example uses the [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A) method to create an account record:
+These methods simplify performing these operations with fewer lines of code. The following example uses the [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A) method to create an account record:
 
 ```csharp
 public static Guid CreateMethodExample(IOrganizationService service)
@@ -190,11 +190,11 @@ As you can see, common data operations have been streamlined using the <xref:Mic
 
 The data describing an operation in a plug-in are in the form of [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters).
 
-In the `PreValidation` and `PreOperation` stages before the main operation of the event pipeline, the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
+In the `PreValidation` and `PreOperation` stages before the `main` operation of the event pipeline, the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
 
-With a custom API, your plug-in will read the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and contain logic to set the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) as part of the main operation stage.
+With a custom API, your plug-in will read the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and contain logic to set the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) as part of the `main` operation stage.
 
-After the main operation stage, in the `PostOperation` stage, the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
+After the `main` operation stage, in the `PostOperation` stage, the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
 
 Understanding the structure of the messages helps you understand where to find the data you want to check or change within the plug-in.
 
@@ -222,7 +222,7 @@ This information is stored in the [SdkMessageFilter table](../reference/entities
 
 #### [SDK for .NET](#tab/sdk)
 
-Use this static method to get a list of message that can work with a table:
+Use this static method to get a list of names of messages that can work with a table:
 
 ```csharp
 /// <summary>
@@ -232,52 +232,52 @@ Use this static method to get a list of message that can work with a table:
 /// <param name="tableName">The logical name of the table</param>
 static void OutputTableMessageNames(IOrganizationService service, string tableName)
 {
-var query = new QueryExpression(entityName: "sdkmessagefilter")
-{
-    Criteria =
+    var query = new QueryExpression(entityName: "sdkmessagefilter")
     {
-        Conditions =
+        Criteria =
         {
-            new ConditionExpression(
-                attributeName:"primaryobjecttypecode",
-                conditionOperator: ConditionOperator.Equal,
-                value: tableName)
-        }
-    },
-    // Link to SdkMessage to get the names
-    LinkEntities =
-    {
-        new LinkEntity(
-            linkFromEntityName:"sdkmessagefilter",
-            linkToEntityName: "sdkmessage",
-            linkFromAttributeName: "sdkmessageid",
-            linkToAttributeName: "sdkmessageid",
-            joinOperator: JoinOperator.Inner)
-        {
-            EntityAlias = "sdkmessage",
-            Columns = new ColumnSet("name"),
-            LinkCriteria =
+            Conditions =
             {
-                Conditions =
+                new ConditionExpression(
+                    attributeName:"primaryobjecttypecode",
+                    conditionOperator: ConditionOperator.Equal,
+                    value: tableName)
+            }
+        },
+        // Link to SdkMessage to get the names
+        LinkEntities =
+        {
+            new LinkEntity(
+                linkFromEntityName:"sdkmessagefilter",
+                linkToEntityName: "sdkmessage",
+                linkFromAttributeName: "sdkmessageid",
+                linkToAttributeName: "sdkmessageid",
+                joinOperator: JoinOperator.Inner)
+            {
+                EntityAlias = "sdkmessage",
+                Columns = new ColumnSet("name"),
+                LinkCriteria =
                 {
-                    // Don't include private messages
-                    new ConditionExpression("isprivate", ConditionOperator.Equal, false)
+                    Conditions =
+                    {
+                        // Don't include private messages
+                        new ConditionExpression("isprivate", ConditionOperator.Equal, false)
+                    }
                 }
             }
         }
-    }
-};
+    };
 
-EntityCollection results = service.RetrieveMultiple(query);
+    EntityCollection results = service.RetrieveMultiple(query);
 
-    foreach (var entity in results.Entities)
-    {
-        Console.WriteLine(((AliasedValue)entity["sdkmessage.name"]).Value);
-    }
+        foreach (var entity in results.Entities)
+        {
+            Console.WriteLine(((AliasedValue)entity["sdkmessage.name"]).Value);
+        }
 }
 ```
 
-If you use this method setting `tableName` to `account`, you will get results that include these:
+If you use this method setting the `tableName` parameter to `account`, you will get results that include these message names:
 
 **Output:**
 
@@ -440,12 +440,11 @@ OData-Version: 4.0
     ]
 }
 ```
+---
+
 
 > [!NOTE]
 > Some of these messages are deprecated. `SetState` and `SetStateDynamicEntity` still exist, but you should use `Update` instead.
-
-
----
 
 ### See also
 
