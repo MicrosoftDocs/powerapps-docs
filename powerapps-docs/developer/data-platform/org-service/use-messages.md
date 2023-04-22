@@ -2,7 +2,7 @@
 title: "Use messages with the Organization service (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
-ms.date: 04/20/2023
+ms.date: 04/24/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: pehecke
@@ -15,9 +15,7 @@ contributors:
 ---
 # Use messages with the Organization service
 
-The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works. Understanding these details helps you as you move on to writing plug-ins, creating custom APIs or troubleshooting errors.
-
-It's important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse as data.
+It's important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse.
 
 Every message has:
 
@@ -25,15 +23,13 @@ Every message has:
 - A collection of input parameters
 - A collection of output parameters
 
-This data-driven approach allows messages defined in Dataverse to work for both Web API and the Dataverse SDK for .NET.
-
 There are three different ways you can use a message with the SDK for .NET as explained in the following sections:
 
 |Method|Description|
 |---------|---------|
-|[OrganizationRequest & OrganizationResponse classes](#organizationrequest-organizationresponse)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes.|
-|[SDK Request & Response classes](#sdk-request-response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
-|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These methods are the quickest and easiest ways to perform most common data operations, but sometimes you need to use SDK Request and Response classes.|
+|[OrganizationRequest & OrganizationResponse classes](#organizationrequest--organizationresponse-classes)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes.|
+|[SDK Request & Response classes](#sdk-request--response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
+|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These methods are the quickest and easiest ways to perform most common data operations.|
 
 ## OrganizationRequest & OrganizationResponse classes
 
@@ -105,23 +101,9 @@ These classes contain properties for all the input and output parameters.
 
    These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
-- The classes ending with *Response contain the output parameters.
+- The classes ending with *Response contain the properties for output parameters.
 
    These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
-
-
-### Generate classes for custom actions
-
-There are other messages that don't have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
-
-Developers can generate Request and Response classes for the messages found in their environment using the following tools:
-
-|Tool|Description|
-|---------|---------|
-|Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
-|CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the `generateActions` parameter to generate Request and Response classes.|
-
-More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
 
 To create a record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class.
 
@@ -151,6 +133,19 @@ public static Guid CreateRequestExample(IOrganizationService service)
 }
 ```
 
+### Generate classes for custom actions
+
+There are other messages that don't have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
+
+Developers can generate Request and Response classes for the messages found in their environment using the following tools:
+
+|Tool|Description|
+|---------|---------|
+|Power Platform CLI<br />[pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build)<br />command|Generates cross-platform .NET (Core) classes for applications that use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient?displayProperty=fullName>.<br />Use the [--generateActions](/power-platform/developer/cli/reference/modelbuilder#--generateactions--a) parameter to generate Request and Response classes.|
+|CrmSvcUtil.exe|Generates .NET Framework classes to support applications that use .NET Framework, such as Dataverse plug-ins.<br />Use the `generateActions` parameter to generate Request and Response classes.|
+
+More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
+
 ### Passing optional parameters with a request
 
 There are several optional parameters you can pass to apply special behaviors to messages. You can't use the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) methods when you use optional parameters. You must use the SDK Request classes or the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
@@ -163,15 +158,15 @@ More information: [Use optional parameters](../optional-parameters.md)
 In addition to the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, the [IOrganizationService Interface](xref:Microsoft.Xrm.Sdk.IOrganizationService) specifies that the following methods must also be implemented. These methods encapsulate the corresponding Request and Response classes:
 
 
-|Method|Request class|Response class|
-|---------|---------|---------|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A>|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>|<xref:Microsoft.Xrm.Sdk.Messages.CreateResponse>|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A>|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse>|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A>|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleResponse>|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A>|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|<xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse>|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest>|<xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse>|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest>|<xref:Microsoft.Xrm.Sdk.Messages.AssociateResponse>|
-|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest>|<xref:Microsoft.Xrm.Sdk.Messages.DisassociateResponse>|
+|Method|Request/Response classes|
+|---------|---------|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A>|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> / <xref:Microsoft.Xrm.Sdk.Messages.CreateResponse>|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve%2A>|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> / <xref:Microsoft.Xrm.Sdk.Messages.RetrieveResponse>|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A>|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> / <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleResponse>|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update%2A>|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> / <xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse>|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete%2A>|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> / <xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse>|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest> / <xref:Microsoft.Xrm.Sdk.Messages.AssociateResponse>|
+|<xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate%2A>|<xref:Microsoft.Xrm.Sdk.Messages.DisassociateRequest> / <xref:Microsoft.Xrm.Sdk.Messages.DisassociateResponse>|
 
 These methods help simplify performing these operations with fewer lines of code. The following example uses the [IOrganizationService.Create](xref:Microsoft.Xrm.Sdk.IOrganizationService.Create%2A) method to create an account record:
 
@@ -189,7 +184,7 @@ public static Guid CreateMethodExample(IOrganizationService service)
 }
 ```
 
-As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it's important to understand
+As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it's important to understand the different options available to use messages, especially when working with custom API and plug-ins.
 
 ## Working with messages in plug-ins
 
@@ -197,13 +192,16 @@ The data describing an operation in a plug-in are in the form of [IExecutionCont
 
 In the `PreValidation` and `PreOperation` stages before the main operation of the event pipeline, the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) contain the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters).
 
-After the main operation, in the `PostOperation` stage, the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
+With a custom API, your plug-in will read the [IExecutionContext.InputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters) and contain logic to set the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) as part of the main operation stage.
+
+After the main operation stage, in the `PostOperation` stage, the [IExecutionContext.OutputParameters](xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters) contain the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results).
 
 Understanding the structure of the messages helps you understand where to find the data you want to check or change within the plug-in.
 
 More information:
 
 - [Write plug-ins to extend business processes](../plug-ins.md)
+- [Create and use Custom APIs](../custom-api.md)
 - [Event Framework](../event-framework.md)
 
 ## Private Messages
@@ -224,74 +222,98 @@ This information is stored in the [SdkMessageFilter table](../reference/entities
 
 #### [SDK for .NET](#tab/sdk)
 
-Use this static method to test whether a given table supports a message name:
+Use this static method to get a list of message that can work with a table:
 
 ```csharp
 /// <summary>
-/// Test whether a specified message is supported for the specified table.
+/// Write the names of messages for a table to the console
 /// </summary>
-/// <param name="service">The IOrganizationService instance.</param>
-/// <param name="entityLogicalName">The logical name of the table.</param>
-/// <param name="messageName">The name of the message.</param>
-/// <returns></returns>
-public static bool IsMessageAvailable(
-    IOrganizationService service,
-    string entityLogicalName,
-    string messageName)
+/// <param name="service">The authenticated IOrganizationService to use</param>
+/// <param name="tableName">The logical name of the table</param>
+static void OutputTableMessageNames(IOrganizationService service, string tableName)
 {
-    QueryExpression query = new("sdkmessagefilter")
+var query = new QueryExpression(entityName: "sdkmessagefilter")
+{
+    Criteria =
     {
-        ColumnSet = new ColumnSet("sdkmessagefilterid"),
-        Criteria = new FilterExpression(LogicalOperator.And)
+        Conditions =
         {
-            Conditions = {
             new ConditionExpression(
                 attributeName:"primaryobjecttypecode",
                 conditionOperator: ConditionOperator.Equal,
-                value: entityLogicalName)
-            }
-        },
-        LinkEntities = {
-            new LinkEntity(
-                linkFromEntityName:"sdkmessagefilter",
-                linkToEntityName:"sdkmessage",
-                linkFromAttributeName:"sdkmessageid",
-                linkToAttributeName:"sdkmessageid",
-                joinOperator: JoinOperator.Inner)
+                value: tableName)
+        }
+    },
+    // Link to SdkMessage to get the names
+    LinkEntities =
+    {
+        new LinkEntity(
+            linkFromEntityName:"sdkmessagefilter",
+            linkToEntityName: "sdkmessage",
+            linkFromAttributeName: "sdkmessageid",
+            linkToAttributeName: "sdkmessageid",
+            joinOperator: JoinOperator.Inner)
+        {
+            EntityAlias = "sdkmessage",
+            Columns = new ColumnSet("name"),
+            LinkCriteria =
             {
-                    LinkCriteria = new FilterExpression(LogicalOperator.And){
-                    Conditions = {
-                        new ConditionExpression(
-                            attributeName:"name",
-                            conditionOperator: ConditionOperator.Equal,
-                            value: messageName)
-                        }
-                    }
+                Conditions =
+                {
+                    // Don't include private messages
+                    new ConditionExpression("isprivate", ConditionOperator.Equal, false)
+                }
             }
         }
-    };
+    }
+};
 
-    EntityCollection entityCollection = service.RetrieveMultiple(query);
+EntityCollection results = service.RetrieveMultiple(query);
 
-    return entityCollection.Entities.Count.Equals(1);
+    foreach (var entity in results.Entities)
+    {
+        Console.WriteLine(((AliasedValue)entity["sdkmessage.name"]).Value);
+    }
 }
 ```
 
+If you use this method setting `tableName` to `account`, you will get results that include these:
+
+**Output:**
+
+```console
+Assign
+Create
+Delete
+GrantAccess
+Merge
+ModifyAccess
+Retrieve
+RetrieveMultiple
+RetrievePrincipalAccess
+RetrieveSharedPrincipalsAndAccess
+RevokeAccess
+SetState
+SetStateDynamicEntity
+Update
+```
+
+
+
 #### [Web API](#tab/webapi)
 
-Use the following `GET` request to detect whether a message is available for a table. The request below tests whether the `account` table supports the `Create` message.  Replace the `@message` and `@table` parameter values for the message and table you want to test.
+Use the following `GET` request to retrieve the messages supported by a table. The request below retrieves messages for the `account` table.  Replace the `@table` alias parameter value for the table you want to retrieve message names for.
 
 **Request**
 
 ```http
 GET [Organization Uri]/api/data/v9.2/sdkmessagefilters?$select=sdkmessagefilterid
-&$filter=sdkmessageid/name eq @message and primaryobjecttypecode eq @table
-&@message='Create'
+&$filter= primaryobjecttypecode eq @table
+&$expand=sdkmessageid($select=name)
 &@table='account'
 Content-Type: application/json
 ```
 
-When the table supports the message, an `sdkmessagefilterid` value is returned. If it isn't supported, the `value` is an empty array.
 
 **Response**
 
@@ -301,15 +323,127 @@ Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
 
 {
-    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#sdkmessagefilters(sdkmessagefilterid)",
+    "@odata.context": "[Organization Uri]/api/data/v9.2/$metadata#sdkmessagefilters(sdkmessagefilterid,sdkmessageid(name))",
     "value": [
         {
-            "@odata.etag": "W/\"2009110\"",
-            "sdkmessagefilterid": "c2c5bb1b-ea3e-db11-86a7-000a3a5473e8"
+            "@odata.etag": "W/\"31433272\"",
+            "sdkmessagefilterid": "87c5bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "Assign",
+                "sdkmessageid": "8cbdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31434372\"",
+            "sdkmessagefilterid": "c2c5bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "Create",
+                "sdkmessageid": "9ebdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31435906\"",
+            "sdkmessagefilterid": "2bc6bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "Delete",
+                "sdkmessageid": "a1bdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31436549\"",
+            "sdkmessagefilterid": "bac6bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "GrantAccess",
+                "sdkmessageid": "c5bdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31429419\"",
+            "sdkmessagefilterid": "f9c6bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "Merge",
+                "sdkmessageid": "dbbdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31436817\"",
+            "sdkmessagefilterid": "fcc6bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "ModifyAccess",
+                "sdkmessageid": "dcbdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31437759\"",
+            "sdkmessagefilterid": "42c7bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "Retrieve",
+                "sdkmessageid": "f2bdbb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31432761\"",
+            "sdkmessagefilterid": "d7c7bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "RetrieveMultiple",
+                "sdkmessageid": "03bebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31441514\"",
+            "sdkmessagefilterid": "39c8bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "RetrievePrincipalAccess",
+                "sdkmessageid": "04bebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"10876821\"",
+            "sdkmessagefilterid": "65c8bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "RetrieveSharedPrincipalsAndAccess",
+                "sdkmessageid": "10bebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31441786\"",
+            "sdkmessagefilterid": "85c8bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "RevokeAccess",
+                "sdkmessageid": "11bebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31439673\"",
+            "sdkmessagefilterid": "d9c8bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "SetState",
+                "sdkmessageid": "1cbebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31440023\"",
+            "sdkmessagefilterid": "fbc8bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "SetStateDynamicEntity",
+                "sdkmessageid": "1dbebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
+        },
+        {
+            "@odata.etag": "W/\"31439008\"",
+            "sdkmessagefilterid": "23c9bb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid": {
+                "name": "Update",
+                "sdkmessageid": "20bebb1b-ea3e-db11-86a7-000a3a5473e8"
+            }
         }
     ]
 }
 ```
+
+> [!NOTE]
+> Some of these messages are deprecated. `SetState` and `SetStateDynamicEntity` still exist, but you should use `Update` instead.
+
 
 ---
 
