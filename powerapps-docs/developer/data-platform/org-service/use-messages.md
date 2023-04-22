@@ -105,9 +105,9 @@ These classes contain properties for all the input and output parameters.
 
    These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
-To create a record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class.
+For example, to create a record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class to prepare the request. Use [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) to send the request and the results will be in form of an [Microsoft.Xrm.Sdk.Messages.CreateResponse](xref:Microsoft.Xrm.Sdk.Messages.CreateResponse) class instance.
 
-The following example uses this class with a generated early-bound class for the account entity:
+The following example uses the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class with a generated early-bound class for the account entity:
 
 ```csharp
 public static Guid CreateRequestExample(IOrganizationService service)
