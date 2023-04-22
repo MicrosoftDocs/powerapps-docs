@@ -15,9 +15,9 @@ contributors:
 ---
 # Use messages with the Organization service
 
-The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works. This will help you as you move on to writing plug-ins, creating custom APIs or troubleshooting errors.
+The Organization service is easy to use. But before we show the easy way, let's look at the hard way so you can better understand how Dataverse works. Understanding these details helps you as you move on to writing plug-ins, creating custom APIs or troubleshooting errors.
 
-It is important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse as data.
+It's important to understand that all data operations in Dataverse are defined as *messages* and the definitions of these messages are stored in Dataverse as data.
 
 Every message has:
 
@@ -31,9 +31,9 @@ There are three different ways you can use a message with the SDK for .NET as ex
 
 |Method|Description|
 |---------|---------|
-|[OrganizationRequest & OrganizationResponse classes](#organizationrequest-organizationresponse)| Use this when you don't have SDK Request and Response classes. You might need to use this when trying a message that is in preview, or if you prefer to not generate SDK Request and Response for custom actions.|
-|[SDK Request & Response classes](#sdk-request-response-classes)|This is the most common way you will use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
-|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These are the quickest and easiest ways to perform most common data operations, but sometimes you will need to use SDK Request and Response classes.|
+|[OrganizationRequest & OrganizationResponse classes](#organizationrequest-organizationresponse)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes.|
+|[SDK Request & Response classes](#sdk-request-response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
+|[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These methods are the quickest and easiest ways to perform most common data operations, but sometimes you need to use SDK Request and Response classes.|
 
 ## OrganizationRequest & OrganizationResponse classes
 
@@ -44,7 +44,7 @@ You can use a message without SDK Request and Response classes.
    - Set the [OrganizationRequest.RequestName](xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName)
    - Set the items in the [OrganizationRequest.Parameters](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) collection.
 
-1. Send the request using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, which will return an <xref:Microsoft.Xrm.Sdk.OrganizationResponse> instance.
+1. Send the request using the [IOrganizationService.Execute](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A) method, which returns an <xref:Microsoft.Xrm.Sdk.OrganizationResponse> instance.
 
    The items in the [OrganizationResponse.Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection contains the results.
 
@@ -88,7 +88,7 @@ To create an account record using this method, you need to know:
 
 This information stored in Dataverse. The [SdkMessage table](../reference/entities/sdkmessage.md) contains information about all the messages.
 
-Information about the input and output parameters is managed by Dataverse in private tables. You will not need to retrieve it because there is an easier way: using the SDK Request and Response classes.
+Dataverse manages information about the input and output parameters in private tables. You don't need to retrieve it because there's an easier way: using the SDK Request and Response classes.
 
 ## SDK Request & Response classes
 
@@ -101,13 +101,18 @@ The SDK for .NET contains definitions for common Dataverse messages in these nam
 
 These classes contain properties for all the input and output parameters.
 
-- The classes ending with *Request contain the properties for input parameters. These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
-- The classes ending with *Response contain the output parameters. These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
+- The classes ending with *Request contain the properties for input parameters.
+
+   These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+
+- The classes ending with *Response contain the output parameters.
+
+   These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
 
 ### Generate classes for custom actions
 
-There are other messages which do not have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
+There are other messages that don't have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
 
 Developers can generate Request and Response classes for the messages found in their environment using the following tools:
 
@@ -118,9 +123,9 @@ Developers can generate Request and Response classes for the messages found in t
 
 More information: [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)
 
-To create an record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class.
+To create a record, you can use the [Microsoft.Xrm.Sdk.Messages.CreateRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateRequest) class.
 
-The following example uses this class with an generated early-bound class for the account entity:
+The following example uses this class with a generated early-bound class for the account entity:
 
 ```csharp
 public static Guid CreateRequestExample(IOrganizationService service)
@@ -148,7 +153,7 @@ public static Guid CreateRequestExample(IOrganizationService service)
 
 ### Passing optional parameters with a request
 
-There are several optional parameters you can pass to apply special behaviors to messages. When using these optional parameters, can't use the IOrganizationService methods. You must use the SDK Request classes or the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+There are several optional parameters you can pass to apply special behaviors to messages. You can't use the [IOrganizationService](xref:Microsoft.Xrm.Sdk.IOrganizationService) methods when you use optional parameters. You must use the SDK Request classes or the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
 More information: [Use optional parameters](../optional-parameters.md)
 
@@ -184,7 +189,7 @@ public static Guid CreateMethodExample(IOrganizationService service)
 }
 ```
 
-As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it is important to understand
+As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and other messages are made easier to use with the Request and Response classes in the SDK assemblies or generated with tooling. Most of the time you don't need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes, but it's important to understand
 
 ## Working with messages in plug-ins
 
