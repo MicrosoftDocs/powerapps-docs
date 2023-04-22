@@ -459,6 +459,11 @@ This information is stored in the [SdkMessageFilter table](../reference/entities
 Use this static method to get a list of names of tables that can be used with a message:
 
 ```csharp
+/// <summary>
+/// Write the names of tables for a message to the console
+/// </summary>
+/// <param name="service">The authenticated IOrganizationService to use</param>
+/// <param name="messageName">The name of the message</param>
 static void OutputTablesForMessage(IOrganizationService service, string messageName) {
 
     var query = new QueryExpression(entityName: "sdkmessage")
