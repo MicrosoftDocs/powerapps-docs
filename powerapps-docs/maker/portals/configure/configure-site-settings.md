@@ -85,7 +85,6 @@ For site settings related to various portal features, see:
 - [Search within file attachment content](search-file-attachment.md)
 - [Behavior and format of the date and time field](behavior-format-date-time-field.md)
 - [Add geolocation](add-geolocation.md)
-- [Implementing General Data Protection Regulations](implement-gdpr.md)
 - [Enable header and footer output caching](enable-header-footer-output-caching.md)
 
 ## Manage global portal settings

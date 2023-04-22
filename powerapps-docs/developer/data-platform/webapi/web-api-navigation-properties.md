@@ -109,7 +109,7 @@ An entity type may have something like the following combination where a single 
 </EntityType>
 ```
 
-In these cases, setting the value of any of the single-valued navigation properties will set all the other participating single-valued navigation properties to null. The corresponding lookup property GUID value will change, but you will need to retrieve specific annotations available to know which table it now refers to. More information: [Retrieve data about lookup properties](query-data-web-api.md#retrieve-data-about-lookup-properties).
+In these cases, setting the value of any of the single-valued navigation properties will set all the other participating single-valued navigation properties to null. The corresponding lookup property GUID value will change, but you will need to retrieve specific annotations available to know which table it now refers to. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
 
 ## Collection-valued navigation properties
 
