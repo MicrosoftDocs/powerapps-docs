@@ -672,7 +672,9 @@ OData-Version: 4.0
 ---
 
 > [!NOTE]
-> For certain messages, you may find that placeholder values are returned, such as `DeletedEntity for objectTypeCode=11478` or `new_system_donotuseentity_rp53fd1p1ekxpa_t12_b71d6344c5`. These aren't valid table names. Disregard these values.
+> - For certain messages, you may find that placeholder values are returned, such as `DeletedEntity for objectTypeCode=11478` or `new_system_donotuseentity_rp53fd1p1ekxpa_t12_b71d6344c5`. These aren't valid table names. Disregard these values.
+> 
+> - This query will also return [Private tables](../entities.md#private-tables). In the example above: `organizationui`,`hierarchyrule`, `appelement`, and `appsetting` are private tables and not supported for use.
 
 
 ### See also
