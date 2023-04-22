@@ -441,11 +441,234 @@ OData-Version: 4.0
     ]
 }
 ```
+
 ---
 
 
 > [!NOTE]
 > Some of these messages are deprecated. `SetState` and `SetStateDynamicEntity` still exist, but you should use `Update` instead.
+
+## Message support for tables
+
+Some messages can only be used with specific tables. For example, you can only use the `RetrieveUnpublishedMultiple` message with a specific set of tables that contain data that can be published
+
+This information is stored in the [SdkMessageFilter table](../reference/entities/sdkmessagefilter.md). You can query this table to determine which tables can be used for a specific message.
+
+#### [SDK for .NET](#tab/sdk)
+
+Use this static method to get a list of names of tables that can be used with a message:
+
+```csharp
+static void OutputTablesForMessage(IOrganizationService service, string messageName) {
+
+    var query = new QueryExpression(entityName: "sdkmessage")
+    {
+        Criteria = { 
+            Conditions =
+            {
+                new ConditionExpression(
+                        attributeName: "name",
+                        conditionOperator: ConditionOperator.Equal,
+                        value: messageName)
+            }
+        },
+        LinkEntities = {
+            new LinkEntity(
+                linkFromEntityName:"sdkmessage",
+                linkToEntityName: "sdkmessagefilter",
+                linkFromAttributeName: "sdkmessageid",
+                linkToAttributeName: "sdkmessageid",
+                joinOperator: JoinOperator.Inner)
+            {
+                EntityAlias = "sdkmessagefilter",
+                Columns = new ColumnSet("primaryobjecttypecode"),
+            }
+        }
+    };
+
+    EntityCollection results = service.RetrieveMultiple(query);
+
+    foreach (var entity in results.Entities)
+    {
+        Console.WriteLine(((AliasedValue)entity["sdkmessagefilter.primaryobjecttypecode"]).Value);
+    }
+}
+```
+
+If you use this method setting the `messageName` parameter to `RetrieveUnpublishedMultiple`, you will get results that include these table names:
+
+**Output:**
+
+```console
+organizationui
+systemform
+savedquery
+savedqueryvisualization
+sitemap
+hierarchyrule
+appmodule
+appconfig
+appconfiginstance
+webresource
+mobileofflineprofile
+mobileofflineprofileitem
+mobileofflineprofileitemassociation
+navigationsetting
+appelement
+appsetting
+teammobileofflineprofilemembership
+usermobileofflineprofilemembership
+```
+
+#### [Web API](#tab/webapi)
+
+Use the following `GET` request to retrieve the tables supported by a message. The request below retrieves messages for the `RetrieveUnpublishedMultiple` message.  Replace the `@message` alias parameter value for the message you want to retrieve table names for.
+
+**Request**
+
+```http
+GET [Organization Uri]/api/data/v9.2/sdkmessages?$select=sdkmessageid
+&$filter= name eq @message
+&$expand=sdkmessageid_sdkmessagefilter($select=primaryobjecttypecode)
+&@message='RetrieveUnpublishedMultiple'
+Content-Type: application/json
+```
+
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#sdkmessages(sdkmessageid,sdkmessageid_sdkmessagefilter(primaryobjecttypecode))",
+    "value": [
+        {
+            "@odata.etag": "W/\"42343467\"",
+            "sdkmessageid": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+            "sdkmessageid_sdkmessagefilter": [
+                {
+                    "@odata.etag": "W/\"10875729\"",
+                    "primaryobjecttypecode": "savedquery",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "b9c7bb1b-ea3e-db11-86a7-000a3a5473e8"
+                },
+                {
+                    "@odata.etag": "W/\"10875725\"",
+                    "primaryobjecttypecode": "organizationui",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "bac7bb1b-ea3e-db11-86a7-000a3a5473e8"
+                },
+                {
+                    "@odata.etag": "W/\"52381806\"",
+                    "primaryobjecttypecode": "appsetting",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "7cbb24ef-4ce1-eb11-bacb-000d3a11527a"
+                },
+                {
+                    "@odata.etag": "W/\"29691679\"",
+                    "primaryobjecttypecode": "appelement",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "72cfb731-fec3-ea11-a812-000d3a5394f0"
+                },
+                {
+                    "@odata.etag": "W/\"42343472\"",
+                    "primaryobjecttypecode": "usermobileofflineprofilemembership",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "6d6b7818-41f3-4d41-a1c5-2e36f16f8cea"
+                },
+                {
+                    "@odata.etag": "W/\"10875697\"",
+                    "primaryobjecttypecode": "appconfiginstance",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "46c863b7-2cb6-46e3-9ae7-46132a966780"
+                },
+                {
+                    "@odata.etag": "W/\"10875745\"",
+                    "primaryobjecttypecode": "webresource",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "bbd24839-4249-4e7c-a239-6fa0fe2b5859"
+                },
+                {
+                    "@odata.etag": "W/\"10875713\"",
+                    "primaryobjecttypecode": "mobileofflineprofile",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "35b7fb00-7b92-49f8-840a-7668b13fa621"
+                },
+                {
+                    "@odata.etag": "W/\"42343469\"",
+                    "primaryobjecttypecode": "teammobileofflineprofilemembership",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "495eaf32-df68-4ac5-be6e-797b5454e106"
+                },
+                {
+                    "@odata.etag": "W/\"10875721\"",
+                    "primaryobjecttypecode": "mobileofflineprofileitemassociation",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "45971bcb-7da3-4a3e-832c-8f72f360ada5"
+                },
+                {
+                    "@odata.etag": "W/\"10875705\"",
+                    "primaryobjecttypecode": "appmodule",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "b78abd84-c055-4795-8ed4-c2832d54ae35"
+                },
+                {
+                    "@odata.etag": "W/\"10875741\"",
+                    "primaryobjecttypecode": "systemform",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "e342b0fc-dc2c-4241-b026-d86cf934a6ab"
+                },
+                {
+                    "@odata.etag": "W/\"10875709\"",
+                    "primaryobjecttypecode": "hierarchyrule",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "a33799de-e398-4a69-8560-dc34be151bbb"
+                },
+                {
+                    "@odata.etag": "W/\"10875717\"",
+                    "primaryobjecttypecode": "mobileofflineprofileitem",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "45940eee-c53e-4e5b-8810-e24ff8ba7a4a"
+                },
+                {
+                    "@odata.etag": "W/\"10875702\"",
+                    "primaryobjecttypecode": "navigationsetting",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "7543d474-ac6d-4126-a54c-e84ad2e12f90"
+                },
+                {
+                    "@odata.etag": "W/\"10875695\"",
+                    "primaryobjecttypecode": "appconfig",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "7ed190aa-444f-4b68-a4e2-ea797c329732"
+                },
+                {
+                    "@odata.etag": "W/\"10875737\"",
+                    "primaryobjecttypecode": "sitemap",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "e9a0c1a2-d815-4454-910c-eea88db72b7c"
+                },
+                {
+                    "@odata.etag": "W/\"10875733\"",
+                    "primaryobjecttypecode": "savedqueryvisualization",
+                    "_sdkmessageid_value": "f6bdbb1b-ea3e-db11-86a7-000a3a5473e8",
+                    "sdkmessagefilterid": "c2995c4d-ede4-437a-9f77-f41971c5437a"
+                }
+            ],
+            "sdkmessageid_sdkmessagefilter@odata.nextLink": "[Organization URI]/api/data/v9.2/sdkmessages(f6bdbb1b-ea3e-db11-86a7-000a3a5473e8)/sdkmessageid_sdkmessagefilter?$select=primaryobjecttypecode"
+        }
+    ]
+}
+```
+
+---
+
+> [!NOTE]
+> For certain messages, you may find that placeholder values are returned, such as `DeletedEntity for objectTypeCode=11478` or `new_system_donotuseentity_rp53fd1p1ekxpa_t12_b71d6344c5`. These aren't valid table names. Disregard these values.
+
 
 ### See also
 
