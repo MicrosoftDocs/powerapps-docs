@@ -126,6 +126,7 @@ public static Guid CreateRequestExample(IOrganizationService service)
     };
 
     // Send the request using the IOrganizationService.Execute method
+    // Cast the OrganizationResponse into a CreateResponse
     var response = (CreateResponse)service.Execute(request);
 
     // Return the id property value
@@ -135,7 +136,7 @@ public static Guid CreateRequestExample(IOrganizationService service)
 
 ### Generate classes for custom actions
 
-There are other messages that don't have definitions in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
+There are other messages that don't have classes in the SDK. For example, solutions installed frequently include new message definitions defined as custom actions (custom API or custom process actions). More information: [Create your own messages](../custom-actions.md)
 
 Developers can generate Request and Response classes for the messages found in their environment using the following tools:
 
