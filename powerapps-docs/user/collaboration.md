@@ -26,10 +26,12 @@ Collaborate with colleagues and share links in model-driven Power Apps the same 
 
 When you're working on a record, you can also see other users who are working on the same record.
 
-You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
+You can also select a user's picture to see their online status, send them an email, or start a Teams chat. 
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
+
+This feature uses the Azure Fluid Relay Service (FRS), which must be available in your region. For more information, go to [Azure Fluid Relay Service availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=fluid-relay). Because this feature uses the Azure Fluid Relay Service, users must be able to access fluidrelay.azure.com. 
 
 ### View a user's status and picture
 
