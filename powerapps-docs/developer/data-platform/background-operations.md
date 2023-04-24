@@ -343,29 +343,7 @@ Background operations can be executed with an optional callback URL to get notif
 
 ### [SDK for .NET](#tab/sdk)
 
-Follow steps mentioned in [Register a webhook](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-webhooks?view=op-9-1#register-a-webhook) for message name OnBackgroundOperationComplete in asynchronous mode. Or you can use following XML in your solution to regester your step to get notified.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<SdkMessageProcessingStep Name="**{Step Name}**" SdkMessageProcessingStepId="**{Step Guid}**">
-  <SdkMessageName>OnBackgroundOperationComplete</SdkMessageName>
-  <PluginTypeName>**{Plugin class fully qualified name}**</PluginTypeName>
-  <PluginTypeId>**{Plugin Type Id}**</PluginTypeId>
-  <AsyncAutoDelete>1</AsyncAutoDelete> <!-- Auto delete should be left to 1 so that AOB should be automatically cleaned up. -->
-  <Description>**{Description of step}**</Description>
-  <FilteringAttributes></FilteringAttributes>
-  <InvocationSource>0</InvocationSource>
-  <Mode>1</Mode> <!-- It will always be Asynchronous -->
-  <Rank>1</Rank>
-  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
-  <Stage>40</Stage> <!-- Stage will be always 40 or higher -->
-  <IsCustomizable>0</IsCustomizable>
-  <IsHidden>0</IsHidden>
-  <SupportedDeployment>0</SupportedDeployment>
-  <IntroducedVersion>1.0</IntroducedVersion>
-  <SdkMessageProcessingStepImages />
-</SdkMessageProcessingStep>
-```
+Follow steps mentioned in [Register a webhook](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-webhooks?view=op-9-1#register-a-webhook) for message name OnBackgroundOperationComplete in asynchronous mode. 
 
 ### [Web API](#tab/webapi)
 
