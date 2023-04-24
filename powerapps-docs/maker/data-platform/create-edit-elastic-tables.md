@@ -56,10 +56,10 @@ The following table features aren't available for elastic tables.
 - Many-to-many, N:N, relationships to standard tables.
 - Many-to-one, N:1, relationships when the N table is a standard table (lookup).
 - Custom alternate keys. More information: [Work with alternate keys](/power-apps/developer/data-platform/define-alternate-keys-entity)
-- Table options: Apply duplication detection rules.
 
-Row options not supported with elastic tables:
+Table properties not supported with elastic tables:
 
+- Apply duplication detection rules
 - Can have connections
 - Can have access team
 - Can be added to a queue
@@ -82,7 +82,7 @@ You create an elastic table just like any other new table in Dataverse.
 1. Select **New table** > **New table** on the command bar.
 1. On the right properties pane, expand **Advanced options**.
 1. Select **Elastic** as the table **Type**.
-1. Select the options you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
 
 ## See also
 
