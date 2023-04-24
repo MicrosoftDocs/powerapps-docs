@@ -27,11 +27,11 @@ There are three different ways you can use a message with the SDK for .NET as ex
 
 |Method|Description|
 |---------|---------|
-|[OrganizationRequest & OrganizationResponse classes](#organizationrequest--organizationresponse-classes)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes when you know the message name and details of the input and output parameters.|
-|[SDK Request & Response classes](#sdk-request--response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
+|[OrganizationRequest and OrganizationResponse classes](#organizationrequest-and-organizationresponse-classes)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes when you know the message name and details of the input and output parameters.|
+|[SDK Request & Response classes](#sdk-request-and-response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
 |[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These methods are the quickest and easiest ways to perform most common data operations.|
 
-## OrganizationRequest & OrganizationResponse classes
+## OrganizationRequest and OrganizationResponse classes
 
 You can use a message without SDK Request and Response classes.
 
@@ -86,7 +86,7 @@ This information stored in Dataverse. The [SdkMessage table](../reference/entiti
 
 Dataverse manages information about the input and output parameters in private tables. You don't need to retrieve it because there's an easier way: using the SDK Request and Response classes.
 
-## SDK Request & Response classes
+## SDK Request and Response classes
 
 The SDK for .NET contains definitions for common Dataverse messages in these namespaces:
 
