@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 03/27/2023
+ms.date: 04/20/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -105,6 +105,10 @@ There are three primary record types: Activities, notes, and posts. All record t
 The timeline shows a simple icon before the activity, note, post, and custom table, making it easy for you to identify the record type.
 
 Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
+
+> [!NOTE]
+>
+> When a custom table has a custom icon, activities related to the custom table are displayed using the default custom table icon not the custom icon.
 
 ### Advanced
 
@@ -551,7 +555,8 @@ The following image shows the Activities tab, where you can modify the Timeline 
 ## Configure auto-post messages to display on the timeline
 
 > [!NOTE]
-> The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - Dynamics 365 incudes auto-post rules for some standard tables such as account, contact, lead, and case. It is not possible to create new auto-post rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
 
 You can configure which auto-post messages will appear on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
 
