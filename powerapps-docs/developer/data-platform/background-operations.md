@@ -148,7 +148,7 @@ Background operation has the following columns you can use to check the status o
 |---------|---------|---------|
 |**Background Operation**<br />`backgroundoperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key.|
 |**Status** <br />`StateCode`<br />`backgroundoperationstatecode`|Picklist|State of the background operation.<br />**Options:**<br />Value: `0`, Label: **Ready**<br />Value: `2`, Label: **Locked**<br />Value: `3`, Label: **Completed**|
-|**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value:`31`,Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
+|**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value: `31`, Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
 |**Name**<br />`Name`<br />`name`|String|The name of the background operation.|
 |**DisplayName**<br />`DisplayName`<br />`displayname`|String|The display name of background operation.|
 |**Input Parameters**<br />`InputParameters`<br />`inputparameters`|Memo|The input parameters that were supplied to start background operation.|
@@ -165,21 +165,56 @@ Background operation has the following columns you can use to check the status o
 
 ### Poll the background operation table
 
-//TODO
+After initiating a background operation, you may want to check its status. To do this, you can use an Web API call with an HTTP GET verb on the location URL. This will give you the status of the background operation, and if the operation is complete, it will also provide the output of the Custom API. If there was an error during execution, you will receive an error message and code. This process is commonly known as status polling. We recommend that you avoid excessive polling, as it can have a negative impact on performance. If needed, we suggest polling at an interval of one minute or more.
 
 #### [SDK for .NET](#tab/sdk)
 
-//TODO Example for SDK
+```csharp
+static Entity PollBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
+{
+    // List of columns that will help to get status, output and error details if any
+    var columnSet = new ColumnSet("backgroundoperationstatecode", "backgroundoperationstatuscode", "outputparameters", "errorcode", "errormessage");
+
+    // Get the entity with all the required columns
+    var backgroundOperation = serviceClient.Retrieve("backgroundoperation", backgroundOperationId, columnSet);
+
+    return backgroundOperation;
+}
+```
 
 #### [Web API](#tab/webapi)
 
-//TODO Example for Web API
+**Request**
+
+```http
+GET [Organization URI]/api/backgroundOperation/{backgroundoperationid}
+Content-Type: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  backgroundOperationErrorCode: {INT},
+  backgroundOperationErrorMessage: {string},
+  backgroundOperationStateCode: {INT},
+  backgroundOperationSatusCode: {INT},
+  outputParam1: {value},
+  outputParam2: {value},
+  outputParam3: {value},
+}
+```
+`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` will only be included when an error occurs. `outputParams` will be included when the operation is successfully complete.
 
 ---
 
 ### Request a callback
-
-//TODO
 
 You can specify a URL in your request to recieve a callback when the operation is completed. Dataverse will use this URL to sent a POST request with the following payload:
 
@@ -212,15 +247,15 @@ Set the `ExecuteBackgroundOperation.CallbackUri` parameter to the URL to send th
 static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 {
 
-   CreateRequest createRequest = new CreateRequest
-   {
-         Target = new Entity("account")
-         {
-            Attributes = {
-               {"name","Test Account" }
+    CreateRequest createRequest = new CreateRequest
+    {
+            Target = new Entity("account")
+            {
+                Attributes = {
+                    {"name","Test Account" }
+                }
             }
-         }
-   };
+    };
 
     OrganizationRequest request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
@@ -240,45 +275,84 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-<!-- I don't know if this is right -->
-
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin
-Accept: application/json  
+Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-Prefer: respond-async,callback,odata.include-annotations="*",url="https://webhook.site/<id>"
+Prefer: respond-async;callback;url="https://webhook.site/<id>"
 ```
 
 ---
 
 ## Cancel background operations
 
-//TODO
+If you initiate a background operation, you may sometimes need to cancel its execution. To do so, you can make use of an ODATA call with an HTTP Delete verb on the location URL. If the operation hasn't begun execution yet, the platform won't execute it. However, if the execution has already started, the platform won't abort the operation. Additionally, if an error occurs during the execution, the platform won't retry it even if a cancellation request was made.
 
 ### [SDK for .NET](#tab/sdk)
 
-//TODO Example for SDK
+```csharp
+static void CancelBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
+{
+
+    var backgroundOperation = new Entity("backgroundoperation");
+                    
+    backgroundOperation.Id = backgroundOperationId;
+
+    //Set state as Locked
+    backgroundOperation["backgroundoperationstatecode"] = new OptionSetValue(2); 
+
+    //Set status as Cancelling
+    backgroundOperation["backgroundoperationstatuscode"] = new OptionSetValue(22);
+
+    service.Update(backgroundOperation);
+}
+```
 
 ### [Web API](#tab/webapi)
 
-//TODO Example for Web API
+```http
+DELETE [Organization URI]/api/backgroundOperation/{backgroundoperationid}
+Content-Type: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0
+```
 
 ---
 
 ## Receive notification of result
 
-//TODO
+Background operations can be executed with an optional callback URL to get notified for a specific execution. Alternatively, you can subscribe to the Business Event **OnBackgroundOperationComplete**, which is triggered whenever a background operation is complete.
 
 ### [SDK for .NET](#tab/sdk)
 
-//TODO Example for SDK
+Follow steps mentioned in [Register a webhook](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-webhooks?view=op-9-1#register-a-webhook) for message name OnBackgroundOperationComplete in asynchronous mode. Or you can use following XML in your solution to regester your step to get notified.
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SdkMessageProcessingStep Name="**{Step Name}**" SdkMessageProcessingStepId="**{Step Guid}**">
+  <SdkMessageName>OnBackgroundOperationComplete</SdkMessageName>
+  <PluginTypeName>**{Plugin class fully qualified name}**</PluginTypeName>
+  <PluginTypeId>**{Plugin Type Id}**</PluginTypeId>
+  <AsyncAutoDelete>1</AsyncAutoDelete> <!-- Auto delete should be left to 1 so that AOB should be automatically cleaned up. -->
+  <Description>**{Description of step}**</Description>
+  <FilteringAttributes></FilteringAttributes>
+  <InvocationSource>0</InvocationSource>
+  <Mode>1</Mode> <!-- It will always be Asynchronous -->
+  <Rank>1</Rank>
+  <EventHandlerTypeCode>4602</EventHandlerTypeCode>
+  <Stage>40</Stage> <!-- Stage will be always 40 or higher -->
+  <IsCustomizable>0</IsCustomizable>
+  <IsHidden>0</IsHidden>
+  <SupportedDeployment>0</SupportedDeployment>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <SdkMessageProcessingStepImages />
+</SdkMessageProcessingStep>
+```
 
 ### [Web API](#tab/webapi)
 
-//TODO Example for Web API
-
+Web API is not applicable for notification subscription.
 
 ---
 
