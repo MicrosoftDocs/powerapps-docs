@@ -21,7 +21,7 @@ contributors:
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
-Depending upon whether you have enabled the new look experience (**Try our new look** toggle) for Power Apps home page, select the appropriate tab below to know more.
+Depending upon whether you have enabled the new look experience by using the toggle on the top-right corner of the home page, select the appropriate tab below to know more.
 
 # [Latest](#tab/home-latest)
 
