@@ -281,7 +281,7 @@ GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d16
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-Prefer: respond-async;callback;url="https://webhook.site/<id>"
+Prefer: respond-async, callback; url="https://webhook.site/<id>"
 ```
 **Response**
 
