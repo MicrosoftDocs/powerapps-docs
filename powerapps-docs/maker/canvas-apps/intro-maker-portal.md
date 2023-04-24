@@ -163,6 +163,8 @@ You'll find links to documentation, Power Apps training on Microsoft Learn, the 
 
 Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
+# [Latest](#tab/home-latest)
+
 In Power Apps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from various sources.
@@ -179,6 +181,14 @@ From the **Home** page, you can create apps, websites, chatbots, and AI models:
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
 - [Get started with chatbots](/powerapps/chatbots)
 - [Get started with AI models](/powerapps/use-ai-builder)
+
+# [New look](#tab/home-new-look)
+
+TO DO: Add new content
+
+---
+
+
 
 ## 5 – Ask a virtual agent
 
