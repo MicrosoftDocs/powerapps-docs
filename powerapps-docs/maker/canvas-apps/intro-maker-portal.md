@@ -23,10 +23,10 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 
 Depending upon whether you have enabled the new look experience by using the toggle on the top-right corner of the home page, select the appropriate tab below to know more.
 
-# [Latest](#tab/home-latest)
+# [New look](#tab/home-new-look)
 
 > [!div class="mx-imgBorder"]
-> ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
+> ![Navigation.](media/intro-maker-portal/main-nav-new.png "Navigation")
 
 Legend:
 
@@ -36,10 +36,10 @@ Legend:
 4. [Build apps](#4--build-apps)
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
 
-# [New look](#tab/home-new-look)
+# [Classic](#tab/home-classic)
 
 > [!div class="mx-imgBorder"]
-> ![Navigation.](media/intro-maker-portal/main-nav-new.png "Navigation")
+> ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
 
 Legend:
 
@@ -163,7 +163,11 @@ You'll find links to documentation, Power Apps training on Microsoft Learn, the 
 
 Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
-# [Latest](#tab/home-latest)
+# [New look](#tab/home-new-look)
+
+TO DO: Add new content
+
+# [Classic](#tab/home-classic)
 
 In Power Apps, you can create and run these types of apps:
 
@@ -181,10 +185,6 @@ From the **Home** page, you can create apps, websites, chatbots, and AI models:
 - [Get started with model-driven apps](/powerapps/maker/model-driven-apps/)
 - [Get started with chatbots](/powerapps/chatbots)
 - [Get started with AI models](/powerapps/use-ai-builder)
-
-# [New look](#tab/home-new-look)
-
-TO DO: Add new content
 
 ---
 
