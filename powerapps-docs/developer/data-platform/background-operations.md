@@ -110,7 +110,7 @@ GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d16
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-Prefer: respond-async,odata.include-annotations="*"
+Prefer: respond-async
 ```
 
 The response indicates that the request was accepted and has the state of **Ready** and status reason of **Waiting for Resources**.
@@ -287,7 +287,7 @@ Prefer: respond-async;callback;url="https://webhook.site/<id>"
 
 ## Cancel background operations
 
-If you initiate a background operation, you may sometimes need to cancel its execution. To do so, you can make use of an ODATA call with an HTTP Delete verb on the location URL. If the operation hasn't begun execution yet, the platform won't execute it. However, if the execution has already started, the platform won't abort the operation. Additionally, if an error occurs during the execution, the platform won't retry it even if a cancellation request was made.
+If you initiate a background operation, you may sometimes need to cancel its execution. To do so, you can make use of an Web API call with an HTTP Delete verb on the location URL. If the operation hasn't begun execution yet, the platform won't execute it. However, if the execution has already started, the platform won't abort the operation. Additionally, if an error occurs during the execution, the platform won't retry it if a cancellation request was made.
 
 ### [SDK for .NET](#tab/sdk)
 
