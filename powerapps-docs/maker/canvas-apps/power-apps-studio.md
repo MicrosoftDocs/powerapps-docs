@@ -446,6 +446,4 @@ Use the screen selector to switch between screens when your canvas app has multi
 
 You can zoom in or out while authoring the canvas app. Select **Ctrl**+**0** **Fit to window** to fit the screen size based on the current authoring window size. The zoom percentage or screen size you use while authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
 
-### See also
 
-[Understand Power Apps Studio in Dataverse in a Teams environment](/power-apps/teams/understand-power-apps-studio.md)
