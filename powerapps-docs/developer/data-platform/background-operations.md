@@ -341,7 +341,7 @@ OData-Version: 4.0
 
 Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the Business Event called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
 
-To configure this event, please refer to the [Register a webhook](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-webhooks?view=op-9-1#register-a-webhook) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the AOB record is automatically removed, and set the stage to 40 or higher.
+To configure this event, please refer to the [Register a webhook](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/register-web-hook) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the AOB record is automatically removed, and set the stage to 40 or higher.
 
 ---
 
