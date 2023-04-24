@@ -1,7 +1,7 @@
 ---
 title: "Dependent Assembly plug-ins (preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to include additional assemblies that your plug-in assembly can depend on." # 115-145 characters including spaces. This abstract displays in the search result.
-ms.date: 04/17/2023
+ms.date: 04/20/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: divkamath # GitHub ID
@@ -82,7 +82,7 @@ To use this feature with PAC CLI and PRT, you should use these tools and applica
 |Tool/App|Instructions |
 |---------|---------|
 |**Microsoft Power Platform CLI**|You must have version 1.17 or higher.<br />The preferred installation method is using Visual Studio Code. See [Power Platform Tools](https://aka.ms/ppcvscode).<br /><br />You can also download and install the Windows version here: [https://aka.ms/PowerAppsCLI](https://aka.ms/PowerAppsCLI).<br />If you have already installed the Windows version, make sure you run `pac install latest` to get the latest version.<br /><br />More information: [What is Microsoft Power Platform CLI?](/power-platform/developer/cli/introduction)|
-|**PRT**|You should use version 9.1.0.155 or higher.<br /><br />Use these instructions to install the latest version: [Dataverse development tools](download-tools-nuget.md).|
+|**PRT**|You should use version 9.1.0.184 or higher.<br /><br />Use these instructions to install the latest version: [Dataverse development tools](download-tools-nuget.md).|
 |**Visual Studio**|We require Visual Studio 2019 or newer.|
 
 ### Create a Visual Studio project
@@ -173,7 +173,7 @@ While viewing the list of plugin packages using the **Display by Package** view,
 :::image type="content" source="media/prt-pluginpackage-unregister-command.png" alt-text="Showing the Unregister command while a plugin package is selected.":::
 
 > [!IMPORTANT]
-> Unregistering a package will delete the package, all assemblies within it, all plug-ins within the assembly, and any plug-in step registrations for the plug-ins.
+> You cannot unregister a package that has any plug-in step registrations for any plug-in assemblies in the package. You must first unregister all step registrations for the assemblies in the package before you can delete the package.
 
 ## Use Power Platform Tools for Visual Studio
 
@@ -306,7 +306,22 @@ The following are known issues that should be resolved before dependent assembli
 
 ### Plug-in profiler
 
-You cannot use Plug-in Profiler to debug plug-ins that are part of a plug-in package. More information: [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
+To debug plug-ins that are part of a plug-in package, you must:
+
+1. Use the latest version of the Plug-in Registration tool (PRT). Version 9.1.0.184 or higher.
+
+   Using pac cli, use [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt) with the `--update` switch to update.
+
+1. In the folder that contains the PRT, edit the `appsettings.json` file. Set `LegacyPluginProfiler` to `false`.
+
+   If you have installed using pac cli, the folder should be:
+   
+   `C:\Users\<you>\AppData\Local\Microsoft\PowerPlatform\PRT\9.1.0.184\tools`
+
+More information:
+
+- [pac tool prt](/power-platform/developer/cli/reference/tool#pac-tool-prt)
+- [Use Plug-in profiler](debug-plug-in.md#use-plug-in-profiler)
 
 ### See also
 
