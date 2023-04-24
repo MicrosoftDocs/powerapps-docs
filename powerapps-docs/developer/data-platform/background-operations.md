@@ -341,13 +341,7 @@ OData-Version: 4.0
 
 Background operations can be executed with an optional callback URL to get notified for a specific execution. Alternatively, you can subscribe to the Business Event **OnBackgroundOperationComplete**, which is triggered whenever a background operation is complete.
 
-### [SDK for .NET](#tab/sdk)
-
 Follow steps mentioned in [Register a webhook](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-webhooks?view=op-9-1#register-a-webhook) for message name OnBackgroundOperationComplete in asynchronous mode. 
-
-### [Web API](#tab/webapi)
-
-Web API is not applicable for notification subscription.
 
 ---
 
