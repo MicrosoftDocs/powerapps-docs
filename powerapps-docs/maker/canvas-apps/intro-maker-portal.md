@@ -17,10 +17,13 @@ contributors:
 ---
 
 
-# Get started with Power Apps 
+# Get started with Power Apps
 
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
+Depending upon whether you have enabled the new look experience (**Try our new look** toggle) for Power Apps home page, select the appropriate tab below to know more.
+
+# [Latest](#tab/home-latest)
 
 > [!div class="mx-imgBorder"]
 > ![Navigation.](media/intro-maker-portal/main-nav.png "Navigation")
@@ -31,15 +34,27 @@ Legend:
 2. [Search](#2--search)
 3. [Environment information and settings](#3--environment-information-and-settings)
 4. [Build apps](#4--build-apps)
-5. [Get help from a virtual agent](#5--ask-a-virtual-agent) 
+5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
 
-## 1 – Left navigation pane 
+# [New look](#tab/home-new-look)
+
+> [!div class="mx-imgBorder"]
+> ![Navigation.](media/intro-maker-portal/main-nav-new.png "Navigation")
+
+Legend:
+
+1. [Left navigation pane](#1--left-navigation-pane)
+2. [Search](#2--search)
+3. [Environment information and settings](#3--environment-information-and-settings)
+4. [Build apps](#4--build-apps)
+5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
+
+## 1 – Left navigation pane
 
 Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
 
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
-
 
 Legend:
 
@@ -53,9 +68,9 @@ Legend:
 
 ### Pin and unpin
 
-Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above **More**. 
+Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above **More**.
 
-When you sign in to the new navigation experience, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference. 
+When you sign in to the new navigation experience, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
 
 > [!div class="mx-imgBorder"]
 > ![First time sign in dialog box.](media/intro-maker-portal/left-nav-dialog-2.png "First time signing in")
@@ -70,37 +85,36 @@ You can also unpin and item by selecting the more button and then select **Unpin
 > [!div class="mx-imgBorder"]
 > ![Unpin a page.](media/intro-maker-portal/unpin-page.png "Unpin a page")
 
-### Discover all 
+### Discover all
 
-To see all your your Power Apps, from the left navigation pane, select **More** > **Discover all**. 
+To see all your your Power Apps, from the left navigation pane, select **More** > **Discover all**.
 
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
 
 When you select **Discover all** you'll see the **Discover** page on the left navigation pane. To keep in pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
+
 ### Move up or move down
 
 When you have a few pages pinned in the navigation pane you can start moving them up or down.
 
 To move a page up or down, select the more button next to the page that you want to move, and then select **Move up** or **Move down**.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Move up or down.](media/intro-maker-portal/move-up-down-4.png "Move up or down")
-
 
 ### Power Platform
 
-From the left navigation pane, select **Power Platform** to access Power Platform services such as Power Platform Admin Center, Power BI, and Power Automate. 
+From the left navigation pane, select **Power Platform** to access Power Platform services such as Power Platform Admin Center, Power BI, and Power Automate.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Access Power Platform services.](media/intro-maker-portal/power-platform-services.png "Access Power Platform service")
 
-## 2 – Search 
+## 2 – Search
 
-Use the **Search** to find apps, create apps, or find help documentation. 
+Use the **Search** to find apps, create apps, or find help documentation.
 
 To find your app, start typing one or more characters in the search bar. When you find the app you want, select the banner icon to play or edit the app.
-
 
 ## 3 – Environment information and settings
 
@@ -110,12 +124,12 @@ View your environment information and settings.
 
 For best results, start by ensuring that the home page is set to the right environment. More information [Choose an environment](sign-in-to-power-apps.md#choose-an-environment).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Environment switcher.](media/intro-maker-portal/environment-switcher.png)
 
 ### Notifications
 
-Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire. 
+Select the bell icon to see notifications. Notifications are stored in the notification center until you dismiss them or when they expire.
 
 ### Settings
 
@@ -124,7 +138,7 @@ Select the gear icon to perform tasks such as connecting to data sources, identi
 - **Admin center**: Opens another windows and goes to the Power Platform admin center.
 - **Plans(s)**: View your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
 - **Advanced settings**: Manage your admin settings. More information: [Manage Microsoft Dataverse settings](/power-platform/admin/admin-settings#environment-settings-are-moving).
-- **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more. 
+- **Session details**: View your Power Apps session details such as session ID, tenant ID, environment ID and more.
 - **Developer resources**: Access developer resources.
 - **Power Apps settings**: View or update your language and time settings, notifications, or access directories.
 - **Themes**: From the list of themes, select a theme for your organization.
@@ -143,10 +157,9 @@ In the header, select the question mark icon to find more information about eith
 
 You'll find links to documentation, Power Apps training on Microsoft Learn, the Power Apps Community (where you can share information with users in other organizations), and the Power Apps blog (where the newest features are announced).
 
-
 ## 4 – Build apps
 
-Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes. 
+Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
 In Power Apps, you can create and run these types of apps:
 
