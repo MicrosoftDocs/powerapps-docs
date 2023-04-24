@@ -2,7 +2,7 @@
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
 ms.custom: intro-internal
-ms.date: 03/22/2022
+ms.date: 04/24/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: Anweshi
@@ -139,7 +139,7 @@ OData-Version: 4.0
 
 The Background Operation table contains information about requests that are sent to be processed asynchronously.
 
-<!-- TODO: add link to Entity table reference when regenerated -->
+<!-- TODO: add link to Background Operation Entity table reference when regenerated -->
 
 Background operation has the following columns you can use to check the status of background operations.
 
@@ -216,7 +216,7 @@ OData-Version: 4.0
 
 ### Request a callback
 
-You can specify a URL in your request to recieve a callback when the operation is completed. Dataverse will use this URL to sent a POST request with the following payload:
+You can specify a URL in your request to receive a callback when the operation is completed. Dataverse will use this URL to sent a POST request with the following payload:
 
 ```json
 {
@@ -328,11 +328,19 @@ static void CancelBackgroundOperationRequest(IOrganizationService service, Guid 
 
 ### [Web API](#tab/webapi)
 
+**Request**
+
 ```http
 DELETE [Organization URI]/api/backgroundOperation/{backgroundoperationid}
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
+```
+
+**Response**
+
+```http
+TODO expect it is 200?
 ```
 
 ---
@@ -341,7 +349,7 @@ OData-Version: 4.0
 
 Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the Business Event called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
 
-To configure this event, please refer to the [Register a webhook](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/register-web-hook) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the AOB record is automatically removed, and set the stage to 40 or higher.
+To configure this event, please refer to the [Register a WebHook](register-web-hook.md) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
 
 ---
 
