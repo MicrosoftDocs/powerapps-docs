@@ -4,7 +4,6 @@ description: Learn how to create an elastic Microsoft Dataverse table.
 ms.custom: ""
 ms.date: 04/24/2023
 ms.reviewer: matp
-ms.topic: conceptual
 author: Mattp123
 ms.topic: how-to
 ms.subservice: dataverse-maker
@@ -12,7 +11,14 @@ ms.author: matp
 ---
 # Create and edit elastic tables (preview)
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API as makers and users love with standard tables. They share many aspects and options with standard tables, but they also come with their own unique features and capabilities powered by Azure Cosmos DB.
+
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## When to consider elastic tables?
 
@@ -20,14 +26,22 @@ Imagine you have a custom Dataverse table that is used on a regular basis, which
 
 Elastic tables are designed to handle massive amounts of data in real-time, so you can:
 
-- Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates over 90 M records per hour (25,000/second) have been observed.
+- Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates over 90-M records per hour (25,000/second) have been observed.
 - Store and analyze terabytes or even petabytes of data without worrying about scalability, latency, or performance issues.
 
-## Elastic tables have unique capabilities
+Elastic tables have unique capabilities.
 
-- Partitioning and scaling: Elastic tables use the Cosmos DB partitioning mechanism to horizontally scale out data across multiple physical servers, allowing for high availability, low latency, and scalability. Partitions are the logical units of data that are distributed across multiple physical servers by Dataverse. Each partition contains a subset of the data stored in the database, and the partition key is used to determine which partition a particular piece of data belongs to. Elastic table scaling involves adding or removing physical servers to accommodate increased or decreased workload demand. Dataverse automatically manages the partitioning and distribution of data across these servers, so you don't need to worry about managing individual servers or partitions yourself.
-- Automatic removal of stale data: Time to live (TTL) policies ensure that you are always working with the most up-to-date and accurate information, while optimizing resources and reducing risk. The TTL live value is set in seconds on a record, and it is interpreted as a delta from the time that a record was last modified.
-- Flexible schema with JSON columns: Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. The JSON format is familiar to your web and mobile developers.
+### Partitioning and scaling
+
+Elastic tables use the Cosmos DB partitioning mechanism to horizontally scale out data across multiple physical servers, allowing for high availability, low latency, and scalability. Partitions are the logical units of data that are distributed across multiple physical servers by Dataverse. Each partition contains a subset of the data stored in the database, and the partition key is used to determine which partition a particular piece of data belongs to. Elastic table scaling involves adding or removing physical servers to accommodate increased or decreased workload demand. Dataverse automatically manages the partitioning and distribution of data across these servers, so you don't need to worry about managing individual servers or partitions yourself.
+
+### Automatic removal of stale data
+
+Time to live (TTL) policies ensure that you're always working with the most up-to-date and accurate information, while optimizing resources and reducing risk. The TTL live value is set in seconds on a record, and it's interpreted as a delta from the time that a record was last modified.
+
+### Flexible schema with JSON columns
+
+Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. The JSON format is familiar to your web and mobile developers.
   
 ## Create an elastic table
 
