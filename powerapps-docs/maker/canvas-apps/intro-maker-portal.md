@@ -49,6 +49,8 @@ Legend:
 4. [Build apps](#4--build-apps)
 5. [Get help from a virtual agent](#5--ask-a-virtual-agent)
 
+---
+
 ## 1 – Left navigation pane
 
 Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
