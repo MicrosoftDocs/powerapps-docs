@@ -13,6 +13,10 @@ contributors:
 ---
 # Create chatbots from Power Apps
 
+[!INCLUDE [GDPR DSR Azure note](~/../shared-content/shared/privacy-includes/gdpr-dsr-azure-note.md)]
+
+[!INCLUDE [AI Generation Note](~/../shared-content/shared/ai-generation-attribution.md)]
+
 Power Virtual Agents allows you to quickly create and maintain intelligent chatbots using a no-code interface. App makers can create and manage their chatbots directly from [Power Apps](https://make.powerapps.com). 
 
 ![Chatbots from Power Apps.](media/chatbots.png "Chatbots from Power Apps")
