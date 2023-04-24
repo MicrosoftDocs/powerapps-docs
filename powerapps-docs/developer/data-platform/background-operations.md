@@ -118,7 +118,7 @@ The response indicates that the request was accepted and has the state of **Read
 **Response**
 
 ```http
-HTTP/1.1 200 OK
+HTTP/1.1 202 Accepted
 Content-Type: application/json; odata.metadata=minimal
 Preference-Applied: respond-async
 OData-Version: 4.0
@@ -286,7 +286,7 @@ Prefer: respond-async, callback; url="https://webhook.site/<id>"
 **Response**
 
 ```http
-HTTP/1.1 200 OK
+HTTP/1.1 202 Accepted
 Content-Type: application/json; odata.metadata=minimal
 Preference-Applied: callback
 OData-Version: 4.0
