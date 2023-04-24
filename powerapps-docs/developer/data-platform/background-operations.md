@@ -64,15 +64,15 @@ Does it have to be a Custom API?
 static void SendRequestAsynchronously(IOrganizationService service)
 {
 
-   CreateRequest createRequest = new CreateRequest
-   {
-         Target = new Entity("account")
-         {
-            Attributes = {
-               {"name","Test Account" }
+    CreateRequest createRequest = new CreateRequest
+    {
+            Target = new Entity("account")
+            {
+                Attributes = {
+                    {"name","Test Account" }
+                }
             }
-         }
-   };
+    };
 
     OrganizationRequest request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
@@ -146,7 +146,7 @@ Background operation has the following columns you can use to check the status o
 
 |Display Name<br />`SchemaName`<br />`LogicalName`|Type |Description|
 |---------|---------|---------|
-|**Background Operation**<br />`backgroundoperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key.|
+|**Background Operation**<br />`BackgroundOperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key.|
 |**Status** <br />`StateCode`<br />`backgroundoperationstatecode`|Picklist|State of the background operation.<br />**Options:**<br />Value: `0`, Label: **Ready**<br />Value: `2`, Label: **Locked**<br />Value: `3`, Label: **Completed**|
 |**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value: `31`, Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
 |**Name**<br />`Name`<br />`name`|String|The name of the background operation.|
@@ -275,6 +275,7 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
+**Request**
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin
 Content-Type: application/json  
@@ -282,7 +283,23 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0  
 Prefer: respond-async;callback;url="https://webhook.site/<id>"
 ```
+**Response**
 
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+Preference-Applied: callback
+OData-Version: 4.0
+
+{
+   backgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884,
+   backgroundOperationStateCode@OData.Community.Display.V1.FormattedValue": "Ready",
+   backgroundOperationStateCode: 0,
+   backgroundOperationStatusCode@OData.Community.Display.V1.FormattedValue": "Waiting For Resources",
+   backgroundOperationStatusCode: 0,
+   location: [Organization URI]/api/data/v9.2/backgroundoperations(f86f8700-6e21-4a39-aa6a-db3bb306b884)
+}
+```
 ---
 
 ## Cancel background operations
