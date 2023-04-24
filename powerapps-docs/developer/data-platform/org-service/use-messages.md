@@ -28,10 +28,13 @@ There are three different ways you can use a message with the SDK for .NET as ex
 |Method|Description|
 |---------|---------|
 |[OrganizationRequest and OrganizationResponse classes](#organizationrequest-and-organizationresponse-classes)| Use these classes when you don't have SDK Request and Response classes. You might prefer to use this approach rather than generating SDK Request and Response classes when you know the message name and details of the input and output parameters.|
-|[SDK Request & Response classes](#sdk-request-and-response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
+|[SDK Request and Response classes](#sdk-request-and-response-classes)|Using these classes is the most common way you use messages. Many messages already have classes defined in the SDK for .NET. For custom actions, you can generate classes.|
 |[IOrganizationService methods](#iorganizationservice-methods)|The <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides some methods for common data operations. These methods are the quickest and easiest ways to perform most common data operations.|
 
 ## OrganizationRequest and OrganizationResponse classes
+
+> [!NOTE]
+> Using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes isn't the most common way to use messages in Dataverse. However, these classes demonstrate how messages are implemented. Understanding this is important to understand how other parts of Dataverse work.
 
 You can use a message without SDK Request and Response classes.
 
@@ -88,6 +91,8 @@ Dataverse manages information about the input and output parameters in private t
 
 ## SDK Request and Response classes
 
+SDK Request and Response classes reduce the complexity of using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. You don't need to know the name of the message and the input and output parameters because the classes have them included.
+
 The SDK for .NET contains definitions for common Dataverse messages in these namespaces:
 
 |Namespace|Description|
@@ -97,11 +102,11 @@ The SDK for .NET contains definitions for common Dataverse messages in these nam
 
 These classes contain properties for all the input and output parameters.
 
-- The classes ending with *Request contain the properties for input parameters.
+- The classes ending with `*Request` contain the properties for input parameters.
 
    These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
 
-- The classes ending with *Response contain the properties for output parameters.
+- The classes ending with `*Response` contain the properties for output parameters.
 
    These classes inherit from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
