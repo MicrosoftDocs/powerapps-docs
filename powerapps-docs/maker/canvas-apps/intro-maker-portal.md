@@ -26,7 +26,7 @@ Depending upon whether you have enabled the new look experience by using the tog
 # [New look](#tab/home-new-look)
 
 > [!div class="mx-imgBorder"]
-> ![Navigation.](media/intro-maker-portal/main-nav-new.png "Navigation")
+> ![Navigation with new look](media/intro-maker-portal/homepage-new-look.png "Home page navigation")
 
 Legend:
 
