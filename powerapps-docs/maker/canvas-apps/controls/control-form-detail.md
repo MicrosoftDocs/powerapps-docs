@@ -179,7 +179,7 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 ## More information
 - For a comprehensive overview of how forms work, see [Understand data forms](../working-with-forms.md).
-- See the [Power Fx formula reference for EditForm](https://learn.microsoft.com/power-platform/power-fx/reference/function-form).
+- See the [Power Fx formula reference for EditForm](/power-platform/power-fx/reference/function-form).
 
 ## Accessibility guidelines
 ### Screen reader support
