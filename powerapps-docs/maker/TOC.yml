@@ -10,14 +10,14 @@
       href: signup-for-powerapps.md
     - name: Request a Power Apps license
       href: ../user/request-license.md
-    - name: Sign up for Developer Plan
-      href: developer-plan.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
     href: ./canvas-apps/intro-maker-portal.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: Get your developer environment
+    href: maker-create-environment.md
   - name: Power Apps preview program
     href: powerapps-preview-program.md
   - name: System requirements, limits, and configuration
@@ -504,10 +504,14 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-reference.md
             - name: Limitations of modern controls 
               href: ./canvas-apps/controls/modern-controls/limitations-modern-controls.md
+            - name: Badge
+              href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md  
+            - name: Date picker
+              href: ./canvas-apps/controls/modern-controls/modern-controls-date-picker.md
             - name: Dropdown
               href: ./canvas-apps/controls/modern-controls/modern-control-dropdown.md
             - name: Info button
@@ -516,6 +520,8 @@
               href: ./canvas-apps/controls/modern-controls/modern-control-link.md
             - name: Progress bar
               href: ./canvas-apps/controls/modern-controls/modern-control-progress-bar.md
+            - name: Radio group
+              href: ./canvas-apps/controls/modern-controls/modern-controls-radio-group.md
             - name: Spinner
               href: ./canvas-apps/controls/modern-controls/modern-control-spinner.md
             - name: Tabs or tab list
@@ -1759,7 +1765,7 @@
         href: ../mobile/setup-mobile-offline.md 
       - name: Enable and use offline-first (preview)
         href: ../mobile/work-in-offline-mode.md 
-    - name: View offline sync status (preview)
+    - name: View offline sync status
       href: ../mobile/offline-sync-icon.md
     - name: Sync data in the background
       href: ../mobile/sync-data-offline-background.md
@@ -1786,11 +1792,11 @@
     - name: Understand portals architecture
       items:
          - name: Understand portals lifecycle
-           href: ./portals/admin/portal-lifecycle.md
+           href: /power-pages/admin/lifecycle
          - name: Understand how portals connects to Microsoft Dataverse
-           href: ./portals/admin/connectivity.md
+           href: /power-pages/admin/connectivity
          - name: Understand and clear server-side cache in portals
-           href: ./portals/admin/clear-server-side-cache.md
+           href: /power-pages/admin/clear-server-side-cache
     - name: Create and manage portals
       items:
         - name: Available portal templates
@@ -2122,8 +2128,6 @@
               href: ./portals/configure/assign-entity-permissions.md
             - name: Configure table permissions using portals Studio
               href: ./portals/configure/entity-permissions-studio.md
-            - name: "Tutorial: Configure table permissions using portals Studio"
-              href: ./portals/configure/entity-permissions-studio-walkthrough.md
             - name: Configure column permissions
               href: ./portals/configure/column-permissions.md              
             - name: Manage page permissions
@@ -2270,8 +2274,6 @@
           href: /power-pages/admin/migrate-site-configuration
     - name: Compliance and accessibility
       items:
-        - name: Implement GDPR in portals
-          href: /power-pages/configure/implement-gdpr
         - name: Cookies used by portal
           href: /power-pages/admin/cookies
         - name: Accessibility in portals
@@ -2409,8 +2411,8 @@
       href: ./data-platform/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Table"
       items:
-      - name: How to create tables using solution explorer
-        href: ./data-platform/create-edit-entities-solution-explorer.md
+      - name: Automatically add columns to forms and views
+        href: ./data-platform/update-forms-and-views.md
       - name: How to open table data in Excel
         href: ./data-platform/data-platform-excel-addin.md
       - name: How to define alternate keys
@@ -2429,6 +2431,8 @@
         href: ./data-platform/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual table
         href: ./data-platform/virtual-entity-walkthrough-using-odata-provider.md
+      - name: How to create tables using solution explorer
+        href: ./data-platform/create-edit-entities-solution-explorer.md        
   - name: Work with table relationships
     href: ./data-platform/relationships-overview.md
     items:
@@ -2664,6 +2668,8 @@
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
+    - name: Use managed identities for Azure (preview)
+      href: ./data-platform/azure-synapse-link-msi.md        
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
     - name: Application Lifecycle Management
@@ -2691,7 +2697,7 @@
       - name: Read Incremental Updates
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with serverless SQL pool
-        href: ./data-platform/azure-synapse-link-choices-serverless.md      
+        href: ./data-platform/azure-synapse-link-choices-serverless.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory

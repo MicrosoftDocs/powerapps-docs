@@ -3,7 +3,6 @@ title: formatDateShort | Microsoft Docs
 description: Returns a string represents the datetime value after being formatted. Result pattern is based on culture. In USA it is represented as MM/DD/YYYY.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

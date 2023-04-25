@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 03/16/2023
+ms.date: 03/31/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -12,14 +12,10 @@ ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 1
 ms.author: sericks
 author: sericks007
-manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
   - enduser
-search.app: 
-  - D365CE
-  - D365Sales
 contributors:
 - joliedes 
 ---
@@ -118,6 +114,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     Any views that have linked tables (related table) that are not available offline are also not supported.
 
+- **Advanced lookups**: The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
+
 - **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command will be hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command will not work in offline.
 
 - **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
@@ -138,6 +136,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 - **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
 - **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
+
+- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 

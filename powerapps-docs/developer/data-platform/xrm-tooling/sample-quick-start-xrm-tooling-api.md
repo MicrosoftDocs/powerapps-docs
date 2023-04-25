@@ -5,15 +5,11 @@ ms.date: 01/31/2023
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
-manager: jstrauss
 ms.topic: sample
 applies_to:
   - "Dynamics 365 (online)"
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke

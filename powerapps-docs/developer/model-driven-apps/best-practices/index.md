@@ -9,9 +9,6 @@ ms.subservice: mda-developer
 ms.author: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Best practices and guidance for model-driven apps

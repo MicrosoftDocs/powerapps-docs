@@ -1,5 +1,5 @@
 ---
-title: Use the Search pane (preview)
+title: Use the Search pane
 description: Learn how to use the Search pane inside Power Apps Studio to find text.
 author: TashasEv
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: tashas
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - TashasEv
@@ -96,7 +94,11 @@ Search result:
 
 :::image type="content" source="media/search/variables-1.png" alt-text="Global and context variables available in search result.":::
 
-Depending on the selected global or context variable, you're taken to the information screen for the selected type of variable.
+If you're using the preview version of Power Apps Studio, select the **Context variables** or **Global variables** to see more information about the variable.
+
+:::image type="content" source="media/search/global-context-variables.png" alt-text="Selecting a global or context variable takes you to the information screen.":::
+
+If you're using the classic version of Power Apps Studio, depending on the selected global or context variable, you're taken to the information screen for the selected type of variable.
 
 Global variable selected:
 
@@ -105,6 +107,7 @@ Global variable selected:
 Context variable selected:
 
 :::image type="content" source="media/search/local-variable-1.png" alt-text="Selecting a context variable takes you to the information screen of the selected context variables.":::
+
 
 ### Collections
 

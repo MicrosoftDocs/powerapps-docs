@@ -2,7 +2,6 @@
 title: "Search options in Microsoft Dataverse| MicrosoftDocs"
 description: Learn how to to use the different search option
 author: sericks
-manager: tapanm-MSFT
 
 ms.component: pa-user
 ms.topic: conceptual
@@ -14,9 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Compare search options in Microsoft Dataverse

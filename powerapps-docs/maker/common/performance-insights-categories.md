@@ -13,11 +13,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: common
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Understanding insights (preview)
 

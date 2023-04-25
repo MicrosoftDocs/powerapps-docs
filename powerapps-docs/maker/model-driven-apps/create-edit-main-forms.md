@@ -16,12 +16,8 @@ ms.assetid: <needs new guid>
 caps.latest.revision: 18
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create or edit a model-driven app main form for a table
 

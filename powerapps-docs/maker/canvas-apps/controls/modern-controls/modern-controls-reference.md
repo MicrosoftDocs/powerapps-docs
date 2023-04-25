@@ -13,14 +13,12 @@ ms.author: yogupt
 
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - yogeshgupta698
 ---
 
-# Modern controls and properties in canvas apps
+# Modern controls and properties in canvas apps (preview)
 
 [This article is pre-release document and is subject to change.]
 
@@ -29,9 +27,13 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 ## Modern Controls
 
+**[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
+
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
+
+**[Date picker](modern-controls-date-picker.md)** - A control that the user can select to specify a date.
 
 **[Dropdown](modern-control-dropdown.md)** – Select a value from the list of items.
 
@@ -39,9 +41,12 @@ Configure the behavior of a modern control by setting one of its properties. Eac
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
 
-**[Progress Bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
+**[Progress bar](modern-control-progress-bar.md)** – Displays the progress, can be configured as determinate showcasing exact progress or indeterminate for ongoing progress.
 
 **[Spinner](modern-control-spinner.md)** – Displays state in motion, for exmaple, loading a page or table.
+
+
+**[Radio group](modern-controls-radio-group.md)** – An input control that shows multiple options, of which users can select only one at a time.
 
 **[Tabs or tab list](modern-control-tabs-or-tabs-list.md)** – Select a tab to move screens or take action on app.
 

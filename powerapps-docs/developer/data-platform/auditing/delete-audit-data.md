@@ -7,12 +7,8 @@ ms.topic: overview
 author: paulliew # GitHub ID
 ms.subservice: dataverse-developer
 ms.author: paulliew # MSFT alias of Microsoft employees only
-manager: mayadu # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
  - phecke

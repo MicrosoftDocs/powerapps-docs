@@ -13,8 +13,6 @@ ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
 ---
 
 # Create push notifications for the Power Apps mobile app using Power Automate

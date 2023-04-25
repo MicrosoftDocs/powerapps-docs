@@ -11,8 +11,6 @@ ms.subservice: canvas-maker
 ms.author: chmoncay
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - chmoncay
   - tahoon-ms
