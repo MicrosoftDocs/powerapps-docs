@@ -13,7 +13,7 @@ ms.author: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API as makers and users love with standard tables. They share many aspects and options with standard tables, but they also come with their own unique features and capabilities powered by Azure Cosmos DB.
+An elastic table is a table managed by the Microsoft Dataverse storage service. Elastic tables come with the same familiar user experience and API that are offered with standard tables. They share many aspects and options with standard tables, but come with their own unique features and capabilities that are powered by Azure Cosmos DB.
 
 > [!IMPORTANT]
 > This is a preview feature.
@@ -26,10 +26,10 @@ Imagine you have a custom Dataverse table that regularly imports large numbers o
 
 Elastic tables are designed to handle massive amounts of data in real-time, so you can:
 
-- Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates of more than 90-M records per hour (25,000/second) is possible.
+- Import and process data streams quickly and at scale, without impacting other Dataverse traffic. Ingestion rates of more than 90-M records per hour (25,000/second) are possible.
 - Store and analyze terabytes or even petabytes of data without worrying about scalability, latency, or performance issues.
 
-Elastic tables have unique capabilities.
+Elastic tables have unique capabilities for partitioning and scaling, removal of stale data, and JSON support.
 
 ### Partitioning and scaling
 
@@ -47,7 +47,7 @@ Elastic tables enable you to store and query data with varying structures, witho
 
 Elastic tables don't provide the same level transaction support as standard tables. Standard tables support strong, consistent transactions support. Elastic tables support what is called *eventual consistency* for transactions, which means that updates made to the database might take some time to propagate to all nodes in the system. This is relevant when you plan to use asynchronous operations, such as Power Automate flows. More information: [Eventual consistency](/azure/cosmos-db/consistency-levels#eventual-consistency).
 
-Elastic tables do support most of the table options supported by standard tables, such as record ownership, change tracking, auditing, mobile offline, Dataverse search and long term data retention.
+Elastic tables do support most of the table properties supported by standard tables, such as record ownership, change tracking, auditing, mobile offline, Dataverse search and long term data retention.
 
 ### Table features not supported
 
@@ -72,7 +72,7 @@ Column data types not supported with elastic tables:
 - File
 - Formula
 - Whole number format other than None (Duration, Language code, and Time zone)
-- Lookup based on the **Customer** option.
+- Lookup based on the Customer option.
 
 ## Create an elastic table
 
