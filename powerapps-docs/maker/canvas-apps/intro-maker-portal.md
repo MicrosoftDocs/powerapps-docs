@@ -175,7 +175,11 @@ Depending upon whether you have the new look turned on, select the appropriate t
 
 If your organization has [AI enabled](ai-overview.md) then you will see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md). 
 
+To create an app, select from the following options:
 
+- **Start with data**: Lets you upload an Excel file, build your own table, select a Dataverse table, or choose from external data source to start building your app. More informaton: [tbd]()
+- **Choose a page tempalte**: Select how you want the app to look by selecting a page template to help you start buiding your app. More informaton: [tbd]()
+- **Pick an app template**: Choose from a fully functional app and then customized it based on your organization needs. More informaton: [tbd]()
 
 
 # [Classic](#tab/home-classic)
