@@ -22,7 +22,7 @@ The Power Apps grid control represents the next evolution of the Power Apps read
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
 > [!IMPORTANT]
-> This feature is generally available with the April 2023 release. 
+> This feature is generally available with the April 2023 release.
 
 ## Add the Power Apps grid control to views for an entity
 
