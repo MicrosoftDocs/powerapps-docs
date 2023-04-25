@@ -51,20 +51,20 @@ Elastic tables do support most of the table properties supported by standard tab
 
 ### Table features not supported
 
-The following table features aren't available for elastic tables.
+Table features not available with elastic tables:
 
 - Many-to-many, N:N, relationships to standard tables.
 - Many-to-one, N:1, relationships when the N table is a standard table (lookup).
 - Custom alternate keys. More information: [Work with alternate keys](/power-apps/developer/data-platform/define-alternate-keys-entity)
 
-Table properties not supported with elastic tables:
+Table properties not available with elastic tables:
 
 - Apply duplication detection rules
 - Can have connections
 - Can have access team
 - Can be added to a queue
 
-Column data types not supported with elastic tables:
+Column data types not available with elastic tables:
 
 - Single line of text
 - Choice
