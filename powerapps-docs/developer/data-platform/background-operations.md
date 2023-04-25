@@ -55,37 +55,28 @@ The `ExecuteBackgroundOperation` message has the following response properties:
 
 The following static method sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> using `ExecuteBackgroundOperation`.
 
-<!-- I'm using a CreateRequest b/c it is simpler in explaining the use of this message w/o introducing some random Custom API. Most People know what a CreateRequest does. 
-
-Does it have to be a Custom API?
--->
-
 ```csharp
 static void SendRequestAsynchronously(IOrganizationService service)
 {
+    //Create a request for main workload i.e. Custom API that need to run in background
+    var asyncRequest = new new OrganizationRequest("UniqueNameOfSomeCustomApi");
 
-    CreateRequest createRequest = new CreateRequest
-    {
-            Target = new Entity("account")
-            {
-                Attributes = {
-                    {"name","Test Account" }
-                }
-            }
-    };
+    //Setting parameters of main workload
+    createAccountRequest.Parameters["inputParam1"] = $"Some Name"; 
 
-    OrganizationRequest request = new OrganizationRequest("ExecuteBackgroundOperation")
+    //Create a request to execute main workload in background
+    var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
         Parameters = {
-            {"Request", createRequest }
+            {"Request", asyncRequest }
         }
     };
 
+    //Issue a background operation request
     var response = service.Execute(request);
 
     Console.WriteLine($"BackgroundOperationId: {response["BackgroundOperationId"]}");
     Console.WriteLine($"Location: {response["Location"]}");
-
 }
 ```
 
@@ -93,7 +84,7 @@ static void SendRequestAsynchronously(IOrganizationService service)
 
 ```
 BackgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884
-Location: [Organization URI]/api/data/v9.2/backgroundoperations(f86f8700-6e21-4a39-aa6a-db3bb306b884)
+Location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
 ```
 
 
@@ -107,9 +98,8 @@ The following example uses the `sample_IsSystemAdmin` custom api described in [S
 
 ```http
 GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+Content-Type: application/json
+Accept: application/json
 Prefer: respond-async
 ```
 
@@ -119,17 +109,13 @@ The response indicates that the request was accepted and has the state of **Read
 
 ```http
 HTTP/1.1 202 Accepted
-Content-Type: application/json; odata.metadata=minimal
 Preference-Applied: respond-async
-OData-Version: 4.0
+x-ms-dyn-backgroundoperationid: f86f8700-6e21-4a39-aa6a-db3bb306b884
+location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
 
 {
    backgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884,
-   backgroundOperationStateCode@OData.Community.Display.V1.FormattedValue": "Ready",
-   backgroundOperationStateCode: 0,
-   backgroundOperationStatusCode@OData.Community.Display.V1.FormattedValue": "Waiting For Resources",
-   backgroundOperationStatusCode: 0,
-   location: [Organization URI]/api/data/v9.2/backgroundoperations(f86f8700-6e21-4a39-aa6a-db3bb306b884)
+   location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
 }
 ```
 
@@ -173,13 +159,54 @@ After initiating a background operation, you may want to check its status. To do
 static Entity PollBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
 {
     // List of columns that will help to get status, output and error details if any
-    var columnSet = new ColumnSet("backgroundoperationstatecode", "backgroundoperationstatuscode", "outputparameters", "errorcode", "errormessage");
+    var columnSet = new ColumnSet(
+        "backgroundoperationstatecode", 
+        "backgroundoperationstatuscode", 
+        "outputparameters", 
+        "errorcode", 
+        "errormessage");
 
     // Get the entity with all the required columns
     var backgroundOperation = serviceClient.Retrieve("backgroundoperation", backgroundOperationId, columnSet);
 
+    Console.Writeline($"State Code: {backgroundOperation.FormattedValues["backgroundoperationstatecode"]}");
+	Console.Writeline($"Status Code: {backgroundOperation.FormattedValues["backgroundoperationstatuscode"]}");
+	Console.Writeline($"Output Parameters: {backgroundOperation["outputparameters"]}");
+	Console.Writeline($"Error Code: {backgroundOperation.GetAttributeValue<string>("errorcode")}");
+	Console.Writeline($"Error Message: {backgroundOperation.GetAttributeValue<string>("errormessage")}");
+
     return backgroundOperation;
 }
+```
+
+**Waiting Output**
+
+```Output
+State Code: 2
+Status Code:  20
+Output Parameters:  
+Error Code:  
+Error Message:  
+```
+
+**Complete Output**
+
+```Output
+State Code: 3
+Status Code:  30
+Output Parameters:  { "outputParam1": "sample string value", "outputParam2": 12345 }
+Error Code:  
+Error Message:  
+```
+
+**Error Output**
+
+```Output
+State Code: 3
+Status Code:  31
+Output Parameters: 
+Error Code:  500
+Error Message:  This is a sample error message 
 ```
 
 #### [Web API](#tab/webapi)
@@ -187,7 +214,7 @@ static Entity PollBackgroundOperationRequest(IOrganizationService service, Guid 
 **Request**
 
 ```http
-GET [Organization URI]/api/backgroundOperation/{backgroundoperationid}
+GET [Organization URI]/api/backgroundoperation/{backgroundoperationid}
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -246,30 +273,26 @@ Set the `ExecuteBackgroundOperation.CallbackUri` parameter to the URL to send th
 ```csharp
 static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 {
+    //Create a request for main workload i.e. Custom API that need to run in background
+    var asyncRequest = new new OrganizationRequest("UniqueNameOfSomeCustomApi");
 
-    CreateRequest createRequest = new CreateRequest
-    {
-            Target = new Entity("account")
-            {
-                Attributes = {
-                    {"name","Test Account" }
-                }
-            }
-    };
+    //Setting parameters of main workload
+    createAccountRequest.Parameters["inputParam1"] = $"Some Name"; 
 
-    OrganizationRequest request = new OrganizationRequest("ExecuteBackgroundOperation")
+    //Create a request to execute main workload in background
+    var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
         Parameters = {
-            {"Request", createRequest },
+            {"Request", asyncRequest },
             {"CallbackUri", "https://webhook.site/<id>" }
         }
     };
 
+    //Issue a background operation request
     var response = service.Execute(request);
 
     Console.WriteLine($"BackgroundOperationId: {response["BackgroundOperationId"]}");
     Console.WriteLine($"Location: {response["Location"]}");
-
 }
 ```
 
@@ -277,27 +300,22 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 
 **Request**
 ```http
-GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin
-Content-Type: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
+GET [Organization URI]/api/data/v9.2/UniqueNameOfSomeCustomApi
+Content-Type: application/json
+Accept: application/json
 Prefer: respond-async, callback; url="https://webhook.site/<id>"
 ```
 **Response**
 
 ```http
 HTTP/1.1 202 Accepted
-Content-Type: application/json; odata.metadata=minimal
 Preference-Applied: callback
-OData-Version: 4.0
+x-ms-dyn-backgroundoperationid: f86f8700-6e21-4a39-aa6a-db3bb306b884
+location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
 
 {
    backgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884,
-   backgroundOperationStateCode@OData.Community.Display.V1.FormattedValue": "Ready",
-   backgroundOperationStateCode: 0,
-   backgroundOperationStatusCode@OData.Community.Display.V1.FormattedValue": "Waiting For Resources",
-   backgroundOperationStatusCode: 0,
-   location: [Organization URI]/api/data/v9.2/backgroundoperations(f86f8700-6e21-4a39-aa6a-db3bb306b884)
+   location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
 }
 ```
 ---
@@ -329,7 +347,7 @@ static void CancelBackgroundOperationRequest(IOrganizationService service, Guid 
 ### [Web API](#tab/webapi)
 
 ```http
-DELETE [Organization URI]/api/backgroundOperation/{backgroundoperationid}
+DELETE [Organization URI]/api/backgroundoperation/{backgroundoperationid}
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -341,7 +359,7 @@ OData-Version: 4.0
 
 Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the Business Event called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
 
-To configure this event, please refer to the [Register a webhook](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/register-web-hook) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the AOB record is automatically removed, and set the stage to 40 or higher.
+To configure this event, please refer to the [Register a webhook](https://learn.microsoft.com/power-apps/developer/data-platform/register-web-hook) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the AOB record is automatically removed, and set the stage to 40 or higher.
 
 ---
 
