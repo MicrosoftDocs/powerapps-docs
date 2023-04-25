@@ -28,6 +28,10 @@ The [Power Fx documentation](/power-platform/power-fx/overview) is the primary s
 
 ## Known limitations of using Power Fx in cards
 
+This section discusses the limitations with Power Fx in cards.
+
+### Supported expressions
+
 The following table lists the Power Fx formulas that don't work in cards or have limitations. All other functions are fully supported.
 
 | Power Fx formula | Supported in cards | 
@@ -35,9 +39,7 @@ The following table lists the Power Fx formulas that don't work in cards or have
 | [Set](/power-platform/power-fx/reference/function-set) | Yes<br><br>Requires the variable to exist and the variable type to match what you're trying to set it to.|
 | [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) | Yes<br><br>Requires the variable to exist and the variable type to match what you're trying to set it to. |
 | [Defaults](/power-platform/power-fx/reference/function-defaults) | No <br><br> Use [Collect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#collect) instead, for example, instead of `Patch(account, Defaults(account), {"Account Name": "Example Account"})` use `Collect(account, {"Account Name": "Example Account"})`. |
-| [User()](/power-platform/power-fx/reference/function-user) | No <br><br>Instead use **Viewer**, which has a subset of information about the user viewing the card. |
-| [Clear](/power-platform/power-fx/reference/function-clear-collect-clearcollect#clear) | No |  
-| [ClearCollect](/power-platform/power-fx/reference/function-clear-collect-clearcollect#clearcollect) | No | 
+| [User](/power-platform/power-fx/reference/function-user) | Yes <br><br>You can also use **Viewer**, which has a similar subset of information about the user viewing the card. |
 | [Update](/power-platform/power-fx/reference/function-update-updateif#update-function) | No | 
 | [UpdateIf](/power-platform/power-fx/reference/function-update-updateif#updateif-function) | No | 
 | Device sensor formulas ([Acceleration, App, Compass, Connection, and Location](/power-platform/power-fx/reference/signals)) | No | 
@@ -78,7 +80,6 @@ The following table lists the Power Fx formulas that don't work in cards or have
 | Errors | No | 
 | HashTags | No | 
 | ISOWeekNum | No | 
-| Language | No | 
 | MatchAll | No | 
 | Refresh | No | 
 | RGBA | No | 
@@ -88,3 +89,15 @@ The following table lists the Power Fx formulas that don't work in cards or have
 | SetProperty | No | 
 | Download | No | 
 | SetFocus | No | 
+
+### Large tables (delegation)
+
+Working with large data sets in cards can impact performance. Take heed of delegation warnings. Learn more about [delegation](/power-apps/maker/canvas-apps/delegation-overview).
+
+Today, cards supports delegating the following functions:
+
+- LookUp
+
+### Dataverse types
+
+Cards do not support Image, URL, File, or ManagedProperty column types yet.
