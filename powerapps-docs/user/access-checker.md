@@ -70,10 +70,11 @@ The admin, owner of the record, or users who have access to a row can share the 
 
 To see who has access to a row and their respective access level, complete the following steps.
 
-There are two database settings for each environment to enable the **Who has access** feature. [Install the **OrganizationSettingsEditor** tool](environment-database-settings.md#install-the-organizationsettingseditor-tool) and set the following options to true:
- 
-- **IsAccessCheckerAllUsersEnabled**: This allows the admin to see who has access to the row.
-- **IsAccessCheckerNonAdminAllUsersEnabled**: This allows the admin, owner of the record, and users who have access to the row to see who has access.
+> [!Note]
+> There are two database settings for each environment that enable the **Who has access** feature. System adminstrators can [Install the **OrganizationSettingsEditor** tool](environment-database-settings.md#install-the-organizationsettingseditor-tool) and set the following options to true:
+> 
+> - **IsAccessCheckerAllUsersEnabled**: This allows the admin to see who has access to the row.
+> - **IsAccessCheckerNonAdminAllUsersEnabled**: This allows the admin, owner of the record, and users who have access to the row to see who has access.
 
 1. Select a row and then select **Edit** on the command bar.
 
