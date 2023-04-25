@@ -22,7 +22,7 @@ contributors:
 The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) home page offers you various options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities like creating custom connections to specific data sources.
 
 
-A new version of the home page is being rolled out that provides a better app creation experience. If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features. The new look is on by default. However, you can turn it off by using the toggle on the top-right corner of the home page.
+A new version of the home page is being rolled out which provides a better app creation experience. If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features. The new look is on by default. However, you can turn it off by using the toggle on the top-right corner of the home page.
 
 > [!div class="mx-imgBorder"]
 > ![New look](media/intro-maker-portal/new-look-toggle.png "New look toggle")
@@ -169,11 +169,14 @@ You'll find links to documentation, Power Apps training on Microsoft Learn, the 
 
 Start building apps, which provide rich business logic and workflow capabilities to transform your manual business operations into digital, automated processes.
 
-Depending upon whether you have the new look turn on, select the appropriate tab below to know more.
+Depending upon whether you have the new look turned on, select the appropriate tab below to know more.
 
 # [New look](#tab/home-new-look)
 
-TO DO: Add new content
+If your organization has [AI enabled](ai-overview.md) then you will see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md). 
+
+
+
 
 # [Classic](#tab/home-classic)
 
