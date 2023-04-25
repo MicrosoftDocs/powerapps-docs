@@ -17,7 +17,7 @@ ms.collection:
 
 Variables store data for reuse. The data can be of different types, like collection, text, or a number. Variables have unique names, which is how you refer to them in [Power Fx formulas](../../make-a-card/power-fx/intro-to-pfx.md). Insert, modify, and remove them in the [card designer](../designer-overview.md).
 
-The value of a variable can be temporary, reset for each card session, or permanent, shared across all sessions of a specific card instance.
+The value of a variable can be temporary, reset for each card session, or permanent, shared across all sessions of a specific card instance. Temporary variables are different for each card session, even for a single user, meaning if you have the same card instance sent to you in a chat and a channel, a temporary variable could be different across those two sessions.
 
 As an example, you've created a card that counts how many times the user presses a button during a session. You would create a temporary number variable to store the number of button presses in the current instance of the card. If you also want to capture the name of the last user to press a button in a card instance, you would store it in a permanent text variable. If you further want to save the data between card instances, you would use a [data connection](../connectors/connector-intro.md).
 
