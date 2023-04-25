@@ -177,7 +177,7 @@ If your organization has [AI enabled](ai-overview.md) then you will see AI assis
 
 To create an app, select from the following options:
 
-- **Start with data**: Lets you upload an Excel file, build your own table, select a Dataverse table, or choose from external data source to start building your app. More informaton: [tbd]()
+- **Start with data**: Lets you upload an [Excel file](get-started-create-from-data), [build your own table], select a [Dataverse table](data-platform-create-app.md), or choose from external data source to start building your app. More informaton: [tbd]()
 - **Choose a page tempalte**: Select how you want the app to look by selecting a page template to help you start buiding your app. More informaton: [tbd]()
 - **Pick an app template**: Choose from a fully functional app and then customized it based on your organization needs. More informaton: [tbd]()
 
