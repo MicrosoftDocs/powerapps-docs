@@ -2,7 +2,7 @@
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
 ms.custom: intro-internal
-ms.date: 03/22/2022
+ms.date: 04/24/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: Anweshi
@@ -19,7 +19,7 @@ contributors:
 
 [!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
 
-Use background operations to send requests that Dataverse will process asynchronously. Dataverse will immediately respond that the request was accepted and provide you with several ways to monitor whether the request ultimately succeeds and to retrieve the result, if any.
+Use background operations to send requests that Dataverse processes asynchronously. Dataverse immediately responds that the request is accepted and provides you with several ways to monitor whether the request ultimately succeeds. You can also retrieve the result, if any.
 
 <!-- Need some information about whether these are actually limited to custom api and why that may be. Many of our system messages are now implemented as custom api. Usually, the caller doesn't need to know how they are defined. -->
 
@@ -44,13 +44,13 @@ The `ExecuteBackgroundOperation` message has the following request parameters:
 |Name  |Type|Description  |
 |---------|---------|---------|
 |`Request`|[OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest)|(Required) The request you want to have processed asynchronously.|
-|`CallbackUri`|string| (Optional) Dataverse will send a POST HTTP request to this Url when the operation is completed. More information: [Request a callback](#request-a-callback)|
+|`CallbackUri`|string| (Optional) Dataverse sends a POST HTTP request to this Url when the operation is completed. More information: [Request a callback](#request-a-callback)|
 
 The `ExecuteBackgroundOperation` message has the following response properties:
 
 |Name|Type|Description |
 |---------|---------|---------|
-|`BackgroundOperationId`|Guid| The id of the background operation table row you can use to monitor the processing of your request. |
+|`BackgroundOperationId`|Guid| The ID of the background operation table row you can use to monitor the processing of your request. |
 |`Location`|string| The URL to use to retrieve the status of your request|
 
 The following static method sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> using `ExecuteBackgroundOperation`.
@@ -123,35 +123,35 @@ location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3
 
 ## Monitor background operations
 
-The Background Operation table contains information about requests that are sent to be processed asynchronously.
+The Background Operation table contains information about requests to process asynchronously.
 
-<!-- TODO: add link to Entity table reference when regenerated -->
+<!-- TODO: add link to Background Operation Entity table reference when regenerated -->
 
 Background operation has the following columns you can use to check the status of background operations.
 
 
 |Display Name<br />`SchemaName`<br />`LogicalName`|Type |Description|
 |---------|---------|---------|
-|**Background Operation**<br />`BackgroundOperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key.|
+|**Background Operation**<br />`BackgroundOperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key|
 |**Status** <br />`StateCode`<br />`backgroundoperationstatecode`|Picklist|State of the background operation.<br />**Options:**<br />Value: `0`, Label: **Ready**<br />Value: `2`, Label: **Locked**<br />Value: `3`, Label: **Completed**|
 |**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value: `31`, Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
 |**Name**<br />`Name`<br />`name`|String|The name of the background operation.|
 |**DisplayName**<br />`DisplayName`<br />`displayname`|String|The display name of background operation.|
 |**Input Parameters**<br />`InputParameters`<br />`inputparameters`|Memo|The input parameters that were supplied to start background operation.|
-|**Output Parameters**<br />`OutputParameters`<br />`outputparameters`|Memo|The response of background operation.|
-|**Start Time**<br />`StartTime`<br />`starttime`|DateTime|When the background operation started execution.|
-|**End Time**<br />`EndTime`<br />`endtime`|DateTime|When the background operation finished execution.|
+|**Output Parameters**<br />`OutputParameters`<br />`outputparameters`|Memo|The response of background operation|
+|**Start Time**<br />`StartTime`<br />`starttime`|DateTime|When the background operation started execution|
+|**End Time**<br />`EndTime`<br />`endtime`|DateTime|When the background operation finished execution|
 |**Retry Count**<br />`RetryCount`<br />`retrycount`|Integer|The number of times background operation was retried.
-|**Error Code**<br />`ErrorCode`<br />`errorcode`|Integer|The error code of error for background operation in case of failure.|
-|**Error Message**<br />`ErrorMessage`<br />`errormessage`|Memo|The error message of error for background operation in case of failure. |
-|**Run As**<br />`RunAs`<br />`runas`|String|The system user identity of user (systemuser entity - systemuserid attribute) which was used to execute background operation.|
-|**Created On**<br />`CreatedOn`<br />`createdon`|DateTime|When the record was created.|
-|**Time to live**<br />`TTLInSeconds`<br />`ttlinseconds`|Integer|Time to live in seconds after which the record will be automatically deleted. Default value is 90 days.|
+|**Error Code**<br />`ErrorCode`<br />`errorcode`|Integer|The error code when the background operation fails|
+|**Error Message**<br />`ErrorMessage`<br />`errormessage`|Memo|The error message when the background operation fails|
+|**Run As**<br />`RunAs`<br />`runas`|String|The `systemuserid` of the `systemuser` used to execute the background operation|
+|**Created On**<br />`CreatedOn`<br />`createdon`|DateTime|When the record was created|
+|**Time to live**<br />`TTLInSeconds`<br />`ttlinseconds`|Integer|Time to live in seconds after which the record is automatically deleted. Default value is 90 days|
 
 
 ### Poll the background operation table
 
-After initiating a background operation, you may want to check its status. To do this, you can use an Web API call with an HTTP GET verb on the location URL. This will give you the status of the background operation, and if the operation is complete, it will also provide the output of the Custom API. If there was an error during execution, you will receive an error message and code. This process is commonly known as status polling. We recommend that you avoid excessive polling, as it can have a negative impact on performance. If needed, we suggest polling at an interval of one minute or more.
+After initiating a background operation, you may want to check its status. To do check the status, you send a Web API GET request to the location URL. This request returns the status of the background operation, and if the operation is complete, it provides the output of the Custom API. If there was an error during execution, you receive an error message and code. This process is commonly known as status polling. We recommend that you avoid excessive polling because it can negatively impact performance. If needed, we suggest polling at an interval of one minute or more.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -231,19 +231,19 @@ OData-Version: 4.0
   backgroundOperationErrorCode: {INT},
   backgroundOperationErrorMessage: {string},
   backgroundOperationStateCode: {INT},
-  backgroundOperationSatusCode: {INT},
+  backgroundOperationStatusCode: {INT},
   outputParam1: {value},
   outputParam2: {value},
   outputParam3: {value},
 }
 ```
-`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` will only be included when an error occurs. `outputParams` will be included when the operation is successfully complete.
+`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values are only included when an error occurs. `outputParams` is only included when the operation completes successfully.
 
 ---
 
 ### Request a callback
 
-You can specify a URL in your request to recieve a callback when the operation is completed. Dataverse will use this URL to sent a POST request with the following payload:
+You can specify a URL in your request to receive a callback when the operation is completed. Dataverse uses this URL to send a `POST` request with the following payload:
 
 ```json
 {
@@ -256,15 +256,13 @@ You can specify a URL in your request to recieve a callback when the operation i
 }
 ```
 
-`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` will only be included when an error occurs.
+`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs.
 
 > [!NOTE]
-> - If the URL requires authentication, the URL must be a self-sufficient shared access signature (SAS)  URL. It isn't possible to include any additional headers to include API keys or tokens for authentication. More information: [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview)
+> - If the URL requires authentication, the URL must be a self-sufficient shared access signature (SAS) URL. It isn't possible to include any additional headers to include API keys or tokens for authentication. More information: [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview)
 > - You may want to use a site like [webhook.site](https://webhook.site/) to test the callback URL.
 
 The following examples show sending a request using a webhook to [webhook.site](https://webhook.site/) for testing:
-
-
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -346,11 +344,19 @@ static void CancelBackgroundOperationRequest(IOrganizationService service, Guid 
 
 ### [Web API](#tab/webapi)
 
+**Request**
+
 ```http
 DELETE [Organization URI]/api/backgroundoperation/{backgroundoperationid}
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
+```
+
+**Response**
+
+```http
+TODO expect it is 200?
 ```
 
 ---
@@ -359,10 +365,10 @@ OData-Version: 4.0
 
 Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the Business Event called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
 
-To configure this event, please refer to the [Register a webhook](https://learn.microsoft.com/power-apps/developer/data-platform/register-web-hook) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, please set the 'Auto Delete' to 'true' so that the AOB record is automatically removed, and set the stage to 40 or higher.
+To configure this event, refer to the [Register a WebHook](register-web-hook.md) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
 
 ---
 
 ## Retries
 
-If an error occurs during execution of the request it will be retried up to three times. These retries will use a [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).
+If an error occurs during execution of the request, it is retried up to three times. These retries use a [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).
