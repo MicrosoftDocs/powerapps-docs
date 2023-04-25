@@ -115,7 +115,7 @@ The same guidelines for the **[Button](control-button.md)** control apply to the
 
 ## Select() barcode reader control
 
-The barcode reader control does not support Select() yet. As a workaround, set the barcode reader fill color to transparent and put it in front of the control you wanted to select the barcode reader with. This will result in the same experience for the app user where clicking the control launches the barcode reader experience as they will be clicking an invisible barcode reader button instead of the actual control.
+The barcode reader control doesn't support Select(). As a workaround, set the barcode reader fill color to transparent and put it in front of the control you wanted to select the barcode reader with. This will result in the same experience for the app user where selecting the control launches the barcode reader experience as they will be selecting an invisible barcode reader button instead of the actual control.
 
 ### See also
 
