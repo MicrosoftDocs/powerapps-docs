@@ -52,6 +52,4 @@ Sending a card in Teams requires a card instance. To get a card instance, use th
 
 ## Common issues and resolutions
 
-1. When you select a card from the drop-down to create a card instance, the connector action can sometimes show the error **GetCardDescription failed with InternalServerError**. This is a transient error, you need to try again and reselect a card.
-
-2. If your card doesn't have any input variables, it will show an empty body parameter after selecting a card to create an instance of. You can ignore that parameter and continue building your flow.
+1. If your card doesn't have any input variables, it will show an empty body parameter after selecting a card to create an instance of. You can ignore that parameter and continue building your flow.
