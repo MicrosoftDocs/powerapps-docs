@@ -113,9 +113,9 @@ Email descriptions (body of the email) have up to this point been stored in the 
 
 ### Transition period
 
-The data migration from Dataverse relation store to Azure Blob storage for all customers is expected to start in May 2023. This data migration will take place as a background process. The initial data movement for existing customers will take a period of 2 to 6 weeks, and possibly even longer depending on the size of the data. After the initial data movement, any remaining migration is a continuous process. All email descriptions older than 12 months will be moved into Azure blob storage automatically.
+The data migration from Dataverse relation store to Azure Blob storage for all customers is expected to start in May 2023. This data migration will take place as a background process. The initial data movement for existing customers is expected to last for about 6 to 12 weeks, and possibly even longer depending on the size of the data. After the initial data movement, any remaining migration is a continuous process. All email descriptions older than 12 months will be moved into Azure blob storage automatically.
 
-This data migration will be transparent to you with the exception that you will see a reduction in the size of the [ActivityPointer](reference/entities/activitypointer.md) table after the migration process is fully completed.
+This data migration will be transparent to you with the exception that you will see a reduction in the size of the [ActivityPointer](reference/entities/activitypointer.md) table after the migration process is fully completed. In Power Platform admin center within the **Capacity** report, a new email line item will be available in **File usage**.
 
 The limitations mentioned in the next section will start applying to any data that has already moved to the Dataverse managed Azure blob storage even if all the data movement is not complete.
 
