@@ -5,7 +5,7 @@ Keywords: object checker, checker, solution checker, solution issue
 author: caburk
 ms.author: caburk
 ms.reviewer: matp
-ms.date: 03/09/2023
+ms.date: 04/25/2023
 ms.topic: how-to
 search.audienceType: 
   - maker
@@ -37,7 +37,13 @@ Object checker runs real-time diagnostics on component objects within your solut
 
 ## Current limitations
 
-Object checker currently only works with model-driven app and site map components.
+- Object checker currently only works with model-driven app and site map components.
+
+- Object Checker rules might fail if customizations haven't been published. When this condition occurs, the following exception can be observed in the '**Multiple sitemaps detection rule**':
+
+    ```text
+    Exception encountered while executing rule: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The value passed for ConditionOperator.In is empty.
+    ```
 
 ### See also
 
