@@ -72,7 +72,8 @@ static void SendRequestAsynchronously(IOrganizationService service)
     //Create a request to execute main workload in background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
-        Parameters = {
+        Parameters = 
+        {
             {"Request", asyncRequest }
         }
     };
@@ -196,7 +197,7 @@ static void PollBackgroundOperationRequest(IOrganizationService service, Guid ba
     }
     catch (Exception error)
     {
-        Console.WriteLine($"Background operation  with id '{backgroundOperationId}' could not be found! Request failed with '{error.Message}'");
+        Console.WriteLine($"Background operation with id '{backgroundOperationId}' could not be found! Request failed with '{error.Message}'");
     }
 }
 ```
@@ -307,7 +308,8 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
     //Create a request to execute main workload in background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
-        Parameters = {
+        Parameters = 
+        {
             {"Request", asyncRequest },
             {"CallbackUri", "https://webhook.site/<id>" }
         }
