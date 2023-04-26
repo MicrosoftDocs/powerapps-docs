@@ -8,7 +8,7 @@ The include files may be used for the following values of ms.service:
 
 ## How to use the shared content repo
 
-Full instructions for [using include files](/help/platform/includes-best-practices?branch=main) are in the Learn contributors guide. Here's a quick summary of how to use the shared content repo for BAP Skilling include files.
+Full instructions for [using include files](https://review.learn.microsoft.com/help/platform/includes-best-practices?branch=main) are in the Learn contributors guide. Here's a quick summary of how to use the shared content repo for BAP Skilling include files.
 
 1. Create a folder in **MicrosoftDocs/powerapps-docs-pr/shared**.
 
