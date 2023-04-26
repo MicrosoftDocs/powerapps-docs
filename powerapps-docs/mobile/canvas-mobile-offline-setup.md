@@ -156,6 +156,42 @@ To create an offline profile, follow these steps:
 
 12. Select **Save** to add the table to your profile so you can continue editing it.
 
+## Create a canvas offline app
+
+To make it easier, we’ve create an offline template that we recommend you to use for each page of the app. The template contains a navigation bar with a placeholder for the name of the app and the Globe icon that gives the user a quick view of the server connectivity and sync state, putting offline at the center of the experience so that the user always knows whether your device and data are ready to go. 
+
+As soon as the app is enabled for offline, a new page created from the offline template is automatically inserted:  
+
+(Image goes here.)
+
+You can also add a new page from this template as any other template: 
+  
+(Image goes here.)
+
+The Globe icon of the template uses different icons depending on the PowerFx Connection.Sync function. You can also create your own icon and set the “Icon” property to: 
+
+```
+Switch(Connection.Sync, 
+
+   ConnectionSync.Connected, Icon.Globe,  
+
+   ConnectionSync.ConnectedWithWarning, Icon.GlobeWarning, 
+
+   ConnectionSync.ConnectedPendingUpsync, Icon.GlobeChangesPending, 
+
+   ConnectionSync.ConnectedError, Icon.GlobeError, 
+
+   ConnectionSync.ConnectedRefresh, Icon.GlobeRefresh, 
+
+   ConnectionSync.NotConnected, Icon.GlobeNotConnected,  
+
+   ConnectionSync.NotConnectedWithWarning, Icon.GlobeWarning, 
+
+   ConnectionSync.NotConnectedPendingUpsync, Icon.GlobeChangesPending, 
+
+   ConnectionSync.NotConnectedSyncError, Icon.GlobeError) 
+```
+
 ## Limitations and known issues
 
 - The auto-generated offline profile does not handle filters. As a result, for each table used in the app, it downloads **all** rows that the user has permissions on.
