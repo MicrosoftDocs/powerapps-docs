@@ -59,10 +59,15 @@ The following static method sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateReque
 static void SendRequestAsynchronously(IOrganizationService service)
 {
     //Create a request for main workload i.e. Custom API that need to run in background
-    var asyncRequest = new new OrganizationRequest("UniqueNameOfSomeCustomApi");
+    var asyncRequest = new new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation");
 
     //Setting parameters of main workload
-    createAccountRequest.Parameters["inputParam1"] = $"Some Name"; 
+    createAccountRequest.Parameters["FetchXml"] =  @"<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+                                                            <entity name='account'>
+                                                                <attribute name='accountid'/>
+                                                                <attribute name='name'/>  
+                                                            </entity>
+                                                        </fetch>"; 
 
     //Create a request to execute main workload in background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
@@ -97,10 +102,19 @@ The following example uses the `sample_IsSystemAdmin` custom api described in [S
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/systemusers(4026be43-6b69-e111-8f65-78e7d1620f5e)/Microsoft.Dynamics.CRM.sample_IsSystemAdmin
+POST [Organization URI]/api/data/v9.2/sample_ExportDataUsingFetchXmlToAnnotation 
 Content-Type: application/json
 Accept: application/json
 Prefer: respond-async
+
+{
+    "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+                    <entity name='account'>
+                        <attribute name='accountid'/>
+                        <attribute name='name'/>  
+                    </entity>
+                </fetch>"
+}
 ```
 
 The response indicates that the request was accepted and has the state of **Ready** and status reason of **Waiting for Resources**.
@@ -123,7 +137,7 @@ location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3
 
 ## Monitor background operations
 
-The Background Operation table contains information about requests to process asynchronously.
+The Background Operation table contains information about requests to process asynchronously. It is identified by the entity name `backgroundoperation` and the entity set name `backgroundoperations`.
 
 <!-- TODO: add link to Background Operation Entity table reference when regenerated -->
 
@@ -148,6 +162,9 @@ Background operation has the following columns you can use to check the status o
 |**Created On**<br />`CreatedOn`<br />`createdon`|DateTime|When the record was created|
 |**Time to live**<br />`TTLInSeconds`<br />`ttlinseconds`|Integer|Time to live in seconds after which the record is automatically deleted. Default value is 90 days|
 
+### Required Access
+
+To perform the background operation, the user initiating it must be granted read and write access to the `backgroundoperation` table. This access can be granted by assigning the `prvReadbackgroundoperation` and `prvWritebackgroundoperation` privileges for read and write, respectively.
 
 ### Poll the background operation table
 
@@ -156,7 +173,7 @@ After initiating a background operation, you may want to check its status. To do
 #### [SDK for .NET](#tab/sdk)
 
 ```csharp
-static Entity PollBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
+static void PollBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
 {
     // List of columns that will help to get status, output and error details if any
     var columnSet = new ColumnSet(
@@ -166,24 +183,29 @@ static Entity PollBackgroundOperationRequest(IOrganizationService service, Guid 
         "errorcode", 
         "errormessage");
 
-    // Get the entity with all the required columns
-    var backgroundOperation = serviceClient.Retrieve("backgroundoperation", backgroundOperationId, columnSet);
+    try
+    {
+        // Get the entity with all the required columns
+        var backgroundOperation = serviceClient.Retrieve("backgroundoperation", backgroundOperationId, columnSet);
 
-    Console.Writeline($"State Code: {backgroundOperation.FormattedValues["backgroundoperationstatecode"]}");
-	Console.Writeline($"Status Code: {backgroundOperation.FormattedValues["backgroundoperationstatuscode"]}");
-	Console.Writeline($"Output Parameters: {backgroundOperation["outputparameters"]}");
-	Console.Writeline($"Error Code: {backgroundOperation.GetAttributeValue<string>("errorcode")}");
-	Console.Writeline($"Error Message: {backgroundOperation.GetAttributeValue<string>("errormessage")}");
-
-    return backgroundOperation;
+        Console.WriteLine($"State Code: {backgroundOperation.FormattedValues["backgroundoperationstatecode"]}");
+        Console.WriteLine($"Status Code: {backgroundOperation.FormattedValues["backgroundoperationstatuscode"]}");
+        Console.WriteLine($"Output Parameters: {backgroundOperation["outputparameters"]}");
+        Console.WriteLine($"Error Code: {backgroundOperation.GetAttributeValue<string>("errorcode")}");
+        Console.WriteLine($"Error Message: {backgroundOperation.GetAttributeValue<string>("errormessage")}");
+    }
+    catch (Exception error)
+    {
+        Console.WriteLine($"Background operation  with id '{backgroundOperationId}' could not be found! Request failed with '{error.Message}'");
+    }
 }
 ```
 
 **Waiting Output**
 
 ```Output
-State Code: 2
-Status Code:  20
+State Code: Locked
+Status Code:  In Progress
 Output Parameters:  
 Error Code:  
 Error Message:  
@@ -192,9 +214,9 @@ Error Message:
 **Complete Output**
 
 ```Output
-State Code: 3
-Status Code:  30
-Output Parameters:  { "outputParam1": "sample string value", "outputParam2": 12345 }
+State Code: Completed
+Status Code:  Succeeded
+Output Parameters:  [{ "Key" : "outputParam1",  "Value" : "sample string value" }, { "Key" : "outputParam2",  "Value" : 12345 } }]
 Error Code:  
 Error Message:  
 ```
@@ -202,8 +224,8 @@ Error Message:
 **Error Output**
 
 ```Output
-State Code: 3
-Status Code:  31
+State Code: Completed
+Status Code:  Failed
 Output Parameters: 
 Error Code:  500
 Error Message:  This is a sample error message 
@@ -252,7 +274,7 @@ You can specify a URL in your request to receive a callback when the operation i
    backgroundOperationStatusCode: {INT},
    backgroundOperationErrorCode: {INT},
    backgroundOperationErrorMessage: {string},
-   location:{locationURL}
+   location: {locationURL}
 }
 ```
 
@@ -272,10 +294,15 @@ Set the `ExecuteBackgroundOperation.CallbackUri` parameter to the URL to send th
 static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 {
     //Create a request for main workload i.e. Custom API that need to run in background
-    var asyncRequest = new new OrganizationRequest("UniqueNameOfSomeCustomApi");
+    var asyncRequest = new new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation");
 
     //Setting parameters of main workload
-    createAccountRequest.Parameters["inputParam1"] = $"Some Name"; 
+    createAccountRequest.Parameters["FetchXml"] =  @"<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+                                                            <entity name='account'>
+                                                                <attribute name='accountid'/>
+                                                                <attribute name='name'/>  
+                                                            </entity>
+                                                        </fetch>";
 
     //Create a request to execute main workload in background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
@@ -298,10 +325,19 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 
 **Request**
 ```http
-GET [Organization URI]/api/data/v9.2/UniqueNameOfSomeCustomApi
+POST [Organization URI]/api/data/v9.2/sample_ExportDataUsingFetchXmlToAnnotation 
 Content-Type: application/json
 Accept: application/json
 Prefer: respond-async, callback; url="https://webhook.site/<id>"
+
+{
+    "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
+                    <entity name='account'>
+                        <attribute name='accountid'/>
+                        <attribute name='name'/>  
+                    </entity>
+                </fetch>"
+}
 ```
 **Response**
 
@@ -356,7 +392,12 @@ OData-Version: 4.0
 **Response**
 
 ```http
-TODO expect it is 200?
+HTTP/1.1 200 Ok
+
+{
+    backgroundOperationStateCode: 2,
+    backgroundOperationSatusCode: 22
+}
 ```
 
 ---
