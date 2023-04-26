@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/21/2023
+ms.date: 04/26/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -165,3 +165,5 @@ To create an offline profile, follow these steps:
 - Dataverse files and images are not supported in an offline-enabled canvas app.
 
 - Some Dataverse tables aren't supported in offline mode. More information: [Mobile offline capabilities and limitations](offline-capabilities.md)
+
+- Items in a gallery may appear in a different order in an offline-enabled app if no sort order is selected. Choose a sort order in the gallery control to ensure that the app behaves consistently in mobile apps and web browsers.
