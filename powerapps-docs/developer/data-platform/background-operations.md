@@ -25,6 +25,8 @@ Use background operations to send requests that Dataverse processes asynchronous
 
 Send a request this way when you don't want to maintain a connection awaiting a potentially long running operations.
 
+In order to showcase the utilization of background operations, we have employed a Custom API called `sample_ExportDataUsingFetchXmlToAnnotation`. This API is designed to retrieve all the data using the provided FetchXML input parameter, create a CSV file, and attach it to a record within the annotation entity. Afterward, the Custom API will return the ID of the newly created record. You can obtain a copy of this sample by downloading it from this [link](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
+
 > [!NOTE]
 > This pattern doesn't allow for operations defined by custom apis to exceed the 2 minute time limit for plug-ins.
 
@@ -217,7 +219,7 @@ Error Message:
 ```Output
 State Code: Completed
 Status Code:  Succeeded
-Output Parameters:  [{ "Key" : "outputParam1",  "Value" : "sample string value" }, { "Key" : "outputParam2",  "Value" : 12345 } }]
+Output Parameters:  [{ "Key" : "AnnotationId",  "Value" : "E084A32F-A5F1-4263-B2E8-5DE1AB4BB26A" }]
 Error Code:  
 Error Message:  
 ```
@@ -231,6 +233,8 @@ Output Parameters:
 Error Code:  500
 Error Message:  This is a sample error message 
 ```
+
+If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web Service Error Codes](https://learn.microsoft.com/power-apps/developer/data-platform/reference/web-service-error-codes). However, if the error is not caused by the platform, its value will be set to zero.
 
 #### [Web API](#tab/webapi)
 
@@ -406,9 +410,9 @@ HTTP/1.1 200 Ok
 
 ## Receive notification of result
 
-Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the Business Event called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
+Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the SDK Message called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
 
-To configure this event, refer to the [Register a WebHook](register-web-hook.md) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
+To configure this message, refer to the [Register a plug-in](https://learn.microsoft.com/power-apps/developer/data-platform/register-plug-in) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
 
 ---
 
