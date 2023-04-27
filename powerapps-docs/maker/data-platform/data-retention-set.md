@@ -25,22 +25,31 @@ The following prerequisites must be completed before you can set a table for lon
 
 ### Ensure the table has been enabled for long term retention
 
-By default, the following tables are enabled for retention. Before setting up a retention policy, we recommend that you make sure the parent (root) table you want has been enabled for long term retention.
+Only managed environments can use the long term data retention feature. More information: [Managed environments overview](/power-platform/admin/managed-environment-overview)
 
-|Table type  | Tables  |
-|---------|---------|
-|Standard     |  Account Contact, Case<sup>1</sup>, Opportunity<sup>1</sup>, Lead<sup>1</sup>, Quote<sup>1</sup>, Order<sup>1</sup>, Invoice<sup>1</sup>     |
-|Activity  |  Activity Party, Activity Mime Attachment, Appointment, CampaignActivity<sup>1</sup>, CampaignResponse<sup>1</sup>, Chat, Email, Fax, Letter, Phone Call, RecurringAppointmentMaster, ServiceAppointment<sup>1</sup>        |
+### Prerequisite 2: Enable an environment for long term retention
 
 <sup>1</sup>Requires a Dynamics 365 customer engagement app, such as Dynamics 365 Sales or Dynamics 365 Marketing.
 
-> [!WARNING]
-> Changing the data state to retained is a one-way process for the for table data. When data is retained long term in Dataverse, the retained row data can't be switched back into the Dataverse live (active) data store.
+> [!IMPORTANT]
+> - By default, Dataverse long term retention is enabled in all Power Platform environments.
+>
+> - If an environment isn't enabled for long term retention, you can't set up a retention policy.
+
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
+1. Select the environment you want to use for long term data retention.
+1. Select **Settings** > **Product** > **Features**.
+1. Scroll down, and select **Long term data retention in Dataverse**.
+1. Select **Save**.
+
+## Prerequisite 3: Enable a table for long term retention
+
+Makers can enable or disable data retention for any table. Before setting up a retention policy to retain historical cold data (non-active data) long term in a Dataverse long term storage, makers should enable retention for the parent root table.
 
 > [!NOTE]
 > When a parent table is enabled for retention, all the cascade related child tables are automatically enabled. You can't disable retention for a child table when the parent table is already enabled for retention. For example, assume a custom table and notes table are child tables of the case table. These child tables can't be disabled for retention when the parent case table is enabled. A maker can disable the parent table for retention and separately enable the child tables for retention.
 
-Enable a table for long term data retention of historical cold data:
+Some tables, such as the case <sup>1</sup> table, have long term retention enabled by default.
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to **Tables**, and then open the table you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 1. Select **Properties** on the command bar, expand **Advanced options**, and then select the **Enable long term retention** property.
@@ -49,7 +58,10 @@ Enable a table for long term data retention of historical cold data:
 
 The parent and any child tables will be available for policy setup in about 15-30 minutes after you save the table. The larger the number of child tables, the longer it  takes to complete the process.
 
-### Determine the Dataverse views for policy criteria
+> [!NOTE]
+> The long term retention property is disabled if the environment isn't enabled for long term retention. More information: [Prerequisite 2: Enable an environment for long term retention](#prerequisite-2-enable-an-environment-for-long-term-retention)
+
+### Prerequisite 4: Create Dataverse views for policy criteria
 
 Dataverse views are used to determine which table rows are marked for retention using a long-term retention policy. Before setting up a data retention policy, you must set up a Dataverse view as the criteria for retention.
 

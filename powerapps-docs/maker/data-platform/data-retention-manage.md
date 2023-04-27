@@ -54,7 +54,7 @@ There are a few ways you can view retained data.
 1. Play a model-driven app, and then open advanced find. 
 1. At the top of the advanced find pane, select **Change to retained data**.
    :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the advanced find pane.":::
-1. Select tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
+1. Select the tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
 ### View retained data using a flow
 
@@ -65,7 +65,7 @@ Use the Power Automate cloud flow template to generate and retrieve retained dat
 This restrictions are enforced by Dataverse for each environment:
 
 - Up to five users can query and retrieve retained data at the same time.
-- ‘Admin’ role or ‘global entity access’ role on table required to retrieve retained data <!-- Do you mean global read access to the Entity privilege? -->
+- Environment admin role or ‘global entity access’ role on table required to retrieve retained data <!-- Do you mean global read access to the Entity privilege? -->
 - Up to 30 queries per day are allowed for each environment.
 - Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
