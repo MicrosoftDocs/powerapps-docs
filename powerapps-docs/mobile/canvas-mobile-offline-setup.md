@@ -4,7 +4,7 @@ description: This article explains how to set up mobile offline for canvas apps.
 author: trdehove
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/26/2023
+ms.date: 04/27/2023
 ms.subservice: mobile
 ms.author: trdehove
 ms.custom: ""
@@ -162,11 +162,11 @@ To make it easier, we’ve create an offline template that we recommend you to u
 
 As soon as the app is enabled for offline, a new page created from the offline template is automatically inserted:  
 
-(Image goes here.)
+:::image type="content" source="media/new-page.png" alt-text="The template contains a navigation bar with a placeholder for the name of the app and the Globe icon that gives the user a quick view of the server connectivity and sync state":::
 
 You can also add a new page from this template as any other template: 
   
-(Image goes here.)
+:::image type="content" source="media/offline-template.png" alt-text="Select the Offline template.":::
 
 The Globe icon of the template uses different icons depending on the PowerFx Connection.Sync function. You can also create your own icon and set the “Icon” property to: 
 
