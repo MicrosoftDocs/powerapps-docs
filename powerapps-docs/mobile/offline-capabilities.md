@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 04/21/2023
+ms.date: 04/27/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -185,7 +185,7 @@ Ensure that you have configured at least one of the Profile rules for each table
 |-------------|---------|  
 |All Records|	If you are selecting this filter, you cannot define any other filter rule.|
 |Download Related Data only|If you are selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for an table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
+|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 
 
