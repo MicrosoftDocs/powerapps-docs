@@ -496,12 +496,15 @@ static void OutputTablesForMessage(IOrganizationService service, string messageN
         }
     };
 
-    EntityCollection results = service.RetrieveMultiple(query);
+            EntityCollection results = service.RetrieveMultiple(query);
+            List<string> names = new List<string>();
 
-    foreach (var entity in results.Entities)
-    {
-        Console.WriteLine(((AliasedValue)entity["sdkmessagefilter.primaryobjecttypecode"]).Value);
-    }
+            foreach (var entity in results.Entities)
+            {
+                names.Add(((AliasedValue)entity["sdkmessagefilter.primaryobjecttypecode"]).Value as string);
+            }
+
+            names.Distinct().ToList().ForEach(name => Console.WriteLine(name));
 }
 ```
 
