@@ -19,7 +19,7 @@ contributors:
 This sample shows how to write a plug-in that supports a Custom API 
 named `sample_ExportDataUsingFetchXmlToAnnotation`.
 You can download the sample from 
-[here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
+[here](https://github.com/Microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
 
 The plug-in provides logic for the main operation of the Custom API. 
 The `sample_ExportDataUsingFetchXmlToAnnotation` custom api retrieves data using 
@@ -41,11 +41,11 @@ There are two ways to create the custom api:
 
 ### Import the managed solution file
 
-The `ExportDataUsingFetchXmlToAnnotation_1_0_0_0_managed.zip` in this folder contains the `sample_ExportDataUsingFetchXmlToAnnotation` Custom API that uses this code, and a cleanup API `sample_CleanupExportedDataAnnotations`. You can simply import this solution file to create the Custom API in your organization.  See [Import solutions](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) for instructions.
+The `ExportDataUsingFetchXmlToAnnotation_1_0_0_0_managed.zip` in this folder contains the `sample_ExportDataUsingFetchXmlToAnnotation` Custom API that uses this code, and a cleanup API `sample_CleanupExportedDataAnnotations`. You can simply import this solution file to create the Custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
 
-After you are finished testing, invoke the clean up Custom API `sample_CleanupExportedDataAnnotations` and delete the managed solution to remove the Custom API.
+After you are finished testing, invoke the `sample_CleanupExportedDataAnnotations` Custom API and delete the managed solution to remove the Custom API.
 
-The Custom API `sample_ExportDataUsingFetchXmlToAnnotation` is an unbound API. It takes one input parameter `FetchXml` which is used to fetch the data and returns `AnnotationId` the record Id of the created annotation record which will have the CSV attached.
+`sample_ExportDataUsingFetchXmlToAnnotation` is an unbound Custom API . It takes one input parameter `FetchXml` which is used to fetch the data and returns `AnnotationId` the record Id of the created annotation record which will have the CSV attached.
 
 The `sample_CleanupExportedDataAnnotations` API has no input/output parameters.
 
@@ -111,6 +111,9 @@ The following JSON data describes the data used to create this Custom API:
 }
 ```
 
+More information: [Create a Custom API with code](../../create-custom-api-with-code.md)
+
+
 ## How this sample works
 
 You can use either the Web API or the Organization Service using the Dataverse .NET Framework SDK assemblies to invoke the Custom API.
@@ -118,7 +121,7 @@ You can use either the Web API or the Organization Service using the Dataverse .
 ### [SDK for .NET](#tab/sdk)
 
 
-1. You can use the Organization Service Quick Start sample instructions to create a .NET Framework Console application with C#. See [Quickstart: Organization service sample (C#)](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/org-service/quick-start-org-service-console-app)
+1. You can use the Organization Service Quick Start sample instructions to create a .NET Framework Console application with C#. See [Quickstart: Execute an Organization service request (C#)](../quick-start-org-service-console-app.md)
 1. Add the following static method to the program class to create a re-usable method for exporting data using FetchXML to Annotation.
 
    ```csharp
@@ -198,7 +201,7 @@ The `AnnotationId` value indicates the record in annotation table.
 
 ## Clean Up
 
-To clean up all the created data, invoke the `sample_CleanupExportedDataAnnotations` Custom API to delete the created Annotation records, and then uninstall the managed solution.
+To clean up all the created data, invoke the `sample_CleanupExportedDataAnnotations` Custom API action to delete the created annotation records, and then uninstall the managed solution.
 
 `sample_CleanupExportedDataAnnotations` deletes all annotation records that meet the following criteria:
 
