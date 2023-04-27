@@ -1403,7 +1403,7 @@
           href: ./model-driven-apps/configure-sorting.md
         - name: Power Apps read-only grid control
           href: ./model-driven-apps/power-apps-grid-control.md
-        - name: Convert views and subgrids into editable grids (preview)
+        - name: Convert views and subgrids into editable grids
           href: ./model-driven-apps/the-power-apps-grid-control.md       
         - name: Convert views and subgrids into editable grids (legacy)
           href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
