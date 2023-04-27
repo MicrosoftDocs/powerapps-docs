@@ -18,9 +18,9 @@ contributors:
 
 # Send in-app notifications within model-driven apps
 
-The notification table stores notifications for each user. Your model-driven app automatically polls the system for new notifications and displays them in the notification center. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
+Developers of model-driven apps can configure notifications to be displayed to app users as a toast or within the notification center. Your model-driven app automatically polls the system for new notifications and displays them to the user. The notification sender or your system administrator can configure how the notification is shown and how it can be dismissed. Notifications appear in the notification center until the recipient dismisses them or they expire. By default, a notification expires after 14 days but your administrator can override this setting.
 
-Each notification row is meant for a single user, identified by the **Owner** column value. If a notification needs to be sent to multiple users, a record needs to be added for each recipient. The sender controls the recipient through the **Owner** column.
+Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. If a notification needs to be sent to multiple users, individual notifications must be created and sent for each recipient.
 
 This article outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md). To see how these notifications appear in applications, see [In-app notifications in model-driven apps](/powerapps/user/notifications).
 
@@ -48,18 +48,18 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 ## Send basic in-app notifications
 
-Because the notification system uses a table, you can use any table functionality to create new notifications.  
+Notifications can be sent using the `SendAppNotification` API. The following basic examples show how to use the API to send in-app notifications.
 
 > [!div class="mx-imgBorder"] 
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
-
-The following examples use the notification table and a notification record to create notifications.
 
 # [Client API](#tab/clientapi)
 
 In-app notifications can be sent by using the [createRecord](reference/xrm-webapi/createrecord.md) API.
 
 ```javascript
+//THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
+
 var systemuserid = "Guid of the user";
 var notificationRecord =
 {
@@ -84,10 +84,10 @@ Xrm.WebApi.createRecord("appnotification", notificationRecord).
 
 # [Web API](#tab/webapi)
 
-In-app notifications can be sent by using the Web API. More information: [Create a table row using the Web API](../../data-platform/webapi/create-entity-web-api.md).
+In-app notifications can be sent by using the Web API. More information: [Use Web API actions](../../data-platform/webapi/use-web-api-actions.md).
 
 ```http
-POST [Organization URI]/api/data/v9.0/appnotifications 
+POST [Organization URI]/api/data/v9.0/sendappnotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -95,28 +95,49 @@ OData-Version: 4.0
 Accept: application/json
 
 {
-  "title": "Welcome",
-  "body": "Welcome to the world of app notifications!",
-  "ownerid@odata.bind": "/systemusers(<Guid of the user>)",
-  "icontype": 100000000, // info
-  "toasttype": 200000000 // timed
+  "Title": "Welcome",
+  "Body": "Welcome to the world of app notifications!",
+  "Recipient": "/systemusers(<Guid of the user>)",
+  "IconType": 100000000, // info
+  "ToastType": 200000000 // timed
 }
 ```
 
 # [Dataverse SDK](#tab/sdk)
 
-In-app notifications can be sent by using the Dataverse SDK with the organization service. More information: [Create table rows using the Organization Service](../../data-platform/org-service/entity-operations-create.md)
+In-app notifications can be sent by using the Dataverse SDK with the organization service. More information: [IOrganizationService Interface](../../data-platform/org-service/iorganizationservice-interface.md)
 
 ```csharp
-appnotification appNotification = new appnotification() { 
-    Title = "Welcome to the world of app notifications!",
-    OwnerId = new EntityReference("systemuser", <Guid of the user>),
-    IconType = new OptionSetValue(100000000), //info
-    ToastType = new OptionSetValue(200000000) //timed
+
+OrganizationRequest request = new OrganizationRequest()
+{
+    RequestName = "SendAppNotification",
+    Parameters = new ParameterCollection
+    {
+        ["Title"] = "Welcome",
+        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
+        ["Body"] = "Welcome to the world of app notifications!",
+        ["IconType"] = new OptionSetValue(100000000), //info
+        ["ToastType"] = new OptionSetValue(200000000) //timed
+     }
 };
 
-Guid appNotificationId = svc.Create(appNotification);
+OrganizationResponse response = currentUserService.Execute(request);
+Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
+
+# [Power Fx](#tab/powerfx)
+
+In-app notifications can be sent from Power Apps using Power Fx. More information: [Microsoft Power Fx overview](https://learn.microsoft.com/en-us/power-platform/power-fx/overview).
+
+```powerapps-dot
+XSendAppNotification(
+  "Welcome",
+  LookUp(Users,'Primary Email'="<User email address>",
+  "Welcome to the world of app notifications!"
+)
+```
+
 ---
 
 ## Notification polling
@@ -125,10 +146,10 @@ In-app notifications use polling to retrieve notifications periodically when the
 
 ## Notification table
 
-The following are the columns for the **Notification** (`appnotification`) table.
+Notifications are stored in the **Notification** (`appnotification`) table. The following are the columns for the table.
 
 |Column display|Column name|Description|
-|---|---|
+|---|---|---|
 |Title|`title`|The title of the notification.|
 |Owner|`ownerid`|The user who receives the notification.|
 |Body|`body`|Details about the notification.|
@@ -138,35 +159,14 @@ The following are the columns for the **Notification** (`appnotification`) table
 |Data|`data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
 
   > [!IMPORTANT]
-  > - The `appmoduleid` field is not used and should not be set on the appnotification entity.
+  > - The `appmoduleid` field is not used.
 
-### Changing the notification behavior
-
-You can change in-app notification behavior by setting **Toast Type** to one of the following values.
-
-|Toast Type|Behavior|Value|
-|---|---|---|
-|Timed|The notification appears for a brief duration (the default is four seconds) and then disappears.|`200000000`|
-|Hidden|The notification appears only in the notification center and not as a toast notification.|`200000001`|
-
-### Changing the notification icon
-
-You can change the in-app notification icon by setting **Icon Type** to one of the following values. When using a custom icon, specify the `iconUrl` parameter within the `data` parameter.
-
-|Icon Type|Value|Image|
-|---|---|---|
-|Info|`100000000`|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
-|Success|`100000001`|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
-|Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
-|Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
-|Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
-|Custom|`100000005`||
-
-
+## Customizing the notifiction
+In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. This includes changing the styles in the **Title** and **Body** of the notification, customizing the notification icon, and changing the behavior of the notification.
 
 ### Using markdown in Title and Body
 
-The **data** field supports overriding the Title and Body simple strings with a limited subset of markdown based.
+The **Title** and **Body** attributes of the `SendAppNotification` API do not support markdown defined within the properties. You can adjust the styles of these properties using markdown in the **OverrideContent** property. This field supports overriding the Title and Body simple strings with a limited subset of markdown styles.
 
 The following is the supported markdown.
 
@@ -180,7 +180,150 @@ The following is the supported markdown.
 
 Newlines can be included with the body using `\n\n\n\n`.
 
-### Changing the navigation target in a notification link
+The following are examples of overriding the title and body properties with markdown.
+
+# [Client API](#tab/clientapi)
+
+```javascript
+//THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
+
+var systemuserid = "Guid of the user";
+var notificationRecord =
+{
+  "title": "Welcome",
+  "body": "Welcome to the world of app notifications!",
+  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+  "icontype": 100000000, // info
+  "toasttype": 200000000 // timed
+}
+// Create notification record
+Xrm.WebApi.createRecord("appnotification", notificationRecord).
+  then(
+      function success(result) {
+          console.log("notification created with ID: " + result.id);
+      },
+      function (error) {
+          console.log(error.message);
+          // handle error conditions
+      }
+  );
+```
+
+# [Web API](#tab/webapi)
+
+```http
+POST [Organization URI]/api/data/v9.0/sendappnotification 
+HTTP/1.1
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+
+{
+  "Title": "Welcome",
+  "Body": "Welcome to the world of app notifications!",
+  "Recipient": "/systemusers(<Guid of the user>)",
+  "IconType": 100000000, // info
+  "ToastType": 200000000 // timed,
+  "OverrideContent": {
+    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+    "title": "**Welcome**",
+    "body": "Welcome to the world of [app notifications](https://www.bing.com/search?q=app+notifications)!"
+  }
+}
+```
+
+# [Dataverse SDK](#tab/sdk)
+
+```csharp
+
+OrganizationRequest request = new OrganizationRequest()
+{
+    RequestName = "SendAppNotification",
+    Parameters = new ParameterCollection
+    {
+        ["Title"] = "Welcome",
+        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
+        ["Body"] = "Welcome to the world of app notifications!",
+        ["IconType"] = new OptionSetValue(100000000), //info
+        ["ToastType"] = new OptionSetValue(200000000) //timed
+        ["OverrideContent"] = new Entity()
+        {
+          Attributes = 
+          {
+            ["title"] = "**Welcome**",
+            ["body"] = "Welcome to the world of [app notifications](https://www.bing.com/search?q=app+notifications)!"
+          }
+        }
+     }
+};
+
+OrganizationResponse response = currentUserService.Execute(request);
+Guid appNotificationId = (Guid)response.Results["NotificationId"];
+```
+
+>[!NOTE]
+>OverrideContent is not supported in Power Fx with the `SendAppNotification` API.
+
+
+---
+
+### Changing the notification behavior
+
+You can change in-app notification behavior by setting **Toast Type** to one of the following values.
+
+|Toast Type|Behavior|Value|
+|---|---|---|
+|Timed|The notification appears for a brief duration (the default is four seconds) and then disappears.|`200000000`|
+|Hidden|The notification appears only in the notification center and not as a toast notification.|`200000001`|
+
+### Changing the notification icon
+
+You can change the in-app notification icon by setting **Icon Type** to one of the following values. When using a custom icon, specify the `iconUrl` parameter within the `OverrideContent` parameter.
+
+|Icon Type|Value|Image|
+|---|---|---|
+|Info|`100000000`|:::image type="content" source="media/send-in-app-notifications/app-notification-info-icon.png" alt-text="Info Icon":::|
+|Success|`100000001`|:::image type="content" source="media/send-in-app-notifications/app-notification-success-icon.png" alt-text="Success Icon":::|
+|Failure|`100000002`|:::image type="content" source="media/send-in-app-notifications/app-notification-failure-icon.png" alt-text="Failure Icon":::|
+|Warning|`100000003`|:::image type="content" source="media/send-in-app-notifications/app-notification-warning-icon.png" alt-text="Warning Icon":::|
+|Mention|`100000004`|:::image type="content" source="media/send-in-app-notifications/app-notification-mention-icon.png" alt-text="Mention Icon":::|
+|Custom|`100000005`||
+
+The following example demonstrates using Web API to send a notification with a custom icon.
+
+```http
+POST [Organization URI]/api/data/v9.0/sendappnotification 
+HTTP/1.1
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+
+{
+  "Title": "Welcome",
+  "Body": "Welcome to the world of app notifications!",
+  "Recipient": "/systemusers(<Guid of the user>)",
+  "IconType": 100000005, // custom
+  "ToastType": 200000000 // timed,
+  "OverrideContent": {
+    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+    "title": "**Welcome**",
+    "body": "Welcome to the world of [app notifications](https://www.bing.com/search?q=app+notifications)!",
+    "iconUrl": "https://<web address>/<file name>" //URL of the image file to be used for the notification icon
+  }
+}
+```
+
+## Notification actions
+
+In-app notifications support zero to many actions on the notification card. There are three supported action types:
+
+- **URL**: When the action is selected the web browser navigates to the defined URL.
+- **Side Pane**: When the action is selected, a side pane is opened in the app and loads the defined context in the pane.
+- **Teams Chat**: 
+
+### Defining a URL action type
 
 You can control where a navigation link opens by setting the `navigationTarget` parameter. 
 
