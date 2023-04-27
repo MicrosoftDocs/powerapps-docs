@@ -8,12 +8,8 @@ ms.reviewer: "pehecke"
 ms.topic: sample
 author: "phecke" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
-manager: "KumarVivek" # MSFT alias of manager or PM counterpart
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 ---
 
 # Sample: Query data using LINQ

@@ -6,15 +6,12 @@ author: matp
 ms.subservice: mda-maker
 ms.author: ansja
 ms.reviewer: matp
-manager: kvivek
 ms.date: 08/17/2022
 ms.topic: how-to
 applies_to: 
   - "powerapps"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 ---
 # Hide a model-driven app from users
 

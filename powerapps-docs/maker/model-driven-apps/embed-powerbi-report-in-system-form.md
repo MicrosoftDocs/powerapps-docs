@@ -9,9 +9,6 @@ ms.author: "srihas"
 ms.reviewer: "matp"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Embed a Power BI report in a model-driven app main form
 

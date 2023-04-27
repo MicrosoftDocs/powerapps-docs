@@ -15,12 +15,8 @@ ms.assetid: fa04f99d-a5f9-48cb-8bfb-f0f50718ccee
 caps.latest.revision: 41
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Create and edit tables using Power Apps
 
@@ -143,6 +139,10 @@ View and create table record data for the table. Select the number of columns, s
 From the table hub, select **Edit** to open the table designer. The table designer lets you make extensive changes to a table including editing or adding new records and columns, editing table properties, or creating a model-driven app based on the table.
 
 :::image type="content" source="media/table-hub.gif" alt-text="Table hub video":::
+
+#### Update forms and views
+
+From the table hub, select **Update forms and views** to add selected columns to forms and views in this table without having to edit them in the form and view designers. More information: [Update forms and views using table designer](update-forms-and-views.md)
 
 ## Delete a table
 

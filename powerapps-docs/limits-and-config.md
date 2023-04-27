@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - lancedmicrosoft
@@ -93,9 +91,9 @@ This list identifies all services to which Power Apps communicates and their usa
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (for example, profile photo) |
 | \*.azure-apim.net |https |Api Hubs - Different subdomains for each locale |
 | \*.powerapps.com |https | create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \*gateway.prod.island.powerapps.com, and \*gateway.prod.cm.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) [Download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net.</br> |
+| \*.azureedge.net |https | create.powerapps.com, content.powerapps.com, and make.powerapps.com <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You may [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change.</br> |
 | \*.ces.microsoftcloud.com  | https  | Access to net promoter score (NPS) and surveys. |
-| \*.blob.core.windows.net |https | Blob storage <br>(Optional) [Download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net.</br> |
+| \*.blob.core.windows.net |https | Blob storage <br>(Optional) We highly recommend that you use the wildcard listed under Domain(s). You may [download](https://go.microsoft.com/fwlink/?linkid=2225562) the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change.</br> |
 | \*.flow.microsoft.com<br/>\*.powerautomate.com | https | create.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com | http and https | Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. <br /><br />Replace # in http://\*.crm#.dynamics.com and https://\*.crm#.dynamics.com with your region's number: <ul><li>Asia/Pacific: 5</li><li>Canada: 3 </li><li>Europe, Africa, and Middle East: 15 and 4</li><li>France: 12</li><li>Germany: 16</li><li>India: 8</li><li>Japan: 7</li><li>North America: no number</li><li>Oceania: 6</li><li>Singapore: 20</li><li>South Africa: 14</li><li>South America: 2</li><li>Switzerland: 17</li><li>UAE: 15</li><li>United Kingdom: 11</li><li>Dynamics 365 US Government: 9</li> |
 | vortex.data.microsoft.com |https |Telemetry |
@@ -104,6 +102,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>

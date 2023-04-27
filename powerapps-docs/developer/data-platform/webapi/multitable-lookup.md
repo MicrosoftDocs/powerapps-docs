@@ -8,9 +8,6 @@ author: NHelgren # GitHub ID
 ms.author: nhelgren # MSFT alias of Microsoft employees only
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---

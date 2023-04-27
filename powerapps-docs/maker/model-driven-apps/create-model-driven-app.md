@@ -2,7 +2,7 @@
 title: "Create a model-driven app using the designer | MicrosoftDocs"
 description: Learn how to create a model-driven app.
 ms.custom: ""
-ms.date: 05/19/2022
+ms.date: 04/13/2023
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -14,12 +14,8 @@ author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "emcoope"
 ms.reviewer: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a model-driven app with the app designer
 
@@ -42,37 +38,25 @@ For more information, go to the following articles:
 
 1. On the [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Solutions** from the left navigation pane. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
-1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md)
-   > [!NOTE]   
-   > Unmanaged solutions can be recognized by the open lock in the **Managed Externally?** column.
-   > :::image type="content" source="media/unmanaged-solutions.png" alt-text="Viewing solutions within an environment":::
+1. Open an unmanaged solution or [create a new solution](../data-platform/create-solution.md).
+   > [!NOTE]
+   > Unmanaged solutions can be identified when the solution has a **No** in the **Managed** column.
+   > 
    > Although the **Default Solution** is an unmanaged solution, it is in most circumstances not recommended to create or edit customizations in the default solution.
+
 1. Select **New** > **App** > **Model-driven app**.
 1. On the **New model-driven app** dialog box, enter a **Name** and optionally, a **Description**, and then select **Create**.
-1. On the left navigation pane, select **Navigation** to display the navigation tree. 
+1. On the command bar select **Add page**, and then on the **New page** screen, select **Dataverse table**, and then select **Next**.
+1. From the list of tables, select **Account**, select **Contact**, and then select **Add**.
+
+On the **Pages** left pane, under **Navigation** the layout for the app is displayed.
 
    :::image type="content" source="media/navigation-area.png" alt-text="Select the navigation area from the navigation pane":::
-   > [!TIP]
-   > Use the menu toggle to show or hide the names of the menu options. :::image type="content" source="media/menu-toggle.png" alt-text="Toggle the menu to show or hide the name of the menu options":::
-1. Notice that a basic navigation structure is already created for you. Expand **Area1**, and then expand **Group1**.
-   :::image type="content" source="media/default-site-map.png" alt-text="Default site map is created for you":::
-1. Select **Group1** and change the title in the property pane to, for example, *Accounts and Contacts*. :::image type="content" source="media/edit-navigation-group-title.png" alt-text="edit the group's title in the property pane":::
-1. Select **Subarea1**, and make changes such as the following:
 
-   - **Content type**: Table
-   - **Table**: Account
-   - **Title**: Accounts
+Notice the preview pane displays your app. Selecting a component, such as the **Accounts form**, affects what's displayed in the preview and property panes. If your environment includes data that you have access to view, that also appears in the preview.
+:::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables." lightbox="media/create-app.png":::
 
-   > [!NOTE]
-   >
-   > - A subarea won't appear in the app preview until you add a content type to it.
-   > - By default, all forms and views are included for a table that's added to a page. To remove one or more components, see [Create, add, and remove forms, views, or dashboards](create-add-remove-forms-views-dashboards.md).
-
-1. On the command bar, select **New page**, select **Table based view and form**, and then select **Next**.
-1. On the **New table view and form pages** dialog box, select **Contact**, leave the **Show in navigation** option selected, and then select **Add**. Note the following: 
-   - Notice the preview pane displays your app. Selecting a component, such as a table, affects what's displayed in the preview. If your environment includes data that you have access to view, that also appears in the preview.
-   :::image type="content" source="media/create-app.png" alt-text="App created with account and contact tables.":::
-1. Select **Save**, and then select **Publish**.
+To save and publish the app, select **Save**, and then select **Publish**.
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
 

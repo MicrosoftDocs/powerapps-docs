@@ -2,7 +2,6 @@
 title: Use the admin app and dashboard in Regional Government Emergency Response and Monitoring solution | Microsoft Docs
 description: Provides detailed instructions for regional organization business admins to configure master data, manage portal users, and view dashboards for key insights.
 author: pankajarora-msft
-manager: annbe
 
 ms.topic: conceptual
 ms.custom: 

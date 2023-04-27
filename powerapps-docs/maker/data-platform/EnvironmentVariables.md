@@ -6,14 +6,10 @@ author: caburk
 ms.subservice: dataverse-maker
 ms.author: caburk
 ms.reviewer: matp
-manager: kvivek
-ms.date: 11/23/2022
+ms.date: 04/20/2023
 ms.topic: overview
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - shmcarth
 ---
@@ -266,9 +262,7 @@ If not already prevented by dependency system, runtime will use the last known v
 
 ### If a value is changed, when does the new value get used in canvas apps and cloud flows?
 
-It may take up to an hour to fully publish updated environment variables.  
-
-With cloud flows, the flows must currently be de-activated and reactivated in order to use the updated value. 
+It may take up to an hour to fully publish updated environment variables because the value is pushed into the apps and flows asynchronously.
 
 ### Are premium licenses required?
 

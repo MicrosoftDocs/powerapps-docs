@@ -11,14 +11,10 @@ applies_to: Dynamics 365 apps
 ms.assetid: 
 ms.author: sericks
 author: sericks007
-manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
   - enduser
-search.app: 
-  - D365CE
-  - D365Sales
 ---
 
 # Open an app in the Power Apps mobile app by scanning a QR code

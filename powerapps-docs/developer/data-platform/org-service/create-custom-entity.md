@@ -6,12 +6,8 @@ ms.reviewer: pehecke
 ms.topic: article
 author: NHelgren # GitHub ID
 ms.author: nhelgren  # MSFT alias of Microsoft employees only
-manager: kvivek # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
   - PHecke
   - JimDaly

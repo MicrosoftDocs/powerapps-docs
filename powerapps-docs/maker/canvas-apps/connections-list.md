@@ -12,8 +12,6 @@ ms.subservice: canvas-maker
 ms.author: lanced
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - lancedMicrosoft
   - mduelae
@@ -94,7 +92,8 @@ You can ask questions about a specific connector in the [Power Apps forums](http
 As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
 
 > [!NOTE]
-> For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> - For detailed information about security considerations when using a relational database server (such as Microsoft SQL Server, or Oracle) as the data source for an app, see [Use Microsoft SQL Server securely with Power Apps](connections\sql-server-security.md).
+> - Power Apps doesn't  support **External member** identities. For more information, see [Properties of an Azure Active Directory B2B collaboration user](/azure/active-directory/external-identities/user-properties). 
 
 ### Azure AD Integrated
 
