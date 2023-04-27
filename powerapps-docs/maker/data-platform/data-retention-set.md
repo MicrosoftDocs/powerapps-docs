@@ -82,6 +82,14 @@ For information about how to create a table view, go to [Create and edit public 
    :::image type="content" source="media/data-retention-policy.png" alt-text="Create a data retention policy" lightbox="media/data-retention-policy.png":::
 1. Select **Save**.
 
+No you can view and manage the policy. More information: [Manage data retention policies](data-retention-manage.md)
+
+About policy runs:
+
+- The parent table and all cascade related records from child tables, of the parent, will be marked and retained as cold data in Dataverse long term storage.
+- Logic associated with existing delete action of any table (parent and children) will always be executed during the policy run.
+- A policy run can take from 24 -48 hours irrespective of the data volume. Data retention policies are given a low priority by the application. Dataverse will always run the retention process in the background to avoid any impact on the live application processes. 
+
 ## Next steps
 
 [Manage data retention policies](data-retention-manage.md)
