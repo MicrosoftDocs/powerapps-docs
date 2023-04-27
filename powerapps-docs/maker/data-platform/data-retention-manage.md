@@ -35,41 +35,48 @@ Use the retention policies dashboard to view and manage retention policies. From
 |---------|---------|
 |Scheduled     |  The policy has been scheduled to run.       |
 |In progress - Retention     | The process of moving and changing the data state from active to non-active (retained) for the rows in the parent root table and all child tables.        |
-|In progress - Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse managed data lake.      |
-|In progress – Reconciling     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
-|In progress – Pending Delete     |  Waiting to delete all retained rows.       |
+|Pending Reconciliation     |  Waiting to reconcile the retained rows in Dataverse managed data lake.      |
+|In progress – Reconciliation     | During this stage, ensures no data loss by reconciling the retained rows with the original rows before delete from active.     |
+|Pending Delete     |  Waiting to delete all retained rows.       |
 |In progress – Delete     |  Delete of retained rows from applications.       |
 |Succeeded     |  Retention process completed successfully.       |
 |Failed     |  The retention process failed  .     |
 
-## View retained data
+## View long term retained data
 
-There are a few ways you can view retained data.
+You can view retained data from an Advanced Find query or by creating a Power Automate flow. 
 
 > [!NOTE]
-> To view retained data in an environment requires the system administrator security role.
+> To view retained data in an environment requires the system administrator security role or other security role membership that includes organization scope read privileges to the table.
+
+### Grant privileges to view retained data
+
+Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Plaform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role). <!--I don't think this would be enough. Probably have to start with the App access user role and add this privilege. Also, how to access advanced find for the auditor? I believe they can go to maker portal > Settings > Advanced Settings > and then select the Advanced Find (filter icon)-->
 
 ### View retained data using advanced find
 
-1. Play a model-driven app, and then open advanced find. 
+> [!NOTE]
+> Advanced Find doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](data-retention-flow.md)
+
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Settings** > **Advanced settings**.
+1. On the **Dynamics 365 Settings** page, select **Advanced Find** (filter icon) on the command bar.
 1. At the top of the advanced find pane, select **Change to retained data**.
    :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the advanced find pane.":::
 1. Select the tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
 ### View retained data using a flow
 
-Use the Power Automate cloud flow template to generate and retrieve retained data in Excel. <!-- Need a demo of this or more specific steps how to do it.-->
+Use the Power Automate cloud flow template to generate and retrieve retained data in Excel. More information: [Create a cloud flow to view Dataverse long term retained data](data-retention-flow.md)
 
 ### Limitations for retrieval of retained data
 
 This restrictions are enforced by Dataverse for each environment:
 
 - Up to five users can query and retrieve retained data at the same time.
-- Environment admin role or ‘global entity access’ role on table required to retrieve retained data <!-- Do you mean global read access to the Entity privilege? -->
 - Up to 30 queries per day are allowed for each environment.
-- Any single request from advanced find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
+- Any single request from Advanced Find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
-- Retained data includes lookup data and doesn't require joins. 
+- Retained data includes lookup data and doesn't require joins.
 - Lookup values in a table are denormalized with ID and name value.
 
 ## Storage capacity reports
