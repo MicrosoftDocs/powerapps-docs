@@ -173,7 +173,7 @@ You can also add a new page from this template as any other template:
 
 The Globe icon of the template uses different icons depending on the PowerFx Connection.Sync function. You can also create your own icon and set the “Icon” property to: 
 
-```
+```PowerFx
 Switch(Connection.Sync, 
 
    ConnectionSync.Connected, Icon.Globe,  
