@@ -29,9 +29,22 @@ provides the following information and shows you how to perform the following ta
 > - There are no costs incurred with the creation of Spark pools. Charges are only incurred once a Spark job is executed on the target Spark pool and the Spark instance is instantiated on demand. These costs are related to the usage of Azure Synapse workspace Spark and are billed monthly. The cost of conducting Spark computing mainly depends on the time interval for incremental update and the data volumes. More information: [Azure Synapse Analytics pricing](https://azure.microsoft.com/pricing/details/synapse-analytics/)
 > - It's important to take these additional costs into consideration when deciding to use this feature as they are not optional and must be paid in order to continue using this feature.
 
-Delta Lake is an open-source project that enables building a lakehouse architecture on top of data lakes. Delta Lake provides ACID (atomicity, consistency, isolation, and durability) transactions, scalable metadata handling, and unifies streaming and batch data processing on top of existing data lakes. Azure Synapse Analytics is compatible with Linux Foundation Delta Lake. The current version of Delta Lake included with Azure Synapse has language support for Scala, PySpark, and .NET. More information: [What is Delta Lake?](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
+## What is Delta Lake?
+Delta Lake is an open-source project that enables building a lakehouse architecture on top of data lakes. Delta Lake provides ACID (atomicity, consistency, isolation, and durability) transactions, scalable metadata handling, and unifies streaming and batch data processing on top of existing data lakes. Azure Synapse Analytics is compatible with Linux Foundation Delta Lake. The current version of Delta Lake included with Azure Synapse has language support for Scala, PySpark, and .NET. More information: [What is Delta Lake?](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake). You can also learn more from the [Introduction to Delta Tables video](https://www.youtube.com/watch?v=B_wyRXlLKok).
 
 Apache Parquet is the baseline format for Delta Lake, enabling you to leverage the efficient compression and encoding schemes that are native to the format. Parquet file format uses column-wise compression. It's efficient and saves storage space. Queries that fetch specific column values need not read the entire row data thus improving performance. Therefore, serverless SQL pool needs less time and fewer storage requests to read the data.
+
+## Why use Delta Lake?
+
+1. **Scalability**: Delta Lake is built on top of Open-source Apache License, which is designed to meet Industry standard for handling large-scale data processing workloads.
+2. **Reliability**: Delta Lake provides ACID transactions, ensuring data consistency and reliability even in the face of failures or concurrent access
+4. **Performance**: Delta Lake leverages the columnar storage format of Parquet, providing better compression and encoding techniques, which can lead to improved query performance compared to query CSV files
+5. **Cost-effective**: The Delta Lake file format is a highly compressed data storage technology that offers significant potential storage savings for businesses. This format is specifically designed to optimize data processing and potentialy reduce the total amount of data processed or running time required for on-demand computing.
+6. **Data protection compliance**: Delta Lake with Synapse Link provides tools and features including soft-delete and hard-delete to comply various data privacy regulations, including the General Data Protection Regulation (GDPR)
+
+## How Delta Lake works with Synapse Link for Dataverse?
+
+When setting up an Azure Synapse Link for Dataverse, you can enable the **export to delta lake** feature and connect with a Synapse workspace and Spark pool. Synapse Link will export the selected Dataverse tables in CSV format at designated time intervals and processed through a Delta Lake conversion Spark job. Upon the completion of this conversion process, CSV data will be cleaned up for storage saving. Additionally, a series of maintenance jobs are scheduled to run on a daily basis, automatically performing compaction and vacuuming processes to merge and clean up data files to further optimize storage and improve query performance
 
 ## Prerequisites
 
