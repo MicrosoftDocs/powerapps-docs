@@ -53,26 +53,30 @@ The `sample_CleanupExportedDataAnnotations` API has no input/output parameters.
 
 You can also build the plug-in assembly in this project, create the custom API and associate the plug-in step manually.
 
-1. Build the solution included above, and using the Plugin Registration Tool, register the assembly `ExportDataUsingFetchXmlToAnnotation.dll`, and include both the plugins
-`PowerApps.Samples.ExportDataUsingFetchXmlToAnnotationPlugin` and `PowerApps.Samples.CleanUpExportedDataAnnotationsPlugin` and note the plugintypeids generated for these.
-
-1. Using the following JSON data create these Custom APIs:
+The following JSON data describes the data used to create this Custom API:
 
 ```json
 {
     "uniquename": "sample_ExportDataUsingFetchXmlToAnnotation",
+    "allowedcustomprocessingsteptype@OData.Community.Display.V1.FormattedValue": "None",
     "allowedcustomprocessingsteptype": 0,
+    "bindingtype@OData.Community.Display.V1.FormattedValue": "Global",
     "bindingtype": 0,
     "boundentitylogicalname": null,
     "description": "Exports data using the input Fetch Xml to CSV attaches to an annotation record.",
-    "name" : "Export Data Using Fetch XML to Annotation",
     "displayname": "Export Data Using Fetch XML to Annotation",
+    "executeprivilegename": null,
+    "isfunction@OData.Community.Display.V1.FormattedValue": "No",
     "isfunction": false,
+    "isprivate@OData.Community.Display.V1.FormattedValue": "No",
     "isprivate": false,
+    "workflowsdkstepenabled@OData.Community.Display.V1.FormattedValue": "No",
     "workflowsdkstepenabled": false,
     "customapiid": "bd8ffcee-5a38-4d0a-b296-6848c94dd22e",
     "iscustomizable": {
         "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "iscustomizableanddeletable"
     },
     "CustomAPIRequestParameters": [
         {            
@@ -80,7 +84,10 @@ You can also build the plug-in assembly in this project, create the custom API a
             "name": "Fetch Xml",
             "description": "Fetch XML which is used to fetch all data and export to CSV",
             "displayname": "Fetch Xml",
+            "type@OData.Community.Display.V1.FormattedValue": "String",
             "type": 10,
+            "logicalentityname": null,
+            "isoptional@OData.Community.Display.V1.FormattedValue": "No",
             "isoptional": false
         }
     ],
@@ -90,34 +97,19 @@ You can also build the plug-in assembly in this project, create the custom API a
             "name": "Annotation Id",
             "description": "Id of the created annotation entity record.",
             "displayname": "Annotation Id",
+            "type@OData.Community.Display.V1.FormattedValue": "Guid",
             "type": 12,
+            "logicalentityname": null
         }
     ],
-    "PluginTypeId@odata.bind": "plugintypes(<Plugin type id for ExportDataUsingFetchXmlToAnnotationPlugin>)"
+    "PluginTypeId": {
+        "typename": "PowerApps.Samples.ExportDataUsingFetchXmlToAnnotationPlugin",
+        "version": "1.0.0.0",
+        "name": "PowerApps.Samples.ExportDataUsingFetchXmlToAnnotationPlugin",
+        "assemblyname": "ExportDataUsingFetchXmlToAnnotation"
+    }
 }
 ```
-
-```json
-{
-    "uniquename": "sample_CleanupExportedDataAnnotations",
-    "allowedcustomprocessingsteptype": 0,
-    "bindingtype": 0,
-    "boundentitylogicalname": null,
-    "description": "Clean Up Exported Data Annotations",
-    "name" : "Clean Up Exported Data Annotations",
-    "displayname": "Clean Up Exported Data Annotations",
-    "isfunction": false,
-    "isprivate": false,
-    "workflowsdkstepenabled": false,
-    "customapiid": "e54824e5-6a98-435a-93ea-f50eb453a1f1",
-    "iscustomizable": {
-        "Value": true,
-    },
-    "PluginTypeId@odata.bind": "plugintypes(<Plugin type id for CleanupExportedDataAnnotationsPlugin>)"
-}
-```
-
-The above created Custom APIs will be created as part of unmanaged customization in your enviornment. To remove it you must delete the Custom API and the plugin assembly.
 
 More information: [Create a Custom API with code](../../create-custom-api-with-code.md)
 
@@ -210,8 +202,6 @@ The `AnnotationId` value indicates the record in annotation table.
 ## Clean Up
 
 To clean up all the created data, invoke the `sample_CleanupExportedDataAnnotations` Custom API action to delete the created annotation records, and then uninstall the managed solution.
-
-If the Custom APIs were created using WebApi then you will have delete the Custom APIs and the registered aassemblies manually.
 
 `sample_CleanupExportedDataAnnotations` deletes all annotation records that meet the following criteria:
 
