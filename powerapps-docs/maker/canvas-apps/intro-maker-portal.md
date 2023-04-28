@@ -181,6 +181,7 @@ To create an app, select from the following options:
 - **Choose a page tempalte**: Select how you want the app to look by selecting a page template to help you start buiding your app. More informaton: [tbd](get-started-test-drive.md)
 - **Pick an app template**: Choose from a fully functional app and then customized it based on your organization needs. More informaton: [tbd](get-started-test-drive.md)
 
+Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you are searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
 # [Classic](#tab/home-classic)
 
