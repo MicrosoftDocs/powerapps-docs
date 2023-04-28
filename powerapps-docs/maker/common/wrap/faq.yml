@@ -100,9 +100,9 @@ sections:
           Yes. You can use ```ms-mobile-apps:///providers/Microsoft.PowerApps/apps/<appID>?tenantId=<tenantId>``` schema to deep link into your wrapped mobile apps. Refer to [Using deep links with wrapped mobile apps](wrap-deep-links.md) for more information.
           
       - question: |
-          Why do I see **You can't get there from here** error message when I try to open my wrapped native app on a mobile device?
+          Why do I see this error message when I try to open my wrapped native app on a mobile device: You can't get there from here error message 
         answer: |
-         You organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue see, [Edit your conditional access policy][/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy].
+         You organization might have **Require Approved Client App** conditional access policy that restricts access to mobile apps. To fix this issue see, [Edit your conditional access policy](/azure/active-directory/conditional-access/migrate-approved-client-app#edit-an-existing-conditional-access-policy).
                 
       - question: |
           Can I create B2C mobile apps with Power Apps?
