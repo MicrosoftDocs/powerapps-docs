@@ -62,6 +62,7 @@ Watch this video to learn how to create a canvas app with data from an Excel fil
 1. Under **Choose a table**, select the table&mdash;**FlooringEstimates** in this example, and then select **Connect**.
 
     ![Choose your table.](./media/get-started-create-from-data/choose-table.png)
+    
 
  ---
 
