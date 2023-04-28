@@ -2,8 +2,8 @@
 title: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write a plug-in for a custom api that exports data to a CSV file you can download."
 ms.date: 04/27/2023
-author: divkamath
-ms.author: dikamath
+author: Anweshi
+ms.author: anweshid
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
