@@ -27,7 +27,7 @@ Background operations requires that the operation performed is defined as a cust
 
 More information: [Create and use Custom APIs](custom-api.md)
 
-In order to showcase the utilization of background operations, we have employed a Custom API called `sample_ExportDataUsingFetchXmlToAnnotation`. This API is designed to retrieve all the data using the provided FetchXML input parameter, create a CSV file, and attach it to a record within the annotation entity. Afterward, the Custom API will return the ID of the newly created record. You can obtain a copy of this sample by downloading it from this [link](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
+<!-- In order to showcase the utilization of background operations, we have employed a Custom API called `sample_ExportDataUsingFetchXmlToAnnotation`. This API is designed to retrieve all the data using the provided FetchXML input parameter, create a CSV file, and attach it to a record within the annotation entity. Afterward, the Custom API will return the ID of the newly created record. You can obtain a copy of this sample by downloading it from this [link](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation). -->
 
 > [!NOTE]
 > This pattern doesn't allow for operations defined by custom apis to exceed the 2 minute time limit for plug-ins.
@@ -57,7 +57,7 @@ The `ExecuteBackgroundOperation` message has the following response properties:
 |`BackgroundOperationId`|Guid| The ID of the background operation table row you can use to monitor the processing of your request. |
 |`Location`|string| The URL to use to retrieve the status of your request|
 
-The following static method sends a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> using `ExecuteBackgroundOperation`.
+The following static method use `ExecuteBackgroundOperation` with a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in  .. TODO add link
 
 ```csharp
 static void SendRequestAsynchronously(IOrganizationService service)
