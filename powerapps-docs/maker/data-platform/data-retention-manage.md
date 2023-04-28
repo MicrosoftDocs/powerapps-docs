@@ -64,6 +64,8 @@ Imagine an auditor requires access to long term data retained for the accounts t
    :::image type="content" source="media/data-retention-advanced-find.png" alt-text="Select change to retained data on the advanced find pane.":::
 1. Select the tables and search filters you want, and then select **Apply**. More information: [Advanced find in model-driven apps](../../user/advanced-find.md)
 
+If you need to retrieve long term data from multiple related tables, such as the account table, which has an associated retained case, first use Advanced Find retrieve the retained case row. Then use the **Casenumber** column and use Advanced Find to retrieve the account row. <!-- Need more detail on how to do this -->
+
 ### View retained data using a flow
 
 Use the Power Automate cloud flow template to generate and retrieve retained data in Excel. More information: [Create a cloud flow to view Dataverse long term retained data](data-retention-flow.md)

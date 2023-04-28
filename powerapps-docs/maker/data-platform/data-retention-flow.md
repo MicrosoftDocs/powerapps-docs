@@ -22,3 +22,7 @@ Creating the flow requires the following high level steps:
 1. Send an email to recipients with the Excel file attached.  
 
 Make sure to check your junk mail folder if you don’t see an email after running a flow successfully.
+
+<!-- WHere are the detailed steps in the DV-LTRPublicDocContent doc? -->
+
+
