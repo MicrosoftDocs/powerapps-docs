@@ -1,6 +1,6 @@
 ---
 title: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
-description: "Learn how to write write a plug-in for a custom api that will export data to a CSV file you can download."
+description: "Learn how to write a plug-in for a custom api that exports data to a CSV file you can download."
 ms.date: 04/27/2023
 author: divkamath
 ms.author: dikamath
@@ -24,11 +24,11 @@ You can download the sample from
 The plug-in provides logic for the main operation of the custom API. 
 The `sample_ExportDataUsingFetchXmlToAnnotation` custom api retrieves data using 
 the provided `FetchXML` input parameter and creates a CSV file. It then creates
-an annotation record and returns the `annotationid` as the `AnnotationId` response property..
+an annotation record and returns the `annotationid` as the `AnnotationId` response property.
 
 **NOTE :**
 The size of data in CSV file should be under the attachment size limit 
-specified in the system settings; otherwise the creation of attachment will fail.
+specified in the system settings; otherwise the creation of attachment fails.
 
 ## How to run this sample
 
@@ -41,11 +41,11 @@ There are two ways to create the custom api:
 
 ### Import the managed solution file
 
-The `ExportDataUsingFetchXmlToAnnotation_1_0_0_0_managed.zip` in this folder contains the `sample_ExportDataUsingFetchXmlToAnnotation` custom API that uses this code, and a cleanup API `sample_CleanupExportedDataAnnotations`. You can simply import this solution file to create the custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
+The `ExportDataUsingFetchXmlToAnnotation_1_0_0_0_managed.zip` in this folder contains the `sample_ExportDataUsingFetchXmlToAnnotation` custom API that uses this code, and a cleanup API `sample_CleanupExportedDataAnnotations`. You can import this solution file to create the custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
 
-After you are finished testing, use the `sample_CleanupExportedDataAnnotations` custom API to delete the data created and delete the managed solution to remove the custom API.
+After you're finished testing, use the `sample_CleanupExportedDataAnnotations` custom API to delete the data created and delete the managed solution to remove the custom API.
 
-`sample_ExportDataUsingFetchXmlToAnnotation` is an unbound custom API . It takes one input parameter `FetchXml` which is used to fetch the data and returns `AnnotationId` the record Id of the created annotation record which will have the CSV attached.
+`sample_ExportDataUsingFetchXmlToAnnotation` is an unbound custom API. It takes one input parameter `FetchXml`, which is used to fetch the data and returns `AnnotationId` the record ID of the created annotation record that contains the CSV file data.
 
 The `sample_CleanupExportedDataAnnotations` API has no input/output parameters.
 
@@ -157,7 +157,7 @@ You can use either the Web API or the Organization Service using the Dataverse S
 
 
 1. You can use the Organization Service Quick Start sample instructions to create a .NET Framework Console application with C#. See [Quickstart: Execute an Organization service request (C#)](../quick-start-org-service-console-app.md)
-1. Add the following static method to the program class to create a re-usable method for exporting data using FetchXML to Annotation.
+1. Add the following static method to the program class to create a reusable method for exporting data using FetchXML to Annotation.
 
    ```csharp
    static Guid ExportDataUsingFetchXmlToAnnotation(IOrganizationService service)
@@ -180,7 +180,7 @@ You can use either the Web API or the Organization Service using the Dataverse S
    }
    ```
 
-1. Replace the code that is calling `WhoAmIRequest` with the following:
+1. Replace the code that is calling `WhoAmIRequest` with the following code:
 
    ```csharp
     var annotationId = ExportDataUsingFetchXmlToAnnotation(svc)
@@ -253,7 +253,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
 
 
 1. You can use the Organization Service Quick Start sample instructions to create a .NET Console application with C#. See [Quickstart: Execute an Organization service request (C#)](../quick-start-org-service-console-app.md)
-1. Add the following static method to the program class to create a re-usable method for deleting the data created using the `sample_ExportDataUsingFetchXmlToAnnotation` custom api.
+1. Add the following static method to the program class to create a reusable method for deleting the data created using the `sample_ExportDataUsingFetchXmlToAnnotation` custom api.
 
    ```csharp
    static void CleanupExportedDataAnnotations(IOrganizationService service)
@@ -264,7 +264,7 @@ You can use either the Web API or the Dataverse SDK for .NET to use the `sample_
    }
    ```
 
-1. Replace the code that is calling `WhoAmIRequest` with the following:
+1. Replace the code that is calling `WhoAmIRequest` with the following code:
 
    ```csharp
     CleanupExportedDataAnnotations(svc)
