@@ -1,5 +1,5 @@
 ---
-title: "Sample: ExportDataUsingFetchXmlToAnnotation Custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
+title: "Sample: ExportDataUsingFetchXmlToAnnotation custom API plug-in (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to write write a plug-in for a custom api that will export data to a CSV file you can download."
 ms.date: 04/27/2023
 author: divkamath
@@ -14,14 +14,14 @@ contributors:
   - cwithfourplus
 ---
 
-# Sample: ExportDataUsingFetchXmlToAnnotation Custom API
+# Sample: ExportDataUsingFetchXmlToAnnotation custom API
 
-This sample shows how to write a plug-in that supports a Custom API 
+This sample shows how to write a plug-in that supports a custom API 
 named `sample_ExportDataUsingFetchXmlToAnnotation`.
 You can download the sample from 
 [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/dataverse/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
 
-The plug-in provides logic for the main operation of the Custom API. 
+The plug-in provides logic for the main operation of the custom API. 
 The `sample_ExportDataUsingFetchXmlToAnnotation` custom api retrieves data using 
 the provided `FetchXML` input parameter and creates a CSV file. It then creates
 an annotation record and returns the `annotationid` as the `AnnotationId` response property..
@@ -32,7 +32,7 @@ specified in the system settings; otherwise the creation of attachment will fail
 
 ## How to run this sample
 
-To run the code found in this sample, you must first create a Custom API in your organization.
+To run the code found in this sample, you must first create a custom API in your organization.
 
 There are two ways to create the custom api:
 
@@ -41,19 +41,21 @@ There are two ways to create the custom api:
 
 ### Import the managed solution file
 
-The `ExportDataUsingFetchXmlToAnnotation_1_0_0_0_managed.zip` in this folder contains the `sample_ExportDataUsingFetchXmlToAnnotation` Custom API that uses this code, and a cleanup API `sample_CleanupExportedDataAnnotations`. You can simply import this solution file to create the Custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
+The `ExportDataUsingFetchXmlToAnnotation_1_0_0_0_managed.zip` in this folder contains the `sample_ExportDataUsingFetchXmlToAnnotation` custom API that uses this code, and a cleanup API `sample_CleanupExportedDataAnnotations`. You can simply import this solution file to create the custom API in your organization.  See [Import solutions](../../../../maker/data-platform/import-update-export-solutions.md) for instructions.
 
-After you are finished testing, invoke the `sample_CleanupExportedDataAnnotations` Custom API and delete the managed solution to remove the Custom API.
+After you are finished testing, invoke the `sample_CleanupExportedDataAnnotations` custom API and delete the managed solution to remove the custom API.
 
-`sample_ExportDataUsingFetchXmlToAnnotation` is an unbound Custom API . It takes one input parameter `FetchXml` which is used to fetch the data and returns `AnnotationId` the record Id of the created annotation record which will have the CSV attached.
+`sample_ExportDataUsingFetchXmlToAnnotation` is an unbound custom API . It takes one input parameter `FetchXml` which is used to fetch the data and returns `AnnotationId` the record Id of the created annotation record which will have the CSV attached.
 
 The `sample_CleanupExportedDataAnnotations` API has no input/output parameters.
 
-### Create the custom API
+### Create the custom APIs
 
-You can also build the plug-in assembly in this project, create the custom API and associate the plug-in step manually.
+You can also build the plug-in assembly in this project, create the custom API and associate the plug-in step using one of several methods. More information: [Create a custom API](../../custom-api.md#create-a-custom-api)
 
-The following JSON data describes the data used to create this Custom API:
+There are two custom apis in this solution. The following JSON describing these custom APIs was retrieved using Web API. More information: [Retrieve data about custom APIs](../../custom-api-tables.md#retrieve-data-about-custom-apis)
+
+#### sample_ExportDataUsingFetchXmlToAnnotation
 
 ```json
 {
@@ -111,12 +113,45 @@ The following JSON data describes the data used to create this Custom API:
 }
 ```
 
-More information: [Create a Custom API with code](../../create-custom-api-with-code.md)
+#### sample_CleanupExportedDataAnnotations
+
+```json
+{
+    "uniquename": "sample_CleanupExportedDataAnnotations",
+    "allowedcustomprocessingsteptype@OData.Community.Display.V1.FormattedValue": "None",
+    "allowedcustomprocessingsteptype": 0,
+    "bindingtype@OData.Community.Display.V1.FormattedValue": "Global",
+    "bindingtype": 0,
+    "boundentitylogicalname": null,
+    "description": "Clean Up Exported Data Annotations",
+    "displayname": "Clean Up Exported Data Annotations",
+    "executeprivilegename": null,
+    "isfunction@OData.Community.Display.V1.FormattedValue": "No",
+    "isfunction": false,
+    "isprivate@OData.Community.Display.V1.FormattedValue": "No",
+    "isprivate": false,
+    "workflowsdkstepenabled@OData.Community.Display.V1.FormattedValue": "No",
+    "workflowsdkstepenabled": false,
+    "iscustomizable": {
+        "Value": true,
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "iscustomizableanddeletable"
+    },
+    "CustomAPIRequestParameters": [],
+    "CustomAPIResponseProperties": [],
+    "PluginTypeId": {
+        "typename": "PowerApps.Samples.CleanUpExportedDataAnnotationsPlugin",
+        "version": "1.0.0.0",
+        "name": "PowerApps.Samples.CleanUpExportedDataAnnotationsPlugin",
+        "assemblyname": "ExportDataUsingFetchXmlToAnnotation"
+    }
+}
+```
 
 
 ## How this sample works
 
-You can use either the Web API or the Organization Service using the Dataverse .NET Framework SDK assemblies to invoke the Custom API.
+You can use either the Web API or the Organization Service using the Dataverse SDK for .NET to invoke the `sample_ExportDataUsingFetchXmlToAnnotation` custom API.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -153,7 +188,7 @@ You can use either the Web API or the Organization Service using the Dataverse .
 
 ### [Web API](#tab/webapi)
 
-To use the Custom API with the Web API, send a `POST` request to the API endpoint.
+To use the `sample_ExportDataUsingFetchXmlToAnnotation` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
 
  **Request**
 
@@ -195,13 +230,13 @@ The `AnnotationId` value indicates the record in annotation table.
 
 1. How to recursively fetch data from fetch xml.
 1. How to create a csv attachment to annotation entity.
-1. How to write a plug-in to support a Custom API
-1. How to invoke a Custom API using the Web API
-1. How to invoke a Custom API using the Organization service
+1. How to write a plug-in to support a custom API
+1. How to invoke a custom API using the Web API
+1. How to invoke a custom API using the Organization service
 
 ## Clean Up
 
-To clean up all the created data, invoke the `sample_CleanupExportedDataAnnotations` Custom API action to delete the created annotation records, and then uninstall the managed solution.
+To clean up all the created data, invoke the `sample_CleanupExportedDataAnnotations` custom API action to delete the created annotation records, and then uninstall the managed solution.
 
 `sample_CleanupExportedDataAnnotations` deletes all annotation records that meet the following criteria:
 
@@ -212,8 +247,56 @@ To clean up all the created data, invoke the `sample_CleanupExportedDataAnnotati
 |`filename`|`exportdatausingfetchxml.csv`|
 
 
+You can use either the Web API or the Organization Service using the Dataverse SDK for .NET to invoke the `sample_CleanupExportedDataAnnotations` custom API.
+
+### [SDK for .NET](#tab/sdk)
+
+
+1. You can use the Organization Service Quick Start sample instructions to create a .NET Console application with C#. See [Quickstart: Execute an Organization service request (C#)](../quick-start-org-service-console-app.md)
+1. Add the following static method to the program class to create a re-usable method for deleting the data created using the `sample_ExportDataUsingFetchXmlToAnnotation` custom api.
+
+   ```csharp
+   static void CleanupExportedDataAnnotations(IOrganizationService service)
+   {
+       var req = new OrganizationRequest("sample_CleanupExportedDataAnnotations")
+   
+      service.Execute(req);
+   }
+   ```
+
+1. Replace the code that is calling `WhoAmIRequest` with the following:
+
+   ```csharp
+    CleanupExportedDataAnnotations(svc)
+   ```
+
+### [Web API](#tab/webapi)
+
+To use the `sample_CleanupExportedDataAnnotations` custom API with the Web API, send a `POST` request to the API endpoint. You can use Postman to send this request. More information: [Set up a Postman environment](../../webapi/setup-postman-environment.md)
+
+ **Request**
+
+```http
+POST [Organization URI]/api/data/v9.2/sample_CleanupExportedDataAnnotations
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+```
+
+ **Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Content-Type: application/json; odata.metadata=minimal
+```
+
+---
+
+
 ## See also
 
-[Create and use Custom APIs](../../custom-api.md)<br />
+[Create and use custom APIs](../../custom-api.md)<br />
 [Write a plug-in](../../write-plug-in.md)<br />
 [Register a plug-in](../../register-plug-in.md)
