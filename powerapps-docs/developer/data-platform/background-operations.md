@@ -2,7 +2,7 @@
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
 ms.custom: intro-internal
-ms.date: 04/24/2023
+ms.date: 04/28/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: Anweshi
@@ -21,9 +21,11 @@ contributors:
 
 Use background operations to send requests that Dataverse processes asynchronously. Dataverse immediately responds that the request is accepted and provides you with several ways to monitor whether the request ultimately succeeds. You can also retrieve the result, if any.
 
-<!-- Need some information about whether these are actually limited to custom api and why that may be. Many of our system messages are now implemented as custom api. Usually, the caller doesn't need to know how they are defined. -->
+Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
-Send a request this way when you don't want to maintain a connection awaiting a potentially long running operations.
+Background operations requires that the operation performed is defined as a custom API.
+
+More information: [Create and use Custom APIs](custom-api.md)
 
 In order to showcase the utilization of background operations, we have employed a Custom API called `sample_ExportDataUsingFetchXmlToAnnotation`. This API is designed to retrieve all the data using the provided FetchXML input parameter, create a CSV file, and attach it to a record within the annotation entity. Afterward, the Custom API will return the ID of the newly created record. You can obtain a copy of this sample by downloading it from this [link](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation).
 
