@@ -321,7 +321,7 @@ In-app notifications support zero to many actions on the notification card. Ther
 
 - **URL**: When the action is selected the web browser navigates to the defined URL.
 - **Side Pane**: When the action is selected, a side pane is opened in the app and loads the defined context in the pane.
-- **Teams Chat**: 
+- **Teams Chat**: When the action is selected, a Teams chat is initiated with defined users in the context of a Dynamics 365 record.
 
 ### Defining a URL action type
 
@@ -333,7 +333,38 @@ You can control where a navigation link opens by setting the `navigationTarget` 
 |`inline`|Default. Opens in the current page.|`"navigationTarget": "inline"` |
 |`newWindow`|Opens in a new browser tab.|`"navigationTarget": "newWindow"` |
 
-### Managing security for notifications
+### Defining a side pane action
+
+A side pane action enables opening a side pane to load a defined page when the action is selected from the app notification. See [Creating side panes by using a client API](./create-app-side-panes.md) for more information.
+
+When using the side pane action type, you have control over the options of the side pane itself, and the page that loads in the side pane.
+- See [createPane](./reference/xrm-app/xrm-app-sidepanes/createpane.md) for the optional parameters for the pane that is created.
+- See [navigateTo (Client API reference](./reference/xrm-navigation/navigateto.md) for the parameters to be defined for the page that will be loaded in the side pane.
+
+### Defining a Teams chat action
+
+A Teams chat action enables scenarios where a Teams chat is initiated from the app notification. This uses the embedded Teams feature for Dynamics 365 apps, which provides sellers and agents the ability to chat in Microsoft Teams from within the customer engagement apps, such as Sales Hub, Customer Service Hub, and custom apps. 
+
+>[!NOTE]
+>Microsoft Teams chat in Dynamics 365 must be enabled to use the Teams chat action type. See [Work with Microsoft Teams chat in Dynamics 365](/dynamics365/teams-integration/enable-teams-chat.md) for more information.
+
+The action type provides the following options:
+- Create a new chat session or open an existing chat session.
+- Link the chat session to a Dynamics 365 record or create an unlinked chat.
+
+The following are the parameters for defining a Teams chat action on the app notification.
+
+|Parameter | Data type | Description | 
+|----------|-----------|-------------|
+|chatId    |GUID       |Define a value for the chat ID to open an existing chat. This is the **Teams Chat Id** property of the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table for chats linked to a Dynamics 365 record, or the **id** property of the **chat** entity from Microsoft Graph. See [Get chat](https://learn.microsoft.com/graph/api/chat-get) for more information.<br><br> If a value is not defined for this parameter then a new chat session will be initiated. |
+|memberIds |GUID       |This is an array of the AAD user ID values of each of the participants that will be included in a new chat session. Member ID values should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the members of the existing chat will be included in the chat when opened. |
+|entityContext | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the entityContext, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (i.e. the **chatId** parameter has not been provided), and the the entity context is not defined, then the new chat session will not be linked to a Dynamics 365 record. |
+|entityName | String | Part of the entity context, this is the logical name of the Dataverse table for the record to which the chat will be linked. |
+|recordId | GUID | Part of the entity context, this is the ID property of the table defined in the **entityName** parameter for the record to which the chat will be linked. |
+|chatTitle | String | The title of the Teams chat. |
+|initialMessage | String | The text of an introduction message you may optionally provide that will be automatically sent when the chat is created. |
+
+## Managing security for notifications
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
