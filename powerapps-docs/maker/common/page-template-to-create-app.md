@@ -17,7 +17,7 @@ contributors:
 
 # Use a page template to create an app
 
-Power Apps offers the feature of create an apps using a pre-built page template. If you're unsure about the initial steps of building an app, utilizing the page template option can assist you in getting started. The template comes equipped with visual aids that enable you to select your preferred app design.
+Power Apps offers the feature to create an apps using a pre-built page template. If you're unsure about the initial steps of building an app, utilizing the page template option can assist you in getting started. The template comes equipped with visual aids that enable you to select your preferred app design.
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
