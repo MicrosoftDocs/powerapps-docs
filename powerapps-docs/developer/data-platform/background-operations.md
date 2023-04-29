@@ -16,11 +16,11 @@ contributors:
 
 # Background operations (Preview)
 
-[!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
+[!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
 
 Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
-Dataverse immediately responds that the request is accepted and there are several ways to monitor whether the request ultimately succeeds. When the operation succeeds, you can retrieve the result. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
+Dataverse immediately responds that the request is accepted and there are several ways to monitor whether the request ultimately succeeds. When the operation completes successfully, you can retrieve the result. There are also several ways to get notified when an background operation completes.
 
 Background operations requires that the operation performed is defined as a custom API. More information:
 
@@ -43,6 +43,8 @@ To perform a background operation, the initiating user must have read and write 
 
 You can request asynchronous processing of a request using both the SDK for .NET and Dataverse Web API.
 
+Examples in this article will use a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
+
 ### [SDK for .NET](#tab/sdk)
 
 Use the `ExecuteBackgroundOperation` message.
@@ -64,7 +66,7 @@ The `ExecuteBackgroundOperation` message has the following output parameters:
 |`BackgroundOperationId`|Guid| The ID of the background operation table row you can use to monitor the processing of your request or cancel it. |
 |`Location`|string| The status monitor resource URL to use to retrieve the status of your request or cancel it.|
 
-The following static method uses `ExecuteBackgroundOperation` with a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
+The following static method uses `ExecuteBackgroundOperation` with the `sample_ExportDataUsingFetchXmlToAnnotation` custom API.
 
 ```csharp
 static void SendRequestAsynchronously(IOrganizationService service)
@@ -120,8 +122,6 @@ More information:
 
 Send your request with the `Prefer: respond-async` header. More information: [Prefer Headers](webapi/compose-http-requests-handle-errors.md#prefer-headers)
 
-The following example uses the `sample_ExportDataUsingFetchXmlToAnnotation` custom api described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md)
-
 **Request**
 
 ```http
@@ -155,9 +155,6 @@ Preference-Applied: respond-async
 - The `x-ms-dyn-backgroundoperationid` response header value is the ID for the background operation row for the request.
 - The response [Location](https://developer.mozilla.org/docs/Web/HTTP/Headers/Location) header contains a URL that represents the *status monitor resource*
 
-
-You can use either URL to manage background operations, but the methods and responses are different.
-
 ---
 
 ## Manage background operations
@@ -190,7 +187,10 @@ When you send a request to be processed in the background, the response will inc
   
 ### Status polling
 
-Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively impact performance. If needed, we suggest polling at an interval of one minute or more.
+Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively impact performance. If needed, we suggest polling at an interval of one minute or more.  More information:
+
+- [Poll the background operation table](#poll-the-background-operation-table)
+- [Poll the status monitor resource](#poll-the-status-monitor-resource)
 
 ## Background Operations table
 
@@ -223,6 +223,7 @@ Background operation has the following columns you can use to manage the status 
 ### Poll the background operation table
 
 Make sure to include these columns in your query:
+- `name`
 - `backgroundoperationstatecode`
 - `backgroundoperationstatuscode`
 - `outputparameters`
@@ -238,6 +239,7 @@ static void PollBackgroundOperationRequest(IOrganizationService service, Guid ba
 {
     // List of columns that will help to get status, output and error details if any
     var columnSet = new ColumnSet(
+        "name",
         "backgroundoperationstatecode",
         "backgroundoperationstatuscode",
         "outputparameters",
@@ -249,6 +251,7 @@ static void PollBackgroundOperationRequest(IOrganizationService service, Guid ba
         // Get the entity with all the required columns
         var backgroundOperation = service.Retrieve("backgroundoperation", backgroundOperationId, columnSet);
 
+        Console.WriteLine($"Name: {backgroundOperation["name"]}");
         Console.WriteLine($"State Code: {backgroundOperation.FormattedValues["backgroundoperationstatecode"]}");
         Console.WriteLine($"Status Code: {backgroundOperation.FormattedValues["backgroundoperationstatuscode"]}");
         Console.WriteLine($"Output Parameters:");
@@ -282,6 +285,7 @@ static void PollBackgroundOperationRequest(IOrganizationService service, Guid ba
 **Waiting Output**
 
 ```console
+Name: sample_ExportDataUsingFetchXmlToAnnotation
 State Code: Locked
 Status Code:  In Progress
 Output Parameters:  
@@ -292,12 +296,11 @@ Error Message:
 **Complete Output**
 
 ```console
+Name: sample_ExportDataUsingFetchXmlToAnnotation
 State Code: Completed
 Status Code:  Succeeded
 Output Parameters:
-        outputParam1: {value},
-        outputParam2: {value},
-        outputParam3: {value}
+        AnnotationId: {value}
 Error Code:  
 Error Message:  
 ```
@@ -305,6 +308,7 @@ Error Message:
 **Error Output**
 
 ```console
+Name: sample_ExportDataUsingFetchXmlToAnnotation
 State Code: Completed
 Status Code:  Failed
 Output Parameters: 
@@ -323,14 +327,13 @@ Response:
 {"error":{"message":"Could not find item '110eaa68-db17-4115-ad74-d185823fc089'.","details":[{"message":"\r\nErrors : [\r\n  \"Resource Not Found. Learn more: https://aka.ms/cosmosdb-tsg-not-found\"\r\n]\r\n"}]}}
 ```
 
-
-
 #### [Web API](#tab/webapi)
 
 **Request**
 
 ```http
 GET [Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>)?$select=
+name,
 backgroundoperationstatecode,
 backgroundoperationstatuscode,
 outputparameters,
@@ -358,6 +361,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
     "backgroundoperationstatecode": 3,
     "backgroundoperationstatuscode@OData.Community.Display.V1.FormattedValue": "Succeeded",
     "backgroundoperationstatuscode": 30,
+    "name":"sample_ExportDataUsingFetchXmlToAnnotation"
     "outputparameters": "[{\"Key\":\"AnnotationId\",\"Value\":\"bb26025c-cbe6-ed11-a7c6-000d3a9933c9\"}]",
     "errorcode": null,
     "errormessage": null,
@@ -373,6 +377,8 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 You can also poll the status monitor resource with a `GET` request. This request returns the status of the background operation. If the operation is complete, it provides the output of the custom API. If there was an error during execution, you receive an error message and code.
 
 Send a request to the status monitor resource URL that was returned with the `Location` response header of the original request.
+
+<!-- Why doesn't the status monitor resource return the operation name? -->
 
 **Request**
 
@@ -417,6 +423,8 @@ You can specify a URL in your request to receive a callback when the operation i
     "backgroundOperationErrorMessage": {string},   
 }
 ```
+
+<!-- Why doesn't the callback include the operation name? -->
 
 `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs.
 
@@ -522,7 +530,7 @@ location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3
 
 ## Cancel background operations
 
-You can cancel a background operation that you initiated.
+You can cancel a background operation that you initiated before it starts.
 
 - If the operation hasn't begun execution yet, the platform won't execute it.
 - If the execution has already started, the platform won't abort the operation.
@@ -595,6 +603,8 @@ OData-Version: 4.0
 
 ### Send a DELETE request to the status monitor resource
 
+You can cancel a background operation by sending a DELETE request to the status monitor resource.
+
 **Request**
 
 ```http
@@ -654,7 +664,7 @@ The `OnBackgroundOperationComplete` message has the following input and output p
 |`BackgroundOperationStateCode`|Integer|Background Operation State Code|
 |`BackgroundOperationStatusCode`|Integer|Background Operation Status Code|
 
-To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as `OnBackgroundOperationComplete` in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
+To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as `OnBackgroundOperationComplete` in asynchronous mode. Set the **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
 
 
 ## Retries
