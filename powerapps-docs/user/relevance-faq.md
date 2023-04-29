@@ -58,7 +58,7 @@ Dataverse search does not return HTML formatting for memo types to optomize the 
 
 ## Why columns are not enabled for dataverse search after adding to quick find view?
 
-Columns are enabled for dataverse search only if quick find view is set to default view. For more information on how to set a default view, see [Set a default view for an entity](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/specify-default-views?view=op-9-1).
+Columns are enabled for dataverse search only if quick find view is set to default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
 ### See also
 
