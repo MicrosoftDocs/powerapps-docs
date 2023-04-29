@@ -19,7 +19,9 @@ contributors:
 
 [!INCLUDE [preview-include](../../cards/includes/preview-include.md)]
 
-Use background operations to send requests that Dataverse processes asynchronously. Dataverse immediately responds that the request is accepted and provides you with several ways to monitor whether the request ultimately succeeds. You can also retrieve the result, if any. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
+Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
+
+Dataverse immediately responds that the request is accepted and there are several ways to monitor whether the request ultimately succeeds. When the operation succeeds, you can retrieve the result. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
 Background operations requires that the operation performed is defined as a custom API. More information:
 
@@ -27,9 +29,9 @@ Background operations requires that the operation performed is defined as a cust
 - [Retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis)
 
 
-### Required Privileges
+## Required Privileges
 
-To perform the background operation, the user initiating it must be granted read and write access to the `backgroundoperation` table. This access can be granted by assigning the `prvReadbackgroundoperation` and `prvWritebackgroundoperation` privileges. More information:
+To perform a background operation, the initiating user must have read and write access to the `backgroundoperation` table. Assign the `prvReadbackgroundoperation` and `prvWritebackgroundoperation` privileges to grant this access. More information:
 
 - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 - <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>
@@ -60,8 +62,8 @@ The `ExecuteBackgroundOperation` message has the following output parameters:
 
 |Name|Type|Description |
 |---------|---------|---------|
-|`BackgroundOperationId`|Guid| The ID of the background operation table row you can use to monitor the processing of your request. |
-|`Location`|string| The URL to use to retrieve the status of your request|
+|`BackgroundOperationId`|Guid| The ID of the background operation table row you can use to monitor the processing of your request or cancel it. |
+|`Location`|string| The status monitor resource URL to use to retrieve the status of your request or cancel it.|
 
 The following static method uses `ExecuteBackgroundOperation` with a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
 
@@ -103,6 +105,12 @@ BackgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884
 Location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
 ```
 
+More information:
+
+- [IOrganizationService Interface](xref:Microsoft.Xrm.Sdk.IOrganizationService)
+- [Use messages with the Organization service](org-service/use-messages.md)
+
+
 
 ### [Web API](#tab/webapi)
 
@@ -114,9 +122,11 @@ The following example uses the `sample_ExportDataUsingFetchXmlToAnnotation` cust
 
 ```http
 POST [Organization URI]/api/data/v9.2/sample_ExportDataUsingFetchXmlToAnnotation HTTP/1.1
-Prefer: respond-async
 Content-Type: application/json
 Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Prefer: respond-async
 
 {
     "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
@@ -132,25 +142,17 @@ Accept: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Cache-Control: private
-Allow: OPTIONS,GET,HEAD,POST
 Location: [Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088
 x-ms-dyn-backgroundoperationid: 110eaa68-db17-4115-ad74-d185823fc088
 Preference-Applied: respond-async
 
 ```
 
-The response [Location](https://developer.mozilla.org/docs/Web/HTTP/Headers/Location) header contains a URL that represents the *status monitor resource* as defined by the [OData specification](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752312).
+- The `x-ms-dyn-backgroundoperationid` response header value is the ID for the background operation row for the request.
+- The response [Location](https://developer.mozilla.org/docs/Web/HTTP/Headers/Location) header contains a URL that represents the *status monitor resource*
 
-The status monitor resource is not the same as the URL you would compose to retrieve data from the backgroundoperations table and it behaves differently. Compare these two URLs:
 
-
-|URL |Example|
-|---------|---------|
-|Status Monitor Resource|`[Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088`|
-|Background Operation EntityType|`[Organization URI]/api/data/v9.0/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088)`|
-
-You can use either URL to get information about the status of background operations, but the results are different.
+You can use either URL to manage background operations, but the methods and responses are different.
 
 ---
 
@@ -164,15 +166,23 @@ When you send a request to be processed in the background, the response will inc
 
    - [Background Operations table](#background-operations-table)
    - [Poll the background operation table](#poll-the-background-operation-table)
-   - [Cancel background operations](#cancel-background-operations)
+   - [Cancel background operation by updating backgroundoperations](#cancel-background-operation-by-updating-backgroundoperations)
 
 
 - A `Location` URL that represents the *status monitor resource*.
 
-   This URL is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations. You can use this value to poll and cancel background operations. More information:
+   > [!IMPORTANT]
+   > The status monitor resource is not the Web API `backgroundoperation` EntityType resource.
+   > 
+   > |URL |Example|
+   > |---------|---------|
+   > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088`|
+   > |`backgroundoperation` EntityType|`[Organization URI]/api/data/v9.0/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088)`|   
+
+   The status monitor resource is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations. You can use this value to poll and cancel background operations. More information:
 
    - [Poll the status monitor resource](#poll-the-status-monitor-resource)
-   - [Cancel background operations](#cancel-background-operations)
+   - [Send a DELETE request to the status monitor resource](#send-a-delete-request-to-the-status-monitor-resource)
   
 
 ### Background Operations table
@@ -181,7 +191,7 @@ The Background Operation table contains information about requests to process as
 
 <!-- TODO: add link to Background Operation Entity table reference when regenerated -->
 
-Background operation has the following columns you can use to check the status of background operations.
+Background operation has the following columns you can use to manage the status of background operations.
 
 
 |Display Name<br />`SchemaName`<br />`LogicalName`|Type |Description|
@@ -312,15 +322,17 @@ Even a 404 error returns -2147185406, IsvAbortedNotFound error. -->
 
 #### [Web API](#tab/webapi)
 
-With the Web API, send a request to the status monitor URL that was returned with the `Location` response header of the original request.
+With the Web API, you can also query the backgroundoperation EntityType resource.
 
 **Request**
 
 ```http
-GET [Organization URI]/api/backgroundoperation/{backgroundoperationid}
-Content-Type: application/json  
-OData-MaxVersion: 4.0  
+GET [Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>)?$select=backgroundoperationstatecode,backgroundoperationstatuscode,outputparameters,errorcode,errormessage
+Content-Type: application/json
+Accept: application/json
+OData-MaxVersion: 4.0
 OData-Version: 4.0
+Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 ```
 
 **Response**
@@ -329,19 +341,22 @@ OData-Version: 4.0
 HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
+Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 {
-  backgroundOperationErrorCode: {INT},
-  backgroundOperationErrorMessage: {string},
-  backgroundOperationStateCode: {INT},
-  backgroundOperationStatusCode: {INT},
-  outputParam1: {value},
-  outputParam2: {value},
-  outputParam3: {value},
+    "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#backgroundoperations(backgroundoperationstatecode,backgroundoperationstatuscode,outputparameters,errorcode,errormessage)/$entity",
+    "@odata.etag": "W/\"92030eaa-0000-0200-0000-644d7c300000\"",
+    "backgroundoperationstatecode@OData.Community.Display.V1.FormattedValue": "Completed",
+    "backgroundoperationstatecode": 3,
+    "backgroundoperationstatuscode@OData.Community.Display.V1.FormattedValue": "Succeeded",
+    "backgroundoperationstatuscode": 30,
+    "outputparameters": "[{\"Key\":\"AnnotationId\",\"Value\":\"bb26025c-cbe6-ed11-a7c6-000d3a9933c9\"}]",
+    "errorcode": null,
+    "errormessage": null,
+    "backgroundoperationid": "<backgroundoperationid value>",
+    "versionnumber": 638183964640916096
 }
 ```
-
-`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values are only included when an error occurs. `outputParams` is only included when the operation completes successfully.
 
 ---
 
@@ -586,7 +601,6 @@ Background operations can be performed with the option of receiving notification
 
 To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
 
----
 
 ## Retries
 
