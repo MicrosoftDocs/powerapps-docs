@@ -2,7 +2,7 @@
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
 ms.custom: intro-internal
-ms.date: 04/28/2023
+ms.date: 04/29/2023
 ms.reviewer: jdaly
 ms.topic: article
 author: Anweshi
@@ -21,9 +21,21 @@ contributors:
 
 Use background operations to send requests that Dataverse processes asynchronously. Dataverse immediately responds that the request is accepted and provides you with several ways to monitor whether the request ultimately succeeds. You can also retrieve the result, if any. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
-Background operations requires that the operation performed is defined as a custom API. More information: [Create and use Custom APIs](custom-api.md)
+Background operations requires that the operation performed is defined as a custom API. More information:
 
-<!-- In order to showcase the utilization of background operations, we have employed a Custom API called `sample_ExportDataUsingFetchXmlToAnnotation`. This API is designed to retrieve all the data using the provided FetchXML input parameter, create a CSV file, and attach it to a record within the annotation entity. Afterward, the Custom API will return the ID of the newly created record. You can obtain a copy of this sample by downloading it from this [link](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportDataUsingFetchXmlToAnnotation). -->
+- [Create and use custom APIs](custom-api.md)
+- [Retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis)
+
+
+### Required Privileges
+
+To perform the background operation, the user initiating it must be granted read and write access to the `backgroundoperation` table. This access can be granted by assigning the `prvReadbackgroundoperation` and `prvWritebackgroundoperation` privileges. More information:
+
+- [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
+- <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>
+- [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole)
+
+<!-- TODO We need a generic topic to describe adding privileges to security roles programmatically: workitem 3342875 -->
 
 
 ## Request asynchronous processing
@@ -41,7 +53,7 @@ The `ExecuteBackgroundOperation` message has the following input parameters:
 
 |Name  |Type|Description  |
 |---------|---------|---------|
-|`Request`|[OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest)|(Required) The request you want to have processed asynchronously.|
+|`Request`|[OrganizationRequest](xref:Microsoft.Xrm.Sdk.OrganizationRequest)|(Required) The request you want to have processed asynchronously. The Dataverse message for this request must be implemented as a custom API.|
 |`CallbackUri`|string| (Optional) Dataverse sends a POST HTTP request to this Url when the operation is completed. More information: [Request a callback](#request-a-callback)|
 
 The `ExecuteBackgroundOperation` message has the following output parameters:
@@ -51,15 +63,15 @@ The `ExecuteBackgroundOperation` message has the following output parameters:
 |`BackgroundOperationId`|Guid| The ID of the background operation table row you can use to monitor the processing of your request. |
 |`Location`|string| The URL to use to retrieve the status of your request|
 
-The following static method use `ExecuteBackgroundOperation` with a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md)
+The following static method uses `ExecuteBackgroundOperation` with a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
 
 ```csharp
 static void SendRequestAsynchronously(IOrganizationService service)
 {
-    //Create a request for main workload i.e. Custom API that need to run in background
-    var asyncRequest = new new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation");
+    //Create a request for message defined as a custom API to run in the background
+    var asyncRequest = new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation");
 
-    //Setting parameters of main workload
+    //Setting input parameters for the message
     asyncRequest.Parameters["FetchXml"] =  @"<fetch version='1.0' output-format='xml-platform' mapping='logical'>
                                                 <entity name='account'>
                                                       <attribute name='accountid'/>
@@ -67,7 +79,7 @@ static void SendRequestAsynchronously(IOrganizationService service)
                                                 </entity>
                                              </fetch>"; 
 
-    //Create a request to execute main workload in background
+    //Create a request to execute the message in the background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
         Parameters = 
@@ -76,7 +88,7 @@ static void SendRequestAsynchronously(IOrganizationService service)
         }
     };
 
-    //Issue a background operation request
+    //Execute the background operation request
     var response = service.Execute(request);
 
     Console.WriteLine($"BackgroundOperationId: {response["BackgroundOperationId"]}");
@@ -135,14 +147,35 @@ The status monitor resource is not the same as the URL you would compose to retr
 
 |URL |Example|
 |---------|---------|
-|Status Monitor Resource|[Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088|
-|Background Operation EntityType|[Organization URI]/api/data/v9.0/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088)|
+|Status Monitor Resource|`[Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088`|
+|Background Operation EntityType|`[Organization URI]/api/data/v9.0/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088)`|
 
 You can use either URL to get information about the status of background operations, but the results are different.
 
 ---
 
-## Monitor background operations
+## Manage background operations
+
+When you send a request to be processed in the background, the response will include two values that represent different methods you can use to manage background operations.
+
+- The ID for a row in the `backgroundoperations` table.
+
+   Use this value with either the SDK or Web API to retrieve or update data from the `backgroundoperations` table. More information:
+
+   - [Background Operations table](#background-operations-table)
+   - [Poll the background operation table](#poll-the-background-operation-table)
+   - [Cancel background operations](#cancel-background-operations)
+
+
+- A `Location` URL that represents the *status monitor resource*.
+
+   This URL is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations. You can use this value to poll and cancel background operations. More information:
+
+   - [Poll the status monitor resource](#poll-the-status-monitor-resource)
+   - [Cancel background operations](#cancel-background-operations)
+  
+
+### Background Operations table
 
 The Background Operation table contains information about requests to process asynchronously. It is identified by the entity name `backgroundoperation` and the entity set name `backgroundoperations`.
 
@@ -169,9 +202,6 @@ Background operation has the following columns you can use to check the status o
 |**Created On**<br />`CreatedOn`<br />`createdon`|DateTime|When the record was created|
 |**Time to live**<br />`TTLInSeconds`<br />`ttlinseconds`|Integer|Time to live in seconds after which the record is automatically deleted. Default value is 90 days|
 
-### Required Access
-
-To perform the background operation, the user initiating it must be granted read and write access to the `backgroundoperation` table. This access can be granted by assigning the `prvReadbackgroundoperation` and `prvWritebackgroundoperation` privileges for read and write, respectively.
 
 ### Poll the background operation table
 
@@ -315,6 +345,50 @@ OData-Version: 4.0
 
 ---
 
+### Poll the status monitor resource
+
+You can poll the status monitor resource.
+
+
+
+If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). However, if the error is not caused by the platform, its value will be set to zero.
+
+<!-- I don't really understand what this means. How do I get the error?
+Even a 404 error returns -2147185406, IsvAbortedNotFound error. -->
+
+
+
+Send a request to the status monitor URL that was returned with the `Location` response header of the original request.
+
+**Request**
+
+```http
+GET [Organization URI]/api/backgroundoperation/{backgroundoperationid}
+Content-Type: application/json  
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  backgroundOperationErrorCode: {INT},
+  backgroundOperationErrorMessage: {string},
+  backgroundOperationStateCode: {INT},
+  backgroundOperationStatusCode: {INT},
+  outputParam1: {value},
+  outputParam2: {value},
+  outputParam3: {value},
+}
+```
+
+`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values are only included when an error occurs. Output parameters are only included when the operation completes successfully.
+
+---
+
+
 ### Request a callback
 
 You can specify a URL in your request to receive a callback when the operation is completed. Dataverse uses this URL to send a `POST` request with the following payload:
@@ -330,11 +404,7 @@ You can specify a URL in your request to receive a callback when the operation i
 }
 ```
 
-`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs.
-
-<!-- No output parameter values sent to the callback? -->
-
-The site that receives the callback can then use the location url to retrieve any results.
+`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs. The callback payload does not include any output parameters. The site that receives the callback can use the location url to retrieve any results.
 
 > [!NOTE]
 >
@@ -430,18 +500,24 @@ location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3
 
 If you initiate a background operation, you may sometimes need to cancel its execution.
 
-If the operation hasn't begun execution yet, the platform won't execute it. However, if the execution has already started, the platform won't abort the operation. Additionally, if an error occurs during the execution, the platform won't retry it if a cancellation request was made.
+- If the operation hasn't begun execution yet, the platform won't execute it.
+- If the execution has already started, the platform won't abort the operation.
+- If an error occurs during the execution, the platform won't retry it if a cancellation request was made.
 
-How you cancel the operation depends on whether you are using the SDK or Web API.
+There are two ways to cancel a background operation:
+
+- [Cancel background operation by updating backgroundoperations](#cancel-background-operation-by-updating-backgroundoperations)
+- [Send a DELETE request to the status monitor resource](#send-a-delete-request-to-the-status-monitor-resource)
+
+### Cancel background operation by updating backgroundoperations
+
+Update the row in the `backgroundoperations` table to set the the `backgroundoperationstatecode` to 2 (**Locked**) and `backgroundoperationstatuscode` to 22 (**Cancelling**)
 
 ### [SDK for .NET](#tab/sdk)
-
-With the SDK, set the `backgroundoperationstatecode` to 2 (Locked) and `backgroundoperationstatuscode` to 22 (Cancelling)
 
 ```csharp
 static void CancelBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
 {
-
     var backgroundOperation = new Entity("backgroundoperation");
                     
     backgroundOperation.Id = backgroundOperationId;
@@ -458,15 +534,38 @@ static void CancelBackgroundOperationRequest(IOrganizationService service, Guid 
 
 ### [Web API](#tab/webapi)
 
-With the Web API, send a `DELETE` request to the status monitor resource url.
+**Request**
+
+```http
+PATCH [Organization URI]/api/data/v9.2/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088) HTTP/1.1
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-Match: *
+Content-Type: application/json
+
+{
+    "backgroundoperationstatecode": 2,
+    "backgroundoperationstatuscode": 22
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
+---
+
+
+### Send a DELETE request to the status monitor resource
 
 **Request**
 
 ```http
 DELETE [Organization URI]/api/backgroundoperation/{backgroundoperationid}
-Content-Type: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0
 ```
 
 **Response**
@@ -476,11 +575,10 @@ HTTP/1.1 200 Ok
 
 {
     backgroundOperationStateCode: 2,
-    backgroundOperationSatusCode: 22
+    backgroundOperationStatusCode: 22
 }
 ```
 
----
 
 ## Receive notification of result
 
