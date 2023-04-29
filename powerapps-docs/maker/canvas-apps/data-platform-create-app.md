@@ -63,7 +63,7 @@ By default, the gallery shows an email address, a city, and an account name. As 
 
 ![Browse screen.](./media/data-platform-create-app/browse-screen.png)
 
-## Save the app
+### Save the app
 You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
 
 1. Select **Settings**.
@@ -76,12 +76,10 @@ You'll probably want to make more changes before you use this app or share it wi
 
 1. Near the left edge, select **Save as** and then, in the lower-right corner, select **Save**.
 
-## Next steps
+### Next steps
 
-In this quickstart, you created an app to manage sample data about accounts in Dataverse. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.
+In this quickstart, you created an app to manage sample data about accounts in Dataverse. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs. More information: [Customize a gallery in Power Apps](customize-layout-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [Customize a gallery](customize-layout-sharepoint.md).
  ---
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
