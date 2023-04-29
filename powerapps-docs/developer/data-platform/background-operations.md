@@ -5,13 +5,12 @@ ms.custom: intro-internal
 ms.date: 04/29/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: Anweshi
+author: cwithfourplus
 ms.subservice: dataverse-developer
-ms.author: anweshid
+ms.author: vikaush
 search.audienceType: 
   - developer
 contributors:
-  - cwithfourplus
   - JimDaly
 ---
 
@@ -71,20 +70,25 @@ The following static method uses `ExecuteBackgroundOperation` with a custom API 
 static void SendRequestAsynchronously(IOrganizationService service)
 {
     //Create a request for message defined as a custom API to run in the background
-    var asyncRequest = new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation");
-
-    //Setting input parameters for the message
-    asyncRequest.Parameters["FetchXml"] =  @"<fetch version='1.0' output-format='xml-platform' mapping='logical'>
-                                                <entity name='account'>
-                                                      <attribute name='accountid'/>
-                                                      <attribute name='name'/>  
-                                                </entity>
-                                             </fetch>"; 
+    var asyncRequest = new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation")
+    {
+        Parameters =
+        {
+            {"FetchXml",  @"<fetch version='1.0'  
+                                    output-format='xml-platform' 
+                                    mapping='logical'>
+                                <entity name='account'>
+                                    <attribute name='accountid'/>
+                                    <attribute name='name'/>  
+                                </entity>
+                            </fetch>" }
+        }
+    };
 
     //Create a request to execute the message in the background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
-        Parameters = 
+        Parameters =
         {
             {"Request", asyncRequest }
         }
@@ -179,7 +183,7 @@ When you send a request to be processed in the background, the response will inc
    > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088`|
    > |`backgroundoperation` EntityType|`[Organization URI]/api/data/v9.0/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088)`|   
 
-   The status monitor resource is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations. You can use this value to poll and cancel background operations. More information:
+   The status monitor resource is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.  You can use this URL to poll and cancel background operations. More information:
 
    - [Poll the status monitor resource](#poll-the-status-monitor-resource)
    - [Send a DELETE request to the status monitor resource](#send-a-delete-request-to-the-status-monitor-resource)
@@ -217,13 +221,16 @@ Background operation has the following columns you can use to manage the status 
 
 After initiating a background operation, you may want to check its status. This process is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively impact performance. If needed, we suggest polling at an interval of one minute or more.
 
-This request returns the status of the background operation, and if the operation is complete, it provides the output of the Custom API.If there was an error during execution, you receive an error message and code.
+The columns that you should return are:
+- `backgroundoperationstatecode`
+- `backgroundoperationstatuscode`
+- `outputparameters`
+- `errorcode`
+- `errormessage`
 
 How you do this depends on whether you are using the SDK or Web API.
 
 #### [SDK for .NET](#tab/sdk)
-
-With the SDK, you can query the background operation table to retrieve these column values: `backgroundoperationstatecode`,`backgroundoperationstatuscode`,`outputparameters`,`errorcode`,`errormessage`
 
 ```csharp
 static void PollBackgroundOperationRequest(IOrganizationService service, Guid backgroundOperationId)
@@ -322,12 +329,17 @@ Even a 404 error returns -2147185406, IsvAbortedNotFound error. -->
 
 #### [Web API](#tab/webapi)
 
-With the Web API, you can also query the backgroundoperation EntityType resource.
+You must use the `backgroundoperation` EntityType to include labels in your response.
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>)?$select=backgroundoperationstatecode,backgroundoperationstatuscode,outputparameters,errorcode,errormessage
+GET [Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>)?$select=
+backgroundoperationstatecode,
+backgroundoperationstatuscode,
+outputparameters,
+errorcode,
+errormessage
 Content-Type: application/json
 Accept: application/json
 OData-MaxVersion: 4.0
@@ -362,9 +374,9 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ### Poll the status monitor resource
 
-You can poll the status monitor resource.
+You can also poll the status monitor resource. We recommend that you avoid excessive polling because it can negatively impact performance. If needed, we suggest polling at an interval of one minute or more.
 
-
+This request returns the status of the background operation. If the operation is complete, it provides the output of the custom API.If there was an error during execution, you receive an error message and code.
 
 If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). However, if the error is not caused by the platform, its value will be set to zero.
 
@@ -401,8 +413,6 @@ Content-Type: application/json
 
 `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values are only included when an error occurs. Output parameters are only included when the operation completes successfully.
 
----
-
 
 ### Request a callback
 
@@ -410,16 +420,18 @@ You can specify a URL in your request to receive a callback when the operation i
 
 ```json
 {
-   backgroundOperationId: {GUID},
-   backgroundOperationStateCode: {INT},
-   backgroundOperationStatusCode: {INT},
+  "location": "< status monitor resource URL >",
+  "backgroundOperationId": "{GUID}",
+  "backgroundOperationStateCode": {INT},
+  "backgroundOperationStatusCode": {INT},
    backgroundOperationErrorCode: {INT},
-   backgroundOperationErrorMessage: {string},
-   location: {locationURL}
+   backgroundOperationErrorMessage: {string},   
 }
 ```
 
-`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs. The callback payload does not include any output parameters. The site that receives the callback can use the location url to retrieve any results.
+`backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs. The callback payload does not include any output parameters. The site that receives the callback must send an authenticated `GET` request using the status monitor resource URL to get any results.
+
+<!-- Why not send the output parameters with the results?  -->
 
 > [!NOTE]
 >
@@ -437,28 +449,34 @@ With the SDK, set the `ExecuteBackgroundOperation.CallbackUri` parameter to the 
 ```csharp
 static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 {
-    //Create a request for main workload i.e. Custom API that need to run in background
-    var asyncRequest = new new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation");
+    //Create a request for message defined as a custom API to run in the background
+    var asyncRequest = new OrganizationRequest("sample_ExportDataUsingFetchXmlToAnnotation")
+    {
+        Parameters =
+        {
+            {"FetchXml",  @"<fetch version='1.0'  
+                                    output-format='xml-platform' 
+                                    mapping='logical'>
+                                <entity name='account'>
+                                    <attribute name='accountid'/>
+                                    <attribute name='name'/>  
+                                </entity>
+                            </fetch>" }
+        }
+    };
 
-    //Setting parameters of main workload
-    createAccountRequest.Parameters["FetchXml"] =  @"<fetch version='1.0' output-format='xml-platform' mapping='logical'>
-                                                            <entity name='account'>
-                                                                <attribute name='accountid'/>
-                                                                <attribute name='name'/>  
-                                                            </entity>
-                                                        </fetch>";
-
-    //Create a request to execute main workload in background
+    //Create a request to execute the message in the background
     var request = new OrganizationRequest("ExecuteBackgroundOperation")
     {
-        Parameters = 
+        Parameters =
         {
             {"Request", asyncRequest },
+            // Request a callback
             {"CallbackUri", "https://webhook.site/<id>" }
         }
     };
 
-    //Issue a background operation request
+    //Execute the background operation request
     var response = service.Execute(request);
 
     Console.WriteLine($"BackgroundOperationId: {response["BackgroundOperationId"]}");
