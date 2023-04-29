@@ -146,8 +146,8 @@ Prefer: respond-async
 
 ```http
 HTTP/1.1 202 Accepted
-Location: [Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088
-x-ms-dyn-backgroundoperationid: 110eaa68-db17-4115-ad74-d185823fc088
+Location: [Organization URI]/api/backgroundoperation/<backgroundoperationid value>
+x-ms-dyn-backgroundoperationid: <backgroundoperationid value>
 Preference-Applied: respond-async
 
 ```
@@ -177,8 +177,8 @@ When you send a request to be processed in the background, the response will inc
    > 
    > |URL |Example|
    > |---------|---------|
-   > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/110eaa68-db17-4115-ad74-d185823fc088`|
-   > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.0/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088)`|
+   > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/<backgroundoperationid value>`|
+   > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.0/backgroundoperations(<backgroundoperationid value>)`|
 
    The status monitor resource is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.  You can use this URL to poll and cancel background operations. More information:
 
@@ -578,7 +578,7 @@ static void CancelBackgroundOperationRequest(
 **Request**
 
 ```http
-PATCH [Organization URI]/api/data/v9.2/backgroundoperations(110eaa68-db17-4115-ad74-d185823fc088) HTTP/1.1
+PATCH [Organization URI]/api/data/v9.2/backgroundoperations(<backgroundoperationid value>) HTTP/1.1
 Accept: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
