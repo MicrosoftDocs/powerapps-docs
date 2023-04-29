@@ -56,6 +56,10 @@ Party list fields are special fields that aren't searchable or viewable in the r
 
 Dataverse search does not return HTML formatting for memo types to optomize the UI experience.
 
+## Why columns are not enabled for dataverse search after adding to quick find view?
+
+Columns are enabled for dataverse search only if quick find view is set to default view. For more information on how to set a default view, see [Set a default view for an entity](../dynamics-365-customer-engagement/blob/main/ce/customerengagement/on-premises/customize/specify-default-views.md).
+
 ### See also
 
 [What is Dataverse search?](relevance-search-benefits.md)<br/>
