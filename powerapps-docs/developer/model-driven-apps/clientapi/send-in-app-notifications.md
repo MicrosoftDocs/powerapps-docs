@@ -246,7 +246,7 @@ OrganizationRequest request = new OrganizationRequest()
         ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
         ["Body"] = "Welcome to the world of app notifications!",
         ["IconType"] = new OptionSetValue(100000000), //info
-        ["ToastType"] = new OptionSetValue(200000000) //timed
+        ["ToastType"] = new OptionSetValue(200000000), //timed
         ["OverrideContent"] = new Entity()
         {
           Attributes = 
@@ -305,7 +305,7 @@ Accept: application/json
   "Body": "Welcome to the world of app notifications!",
   "Recipient": "/systemusers(<Guid of the user>)",
   "IconType": 100000005, // custom
-  "ToastType": 200000000 // timed,
+  "ToastType": 200000000, // timed,
   "OverrideContent": {
     "@odata.type": "#Microsoft.Dynamics.CRM.expando",
     "title": "**Welcome**",
@@ -325,21 +325,301 @@ In-app notifications support zero to many actions on the notification card. Ther
 
 ### Defining a URL action type
 
-You can control where a navigation link opens by setting the `navigationTarget` parameter. 
+The URL action type enables navigation from the action on the app notification to a defined URL. The following are the parameters for this action type:
 
-|Navigation target|Behavior|Example|
-|----------|-----------|-----------|
-|`dialog`|Opens in the center dialog.|`"navigationTarget": "dialog"` |
-|`inline`|Default. Opens in the current page.|`"navigationTarget": "inline"` |
-|`newWindow`|Opens in a new browser tab.|`"navigationTarget": "newWindow"` |
+|Parameter | Required | Data type | Description |
+|-------------|-------------|-------------|-------------|
+|url | Yes | String | This is the URL of the web address to be opened when the action is selected. |
+|navigationTarget | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li><ul> |
 
+The following example shows how to create a notification with a single URL action.
+
+> [!div class="mx-imgBorder"] 
+> ![App notification with a single action.](../media/app-notification-with-single-action.png "App notification with a single action")
+  
+# [Web API](#tab/webapi)
+
+```http
+POST [Organization URI]/api/data/v9.0/sendappnotification 
+HTTP/1.1
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+
+{
+  "Title": "Congratulations",
+  "Body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+  "Recipient": "/systemusers(<Guid of the user>)",
+  "IconType": 100000001, // success
+  "ToastType": 200000000, // timed
+  "Actions": {
+    "@odata.type": "Microsoft.Dynamics.CRM.expando",
+    "actions@odata.type":#Collection(Microsoft.Dynamics.CRM.expando)",
+    "actions": [
+      {
+        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+        "title": "View cases",
+        "type": "url",
+        "data": {
+            "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+            "url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
+            "navigationTarget": "newWindow"
+        }
+      }
+    }
+  ]
+}
+```
+
+# [Dataverse SDK](#tab/sdk)
+
+```csharp
+
+OrganizationRequest request = new OrganizationRequest()
+{
+    RequestName = "SendAppNotification",
+    Parameters = new ParameterCollection
+    {
+        ["Title"] = "Congratulations",
+        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
+        ["Body"] = "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+        ["IconType"] = new OptionSetValue(100000000), //info
+        ["ToastType"] = new OptionSetValue(200000000), //timed
+        ["Actions"] = new Entity()
+        {
+          Attributes = 
+          {
+            ["actions"] = new EntityCollection()
+            {
+              Entities = 
+              {
+                new Entity()
+                {
+                  Attributes =
+                  {
+                    ["title"] = "View cases",
+                    ["data"] = new Entity()
+                    {
+                      Attributes =
+                      {
+                        ["type"] = "url",
+                        ["url"] = "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
+                        ["navigationTarget"] = "newWindow"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+     }
+};
+
+OrganizationResponse response = currentUserService.Execute(request);
+Guid appNotificationId = (Guid)response.Results["NotificationId"];
+```
+
+# [Power Fx](#tab/powerfx)
+
+```powerapps-dot
+XSendAppNotification(
+    "Congratulations",
+    AsType(ThisRecord.Owner, Users),
+    "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+    [XCreateUrlAction
+        ("View cases","?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039")
+    ]
+)
+```
+
+---
+  
 ### Defining a side pane action
 
 A side pane action enables opening a side pane to load a defined page when the action is selected from the app notification. See [Creating side panes by using a client API](./create-app-side-panes.md) for more information.
 
 When using the side pane action type, you have control over the options of the side pane itself, and the page that loads in the side pane.
 - See [createPane](./reference/xrm-app/xrm-app-sidepanes/createpane.md) for the optional parameters for the pane that is created.
-- See [navigateTo (Client API reference](./reference/xrm-navigation/navigateto.md) for the parameters to be defined for the page that will be loaded in the side pane.
+- See [navigateTo (Client API reference)](./reference/xrm-navigation/navigateto.md) for the parameters to be defined for the page that will be loaded in the side pane.
+  
+The following example shows creating an app notification with a two side pane actions.
+  
+# [Web API](#tab/webapi)
+
+```http
+POST [Organization URI]/api/data/v9.0/sendappnotification 
+HTTP/1.1
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+
+{
+  "Title": "New task",
+  "Body": "A new task has been assigned to you to follow up on the Contoso account",
+  "Recipient": "/systemusers(<Guid of the user>)",
+  "IconType": 100000000, // info
+  "ToastType": 200000000, // timed
+  "Actions": {
+      "@odata.type":"Microsoft.Dynamics.CRM.expando",
+      "actions@odata.type":"#Collection(Microsoft.Dynamics.CRM.expando)",
+      "actions": [
+        {
+          "title": "View task",
+          "data" : {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "type": "sidepane",
+                "paneOptions": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "title": "Task Record",
+                    "width": 400
+                },
+                "navigationTarget": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "pageType": "entityrecord",
+                    "entityName": "task",
+                    "entityId": "<Task ID>"
+                }
+           }
+        },
+        {
+          "title": "View account",
+          "data" : {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "type": "sidepane",
+                "paneOptions": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "title": "Account Record",
+                    "width": 400
+                },
+                "navigationTarget": {
+                    "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                    "pageType": "entityrecord",
+                    "entityName": "account",
+                    "entityId": "<Account ID>"
+                }
+           }
+        }
+    }
+  ]
+}
+```
+
+# [Dataverse SDK](#tab/sdk)
+
+```csharp
+
+OrganizationRequest request = new OrganizationRequest()
+{
+    RequestName = "SendAppNotification",
+    Parameters = new ParameterCollection
+    {
+        ["Title"] = "New task",
+        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
+        ["Body"] = "A new task has been assigned to you to follow up on the Contoso account",
+        ["IconType"] = new OptionSetValue(100000000), //info
+        ["ToastType"] = new OptionSetValue(200000000), //timed
+        ["Actions"] = new Entity()
+        {
+          Attributes = 
+          {
+            ["actions"] = new EntityCollection()
+            {
+              Entities = 
+              {
+                new Entity()
+                {
+                  Attributes =
+                  {
+                    ["title"] = "View task",
+                    ["data"] = new Entity()
+                    {
+                      Attributes =
+                      {
+                        ["type"] = "sidepane",
+                        ["paneOptions"] = new Entity
+                        {
+                          Attributes = 
+                          {
+                            ["title"] = "Task",
+                            ["width"] = 400
+                          }
+                        },
+                        ["navigationTarget"] = new Entity
+                        {
+                          Attributes = 
+                          {
+                            ["pageType"] = "entityrecord",
+                            ["entityName"] = "task",
+                            ["entityId"] = "<GUID of the table record>"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                new Entity()
+                {
+                  Attributes =
+                  {
+                    ["title"] = "View account",
+                    ["data"] = new Entity()
+                    {
+                      Attributes =
+                      {
+                        ["type"] = "sidepane",
+                        ["paneOptions"] = new Entity
+                        {
+                          Attributes = 
+                          {
+                            ["title"] = "Account",
+                            ["width"] = 400
+                          }
+                        },
+                        ["navigationTarget"] = new Entity
+                        {
+                          Attributes = 
+                          {
+                            ["pageType"] = "entityrecord",
+                            ["entityName"] = "account",
+                            ["entityId"] = "<GUID of the table record>"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+     }
+};
+
+OrganizationResponse response = currentUserService.Execute(request);
+Guid appNotificationId = (Guid)response.Results["NotificationId"];
+```
+
+# [Power Fx](#tab/powerfx)
+
+```powerapps-dot
+//THIS NEEDS TO BE UPDATED WHEN THE NEW FUNCTIONS ARE AVAILABLE
+  
+XSendAppNotification(
+  "You have a new task!",
+  AsType(ThisRecord.Owner, Users),
+  "A new task has been assigned to you to follow up with your customer",
+  [XCreateEntityRecordSidePaneAction
+    ("View task","taskRecord","Task","task",ThisRecord.Task),
+  XCreateEntityRecordSidePaneAction
+    ("View account","accountRecord","Account","account",AsType(ThisRecord.Regarding, Accounts).Account)
+  ]
+)
+```
+
+---
 
 ### Defining a Teams chat action
 
@@ -364,6 +644,119 @@ The following are the parameters for defining a Teams chat action on the app not
 |chatTitle | String | The title of the Teams chat. |
 |initialMessage | String | The text of an introduction message you may optionally provide that will be automatically sent when the chat is created. |
 
+The following example shows creating an app notification with a single Teams chat action.
+  
+# [Web API](#tab/webapi)
+
+```http
+POST [Organization URI]/api/data/v9.0/sendappnotification 
+HTTP/1.1
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+
+{
+  "Title": "New order posted",
+  "Body": "A new sales order has been posted for Contoso",
+  "Recipient": "/systemusers(<Guid of the user>)",
+  "IconType": 100000000, // info
+  "ToastType": 200000000, // timed
+  "Actions": {
+      "@odata.type":"Microsoft.Dynamics.CRM.expando",
+      "actions@odata.type":"#Collection(Microsoft.Dynamics.CRM.expando)",
+      "actions": [
+        {
+            "title": "Chat with sales rep",
+            "data": {
+                "@odata.type":"#Microsoft.Dynamics.CRM.expando",
+                "type": "teamsChat",
+                "memberIds@odata.type": "#Collection(String)",
+                "memberIds": ["<AAD user ID 1>","<AAD user ID 2>"],
+                "entityContext": {
+                  "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                  "entityName": "account",
+                  "recordId": "<Account ID value>"
+                }
+            }
+        }
+      ]
+  }
+}
+```
+
+# [Dataverse SDK](#tab/sdk)
+
+```csharp
+
+OrganizationRequest request = new OrganizationRequest()
+{
+    RequestName = "SendAppNotification",
+    Parameters = new ParameterCollection
+    {
+        ["Title"] = "New order posted",
+        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
+        ["Body"] = "A new sales order has been posted for Contoso",
+        ["IconType"] = new OptionSetValue(100000000), //info
+        ["ToastType"] = new OptionSetValue(200000000), //timed
+        ["Actions"] = new Entity()
+        {
+          Attributes = 
+          {
+            ["actions"] = new EntityCollection()
+            {
+              Entities = 
+              {
+                new Entity()
+                {
+                  Attributes =
+                  {
+                    ["title"] = "Chat with sales rep",
+                    ["data"] = new Entity()
+                    {
+                      Attributes =
+                      {
+                        ["type"] = "teamsChat",
+                        ["memberIds"] = new string[]{ "<AAD user ID 1>","<AAD user ID 2>" },
+                        ["entityContext"] = new Entity
+                        {
+                          Attributes = 
+                          {
+                            ["entityName"] = "account",
+                            ["recordId"] = "<Account ID value>"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+     }
+};
+
+OrganizationResponse response = currentUserService.Execute(request);
+Guid appNotificationId = (Guid)response.Results["NotificationId"];
+```
+
+# [Power Fx](#tab/powerfx)
+
+```powerapps-dot
+  
+XSendAppNotification
+	("New order posted",
+	AsType(ThisRecord.Owner, Users),
+	"A new sales order has been posted for Contoso",
+	[XCreateTeamsChatAction
+		("Chat with sales rep",
+		[AsType(ThisRecord.Owner, Users).'Azure AD Object ID',ThisRecord.'Created By'.'Azure AD Object ID'],
+		AsType(ThisRecord.Customer, Accounts).Account,"account",ThisRecord.Description)])
+```
+
+---
+
 ## Managing security for notifications
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
@@ -376,7 +769,7 @@ The in-app notification feature uses three tables. A user needs to have the corr
 |User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit. |
 
 
-### Notification storage
+## Notification storage
 
 Because the app notification table uses the organization's database storage capacity, it's important to consider the volume of notifications sent and the expiration setting. More information: [Microsoft Dataverse storage capacity](/power-platform/admin/capacity-storage)
 
