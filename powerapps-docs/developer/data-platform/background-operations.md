@@ -486,7 +486,7 @@ HTTP/1.1 200 Ok
 
 Background operations can be performed with the option of receiving notification through a callback URL upon completion, or by subscribing to the SDK Message called **OnBackgroundOperationComplete**, which is triggered each time a background operation finishes. 
 
-To configure this message, refer to the [Register a plug-in](https://learn.microsoft.com/power-apps/developer/data-platform/register-plug-in) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
+To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as **OnBackgroundOperationComplete** in asynchronous mode. Additionally, set the 'Auto Delete' to 'true' so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed, and set the stage to **Post Operation** or higher.
 
 ---
 
