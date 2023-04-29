@@ -32,7 +32,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 Upload an Excel file from your computer then, an app will be created for you.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. From the home screen select, **Start with data** > **Upload an Excel file**
+2. From the home screen select, **Start with data** > **Upload an Excel file**.
 3. Choose **Select from device** and browse to the location where you have the Excel file and upload it.
 4. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
 5. Select **Row ownership** and choose how you want to manage row owership.
