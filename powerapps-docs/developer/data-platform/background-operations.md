@@ -318,7 +318,7 @@ Error Code:  -2147187707
 Error Message:  Access is denied.
 ```
 
-If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web Service Error Codes](https://learn.microsoft.com/power-apps/developer/data-platform/reference/web-service-error-codes). However, if the error is not caused by the platform, its value will be set to zero.
+If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). However, if the error is not caused by the platform, its value will be set to zero.
 
 **Id not found**
 
