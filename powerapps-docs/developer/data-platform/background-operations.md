@@ -380,8 +380,6 @@ You can poll the status monitor resource with a `GET` request. This request retu
 
 Send a request to the status monitor resource URL that was returned with the `Location` response header of the original request.
 
-<!-- Why doesn't the status monitor resource return the operation name? -->
-
 **Request**
 
 ```http
@@ -434,13 +432,9 @@ You can specify a URL in your request to receive a callback when the operation i
 }
 ```
 
-<!-- Why doesn't the callback include the operation name? -->
-
 `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs.
 
 The callback payload doesn't include any output parameters. The site that receives the callback must send an authenticated `GET` request using the status monitor resource URL to get any results.
-
-<!-- Why not send the output parameters with the results?  -->
 
 > [!NOTE]
 >
@@ -499,11 +493,6 @@ With the Web API, set the `Prefer` request header with this value:
 
 `Prefer: respond-async, odata.callback; url="<url>"`
 
-<!-- 
-Spec 8.2.8.2 Preference odata.callback says this should be 'odata.callback' rather than just 'callback'.. 
-http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc445374558
--->
-
 **Request**
 
 ```http
@@ -553,11 +542,9 @@ The `OnBackgroundOperationComplete` message has the following input and output p
 
 ### Input parameters
 
-<!-- Need information on what values are valid for PayloadType and how to use it. -->
-
 |Name|Type|Description|
 |---------|---------|---------|
-|`PayloadType`|Integer|Payload type tells what type of response is sent to the callback URI when background operation is complete, i.e. Full output of API or Location to get the output of API. This is an internal field and shouldn't be updated.|
+|`PayloadType`|Integer|Payload type tells what type of response is sent to the callback URI when background operation is complete, it will always be ZERO for background operations. This is an internal field and shouldn't be updated.|
 |`LocationUrl`|String|Location URL|
 |`BackgroundOperationId`|Guid|The ID of Background Operation.|
 
