@@ -20,9 +20,9 @@ contributors:
 
 Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
-Dataverse immediately responds that the request is accepted. When the operation completes successfully, you can retrieve the result. You can poll the `backgroundoperations` table or use two other methods to get notified when an background operation completes.
+Dataverse immediately responds that the request is accepted. When the operation completes successfully, you can retrieve the result. You can poll the `backgroundoperations` table or use two different methods to get notified when a background operation completes.
 
-Background operations requires that the operation performed is defined as a custom API. More information:
+Background operations require that the operation performed is defined as a custom API. More information:
 
 - [Create and use custom APIs](custom-api.md)
 - [Retrieve data about custom APIs](custom-api-tables.md#retrieve-data-about-custom-apis)
@@ -43,7 +43,7 @@ To perform a background operation, the initiating user must have read and write 
 
 You can request asynchronous processing of a request using both the SDK for .NET and Dataverse Web API.
 
-Examples in this article will use a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
+Examples in this article use a custom API named `sample_ExportDataUsingFetchXmlToAnnotation`. This custom API is described in [Sample: ExportDataUsingFetchXmlToAnnotation custom API](org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md).
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -107,8 +107,8 @@ static void SendRequestAsynchronously(IOrganizationService service)
 **Output:**
 
 ```
-BackgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884
-Location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
+BackgroundOperationId: <backgroundoperationid value>
+Location: [Organization URI]/api/backgroundoperation/<backgroundoperationid value>
 ```
 
 More information:
@@ -159,11 +159,11 @@ Preference-Applied: respond-async
 
 ## Manage background operations
 
-When you send a request to be processed in the background, the response will include two values that represent different methods you can use to manage background operations.
+When you send a request to be processed in the background, the response includes two values that represent different methods you can use to manage background operations.
 
 - The ID for a row in the `backgroundoperations` table.
 
-   Use this value with either the SDK or Web API to retrieve or update data from the `backgroundoperations` table. More information:
+   Use this value with either the SDK or Web API to retrieve or update data in the `backgroundoperations` table. More information:
 
    - [Background Operations table](#background-operations-table)
    - [Poll the background operation table](#poll-the-background-operation-table)
@@ -180,21 +180,21 @@ When you send a request to be processed in the background, the response will inc
    > |Status Monitor Resource|`[Organization URI]/api/backgroundoperation/<backgroundoperationid value>`|
    > |`backgroundoperation` EntityType resource|`[Organization URI]/api/data/v9.0/backgroundoperations(<backgroundoperationid value>)`|
 
-   The status monitor resource is not part of the Dataverse Web API. Notice that the URL does not contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.  You can use this URL to poll and cancel background operations. More information:
+   The status monitor resource isn't part of the Dataverse Web API. Notice that the URL doesn't contain `/data/v9.2/`. This resource supports only `GET` and `DELETE` operations and doesn't have the same behaviors as the Web API `backgroundoperation` EntityType resource.  You can use this URL to poll and cancel background operations. More information:
 
    - [Poll the status monitor resource](#poll-the-status-monitor-resource)
    - [Send a DELETE request to the status monitor resource](#send-a-delete-request-to-the-status-monitor-resource)
   
 ### Status polling
 
-Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively impact performance. If needed, we suggest polling at an interval of one minute or more.  More information:
+Querying the background operation table or status monitor resource to check on requests is commonly known as *status polling*. We recommend that you avoid excessive polling because it can negatively affect performance. If needed, we suggest polling at an interval of one minute or more.  More information:
 
 - [Poll the background operation table](#poll-the-background-operation-table)
 - [Poll the status monitor resource](#poll-the-status-monitor-resource)
 
 ## Background Operations table
 
-The Background Operation table contains information about requests to process asynchronously. It is identified by the entity name `backgroundoperation` and the entity set name `backgroundoperations`.
+The Background Operation table contains information about requests to process asynchronously. This table has the logical name `backgroundoperation` and the entity set name `backgroundoperations`.
 
 <!-- TODO: add link to Background Operation Entity table reference when regenerated -->
 
@@ -208,12 +208,12 @@ Background operation has the following columns you can use to manage the status 
 |**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value: `31`, Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
 |**Name**<br />`Name`<br />`name`|String|The name of the background operation.|
 |**DisplayName**<br />`DisplayName`<br />`displayname`|String|The display name of background operation.|
-|**Input Parameters**<br />`InputParameters`<br />`inputparameters`|Memo|The input parameters that were supplied to start background operation.<br />This is a JSON serialized array of `Key` and `Value`.|
-|**Output Parameters**<br />`OutputParameters`<br />`outputparameters`|Memo|The response of background operation<br />This is a JSON serialized array of `Key` and `Value`.|
+|**Input Parameters**<br />`InputParameters`<br />`inputparameters`|Memo|The input parameters that were supplied to start background operation.<br />This string is a JSON serialized array of `Key` and `Value`.|
+|**Output Parameters**<br />`OutputParameters`<br />`outputparameters`|Memo|The response of background operation<br />This string is a JSON serialized array of `Key` and `Value`.|
 |**Start Time**<br />`StartTime`<br />`starttime`|DateTime|When the background operation started execution|
 |**End Time**<br />`EndTime`<br />`endtime`|DateTime|When the background operation finished execution|
 |**Retry Count**<br />`RetryCount`<br />`retrycount`|Integer|The number of times background operation was retried.
-|**Error Code**<br />`ErrorCode`<br />`errorcode`|Integer|The error code when the background operation fails.<br />If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). However, if the error is not caused by the platform, its value will be set to zero.|
+|**Error Code**<br />`ErrorCode`<br />`errorcode`|Integer|The error code when the background operation fails.<br />If the error comes from Dataverse, it has an integer value that corresponds to one of the codes listed in [Web service error codes](reference/web-service-error-codes.md). However, if the error didn't come from Dataverse, the value is set to zero.|
 |**Error Message**<br />`ErrorMessage`<br />`errormessage`|Memo|The error message when the background operation fails|
 |**Run As**<br />`RunAs`<br />`runas`|String|The `systemuserid` of the `systemuser` used to execute the background operation|
 |**Created On**<br />`CreatedOn`<br />`createdon`|DateTime|When the record was created|
@@ -230,7 +230,7 @@ Make sure to include these columns in your query:
 - `errorcode`
 - `errormessage`
 
-How you do this depends on whether you are using the SDK or Web API.
+How you do poll this table depends on whether you're using the SDK or Web API.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -268,7 +268,7 @@ static void PollBackgroundOperationRequest(IOrganizationService service, Guid ba
         Console.WriteLine($"Error Code: {backgroundOperation.GetAttributeValue<string>("errorcode")}");
         Console.WriteLine($"Error Message: {backgroundOperation.GetAttributeValue<string>("errormessage")}");
     }
-    // Catch platform errors
+    // Catch Dataverse errors
     catch (FaultException<OrganizationServiceFault> ex)
     {
         Console.WriteLine($"ErrorCode:{ex.Detail.ErrorCode}");
@@ -374,7 +374,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 ### Poll the status monitor resource
 
-You can also poll the status monitor resource with a `GET` request. This request returns the status of the background operation. If the operation is complete, it provides the output of the custom API. If there was an error during execution, you receive an error message and code.
+You can poll the status monitor resource with a `GET` request. This request returns the status of the background operation. If the operation is complete, it provides the output of the custom API. If there was an error during execution, you receive an error message and code.
 
 Send a request to the status monitor resource URL that was returned with the `Location` response header of the original request.
 
@@ -406,7 +406,7 @@ Content-Type: application/json
 
 `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` values are only included when an error occurs. Output parameters are only included when the operation completes successfully.
 
-Labels are not available when using the status monitor resource.
+Labels aren't available when using the status monitor resource.
 
 
 ## Receive notification of result
@@ -436,7 +436,7 @@ You can specify a URL in your request to receive a callback when the operation i
 
 `backgroundOperationErrorCode` and `backgroundOperationErrorMessage` are only included when an error occurs.
 
-The callback payload does not include any output parameters. The site that receives the callback must send an authenticated `GET` request using the status monitor resource URL to get any results.
+The callback payload doesn't include any output parameters. The site that receives the callback must send an authenticated `GET` request using the status monitor resource URL to get any results.
 
 <!-- Why not send the output parameters with the results?  -->
 
@@ -445,7 +445,7 @@ The callback payload does not include any output parameters. The site that recei
 > - If the URL requires authentication, the URL must be a self-sufficient shared access signature (SAS) URL. It isn't possible to include any additional headers to include API keys or tokens for authentication. More information: [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview)
 > - You may want to use a site like [webhook.site](https://webhook.site/) to test the callback URL.
 
-How you do request a callback depends on whether you are using the SDK or Web API.
+How you request a callback depends on whether you're using the SDK or Web API.
 
 The following examples show sending a request using a webhook to [webhook.site](https://webhook.site/) for testing:
 
@@ -525,12 +525,12 @@ Prefer: respond-async, callback; url="https://webhook.site/<id>"
 ```http
 HTTP/1.1 202 Accepted
 Preference-Applied: callback
-x-ms-dyn-backgroundoperationid: f86f8700-6e21-4a39-aa6a-db3bb306b884
-location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
+x-ms-dyn-backgroundoperationid: <backgroundoperationid value>
+location: [Organization URI]/api/backgroundoperation/<backgroundoperationid value>
 
 {
-   backgroundOperationId: f86f8700-6e21-4a39-aa6a-db3bb306b884,
-   location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3bb306b884
+   backgroundOperationId: <backgroundoperationid value>,
+   location: [Organization URI]/api/backgroundoperation/<backgroundoperationid value>
 }
 ```
 
@@ -538,7 +538,7 @@ location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3
 
 ### OnBackgroundOperationComplete event
 
-Another way to receive notification is by registering a step on the `OnBackgroundOperationComplete` message. This message is a custom api that only allows asynchronous step registrations.  It is an example of the type of messages created using custom API to represent business events. More information: [Microsoft Dataverse business events](business-events.md)
+Another way to receive notification is by registering a step on the `OnBackgroundOperationComplete` message. This message is a custom api that only allows asynchronous step registrations.  It's an example of the type of messages created using custom API to represent business events. More information: [Microsoft Dataverse business events](business-events.md)
 
 This event occurs each time a background operation completes. By registering an asynchronous step on this event, you can perform any type of logic you want within a plug-in, or forward the data on to Azure services, or to a Web Hook. More information:
 
@@ -555,9 +555,9 @@ The `OnBackgroundOperationComplete` message has the following input and output p
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`PayloadType`|Integer|Payload type tells what type of response is sent to the callback URI when background operation is complete, i.e. Full output of API or Location to get the output of API. This is an internal field and should not be updated.|
+|`PayloadType`|Integer|Payload type tells what type of response is sent to the callback URI when background operation is complete, i.e. Full output of API or Location to get the output of API. This is an internal field and shouldn't be updated.|
 |`LocationUrl`|String|Location URL|
-|`BackgroundOperationId`|Guid|The Id of Background Operation.|
+|`BackgroundOperationId`|Guid|The ID of Background Operation.|
 
 ### Output parameters
 
@@ -567,17 +567,17 @@ The `OnBackgroundOperationComplete` message has the following input and output p
 |`BackgroundOperationStateCode`|Integer|Background Operation State Code|
 |`BackgroundOperationStatusCode`|Integer|Background Operation Status Code|
 
-To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as `OnBackgroundOperationComplete` in asynchronous mode. Set the **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
+To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as `OnBackgroundOperationComplete`. Set the **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
 
 ## Cancel background operations
 
 You can cancel a background operation that you initiated before it starts.
 
-- If the operation hasn't begun execution yet, the platform won't execute it.
-- If the execution has already started, the platform won't abort the operation.
-- If an error occurs during the execution, the platform won't retry it if a cancellation request was made.
+- If the operation hasn't begun execution yet, Dataverse doesn't start it.
+- If the execution has already started, Dataverse doesn't abort the operation.
+- If an error occurs during the execution, Dataverse doesn't retry it if a cancellation request was made.
 
-If you try to cancel a background operation that has already completed, you will get the following error:
+If you try to cancel a background operation that has already completed, you get the following error:
 
 `Canceling background operation is not allowed after it is in terminal state.`
 
@@ -588,7 +588,7 @@ There are two ways to cancel a background operation:
 
 ### Cancel background operation by updating backgroundoperations
 
-Update the row in the `backgroundoperations` table to set the the `backgroundoperationstatecode` to 2 (**Locked**) and `backgroundoperationstatuscode` to 22 (**Cancelling**)
+Update the row in the `backgroundoperations` table to set the `backgroundoperationstatecode` to 2 (**Locked**) and `backgroundoperationstatuscode` to 22 (**Cancelling**)
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -663,7 +663,7 @@ HTTP/1.1 200 Ok
 }
 ```
 
-If you try to cancel a background application that has already completed using the status monitor resource, you will get this error:
+If you try to cancel a background application that has already completed using the status monitor resource, you get this error:
 
 ```http
 HTTP/1.1 409 Conflict
@@ -679,4 +679,4 @@ HTTP/1.1 409 Conflict
 
 ## Retries
 
-If an error occurs during execution of the request, it is retried up to three times. These retries use a [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).
+If an error occurs during execution of the request, it's retried up to three times. These retries use a [exponential backoff strategy](https://wikipedia.org/wiki/Exponential_backoff).
