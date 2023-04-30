@@ -497,7 +497,7 @@ static void SendRequestAsynchronouslyWithCallback(IOrganizationService service)
 
 With the Web API, set the `Prefer` request header with this value:
 
-`Prefer: respond-async, callback; url="<url>"`
+`Prefer: respond-async, odata.callback; url="<url>"`
 
 <!-- 
 Spec 8.2.8.2 Preference odata.callback says this should be 'odata.callback' rather than just 'callback'.. 
@@ -510,7 +510,7 @@ http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/
 POST [Organization URI]/api/data/v9.2/sample_ExportDataUsingFetchXmlToAnnotation 
 Content-Type: application/json
 Accept: application/json
-Prefer: respond-async, callback; url="https://webhook.site/<id>"
+Prefer: respond-async, odata.callback; url="https://webhook.site/<id>"
 
 {
     "FetchXml": "<fetch version='1.0' output-format='xml-platform' mapping='logical'>
