@@ -185,7 +185,7 @@ This example shows how to create a notification by adding a custom body definiti
 > [!div class="mx-imgBorder"] 
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
-# [Client API](#tab/clientapi)
+# [Client API](#tab/clientapi2)
 
 ```javascript
 //THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
@@ -213,7 +213,7 @@ then(
   );
 ```
 
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi2)
 
 ```http
 POST [Organization URI]/api/data/v9.0/sendappnotification 
@@ -237,7 +237,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk)
+# [Dataverse SDK](#tab/sdk2)
 
 ```csharp
 
@@ -265,13 +265,14 @@ OrganizationRequest request = new OrganizationRequest()
 OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
+---
 
 This example adds a custom title and a body definition that allows multiple links, bold formatting, and italic formatting.
 
 > [!div class="mx-imgBorder"] 
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
 
-# [Client API](#tab/clientapi)
+# [Client API](#tab/clientapi3)
 
 ```javascript
 //THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
@@ -308,7 +309,7 @@ Xrm.WebApi.createRecord("appnotification",notificationRecord).
   );
 ```
 
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi3)
 
 ```http
 POST [Organization URI]/api/data/v9.0/sendappnotification 
@@ -331,7 +332,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk)
+# [Dataverse SDK](#tab/sdk3)
 
 ```csharp
 
@@ -358,12 +359,13 @@ OrganizationRequest request = new OrganizationRequest()
 OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
+---
 
 >[!NOTE]
 >OverrideContent is not supported in Power Fx with the `SendAppNotification` API.
 
 
----
+
 
 ### Changing the notification behavior
 
@@ -431,7 +433,7 @@ The following example shows how to create a notification with a single URL actio
 > [!div class="mx-imgBorder"] 
 > ![App notification with a single action.](../media/app-notification-with-single-action.png "App notification with a single action")
   
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi4)
 
 ```http
 POST [Organization URI]/api/data/v9.0/sendappnotification 
@@ -466,7 +468,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk)
+# [Dataverse SDK](#tab/sdk4)
 
 ```csharp
 
@@ -515,7 +517,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+# [Power Fx](#tab/powerfx4)
 
 ```powerapps-dot
 XSendAppNotification(
@@ -540,7 +542,7 @@ When using the side pane action type, you have control over the options of the s
   
 The following example shows creating an app notification with a two side pane actions.
   
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi5)
 
 ```http
 POST [Organization URI]/api/data/v9.0/sendappnotification 
@@ -601,7 +603,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk)
+# [Dataverse SDK](#tab/sdk5)
 
 ```csharp
 
@@ -696,7 +698,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+# [Power Fx](#tab/powerfx5)
 
 ```powerapps-dot
 //THIS NEEDS TO BE UPDATED WHEN THE NEW FUNCTIONS ARE AVAILABLE
@@ -740,7 +742,7 @@ The following are the parameters for defining a Teams chat action on the app not
 
 The following example shows creating an app notification with a single Teams chat action.
   
-# [Web API](#tab/webapi)
+# [Web API](#tab/webapi6)
 
 ```http
 POST [Organization URI]/api/data/v9.0/sendappnotification 
@@ -779,7 +781,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk)
+# [Dataverse SDK](#tab/sdk6)
 
 ```csharp
 
@@ -835,7 +837,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+# [Power Fx](#tab/powerfx6)
 
 ```powerapps-dot
   
