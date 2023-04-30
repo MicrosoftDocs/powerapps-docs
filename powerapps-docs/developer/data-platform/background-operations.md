@@ -314,9 +314,11 @@ Name: sample_ExportDataUsingFetchXmlToAnnotation
 State Code: Completed
 Status Code:  Failed
 Output Parameters: 
-Error Code:  500
-Error Message:  This is a sample error message 
+Error Code:  -2147187707
+Error Message:  Access is denied.
 ```
+
+If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web Service Error Codes](https://learn.microsoft.com/power-apps/developer/data-platform/reference/web-service-error-codes). However, if the error is not caused by the platform, its value will be set to zero.
 
 **Id not found**
 
