@@ -16,11 +16,11 @@ contributors:
 
 # Background operations (Preview)
 
-[!INCLUDE [cc-preview-feature](../../includes/cc-preview-feature.md)]
+[This article is pre-release documentation and is subject to change.]
 
 Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
-Dataverse immediately responds that the request is accepted and there are several ways to monitor whether the request ultimately succeeds. When the operation completes successfully, you can retrieve the result. There are also several ways to get notified when an background operation completes.
+Dataverse immediately responds that the request is accepted. When the operation completes successfully, you can retrieve the result. You can poll the `backgroundoperations` table or use two other methods to get notified when an background operation completes.
 
 Background operations requires that the operation performed is defined as a custom API. More information:
 
@@ -409,6 +409,14 @@ Content-Type: application/json
 Labels are not available when using the status monitor resource.
 
 
+## Receive notification of result
+
+There are two ways you can receive a notification when a background operation completes.
+
+- You can include a callback url with your request. More information: [Request a callback](#request-a-callback)
+- You can subscribe to the `OnBackgroundOperationComplete` event. More information: [OnBackgroundOperationComplete event](#onbackgroundoperationcomplete-event)
+
+
 ### Request a callback
 
 You can specify a URL in your request to receive a callback when the operation is completed. Dataverse uses this URL to send a `POST` request with the following payload:
@@ -528,6 +536,39 @@ location: [Organization URI]/api/backgroundoperation/f86f8700-6e21-4a39-aa6a-db3
 
 ---
 
+### OnBackgroundOperationComplete event
+
+Another way to receive notification is by registering a step on the `OnBackgroundOperationComplete` message. This message is a custom api that only allows asynchronous step registrations.  It is an example of the type of messages created using custom API to represent business events. More information: [Microsoft Dataverse business events](business-events.md)
+
+This event occurs each time a background operation completes. By registering an asynchronous step on this event, you can perform any type of logic you want within a plug-in, or forward the data on to Azure services, or to a Web Hook. More information:
+
+- [Register a plug-in](register-plug-in.md)
+- [Azure integration](azure-integration.md)
+- [Work with Microsoft Dataverse event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md)
+- [Use Webhooks to create external handlers for server events](use-webhooks.md)
+
+The `OnBackgroundOperationComplete` message has the following input and output parameters:
+
+### Input parameters
+
+<!-- Need information on what values are valid for PayloadType and how to use it. -->
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`PayloadType`|Integer|Payload type tells what type of response is sent to the callback URI when background operation is complete, i.e. Full output of API or Location to get the output of API. This is an internal field and should not be updated.|
+|`LocationUrl`|String|Location URL|
+|`BackgroundOperationId`|Guid|The Id of Background Operation.|
+
+### Output parameters
+
+|Name|Type|Description|
+|---------|---------|---------|
+|`OperationName`|String|Operation Name|
+|`BackgroundOperationStateCode`|Integer|Background Operation State Code|
+|`BackgroundOperationStatusCode`|Integer|Background Operation Status Code|
+
+To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as `OnBackgroundOperationComplete` in asynchronous mode. Set the **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
+
 ## Cancel background operations
 
 You can cancel a background operation that you initiated before it starts.
@@ -633,38 +674,7 @@ HTTP/1.1 409 Conflict
 ```
 
 
-## Receive notification of result
 
-Another way to receive notification is by registering a step on the `OnBackgroundOperationComplete` message. This message is a custom api that only allows asynchronous step registrations.  It is an example of the type of messages created using custom API to represent business events. More information: [Microsoft Dataverse business events](business-events.md)
-
-This event occurs each time a background operation completes. By registering an asynchronous step on this event, you can perform any type of logic you want within a plug-in, or forward the data on to Azure services, or to a Web Hook. More information:
-
-- [Register a plug-in](register-plug-in.md)
-- [Azure integration](azure-integration.md)
-- [Work with Microsoft Dataverse event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md)
-- [Use Webhooks to create external handlers for server events](use-webhooks.md)
-
-The `OnBackgroundOperationComplete` message has the following input and output parameters:
-
-### Input parameters
-
-<!-- Need information on what values are valid for PayloadType and how to use it. -->
-
-|Name|Type|Description|
-|---------|---------|---------|
-|`PayloadType`|Integer|Payload type tells what type of response is sent to the callback URI when background operation is complete, i.e. Full output of API or Location to get the output of API. This is an internal field and should not be updated.|
-|`LocationUrl`|String|Location URL|
-|`BackgroundOperationId`|Guid|The Id of Background Operation.|
-
-### Output parameters
-
-|Name|Type|Description|
-|---------|---------|---------|
-|`OperationName`|String|Operation Name|
-|`BackgroundOperationStateCode`|Integer|Background Operation State Code|
-|`BackgroundOperationStatusCode`|Integer|Background Operation Status Code|
-
-To configure this message, refer to the [Register a plug-in](register-plug-in.md) instructions, and ensure that you set the message name as `OnBackgroundOperationComplete` in asynchronous mode. Set the **Auto Delete** to `true` so that the [System Job (AsyncOperation)](reference/entities/asyncoperation.md) record is automatically removed.
 
 
 ## Retries
