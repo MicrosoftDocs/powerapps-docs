@@ -155,6 +155,8 @@ Preference-Applied: respond-async
 - The `x-ms-dyn-backgroundoperationid` response header value is the ID for the background operation row for the request.
 - The response [Location](https://developer.mozilla.org/docs/Web/HTTP/Headers/Location) header contains a URL that represents the *status monitor resource*
 
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
 ---
 
 ## Manage background operations
@@ -206,8 +208,8 @@ Background operation has the following columns you can use to manage the status 
 |**Background Operation**<br />`BackgroundOperationId`<br />`backgroundoperationid`|Uniqueidentifier|The primary key|
 |**Status** <br />`StateCode`<br />`backgroundoperationstatecode`|Picklist|State of the background operation.<br />**Options:**<br />Value: `0`, Label: **Ready**<br />Value: `2`, Label: **Locked**<br />Value: `3`, Label: **Completed**|
 |**Status Reason** <br />`StatusCode`<br />`backgroundoperationstatuscode`|Picklist|Status of the background operation.<br />**Options:**<br />Value: `0`, Label: **Waiting For Resources** (State:Ready)<br />Value: `20`, Label: **In Progress** (State:Locked)<br />Value: `22`, Label: **Canceling**  (State:Locked)<br />Value: `30`, Label: **Succeeded**  (State:Completed)<br />Value: `31`, Label: **Failed** (State:Completed)<br />Value: `32`, Label: **Canceled** (State:Completed)|
-|**Name**<br />`Name`<br />`name`|String|The name of the background operation.|
-|**DisplayName**<br />`DisplayName`<br />`displayname`|String|The display name of background operation.|
+|**Name**<br />`Name`<br />`name`|String|The `UniqueName` of the custom api used for the background operation.|
+|**DisplayName**<br />`DisplayName`<br />`displayname`|String|The `DisplayName` of the custom api used for the background operation.|
 |**Input Parameters**<br />`InputParameters`<br />`inputparameters`|Memo|The input parameters that were supplied to start background operation.<br />This string is a JSON serialized array of `Key` and `Value`.|
 |**Output Parameters**<br />`OutputParameters`<br />`outputparameters`|Memo|The response of background operation<br />This string is a JSON serialized array of `Key` and `Value`.|
 |**Start Time**<br />`StartTime`<br />`starttime`|DateTime|When the background operation started execution|
