@@ -138,7 +138,7 @@ XSendAppNotification(
 )
 ```
 
----
+----
 
 ## Notification polling
 
