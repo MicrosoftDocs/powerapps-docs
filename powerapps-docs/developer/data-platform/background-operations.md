@@ -33,8 +33,8 @@ Background operations require that the operation performed is defined as a custo
 To perform a background operation, the initiating user must have read and write access to the `backgroundoperation` table. Assign the `prvReadbackgroundoperation` and `prvWritebackgroundoperation` privileges to grant this access. More information:
 
 - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
-- <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>
-- [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole)
+- SDK: <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>
+- Web API: [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole)
 
 <!-- TODO We need a generic topic to describe adding privileges to security roles programmatically: workitem 3342875 -->
 
