@@ -53,34 +53,6 @@ Notifications can be sent using the `SendAppNotification` API. The following bas
 > [!div class="mx-imgBorder"] 
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
 
-# [Client API](#tab/clientapi)
-
-In-app notifications can be sent by using the [createRecord](reference/xrm-webapi/createrecord.md) API.
-
-```javascript
-//THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
-
-var systemuserid = "Guid of the user";
-var notificationRecord =
-{
-  "title": "Welcome",
-  "body": "Welcome to the world of app notifications!",
-  "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
-  "icontype": 100000000, // info
-  "toasttype": 200000000 // timed
-}
-// Create notification record
-Xrm.WebApi.createRecord("appnotification", notificationRecord).
-  then(
-      function success(result) {
-          console.log("notification created with ID: " + result.id);
-      },
-      function (error) {
-          console.log(error.message);
-          // handle error conditions
-      }
-  );
-```
 
 # [Web API](#tab/webapi)
 
@@ -185,34 +157,6 @@ This example shows how to create a notification by adding a custom body definiti
 > [!div class="mx-imgBorder"] 
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
-# [Client API](#tab/clientapi2)
-
-```javascript
-//THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
-
-var systemuserid = "<user-guid>";
-var notificationRecord = 
-{
-    "title": "SLA ctitical",
-   "body": "Records assigned to you is critically past SLA.",
-   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
-    "icontype": 100000003, // warning
-    "data": JSON.stringify({
-    "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned and has been escalated to your manager."
-    })
-}
-Xrm.WebApi.createRecord("appnotification",notificationRecord).
-then(
-      function success(result) {
-          console.log("notification created with custom body and bold styling: " + result.id);
-      },
-      function (error) {
-          console.log(error.message);
-          // handle error conditions
-      }
-  );
-```
-
 # [Web API](#tab/webapi2)
 
 ```http
@@ -271,43 +215,6 @@ This example adds a custom title and a body definition that allows multiple link
 
 > [!div class="mx-imgBorder"] 
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
-
-# [Client API](#tab/clientapi3)
-
-```javascript
-//THIS NEEDS TO BE UPDATED WITH CORRECT SYNTAX FOR SENDAPPNOTIFICATION
-
-var systemuserid = "<user-guid>";
-var notificationRecord = 
-{
-    "title": "Complete overhaul required (sample)",
-   "body": "Maria Campbell mentioned you in a post.",
-   "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
-    "icontype": 100000004, // mention
-    "data": JSON.stringify({
-    "title": "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
-    "body": "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_",
-     "actions": [
-      {
-        "title": "View record",
-       "data": {
-       "url": "?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8"
-       }
-      }
-     ]
-    })
-}
-Xrm.WebApi.createRecord("appnotification",notificationRecord).
-  then(
-      function success(result) {
-          console.log("notification created with custom title and body: " + result.id);
-      },
-      function (error) {
-          console.log(error.message);
-          // handle error conditions
-      }
-  );
-```
 
 # [Web API](#tab/webapi3)
 
@@ -863,7 +770,7 @@ In addition to the appropriate table permissions, a user must be assigned the **
 |User has no in-app notification bell and receives no in-app notification |None: Read privilege on the app notification table. |
 |User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.</li></ul> |
 |User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table, and Send In-App Notification privilege. |
-|User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit, and Send In-App Notificatino privilege. |
+|User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit, and Send In-App Notification privilege. |
 
 
 ## Notification storage
