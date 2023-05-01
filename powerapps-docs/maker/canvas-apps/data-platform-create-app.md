@@ -33,6 +33,8 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 # [New look](#tab/home-new-look)
 
+[This article is prerelease documentation and is subject to change.]
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Select an existing table**.
 1. On the **Select a Dataverse table** screen, select your table, and then select **Create app**.
