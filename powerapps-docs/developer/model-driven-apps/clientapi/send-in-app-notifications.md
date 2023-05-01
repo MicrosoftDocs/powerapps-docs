@@ -146,7 +146,7 @@ In-app notifications use polling to retrieve notifications periodically when the
 
 ## Notification table
 
-Notifications are stored in the **Notification** (`appnotification`) table. The following are the columns for the table.
+Notifications sent using the `SendAppNotification` API are stored in the **Notification** (`appnotification`) table. The following are the columns for the table.
 
 |Column display|Column name|Description|
 |---|---|---|
@@ -193,12 +193,12 @@ This example shows how to create a notification by adding a custom body definiti
 var systemuserid = "<user-guid>";
 var notificationRecord = 
 {
-    "title": "SLA Missed",
+    "title": "SLA ctitical",
    "body": "Records assigned to you is critically past SLA.",
    "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
     "icontype": 100000003, // warning
     "data": JSON.stringify({
-    "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
+    "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned and has been escalated to your manager."
     })
 }
 Xrm.WebApi.createRecord("appnotification",notificationRecord).
@@ -224,15 +224,15 @@ OData-Version: 4.0
 Accept: application/json
 
 {
-  "Title": "SLA Missed",
+  "Title": "SLA critical",
   "Body": "Record assigned to yo uis critically past SLA.",
   "Recipient": "/systemusers(<Guid of the user>)",
   "IconType": 100000003, // warning
   "ToastType": 200000000, // timed
   "OverrideContent": {
     "@odata.type": "#Microsoft.Dynamics.CRM.expando",
-    "title": "**SLA Missed**",
-    "body": "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
+    "title": "**SLA critical**",
+    "body": "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned is critically past SLA and has been escalated to your manager."
   }
 }
 ```
@@ -246,7 +246,7 @@ OrganizationRequest request = new OrganizationRequest()
     RequestName = "SendAppNotification",
     Parameters = new ParameterCollection
     {
-        ["Title"] = "SLA Missed",
+        ["Title"] = "SLA critical",
         ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
         ["Body"] = "Record assigned to you is critically past SLA.",
         ["IconType"] = new OptionSetValue(100000003), //warning
@@ -256,7 +256,7 @@ OrganizationRequest request = new OrganizationRequest()
           Attributes = 
           {
             ["title"] = "**SLA Missed**",
-            ["body"] = "Case record [Average order shipment time (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) **assigned** to you just went out of SLA."
+            ["body"] = "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
           }
         }
      }
@@ -446,25 +446,24 @@ Accept: application/json
 {
   "Title": "Congratulations",
   "Body": "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
-  "Recipient": "/systemusers(<Guid of the user>)",
+  "Recipient": "/systemusers(<GUID of user>)",
   "IconType": 100000001, // success
   "ToastType": 200000000, // timed
   "Actions": {
-    "@odata.type": "Microsoft.Dynamics.CRM.expando",
-    "actions@odata.type":#Collection(Microsoft.Dynamics.CRM.expando)",
-    "actions": [
-      {
-        "@odata.type": "#Microsoft.Dynamics.CRM.expando",
-        "title": "View cases",
-        "type": "url",
-        "data": {
-            "@odata.type": "#Microsoft.Dynamics.CRM.expando",
-            "url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
-            "navigationTarget": "newWindow"
+      "@odata.type":"Microsoft.Dynamics.CRM.expando",
+      "actions@odata.type":"#Collection(Microsoft.Dynamics.CRM.expando)",
+      "actions": [
+        {
+            "title": "View cases",
+            "data": {
+                "@odata.type": "#Microsoft.Dynamics.CRM.expando",
+                "type": "url",
+                "url": "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
+                "navigationTarget": "newWindow"
+            }
         }
-      }
-    }
-  ]
+      ]
+  }
 }
 ```
 
@@ -555,7 +554,7 @@ Accept: application/json
 {
   "Title": "New task",
   "Body": "A new task has been assigned to you to follow up on the Contoso account",
-  "Recipient": "/systemusers(<Guid of the user>)",
+  "Recipient": "/systemusers(<User ID>)",
   "IconType": 100000000, // info
   "ToastType": 200000000, // timed
   "Actions": {
@@ -598,8 +597,8 @@ Accept: application/json
                 }
            }
         }
-    }
-  ]
+      ]
+  }
 }
 ```
 
@@ -732,7 +731,7 @@ The following are the parameters for defining a Teams chat action on the app not
 
 |Parameter | Data type | Description | 
 |----------|-----------|-------------|
-|chatId    |GUID       |Define a value for the chat ID to open an existing chat. This is the **Teams Chat Id** property of the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table for chats linked to a Dynamics 365 record, or the **id** property of the **chat** entity from Microsoft Graph. See [Get chat](https://learn.microsoft.com/graph/api/chat-get) for more information.<br><br> If a value is not defined for this parameter then a new chat session will be initiated. |
+|chatId    |GUID       |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. See [Get chat](https://learn.microsoft.com/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
 |memberIds |GUID       |This is an array of the AAD user ID values of each of the participants that will be included in a new chat session. Member ID values should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the members of the existing chat will be included in the chat when opened. |
 |entityContext | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the entityContext, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (i.e. the **chatId** parameter has not been provided), and the the entity context is not defined, then the new chat session will not be linked to a Dynamics 365 record. |
 |entityName | String | Part of the entity context, this is the logical name of the Dataverse table for the record to which the chat will be linked. |
@@ -857,12 +856,14 @@ XSendAppNotification
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
+In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification (prvSendAppNotification)** privilege to execute the `SendAppNotification` API. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending app notifications. It is not required to receive notifications.
+
 |Usage|Required table privileges|
 |------------|----------------|
 |User has no in-app notification bell and receives no in-app notification |None: Read privilege on the app notification table. |
 |User can receive in-app notifications|<ul><li>Basic: Read privilege on the app notification table.</li><li>Create, Read, Write, and Append privileges on the model-driven app user setting.</li><li>Read and AppendTo privileges on setting definition.</li></ul> |
-|User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table. |
-|User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit. |
+|User can send in-app notifications to self |Basic: Create and Read privileges on the app notification table, and Send In-App Notification privilege. |
+|User can send in-app notifications to others |Read privilege with Local, Deep, or Global access level on the app notification table based on the receiving user's business unit, and Send In-App Notificatino privilege. |
 
 
 ## Notification storage
