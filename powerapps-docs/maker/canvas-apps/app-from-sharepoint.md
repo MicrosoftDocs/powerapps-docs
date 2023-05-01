@@ -47,7 +47,7 @@ Watch this video to learn how to create a canvas app from a list:
 
 Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
 
-# [New look](#tab/home-new-look)
+# [New look (preview)](#tab/home-new-look)
 
 [This article is prerelease documentation and is subject to change.]
 
