@@ -29,9 +29,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 # [New look](#tab/home-new-look)
 
-Upload an Excel file from your computer then, an app will be created for you.
-
-To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in on your device.
+To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it on your device.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. From the home screen select, **Start with data** > **Upload an Excel file**.
