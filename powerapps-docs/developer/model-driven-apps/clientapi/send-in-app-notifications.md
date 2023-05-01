@@ -326,7 +326,7 @@ In-app notifications support zero to many actions on the notification card. Ther
 - **Side Pane**: When the action is selected, a side pane is opened in the app and loads the defined context in the pane.
 - **Teams Chat**: When the action is selected, a Teams chat is initiated with defined users in the context of a Dynamics 365 record.
 
-### Defining a URL action type
+### Defining a URL action
 
 The URL action type enables navigation from the action on the app notification to a defined URL. The following are the parameters for this action type:
 
@@ -561,7 +561,7 @@ OrganizationRequest request = new OrganizationRequest()
                       }
                     }
                   }
-                }
+                },
                 new Entity()
                 {
                   Attributes =
