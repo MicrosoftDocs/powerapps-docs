@@ -31,6 +31,8 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 Upload an Excel file from your computer then, an app will be created for you.
 
+To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in on your device.
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. From the home screen select, **Start with data** > **Upload an Excel file**.
 3. Choose **Select from device** and browse to the location where you have the Excel file and upload it.
@@ -42,8 +44,7 @@ Upload an Excel file from your computer then, an app will be created for you.
 
 The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business. The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
 
-Watch this video to learn how to create a canvas app with data from an Excel file:
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWLj3l]
+To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -70,56 +71,35 @@ Watch this video to learn how to create a canvas app with data from an Excel fil
 
 ## Run the app
 
-1. Open Preview by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
-
-    ![Open Preview.](./media/get-started-create-from-data/open-preview.png)
-
-1. Toggle the sort order by clicking or tapping the sort icon near the upper-right corner.
-
-    ![Sort icon.](./media/get-started-create-from-data/sort-icon.png)
+1. Select the play icon near the upper-right corner to  **Preview the app** by select F5 on your keyboard.
 
 1. Filter the list by typing or pasting one or more characters in the search box.
 
     For example, type or paste **Honey** to show the only record for which that string appears in the product's name, category, or overview.
 
-    ![Filter example.](./media/get-started-create-from-data/filter-example.png)
-
 1. Add a record:
 
-    1. Select the plus icon.
-
-        ![Plus icon.](./media/get-started-create-from-data/plus-icon.png)
+    1. Select **New record**.
 
     1. Add whatever data you want, and then select the checkmark icon to save your changes.
-
-        ![Save icon.](./media/get-started-create-from-data/save-icon.png)
-
+  
 1. Edit a record:
 
-    1. Select the arrow for the record that you want to edit.
-
-        ![Next arrow.](./media/get-started-create-from-data/next-arrow.png)
+    1. Select the record that you want to edit.
 
     1. Select the pencil icon.
 
-        ![Pencil icon.](./media/get-started-create-from-data/pencil-icon.png)
-
     1. Update one or more fields, and then select the checkmark icon to save your changes.
-
-        ![Save icon.](./media/get-started-create-from-data/save-icon.png)
 
         As an alternative, select the cancel icon to discard your changes.
 
 1. Delete a record:
 
-    1. Select the next arrow for the record that you want to delete.
-
-        ![Next arrow.](./media/get-started-create-from-data/next-arrow.png)
+    1. Select the record that you want to delete.
 
     1. Select the trash icon.
 
-        ![Trash icon.](./media/get-started-create-from-data/trash-icon.png)
-
+        
 ## Next steps
 
 Customize the default browse screen to better suit your needs. For example, you can sort and filter the list by product name only, not category or overview.
