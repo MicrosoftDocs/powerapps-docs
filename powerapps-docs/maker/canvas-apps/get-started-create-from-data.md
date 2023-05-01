@@ -36,6 +36,7 @@ Upload an Excel file from your computer then, an app will be created for you.
 3. Choose **Select from device** and browse to the location where you have the Excel file and upload it.
 4. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
 5. Select **Row ownership** and choose how you want to manage row owership.
+6. When you're done, select **Create app**.
 
 # [Classic](#tab/home-classic)
 
