@@ -35,10 +35,8 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Select an existing table**.
-1. On the **Select a Dataverse table**, select your table, and then select **Create app**.
+1. On the **Select a Dataverse table** screen, select your table, and then select **Create app**.
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
-
-Your app opens in Power Apps Stuido where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
 
 
 # [Classic](#tab/home-classic)
@@ -57,29 +55,24 @@ Watch this short video that shows you how to create a canvas app quickly using D
 
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
-Your app opens to the browse screen, which shows a list of accounts in a control called a gallery. Near the top of the screen, a title bar shows icons for refreshing the data in the gallery, sorting the data in the gallery alphabetically, and adding data to the gallery. Under the title bar, a search box provides the option to filter the data in the gallery based on text that you type or paste. 
+ ---
 
-By default, the gallery shows an email address, a city, and an account name. As you'll see in [Next steps](data-platform-create-app.md#next-steps), you can customize the gallery to change how the data appears and even show other types of data.
+## Save and design the app
 
-![Browse screen.](./media/data-platform-create-app/browse-screen.png)
+Your app opens in Power Apps Stuido where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
 
-### Save the app
-You'll probably want to make more changes before you use this app or share it with others. As a best practice, save your work so far before you proceed.
+As a best practice, before you make any more changes save your work before you proceed.
 
-1. Select **Settings**.
+1. On the command bar, select **Settings**.
 
-1. Set the app name to **AppGen**, change the background color to deep red, and change the icon to a checkmark.
+1. Set the app name such as **AppGen**, change the icon to a checkmark, and the icon background color to a deep red.
 
-1. Set the app name to **AppGen**, and select **Save**.
+1. Close the setting screen and then select the **Save** icon on upper-right corner.
 
-1. Close the settings dialog.
-
-1. Near the left edge, select **Save as** and then, in the lower-right corner, select **Save**.
-
-### Next steps
+ 
+ ## Next steps
 
 In this quickstart, you created an app to manage sample data about accounts in Dataverse. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs. More information: [Customize a gallery in Power Apps](customize-layout-sharepoint.md)
 
- ---
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
