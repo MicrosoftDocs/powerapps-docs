@@ -5,7 +5,7 @@ author: sericks
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/22/2023
+ms.date: 5/01/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -15,6 +15,7 @@ search.audienceType:
   - enduser
 contributors:
 - mspilde
+- manish1604
 ---
 
 # Frequently asked questions about Dataverse search
@@ -56,9 +57,9 @@ Party list fields are special fields that aren't searchable or viewable in the r
 
 Dataverse search does not return HTML formatting for memo types to optomize the UI experience.
 
-## Why columns are not enabled for dataverse search after adding to quick find view?
+## Why columns are not enabled for Dataverse search after adding to a quick find view?
 
-Columns are enabled for dataverse search only if quick find view is set to default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
+Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
 ### See also
 
