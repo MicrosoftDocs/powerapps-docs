@@ -22,7 +22,7 @@ Developers of model-driven apps can configure notifications to be displayed to a
 
 Notifications are user-specific. Each notification is intended for a single user, identified as the recipient when the notification is sent. If a notification needs to be sent to multiple users, individual notifications must be created and sent for each recipient.
 
-This article outlines the steps for how to send in-app notifications to a specific user by using a [client API](reference.md). To see how these notifications appear in applications, see [In-app notifications in model-driven apps](/powerapps/user/notifications).
+This article outlines the steps for how to send in-app notifications to a specific user. To see how these notifications appear in applications, see [In-app notifications in model-driven apps](/powerapps/user/notifications).
 
 ## Enable the in-app notification feature
 
