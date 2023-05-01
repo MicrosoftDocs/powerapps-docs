@@ -55,7 +55,7 @@ Watch this short video that shows you how to create a canvas app quickly using D
 
 1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
- ---
+---
 
 ## Save and design the app
 
