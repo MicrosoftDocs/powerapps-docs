@@ -4,7 +4,7 @@ description: Learn how to request a Power Apps license.
 author: sericks007
 ms.subservice: common
 ms.topic: overview
-ms.date: 04/26/2023
+ms.date: 05/01/2023
 ms.author: sericks
 ms.reviewer: sericks
 ms.contributors: zadesa
@@ -39,7 +39,7 @@ After your admin has reviewed your request, you'll receive an email notification
 
 ## Request a license for other users
 
-If you're a Power Apps maker, you can request a Power Apps license for other users.
+If you're a Power Apps maker, you can request a Power Apps license for other users. Select **Request licenses** when sharing a [canvas app](../maker/canvas-apps/share-app.md) or [model-driven app](../maker/model-driven-apps/share-model-driven-app.md).
 
 After your admin has reviewed your request, you'll receive an email notification indicating whether the request was approved or denied.
 
