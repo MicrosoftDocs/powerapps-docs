@@ -27,7 +27,9 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
 
-# [New look](#tab/home-new-look)
+# [New look (preview)]
+
+[This article is prerelease documentation and is subject to change.]
 
 To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it on your device.
 
