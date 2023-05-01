@@ -72,7 +72,7 @@ As a best practice, before you make any more changes save your work before you p
  
  ## Next steps
 
-In this quickstart, you created an app to manage sample data about accounts in Dataverse. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs. More information: [Customize a gallery in Power Apps](customize-layout-sharepoint.md)
+As a next step, customize the gallery and other elements of the default browse screen to better suit your needs. More information: [Customize a gallery in Power Apps](customize-layout-sharepoint.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
