@@ -71,9 +71,9 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 
 ## Run the app
 
-1. Select the play icon near the upper-right corner to  **Preview the app** by select F5 on your keyboard.
+1. Select the play icon near the upper-right corner to  **Preview the app**.
 
-1. Filter the list by typing or pasting one or more characters in the search box.
+1. Filter the list by typing one or more characters in the search box.
 
     For example, type or paste **Honey** to show the only record for which that string appears in the product's name, category, or overview.
 
@@ -81,7 +81,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 
     1. Select **New record**.
 
-    1. Add whatever data you want, and then select the checkmark icon to save your changes.
+    1. Add whatever data you want, and then select the checkmark button to save your changes.
   
 1. Edit a record:
 
