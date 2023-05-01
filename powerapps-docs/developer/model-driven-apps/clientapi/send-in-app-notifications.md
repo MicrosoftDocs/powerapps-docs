@@ -59,7 +59,7 @@ Notifications can be sent using the `SendAppNotification` API. The following bas
 In-app notifications can be sent by using the Web API. More information: [Use Web API actions](../../data-platform/webapi/use-web-api-actions.md).
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -160,7 +160,7 @@ This example shows how to create a notification by adding a custom body definiti
 # [Web API](#tab/webapi2)
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -219,7 +219,7 @@ This example adds a custom title and a body definition that allows multiple link
 # [Web API](#tab/webapi3)
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -299,7 +299,7 @@ You can change the in-app notification icon by setting **Icon Type** to one of t
 The following example demonstrates using Web API to send a notification with a custom icon.
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -343,7 +343,7 @@ The following example shows how to create a notification with a single URL actio
 # [Web API](#tab/webapi4)
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -451,7 +451,7 @@ The following example shows creating an app notification with a two side pane ac
 # [Web API](#tab/webapi5)
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -651,7 +651,7 @@ The following example shows creating an app notification with a single Teams cha
 # [Web API](#tab/webapi6)
 
 ```http
-POST [Organization URI]/api/data/v9.0/sendappnotification 
+POST [Organization URI]/api/data/v9.0/SendAppNotification 
 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
