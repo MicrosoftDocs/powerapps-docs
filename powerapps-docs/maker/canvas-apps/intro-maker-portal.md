@@ -29,7 +29,9 @@ A new version of the home page is being rolled out which provides a better app c
 
 Select the appropriate tab below to know more.
 
-# [New look](#tab/home-new-look)
+# [Try the new Power Apps (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
 
 > [!div class="mx-imgBorder"]
 > ![Navigation with new look](media/intro-maker-portal/homepage-new-look.png "Home page navigation")
@@ -171,7 +173,9 @@ Start building apps, which provide rich business logic and workflow capabilities
 
 Depending upon whether you have the new look turned on, select the appropriate tab below to know more.
 
-# [New look](#tab/home-new-look)
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
 
 If your organization has [AI enabled](ai-overview.md) then you will see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
 
