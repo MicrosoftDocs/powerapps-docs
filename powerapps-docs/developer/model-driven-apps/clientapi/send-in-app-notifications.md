@@ -48,7 +48,9 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 ## Send basic in-app notifications
 
-Notifications can be sent using the `SendAppNotification` API. The following basic examples show how to use the API to send in-app notifications.
+Notifications can be sent using the `SendAppNotification` API. See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the API and parameters. 
+
+The following basic examples show how to use the API to send in-app notifications.
 
 > [!div class="mx-imgBorder"] 
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
