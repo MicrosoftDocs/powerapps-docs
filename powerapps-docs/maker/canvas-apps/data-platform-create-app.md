@@ -38,7 +38,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Select an existing table**.
 1. On the **Select a Dataverse table** screen, select your table, and then select **Create app**.
-1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
+
 
 
 # [Classic](#tab/home-classic)
@@ -54,8 +54,6 @@ Watch this short video that shows you how to create a canvas app quickly using D
 1. If this is your first time, you're prompted to create a connection to Dataverse. Select **Create** this connection.
 
 1. Under **Choose a table**, select your table (such as **Accounts** for this example), and then select **Connect**.
-
-1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 ---
 
