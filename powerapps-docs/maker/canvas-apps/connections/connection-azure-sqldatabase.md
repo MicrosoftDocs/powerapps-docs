@@ -37,6 +37,21 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 * For an on-premises database, identify a [data gateway](../gateway-management.md) that was shared with you (or create one).
 
 ## Generate an app automatically
+
+Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen select, **Start with data** > **Connect to external data** > **Excel**.
+1. Select your data connection and the data set from which to generate your app.
+1. When you're done, select **Create app**.
+
+
+# [Classic](#tab/home-classic)
+
 1. In Power Apps Studio, click or tap **New** on the **File** menu (along the left edge).
    
     ![New option on the File menu.](./media/connection-azure-sqldatabase/file-new.png)
@@ -62,7 +77,8 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
     Power Apps creates an app that shows data on three screens. Heuristics suggest what kind of data to show, but you might need to customize the UI to suit your needs.
 8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
-## Build an app from scratch
+
+### Build an app from scratch
 1. Sign in to [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with the same account that you used to sign up for Power Apps.
 2. In the left navigation bar, click or tap **Connections**:  
    
@@ -82,7 +98,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 5. Click or tap **Create** to create the connection.
 6. Create an app by using techniques that are similar to those that [Create an app from scratch](../get-started-create-from-blank.md) describes.
 
-## Update an existing app
+### Update an existing app
 1. In Power Apps Studio, open the app that you want to update.
 2. Click or tap **Data sources** on the **View** tab of the ribbon.
 3. In the right-hand pane, click or tap **Add a data source**.
@@ -103,6 +119,8 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 6. Click or tap **Connect**.
 7. Under **Choose a dataset**, click or tap an option.
 8. Under **Choose a table**, select one or more checkboxes, and then click or tap **Connect**.
+
+---
 
 ## Next steps
 * Learn how to [show data from a data source](../add-gallery.md).
