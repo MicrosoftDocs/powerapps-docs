@@ -43,7 +43,7 @@ To start with data from Excel frist [create an app from scratch from Excel](../g
 1. From the home screen select, **Start with data** > **Excel**.
 1. Connect to the Excel Online (Business) connector. 
 1. Enter the file URL or select it fromt the list below.
-1. Select the tabled identity column. 
+1. Select the table identity column. 
 1. When you're done, select **Create app**.
 
 
