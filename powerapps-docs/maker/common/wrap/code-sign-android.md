@@ -1,4 +1,4 @@
-﻿---
+---
 title: Code sign for Android
 description: Learn about how to code sign for Android for Power Apps wrap.
 author: larryk78
@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - larryk78
@@ -40,7 +38,7 @@ We'll use **keytool.exe** (available after installing Android Studio, from the f
 
 To generate a key, open a command prompt and run the following command:
 
-`keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 100`
+`keytool -genkey -alias SIGNATURE_ALIAS -keyalg RSA -keystore PATH_TO_KEYSTORE -keysize 2048 -validity 10000`
 
 
 Parameters:

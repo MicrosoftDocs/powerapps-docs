@@ -1,18 +1,14 @@
 ---
 title: "ProcessStage table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the ProcessStage table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # ProcessStage table/entity reference
@@ -60,6 +56,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OperationId](#BKMK_OperationId)
 - [OperationKind](#BKMK_OperationKind)
 - [OperationType](#BKMK_OperationType)
+- [ParameterName](#BKMK_ParameterName)
+- [ParameterValue](#BKMK_ParameterValue)
+- [ParentProcessStageId](#BKMK_ParentProcessStageId)
 - [PrimaryEntityTypeCode](#BKMK_PrimaryEntityTypeCode)
 - [ProcessId](#BKMK_ProcessId)
 - [ProcessStageId](#BKMK_ProcessStageId)
@@ -248,6 +247,58 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 
 
+### <a name="BKMK_ParameterName"></a> ParameterName
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The parameter name.|
+|DisplayName|Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parametername|
+|MaxLength|100|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
+
+
+### <a name="BKMK_ParameterValue"></a> ParameterValue
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The parameter value.|
+|DisplayName|Value|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parametervalue|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ParentProcessStageId"></a> ParentProcessStageId
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The parent stage for the parameter.|
+|DisplayName|Stage|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parentprocessstageid|
+|RequiredLevel|ApplicationRequired|
+|Targets|processstage|
+|Type|Lookup|
+
+
 ### <a name="BKMK_PrimaryEntityTypeCode"></a> PrimaryEntityTypeCode
 
 |Property|Value|
@@ -343,6 +394,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
+- [ParentProcessStageIdName](#BKMK_ParentProcessStageIdName)
 - [ProcessIdName](#BKMK_ProcessIdName)
 - [VersionNumber](#BKMK_VersionNumber)
 
@@ -403,6 +455,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_ParentProcessStageIdName"></a> ParentProcessStageIdName
+
+**Added by**: Power Automate Extensions core package Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|parentprocessstageidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ProcessIdName"></a> ProcessIdName
 
 |Property|Value|
@@ -456,6 +526,7 @@ Listed by **SchemaName**.
 - [processstage_phonecalls](#BKMK_processstage_phonecalls)
 - [lk_expiredprocess_activestageid](#BKMK_lk_expiredprocess_activestageid)
 - [processstage_processstageparameter](#BKMK_processstage_processstageparameter)
+- [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage)
 
 
 ### <a name="BKMK_processstage_knowledgearticle"></a> processstage_knowledgearticle
@@ -714,16 +785,40 @@ Same as the [processstage_processstageparameter](processstageparameter.md#BKMK_p
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
+
+### <a name="BKMK_processstage_parentprocessstage"></a> processstage_parentprocessstage
+
+**Added by**: Power Automate Extensions core package Solution
+
+Same as the [processstage_parentprocessstage](processstage.md#BKMK_processstage_parentprocessstage) many-to-one relationship for the [processstage](processstage.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstage|
+|ReferencingAttribute|parentprocessstageid|
+|IsHierarchical|True|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|processstage_parentprocessstage|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
 <a name="manytoone"></a>
 
 ## Many-To-One Relationships
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related table. Listed by **SchemaName**.
 
+- [process_processstage](#BKMK_process_processstage)
+- [processstage_parentprocessstage](#BKMK_processstage_parentprocessstage)
+
 
 ### <a name="BKMK_process_processstage"></a> process_processstage
 
 See the [process_processstage](workflow.md#BKMK_process_processstage) one-to-many relationship for the [workflow](workflow.md) table/entity.
+
+### <a name="BKMK_processstage_parentprocessstage"></a> processstage_parentprocessstage
+
+See the [processstage_parentprocessstage](processstage.md#BKMK_processstage_parentprocessstage) one-to-many relationship for the [processstage](processstage.md) table/entity.
 
 ### See also
 

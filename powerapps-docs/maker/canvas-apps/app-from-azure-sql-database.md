@@ -1,7 +1,7 @@
 ---
 title: Create a canvas app from Azure SQL Database
 description: Describes how to create canvas app from your data in Azure SQL Database
-author: tapanm-msft
+author: mduelae
 
 ms.topic: conceptual
 ms.custom: 
@@ -13,8 +13,6 @@ ms.subservice: canvas-maker
 ms.author: hahuber
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
 ---

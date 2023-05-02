@@ -64,7 +64,7 @@ To enable permissions for a basic form, select the checkbox to **Enable Table Pe
 |Record Source Type|One of the following values:<ul><li>Query String</li><li>Current Portal User</li><li>Record Associated to Current Portal User</li></ul>Selecting _Query String_ requires a parameter name that must be provided in the query string of the URL to the form. This can be specified in the 'Record ID Parameter Name' field.<br>Selecting _Current Portal User_ will retrieve the portal user record for the current authenticated user.<br>Selecting _Record Associated to Current Portal User_ will retrieve the portal user record for the current authenticated user and then retrieve the record for the given relationship as specified by the 'Relationship Name' field.|
 |Record ID Parameter Name|    A parameter name provided in the query string of the URL to the Web Page containing this Basic Form.|
 |Relationship Name|    Required when Record Source Type is Record Associated to Current Portal User. The logical name of the relationship between the current portal user record and the target record. This must return the same table type specified by the Table Name field.|
-|Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to.|
+|Allow Create If Null|    An optional boolean value available when Record Source Type is Record Associated to Current Portal User. Indicates that if the related record does not exist, allow the user to create it the first time, otherwise an exception will be thrown if the record does not already exist as the form needs a record to data bind to. <br> **NOTE**: This feature is not available in multistep forms. |
 |Enable Table Permissions|    Will Cause the form to respect Table Permissions. The default is false for backwards compatibility reasons. If set to true, explicit permissions are REQUIRED for any user wanting to access the form. <br> **NOTE**: This method of securing forms would be deprecated soon. Therefore, it shouldn't be used. Use proper [table permissions](entity-permissions-studio.md), and web role setup to provide access to users for any data instead. More information: [Table permission changes for forms and lists on new portals](../important-changes-deprecations.md#table-permission-changes-for-forms-and-lists-on-new-portals) |
 |||
 
@@ -226,7 +226,6 @@ To disable request validation, follow these steps:
 - The Connection table subgrids aren't supported in basic forms. If you add a Connection table subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection table.
 - Duplicate fields, Party List fields, and business rules aren't supported in basic forms.
 - Field level code components are in public preview, and can be added to forms. More information: [Add a code component to a field in a model-driven app](../component-framework.md#add-a-code-component-to-a-field-in-a-model-driven-app) 
-- [Image attributes](../../../developer/data-platform/image-attributes.md), [file attributes](../../../developer/data-platform/file-attributes.md) and [table images](/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [basic forms](entity-forms.md), [multistep forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 - Business rules and client API can enable locked fields on a read-only form.
 - If you create a basic form in the Insert mode, you can't change a button's alignment or place an action button above the basic form.
 - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
@@ -240,6 +239,5 @@ To disable request validation, follow these steps:
 - [Multistep Forms metadata for portals](configure-web-form-metadata.md)  
 - [Multistep Form subgrid configuration for portals](configure-web-form-subgrid.md)  
 - [Notes configuration for basic forms and Multistep Forms for portals](../configure-notes.md)
-- [Interact with Dataverse data using basic forms](/training/modules/portals-access-data-platform/3-entity-forms)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

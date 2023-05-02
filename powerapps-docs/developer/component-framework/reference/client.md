@@ -3,7 +3,6 @@ title: Client | Microsoft Docs
 description: Provides access to the methods to determine which client is being used, whether the client is connected to server, and what kind of device is being used.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

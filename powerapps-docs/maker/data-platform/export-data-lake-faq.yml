@@ -52,6 +52,8 @@ sections:
         
         > [!NOTE]
         > **CreatedOn** data type changed from datetime to datetimeOffset on 07/29/2022. To edit the data type format for a table created before the change, drop and re-add the table.
+        > 
+        > You can choose different column behaviors for a Date and Time column in Dataverse, which updates the data type format. More information: [Behavior and format of the Date and Time column](behavior-format-date-time-field.md)
    - question: When should I use a yearly or monthly partition strategy?
      answer: |
         For Dataverse tables where data volume is high within a year, we recommend you use monthly partitions. Doing so results in smaller files and better performance. Additionally, if the rows in Dataverse tables are updated frequently, splitting into multiple smaller files help improve performance in the case of in-place update scenarios.
@@ -72,6 +74,7 @@ sections:
         Any table that does not have change tracking enabled will not be supported in addition to following system tables:
         - Attachment
         - Calendar
+        - Calendarrule
    - question: Does Azure Synapse Link support calculated columns?
      answer: |
         Yes. In Dataverse, the calculated column keeps only the formula information and the real value depends on the base entity column so the calculated column will be updated if and only if all data (base tables) related to calculated columns are exported via Azure Synapse Link.

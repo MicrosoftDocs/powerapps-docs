@@ -1,19 +1,16 @@
 ---
-title: "Use FetchXml with Web API (Microsoft Dataverse)| Microsoft Learn"
-description: "FetchXml provides another way to define a query you can use with Web API to retrieve table data."
+title: "Use FetchXML with Web API (Microsoft Dataverse)| Microsoft Learn"
+description: "FetchXML provides another way to define a query you can use with Web API to retrieve table data."
 ms.date: 09/27/2022
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
-# Use FetchXml with Web API
+# Use FetchXML with Web API
 
 FetchXML is a proprietary query language that provides capabilities to retrieve data and perform aggregation. It can be used in Web API and with the .NET SDK.  More information: [Use FetchXML to query data](../use-fetchxml-construct-query.md).
 
@@ -421,7 +418,6 @@ OData-Version: 4.0
 
 [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)<br />
 [Query data using the Web API](query-data-web-api.md)<br />
-[Retrieve related table records with a query](retrieve-related-entities-query.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)
 
 

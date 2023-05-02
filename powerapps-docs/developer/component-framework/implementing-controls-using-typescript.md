@@ -930,7 +930,7 @@ Follow these steps to create and import a [solution](../../maker/data-platform/s
    Project reference successfully added to Dataverse solution project.
    ```
    
-1. To generate a zip file from your solution project, when inside the the `cdsproj` solution project directory, using the following command:
+1. To generate a zip file from your solution project, when inside the `cdsproj` solution project directory, using the following command:
 
    ```CLI
    msbuild /t:restore

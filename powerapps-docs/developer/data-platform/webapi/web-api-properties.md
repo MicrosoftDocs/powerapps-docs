@@ -5,15 +5,11 @@ ms.date: 04/06/2022
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
-manager: sunilg
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)" 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors:
  - JimDaly
 ---
@@ -84,7 +80,7 @@ Lookup properties are computed, read-only properties that have an `Edm.Guid` val
 
 To change the value of a lookup property, you must change the single-valued navigation property that it represents. More information: [Lookup properties](web-api-navigation-properties.md#lookup-properties)
 
-When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes which aren’t represented by a single-valued navigation property. More information: [Retrieve data about lookup properties](query-data-web-api.md#retrieve-data-about-lookup-properties).
+When you include lookup properties in a query, you can request annotations to be included that provide additional information about the data that is set for those underlying attributes which aren't represented by a single-valued navigation property. More information: [Lookup property data](query-data-web-api.md#lookup-property-data)
 
 ## Next steps
 

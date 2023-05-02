@@ -1,7 +1,7 @@
 ---
 title: Create a canvas app with data from Microsoft Dataverse (contains video)
 description: Learn about how to automatically create a canvas app to manage data in Microsoft Dataverse.
-author: tapanm-msft
+author: mduelae
 
 ms.topic: quickstart
 ms.custom: 
@@ -13,8 +13,6 @@ ms.subservice: canvas-maker
 ms.author: tapanm
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - lancedmicrosoft

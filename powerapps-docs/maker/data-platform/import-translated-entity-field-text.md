@@ -4,7 +4,6 @@ description: "Learn how to import translated table and column text"
 ms.custom: ""
 ms.date: 06/19/2018
 ms.reviewer: ""
-
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,16 +16,10 @@ ms.assetid: 3d77d149-819b-45e6-8e70-1fbe54d5c153
 caps.latest.revision: 19
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Import translated table, form, and column text back into an app
-
-
 
 If you have customized table or column text, such as column labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
   
@@ -38,7 +31,7 @@ If you have customized table or column text, such as column labels or drop-down 
   
 1. Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. Select **Solutions**, and select the unmanaged solution from which to import the translated text.
+2. Select **Solutions**, and select the unmanaged solution from which to import the translated text. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 
 3. In the solution explorer, on the Actions toolbar, select **Translations**, and then select **Import translations**.
 

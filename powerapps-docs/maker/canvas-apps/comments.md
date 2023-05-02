@@ -5,25 +5,17 @@ author: mkaur
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 10/19/2022
+ms.date: 03/01/2023
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   
 ---
 
-# Add comments (preview)
-
-[This article is pre-release documentation and is subject to change.]
-
->[!IMPORTANT]
->This is a preview feature.
->[!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+# Add comments
 
 Easily add comments when you’re building a canvas app in [Power Apps Studio](power-apps-studio.md). Use comments to help your team review the app and provide feedback, or provide additional information on implementation details in your app. To allow other makers to add comments, make sure to share the app with them.
 

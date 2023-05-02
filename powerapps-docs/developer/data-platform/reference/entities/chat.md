@@ -1,18 +1,14 @@
 ---
 title: "Teams chat (chat)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Teams chat (chat)  table/entity."
-ms.date: 12/07/2022
+ms.date: 03/07/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
-manager: "margoc"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Teams chat (chat)  table/entity reference
@@ -31,6 +27,7 @@ For internal use only. Entity which stores association data of Dynamics 365 reco
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.2/chats(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/chats<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/chats(*activityid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -42,6 +39,7 @@ For internal use only. Entity which stores association data of Dynamics 365 reco
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.2/chats(*activityid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/chats(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Properties
 
@@ -84,6 +82,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsMapiPrivate](#BKMK_IsMapiPrivate)
 - [IsWorkflowCreated](#BKMK_IsWorkflowCreated)
 - [LastOnHoldTime](#BKMK_LastOnHoldTime)
+- [LastSyncError](#BKMK_LastSyncError)
 - [LeftVoiceMail](#BKMK_LeftVoiceMail)
 - [ModifiedInTeamsBy](#BKMK_ModifiedInTeamsBy)
 - [ModifiedInTeamsByActivityPartyId](#BKMK_ModifiedInTeamsByActivityPartyId)
@@ -111,6 +110,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [StateCode](#BKMK_StateCode)
 - [StatusCode](#BKMK_StatusCode)
 - [Subject](#BKMK_Subject)
+- [SyncStatus](#BKMK_SyncStatus)
 - [teamschatid](#BKMK_teamschatid)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [To](#BKMK_To)
@@ -443,6 +443,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|lastonholdtime|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_LastSyncError"></a> LastSyncError
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The last sync error that occurred for the chat.|
+|DisplayName|Last Sync Error|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|lastsyncerror|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_LeftVoiceMail"></a> LeftVoiceMail
@@ -870,9 +888,33 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|subject|
-|MaxLength|200|
+|MaxLength|250|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_SyncStatus"></a> SyncStatus
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Displays the sync status.|
+|DisplayName|Sync Status|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|syncstatus|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### SyncStatus Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Enabled||
+|1|Pending||
+|2|Enabled||
+
 
 
 ### <a name="BKMK_teamschatid"></a> teamschatid
@@ -981,6 +1023,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [DeliveryLastAttemptedOn](#BKMK_DeliveryLastAttemptedOn)
+- [EventsSummary](#BKMK_EventsSummary)
 - [ExchangeRate](#BKMK_ExchangeRate)
 - [InstanceTypeCode](#BKMK_InstanceTypeCode)
 - [IsRegularActivity](#BKMK_IsRegularActivity)
@@ -1151,6 +1194,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|deliverylastattemptedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_EventsSummary"></a> EventsSummary
+
+**Added by**: msft_ActivitiesInfra_Extensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|For internal use only. A rich text calculated field to display a summary of events.|
+|DisplayName|Events summary|
+|FormatName|RichText|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|eventssummary|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ExchangeRate"></a> ExchangeRate

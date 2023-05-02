@@ -9,9 +9,6 @@ ms.subservice: mda-developer
 ms.reviewer: 
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---

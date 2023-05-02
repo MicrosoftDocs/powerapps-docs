@@ -14,14 +14,10 @@ applies_to:
 author: "matthewbolanos"
 ms.subservice: mda-maker
 ms.author: "mabolan"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Add an embedded canvas app on a model-driven form
 

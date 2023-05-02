@@ -2,21 +2,16 @@
 title: "Use an email signature| MicrosoftDocs"
 description: Learn how to use an email signature.
 author: mduelae
-manager: kvivek
 
 ms.component: pa-user
-ms.topic: conceptual
-ms.date: 10/03/2022
-ms.subservice: end-user
+ms.date: 04/10/2023
+ms.topic: how-to
 ms.author: mkaur
-ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
   - enduser
-search.app: 
-  - PowerApps
-  - D365CE
+ms.custom: bap-template
 ---
 
 
@@ -37,7 +32,7 @@ Based on the email's sender specified in the **From** field, one of the followin
 
 - If the sender is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the user.
 - If the sender is set to a queue and the  queue's owner is a user, the dynamic placeholders defined in the email signature template are replaced with the values corresponding to the queue's owner. 
- - If the sender is set to a queue and the queue's owner is a team, the the dynamic placeholders are replaced with the values corresponding to the team's administrator.
+ - If the sender is set to a queue and the queue's owner is a team, the dynamic placeholders are replaced with the values corresponding to the team's administrator.
 
 
 ## Create an email signature
@@ -53,7 +48,7 @@ You can add a new email signature by:
    2. **Signature editor**. This allows you to create your email signature and **Save** when finished. 
 
       > [!Note] 
-      > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size.
+      > - You can  include inline images, such as a business logo, in email signatures, as long as they are under 1 MB in size. However, the inline image might not render properly if you open the email in the Outlook Desktop app.
       > -  You can add only those fields as dynamic placeholders that are linked to the **Record type** user.
       > - Signatures can also be created and used for queues.
       

@@ -8,12 +8,8 @@ ms.topic: "how-to"
 author: "Mattp123"
 ms.subservice: dataverse-maker
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 # Define alternate keys using Power Apps
 
@@ -26,7 +22,7 @@ Power Apps enables configuring the most common options, but certain options can 
 
 ## View alternate keys
 
-1. In Power Apps ([make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)), select **Data** > **Tables** and select the table that you want to view.
+1. In Power Apps ([make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)), select **Tables** from the left navigation pane, and then select the table that you want to view. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
 2. Select **Keys** to view a list of any alternate keys that are defined.
 
 ## Create an alternate key

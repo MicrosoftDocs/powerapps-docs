@@ -14,14 +14,10 @@ applies_to:
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Add and configure a subgrid component on a form
 
@@ -30,21 +26,21 @@ A form that displays the details of a table record can use a subgrid component t
 ## Add a subgrid component
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-2. Expand **Data**, select **Tables**, select the table that you want, select the **Forms** area, and then edit the form you want.
-   
-   > [!note]
+1. Select **Tables**, and then select the table that you want. [!INCLUDE [left-navigation-pane](../../includes/left-navigation-pane.md)]
+
+   > [!NOTE]
    > Customizations to a table should take place within a [solution](../model-driven-apps/model-driven-app-glossary.md#solution). To update a table within a solution, open your solution from the **Solutions** area, select the table, select the **Forms** area, and then edit the form you want.
 
-3. Select **+Component** on the command bar. This can also be selected from the left pane.
-4. Drag a **1 column section** from the layout area of the components menu onto the form.
-5. Select **Subgrid** from the **Related Data** area of the components menu.
-
-6. On the **Select subgrid views** pane:
+1. Select the **Forms** area, and then edit the form you want.
+1. Select **+Component** on the command bar. This can also be selected from the left pane.
+1. Drag a **1 column section** from the layout area of the components menu onto the form.
+1. Select **Subgrid** from the **Related Data** area of the components menu.
+1. On the **Select subgrid views** pane:
    - Typically app users want to view related records. When **Show related records** is selected, only tables with a relationship are displayed.
    - Select the **Table** you want.
    - Select the **Default view** from the table. When an existing view is not suitable for the app, [create or edit a view](create-edit-views.md) for the table.
-7. Select **Done**.
-8. Select **Save**, and then select **Publish**.
+1. Select **Done**.
+1. Select **Save**, and then select **Publish**.
 
 ## Configure a subgrid component
 
