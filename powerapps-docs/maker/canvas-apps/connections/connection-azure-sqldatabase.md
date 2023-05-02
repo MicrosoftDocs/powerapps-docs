@@ -46,7 +46,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Connect to external data** > **Excel**.
-1. Select your data connection and the data set from which to generate your app.
+1. Choose your preferred data connection and dataset to generate your app.
 1. When you're done, select **Create app**.
 
 
