@@ -29,7 +29,7 @@ A new version of the home page is being rolled out which provides a better app c
 
 Select the appropriate tab below to know more.
 
-# [Try the new Power Apps (preview)](#tab/home-new-look)
+# [New look (preview)](#tab/home-new-look)
 
 [This article is prerelease documentation and is subject to change.]
 
