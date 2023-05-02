@@ -100,6 +100,8 @@ Once you've selected your Excel file, and then table within it, you'll have adde
 
 ![Updated connector version using Excel icon instead of older OneDrive icon.](./media/connection-excel/excel-data-source.png "Updated connector version using Excel icon instead of older OneDrive icon")
 
+---
+
 ## Other connectors
 
 For information about how to connect to other types of data, see the [list of connections for Power Apps](../connections-list.md).
