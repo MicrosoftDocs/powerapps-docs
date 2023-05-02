@@ -124,13 +124,14 @@ Notifications sent using the `SendAppNotification` API are stored in the **Notif
 
 |Column display|Column name|Description|
 |---|---|---|
-|Title|`title`|The title of the notification.|
-|Owner|`ownerid`|The user who receives the notification.|
-|Body|`body`|Details about the notification.|
-|IconType|`icontype`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this article.|
-|Toast Type|`toasttype`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
-|Expiry (seconds)|`ttlinseconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
-|Data|`data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
+|Title|`Title`|The title of the notification.|
+|Owner|`OwnerId`|The user who receives the notification.|
+|Body|`Body`|Details about the notification.|
+|IconType|`IconType`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this article.|
+|Toast Type|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
+|Priority | `Priority` |Enables prioritization of notifications, which determines the order in which the notifications are displayed in the notification center. For more information, see [Changing the notification behavior](#changing-the-notification-behavior) later in this article. |
+|Expiry (seconds)|`TTLInSeconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
+|Data|`Data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
 
   > [!NOTE]
   > The `appmoduleid` field is not used in the table.
@@ -319,6 +320,17 @@ Accept: application/json
   }
 }
 ```
+
+### Setting the notification priority
+
+You can change the order in which notifications display in the notification center by setting the priority. The following are the optional values:
+
+|Priority | Value |
+|---------|-------|
+|Normal |`200000000`|
+|High |`200000001`|
+
+The default value is `Normal`. Notifications are sorted in the notification center by Priority and Created On date, descending. High priority notifications will display at the top of the list in the notification center.
 
 ## Notification actions
 
