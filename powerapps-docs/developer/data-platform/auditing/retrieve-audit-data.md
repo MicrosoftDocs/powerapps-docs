@@ -479,7 +479,7 @@ More information:
 - <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails?text=RetrieveAuditDetails Function>
 - <xref:Microsoft.Dynamics.CRM.RetrieveAuditDetailsResponse?text=RetrieveAuditDetailsResponse ComplexType>
 - [Use Web API functions](../webapi/use-web-api-functions.md)
-- [Include formatted values](../webapi/query-data-web-api.md#include-formatted-values)
+- [Formatted values](../webapi/query-data-web-api.md#formatted-values)
 
 
 # [SDK for .NET](#tab/sdk)
