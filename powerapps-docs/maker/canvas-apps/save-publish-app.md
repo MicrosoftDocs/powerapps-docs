@@ -25,15 +25,13 @@ For information about how to share an app, see [Share an app](share-app.md).
  With your app open for editing in [Power Apps Studio](https://create.powerapps.com), in the app actions menu, select **Save** and perform the following actions:
 
 - **Save**: Saves recent and unsaved changes you made to the app in Power Apps Studio. Each time you save changes, a new version is created.
+![Studio save.](media/studio/pa-studio-save.png)
 - **Save with version notes**: Save and add notes about the updates you've made.
-- **Save as**: Duplicate the app by saving the app with a different name.
-- **Save and publish**: Allows you to save the app and publish it at the same time.
+- **Save as**: Duplicate the app by saving the app with a different name.  
+![Studio save options.](media/studio/pa-studio-save-options.png)
 - **Download a copy**: Downland a local copy of the app.
-
-
-> [!div class="mx-imgBorder"] 
-> ![Studio save options.](media/studio/pa-studio-save-options.png)
-
+- **Publish**: Allows you to save the app and publish it at the same time.  
+![Studio publish.](media/studio/pa-studio-publish.png)
 
 Power Apps can also periodically save the app every 2 minutes. If you've saved the app once, Power Apps will continue to save a version of the app periodically without requiring the user to press or tap the Save action. Authors can enable or disable the **Auto save** by going to **Setting** > **General**.
 
