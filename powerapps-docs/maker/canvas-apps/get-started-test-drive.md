@@ -27,6 +27,20 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Create an app
 
+Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen select, **Start with data** > **Pick an app template**.
+
+
+
+
+# [Classic](#tab/home-classic)
+
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **+ Create** from the left-pane.
@@ -46,6 +60,8 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
     > [!NOTE]
     > You may be prompted to create or allow connections for connectors that the selected app is configured to use.
+
+---
 
 ## Run the app
 
