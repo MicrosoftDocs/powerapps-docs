@@ -28,8 +28,8 @@ For information about how to share an app, see [Share an app](share-app.md).
 ![Studio save.](media/studio/pa-studio-save.png)
 - **Save with version notes**: Save and add notes about the updates you've made.
 - **Save as**: Duplicate the app by saving the app with a different name.  
-![Studio save options.](media/studio/pa-studio-save-options.png)
 - **Download a copy**: Downland a local copy of the app.
+![Studio save options.](media/studio/pa-studio-save-options.png)
 - **Publish**: Allows you to save the app and publish it at the same time.  
 ![Studio publish.](media/studio/pa-studio-publish.png)
 
