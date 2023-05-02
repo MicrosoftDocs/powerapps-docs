@@ -2,21 +2,26 @@
 title: "Background operations (Preview) (Microsoft Dataverse) | Microsoft Docs"
 description: "Learn how to invoke custom apis asynchronously." 
 ms.custom: intro-internal
-ms.date: 04/29/2023
+ms.date: 05/02/2023
 ms.reviewer: jdaly
 ms.topic: article
-author: cwithfourplus
+author: sumadhey
 ms.subservice: dataverse-developer
-ms.author: vikaush
+ms.author: sumadhey
 search.audienceType: 
   - developer
 contributors:
   - JimDaly
+  - cwithfourplus
 ---
 
 # Background operations (Preview)
 
 [This article is pre-release documentation and is subject to change.]
+
+> [!NOTE]
+> As of May 2, 2023, this feature is being deployed and is not yet available in all regions.
+
 
 Use background operations to send requests that Dataverse processes asynchronously. Send a request this way when you don't want to maintain a connection awaiting potentially long running operations.
 
@@ -35,9 +40,6 @@ To perform a background operation, the initiating user must have read and write 
 - [Edit a security role](/power-platform/admin/create-edit-security-role#edit-a-security-role)
 - SDK: <xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest>
 - Web API: [AddPrivilegesRole Action](xref:Microsoft.Dynamics.CRM.AddPrivilegesRole)
-
-<!-- TODO We need a generic topic to describe adding privileges to security roles programmatically: workitem 3342875 -->
-
 
 ## Request asynchronous processing
 
@@ -196,12 +198,9 @@ Querying the background operation table or status monitor resource to check on r
 
 ## Background Operations table
 
-The Background Operation table contains information about requests to process asynchronously. This table has the logical name `backgroundoperation` and the entity set name `backgroundoperations`.
-
-<!-- TODO: add link to Background Operation Entity table reference when regenerated -->
+The Background Operation table contains information about requests to process asynchronously. This table has the logical name `backgroundoperation` and the entity set name `backgroundoperations`. See [backgroundoperation EntityType](xref:Microsoft.Dynamics.CRM.backgroundoperation)
 
 Background operation has the following columns you can use to manage the status of background operations.
-
 
 |Display Name<br />`SchemaName`<br />`LogicalName`|Type |Description|
 |---------|---------|---------|
@@ -274,7 +273,7 @@ static void PollBackgroundOperationRequest(IOrganizationService service, Guid ba
     catch (FaultException<OrganizationServiceFault> ex)
     {
         Console.WriteLine($"ErrorCode:{ex.Detail.ErrorCode}");
-        Console.WriteLine($"Message:{ex.Message}");
+        Console.WriteLine($"Message:{ex.Detail.Message}");
     }
     // Catch other errors
     catch (Exception error)
@@ -318,7 +317,7 @@ Error Code:  -2147187707
 Error Message:  Access is denied.
 ```
 
-If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). However, if the error is not caused by the platform, its value will be set to zero.
+If the error is produced by the platform, it will have an integer value that corresponds to one of the codes listed in the [Web service error codes](reference/web-service-error-codes.md). However, if the error isn't caused by the platform, its value is set to zero.
 
 **Id not found**
 
