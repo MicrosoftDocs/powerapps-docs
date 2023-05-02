@@ -34,9 +34,9 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 [This article is prerelease documentation and is subject to change.]
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with data** > **Pick an app template**.
+1. From the home screen select, **Pick an app template**.
 1. Select a template to learn more. If you want to choose another template, select **Cancel** and then select another template.
-1. After you select a template, you can update the app name and select either a tablet or phone format.
+1. After you select a template, you can update the app name and select the layout for your app. 
 1. When you're done, select **Next**.
 
 
