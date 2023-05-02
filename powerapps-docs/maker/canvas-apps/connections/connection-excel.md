@@ -31,6 +31,24 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 
 ## Step 3 - Add Excel as a data source for your Power App
 
+Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+
+# [New look (preview)](#tab/home-new-look)
+
+[This article is prerelease documentation and is subject to change.]
+
+To start with data from Excel frist [create an app from scratch from Excel](../get-started-create-from-blank.md). Then, drop the OneDrive or any other cloud data source that stores your Excel file.
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen select, **Start with data** > **Excel**.
+1. Connect to the Excel Online (Business) connector. 
+1. Enter the file URL or select it fromt the list below.
+1. Select the tabled identity column. 
+1. When you're done, select **Create app**.
+
+
+# [Classic](#tab/home-classic)
+
 There are currently two ways to add the Excel table as a data source in your application. These two different approaches each uses a slightly different version of the connector.
 
 > [!NOTE]
@@ -50,7 +68,7 @@ When you're finished, you'll have an application and in the Data Source window, 
 
 #### Start from Excel with new connector
 
-If you want to start with data from Excel, but with the newer version of the connector, [create an app from scratch from Excel](../get-started-create-from-blank.md) first. Then, drop the OneDrive or any other cloud data source that stores your Excel file, and then readd the Excel data source using the new connector (**Excel Online (Business)**). Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
+If you want to start with data from Excel, but with the newer version of the connector, [create an app from scratch from Excel](../get-started-create-from-blank.md) first. Then, drop the OneDrive or any other cloud data source that stores your Excel file, and then read the Excel data source using the new connector (**Excel Online (Business)**). Because the names of the tables are the same and the file is the same, the Power Apps will  connect to the updated data source and work without any more changes required.
 
 ![Using Start from Data with new connector.](./media/connection-excel/excel-data-source-with-app.png "Using Start from Data with new connector")
 
