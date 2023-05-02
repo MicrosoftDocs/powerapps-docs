@@ -182,7 +182,7 @@ If your organization has [AI enabled](ai-overview.md) then you will see AI assis
 To create an app, select from the following options:
 
 - **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
-- **Choose a page template**: Select the type of app you want to create. You can also use the the **Filter** option located in the top-right to narrow down the available templates by app type or by app features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [How do I find and run apps?](../../user/index.md)
+- **Choose a page template**: Select the type of app you want to create. You can also use the the **Filter** option located in the top-right to narrow down the available templates by app type or by app features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
 - **Pick an app template**: Choose from a fully functional app and then customized it based on your organization needs. More informaton: [tbd](get-started-test-drive.md)
 
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you are searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
