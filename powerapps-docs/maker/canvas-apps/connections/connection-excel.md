@@ -40,10 +40,9 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 To start with data from Excel frist [create an app from scratch from Excel](../get-started-create-from-blank.md). Then, drop the OneDrive or any other cloud data source that stores your Excel file.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with data** > **Excel**.
-1. Connect to the Excel Online (Business) connector. 
-1. Enter the file URL or select it fromt the list below.
-1. Select the table identity column. 
+1. From the home screen select, **Start with data** > **Connect to external data** > **Excel**.
+1. If this is your first time, you're prompted to create a connection. Once a connection is established, enter the file URL or select it from the list below.
+1. Select the table's identity column. 
 1. When you're done, select **Create app**.
 
 
