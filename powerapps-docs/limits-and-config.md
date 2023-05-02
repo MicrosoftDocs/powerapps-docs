@@ -102,6 +102,7 @@ This list identifies all services to which Power Apps communicates and their usa
 | ecs.office.com | https | Retrieve feature flags for Power Apps |
 | config.edge.skype.com | https | Retrieve feature flags for Power Apps (backup)|
 | \*.api.powerplatform.com | https | Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform [programmability and extensibility](/power-platform/admin/programmability-extensibility-overview).|
+| *.sharepointonline.com| https | Retrieve assets for presenting the header that appears at the top of app playing experiences |
 
 
 <sup>1</sup> Replaces domain name `gov.content.powerapps.us` used prior to July 2022. <br>
