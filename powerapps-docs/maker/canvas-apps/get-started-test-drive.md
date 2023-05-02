@@ -35,8 +35,9 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Pick an app template**.
-
-
+1. Select a template to learn more. If you want to choose another template, select **Cancel** and then select another template.
+1. After you select a template, you can update the app name and select either a tablet or phone format.
+1. When you're done, select **Next**.
 
 
 # [Classic](#tab/home-classic)
@@ -44,8 +45,6 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **+ Create** from the left-pane.
-
-    :::image type="content" source="media/get-started-test-drive/create-left-pane.png" alt-text="Select + Create from Power Apps.":::
 
 1. Scroll down to **Start from template** section, and choose the template of your choice for canvas apps.
 
