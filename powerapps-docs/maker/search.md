@@ -43,13 +43,13 @@ To prevent users from using the **See web results** option to perform external w
 
 The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Global admins, Azure Active Directory Global admins, or Dynamics 365 admin security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 
-By default, all search providers are enabled. The following search providers can be disabled.
+By default, all search providers are enabled except for the docs search provider. The following search providers can be enabled or disabled.
 
-|Search provider namespace |Description  |
-|---------|---------|
-|`PowerPlatform.Search.disableDocsSearch`  |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
-|`PowerPlatform.Search.disableCommunitySearch`     | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
-| `PowerPlatform.Search.disableBingVideoSearch`    | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
+|Search provider namespace |Default |Description  |
+|---------|---------|---------|
+|`PowerPlatform.Search.disableDocsSearch`  |True |  When this provider is disabled, users in the environment will see a message that Microsoft Learn and Documentation search categories have been turned off by the administrator in the search results page.   |
+|`PowerPlatform.Search.disableCommunitySearch`     |False | When this provider is disabled, users in the environment will see a message that Community and Blog search categories have been turned off by the administrator in the search results page.   |
+| `PowerPlatform.Search.disableBingVideoSearch`    |False | When this provider is disabled, users in the environment will see a message that Video search categories have been turned off by the administrator in the search results page.   |
 
 To return the current settings including which search providers are enabled or disabled, run this cmdlet:
 `Get-TenantSettings`
@@ -72,6 +72,14 @@ $requestBody = @{PowerPlatform.Search.disableDocsSearch = $false}
 Set-TenantSettings -RequestBody $requestBody
 ```
 
+Alternatively, run:
+```powershell
+$settings = Get-TenantSettings 
+$settings.PowerPlatform.Search.disableDocsSearch = $false
+Set-TenantSettings -RequestBody $settings
+```
+
 ### See also
 
-[Overview of creating apps in Power Apps](index.md)
+[Overview of creating apps in Power Apps](index.md)  
+[Power Apps cmdlets for administrators](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators)
