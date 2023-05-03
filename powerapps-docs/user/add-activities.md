@@ -329,7 +329,9 @@ Legend
 
 ### View whether a note has attachments and inline files in the timeline
   
-If you attach a file to a note or include an inline image in the note, the timeline will show that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note will show the number of files using the first two file names and a number to represent the remaining count of and the file type. 
+If you attach a file to a note or include an inline image in the note, the timeline will show that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note will show the number of files using the first two file names and a number to represent the remaining count of and the file type.
+
+![View the number of attachments in a note on timeline.](media\timeline-attachments-notes.png "View the number of attachments in a note on timeline")
 
 ### Add a mention or reference a team member in a note
 
@@ -452,7 +454,7 @@ The following table describes the different formatting features and functionalit
 |![Clear All Formatting.](media/clear-formatting.png "Clear All Formatting")| Clear All Formatting |  | Remove all formatting from a selection of text, leaving only the normal, unformatted text. |
 |![Add a Table.](media/add-table.png "Add a Table")| Add a Table |  | Add a table to your content. <br /><br />After adding a table, you can do any of the following:<br /><ul><li>Resize table columns by clicking and dragging your mouse to resize to the columns to the desired width.</li><li>Select one or several cells within a table and apply specific formatting, add links to the selection, or cut, copy, or paste entire rows or columns.</li><li>Right-click to access the properties. This supports features such as cell type, width and height, word wrapping, alignment, merging and splitting cells horizontally and vertically, inserting or deleting rows and columns, row and column span, and cell and border color.</li></ul>|
 |![Expand Toolbar.](media/show-more.png "Expand Toolbar")| Expand Toolbar |  | Appears when the toolbar is collapsed. Click to expand the toolbar and make all options visible. |
-|![Copy to Clipboard.](media/copy-clipboard.png "Copy to Clipboard")| | Copy to Clipboard | Copies entire text in a note to the clipboard so that you can paste the contents in another location.
+|![Copy to Clipboard.](media/copy-clipboard.png "Copy to Clipboard")| Copy to Clipboard | | Copies entire text in a note to the clipboard so that you can paste the contents in another location.
 
 The rich text editor is enabled by default. Your system administrator can enable or disable the editor for you.
 
