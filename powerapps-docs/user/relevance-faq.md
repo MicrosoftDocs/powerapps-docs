@@ -61,6 +61,10 @@ Dataverse search does not return HTML formatting for memo types to optomize the 
 
 Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
+## Why search on ownerid attribute does not work when seaarch is enabled on it?
+
+Dataverse search does not support search and suggest for attributes of type Owner.
+
 ### See also
 
 [What is Dataverse search?](relevance-search-benefits.md)<br/>
