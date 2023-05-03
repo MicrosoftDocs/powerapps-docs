@@ -4,7 +4,7 @@ description: Use unified search to find what you need.
 author: Mattp123
 ms.subservice: common
 ms.topic: conceptual
-ms.date: 02/24/2021
+ms.date: 05/03/2023
 ms.author: matp
 search.audienceType: 
   - maker
@@ -43,7 +43,7 @@ To prevent users from using the **See web results** option to perform external w
 
 The Microsoft.PowerApps.Administration.PowerShell module includes the cmdlets that members of either the Global admins, Azure Active Directory Global admins, or Dynamics 365 admin security groups can use to modify the search providers. More information: [Get started using the Power Apps admin module](/powershell/powerapps/get-started-powerapps-admin).
 
-By default, all search providers are enabled except for the docs search provider. The following search providers can be enabled or disabled.
+By default, all search providers are enabled, except for the docs search provider `PowerPlatform.Search.disableDocsSearch`. The following search providers can be enabled or disabled.
 
 |Search provider namespace |Default |Description  |
 |---------|---------|---------|
