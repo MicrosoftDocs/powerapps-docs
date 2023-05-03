@@ -5,7 +5,7 @@ author: mduelae
 
 ms.component: pa-user
 ms.topic: overview
-ms.date: 11/11/2022
+ms.date: 05/03/2023
 ms.subservice: end-user
 ms.author: mkaur
 ms.custom: ""
@@ -133,7 +133,7 @@ Legend
 1. The **Show email as** command is used to enable or disable threaded email views.
 1. The **Display layout** command allows you to choose from two different views: **Roomy** or **Cozy**. **Roomy** (set by default) shows you more information, such as profile details, and adds space between the rows. **Cozy** hides some of the details, such as icons, and compacts the space between rows.
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
-1. The **Reset to default** command will change all of the command settings you've changed back to the default settings.
+1. The **Reset to default** command will revert all of the command settings you've changed back to the default settings.
 
 
 ## View email inline in timeline
