@@ -2,7 +2,7 @@
 title: "Create and edit tables using Power Apps | MicrosoftDocs"
 description: "Understand how to create and edit tables using Power Apps portal"
 ms.custom: ""
-ms.date: 06/09/2022
+ms.date: 05/03/2023
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
