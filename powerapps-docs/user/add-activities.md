@@ -326,7 +326,11 @@ Legend
 > - You can only format the message body of a note; not the title.
 > - The rich text editor is available only for Unified Interface.
 > - If you create a rich text editor note in Unified Interface and then view the note in the web client, it will display in HTML syntax.
-> 
+
+### View whether a note has attachments and inline files in the timeline
+  
+If you attach a file to a note or include an inline image in the note, the timeline will show that the note has an attachment or inline files. If you attach a file or include multiple files inline, the note will show the number of files using the first two file names and a number to represent the remaining count of and the file type. 
+
 ### Add a mention or reference a team member in a note
 
 ![Add a mention or reference to a team member in a note on timeline.](media\timeline_at_1_legend_note.png "Add a mention or reference to a team member in a note on timeline")
