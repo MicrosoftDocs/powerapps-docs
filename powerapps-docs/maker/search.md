@@ -81,5 +81,4 @@ Set-TenantSettings -RequestBody $settings
 
 ### See also
 
-[Overview of creating apps in Power Apps](index.md)  
-[Power Apps cmdlets for administrators](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators)
+[Overview of creating apps in Power Apps](index.md)
