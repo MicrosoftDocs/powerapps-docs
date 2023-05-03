@@ -132,6 +132,7 @@ Legend
 1. The **Sort newer to older** or **Sort older to newer** command is used to sort rows.
 1. The **Show email as** command is used to enable or disable threaded email views.
 1. The **Remember my filters** command allows your filters to persist when you close the record so that they continue to be applied across sessions.
+1. The **Display layout** command allows you to choose from a **Roomy** view, where more information is displayed for the entries, such as profile details, or a **Cozy** view, which displays less details and compacts the entries. 
 
 
 ## View email inline in timeline
