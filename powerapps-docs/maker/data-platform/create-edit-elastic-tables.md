@@ -53,7 +53,7 @@ Elastic tables support many of the table properties supported by standard tables
 - Security features:
    - User and organization owned tables
    - Field level security
-   - Change tracking triggers (like when a record is created, send email) <!-- you mean change tracking attribute? -->
+   - Track changes (to trigger an action like when a record is created, send email) <!-- you mean change tracking attribute? -->
 
 Additionally, elastic tables, which are powered by Cosmos DB, so queries only support left-outer JOIN. Elastic tables don't support queries that require other JOINS across tables. This means that filters on related tables when creating views or with Advanced Find won't work. We recommend that you denormalize columns from related tables into the main table if filters on related tables are needed. <!-- what does it mean to denormalize columns from related tables into the main table? -->
 
@@ -86,7 +86,7 @@ Column data types currently not available with elastic tables:
 - File
 - Formula
 - Whole number format other than None (Duration, Language code, and Time zone)
-- Lookup based on the Customer option.
+- Lookup based on the Customer option
 
 ## Create an elastic table
 
