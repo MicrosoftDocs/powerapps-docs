@@ -37,7 +37,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look-pr
 
 [This article is prerelease documentation and is subject to change.]
 
-To start with data from Excel frist [create an app from scratch from Excel](../get-started-create-from-blank.md). Then, drop the OneDrive or any other cloud data source that stores your Excel file.
+To start with data from Excel, first [create an app from scratch from Excel](../get-started-create-from-blank.md). Then, drop the OneDrive or any other cloud data source that stores your Excel file.
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Connect to external data** > **Excel**.
@@ -59,7 +59,7 @@ There are currently two ways to add the Excel table as a data source in your app
 > [!IMPORTANT]
 > If you choose this method, you'll use an older version of the connector.
 
-You can automatically add Excel and create a 3 screen application by [creating a canvas app with data from an Excel file](../get-started-create-from-data.md)
+You can automatically add Excel and create a three screen application by [creating a canvas app with data from an Excel file](../get-started-create-from-data.md)
 
 When you're finished, you'll have an application and in the Data Source window, you'll see your data source has been added with a **OneDrive** connector.
 
