@@ -1,5 +1,5 @@
 ---
-title: Request a Power Apps license
+title: Request a Power Apps license for yourself
 description: Learn how to request a Power Apps license.
 author: sericks007
 ms.subservice: common
@@ -12,7 +12,7 @@ searchScope:
   - "Power Apps"
 
 ---
-# Request a Power Apps license
+# Request a Power Apps license for yourself
 
 You can request a Power Apps license from your admin directly using Power Apps.
 
