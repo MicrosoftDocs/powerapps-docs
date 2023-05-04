@@ -149,7 +149,7 @@ Use the Colleges entity to manage and maintain a list of the colleges at univers
 
 To create a record in Colleges:
 
-1. Sign in to the admin app by using the URL provided by your IT admin.
+1. Sign in to the admin app using the URL your IT admin provided.
 
 1. On the left pane, select **Administration** > **Colleges**, and then select **New**.
 
@@ -319,7 +319,7 @@ associated with the sponsored program.
 
 To create a record in Sponsors:
 
-1. Sign in to the admin app by using the URL provided by your IT admin.
+1. Sign in to the admin app using the URL your IT admin provided.
 
 1. On the left pane, select **Higher Education Crisis Financial Impact Tracker** > **Sponsors**, and then select **New**.
 
