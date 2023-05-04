@@ -59,7 +59,7 @@ Watch this short video that shows you how to create a canvas app quickly using D
 
 ## Save and design the app
 
-Your app opens in Power Apps Stuido where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
+Your app opens in Power Apps Studio where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
 
 As a best practice, before you make any more changes save your work before you proceed.
 
