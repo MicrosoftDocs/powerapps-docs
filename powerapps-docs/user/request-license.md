@@ -25,28 +25,18 @@ If you don't have a license and are trying to open apps made with Power Apps, yo
 
 :::image type="content" source="media/request-license.png" alt-text="Request a Power Apps license from your admin.":::
 
-### Request a license through a trial
+## Request a license through a trial
 If you're already in an active Power Apps trial, you can request a license by selecting **Request license** near the top of the page.
 
 :::image type="content" source="media/request-license-in-trial.png" alt-text="Users who are already in an active Power Apps trial, can request a license.":::
 
 If you're using a Power Apps trial, you can continue to use the trial while you wait for your request to be approved.
 
-### Wait for response
+## Wait for response
 After you request a license, you'll see a banner at the top of the page that confirms that your request was sent, and that it might take a few days for your [admin to respond to the request](/microsoft-365/commerce/licenses/manage-license-requests?view=o365-worldwide#approve-or-deny-a-license-request&preserve-view=true).
 
 After your admin has reviewed your request, you'll receive an email notification indicating whether the request was approved or denied.
 
-## Request a license for other users
-
-If you're a Power Apps maker, you can request a Power Apps license for other users. Select **Request licenses** to submit a license request to your admin when sharing a [canvas app](../maker/canvas-apps/share-app.md) or [model-driven app](../maker/model-driven-apps/share-model-driven-app.md) with other users.
-
-:::image type="content" source="media/request-licenses-for-others.png" alt-text="Request licenses for other users when sharing an app.":::
-
-> [!Note]
-> You can't request licenses for security groups or distribution lists.
-
-After your admin has reviewed your request, you'll receive an email notification indicating whether the request was approved or denied.
 
 
 
