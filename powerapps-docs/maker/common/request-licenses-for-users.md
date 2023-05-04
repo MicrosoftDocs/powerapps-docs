@@ -23,6 +23,6 @@ When sharing a [canvas app](../canvas-apps/share-app.md) or [model-driven app](.
 > [!Note]
 > You can't request licenses for security groups or distribution lists.
 
-After your [admin has reviewed your request](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/manage-license-requests?view=o365-worldwide), you'll receive an email notification indicating whether the request was approved or denied.
+After your [admin has reviewed your request](/microsoft-365/commerce/licenses/manage-license-requests?view=o365-worldwide&preserve-view=true ), you'll receive an email notification indicating whether the request was approved or denied.
 
 
