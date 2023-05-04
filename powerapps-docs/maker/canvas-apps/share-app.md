@@ -143,8 +143,8 @@ Legend:
 4. **Add app to Teams**: Select to add the app to Teams.
 5. **Launch app in Web**: Open the app directly in your browser.
 
-## Requests licenses for your users
-As a Power Apps maker, you can request licenses for your app users when you [share the app](#share-an-app).
+## Request licenses for your users
+As a Power Apps maker, you can request licenses for your app users when you [share an app](#share-an-app).
 
 ## Security group considerations
 
