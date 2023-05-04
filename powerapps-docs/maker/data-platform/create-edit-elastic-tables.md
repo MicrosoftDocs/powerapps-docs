@@ -46,7 +46,7 @@ Elastic tables support many of the table properties supported by standard tables
 - Create, update, delete (CRUD) operations including `XMultiple` (for high throughput), bulk delete, and requests from plugins.
 - Relationships:
    - 1:N (One-to-Many)
-   - (1) -> ET (N)
+   - (1) -> ET (N)  <!-- What's ET? Elastic table? -->
    - ET (1) -> Standard (N)
    - N: 1 (Many-to-One)
    - ET (N) -> ET (1)
