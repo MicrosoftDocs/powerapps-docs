@@ -31,7 +31,7 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 
 ## Step 3 - Add Excel as a data source for your Power App
 
-Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic#classic) turned on, select the appropriate tab below to know more.
 
 # [New look (preview)](#tab/home-new-look)
 
