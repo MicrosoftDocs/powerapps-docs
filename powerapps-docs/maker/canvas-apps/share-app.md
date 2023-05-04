@@ -14,6 +14,7 @@ contributors:
   - mduelae
   - alaug
   - msftsamperl
+  - sericks
 ---
 # Share a canvas app with your organization
 
@@ -64,6 +65,10 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a group outside your organization.
+
+1. To request Power Apps licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
+
+    :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
