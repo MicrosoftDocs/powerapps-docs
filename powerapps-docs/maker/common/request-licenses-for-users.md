@@ -1,5 +1,5 @@
 ---
-title: Request Power Apps licenses for your users.
+title: Request Power Apps licenses for your app users
 description: Learn how to request Power Apps licenses for your users.
 author: sericks007
 ms.subservice: common
@@ -12,7 +12,7 @@ searchScope:
   - "Power Apps"
 
 ---
-# Request Power Apps licenses for your users
+# Request Power Apps licenses for your app users
 
 As a Power Apps maker, you can request a Power Apps license for users of your app. Select **Request licenses** to submit a license request to your admin when sharing a [canvas app](../canvas-apps/share-app.md) or [model-driven app](../model-driven-apps/share-model-driven-app.md) with other users.
 
