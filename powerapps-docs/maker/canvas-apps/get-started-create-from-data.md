@@ -41,6 +41,9 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 5. Select **Row ownership** and choose how you want to manage row owership.
 6. When you're done, select **Create app**.
 
+### known issue
+
+
 # [Classic](#tab/home-classic)
 
 The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business. The method in this article uses the latest version of the connector. To learn about different methods and how they affect the version of connector being used, see [Popular connectors - connect to Excel from Power Apps](connections/connection-excel.md).
