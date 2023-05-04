@@ -360,7 +360,7 @@ This section demonstrates how to create a table row and related row, in a single
   
 This section creates an account, its primary contact, and a set of tasks for that contact in one request.  
   
-1. Create the account `Fourth Coffee` and its primary contact `Susie Curtis` and her three related tasks in one operation.  Note the use of the single-valued `primarycontactid` navigation property and the collection-valued navigation property `Contact_Tasks` to define these relationships, respectively.  Single-valued navigational properties take an object value, whereas collection-valued navigation properties take an array value.  
+1. Create the account `Fourth Coffee` and its primary contact `Susie Curtis` and their three related tasks in one operation.  Note the use of the single-valued `primarycontactid` navigation property and the collection-valued navigation property `Contact_Tasks` to define these relationships, respectively.  Single-valued navigational properties take an object value, whereas collection-valued navigation properties take an array value.  
   
    **Request**
    
