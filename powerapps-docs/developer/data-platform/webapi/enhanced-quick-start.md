@@ -23,15 +23,16 @@ Putting user logon credentials inside your code is not a good practice. How you 
 
 Enabling this requires three steps:
 
-1. [Add a System.Configuration reference to the Visual Studio project](#add-a-systemconfiguration-reference-to-the-visual-studio-project)
+1. [Add the System.Configuration.ConfigurationManager NuGet package to the Visual Studio project](#add-the-systemconfigurationconfigurationmanager-nuget-package-to-the-visual-studio-project)
 1. [Edit the application configuration file](#edit-the-application-configuration-file)
 1. [Add a `using` directive in Program.cs](#add-using-directive-to-programcs)
 
-### Add a System.Configuration reference to the Visual Studio project
+### Add the System.Configuration.ConfigurationManager NuGet package to the Visual Studio project
 
-1. In **Solution Explorer**, right click **References** and select **Add Reference...** .
-1. In the **Reference Manager** dialog search for `System.Configuration` and select the checkbox to add this reference to your project.
-1. Click **OK** to close the **Reference Manager** dialog.
+1. In **Solution Explorer**, right-click **Dependencies** and select **Manage NuGet Packages...** in the context menu.
+1. Browse for the NuGet package named `System.Configuration.ConfigurationManager`, select it, and then choose **Install**.
+
+:::image type="content" source="media/enhanced-quick-start-nuget-package-install-light-theme.png" alt-text="Install the System.Configuration.ConfigurationManager package" lightbox="media/enhanced-quick-start-nuget-package-install-light-theme.png":::
 
 ### Edit the application configuration file
 
