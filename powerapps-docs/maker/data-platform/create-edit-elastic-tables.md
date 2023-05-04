@@ -46,14 +46,14 @@ Elastic tables support many of the table properties supported by standard tables
 - Create, update, delete (CRUD) operations including `XMultiple` (for high throughput), bulk delete, and requests from plugins.
 - Relationships:
    - 1:N (One-to-Many)
-   - (1) -> ET (N)  <!-- What's ET? Elastic table? -->
+   - (1) -> ET (N)  <!-- What's ET? Elastic table? Why can't we just state that elastic tables support both 1:N (one-to-many) and N:1 (many-to-one) relationships with both standard and elastic tables. For example, you can have an elastic table relationship with many standard tables or a standard table relationship with many elastic tables.-->
    - ET (1) -> Standard (N)
-   - N: 1 (Many-to-One)
+   - N:1 (Many-to-One)
    - ET (N) -> ET (1)
 - Security features:
    - User and organization owned tables
    - Field level security
-   - Track changes (to trigger an action like when a record is created, send email) <!-- you mean change tracking attribute? -->
+   - Track changes (to trigger an action like when a record is created, send email) <!-- you mean the track changes attribute? -->
 
 Additionally, elastic tables, which are powered by Cosmos DB, so queries only support left-outer JOIN. Elastic tables don't support queries that require other JOINS across tables. This means that filters on related tables when creating views or with Advanced Find won't work. We recommend that you denormalize columns from related tables into the main table if filters on related tables are needed. <!-- what does it mean to denormalize columns from related tables into the main table? -->
 
