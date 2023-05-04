@@ -25,7 +25,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Create the app
 
-Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#home-classic#) turned on, select the appropriate tab below to know more.
+Depending upon whether you have the [new look](intro-maker-portal.md#new-look-preview) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
 
 
 # [New look (preview)](#tab/home-new-look)
