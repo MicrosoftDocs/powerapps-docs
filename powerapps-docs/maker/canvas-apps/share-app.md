@@ -14,7 +14,6 @@ contributors:
   - mduelae
   - alaug
   - msftsamperl
-  - sericks
 ---
 # Share a canvas app with your organization
 
