@@ -10,7 +10,7 @@
       href: signup-for-powerapps.md
     - name: Request a Power Apps license for yourself
       href: ../user/request-license.md
-    - name: Request Power Apps licenses for your users
+    - name: Request Power Apps licenses for your app users
       href: common/request-licenses-for-users.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
