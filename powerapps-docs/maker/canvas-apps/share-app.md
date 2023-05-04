@@ -71,7 +71,7 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
     :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
     
     > [!Note]
-    > You can't request licenses for security groups or distribution lists. for more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md)
+    > You can't request licenses for security groups or distribution lists. For more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
