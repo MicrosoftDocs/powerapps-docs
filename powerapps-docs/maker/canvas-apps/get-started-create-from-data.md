@@ -38,7 +38,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 2. From the home screen select, **Start with data** > **Upload an Excel file**.
 3. Select **Select from device** and navigate to the location where your Excel file is saved and upload it.
 4. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
-5. Select **Row ownership** and choose how you want to manage row owership.
+5. Select **Row ownership** and choose how you want to manage row ownership.
 6. When you're done, select **Create app**.
 
 ### known issue
