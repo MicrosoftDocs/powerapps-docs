@@ -57,16 +57,13 @@ Elastic tables support many of the table properties supported by standard tables
 
 Additionally, elastic tables, which are powered by Cosmos DB, so queries only support left-outer JOIN. Elastic tables don't support queries that require other JOINS across tables. This means that filters on related tables when creating views or with Advanced Find won't work. We recommend that you denormalize columns from related tables into the main table if filters on related tables are needed. <!-- what does it mean to denormalize columns from related tables into the main table? -->
 
-### Table features not supported
+### Not supported with elastic tables
 
-Table features not available with elastic tables:
+Table features currently not supported with elastic tables:
 
-- Many-to-many, N:N, relationships to standard tables.
-- Many-to-one, N:1, relationships when the N table is a standard table (lookup).
-- Custom alternate keys. More information: [Work with alternate keys](/power-apps/developer/data-platform/define-alternate-keys-entity)
-
-Table features currently not available with elastic tables:
-
+- Many-to-many, N:N, relationships to standard tables
+- Many-to-one, N:1, relationships when the N table is a standard table (lookup)
+- Custom alternate keys
 - Duplicate detection rules
 - Business rules
 - Charts
