@@ -69,6 +69,9 @@ Before you share an app, you must [save it](save-publish-app.md) (not locally) a
 1. To request Power Apps licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
 
     :::image type="content" source="media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
+    
+    > [!Note]
+    > You can't request licenses for security groups or distribution lists. for more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md)
 
 1. If you want to allow users to edit and share the app, select the **Co-owner** check box.
 
@@ -140,8 +143,8 @@ Legend:
 4. **Add app to Teams**: Select to add the app to Teams.
 5. **Launch app in Web**: Open the app directly in your browser.
 
-
-
+## Requests licenses for your users
+As a Power Apps maker, you can request licenses for your app users when you [share the app](#share-an-app).
 
 ## Security group considerations
 
