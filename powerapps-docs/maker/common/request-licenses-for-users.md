@@ -14,9 +14,7 @@ searchScope:
 ---
 # Request Power Apps licenses for your users
 
-If you're a Power Apps maker, you can request a Power Apps license for other users. Select **Request licenses** to submit a license request to your admin when sharing a [canvas app](../maker/canvas-apps/share-app.md) or [model-driven app](../maker/model-driven-apps/share-model-driven-app.md) with other users.
-
-:::image type="content" source="media/request-licenses-for-others.png" alt-text="Request licenses for other users when sharing an app.":::
+As a Power Apps maker, you can request a Power Apps license for users of your app. Select **Request licenses** to submit a license request to your admin when sharing a [canvas app](../canvas-apps/share-app.md) or [model-driven app](../model-driven-apps/share-model-driven-app.md) with other users.
 
 > [!Note]
 > You can't request licenses for security groups or distribution lists.
