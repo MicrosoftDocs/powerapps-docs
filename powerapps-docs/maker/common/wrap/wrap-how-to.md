@@ -74,13 +74,6 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
    > [!div class="mx-imgBorder"] 
    > ![Select the app to wrap.](media/how-to-v2/select-app-to-wrap.png "Select the app to wrap")
 
-4. On the **Wrap** pane, select **Get started** to use the wizard.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Use the wrap wizard.](media/how-to-v2/wrap-get-started.png "Use the wrap wizard")
-
-
-
 
 ### Step 1: Select Apps 
 
