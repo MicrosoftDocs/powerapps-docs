@@ -183,8 +183,53 @@ On the **Manage output** screen, create or select an existing App Center locatio
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the App Center location that you have selected in the previous step.
 
+## Set up KeyVault for automated signing
+  
+**Prerequisites**
+  
+- You'll need to have a [Apple account](https://developer.apple.com) enrolled in Apple developer Program or Apple enterprise developer program.
+- Create a [distribution certificate](code-sign-ios.md#create-the-distribution-certificate) or [ad-hoc Provisioning Profile](code-sign-ios.md#create-an-ios-provisioning-profile) or enterprise provisioning profile.
+- Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
+- Admin access for your tenant.
+   
+Follow these steps to configure KeyVault URI:
+  
+1. Sign in to your tenent as an admin and create an Azure service principal for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) by running the following script: <br>
+`Connect-AzureAD -TenantId <your tenant ID> New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
+  
+2. Add a role to the service principal listed above in the subscription where the Key Vault is going to exist. For detailed steps, see [Assign a user as an administrator of an Azure subscription](/azure/role-based-access-control/role-assignments-portal-subscription-admin). Note: In step 3, you may choose Contributor, as only a minimal role is required to access the Key vault.
+
+3. Create or access existing key vault: [Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal)
+4. Add access policies for the key vault.
+  
+   :::image type="content" source="media/wrap-canvas-app/wrap-keyvault.gif" alt-text="Add access policies for the key vault.":::
+  
+5. Depending on your device, do one of following:
+   - For Android, create the .pfx file upload it to the keyvault certificate section. More information: [Generate keys](code-sign-android.md#generate-keys) 
+  
+     :::image type="content" source="media/wrap-canvas-app/wrap-1.png" alt-text="Create a cert for Android.":::
+     > [!NOTE]
+      > The name of the certificate must be present in the tag step. The password also needs match the password you entered during the store pass parameter used to create the .pfx file in step 2.
+  
+   - For iOS: 
+     1. Install the .cer into Keychain Access app by double clicking it. More information: [Create the distribution certificate](code-sign-ios.md#create-the-distribution-certificate) </br> Then export the file as a .p12 file by right clicking your certificate file and the select **Export** and select the file format .p12. 
+        > [!NOTE]
+        > The .p12 password that you set in step 4 is required when uploading it to the keyvault in the next step.
+     2. [Create the provisioning profile](code-sign-ios.md#create-an-ios-provisioning-profile) and run the following command to encode it to base64:
+        - Mac: base64 `-i example.mobileprovision`
+        - Windows:  `certutil -encode data.txt tmp.b64`
+     
+     3. Get the outputted `base64` string from previous step and upload to Keyvault secret. Then, get the .p12 file and upload it to Keyvault Certificate.
+  
+        :::image type="content" source="media/wrap-canvas-app/wrap-2.png" alt-text="Create a cert for iOS.":::
+
+6. Once iOS or Android certificates are created and uploaded, add three tags with the name as the bundle id, and the value corresponding to the name of the uploaded certificate(s).
+  
+     :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
+  
+
 ## Sign your mobile app package
-If you have not code signed your mobile app duiring wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
+If you have not code signed your mobile app during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
 - [Code signing for Android](code-sign-android.md)
