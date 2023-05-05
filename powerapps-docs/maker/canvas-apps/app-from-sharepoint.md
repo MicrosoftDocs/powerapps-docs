@@ -45,7 +45,7 @@ Watch this video to learn how to create a canvas app from a list:
 
 ## Create an app from within Power Apps
 
-Depending upon whether you have the [new look](intro-maker-portal.md#new-look-preview) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
 
 # [New look (preview)](#tab/home-new-look)
 
