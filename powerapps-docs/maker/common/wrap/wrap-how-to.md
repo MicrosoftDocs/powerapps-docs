@@ -139,21 +139,6 @@ For new app registration, select **New app registration** to create a new regist
 
 When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
 
-Both single tenant and multitenant customers can use wrap to create native mobile apps based on their canvas app.
-
-However, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap:
-
- > [!div class="mx-imgBorder"] 
- > ![Register an app.](media/how-to-v2/wrap-2.png "Register an app")
-    
-The sign-in experience for users on the mobile wrapped up will still be scoped to a single tenant regardless of what type of account you choose in this step for your app.
-
-> [!IMPORTANT]
-> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types)
-> - To ensure the **Redirect URI** matches the [required format](how-to.md#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** &gt; **+ Add a platform** to add the platform instead.
-> - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
-
-After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
 
 ### Step 5: Manage output
 
