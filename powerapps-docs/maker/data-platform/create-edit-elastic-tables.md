@@ -45,17 +45,17 @@ Elastic tables support many of the table properties supported by standard tables
 - Record ownership, change tracking, auditing, mobile offline, Dataverse search and long term data retention.
 - Create, update, delete (CRUD) operations including `XMultiple` (for high throughput), bulk delete, and requests from plugins.
 - Relationships:
-   - 1:N (One-to-Many)
-   - (1) -> ET (N)  <!-- What's ET? Elastic table? Why can't we just state that elastic tables support both 1:N (one-to-many) and N:1 (many-to-one) relationships with both standard and elastic tables. For example, you can have an elastic table relationship with many standard tables or a standard table relationship with many elastic tables.-->
+   - 1:N (One-to-many)
+   - (1) -> ET (N)  <!-- What's ET? Elastic table? Why can't we just state that elastic tables support both 1:N (one-to-many) and N:1 (many-to-one) relationships with both standard and elastic tables. For example, you can have an elastic table relationship with many standard tables or a standard table relationship with many elastic tables. GIRISH TO WRITE THIS OUT RATHER THAN CREATE A NEW SYNTAX-->
    - ET (1) -> Standard (N)
-   - N:1 (Many-to-One)
+   - N:1 (Many-to-one)
    - ET (N) -> ET (1)
 - Security features:
    - User and organization owned tables
    - Field level security
-   - Track changes (to trigger an action like when a record is created, send email) <!-- you mean the track changes attribute? -->
+   - Track changes (to trigger an action like when a record is created, send email) <!-- you mean the track changes attribute? GIRISH TO VERIFY WITH TEAM MEMBER-->
 
-Additionally, elastic tables, which are powered by Cosmos DB, so queries only support left-outer JOIN. Elastic tables don't support queries that require other JOINS across tables. This means that filters on related tables when creating views or with Advanced Find won't work. We recommend that you denormalize columns from related tables into the main table if filters on related tables are needed. <!-- what does it mean to denormalize columns from related tables into the main table? -->
+Elastic tables, which are powered by Cosmos DB only support left-outer JOIN for queries. They don't support queries that require other JOINS across tables. This means that filters on related tables when creating views or with Advanced Find won't work. We recommend that you denormalize columns from related tables into the main table if filters on related tables are needed. <!-- what does it mean to denormalize columns from related tables into the main table? GIRISH TO ADD AN EXAMPLE OF WHAT IT MEANS TO denormalize columns from related tables-->
 
 ### Not supported with elastic tables
 
@@ -69,11 +69,11 @@ Table features currently not supported with elastic tables:
 - Charts
 - Business process flows
 - Calculated or rollup columns
-- Column comparison <!-- What is this? -->
+- Column comparison <!-- What is this? GIRISH TO VERIFY WITH TEAM MEMBER-->
 - Table sharing
 - Cascade relationships - Delete/Reparent/Assign/Share/Unshare
 - Ordering on lookup columns
-- One Dataverse connector for PowerBI
+- One Dataverse connector for Power BI
 - Table connections
 - Access teams
 - Queues
