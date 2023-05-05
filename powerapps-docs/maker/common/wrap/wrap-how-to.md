@@ -1,5 +1,5 @@
 ---
-title: Customize and build your mobile app using the wrap wizard (preview)
+title: Customize and build your mobile app using the wrap wizard
 description: Learn about how to use the wrap wizard to package canvas apps into a native mobile app package.
 author: makolomi
 ms.topic: article
@@ -15,9 +15,7 @@ contributors:
   - makolomi
 ---
 
-# Use the wrap wizard to build your mobile app (preview)
-
-[This article is pre-release documentation and is subject to change.]
+# Use the wrap wizard to build your mobile app
 
 Use the wrap feature to package one or more canvas app(s) as a single native mobile app package using the step-by-step wizard.
 
@@ -37,10 +35,6 @@ The wrap feature will wrap your canvas apps in a native mobile app shell that yo
 You can use Microsoft Intune, App Center or Apple Business Manager, Google Play Store to distribute your native mobile apps created with wrap.
 
 When you update your app and republish it, the app is automatically updated.
-
-> [!IMPORTANT]
-> - This is a preview feature.
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so  that customers can get early access and provide feedback.
 
 
 ## Prerequisites
@@ -67,6 +61,23 @@ To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md
 
    > [!div class="mx-imgBorder"] 
    > ![Use the wrap wizard.](media/how-to-v2/wrap-get-started.png "Use the wrap wizard")
+
+
+## Add canvas app to solution
+
+Wrap for Power Apps requires the apps to be part of a solution. If your canvas apps aren't part of a solution already, add them to an existing or a new solution. Go to **Solutions** section, select a solution and press **Edit** button.
+
+:::image type="content" source="media/wrap-canvas-app/select-solution.png" alt-text="Select a solution.":::
+
+Chooose **+ Add existing** option from the top menu and select **App > Canvas app** in the dropdown list.
+
+:::image type="content" source="media/wrap-canvas-app/select-add-existing.png" alt-text="Select Add existing from the menu.":::
+
+Select **Oustide Dataverse** tab and choose your app from the list. Press **Add** button to add this app to a solution.
+
+:::image type="content" source="media/wrap-canvas-app/add-app.png" alt-text="Select Add app to a solution.":::
+
+More information: [Add an app to a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution)
 
 
 ### Step 1: Select Apps 
