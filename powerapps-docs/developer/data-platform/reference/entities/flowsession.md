@@ -1,14 +1,18 @@
 ---
 title: "flowsession table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowsession table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # flowsession table/entity reference
@@ -85,6 +89,10 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [ProcessVersion](#BKMK_ProcessVersion)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [RunDetails](#BKMK_RunDetails)
+- [RunDuration](#BKMK_RunDuration)
+- [RunExecutionDuration](#BKMK_RunExecutionDuration)
+- [RunWaitDuration](#BKMK_RunWaitDuration)
 - [StartedOn](#BKMK_StartedOn)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -401,6 +409,67 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|regardingobjecttypecode|
 |RequiredLevel|None|
 |Type|EntityName|
+
+
+### <a name="BKMK_RunDetails"></a> RunDetails
+
+|Property|Value|
+|--------|-----|
+|Description|Details about the run.|
+|DisplayName|RunDetails|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|rundetails|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_RunDuration"></a> RunDuration
+
+|Property|Value|
+|--------|-----|
+|Description|Duration of the run.|
+|DisplayName|RunDuration|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runduration|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_RunExecutionDuration"></a> RunExecutionDuration
+
+|Property|Value|
+|--------|-----|
+|Description|Duration of the run execution.|
+|DisplayName|RunExecutionDuration|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runexecutionduration|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
+
+
+### <a name="BKMK_RunWaitDuration"></a> RunWaitDuration
+
+|Property|Value|
+|--------|-----|
+|Description|Time the run spent waiting.|
+|DisplayName|RunWaitDuration|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runwaitduration|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 
 ### <a name="BKMK_StartedOn"></a> StartedOn

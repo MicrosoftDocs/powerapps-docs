@@ -1,14 +1,18 @@
 ---
 title: "synapsedatabase table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapsedatabase table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # synapsedatabase table/entity reference
@@ -68,6 +72,9 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DevelopmentEndpoint](#BKMK_DevelopmentEndpoint)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
+- [LakehouseConnectionId](#BKMK_LakehouseConnectionId)
+- [LakehouseId](#BKMK_LakehouseId)
+- [LakehouseWorkspaceId](#BKMK_LakehouseWorkspaceId)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -168,6 +175,45 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|iscustomizable|
 |RequiredLevel|SystemRequired|
 |Type|ManagedProperty|
+
+
+### <a name="BKMK_LakehouseConnectionId"></a> LakehouseConnectionId
+
+|Property|Value|
+|--------|-----|
+|Description|Connection Id for the Lakehouse that contains shortcuts to the table.|
+|DisplayName|Lakehouse Connection Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lakehouseconnectionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_LakehouseId"></a> LakehouseId
+
+|Property|Value|
+|--------|-----|
+|Description|Id for the Lakehouse that contains shortcuts to the table.|
+|DisplayName|Lakehouse Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lakehouseid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_LakehouseWorkspaceId"></a> LakehouseWorkspaceId
+
+|Property|Value|
+|--------|-----|
+|Description|Id for the Power BI workspace that contains the Lakehouse|
+|DisplayName|Lakehouse Workspace Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lakehouseworkspaceid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_name"></a> name

@@ -1,14 +1,18 @@
 ---
 title: "synapselinkprofileentity table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkprofileentity table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # synapselinkprofileentity table/entity reference
@@ -60,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [AppendOnlyMode](#BKMK_AppendOnlyMode)
 - [Enabled](#BKMK_Enabled)
 - [EntityName](#BKMK_EntityName)
+- [EntitySource](#BKMK_EntitySource)
 - [EntityType](#BKMK_EntityType)
 - [ExtendedProperties](#BKMK_ExtendedProperties)
 - [GenerateParquet](#BKMK_GenerateParquet)
@@ -139,6 +144,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|64|
 |RequiredLevel|SystemRequired|
 |Type|String|
+
+
+### <a name="BKMK_EntitySource"></a> EntitySource
+
+|Property|Value|
+|--------|-----|
+|Description|Source of the entity|
+|DisplayName|Entity source|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|entitysource|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### EntitySource Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Dataverse|Dataverse|
+|1|FnOTables|FnOTables|
+
 
 
 ### <a name="BKMK_EntityType"></a> EntityType

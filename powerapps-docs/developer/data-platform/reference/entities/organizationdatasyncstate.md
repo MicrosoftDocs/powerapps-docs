@@ -1,14 +1,18 @@
 ---
 title: "organizationdatasyncstate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the organizationdatasyncstate table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # organizationdatasyncstate table/entity reference
@@ -75,11 +79,14 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [organizationdatasyncstateId](#BKMK_organizationdatasyncstateId)
 - [organizationdatasyncsubscriptionid](#BKMK_organizationdatasyncsubscriptionid)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
+- [pagenumber](#BKMK_pagenumber)
+- [paginationcookie](#BKMK_paginationcookie)
 - [pagingcookie](#BKMK_pagingcookie)
 - [partitionid](#BKMK_partitionid)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
+- [usepagingcookiemax](#BKMK_usepagingcookiemax)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
 
 
@@ -213,7 +220,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|implicitlastdataversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -246,7 +253,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lastdataversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -262,7 +269,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lastmetadataversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -293,7 +300,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lockowner|
-|MaxLength|500|
+|MaxLength|1000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -309,7 +316,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|minactiverowversion|
-|MaxLength|1000|
+|MaxLength|4000|
 |RequiredLevel|None|
 |Type|String|
 
@@ -388,6 +395,38 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|overriddencreatedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_pagenumber"></a> pagenumber
+
+|Property|Value|
+|--------|-----|
+|Description|pagenumber|
+|DisplayName|pagenumber|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|pagenumber|
+|MaxValue|2147483647|
+|MinValue|-1|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_paginationcookie"></a> paginationcookie
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|paginationcookie|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|paginationcookie|
+|MaxLength|300000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_pagingcookie"></a> pagingcookie
@@ -480,6 +519,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-1|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_usepagingcookiemax"></a> usepagingcookiemax
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|usepagingcookiemax|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|usepagingcookiemax|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### usepagingcookiemax Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_UTCConversionTimeZoneCode"></a> UTCConversionTimeZoneCode

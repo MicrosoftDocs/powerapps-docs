@@ -1,14 +1,18 @@
 ---
 title: "msdyn_customcontrolextendedsettings table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_customcontrolextendedsettings table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # msdyn_customcontrolextendedsettings table/entity reference
@@ -25,13 +29,16 @@ search.audienceType:
 
 |Message|Web API Operation|SDK class or method|
 |-|-|-|
+|Archive|<xref href="Microsoft.Dynamics.CRM.Archive?text=Archive Action" />|<xref:Microsoft.Crm.Sdk.Messages.ArchiveRequest>|
 |Assign|PATCH [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|BulkArchive|<xref href="Microsoft.Dynamics.CRM.BulkArchive?text=BulkArchive Action" />|<xref:Microsoft.Crm.Sdk.Messages.BulkArchiveRequest>|
 |Create|POST [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
 |CreateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
 |ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|PurgeArchivedContent|<xref href="Microsoft.Dynamics.CRM.PurgeArchivedContent?text=PurgeArchivedContent Action" />|<xref:Microsoft.Crm.Sdk.Messages.PurgeArchivedContentRequest>|
 |Retrieve|GET [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
 |RetrieveMultiple|GET [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
 |RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
@@ -40,6 +47,7 @@ search.audienceType:
 |SetState|PATCH [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.2/msdyn_customcontrolextendedsettingses(*msdyn_customcontrolextendedsettingsid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |UpdateMultiple||<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
+|ValidateArchiveConfig|<xref href="Microsoft.Dynamics.CRM.ValidateArchiveConfig?text=ValidateArchiveConfig Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateArchiveConfigRequest>|
 
 ## Properties
 
@@ -67,6 +75,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_customcontrolextendedsettingsId](#BKMK_msdyn_customcontrolextendedsettingsId)
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_rte_userpersonalizationsettings](#BKMK_msdyn_rte_userpersonalizationsettings)
+- [msdyn_timeline_displaylayoutoption](#BKMK_msdyn_timeline_displaylayoutoption)
 - [msdyn_timelineWall_isAutoExpanded](#BKMK_msdyn_timelineWall_isAutoExpanded)
 - [msdyn_timelineWall_isFilterPaneOpen](#BKMK_msdyn_timelineWall_isFilterPaneOpen)
 - [msdyn_timelineWall_isSortOrderNewerToOlder](#BKMK_msdyn_timelineWall_isSortOrderNewerToOlder)
@@ -139,6 +148,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|msdyn_rte_userpersonalizationsettings|
+|MaxLength|65536|
+|RequiredLevel|None|
+|Type|Memo|
+
+
+### <a name="BKMK_msdyn_timeline_displaylayoutoption"></a> msdyn_timeline_displaylayoutoption
+
+|Property|Value|
+|--------|-----|
+|Description|User configured display layout option for the Timeline control|
+|DisplayName|Timeline display layout options|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_timeline_displaylayoutoption|
 |MaxLength|65536|
 |RequiredLevel|None|
 |Type|Memo|

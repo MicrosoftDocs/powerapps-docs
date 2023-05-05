@@ -1,14 +1,18 @@
 ---
 title: "flowmachinegroup table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachinegroup table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # flowmachinegroup table/entity reference
@@ -71,6 +75,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [DomainSetting](#BKMK_DomainSetting)
 - [FlowGroupType](#BKMK_FlowGroupType)
 - [flowmachineimage](#BKMK_flowmachineimage)
+- [flowmachinenetwork](#BKMK_flowmachinenetwork)
 - [GroupMetadata](#BKMK_GroupMetadata)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [IsCustomizable](#BKMK_IsCustomizable)
@@ -169,6 +174,20 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|flowmachineimage|
 |RequiredLevel|None|
 |Targets|flowmachineimage|
+|Type|Lookup|
+
+
+### <a name="BKMK_flowmachinenetwork"></a> flowmachinenetwork
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for the Flow Machine Network associated with the Flow Machine Group.|
+|DisplayName|Flow Machine Network|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|flowmachinenetwork|
+|RequiredLevel|None|
+|Targets|flowmachinenetwork|
 |Type|Lookup|
 
 
@@ -633,6 +652,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [flowmachinegroupId](#BKMK_flowmachinegroupId)
 - [flowmachineimageName](#BKMK_flowmachineimageName)
+- [flowmachinenetworkName](#BKMK_flowmachinenetworkName)
 - [IsManaged](#BKMK_IsManaged)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
@@ -840,6 +860,22 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|flowmachineimagename|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_flowmachinenetworkName"></a> flowmachinenetworkName
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|flowmachinenetworkname|
 |MaxLength|100|
 |RequiredLevel|None|
 |Type|String|
@@ -1417,6 +1453,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [flowmachinegroup_PasswordChangedBy](#BKMK_flowmachinegroup_PasswordChangedBy)
 - [flowmachinegroup_RotationStartedBy](#BKMK_flowmachinegroup_RotationStartedBy)
 - [flowmachinegroup_flowmachineimage](#BKMK_flowmachinegroup_flowmachineimage)
+- [flowmachinegroup_flowmachinenetwork](#BKMK_flowmachinegroup_flowmachinenetwork)
 
 
 ### <a name="BKMK_lk_flowmachinegroup_createdby"></a> lk_flowmachinegroup_createdby
@@ -1476,6 +1513,10 @@ See the [flowmachinegroup_RotationStartedBy](systemuser.md#BKMK_flowmachinegroup
 ### <a name="BKMK_flowmachinegroup_flowmachineimage"></a> flowmachinegroup_flowmachineimage
 
 See the [flowmachinegroup_flowmachineimage](flowmachineimage.md#BKMK_flowmachinegroup_flowmachineimage) one-to-many relationship for the [flowmachineimage](flowmachineimage.md) table/entity.
+
+### <a name="BKMK_flowmachinegroup_flowmachinenetwork"></a> flowmachinegroup_flowmachinenetwork
+
+See the [flowmachinegroup_flowmachinenetwork](flowmachinenetwork.md#BKMK_flowmachinegroup_flowmachinenetwork) one-to-many relationship for the [flowmachinenetwork](flowmachinenetwork.md) table/entity.
 
 ### See also
 

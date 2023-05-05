@@ -1,14 +1,18 @@
 ---
 title: "Chatbot subcomponent (botcomponent)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Chatbot subcomponent (botcomponent)  table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Chatbot subcomponent (botcomponent)  table/entity reference
@@ -1275,6 +1279,7 @@ Relationship details provided where the botcomponent table is the first table in
 - [botcomponent_botcomponent](#BKMK_botcomponent_botcomponent)
 - [botcomponent_environmentvariabledefinition](#BKMK_botcomponent_environmentvariabledefinition)
 - [botcomponent_workflow](#BKMK_botcomponent_workflow)
+- [botcomponent_connectionreference](#BKMK_botcomponent_connectionreference)
 
 
 ### <a name="BKMK_bot_botcomponent"></a> bot_botcomponent
@@ -1347,6 +1352,29 @@ IntersectEntityName: botcomponent_workflow<br />
 |LogicalName|workflow|
 |IntersectAttribute|workflowid|
 |NavigationPropertyName|botcomponent_workflow|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+
+### <a name="BKMK_botcomponent_connectionreference"></a> botcomponent_connectionreference
+
+IntersectEntityName: botcomponent_connectionreference<br />
+#### Table 1
+
+|Property|Value|
+|--------|-----|
+|IntersectAttribute|botcomponentid|
+|IsCustomizable|False|
+|LogicalName|botcomponent|
+|NavigationPropertyName|botcomponent_connectionreference|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+
+#### Table 2
+
+|Property|Value|
+|--------|-----|
+|LogicalName|connectionreference|
+|IntersectAttribute|connectionreferenceid|
+|NavigationPropertyName|botcomponent_connectionreference|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 
 

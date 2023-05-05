@@ -1,14 +1,18 @@
 ---
 title: "synapselinkexternaltablestate table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the synapselinkexternaltablestate table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # synapselinkexternaltablestate table/entity reference
@@ -60,6 +64,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [datalakefolder](#BKMK_datalakefolder)
 - [EntityName](#BKMK_EntityName)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [LakehouseShortcutState](#BKMK_LakehouseShortcutState)
 - [MetadataVersion](#BKMK_MetadataVersion)
 - [name](#BKMK_name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -119,6 +124,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_LakehouseShortcutState"></a> LakehouseShortcutState
+
+|Property|Value|
+|--------|-----|
+|Description|State of lakehouse shortcut creation for an entity|
+|DisplayName|Lakehouse Shortcut State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lakehouseshortcutstate|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### LakehouseShortcutState Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|0|Not Created|Not created|
+|1|Created|Created|
+|2|Failed|Failed|
+|3|Deleted|Deleted|
+
 
 
 ### <a name="BKMK_MetadataVersion"></a> MetadataVersion

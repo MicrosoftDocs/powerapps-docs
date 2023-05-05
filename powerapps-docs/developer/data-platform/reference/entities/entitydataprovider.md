@@ -1,14 +1,18 @@
 ---
 title: "Virtual Entity Data Provider (EntityDataProvider)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Virtual Entity Data Provider (EntityDataProvider)  table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Virtual Entity Data Provider (EntityDataProvider)  table/entity reference
@@ -53,6 +57,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ArchivePlugin](#BKMK_ArchivePlugin)
 - [BulkArchivePlugin](#BKMK_BulkArchivePlugin)
+- [BulkRetainPlugin](#BKMK_BulkRetainPlugin)
 - [CreateMultiplePlugin](#BKMK_CreateMultiplePlugin)
 - [CreatePlugin](#BKMK_CreatePlugin)
 - [DataSourceLogicalName](#BKMK_DataSourceLogicalName)
@@ -64,14 +69,18 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [Name](#BKMK_Name)
 - [PurgeArchivedContentPlugin](#BKMK_PurgeArchivedContentPlugin)
+- [PurgeRetainedContentPlugin](#BKMK_PurgeRetainedContentPlugin)
+- [RetainPlugin](#BKMK_RetainPlugin)
 - [RetrieveEntityChangesPlugin](#BKMK_RetrieveEntityChangesPlugin)
 - [RetrieveMultiplePlugin](#BKMK_RetrieveMultiplePlugin)
 - [RetrievePlugin](#BKMK_RetrievePlugin)
+- [RollbackRetainPlugin](#BKMK_RollbackRetainPlugin)
 - [UpdateMultiplePlugin](#BKMK_UpdateMultiplePlugin)
 - [UpdatePlugin](#BKMK_UpdatePlugin)
 - [UpsertMultiplePlugin](#BKMK_UpsertMultiplePlugin)
 - [UpsertPlugin](#BKMK_UpsertPlugin)
 - [ValidateArchiveConfigPlugin](#BKMK_ValidateArchiveConfigPlugin)
+- [ValidateRetentionConfigPlugin](#BKMK_ValidateRetentionConfigPlugin)
 
 
 ### <a name="BKMK_ArchivePlugin"></a> ArchivePlugin
@@ -100,6 +109,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|bulkarchiveplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_BulkRetainPlugin"></a> BulkRetainPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the bulkretainplugin id that should be run when BulkRetain is invoked|
+|DisplayName|Contains the bulkretainplugin id that should be run when BulkRetain is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|bulkretainplugin|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
@@ -267,6 +291,36 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Uniqueidentifier|
 
 
+### <a name="BKMK_PurgeRetainedContentPlugin"></a> PurgeRetainedContentPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the purgeretainedcontentplugin id that should be run when PurgeRetainedContent is invoked|
+|DisplayName|Contains the purgeretainedcontentplugin id that should be run when PurgeRetainedContent is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|purgeretainedcontentplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_RetainPlugin"></a> RetainPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the retainplugin id that should be run when Retain is invoked|
+|DisplayName|Contains the retainplugin id that should be run when Retain is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|retainplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
 ### <a name="BKMK_RetrieveEntityChangesPlugin"></a> RetrieveEntityChangesPlugin
 
 **Added by**: EntityDataProviderExtensions Solution
@@ -304,6 +358,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|retrieveplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_RollbackRetainPlugin"></a> RollbackRetainPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the rollbackretainplugin id that should be run when Rollback Retain is invoked|
+|DisplayName|Contains the rollbackretainplugin id that should be run when Rollback Retain is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|rollbackretainplugin|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 
@@ -377,6 +446,21 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|validatearchiveconfigplugin|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ValidateRetentionConfigPlugin"></a> ValidateRetentionConfigPlugin
+
+**Added by**: EntityDataProviderExtensions Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Contains the validateretentionconfigplugin id that should be run when ValidateRetentionConfig is invoked|
+|DisplayName|Contains the validateretentionconfigplugin id that should be run when ValidateRetentionConfig is invoked|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|validateretentionconfigplugin|
 |RequiredLevel|None|
 |Type|Uniqueidentifier|
 

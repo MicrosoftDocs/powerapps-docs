@@ -1,14 +1,18 @@
 ---
 title: "flowmachinenetwork table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the flowmachinenetwork table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # flowmachinenetwork table/entity reference
@@ -75,6 +79,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [statuscode](#BKMK_statuscode)
 - [statuserrormessage](#BKMK_statuserrormessage)
 - [subnet](#BKMK_subnet)
+- [SupportedScenario](#BKMK_SupportedScenario)
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [type](#BKMK_type)
 - [UTCConversionTimeZoneCode](#BKMK_UTCConversionTimeZoneCode)
@@ -281,6 +286,28 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MaxLength|2048|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
+
+
+### <a name="BKMK_SupportedScenario"></a> SupportedScenario
+
+|Property|Value|
+|--------|-----|
+|Description|The Flow machine network supported scenario.|
+|DisplayName|Supported Scenario|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|supportedscenario|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### SupportedScenario Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|HostedMachineGroup||
+|2|RpaBox||
+|3|HostedMachineGroupdAndRpaBox||
+
 
 
 ### <a name="BKMK_TimeZoneRuleVersionNumber"></a> TimeZoneRuleVersionNumber
@@ -851,6 +878,7 @@ Listed by **SchemaName**.
 - [flowmachinenetwork_ProcessSession](#BKMK_flowmachinenetwork_ProcessSession)
 - [flowmachinenetwork_BulkDeleteFailures](#BKMK_flowmachinenetwork_BulkDeleteFailures)
 - [flowmachinenetwork_PrincipalObjectAttributeAccesses](#BKMK_flowmachinenetwork_PrincipalObjectAttributeAccesses)
+- [flowmachinegroup_flowmachinenetwork](#BKMK_flowmachinegroup_flowmachinenetwork)
 - [flowmachine_flowmachinenetwork](#BKMK_flowmachine_flowmachinenetwork)
 
 
@@ -988,6 +1016,21 @@ Same as the [flowmachinenetwork_PrincipalObjectAttributeAccesses](principalobjec
 |ReferencedEntityNavigationPropertyName|flowmachinenetwork_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_flowmachinegroup_flowmachinenetwork"></a> flowmachinegroup_flowmachinenetwork
+
+Same as the [flowmachinegroup_flowmachinenetwork](flowmachinegroup.md#BKMK_flowmachinegroup_flowmachinenetwork) many-to-one relationship for the [flowmachinegroup](flowmachinegroup.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowmachinegroup|
+|ReferencingAttribute|flowmachinenetwork|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|flowmachinegroup_flowmachinenetwork|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_flowmachine_flowmachinenetwork"></a> flowmachine_flowmachinenetwork

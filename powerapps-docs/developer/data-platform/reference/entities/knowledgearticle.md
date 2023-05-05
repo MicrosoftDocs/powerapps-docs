@@ -1,14 +1,18 @@
 ---
 title: "KnowledgeArticle table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # KnowledgeArticle table/entity reference
@@ -84,6 +88,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [msdyn_iscontentsyncedtostore](#BKMK_msdyn_iscontentsyncedtostore)
 - [msdyn_isingestedarticle](#BKMK_msdyn_isingestedarticle)
 - [msdyn_keywordsdescsuggestioncontrol](#BKMK_msdyn_keywordsdescsuggestioncontrol)
+- [msdyn_languagecode](#BKMK_msdyn_languagecode)
 - [msdyn_retrycountformigrationtocontentstore](#BKMK_msdyn_retrycountformigrationtocontentstore)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
@@ -540,6 +545,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_msdyn_languagecode"></a> msdyn_languagecode
+
+**Added by**: Knowledge Management Patch Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The Language Code that the article's content is in.|
+|DisplayName|Language Code|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_languagecode|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_retrycountformigrationtocontentstore"></a> msdyn_retrycountformigrationtocontentstore
@@ -1720,6 +1743,7 @@ Listed by **SchemaName**.
 - [knowledgearticle_chats](#BKMK_knowledgearticle_chats)
 - [msdyn_knowledgearticle_feedback_context](#BKMK_msdyn_knowledgearticle_feedback_context)
 - [msdyn_knowledgearticleimage_parentknowledgearticleid](#BKMK_msdyn_knowledgearticleimage_parentknowledgearticleid)
+- [msdyn_knowledgearticle_favoriteknowledgearticle](#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle)
 
 
 ### <a name="BKMK_knowledgearticle_connections1"></a> knowledgearticle_connections1
@@ -2250,6 +2274,23 @@ Same as the [msdyn_knowledgearticleimage_parentknowledgearticleid](msdyn_knowled
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|msdyn_knowledgearticleimage_parentknowledgearticleid|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_knowledgearticle_favoriteknowledgearticle"></a> msdyn_knowledgearticle_favoriteknowledgearticle
+
+**Added by**: Knowledge Management Features Solution
+
+Same as the [msdyn_knowledgearticle_favoriteknowledgearticle](msdyn_favoriteknowledgearticle.md#BKMK_msdyn_knowledgearticle_favoriteknowledgearticle) many-to-one relationship for the [msdyn_favoriteknowledgearticle](msdyn_favoriteknowledgearticle.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_favoriteknowledgearticle|
+|ReferencingAttribute|msdyn_knowledgearticleid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_knowledgearticle_favoriteknowledgearticle|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: Id of Knowledge Article<br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>

@@ -44,6 +44,10 @@
   href: appnotification.md
 - name: Appointment
   href: appointment.md
+- name: ArchiveCleanupInfo
+  href: archivecleanupinfo.md
+- name: ArchiveCleanupOperation
+  href: archivecleanupoperation.md
 - name: AsyncOperation
   href: asyncoperation.md
 - name: Attribute
@@ -52,10 +56,20 @@
   href: attributeimageconfig.md
 - name: Audit
   href: audit.md
+- name: backgroundoperation
+  href: backgroundoperation.md
 - name: bot
   href: bot.md
 - name: botcomponent
   href: botcomponent.md
+- name: BulkArchiveConfig
+  href: bulkarchiveconfig.md
+- name: BulkArchiveFailureDetail
+  href: bulkarchivefailuredetail.md
+- name: BulkArchiveOperation
+  href: bulkarchiveoperation.md
+- name: BulkArchiveOperationDetail
+  href: bulkarchiveoperationdetail.md
 - name: BulkDeleteFailure
   href: bulkdeletefailure.md
 - name: BulkDeleteOperation
@@ -72,6 +86,8 @@
   href: canvasapp.md
 - name: card
   href: card.md
+- name: cardstateitem
+  href: cardstateitem.md
 - name: Catalog
   href: catalog.md
 - name: CatalogAssignment
@@ -142,6 +158,8 @@
   href: email.md
 - name: EmailServerProfile
   href: emailserverprofile.md
+- name: enablearchivalrequest
+  href: enablearchivalrequest.md
 - name: Entity
   href: entity.md
 - name: EntityAnalyticsConfig
@@ -152,6 +170,8 @@
   href: entityimageconfig.md
 - name: EntityKey
   href: entitykey.md
+- name: EntityRecordFilter
+  href: entityrecordfilter.md
 - name: EntityRelationship
   href: entityrelationship.md
 - name: EnvironmentVariableDefinition
@@ -162,6 +182,8 @@
   href: exchangesyncidmapping.md
 - name: ExpiredProcess
   href: expiredprocess.md
+- name: exportedexcel
+  href: exportedexcel.md
 - name: ExportSolutionUpload
   href: exportsolutionupload.md
 - name: Fax
@@ -236,6 +258,8 @@
   href: mailmergetemplate.md
 - name: ManagedIdentity
   href: managedidentity.md
+- name: MetadataForArchival
+  href: metadataforarchival.md
 - name: Metric
   href: metric.md
 - name: MobileOfflineProfile
@@ -266,6 +290,8 @@
   href: msdyn_aibfileattacheddata.md
 - name: msdyn_AIConfiguration
   href: msdyn_aiconfiguration.md
+- name: msdyn_AIEvent
+  href: msdyn_aievent.md
 - name: msdyn_AIFpTrainingDocument
   href: msdyn_aifptrainingdocument.md
 - name: msdyn_AIModel
@@ -302,16 +328,22 @@
   href: msdyn_dataflow.md
 - name: msdyn_dataflowrefreshhistory
   href: msdyn_dataflowrefreshhistory.md
+- name: msdyn_DataflowTemplate
+  href: msdyn_dataflowtemplate.md
 - name: msdyn_datalakeds
   href: msdyn_datalakeds.md
 - name: msdyn_entitylinkchatconfiguration
   href: msdyn_entitylinkchatconfiguration.md
 - name: msdyn_entityrefreshhistory
   href: msdyn_entityrefreshhistory.md
+- name: msdyn_favoriteknowledgearticle
+  href: msdyn_favoriteknowledgearticle.md
 - name: msdyn_federatedarticle
   href: msdyn_federatedarticle.md
 - name: msdyn_federatedarticleincident
   href: msdyn_federatedarticleincident.md
+- name: msdyn_FileUpload
+  href: msdyn_fileupload.md
 - name: msdyn_helppage
   href: msdyn_helppage.md
 - name: msdyn_InsightsStoreVirtualEntity
@@ -330,6 +362,8 @@
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
   href: msdyn_knowledgearticletemplate.md
+- name: msdyn_knowledgeconfiguration
+  href: msdyn_knowledgeconfiguration.md
 - name: msdyn_knowledgeinteractioninsight
   href: msdyn_knowledgeinteractioninsight.md
 - name: msdyn_knowledgemanagementsetting
@@ -408,12 +442,16 @@
   href: officegraphdocument.md
 - name: Organization
   href: organization.md
+- name: organizationdatasyncfnostate
+  href: organizationdatasyncfnostate.md
 - name: organizationdatasyncstate
   href: organizationdatasyncstate.md
 - name: organizationdatasyncsubscription
   href: organizationdatasyncsubscription.md
 - name: organizationdatasyncsubscriptionentity
   href: organizationdatasyncsubscriptionentity.md
+- name: organizationdatasyncsubscriptionfnotable
+  href: organizationdatasyncsubscriptionfnotable.md
 - name: OwnerMapping
   href: ownermapping.md
 - name: package
@@ -478,6 +516,12 @@
   href: queueitem.md
 - name: RecommendedDocument
   href: recommendeddocument.md
+- name: reconciliationentityinfo
+  href: reconciliationentityinfo.md
+- name: reconciliationinfo
+  href: reconciliationinfo.md
+- name: RecordFilter
+  href: recordfilter.md
 - name: RecurrenceRule
   href: recurrencerule.md
 - name: RecurringAppointmentMaster
@@ -490,6 +534,18 @@
   href: report.md
 - name: ReportCategory
   href: reportcategory.md
+- name: retentioncleanupinfo
+  href: retentioncleanupinfo.md
+- name: retentioncleanupoperation
+  href: retentioncleanupoperation.md
+- name: retentionconfig
+  href: retentionconfig.md
+- name: retentionfailuredetail
+  href: retentionfailuredetail.md
+- name: retentionoperation
+  href: retentionoperation.md
+- name: retentionoperationdetail
+  href: retentionoperationdetail.md
 - name: RibbonMetadataToProcess
   href: ribbonmetadatatoprocess.md
 - name: Role
@@ -560,6 +616,8 @@
   href: solutioncomponentrelationshipconfiguration.md
 - name: SolutionHistoryData
   href: solutionhistorydata.md
+- name: StagedEntity
+  href: stagedentity.md
 - name: StageSolutionUpload
   href: stagesolutionupload.md
 - name: Subject
@@ -586,6 +644,8 @@
   href: task.md
 - name: Team
   href: team.md
+- name: teammobileofflineprofilemembership
+  href: teammobileofflineprofilemembership.md
 - name: TeamTemplate
   href: teamtemplate.md
 - name: Template
@@ -614,6 +674,8 @@
   href: userform.md
 - name: UserMapping
   href: usermapping.md
+- name: usermobileofflineprofilemembership
+  href: usermobileofflineprofilemembership.md
 - name: UserQuery
   href: userquery.md
 - name: UserQueryVisualization

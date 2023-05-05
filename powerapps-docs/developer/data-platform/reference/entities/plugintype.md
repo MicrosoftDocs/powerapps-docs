@@ -1,14 +1,18 @@
 ---
 title: "Plug-in Type (PluginType)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Plug-in Type (PluginType)  table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Plug-in Type (PluginType)  table/entity reference
@@ -55,6 +59,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [FriendlyName](#BKMK_FriendlyName)
 - [Name](#BKMK_Name)
 - [PluginAssemblyId](#BKMK_PluginAssemblyId)
+- [PluginTypeExportKey](#BKMK_PluginTypeExportKey)
 - [PluginTypeId](#BKMK_PluginTypeId)
 - [TypeName](#BKMK_TypeName)
 - [WorkflowActivityGroupName](#BKMK_WorkflowActivityGroupName)
@@ -120,6 +125,25 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |RequiredLevel|None|
 |Targets|pluginassembly|
 |Type|Lookup|
+
+
+### <a name="BKMK_PluginTypeExportKey"></a> PluginTypeExportKey
+
+**Added by**: Plugin Infrastructure Extension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Plugin Type export key|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|plugintypeexportkey|
+|MaxLength|256|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_PluginTypeId"></a> PluginTypeId

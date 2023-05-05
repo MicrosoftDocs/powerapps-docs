@@ -1,14 +1,18 @@
 ---
 title: "connectionreference table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the connectionreference table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # connectionreference table/entity reference
@@ -1115,6 +1119,16 @@ See the [business_unit_connectionreference](businessunit.md#BKMK_business_unit_c
 **Added by**: Power Connector Solution Solution
 
 See the [connector_connectionreference](connector.md#BKMK_connector_connectionreference) one-to-many relationship for the [connector](connector.md) table/entity.
+<a name="manytomany"></a>
+
+## Many-To-Many Relationships
+
+Relationship details provided where the connectionreference table is the first table in the relationship. Listed by **SchemaName**.
+
+
+### <a name="BKMK_botcomponent_connectionreference"></a> botcomponent_connectionreference
+
+See the [botcomponent_connectionreference](botcomponent.md#BKMK_botcomponent_connectionreference) many-to-many relationship for the [botcomponent](botcomponent.md) table/entity.
 
 ### See also
 

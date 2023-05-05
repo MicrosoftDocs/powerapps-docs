@@ -1,14 +1,18 @@
 ---
 title: "powerfxrule table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the powerfxrule table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # powerfxrule table/entity reference
@@ -74,6 +78,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
+- [Parameters](#BKMK_Parameters)
 - [powerfxruleId](#BKMK_powerfxruleId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -262,6 +267,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|owneridtype|
 |RequiredLevel|SystemRequired|
 |Type|EntityName|
+
+
+### <a name="BKMK_Parameters"></a> Parameters
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Input and output parameters associated with the expression|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|parameters|
+|MaxLength|200000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_powerfxruleId"></a> powerfxruleId
@@ -887,6 +908,7 @@ Listed by **SchemaName**.
 - [powerfxrule_BulkDeleteFailures](#BKMK_powerfxrule_BulkDeleteFailures)
 - [powerfxrule_PrincipalObjectAttributeAccesses](#BKMK_powerfxrule_PrincipalObjectAttributeAccesses)
 - [powerfxrule_sdkmessageprocessingstep](#BKMK_powerfxrule_sdkmessageprocessingstep)
+- [powerfxrule_customapi](#BKMK_powerfxrule_customapi)
 
 
 ### <a name="BKMK_powerfxrule_SyncErrors"></a> powerfxrule_SyncErrors
@@ -1037,6 +1059,23 @@ Same as the [powerfxrule_sdkmessageprocessingstep](sdkmessageprocessingstep.md#B
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|powerfxrule_sdkmessageprocessingstep|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_powerfxrule_customapi"></a> powerfxrule_customapi
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+Same as the [powerfxrule_customapi](customapi.md#BKMK_powerfxrule_customapi) many-to-one relationship for the [customapi](customapi.md) table/entity.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|customapi|
+|ReferencingAttribute|powerfxruleid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|powerfxrule_customapi|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>

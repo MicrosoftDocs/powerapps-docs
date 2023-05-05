@@ -1,14 +1,18 @@
 ---
 title: "QueueItem table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the QueueItem table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # QueueItem table/entity reference
@@ -705,8 +709,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |4216|Social Activity|For internal use only.|
 |4251|Recurring Appointment|The Master appointment of a recurring appointment series.|
 |9953|Knowledge Article|Organizational knowledge for internal and external use.|
-|10083|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
-|10097|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
+|10086|Teams chat|For internal use only. Entity which stores association data of Dynamics 365 records with Microsoft Teams chat|
+|10102|Knowledge Article Template|Organizational Knowledge Article Template for Internal and external creation of Knowledge Articles.|
 
 
 

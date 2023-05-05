@@ -1,14 +1,18 @@
 ---
 title: "msdyn_integratedsearchprovider table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the msdyn_integratedsearchprovider table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # msdyn_integratedsearchprovider table/entity reference
@@ -64,14 +68,17 @@ Ingest and search files, documents, or articles from data sources outside of you
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [msdyn_allowedlanguages](#BKMK_msdyn_allowedlanguages)
 - [msdyn_articlepropertiesmapping](#BKMK_msdyn_articlepropertiesmapping)
 - [msdyn_authenticationtype](#BKMK_msdyn_authenticationtype)
 - [msdyn_clientid](#BKMK_msdyn_clientid)
 - [msdyn_clientsecret](#BKMK_msdyn_clientsecret)
 - [msdyn_datasourcetype](#BKMK_msdyn_datasourcetype)
 - [msdyn_description](#BKMK_msdyn_description)
+- [msdyn_htmlmetatags](#BKMK_msdyn_htmlmetatags)
 - [msdyn_includedsitemapurls](#BKMK_msdyn_includedsitemapurls)
 - [msdyn_integratedsearchproviderId](#BKMK_msdyn_integratedsearchproviderId)
+- [msdyn_isfieldmappingoptionselected](#BKMK_msdyn_isfieldmappingoptionselected)
 - [msdyn_lastfetchtime](#BKMK_msdyn_lastfetchtime)
 - [msdyn_lookbackperiod](#BKMK_msdyn_lookbackperiod)
 - [msdyn_name](#BKMK_msdyn_name)
@@ -103,6 +110,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_msdyn_allowedlanguages"></a> msdyn_allowedlanguages
+
+|Property|Value|
+|--------|-----|
+|Description|Languages allowed for ingestion|
+|DisplayName|Allowed Languages|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_allowedlanguages|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_articlepropertiesmapping"></a> msdyn_articlepropertiesmapping
@@ -210,6 +233,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|String|
 
 
+### <a name="BKMK_msdyn_htmlmetatags"></a> msdyn_htmlmetatags
+
+|Property|Value|
+|--------|-----|
+|Description|Information about the meta tags extracted from sample dataprovider html|
+|DisplayName|Html meta tags information|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_htmlmetatags|
+|MaxLength|1048576|
+|RequiredLevel|None|
+|Type|Memo|
+
+
 ### <a name="BKMK_msdyn_includedsitemapurls"></a> msdyn_includedsitemapurls
 
 |Property|Value|
@@ -238,6 +277,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |LogicalName|msdyn_integratedsearchproviderid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_msdyn_isfieldmappingoptionselected"></a> msdyn_isfieldmappingoptionselected
+
+|Property|Value|
+|--------|-----|
+|Description|Value is true when field mapping option is selected|
+|DisplayName|Is Field Mapping Option Selected|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_isfieldmappingoptionselected|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### msdyn_isfieldmappingoptionselected Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_msdyn_lastfetchtime"></a> msdyn_lastfetchtime
@@ -271,10 +333,11 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 |Value|Label|Description|
 |-----|-----|--------|
-|0|2 hours||
-|1|4 hours||
-|2|6 hours||
-|3|8 hours||
+|0|No Lookback||
+|1|2 hours||
+|2|4 hours||
+|3|6 hours||
+|4|8 hours||
 
 
 
@@ -514,6 +577,8 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [msdyn_htmlsample](#BKMK_msdyn_htmlsample)
+- [msdyn_htmlsample_Name](#BKMK_msdyn_htmlsample_Name)
 - [OwnerIdName](#BKMK_OwnerIdName)
 - [OwnerIdYomiName](#BKMK_OwnerIdYomiName)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -758,6 +823,35 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |LogicalName|modifiedonbehalfbyyominame|
 |MaxLength|100|
 |RequiredLevel|SystemRequired|
+|Type|String|
+
+
+### <a name="BKMK_msdyn_htmlsample"></a> msdyn_htmlsample
+
+|Property|Value|
+|--------|-----|
+|Description|The reference to the sample html file uploaded for the integrated search provider|
+|DisplayName|Sample HTML File of Data Provider uploaded for metatags extraction|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_htmlsample|
+|RequiredLevel|None|
+|Type|File|
+
+
+### <a name="BKMK_msdyn_htmlsample_Name"></a> msdyn_htmlsample_Name
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|msdyn_htmlsample_name|
+|MaxLength|200|
+|RequiredLevel|None|
 |Type|String|
 
 

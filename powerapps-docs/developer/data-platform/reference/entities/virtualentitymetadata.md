@@ -1,14 +1,18 @@
 ---
 title: "VirtualEntityMetadata table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the VirtualEntityMetadata table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # VirtualEntityMetadata table/entity reference
@@ -59,6 +63,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 - [ExtensionOfRecordId](#BKMK_ExtensionOfRecordId)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [IsAttachmentsSupported](#BKMK_IsAttachmentsSupported)
 - [IsChangedFieldsEnabledForUpdateEvent](#BKMK_IsChangedFieldsEnabledForUpdateEvent)
 - [IsCustomizable](#BKMK_IsCustomizable)
 - [IsOnExternalCreatedEnabled](#BKMK_IsOnExternalCreatedEnabled)
@@ -107,6 +112,29 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_IsAttachmentsSupported"></a> IsAttachmentsSupported
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates if attachments are supported for the virtual entity|
+|DisplayName|Is Attachments Supported|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|isattachmentssupported|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### IsAttachmentsSupported Choices/Options
+
+|Value|Label|Description|
+|-----|-----|--------|
+|1|Yes||
+|0|No||
+
+**DefaultValue**: 0
+
 
 
 ### <a name="BKMK_IsChangedFieldsEnabledForUpdateEvent"></a> IsChangedFieldsEnabledForUpdateEvent

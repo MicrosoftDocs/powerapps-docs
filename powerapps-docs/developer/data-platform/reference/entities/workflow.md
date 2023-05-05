@@ -1,14 +1,18 @@
 ---
 title: "Process (Workflow)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Process (Workflow)  table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Process (Workflow)  table/entity reference
@@ -66,6 +70,7 @@ Set of logical rules that define the steps necessary to automate a specific busi
 These columns/attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [AsyncAutoDelete](#BKMK_AsyncAutoDelete)
+- [BillingContext](#BKMK_BillingContext)
 - [BusinessProcessType](#BKMK_BusinessProcessType)
 - [Category](#BKMK_Category)
 - [ClientData](#BKMK_ClientData)
@@ -140,6 +145,24 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 
 **DefaultValue**: 0
 
+
+
+### <a name="BKMK_BillingContext"></a> BillingContext
+
+**Added by**: Power Automate Extensions Workflow Customization package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Billing context this flow is in.|
+|DisplayName|BillingContext|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|billingcontext|
+|MaxLength|100000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_BusinessProcessType"></a> BusinessProcessType

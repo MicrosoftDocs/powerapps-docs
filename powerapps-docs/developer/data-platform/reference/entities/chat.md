@@ -1,14 +1,18 @@
 ---
 title: "Teams chat (chat)  table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the Teams chat (chat)  table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Teams chat (chat)  table/entity reference
@@ -1770,8 +1774,6 @@ Listed by **SchemaName**.
 - [chat_activity_parties](#BKMK_chat_activity_parties)
 - [chat_ActionCards](#BKMK_chat_ActionCards)
 - [chat_SyncErrors](#BKMK_chat_SyncErrors)
-- [chat_DuplicateMatchingRecord](#BKMK_chat_DuplicateMatchingRecord)
-- [chat_DuplicateBaseRecord](#BKMK_chat_DuplicateBaseRecord)
 - [chat_AsyncOperations](#BKMK_chat_AsyncOperations)
 - [chat_MailboxTrackingFolders](#BKMK_chat_MailboxTrackingFolders)
 - [chat_ProcessSession](#BKMK_chat_ProcessSession)
@@ -1828,40 +1830,6 @@ Same as the [chat_SyncErrors](syncerror.md#BKMK_chat_SyncErrors) many-to-one rel
 |IsHierarchical|False|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|chat_SyncErrors|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_chat_DuplicateMatchingRecord"></a> chat_DuplicateMatchingRecord
-
-**Added by**: System Solution Solution
-
-Same as the [chat_DuplicateMatchingRecord](duplicaterecord.md#BKMK_chat_DuplicateMatchingRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|duplicaterecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|chat_DuplicateMatchingRecord|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_chat_DuplicateBaseRecord"></a> chat_DuplicateBaseRecord
-
-**Added by**: System Solution Solution
-
-Same as the [chat_DuplicateBaseRecord](duplicaterecord.md#BKMK_chat_DuplicateBaseRecord) many-to-one relationship for the [duplicaterecord](duplicaterecord.md) table/entity.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|duplicaterecord|
-|ReferencingAttribute|baserecordid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|chat_DuplicateBaseRecord|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

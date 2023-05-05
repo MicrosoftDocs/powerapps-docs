@@ -1,14 +1,18 @@
 ---
 title: "sharedworkspace table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the sharedworkspace table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # sharedworkspace table/entity reference
@@ -304,7 +308,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |IsValidForRead|True|
 |IsValidForUpdate|False|
 |LogicalName|workspaceschema|
-|MaxLength|2000|
+|MaxLength|20000|
 |RequiredLevel|None|
 |Type|Memo|
 

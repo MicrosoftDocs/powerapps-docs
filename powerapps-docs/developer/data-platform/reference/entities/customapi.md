@@ -1,14 +1,18 @@
 ---
 title: "CustomAPI table/entity reference (Microsoft Dataverse) | Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomAPI table/entity."
-ms.date: 03/07/2023
+ms.date: 05/04/2023
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
 author: "phecke"
 ms.author: "pehecke"
+manager: "margoc"
 search.audienceType: 
   - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # CustomAPI table/entity reference
@@ -79,6 +83,7 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PluginTypeId](#BKMK_PluginTypeId)
+- [PowerfxRuleId](#BKMK_PowerfxRuleId)
 - [SdkMessageId](#BKMK_SdkMessageId)
 - [statecode](#BKMK_statecode)
 - [statuscode](#BKMK_statuscode)
@@ -371,6 +376,22 @@ These columns/attributes return true for either **IsValidForCreate** or **IsVali
 |Type|Lookup|
 
 
+### <a name="BKMK_PowerfxRuleId"></a> PowerfxRuleId
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier for powerfxrule associated with Custom API.|
+|DisplayName|PowerFx Rule|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|powerfxruleid|
+|RequiredLevel|None|
+|Targets|powerfxrule|
+|Type|Lookup|
+
+
 ### <a name="BKMK_SdkMessageId"></a> SdkMessageId
 
 |Property|Value|
@@ -532,6 +553,7 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
 - [PluginTypeIdName](#BKMK_PluginTypeIdName)
+- [PowerfxRuleIdName](#BKMK_PowerfxRuleIdName)
 - [SdkMessageIdName](#BKMK_SdkMessageIdName)
 - [SolutionId](#BKMK_SolutionId)
 - [SupportingSolutionId](#BKMK_SupportingSolutionId)
@@ -976,6 +998,24 @@ These columns/attributes return false for both **IsValidForCreate** or **IsValid
 |Type|String|
 
 
+### <a name="BKMK_PowerfxRuleIdName"></a> PowerfxRuleIdName
+
+**Added by**: msft_PowerfxRuleSolutionExtension Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|powerfxruleidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_SdkMessageIdName"></a> SdkMessageIdName
 
 |Property|Value|
@@ -1218,6 +1258,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [business_unit_customapi](#BKMK_business_unit_customapi)
 - [sdkmessage_customapi](#BKMK_sdkmessage_customapi)
 - [plugintype_customapi](#BKMK_plugintype_customapi)
+- [powerfxrule_customapi](#BKMK_powerfxrule_customapi)
 
 
 ### <a name="BKMK_lk_customapi_createdby"></a> lk_customapi_createdby
@@ -1273,6 +1314,12 @@ See the [sdkmessage_customapi](sdkmessage.md#BKMK_sdkmessage_customapi) one-to-m
 **Added by**: System Solution Solution
 
 See the [plugintype_customapi](plugintype.md#BKMK_plugintype_customapi) one-to-many relationship for the [plugintype](plugintype.md) table/entity.
+
+### <a name="BKMK_powerfxrule_customapi"></a> powerfxrule_customapi
+
+**Added by**: msft_PowerfxRuleSolution Solution
+
+See the [powerfxrule_customapi](powerfxrule.md#BKMK_powerfxrule_customapi) one-to-many relationship for the [powerfxrule](powerfxrule.md) table/entity.
 
 ### See also
 
