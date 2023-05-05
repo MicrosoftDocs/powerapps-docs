@@ -106,13 +106,14 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. (Optional) Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, select the **Azure Key Vault URI** from the list and then click **Next**. 
+3. (Optional) Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
 If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
-You can also For more information on how to code sign your app manually, see:
+You can also code sign your mobile app package manually instead of using automatic code signing in wrap wizard. For more information on how to code sign your app manually, see:
   
    - [Code sign for iOS](code-sign-ios.md)
    - [Code sign for Android](code-sign-android.md) 
+   - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 4.  Select **Next**.
 
@@ -134,19 +135,7 @@ You can also For more information on how to code sign your app manually, see:
 
 ### Step 4: Register app
 
-On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform.
-
-Your app must be registered in Azure ADD so that your app users can sign in. You need to go to [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
-
-- **For iOS**: The **Redirect URI** only requires the **Bundle ID**.  Examples for iOS:
-
-    - **Bundle ID**: com.contoso.myapp
-    - **Redirect URI**: msauth.com.contoso.myapp://auth
-
-- **For Android**: The **Redirect URI** requires the **Package name**, and the **Signature hash**. To create the signature hash, [generate keys](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash). Examples for Android:
-
-    - **Package name**: com.contoso.myapp
-    - **Redirect URI**: msauth://com.contoso.myapp/&lt;generated signature hash&gt;
+On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform. Your app must be registered in Azure ADD so that your app users can sign in. 
 
 #### New app registration
 
