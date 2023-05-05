@@ -14,7 +14,7 @@ searchScope:
 ---
 # Request Power Apps licenses for your app users
 
-As a Power Apps maker, you can create an app that requires a license for use. For example, if you create an app with premium components, such as a map or an address input component, users must have a Power Apps license to use that app. 
+As a Power Apps maker, you can create an app that requires a license for use. For example, if you create an app with premium components or connectors, users must have an appropriate Power Apps license to use that app. 
 
 When sharing a [canvas app](../canvas-apps/share-app.md) or [model-driven app](../model-driven-apps/share-model-driven-app.md) that contains premium components, select **Request licenses** to submit a license request for your users. The request will be submitted to your admin for approval.
 
