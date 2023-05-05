@@ -107,7 +107,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
 3. (Optional) Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, select the **Azure Key Vault URI** from the list and then click **Next**. 
-If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set up Azure Key Vault for automated code signing).
+If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
 You can also For more information on how to code sign your app manually, see:
   
