@@ -20,7 +20,7 @@ search.app:
 > [!NOTE]
 > Unsure about table vs. entity? See [Developers: Understand terminology in Microsoft Dataverse](/powerapps/developer/data-platform/understand-terminology).
 
-Holds operation details values for entities for archival
+Holds operation details values for entities for archival. For internal use only.
 
 **Added by**: Retention Base Components Solution
 
