@@ -67,7 +67,7 @@ Edit the connection string `Url`, `Username` and `Password` values in the `conne
 
 ### Add using directive to Program.cs
 
-At the top of your Program.cs file, add this using directive:
+At the top of your `Program.cs` file, add this `using` directive:
 
 ```csharp
 using System.Configuration;
@@ -81,7 +81,7 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
 1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
 
-1. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it "SampleHelpers.cs".
+1. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it `SampleHelpers.cs`.
 
 > [!NOTE]
 > The name of the class will determine how you will reference these helper properties and methods within your main program. The remaining instructions will assume you named the class `SampleHelpers`.
@@ -298,6 +298,8 @@ This is less code and you have added error handling and the means to refresh the
 
 However, you will see that `JObject` has red squiggly lines under it. If you try to build this project it will fail.
 
+The [Quick start](quick-start-console-app-csharp.md) used `System.Text.Json`, but this code uses NewtonSoft.
+
 ### Install NewtonSoft.Json
 
 1. Right-click the `JObject` with the red squiggly lines under it and choose `Quick Actions and Refactorings...`
@@ -344,10 +346,10 @@ WhoAmIResponse response = WhoAmI(client);
 
 Before you begin, it would be a good idea to go out to the Web API Reference and review these topics:
 
-- [WhoAmI Function](xref:"Microsoft.Dynamics.CRM.WhoAmI)
-- [WhoAmIResponse ComplexType](xref:"Microsoft.Dynamics.CRM.WhoAmIResponse)
+- [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI)
+- [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse)
 
-Notice how the [WhoAmI Function](xref:"Microsoft.Dynamics.CRM.WhoAmI) returns a [WhoAmIResponse ComplexType](xref:"Microsoft.Dynamics.CRM.WhoAmIResponse) and the [WhoAmIResponse ComplexType](xref:"Microsoft.Dynamics.CRM.WhoAmIResponse) contains three `GUID` properties: `BusinessUnitId`, `UserId`, and `OrganizationId`;
+Notice how the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) returns a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) and the [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) contains three `GUID` properties: `BusinessUnitId`, `UserId`, and `OrganizationId`;
 
 The code we will add is simply to model these into a re-usable method that accepts an `HttpClient` as a parameter.
 
