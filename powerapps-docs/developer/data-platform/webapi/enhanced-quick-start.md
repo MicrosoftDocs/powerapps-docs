@@ -13,15 +13,15 @@ contributors:
 
 # Enhanced quick start
 
-This topic demonstrates how to re-factor the code in the [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you begin this topic, or simply [download](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) the MSAL version of the complete Visual Studio project.
+This article demonstrates how to refactor the code in the [Quick start](quick-start-console-app-csharp.md) article by adding reusable <xref:System.Net.Http.HttpClient> and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) article to create a new Visual Studio project before you begin this article, or [download](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/QuickStart) the MSAL version of the complete Visual Studio project.
 
 If you get stuck following this enhanced quick start, you can [download](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/C%23/EnhancedQuickStart) the completed solution.
 
 ## Enable passing credentials in a connection string
 
-Putting user logon credentials inside your code is not a good practice. How you capture user credentials depends on the type of client you are making. For this console application we will set the credentials within the App.config file because it is a convenient way to move the credentials out of code. It is also the method used in the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), so if you understand this method, you can easily see how the other Web API samples work.
+Putting user credentials inside your code isn't a good practice. How you capture user credentials depends on the type of client you're making. For this console application, we'll set the credentials within the App.config file because it's a convenient way to move the credentials out of code. It's also the method used in the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), so if you understand this method, you can easily see how the other Web API samples work.
 
-Enabling this requires three steps:
+Enabling passing these credentials requires three steps:
 
 1. [Add the System.Configuration.ConfigurationManager NuGet package to the Visual Studio project](#add-the-systemconfigurationconfigurationmanager-nuget-package-to-the-visual-studio-project)
 1. [Add an application configuration file](#add-an-application-configuration-file)
@@ -39,7 +39,7 @@ Enabling this requires three steps:
 1. In **Solution Explorer**, right-click the project and select Add > New Item...
 1. Select **Application Configuration File**.
 
-   This will create a new file named `App.config` in your project.
+   These steps creates a new file named `App.config` in your project.
 
 1. In **Solution Explorer**, open the **App.config** file. It should look something like this:
 
@@ -49,7 +49,7 @@ Enabling this requires three steps:
    </configuration>
    ```
 
-1. Edit the `<configuration>` element to add a the `connectionStrings` node as shown below:
+1. Edit the `<configuration>` element to add the `connectionStrings` node as shown below:
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -75,11 +75,11 @@ using System.Configuration;
 
 ## Add helper code
 
-In the [Quick start](quick-start-console-app-csharp.md) example, all the code is within the `Program.cs` file. We are going to move the code that deals with connecting and creating an <xref:System.Net.Http.HttpClient> into a separate file of helper methods.
+In the [Quick start](quick-start-console-app-csharp.md) example, all the code is within the `Program.cs` file. We're going to move the code that deals with connecting and creating an <xref:System.Net.Http.HttpClient> into a separate file of helper methods.
 
-These helpers are also used in the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23/SampleHelpers.cs) file used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). If you understand these helpers, you will understand how they are used in the samples.
+These helpers are also used in the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23/SampleHelpers.cs) file used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md). If you understand these helpers, you'll understand how they're used in the samples.
 
-1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
+1. In **Solution Explorer**, right-click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
 
 1. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it `SampleHelpers.cs`.
 
@@ -175,7 +175,7 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
 1. Add an `OAuthMessageHandler` class in its own class file using the code provided below.
 
-   This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Microsoft Authentication Library (MSAL) authentication context to call the correct `AcquireToken` variation every time an operation is performed so you don't need to explicitly manage token expiration.
+   This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that works with the Microsoft Authentication Library (MSAL) authentication context to call the correct `AcquireToken` variation every time an operation is performed so you don't need to explicitly manage token expiration.
 
    ```csharp
    using Microsoft.Identity.Client;
@@ -296,7 +296,7 @@ namespace EnhancedQuickStart
 
 This is less code and you have added error handling and the means to refresh the access token with every use of the `HttpClient`.
 
-However, you will see that `JObject` has red squiggly lines under it. If you try to build this project it will fail.
+However, you'll see that `JObject` has red squiggly lines under it. If you try to build this project, it will fail.
 
 The [Quick start](quick-start-console-app-csharp.md) used `System.Text.Json`, but this code uses NewtonSoft.
 
@@ -314,7 +314,7 @@ Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
 Press any key to exit.
 ```
 
-## Create re-usable methods
+## Create reusable methods
 
 While we have reduced the total amount of code in the `Program.Main` method, you aren't going to write a program to just call one operation, and it isn't realistic to write so much code just to call a single operation.
 
@@ -344,19 +344,19 @@ WhoAmIResponse response = WhoAmI(client);
       Console.WriteLine("Your system user ID is: {0}", response.UserId);
 ```
 
-Before you begin, it would be a good idea to go out to the Web API Reference and review these topics:
+Before you begin, it would be a good idea to go out to the Web API Reference and review these articles:
 
 - [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI)
 - [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse)
 
 Notice how the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) returns a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) and the [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse) contains three `GUID` properties: `BusinessUnitId`, `UserId`, and `OrganizationId`;
 
-The code we will add is simply to model these into a re-usable method that accepts an `HttpClient` as a parameter.
+The code we'll add is simply to model the function into a reusable method that accepts an `HttpClient` as a parameter.
 
 > [!NOTE]
 > Exactly how you do this is a matter of personal preference. This design is provided because of it's relative simplicity.
 
-In your Visual Studio project perform the following steps:
+In your Visual Studio project, perform the following steps:
 
 1. Edit the `Program` class to make it a partial class.
 
@@ -378,7 +378,7 @@ In your Visual Studio project perform the following steps:
 
    `partial class Program`
 
-   In this way the `Program` class in `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file.
+   In this way, the `Program` class in `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file.
 
 1. Add the following using directives to the top of the ProgramMethods.cs file.
 
@@ -463,7 +463,7 @@ If you have any trouble running this sample, you can download all the Power Apps
 
 ## Create a Template project
 
-Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](/visualstudio/ide/how-to-create-project-templates) instructions to create the template.
+Before you leave this article, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](/visualstudio/ide/how-to-create-project-templates) instructions to create the template.
 
 ## Next steps
 
