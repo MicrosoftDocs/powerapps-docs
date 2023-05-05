@@ -38,8 +38,8 @@ You can select **Go to the parent** to identify the section or column in which t
 You can use HTML to further personalize your email template. If you'd like to add your html tags, select **HTML**, and ensure that you follow the guidelines below:
 
 - Don't delete any of the meta tags already available.
-- Add tags corresponding to external style elements inside the style tags.
-- Add any other html content inside the body tags.
+- Add Cascading Style Sheets (CSS) tags inside the style tags.
+- Add any other HTML content inside the body tags.
 
 ### Add a layout section to the template
 
