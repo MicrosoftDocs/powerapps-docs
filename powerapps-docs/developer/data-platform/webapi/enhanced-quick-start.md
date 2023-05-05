@@ -83,8 +83,8 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
 1. Specify a name for your class file. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it `SampleHelpers.cs`.
 
-> [!NOTE]
-> The name of the class will determine how you will reference these helper properties and methods within your main program. The remaining instructions will assume you named the class `SampleHelpers`.
+   > [!NOTE]
+   > The name of the class will determine how you will reference these helper properties and methods within your main program. The remaining instructions will assume you named the class `SampleHelpers`.
 
 1. Add the following code to your `SampleHelpers.cs` file.
 
@@ -302,7 +302,7 @@ The [Quick start](quick-start-console-app-csharp.md) used `System.Text.Json`, bu
 
 ### Install NewtonSoft.Json
 
-1. Right-click the `JObject` with the red squiggly lines under it and choose `Quick Actions and Refactorings...`
+1. Right-click the `JObject` with the red squiggly lines under it and choose **Quick Actions and Refactorings...**.
 1. Select **Install package 'Newtonsoft.Json'** > **Find and install latest version**.
 
 ## Run the program
