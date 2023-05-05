@@ -35,7 +35,7 @@ You can select **Go to the parent** to identify the section or column in which t
 
   :::image type="content" source="media\add-template-optns.png" alt-text="Screenshot of the email template editor page, with the go to parent call out.":::
 
-You can use HTML to further personalize your email template. If you'd like to add your html tags, select **HTML**, and ensure that you follow the guidelines below:
+You can select **HTML** to use HTML tags to personalize your email template. We recommend that you follow the guidelines below:
 
 - Don't delete any of the meta tags already available.
 - Add Cascading Style Sheets (CSS) tags inside the style tags.
