@@ -19,10 +19,11 @@ You can view retained data from an Advanced Find query or by creating a Power Au
 
 Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Plaform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role). <!--I don't think this would be enough. Probably have to start with the App access user role and add this privilege. Also, how to access advanced find for the auditor? I believe they can go to maker portal > Settings > Advanced Settings > and then select the Advanced Find (filter icon)-->
 
-## View retained data using advanced find
+## View retained data using Advanced Find
 
 > [!NOTE]
-> Advanced Find doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](data-retention-flow.md)
+> - You can't save or export the Advanced Find find query results of the retained data for sharing with others. To share retained data, [create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow).
+> - Advanced Find doesn't retrieve table row attachments. To view attachment data, create a flow. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Settings** > **Advanced settings**.
 1. On the **Dynamics 365 Settings** page, select **Advanced Find** (filter icon) on the command bar.
@@ -34,7 +35,7 @@ If you need to retrieve long term data from multiple related tables, such as the
 
 ## View retained data using a flow
 
-Use the Power Automate cloud flow template to generate and retrieve retained data in Excel. More information: [Create a cloud flow to view Dataverse long term retained data](data-retention-flow.md)
+Create a Power Automate cloud flow to create an Excel file of the retained data from a FetchXML query and send as an email attachment. More information: [Create a cloud flow to view Dataverse long term retained data](/power-automate/dataverse/data-retention-flow)
 
 ## Limitations for retrieval of retained data
 
@@ -49,3 +50,4 @@ This restrictions are enforced by Dataverse for each environment:
 
 ## See also
 
+[Dataverse long term data retention overview (preview)](data-retention-overview.md)
