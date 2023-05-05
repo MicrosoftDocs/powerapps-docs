@@ -53,7 +53,7 @@ When you share a model-driven app, you can share it with all members of one or m
    - To assign an individual user or team, select the user name or team from the **People** list.
    :::image type="content" source="media/share-model-driven-app/share-user.png" alt-text="Assign specific users to a model-driven app":::
    
-     If your app contains a premium component, such as map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
+     If your app contains premium components, such as map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
 
     :::image type="content" source="../canvas-apps/media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
     
