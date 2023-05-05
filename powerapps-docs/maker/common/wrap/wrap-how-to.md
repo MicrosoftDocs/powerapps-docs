@@ -106,7 +106,10 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Set the **Sign my app** toggle to **ON** to automatically code sign your app (Android only) and then select **Next**. For more information on how to code sign your app manually, see:
+3. (Optional) Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, select the **Azure Key Vault URI** from the list and then click **Next**. 
+If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set up Azure Key Vault for automated code signing).
+
+You can also For more information on how to code sign your app manually, see:
   
    - [Code sign for iOS](code-sign-ios.md)
    - [Code sign for Android](code-sign-android.md) 
@@ -183,7 +186,9 @@ On the **Manage output** screen, create or select an existing App Center locatio
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the App Center location that you have selected in the previous step.
 
-## Set up KeyVault for automated signing
+## Set up Azure Key Vault for automated code signing 
+
+You need to have [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts) set up to automatically sign your Android or iOS mobile app package in **Step 2** of wrap wizard.
   
 **Prerequisites**
   
@@ -192,7 +197,7 @@ After a successful build, you'll see your mobile app in the App Center location 
 - Azure Active Directory subscription to [create Key Vault](/azure/key-vault/general/quick-create-portal).
 - Admin access for your tenant.
    
-Follow these steps to configure KeyVault URI:
+Follow these steps to create Azure Key Valut and configure KeyVault URI:
   
 1. Sign in to your tenent as an admin and create an Azure service principal for 1P AAD application: 4e1f8dc5-5a42-45ce-a096-700fa485ba20 (WrapKeyVaultAccessApp) by running the following script: <br>
 `Connect-AzureAD -TenantId <your tenant ID> New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"`
@@ -228,8 +233,8 @@ Follow these steps to configure KeyVault URI:
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
 
-## Sign your mobile app package
-If you have not code signed your mobile app during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
+## (Optional) Sign your mobile app package manually
+If you do not want to aumomatically sign your mobile app package during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
 - [Code signing for Android](code-sign-android.md)
