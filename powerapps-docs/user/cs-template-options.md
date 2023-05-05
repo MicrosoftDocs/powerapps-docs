@@ -4,7 +4,7 @@ description: Create an email template using the enhanced email template editor
 author: gandhamm
 
 ms.topic: conceptual
-ms.date: 05/06/2022
+ms.date: 05/05/2023
 ms.subservice: end-user
 ms.author: mgandham
 search.audienceType: 
