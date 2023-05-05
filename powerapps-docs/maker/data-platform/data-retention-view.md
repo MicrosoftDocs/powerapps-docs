@@ -8,12 +8,16 @@ ms.topic: how-to
 ms.date: 05/05/2023
 ms.custom: template-how-to 
 ---
-# View long term retained data
+# View long term retained data (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can view retained data from an Advanced Find query or by creating a Power Automate flow. 
 
-> [!NOTE]
-> To view retained data in an environment requires the system administrator security role or other security role membership that includes organization scope read privileges to the table.
+To view retained data in an environment requires the system administrator security role or other security role membership that includes organization scope read privileges to the table.
+
+> [!IMPORTANT]
+> This is a preview feature.
 
 ## Grant privileges to view retained data
 

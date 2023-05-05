@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 03/23/2023
 ms.custom: template-how-to
 ---
-# Set a data retention policy for a table
+# Set a data retention policy for a table (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

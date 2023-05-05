@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 03/23/2023
 ms.custom: template-how-to 
 ---
-# Manage data retention policies
+# Manage data retention policies (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
