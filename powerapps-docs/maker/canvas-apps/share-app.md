@@ -143,7 +143,7 @@ Legend:
 5. **Launch app in Web**: Open the app directly in your browser.
 
 ## Request licenses for your users
-As a Power Apps maker, you can request licenses for your app users when you [share an app](#share-an-app).
+When sharing an app that requires a license for use, you can request Power Apps licenses for your users. For more information, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
 
 ## Security group considerations
 
