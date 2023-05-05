@@ -181,6 +181,14 @@ On the **Manage output** screen, create or select an existing App Center locatio
 ### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
+After a successful build, you'll see your mobile app in the App Center location that you have selected in the previous step.
+
+## Sign your mobile app package
+[Code signing](overview.md#code-signing) process is different for Android and iOS devices.
+
+- [Code signing for iOS](code-sign-ios.md)
+- [Code signing for Android](code-sign-android.md)
+- [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 ## Test and distribute mobile app package
 
