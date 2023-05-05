@@ -1,7 +1,7 @@
 ---
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
-ms.date: 01/09/2023
+ms.date: 05/04/2023
 ms.reviewer: ""
 ms.topic: overview
 author: "Mattp123"
@@ -121,7 +121,7 @@ Easily deploy solutions to test and production environments using pipelines in P
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
--	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
+-	If you encounter a canvas app publishing error: **the app has connections to flows that are no longer in the environment**, remove any deleted flows from the app. Then save and publish the app.  
 - Canvas apps shared with 'Everyone' that go through environment backup and environment restore operations aren't shared with 'Everyone' in the restored environment. Notice that, the canvas app can be shared with a security group and the app in the restored environment will be shared with that security group.  
 - Canvas app instant flows must be created from an app already in a solution since adding this type of flow from outside solutions is blocked. 
    - Workaround for this limitation: Remove the trigger, replace with another trigger like recurrence, save the flow, add it into a solution, and then change the trigger as needed.
