@@ -106,7 +106,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. Set the **Sign my app (preview)** toggle to **ON** to code sign your app and then select **Next**. For more information on code sign, see:
+3. Set the **Sign my app** toggle to **ON** to automatically code sign your app (Android only) and then select **Next**. For more information on how to code sign your app manually, see:
   
    - [Code sign for iOS](code-sign-ios.md)
    - [Code sign for Android](code-sign-android.md) 
@@ -184,7 +184,7 @@ On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the App Center location that you have selected in the previous step.
 
 ## Sign your mobile app package
-[Code signing](overview.md#code-signing) process is different for Android and iOS devices.
+If you have not code signed your mobile app duiring wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
 - [Code signing for Android](code-sign-android.md)
