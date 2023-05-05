@@ -168,3 +168,13 @@ On the **Manage output** screen, create or select an existing App Center locatio
 ### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
+
+## Test and distribute mobile app package
+
+For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
+
+### See also
+
+- [Wrap overview](overview.md)
+- [Code sign for iOS](code-sign-ios.md)
+- [Code sign for Android](code-sign-android.md)
