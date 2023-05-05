@@ -37,9 +37,8 @@ You can select **Go to the parent** to identify the section or column in which t
 
 Select **HTML**to  personalize your email template. We recommend the following guidelines:
 
-- Don't delete the existing meta tags.
-- Add CSS inside the style tags.
-- Add HTML content inside the body tags.
+- Ensure that you don't delete the existing meta tags.
+- You can add CSS inside the style tags and HTML content inside the body tags.
 
 ### Add a layout section to the template
 
