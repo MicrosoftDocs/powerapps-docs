@@ -38,7 +38,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Generate an app automatically
 
-Depending upon whether you have the [new look](../intro-maker-portal.md#new-look-preview) or [classic look](../intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
 
 # [New look (preview)](#tab/home-new-look)
 
