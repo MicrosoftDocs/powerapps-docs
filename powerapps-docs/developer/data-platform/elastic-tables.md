@@ -391,8 +391,5 @@ Introduce what the Web API sample does
 
 ### See Also
 
-[Passing optional parameters with a request](use-messages.md#passing-optional-parameters-with-a-request)  
-[Create entities using the Organization Service](entity-operations-create.md)  
-[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)  
-[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)  
+[Use optional parameters](optional-parameters.md)<br />
 [Partitioning and horizontal scaling in Azure Cosmos DB](/azure/cosmos-db/partitioning-overview)
