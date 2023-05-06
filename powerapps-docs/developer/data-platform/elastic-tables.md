@@ -17,6 +17,14 @@ contributors:
 
 Elastic tables are great..
 
+<!-- 
+jdaly: TODO:
+Delete and redirect these topics:
+powerapps-docs\developer\data-platform\org-service\azure-storage-partitioning-sdk.md
+powerapps-docs\developer\data-platform\webapi\azure-storage-partitioning.md 
+
+-->
+
 ## Using Partitions
 
 An optional partition key can be specified to create a logical partition for non-relational custom entity data stored in NoSql tables of Azure heterogenous storage ([Azure Cosmos DB](/azure/cosmos-db/introduction)). Having a partition key improves application performance for large sets of data (millions of records) by grouping data items into logical sets within a table. For example, a table containing products can be grouped logically into product categories to improve retrieval of all items within a product category. The partition key value can be a string or numeric type. Once specified, the partition key value can't be changed.
