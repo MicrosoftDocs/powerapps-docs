@@ -40,7 +40,7 @@ You'll need access to:
 - [App Center](https://appcenter.ms/) to add new organization and apps.
 - This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution). 
 
-To use Android platform, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
+If you are creating a mobile app package for Android platform that you plan to code sign manually, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
 
 ## Add canvas app to solution
 
@@ -98,7 +98,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
 If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
-You can also code sign your mobile app package manually instead of using automatic code signing in wrap wizard. For more information on how to code sign your app manually, see:
+You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
    - [Code sign for iOS](code-sign-ios.md)
    - [Code sign for Android](code-sign-android.md) 
