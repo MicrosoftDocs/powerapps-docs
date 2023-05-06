@@ -18,8 +18,8 @@ The solution checker analyzes these solution components:
 - Dataverse custom workflow activities 
 - Dataverse web resources (HTML and JavaScript)
 - Dataverse configurations, such as SDK message steps
-- Power Automate flows (via flow checker)
-- Power Fx expressions (via app checker)
+- Power Automate flows (via [flow checker](https://learn.microsoft.com/power-automate/error-checker))
+- Power Fx expressions (via [app checker](https://powerapps.microsoft.com/en-us/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/))
 
 Solution checker works with unmanaged solutions that can be exported from an environment. 
 
