@@ -144,7 +144,7 @@ On the **Manage output** screen, create or select an existing App Center locatio
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
+You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center container for your mobile app manually](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
 ### Step 6: Wrap up
 
