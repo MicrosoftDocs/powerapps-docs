@@ -27,11 +27,7 @@ Wrap feature allows you to create mobile apps for iOS, Android or Google Play St
 - Android (APK package)
 - Google Play Store (AAB package)
 
-The wrap feature will wrap your canvas apps in a native mobile app shell that you can digitally sign and distribute. More information:
-
-- [Code sign for iOS](code-sign-ios.md)
-- [Code sign for Android](code-sign-android.md)
-
+The wrap feature will wrap your canvas apps in a native mobile app shell that you can digitally sign and distribute.
 You can use Microsoft Intune, App Center or Apple Business Manager, Google Play Store to distribute your native mobile apps created with wrap.
 
 When you update your app and republish it, the app is automatically updated.
@@ -148,7 +144,7 @@ On the **Manage output** screen, create or select an existing App Center locatio
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Create an App Center container for your mobile app manually](#Creating-an-App-Center-container-for-your-mobile-app-manually)).
+You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Create an App Center container for your mobile app manually](#Creating-an-App-Center-container-for-your-mobile-app-manually-(optional)).
 
 ### Step 6: Wrap up
 
@@ -203,7 +199,7 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
   
   
   
-## Creating an App Center container for your mobile app manually
+## Creating an App Center container for your mobile app manually (optional)
 
 You can manually create your App Center contaner for you mobile app. More information: [App Center container](overview.md#app-center-container)
 
@@ -240,7 +236,7 @@ You can manually create your App Center contaner for you mobile app. More inform
     More information: [App Center URL](overview.md#app-center-url)
  
 
-## Signing your mobile app package manually 
+## Signing your mobile app package manually (optional)
 If you do not want to aumomatically sign your mobile app package during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
