@@ -95,7 +95,7 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 
 2. Under **Target platforms(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. (Optional) Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
+3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
 If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
 You can also code sign your mobile app package manually instead of using automatic code signing in wrap wizard. For more information on how to code sign your app manually, see:
@@ -144,7 +144,7 @@ On the **Manage output** screen, create or select an existing App Center locatio
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center container for your mobile app manually](#Set-up-Azure-Key-Vault-for-automated-code-signing).
+You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center container for your mobile app manually](#Creating-an-App-Center-container-for-your-mobile-app-manually).
 
 ### Step 6: Wrap up
 
@@ -201,7 +201,7 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
   
 ## Creating an App Center container for your mobile app manually
 
-You can manually create your App Center contaner for you mobile app. More information: [App Center container](overview.md#app-center-container)
+You can manually create an App Center contaner for your mobile app. More information: [App Center container](overview.md#app-center-container)
 
 > [!TIP]
 > For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
