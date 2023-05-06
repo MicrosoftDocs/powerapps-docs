@@ -36,7 +36,7 @@ When you update your app and republish it, the app is automatically updated.
 ## Prerequisites
 
 You'll need access to:
-- [Azure portal](https://portal.azure.com/) to register your app and configure the API permissions on the Microsoft Identity platform.
+- [Azure portal](https://portal.azure.com/) to register your app.
 - [App Center](https://appcenter.ms/) to add new organization and apps.
 - This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution). 
 
@@ -138,13 +138,13 @@ Select **New app registration** to create a new registration for your app.
 
 ### Step 5: Manage output
 
-On the **Manage output** screen, create or select an existing App Center location to send your mobile app once the build is complete. To create a new location, seect **New location** on top of the screen and then select **Android** or **iOS**.
+On the **Manage output** screen, create or select an existing App Center location to send your mobile app once the build is complete. To automatically create a new location, seect **New location** on top of the screen and then select **Android** or **iOS**.
 
 - **Android**: Choose an existing location or create a new location.
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Create an App Center container for your mobile app manually](#Creating-an-App-Center-container-for-your-mobile-app-manually).
+You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Create an App Center container for your mobile app manually](Creating-an-App-Center-container-for-your-mobile-app-manually).
 
 ### Step 6: Wrap up
 
