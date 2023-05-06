@@ -92,7 +92,7 @@ Here's a summary of each column in the report.
 |Report column |Description  |Applies-to component   |
 |---------|---------|---------|
 |Issue     |   The title of the issue identified in the solution.      | All        |
-|Category     | The categorization of the issue identified, such as **Performance**, **Usage**, **Supportability**, **Design**, **Security**, **Accessibility**, or **Upgrade readiness**.      |  All     |
+|Category     | The categorization of the issue identified, such as **Performance**, **Maintainability**, **Usage**, **Supportability**, **Design**, **Security**, **Accessibility**, or **Upgrade readiness**.      |  All     |
 |Severity     | Represents the potential impact of the issue identified. Available impact types are **Critical**, **High**, **Medium**, **Low**, and **Informational**.         |  All       |
 |Guidance     |  Link to article detailing the issue, impact, and recommended action.       |  All       |
 |Component     |  The solution component where the issue was identified.        |   All      |
