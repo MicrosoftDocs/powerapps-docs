@@ -144,7 +144,7 @@ On the **Manage output** screen, create or select an existing App Center locatio
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center container for your mobile app manually](#Creating-an-App-Center-container-for-your-mobile-app-manually).
+You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center container for your mobile app manually](#Create-an-App-Center-container-for-your-mobile-app-manually).
 
 ### Step 6: Wrap up
 
@@ -199,7 +199,7 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
   
   
   
-## Creating an App Center container for your mobile app manually
+## Create an App Center container for your mobile app manually
 
 You can manually create an App Center contaner for your mobile app. More information: [App Center container](overview.md#app-center-container)
 
@@ -236,7 +236,7 @@ You can manually create an App Center contaner for your mobile app. More informa
     More information: [App Center URL](overview.md#app-center-url)
  
 
-## Signing your mobile app package manually (optional)
+## Sign your mobile app package manually (optional)
 If you do not want to aumomatically sign your mobile app package during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
