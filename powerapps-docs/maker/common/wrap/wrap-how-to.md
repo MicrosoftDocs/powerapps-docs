@@ -252,3 +252,4 @@ For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and 
 - [Wrap overview](overview.md)
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
+- [Frequently asked questions for wrap](faq.yml)
