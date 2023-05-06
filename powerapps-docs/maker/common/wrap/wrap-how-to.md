@@ -132,21 +132,23 @@ On the **Register your app** screen, register your application in Azure to estab
 
 #### New app registration
 
-For new app registration, select **New app registration** to create a new registration for your app in the organizational directory using the Azure portal. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+Select **New app registration** to create a new registration for your app.
 
    > [!div class="mx-imgBorder"] 
    > ![New app registration.](media/how-to-v2/new-app-reg.png "New app registration")
 
-When creating a new app registration, ensure to use the supported account type that includes accounts in an organizational directory.
+
 
 
 ### Step 5: Manage output
 
-On the **Manage output** screen, create or select an existing App Center location to send your mobile app once the build is complete. 
+On the **Manage output** screen, create or select an existing App Center location to send your mobile app once the build is complete. To create a new location, seect **New location** on top of the screen and then select **Android** or **iOS**.
 
 - **Android**: Choose an existing location or create a new location.
 
 - **iOS**: Choose an existing location or create a new location.
+
+You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [](#Create-an-App-Center-container-for-your-mobile-app-manually-(optional)).
 
 ### Step 6: Wrap up
 
@@ -199,8 +201,46 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
   
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
+  
+  
+## Create an App Center container for your mobile app manually (optional)
 
-## (Optional) Sign your mobile app package manually
+You can manually create your App Center contaner for you mobile app. More information: [App Center container](overview.md#app-center-container)
+
+> [!TIP]
+> For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
+
+1. Go to [App Center](https://appcenter.ms/).
+1. Sign in with your work or school account.
+1. If you don't have any existing organization, select **Add new** &gt; **Add new organization** to create a new organization.
+1. Select the organization from the list on the left-pane.
+1. Select **Apps** &gt; **Add app**.
+1. Enter app name.
+1. Select app release type.
+1. Select **Custom** OS for iOS apps, or **Android** OS for Android apps.
+
+    > [!NOTE]
+    > You must create separate App Center containers for each platform.
+
+1. For **Android** OS, select **Platform** as **React Native**.
+
+    > [!NOTE]
+    > **Platform** must be **React Native** for all apps in App Center.
+
+    :::image type="content" source="media/wrap-canvas-app/app-center-app.png" alt-text="App center app configuration.":::
+
+1. Select **Add new app**.
+
+1. Copy the app's App Center URL that you'll need later when configuring the wrap project inside Power Apps.
+
+    For example, `https://appcenter.ms/orgs/Contoso-sales/apps/Sample-canvas-app-for-Android-OS/`
+
+    :::image type="content" source="media/wrap-canvas-app/app-center-url.png" alt-text="App center URL.":::
+
+    More information: [App Center URL](overview.md#app-center-url)
+ 
+
+## Sign your mobile app package manually (optional)
 If you do not want to aumomatically sign your mobile app package during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
