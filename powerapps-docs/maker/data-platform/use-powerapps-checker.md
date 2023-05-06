@@ -37,15 +37,13 @@ Solution checker works with unmanaged solutions that can be exported from an env
    > [!div class="mx-imgBorder"]
    > ![Run solution checker command.](media/solution-checker-run.png "Run solution checker command")
 
-4.	The status pane located on the upper right of the **Solutions** page displays **Solution checker running**. 
+4.	The **Solution checker** command button has a loading indicator, and you'll notice a **Running…** state in the **Solution check** column of the **Solution** list. 
 
     > [!div class="mx-imgBorder"]
     > ![Solution checker status.](media/solution-checker-status.png "Solution checker status")
    
     Note the following:
     - The solution checker can take a few minutes to complete the analysis. 
-    
-    - During this time you'll notice a **Running…** state in the **Solution check** column of the **Solution** list. 
     
     - You'll receive an email notification and a notification in the **Notifications** area of the Power Apps site when the check is completed.  
 
