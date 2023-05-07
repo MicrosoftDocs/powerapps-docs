@@ -111,7 +111,7 @@ You can run solution checker rules in your development environment to detect iss
 
 ## Best practice rules used by solution checker (preview)
 
-The following table lists the component type, rule description, and severity. Critical violations are blocked or warned when configured for solution checker enforcement with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
+The following table lists the component type, rule description, severity, and category. Critical violations are blocked or warned when configured for solution checker enforcement with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
 
 > [!IMPORTANT]
 > Solution checker enforcement with managed environments is a preview feature.
