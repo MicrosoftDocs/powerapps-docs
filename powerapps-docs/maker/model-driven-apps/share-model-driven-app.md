@@ -9,7 +9,7 @@ tags: ''
 ms.devlang: na
 ms.topic: how-to
 ms.component: model
-ms.date: 02/10/2021
+ms.date: 05/08/2023
 ms.subservice: mda-maker
 ms.author: matp
 search.audienceType: 
@@ -31,7 +31,7 @@ There are a few key environment and licensing prerequisites required when sharin
 - A Microsoft 365 user with Power Platform administrator rights or global admin rights must exist within the organization. [Learn how to assign Power Platform Administrator rights](/power-platform/admin/use-service-admin-role-manage-tenant).  This provides the user with administrator rights over all environments.
 - The app sharer must have admin privileges to the specific environment (or be a Power Platform administrator). The app sharer must have a [security role](/power-platform/admin/security-roles-privileges) with equal or greater privileges than the security role they're assigning to the app and to other users. Usually, this takes the form of the app sharer having the Dataverse **System Administrator** or **System Customizer** security role.  These roles can be assigned by Power Platform administrators (who have rights over all Dataverse environments). The system administrator and system customizer security roles are standard roles that exist within all Dataverse environments.
 - The user must exist as a user within the environment. It isn't enough to only be a Microsoft 365 user. This is because all users in an environment are accounted for and described within tables in the environment. [Learn how to add a user to an environment](/power-platform/admin/add-users-to-environment)
-- The user must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. This may be assigned through a per app plan pass, a per user license, or a pay as you go license. Also, the license must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a Microsoft Dataverse for Teams environment.
+- Users must have the correct [license](/power-platform/admin/pricing-billing-skus) to be able to use the app. Users can [request a license themselves](../../user/request-license.md), or a [maker can request licenses for their app users](../common/request-licenses-for-users.md). Also, the license must be assigned in the tenant hosting the app. The exception to this prerequisite is when an app is hosted in a Microsoft Dataverse for Teams environment.
 
 ## Model-driven app sharing basics
 
@@ -52,6 +52,14 @@ When you share a model-driven app, you can share it with all members of one or m
    > If your app has one or more custom tables, in order for users to work with your custom table's records, you must configure privileges to the custom tables in a security role. More information: [Create or edit a security role for your app](#create-or-edit-a-security-role-for-your-app)
    - To assign an individual user or team, select the user name or team from the **People** list.
    :::image type="content" source="media/share-model-driven-app/share-user.png" alt-text="Assign specific users to a model-driven app":::
+   
+     If your app contains premium components, such as a map or address input components, users must have a Power Apps license to use the app. To request licenses for the users of your app, select **Request licenses** to submit a license request to your admin.
+
+      :::image type="content" source="../canvas-apps/media/request-licenses-for-others-banner.png" alt-text="Request Power Apps licenses for your users.":::
+    
+      > [!Note]
+      > You can't request licenses for security groups or distribution lists. For more information about requesting licenses, see [Request Power Apps licenses for your app users](../common/request-licenses-for-users.md).
+
 1. Select **Share**.
 
 ## Create or edit a security role for your app
