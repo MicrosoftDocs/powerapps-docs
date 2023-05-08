@@ -32,11 +32,11 @@ To learn how to use the new AI features in Power Apps, see:
 
 > [!IMPORTANT]
 > - This capability is in gated preview, and you'll need to apply for consideration to take part in the trial. To apply, go to [Limited preview request](https://go.microsoft.com/fwlink/?linkid=2227838).
-> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-> - For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback. For more information, go to our [preview terms](https://go.microsoft.com/fwlink/?linkid=2189520).
+> - By using this capability, your data does not leave the Microsoft ecosystem and promised data boundaries and is not used to train AI for other customers or for ChatGPT. Learn more: [Transparency note for AI Copilot data sharing in Power Platform](/power-platform/transparency-note-copilot-data-sharing).
 > - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
 > - This capability is in process of rolling out, and may not be available in your region yet.
-> - This capability  may be subject to usage limits or capacity throttling.
+> - This capability may be subject to usage limits or capacity throttling.
 
 
 ## Prerequisites for the AI features in Power Apps 
