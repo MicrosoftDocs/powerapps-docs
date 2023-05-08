@@ -15,7 +15,7 @@ contributors:
   
 ---
 
-# Find out who's working on an app
+# Find out who's working on the same app
 
 Use copresence to identify individuals working on the same app as you in Power Apps Studio. Copresence offers the following advantages:
 
