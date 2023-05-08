@@ -97,17 +97,7 @@ The following list explains what you'll need before you can start using wrap fea
 
 Wrap involves multiple components across Power Apps, App Center, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
 
-### App Center API token
-
-App Center allows you to create user tokens, and app tokens. Wrap requires the use of app token that allows full access to the app. Power Apps uses this token to connect and work with the app and the app location in App Center.
-
-Consider the following best practices when using API token:
-
-- Use a different token for each app center location.
-- Don't reuse token created for wrap capability anywhere else.
-- Don't use a user token for wrap. Use an app token.
-
-### App Center container
+### App Center location
 
 Container in App Center to store the built packages for mobile app distribution. Build output types differ depending on the target platform you select.
 
@@ -116,10 +106,6 @@ Container in App Center to store the built packages for mobile app distribution.
 | **iOS** (for distribution using Apple Store)                                                         | Custom                    |  \*.zip                       |
 | **Android** (for distribution using all channels except Google Play Store) |  Android                   | \*.apk                       |
 
-### App Center URL
-
-App Center URL refers to the URL and the location of the app you created in App Center that you want to use for storing the distributable builds for mobile users.
-
 ### App platform(s)
 
 Intended platforms for the app that you want to go through the build process for publication. You can create builds for mobile app for iOS, Android, or Google Play Store.
@@ -127,15 +113,7 @@ Intended platforms for the app that you want to go through the build process for
 - **iOS** creates IPA package
 - **Android** creates APK package
 - **Google Play Store** creates AAB package
-    >[!IMPORTANT]
-    > Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
-
-### Application (client) ID
-
-Also called the client ID, this value uniquely identifies your application in the Microsoft identity platform.
-
-More information: [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
-
+   
 ### Build the wrap project
 
 Building a wrap project is a process that creates the build packages for the mobile app distribution across different platforms. This process uses the app that you registered on Microsoft identity platform and creates the builds on the given App Center location depending on the platforms you choose. The built packages include the primary and optional secondary apps packaged into one mobile app package for each platform type.
