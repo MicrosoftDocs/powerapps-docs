@@ -19,7 +19,7 @@ contributors:
 
 Use the wrap feature to package one or more canvas app(s) as a single native mobile app package using the step-by-step wizard.
 
-The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through Microsoft Intune, App Center or other native distribution methods.
+The wrap feature in Power Apps lets you create native mobile versions of your [canvas apps](../../canvas-apps/getting-started.md) as custom-branded Android and iOS mobile apps. You can distribute such *wrapped* native mobile apps to the end users through [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), [Microsoft App Center](https://visualstudio.microsoft.com/app-center/), [Google Play](https://support.google.com/googleplay/work/answer/6138458) or [Apple Business Manager](https://developer.apple.com/custom-apps/) or other native distribution methods.
 
 Wrap feature allows you to create mobile apps for iOS, Android or Google Play Store:
 
@@ -27,10 +27,7 @@ Wrap feature allows you to create mobile apps for iOS, Android or Google Play St
 - Android (APK package)
 - Google Play Store (AAB package)
 
-The wrap feature will wrap your canvas apps in a native mobile app shell that you can digitally sign and distribute.
-You can use Microsoft Intune, App Center or Apple Business Manager, Google Play Store to distribute your native mobile apps created with wrap.
-
-When you update your app and republish it, the app is automatically updated.
+The wrap feature will wrap your canvas apps in a native mobile app shell that you can digitally sign and distribute. When you update your app and republish it, the app is automatically updated.
 
 
 ## Prerequisites
