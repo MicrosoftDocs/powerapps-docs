@@ -315,4 +315,5 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 - [Wrap overview](overview.md)
 - [Code sign for iOS](code-sign-ios.md)
 - [Code sign for Android](code-sign-android.md)
+- [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Frequently asked questions for wrap](faq.yml)
