@@ -47,9 +47,9 @@ You can add four types of buttons to your cards:
 - Open Url
 - Toggle Visibility
 
-#### Run PowerFx
+#### Run Power Fx
 
-Use a **Run PowerFx** button to run Power Fx expressions. [Learn more about Power FX](../power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
+Use a **Run PowerFx** button to run Power Fx expressions. [Learn more about Power Fx](../power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
 
 Select the **Power Fx** link in the button properties pane to start entering an expression in the formula bar.
 
