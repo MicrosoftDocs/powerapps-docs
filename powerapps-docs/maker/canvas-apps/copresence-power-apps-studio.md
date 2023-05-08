@@ -26,8 +26,8 @@ Use copresence to identify individuals working on the same app as you in Power A
 
 ## How copresence works
 
-The first time someone opens your app in app Power Apps Studio while you're working on it, a notice appears that indicates other people are also working on the app. The maker that edits the app first has editing control. If someone else tries to edit the app, a noticiation appears letting them know that someone else is editing the app. If you're in ready-only mode, you can save a copy of the app.
+The first time someone opens your app in app Power Apps Studio while you're working on it, a notice appears that indicates other people are also working on the app. The maker that edits the app first has editing control. If someone else tries to edit the app, a notification appears letting them know that someone else is editing the app. If you're in ready-only mode, you can save a copy of the app.
 
 Icons of copresent makers appear in both the command bar and the left navigation pane showing where other makers are working in the app.
 
-You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When this happens, you're advised to refresh the to get latest version of the app.
+You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification letting you know that another maker made changes. When this happens, you're advised to refresh the app to get latest version.
