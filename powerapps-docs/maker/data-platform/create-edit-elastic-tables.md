@@ -20,68 +20,90 @@ An elastic table is a table managed by the Microsoft Dataverse storage service. 
 > 
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-## When to consider elastic tables?
-
-Imagine you have a custom Dataverse table that regularly imports large numbers of rows, in excess of tens of millions of rows. App users work with the table within one or more apps to query and transact on the data. Because elastic tables provide improved query and transact performance over standard or virtual tables for very large datasets, they might be a good choice in this situation.
+## When to consider Dataverse elastic tables?
 
 Elastic tables are designed to handle large volumes of data in real-time. With elastic tables, you can import, store, and analyze large volumes of data without scalability, latency, or performance issues.
 
-Elastic tables have unique capabilities for partitioning and scaling, removal of stale data, and JSON support.
+Elastic tables have unique capabilities for flexible schema, horizontal scaling, and automatic removal of data after a time-period.
 
-### Automatic removal of stale data
+Consider a scenario where a solar company has to ingest large volumes of IoT signals every hour from its installed solar panels across multiple regions. The data is unstructured JSON, which doesn't fit neatly into the relational format and requires frequent querying. Elastic tables are the right choice for  this low latency, high throughput, and flexible schema requirement with this scenario when compared to standard or virtual tables. <!-- Suggest removing virtual tables. Can't someone argue that virtual tables could also provide this level of functionality if connecting to a data source that supports it? -->
+
+Elastic tables automatically scale to ingest tens of millions of rows every hour. Background processes can collate the IoT signals, predict maintenance requirements, and proactively schedule technicians.
+
+With this high data volume scenario, applications can use the time-to-live capability to remove data automatically after set periods and optimize the storage capacity consumed.
+
+## Horizontal scaling and performance  
+
+As your business data grows, elastic tables provide unlimited auto scalability based on your application workload, both for storage size and throughput, such as the number of records created, updated, or deleted in a given timeframe. 
+
+If your business scenario requires very large volume of data writes, application makers can make use of Dataverse XMultiple <!-- what is xmultiple? Use a term that exists in the Power Platform vernacular --> API's to achieve more thoughput within Dataverse throttling limits. Learn more.
+
+### Automatic removal of data
 
 Time to live (TTL) policies ensure that you're always working with the most up-to-date and accurate information, while optimizing resources and reducing risk. The TTL live value is set in seconds on a record, and it's interpreted as a delta from the time that a record was last modified.
 
 ### Flexible schema with JSON columns
 
-Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. The JSON format is familiar to your web and mobile developers.
-  
+Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. <!-- Learn more link to How to query JSON columns in elastic tables -->
+
 ## Considerations when you use elastic tables  
 
-Elastic tables don't provide the same level transaction support as standard tables. Standard tables support strong, consistent transactions support. Elastic tables support what is called *eventual consistency* for transactions, which means that updates made to the database might take some time to propagate to all nodes in the system. This is relevant when you plan to use asynchronous operations, such as Power Automate flows. More information: [Eventual consistency](/azure/cosmos-db/consistency-levels#eventual-consistency).
+Elastic tables don't provide the same level transaction support as standard tables. Standard tables support strong, consistent transactions support. Elastic tables support what is called *eventual consistency* for transactions, which means that updates made to the database might take some time to propagate to all nodes in the system. More information: [Eventual consistency](/azure/cosmos-db/consistency-levels#eventual-consistency).
 
-Elastic tables support many of the table properties supported by standard tables:
+Elastic tables support only left-outer JOIN in queries. This means that filters on related tables when creating views or in Advanced Find won't work. We recommend to denormalize columns from related tables into the main table if filters on related tables are needed.
 
-- Record ownership, change tracking, auditing, mobile offline, Dataverse search and long term data retention.
-- Create, update, delete (CRUD) operations including `XMultiple` (for high throughput), bulk delete, and requests from plugins.
+### Denormalize columns
+
+Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is *New York*.
+
+This requires an inner join of the two tables, which isn't supported with elastic tables. One way to make this work for the elastic tables is to denormalize <!-- Need another word for this. Combine? Assimilate? Integrate?  --> the city data into the customer table so that all customers city values are present in the customer table.  
+
+## Elastic tables feature support
+
+- Record ownership, change tracking, auditing, mobile offline, and Dataverse search.
+- Create, retrieve, update, delete (CRUD) operations including `XMultiple` <!-- what is xmultiple? Use a term that exists in the Power Platform vernacular --> (for high throughput), bulk delete, and requests from plugins.
 - Relationships:
-   - 1:N (One-to-many)
-   - (1) -> ET (N)  <!-- What's ET? Elastic table? Why can't we just state that elastic tables support both 1:N (one-to-many) and N:1 (many-to-one) relationships with both standard and elastic tables. For example, you can have an elastic table relationship with many standard tables or a standard table relationship with many elastic tables. GIRISH TO WRITE THIS OUT RATHER THAN CREATE A NEW SYNTAX-->
-   - ET (1) -> Standard (N)
-   - N:1 (Many-to-one)
-   - ET (N) -> ET (1)
+  - 1:N (One-to-many)
+    - One elastic table -> Many elastic tables
+    - One elastic table -> Many standard tables
+  - N:1 (Many-to-one)
+    - Many elastic tables -> One standard table
 - Security features:
    - User and organization owned tables
    - Field level security
-   - Track changes (to trigger an action like when a record is created, send email) <!-- you mean the track changes attribute? GIRISH TO VERIFY WITH TEAM MEMBER-->
 
-Elastic tables, which are powered by Cosmos DB only support left-outer JOIN for queries. They don't support queries that require other JOINS across tables. This means that filters on related tables when creating views or with Advanced Find won't work. We recommend that you denormalize columns from related tables into the main table if filters on related tables are needed. <!-- what does it mean to denormalize columns from related tables into the main table? GIRISH TO ADD AN EXAMPLE OF WHAT IT MEANS TO denormalize columns from related tables-->
-
-### Not supported with elastic tables
+### Features currently not supported with elastic tables
 
 Table features currently not supported with elastic tables:
 
-- Many-to-many, N:N, relationships to standard tables
-- Many-to-one, N:1, relationships when the N table is a standard table (lookup)
-- Custom alternate keys
-- Duplicate detection rules
 - Business rules
 - Charts
 - Business process flows
-- Calculated or rollup columns
-- Column comparison <!-- What is this? GIRISH TO VERIFY WITH TEAM MEMBER-->
-- Table sharing
-- Cascade relationships - Delete/Reparent/Assign/Share/Unshare
-- Ordering on lookup columns
 - One Dataverse connector for Power BI
+- Many-to-many (N:N) relationships to standard tables
+- Many-to-one (N:1) relationships when the N table is a standard table (lookup)
+- Alternate key
+- Duplicate detection
+- Calculated and rollup columns
+- Currency columns
+- [Column comparison in queries using FetchXML, Web API, or the SDK API](../../developer/data-platform/column-comparison.md)
+- Table sharing
+- Composite indexes (all fields are indexed)
+- Cascade operations: Delete, Reparent, Assign, Share, Unshare 
+- Ordering on lookup columns
+- Aggregate queries:
+  - Distinct value of `attribute1` while orderby on `attribute2` value
+  - Pagination when having multiple distincts
+  - Distinct with multiple order by
+  - Order by and group by together
+  - Group by on link entity (left outer join)
+  - Distinct on user owned tables  
 - Table connections
 - Access teams
 - Queues
 
 Column data types currently not available with elastic tables:
 
-- Single line of text
-- Choice
 - Currency
 - File
 - Formula
@@ -97,6 +119,10 @@ You create an elastic table just like any other new table in Dataverse.
 1. On the right properties pane, expand **Advanced options**.
 1. Select **Elastic** as the table **Type**.
 1. Select the properties you want, and then select **Save**. More information: [Advanced options](create-edit-entities-portal.md#advanced-options)
+
+## Known issue
+
+Currently Power Apps (make.powerapps.com) allows you to set a many-to-one (N:1) relationship with an elastic table where the N table is a standard table. However this relationship isn't supported and won't function as expected.
 
 ## See also
 
