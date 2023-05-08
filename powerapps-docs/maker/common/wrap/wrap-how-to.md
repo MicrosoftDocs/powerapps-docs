@@ -255,7 +255,7 @@ For detailed steps, refer to [Request the permissions in the app registration po
   
 ## Creating an App Center location for your mobile app manually
 
-You can manually create an **App Center location** for your mobile app. More information: [App Center container](overview.md#app-center-container)
+If you do not want to aumomatically create a new **App Center location** to store your mobile app in **Step 5**, you can manually create it. More information: [App Center container](overview.md#app-center-container)
 
 > [!TIP]
 > For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
