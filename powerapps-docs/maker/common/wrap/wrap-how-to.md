@@ -135,6 +135,9 @@ Select **New app registration** to create a new registration for your app automa
 
 You can also create a **new app registration** manually. See [Registering your app on Azure portal manually](#Registering-your-app-on-Azure-portal-manually) for more information.
 
+  > [!NOTE]
+  > Depending you the settings in your organization, in some cases you need to allow the apps registered using the Azure portal in your Power Platform environment manually to complete **Step 4**. See [Allowing registered apps in your environment manually](#Allowing-registered-apps-in-your-environment-manually) for detais.
+
 ### Step 5: Manage output
 
 On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, seect **New location** on top of the screen and then select **Android** or **iOS**.
@@ -149,6 +152,10 @@ You can also choose to create your **App Center location** manually at [App Cent
 
 On the **Wrap up** screen, review the app details and then select **Build**.
 After a successful build, you'll see your mobile app in the **App Center location** that you have selected in the previous step.
+
+## Test and distribute mobile app package
+
+For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
 
 ## Set up Azure Key Vault for automated code signing 
 
@@ -262,9 +269,18 @@ If you do not want to aumomatically sign your mobile app package during wrap pro
 - [Code signing for Android](code-sign-android.md)
 - [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
-## Test and distribute mobile app package
 
-For testing and distribution, see [App Center Test](/appcenter/test-cloud/) and [Distribute](/appcenter/distribution/).
+### Allowing registered apps in your environment manually
+
+You'll need to allow the apps registered using the Azure portal in your Power Platform environment. To perform this step, use the latest version of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**, and run the following cmdlet with the Application (client) ID from the [App registration](#app-registration) step:
+
+```powershell
+Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
+```
+
+> [!NOTE]
+> - This cmdlet is available in 2.0.144 or later versions of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**.
+> - You'll need global tenant administrator privileges to run this cmdlet. The cmdlet allows an administrator to designate which registered 3rd-party applications in Azure AD can invoke Power Platform connections.
 
 ### See also
 
