@@ -96,6 +96,9 @@ More information: [Add an app to a solution](../../canvas-apps/add-app-solution.
 3. Set the **Sign my app** toggle to **ON** to automatically code sign your mobile app, then select the **Azure Key Vault URI** from the list and click **Next**. 
 If you do not have any entries in **Azure Key Vault URI** list, you need to create **Azure Key Vault** first. For more information, see [Set up Azure Key Vault for automated code signing](#Set-up-Azure-Key-Vault-for-automated-code-signing).
 
+     > [!div class="mx-imgBorder"] 
+     > ![Choose the apps to wrap.](media/how-to-v2/select-target-platforms.png "Select target platforms")
+
 You can also code sign your mobile app package manually instead of using automatic code signing available in wrap wizard. For more information on how to code sign your app manually, see:
   
    - [Code sign for iOS](code-sign-ios.md)
@@ -140,7 +143,10 @@ The wrap wizard will configure all the required API permissions for your app aut
 
 ### Step 5: Manage output
 
-On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, seect **New location** on top of the screen and then select **Android** or **iOS**.
+On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen and then select **Android** or **iOS**.
+
+     > [!div class="mx-imgBorder"] 
+     > ![Choose the apps to wrap.](media/how-to-v2/new-app-center-location.png "Create new App Center location")
 
 - **Android**: Choose an existing location or create a new location.
 
