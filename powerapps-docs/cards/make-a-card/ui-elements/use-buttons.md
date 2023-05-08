@@ -47,9 +47,9 @@ You can add four types of buttons to your cards:
 - Open Url
 - Toggle Visibility
 
-#### Run PowerFx
+#### Run Power Fx
 
-Use a **Run PowerFx** button to run Power Fx expressions. [Learn more about Power FX](../power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
+Use a **Run PowerFx** button to run Power Fx expressions. [Learn more about Power Fx](../power-fx/intro-to-pfx.md) and the [functions and formulas you can use in an expression](/powerapps/maker/canvas-apps/formula-reference).
 
 Select the **Power Fx** link in the button properties pane to start entering an expression in the formula bar.
 
@@ -57,7 +57,7 @@ Select the **Power Fx** link in the button properties pane to start entering an 
 
 #### Show Screen
 
-Use a **Show Screen** button to display a specific screen. [Learn about screens in Power Apps](../screens/use-screens.md).
+Use a **Show Screen** button to display a specific screen beneath the current view. [Learn about screens in Power Apps](../screens/use-screens.md).
 
 In the button properties pane, set the **Type** to **Show Screen**, and then select a **Screen** to open. If you don't have any screens yet, only **main** will appear in the list.
 
