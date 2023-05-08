@@ -40,7 +40,7 @@ You'll need access to:
 - [App Center](https://appcenter.ms/) to add new organization and apps.
 - This feature requires the apps to be part of a  [managed or unmanaged solution](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions). If your apps aren't part of a solution already, add them to an existing or a new solution. More information: [Create a canvas app from within a solution](../../canvas-apps/add-app-solution.md#add-an-existing-canvas-app-to-a-solution). 
 
-If you are creating a mobile app package for Android platform that you plan to code sign manually, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you [<u>register the app</u>](how-to.md#app-registration). You'll need the generated signature hash to configure the **Redirect URI**.
+If you are creating a mobile app package for Android platform and you plan to code sign manually, ensure you [<u>generate keys</u>](code-sign-android.md#generate-keys), and then [generate signature hash](code-sign-android.md#generate-signature-hash) before you start. You'll need the generated signature hash to configure the **Redirect URI**.
 
 ## Add canvas app to solution
 
@@ -110,7 +110,7 @@ You can also code sign your mobile app package manually instead of using automat
 
 1. On the **Configure Branding Step**, set the following look and feel options for your app:
    
-   - **App icons**: Upload icons to use for your app. All five icons need to be selected for your wrapped mobile app
+   - **App icons**: Upload icons to use for your app. All five icons need to be selected for your wrapped mobile app.
    - **Splash screen image**: Image that will be used on the splash screen of your mobile app, while it loads. Default image used when not provided.
    - **Welcome screen image**: Image that will be used on the welcome (sign in) screen of your mobile app, while it loads. Default image used when not provided.
    - **Background fill color**: Hexadecimal color code used for the background of the welcome screen.
@@ -138,18 +138,18 @@ Select **New app registration** to create a new registration for your app.
 
 ### Step 5: Manage output
 
-On the **Manage output** screen, create or select an existing App Center location to send your mobile app once the build is complete. To automatically create a new location, seect **New location** on top of the screen and then select **Android** or **iOS**.
+On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, seect **New location** on top of the screen and then select **Android** or **iOS**.
 
 - **Android**: Choose an existing location or create a new location.
 
 - **iOS**: Choose an existing location or create a new location.
 
-You can also choose to create your App Center location manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center container for your mobile app manually](#Create-an-App-Center-container-for-your-mobile-app-manually).
+You can also choose to create your **App Center location** manually at [App Center](https://appcenter.ms/). For more information. see [Creating an App Center location for your mobile app manually](#Creating-an-App-Center-location-for-your-mobile-app-manually).
 
 ### Step 6: Wrap up
 
 On the **Wrap up** screen, review the app details and then select **Build**.
-After a successful build, you'll see your mobile app in the App Center location that you have selected in the previous step.
+After a successful build, you'll see your mobile app in the **App Center location** that you have selected in the previous step.
 
 ## Set up Azure Key Vault for automated code signing 
 
@@ -199,9 +199,9 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
   
   
   
-## Create an App Center container for your mobile app manually
+## Creating an App Center location for your mobile app manually
 
-You can manually create an App Center contaner for your mobile app. More information: [App Center container](overview.md#app-center-container)
+You can manually create an **App Center location** for your mobile app. More information: [App Center container](overview.md#app-center-container)
 
 > [!TIP]
 > For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
@@ -236,7 +236,7 @@ You can manually create an App Center contaner for your mobile app. More informa
     More information: [App Center URL](overview.md#app-center-url)
  
 
-## Sign your mobile app package manually (optional)
+## Signing your mobile app package manually 
 If you do not want to aumomatically sign your mobile app package during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
