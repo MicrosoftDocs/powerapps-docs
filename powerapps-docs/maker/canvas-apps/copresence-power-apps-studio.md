@@ -22,12 +22,12 @@ Use copresence to identify individuals working on the same app as you in Power A
 - The command bar displays the names and icons of other makers who are currently using the app and may be making changes. 
 - The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. 
 - You receive notifications when the maker that's currently editing the app makes changes and then saves it. To ensure you don't overwrite someone else's work or lose your own, you're prompted to refresh the app so you are on the most recent version. 
-- The name of the maker who made the first or last save will be displayed. 
+- The name of the maker who made the first or last save is displayed. 
 
 ## How copresence works
 
-The first time someone opens your app in app Power Apps Studio while you're working on it, a notice appears that indicates other people are also working on the app. The maker that edits the app first has editing control. If someone else tries to edit the app a noticiation appears letting them know someone else is editing the app. If you're in ready-only mode, you can save a copy of the app in the environment.  
+The first time someone opens your app in app Power Apps Studio while you're working on it, a notice appears that indicates other people are also working on the app. The maker that edits the app first has editing control. If someone else tries to edit the app, a noticiation appears letting them know that someone else is editing the app. If you're in ready-only mode, you can save a copy of the app in the environment.  
 
 Icons of copresent makers appear in both the command bar and the left navigation pane showing where other makers are working in the app.
 
-You may be working on the app, or you may be idle, but once someone else saves a change to the app, you will receive a notification indicating that another maker made changes. When this occurs, you're advised to refresh to be at the latest version so as not to lose changes you make afterwards.
+You may be working on the app, or you may be idle, but once someone else saves a change to the app, you receive a notification that tell you that another maker made changes. When this happens, you're advised to refresh so that you're on the latest version of the app.
