@@ -15,6 +15,20 @@ contributors:
 
 # Use elastic tables (Preview)
 
+<!-- 
+Maker topics to refer to:
+
+Create and edit elastic tables (preview)
+https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-elastic-tables?branch=pr-en-us-8083
+
+Create and edit tables using Power Apps
+https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-entities-portal?branch=pr-en-us-8083
+
+Types of tables
+https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of-entities?branch=pr-en-us-8083
+
+-->
+
 Elastic tables are great..
 
 <!-- 
