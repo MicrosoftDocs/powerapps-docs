@@ -138,6 +138,8 @@ You can also create a **new app registration** manually. See [Registering your a
   > [!NOTE]
   > Depending you the settings in your organization, in some cases you need to allow the apps registered using the Azure portal in your Power Platform environment manually to complete **Step 4**. See [Allowing registered apps in your environment manually](#Allowing-registered-apps-in-your-environment-manually) for detais.
 
+The wrap wizard will configure all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. See [Configuring the API permissions for your app manually](#Configuring-the-API-permissions-for-your-app-manually) for details.
+
 ### Step 5: Manage output
 
 On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, seect **New location** on top of the screen and then select **Android** or **iOS**.
@@ -224,6 +226,34 @@ Whether you're a single or multitenant maker, you must select any of the options
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
 After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
+
+
+## Configuring the API permissions for your app manually
+
+The wrap wizard will automatically configure all the required API permissions for your app automatically in **Step 4**. In case you enrounter some errors in wrap wizard, you can also confifure API persmisison mnamually to fix them. See [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app manually:
+
+- **Microsoft APIs**
+    - *Dynamics CRM*
+- **APIs my organization uses**
+    - *Azure API Connections*
+    - *PowerApps Service*
+    - *Power BI* (only required if your canvas app(s) use Power BI data)
+    - *Microsoft Mobile Application Management* (only required if you want to use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) for mobile app distribution)
+
+> [!NOTE]
+> If you don't find the permissions under **APIs my organization uses**, run the following PowerShell commands as appropriate, and try again:
+> - Missing *Azure API Connections* permission: 
+>     ```powershell
+>     Connect-AzureAD -TenantId <your tenant ID>
+>     New-AzureADServicePrincipal -AppId fe053c5f-3692-4f14-aef2-ee34fc081cae -DisplayName "Azure API Connections"
+>     ```
+> - Missing *PowerApps Service* permission:
+>     ```powershell
+>     Connect-AzureAD -TenantId <your tenant ID>
+>     New-AzureADServicePrincipal -AppId 475226c6-020e-4fb2-8a90-7a972cbfc1d4 -DisplayName "PowerApps Service"
+>     ```
+
+For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
   
 ## Creating an App Center location for your mobile app manually
 
