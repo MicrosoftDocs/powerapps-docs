@@ -298,7 +298,7 @@ If you do not want to aumomatically sign your mobile app package during wrap pro
 - [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
 
-### Allowing registered apps in your environment manually
+## Allowing registered apps in your environment manually
 
 You'll need to allow the apps registered using the Azure portal in your Power Platform environment. To perform this step, use the latest version of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**, and run the following cmdlet with the Application (client) ID from the [App registration](#app-registration) step:
 
@@ -310,7 +310,7 @@ Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
 > - This cmdlet is available in 2.0.144 or later versions of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**.
 > - You'll need global tenant administrator privileges to run this cmdlet. The cmdlet allows an administrator to designate which registered 3rd-party applications in Azure AD can invoke Power Platform connections.
 
-### See also
+## See also
 
 - [Wrap overview](overview.md)
 - [Code sign for iOS](code-sign-ios.md)
