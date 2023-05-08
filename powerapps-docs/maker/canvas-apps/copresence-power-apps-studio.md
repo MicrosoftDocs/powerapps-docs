@@ -21,7 +21,7 @@ Use copresence to identify individuals working on the same app as you in Power A
 
 - The command bar displays the names and icons of other makers who are currently using the app and may be making changes. 
 - The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. 
-- You receive notifications when the maker that's currently editing the app makes changes and save it. To ensure you don't overwrite someone else's work or lose your own, you are prompted to refresh the app and stay on the most recent version. 
+- You receive notifications when the maker that's currently editing the app makes changes and then saves it. To ensure you don't overwrite someone else's work or lose your own, you're prompted to refresh the app so you are on the most recent version. 
 - The name of the maker who made the first or last save will be displayed. 
 
 ## How copresence works
