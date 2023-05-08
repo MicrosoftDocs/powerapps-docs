@@ -16,7 +16,7 @@ contributors:
 # Use elastic tables (Preview)
 
 <!-- 
-Maker topics to refer to:
+Maker topics to refer to from https://github.com/MicrosoftDocs/powerapps-docs-pr/pull/8083
 
 Create and edit elastic tables (preview)
 https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-elastic-tables?branch=pr-en-us-8083
