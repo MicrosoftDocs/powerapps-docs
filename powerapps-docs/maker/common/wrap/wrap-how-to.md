@@ -145,8 +145,8 @@ The wrap wizard will configure all the required API permissions for your app aut
 
 On the **Manage output** screen, create or select an existing **App Center location** to send your mobile app once the build is complete. To automatically create a new location in wrap wizard, select **New location** on top of the screen and then select **Android** or **iOS**.
 
-     > [!div class="mx-imgBorder"] 
-     > ![Choose the apps to wrap.](media/how-to-v2/new-app-center-location.png "Create new App Center location")
+> [!div class="mx-imgBorder"] 
+   > ![New app registration.](media/how-to-v2/new-app-reg.png "New app registration")
 
 - **Android**: Choose an existing location or create a new location.
 
