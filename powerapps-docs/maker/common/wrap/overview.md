@@ -42,15 +42,18 @@ The following section explains steps involved in using the wrap feature to creat
 
 :::image type="content" source="media/wrap-intro/wrap-steps.png" alt-text="Steps involved in using wrap feature to create mobile apps." border="false":::
 
-1. Start with your primary canvas app. A primary canvas app is the app that provides the initial experience you want your mobile users to see when they launch your mobile app. Ensure this canvas app is part of a solution (if not, create a new solution and add the canvas app).
-1. Register your soon-to-be mobile app in Azure portal to allow it to connect to your company resources, including the Power Apps online service.
-1. Set up a Visual Studio App Center storage location to store the builds of your mobile app.
-1. Create a wrap project from the primary app.
-1. Optionally, add additional canvas apps to the solution and to the wrap project. More information: [Wrapping multiple canvas apps together](#wrap-multiple-canvas-apps-together)
-1. Customize app branding with icons, images, and color palette to personalize your mobile app.
-1. Start the build process to generate your custom-branded mobile app.
-1. Download your mobile app from the App Center.
-1. Sign and test the app package.
+1. Start with your **primary canvas app**. A primary canvas app is the app that provides the initial experience you want your mobile users to see when they launch your mobile app. You canvas app ust be part of a solution; you must add [Add canvas app to solution](#wrap-how-to.md#Add-canvas-app-to-solution) if needed. 
+1. Selecet you **primary canvas app** and start the **wrap wizard**.
+1. Optionally, add **additional canvas apps** to your mobile app in wrap wizard. More information: [Wrapping multiple canvas apps together](#wrap-multiple-canvas-apps-together)
+1. Select the **target platforms** (iOS and Android) for your mobile app. 
+1. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
+1. Register you app. Use an existing **app registration**, or create a new one in wrap wizard. 
+1. Optionally, select to **automatically code sign** your mobile app package in wrap wizard.
+1. Select **App Center location** to store your app. Use an existing **App Center location** or create a new one in wrap wizard. 
+1. Start the build process in **Wrap up** step to generate your custom-branded mobile app.
+1. Download your mobile app from the **App Center location**.
+1. If **automatically code sign** is not chosen in wrap wizard, **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](#wrap-how-to.md#Signing-your-mobile-app-package-manually).
+1. Test the app package.
 1. Distribute the app package to mobile users.
 
 ## Wrap multiple canvas apps together
@@ -92,7 +95,7 @@ The following list explains what you'll need before you can start using wrap fea
 > [!NOTE]
 > Developing apps for the iOS platform requires an [Apple Developer Program](https://developer.apple.com/) account.
 
-## Understand wrap terminology
+## Understanding wrap terminology
 
 Wrap involves multiple components across Power Apps, App Center, and third-party platforms such as iOS and Android. Hence, it becomes important to understand the components involved while working with wrap functionality in Power Apps.
 
@@ -170,4 +173,5 @@ Optional additional canvas apps that you're wrapping in the same build for mobil
 
 - [Code sign on iOS](code-sign-ios.md)
 - [Code sign on Android](code-sign-Android.md)
+- [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 - [Frequently Asked Questions](faq.yml)
