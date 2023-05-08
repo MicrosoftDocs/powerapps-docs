@@ -124,17 +124,16 @@ You can also code sign your mobile app package manually instead of using automat
 
 ### Step 4: Register app
 
-On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform. Your app must be registered in Azure ADD so that your app users can sign in. 
+On the **Register your app** screen, register your application in Azure to establish a trust relationship between your app and the Microsoft identity platform. Your app must be registered in Azure Active Directory so that your app users can sign in. 
 
 #### New app registration
 
-Select **New app registration** to create a new registration for your app.
+Select **New app registration** to create a new registration for your app automatically.
 
    > [!div class="mx-imgBorder"] 
    > ![New app registration.](media/how-to-v2/new-app-reg.png "New app registration")
 
-
-
+You can also create a **new app registration** manually. See [Registering your app on Azure portal manually](#Registering-your-app-on-Azure-portal-manually) for more information.
 
 ### Step 5: Manage output
 
@@ -198,6 +197,26 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
   
+## Registering your app on Azure portal manually
+
+If your do not wnat to automatically register your app in wrap wizard **Step 4**, you can create a new registration for your app manually. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+
+> [!NOTE]
+> Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
+
+Whether you're a single or multitenant maker, you must select any of the options containing **Any Azure AD directory - Multitenant** when choosing the supported account type for your app to enable it for wrap. Choose one of the following account types:
+ - Accounts in any organizational directory (Any Azure AD directory - Multitenant)
+ - Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)
+
+:::image type="content" source="media/wrap-intro/AppResgistration_AccountTypes.png" alt-text="App registration - supported account types for wrap.":::
+
+
+> [!IMPORTANT]
+> - Wrap only supports **Multitenant** account types currently. **Single tenant** account type is not yet supported. More information on the account types: [Account types in Microsoft identity platform](/azure/active-directory/develop/v2-supported-account-types).
+> - To ensure the **Redirect URI** matches the [required format](#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** > **+ Add a platform** to add the platform instead.
+> - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
+
+After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
   
 ## Creating an App Center location for your mobile app manually
 
