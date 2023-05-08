@@ -47,7 +47,7 @@ The following section explains steps involved in using the wrap feature to creat
 1. Select the **target platforms** (iOS and Android) for your mobile app. 
 1. Customize **app branding** with icons, images, and color palette to personalize your mobile app.
 1. Register you app. Use an existing **app registration**, or create a new one in wrap wizard. Optionally, select to **automatically code sign** your mobile app package in wrap wizard.
-1. Select **App Center location** to store your app. Use an existing **App Center location** or create a new one in wrap wizard. 
+1. Select **App Center location** to store your mobile app. Use an existing **App Center location** or create a new one in wrap wizard. 
 1. Start the build process in **Wrap up** step to generate your custom-branded mobile app.
 1. Download your mobile app from the **App Center location**.
 1. If **automatically code sign** is not chosen in wrap wizard, you must **code sign** the mobile app package manually. More information: [Signing your mobile app package manually](#wrap-how-to.md#Signing-your-mobile-app-package-manually).
