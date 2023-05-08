@@ -136,9 +136,6 @@ Select **New app registration** to create a new registration for your app automa
 
 You can also create a **new app registration** manually. See [Registering your app on Azure portal manually](#Registering-your-app-on-Azure-portal-manually) for more information.
 
-  > [!NOTE]
-  > Depending you the settings in your organization, in some cases you need to allow the apps registered using the Azure portal in your Power Platform environment manually to complete **Step 4**. See [Allowing registered apps in your environment manually](#Allowing-registered-apps-in-your-environment-manually) for detais.
-
 The wrap wizard will configure all the required API permissions for your app automatically. You can also configure the API permissions manually if your need to stoubeshoot this step. See [Configuring the API permissions for your app manually](#Configuring-the-API-permissions-for-your-app-manually) for details.
 
 ### Step 5: Manage output
