@@ -17,11 +17,15 @@ contributors:
 
 # Find out who's working on the same app
 
-Use copresence to identify individuals working on the same app as you in Power Apps Studio. Copresence offers the following advantages:
+Use copresence to identify individuals working on the same app as you in Power Apps Studio. 
 
-- The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
-- The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. 
-- You'll receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
+> [!div class="mx-imgBorder"] 
+> ![Copresence in Power Apps Studio.](media/copresence/canvas-copresence.png)
+
+Legend
+
+1. The command bar displays the names and icons of other makers who are working on the app and may be making changes. 
+2. The left-hand navigation pane in Power Apps Studio displays the app's structure, indicating which part of the app is being worked on. You'll receive a notification to refresh the app when the maker that's editing the app makes changes and saves that app.
 
 ## How copresence works
 
