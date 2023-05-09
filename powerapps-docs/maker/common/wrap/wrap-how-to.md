@@ -207,9 +207,8 @@ Follow these steps to create Azure Key Valut and configure KeyVault URI:
      :::image type="content" source="media/wrap-canvas-app/wrap-3.png" alt-text="Add tags.":::
   
   
-## Registering your app on Azure portal manually
-
-If your do not wnat to automatically register your app in wrap wizard **Step 4**, you can create a new registration for your app manually. For detailed steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+## Registering your app on Azure portal manually (optional)
+You have an option to automatically create your app registration in wrap wizard **Step 4**, you can also create a new registration for your app on Azure portal manually. For details steps, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 > [!NOTE]
 > Both single tenant and multitenant customers can use wrap to create native mobile apps based on their Power Apps canvas apps.
@@ -226,12 +225,9 @@ Whether you're a single or multitenant maker, you must select any of the options
 > - To ensure the **Redirect URI** matches the [required format](#redirect-uri-format), don't create the **Redirect URI** while creating the app registration. Once the app registration is complete, go to app, and then choose **Authentication** > **+ Add a platform** to add the platform instead.
 > - You must create a separate **Redirect URI** for each platform (iOS, Android) that you want to target.
 
-After the app is registered, copy the **Application (client) ID** and the **Redirect URI** that you'll need later when configuring the wrap project inside Power Apps. More information: [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application)
+## Configuring the API permissions for your app manually (optional)
 
-
-## Configuring the API permissions for your app manually
-
-The wrap wizard will automatically configure all the required API permissions for your app automatically in **Step 4**. In case you enrounter some errors in wrap wizard, you can also confifure API persmisison mnamually to fix them. See [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app manually:
+The wrap wizard will automatically configure all the required API permissions for your app automatically in **Step 4**. In case you enrounter some errors in wrap wizard, you can also confifure API persmisison mnamually. See [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal) the following API permissions for the app manually:
 
 - **Microsoft APIs**
     - *Dynamics CRM*
@@ -256,9 +252,9 @@ The wrap wizard will automatically configure all the required API permissions fo
 
 For detailed steps, refer to [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
   
-## Creating an App Center location for your mobile app manually
+## Creating an App Center location for your mobile app manually (optional)
 
-If you do not want to aumomatically create a new **App Center location** to store your mobile app in **Step 5**, you can manually create it. More information: [App Center container](overview.md#app-center-container)
+You have an option to automatically create a new **App Center location** to store your mobile app in **Step 5** in wrap wizard, but you can also manually create it directly in App Center. More information: [App Center container](overview.md#app-center-container)
 
 > [!TIP]
 > For more information about App Center, go to [Visual Studio App Center documentation](/appcenter/).
@@ -293,25 +289,13 @@ If you do not want to aumomatically create a new **App Center location** to stor
     More information: [App Center URL](overview.md#app-center-url)
  
 
-## Signing your mobile app package manually 
-If you do not want to aumomatically sign your mobile app package during wrap process in **Step 2**, you can do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
+## Signing your mobile app package manually (optional)
+You can automatically sign your mobile app package during wrap process in **Step 2**, but you can also do so manually after the mobile app package is build. [Code signing](overview.md#code-signing) process is different for Android and iOS devices.
 
 - [Code signing for iOS](code-sign-ios.md)
 - [Code signing for Android](code-sign-android.md)
 - [Code signing for Google Play Store](https://developer.android.com/studio/publish/app-signing)
 
-
-## Allowing registered apps in your environment manually
-
-You'll need to allow the apps registered using the Azure portal in your Power Platform environment. To perform this step, use the latest version of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**, and run the following cmdlet with the Application (client) ID from the [App registration](#app-registration) step:
-
-```powershell
-Add-AdminAllowedThirdPartyApps -ApplicationId <App ID>
-```
-
-> [!NOTE]
-> - This cmdlet is available in 2.0.144 or later versions of the [Power Apps PowerShell module](/power-platform/admin/powerapps-powershell#cmdlets) for **Administrator**.
-> - You'll need global tenant administrator privileges to run this cmdlet. The cmdlet allows an administrator to designate which registered 3rd-party applications in Azure AD can invoke Power Platform connections.
 
 ## See also
 
