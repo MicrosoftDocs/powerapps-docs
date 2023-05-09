@@ -2,9 +2,8 @@
 title: "Delete data in bulk (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Deleting data in bulk helps maintain data quality and manage the consumption of system storage by deleting data that is no longer needed." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/26/2021
+ms.date: 05/09/2023
 ms.reviewer: "pehecke"
-
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.subservice: dataverse-developer
@@ -69,10 +68,11 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
  If a plug-in or a workflow (process) is triggered by the delete action on a specific table type, it is triggered every time that a table record of this type is deleted by the bulk delete job.  
  
 ## Long-term retained data
-Bulk delete is also available for Long-term retained (LTR) data. To run bulk delete against LTR records, run a bulk delete as you normally would against the corresponding table, but set the DataSource as "retained". There are several ways to do this:
+Bulk delete is also available for long-term retained (LTR) data. To run bulk delete against LTR rows (records), run a bulk delete as you normally would against the corresponding table but set the query's `DataSource` field to "retained". There are several ways to do this:
 
-#### [SDK for .NET (QueryExpression)](#tab/sdk-queryexpression)
-Users can set the DataSource field available in the QueryExpression class to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data. Set query.DataSource = "retained" to bulk delete retained records only.
+### [SDK for .NET (QueryExpression)](#tab/sdk-queryexpression)
+Developers can set the `DataSource` field available in the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to indicate that the query is for retained rows (records) only. This flag marks the bulk delete operation to delete retained data. Set `query.DataSource`= "retained" to bulk delete retained rows only.
+
 ```csharp
 var bulkDeleteRequest = new BulkDeleteRequest();
 bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts";
@@ -98,8 +98,9 @@ bulkDeleteRequest.CCRecipients = new Guid[] { };
 BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
 ```
 
-#### [SDK for .NET (FetchXML)](#tab/sdk-fetchxml)
-Users can use a datasource='retained' attribute inside a FetchXML expression to indicate that the query is for retained data. This flag will mark the bulk delete to delete retained records only.
+### [SDK for .NET (FetchXML)](#tab/sdk-fetchxml)
+Developers can set the `datasource='retained'` attribute inside a FetchXML expression to indicate that the query is for retained data. This flag marks the bulk delete operation to delete retained rows (records) only.
+
 ```csharp
 var bulkDeleteRequest = new BulkDeleteRequest();
 bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts"
@@ -127,8 +128,8 @@ bulkDeleteRequest.CCRecipients = new Guid[] { };
 BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
 ```
 
-#### [Web API](#tab/webapi)
-Users can call the bulk delete action via OData using the Rest API.
+### [Web API](#tab/webapi)
+Developers can call the <xref:Microsoft.Dynamics.CRM.BulkDelete?displayProperty=nameWithType> using the Web API.
 
 **Request**
 
