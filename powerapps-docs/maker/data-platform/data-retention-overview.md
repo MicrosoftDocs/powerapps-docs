@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.author: matp
 ms.topic: overview
-ms.date: 03/23/2023
+ms.date: 05/09/2023
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview (preview)
@@ -22,45 +22,43 @@ Microsoft Dataverse supports custom retention policies to securely retain data l
 
 ## Business application data lifecycle
 
-Consider the business application data lifecycle in three stages. First active data, which over time transitions to non-active data, and finally transitions to deleted data.
+Consider the business application data lifecycle in three stages. First active data, which over time transitions to inactive data, and finally transitions to deleted data.
 
-:::image type="content" source="media/business-app-data-lifecycle.png" alt-text="Business application data lifecycle diagram":::
+:::image type="content" source="media/business-app-data-lifecycle.png" alt-text="Business application data lifecycle diagram":::  <!-- Girish to update diagram -->
 
 |Stage  |Description  |
 |---------|---------|
 |1. Active data     |  Data is readily available and transformed via apps. <br /> Accessed across all application workflows.  <br /> Also referred to as *live* data.     |
-|2. Non-active data     | Data is immutable. <br />  Is stored in long term retention.  <br /> Has limited access. Retained for compliance, audit, and legal discovery. <br />Also referred to as *cold* data.      |
+|2. Inactive data     | Data is immutable and read-only. <br />  Is stored in long term retention.  <br /> Has limited access. Retained for compliance, audit, and legal discovery.      |
 |3. Deleted data   |  Permanently deleted. Data lifecycle is completed.        |
 
 Dataverse delivers native platform support for long term retention of data. It allows organizations to get immediate and ongoing benefits:
 
-- Reduce historical application data from the live application.
-- Securely retain the historical data long term.
-- Retain data without losing the ability to build custom screens.
-- Avoid investments due to the need for custom solutions for long term retention of historical data.
+- Securely retain the historical application data long term for audit, legal, and regulatory requirements.
+- Access the read-only data for limited inquiry purposes.
+- Reduce database capacity consumed.
+- Avoid IT investments required to build and maintain custom solutions for long term retention of historical application data.
 
 ## How it works
 
-Application admins set up custom policies for a table with criterion to retain data long term. The retained data is never moved out of Dataverse, it is stored in a Dataverse managed data lake. The data is always secured with Dataverse security backed by Azure Active Directory.  
-
-The retained data is never moved out of Dataverse and the data is always secured with Dataverse security and backed by Azure Active Directory.
+Application admins set up custom policies for a table with criterion to retain data long term. The retained data is never moved out of Dataverse, it's stored in a Dataverse managed data lake. The data is always secured with Dataverse security backed by Azure Active Directory.  
 
 > [!IMPORTANT]
-> - Once data is moved to long term (non-active) data store it can't be moved back to the active (live) data store.
+> - Once data is retained in the Dataverse long term (inactive) store it can't be moved back to the Dataverse live (active) data store.
 > - When a retention policy is run, the process makes API requests in Microsoft Power Platform. These requests are counted towards the existing API requests available with your plan. More information: [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)
 
-Dataverse provides read-only access to the read-only retained data via:
+Dataverse provides read-only access to the retained data via:
 
 - Advanced Find within an application.
-- Power Automate cloud flow templates.
-- Dataverse OData APIs used to build custom application workflows.
+- Power Automate cloud flow.
+- Dataverse OData APIs for custom screens.
 
 ## Types of data retained long term
 
-Dataverse standard (except system) tables, custom tables, along with attachments, can be retained in in Dataverse long term storage. 
+Dataverse standard (except system) tables, custom tables, along with attachments, can be retained in Dataverse long term storage.
 
 > [!NOTE]
-> Currently, audit rows, elastic table rows, and images aren't supported for long term retention.
+> Currently, audit, elastic tables, and images aren't supported for long term retention.
 
 Admins set retention policies on tables when the application maker has enabled long term retention for the table. When a maker enables retention on a parent root table, it also enables retention for all child tables.
 
