@@ -39,7 +39,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates a user with no security role assigned to him as shown above.
+2. The `CreateRequiredRecords` method creates a user with no security role assigned to them as shown above.
 
 ### Demonstrate
 
