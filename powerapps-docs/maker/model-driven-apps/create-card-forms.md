@@ -13,16 +13,12 @@ ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "matp"
-manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 topic-status: Drafting
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Create a card form
 

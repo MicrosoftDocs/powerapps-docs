@@ -10,9 +10,6 @@ ms.author: kvivek
 ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Developers: Understand terminology in Microsoft Dataverse

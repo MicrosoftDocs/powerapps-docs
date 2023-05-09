@@ -4,14 +4,10 @@ description: "This sample showcases how to determine whether a user has a specif
 ms.date: 04/03/2022
 author: paulliew
 ms.author: paulliew
-manager: mayadu
 ms.reviewer: jdaly
 ms.topic: sample
 search.audienceType:
   - developer
-search.app:
-  - PowerApps
-  - D365CE
 contributors:
   - JimDaly
   - phecke
@@ -43,7 +39,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `CreateRequiredRecords` method creates a user with no security role assigned to him as shown above.
+2. The `CreateRequiredRecords` method creates a user with no security role assigned to them as shown above.
 
 ### Demonstrate
 

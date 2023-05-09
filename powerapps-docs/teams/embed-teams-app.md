@@ -12,8 +12,6 @@ ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - alaug
   - msftsamperl

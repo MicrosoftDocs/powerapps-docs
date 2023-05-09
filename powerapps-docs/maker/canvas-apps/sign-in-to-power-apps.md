@@ -10,8 +10,6 @@ ms.subservice: canvas-maker
 ms.author: alaug
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - tapanm-msft
   - alaug
@@ -20,6 +18,9 @@ contributors:
 # Sign in to Power Apps 
 
 To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
+
+> [!NOTE]
+> To create canvas apps a user must have the [Environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles). 
 
 For information on getting started, see [Get started with Power Apps](intro-maker-portal.md).
 

@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -20,7 +18,7 @@ contributors:
 
 An individual column which acts as a container for other elements. This column can be arranged side-by-side with other columns using the [column set control](column-set.md).
 
-Add to a column set to create dividers on the page. Empty columns aren't visible. You'll need to put another control (like a text input control) into a column to make it visible.
+Add to a column set to create dividers on the page. Empty columns aren't visible. You'll need to put another control (like a text input control) into a column to make it visible. You can drag and drop controls into a column within the card canvas.
 
 ## Properties
 

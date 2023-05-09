@@ -7,9 +7,6 @@ ms.author: dikamath
 ms.reviewer: jdaly
 search.audienceType: 
   - developer
-search.app: 
-  - PowerApps
-  - D365CE
 contributors: 
   - JimDaly
 ---
@@ -1073,7 +1070,7 @@ More information:
 
 ### .NET HttpRequestMessage to HttpMessageContent example
 
-In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. <xref:System.Net.Http.HttpMessageContent> inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
+In .NET, you must send batch requests as <xref:System.Net.Http.MultipartContent> that is a collection of <xref:System.Net.Http.HttpContent>. `HttpMessageContent` inherits from `HttpContent`. The [WebAPIService class library (C#)](samples/webapiservice.md) [BatchRequest class](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/C%23-NETx/WebAPIService/Batch/BatchRequest.cs) uses the following private static `ToMessageContent` method to convert <xref:System.Net.Http.HttpRequestMessage> to `HttpMessageContent` that can be added to `MultipartContent`.
 
 ```csharp
 /// <summary>

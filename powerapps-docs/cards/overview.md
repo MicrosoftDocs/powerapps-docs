@@ -5,7 +5,6 @@ ms.date: 09/20/2022
 ms.topic: overview
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -28,12 +27,6 @@ You can create cards with just a few clicks. There are no complex systems or ser
 To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Cards (preview)**, and then select **+ Create a card**. [!INCLUDE [left-navigation-pane](../includes/left-navigation-pane.md)]
 
 :::image type="content" source="media/overview/create-card-screen.png" alt-text="Screenshot of the card create page in Power Apps.":::
-
-There are two key components of a card:
-
-- **Card designer**: The interface in which you create cards using drag-and-drop controls, Power Fx logic, and data from Power Platform connectors
-
-- **Power Apps data and resource management**: The services that manage sending and receiving cards with embedded data and workflows
 
 ### Drag and drop UI elements in the card designer
 

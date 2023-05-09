@@ -9,8 +9,6 @@ ms.date: 03/01/2023
 ms.author: anuitz
 search.audienceType:
   - maker
-search.app:
-  - PowerApps
 contributors:
   - mduelae
   - anuitz
@@ -18,7 +16,9 @@ contributors:
 
 # Button set control in cards
 
-A container for a set of button elements.
+A container for a set of [button](button.md) elements.
+
+The button set control can be used to add buttons in places other than the bottom of the card as well as to group buttons together.
 
 ## Properties
 

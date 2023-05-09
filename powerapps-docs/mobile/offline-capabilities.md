@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 03/16/2023
+ms.date: 04/27/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -12,14 +12,10 @@ ms.assetid: 6828238b-1645-4710-a192-0014acb03196
 caps.latest.revision: 1
 ms.author: sericks
 author: sericks007
-manager: tapanm-MSFT
 search.audienceType: 
   - admin
   - customizer
   - enduser
-search.app: 
-  - D365CE
-  - D365Sales
 contributors:
 - joliedes 
 ---
@@ -118,6 +114,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 
     Any views that have linked tables (related table) that are not available offline are also not supported.
 
+- **Advanced lookups**: The **[Advanced lookup]**(../user/lookup-field.md#advanced-lookup) functionality isn't supported in offline scenarios. When you're offline, the **Advanced lookup** button is replaced by a **Change view** dropdown list.
+
 - **Add Existing on subgrids**: **Add Existing** is not supported for mobile offline for certain types of relationships. When you are offline, certain relationships such as relationships that are N:N are read only, and the **Add Existing** command will be hidden on subgrids for those relationships. Even if the button is unhidden via customization, the command will not work in offline.
 
 - **Web resources**: Web resources are partially supported in offline mode. Refer to the table below for more information.
@@ -125,8 +123,8 @@ For more information, see [Run business process flows offline](/power-automate/b
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
     |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
-    |JavaScript files referenced within an HTML web resource|Supported| Partially supported: The web resource needs to be opened at least once when you are in online mode, so that the browser can cache it. |
-    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Supported| Partially supported: The web resource needs to be opened at least once while online, so that the browser can cache it.|
+    |JavaScript files referenced within an HTML web resource|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser. |
+    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser.|
     |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes are not webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
     |Webpage (HTML web resource) via a model-driven app’s sitemap|Not supported|Not supported|
     |Custom JS files that create a fetchXML dynamically |Not supported|Not supported|
@@ -138,6 +136,8 @@ For more information, see [Run business process flows offline](/power-automate/b
 - **Mapped fields**: When you run an app in offline mode, mapped fields aren’t prepopulated when you create a new record from a table that has fields mapped to another table.
 
 - **Filter operations**: Not all filter operations are supported in offline mode. For a full list of supported operators, see [Supported Filter Operations Per Attribute Type in Mobile Offline using FetchXML](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-webapi/retrievemultiplerecords#supported-filter-operations-per-attribute-type-in-mobile-offline-using-fetchxml).
+
+- **Appointments**: Appointments can be created or updated in Dataverse, but they won't be sent to recipients with server-side synchronization. For more information, see [Appointment table/entity reference](../developer/data-platform/reference/entities/appointment.md) and [Server-side synchronization tables](../developer/data-platform/server-side-synchronization-entities.md).
 
 ## Tips
 
@@ -185,7 +185,7 @@ Ensure that you have configured at least one of the Profile rules for each table
 |-------------|---------|  
 |All Records|	If you are selecting this filter, you cannot define any other filter rule.|
 |Download Related Data only|If you are selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for an table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
+|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 
 

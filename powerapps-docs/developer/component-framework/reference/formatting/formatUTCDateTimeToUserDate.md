@@ -3,7 +3,6 @@ title: formatUTCDateTimeToUserDate | Microsoft Docs
 description: Returns a date that represents the UTC value after being formatted.
 ms.author: noazarur
 author: noazarur-microsoft
-manager: lwelicki
 ms.date: 05/27/2022
 ms.reviewer: jdaly
 ms.topic: reference

@@ -13,14 +13,12 @@ ms.author: yogupt
 ms.reviewer: mkaur
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
 contributors:
   - mduelae
   - yogeshgupta698
   
 ---
-# Drop down modern control in Power Apps
+# Drop down modern control in Power Apps (preview)
 
 [This article is pre-release document and is subject to change.]
 

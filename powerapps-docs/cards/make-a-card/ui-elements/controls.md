@@ -5,7 +5,6 @@ ms.date: 09/20/2022
 ms.topic: how-to
 author: iaanw
 ms.author: iawilt
-manager: shellyha
 ms.reviewer: 
 ms.custom: 
 ms.collection: 
@@ -39,6 +38,14 @@ There are three categories of controls that you can add to your card:
    :::image type="content" source="../../media/make-a-card/insert-menu.png" alt-text="Screenshot of the Insert menu in the Power Apps card designer.":::
 
 1. With the control selected, use the properties pane to modify it.
+
+## Rename a control
+
+1. Sign in to [Power Apps](https://powerapps.microsoft.com/). Select **Cards (preview)** > **Cards**, and then select a card.
+
+1. In the left pane of the card designer, select **Tree View**.
+
+1. Double click a control to rename or select a control and click the pencil icon next to the current control name in the right-hand properties pane.
 
 ## Controls reference
 

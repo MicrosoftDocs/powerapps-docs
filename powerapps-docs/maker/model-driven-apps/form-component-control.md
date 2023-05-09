@@ -12,12 +12,8 @@ applies_to:
 author: "Mattp123"
 ms.subservice: mda-maker
 ms.author: "mspilde"
-manager: "kvivek"
 search.audienceType: 
   - maker
-search.app: 
-  - "PowerApps"
-  - D365CE
 ---
 # Edit related table records directly from another table’s main form
 

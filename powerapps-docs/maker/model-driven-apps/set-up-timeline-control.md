@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app"
 ms.custom: ""
-ms.date: 03/27/2023
+ms.date: 04/20/2023
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -10,13 +10,9 @@ ms.topic: "how-to"
 author: "lalexms"
 ms.subservice: mda-maker
 ms.author: "laalexan"
-manager: "kvivek"
 tags: 
 search.audienceType: 
   - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Set up the timeline control
@@ -109,6 +105,10 @@ There are three primary record types: Activities, notes, and posts. All record t
 The timeline shows a simple icon before the activity, note, post, and custom table, making it easy for you to identify the record type.
 
 Dates and timestamps always appear on each record on the bottom-right side of the preview, and are always viewable.
+
+> [!NOTE]
+>
+> When a custom table has a custom icon, activities related to the custom table are displayed using the default custom table icon not the custom icon.
 
 ### Advanced
 
@@ -555,7 +555,8 @@ The following image shows the Activities tab, where you can modify the Timeline 
 ## Configure auto-post messages to display on the timeline
 
 > [!NOTE]
-> The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - The auto-post functionality is only available with environments that are configured for **Enable Dynamics 365 apps**.
+> - Dynamics 365 incudes auto-post rules for some standard tables such as account, contact, lead, and case. It is not possible to create new auto-post rules. However, you can use other options such as Power Automate or a custom plug-in to create a post record based on the desired conditions.
 
 You can configure which auto-post messages will appear on the timeline when a system event occurs. The auto-post configuration replaces the legacy Activity Feed Configuration and Activity Feed Configuration Rules.
 
@@ -603,8 +604,13 @@ Power platform administrators can restrict the file size of attachments users ca
 
 ## Known issues
   
-- When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
-> This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
+
+This is a configuration issue for the rich text editor control. To resolve this, add `"removePlugins": "stickystyles" ` to your RTE config file. More information: [Create and use advanced configuration for the rich text editor control](rich-text-editor-control.md#create-and-use-advanced-configuration-for-the-rich-text-editor-control)
+
+### Timeline fails to load with error `code:"0x8004430d","message":"Number of link entity: <number> exceed limit 15`
+
+There's a limit of 15 different tables that can be associated with a timeline. Either disable some of the activities associated with the timeline, or follow one of the workarounds described in this article: [Timeline does not render and shows "Records could not be loaded"](https://support.microsoft.com/topic/timeline-does-not-render-and-shows-records-could-not-be-loaded-4ce9200a-1afe-3ef4-ac11-a74b91f4f40c)
 
 ### See also
 
