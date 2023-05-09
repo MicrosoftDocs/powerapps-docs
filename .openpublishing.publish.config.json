@@ -81,7 +81,7 @@
     {
       "path_to_root": "shared-content",
       "url": "https://github.com/MicrosoftDocs/powerapps-docs-pr",
-      "branch": "reusable-content",
+      "branch": "main",
       "branch_mapping": {}
     }   
   ],

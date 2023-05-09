@@ -8,8 +8,10 @@
     items:
     - name: Sign up for 30-day trial version
       href: signup-for-powerapps.md
-    - name: Request a Power Apps license
+    - name: Request a license for yourself
       href: ../user/request-license.md
+    - name: Request licenses for your app users
+      href: common/request-licenses-for-users.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
@@ -1403,7 +1405,7 @@
           href: ./model-driven-apps/configure-sorting.md
         - name: Power Apps read-only grid control
           href: ./model-driven-apps/power-apps-grid-control.md
-        - name: Convert views and subgrids into editable grids (preview)
+        - name: Convert views and subgrids into editable grids
           href: ./model-driven-apps/the-power-apps-grid-control.md       
         - name: Convert views and subgrids into editable grids (legacy)
           href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
@@ -1872,118 +1874,118 @@
     - name: Configure portals using Portal Management app
       items:
         - name: Portal Management app overview
-          href: ./portals/configure/configure-portal.md
+          href: /power-pages/configure/portal-management-app
         - name: Configure site settings
-          href: ./portals/configure/configure-site-settings.md
+          href: /power-pages/configure/configure-site-settings
         - name: Work with forms and lists in portals
           items:
             - name: Work with lists
-              href: ./portals/configure/entity-lists.md
+              href: /power-pages/configure/lists
               items:
               - name: List attributes and relationships
-                href: portals/configure/list-attributes-relationionships.md
+                href: /power-pages/configure/list-attributes-relationships
               - name: Sort lists
-                href: portals/configure/sort-lists.md
+                href: /power-pages/configure/sort-lists
               - name: Add custom JavaScript
-                href: portals/configure/add-custom-javascript-list.md
+                href: /power-pages/configure/add-custom-javascript-list
               - name: List configuration  
-                href: portals/configure/list-configuration.md
+                href: /power-pages/configure/list-configuration
               - name: Securing lists
-                href: portals/configure/securing-lists.md
+                href: /power-pages/configure/securing-lists
               - name: Add a view details page
-                href: portals/configure/list-view-details.md
+                href: /power-pages/configure/list-view-details
               - name: List filter configuration
-                href: portals/configure/list-filter-configuration.md
+                href: /power-pages/configure/list-filter-configuration
               - name: List Map view
-                href: portals/configure/list-map-view.md
+                href: /power-pages/configure/list-map-view
               - name: List Calendar view 
-                href: portals/configure/list-calendar-view.md
+                href: /power-pages/configure/list-calendar-view
               - name: List OData feeds 
                 href: portals/configure/list-odata-feeds.md
               - name: Enhanced view filter for lists
-                href: portals/configure/list-enhanced-view-filter.md
+                href: /power-pages/configure/list-enhanced-view-filter
             - name: Work with basic forms
               items:
                 - name: Work with basic forms
-                  href: ./portals/configure/entity-forms.md
+                  href: /power-pages/configure/basic-forms
                 - name: Configure basic form metadata
-                  href: ./portals/configure/configure-basic-form-metadata.md
+                  href: /power-pages/configure/configure-basic-form-metadata
                 - name: Configure basic form subgrid
-                  href: ./portals/configure/configure-basic-form-subgrid.md
+                  href: /power-pages/configure/configure-basic-form-subgrid
             - name: Work with multistep forms
               items:
                 - name: Define multistep form properties
-                  href: ./portals/configure/web-form-properties.md
+                  href: /power-pages/configure/multistep-form-properties
                 - name: Multistep form steps
                   items:
                     - name: Define multistep form steps
-                      href: ./portals/configure/web-form-steps.md
+                      href: /power-pages/configure/multistep-form-steps
                     - name: Define a load form and load tab step type
-                      href: ./portals/configure/load-form-step.md
+                      href: /power-pages/configure/load-form-step
                     - name: Add a redirect step type
-                      href: ./portals/configure/add-redirect-step.md
+                      href: /power-pages/configure/add-redirect-step
                     - name: Add a conditional step type
-                      href: ./portals/configure/add-conditional-step.md
+                      href: /power-pages/configure/add-conditional-step
                     - name: Add custom JavaScript
-                      href: ./portals/configure/add-custom-javascript.md
+                      href: /power-pages/configure/add-custom-javascript
                 - name: Configure multistep form metadata
-                  href: ./portals/configure/configure-web-form-metadata.md
+                  href: /power-pages/configure/configure-multistep-form-metadata
                 - name: Configure a multistep form subgrid
-                  href: ./portals/configure/configure-web-form-subgrid.md
+                  href: /power-pages/configure/configure-multistep-form-subgrid
                 - name: Add geolocation
-                  href: ./portals/configure/add-geolocation.md
+                  href: /power-pages/configure/add-geolocation
             - name: "Walkthrough: Get data from customer engagement apps to display on your portal"
-              href: ./portals/configure/walkthrough-get-data-on-portal.md
+              href: /power-pages/getting-started/tutorial-dataverse-website
         - name: Add chart on a web page in portal
-          href: ./portals/configure/add-chart.md
+          href: /power-pages/configure/add-chart
         - name: Add fixed page layouts
-          href: ./portals/configure/add-fixed-layouts.md          
+          href: /power-pages/getting-started/tutorial-add-custom-page-layout          
         - name: Enable multiple languages
           items:
             - name: Enable multiple-language support
-              href: ./portals/configure/enable-multiple-language-support.md
+              href: /power-pages/configure/enable-multiple-language-support
             - name: Behavior and format of the Duration, Date and Time fields
-              href: ./portals/configure/behavior-format-date-time-field.md
+              href: /power-pages/configure/behavior-format-date-time-field
         - name: Create and show portal content
           href: ./portals/configure/create-show-portal-content.md
         - name: Setup HTTP headers
-          href: ./portals/configure/cors-support.md
+          href: /power-pages/configure/cors-support
         - name: Configure advertisements
-          href: ./portals/configure/create-run-advertisement.md
+          href: /power-pages/configure/create-run-advertisement
         - name: Configure choices column 
-          href: ./portals/configure/choices-column.md          
+          href: /power-pages/configure/choices-column          
         - name: Configure content snippets
-          href: ./portals/configure/customize-content-snippets.md
+          href: /power-pages/configure/customize-content-snippets
         - name: Configure file column
-          href: ./portals/configure/file-column.md
+          href: /power-pages/configure/file-column
         - name: Configure header and footer output caching
-          href: ./portals/configure/enable-header-footer-output-caching.md
+          href: /power-pages/configure/enable-header-footer-output-caching
         - name: Configure image column
-          href: ./portals/configure/image-column.md         
+          href: /power-pages/configure/image-column        
         - name: Configure page templates
-          href: ./portals/configure/page-templates.md
+          href: /power-pages/configure/page-templates
         - name: Configure polls
-          href: ./portals/configure/gather-feedback-poll.md
+          href: /power-pages/configure/gather-feedback-poll
         - name: Configure publishing states
-          href: ./portals/configure/publishing-states.md
+          href: /power-pages/configure/publishing-states
         - name: Configure shortcuts
-          href: ./portals/configure/place-child-nodes.md
+          href: /power-pages/configure/place-child-nodes
         - name: Configure website redirects
-          href: ./portals/configure/add-redirect-url.md
+          href: /power-pages/configure/add-redirect-url
         - name: Configure webpage ratings
-          href: ./portals/configure/rate-webpage.md
+          href: /power-pages/configure/rate-webpage
         - name: Configure web files
-          href: ./portals/configure/web-files.md
+          href: /power-pages/configure/web-files
         - name: Configure web links
-          href: ./portals/configure/manage-web-links.md
+          href: /power-pages/configure/manage-web-links
         - name: Configure webpages
-          href: ./portals/configure/web-page.md
+          href: /power-pages/configure/web-page
         - name: Configure websites
-          href: ./portals/configure/websites.md
+          href: /power-pages/configure/websites
         - name: Configure website bindings
-          href: ./portals/configure/website-bindings.md
+          href: /power-pages/configure/website-bindings
         - name: View activities in portal timeline
-          href: ./portals/configure/view-all-activities-in-portal-timeline.md
+          href: /power-pages/configure/view-all-activities-in-portal-timeline
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
         - name: Edit portal using portal content editor
@@ -2283,47 +2285,47 @@
         - name: Knowledge article
           items:
             - name: Configure knowledge categories and articles
-              href: ./portals/customer-engagement-apps/configure-knowledge-categories-articles.md
+              href: /power-pages/templates/dynamics-365-apps/configure-knowledge-categories-articles
             - name: Manage knowledge articles by using content access level
-              href: ./portals/customer-engagement-apps/manage-knowledge-articles-content-levels.md
+              href: /power-pages/templates/dynamics-365-apps/manage-knowledge-articles-content-levels
             - name: Display file attachments with knowledge articles
-              href: ./portals/customer-engagement-apps/display-file-attachments-knowledge-article.md
+              href: /power-pages/templates/dynamics-365-apps/display-file-attachments-knowledge-article
         - name: Create an opportunity
-          href: ./portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md
+          href: /power-pages/templates/dynamics-365-apps/create-edit-and-distribute-opportunities-in-dynamics-365
         - name: Work with communities
           items:
             - name: Engage with communities
-              href: ./portals/customer-engagement-apps/engage-with-communities.md
+              href: /power-pages/templates/dynamics-365-apps/engage-with-communities
             - name: Forums
               items:
                 - name: Set up and manage forums
-                  href: ./portals/customer-engagement-apps/setup-manage-forums.md
+                  href: /power-pages/templates/dynamics-365-apps/setup-manage-forums
                 - name: Manage forum threads
-                  href: ./portals/customer-engagement-apps/manage-forum-threads.md
+                  href: /power-pages/templates/dynamics-365-apps/manage-forum-threads
                 - name: Create forum posts
-                  href: ./portals/customer-engagement-apps/create-forum-posts.md
+                  href: /power-pages/templates/dynamics-365-apps/create-forum-posts
                 - name: Moderate forums
-                  href: ./portals/customer-engagement-apps/moderate-forums.md
+                  href: /power-pages/templates/dynamics-365-apps/moderate-forums
                 - name: Manage forum access permissions
-                  href: ./portals/customer-engagement-apps/forum-access-permission.md
+                  href: /power-pages/templates/dynamics-365-apps/forum-access-permission
                 - name: Subscribe to alerts
-                  href: ./portals/customer-engagement-apps/subscribe-alerts.md
+                  href: /power-pages/templates/dynamics-365-apps/subscribe-alerts
             - name: Manage blogs
-              href: ./portals/customer-engagement-apps/manage-blogs.md
+              href: /power-pages/templates/dynamics-365-apps/manage-blogs
             - name: Ideas
-              items:
+              items: 
                 - name: Manage ideas
-                  href: ./portals/customer-engagement-apps/crowdsource-ideas.md
+                  href: /power-pages/templates/dynamics-365-apps/crowdsource-ideas
                 - name: Enable content moderation on ideas
-                  href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
+                  href: /power-pages/templates/dynamics-365-apps/enable-idea-content-moderation
             - name: Manage cases in portals
-              href: ./portals/customer-engagement-apps/case-management.md
+              href: /power-pages/templates/dynamics-365-apps/case-management
         - name: Configure web roles for a partner portal
-          href: ./portals/customer-engagement-apps/configure-web-roles-partner-portal.md
+          href: /power-pages/templates/dynamics-365-apps/configure-web-roles-partner-portal
         - name: Integrate Project Service Automation
-          href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
+          href: /power-pages/templates/dynamics-365-apps/integrate-project-service-automation
         - name: Integrate Field Service
-          href: ./portals/customer-engagement-apps/integrate-field-service.md
+          href: /power-pages/templates/dynamics-365-apps/integrate-field-service
     - name: Important upcoming changes and deprecations
       href: /power-pages/important-changes-deprecations
     - name: Known issues
@@ -2485,6 +2487,8 @@
       href: ./data-platform/formula-columns.md
     - name: Set managed properties for columns
       href: ./data-platform/set-managed-properties-for-field.md
+    - name: Address validation for email columns (preview)
+      href: ./data-platform/data-validation-email-column.md  
     - name: Behavior and format of the Date and Time column
       href: ./data-platform/behavior-format-date-time-field.md
     - name: "How-to guides: Columns"
@@ -2668,7 +2672,7 @@
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
-    - name: Use managed identities for Azure (preview)
+    - name: Use managed identities for Azure
       href: ./data-platform/azure-synapse-link-msi.md        
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml
@@ -2698,6 +2702,8 @@
         href: ./data-platform/azure-synapse-link-incremental.md
       - name: Access Dataverse choices with serverless SQL pool
         href: ./data-platform/azure-synapse-link-choices-serverless.md
+      - name: Export data in Delta Lake format (preview) 
+        href: ./data-platform/azure-synapse-link-delta-lake.md
     - name: Analyze in Azure Data Lake Storage Gen2
       items:
       - name: Ingest exported data with Azure Data Factory
