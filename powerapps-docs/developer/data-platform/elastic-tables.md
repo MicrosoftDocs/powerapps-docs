@@ -17,6 +17,7 @@ contributors:
 
 <!-- 
 Maker topics to refer to from https://github.com/MicrosoftDocs/powerapps-docs-pr/pull/8083
+These are in the peakerbl-1 branch.
 
 Create and edit elastic tables (preview)
 https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-elastic-tables?branch=pr-en-us-8083
