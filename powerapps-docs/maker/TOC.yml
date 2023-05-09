@@ -1853,30 +1853,30 @@
               href: ./portals/theme-overview.md
             - name: Edit CSS
               href: ./portals/edit-css.md
-        - name: Sites as Progressive Web Apps
-          items:
-            - name: Overview
-              href: ./portals/progressive-web-apps.md
-            - name: Build Progressive Web Apps
-              href: ./portals/build-progressive-web-apps.md                                   
-        - name: Supported browsers for studio
-          href: ./portals/supported-browser.md
-        - name: List OData feeds 
-          href: ./portals/configure/list-odata-feeds.md
-        - name: Create and show site content
-          href: ./portals/configure/create-show-portal-content.md
-        - name: Create custom Portal Management app
-          href: ./portals/configure/create-custom-portal-management-app.md
-        - name: Edit site using site content editor
-          items:
-             - name: Get started with the portal content editor
-               href: ./portals/portal-content-editor.md
-             - name: Edit page content using portal content editor
-               href: ./portals/use-content-editor.md
-        - name: Update domain name
-          href: ./portals/admin/update-portal-domain.md
-        - name: Customize the Azure AD B2C user interface
-          href: ./portals/configure/azure-ad-b2c.md
+    - name: Sites as Progressive Web Apps
+      items:
+        - name: Overview
+          href: ./portals/progressive-web-apps.md
+        - name: Build Progressive Web Apps
+          href: ./portals/build-progressive-web-apps.md                                   
+    - name: Supported browsers for studio
+      href: ./portals/supported-browser.md
+    - name: List OData feeds 
+      href: ./portals/configure/list-odata-feeds.md
+    - name: Create and show site content
+      href: ./portals/configure/create-show-portal-content.md
+    - name: Create custom Portal Management app
+      href: ./portals/configure/create-custom-portal-management-app.md
+    - name: Edit site using site content editor
+      items:
+         - name: Get started with the portal content editor
+           href: ./portals/portal-content-editor.md
+         - name: Edit page content using portal content editor
+           href: ./portals/use-content-editor.md
+    - name: Update domain name
+      href: ./portals/admin/update-portal-domain.md
+    - name: Customize the Azure AD B2C user interface
+      href: ./portals/configure/azure-ad-b2c.md
     - name: Integrate Power BI
       items:
         - name: Add Power BI as a component to a webpage
