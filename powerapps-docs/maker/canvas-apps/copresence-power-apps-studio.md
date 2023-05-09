@@ -31,7 +31,7 @@ Legend
 
 The first time someone opens your app in Power Apps Studio while you're working on it, copresence indicators appear that shows other people are also working on the app. 
 
-The maker that opens the app first has editing control. If a second user tries to open the app, a notification appears letting them know that someone else is editing the app so they're in read-only mode. If you're in ready-only mode, you can save a copy of the app.
+The maker that opens the app first has editing control. If a second user tries to open the app, a notification appears letting them know that someone else is editing the app so they're in read-only mode. If you're in read-only mode, you can save a copy of the app.
 
 Icons of copresent makers appear in both the command bar and the left navigation pane showing where other makers are working in the app.
 
