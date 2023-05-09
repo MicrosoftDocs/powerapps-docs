@@ -29,9 +29,16 @@ Choice, Choices
 
 ## Return Value
 
-**Type**: Array of option objects. 
+**Type**: Array of option objects.
 
 **Description**: The array of option objects representing valid options.
+
+Options have two properties:
+
+|Property|Type|Description|
+|--------|----|-----------|
+|`text`|string|The localized label for the option.|
+|`value`|number|The integer value of the option.|
 
 
 

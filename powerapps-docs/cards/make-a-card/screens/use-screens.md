@@ -53,3 +53,27 @@ The Power Fx [Back](/power-platform/power-fx/reference/function-navigate#back) a
 The Show Screen button opens a screen underneath the existing screen, keeping both screens visible, while the Power Fx Back and Navigate functions change the screen that is visible to the user. The Back and Navigate functions can also be used outside of buttons and are appropriate for more complex screen-switching scenarios.
 
 For more information about Back and Navigate, see the [Power Fx reference documentation syntax](/power-platform/power-fx/reference/function-navigate#syntax), [examples](/power-platform/power-fx/reference/function-navigate#examples), and [step-by-step instructions](/power-platform/power-fx/reference/function-navigate#step-by-step).
+
+## Screen properties
+
+**On show** – A Power Fx expression that is executed after the screen is shown.
+
+**Fallback text** - Text shown when the client doesn't support the version specified (may contain markdown).
+
+**Speak** - Specifies what should be spoken for this entire card. This is simple text or SSML fragment.
+
+**Minimum height** - Specifies the minimum height of the card. In pixels, e.g. '500px'.
+
+**Content alignment** - Defines how the content should be aligned vertically within the container. Only relevant for fixed-height cards, or cards with a minimum height specified.
+
+**Background image** - A boolean property that indicates whether the screen should have a background image for the screen. Acceptable formats are PNG, JPEG, and GIF.
+
+**Url** - The url or base64 encoded media that defines the background image for the screen.
+
+**Horizontal alignment** - How the background image is aligned with the screen.
+
+**Vertical alignment** - Describes how the image should be aligned if it must be cropped or if using repeat fill mode.
+
+**FillMode** - Describes how the background image should fill the area.
+
+**Select action** - Action that is invoked when the screen is selected.
