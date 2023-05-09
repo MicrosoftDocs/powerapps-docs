@@ -129,7 +129,7 @@ BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDele
 ```
 
 ### [Web API](#tab/webapi)
-Developers can call the <xref:Microsoft.Dynamics.CRM.BulkDelete?displayProperty=nameWithType> using the Web API.
+Developers can call the <xref:Microsoft.Dynamics.CRM.BulkDelete?displayProperty=nameWithType> action using the Web API.
 
 **Request**
 
