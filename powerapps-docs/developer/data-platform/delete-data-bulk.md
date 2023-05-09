@@ -67,7 +67,89 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
  You can perform a bulk deletion on all tables that are supported by the delete action. For information about possible actions on table records, see [Actions on table records](/dynamics365/customer-engagement/developer/introduction-entities#ActionsOnEntityRecords).  
   
  If a plug-in or a workflow (process) is triggered by the delete action on a specific table type, it is triggered every time that a table record of this type is deleted by the bulk delete job.  
-  
+ 
+## Long-term retained data
+Bulk delete is also available for Long-term retained (LTR) data. To run bulk delete against LTR records, run a bulk delete as you normally would against the corresponding table, but set the DataSource as "retained". There are several ways to do this:
+
+Users can set the DataSource field available in the QueryExpression class to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data only. Set query.DataSource = "retained" to bulk delete retained records.
+#### [SDK for .NET](#tab/sdk)
+
+```csharp
+var bulkDeleteRequest = new BulkDeleteRequest();
+bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts";
+
+// Create query and add additional filters as needed
+QueryExpression query = new QueryExpression()
+{
+    EntityName = "account",
+};
+query.DataSource = "retained";
+
+bulkDeleteRequest.QuerySet = new QueryExpression[]
+{
+    query
+};
+
+bulkDeleteRequest.StartDateTime = DateTime.Now;
+bulkDeleteRequest.RecurrencePattern = String.Empty;
+bulkDeleteRequest.SendEmailNotification = false;
+bulkDeleteRequest.ToRecipients = new Guid[] { };
+bulkDeleteRequest.CCRecipients = new Guid[] { };
+
+BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
+```
+
+#### [Web API](#tab/webapi)
+
+**Request**
+
+```http
+POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+If-None-Match: null
+Accept: application/json
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+
+{
+    "QuerySet": 
+    [
+        {
+            "EntityName": "contact",
+            "DataSource": "retained",
+            "Criteria":
+            {
+                "FilterOperator": "And",
+                "Conditions": 
+                [
+                    {
+                        "AttributeName": "firstname",
+                        "Operator": "Equal",
+                        "Values" : [{"Value":"Bob","Type":"System.String"}]
+                    }
+                ]
+            }
+        }
+    ],
+    "JobName": "Bulk Delete Retained Contacts",
+    "SendEmailNotification": false,
+    "RecurrencePattern": "",
+    "StartDateTime": "2023-03-07T05:00:00Z",
+    "ToRecipients": [],
+    "CCRecipients": []
+}
+```
+
+More information: [Use Web API actions](webapi/use-web-api-actions.md)
+
+---
+
+ 
 ## Samples
 
 Look at the following Organization service samples for the bulk delete feature:
