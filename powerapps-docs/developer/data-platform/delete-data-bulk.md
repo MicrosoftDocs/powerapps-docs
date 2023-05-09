@@ -72,7 +72,7 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
 Bulk delete is also available for Long-term retained (LTR) data. To run bulk delete against LTR records, run a bulk delete as you normally would against the corresponding table, but set the DataSource as "retained". There are several ways to do this:
 
 #### [SDK for .NET (QueryExpression)](#tab/sdk-queryexpression)
-Users can set the DataSource field available in the QueryExpression class to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data only. Set query.DataSource = "retained" to bulk delete retained records.
+Users can set the DataSource field available in the QueryExpression class to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data. Set query.DataSource = "retained" to bulk delete retained records only.
 ```csharp
 var bulkDeleteRequest = new BulkDeleteRequest();
 bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts";
@@ -99,7 +99,7 @@ BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDele
 ```
 
 #### [SDK for .NET (FetchXML)](#tab/sdk-fetchxml)
-Users can use a datasource='retained' attribute inside a FetchXML expression to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data only.
+Users can use a datasource='retained' attribute inside a FetchXML expression to indicate that the query is for retained data. This flag will mark the bulk delete to delete retained records only.
 ```csharp
 var bulkDeleteRequest = new BulkDeleteRequest();
 bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts"
