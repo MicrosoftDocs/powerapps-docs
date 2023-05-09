@@ -110,7 +110,7 @@ Now that you have a better understanding of the default generated form and the *
   > [!TIP]
   >    Set different values for a variable in the **OnNew**, **OnView**, and **OnEdit** formulas. You can use this variable in the **OnSave** formula to determine which form is being used.
 
-* Make sure to include **RequestHide()** in the **OnSuccess** formula of all your forms. If you forget this, SharePoint won't know when to hide the form.
+* Make sure to include **RequestHide()** in the **OnSuccess** formula of all your forms. If you forget this, SharePoint won't know when to hide the form. Also, avoid running important code after calling **RequestHide()**, so that all code runs while the form is still visible and able to run logic. 
 
 * You can't control the hiding of a form when a user selects **Cancel** in SharePoint, so make sure you reset your forms in the **OnCancel** formula of the **SharePointIntegration** control.
 
