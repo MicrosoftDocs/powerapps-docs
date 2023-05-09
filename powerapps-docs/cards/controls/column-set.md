@@ -18,6 +18,8 @@ contributors:
 
 A collection of columns, each column is a container. These columns allow controls to sit side-by-side.
 
+Column set is useful for showing a row of data. You can add a column for the different UI elements you want within the column set, then drag and drop those elements into the column within the card canvas. You can also [data bind](../make-a-card/ui-elements/data-binding.md) a column set to a collection or data source to repeat the column set for each row, resulting in a list of data. 
+
 ## Properties
 
 **[Style](control-reference.md#s)** – Determines the style of the control, allowed values: default, emphasis, good, attention, warning, accent.
