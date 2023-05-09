@@ -51,8 +51,12 @@
               href: custom-api-tables.md
             - name: "Sample: IsSystemAdmin Custom API plug-in"
               href: org-service/samples/issystemadmin-customapi-sample-plugin.md
+            - Name: "Sample: ExportDataUsingFetchXmlToAnnotation Custom API plug-in"
+              href: org-service/samples/export-data-fetchxml-annotation-custom-api-sample.md
         - name: Use Custom Process Actions with code
           href: workflow-custom-actions.md
+    - name: Background operations (Preview)
+      href: background-operations.md
     - name: Use optional parameters
       href: optional-parameters.md
     - name: Use FetchXML to query data

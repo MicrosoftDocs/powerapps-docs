@@ -58,6 +58,8 @@ Predefined templates for showing images and text in a gallery are available, and
 
 **AllItems** – Items that are loaded in the gallery. This may be less than the actual number of **Items** of the data source. More items may be loaded when the gallery is scrolled. **AllItems** also contains controls that are used in each gallery item.
 
+**AllItemsCount** - Count of items that are loaded in the gallery. This may be less than the actual number of **Items** of the data source. More items may be loaded when the gallery is scrolled.
+
 [BorderColor](properties-color-border.md) – The color of a control's border.
 
 [BorderStyle](properties-color-border.md) – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
