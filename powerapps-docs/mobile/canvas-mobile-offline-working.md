@@ -69,6 +69,6 @@ By clicking on the icon, you get a description of the state.
 
 ## Considerations
 - Canvas apps that are in offline mode, do not yet support files or images.  This means that if you are using a Dataverse table that has an image on it, it may create some unanticipated errors.  For instance, the gallery auto-template for a canvas app will choose a format that will pull in an image automatically for you and create an error.  If you want to use a table that has an image but not the image column, you may need to explicitly choose a gallery template that does not include an image.
-- Key Power Fx functions that are not yet supported include *StartsWith*, *In*, and *With*.  If you use the 'App from Data' feature you will get an app that has a search text field that uses a StartsWith formula which will fail silently.  
+- Key Power Fx functions that are not yet supported include *StartsWith*, *In*, and *With*.  If you use the 'App from Data' feature you will get an app that has a search text field that uses a *StartsWith* formula which will fail silently.  
 - Dataverse and SQLite sort data slightly differently. Numbers and special characters have different priorities in each system. If you update a record that has these characters in it, you may not find it where you expect it.
 - When testing your offline app, it's easy to lose track of whether you are online or offline.  Check the [sync status icons](#sync-status-icons) to see if Power Apps is offline or not.  When online, Power Apps is currently set to sync every 5 minutes.
