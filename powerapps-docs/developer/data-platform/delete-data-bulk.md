@@ -71,9 +71,8 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
 ## Long-term retained data
 Bulk delete is also available for Long-term retained (LTR) data. To run bulk delete against LTR records, run a bulk delete as you normally would against the corresponding table, but set the DataSource as "retained". There are several ways to do this:
 
+#### [SDK for .NET (QueryExpression)](#tab/sdk-queryexpression)
 Users can set the DataSource field available in the QueryExpression class to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data only. Set query.DataSource = "retained" to bulk delete retained records.
-#### [SDK for .NET](#tab/sdk)
-
 ```csharp
 var bulkDeleteRequest = new BulkDeleteRequest();
 bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts";
@@ -99,8 +98,37 @@ bulkDeleteRequest.CCRecipients = new Guid[] { };
 BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
 ```
 
-#### [Web API](#tab/webapi)
+#### [SDK for .NET (FetchXML)](#tab/sdk-fetchxml)
+Users can use a datasource='retained' attribute inside a FetchXML expression to indicate that the query is for retained records only. This flag will mark the bulk delete to delete retained data only.
+```csharp
+var bulkDeleteRequest = new BulkDeleteRequest();
+bulkDeleteRequest.JobName = "Bulk Delete Retained Accounts"
 
+var convert = new FetchXmlToQueryExpressionRequest();
+convert.FetchXml = @"
+    <fetch version='1.0' output-format='xml-platform' mapping='logical' datasource='retained'>
+	<entity name='account'>
+	</entity>
+    </fetch>";
+
+FetchXmlToQueryExpressionResponse response = (FetchXmlToQueryExpressionResponse)svc.Execute(convert);
+
+bulkDeleteRequest.QuerySet = new QueryExpression[]
+{
+    response.Query
+};
+
+bulkDeleteRequest.StartDateTime = DateTime.Now;
+bulkDeleteRequest.RecurrencePattern = String.Empty;
+bulkDeleteRequest.SendEmailNotification = false;
+bulkDeleteRequest.ToRecipients = new Guid[] { };
+bulkDeleteRequest.CCRecipients = new Guid[] { };
+
+BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDeleteRequest);
+```
+
+#### [Web API](#tab/webapi)
+Users can call the bulk delete action via OData using the Rest API.
 **Request**
 
 ```http
