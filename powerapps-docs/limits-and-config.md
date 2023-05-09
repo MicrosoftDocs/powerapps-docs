@@ -130,12 +130,12 @@ The following table shows some of the examples where embedding a canvas app is a
   
 | Power Apps embedding scenario                                                                   | Supported clients                                 | Unsupported clients                            |
 |-------------------------------------------------------------------------------------------------|---------------------------------------------------|------------------------------------------------|
-| A canvas app embedded in a SharePoint page.                                                     | Web, E.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
-| A canvas app embedded in a SharePoint page that is added as a tab in a Microsoft Teams channel. | Web, E.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
-| A canvas app used as a custom form in the SharePoint page.                                      | Web, E.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, E.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
-| A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, E.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
-| A model-driven form that is added to Teams.                                                     | Web, E.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app embedded in a SharePoint page.                                                     | Web, e.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app embedded in a SharePoint page that is added as a tab in a Microsoft Teams channel. | Web, e.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app used as a custom form in the SharePoint page.                                      | Web, e.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, e.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
+| A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
+| A model-driven form that is added to Teams.                                                     | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
 | A canvas app is embedded in a 3rd party client.                                                 | 3rd party web client that iframe's an app         | 3rd party native client via WebView            |
 
 ## Proxies
