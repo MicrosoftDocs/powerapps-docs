@@ -129,6 +129,7 @@ BulkDeleteResponse bulkDeleteResponse = (BulkDeleteResponse)svc.Execute(bulkDele
 
 #### [Web API](#tab/webapi)
 Users can call the bulk delete action via OData using the Rest API.
+
 **Request**
 
 ```http
