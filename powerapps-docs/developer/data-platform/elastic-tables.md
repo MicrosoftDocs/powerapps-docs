@@ -3,7 +3,7 @@ title: "Use elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # I
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: intro-internal
 ms.topic: "article"
-ms.date: 04/03/2022
+ms.date: 05/09/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -31,13 +31,7 @@ https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of
 
 Elastic tables are great..
 
-<!-- 
-jdaly: TODO:
-Delete and redirect these topics:
-powerapps-docs\developer\data-platform\org-service\azure-storage-partitioning-sdk.md
-powerapps-docs\developer\data-platform\webapi\azure-storage-partitioning.md 
 
--->
 
 ## Using Partitions
 

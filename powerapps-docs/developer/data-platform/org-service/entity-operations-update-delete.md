@@ -246,7 +246,7 @@ More information:
 
 ## Update and delete documents in storage partitions
 
-If you are updating or deleting table data stored in partitions be sure to specify the partition key when accessing that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
+If you are updating or deleting elastic table data stored in partitions be sure to specify the partition key when accessing that data. More information: [Using Partitions](../elastic-tables.md#using-partitions).
 
 ## Use Upsert
 

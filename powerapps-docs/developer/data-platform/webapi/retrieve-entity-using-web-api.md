@@ -97,9 +97,9 @@ Anytime you need to uniquely identify an entity to retrieve, update, or delete, 
 
 ## Retrieve documents in storage partitions
 
-When retrieving entity data stored in partitions be sure to specify the partition key when retrieving that data.
+When retrieving elastic table data stored in partitions be sure to specify the partition key when retrieving that data.
 
-More information: [Access table data faster using storage partitions](azure-storage-partitioning.md)
+More information: [Using Partitions > Retrieve a record](../elastic-tables.md#retrieve-a-record)
 
 ## Retrieve a single property value
 

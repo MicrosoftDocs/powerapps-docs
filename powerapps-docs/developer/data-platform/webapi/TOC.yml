@@ -71,8 +71,6 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
-  - name: Access table data faster using partitions
-    href: azure-storage-partitioning.md
   - name: Troubleshoot client errors
     href: /troubleshoot/power-platform/power-apps/web-api-client-errors
 - name: Work with table definitions (metadata)

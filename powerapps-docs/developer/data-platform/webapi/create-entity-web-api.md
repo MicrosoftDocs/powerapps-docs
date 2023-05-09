@@ -333,9 +333,9 @@ Accept: application/json
 
 ## Create documents in storage partitions
 
-If you are creating large numbers of entities that contain documents, you can create the entities in storage partitions to speed up access to those entity records.
+If you are creating large numbers of records for elastic tables, you can create the entities in storage partitions to speed up access to those entity records.
 
-More information: [Access documents faster using storage partitions](azure-storage-partitioning.md)
+More information: [Using Partitions > Create a record](../elastic-tables.md#create-a-record)
 
 ### See also
 

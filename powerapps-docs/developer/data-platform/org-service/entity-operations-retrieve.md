@@ -166,7 +166,7 @@ Console.WriteLine(entity["name"]);
 
 ## Retrieve documents in storage partitions
 
-If you are retrieving table data stored in partitions be sure to specify the partition key when retrieving that data. More information: [Improve performance when accessing table data using storage partitions](azure-storage-partitioning-sdk.md)
+If you are retrieving table data stored in partitions be sure to specify the partition key when retrieving that data. More information:  [Using Partitions > Retrieve a record](../elastic-tables.md#retrieve-a-record)
 
 ## Access Formatted values
 
