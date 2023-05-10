@@ -8,8 +8,10 @@
     items:
     - name: Sign up for 30-day trial version
       href: signup-for-powerapps.md
-    - name: Request a Power Apps license
+    - name: Request a license for yourself
       href: ../user/request-license.md
+    - name: Request licenses for your app users
+      href: common/request-licenses-for-users.md
   - name: Sign in to Power Apps
     href:  ./canvas-apps/sign-in-to-power-apps.md
   - name: Get started with Power Apps
@@ -2283,47 +2285,47 @@
         - name: Knowledge article
           items:
             - name: Configure knowledge categories and articles
-              href: ./portals/customer-engagement-apps/configure-knowledge-categories-articles.md
+              href: /power-pages/templates/dynamics-365-apps/configure-knowledge-categories-articles
             - name: Manage knowledge articles by using content access level
-              href: ./portals/customer-engagement-apps/manage-knowledge-articles-content-levels.md
+              href: /power-pages/templates/dynamics-365-apps/manage-knowledge-articles-content-levels
             - name: Display file attachments with knowledge articles
-              href: ./portals/customer-engagement-apps/display-file-attachments-knowledge-article.md
+              href: /power-pages/templates/dynamics-365-apps/display-file-attachments-knowledge-article
         - name: Create an opportunity
-          href: ./portals/customer-engagement-apps/create-edit-and-distribute-opportunities-in-dynamics-365.md
+          href: /power-pages/templates/dynamics-365-apps/create-edit-and-distribute-opportunities-in-dynamics-365
         - name: Work with communities
           items:
             - name: Engage with communities
-              href: ./portals/customer-engagement-apps/engage-with-communities.md
+              href: /power-pages/templates/dynamics-365-apps/engage-with-communities
             - name: Forums
               items:
                 - name: Set up and manage forums
-                  href: ./portals/customer-engagement-apps/setup-manage-forums.md
+                  href: /power-pages/templates/dynamics-365-apps/setup-manage-forums
                 - name: Manage forum threads
-                  href: ./portals/customer-engagement-apps/manage-forum-threads.md
+                  href: /power-pages/templates/dynamics-365-apps/manage-forum-threads
                 - name: Create forum posts
-                  href: ./portals/customer-engagement-apps/create-forum-posts.md
+                  href: /power-pages/templates/dynamics-365-apps/create-forum-posts
                 - name: Moderate forums
-                  href: ./portals/customer-engagement-apps/moderate-forums.md
+                  href: /power-pages/templates/dynamics-365-apps/moderate-forums
                 - name: Manage forum access permissions
-                  href: ./portals/customer-engagement-apps/forum-access-permission.md
+                  href: /power-pages/templates/dynamics-365-apps/forum-access-permission
                 - name: Subscribe to alerts
-                  href: ./portals/customer-engagement-apps/subscribe-alerts.md
+                  href: /power-pages/templates/dynamics-365-apps/subscribe-alerts
             - name: Manage blogs
-              href: ./portals/customer-engagement-apps/manage-blogs.md
+              href: /power-pages/templates/dynamics-365-apps/manage-blogs
             - name: Ideas
-              items:
+              items: 
                 - name: Manage ideas
-                  href: ./portals/customer-engagement-apps/crowdsource-ideas.md
+                  href: /power-pages/templates/dynamics-365-apps/crowdsource-ideas
                 - name: Enable content moderation on ideas
-                  href: ./portals/customer-engagement-apps/enable-idea-content-moderation.md
+                  href: /power-pages/templates/dynamics-365-apps/enable-idea-content-moderation
             - name: Manage cases in portals
-              href: ./portals/customer-engagement-apps/case-management.md
+              href: /power-pages/templates/dynamics-365-apps/case-management
         - name: Configure web roles for a partner portal
-          href: ./portals/customer-engagement-apps/configure-web-roles-partner-portal.md
+          href: /power-pages/templates/dynamics-365-apps/configure-web-roles-partner-portal
         - name: Integrate Project Service Automation
-          href: ./portals/customer-engagement-apps/integrate-project-service-automation.md
+          href: /power-pages/templates/dynamics-365-apps/integrate-project-service-automation
         - name: Integrate Field Service
-          href: ./portals/customer-engagement-apps/integrate-field-service.md
+          href: /power-pages/templates/dynamics-365-apps/integrate-field-service
     - name: Important upcoming changes and deprecations
       href: /power-pages/important-changes-deprecations
     - name: Known issues
@@ -2670,7 +2672,7 @@
       href: ./data-platform/azure-synapse-link-data-lake.md
     - name: Advanced Configuration Settings
       href: ./data-platform/azure-synapse-link-advanced-configuration.md
-    - name: Use managed identities for Azure (preview)
+    - name: Use managed identities for Azure
       href: ./data-platform/azure-synapse-link-msi.md        
     - name: Azure Synapse Link FAQ
       href: ./data-platform/export-data-lake-faq.yml

@@ -45,6 +45,6 @@ When the schema provided by your connector changes, you can refresh the connecto
 
 ## Types of connectors
 
-Only connections to Dataverse are currently available. Other connectors are shown in the data source list, but functionality for them will be added in future updates.
+Only connections to Dataverse are currently available. You can connect to Dataverse tables to create, read, update, and delete records. [Learn how to create a card with data from Dataverse](../../tutorials/dataverse-card.md).
 
-You can connect to Dataverse tables to create, read, update, and delete records. [Learn how to create a card with data from Dataverse](../../tutorials/dataverse-card.md).
+We are working on support for other connectors.
