@@ -50,9 +50,158 @@ For all elastic tables, partitionid column should:
 
 When partitionId is not specified for a row, Dataverses makes row id (primary key) as the default partitionid. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the row Id (primary key) is naturally a great choice for the partitionid column.
 
-Imagine a Customer which needs to store and manage large amounts of sensor data being emitted from IoT devices which they operate. Customer has created an elastic table "SensorData" to store and query IoT data with "DeviceId" as the partitionid for rows. Since deviceId is unique to each device, it acts as a good partition strategy for entire dataset.
+Imagine Contoso operates large number of IoT devices deployed all across the world. Contos needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights. 
+Contoso can create an elastic table "SensorData" to store and query large volume of IoT data. It can choose to use "DeviceId" as the partitionid for each row corresponding to that device. Since deviceId is unique to each device and contoso performs queries mostly in context of a given deviceId, it acts as a good partition strategy for entire dataset.
 
-Following examples throw more detail into how customer can work with data stored in an elastic table.
+## Create elastic tables
+
+#### [SDK for .NET](#tab/sdk)
+This example creates a new elastic table SensorData. TableType property is used to indicate that we are creating an Elastic table. 
+Dataverse automatically creates two system defined columns for each elastic tables at the time of table creation. 
+- PartitionId - Defines logical partition a row belongs to.
+- TimeToLiveInSeconds - Defines time in seconds after which row will expire and get deleted from database automatically.
+
+```csharp
+public static Guid CreateElasticTable(IOrganizationService service)
+{
+    CreateEntityRequest createrequest = new CreateEntityRequest
+    {
+        // Define table properties
+        Entity = new EntityMetadata
+        {
+            SchemaName = "contoso_sensordata",
+            DisplayName = new Label("SensorData", 1033),
+            DisplayCollectionName = new Label("SensorData", 1033),
+            Description = new Label("Stores IoT data emitted from devices", 1033),
+            OwnershipType = OwnershipTypes.UserOwned,
+            TableType = "Elastic"
+            IsActivity = false,
+            CanCreateCharts = new Microsoft.Xrm.Sdk.BooleanManagedProperty(false)
+        },
+
+        // Define the primary attribute for the entity
+        PrimaryAttribute = new StringAttributeMetadata
+        {
+            SchemaName = "contoso_sensortype",
+            RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
+            MaxLength = 100,
+            FormatName = StringFormatName.Text,
+            DisplayName = new Label("SensorType", 1033),
+            Description = new Label("Type of sensor emitting data", 1033)
+        }
+
+    };
+    return service.Execute(createrequest);
+}
+```
+#### [Web API](#tab/webapi)
+This example creates a new elastic table with logicalName=contoso_sensordata. Note that TableType property is used to indicate that we are creating an Elastic table.
+
+**Request**
+```http
+POST [Organization URI]/api/data/v9.0/EntityDefinitions
+Content-Type: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+{
+  "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+  "Attributes": [
+    {
+      "AttributeType": "String",
+      "AttributeTypeName": {
+        "Value": "StringType"
+      },
+      "Description": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Type of sensor reporting data",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "DisplayName": {
+        "@odata.type": "Microsoft.Dynamics.CRM.Label",
+        "LocalizedLabels": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "SensorType",
+            "LanguageCode": 1033
+          }
+        ]
+      },
+      "IsPrimaryName": true,
+      "RequiredLevel": {
+        "Value": "None",
+        "CanBeChanged": true,
+        "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+      },
+      "SchemaName": "contoso_sensortype",
+      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+      "FormatName": {
+        "Value": "Text"
+      },
+      "MaxLength": 100
+    }
+  ],
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Stores IoT data emitted from devices",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "DisplayCollectionName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "SensorData",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "SensorData",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "TableType": "Elastic",
+  "HasActivities": false,
+  "HasNotes": false,
+  "IsActivity": false,
+  "IsActivityParty": false,
+  "OwnershipType": "OrganizationOwned",
+  "SchemaName": "contoso_sensordata",
+  "CanChangeTrackingBeEnabled": {
+    "Value": true,
+    "CanBeChanged": true
+  },
+  "ChangeTrackingEnabled": true,
+  "CanCreateCharts": {
+    "Value": false,
+    "CanBeChanged": true
+  }
+}
+```
+**Response**
+```http
+HTTP/1.1 204 No Content  
+OData-Version: 4.0  
+OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
+```
+---
+
+Following examples show how customer can work with data stored in an elastic table.
 
 ### Create a record
 
@@ -288,6 +437,8 @@ OData-Version: 4.0
     ]
 }
 ```
+---
+
 ### Query rows across all logical partitions
 
 #### [SDK for .NET](#tab/sdk)
