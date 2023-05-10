@@ -35,9 +35,20 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 
 [This article is prerelease documentation and is subject to change.]
 
+### Create an app using responsive layout
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with data** > **Select an existing table**.
+1. Depending on how you want to create your app, from the home screen, select one of the following options:
+  - To use data to create an app select, **Start with data** > **Select an existing table**.
+  - To create an app using a page design, select **Start with a page design** > **Gallery connected to table**.
 1. On the **Select a Dataverse table** screen, select your table, and then select **Create app**.
+
+### Create a three screen mobile app
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen select, **Start with an app template** > **From Dataverse**.
+1. Select a table or create a new table by selecting **Create a new table**.
+1. When you're done select, **Create app**.
 
 
 
