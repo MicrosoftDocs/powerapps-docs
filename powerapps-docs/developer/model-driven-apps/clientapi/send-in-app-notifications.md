@@ -52,7 +52,7 @@ Notifications can be sent using the `SendAppNotification` message.
 
 See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the message and parameters. 
 
-The `SendAppNotification` message does not currently have request & response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message you must generated classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md)
+The `SendAppNotification` message does not currently have request & response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md)
 
 The following basic examples show how to use the API to send in-app notifications.
 
@@ -65,8 +65,7 @@ The following basic examples show how to use the API to send in-app notification
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification 
-HTTP/1.1
+POST [Organization URI]/api/data/v9.0/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -93,7 +92,6 @@ More information: [Use Web API actions](../../data-platform/webapi/use-web-api-a
 # [SDK for .NET](#tab/sdk)
 
 ```csharp
-
 /// <summary>
 /// Example of SendAppNotification
 /// </summary>
@@ -122,19 +120,6 @@ public static Guid SendAppNotificationExample(IOrganizationService service, Guid
 
 More information: [IOrganizationService Interface](../../data-platform/org-service/iorganizationservice-interface.md)
 
-
-<!-- # [Power Fx](#tab/powerfx)
-
-In-app notifications can be sent from Power Apps using Power Fx. More information: [Microsoft Power Fx overview](/power-platform/power-fx/overview).
-
-```powerapps-dot
-XSendAppNotification(
-  "Welcome",
-  LookUp(Users,'Primary Email'="<User email address>"),
-  "Welcome to the world of app notifications!"
-)
-``` -->
-
 ---
 
 ## Notification polling
@@ -143,18 +128,18 @@ In-app notifications use polling to retrieve notifications periodically when the
 
 ## Notification table
 
-Notifications sent using the `SendAppNotification` message are stored in the [Notification (appnotification) table](../../data-platform/reference/entities/appnotification.md). The following are the columns for the table.
+Notifications sent using the `SendAppNotification` message are stored in the [Notification (appnotification) table](../../data-platform/reference/entities/appnotification.md) (Web API <xref:Microsoft.Dynamics.CRM.appnotification?displayProperty=nameWithType>). The following are selected columns for the table.
 
 |Display Name|Schema Name|Description|
 |---|---|---|
-|Title|`Title`|The title of the notification.|
-|Owner|`OwnerId`|The user who receives the notification.|
-|Body|`Body`|Details about the notification.|
+|**Title**|`Title`|The title of the notification.|
+|**Owner**|`OwnerId`|The user who receives the notification.|
+|**Body**|`Body`|Details about the notification.|
 |IconType|`IconType`|The list of predefined icons. The default value is `Info`. For more information, go to [Changing the notification icon](#changing-the-notification-icon) later in this article.|
-|Toast Type|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
-|Priority | `Priority` |Enables prioritization of notifications, which determines the order in which the notifications are displayed in the notification center. For more information, see [Changing the notification behavior](#changing-the-notification-behavior) later in this article. |
-|Expiry (seconds)|`TTLInSeconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
-|Data|`Data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
+|**Toast Type**|`ToastType`|The list of notification behaviors. The default value is `Timed`. For more information, go to [Changing the notification behavior](#changing-the-notification-behavior) later in this article.|
+|**Priority** | `Priority` |Enables prioritization of notifications, which determines the order in which the notifications are displayed in the notification center. For more information, see [Changing the notification behavior](#changing-the-notification-behavior) later in this article. |
+|**Expiry (seconds)**|`TTLInSeconds`|The number of seconds from when the notification should be deleted if not already dismissed.|
+|**Data**|`Data`|JSON that's used for extensibility and parsing richer data into the notification. The maximum length is 5,000 characters.|
 
   > [!NOTE]
   > The `appmoduleid` field is not used in the table.
@@ -181,12 +166,10 @@ Newlines can be included with the body using `\n\n\n\n`.
 
 This example shows how to create a notification by adding a custom body definition that includes an inline link.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
 # [Web API](#tab/webapi)
-
-**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
@@ -208,19 +191,11 @@ Accept: application/json
   }
 }
 ```
-
-**Response**
-
-```http
-HTTP/1.1 204 No Content
-OData-Version: 4.0
-```
-
 # [SDK for .NET](#tab/sdk)
 
 ```csharp
 /// <summary>
-/// Example of SendAppNotification with overriddent content
+/// Example of SendAppNotification with overridden content
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="userId">The Id of the user to send the notification to.</param>
@@ -297,12 +272,12 @@ OData-Version: 4.0
 
 ```csharp
 /// <summary>
-/// Example of SendAppNotification with overridden content
+/// Example of SendAppNotification with formatted content
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="userId">The Id of the user to send the notification to.</param>
 /// <returns>The app notification id</returns>
-public static Guid SendAppNotificationWithOverriddenContent2(IOrganizationService service, Guid userId)
+public static Guid SendAppNotificationWithFormattedContent(IOrganizationService service, Guid userId)
 {
 
     var request = new OrganizationRequest()
@@ -335,8 +310,7 @@ public static Guid SendAppNotificationWithOverriddenContent2(IOrganizationServic
 >[!NOTE]
 > `OverrideContent` is not supported in Power Fx with the `xSendAppNotification` function.
 
-
-
+<!-- TODO: Add link to where this function is documented -->
 
 ### Changing the notification behavior
 
@@ -418,8 +392,7 @@ The following example shows how to create a notification with a single URL actio
 # [Web API](#tab/webapi)
 
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification 
-HTTP/1.1
+POST [Organization URI]/api/data/v9.0/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -453,12 +426,12 @@ Accept: application/json
 
 ```csharp
 /// <summary>
-/// Example of SendAppNotification with overriddent content
+/// Example of SendAppNotification with URl Action
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="userId">The Id of the user to send the notification to.</param>
 /// <returns>The app notification id</returns>
-public static Guid SendAppNotificationWithOverriddenContent3(IOrganizationService service, Guid userId)
+public static Guid SendAppNotificationWithUrlAction(IOrganizationService service, Guid userId)
 {
     var request = new OrganizationRequest()
     {
@@ -502,19 +475,6 @@ public static Guid SendAppNotificationWithOverriddenContent3(IOrganizationServic
     };
 ```
 
-<!-- # [Power Fx](#tab/powerfx)
-
-```powerapps-dot
-XSendAppNotification(
-    "Congratulations",
-    LookUp(Users,'Primary Email'="<User email address>"),
-    "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
-    [XCreateUrlAction
-        ("View cases","?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039", "newWindow")
-    ]
-)
-``` -->
-
 ---
   
 ### Defining a side pane action
@@ -531,7 +491,6 @@ The following example shows creating an app notification with a two side pane ac
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
-HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -592,12 +551,12 @@ Accept: application/json
 
 ```csharp
 /// <summary>
-/// Example of SendAppNotification with side pane action
+/// Example of SendAppNotification with side pane actions
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="userId">The Id of the user to send the notification to.</param>
 /// <returns>The app notification id</returns>
-public static Guid SendAppNotificationWithSidePaneAction(IOrganizationService service, Guid userId)
+public static Guid SendAppNotificationWithSidePaneActions(IOrganizationService service, Guid userId)
 {
 
     var request = new OrganizationRequest()
@@ -615,73 +574,73 @@ public static Guid SendAppNotificationWithSidePaneAction(IOrganizationService se
                 Attributes =
     {
     ["actions"] = new EntityCollection()
-    {
-        Entities =
-        {
-        new Entity()
-        {
-            Attributes =
+      {
+         Entities =
+         {
+            new Entity()
             {
-            ["title"] = "View task",
-            ["data"] = new Entity()
+               Attributes =
+               {
+                  ["title"] = "View task",
+                  ["data"] = new Entity()
+                  {
+                     Attributes =
+                     {
+                        ["type"] = "sidepane",
+                        ["paneOptions"] = new Entity
+                        {
+                           Attributes =
+                           {
+                              ["title"] = "Task",
+                              ["width"] = 400
+                           }
+                        },
+                     ["navigationTarget"] = new Entity
+                        {
+                           Attributes =
+                           {
+                              ["pageType"] = "entityrecord",
+                              ["entityName"] = "task",
+                              ["entityId"] = "<GUID of the table record>"
+                           }
+                        }
+                     }
+                  }
+               }
+            },
+            new Entity()
             {
-                Attributes =
-                {
-                ["type"] = "sidepane",
-                ["paneOptions"] = new Entity
-                {
-                    Attributes =
-                    {
-                    ["title"] = "Task",
-                    ["width"] = 400
-                    }
-                },
-                ["navigationTarget"] = new Entity
-                {
-                    Attributes =
-                    {
-                    ["pageType"] = "entityrecord",
-                    ["entityName"] = "task",
-                    ["entityId"] = "<GUID of the table record>"
-                    }
-                }
-                }
+                  Attributes =
+                  {
+                  ["title"] = "View account",
+                  ["data"] = new Entity()
+                  {
+                     Attributes =
+                     {
+                        ["type"] = "sidepane",
+                        ["paneOptions"] = new Entity
+                        {
+                           Attributes =
+                           {
+                              ["title"] = "Account",
+                              ["width"] = 400
+                           }
+                        },
+                        ["navigationTarget"] = new Entity
+                        {
+                           Attributes =
+                           {
+                              ["pageType"] = "entityrecord",
+                              ["entityName"] = "account",
+                              ["entityId"] = "<GUID of the table record>"
+                           }
+                        }
+                     }
+                  }
+               }
             }
-            }
-        },
-        new Entity()
-        {
-            Attributes =
-            {
-            ["title"] = "View account",
-            ["data"] = new Entity()
-            {
-                Attributes =
-                {
-                ["type"] = "sidepane",
-                ["paneOptions"] = new Entity
-                {
-                    Attributes =
-                    {
-                    ["title"] = "Account",
-                    ["width"] = 400
-                    }
-                },
-                ["navigationTarget"] = new Entity
-                {
-                    Attributes =
-                    {
-                    ["pageType"] = "entityrecord",
-                    ["entityName"] = "account",
-                    ["entityId"] = "<GUID of the table record>"
-                    }
-                }
-                }
-            }
-            }
-        }
-        }
-    }
+         }
+      }
     }
             }
         }
@@ -691,21 +650,6 @@ public static Guid SendAppNotificationWithSidePaneAction(IOrganizationService se
     return (Guid)response.Results["NotificationId"];
 }
 ```
-
-<!-- # [Power Fx](#tab/powerfx)
-
-```powerapps-dot
-XSendAppNotification(
-  "You have a new task!",
-  AsType(ThisRecord.Owner, Users),
-  "A new task has been assigned to you to follow up with your customer",
-  [XCreateSidePaneActionForEntity
-    ("View task","taskRecord","Task","task",ThisRecord.Task),
-  XCreateSidePaneActionForEntity
-    ("View account","accountRecord","Account","account",AsType(ThisRecord.Regarding, Accounts).Account)
-  ]
-)
-``` -->
 
 ---
 
@@ -778,13 +722,16 @@ Accept: application/json
 
 ```csharp
 /// <summary>
-/// Example of SendAppNotification with side pane action
+/// Example of SendAppNotification with single Teams chat action.
 /// </summary>
 /// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
 /// <param name="userId">The Id of the user to send the notification to.</param>
 /// <param name="userIds">The Ids of the users in the teams chat.</param>
 /// <returns>The app notification id</returns>
-public static Guid SendAppNotificationWithTeamChatAction(IOrganizationService service, Guid userId, Guid[] userIds)
+public static Guid SendAppNotificationWithTeamChatAction(
+   IOrganizationService service, 
+   Guid userId, 
+   Guid[] userIds)
 {
 
     var request = new OrganizationRequest()
@@ -840,25 +787,6 @@ public static Guid SendAppNotificationWithTeamChatAction(IOrganizationService se
 
 }
 ```
-
-<!-- # [Power Fx](#tab/powerfx)
-
-```powerapps-dot
-  
-XSendAppNotification(
-   "New order posted",
-   AsType(ThisRecord.Owner, Users),
-   "A new sales order has been posted for Contoso",
-   [XCreateTeamsChatAction(
-      "Chat with sales rep",
-      [AsType(ThisRecord.Owner, Users).'Azure AD Object ID',ThisRecord.'Created By'.'Azure AD Object ID'],
-      AsType(ThisRecord.Customer, Accounts).Account,
-      "account",
-      ThisRecord.Description
-      )
-   ]
-)
-``` -->
 
 ---
 
