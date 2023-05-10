@@ -20,7 +20,7 @@ contributors:
 # Terminology changes in Power Apps portals
 
 
-[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 Effective November 2020, Common Data Service has been renamed to Microsoft Dataverse. More information: [Common Data Service is now Microsoft Dataverse](https://aka.ms/PAuAppBlog). Some terminology in Microsoft Dataverse has also been updated. For example, *entity* is now *table* and *field* is now *column*. More information: [Terminology updates in Dataverse](../data-platform/data-platform-intro.md).
 
