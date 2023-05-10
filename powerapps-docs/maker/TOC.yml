@@ -1787,7 +1787,7 @@
   items:
     - name: What is Power Pages?
       href: /power-pages/introduction
-    - name: Terminology changes in Power Pages
+    - name: Terminology changes
       href: ./portals/terminology-changes.md
     - name: Create and manage sites
       items:
