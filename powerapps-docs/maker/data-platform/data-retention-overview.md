@@ -66,6 +66,44 @@ Admins set retention policies on tables when the application maker has enabled l
 
 All the existing delete action cascade relationships and plugins for tables are started when a data retention policy is run on the table.
 
+## Storage capacity reports
+
+With Dataverse long term retention, data is never moved out of Dataverse . The reported capacity in the existing Power Platform admin reports includes live (active) plus retained (inactive) data in GBs. <!-- what does this mean? --> The storage reports can take up to 24 hours to refresh with retained data after a long-term retention policy is successfully completed.
+
+- Database capacity details reported
+  - Database capacity reported is the sum of the live and retained data. The overall database capacity consumed is reduced depending on the proportion of the data rows retained during a policy run.  
+  - Consider a non-production preview scenario where all the live data for the case table is retained with Dataverse long term retention.  
+- Notice that the policy run might take up to 96 hours to complete and there'll be an additional 24 hours afterward for the database capacity reports to appear. When available the reports display two entries for a table that has been enabled for long term retention:
+    - *Table*, such as **Case**.
+    - *Table***-Retained**, such as **Case-Retained**.
+  - Case size should be minimal to zero and case-retained size will display the retained data GB. <!-- what does this mean? -->
+
+> [!NOTE]
+> Since the case table commonly has associated child tables, the capacity reports also display the childtable-retained GB size.
+
+- File capacity details reported.
+  - If there are associated file attachments retained long term, the file capacity reflects the sum of the live and retained data. There will be no reduction or savings observed with file capacity after running a retention policy, which involved file attachments.  
+
+Log capacity reports aren't currently available.
+
+After a long term retention policy is successfully completed, there's a new entry for <Case-Retained> and <Contact-Retained> with a reduction in database capacity consumed depending on the number of rows and data type involved in the retention process. <!-- These are examples if you enabled case table and contact for long term retention, right?>
+
+:::image type="content" source="media/data-retention-storage-capacity-report.png" alt-text="Storage capacity report that includes retained table data":::
+
+## Solution aware retention policies
+
+Dataverse retention policies are solution aware. Dataverse retention policies added to a solution are known as solution-aware retention policies. You can add multiple retention policies to a single solution. Retention policies are added to an unmanaged solution. This helps makers follow application lifecycle management (ALM) best practices when working with Dataverse retention policies.
+
+When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a pre-production environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
+
+> [!NOTE]
+> - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
+> - Only retention policies created in Power Platform environments can be solution-aware.
+
+You create a solution before you add a retention policy to it. Exporting and importing solutions containing retention policies is the same as with other solution components.
+
+For more information about solutions and solution components, go to [Solutions overview](solutions-overview.md).
+
 ## Next steps
 
 [Set a data retention policy for a table](data-retention-set.md)
