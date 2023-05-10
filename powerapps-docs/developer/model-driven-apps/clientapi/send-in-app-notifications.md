@@ -32,7 +32,7 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 1. Open the solution that contains the model-driven app.  
 
-1. Select the model-driven app and click **Edit** split menu to open using the modern app designer.
+1. Select the model-driven app and select the **Edit** split menu to open using the modern app designer.
 
 1. Open **Settings** and switch to **Features**.
 
@@ -41,9 +41,9 @@ To use the in-app notification feature, you need to enable the **In-app notifica
     > [!div class="mx-imgBorder"]
     > ![Custom page as main page](media/send-in-app-notifications/app-designer-settings-enable-in-app-notifications.png "Custom page as main page")
 
-1. Click **Save** to save the settings change.
+1. Select **Save** to save the settings change.
 
-1. Click **Publish** on the model-driven app.
+1. Select **Publish** on the model-driven app.
 
 
 ## Send basic in-app notifications
@@ -52,7 +52,7 @@ Notifications can be sent using the `SendAppNotification` message.
 
 See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the message and parameters. 
 
-The `SendAppNotification` message does not currently have request & response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md)
+The `SendAppNotification` message doesn't currently have request & response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message, you must generate classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md)
 
 The following basic examples show how to use the API to send in-app notifications.
 
@@ -124,7 +124,7 @@ More information: [IOrganizationService Interface](../../data-platform/org-servi
 
 ## Notification polling
 
-In-app notifications use polling to retrieve notifications periodically when the app is running.  New notifications are retrieved at start of the model-driven app and when a page navigation occurs as long as the last retrieval is more than one minute ago.  If a user stays on a page for a long duration, new notifications won't be retrieved until the user navigates to another page.
+In-app notifications use polling to retrieve notifications periodically when the app is running.  New notifications are retrieved at start of the model-driven app and when a page navigation occurs as long as the last retrieval is more than one minute ago.  If a user stays on a page for a long duration, new notifications aren't retrieved until the user navigates to another page.
 
 ## Notification table
 
@@ -144,13 +144,13 @@ Notifications sent using the `SendAppNotification` message are stored in the [No
   > [!NOTE]
   > The `appmoduleid` field is not used in the table.
 
-## Customizing the notifiction
+## Customizing the notification
 
-In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. This includes changing the styles in the `Title` and `Body` of the notification, customizing the notification icon, and changing the behavior of the notification.
+In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. Customizing the notification involves changing the styles in the `Title` and `Body` of the notification, customizing the notification icon, and changing the behavior of the notification.
 
 ### Using markdown in Title and Body
 
-The `Title` and `Body` parameters of the `SendAppNotification` message do not support markdown defined within the properties. You can adjust the styles of these properties using markdown in the `OverrideContent` property. This field supports overriding the `Title` and `Body` simple strings with a limited subset of markdown styles.
+The `Title` and `Body` parameters of the `SendAppNotification` message don't support markdown defined within the properties. You can adjust the styles of these properties using markdown in the `OverrideContent` property. This field supports overriding the `Title` and `Body` simple strings with a limited subset of markdown styles.
 
 The following is the supported markdown.
 
@@ -365,7 +365,7 @@ You can change the order in which notifications display in the notification cent
 |Normal |`200000000`|
 |High |`200000001`|
 
-The default value is `Normal`. Notifications are sorted in the notification center by **Priority** and **Created On** date, descending. High priority notifications will display at the top of the list in the notification center.
+The default value is `Normal`. Notifications are sorted in the notification center by **Priority** and **Created On** date, descending. High priority notifications display at the top of the list in the notification center.
 
 ## Notification actions
 
@@ -381,7 +381,7 @@ The URL action type enables navigation from the action on the app notification t
 
 |Parameter | Required | Data type | Description |
 |-------------|-------------|-------------|-------------|
-|`url` | Yes | String | This is the URL of the web address to be opened when the action is selected. |
+|`url` | Yes | String | The URL of the web address to be opened when the action is selected. |
 |`navigationTarget` | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li><ul> |
 
 The following example shows how to create a notification with a single URL action.
@@ -479,11 +479,11 @@ public static Guid SendAppNotificationWithUrlAction(IOrganizationService service
   
 ### Defining a side pane action
 
-A side pane action enables opening a side pane to load a defined page when the action is selected from the app notification. See [Creating side panes by using a client API](./create-app-side-panes.md) for more information.
+A side pane action enables opening a side pane to load a defined page when the action is selected from the app notification. More information: [Creating side panes by using a client API](./create-app-side-panes.md) for more information.
 
 When using the side pane action type, you have control over the options of the side pane itself, and the page that loads in the side pane.
 - See [createPane](./reference/xrm-app/xrm-app-sidepanes/createpane.md) for the optional parameters for the pane that is created.
-- See [navigateTo (Client API reference)](./reference/xrm-navigation/navigateto.md) for the parameters to be defined for the page that will be loaded in the side pane.
+- See [navigateTo (Client API reference)](./reference/xrm-navigation/navigateto.md) for the parameters to be defined for the page that is loaded in the side pane.
   
 The following example shows creating an app notification with a two side pane actions.
   
@@ -655,7 +655,7 @@ public static Guid SendAppNotificationWithSidePaneActions(IOrganizationService s
 
 ### Defining a Teams chat action
 
-A Teams chat action enables scenarios where a Teams chat is initiated from the app notification. This uses the embedded Teams feature for Dynamics 365 apps, which provides sellers and agents the ability to chat in Microsoft Teams from within the customer engagement apps, such as Sales Hub, Customer Service Hub, and custom apps. 
+A Teams chat action enables scenarios where a Teams chat is initiated from the app notification. This action uses the embedded Teams feature for Dynamics 365 apps, which provides sellers and agents the ability to chat in Microsoft Teams from within the customer engagement apps, such as Sales Hub, Customer Service Hub, and custom apps. 
 
 >[!NOTE]
 >Microsoft Teams chat in Dynamics 365 must be enabled to use the Teams chat action type. See [Work with Microsoft Teams chat in Dynamics 365](/dynamics365/teams-integration/enable-teams-chat) for more information.
@@ -668,10 +668,10 @@ The following are the parameters for defining a Teams chat action on the app not
 
 |Parameter | Data type | Description |
 |----------|-----------|-------------|
-|`chatId`    |String     |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. See [Get chat](/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
-|`memberIds` |GUID[]       |This is an array of the AAD user ID values of each of the participants that will be included in a new chat session. Member ID values should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the members of the existing chat will be included in the chat when opened. |
-|`entityContext` | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the entityContext, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (i.e. the **chatId** parameter has not been provided), and the the entity context is not defined, then the new chat session will not be linked to a Dynamics 365 record. |
-|`entityName` | String | Part of the entity context, this is the logical name of the Dataverse table for the record to which the chat will be linked. |
+|`chatId`    |String     |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. More information: [Get chat](/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
+|`memberIds` |GUID[]|An array of the Microsoft Azure Active Directory (AAD) user ID values of each of the participants that to be included in a new chat session. Member ID values shouldn't be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat is opened, and the members of the existing chat are included in the chat when opened. |
+|`entityContext` | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context shouldn't be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat is opened, and the `entityContext`, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (that is, the **chatId** parameter hasn't been provided), and the entity context isn't defined, then the new chat session won't be linked to a Dynamics 365 record. |
+|`entityName` | String | Part of the entity context, the logical name of the Dataverse table for the record to which the chat is related to. |
 |`recordId` | GUID | Part of the entity context, this is the ID property of the table defined in the **entityName** parameter for the record to which the chat will be linked. |
 |`chatTitle` | String | The title of the Teams chat. |
 |`initialMessage` | String | The text of an introduction message you may optionally provide that will be automatically sent when the chat is created. |
@@ -794,7 +794,7 @@ public static Guid SendAppNotificationWithTeamChatAction(
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
-In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending app notifications. It is not required to receive notifications.
+In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending app notifications. It isn't required to receive notifications.
 
 |Usage|Required table privileges|
 |------------|----------------|
