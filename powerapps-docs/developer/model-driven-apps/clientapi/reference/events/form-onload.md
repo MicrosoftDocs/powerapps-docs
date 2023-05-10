@@ -52,10 +52,10 @@ To enable the async Onload event handlers for a specific app:
     
 ### Async OnLoad timeouts
 
-When using an async handler, a form load will wait for the promise to be fulfilled. To ensure that a load completes on time, the handler throws a timeout exception after 10 seconds to let you know to tune the async OnLoad event for better performance.
+When using an async handler, a form load will wait for the promise to be fulfilled, but only up to 10 seconds. This is to ensure that the form loads within a reasonable amount of time.
 
-There may be scenarios where you want to halt the OnLoad execution, and the timeout will stop the operation from occurring.  An example is opening a dialog in the async OnLoad and waiting for the user's input before saving. To make sure the async operation will wait you can provide the event argument **disableAsyncTimeout**(executioncontext.getEventArgs().disableAsyncTimeout()).
- When the **disableAsyncTimeout is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
+There may be scenarios where you want to pause OnLoad for a longer period of time.  An example is opening a dialog in the async OnLoad handler and waiting for the user's input before saving. To make sure the async operation will wait, you can invoke the event argument **disableAsyncTimeout** as follows `executioncontext.getEventArgs().disableAsyncTimeout()`.
+When **disableAsyncTimeout** is set, the timeout for that handler will not be applied. It will continue to wait for that handler's promise to be fulfilled.
 
 This should be used with caution as it might affect the performance of the form load.
 
