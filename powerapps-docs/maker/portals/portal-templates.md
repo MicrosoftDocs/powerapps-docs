@@ -1,5 +1,5 @@
 ---
-title: Portal templates
+title: Available templates
 description: Learn about various portal templates available in Power Apps.
 author: neerajnandwana-msft
 
@@ -15,7 +15,7 @@ contributors:
     - sandhangitmsft
 ---
 
-# Portal templates
+# Available templates
 
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
