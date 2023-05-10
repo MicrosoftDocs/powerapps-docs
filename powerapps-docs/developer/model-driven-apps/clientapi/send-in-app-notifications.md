@@ -107,7 +107,7 @@ In-app notifications can be sent from Power Apps using Power Fx. More informatio
 ```powerapps-dot
 XSendAppNotification(
   "Welcome",
-  LookUp(Users,'Primary Email'="<User email address>",
+  LookUp(Users,'Primary Email'="<User email address>"),
   "Welcome to the world of app notifications!"
 )
 ```
@@ -442,10 +442,10 @@ Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```powerapps-dot
 XSendAppNotification(
     "Congratulations",
-    AsType(ThisRecord.Owner, Users),
+    LookUp(Users,'Primary Email'="<User email address>"),
     "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
     [XCreateUrlAction
-        ("View cases","?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039")
+        ("View cases","?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039", "newWindow")
     ]
 )
 ```
@@ -621,15 +621,13 @@ Guid appNotificationId = (Guid)response.Results["NotificationId"];
 # [Power Fx](#tab/powerfx5)
 
 ```powerapps-dot
-//THIS NEEDS TO BE UPDATED WHEN THE NEW FUNCTIONS ARE AVAILABLE
-  
 XSendAppNotification(
   "You have a new task!",
   AsType(ThisRecord.Owner, Users),
   "A new task has been assigned to you to follow up with your customer",
-  [XCreateEntityRecordSidePaneAction
+  [XCreateSidePaneActionForEntity
     ("View task","taskRecord","Task","task",ThisRecord.Task),
-  XCreateEntityRecordSidePaneAction
+  XCreateSidePaneActionForEntity
     ("View account","accountRecord","Account","account",AsType(ThisRecord.Regarding, Accounts).Account)
   ]
 )
@@ -761,14 +759,19 @@ Guid appNotificationId = (Guid)response.Results["NotificationId"];
 
 ```powerapps-dot
   
-XSendAppNotification
-	("New order posted",
+XSendAppNotification(
+	"New order posted",
 	AsType(ThisRecord.Owner, Users),
 	"A new sales order has been posted for Contoso",
-	[XCreateTeamsChatAction
-		("Chat with sales rep",
+	[XCreateTeamsChatAction(
+		"Chat with sales rep",
 		[AsType(ThisRecord.Owner, Users).'Azure AD Object ID',ThisRecord.'Created By'.'Azure AD Object ID'],
-		AsType(ThisRecord.Customer, Accounts).Account,"account",ThisRecord.Description)])
+		AsType(ThisRecord.Customer, Accounts).Account,
+		"account",
+		ThisRecord.Description
+		)
+	]
+)
 ```
 
 ---
