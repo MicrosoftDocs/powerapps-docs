@@ -34,14 +34,25 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 
 To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it on your device.
 
+### Upload an Excel file to create an app
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. From the home screen select, **Start with data** > **Upload an Excel file**.
-3. Select **Select from device** and navigate to the location where your Excel file is saved and upload it.
-4. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
-5. Select **Row ownership** and choose how you want to manage row ownership.
-6. When you're done, select **Create app**.
+1. From the home screen select, **Start with data** > **Upload an Excel file**.
+1. Select **Select from device** and navigate to the location where your Excel file is saved and upload it.
+1. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
+1. Select **Row ownership** and choose how you want to manage row ownership.
+1. When you're done, select **Create app**.
 
+### Connect to Excel to create an app
 
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Depending on how you want to create you app, from the home screen select one of the following options:
+   - To use data to create an app select, **Start with data** > **Connect to external data** > **Excel**
+   - To use an app template to create an app select, **Start with an app template** > **From Excel**.
+   - To use your data in a single-page gallery app, select, **Start with page design** > **Gallery connected to external data** > **From Excel**
+1. Only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or add a new connection.
+1. Enter the file location and select the table.
+1. When you're done, select **Create app**.
 
 # [Classic](#tab/home-classic)
 
