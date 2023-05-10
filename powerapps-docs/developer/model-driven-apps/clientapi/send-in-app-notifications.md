@@ -1,7 +1,7 @@
 ---
 title: "Send in-app notifications within model-driven apps" 
 description: Learn how to configure notifications in model-driven apps by using a client API.
-ms.date: 02/22/2023
+ms.date: 05/10/2023
 ms.reviewer: jdaly
 ms.service: powerapps
 ms.subservice: mda-developer
@@ -102,7 +102,7 @@ Guid appNotificationId = (Guid)response.Results["NotificationId"];
 
 # [Power Fx](#tab/powerfx)
 
-In-app notifications can be sent from Power Apps using Power Fx. More information: [Microsoft Power Fx overview](https://learn.microsoft.com/en-us/power-platform/power-fx/overview).
+In-app notifications can be sent from Power Apps using Power Fx. More information: [Microsoft Power Fx overview](/power-platform/power-fx/overview).
 
 ```powerapps-dot
 XSendAppNotification(
@@ -137,6 +137,7 @@ Notifications sent using the `SendAppNotification` API are stored in the **Notif
   > The `appmoduleid` field is not used in the table.
 
 ## Customizing the notifiction
+
 In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. This includes changing the styles in the **Title** and **Body** of the notification, customizing the notification icon, and changing the behavior of the notification.
 
 ### Using markdown in Title and Body
@@ -640,7 +641,7 @@ XSendAppNotification(
 A Teams chat action enables scenarios where a Teams chat is initiated from the app notification. This uses the embedded Teams feature for Dynamics 365 apps, which provides sellers and agents the ability to chat in Microsoft Teams from within the customer engagement apps, such as Sales Hub, Customer Service Hub, and custom apps. 
 
 >[!NOTE]
->Microsoft Teams chat in Dynamics 365 must be enabled to use the Teams chat action type. See [Work with Microsoft Teams chat in Dynamics 365](/dynamics365/teams-integration/enable-teams-chat.md) for more information.
+>Microsoft Teams chat in Dynamics 365 must be enabled to use the Teams chat action type. See [Work with Microsoft Teams chat in Dynamics 365](/dynamics365/teams-integration/enable-teams-chat) for more information.
 
 The action type provides the following options:
 - Create a new chat session or open an existing chat session.
@@ -648,9 +649,9 @@ The action type provides the following options:
 
 The following are the parameters for defining a Teams chat action on the app notification.
 
-|Parameter | Data type | Description | 
+|Parameter | Data type | Description |
 |----------|-----------|-------------|
-|chatId    |String     |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. See [Get chat](https://learn.microsoft.com/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
+|chatId    |String     |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. See [Get chat](/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
 |memberIds |GUID       |This is an array of the AAD user ID values of each of the participants that will be included in a new chat session. Member ID values should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the members of the existing chat will be included in the chat when opened. |
 |entityContext | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the entityContext, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (i.e. the **chatId** parameter has not been provided), and the the entity context is not defined, then the new chat session will not be linked to a Dynamics 365 record. |
 |entityName | String | Part of the entity context, this is the logical name of the Dataverse table for the record to which the chat will be linked. |
@@ -760,17 +761,17 @@ Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```powerapps-dot
   
 XSendAppNotification(
-	"New order posted",
-	AsType(ThisRecord.Owner, Users),
-	"A new sales order has been posted for Contoso",
-	[XCreateTeamsChatAction(
-		"Chat with sales rep",
-		[AsType(ThisRecord.Owner, Users).'Azure AD Object ID',ThisRecord.'Created By'.'Azure AD Object ID'],
-		AsType(ThisRecord.Customer, Accounts).Account,
-		"account",
-		ThisRecord.Description
-		)
-	]
+   "New order posted",
+   AsType(ThisRecord.Owner, Users),
+   "A new sales order has been posted for Contoso",
+   [XCreateTeamsChatAction(
+      "Chat with sales rep",
+      [AsType(ThisRecord.Owner, Users).'Azure AD Object ID',ThisRecord.'Created By'.'Azure AD Object ID'],
+      AsType(ThisRecord.Customer, Accounts).Account,
+      "account",
+      ThisRecord.Description
+      )
+   ]
 )
 ```
 
