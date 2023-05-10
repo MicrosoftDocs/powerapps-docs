@@ -60,7 +60,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 1. Select a list and then select, **Create app**.
 
 
-## Create a three screen mobile app
+### Create a three screen mobile app
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with an app template** > **From SharePoint**.
