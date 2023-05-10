@@ -48,17 +48,21 @@ To use the in-app notification feature, you need to enable the **In-app notifica
 
 ## Send basic in-app notifications
 
-Notifications can be sent using the `SendAppNotification` API. See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the API and parameters. 
+Notifications can be sent using the `SendAppNotification` message.
+
+See [SendAppNotification Action](xref:Microsoft.Dynamics.CRM.SendAppNotification) for information on the message and parameters. 
+
+The `SendAppNotification` message does not currently have request & response classes in the Dataverse SDK for .NET. To get strongly typed classes for this message you must generated classes or use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. More information: [Use messages with the Organization service](../../data-platform/org-service/use-messages.md)
 
 The following basic examples show how to use the API to send in-app notifications.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Screenshot of a Welcome notification.](../media/welcome-notification.png "Welcome notification")
 
 
 # [Web API](#tab/webapi)
 
-In-app notifications can be sent by using the Web API. More information: [Use Web API actions](../../data-platform/webapi/use-web-api-actions.md).
+**Request**
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -77,28 +81,47 @@ Accept: application/json
 }
 ```
 
-# [SDK for .NET](#tab/sdk)
+**Response**
 
-In-app notifications can be sent by using the Dataverse SDK with the organization service. More information: [IOrganizationService Interface](../../data-platform/org-service/iorganizationservice-interface.md)
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
+More information: [Use Web API actions](../../data-platform/webapi/use-web-api-actions.md).
+
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 
-OrganizationRequest request = new OrganizationRequest()
+/// <summary>
+/// Example of SendAppNotification
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userId">The Id of the user to send the notification to.</param>
+/// <returns>The app notification id</returns>
+public static Guid SendAppNotificationExample(IOrganizationService service, Guid userId)
 {
-    RequestName = "SendAppNotification",
-    Parameters = new ParameterCollection
+    var request = new OrganizationRequest()
     {
-        ["Title"] = "Welcome",
-        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
-        ["Body"] = "Welcome to the world of app notifications!",
-        ["IconType"] = new OptionSetValue(100000000), //info
-        ["ToastType"] = new OptionSetValue(200000000) //timed
-     }
-};
+        RequestName = "SendAppNotification",
+        Parameters = new ParameterCollection
+        {
+            ["Title"] = "Welcome",
+            ["Recipient"] = new EntityReference("systemuser", userId),
+            ["Body"] = "Welcome to the world of app notifications!",
+            ["IconType"] = new OptionSetValue(100000000), //info
+            ["ToastType"] = new OptionSetValue(200000000) //timed
+        }
+    };
 
-OrganizationResponse response = currentUserService.Execute(request);
-Guid appNotificationId = (Guid)response.Results["NotificationId"];
+    OrganizationResponse response = service.Execute(request);
+    return (Guid)response.Results["NotificationId"];
+}
 ```
+
+More information: [IOrganizationService Interface](../../data-platform/org-service/iorganizationservice-interface.md)
+
 
 <!-- # [Power Fx](#tab/powerfx)
 
@@ -120,9 +143,9 @@ In-app notifications use polling to retrieve notifications periodically when the
 
 ## Notification table
 
-Notifications sent using the `SendAppNotification` API are stored in the [Notification (appnotification)  table](../../data-platform/reference/entities/appnotification.md). The following are the columns for the table.
+Notifications sent using the `SendAppNotification` message are stored in the [Notification (appnotification) table](../../data-platform/reference/entities/appnotification.md). The following are the columns for the table.
 
-|Column Label|Column Schema Name|Description|
+|Display Name|Schema Name|Description|
 |---|---|---|
 |Title|`Title`|The title of the notification.|
 |Owner|`OwnerId`|The user who receives the notification.|
@@ -138,11 +161,11 @@ Notifications sent using the `SendAppNotification` API are stored in the [Notifi
 
 ## Customizing the notifiction
 
-In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. This includes changing the styles in the **Title** and **Body** of the notification, customizing the notification icon, and changing the behavior of the notification.
+In addition to the basic properties of the notification, there are options for customizing the notification delivered to the user. This includes changing the styles in the `Title` and `Body` of the notification, customizing the notification icon, and changing the behavior of the notification.
 
 ### Using markdown in Title and Body
 
-The **Title** and **Body** attributes of the `SendAppNotification` API do not support markdown defined within the properties. You can adjust the styles of these properties using markdown in the **OverrideContent** property. This field supports overriding the `Title` and `Body` simple strings with a limited subset of markdown styles.
+The `Title` and `Body` parameters of the `SendAppNotification` message do not support markdown defined within the properties. You can adjust the styles of these properties using markdown in the `OverrideContent` property. This field supports overriding the `Title` and `Body` simple strings with a limited subset of markdown styles.
 
 The following is the supported markdown.
 
@@ -163,9 +186,10 @@ This example shows how to create a notification by adding a custom body definiti
 
 # [Web API](#tab/webapi)
 
+**Request**
+
 ```http
-POST [Organization URI]/api/data/v9.0/SendAppNotification 
-HTTP/1.1
+POST [Organization URI]/api/data/v9.0/SendAppNotification
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -185,46 +209,65 @@ Accept: application/json
 }
 ```
 
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
 # [SDK for .NET](#tab/sdk)
 
 ```csharp
-
-OrganizationRequest request = new OrganizationRequest()
+/// <summary>
+/// Example of SendAppNotification with overriddent content
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userId">The Id of the user to send the notification to.</param>
+/// <returns>The app notification id</returns>
+public static Guid SendAppNotificationWithOveriddenContent(IOrganizationService service, Guid userId)
 {
-    RequestName = "SendAppNotification",
-    Parameters = new ParameterCollection
-    {
-        ["Title"] = "SLA critical",
-        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
-        ["Body"] = "Record assigned to you is critically past SLA.",
-        ["IconType"] = new OptionSetValue(100000003), //warning
-        ["ToastType"] = new OptionSetValue(200000000), //timed
-        ["OverrideContent"] = new Entity()
-        {
-          Attributes = 
-          {
-            ["title"] = "**SLA critical**",
-            ["body"] = "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
-          }
-        }
-     }
-};
 
-OrganizationResponse response = currentUserService.Execute(request);
-Guid appNotificationId = (Guid)response.Results["NotificationId"];
+    var request = new OrganizationRequest()
+    {
+        RequestName = "SendAppNotification",
+        Parameters = new ParameterCollection
+        {
+            ["Title"] = "SLA critical",
+            ["Recipient"] = new EntityReference("systemuser", userId),
+            ["Body"] = "Record assigned to you is critically past SLA.",
+            ["IconType"] = new OptionSetValue(100000003), //warning
+            ["ToastType"] = new OptionSetValue(200000000), //timed
+            ["OverrideContent"] = new Entity()
+            {
+                Attributes =
+                  {
+                  ["title"] = "**SLA critical**",
+                  ["body"] = "Case record [Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8) assigned to you is critically past SLA and has been escalated to your manager."
+                  }
+            }
+        }
+    };
+
+    OrganizationResponse response = service.Execute(request);
+    return (Guid)response.Results["NotificationId"];
+
+}
 ```
+
 ---
 
 This example adds a custom title and a body definition that allows multiple links, bold formatting, and italic formatting.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
 
 # [Web API](#tab/webapi)
 
+**Request**
+
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
-HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -243,44 +286,61 @@ Accept: application/json
 }
 ```
 
+**Response**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+```
+
 # [SDK for .NET](#tab/sdk)
 
 ```csharp
-
-OrganizationRequest request = new OrganizationRequest()
+/// <summary>
+/// Example of SendAppNotification with overridden content
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userId">The Id of the user to send the notification to.</param>
+/// <returns>The app notification id</returns>
+public static Guid SendAppNotificationWithOverriddenContent2(IOrganizationService service, Guid userId)
 {
-    RequestName = "SendAppNotification",
-    Parameters = new ParameterCollection
-    {
-        ["Title"] = "Complete overhaul required (sample)",
-        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
-        ["Body"] = "Maria Campbell mentioned you in a post.",
-        ["IconType"] = new OptionSetValue(100000004), //mention
-        ["OverrideContent"] = new Entity()
-        {
-          Attributes = 
-          {
-            ["title"] = "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
-            ["body"] = "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_"
-          }
-        }
-     }
-};
 
-OrganizationResponse response = currentUserService.Execute(request);
-Guid appNotificationId = (Guid)response.Results["NotificationId"];
+    var request = new OrganizationRequest()
+    {
+        RequestName = "SendAppNotification",
+        Parameters = new ParameterCollection
+        {
+            ["Title"] = "Complete overhaul required (sample)",
+            ["Recipient"] = new EntityReference("systemuser", userId),
+            ["Body"] = "Maria Campbell mentioned you in a post.",
+            ["IconType"] = new OptionSetValue(100000004), //mention
+            ["OverrideContent"] = new Entity()
+            {
+                Attributes =
+                {
+                    ["title"] = "[Complete overhaul required (sample)](?pagetype=entityrecord&etn=incident&id=0a9f62a8-90df-e311-9565-a45d36fc5fe8)",
+                    ["body"] = "[Maria Campbell](?pagetype=entityrecord&etn=contact&id=43m770h2-6567-ebm1-ob2b-000d3ac3kd6c) mentioned you in a post: _\"**[@Paul](?pagetype=entityrecord&etn=contact&id=03f770b2-6567-eb11-bb2b-000d3ac2be4d)** we need to prioritize this overdue case, [@Robert](?pagetype=entityrecord&etn=contact&id=73f970b2-6567-eb11-bb2b-000d3ac2se4h) will work with you to engage with engineering team ASAP.\"_"
+                }
+            }
+        }
+    };
+
+    OrganizationResponse response = service.Execute(request);
+    return (Guid)response.Results["NotificationId"];
+}
 ```
+
 ---
 
 >[!NOTE]
->OverrideContent is not supported in Power Fx with the `SendAppNotification` API.
+> `OverrideContent` is not supported in Power Fx with the `xSendAppNotification` function.
 
 
 
 
 ### Changing the notification behavior
 
-You can change in-app notification behavior by setting **Toast Type** to one of the following values.
+You can change in-app notification behavior by setting `ToastType` to one of the following values.
 
 |Toast Type|Behavior|Value|
 |---|---|---|
@@ -289,7 +349,7 @@ You can change in-app notification behavior by setting **Toast Type** to one of 
 
 ### Changing the notification icon
 
-You can change the in-app notification icon by setting **Icon Type** to one of the following values. When using a custom icon, specify the `iconUrl` parameter within the `OverrideContent` parameter.
+You can change the in-app notification icon by setting `IconType` to one of the following values. When using a custom icon, specify the `iconUrl` parameter within the `OverrideContent` parameter.
 
 |Icon Type|Value|Image|
 |---|---|---|
@@ -324,14 +384,14 @@ Accept: application/json
 
 ### Setting the notification priority
 
-You can change the order in which notifications display in the notification center by setting the priority. The following are the optional values:
+You can change the order in which notifications display in the notification center by setting the `Priority`. The following are the optional values:
 
 |Priority | Value |
 |---------|-------|
 |Normal |`200000000`|
 |High |`200000001`|
 
-The default value is `Normal`. Notifications are sorted in the notification center by Priority and Created On date, descending. High priority notifications will display at the top of the list in the notification center.
+The default value is `Normal`. Notifications are sorted in the notification center by **Priority** and **Created On** date, descending. High priority notifications will display at the top of the list in the notification center.
 
 ## Notification actions
 
@@ -347,8 +407,8 @@ The URL action type enables navigation from the action on the app notification t
 
 |Parameter | Required | Data type | Description |
 |-------------|-------------|-------------|-------------|
-|url | Yes | String | This is the URL of the web address to be opened when the action is selected. |
-|navigationTarget | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li><ul> |
+|`url` | Yes | String | This is the URL of the web address to be opened when the action is selected. |
+|`navigationTarget` | No | String | This parameter controls where a navigation link opens. The options are:<br><ul><li>`dialog`: Opens in the center dialog.</li><li>`inline`: Default. Opens in the current page.</li><li>`newWindow`: Opens in a new browser tab.</li><ul> |
 
 The following example shows how to create a notification with a single URL action.
 
@@ -392,50 +452,54 @@ Accept: application/json
 # [SDK for .NET](#tab/sdk)
 
 ```csharp
-
-OrganizationRequest request = new OrganizationRequest()
+/// <summary>
+/// Example of SendAppNotification with overriddent content
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userId">The Id of the user to send the notification to.</param>
+/// <returns>The app notification id</returns>
+public static Guid SendAppNotificationWithOverriddenContent3(IOrganizationService service, Guid userId)
 {
-    RequestName = "SendAppNotification",
-    Parameters = new ParameterCollection
+    var request = new OrganizationRequest()
     {
-        ["Title"] = "Congratulations",
-        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
-        ["Body"] = "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
-        ["IconType"] = new OptionSetValue(100000000), //info
-        ["ToastType"] = new OptionSetValue(200000000), //timed
-        ["Actions"] = new Entity()
+        RequestName = "SendAppNotification",
+        Parameters = new ParameterCollection
         {
-          Attributes = 
-          {
-            ["actions"] = new EntityCollection()
+            ["Title"] = "Congratulations",
+            ["Recipient"] = new EntityReference("systemuser", userId),
+            ["Body"] = "Your customer rating is now an A. You resolved 80% of your cases within SLA thi week and average customer rating was A+",
+            ["IconType"] = new OptionSetValue(100000000), //info
+            ["ToastType"] = new OptionSetValue(200000000), //timed
+            ["Actions"] = new Entity()
             {
-              Entities = 
-              {
-                new Entity()
+                Attributes =
                 {
-                  Attributes =
-                  {
-                    ["title"] = "View cases",
-                    ["data"] = new Entity()
+                    ["actions"] = new EntityCollection()
                     {
-                      Attributes =
-                      {
-                        ["type"] = "url",
-                        ["url"] = "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
-                        ["navigationTarget"] = "newWindow"
-                      }
+                        Entities =
+                        {
+                            new Entity()
+                            {
+                                Attributes =
+                                {
+                                    ["title"] = "View cases",
+                                    ["data"] = new Entity()
+                                    {
+                                        Attributes =
+                                        {
+                                            ["type"] = "url",
+                                            ["url"] = "?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039",
+                                            ["navigationTarget"] = "newWindow"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                  }
                 }
-              }
             }
-          }
         }
-     }
-};
-
-OrganizationResponse response = currentUserService.Execute(request);
-Guid appNotificationId = (Guid)response.Results["NotificationId"];
+    };
 ```
 
 <!-- # [Power Fx](#tab/powerfx)
@@ -527,96 +591,105 @@ Accept: application/json
 # [SDK for .NET](#tab/sdk)
 
 ```csharp
-
-OrganizationRequest request = new OrganizationRequest()
+/// <summary>
+/// Example of SendAppNotification with side pane action
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userId">The Id of the user to send the notification to.</param>
+/// <returns>The app notification id</returns>
+public static Guid SendAppNotificationWithSidePaneAction(IOrganizationService service, Guid userId)
 {
-    RequestName = "SendAppNotification",
-    Parameters = new ParameterCollection
-    {
-        ["Title"] = "New task",
-        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
-        ["Body"] = "A new task has been assigned to you to follow up on the Contoso account",
-        ["IconType"] = new OptionSetValue(100000000), //info
-        ["ToastType"] = new OptionSetValue(200000000), //timed
-        ["Actions"] = new Entity()
-        {
-          Attributes = 
-          {
-            ["actions"] = new EntityCollection()
-            {
-              Entities = 
-              {
-                new Entity()
-                {
-                  Attributes =
-                  {
-                    ["title"] = "View task",
-                    ["data"] = new Entity()
-                    {
-                      Attributes =
-                      {
-                        ["type"] = "sidepane",
-                        ["paneOptions"] = new Entity
-                        {
-                          Attributes = 
-                          {
-                            ["title"] = "Task",
-                            ["width"] = 400
-                          }
-                        },
-                        ["navigationTarget"] = new Entity
-                        {
-                          Attributes = 
-                          {
-                            ["pageType"] = "entityrecord",
-                            ["entityName"] = "task",
-                            ["entityId"] = "<GUID of the table record>"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                new Entity()
-                {
-                  Attributes =
-                  {
-                    ["title"] = "View account",
-                    ["data"] = new Entity()
-                    {
-                      Attributes =
-                      {
-                        ["type"] = "sidepane",
-                        ["paneOptions"] = new Entity
-                        {
-                          Attributes = 
-                          {
-                            ["title"] = "Account",
-                            ["width"] = 400
-                          }
-                        },
-                        ["navigationTarget"] = new Entity
-                        {
-                          Attributes = 
-                          {
-                            ["pageType"] = "entityrecord",
-                            ["entityName"] = "account",
-                            ["entityId"] = "<GUID of the table record>"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-     }
-};
 
-OrganizationResponse response = currentUserService.Execute(request);
-Guid appNotificationId = (Guid)response.Results["NotificationId"];
+    var request = new OrganizationRequest()
+    {
+        RequestName = "SendAppNotification",
+        Parameters = new ParameterCollection
+        {
+            ["Title"] = "New task",
+            ["Recipient"] = new EntityReference("systemuser", userId),
+            ["Body"] = "A new task has been assigned to you to follow up on the Contoso account",
+            ["IconType"] = new OptionSetValue(100000000), //info
+            ["ToastType"] = new OptionSetValue(200000000), //timed
+            ["Actions"] = new Entity()
+            {
+                Attributes =
+    {
+    ["actions"] = new EntityCollection()
+    {
+        Entities =
+        {
+        new Entity()
+        {
+            Attributes =
+            {
+            ["title"] = "View task",
+            ["data"] = new Entity()
+            {
+                Attributes =
+                {
+                ["type"] = "sidepane",
+                ["paneOptions"] = new Entity
+                {
+                    Attributes =
+                    {
+                    ["title"] = "Task",
+                    ["width"] = 400
+                    }
+                },
+                ["navigationTarget"] = new Entity
+                {
+                    Attributes =
+                    {
+                    ["pageType"] = "entityrecord",
+                    ["entityName"] = "task",
+                    ["entityId"] = "<GUID of the table record>"
+                    }
+                }
+                }
+            }
+            }
+        },
+        new Entity()
+        {
+            Attributes =
+            {
+            ["title"] = "View account",
+            ["data"] = new Entity()
+            {
+                Attributes =
+                {
+                ["type"] = "sidepane",
+                ["paneOptions"] = new Entity
+                {
+                    Attributes =
+                    {
+                    ["title"] = "Account",
+                    ["width"] = 400
+                    }
+                },
+                ["navigationTarget"] = new Entity
+                {
+                    Attributes =
+                    {
+                    ["pageType"] = "entityrecord",
+                    ["entityName"] = "account",
+                    ["entityId"] = "<GUID of the table record>"
+                    }
+                }
+                }
+            }
+            }
+        }
+        }
+    }
+    }
+            }
+        }
+    };
+
+    OrganizationResponse response = service.Execute(request);
+    return (Guid)response.Results["NotificationId"];
+}
 ```
 
 <!-- # [Power Fx](#tab/powerfx)
@@ -651,13 +724,13 @@ The following are the parameters for defining a Teams chat action on the app not
 
 |Parameter | Data type | Description |
 |----------|-----------|-------------|
-|chatId    |String     |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. See [Get chat](/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
-|memberIds |GUID       |This is an array of the AAD user ID values of each of the participants that will be included in a new chat session. Member ID values should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the members of the existing chat will be included in the chat when opened. |
-|entityContext | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the entityContext, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (i.e. the **chatId** parameter has not been provided), and the the entity context is not defined, then the new chat session will not be linked to a Dynamics 365 record. |
-|entityName | String | Part of the entity context, this is the logical name of the Dataverse table for the record to which the chat will be linked. |
-|recordId | GUID | Part of the entity context, this is the ID property of the table defined in the **entityName** parameter for the record to which the chat will be linked. |
-|chatTitle | String | The title of the Teams chat. |
-|initialMessage | String | The text of an introduction message you may optionally provide that will be automatically sent when the chat is created. |
+|`chatId`    |String     |Define a value for the chat ID to open an existing chat. This is the ID of the Teams chat session, which can be obtained from the **id** property of the **chat** entity in Microsoft Graph. See [Get chat](/graph/api/chat-get) for more information. For Teams chat sessions that have been linked to Dynamics 365 records, the association is stored in the **Microsoft Teams chat association entity (msdyn_teamschatassociation)** table in Dataverse. The ID for the chat session is stored in the **Teams Chat Id** property of this table.<br><br> Leave this parameter blank to initiate a new chat session. |
+|`memberIds` |GUID[]       |This is an array of the AAD user ID values of each of the participants that will be included in a new chat session. Member ID values should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the members of the existing chat will be included in the chat when opened. |
+|`entityContext` | Expando |The entity context provides the Dynamics 365 record to which the chat session should be linked. For example, if the chat session is regarding a specific customer account record, define the account record in this parameter to have the chat session linked to the account and display in the account's timeline. <br><br>The entity context includes the **entityName** and **recordId** parameters, which must be defined to identify the record for the entity context.<br><br> An entity context should not be defined if a value has been defined for the **chatId** parameter. If the **chatId** has been defined, then the existing chat will be opened, and the entityContext, whether linked or unlinked, will already have been defined for the existing chat. If the action is creating a new chat session (i.e. the **chatId** parameter has not been provided), and the the entity context is not defined, then the new chat session will not be linked to a Dynamics 365 record. |
+|`entityName` | String | Part of the entity context, this is the logical name of the Dataverse table for the record to which the chat will be linked. |
+|`recordId` | GUID | Part of the entity context, this is the ID property of the table defined in the **entityName** parameter for the record to which the chat will be linked. |
+|`chatTitle` | String | The title of the Teams chat. |
+|`initialMessage` | String | The text of an introduction message you may optionally provide that will be automatically sent when the chat is created. |
 
 The following example shows creating an app notification with a single Teams chat action.
   
@@ -665,7 +738,6 @@ The following example shows creating an app notification with a single Teams cha
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
-HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -702,58 +774,71 @@ Accept: application/json
 
 # [SDK for .NET](#tab/sdk)
 
-```csharp
+<!-- TODO test this line:  ["memberIds"] = Array.ConvertAll(userIds, x => x.ToString()), -->
 
-OrganizationRequest request = new OrganizationRequest()
+```csharp
+/// <summary>
+/// Example of SendAppNotification with side pane action
+/// </summary>
+/// <param name="service">Authenticated client implementing the IOrganizationService interface</param>
+/// <param name="userId">The Id of the user to send the notification to.</param>
+/// <param name="userIds">The Ids of the users in the teams chat.</param>
+/// <returns>The app notification id</returns>
+public static Guid SendAppNotificationWithTeamChatAction(IOrganizationService service, Guid userId, Guid[] userIds)
 {
-    RequestName = "SendAppNotification",
-    Parameters = new ParameterCollection
+
+    var request = new OrganizationRequest()
     {
-        ["Title"] = "New order posted",
-        ["Recipient"] = new EntityReference("systemuser", <Guid of the user>),
-        ["Body"] = "A new sales order has been posted for Contoso",
-        ["IconType"] = new OptionSetValue(100000000), //info
-        ["ToastType"] = new OptionSetValue(200000000), //timed
-        ["Actions"] = new Entity()
+        RequestName = "SendAppNotification",
+        Parameters = new ParameterCollection
         {
-          Attributes = 
-          {
-            ["actions"] = new EntityCollection()
+            ["Title"] = "New order posted",
+            ["Recipient"] = new EntityReference("systemuser", userId),
+            ["Body"] = "A new sales order has been posted for Contoso",
+            ["IconType"] = new OptionSetValue(100000000), //info
+            ["ToastType"] = new OptionSetValue(200000000), //timed
+            ["Actions"] = new Entity()
             {
-              Entities = 
-              {
-                new Entity()
-                {
-                  Attributes =
+                Attributes =
+    {
+      ["actions"] = new EntityCollection()
+      {
+         Entities =
+         {
+            new Entity()
+            {
+               Attributes =
+               {
+                  ["title"] = "Chat with sales rep",
+                  ["data"] = new Entity()
                   {
-                    ["title"] = "Chat with sales rep",
-                    ["data"] = new Entity()
-                    {
-                      Attributes =
-                      {
+                     Attributes =
+                     {
                         ["type"] = "teamsChat",
-                        ["memberIds"] = new string[]{ "<AAD user ID 1>","<AAD user ID 2>" },
+                        ["memberIds"] = Array.ConvertAll(userIds, x => x.ToString()),
                         ["entityContext"] = new Entity
                         {
-                          Attributes = 
-                          {
-                            ["entityName"] = "account",
-                            ["recordId"] = "<Account ID value>"
-                          }
+                           Attributes =
+                           {
+                              ["entityName"] = "account",
+                              ["recordId"] = "<Account ID value>"
+                           }
                         }
-                      }
-                    }
+                     }
                   }
-                }
-              }
+               }
             }
-          }
+         }
+      }
+    }
+            }
         }
-     }
-};
+    };
 
-OrganizationResponse response = currentUserService.Execute(request);
-Guid appNotificationId = (Guid)response.Results["NotificationId"];
+    OrganizationResponse response = service.Execute(request);
+    return (Guid)response.Results["NotificationId"];
+
+}
 ```
 
 <!-- # [Power Fx](#tab/powerfx)
@@ -781,7 +866,7 @@ XSendAppNotification(
 
 The in-app notification feature uses three tables. A user needs to have the correct security roles to receive notifications and to send notifications to themselves or other users.  
 
-In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification (prvSendAppNotification)** privilege to execute the `SendAppNotification` API. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending app notifications. It is not required to receive notifications.
+In addition to the appropriate table permissions, a user must be assigned the **Send In-App Notification** `prvSendAppNotification` privilege to execute the `SendAppNotification` message. The privilege is granted to the **Environment Maker** role by default. This privilege is required for sending app notifications. It is not required to receive notifications.
 
 |Usage|Required table privileges|
 |------------|----------------|
