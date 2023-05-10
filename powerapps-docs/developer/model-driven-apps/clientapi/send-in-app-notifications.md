@@ -77,7 +77,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk)
+# [SDK for .NET](#tab/sdk)
 
 In-app notifications can be sent by using the Dataverse SDK with the organization service. More information: [IOrganizationService Interface](../../data-platform/org-service/iorganizationservice-interface.md)
 
@@ -120,9 +120,9 @@ In-app notifications use polling to retrieve notifications periodically when the
 
 ## Notification table
 
-Notifications sent using the `SendAppNotification` API are stored in the **Notification** (`appnotification`) table. The following are the columns for the table.
+Notifications sent using the `SendAppNotification` API are stored in the [Notification (appnotification)  table](../../data-platform/reference/entities/appnotification.md). The following are the columns for the table.
 
-|Column display|Column name|Description|
+|Column Label|Column Schema Name|Description|
 |---|---|---|
 |Title|`Title`|The title of the notification.|
 |Owner|`OwnerId`|The user who receives the notification.|
@@ -142,7 +142,7 @@ In addition to the basic properties of the notification, there are options for c
 
 ### Using markdown in Title and Body
 
-The **Title** and **Body** attributes of the `SendAppNotification` API do not support markdown defined within the properties. You can adjust the styles of these properties using markdown in the **OverrideContent** property. This field supports overriding the Title and Body simple strings with a limited subset of markdown styles.
+The **Title** and **Body** attributes of the `SendAppNotification` API do not support markdown defined within the properties. You can adjust the styles of these properties using markdown in the **OverrideContent** property. This field supports overriding the `Title` and `Body` simple strings with a limited subset of markdown styles.
 
 The following is the supported markdown.
 
@@ -161,7 +161,7 @@ This example shows how to create a notification by adding a custom body definiti
 > [!div class="mx-imgBorder"] 
 > ![Notification with a block of text that includes an inline link.](../media/app-notification-with-custom-body.png "Notification with an inline link")
 
-# [Web API](#tab/webapi2)
+# [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -185,7 +185,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk2)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 
@@ -220,7 +220,7 @@ This example adds a custom title and a body definition that allows multiple link
 > [!div class="mx-imgBorder"] 
 > ![Notification that includes a custom title, multiple links, bold text, and italic formatting.](../media/app-notification-with-custom-title-body.png "Notification with a custom title and body")
 
-# [Web API](#tab/webapi3)
+# [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification
@@ -243,7 +243,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk3)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 
@@ -355,7 +355,7 @@ The following example shows how to create a notification with a single URL actio
 > [!div class="mx-imgBorder"] 
 > ![App notification with a single action.](../media/app-notification-with-single-action.png "App notification with a single action")
   
-# [Web API](#tab/webapi4)
+# [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -389,7 +389,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk4)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 
@@ -438,7 +438,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx4)
+# [Power Fx](#tab/powerfx)
 
 ```powerapps-dot
 XSendAppNotification(
@@ -463,7 +463,7 @@ When using the side pane action type, you have control over the options of the s
   
 The following example shows creating an app notification with a two side pane actions.
   
-# [Web API](#tab/webapi5)
+# [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -524,7 +524,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk5)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 
@@ -619,7 +619,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx5)
+# [Power Fx](#tab/powerfx)
 
 ```powerapps-dot
 XSendAppNotification(
@@ -661,7 +661,7 @@ The following are the parameters for defining a Teams chat action on the app not
 
 The following example shows creating an app notification with a single Teams chat action.
   
-# [Web API](#tab/webapi6)
+# [Web API](#tab/webapi)
 
 ```http
 POST [Organization URI]/api/data/v9.0/SendAppNotification 
@@ -700,7 +700,7 @@ Accept: application/json
 }
 ```
 
-# [Dataverse SDK](#tab/sdk6)
+# [SDK for .NET](#tab/sdk)
 
 ```csharp
 
@@ -756,7 +756,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx6)
+# [Power Fx](#tab/powerfx)
 
 ```powerapps-dot
   
