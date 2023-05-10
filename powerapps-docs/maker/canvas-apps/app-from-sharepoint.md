@@ -51,8 +51,19 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 
 [This article is prerelease documentation and is subject to change.]
 
+### Create an app using responsive layout
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Connect to external data** > **SharePoint**.
+1. If you don't have a SharePoint connection already created, you'll be prompted to.  
+1. Enter the SharePoint URL and then select **Connect**. Or, select a recent site.
+1. Select a list and then select, **Create app**.
+
+
+## Create a three screen mobile app
+
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. From the home screen select, **Start with an app template** > **From SharePoint**.
 1. If you don't have a SharePoint connection already created, you'll be prompted to.  
 1. Enter the SharePoint URL and then select **Connect**. Or, select a recent site.
 1. Select a list and then select, **Create app**.
