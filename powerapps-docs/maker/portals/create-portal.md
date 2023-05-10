@@ -17,7 +17,7 @@ contributors:
 # Create a Dataverse starter portal
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 With the capability to build a portal in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Microsoft Dataverse.
 

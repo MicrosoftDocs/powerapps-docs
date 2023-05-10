@@ -19,7 +19,7 @@ contributors:
 # Manage existing portals
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 
 Once you've created a portal, it's visible when you sign in to [Power Apps](https://make.powerapps.com), and then select **Apps**.

@@ -23,7 +23,7 @@ ms.custom: intro-internal
 >
 > **This feature will be removed by April 2023.**
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 Users with suitable permissions can add, modify, or delete webpages and their content using the **portal content editor**. 
 

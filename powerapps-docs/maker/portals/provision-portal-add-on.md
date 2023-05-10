@@ -17,7 +17,7 @@ contributors:
 # Provision a portal using the older portal add-on
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page and provision the portal.
 
