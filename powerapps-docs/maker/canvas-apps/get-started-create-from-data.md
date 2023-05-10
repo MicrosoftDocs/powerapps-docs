@@ -41,9 +41,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 5. Select **Row ownership** and choose how you want to manage row ownership.
 6. When you're done, select **Create app**.
 
-### known issue
 
-<add known issues here>
 
 # [Classic](#tab/home-classic)
 
