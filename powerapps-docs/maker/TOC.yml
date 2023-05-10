@@ -1793,7 +1793,7 @@
       items:
         - name: Available templates
           href: ./portals/portal-templates.md
-        - name: Starter
+        - name: Starter site
           items:                  
             - name: Create a starter site
               href: ./portals/create-portal.md
@@ -1801,7 +1801,7 @@
               href: ./portals/contact-us-sample.md              
         - name: Create a site with Dynamics 365 environment
           href: ./portals/create-dynamics-portal.md
-        - name: Create a siteportal using the older portal add-on
+        - name: Create a site using the older add-on
           href: ./portals/provision-portal-add-on.md
         - name: Common problems and resolutions while creating a site
           href: ./portals/create-common-problems.md

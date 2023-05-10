@@ -1,5 +1,5 @@
 ---
-title: Create additional portals in an environment
+title: Create additional sites in an environment
 description: Instructions to create additional portals in an environment.
 author: neerajnandwana-msft
 
@@ -15,12 +15,12 @@ contributors:
     - ProfessorKendrick
 ---
 
-# Create additional portals in an environment
+# Create additional sites in an environment
 
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-The ability to create additional environments is determined by the template chosen for the new portal. The following table explains the limits for creating additional portals in an environment.
+The ability to create additional environments is determined by the template chosen for the new site (portal). The following table explains the limits for creating additional portals in an environment.
 
 | Environment type | Template | Limit | Additional information |
 | - | - | - | - |

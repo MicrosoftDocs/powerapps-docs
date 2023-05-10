@@ -1,5 +1,5 @@
 ---
-title: Create a Dataverse starter portal
+title: Create a Dataverse starter site
 description: Learn about how to create a Dataverse starter portal in Power Apps.
 author: neerajnandwana-msft
 
@@ -14,12 +14,12 @@ contributors:
     - nickdoelman
 ---
 
-# Create a Dataverse starter portal
+# Create a Dataverse starter site
 
 
 [!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-With the capability to build a portal in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Microsoft Dataverse.
+With the capability to build a site (portal) in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Microsoft Dataverse.
 
 Some of the benefits of creating a Power Apps portal:
 
