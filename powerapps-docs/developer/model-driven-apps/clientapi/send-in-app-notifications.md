@@ -100,7 +100,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+<!-- # [Power Fx](#tab/powerfx)
 
 In-app notifications can be sent from Power Apps using Power Fx. More information: [Microsoft Power Fx overview](/power-platform/power-fx/overview).
 
@@ -110,7 +110,7 @@ XSendAppNotification(
   LookUp(Users,'Primary Email'="<User email address>"),
   "Welcome to the world of app notifications!"
 )
-```
+``` -->
 
 ---
 
@@ -438,7 +438,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+<!-- # [Power Fx](#tab/powerfx)
 
 ```powerapps-dot
 XSendAppNotification(
@@ -449,7 +449,7 @@ XSendAppNotification(
         ("View cases","?pagetype=entitylist&etn=incident&viewid=00000000-0000-0000-00aa-000010001028&viewType=1039", "newWindow")
     ]
 )
-```
+``` -->
 
 ---
   
@@ -619,7 +619,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+<!-- # [Power Fx](#tab/powerfx)
 
 ```powerapps-dot
 XSendAppNotification(
@@ -632,7 +632,7 @@ XSendAppNotification(
     ("View account","accountRecord","Account","account",AsType(ThisRecord.Regarding, Accounts).Account)
   ]
 )
-```
+``` -->
 
 ---
 
@@ -756,7 +756,7 @@ OrganizationResponse response = currentUserService.Execute(request);
 Guid appNotificationId = (Guid)response.Results["NotificationId"];
 ```
 
-# [Power Fx](#tab/powerfx)
+<!-- # [Power Fx](#tab/powerfx)
 
 ```powerapps-dot
   
@@ -773,7 +773,7 @@ XSendAppNotification(
       )
    ]
 )
-```
+``` -->
 
 ---
 
