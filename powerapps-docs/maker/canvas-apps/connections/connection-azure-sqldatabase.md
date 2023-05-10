@@ -45,7 +45,7 @@ Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=hom
 [This article is prerelease documentation and is subject to change.]
 
 
-### Create an app using the responsive layout
+### Create an app using responsive layout
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. From the home screen select, **Start with data** > **Connect to external data**.
 1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch or to create a new SQL connection.
