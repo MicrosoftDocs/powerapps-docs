@@ -59,6 +59,10 @@ You can find the labels in the definition of the default `statuscode` options fo
 
 <a name="bkmk_sortdate"></a>
 
+## Updating activities with a StateCode of Completed or Cancelled
+
+When an activity is closed with a StateCode of Completed or Cancelled, only a user with the System Administrator security role can modify the row. Although you cannot edit a closed activity in model-driven apps, the row can be modified programatically or if you use other options such as Power Automate or a canvas app. 
+
 ## Control how activities are sorted by date  
   
  Whenever you display a list of activity entities and order them by date, you can only use the common date columns defined in the [ActivityPointer](reference/entities/activitypointer.md) table. However, sometimes you want different sorting behaviors depending on the type of activity. For example, with the email table you might want to sort by the `senton` column value  rather than the `modifiedon` column value.  
