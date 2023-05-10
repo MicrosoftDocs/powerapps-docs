@@ -21,7 +21,7 @@ To view retained data in an environment requires the system administrator securi
 
 ## Grant privileges to view retained data
 
-Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Plaform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role). <!--I don't think this would be enough. Probably have to start with the App access user role and add this privilege. Also, how to access advanced find for the auditor? I believe they can go to maker portal > Settings > Advanced Settings > and then select the Advanced Find (filter icon)-->
+Imagine an auditor requires access to long term data retained for the accounts table. To provide the auditor access, a Power Platform admin creates a new role, for example a role named *LTRAccounts Access Role* and grants organization scope read privilege to the accounts table. Then add the auditor's Power Platform user account to the security role. When the auditor's job is complete, it's a best practice to remove the auditor from the security role. For more information about creating and editing Dataverse security roles, go to [Create or edit a security role to manage access](/power-platform/admin/create-edit-security-role). <!--I don't think this would be enough. Probably have to start with the App access user role and add this privilege. Also, how to access advanced find for the auditor? I believe they can go to maker portal > Settings > Advanced Settings > and then select the Advanced Find (filter icon)-->
 
 ## View retained data using Advanced Find
 
@@ -49,8 +49,7 @@ This restrictions are enforced by Dataverse for each environment:
 - Up to 30 queries per day are allowed for each environment.
 - Any single request from Advanced Find, Power Automate cloud flow, or Dataverse OData public API is considered as one query.
 - Queries are allowed on one table at a time. Joins and aggregation functions aren't allowed.
-- Retained data includes lookup data and doesn't require joins.
-- Lookup values in a table are denormalized with ID and name value.
+- Retained data includes lookup data. Lookup values in the table are denormalized with ID and name value.
 
 ## See also
 
