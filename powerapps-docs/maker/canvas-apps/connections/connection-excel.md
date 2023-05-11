@@ -31,23 +31,6 @@ Store the Excel file in a cloud-storage account, such as Dropbox, Google Drive, 
 
 ## Step 3 - Add Excel as a data source for your Power App
 
-Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
-
-# [New look (preview)](#tab/home-new-look)
-
-[This article is prerelease documentation and is subject to change.]
-
-To start with data from Excel, first [create an app from scratch from Excel](../get-started-create-from-blank.md). Then, drop the OneDrive or any other cloud data source that stores your Excel file.
-
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with data** > **Connect to external data** > **Excel**.
-1. If this is your first time, you're prompted to create a connection. Once a connection is established, enter the file URL or select it from the list below.
-1. Select the table's identity column. 
-1. When you're done, select **Create app**.
-
-
-# [Classic](#tab/home-classic)
-
 There are currently two ways to add the Excel table as a data source in your application. These two different approaches each uses a slightly different version of the connector.
 
 > [!NOTE]
