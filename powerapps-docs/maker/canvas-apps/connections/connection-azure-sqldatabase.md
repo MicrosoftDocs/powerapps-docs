@@ -45,17 +45,11 @@ Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=hom
 [This article is prerelease documentation and is subject to change.]
 
 
-### Create an app using responsive layout
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
-   - To use data to create an app, select **Start with data** > **Connect to external data** > **From SQL**.
-   - To see your data in a single-page gallery app, select **Start with a page design** > **Gallery connected to external table** > **From SQL**.
-1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
-1. When you're done, select **Create app**.
-
-### Create a three screen mobile app
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with an app template** > **From SQL**.
+   - To create an app using responsive layout using data, select **Start with data** > **Connect to external data** > **From SQL**.
+   - To see your data in a single-page gallery app using responsive layout, select **Start with a page design** > **Gallery connected to external table** > **From SQL**.
+   - To create a three screen mobile app, **Start with an app template** > **From SQL**.
 1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
 1. When you're done, select **Create app**.
 
