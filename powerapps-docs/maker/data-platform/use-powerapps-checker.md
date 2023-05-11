@@ -109,7 +109,7 @@ Here's a summary of each column in the report.
 
 You can run solution checker rules in your development environment to detect issues much sooner as you create your solution resources.  This is currently supported for web resources (JavaScript and [TypeScript](https://typescript-eslint.io/)). For more details, go to the NPM package [@microsoft/eslint-plugin-power-apps](https://www.npmjs.com/package/@microsoft/eslint-plugin-power-apps).
 
-## Best practice rules used by solution checker (preview)
+## Best practice rules used by solution checker
 
 The following table lists the component type, rule description, severity, and category. Critical violations are blocked or warned when configured for solution checker enforcement with managed environments. More information: [Use solution checker in Managed Environments (preview)](/power-platform/admin/managed-environment-solution-checker)
 
