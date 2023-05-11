@@ -67,7 +67,7 @@ The offline sync icon changes based on the app's sync status.
 
 By clicking on the icon, you get a description of the state.
 
-## Considerations
+## Known issues
 - Key Power Fx functions that are not yet supported include *StartsWith*, *In*, and *With*.  If you use the 'App from Data' feature you will get an app that has a search text field that uses a *StartsWith* formula which will fail silently.  
 - Dataverse and SQLite sort data slightly differently. Numbers and special characters have different priorities in each system. If you update a record that has these characters in it, you may not find it where you expect it.
 - When testing your offline app, it's easy to lose track of whether you are online or offline.  Check the [sync status icons](#sync-status-icons) to see if Power Apps is offline or not.  When online, Power Apps is currently set to sync every 5 minutes.
