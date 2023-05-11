@@ -190,12 +190,12 @@ Furthermore, you can locate your top six apps under **Your apps**. You have the 
 The table below summarizes scenarios and outcome for options that require Microssoft Dataverse.
 
 
-| **Maker has developer enviornment** | **Is developer enviornment creation enabled by tenant admin** |  **Does maker have any other Dataverse environment with sufficient permission** | **Suggested action** | **Result** |
+| **Maker has access to a developer enviornment** | **Maker has permission to create a developer enviornment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | **Result** |
 | --- | --- | --- |--- |--- |
-| Yes| n/a  | n/a  | Switch to your developer environment | Maker will switch to their first alphabetically ordered Developer environment  
-| No| Yes  | n/a | Create developer environment | Maker will create a new Developer environment, and switch into that environment  
-| No |No | Yes | Switch to another environment | Maker will see the environment picker filtered to environments that they have sufficient permissions
-| No|No| No | Contact your admin | Maker will need to reach out to their admin for help 
+| Yes| n/a  | n/a  | Switch to your developer environment | Maker will switch to their first alphabetically ordered developer environment  
+| No| Yes  | n/a | Create developer environment | Maker will create a new developer environment, and switch into that environment  
+| No |No | Yes | Switch to another environment | The environment picker will display only those environments that maker has permission to access.
+| No|No| No | Contact your admin | Make needs to contact admin 
 
 
 # [Classic](#tab/home-classic)
