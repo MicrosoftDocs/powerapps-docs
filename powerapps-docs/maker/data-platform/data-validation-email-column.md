@@ -1,5 +1,5 @@
 ---
-title: Address validation for email columns in Dataverse
+title: Email address validation for email columns in Dataverse
 description: Explains address validation for email columns with Microsoft Dataverse
 author: Mattp123
 ms.author: matp
@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 03/30/2023
 ms.custom: template-how-to
 ---
-# Address validation for email columns (preview)
+# Email address validation for email columns (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 

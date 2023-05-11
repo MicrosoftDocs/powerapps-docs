@@ -126,14 +126,17 @@ This section lists endpoints that we no longer support. Instead, use the new end
 
 Power Apps doesn't support the nested embedding of canvas apps in native desktop, mobile, or other non-browser clients.
 
-The following table shows some of the examples where embedding a canvas app isn't supported:
-
-| Canvas apps embedded to | Unsupported client |
-| - | - |
-| A SharePoint page that is added as a tab in a Microsoft Teams channel | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A Power BI report that is added to a Teams team, or a SharePoint site | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li> SharePoint mobile </li> </ul> |
-| A model-driven form that is added to Teams | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
-| A SharePoint page | <ul> <li> SharePoint mobile </li></ul> |
+The following table shows some of the examples where embedding a canvas app is and isn't supported:
+  
+| Power Apps embedding scenario                                                                   | Supported clients                                 | Unsupported clients                            |
+|-------------------------------------------------------------------------------------------------|---------------------------------------------------|------------------------------------------------|
+| A canvas app embedded in a SharePoint page.                                                     | Web, e.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app embedded in a SharePoint page that is added as a tab in a Microsoft Teams channel. | Web, e.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app used as a custom form in the SharePoint page.                                      | Web, e.g.   Sharepoint.com                        | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul> |
+| A canvas app used as a custom form in the SharePoint page that is added to a Teams team.        | Web, e.g.   <ul><li>Sharepoint.com</li>  <li>Teams.microsoft.com</li></ul> | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> </ul> |
+| A Power BI report that is added to Teams, or a SharePoint site.                                 | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> <li>SharePoint mobile</li> |
+| A model-driven form that is added to Teams.                                                     | Web, e.g. Teams.microsoft.com                     | <ul> <li> Teams desktop </li> <li> Teams mobile </li> </ul>                    |
+| A canvas app is embedded in a 3rd party client.                                                 | 3rd party web client that iframe's an app         | 3rd party native client via WebView            |
 
 ## Proxies
 Power Apps does not support running with a proxy enabled. This can cause unpredictable behavior. If you encounter issues, disable the proxy and then try again.

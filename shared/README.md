@@ -32,4 +32,4 @@ It's a long story. The TL;DR: is that powerapps-docs-pr is already set up for al
 
 ## Where can I get help with the shared content repo?
 
-Submit a Content Engineering request.
+[Submit a Content Engineering request](content-engineering-requests.md?branch=main) or reach out to [BAP Skilling Content Engineering](mailto:crmce@microsoft.com).

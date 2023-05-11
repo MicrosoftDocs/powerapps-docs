@@ -18,7 +18,7 @@ contributors:
 # List OData feeds
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 > [!NOTE]
 > This feature has been deprecated. Alternatively, use the [portals Web API](../web-api-overview.md) to interact with the data.
@@ -36,6 +36,5 @@ When enabled, a table can be published to an OData feed. The OData protocol is a
 ### See also
 
 - [Work with lists](entity-lists.md)
-- [Display multiple Dataverse records using lists](/training/modules/portals-access-data-platform/2-entity-lists)
 - [Configure a portal](configure-portal.md)  
 - [Redirect to a new URL on a portal](add-redirect-url.md)
