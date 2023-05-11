@@ -192,10 +192,10 @@ The table below summarizes scenarios and outcome when you create apps that requi
 
 | **Maker has access to a developer enviornment** | **Maker has permission to create a developer enviornment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
 | --- | --- | --- |--- |
-| Yes| n/a  | n/a  |  Switch to the developer environment that appears first in the alphabetical listing. |  
-| No| Yes  | n/a | Create a developer environment. | 
-| No |No | Yes | Switch to another environment using the environment picker. | 
-| No|No| No | Contact your admin. |
+| Yes| n/a  | n/a  |  Switch to the developer environment that appears first in the alphabetical list |  
+| No| Yes  | n/a | Create a developer environment | 
+| No |No | Yes | Switch to another environment using the environment picker | 
+| No|No| No | Contact your admin |
 
 # [Classic](#tab/home-classic)
 
