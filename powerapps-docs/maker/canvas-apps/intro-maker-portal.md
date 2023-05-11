@@ -184,14 +184,14 @@ To create an app, select from the following options:
 - **Pick an app template**: Choose from an app template including, data-centered tamplates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
 > [!NOTE]
-> If a create option isn't available, review the permission table. More information: [Permissions for Dataverse](#permissions-for-dataverse)
+> If the create option that uses Dataverse isn't available, review the permissions table. More information: [Permissions for Dataverse](#permissions-for-dataverse)
 
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
 
 ### Permissions for Dataverse
 
-The table below summarizes scenarios and outcome when you create apps that require access to Microsoft Dataverse.
+The table summarizes scenarios and outcome when you create apps that require Microsoft Dataverse.
 
 
 | **Maker has access to a developer enviornment** | **Maker has permission to create a developer enviornment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
