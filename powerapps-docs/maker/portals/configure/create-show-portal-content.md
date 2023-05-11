@@ -17,7 +17,7 @@ contributors:
 # Create and show portal content using Portal Management app
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 To create a webpage by using basic forms and lists is a complex task. **Create Portal Content** wizard simplifies this process. You can use this wizard to create and expose portal content easily by filling in the minimum required fields.
 

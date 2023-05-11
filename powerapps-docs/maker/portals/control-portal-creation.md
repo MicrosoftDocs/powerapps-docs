@@ -1,5 +1,5 @@
 ---
-title: Control portal creation in a tenant
+title: Control site creation in a tenant
 description: Instructions to control portal creation in a tenant.
 author: neerajnandwana-msft
 
@@ -14,12 +14,12 @@ contributors:
     - nickdoelman
 ---
 
-# Control portal creation in a tenant
+# Control site creation in a tenant
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-As a global administrator, if you want to disable portal creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](/power-platform/admin/powerapps-powershell#installation).
+As a global administrator, if you want to disable site (portal) creation in a tenant by non-administrators, you can do it by enabling the `disablePortalsCreationByNonAdminUsers` tenant level setting through PowerShell. To run PowerShell cmdlets, you must first install the required modules. For information on installing the required PowerShell modules, see [Installation](/power-platform/admin/powerapps-powershell#installation).
 
 After installing the modules, run the following command in a PowerShell window (run PowerShell as an administrator).
 
@@ -56,6 +56,5 @@ For more details about the required roles, and permissions to create a portal, g
 
 [Create additional portals in an environment](create-additional-portals.md) <br>
 [Administer Power Apps portals](/training/paths/administer-portals/) <br>
-[Access Dataverse in Power Apps portals](/training/modules/portals-access-data-platform/)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]
