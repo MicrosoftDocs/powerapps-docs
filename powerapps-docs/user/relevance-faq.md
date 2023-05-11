@@ -5,7 +5,7 @@ author: sericks
 
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 5/01/2023
+ms.date: 5/11/2023
 ms.subservice: end-user
 ms.author: sericks
 ms.custom: ""
@@ -61,9 +61,9 @@ Dataverse search does not return HTML formatting for memo types to optomize the 
 
 Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
-## Why search on ownerid attribute does not work when seaarch is enabled on it?
+## Why does searching on the OwnerID attribute not work when search is enabled on it?
 
-Dataverse search does not support search and suggest for attributes of type Owner.
+Data from the Owner column isn't available for search and suggest operations. More information: [Types of columns](../maker/data-platform/types-of-fields.md)
 
 ### See also
 
