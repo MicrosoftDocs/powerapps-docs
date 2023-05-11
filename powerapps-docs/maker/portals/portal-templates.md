@@ -1,5 +1,5 @@
 ---
-title: Portal templates
+title: Available templates
 description: Learn about various portal templates available in Power Apps.
 author: neerajnandwana-msft
 
@@ -15,10 +15,10 @@ contributors:
     - sandhangitmsft
 ---
 
-# Portal templates
+# Available templates
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
 Based on the selected environment in Power Apps, you can create a Dataverse starter portal or a portal in an environment containing customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation).
 

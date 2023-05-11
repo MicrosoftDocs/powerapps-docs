@@ -17,7 +17,7 @@ contributors:
 # Update to Power Apps portals domain
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 If you provision a portal using the older portal add-on, the domain of your portal will be `microsoftcrmportals.com`. With the release of Power Apps portals, you can now update your Dynamics 365 domain `microsoftcrmportals.com` to the Power Apps portals domain `powerappsportals.com`.
 
