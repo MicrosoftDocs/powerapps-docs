@@ -50,7 +50,7 @@ For all elastic tables, partitionid column should:
 
 When partitionId is not specified for a row, Dataverses makes row id (primary key) as the default partitionid. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the row Id (primary key) is naturally a great choice for the partitionid column.
 
-Imagine Contoso operates large number of IoT devices deployed all across the world. Contos needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights. 
+Imagine Contoso operates large number of IoT devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights. 
 Contoso can create an elastic table "SensorData" to store and query large volume of IoT data. It can choose to use "DeviceId" as the partitionid for each row corresponding to that device. Since deviceId is unique to each device and contoso performs queries mostly in context of a given deviceId, it acts as a good partition strategy for entire dataset.
 
 ## Create elastic tables
@@ -615,25 +615,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: hn76qq#7324
 ```
-
 ---
-
-## Bulk operations
-
-## Consistency level
-
-Elastic tables support session consistency. Session consistency in Elastic tables is achieved through the use of session tokens, which are opaque strings returned by dataverse when a client performs any write operation (create/update/upsert/delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing dataverse to return the most up-to-date data for that client.
-
-You will find session token as x-ms-session-token header in response of all write operations. (Create/Update/Upsert/Delete)
-
-When calling a retrieve API, you can use MSCRM.SessionToken header to pass corresponding session-token to retrieve the most up-to-date row value.
-
-## Transactional behavior
-
-Elastic table support transactions within a single logical partition. You can execute two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message request with limitation that all requests belong to the same logical partition.
-
-For single request execution, Elastic tables does not support transaction within various plugin stages. For example, if you have a post plugin registered on Create message for SensorData table at stage 40, and if an error ocurrs during post plugin execution, the database write operation would not be rolled back.
-
 ## Query JSON columns
 
 Elastic table supports a new JSON format for text columns. This column can be used to store schema less arbitrary json as per application needs. You can use ExecuteCosmosSQLQuery API to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
@@ -768,10 +750,31 @@ OData-Version: 4.0
     ]
 }
 ```
+---
 
-## Create elastic tables
+## Bulk operations
 
-<!-- Same as standard table except TableType = "Elastic" -->
+
+
+
+## Consistency level
+
+Elastic tables support session consistency. Session consistency in Elastic tables is achieved through the use of session tokens, which are opaque strings returned by dataverse when a client performs any write operation (create/update/upsert/delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing dataverse to return the most up-to-date data for that client.
+
+You will find session token as x-ms-session-token header in response of all write operations. (Create/Update/Upsert/Delete)
+
+When calling a retrieve API, you can use MSCRM.SessionToken header to pass corresponding session-token to retrieve the most up-to-date row value.
+
+## Transactional behavior
+
+Elastic tables are vastly different from standard tables when it comes to transactional guarantees. For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide ACID guarantees for transactions, meaning that each transaction is atomic (all or nothing), consistent (maintains data integrity), isolated (transactions don't interfere with each other), and durable (committed transactions are permanent).
+
+In contrast, Elastic table currently do not support transaction in any form. 
+For single request execution, write operation happening in various plugin stages are **NOT** transactional. For example, if you have a post plugin registered on Create message for SensorData table at stage 40, and if an error ocurrs during post plugin execution, the database write operation will not be rolled back.
+Multiple write operations within even within same plugin execution are also not atomic.
+
+Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message.
+
 
 ## Frequently Asked Questions (FAQ)
 
