@@ -9,7 +9,7 @@ ms.custom:
 ms.reviewer: matp
 ms.date: 01/09/2021
 ms.subservice: teams
-ms.author: aheaney
+ms.author: aorth
 search.audienceType: 
   - maker
 contributors:
