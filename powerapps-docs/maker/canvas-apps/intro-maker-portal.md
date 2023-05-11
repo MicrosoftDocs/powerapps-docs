@@ -82,9 +82,6 @@ Pin your most used pages in the navigation pane so you can quickly access featur
 
 When you sign in, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
 
-> [!div class="mx-imgBorder"]
-> ![First time sign in dialog box.](media/intro-maker-portal/left-nav-dialog-2.png "First time signing in")
-
 To pin or unpin a page from the left navigation pane, select **More**, and then select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin or ![Unpin button.](media/intro-maker-portal/unpin-button.png) unpin button.
 
 > [!div class="mx-imgBorder"]
