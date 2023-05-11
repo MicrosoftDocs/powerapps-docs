@@ -184,6 +184,20 @@ To create an app, select from the following options:
 
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
+
+### Permissions
+
+The table below summarizes scenarios and outcome for options that require Microssoft Dataverse.
+
+
+| **Maker has developer enviornment** | **Is developer enviornment creation enabled by tenant admin** |  **Does maker have any other Dataverse environment with sufficient permission** | **Suggested action** | **Result** |
+| --- | --- | --- |--- |--- |
+| Yes| n/a  | n/a  | Switch to your developer environment | Maker will switch to their first alphabetically ordered Developer environment  
+| No| Yes  | n/a | Create developer environment | Maker will create a new Developer environment, and switch into that environment  
+| No |No | Yes | Switch to another environment | Maker will see the environment picker filtered to environments that they have sufficient permissions
+| No|No| No | Contact your admin | Maker will need to reach out to their admin for help 
+
+
 # [Classic](#tab/home-classic)
 
 In Power Apps, you can create and run these types of apps:
