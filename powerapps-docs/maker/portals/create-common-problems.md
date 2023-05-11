@@ -1,5 +1,5 @@
 ---
-title: Common problems and resolutions while creating a portal
+title: Common problems and resolutions while creating a site
 description: Learn about frequent issues, problems, FAQs and resolutions while creating a Power Apps portal.
 author: neerajnandwana-msft
 
@@ -14,12 +14,12 @@ contributors:
     - nickdoelman
 ---
 
-# Common problems and resolutions while creating a portal
+# Common problems and resolutions while creating a site
 
 
-[!INCLUDE[cc-pages-ga-banner](../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../includes/cc-pages-banner.md)]
 
-In this article, you'll learn about the common problems that occur while creating a Power Apps portal, and how to resolve them.
+In this article, you'll learn about the common problems that occur while creating a site (portal), and how to resolve them.
 
 ## No permissions to create a portal
 
