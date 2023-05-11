@@ -1,9 +1,8 @@
 ---
 title: "Use elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
-ms.custom: intro-internal
-ms.topic: "article"
-ms.date: 05/09/2022
+ms.topic: article
+ms.date: 05/11/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -15,6 +14,13 @@ contributors:
 ---
 
 # Use elastic tables (Preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
+> [!IMPORTANT]
+> This is a preview feature.
+> 
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 <!-- 
 Maker topics to refer to from https://github.com/MicrosoftDocs/powerapps-docs-pr/pull/8083
@@ -32,7 +38,7 @@ https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of
 -->
 **///////////////////////////////////**
 
-TODO: Sumant to add content about why Elastic tables are great for developers
+TODO: Sumant to add content about why Elastic tables are great <u>for developers</u>
 
 **///////////////////////////////////**
 
@@ -59,9 +65,9 @@ When `partitionid` is not specified for a row, Dataverse uses the primary key as
 
 ### Scenario
 
-Imagine Contoso operates large number of IoT devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
+Imagine Contoso operates large number of Internet of Things (IoT) devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
 
-Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of Internet of Things (IoT) data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
+Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
 
 ## Create elastic tables
 
@@ -69,10 +75,7 @@ You can create elastic tables using [Power Apps](https://make.powerapps.com/) wi
 
 These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code.
 
-Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
 
-- `PartitionId` : Defines the logical partition a row belongs to.
-- `TimeToLiveInSeconds` :  Defines the time in seconds after which row will expire and get deleted from database automatically.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -224,14 +227,32 @@ OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c
 
 ### Adding Columns
 
-**///////////////////////////////////**
+Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
 
-I think there are limits on the types of columns that can be created
+- `PartitionId` : Defines the logical partition a row belongs to.
+- `TimeToLiveInSeconds` :  Defines the time in seconds after which row will expire and get deleted from database automatically.
 
-**///////////////////////////////////**
+There are limits on the types of columns you can add. Currently you cannot add these types of columns:
 
+- Currency (`MoneyAttributeMetadata`)
+- File (`FileAttributeMetadata` )
+- Any column using `FormulaDefinition`
+- Whole number (`IntegerAttributeMetadata`) with `Format` other than `None`.
+- Lookup (`LookupAttributeMetadata`) with multiple `Target` values.
 
 ### Adding Relationships
+
+There are limitations on the types of relationships you can create with elastic tables.
+
+You can create: 
+
+- 1:N and N:N relationships between elastic tables.
+- 1:N relationships with a standard table. You can add a lookup column on an standard table that refers to an elastic table
+
+You can't create:
+
+- N:N relationships with standard tables
+- ??  Not clear here yet.
 
 **///////////////////////////////////**
 
@@ -256,7 +277,7 @@ Following examples show how customer can work with data stored in an elastic tab
 
 ### Create a record
 
-This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day and deleted from dataverse automatically.
+This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day and deleted from Dataverse automatically.
 
 
 **///////////////////////////////////**
@@ -321,20 +342,17 @@ x-ms-session-token: hj23ad#1543
 OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
 
-**///////////////////////////////////**
-We have never called out the `x-ms-session-token` response header as something developers need to know about.
-I'll read further to see if you explain why this is important.
-**///////////////////////////////////**
+> [!NOTE]
+> The `x-ms-session-token` value returned can be used to with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. More information: [Consistency level](#consistency-level)
+
 
 ---
 
 ### Update a record
 
-This example updates sensor `value` and `timestamp` of an existing row in `contoso_SensorData` table with using the sensordataid primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+This example updates sensor `value` and `timestamp` of an existing row in `contoso_SensorData` table with using the `sensordataid` primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
 
 #### [SDK for .NET](#tab/sdk)
-
-
 
 ```csharp
 public static void UpdateExample(IOrganizationService service, Guid sensordataid)
@@ -353,8 +371,6 @@ public static void UpdateExample(IOrganizationService service, Guid sensordataid
 ```
 
 #### [Web API](#tab/webapi)
-
-
 
 **Request**
 
@@ -384,17 +400,19 @@ x-ms-session-token: hn76qq#7324
 
 ### Retrieve a record
 
+This example retrieves an existing row in SensorData table with the `sensordataid` and `partitionid` = 'device-001'. Both primary key and `partitionid` columns are required to uniquely identify an existing elastic table row.
+
 #### [SDK for .NET](#tab/sdk)
 
-This example retrieves an existing row in SensorData table with SensorDataId = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and partitionid = 'device-001'. Both primary key and partitionid columns are required to uniquely identify an existing elastic table row.
+Here the partitionid value is passed using `partitionId` as an optional parameter. More information: [Use optional parameters](optional-parameters.md)
 
 ```csharp
-public static Entity RetrieveExample(IOrganizationService service)
+public static Entity RetrieveExample(IOrganizationService service, Guid sensorDataId)
 {
    var request = new RetrieveRequest
    {
          ColumnSet = new ColumnSet("new_firstname"),
-         Target = new EntityReference("new_customer", new Guid("ff67610c-82ce-412c-85df-0bbc6521bb01")),
+         Target = new EntityReference("new_customer", sensorDataId),
          ["partitionId"] = "deviceid-001"
    };
 
@@ -405,12 +423,18 @@ public static Entity RetrieveExample(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-This example retrieves an existing row in SensorData table with SensorDataId = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and partitionid = 'device-001'. Both primary key and partitionid columns are required to uniquely identify an existing elastic table row. Here partitionid is being passed as query parameter.
+Here the `partitionid` is being passed as query parameter.
+
+**//////**
+
+I was looking for use of `MSCRM.SessionToken` request header hear.
+
+**/////**
 
 **Request**
 
 ```http
-GET [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionid="deviceid-001"&$select=value,timestamp
+GET [Organization URI]/api/data/v9.2/sensordata(<sensordataid value>)?partitionid="deviceid-001"&$select=value,timestamp
 Accept: application/json
 Content-Type: application/json
 OData-MaxVersion: 4.0
@@ -443,8 +467,6 @@ These examples retrieve the first 5000 rows in the `contoso_SensorData` table wh
 
 #### [SDK for .NET](#tab/sdk)
 
-
-
 ```csharp
 public static EntityCollection RetrieveMultipleExample(IOrganizationService service)
 {
@@ -463,8 +485,6 @@ public static EntityCollection RetrieveMultipleExample(IOrganizationService serv
 ```
 
 #### [Web API](#tab/webapi)
-
-This example retrieves all rows in SensorData table which belong to logical partitionid = 'deviceid-001'.
 
 **Request**
 
@@ -508,13 +528,14 @@ OData-Version: 4.0
     ]
 }
 ```
+
 ---
 
 ### Query rows across all logical partitions
 
-#### [SDK for .NET](#tab/sdk)
-
 This example retrieves all rows in SensorData table across all logical partitions. Not applying any filter on logical partition allows us to get rows from all logical partitions. Note that this query will not performant and data modelling of the table should be done in a way to keep queries limited to a single logical partition as much as possible.
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 public static EntityCollection RetrieveMultipleExample(IOrganizationService service)
@@ -535,8 +556,6 @@ public static EntityCollection RetrieveMultipleExample(IOrganizationService serv
 ```
 
 #### [Web API](#tab/webapi)
-
-This example retrieves all rows in SensorData table across all logical partitions. Not applying any filter on logical partition allows us to get rows from all logical partitions. Note that this query will not performant and data modelling of the table should be done in a way to keep queries limited to a single logical partition as much as possible.
 
 **Request**
 
@@ -585,7 +604,7 @@ OData-Version: 4.0
 
 ### Upsert a record
 
-An Upsert oepration is similar to update. The difference is that if record with given id and partitionid doesn't exist it will be created. If it already exists, it will be updated.
+An Upsert operation is similar to update. The difference is that if record with given id and partitionid doesn't exist it will be created. If it already exists, it will be updated.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -668,7 +687,7 @@ public static void DeleteExample(IOrganizationService service, Guid id)
 
 #### [Web API](#tab/webapi)
 
-This example upserts a row in SensorData table with id = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and partitionid = 'deviceid-001'.
+This example deletes a row in SensorData table with id = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and partitionid = 'deviceid-001'.
 
 **Request**
 
@@ -695,6 +714,7 @@ Elastic table supports a new JSON format for text columns. This column can be us
 ### Create Json format columns
 
 This example creates a string column SensorValue with Json format in our SensorData elastic table. For cases where large json need to be stored, instead of using String attribute type, we can use Memo attribute type with JSON format.
+
 #### [SDK for .NET](#tab/sdk)
 
 **///////////////////////////////////**
@@ -772,7 +792,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
 
 ### Set Json column data
 
-This example creates a row in SensorData elastic table with JSON values in the sensorvalue column.
+This example creates a row in `contoso_SensorData` elastic table with JSON values in the `contoso_Value` column.
 #### [SDK for .NET](#tab/sdk)
 
 **///////////////////////////////////**
@@ -889,21 +909,31 @@ OData-Version: 4.0
 
 ## Consistency level
 
-Elastic tables support session consistency. Session consistency in Elastic tables is achieved through the use of session tokens, which are opaque strings returned by dataverse when a client performs any write operation (create/update/upsert/delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing dataverse to return the most up-to-date data for that client.
+Elastic tables support session consistency. Session consistency in elastic tables is achieved through the use of session tokens, which are opaque strings returned by Dataverse when a client performs any write operation (Create/Update/Upsert/Delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing Dataverse to return the most up-to-date data for that client.
 
-You will find session token as x-ms-session-token header in response of all write operations. (Create/Update/Upsert/Delete)
+You will find session token as `x-ms-session-token` response header for all write operations. (Create/Update/Upsert/Delete)
 
-When calling a retrieve API, you can use MSCRM.SessionToken header to pass corresponding session-token to retrieve the most up-to-date row value.
+When calling a retrieve API, you can use `MSCRM.SessionToken` request header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
 
 ## Transactional behavior
 
-Elastic tables are vastly different from standard tables when it comes to transactional guarantees. For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide ACID guarantees for transactions, meaning that each transaction is atomic (all or nothing), consistent (maintains data integrity), isolated (transactions don't interfere with each other), and durable (committed transactions are permanent).
+Elastic tables are vastly different from standard tables when it comes to transactional guarantees.
 
-In contrast, Elastic table currently do not support transaction in any form. 
-For single request execution, write operation happening in various plugin stages are **NOT** transactional. For example, if you have a post plugin registered on Create message for SensorData table at stage 40, and if an error ocurrs during post plugin execution, the database write operation will not be rolled back.
+For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide **ACID** guarantees for transactions, meaning that each transaction is:
+
+- **A**tomic: All or nothing
+- **C**onsistent: Maintains data integrity
+- **I**solated: transactions don't interfere with each other
+- **D**urable: Committed transactions are permanent
+
+In contrast, elastic tables currently do not support transaction in any form.
+For single request execution, write operation happening in synchronous plugin stages are **NOT** transactional.
+
+For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for the `Create` message an elastic table, any error in your plug-in will not roll back the operation.
+
 Multiple write operations within even within same plugin execution are also not atomic.
 
-Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message.
+Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the `ExecuteTransaction` message or in a Web API $batch operation ChangeSet.
 
 
 ## Frequently Asked Questions (FAQ)
@@ -917,11 +947,13 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ## Tabbed Template
 
-<!-- Copy the following whenever you want to have a sample that is for SDK AND Web API -->
+<!-- Copy the following for in-line samples showing SDK & Web API -->
+
+<!-- Copy Start -->
 
 #### [SDK for .NET](#tab/sdk)
 
-Introduce what the SDK sample does
+Comments on anything special about the SDK sample
 
 ```csharp
 
@@ -929,7 +961,7 @@ Introduce what the SDK sample does
 
 #### [Web API](#tab/webapi)
 
-Introduce what the Web API sample does
+Comments on anything special about the Web API sample
 
 **Request**
 
@@ -944,6 +976,8 @@ Introduce what the Web API sample does
 ```
 
 ---
+
+<!-- Copy End -->
 
 ### See Also
 
