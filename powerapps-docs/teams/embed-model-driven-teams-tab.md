@@ -2,7 +2,6 @@
 title: Embed a model-driven app as tab app (preview)
 description: "Embed a model-driven app as tab app"
 author: mattp123
-
 ms.component: pa-user
 ms.topic: article
 ms.date: 11/16/2020
@@ -16,6 +15,8 @@ contributors:
 ---
 
 # Embed a model-driven app as tab app in Teams (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can customize the Teams experience by adding Power Apps model-driven apps to your channels in Teams using the **Power Apps** tab. 
 
