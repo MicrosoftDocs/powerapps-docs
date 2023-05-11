@@ -40,7 +40,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
     - To create a three screen mobile app by connecting to an external data source, select one of these data source:
       - **From SharePoint**
       - **From Excel**
-      - **From SQL**.
+      - **From SQL**
     - To use other templates, select a template from the list of **other app templates**.
 5. After you select a template, you can update the app name and select the layout for your app. 
 6. When you're done, select **Next**.
