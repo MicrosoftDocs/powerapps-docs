@@ -44,24 +44,24 @@ Time to live (TTL) policies ensure that you're always working with the most up-t
 
 ### Flexible schema with JSON columns
 
-Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. <!-- Learn more link to How to query JSON columns in elastic tables -->
+Elastic tables enable you to store and query data with varying structures, without the need for pre-defined schemas or migrations. There's no need to write custom code to map the imported data into a fixed schema. <!-- Need link to How to query JSON columns in elastic tables -->
 
 ## Considerations when you use elastic tables  
 
 Elastic tables don't provide the same level transaction support as standard tables. Standard tables support strong, consistent transactions support. Elastic tables support what is called *eventual consistency* for transactions, which means that updates made to the database might take some time to propagate to all nodes in the system. More information: [Eventual consistency](/azure/cosmos-db/consistency-levels#eventual-consistency).
 
-Elastic tables support only left-outer JOIN in queries. This means that filters on related tables when creating views or in Advanced Find won't work. We recommend to denormalize columns from related tables into the main table if filters on related tables are needed.
+Elastic tables support only left-outer JOIN in queries. This means that filters on related tables when creating views or in Advanced Find won't work. We recommend to denormalize columns by grouping them on the same table, such as  from related tables into the main table if filters on related tables are needed.
 
 ### Denormalize columns
 
 Consider a retailer with two elastic tables: customer and address. One customer has many addresses. You want to return query results for all customers from the customer table whose city value in the address table is *New York*.
 
-This requires an inner join of the two tables, which isn't supported with elastic tables. One way to make this work for the elastic tables is to denormalize <!-- Need another word for this. Combine? Assimilate? Integrate?  --> the city data into the customer table so that all customers city values are present in the customer table.  
+This requires an inner join of the two tables, which isn't supported with elastic tables. One way to make this work for the elastic tables is to denormalize the city data into the customer table so that all customers city values are present in the customer table.  
 
 ## Elastic tables feature support
 
 - Record ownership, change tracking, auditing, mobile offline, and Dataverse search.
-- Create, retrieve, update, delete (CRUD) operations including `XMultiple` <!-- what is xmultiple? Use a term that exists in the Power Platform vernacular --> (for high throughput), bulk delete, and requests from plugins.
+- Create, retrieve, update, delete (CRUD) operations including `XMultiple` (for high throughput), bulk delete, and requests from plugins.
 - Relationships:
   - 1:N (One-to-many)
     - One elastic table -> Many elastic tables
