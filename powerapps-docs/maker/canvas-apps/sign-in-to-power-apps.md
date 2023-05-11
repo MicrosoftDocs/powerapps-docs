@@ -17,15 +17,9 @@ contributors:
 ---
 # Sign in to Power Apps 
 
-To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). 
+To create, edit, or play an app, sign in to Power Apps at [make.powerapps.com](https://make.powerapps.com). To create canvas apps a user must have the [Environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles). 
 
-> [!NOTE]
-> To create canvas apps a user must have the [Environment maker predefined security role](/power-platform/admin/database-security#predefined-security-roles). 
-
-For information on getting started, see [Get started with Power Apps](intro-maker-portal.md).
-
-> [!div class="mx-imgBorder"] 
-> ![Power Apps sign in.](media/intro-maker-portal/power-apps-signin.png)
+To learn more about the [Power Apps](https://make.powerapps.com) home page, see [Get started with Power Apps](intro-maker-portal.md).
 
 ## Choose an environment
 
