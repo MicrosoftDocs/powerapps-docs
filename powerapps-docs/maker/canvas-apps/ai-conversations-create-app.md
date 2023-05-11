@@ -68,7 +68,7 @@ Based on what you described, AI will generate a table for your app. The followin
 
 4. **Copilot**: Enter text to instruct the AI assistant on how to modify the table, such as remove room type column.
 
-5. **Create app or Cancel**: Select **Create app** to create an app based on the table or select **Cancel** to start over.
+5. **Create app: Select **Create app** to create an app based on the table or select **Cancel** to start over.
 
    > [!div class="mx-imgBorder"]
    > ![Review table for your app.](media/artificial-intelligence/table-created.png)

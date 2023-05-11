@@ -25,7 +25,7 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 A new version of the home page is being rolled out which provides a better app creation experience. If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features. The new look is on by default. However, you can turn it off by using the toggle on the top-right corner of the home page.
 
 > [!div class="mx-imgBorder"]
-> ![New look](media/intro-maker-portal/new-look-toggle.svg "New look toggle")
+> ![New look](media/intro-maker-portal/new-look-toggle.png "New look toggle")
 
 Select the appropriate tab below to know more.
 
@@ -61,7 +61,7 @@ Legend:
 
 ## 1 – Left navigation pane
 
-Find what you need with the new left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane will show the following menu items:
+Find what you need with the left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
 
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
@@ -70,9 +70,9 @@ Legend:
 
 1. **Home**: Takes you to the Power Apps home page.
 2. **Create**: Create apps as such as [canvas apps](/powerapps/maker/canvas-apps/), [model-driven apps](/powerapps/maker/model-driven-apps/), [chatbots](/powerapps/chatbots), and [AI models](/powerapps/use-ai-builder).
-3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that will help you to create and build Power Apps.
+3. **Learn**: The [learn hub](../common/learn-hub.md) lets you explore documents, training material, get help from the Power Apps community, and other resources that help you to create and build Power Apps.
 4. **Apps**: If you've created an app or someone else has created one and shared it with you, you can play or edit it. You can also filter the list of apps based on criteria such as whether you opened it recently.
-5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in to the new navigation experience the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
+5. **Your most used pages such as Tables, Connections, Flows**: When you first sign in the top three pages that you use most are pinned to the left navigation pane. Use the **More** option to unpin any of these pages and pin something else.
 6. **More**: Pin your most used items to the left navigation such as tables, flows, and more.
 7. **Power Platform**: Explore other Power Platform products or service.
 
@@ -80,12 +80,9 @@ Legend:
 
 Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above **More**.
 
-When you sign in to the new navigation experience, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
+When you sign in, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
 
-> [!div class="mx-imgBorder"]
-> ![First time sign in dialog box.](media/intro-maker-portal/left-nav-dialog-2.png "First time signing in")
-
-To pin or unpin a page from the left navigation pane, select **More** and then select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin or ![Unpin button.](media/intro-maker-portal/unpin-button.png) unpin button.
+To pin or unpin a page from the left navigation pane, select **More**, and then select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin or ![Unpin button.](media/intro-maker-portal/unpin-button.png) unpin button.
 
 > [!div class="mx-imgBorder"]
 > ![Pin or unpin an item.](media/intro-maker-portal/pin-3.png "Pin an item")
@@ -97,7 +94,7 @@ You can also unpin and item by selecting the more button and then select **Unpin
 
 ### Discover all
 
-To see all your your Power Apps, from the left navigation pane, select **More** > **Discover all**.
+To see all your Power Apps, from the left navigation pane, select **More** > **Discover all**.
 
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
@@ -106,7 +103,7 @@ When you select **Discover all** you'll see the **Discover** page on the left na
 
 ### Move up or move down
 
-When you have a few pages pinned in the navigation pane you can start moving them up or down.
+When you have a few pages pinned in the navigation pane, you can start moving them up or down.
 
 To move a page up or down, select the more button next to the page that you want to move, and then select **Move up** or **Move down**.
 
@@ -143,7 +140,7 @@ Select the bell icon to see notifications. Notifications are stored in the notif
 
 ### Settings
 
-Select the gear icon to perform tasks such as connecting to data sources, identifying your Power Apps license or licenses, and opening the page where you can perform administrative tasks.
+Select the gear icon to perform tasks such as connecting to data sources, identify your Power Apps license or licenses, and open the page where you can perform administrative tasks.
 
 - **Admin center**: Opens another windows and goes to the Power Platform admin center.
 - **Plans(s)**: View your licenses. More information: [Licensing overview](/power-platform/admin/pricing-billing-skus)
@@ -177,15 +174,15 @@ Depending upon whether you have the new look turned on, select the appropriate t
 
 [This article is prerelease documentation and is subject to change.]
 
-If your organization has [AI enabled](ai-overview.md) then you will see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
+If your organization has [AI enabled](ai-overview.md) then you'll see AI assistant on the Power Apps Home screen. For more information, see [Build apps through conversation](ai-conversations-create-app.md).
 
 To create an app, select from the following options:
 
 - **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
-- **Choose a page template**: Select the type of app you want to create. You can also use the the **Filter** option located in the top-right to narrow down the available templates by app type or by app features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
-- **Pick an app template**: Choose from a fully functional app and then customized it based on your organization needs. More informaton: [Create a canvas app from a template](get-started-test-drive.md)
+- **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down the available templates by app type or by app features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
+- **Pick an app template**: Choose from an app template including, data-centered tamplates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
-Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you are searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
+Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
 # [Classic](#tab/home-classic)
 

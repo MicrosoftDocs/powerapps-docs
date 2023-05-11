@@ -38,15 +38,20 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Generate an app automatically
 
-Depending upon whether you have the [new look](../intro-maker-portal.md#new-look-preview) or [classic look](../intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+
+Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=home-new-look) or [classic look](../intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
 
 # [New look (preview)](#tab/home-new-look)
 
 [This article is prerelease documentation and is subject to change.]
 
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with data** > **Connect to external data** > **Excel**.
-1. Choose your preferred data connection and data set to generate your app.
+1. Depending on how you want to create your app, from the home screen, select one of the following options:
+   - To create an app using responsive layout using data, select **Start with data** > **Connect to external data** > **From SQL**.
+   - To see your data in a single-page gallery app using responsive layout, select **Start with a page design** > **Gallery connected to external table** > **From SQL**.
+   - To create a three screen mobile app, **Start with an app template** > **From SQL**.
+1. Select your SQL connection and then select a table. Note, that only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or create a new SQL connection.
 1. When you're done, select **Create app**.
 
 

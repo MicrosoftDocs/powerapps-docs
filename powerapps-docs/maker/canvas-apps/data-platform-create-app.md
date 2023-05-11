@@ -29,15 +29,20 @@ To follow this quickstart, you must be assigned to the [Environment Maker](/powe
 
 ## Create an app
 
-Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#classic) turned on, select the appropriate tab below to know more.
+Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
 
 # [New look (preview)](#tab/home-new-look)
 
 [This article is prerelease documentation and is subject to change.]
 
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. From the home screen select, **Start with data** > **Select an existing table**.
-1. On the **Select a Dataverse table** screen, select your table, and then select **Create app**.
+1. Depending on how you want to create your app, from the home screen, select one of the following options:
+  - To create an app using responsive layout using data, select **Start with data** > **Select an existing table**.
+  - To see your data in a single-page gallery app using responsive layout, select **Start with a page design** > **Gallery connected to table**.
+  - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**.
+1. Select a table, and then select **Create app**.
+
 
 
 
@@ -59,7 +64,7 @@ Watch this short video that shows you how to create a canvas app quickly using D
 
 ## Save and design the app
 
-Your app opens in Power Apps Stuido where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
+Your app opens in Power Apps Studio where you can design, build, and manage your app. More information: [Understand Power Apps Studio](power-apps-studio.md)
 
 As a best practice, before you make any more changes save your work before you proceed.
 

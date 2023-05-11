@@ -25,7 +25,7 @@ If you don't have a license for Power Apps, you can [sign up for free](../signup
 
 ## Create the app
 
-Depending upon whether you have the [new look](intro-maker-portal.md#new-look) or [classic look](intro-maker-portal.md#home-classic) turned on, select the appropriate tab below to know more.
+Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-new-look) or [classic look](intro-maker-portal.md?tabs=home-classic) turned on, select the appropriate tab below to know more.
 
 
 # [New look (preview)](#tab/home-new-look)
@@ -34,12 +34,16 @@ Depending upon whether you have the [new look](intro-maker-portal.md#new-look) o
 
 To follow this topic exactly, download the [Flooring Estimates](https://download.microsoft.com/download/5/7/f/57fc6c55-6bb0-479b-a5c5-98fa08ee9efd/FlooringEstimates.xlsx) file in Excel, and save it on your device.
 
+### Upload an Excel file to create an app
+
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2. From the home screen select, **Start with data** > **Upload an Excel file**.
-3. Select **Select from device** and navigate to the location where your Excel file is saved and upload it.
-4. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
-5. Select **Row ownership** and choose how you want to manage row owership.
-6. When you're done, select **Create app**.
+1. From the home screen, select **Start with data** > **Upload an Excel file**. 
+1. Select **Select from device** and navigate to the location where your Excel file is saved and upload it.
+1. When the table is created, select a column name or the table name to edit the properties to suit your needs. 
+1. Select **Row ownership** and choose how you want to manage row ownership.
+1. When you're done, select **Create app**.
+
+To create an app by connecting to Excel, see [Connect to Excel from Power Apps](./connections/connection-excel.md).
 
 # [Classic](#tab/home-classic)
 
