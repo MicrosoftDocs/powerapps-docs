@@ -17,7 +17,7 @@ contributors:
 # Create custom Portal Management app
 
 
-[!INCLUDE[cc-pages-ga-banner](../../../includes/cc-pages-ga-banner.md)]
+[!INCLUDE[cc-pages-banner](../../../includes/cc-pages-banner.md)]
 
 The [overview](configure-portal.md) introduces **Portal Management** app to help you get started with the advanced portal configuration. In this walk-through, you'll learn how to create a custom **Portal Management** app.
 
