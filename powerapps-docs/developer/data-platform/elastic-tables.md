@@ -31,7 +31,9 @@ https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of
 
 -->
 **///////////////////////////////////**
+
 TODO: Sumant to add content about why Elastic tables are great for developers
+
 **///////////////////////////////////**
 
 ## Partitioning and horizontal scaling
@@ -59,13 +61,13 @@ When `partitionid` is not specified for a row, Dataverse uses the primary key as
 
 Imagine Contoso operates large number of IoT devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
 
-Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `DeviceId` as the partitionid for each row corresponding to that device. Since `DeviceId` is unique to each device and contoso performs queries mostly in context of a given `DeviceId`, it acts as a good partition strategy for entire dataset.
+Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of Internet of Things (IoT) data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
 
 ## Create elastic tables
 
 You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md). 
 
-These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `TableType` property with a value of `Elastic` to create an elastic table with code.
+These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `EntityMetadata.TableType` property with a value of `Elastic` to create an elastic table with code.
 
 Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
 
@@ -77,7 +79,7 @@ Dataverse automatically creates two system columns for each elastic tables at th
 ```csharp
 public static Guid CreateElasticTable(IOrganizationService service)
 {
-    CreateEntityRequest createrequest = new CreateEntityRequest
+    var request = new CreateEntityRequest
     {
         // Define table properties
         Entity = new EntityMetadata
@@ -95,16 +97,16 @@ public static Guid CreateElasticTable(IOrganizationService service)
         // Define the primary attribute for the entity
         PrimaryAttribute = new StringAttributeMetadata
         {
-            SchemaName = "contoso_sensortype",
+            SchemaName = "contoso_SensorType",
             RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
             MaxLength = 100,
             FormatName = StringFormatName.Text,
-            DisplayName = new Label("SensorType", 1033),
+            DisplayName = new Label("Sensor Type", 1033),
             Description = new Label("Type of sensor emitting data", 1033)
         }
 
     };
-    return service.Execute(createrequest);
+    return service.Execute(request);
 }
 ```
 
@@ -114,7 +116,7 @@ public static Guid CreateElasticTable(IOrganizationService service)
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/EntityDefinitions
+POST [Organization URI]/api/data/v9.2/EntityDefinitions
 Content-Type: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
@@ -157,7 +159,7 @@ OData-Version: 4.0
   "HasNotes": false,
   "IsActivity": false,
   "IsActivityParty": false,
-  "OwnershipType": "OrganizationOwned",
+  "OwnershipType": "UserOwned",
   "CanChangeTrackingBeEnabled": {
     "Value": true,
     "CanBeChanged": true
@@ -169,7 +171,7 @@ OData-Version: 4.0
   },
   "Attributes": [
     {
-      "SchemaName": "contoso_SensorData",
+      "SchemaName": "contoso_SensorType",
       "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
       "FormatName": {
         "Value": "Text"
@@ -193,7 +195,7 @@ OData-Version: 4.0
         "LocalizedLabels": [
           {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "SensorType",
+            "Label": "Sensor Type",
             "LanguageCode": 1033
           }
         ]
@@ -215,12 +217,42 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
-OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
+OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
 ```
 
 ---
 
+### Adding Columns
+
+**///////////////////////////////////**
+
+I think there are limits on the types of columns that can be created
+
+**///////////////////////////////////**
+
+
+### Adding Relationships
+
+**///////////////////////////////////**
+
+I know that there are limits on relationships that can be added.
+
+Verify whether the Table relationship eligibilty APIs work for this:
+
+https://learn.microsoft.com/en-us/power-apps/developer/data-platform/entity-relationship-eligibility
+
+**///////////////////////////////////**
+
+
+## Data operations
+
 Following examples show how customer can work with data stored in an elastic table.
+
+- [Create a record](#create-a-record)
+- [Update a record](#update-a-record)
+- [Retrieve a record](#retrieve-a-record)
+- [Query rows in a single logical partition](#query-rows-in-a-single-logical-partition)
+
 
 ### Create a record
 
@@ -298,14 +330,16 @@ I'll read further to see if you explain why this is important.
 
 ### Update a record
 
+This example updates sensor `value` and `timestamp` of an existing row in `contoso_SensorData` table with using the sensordataid primary key and `partitionid` = `'device-001'`. Note that primary key and `partitionid` columns are always required to uniquely identify an existing elastic table row. The `partitionid` of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+
 #### [SDK for .NET](#tab/sdk)
 
-This example updates sensor value and timestamp of an existing row in SensorData table with SensorDataId = ff67610c-82ce-412c-85df-0bbc6521bb01 and partitionid = 'device-001'. Note that primary key and partitionid columns are always required to uniquely identify an existing elastic table row. PartitionId of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+
 
 ```csharp
-public static void UpdateExample(IOrganizationService service)
+public static void UpdateExample(IOrganizationService service, Guid sensordataid)
 {
-   var entity = new Entity("sensordataid", new Guid("ff67610c-82ce-412c-85df-0bbc6521bb01"))
+   var entity = new Entity("contoso_sensordata", sensordataid)
    {
          Attributes = {
             { "value", 60 },
@@ -320,12 +354,12 @@ public static void UpdateExample(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-This example updates sensor value and timestamp of an existing row in SensorData table with SensorDataId = ff67610c-82ce-412c-85df-0bbc6521bb01 and partitionid = 'device-001'. Note that primary key and partitionid columns are always required to uniquely identify an existing elastic table row. PartitionId of an existing row cannot be updated and is only being used to uniquely identify the row to update.
+
 
 **Request**
 
 ```http
-PATCH [Organization URI]/api/data/v9.0/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)
+PATCH [Organization URI]/api/data/v9.0/contoso_sensordata(<sensordataid value>)
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
@@ -402,19 +436,23 @@ OData-Version: 4.0
 
 ### Query rows in a single logical partition
 
+These examples retrieve the first 5000 rows in the `contoso_SensorData` table which belong to logical `partitionid` = 'deviceid-001'. 
+
+> [!NOTE]
+> When used this way, the value must use `partitionId` (capital 'I') rather than `partitionid` (all lower case).
+
 #### [SDK for .NET](#tab/sdk)
 
-This example retrieves all rows in SensorData table which belong to logical partitionid = 'deviceid-001'. 
+
 
 ```csharp
 public static EntityCollection RetrieveMultipleExample(IOrganizationService service)
 {
    var request = new RetrieveMultipleRequest
    {
-         Query = new QueryExpression()
+         Query = new QueryExpression("contoso_sensordata")
          {
-            EntityName = "sensordata",
-            ColumnSet = new ColumnSet("value")
+            ColumnSet = new ColumnSet("contoso_value")
          },
          ["partitionId"] = "deviceid-001"
    };
@@ -648,14 +686,30 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 x-ms-session-token: hn76qq#7324
 ```
+
 ---
 ## Query JSON columns
 
 Elastic table supports a new JSON format for text columns. This column can be used to store schema less arbitrary json as per application needs. You can use ExecuteCosmosSQLQuery API to run any Cosmos SQL query directly against your elastic table and filter rows based on properties inside JSON.
 
-#### [Web API](#tab/webapi)
+### Create Json format columns
 
 This example creates a string column SensorValue with Json format in our SensorData elastic table. For cases where large json need to be stored, instead of using String attribute type, we can use Memo attribute type with JSON format.
+#### [SDK for .NET](#tab/sdk)
+
+**///////////////////////////////////**
+
+We need to keep the SDK tab for all samples.
+If this can't be done with the SDK, we will say that this is only possible using Web API
+
+**///////////////////////////////////**
+
+```csharp
+
+```
+
+#### [Web API](#tab/webapi)
+
 
 **Request**
 
@@ -714,9 +768,26 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)  
 ```
 
-#### [Web API](#tab/webapi)
+---
+
+### Set Json column data
 
 This example creates a row in SensorData elastic table with JSON values in the sensorvalue column.
+#### [SDK for .NET](#tab/sdk)
+
+**///////////////////////////////////**
+
+We need to keep the SDK tab for all samples.
+If this can't be done with the SDK, we will say that this is only possible using Web API
+
+**///////////////////////////////////**
+
+```csharp
+
+```
+
+#### [Web API](#tab/webapi)
+
 
 **Request**
 
@@ -733,7 +804,9 @@ POST [Organization URI]/api/data/v9.0/sensordata
    "partitionid" : "device-001"
 }
 ```
+
 **Response**
+
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
@@ -741,9 +814,30 @@ x-ms-session-token: hj23ad#1543
 OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
 
-#### [Web API](#tab/webapi)
+---
+
+
+### Query Json column data
 
 This example runs a query on SensorData elastic table with filter on sensorvalue.type json element to be equal to "Humidity"
+
+#### [SDK for .NET](#tab/sdk)
+
+
+**///////////////////////////////////**
+
+We need to keep the SDK tab for all samples.
+If this can't be done with the SDK, we will say that this is only possible using Web API
+
+**///////////////////////////////////**
+
+```csharp
+
+```
+
+#### [Web API](#tab/webapi)
+
+
 
 **Request**
 
@@ -756,7 +850,9 @@ GET [Organization URI]/api/data/v9.0/ExecuteCosmosSqlQuery(
    &@p2='sensordata'
    &@p3={'Keys':['@sensortype'],'Values':[{'Type':'System.String','Value':'Humidity'}]}
 ```
+
 **Response**
+
 ```http
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
@@ -783,6 +879,7 @@ OData-Version: 4.0
     ]
 }
 ```
+
 ---
 
 ## Bulk operations
@@ -820,7 +917,7 @@ They should ALWAYS include a link to the section of the docs where the informati
 
 ## Tabbed Template
 
-<!-- Copy the following whenever you want to have a sample that is for SDK or Web API -->
+<!-- Copy the following whenever you want to have a sample that is for SDK AND Web API -->
 
 #### [SDK for .NET](#tab/sdk)
 
