@@ -37,7 +37,7 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 1. From the home screen select, **Start with an app template**. Select a template to learn more. If you want to choose another template, select **Cancel** and then select another template.
 2. Select one of the following options:
     - To create a three screen mobile app using data stored in Dataverse, select **From Dataverse**.
-    - To create a three screen mobile app by connecting to an external data source, select one of these data source:
+    - To create a three screen mobile app by connecting to an external data source, select one of these data sources:
       - **From SharePoint**
       - **From Excel**
       - **From SQL**
