@@ -43,17 +43,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://download
 1. Select **Row ownership** and choose how you want to manage row ownership.
 1. When you're done, select **Create app**.
 
-### Connect to Excel to create an app
-
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Depending on how you want to create your app, from the home screen, select one of the following options:
-   - To use data to create an app, select **Start with data** > **Connect to external data** > **Excel**.
-   - To use your data in a single-page gallery app, select **Start with page design** > **Gallery connected to external data** > **From Excel**
-   - To use an app template to create an app, select **Start with an app template** > **From Excel**.
-
-1. Only one connection is shown at a time. To select a different connection, select on the **...** button to switch connection or add a new connection.
-1. Enter the file location and select the table.
-1. When you're done, select **Create app**.
+To create an app by connecting to Excel, see [Connect to Excel from Power Apps](./connections/connection-excel.md).
 
 # [Classic](#tab/home-classic)
 
