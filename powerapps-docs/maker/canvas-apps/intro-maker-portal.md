@@ -180,7 +180,7 @@ To create an app, select from the following options:
 
 
 - **Start with data**: Lets you upload an [Excel file](get-started-create-from-data.md), build your own table, select a [Dataverse table](data-platform-create-app.md), or choose from external data source such as [SharePoint](app-from-sharepoint.md), [Excel](./connections/connection-excel.md), or [SQL](./connections/connection-azure-sqldatabase.md) to start building your app.
-- **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down the available templates by app type or by app features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
+- **Choose a page template**: Select the type of app you want to create. You can also use the **Filter** option located in the top-right to narrow down templates by app type or features, such as offline use, responsive design, or embed into other Microsoft 365 products. More information: [Overview of creating apps in Power Apps](../index.md)
 - **Pick an app template**: Choose from an app template including, data-centered tamplates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
 > [!NOTE]
@@ -209,7 +209,7 @@ In Power Apps, you can create and run these types of apps:
 - **Model-driven apps** have a standard UI and connect to data only in Dataverse. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 - **Cards** (preview) are micro-apps with enterprise data and workflows and interactive, lightweight UI elements that other applications can use as content.
 
-In addition, Power Apps also allows you to create Power Pages websites. More information: [What is Power Pages](/power-pages/introduction).
+In addition, Power Apps also allows you to create Power Pages websites. More information: [What is Power Pages?](/power-pages/introduction)
 
 If you choose an [environment that has a Dataverse database](/power-platform/admin/create-environment#create-an-environment-with-a-database), you can build canvas or model-driven apps from the same **Home** page.
 
