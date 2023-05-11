@@ -25,7 +25,7 @@ The [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkina
 A new version of the home page is being rolled out which provides a better app creation experience. If your organization has AI enabled then it also includes the new [Copilot](ai-overview.md) features. The new look is on by default. However, you can turn it off by using the toggle on the top-right corner of the home page.
 
 > [!div class="mx-imgBorder"]
-> ![New look](media/intro-maker-portal/new-look-toggle.svg "New look toggle")
+> ![New look](media/intro-maker-portal/new-look-toggle.png "New look toggle")
 
 Select the appropriate tab below to know more.
 
