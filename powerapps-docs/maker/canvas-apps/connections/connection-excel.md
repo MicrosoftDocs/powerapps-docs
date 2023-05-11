@@ -37,8 +37,6 @@ Depending upon whether you have the [new look](../intro-maker-portal.md?tabs=hom
 
 [This article is prerelease documentation and is subject to change.]
 
-To start with data from Excel, first [create an app from scratch from Excel](../get-started-create-from-blank.md). Then, drop the OneDrive or any other cloud data source that stores your Excel file.
-
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 1. Depending on how you want to create your app, from the home screen, select one of the following options:
    - To create an app using responsive layout using data, select **Start with data** > **Connect to external data** > **From Excel**.
