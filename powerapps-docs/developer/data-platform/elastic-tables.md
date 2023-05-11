@@ -10,6 +10,7 @@ ms.reviewer: jdaly
 search.audienceType: 
   - developer
 contributors:
+ - sumantb-msft
  - JimDaly
 ---
 
@@ -29,37 +30,49 @@ Types of tables
 https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of-entities?branch=pr-en-us-8083
 
 -->
-
-Elastic tables are great..
-
-
+**///////////////////////////////////**
+TODO: Sumant to add content about why Elastic tables are great for developers
+**///////////////////////////////////**
 
 ## Partitioning and horizontal scaling
 
-Elastic tables leverage Azure Cosmos DB partitioning to scale individual tables to meet the performance needs of your application. All elastic tables contain a system-defined partitionid column. Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called logical partitions which are formed based on the value of partitionid column of each row. 
+Elastic tables leverage Azure Cosmos DB partitioning to scale individual tables to meet the performance needs of your application. All elastic tables contain a system-defined **Partition Id** string column with the schema name `PartitionId` and logical name `partitionid`.
 
-A logical partition in an elastic table consists of a set of rows that have the same partitionid. For example, in a table that contains data about various products, you can use product category as the partitionid for the table. Groups of items that have specific values for product category, such as Clothing, Books, Electronic Appliances and Pet supplies, form distinct logical partitions.
+Azure Cosmos DB ensures that the rows in a table are divided into distinct subsets called logical partitions which are formed based on the value of `partitionid` column of each row.
+
+### Choosing a PartitionId value
+
+The `partitionid` value you should use depends on the nature of your data.  A logical partition in an elastic table consists of a set of rows that have the same `partitionid`. For example, in a table that contains data about various products, you can use product category as the `partitionid` for the table. Groups of items that have specific values for product category, such as Clothing, Books, Electronic Appliances and Pet supplies, form distinct logical partitions.
 
 Dataverse transparently and automatically manages logical partitions associated with a table. There is no limit on the number of logical partitions you can have in a table. You also don't have to worry about deleting a logical partition when the underlying rows belonging to that partition is deleted.
 
-For all elastic tables, partitionid column should:
--	Have a value which doesn't change. Once a row is created with a partitionid value, you cannot change it later.
--	Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a partitionId with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
--	Spread data as evenly as possible between all logical partitions.
--	Have values that are no larger than 1024 bytes.
+For all elastic tables, `partitionid` column should:
 
-When partitionId is not specified for a row, Dataverses makes row id (primary key) as the default partitionid. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the row Id (primary key) is naturally a great choice for the partitionid column.
+- Have a value which doesn't change. Once a row is created with a `partitionid` value, you cannot change it later.
+- Have a high cardinality value. In other words, the property should have a wide range of possible values. Each logical partition can store 20 GB of data. So, choosing a partitionId with a wide range of possible values ensures that the table can scale without reaching limits for any specific logical partition.
+- Spread data as evenly as possible between all logical partitions.
+- Have values that are no larger than 1024 bytes.
 
-Imagine Contoso operates large number of IoT devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights. 
-Contoso can create an elastic table "SensorData" to store and query large volume of IoT data. It can choose to use "DeviceId" as the partitionid for each row corresponding to that device. Since deviceId is unique to each device and contoso performs queries mostly in context of a given deviceId, it acts as a good partition strategy for entire dataset.
+When `partitionid` is not specified for a row, Dataverse uses the primary key as the default `partitionid`. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the primary key is naturally a great choice for the `partitionid` column.
+
+### Scenario
+
+Imagine Contoso operates large number of IoT devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
+
+Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `DeviceId` as the partitionid for each row corresponding to that device. Since `DeviceId` is unique to each device and contoso performs queries mostly in context of a given `DeviceId`, it acts as a good partition strategy for entire dataset.
 
 ## Create elastic tables
 
+You can create elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md). 
+
+These examples create a new elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. Use the `TableType` property with a value of `Elastic` to create an elastic table with code.
+
+Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
+
+- `PartitionId` : Defines the logical partition a row belongs to.
+- `TimeToLiveInSeconds` :  Defines the time in seconds after which row will expire and get deleted from database automatically.
+
 #### [SDK for .NET](#tab/sdk)
-This example creates a new elastic table SensorData. TableType property is used to indicate that we are creating an Elastic table. 
-Dataverse automatically creates two system defined columns for each elastic tables at the time of table creation. 
-- PartitionId - Defines logical partition a row belongs to.
-- TimeToLiveInSeconds - Defines time in seconds after which row will expire and get deleted from database automatically.
 
 ```csharp
 public static Guid CreateElasticTable(IOrganizationService service)
@@ -69,7 +82,7 @@ public static Guid CreateElasticTable(IOrganizationService service)
         // Define table properties
         Entity = new EntityMetadata
         {
-            SchemaName = "contoso_sensordata",
+            SchemaName = "contoso_SensorData",
             DisplayName = new Label("SensorData", 1033),
             DisplayCollectionName = new Label("SensorData", 1033),
             Description = new Label("Stores IoT data emitted from devices", 1033),
@@ -94,19 +107,73 @@ public static Guid CreateElasticTable(IOrganizationService service)
     return service.Execute(createrequest);
 }
 ```
+
 #### [Web API](#tab/webapi)
-This example creates a new elastic table with logicalName=contoso_sensordata. Note that TableType property is used to indicate that we are creating an Elastic table.
+
 
 **Request**
+
 ```http
 POST [Organization URI]/api/data/v9.0/EntityDefinitions
 Content-Type: application/json
 OData-MaxVersion: 4.0
 OData-Version: 4.0
+
 {
   "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+  "SchemaName": "contoso_SensorData",
+  "TableType": "Elastic",
+  "DisplayName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "SensorData",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "Description": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "Stores IoT data emitted from devices",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "DisplayCollectionName": {
+    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+    "LocalizedLabels": [
+      {
+        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+        "Label": "SensorData",
+        "LanguageCode": 1033
+      }
+    ]
+  },
+  "HasActivities": false,
+  "HasNotes": false,
+  "IsActivity": false,
+  "IsActivityParty": false,
+  "OwnershipType": "OrganizationOwned",
+  "CanChangeTrackingBeEnabled": {
+    "Value": true,
+    "CanBeChanged": true
+  },
+  "ChangeTrackingEnabled": true,
+  "CanCreateCharts": {
+    "Value": false,
+    "CanBeChanged": true
+  },
   "Attributes": [
     {
+      "SchemaName": "contoso_SensorData",
+      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+      "FormatName": {
+        "Value": "Text"
+      },
       "AttributeType": "String",
       "AttributeTypeName": {
         "Value": "StringType"
@@ -137,82 +204,45 @@ OData-Version: 4.0
         "CanBeChanged": true,
         "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
       },
-      "SchemaName": "contoso_sensortype",
-      "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
-      "FormatName": {
-        "Value": "Text"
-      },
       "MaxLength": 100
     }
-  ],
-  "Description": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "Stores IoT data emitted from devices",
-        "LanguageCode": 1033
-      }
-    ]
-  },
-  "DisplayCollectionName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "SensorData",
-        "LanguageCode": 1033
-      }
-    ]
-  },
-  "DisplayName": {
-    "@odata.type": "Microsoft.Dynamics.CRM.Label",
-    "LocalizedLabels": [
-      {
-        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-        "Label": "SensorData",
-        "LanguageCode": 1033
-      }
-    ]
-  },
-  "TableType": "Elastic",
-  "HasActivities": false,
-  "HasNotes": false,
-  "IsActivity": false,
-  "IsActivityParty": false,
-  "OwnershipType": "OrganizationOwned",
-  "SchemaName": "contoso_sensordata",
-  "CanChangeTrackingBeEnabled": {
-    "Value": true,
-    "CanBeChanged": true
-  },
-  "ChangeTrackingEnabled": true,
-  "CanCreateCharts": {
-    "Value": false,
-    "CanBeChanged": true
-  }
+  ]
 }
 ```
+
 **Response**
+
 ```http
 HTTP/1.1 204 No Content  
 OData-Version: 4.0  
 OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c-e511-80d2-00155d2a68d2) 
 ```
+
 ---
 
 Following examples show how customer can work with data stored in an elastic table.
 
 ### Create a record
 
-#### [SDK for .NET](#tab/sdk)
+This example creates a new row in `contoso_SensorData` table with `partitionid` set to `deviceid`. It also sets `ttlinseconds` column which ensures that row expires after 1 day and deleted from dataverse automatically.
 
-This example creates a new row in SensorData table with partitionid set to deviceid. It also sets ttlinseconds column which ensures that row expires after 1 day and deleted from dataverse automatically.
+
+**///////////////////////////////////**
+
+**TODO: Sumant:**
+These examples seem to be setting the `sensordataid` primary key value for create. 
+For create we recommend people let Dataverse set the primary key value. Is this different for elastic tables?
+
+Also, I expect that the column names must be `contoso_deviceId`, `contoso_sensortype`, `contoso_value` etc.
+
+**///////////////////////////////////**
+
+#### [SDK for .NET](#tab/sdk)
 
 ```csharp
 public static Guid CreateExample(IOrganizationService service)
 {
-   var entity = new Entity("SensorData")
+   var entity = new Entity("contoso_sensordata")
    {
          Attributes = {
             { "sensordataid", "ff67610c-82ce-412c-85df-0bbc6521bb01" },
@@ -230,8 +260,6 @@ public static Guid CreateExample(IOrganizationService service)
 ```
 
 #### [Web API](#tab/webapi)
-
-This example creates a new row in SensorData table with partitionid set to deviceid. It also sets ttlinseconds column which ensures that row expires after 1 day and deleted from dataverse automatically.
 
 **Request**
 
@@ -260,6 +288,11 @@ OData-Version: 4.0
 x-ms-session-token: hj23ad#1543
 OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
+
+**///////////////////////////////////**
+We have never called out the `x-ms-session-token` response header as something developers need to know about.
+I'll read further to see if you explain why this is important.
+**///////////////////////////////////**
 
 ---
 
