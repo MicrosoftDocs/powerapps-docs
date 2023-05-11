@@ -185,9 +185,9 @@ To create an app, select from the following options:
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
 
-### Permissions
+### Permissions for Dataverse
 
-The table below summarizes scenarios and outcome for options that require Microssoft Dataverse.
+The table below summarizes scenarios and outcome for create app options that require access to Microssoft Dataverse.
 
 
 | **Maker has access to a developer enviornment** | **Maker has permission to create a developer enviornment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
