@@ -184,7 +184,7 @@ To create an app, select from the following options:
 - **Pick an app template**: Choose from an app template including, data-centered tamplates for mobile apps. More information: [Create a canvas app from a template](get-started-test-drive.md)
 
 > [!NOTE]
-> If a create option isn't available, review the permission table. More information:[Permissions for Dataverse](ntro-maker-portal.md#permissions-for-dataverse)
+> If a create option isn't available, review the permission table. More information: [Permissions for Dataverse](#permissions-for-dataverse)
 
 Furthermore, you can locate your top six apps under **Your apps**. You have the option to filter and sort them to quickly find the app you're searching for. Use the **Commands** button to perform various actions such as editing the app, viewing app details, and accessing settings.
 
