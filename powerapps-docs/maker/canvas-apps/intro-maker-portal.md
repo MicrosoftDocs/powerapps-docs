@@ -61,7 +61,7 @@ Legend:
 
 ## 1 – Left navigation pane
 
-Find what you need with the left navigation pane. If this is the first time, you're signing in to the [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
+Find what you need with the left navigation pane. When you sign in to [Power Apps home page](https://make.powerapps.com) the left navigation pane shows the following menu items:
 
 > [!div class="mx-imgBorder"]
 > ![Power Apps left navigation pane.](media/intro-maker-portal/default-nav-1.png "Power Apps left navigation pane")
@@ -80,7 +80,7 @@ Legend:
 
 Pin your most used pages in the navigation pane so you can quickly access features that you use frequently. Links to other pages are available through the **More** link. When you pin an item, it appears in the middle section above **More**.
 
-When you sign in, the system will automatically pin your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
+When you sign in, the system automatically pins your most and recently used pages on the left navigation pane. However, you can pin and unpin pages and customize it to your preference.
 
 To pin or unpin a page from the left navigation pane, select **More**, and then select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin or ![Unpin button.](media/intro-maker-portal/unpin-button.png) unpin button.
 
@@ -99,7 +99,7 @@ To see all your Power Apps, from the left navigation pane, select **More** > **D
 > [!div class="mx-imgBorder"]
 > ![Discover all your Power Apps.](media/intro-maker-portal/discover-all.png "Discover all")
 
-When you select **Discover all** you'll see the **Discover** page on the left navigation pane. To keep in pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
+Select **Discover all** to see the **Discover** page on the left navigation pane. To keep in pinned, select the ![Pin button.](media/intro-maker-portal/pin-button.png) pin button.
 
 ### Move up or move down
 
@@ -194,7 +194,7 @@ Furthermore, you can locate your top six apps under **Your apps**. You have the 
 The table summarizes scenarios and outcome when you create apps that require Microsoft Dataverse.
 
 
-| **Maker has access to a developer enviornment** | **Maker has permission to create a developer enviornment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
+| **Maker has access to a developer environment** | **Maker has permission to create a developer environment** |  **Maker has access to another Dataverse environment with required permissions** | **Action** | 
 | --- | --- | --- |--- |
 | Yes| n/a  | n/a  |  Switch to the developer environment that appears first in the alphabetical list |  
 | No| Yes  | n/a | Create a developer environment | 
