@@ -135,17 +135,6 @@ Developers can call the <xref:Microsoft.Dynamics.CRM.BulkDelete?displayProperty=
 
 ```http
 POST [Organization Uri]/api/data/v9.2/BulkDelete HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-If-None-Match: null
-Accept: application/json
-```
-
-**Response**
-
-```http
-HTTP/1.1 200 OK
-
 {
     "QuerySet": 
     [
@@ -172,6 +161,16 @@ HTTP/1.1 200 OK
     "StartDateTime": "2023-03-07T05:00:00Z",
     "ToRecipients": [],
     "CCRecipients": []
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 200 OK
+{
+    "@odata.context": "https://example.dynamics.com/api/data/v9.1/$metadata#Microsoft.Dynamics.CRM.BulkDeleteResponse",
+    "JobId": "3093d67f-21f0-ed11-8b48-6045bdd92a32"
 }
 ```
 
