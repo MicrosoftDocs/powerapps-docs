@@ -73,6 +73,9 @@ Follow these steps to enable a table for offline use.
 6.  In the **Edit table** pane, select **Advanced options**. Then scroll to the **Rows in this table** section.
 7.  Select **Can be taken offline**.
 
+    > [!Note]
+    > If you don’t see the **Can be taken offline** option, make that the app in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
+
     :::image type="content" source="media/can-be-taken-offline.png" alt-text="Select the **Can taken offline** option.":::
 
 ## Enable your app for offline use
