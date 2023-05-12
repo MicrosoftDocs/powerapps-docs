@@ -71,4 +71,4 @@ By clicking on the icon, you get a description of the state.
 
 ## Known issues
 - Key Power Fx functions that are not yet supported include *StartsWith*, *In*, and *With*.  If you use the 'App from Data' feature you will get an app that has a search text field that uses a *StartsWith* formula which will fail silently.  
-- Dataverse and SQLite sort data slightly differently. Numbers and special characters have different priorities in each system. If you update a record that has these characters in it, you may not find it where you expect it.
+
