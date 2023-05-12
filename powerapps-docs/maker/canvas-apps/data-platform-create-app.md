@@ -37,11 +37,11 @@ Depending upon whether you have the [new look](intro-maker-portal.md?tabs=home-n
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Depending on how you want to create your app, from the home screen, select one of the following options:
-  - To create an app using responsive layout using data, select **Start with data** > **Select an existing table**.
-  - To see your data in a single-page gallery app using responsive layout, select **Start with a page design** > **Gallery connected to table**.
-  - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**.
-1. Select a table, and then select **Create app**.
+2. Depending on how you want to create your app, from the home screen, select one of the following options:
+    - To create an app using responsive layout using data, select **Start with data** > **Select an existing table**.
+    - To see your data in a single-page gallery app using responsive layout, select **Start with a page design** > **Gallery connected to table**.
+    - To create a three screen mobile app, select **Start with an app template** > **From Dataverse**.
+3. Select a table, and then select **Create app**.
 
 
 
