@@ -173,7 +173,7 @@ To create an offline profile, follow these steps:
 
 ### Create an offline profile without admin rights
 1. Create an empty model-driven app.
-2. Enable the app for offline use. (Need link.)
+2. [Enable the app for offline use](setup-mobile-offline.md).
 3. [Generate a default profile](setup-mobile-offline.md#generate-a-default-profile) and [add tables to the offline profile and apply filters](setup-mobile-offline.md#add-a-table-to-an-offline-profile-and-apply-filters).
 4. Publish the model-driven app.
 5. Select this offline profile in your canvas app.
