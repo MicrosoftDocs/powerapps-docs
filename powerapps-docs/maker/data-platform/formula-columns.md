@@ -50,6 +50,8 @@ The formula that you enter determines the column type. You can't change a column
 
 For example, the formula *price * discount* creates a column type of number. You can change *price * discount* to  *price * (discount + 10%)* because that doesn’t change the column type. However, you can’t change *price * discount* to  *Text(price * discount)* because that would require changing the column type to string.
 
+You cannot combine data types in a formula column e.g. string and number.
+
 ## Operators
 
 You can use the following operators in a formula column:  
@@ -62,11 +64,11 @@ For more information, go to [Operators in Power Apps](../canvas-apps/functions/o
 You can display the following data types in a formula column:
 
 - Text
-- Decimal number
+- Decimal number (currently only two decimal places supported, Round, RounpUp & RoundDown have no effect on this)
 - Yes/No (boolean)
 - Datetime
 
-The currency and date data types aren't currently supported.
+The currency and date data types aren't currently supported. Choice columns aren't currently supported either.
 
 ## Function types
 
