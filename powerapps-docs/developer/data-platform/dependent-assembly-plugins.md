@@ -294,6 +294,18 @@ More information:
 - [Create a NuGet package using MSBuild](/nuget/create-packages/creating-a-package-msbuild)
 - [NuGet pack and restore as MSBuild targets](/nuget/reference/msbuild-targets)
 
+
+## Using System.Text.Json
+
+If you use [System.Text.Json](xref:System.Text.Json), please pay special attention to explicitly add a reference to the [System.Text.Json NuGet package](https://www.nuget.org/packages/System.Text.Json/).
+
+With dependent assemblies you must include NuGet package dependencies for any external libraries you use. You must do this to be able to refer to those types at design time.  Your class library project must also include a reference to the [Microsoft.CrmSdk.CoreAssemblies NuGet package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies) so that you can refer to essential interfaces for to write your plug-in.
+
+Because the [Microsoft.CrmSdk.CoreAssemblies Nuget package has a dependency on System.Text.Json](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies#dependencies-body-tab), you will be able to refer to `System.Text.Json` types at design time without explicitly adding the `System.Text.Json` Nuget package. However, the `System.Text.Json ` NuGet package will not be included in your plug-in package due to this indirect dependency. You must explicitly add it as a first level dependency for your plug-in package.
+
+Currently, `System.Text.Json` is the only dependency in the Microsoft.CrmSdk.CoreAssemblies Nuget package. This guidance will be true if any other  new dependencies are added in the future.
+
+
 ## FAQ
 
 ### Q: Can I continue to use ILMerge?

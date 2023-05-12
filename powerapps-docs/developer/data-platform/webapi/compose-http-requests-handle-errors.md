@@ -1,7 +1,7 @@
 ---
 title: "Compose HTTP requests and handle errors (Microsoft Dataverse)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests for the Web API. Learn how to identify and handle errors returned in the response"
-ms.date: 04/14/2023
+ms.date: 04/19/2023
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
@@ -110,6 +110,11 @@ You can use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the
 |`odata.include-annotations`|See [Request annotations](#request-annotations)|
 |`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query-data-web-api.md#page-results) |
 |`odata.track-changes`|The change tracking feature allows you to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
+|`respond-async`|Specifies that the request should be processed asynchronously. More information: [Background operations (Preview)](../background-operations.md)|
+
+> [!NOTE]
+> Multiple Prefer headers can be specified using comma separated values. For example:
+> `Prefer: respond-async,odata.include-annotations="*"`
 
 
 #### Request annotations

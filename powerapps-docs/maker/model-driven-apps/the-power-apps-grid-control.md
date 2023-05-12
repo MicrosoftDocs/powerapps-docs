@@ -15,16 +15,14 @@ ms.author: "matp"
 search.audienceType: 
   - maker
 ---
-# Power Apps grid control (preview)
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Power Apps grid control 
 
 The Power Apps grid control represents the next evolution of the Power Apps read-only grid control, allowing users to view, open, and edit records from views and subgrids. In addition to inline editing, the control provides other capabilities including a modern data browsing experience via infinite scrolling, allowing users to scroll indefinitely through data until they find the records they're interested in, and an ability to customize the visual appearance of columns for specific needs. Like the read-only grid control, this control supports the latest Microsoft accessibility standards and aligns with the latest Microsoft design guidance. This control will eventually replace all read-only and editable grids in model-driven apps.
 
 :::image type="content" source="media/power-apps-grid-control-editing.gif" alt-text="Editing data with the Power Apps grid control":::
 
 > [!IMPORTANT]
-> This is a preview feature.
+> This feature is generally available with the April 2023 release.
 
 ## Add the Power Apps grid control to views for an entity
 
@@ -32,12 +30,12 @@ When you configure the Power Apps grid control for an entity, all views for that
 
 1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
 1.	Expand **Entities**. Browse to the table you want and select it. On the **Controls** tab, select **Add control**.
-1.	In the **Add control** dialog box, select **(Preview) Power Apps grid control**, and then select **Add**.
+1.	In the **Add control** dialog box, select **Power Apps grid control**, and then select **Add**.
     :::image type="content" source="media/add-the-power-apps-grid-control.png" alt-text="Add Power Apps grid control to a table":::
 
 ## Configure the Power Apps grid control
 
-1.	In the **(Preview) Power Apps grid control** row, select the app types you want to apply the grid to. This makes the control the default control for the selected clients. 
+1.	In the **Power Apps grid control** row, select the app types you want to apply the grid to. This makes the control the default control for the selected clients. 
     :::image type="content" source="media/configure-the-power-apps-grid-control.png" alt-text="Select the client types where you want to use the control":::
 1.	There are several properties included with the control to let you tailor the grid experience for that table. To modify any of these properties, select **Edit** in the corresponding row, and then change the value using the dropdown list under **Bind to static options**. 
     - The **Enable editing** property determines whether the grid is read-only or editable. The default value is **No**. Select **Yes** to make the grid editable. Editable grids are visually indicated by vertical lines between columns.
@@ -57,7 +55,7 @@ When you configure the Power Apps grid control for an entity, all views for that
 1.	Open the [solution explorer](advanced-navigation.md#solution-explorer).
 1.	Open the form that contains the subgrid.
 1.	Select the subgrid where you want to configure this grid, and then select **Change properties** on the command bar.
-1.	In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **(Preview) Power Apps grid control**.
+1.	In the **Set properties** dialog box, select the **Controls** tab, select **Add control**, and then select **Power Apps grid control**.
 1.	To continue with configuring and publishing the control, see [Configure the Power Apps grid control](#configure-the-power-apps-grid-control).
 
 ## Customization

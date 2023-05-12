@@ -2,7 +2,7 @@
 title: Mobile offline capabilities and limitations
 description: Mobile offline capabilities and limitations for Power Apps and Dynamics 365 phones and tablets app
 ms.custom: 
-ms.date: 03/31/2023
+ms.date: 04/27/2023
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -123,8 +123,8 @@ For more information, see [Run business process flows offline](/power-automate/b
     |Web resource configuration |Offline support on Android and Windows|Offline support on iOS|  
     |-------------|---------|--------|  
     |Web resource used on form handlers, form scripts and ribbon commands|Supported (File names should be in lower case)|Supported (file names need should be in lower case)|
-    |JavaScript files referenced within an HTML web resource|Supported| Partially supported: The web resource needs to be opened at least once when you are in online mode, so that the browser can cache it. |
-    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Supported| Partially supported: The web resource needs to be opened at least once while online, so that the browser can cache it.|
+    |JavaScript files referenced within an HTML web resource|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser. |
+    |HTML, JS, CSS, XML web resources embedded on a model-driven app form|Not supported| Web resources may be available offline in some circumstances if they are retrieved while online and cached by the browser.|
     |Other web resources embedded on a model-driven app form (like images, resx, etc.) <br><br>**Note**: The [Dataverse file](/power-apps/developer/data-platform/file-attributes) and [image](/power-apps/developer/data-platform/image-attributes) attributes are not webresources but regular Dataverse data. To enable them offline, see  [Configure mobile offline profiles for images and files](/power-apps/mobile/offline-file-images). |Not supported**|Not supported**|
     |Webpage (HTML web resource) via a model-driven app’s sitemap|Not supported|Not supported|
     |Custom JS files that create a fetchXML dynamically |Not supported|Not supported|
@@ -185,7 +185,7 @@ Ensure that you have configured at least one of the Profile rules for each table
 |-------------|---------|  
 |All Records|	If you are selecting this filter, you cannot define any other filter rule.|
 |Download Related Data only|If you are selecting this filter, you cannot define any other filter rule. Ensure that the table has been defined as a Profile Item Association table also.|
-|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for an table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
+|Other Data Filter - if selected, then select at least one of these options: **Download my Records**, **Download my team records**, or **Download my business unit**  |	If you want to define this filter, then you have to pick at least one of the given options. It is highly recommended to not have Business Unit level filter for a table unless there is a strong justification. It is recommended for a master data scenario with a small data set like Country codes. |
 |Custom Data Filter |<=3 filters can be defined in the custom data filter. |
 
 

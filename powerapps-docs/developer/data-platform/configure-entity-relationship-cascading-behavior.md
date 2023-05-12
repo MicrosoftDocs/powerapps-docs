@@ -5,7 +5,7 @@ suite: powerapps
 author: NHelgren
 ms.author: nhelgren
 ms.topic: article
-ms.date: 11/10/2021
+ms.date: 04/25/2023
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -262,8 +262,6 @@ Some examples of the kind of notifications that your custom plug-in can provide 
 - On success, add an entry to a run-time log
 -   On failure, add an entry to a run-time log, and then send an email (or other communication) to the administrator indicating the date/time and nature of the failure
 - Display a message to the interactive user
-
-More information: [Create and use Custom APIs](custom-api.md); [Write a Plug-in for your Custom API](custom-api.md#write-a-plug-in-for-your-custom-api)
 
 ### See also
 
