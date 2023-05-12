@@ -34,8 +34,8 @@ Verify the following prerequisites before you enable mobile offline:
   |Feature | Required minimum version | Visible in some regions | Enabled in all regions |
   |--------|---------------------------|--------------------------|--------------------------|
   | Power Apps maker studio | 3.23052.00| May 15, 2023 | May 30, 2023 |
-  | Power Apps mobile app | 3.23053.X | May 22, 2023 | May 26, 2023 |
-  |Auto-generated offline profile | 3.23053.XX | May 30, 2023 | June 5, 2023 |
+  | Power Apps mobile app | 3.23053.00 | May 22, 2023 | May 26, 2023 |
+  |Auto-generated offline profile | 3.23053.00 | May 30, 2023 | June 5, 2023 |
     
 - The canvas app must be associated to a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
