@@ -108,7 +108,7 @@ The Dynamics 365 Sales free trial includes Power Apps use rights, along with oth
 ### How do I create model driven apps and use Dataverse? 
 Select or create an environment with Dataverse. You can create Developer environments with Dataverse for free.
 
-1. Sign in to [Power Apps](http://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Select the Environment picker. 
 3. In the **Need your own environment?** prompt, select **Try it now** to create an environment with Dataverse. 
 
