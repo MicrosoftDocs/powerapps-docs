@@ -25,7 +25,7 @@ A few ways in which Copilot for natural language generation is unique:
 
 - Powered by [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview), Copilot is designed from the ground up on a foundation of enterprise-grade security, compliance, and privacy.
   
-## How Copilot works in Dynamics 365 and Power Platform?
+## How does Copilot work in Dynamics 365 and Power Platform?
 
 With Copilot, Dynamics 365 and Power Platform harness the power of foundation models coupled with proprietary Microsoft technologies applied to your business data:
 
@@ -83,7 +83,7 @@ We also provide guidance within the user experience to reinforce the responsible
 
 Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview), Copilot features built-in responsible AI and enterprise-grade Azure security.
 
-- **Built on Microsoft’s comprehensive approach to security, compliance and privacy**. Copilot is integrated into Microsoft services like Dynamics 365, Viva Sales, Power Platform, and Microsoft 365 and automatically inherits all your company’s valuable security, compliance, and privacy policies and processes. Two-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
+- **Built on Microsoft’s comprehensive approach to security, compliance, and privacy**. Copilot is integrated into Microsoft services like Dynamics 365, Viva Sales, Power Platform, and Microsoft 365 and automatically inherits all your company’s valuable security, compliance, and privacy policies and processes. Two-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
 
 - **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. LLMs aren't further trained on, or learn from, your tenant data or your prompts. Within your tenant, our time-tested permissions model provides safeguards and enterprise grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we’ve been using for years to secure customer data.
 
