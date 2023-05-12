@@ -91,10 +91,13 @@ Enable your app for offline use in the [Power Apps studio](../maker/canvas-apps
 
     :::image type="content" source="media/dataverse-offline.png" alt-text="Dataverse offline option.":::
 
-1.  Select **General**. Then do the following:
+1.  Select **General**.
   
-    - Set the **Can be used offline** option to **On**.
-    - We recommend that you use an **auto-generated profile**. When an auto-generated profile is used, the app downloads on the device the tables that are used in your app.
+1. Set the **Can be used offline** option to **On**.
+1. Select an offline profile. You have two options:
+
+- Use an auto-generated profile (recommended) (available soon). When an auto-generated profile is used, the app downloads on the device the tables that are used in your app.
+- Create your own profile. See [Set up mobile offline for canvas apps](#set-up-a-mobile-offline-profile) and customize for your needs. Then click **Refresh** to see your new profile in the list.
 
     :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
     
