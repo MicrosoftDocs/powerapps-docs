@@ -33,7 +33,9 @@ With Copilot, Dynamics 365 and Power Platform harness the power of foundation mo
 
 - Microsoft Graph API brings more context from customer signals into the prompt, such as information from emails, chats, documents, meetings, and more
 
-:::image type="content" source="../../powerapps-docs/media/shared-includes/copilot.png" alt-text="<How Copilot works in Dynamics 365 and Power Platform>":::
+Here is a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
+
+:::image type="content" source="/power-apps/media/shared-includes/copilot.png" alt-text="<How Copilot works in Dynamics 365 and Power Platform>":::
 
 1. Copilot requests an input prompt from a business user in an app, like Dynamics 365 Sales or Power Apps.
 
