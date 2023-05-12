@@ -63,7 +63,7 @@ Copilot has real-time access to both your content and context in Microsoft 365 G
 
 > [!IMPORTANT]
 >
-> - Microsoft doesn't use customers’ data to train LLMs. We believe the customers’ data is their data aligned to Microsoft’s privacy policy (<https://aka.ms/privacy>).
+> - Microsoft doesn't use customers’ data to train LLMs. We adhere to the Microsoft’s privacy policy (<https://aka.ms/privacy>) for Copilot capabilities.
 > - AI-powered LLMs are trained on a large but limited corpus of data. However, prompts, responses, and data accessed through Microsoft 365 Graph and Microsoft services aren't used to train Copilot capabilities in Dynamics 365 and Power Platform for use by other customers.
 > - The foundation models aren't improved through your usage. This means your data is accessible only by authorized users within your organization unless you explicitly consent to other access or use.
 
