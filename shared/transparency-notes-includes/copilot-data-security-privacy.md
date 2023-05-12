@@ -11,17 +11,19 @@ Before your business starts using Copilot capabilities in Dynamics 365 and Power
 
 This transparency note provides answers to common questions related to business data security and privacy to help your organization get started with Copilot in Dynamics 365 and Power Platform.
 
-## What’s the difference between ChatGPT and Copilot?
+## What's the difference between ChatGPT and Copilot?
 
-ChatGPT is a general-purpose large language model (LLM) trained by OpenAI on a massive dataset of text, designed to engage in human-like conversations and answer a wide range of questions on various topics.
+ChatGPT is a general-purpose large language model (LLM) trained by OpenAI on a massive dataset of text, designed to engage in human-like conversations and answer a wide range of questions on several topics.
 
-Copilot also uses an LLM, however, the enterprise-ready AI technology is prompted and optimized for your business processes, your business data, and your security and privacy requirements. It offers enterprise-ready AI technology tuned for your business processes, your business data, and your security and privacy requirements. For Dynamics 365 and Power Platform users, Copilot suggests optional actions and content recommendations in context with the task at hand.  A few ways Copilot for natural language generation is unique:  
+Copilot also uses an LLM, however, the enterprise-ready AI technology is prompted and optimized for your business processes, your business data, and your security and privacy requirements. It offers enterprise-ready AI technology tuned for your business processes, your business data, and your security and privacy requirements. For Dynamics 365 and Power Platform users, Copilot suggests optional actions and content recommendations in context with the task at hand.
 
-- AI-generated responses are uniquely contextual and relevant to the task at hand informed by business data, whether a response to an email from Dynamics 365, an application that automates a specific manual process, or creating a targeted list of customer segments from your CRM system.
+A few ways in which Copilot for natural language generation is unique:  
+
+- AI-generated responses are uniquely contextual and relevant to the task at hand informed by business data whether a response to an email from Dynamics 365, an application that automates a specific manual process, or creating a targeted list of customer segments from your CRM system.
 
 - Copilot uses both an LLM (like GPT) and your organization’s business data to produce more accurate, relevant, and personalized results. In short, your business data stays within your tenancy and is used to improve context only for your scenario and the LLM itself doesn't learn from your usage. More on how the system works is below.
 
-- Powered by Azure OpenAI Service, Copilot is designed from the ground up on a foundation of enterprise-grade security, compliance, and privacy.
+- Powered by [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview), Copilot is designed from the ground up on a foundation of enterprise-grade security, compliance, and privacy.
   
 ## How Copilot works in Dynamics 365 and Power Platform?
 
@@ -33,13 +35,13 @@ With Copilot, Dynamics 365 and Power Platform harness the power of foundation mo
 
 - [Microsoft Graph API](https://learn.microsoft.com/graph/use-the-api) brings more context from customer signals into the prompt, such as information from emails, chats, documents, meetings, and more
 
-Here is a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
+Here's a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
 
 :::image type="content" source="/power-apps/media/shared-includes/copilot.png" alt-text="<How Copilot works in Dynamics 365 and Power Platform>":::
 
 1. Copilot requests an input prompt from a business user in an app, like Dynamics 365 Sales or Power Apps.
 
-1. Copilot preprocesses the prompt through an approach called *grounding*, which improves the specificity of the prompt, so you get answers that are relevant and actionable to your specific task. It does this, in part, by making a call to the Microsoft Graph and Dataverse and accessing the enterprise data you consent and grant permissions to use for the retrieval of your business content and context. We also scope the grounding to documents and data which are visible to the authenticated user through role-based access controls (RBAC). For instance, an intranet question about benefits would only return an answer based on documents relevant to the employee’s role.
+1. Copilot preprocesses the prompt through an approach called *grounding*, which improves the specificity of the prompt, so you get answers that are relevant and actionable to your specific task. It does this, in part, by making a call to Microsoft Graph and Dataverse and accessing the enterprise data you consent to and grant permissions to use for the retrieval of your business content and context. We also scope the grounding to documents and data that is visible to the authenticated user through role-based access controls (RBAC). For instance, an intranet question about benefits would only return an answer based on documents relevant to the employee’s role.
 
     This retrieval of information is referred to as *retrieval-augmented generation* and allows Copilot to provide exactly the right type of information as input to a large language model, combining this user data with other inputs such as information retrieved from knowledge base articles to improve the prompt.  
 
@@ -53,11 +55,11 @@ Copilot unlocks business value by connecting LLMs to your business data in a sec
 
 Copilot has real-time access to both your content and context in the Microsoft 365 Graph and Dataverse. This implies that Copilot:
 
-1. Generates answers anchored in your business content, such as your documents, emails, calendar, chats, meetings, contacts and other business data.
+1. Generates answers anchored in your business content, such as your documents, emails, calendar, chats, meetings, contacts, and other business data.
 
 1. Combines them with your working context. For example, the meeting you’re in now, the email exchanges you’ve had on a topic, the chat conversations you had last week.
 
-1. Delivers accurate, relevant, contextual responses based on above.
+1. Delivers accurate, relevant, and contextual responses based on the above.
 
 > [!IMPORTANT]
 >
@@ -67,7 +69,7 @@ Copilot has real-time access to both your content and context in the Microsoft 3
 
 ## Are Copilot responses always factual?
 
-Responses produced with generative AI aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing outputs. Our Copilot capabilities leave you in the driver seat, while providing useful drafts and summaries to help you achieve more.
+Responses produced with generative AI aren't guaranteed to be 100% factual. While we continue to improve responses to fact-based inquiries, people should still use their judgment when reviewing outputs. Our Copilot capabilities leave you in the driver's seat while providing useful drafts and summaries to help you achieve more.
 
 Our teams are working to address issues, such as misinformation and disinformation, content blocking, data safety, and preventing the promotion of harmful or discriminatory content in line with our [responsible AI principles](https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1:primaryr5).
 
@@ -83,7 +85,7 @@ Microsoft is uniquely positioned to deliver enterprise-ready AI. Powered by [Azu
 
 - **Built on Microsoft’s comprehensive approach to security, compliance and privacy**. Copilot is integrated into Microsoft services like Dynamics 365, Viva Sales, Power Platform, and Microsoft 365 and automatically inherits all your company’s valuable security, compliance, and privacy policies and processes. Two-factor authentication, compliance boundaries, privacy protections, and more make Copilot the AI solution you can trust.
 
-- **Architected to protect tenant, group and individual data**. We know data leakage is a concern for customers. Large language models aren't further trained on, or learn from, your tenant data or your prompts. Within your tenant, our time-tested permissions model provides safeguards and enterprise grade security as seen in our Azure offerings. And on an individual level, Copilot presents only data you can access using the same technology that we’ve been using for years to secure customer data.
+- **Architected to protect tenant, group, and individual data**. We know data leakage is a concern for customers. LLMs aren't further trained on, or learn from, your tenant data or your prompts. Within your tenant, our time-tested permissions model provides safeguards and enterprise grade security as seen in our Azure offerings. On an individual level, Copilot presents data that only you can access using the same technology that we’ve been using for years to secure customer data.
 
 - **Designed to learn new skills**. Copilot’s foundation skills are a game changer for productivity and business processes. The capabilities allow you to create, summarize, analyze, collaborate, and automate using your specific business content and context. But it doesn’t stop there. Copilot recommends actions  for the user (for example, "create a time and expense application to enable employees to submit their time and expense reports"). Copilot is designed to learn new skills. For example, with Viva Sales, Copilot can learn how to connect to CRM systems of record to pull customer data, like interaction and order histories, into communications. As Copilot learns about new domains and processes, it will be able to perform even more sophisticated tasks and queries.
 
