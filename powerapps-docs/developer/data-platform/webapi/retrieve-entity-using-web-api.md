@@ -85,6 +85,9 @@ If an entity has an alternate key defined, you can also use the alternate key to
 GET [Organization URI]/api/data/v9.2/contacts(firstname='Joe',emailaddress1='abc@example.com')
 ```
 
+> [!NOTE]
+> Alternate key values containing the '+' character are not currently supported for retrieval through OData.
+
 If the alternate key definition contains lookup type field (for example, the `primarycontactid` property for the `account` entity), you can retrieve the `account` using the [Lookup properties](web-api-properties.md#lookup-properties) as shown here.
 
 ```http
