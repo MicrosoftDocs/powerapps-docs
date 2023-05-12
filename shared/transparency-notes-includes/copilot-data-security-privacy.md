@@ -5,11 +5,11 @@ ms.date: 05/11/2023
 ms.topic: include
 ---
 
-With the introduction of [generative AI across Microsoft business applications](https://www.microsoft.com/en-us/ai/dynamics-365-ai)—including Dynamics 365, Viva Sales, and Microsoft Power Platform—interactions with AI across business roles and processes will become second nature. With Copilot, Dynamics 365 and Power Platform introduce a new way to generate ideas, content drafts, and methods to access and organize information across the business.
+With the introduction of [generative AI across Microsoft business applications](https://www.microsoft.com/en-us/ai/dynamics-365-ai) including Dynamics 365, Viva Sales, and Microsoft Power Platform, interactions with AI across business roles and processes will become second nature. With Copilot, Dynamics 365 and Power Platform introduce a new way to generate ideas, content drafts, and methods to access and organize information across the business.
 
 Before your business starts using Copilot capabilities in Dynamics 365 and Power Platform, you may have questions about how it works, how it keeps your business data secure and adheres to privacy requirements, and other important considerations.
 
-This transparency note provides answers to common questions related to business data security and privacy to help your organization get started with Copilot.
+This transparency note provides answers to common questions related to business data security and privacy to help your organization get started with Copilot in Dynamics 365 and Power Platform.
 
 ## What’s the difference between ChatGPT and Copilot?
 
