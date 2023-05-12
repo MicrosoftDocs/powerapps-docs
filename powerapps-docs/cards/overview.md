@@ -28,12 +28,6 @@ To get started, sign in to [Power Apps](https://make.powerapps.com). Select **Ca
 
 :::image type="content" source="media/overview/create-card-screen.png" alt-text="Screenshot of the card create page in Power Apps.":::
 
-There are two key components of a card:
-
-- **Card designer**: The interface in which you create cards using drag-and-drop controls, Power Fx logic, and data from Power Platform connectors
-
-- **Power Apps data and resource management**: The services that manage sending and receiving cards with embedded data and workflows
-
 ### Drag and drop UI elements in the card designer
 
 With the drag-and-drop card designer, add buttons, tables, labels, images, check boxes, text boxes, and many other controls to your cards, all without writing a single line of code.
