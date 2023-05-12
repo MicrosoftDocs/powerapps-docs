@@ -223,6 +223,7 @@ The following Power Fx functions are currently not supported with commanding in 
 - UpdateContext()
 - User()
 - ViewForm()
+- Copy() - Intellisense won't give you an error however the formula won't do anything
 
 ### Enums not supported
 
