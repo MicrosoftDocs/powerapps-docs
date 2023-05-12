@@ -99,7 +99,7 @@ Enable your app for offline use in the [Power Apps studio](../maker/canvas-apps
     :::image type="content" source="media/can-be-used-offline.png" alt-text="Can be used offline option.":::
     
     > [!Note]
-    > If you don’t see the **Can be taken offline** option, make that the app in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
+    > If you don’t see the **Can be used offline** option, make that the app is in a solution. More information: [Create a canvas app from within a solution](../maker/canvas-apps/add-app-solution.md)
 
     A page using the **Offline** template is automatically inserted. The page contains an icon hooked up with the [Connection](/power-platform/power-fx/reference/signals#connection) Power Fx function. The icon has multiple variant that reflect the offline sync status. You can decide to use it or not, and you can also customize it as appropriate.
 
@@ -219,6 +219,6 @@ Switch(Connection.Sync,
 
 - Some Dataverse tables aren't supported in offline mode. More information: [Mobile offline capabilities and limitations](offline-capabilities.md)
 
-- Items in a gallery may appear in a different order in an offline-enabled app if no sort order is selected. Choose a sort order in the gallery control to ensure that the app behaves consistently in mobile apps and web browsers.
+- Items in a gallery may appear in a different order in an offline-enabled app if no [sort order](/power-platform/power-fx/reference/function-sort) is selected. Choose a sort order in the gallery control to ensure that the app behaves consistently in mobile apps and web browsers.
 
 - Canvas apps that are in offline mode, do not yet support files or images. This means that if you are using a Dataverse table that has an image on it, it may create some unanticipated errors.  For instance, if you are using a gallery, you need to make sure that the template and the layout is not using images. 
