@@ -26,11 +26,15 @@ Elastic tables are designed to handle large volumes of data in real-time. With e
 
 Elastic tables have unique capabilities for flexible schema, horizontal scaling, and automatic removal of data after a time-period.
 
-Consider a scenario where a solar company has to ingest large volumes of IoT signals every hour from its installed solar panels across multiple regions. The data is unstructured JSON, which doesn't fit neatly into the relational format and requires frequent querying. Elastic tables are the right choice for  this low latency, high throughput, and flexible schema requirement with this scenario when compared to standard or virtual tables. <!-- Suggest removing virtual tables. Can't someone argue that virtual tables could also provide this level of functionality if connecting to a data source that supports it? -->
-
 Elastic tables automatically scale to ingest tens of millions of rows every hour. Background processes can collate the IoT signals, predict maintenance requirements, and proactively schedule technicians.
 
-With this high data volume scenario, applications can use the time-to-live capability to remove data automatically after set periods and optimize the storage capacity consumed.
+Consider a scenario where Contoso is a retailer with millions of existing customers. Contoso has a large database of customers and are looking to increase sales while retaining customers. Based on prior customer history, they're looking to have 24-hour flash sale events with different coupons targeting their customers and products. They have estimated that the number of coupons required will be 100 million plus per flash sale campaign. Marketing plans to run multiple 24-hour campaigns targeting different customer segments.  
+
+The requirement for Constoso’s marketing application is that it must be able to ingest up to 100 million or more coupon details within a few hours, read millions of coupons per hour, and send coupons to customers.  
+
+Elastic tables will automatically scale for this high throughput scenario.  
+
+For example, in the above scenario, an elastic table named *Coupon* with millions of records can be associated with Dataverse standard tables like *Contact* (customer info) and *Offer* (a custom standard table). Since the elastic tables are isolated from the standard tables, performance for the overall marketing application won't be negatively impacted. In addition, time-to-live capability with elastic table (*Coupon* in this scenario) allows removal of data automatically after fixed periods and ensure optimization of storage capacity.
 
 ## Horizontal scaling and performance  
 
