@@ -51,13 +51,13 @@ Here is a high-level overview of how Copilot works in Dynamics 365 and Power Pla
 
 Copilot unlocks business value by connecting LLMs to your business data in a secure, compliant, privacy-preserving way.
 
-Copilot has real-time access to both your content and context in the Microsoft 365 Graph and Dataverse. This means, Copilot:
+Copilot has real-time access to both your content and context in the Microsoft 365 Graph and Dataverse. This implies that Copilot:
 
-a. Generates answers anchored in your business content, such as your documents, emails, calendar, chats, meetings, contacts and other business data.
+1. Generates answers anchored in your business content, such as your documents, emails, calendar, chats, meetings, contacts and other business data.
 
-b.  Combines them with your working context. For example, the meeting you’re in now, the email exchanges you’ve had on a topic, the chat conversations you had last week.
+1. Combines them with your working context. For example, the meeting you’re in now, the email exchanges you’ve had on a topic, the chat conversations you had last week.
 
-c.  Delivers accurate, relevant, contextual responses based on above.
+1. Delivers accurate, relevant, contextual responses based on above.
 
 > [!IMPORTANT]
 >
