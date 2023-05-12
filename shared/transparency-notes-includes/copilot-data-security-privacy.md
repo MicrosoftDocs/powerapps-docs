@@ -27,11 +27,11 @@ Copilot also uses an LLM, however, the enterprise-ready AI technology is prompte
 
 With Copilot, Dynamics 365 and Power Platform harness the power of foundation models coupled with proprietary Microsoft technologies applied to your business data:
 
-- Search (using Bing and Azure Cognitive Search) brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this Retrieval Augmented Generation approach as preprocessing to calling an LLM
+- Search (using Bing and [Azure Cognitive Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)) brings domain-specific context to a Copilot prompt, enabling a response to integrate information from content like manuals, documents or other data within the organization's tenant. Currently, Power Virtual Agents and Dynamics 365 Customer Service use this Retrieval Augmented Generation approach as preprocessing to calling an LLM
 
 - Microsoft applications like Dynamics 365, Viva Sales, and Power Platform and the business data stored in Dataverse
 
-- Microsoft Graph API brings more context from customer signals into the prompt, such as information from emails, chats, documents, meetings, and more
+- [Microsoft Graph API](https://learn.microsoft.com/graph/use-the-api) brings more context from customer signals into the prompt, such as information from emails, chats, documents, meetings, and more
 
 Here is a high-level overview of how Copilot works in Dynamics 365 and Power Platform.
 
