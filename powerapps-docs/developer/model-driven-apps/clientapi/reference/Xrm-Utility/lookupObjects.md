@@ -39,7 +39,7 @@ contributors:
 **successCallback**: Function. A function to call when the lookup control is invoked. An array of objects with the following properties is passed:<br/><ul><li>**entityType**: String. table type of the record selected in the lookup control.</li><li>**id**: String. ID of the record selected in the lookup control.</li><li>**name**: String. Name of the record selected in the lookup control.</li></ul>
 
 
-**errorCallback**: Function. A function to call when you cancel the lookup control or the operation fails.  
+**errorCallback**: Function. A function to call when the operation fails. It is not considered a failure if the user cancels the operation.
 
 ## Example
 
