@@ -2,7 +2,7 @@
 title: "Use elastic tables (Preview) (Microsoft Dataverse) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to use elastic tables with code" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.topic: article
-ms.date: 05/11/2022
+ms.date: 05/14/2022
 author: pnghub
 ms.author: gned
 ms.reviewer: jdaly
@@ -36,24 +36,25 @@ Types of tables
 https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of-entities?branch=pr-en-us-8083
 
 -->
-Elastic tables are Dataverse tables which are powered by Azure Cosmos DB. They are designed to scale horizontoally and can handle large amounts of data and high levels of throughput with low latency. This makes it suitable for applications with unpredictable, spiky or rapidly growing workloads.
+Elastic tables are Dataverse tables which are powered by Azure Cosmos DB. They are designed to scale horizontally and can handle large amounts of data and high levels of throughput with low latency. This makes it suitable for applications with unpredictable, spiky or rapidly growing workloads.
 
-## When to use Elastic tables
+## When to use elastic tables
 
-When to use an Elastic table versus a Standard table depends on the specific needs of your application. Here are some general scenarios when elastic table may be a better choice:
+When to use an elastic table versus a Standard table depends on the specific needs of your application. Here are some general scenarios when elastic table may be a better choice:
 
 - If your data is unstructured or semi-structured, or if your data model is constantly changing.
 - If you need to scale horizontally easily.
 - If you need to handle a high volume of read and write requests.
 
-Elastic table's high scalability and throughput advantages comes at a trade-off which makes it **NOT** suitable for following scenarios - 
-- If your application requires strong data consistency
+Elastic table's high scalability and throughput advantages comes at a trade-off which makes it **NOT** suitable for following scenarios:
+
+- If your application requires strong data consistency.
 - If your application requires relational modeling and needs transactional capability across tables and during various stages of plugin execution.
 - If your application requires complex joins
 
 A standard dataverse tables may be better suited for these scenarios.
 
-It's important to note that both standard and Elastic table have their strengths and weaknesses, and the choice of table should be based on the specific needs of your application. In some cases, a combination of both types of tables may be appropriate.
+It's important to note that both standard and elastic table have their strengths and weaknesses, and the choice of table should be based on the specific needs of your application. In some cases, a combination of both types of tables may be appropriate.
 
 ## Partitioning and horizontal scaling
 
@@ -78,11 +79,11 @@ When `partitionid` is not specified for a row, Dataverse uses the primary key as
 
 ## Consistency level
 
-Elastic tables support session consistency. Session consistency in Elastic tables is achieved through the use of session tokens, which are opaque strings returned by dataverse when a client performs any write operation (create/update/upsert/delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing dataverse to return the most up-to-date data for that client.
+Elastic tables support session consistency. Session consistency in elastic tables is achieved through the use of session tokens, which are opaque strings returned by dataverse when a client performs any write operation (create/update/upsert/delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing dataverse to return the most up-to-date data for that client.
 
-You will find session token as x-ms-session-token header in response of all write operations. (Create/Update/Upsert/Delete)
+You will find session token as `x-ms-session-token` header in response of all write operations. (Create/Update/Upsert/Delete)
 
-When calling a retrieve API, you can use MSCRM.SessionToken header to pass corresponding session-token to retrieve the most up-to-date row value.
+When calling a retrieve API, you can use `MSCRM.SessionToken` header to pass corresponding session-token to retrieve the most up-to-date row value.
 
 ## Transactional behavior
 
@@ -107,7 +108,7 @@ Elastic tables also currently do not support executing two or more organization 
 
 Imagine Contoso operates large number of Internet of Things (IoT) devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
 
-Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
+Contoso can create an elastic table named `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
 
 ## Create elastic tables
 
@@ -373,7 +374,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c
 
 Dataverse currently does not support creating Many-to-Many relationship when one or both of the tables in relationship is an elastic table.
 
-One-to-Many relationships are supported for Elastic tables with following limitations
+One-to-Many relationships are supported for elastic tables with following limitations
 - Cascading is not supported. Cascading behavior must be set to `Cascade.None` when creating relationship.
 - When table on the Many side of relationship is a standard table.
 
@@ -1180,18 +1181,21 @@ OData-Version: 4.0
 
 ## Bulk operations
 
-Often applications need to ingest large amount of data into Dataverse in a short amount of time which can be be processed later. Using Bulk APIs with Elastic tables provides a great way to achieve high throughput for such large volume ingestions.
+Often applications need to ingest large amount of data into Dataverse in a short amount of time which can be be processed later. Using Bulk APIs with elastic tables provides a great way to achieve high throughput for such large volume ingestions.
 
 Bulk APIs are optimized for performance when executing multiple write operations on the same table by taking a batch of rows as input in a single write operation. Multiple bulk operation can be run in parallel to achieve high throughput. Read more about them here <!--> TODO. Link here. -->
 
-Elastic tables currently supports following messages for Bulk execution
-- CreateMultiple
-- UpdateMultiple
-- DeleteMultiple
+Elastic tables currently supports following messages for Bulk execution:
 
-Support for UpsertMultiple mesage will be coming soon. Also, Bulk APIs are currently supported only in SDK for .NET
+- `CreateMultiple`
+- `UpdateMultiple`
+- `DeleteMultiple`
 
-#### [SDK for .NET](#tab/sdk)
+Support for `UpsertMultiple` mesage will be coming soon. Also, Bulk APIs are currently supported only in SDK for .NET
+
+### CreateMultiple
+
+
 This example uses CreateMultiple message to create mutiple rows in `contoso_SensorData` elastic table.
 
 ```csharp
@@ -1252,7 +1256,8 @@ public static Guid CreateMultiple(IOrganizationService service)
 }
 ```
 
-#### [SDK for .NET](#tab/sdk)
+### UpdateMultiple
+
 This example uses UpdateMultiple message to update mutiple rows of `contoso_SensorData` elastic table.
 
 ```csharp
@@ -1301,7 +1306,8 @@ public static Guid UpdateMultiple(IOrganizationService service)
 }
 ```
 
-#### [SDK for .NET](#tab/sdk)
+### DeleteMultiple
+
 This example uses DeleteMultiple message to delete mutiple rows from `contoso_SensorData` elastic table.
 
 ```csharp
