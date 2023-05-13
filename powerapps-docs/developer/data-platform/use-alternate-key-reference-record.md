@@ -45,6 +45,7 @@ The following table provides examples showing how to reference records using rel
 You have to be aware of the following conditions and possible exceptions when using alternate keys:  
   
 - If you specify a column that is not defined as a unique key, an error will be thrown indicating that use of unique key columns is required. The error message is: `The key in the request URI is not valid for resource 'Microsoft.Dynamics.CRM.<table logical name>'. Ensure that the names and number of key properties match the declared or alternate key properties for the resource 'Microsoft.Dynamics.CRM.<table logical name>'.`  
+- Alternate key values containing a '+' character are not currently supported for retrieval through OData.
 
 More information: [Retrieve using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-using-an-alternate-key)
 
