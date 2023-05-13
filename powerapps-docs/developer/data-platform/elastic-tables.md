@@ -1198,7 +1198,7 @@ More information: [Use messages with the Organization service](org-service/use-m
 
 #### [Web API](#tab/webapi)
 
-This request uses the 
+This request uses the [ExecuteCosmosSqlQuery Function](xref:Microsoft.Dynamics.CRM.ExecuteCosmosSqlQuery).
 
 **Request**
 
