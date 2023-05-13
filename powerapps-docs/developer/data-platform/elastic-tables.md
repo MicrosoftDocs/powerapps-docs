@@ -91,13 +91,22 @@ When calling a retrieve API, you can use MSCRM.SessionToken header to pass corre
 
 ## Transactional behavior
 
-Elastic tables are vastly different from standard tables when it comes to transactional guarantees. For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide ACID guarantees for transactions, meaning that each transaction is atomic (all or nothing), consistent (maintains data integrity), isolated (transactions don't interfere with each other), and durable (committed transactions are permanent).
+Elastic tables are vastly different from standard tables when it comes to transactional guarantees.
+For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide **ACID** guarantees for transactions, meaning that each transaction is:
 
-In contrast, Elastic table currently do not support transaction in any form. 
-For single request execution, write operation happening in various plugin stages are **NOT** transactional. For example, if you have a post plugin registered on Create message for SensorData table at stage 40, and if an error ocurrs during post plugin execution, the database write operation will not be rolled back.
+- **A**tomic: All or nothing
+- **C**onsistent: Maintains data integrity
+- **I**solated: transactions don't interfere with each other
+- **D**urable: Committed transactions are permanent
+
+In contrast, elastic tables currently do not support transaction in any form.
+For single request execution, write operation happening in synchronous plugin stages are **NOT** transactional.
+
+For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for the `Create` message an elastic table, any error in your plug-in will not roll back the operation.
+
 Multiple write operations within even within same plugin execution are also not atomic.
 
-Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message. Support for this  will be coming soon.
+Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the `ExecuteTransaction` message or in a Web API $batch operation ChangeSet.
 
 ## Create elastic tables
 
@@ -257,44 +266,25 @@ OData-EntityId: [Organization URI]/api/data/v9.2/EntityDefinitions(417129e1-207c
 
 ## Adding Columns
 
-<<<<<<< HEAD
 You can create columns in elastic tables using [Power Apps](https://make.powerapps.com/) without writing code. More information: [Create and edit tables using Power Apps](../../maker/data-platform/create-edit-entities-portal.md). 
-=======
-Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
-<<<<<<< HEAD
-Columns can also be created using standard table APIs. These examples create a new column `contoso_sensortype` in elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. 
-=======
+Dataverse automatically creates two system columns for each elastic tables at the time of table creation.
 - `PartitionId` : Defines the logical partition a row belongs to.
 - `TimeToLiveInSeconds` :  Defines the time in seconds after which row will expire and get deleted from database automatically.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
-<<<<<<< HEAD
-> [!NOTE]
-> Following column types are not supported by elastic tables currently.
-> - MoneyType
-> - MultiSelectPicklistType
-> - StateType
-> - StatusType
-> - CalendarRulesType
-> - PartyListType
-> - FileType
-> - ImageType
-> - CustomerType
-=======
+Columns can also be created using standard table APIs. These examples create a new column `contoso_sensortype` in elastic table `contoso_SensorData` using the Dataverse SDK for .NET and Web API. 
+
 There are limits on the types of columns you can add. Currently you cannot add these types of columns:
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
-<<<<<<< HEAD
+- MoneyType (`MoneyAttributeMetadata`)
+- MultiSelectPicklistType (`MultiSelectPicklistAttributeMetadata`)
+- StateType (`StateAttributeMetadata`)
+- StatusType (`StatusAttributeMetadata`)
+- FileType (`FileAttributeMetadata`)
+- ImageType (`ImageAttributeMetadata`)
+- Calculated or Rollup
+
 #### [SDK for .NET](#tab/sdk)
-=======
-- Currency (`MoneyAttributeMetadata`)
-- File (`FileAttributeMetadata` )
-- Any column using `FormulaDefinition`
-- Whole number (`IntegerAttributeMetadata`) with `Format` other than `None`.
-- Lookup (`LookupAttributeMetadata`) with multiple `Target` values.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
 ```csharp
 public static OrganizationResponse CreateColumn(IOrganizationService service)
@@ -313,25 +303,9 @@ public static OrganizationResponse CreateColumn(IOrganizationService service)
         }
     };
 
-<<<<<<< HEAD
     return service.Execute(createjsonAttributeRequest);
 }
 ```
-=======
-There are limitations on the types of relationships you can create with elastic tables.
-
-You can create: 
-
-- 1:N and N:N relationships between elastic tables.
-- 1:N relationships with a standard table. You can add a lookup column on an standard table that refers to an elastic table
-
-You can't create:
-
-- N:N relationships with standard tables
-- ??  Not clear here yet.
-
-**///////////////////////////////////**
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
 #### [Web API](#tab/webapi)
 
@@ -614,14 +588,10 @@ OData-Version: 4.0
 x-ms-session-token: hj23ad#1543
 OData-EntityId: [Organization URI]/api/data/v9.0/sensordata(7eb682f1-ca75-e511-80d4-00155d2a68d1)
 ```
-<<<<<<< HEAD
-=======
 
 > [!NOTE]
 > The `x-ms-session-token` value returned can be used to with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. More information: [Consistency level](#consistency-level)
 
-
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 ---
 
 ### Update a record
@@ -676,17 +646,14 @@ x-ms-session-token: hn76qq#7324
 
 ### Retrieve a record
 
-This example retrieves an existing row in SensorData table with the `sensordataid` and `partitionid` = 'device-001'. Both primary key and `partitionid` columns are required to uniquely identify an existing elastic table row.
+This example retrieves an existing row in SensorData table with SensorDataId = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'device-001'. 
+Here the partitionid value is passed using `partitionId` as an optional parameter. More information: [Use optional parameters](optional-parameters.md)
+
+Note that unlike standard tables where primary key is enough to uniquely identify a row, Both primary key and `partitionid` columns are required for elastic tables. If a row has been created with non-null `partitionid` value, when retrieving the same row `partitionid` parameter MUST be passed. `404 Not Found` error will be thrown by Dataverse if `partitionid` is not passed but row was created with a non-null `partitionid` value.
+
 
 #### [SDK for .NET](#tab/sdk)
 
-<<<<<<< HEAD
-This example retrieves an existing row in SensorData table with SensorDataId = 'ff67610c-82ce-412c-85df-0bbc6521bb01' and `partitionid` = 'device-001'. 
-=======
-Here the partitionid value is passed using `partitionId` as an optional parameter. More information: [Use optional parameters](optional-parameters.md)
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
-
-Note that unlike standard tables where primary key is enough to uniquely identify a row, Both primary key and `partitionid` columns are required for elastic tables to uniquely identify a row. If row is created with a non-null `partitionid` value but while retrieving the same row if `partitionid` is not passed, an error `404 Not Found` will be thrown by Dataverse.
 
 ```csharp
 public static Entity RetrieveExample(IOrganizationService service, Guid sensorDataId)
@@ -707,22 +674,13 @@ public static Entity RetrieveExample(IOrganizationService service, Guid sensorDa
 
 Here the `partitionid` is being passed as query parameter.
 
-**//////**
-
-I was looking for use of `MSCRM.SessionToken` request header hear.
-
-**/////**
-
 **Request**
 
 ```http
-<<<<<<< HEAD
-GET [Organization URI]/api/data/v9.2/sensordata(ff67610c-82ce-412c-85df-0bbc6521bb01)?partitionid="deviceid-001"&$select=contoso_value,contoso_timestamp
-=======
-GET [Organization URI]/api/data/v9.2/sensordata(<sensordataid value>)?partitionid="deviceid-001"&$select=value,timestamp
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
+GET [Organization URI]/api/data/v9.2/sensordata(<sensordataid value>)?partitionId=deviceid-001&$select=contoso_value,contoso_timestamp
 Accept: application/json
 Content-Type: application/json
+MSCRM.SessionToken : htjy#4567
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
@@ -818,7 +776,7 @@ OData-Version: 4.0
 
 ### Query rows across all logical partitions
 
-This example retrieves all rows in SensorData table across all logical partitions. Not applying any filter on logical partition allows us to get rows from all logical partitions. Note that this query will not performant and data modelling of the table should be done in a way to keep queries limited to a single logical partition as much as possible.
+This example retrieves all rows in SensorData table across all logical partitions. Not applying any filter on logical partition allows us to get rows from all logical partitions. Note that this query will not be performant and table should be modeled in a way which keeps queries limited to a single logical partition as much as possible.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -1232,19 +1190,9 @@ Elastic tables currently supports following messages for Bulk execution
 
 Support for UpsertMultiple mesage will be coming soon. Also, Bulk APIs are currently supported only in SDK for .NET
 
-<<<<<<< HEAD
 #### [SDK for .NET](#tab/sdk)
-=======
-Elastic tables support session consistency. Session consistency in elastic tables is achieved through the use of session tokens, which are opaque strings returned by Dataverse when a client performs any write operation (Create/Update/Upsert/Delete). When the client performs a subsequent read operation, it includes the session token in the request, allowing Dataverse to return the most up-to-date data for that client.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
-
-<<<<<<< HEAD
 This example uses CreateMultiple message to create mutiple rows in `contoso_SensorData` elastic table.
-=======
-You will find session token as `x-ms-session-token` response header for all write operations. (Create/Update/Upsert/Delete)
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
-<<<<<<< HEAD
 ```csharp
 public static Guid CreateMultiple(IOrganizationService service)
 {
@@ -1287,9 +1235,6 @@ public static Guid CreateMultiple(IOrganizationService service)
             }
          }
       };
-=======
-When calling a retrieve API, you can use `MSCRM.SessionToken` request header to pass corresponding `x-ms-session-token` to retrieve the most up-to-date row value.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
     // Create an EntityCollection populated with the list of entities.
     EntityCollection entities = new(entityList)
@@ -1297,7 +1242,6 @@ When calling a retrieve API, you can use `MSCRM.SessionToken` request header to 
         EntityName = tableLogicalName
     };
 
-<<<<<<< HEAD
     // Use CreateMultipleRequest
     CreateMultipleRequest createMultipleRequest = new()
     {
@@ -1306,33 +1250,9 @@ When calling a retrieve API, you can use `MSCRM.SessionToken` request header to 
     return service.Execute(request);
 }
 ```
-=======
-Elastic tables are vastly different from standard tables when it comes to transactional guarantees.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
-<<<<<<< HEAD
 #### [SDK for .NET](#tab/sdk)
-=======
-For standard tables, transactions are a fundamental concept and are used to group a set of requests into a single unit of work that must be either fully completed or fully rolled back in case of failure. Standard tables provide **ACID** guarantees for transactions, meaning that each transaction is:
-
-- **A**tomic: All or nothing
-- **C**onsistent: Maintains data integrity
-- **I**solated: transactions don't interfere with each other
-- **D**urable: Committed transactions are permanent
-
-In contrast, elastic tables currently do not support transaction in any form.
-For single request execution, write operation happening in synchronous plugin stages are **NOT** transactional.
-
-For example, if you have a synchronous plug-in step registered on the `PostOperation` stage for the `Create` message an elastic table, any error in your plug-in will not roll back the operation.
-
-Multiple write operations within even within same plugin execution are also not atomic.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
-
-<<<<<<< HEAD
 This example uses UpdateMultiple message to update mutiple rows of `contoso_SensorData` elastic table.
-=======
-Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the `ExecuteTransaction` message or in a Web API $batch operation ChangeSet.
->>>>>>> 281e30a562a575c768a35d51b2c7e48279a95f7c
 
 ```csharp
 public static Guid UpdateMultiple(IOrganizationService service)
@@ -1382,6 +1302,7 @@ public static Guid UpdateMultiple(IOrganizationService service)
 
 #### [SDK for .NET](#tab/sdk)
 This example uses DeleteMultiple message to delete mutiple rows from `contoso_SensorData` elastic table.
+
 ```csharp
 public static OrganizationResponse DeleteMultiple(IOrganizationService service)
 {
