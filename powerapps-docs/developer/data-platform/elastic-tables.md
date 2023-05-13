@@ -36,7 +36,7 @@ Types of tables
 https://review.learn.microsoft.com/en-us/power-apps/maker/data-platform/types-of-entities?branch=pr-en-us-8083
 
 -->
-Elastic tables are Azure Cosmos DB powered Dataverse tables which are designed to scale horizontoally and can handle large amounts of data and high levels of throughput with low latency. This makes it suitable for applications with unpredictable, spiky or rapidly growing workloads.
+Elastic tables are Dataverse tables which are powered by Azure Cosmos DB. They are designed to scale horizontoally and can handle large amounts of data and high levels of throughput with low latency. This makes it suitable for applications with unpredictable, spiky or rapidly growing workloads.
 
 ## When to use Elastic tables
 
@@ -50,7 +50,8 @@ Elastic table's high scalability and throughput advantages comes at a trade-off 
 - If your application requires strong data consistency
 - If your application requires relational modeling and needs transactional capability across tables and during various stages of plugin execution.
 - If your application requires complex joins
-A standard dataverse tables is better suited for these scenarios.
+
+A standard dataverse tables may be better suited for these scenarios.
 
 It's important to note that both standard and Elastic table have their strengths and weaknesses, and the choice of table should be based on the specific needs of your application. In some cases, a combination of both types of tables may be appropriate.
 
@@ -74,12 +75,6 @@ For all elastic tables, `partitionid` column should:
 - Have values that are no larger than 1024 bytes.
 
 When `partitionid` is not specified for a row, Dataverse uses the primary key as the default `partitionid`. For write-heavy tables of any size or for cases where rows are mostly retrieved using id, the primary key is naturally a great choice for the `partitionid` column.
-
-### Scenario
-
-Imagine Contoso operates large number of Internet of Things (IoT) devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
-
-Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
 
 ## Consistency level
 
@@ -107,6 +102,12 @@ For example, if you have a synchronous plug-in step registered on the `PostOpera
 Multiple write operations within even within same plugin execution are also not atomic.
 
 Elastic tables also currently do not support executing two or more organization service requests in a single database transaction using the `ExecuteTransaction` message or in a Web API $batch operation ChangeSet.
+
+### Scenario
+
+Imagine Contoso operates large number of Internet of Things (IoT) devices deployed by the company all across the world. Contoso needs to store and query large amounts of sensor data being emitted from IoT devices so that they can monitor health of device and gathering other insights.
+
+Contoso can create an elastic table named  `contoso_SensorData` to store and query large volume of IoT data. It can choose to use `contoso_DeviceId` as the partitionid for each row corresponding to that device. Since `contoso_DeviceId` is unique to each device and Contoso performs queries mostly in context of a given `contoso_DeviceId`, it acts as a good partition strategy for entire dataset.
 
 ## Create elastic tables
 
@@ -282,7 +283,7 @@ There are limits on the types of columns you can add. Currently you cannot add t
 - StatusType (`StatusAttributeMetadata`)
 - FileType (`FileAttributeMetadata`)
 - ImageType (`ImageAttributeMetadata`)
-- Calculated or Rollup
+- Calculated or Rollup Columns
 
 #### [SDK for .NET](#tab/sdk)
 
